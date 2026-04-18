@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esquema-resumen — CTE Parte I (Tema 9)</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.20);--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.18)}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2rem 1rem}
+  .page{max-width:860px;margin:0 auto}
+  h1{font-size:20px;font-weight:500;margin-bottom:4px}
+  .sub{font-size:13px;color:var(--t3);margin-bottom:24px}
+  .sub a{color:var(--t2);text-decoration:none}
+  .sub a:hover{color:var(--t1)}
+  .bloque{background:var(--bg2);border:.5px solid var(--bl);border-radius:var(--r2);padding:14px 16px;margin-bottom:10px}
+  .bt{font-size:13px;font-weight:500;margin:0 0 10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .badge{font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap}
+  .bp{background:#EEEDFE;color:#3C3489}.bb{background:#E6F1FB;color:#0C447C}.btl{background:#E1F5EE;color:#085041}.ba{background:#FAEEDA;color:#633806}.bc{background:#FAECE7;color:#712B13}.bg{background:#EAF3DE;color:#27500A}.bx{background:#F1EFE8;color:#444441}
+  @media(prefers-color-scheme:dark){.bp{background:#3C3489;color:#CECBF6}.bb{background:#0C447C;color:#B5D4F4}.btl{background:#085041;color:#9FE1CB}.ba{background:#633806;color:#FAC775}.bc{background:#712B13;color:#F5C4B3}.bg{background:#27500A;color:#C0DD97}.bx{background:#444441;color:#D3D1C7}}
+  .items{display:flex;flex-wrap:wrap;gap:6px}
+  .item{font-size:12px;color:var(--t2);background:var(--bg1);border:.5px solid var(--bl);border-radius:6px;padding:3px 9px}
+  .itemd{font-size:12px;font-weight:500;color:var(--t1);background:var(--bg1);border:.5px solid var(--bm);border-radius:6px;padding:3px 9px}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .s{font-size:11px;color:var(--t3);font-weight:500;margin:0 0 6px}
+  .sep{margin-top:10px;padding-top:10px;border-top:.5px solid var(--bl)}
+  @media(max-width:560px){.g2,.g3{grid-template-columns:1fr}}
+  .footer{margin-top:20px;font-size:11px;color:var(--t3);text-align:center}
+  /* DB visual grid */
+  .dbgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
+  .dbc{border:.5px solid var(--bm);border-radius:8px;padding:10px;background:var(--bg1)}
+  .dbt{font-size:12px;font-weight:600;margin-bottom:4px}
+  .dbs{font-size:11px;color:var(--t2);line-height:1.5}
+  .se{border-left:3px solid #3C3489}.si{border-left:3px solid #712B13}.sua{border-left:3px solid #085041}.hs{border-left:3px solid #0C447C}.hr{border-left:3px solid #633806}.he{border-left:3px solid #27500A}
+  @media(max-width:600px){.dbgrid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>CTE Parte I — Condiciones Técnicas y Administrativas</h1>
+  <p class="sub">Tema 9 (Ingeniero Técnico) · Esquema-resumen · RD 314/2006 · LOE 38/1999<br>
+    <a href="../index.html">Índice</a><br>
+    <a href="1_texto_explicativo.html">< Texto completo</a>
+     | 
+    <a href="3_cuadro_comparativo.html">Cuadros comparativos ></a>
+  </p>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bp">Marco normativo y estructura del CTE</span></div>
+    <div class="g3">
+      <div><div class="s">Base legal</div>
+      <div class="items">
+        <span class="itemd">RD 314/2006, de 17 de marzo — aprobación del CTE</span>
+        <span class="item">RD 732/2019 — última actualización relevante (HE y HR)</span>
+        <span class="itemd">LOE 38/1999, art. 3 — requisitos básicos de la edificación</span>
+        <span class="item">Reglamento UE 305/2011 — marcado CE de productos de construcción</span>
+      </div></div>
+      <div><div class="s">Estructura del CTE</div>
+      <div class="items">
+        <span class="itemd">Parte I — Condiciones Técnicas y Administrativas (marco normativo)</span>
+        <span class="itemd">Parte II — Documentos Básicos (DB): SE · SI · SUA · HS · HR · HE</span>
+        <span class="item">Anejos: I (modelo de ficha justificativa) · II (normas de referencia) · III (terminología)</span>
+        <span class="item">Documentos Reconocidos — sin carácter reglamentario · de apoyo a la aplicación de los DB</span>
+      </div></div>
+      <div><div class="s">Ámbito de aplicación (art. 2)</div>
+      <div class="items">
+        <span class="itemd">Obras de nueva construcción: aplicación total</span>
+        <span class="item">Obras de ampliación, reforma, rehabilitación: aplicación parcial (mejora respecto al estado previo)</span>
+        <span class="item">Excluidas: obras de escasa entidad (1 planta, no residencial, no público) · construcciones provisionales · ingeniería civil</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bb">Los 6 Documentos Básicos y sus exigencias</span> Art. 3 CTE</div>
+    <div class="dbgrid">
+      <div class="dbc se"><div class="dbt">DB-SE · Seguridad Estructural</div><div class="dbs">SE-1 Resistencia y estabilidad<br>SE-2 Aptitud al servicio<br>SE-AE · SE-C · SE-A · SE-F · SE-M</div></div>
+      <div class="dbc si"><div class="dbt">DB-SI · Seguridad en Incendio</div><div class="dbs">SI-1 Propagación interior<br>SI-2 Propagación exterior<br>SI-3 Evacuación<br>SI-4 Instalaciones PCI<br>SI-5 Intervención bomberos<br>SI-6 Resistencia al fuego estructura</div></div>
+      <div class="dbc sua"><div class="dbt">DB-SUA · Seguridad Utilización y Accesibilidad</div><div class="dbs">SUA-1 Caídas · SUA-2 Impacto/atrapamiento · SUA-3 Aprisionamiento · SUA-4 Iluminación · SUA-5 Alta ocupación · SUA-6 Ahogamiento · SUA-7 Vehículos · SUA-8 Rayo · SUA-9 Accesibilidad</div></div>
+      <div class="dbc hs"><div class="dbt">DB-HS · Salubridad</div><div class="dbs">HS-1 Humedad<br>HS-2 Residuos<br>HS-3 Calidad aire interior<br>HS-4 Suministro de agua<br>HS-5 Evacuación de aguas</div></div>
+      <div class="dbc hr"><div class="dbt">DB-HR · Protección frente al Ruido</div><div class="dbs">HR-1 Aislamiento acústico<br>HR-2 Tiempo de reverberación<br>HR-3 Ruido de instalaciones<br>Actualizado RD 732/2019</div></div>
+      <div class="dbc he"><div class="dbt">DB-HE · Ahorro de Energía</div><div class="dbs">HE-0 Consumo energético<br>HE-1 Demanda (envolvente)<br>HE-2 Rendimiento inst. térm. (→RITE)<br>HE-3 Iluminación<br>HE-4 ACS renovable<br>HE-5 Fotovoltaica</div></div>
+    </div>
+    <div class="sep"><div class="items"><span class="itemd">Cumplimiento mediante DB → presunción de conformidad con las exigencias básicas</span><span class="item">Soluciones alternativas a los DB: válidas si se justifica que alcanzan el mismo nivel de prestaciones</span></div></div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge btl">Contenido del proyecto</span> Art. 6 CTE</div>
+    <div class="g2">
+      <div><div class="s">Proyecto básico vs. proyecto de ejecución</div>
+      <div class="items">
+        <span class="itemd">Proyecto básico — define características generales · suficiente para solicitar licencia urbanística · NO para iniciar la construcción</span>
+        <span class="itemd">Proyecto de ejecución — desarrollo completo + cálculos + especificaciones de instalaciones · necesario para dirigir la obra</span>
+        <span class="item">Ambos deben suscribirse por el mismo proyectista o proyectistas</span>
+      </div></div>
+      <div><div class="s">Documentos del proyecto</div>
+      <div class="items">
+        <span class="itemd">Memoria — descripción + justificación expresa del cumplimiento del CTE (apartado "Cumplimiento del CTE")</span>
+        <span class="item">Planos — definición y localización de todos los elementos para verificar el cumplimiento de cada DB</span>
+        <span class="item">Pliego de condiciones técnicas — características mínimas de materiales, equipos y condiciones de ejecución</span>
+        <span class="item">Mediciones y presupuesto</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge ba">Documentación del seguimiento de la obra</span> Art. 7 CTE</div>
+    <div class="g3">
+      <div><div class="s">Documentos de seguimiento en obra</div>
+      <div class="items">
+        <span class="itemd">Libro de Órdenes y Asistencias — órdenes del Director de Obra al contratista · habilitado por el Colegio profesional</span>
+        <span class="item">Libro de Incidencias — seguridad y salud · coordinador CSS (RD 1627/1997)</span>
+        <span class="item">Libro de Control de Calidad — resultados de ensayos y controles</span>
+      </div></div>
+      <div><div class="s">Control de calidad (3 tipos)</div>
+      <div class="items">
+        <span class="itemd">Control de recepción de productos — responsabilidad del DEO · marcado CE · declaración de prestaciones</span>
+        <span class="item">Control de ejecución — verificación de que la ejecución cumple el proyecto</span>
+        <span class="item">Control de obra terminada — pruebas e inspecciones del edificio terminado</span>
+      </div></div>
+      <div><div class="s">Al finalizar la obra</div>
+      <div class="items">
+        <span class="itemd">Acta de recepción — con o sin reservas · inicia plazos de responsabilidad LOE: 1/3/10 años</span>
+        <span class="itemd">Libro del Edificio — planos as-built + manuales de uso y mantenimiento + garantías · elaborado por DO · entregado al promotor</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bc">Terminología clave (Anejo III CTE)</span></div>
+    <div class="g3">
+      <div><div class="s">Agentes de la edificación</div>
+      <div class="items">
+        <span class="item">Promotor — decide, impulsa y financia</span>
+        <span class="item">Proyectista — redacta el proyecto</span>
+        <span class="item">Constructor — ejecuta las obras</span>
+        <span class="itemd">Director de Obra (DO) — dirige los aspectos técnicos, estéticos, urbanísticos y medioambientales</span>
+        <span class="itemd">Director de Ejecución de la Obra (DEO) — dirige la ejecución material y controla la calidad</span>
+      </div></div>
+      <div><div class="s">Conceptos técnicos</div>
+      <div class="items">
+        <span class="item">Prestación — cumplimiento cuantificado de una exigencia básica</span>
+        <span class="item">Nivel o clase — expresión del nivel de prestación de una característica</span>
+        <span class="item">Vida útil — período en que el edificio cumple su función sin reparación especial</span>
+        <span class="itemd">Solución alternativa — solución distinta a la del DB · válida si se justifica el mismo nivel de prestaciones</span>
+        <span class="item">Presunción de conformidad — cumplir el DB implica cumplir la exigencia básica</span>
+      </div></div>
+      <div><div class="s">Conformidades documentales</div>
+      <div class="items">
+        <span class="itemd">Marcado CE — declara que el producto cumple la norma armonizada europea (no es sello de calidad · el DEO debe verificar que las prestaciones son las requeridas)</span>
+        <span class="item">DIT — Documento de Idoneidad Técnica · para productos sin norma armonizada · emitido por el IETcc</span>
+        <span class="item">ETA — Evaluación Técnica Europea (equivalente europeo del DIT)</span>
+        <span class="item">Documentos Reconocidos — sin carácter reglamentario · facilitan la aplicación del CTE</span>
+      </div></div>
+    </div>
+  </div>
+
+  <p class="footer">Real Decreto 314/2006 (CTE) · Real Decreto 732/2019 · Ley 38/1999 (LOE) · Reglamento UE 305/2011</p>
+</div>
+</body>
+</html>

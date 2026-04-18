@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuadro comparativo — LF 12/2018 Accesibilidad Universal Navarra (Tema 8)</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.20);--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.18)}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2rem 1rem}
+  .page{max-width:1040px;margin:0 auto}
+  h1{font-size:20px;font-weight:500;margin-bottom:4px}
+  h2{font-size:17px;font-weight:500;margin:2.5rem 0 1rem;padding-bottom:8px;border-bottom:.5px solid var(--bm)}
+  .sub{font-size:13px;color:var(--t3);margin-bottom:28px}
+  .sub a{color:var(--t2);text-decoration:none}
+  .sub a:hover{color:var(--t1)}
+  .wrap{overflow-x:auto;background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r2);margin-bottom:16px}
+  table{width:100%;border-collapse:collapse;font-size:12px;min-width:580px}
+  thead tr{background:var(--bg2)}
+  th{font-weight:500;font-size:11.5px;color:var(--t2);text-align:left;padding:10px 12px;border-bottom:.5px solid var(--bm);white-space:nowrap}
+  td{padding:10px 12px;border-bottom:.5px solid var(--bl);vertical-align:top;line-height:1.65;color:var(--t2)}
+  tr:last-child td{border-bottom:none}
+  tr:hover td{background:var(--bg2)}
+  .dest{font-weight:500;color:var(--t1);font-size:12px;white-space:nowrap}
+  .val{font-weight:700;color:var(--t1);background:var(--bg2);padding:1px 6px;border-radius:4px;font-size:12px;display:inline-block}
+  .in{font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap;display:inline-block}
+  .a{background:#EEEDFE;color:#3C3489}.b{background:#E6F1FB;color:#0C447C}.c{background:#E1F5EE;color:#085041}
+  .d{background:#FAEEDA;color:#633806}.e{background:#FAECE7;color:#712B13}.f{background:#EAF3DE;color:#27500A}
+  .si{background:#EAF3DE;color:#27500A;font-size:11px;font-weight:500;padding:1px 6px;border-radius:4px;display:inline-block}
+  .no{background:#FCEBEB;color:#791F1F;font-size:11px;font-weight:500;padding:1px 6px;border-radius:4px;display:inline-block}
+  .cond{background:#FAEEDA;color:#633806;font-size:11px;font-weight:500;padding:1px 6px;border-radius:4px;display:inline-block}
+  @media(prefers-color-scheme:dark){.a{background:#3C3489;color:#CECBF6}.b{background:#0C447C;color:#B5D4F4}.c{background:#085041;color:#9FE1CB}.d{background:#633806;color:#FAC775}.e{background:#712B13;color:#F5C4B3}.f{background:#27500A;color:#C0DD97}.si{background:#173404;color:#C0DD97}.no{background:#501313;color:#F7C1C1}.cond{background:#633806;color:#FAC775}.val{background:#323230}}
+  .nota{font-size:12px;color:var(--t2);padding:10px 14px;background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r1);margin-bottom:20px;line-height:1.65}
+  .nota strong{color:var(--t1)}
+  .footer{margin-top:28px;font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>LF 12/2018 — Accesibilidad Universal en Navarra</h1>
+  <p class="sub">Cuadros comparativos · Ingeniero Técnico<br>
+    <a href="../index.html">Índice</a><br>
+    <a href="1_texto_explicativo.html"><< Texto completo</a>
+     | 
+    <a href="2_esquema_resumen.html">< Esquema-resumen</a>
+  </p>
+
+  <!-- TABLA 1: PARÁMETROS TÉCNICOS CLAVE (tabla de referencia rápida) -->
+  <h2>Parámetros técnicos clave — tabla de referencia rápida</h2>
+  <div class="nota"><strong>Esta tabla recoge los valores numéricos que más habitualmente aparecen en test de oposición.</strong> Los valores provienen de la LF 12/2018 y del CTE DB-SUA aplicable en Navarra.</div>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr><th>Elemento</th><th>Parámetro</th><th>Valor mínimo / máximo</th><th>Ámbito de aplicación</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="dest">Itinerario peatonal accesible</td><td>Anchura libre mínima</td><td><span class="val">1,80 m</span> (reducción puntual: 0,90 m)</td><td>Espacio urbano</td></tr>
+        <tr><td class="dest">Itinerario peatonal accesible</td><td>Altura libre mínima</td><td><span class="val">2,20 m</span></td><td>Espacio urbano</td></tr>
+        <tr><td class="dest">Itinerario peatonal accesible</td><td>Pendiente transversal máxima</td><td><span class="val">2%</span></td><td>Espacio urbano</td></tr>
+        <tr><td class="dest">Itinerario peatonal accesible</td><td>Pendiente longitudinal sin rampa</td><td><span class="val">6%</span></td><td>Espacio urbano</td></tr>
+        <tr><td class="dest">Vado peatonal</td><td>Diferencia de nivel con la calzada</td><td><span class="val">≤2 cm</span></td><td>Espacio urbano</td></tr>
+        <tr><td class="dest">Vado peatonal</td><td>Pendiente máxima del plano inclinado</td><td><span class="val">8%</span></td><td>Espacio urbano</td></tr>
+        <tr><td class="dest">Rampa urbana (&gt;10 m)</td><td>Pendiente máxima</td><td><span class="val">8%</span></td><td>Espacio urbano</td></tr>
+        <tr><td class="dest">Rampa urbana (3-10 m)</td><td>Pendiente máxima</td><td><span class="val">10%</span></td><td>Espacio urbano</td></tr>
+        <tr><td class="dest">Rampa urbana (&lt;3 m)</td><td>Pendiente máxima</td><td><span class="val">12%</span></td><td>Espacio urbano</td></tr>
+        <tr><td class="dest">Rampa urbana</td><td>Anchura mínima entre pasamanos</td><td><span class="val">1,20 m</span></td><td>Espacio urbano</td></tr>
+        <tr><td class="dest">Rampa urbana</td><td>Longitud mínima de descansillo</td><td><span class="val">1,50 m</span></td><td>Espacio urbano</td></tr>
+        <tr><td class="dest">Pasamanos</td><td>Alturas (doble)</td><td><span class="val">0,65-0,75 m</span> (silla de ruedas) + <span class="val">0,90-1,10 m</span> (deambulantes)</td><td>Espacio urbano</td></tr>
+        <tr><td class="dest">Pasamanos</td><td>Prolongación más allá del inicio/fin</td><td><span class="val">30 cm</span></td><td>Espacio urbano y edificación</td></tr>
+        <tr><td class="dest">Puerta de acceso al edificio</td><td>Anchura libre mínima de paso</td><td><span class="val">0,80 m</span></td><td>Edificación</td></tr>
+        <tr><td class="dest">Umbral de puerta</td><td>Diferencia de nivel máxima</td><td><span class="val">2 cm</span></td><td>Edificación</td></tr>
+        <tr><td class="dest">Pasillo de uso común residencial</td><td>Anchura libre mínima</td><td><span class="val">1,20 m</span></td><td>Edificación residencial</td></tr>
+        <tr><td class="dest">Pasillo de uso público principal</td><td>Anchura libre mínima</td><td><span class="val">1,50 m</span></td><td>Edificación de uso público</td></tr>
+        <tr><td class="dest">Altura libre en pasillos</td><td>Mínima</td><td><span class="val">2,20 m</span></td><td>Edificación</td></tr>
+        <tr><td class="dest">Giro 90°</td><td>Espacio libre mínimo</td><td><span class="val">1,20 × 1,20 m</span></td><td>Edificación</td></tr>
+        <tr><td class="dest">Giro 180° (maniobra silla de ruedas)</td><td>Diámetro mínimo</td><td><span class="val">1,50 m</span></td><td>Edificación</td></tr>
+        <tr><td class="dest">Escalera accesible</td><td>Anchura mínima</td><td><span class="val">1,20 m</span></td><td>Edificación</td></tr>
+        <tr><td class="dest">Escalera accesible</td><td>Huella mínima</td><td><span class="val">28 cm</span></td><td>Edificación</td></tr>
+        <tr><td class="dest">Escalera accesible</td><td>Contrahuella máxima</td><td><span class="val">18 cm</span></td><td>Edificación</td></tr>
+        <tr><td class="dest">Ascensor accesible (cabina mínima)</td><td>Dimensiones</td><td><span class="val">1,00 × 1,25 m</span></td><td>Edificación</td></tr>
+        <tr><td class="dest">Ascensor accesible</td><td>Anchura libre de puerta</td><td><span class="val">0,80 m</span></td><td>Edificación</td></tr>
+        <tr><td class="dest">Aseo accesible</td><td>Espacio libre de maniobra (diámetro)</td><td><span class="val">1,50 m</span></td><td>Edificación de uso público</td></tr>
+        <tr><td class="dest">Aseo accesible — inodoro</td><td>Espacio de transferencia lateral</td><td><span class="val">≥80 cm</span> a un lado</td><td>Edificación de uso público</td></tr>
+        <tr><td class="dest">Aseo accesible — lavabo</td><td>Espacio libre inferior</td><td><span class="val">≥70 cm</span> alto × <span class="val">≥50 cm</span> fondo</td><td>Edificación de uso público</td></tr>
+        <tr><td class="dest">Barras de apoyo del inodoro</td><td>Altura</td><td><span class="val">70-75 cm</span></td><td>Edificación de uso público</td></tr>
+        <tr><td class="dest">Mostrador de atención al público</td><td>Altura de la parte accesible</td><td><span class="val">70-85 cm</span></td><td>Edificación de uso público</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TABLA 2: ESPACIO URBANO vs. EDIFICACIÓN -->
+  <h2>Accesibilidad en el espacio urbano vs. accesibilidad en la edificación — diferencias clave</h2>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr><th>Aspecto</th><th><span class="in a">Accesibilidad en el espacio urbano</span></th><th><span class="in b">Accesibilidad en la edificación</span></th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="dest">Normativa principal aplicable</td><td>LF 12/2018 · RDL 1/2013 · normas técnicas urbanísticas</td><td>LF 12/2018 · RDL 1/2013 · CTE DB-SUA (norma técnica estatal)</td></tr>
+        <tr><td class="dest">Quién verifica el cumplimiento</td><td>Ayuntamiento en el contexto del proyecto de urbanización o de la licencia de obras de urbanización</td><td>Ayuntamiento (licencia de obras) + Comunidad Foral (en edificios de su competencia). El proyectista certifica el cumplimiento en el proyecto</td></tr>
+        <tr><td class="dest">Anchura libre mínima del itinerario</td><td>1,80 m (reducción puntual hasta 0,90 m)</td><td>1,20 m en pasillos residenciales · 1,50 m en pasillos de uso público principal</td></tr>
+        <tr><td class="dest">Pendiente máxima sin rampa</td><td>6% longitudinal</td><td>No hay concepto equivalente — en edificación las diferencias de nivel se salvan con escalera + rampa o ascensor</td></tr>
+        <tr><td class="dest">Pavimento táctil indicador</td><td>Obligatorio para señalización de zonas de peligro y dirección de itinerario</td><td>Opcional en espacios interiores; recomendado en zonas de riesgo (arranque de escaleras, cambios de nivel)</td></tr>
+        <tr><td class="dest">Elemento de transición entre niveles</td><td>Rampa de pendiente según longitud (8-12%) + pasamanos doble</td><td>Rampa (8% máximo en edificios públicos) + escalera + ascensor obligatorio en edificios residenciales de &gt;2 plantas</td></tr>
+        <tr><td class="dest">¿Cómo se actúa en elementos existentes?</td><td>En obras de reforma o mantenimiento, aprovechar para mejorar accesibilidad hasta estándares de nueva construcción si es factible</td><td>Ajustes razonables · plazos de adecuación para edificios públicos · en rehabilitación, obligación proporcional al coste de las obras</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TABLA 3: EDIFICIO RESIDENCIAL vs. EDIFICIO DE USO PÚBLICO -->
+  <h2>Edificio residencial privado vs. edificio de uso público — diferencias en los requisitos de accesibilidad</h2>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr><th>Requisito</th><th><span class="in c">Edificio residencial privado</span></th><th><span class="in d">Edificio de uso público / pública concurrencia</span></th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="dest">Accesos accesibles</td><td>Al menos uno desde el exterior y desde el aparcamiento</td><td>Todos los accesos (o al menos el principal, con señalización de los accesibles)</td></tr>
+        <tr><td class="dest">Itinerario accesible a todos los espacios</td><td>A los espacios de uso común y a las viviendas accesibles</td><td>A todos los espacios de uso por el público, en todas las plantas</td></tr>
+        <tr><td class="dest">Anchura pasillos</td><td>≥1,20 m (zonas comunes)</td><td>≥1,50 m (pasillos principales) · ≥1,20 m (pasillos secundarios)</td></tr>
+        <tr><td class="dest">Ascensor obligatorio</td><td>Edificios con &gt;2 plantas sobre rasante O diferencia de cota &gt;6 m</td><td>Siempre que haya más de una planta de uso por el público (en general)</td></tr>
+        <tr><td class="dest">Aseos accesibles</td><td>Al menos un aseo adaptado en las viviendas accesibles</td><td>Al menos un aseo accesible por sexo en la misma planta de uso público, o en planta accesible por ascensor</td></tr>
+        <tr><td class="dest">Mostrador de atención al público</td><td>No aplica</td><td>Sí — parte del mostrador a 70-85 cm con espacio libre inferior</td></tr>
+        <tr><td class="dest">Plazas de aparcamiento reservadas</td><td>En aparcamientos comunitarios de &gt;X plazas: proporción mínima reservada</td><td>Sí — proporción mínima de plazas reservadas con zona de transferencia de 1,20 m</td></tr>
+        <tr><td class="dest">Viviendas/unidades accesibles</td><td>Porcentaje mínimo de viviendas accesibles para usuarios de silla de ruedas</td><td>No aplica (son edificios de uso colectivo no residencial)</td></tr>
+        <tr><td class="dest">Señalización accesible</td><td>Señalización en Braille en ascensores</td><td>Señalización visual + Braille + audio/bucle inductivo en todos los espacios de uso por el público</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TABLA 4: DISEÑO UNIVERSAL vs. AJUSTE RAZONABLE -->
+  <h2>Diseño universal vs. ajuste razonable — cuándo se aplica cada uno</h2>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr><th>Aspecto</th><th><span class="in e">Diseño universal (diseño para todos)</span></th><th><span class="in f">Ajuste razonable</span></th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="dest">¿Cuándo se aplica?</td><td>En la fase de diseño y proyecto de nuevos entornos, productos o servicios (obras nuevas o grandes reformas)</td><td>En entornos, productos y servicios existentes que no fueron diseñados con criterios de accesibilidad</td></tr>
+        <tr><td class="dest">¿Es obligatorio?</td><td><span class="si">SÍ</span> — en obras nuevas y grandes reformas, cumplir los estándares de accesibilidad es obligatorio</td><td><span class="cond">Sí, salvo que sea desproporcionado</span> — cuando el coste es desproporcionado respecto a los recursos del titular, puede no exigirse</td></tr>
+        <tr><td class="dest">Enfoque</td><td>Preventivo: evitar la creación de barreras antes de que existan</td><td>Correctivo: eliminar o reducir barreras ya existentes</td></tr>
+        <tr><td class="dest">Quién lo debe aplicar</td><td>Los proyectistas y promotores de obras nuevas o reformas sustanciales</td><td>Los titulares de entornos, productos y servicios existentes que sean requeridos por personas con discapacidad o por la autoridad</td></tr>
+        <tr><td class="dest">¿Cómo se determina la proporcionalidad?</td><td>No se aplica — en obra nueva todos los estándares son obligatorios sin excepción</td><td>Valorando el coste de la medida vs. los recursos del titular vs. los beneficios para la persona con discapacidad · la carga es "desproporcionada" si excede razonablemente las posibilidades económicas del titular</td></tr>
+        <tr><td class="dest">Ejemplo típico</td><td>Un edificio de nueva construcción que incorpora desde el proyecto el ascensor, el aseo accesible, las rampas y los pasamanos exigidos por la normativa</td><td>Un comercio en un edificio antiguo sin ascensor que instala una rampa portátil en el acceso o un timbre para llamar al personal a petición del cliente con discapacidad</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="footer">Ley Foral 12/2018, de 14 de junio · RDL 1/2013 (LGDPD) · CTE DB-SUA · Convención ONU 2006 · CE arts. 9.2 y 49</p>
+</div>
+</body>
+</html>

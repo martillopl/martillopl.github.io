@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 8 — LF 12/2018: Accesibilidad Universal en Navarra</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.22);--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.20)}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2.5rem 1rem;line-height:1.8}
+  .page{max-width:740px;margin:0 auto}
+  .header{margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:.5px solid var(--bm)}
+  .tlabel{font-size:12px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+  h1{font-size:22px;font-weight:500;line-height:1.3;margin-bottom:8px}
+  .meta{font-size:13px;color:var(--t3)}
+  .meta a{color:var(--t2);text-decoration:none}
+  .meta a:hover{color:var(--t1)}
+  .indice{background:var(--bg2);border:.5px solid var(--bl);border-radius:var(--r2);padding:16px 20px;margin-bottom:2.5rem}
+  .itit{font-size:11px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+  .indice ol{padding-left:18px}
+  .indice li{font-size:13px;color:var(--t2);padding:3px 0}
+  .indice a{color:var(--t2);text-decoration:none}
+  .indice a:hover{color:var(--t1)}
+  .sec{margin-bottom:2.8rem}
+  h2{font-size:18px;font-weight:500;margin-bottom:1rem;padding-bottom:8px;border-bottom:.5px solid var(--bl)}
+  h3{font-size:15px;font-weight:500;margin:1.6rem 0 .6rem}
+  h4{font-size:14px;font-weight:500;margin:1.2rem 0 .4rem;color:var(--t2)}
+  p{font-size:15px;color:var(--t2);margin-bottom:1rem}
+  p:last-child{margin-bottom:0}
+  strong{font-weight:500;color:var(--t1)}
+  .art{display:inline-block;font-size:11px;font-weight:500;background:var(--bg2);border:.5px solid var(--bm);border-radius:20px;padding:1px 8px;color:var(--t3);vertical-align:middle;margin-left:4px}
+  ul{padding-left:20px;margin-bottom:1rem}
+  ul li{font-size:15px;color:var(--t2);padding:3px 0}
+  ol.num{padding-left:20px;margin-bottom:1rem}
+  ol.num li{font-size:15px;color:var(--t2);padding:3px 0}
+  .nota{background:var(--bg2);border-left:2px solid var(--bm);padding:12px 16px;margin:1.2rem 0;font-size:13.5px;color:var(--t2);line-height:1.65}
+  .nota strong{color:var(--t1)}
+  .footer{margin-top:3rem;padding-top:1.2rem;border-top:.5px solid var(--bl);font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="tlabel">Tema 8 — Accesibilidad · Ingeniero Técnico · Navarra</div>
+    <h1>Ley Foral 12/2018, de 14 de junio, de Accesibilidad Universal</h1>
+    <div class="meta">LF 12/2018 · RDL 1/2013 (LGDPD) · Convención ONU 2006 · CTE DB-SUA<br>
+      <a href="../index.html">Índice</a><br>
+      <a href="2_esquema_resumen.html">Esquema-resumen ></a>
+       | 
+      <a href="3_cuadro_comparativo.html">Cuadros comparativos >></a>
+    </div>
+  </div>
+  <div class="indice">
+    <div class="itit">Índice</div>
+    <ol>
+      <li><a href="#s1">Marco normativo: la accesibilidad universal como derecho</a></li>
+      <li><a href="#s2">Objeto de la LF 12/2018</a></li>
+      <li><a href="#s3">Principios de la LF 12/2018</a></li>
+      <li><a href="#s4">Ámbito de aplicación subjetivo y objetivo</a></li>
+      <li><a href="#s5">Definiciones clave</a></li>
+      <li><a href="#s6">Accesibilidad en el territorio: el espacio urbano</a></li>
+      <li><a href="#s7">Condiciones técnicas de accesibilidad en el espacio urbano</a></li>
+      <li><a href="#s8">Accesibilidad en la edificación: conceptos generales</a></li>
+      <li><a href="#s9">Condiciones técnicas de accesibilidad en edificios de uso privado</a></li>
+      <li><a href="#s10">Condiciones técnicas de accesibilidad en edificios de uso público</a></li>
+      <li><a href="#s11">La cadena de accesibilidad</a></li>
+      <li><a href="#s12">Las obras de adecuación y los ajustes razonables</a></li>
+      <li><a href="#s13">Accesibilidad en edificios existentes y rehabilitación</a></li>
+      <li><a href="#s14">Comunicación e información accesible</a></li>
+      <li><a href="#s15">Inspección, régimen sancionador y garantías</a></li>
+    </ol>
+  </div>
+
+  <div class="sec" id="s1">
+    <h2>1. Marco normativo: la accesibilidad universal como derecho</h2>
+    <p>La <strong>accesibilidad universal</strong> es la condición que deben cumplir los entornos, procesos, bienes, productos y servicios, así como los objetos, instrumentos, herramientas y dispositivos, para ser comprensibles, utilizables y practicables por todas las personas en condiciones de seguridad y comodidad y de la forma más autónoma y natural posible.</p>
+    <p>El derecho a la accesibilidad universal tiene su fundamento en varios instrumentos internacionales y nacionales:</p>
+    <ul>
+      <li>La <strong>Convención de las Naciones Unidas sobre los Derechos de las Personas con Discapacidad</strong>, adoptada en Nueva York el 13 de diciembre de 2006 y ratificada por España en 2008. La Convención reconoce la accesibilidad como condición previa para el ejercicio de los derechos de las personas con discapacidad y obliga a los Estados a garantizar que las personas con discapacidad tengan acceso, en igualdad de condiciones con los demás, al entorno físico, al transporte, a la información y las comunicaciones, y a otros servicios e instalaciones de uso público.</li>
+      <li>La <strong>Constitución Española</strong>, que en su artículo 9.2 obliga a los poderes públicos a promover las condiciones para que la igualdad de los individuos y los grupos en que se integran sea real y efectiva, y en su artículo 49 encomienda a los poderes públicos prestar especial atención a la integración de las personas con discapacidad.</li>
+      <li>El <strong>Real Decreto Legislativo 1/2013, de 29 de noviembre, por el que se aprueba el Texto Refundido de la Ley General de Derechos de las Personas con Discapacidad y de su Inclusión Social (LGDPD)</strong>, que es la norma básica estatal en materia de discapacidad y accesibilidad. Establece el derecho de las personas con discapacidad a vivir de forma independiente y a participar plenamente en todos los aspectos de la vida, y obliga a los poderes públicos y a los agentes privados a garantizar la accesibilidad de los entornos, productos y servicios.</li>
+      <li>La <strong>Ley Foral 12/2018, de 14 de junio, de Accesibilidad Universal (LF 12/2018)</strong>, que es la norma autonómica navarra que desarrolla y adapta al ámbito foral las previsiones de la normativa estatal e internacional en materia de accesibilidad. Deroga la anterior <strong>Ley Foral 5/2010, de 6 de abril, de accesibilidad universal y diseño para todos</strong>.</li>
+    </ul>
+    <div class="nota"><strong>Relevancia para el ingeniero técnico:</strong> La LF 12/2018 es de aplicación directa al trabajo del ingeniero técnico en proyectos de edificación, urbanización, instalaciones y servicios en Navarra. El proyecto técnico de cualquier obra nueva o de rehabilitación que afecte a espacios de uso público debe cumplir íntegramente los requisitos de accesibilidad de esta ley.</div>
+  </div>
+
+  <div class="sec" id="s2">
+    <h2>2. Objeto de la LF 12/2018</h2>
+    <p>El <strong>artículo 1 de la LF 12/2018</strong> establece que la ley tiene por objeto regular, en el ámbito de la Comunidad Foral de Navarra, las condiciones básicas de accesibilidad universal que deben cumplir los entornos, productos y servicios con el fin de garantizar que las personas con discapacidad puedan ejercer sus derechos en igualdad de condiciones con el resto de la ciudadanía.</p>
+    <p>Los objetivos específicos de la LF 12/2018 son:</p>
+    <ul>
+      <li>Garantizar la <strong>igualdad de oportunidades</strong> de las personas con discapacidad mediante la supresión de las barreras físicas, comunicativas y actitudinales que limitan su participación plena en la sociedad.</li>
+      <li>Promover el <strong>diseño universal o diseño para todos</strong> como criterio básico de planificación y diseño de los entornos, productos y servicios, de manera que sean utilizables por todas las personas sin necesidad de adaptaciones especiales.</li>
+      <li>Regular los <strong>ajustes razonables</strong> que deben adoptar los titulares de entornos, productos y servicios existentes para garantizar su accesibilidad cuando no sea posible o proporcionado aplicar el diseño universal de forma inmediata.</li>
+      <li>Establecer los <strong>instrumentos de planificación, control y garantía</strong> que permitan verificar el cumplimiento de las condiciones de accesibilidad y corregir las situaciones de incumplimiento.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s3">
+    <h2>3. Principios de la LF 12/2018</h2>
+    <p>El <strong>artículo 4 de la LF 12/2018</strong> establece los principios que inspiran la ley y que deben guiar la actuación de los poderes públicos y los agentes privados en materia de accesibilidad.</p>
+
+    <h3>Principio de vida independiente</h3>
+    <p>Las personas con discapacidad tienen derecho a vivir de forma independiente, a tomar sus propias decisiones y a participar plenamente en todos los aspectos de la vida. La accesibilidad es la condición previa para el ejercicio de este derecho: sin entornos accesibles, la autonomía personal es imposible.</p>
+
+    <h3>Principio de no discriminación</h3>
+    <p>Ninguna persona puede ser discriminada por razón de discapacidad en el acceso a los entornos, productos y servicios. La discriminación puede ser directa (trato explícitamente diferente) o indirecta (condición aparentemente neutra que pone a las personas con discapacidad en situación de desventaja).</p>
+
+    <h3>Principio de accesibilidad universal</h3>
+    <p>Los entornos, productos y servicios deben diseñarse y ejecutarse de forma que puedan ser utilizados por todas las personas, en la mayor medida posible, sin necesidad de adaptaciones o diseños especializados. Este principio es la manifestación del diseño universal o diseño para todos.</p>
+
+    <h3>Principio de diseño universal o diseño para todos</h3>
+    <p>El <strong>diseño universal</strong> es la actividad por la que se conciben o proyectan, desde el origen, entornos, procesos, bienes, productos, servicios, objetos, instrumentos, programas, dispositivos y herramientas de tal forma que puedan ser utilizados por todas las personas, o en la mayor extensión posible, sin necesidad de adaptaciones ni diseños especializados. No excluye los productos de apoyo para determinadas personas con discapacidad cuando lo necesiten. Es el enfoque preventivo: evitar las barreras antes de que se creen, en lugar de eliminarlas a posteriori.</p>
+
+    <h3>Principio de normalización</h3>
+    <p>Las personas con discapacidad deben poder utilizar los recursos generales disponibles para la ciudadanía, en las mismas condiciones que el resto. Solo en los casos en que esto no sea posible o suficiente, se recurrirá a recursos específicos o adaptados. La accesibilidad no es un servicio especial para personas con discapacidad, sino la condición ordinaria de todos los entornos.</p>
+
+    <h3>Principio de transversalidad</h3>
+    <p>La accesibilidad universal debe integrarse en todas las políticas, planes, programas y actuaciones de los poderes públicos, y no tratarse como una cuestión sectorial o específica de un único departamento. La perspectiva de la accesibilidad debe aplicarse transversalmente en el urbanismo, la edificación, el transporte, las tecnologías de la información, los servicios públicos, etc.</p>
+
+    <h3>Principio de diálogo civil</h3>
+    <p>La planificación, diseño y evaluación de las políticas de accesibilidad deben realizarse con la participación activa de las organizaciones representativas de las personas con discapacidad y sus familias.</p>
+  </div>
+
+  <div class="sec" id="s4">
+    <h2>4. Ámbito de aplicación subjetivo y objetivo</h2>
+
+    <h3>Ámbito subjetivo</h3>
+    <p>La LF 12/2018 se aplica a:</p>
+    <ul>
+      <li>Las <strong>Administraciones Públicas navarras</strong>: Administración de la Comunidad Foral de Navarra, entidades locales navarras y entidades públicas vinculadas o dependientes de ellas.</li>
+      <li>Los <strong>agentes privados</strong>: personas físicas y jurídicas privadas que realicen actividades de edificación, urbanización, transporte, comunicación o prestación de servicios en el ámbito territorial de Navarra.</li>
+    </ul>
+
+    <h3>Ámbito objetivo</h3>
+    <p>La ley se aplica a los siguientes ámbitos:</p>
+    <ul>
+      <li><strong>Accesibilidad en el territorio</strong>: el espacio urbano, las redes de comunicación peatonal y los espacios libres públicos.</li>
+      <li><strong>Accesibilidad en la edificación</strong>: los edificios de nueva construcción, los existentes cuando se realicen obras de reforma o ampliación, y los edificios existentes de titularidad pública en un horizonte temporal determinado.</li>
+      <li><strong>Accesibilidad en el transporte</strong>: los sistemas de transporte público, los vehículos de transporte público y la infraestructura de transporte.</li>
+      <li><strong>Accesibilidad en la comunicación e información</strong>: los servicios de comunicación e información de las Administraciones Públicas, los servicios de atención al público, los servicios electrónicos.</li>
+      <li><strong>Accesibilidad en los bienes y servicios</strong>: los establecimientos y los servicios ofertados al público en general.</li>
+    </ul>
+    <p>Para el ingeniero técnico, los ámbitos más relevantes de la LF 12/2018 son la accesibilidad en el territorio y la accesibilidad en la edificación, que son los dos que abarca el enunciado del tema.</p>
+  </div>
+
+  <div class="sec" id="s5">
+    <h2>5. Definiciones clave</h2>
+    <p>La LF 12/2018 establece en su articulado y disposiciones técnicas las siguientes definiciones esenciales:</p>
+    <ul>
+      <li><strong>Persona con discapacidad</strong>: a los efectos de esta ley, engloba a todas las personas que tienen deficiencias físicas, mentales, intelectuales o sensoriales a largo plazo que, al interactuar con diversas barreras, puedan impedir su participación plena y efectiva en la sociedad en igualdad de condiciones con los demás.</li>
+      <li><strong>Barreras</strong>: cualquier impedimento, traba u obstáculo que limite o impida el acceso, la utilización, el disfrute, la interacción y la comprensión de manera normalizada, digna, cómoda y segura del entorno construido, los productos y los servicios por personas con discapacidad. Las barreras pueden ser físicas (arquitectónicas y urbanísticas), de comunicación (en el acceso a la información) y actitudinales (derivadas de actitudes y comportamientos excluyentes).</li>
+      <li><strong>Itinerario accesible</strong>: recorrido que, cumpliendo los requisitos establecidos, permite la utilización por parte de personas con discapacidad de los espacios y edificios. El itinerario accesible garantiza la continuidad de la cadena de accesibilidad desde el espacio público hasta el destino final en el edificio.</li>
+      <li><strong>Ajuste razonable</strong>: las modificaciones y adaptaciones necesarias y adecuadas para garantizar a las personas con discapacidad el goce o ejercicio, en igualdad de condiciones con los demás, de todos los derechos humanos y libertades fundamentales, siempre que no impongan una carga desproporcionada o indebida.</li>
+      <li><strong>Diseño universal o diseño para todos</strong>: la actividad por la que se conciben o proyectan entornos, procesos, bienes, productos, servicios, objetos, instrumentos, programas, dispositivos o herramientas de tal forma que puedan ser utilizados por todas las personas o en la mayor extensión posible.</li>
+      <li><strong>Productos de apoyo</strong>: cualquier producto (incluyendo dispositivos, equipos, instrumentos, tecnología y software) fabricado especialmente o disponible en el mercado, para prevenir, compensar, controlar, mitigar o neutralizar deficiencias, limitaciones en la actividad y restricciones en la participación de personas con discapacidad.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s6">
+    <h2>6. Accesibilidad en el territorio: el espacio urbano</h2>
+    <p>La LF 12/2018 dedica un capítulo específico a la <strong>accesibilidad en el territorio</strong>, que regula las condiciones que deben cumplir el espacio urbano, las vías públicas, los espacios libres y los elementos del mobiliario urbano para garantizar la movilidad de las personas con discapacidad en el entorno urbano.</p>
+
+    <h3>Exigencia de accesibilidad en el espacio urbano</h3>
+    <p>Los nuevos desarrollos urbanos y las obras de urbanización de cualquier tipo deben diseñarse y ejecutarse con criterios de accesibilidad universal. Las obras de reforma, renovación o mantenimiento de los espacios urbanos existentes deben aprovechar la actuación para mejorar las condiciones de accesibilidad hasta alcanzar los estándares exigidos para los espacios de nueva construcción, siempre que esto sea técnica y económicamente factible.</p>
+
+    <h3>El itinerario peatonal accesible</h3>
+    <p>La pieza clave de la accesibilidad en el espacio urbano es el <strong>itinerario peatonal accesible</strong>: la red de recorridos peatonales que comunican los distintos puntos de una ciudad y que cumplen las condiciones establecidas para garantizar la movilidad de las personas con discapacidad. El itinerario peatonal accesible debe garantizar la continuidad desde el espacio público hasta los accesos a los edificios, formando una cadena de accesibilidad sin interrupciones.</p>
+
+    <h3>Condiciones del itinerario peatonal accesible en la LF 12/2018</h3>
+    <p>Los itinerarios peatonales accesibles deben cumplir las siguientes condiciones generales:</p>
+    <ul>
+      <li><strong>Ausencia de escalones</strong>: no puede haber escalones aislados ni series de escalones en el recorrido. Cuando existe diferencia de nivel, debe salvarse mediante rampas de pendiente adecuada o mediante ascensores o plataformas elevadoras.</li>
+      <li><strong>Anchura libre mínima</strong>: la anchura libre mínima del itinerario peatonal accesible es de <strong>1,80 metros</strong>, que permite el cruce de dos personas usuarias de silla de ruedas en sentidos opuestos. En tramos en que no sea posible alcanzar esta anchura (por la presencia de obstáculos o por la estrechez de la acera), se admite una reducción puntual hasta <strong>0,90 metros</strong>, siempre que existan zonas de ensanchamiento que permitan el giro y el cruce.</li>
+      <li><strong>Altura libre</strong>: la altura libre mínima sobre el itinerario peatonal accesible es de <strong>2,20 metros</strong>, para evitar que los elementos en vuelo (marquesinas, ramas de árboles, mobiliario urbano, etc.) puedan golpear a las personas con discapacidad visual.</li>
+      <li><strong>Pendiente transversal</strong>: la pendiente transversal máxima del itinerario peatonal accesible es del <strong>2%</strong>.</li>
+      <li><strong>Pendiente longitudinal</strong>: la pendiente longitudinal máxima sin necesidad de rampa es del <strong>6%</strong>. Para pendientes entre el 6% y el 12%, se admiten como accesibles si la longitud del tramo no supera determinados valores. Para pendientes superiores al 12%, se requiere rampa o solución alternativa.</li>
+      <li><strong>Pavimento</strong>: el pavimento del itinerario peatonal accesible debe ser duro, estable, no deslizante en condiciones normales de uso ni con lluvia. El pavimento táctil indicador (franjas y losetas con resalte en forma de botones o de barras) se utiliza para la orientación de las personas con discapacidad visual: el pavimento de botones señaliza situaciones de peligro (bordillos, cruce con tráfico rodado), y el pavimento de bandas señaliza la dirección del itinerario.</li>
+    </ul>
+
+    <h3>El vado peatonal</h3>
+    <p>El <strong>vado peatonal</strong> es el rebaje del bordillo que conecta el itinerario peatonal con el paso de peatones o con el carril-bici, permitiendo a las personas usuarias de silla de ruedas o con problemas de movilidad cruzar de la acera a la calzada sin obstáculo. La LF 12/2018 establece las condiciones que deben cumplir los vados peatonales:</p>
+    <ul>
+      <li>El vado debe alcanzar el nivel de la calzada o tener una diferencia de nivel máxima de <strong>2 cm</strong>.</li>
+      <li>La pendiente del plano inclinado del vado no debe superar el <strong>8%</strong> en el sentido de la circulación peatonal.</li>
+      <li>El vado debe estar señalizado con pavimento táctil indicador de botones.</li>
+      <li>Cuando el paso de peatones no esté en línea con la acera (por ejemplo, cuando el refugio central no está alineado con las aceras), el vado debe orientarse en la dirección del paso, no perpendicular a la acera.</li>
+    </ul>
+
+    <h3>El mobiliario urbano accesible</h3>
+    <p>El mobiliario urbano (bancos, papeleras, quioscos, marquesinas de autobús, teléfonos públicos, máquinas expendedoras, señales verticales, etc.) debe situarse fuera del itinerario peatonal accesible y no debe reducir la anchura mínima libre de paso. Cuando el mobiliario urbano deba ubicarse necesariamente en el itinerario, debe señalizarse mediante el pavimento táctil para advertir a las personas con discapacidad visual. Los elementos de mobiliario de uso público deben ser accesibles en su altura y modo de operación.</p>
+  </div>
+
+  <div class="sec" id="s7">
+    <h2>7. Condiciones técnicas de accesibilidad en el espacio urbano</h2>
+    <p>La LF 12/2018 establece los parámetros técnicos concretos que deben cumplir los distintos elementos del espacio urbano. Estos parámetros complementan y en algunos casos amplían los establecidos en el <strong>Real Decreto 1/2013 (LGDPD)</strong> y en la normativa técnica de accesibilidad del <strong>Código Técnico de la Edificación (CTE)</strong>.</p>
+
+    <h3>Rampas en el espacio urbano</h3>
+    <ul>
+      <li>Pendiente máxima de rampa accesible: <strong>8%</strong> para rampas de longitud superior a 10 metros; <strong>10%</strong> para rampas de longitud entre 3 y 10 metros; <strong>12%</strong> para rampas de longitud inferior a 3 metros.</li>
+      <li>Anchura mínima de la rampa: <strong>1,20 metros</strong> entre pasamanos.</li>
+      <li>Descansillos entre tramos de rampa: mínimo <strong>1,50 metros</strong> de longitud a nivel.</li>
+      <li>Los pasamanos deben ser continuos a lo largo de toda la rampa, a doble altura (0,65-0,75 m para uso de personas en silla de ruedas y 0,90-1,10 m para deambulantes) y prolongarse al menos 30 cm más allá del inicio y del final de la rampa.</li>
+    </ul>
+
+    <h3>Cruces y pasos de peatones</h3>
+    <p>Los pasos de peatones deben señalizarse con señalización horizontal en la calzada y con semáforos de peatones que incorporen señal acústica o vibratoria para personas con discapacidad visual en los cruces con tráfico semafórico. Los tiempos de cruce deben ser suficientes para que una persona que se desplace a 0,5 m/s (velocidad de una persona con movilidad reducida) pueda cruzar la calzada con seguridad.</p>
+
+    <h3>Plazas de aparcamiento reservadas para personas con discapacidad</h3>
+    <p>En los aparcamientos de uso público (tanto en la vía pública como en aparcamientos privados de uso colectivo), debe reservarse un número mínimo de plazas para personas con discapacidad con movilidad reducida. Las dimensiones de las plazas reservadas deben ser mayores que las estándar, con una zona de transferencia lateral de al menos <strong>1,20 metros de anchura</strong> entre la plaza y el itinerario peatonal accesible.</p>
+  </div>
+
+  <div class="sec" id="s8">
+    <h2>8. Accesibilidad en la edificación: conceptos generales</h2>
+    <p>La LF 12/2018 regula las condiciones de accesibilidad que deben cumplir los edificios, tanto de nueva construcción como los existentes cuando se realicen obras de reforma o ampliación, o cuando sean de titularidad pública y deba cumplirse con los plazos de adecuación establecidos.</p>
+
+    <h3>La accesibilidad en la edificación como condición de seguridad y habitabilidad</h3>
+    <p>La accesibilidad de los edificios no es solo una cuestión de igualdad de oportunidades para las personas con discapacidad: es una condición de seguridad y de calidad del entorno construido que beneficia a todas las personas. Los edificios accesibles son más seguros para todos los usuarios, especialmente en situaciones de emergencia, y facilitan la movilidad de las personas mayores, de las personas que temporalmente tienen reducida su movilidad (por lesión, enfermedad, embarazo, etc.) y de quienes van acompañadas de menores en cochecito.</p>
+
+    <h3>La relación entre la LF 12/2018 y el CTE DB-SUA</h3>
+    <p>La LF 12/2018 se aplica conjuntamente con el <strong>Código Técnico de la Edificación, Documento Básico de Seguridad de Utilización y Accesibilidad (CTE DB-SUA)</strong>, que es la norma técnica estatal de referencia en materia de accesibilidad en edificios. El CTE DB-SUA establece las condiciones técnicas que deben cumplir los edificios en cuanto a itinerarios accesibles, plazas accesibles, rampas, escaleras, ascensores, servicios higiénicos accesibles, etc. La LF 12/2018 puede ser más exigente que el CTE DB-SUA en determinados aspectos, pero no puede ser menos exigente.</p>
+
+    <h3>Tipos de edificios a efectos de accesibilidad</h3>
+    <p>La LF 12/2018 distingue, a efectos de la aplicación de los requisitos de accesibilidad, entre:</p>
+    <ul>
+      <li><strong>Edificios de uso residencial privado</strong>: edificios de viviendas y edificios de uso residencial no turístico.</li>
+      <li><strong>Edificios de uso no residencial o de pública concurrencia</strong>: administrativos, sanitarios, docentes, comerciales, culturales, deportivos, de espectáculos, de hostelería, de transporte, religiosos, etc.</li>
+      <li><strong>Edificios de titularidad pública</strong>: los que pertenecen a la Administración de la Comunidad Foral de Navarra, a las entidades locales navarras o a entidades del sector público foral.</li>
+    </ul>
+    <p>Los edificios de pública concurrencia y los de titularidad pública tienen requisitos de accesibilidad más exigentes que los edificios residenciales privados, en particular en cuanto a la accesibilidad de todas sus dependencias (no solo las de uso común) y en cuanto a los plazos de adecuación.</p>
+  </div>
+
+  <div class="sec" id="s9">
+    <h2>9. Condiciones técnicas de accesibilidad en edificios de uso privado</h2>
+    <p>Los edificios de uso residencial privado de nueva construcción deben cumplir los siguientes requisitos de accesibilidad, conforme a la LF 12/2018 y al CTE DB-SUA:</p>
+
+    <h3>Accesos al edificio</h3>
+    <ul>
+      <li>Al menos un <strong>acceso accesible</strong> al edificio desde el espacio exterior y desde las zonas de aparcamiento, que conecte mediante itinerario accesible con el portal, el ascensor o la escalera accesible.</li>
+      <li>Anchura libre mínima de paso en el acceso accesible: <strong>0,80 metros</strong>.</li>
+      <li>Ausencia de escalones o diferencias de nivel en el acceso. Si existen diferencias de nivel, deben salvarse mediante rampa o ascensor.</li>
+      <li>El umbral de la puerta no puede superar <strong>2 cm</strong>.</li>
+    </ul>
+
+    <h3>Circulación interior</h3>
+    <ul>
+      <li>Los <strong>pasillos de uso común</strong> deben tener una anchura libre mínima de <strong>1,20 metros</strong> y una altura libre mínima de <strong>2,20 metros</strong>.</li>
+      <li>En los giros de 90°, debe existir un espacio libre mínimo de <strong>1,20 × 1,20 metros</strong>; en los giros de 180°, un espacio libre de diámetro mínimo de <strong>1,50 metros</strong>.</li>
+      <li>En los cambios de dirección a lo largo de los pasillos, no pueden existir reducción de anchura por debajo de los mínimos sin los espacios de maniobra adecuados.</li>
+    </ul>
+
+    <h3>Escaleras accesibles</h3>
+    <ul>
+      <li>Anchura mínima: <strong>1,20 metros</strong>.</li>
+      <li>Huella mínima: <strong>28 cm</strong>; contrahuella máxima: <strong>18 cm</strong>; la suma de la huella más dos veces la contrahuella debe estar entre 54 y 70 cm (fórmula de Blondel).</li>
+      <li>Pasamanos continuo a ambos lados, a altura entre <strong>0,90 y 1,10 metros</strong>.</li>
+      <li>El pasamanos debe prolongarse <strong>30 cm</strong> más allá del primer y del último peldaño.</li>
+      <li>No se admiten escalones en los rellanos entre tramos de escalera.</li>
+    </ul>
+
+    <h3>Ascensores en edificios residenciales</h3>
+    <p>La LF 12/2018, en línea con el CTE DB-SUA, establece que los edificios de viviendas de nueva construcción con más de dos plantas sobre rasante o una diferencia de cota mayor de 6 metros deben disponer de ascensor accesible. Las dimensiones mínimas de la cabina del ascensor accesible son <strong>1,00 × 1,25 metros</strong>, con puertas de anchura libre mínima de <strong>0,80 metros</strong>.</p>
+
+    <h3>Viviendas accesibles</h3>
+    <p>En los edificios de viviendas de nueva construcción, un porcentaje mínimo de las viviendas (establecido por la normativa de aplicación) deben ser <strong>viviendas accesibles para personas usuarias de silla de ruedas</strong>. Estas viviendas deben cumplir requisitos específicos en cuanto a las dimensiones de las estancias, los accesos, los baños y los elementos de la cocina.</p>
+  </div>
+
+  <div class="sec" id="s10">
+    <h2>10. Condiciones técnicas de accesibilidad en edificios de uso público</h2>
+    <p>Los edificios de uso no residencial y de pública concurrencia (administrativos, sanitarios, docentes, comerciales, deportivos, etc.) tienen requisitos de accesibilidad más exigentes que los edificios residenciales. La LF 12/2018 establece que estos edificios deben ser completamente accesibles en todas las dependencias de uso por el público.</p>
+
+    <h3>Acceso y circulación interior</h3>
+    <ul>
+      <li>Todos los accesos al edificio deben ser accesibles o, al menos, el acceso principal. Si hay accesos secundarios, deben señalizarse los accesibles de forma visible.</li>
+      <li>Todos los espacios de uso por el público deben ser accesibles mediante itinerario accesible desde el acceso principal del edificio.</li>
+      <li>Anchura mínima de paso en circulaciones de uso público: <strong>1,50 metros</strong> en pasillos principales y <strong>1,20 metros</strong> en pasillos secundarios.</li>
+    </ul>
+
+    <h3>Servicios higiénicos accesibles</h3>
+    <p>Los edificios de uso público deben disponer de servicios higiénicos accesibles en la misma planta que los espacios de uso por el público, o en planta accesible mediante ascensor. Los aseos accesibles deben cumplir las siguientes condiciones:</p>
+    <ul>
+      <li>Espacio libre de maniobra de <strong>1,50 metros de diámetro</strong> dentro del aseo, para el giro de silla de ruedas.</li>
+      <li>Inodoro con espacio de transferencia lateral de al menos <strong>80 cm</strong> a uno de los lados.</li>
+      <li>Lavabo sin pedestal y con espacio libre inferior de al menos <strong>70 cm de alto y 50 cm de fondo</strong> para aproximación en silla de ruedas.</li>
+      <li>Barras de apoyo abatibles a ambos lados del inodoro, a una altura de <strong>70-75 cm</strong>.</li>
+      <li>Grifo monomando o sensor en el lavabo.</li>
+      <li>La puerta del aseo debe abrirse hacia el exterior o ser corredera.</li>
+    </ul>
+
+    <h3>Aparcamientos</h3>
+    <p>Los aparcamientos de edificios de uso público deben reservar plazas de aparcamiento accesibles para personas con discapacidad, en número proporcional al total de plazas y con las dimensiones específicas requeridas: anchura mínima de la plaza más la zona de transferencia.</p>
+
+    <h3>Mostrador de atención al público</h3>
+    <p>Los mostradores, taquillas y elementos de atención al público deben tener una parte accesible a una altura de entre <strong>70 y 85 cm</strong> sobre el suelo, con espacio libre inferior para aproximación en silla de ruedas, de al menos <strong>70 cm de alto y 50 cm de fondo</strong>.</p>
+  </div>
+
+  <div class="sec" id="s11">
+    <h2>11. La cadena de accesibilidad</h2>
+    <p>El concepto de <strong>cadena de accesibilidad</strong> es fundamental en la LF 12/2018: la accesibilidad no se garantiza por el cumplimiento aislado de los requisitos en cada elemento, sino por la existencia de un recorrido continuo y sin interrupciones desde el origen del desplazamiento hasta el destino final.</p>
+    <p>La cadena de accesibilidad comprende, de forma secuencial:</p>
+    <ol class="num">
+      <li>El <strong>punto de partida</strong>: la vivienda, el vehículo o el punto de origen del desplazamiento.</li>
+      <li>Los <strong>itinerarios peatonales accesibles</strong>: las aceras, los pasos de peatones, los cruces, con las condiciones técnicas establecidas.</li>
+      <li>El <strong>transporte público accesible</strong>: las paradas, los andenes, los vehículos y los sistemas de información accesibles.</li>
+      <li>El <strong>acceso al edificio</strong>: el acceso exterior, el portal o la entrada.</li>
+      <li>La <strong>circulación interior del edificio</strong>: pasillos, escaleras, ascensores, rampas.</li>
+      <li>El <strong>destino final</strong>: la dependencia, el servicio o el espacio al que se dirige la persona.</li>
+    </ol>
+    <p>Si en cualquier punto de esta cadena existe una barrera no salvable, la cadena de accesibilidad se rompe y la persona con discapacidad no puede llegar a su destino de forma autónoma. Por eso, la LF 12/2018 exige que la accesibilidad se garantice de forma integral a lo largo de todo el recorrido.</p>
+  </div>
+
+  <div class="sec" id="s12">
+    <h2>12. Las obras de adecuación y los ajustes razonables</h2>
+    <p>La LF 12/2018 reconoce que la aplicación inmediata de todos los requisitos de accesibilidad a los edificios y espacios existentes no siempre es técnica o económicamente posible. Por ello, establece el concepto de <strong>ajuste razonable</strong> como instrumento para garantizar la accesibilidad de los entornos existentes en la mayor medida posible y en plazos razonables.</p>
+
+    <h3>El ajuste razonable</h3>
+    <p>Un ajuste razonable es una modificación o adaptación de un entorno, producto o servicio que:</p>
+    <ul>
+      <li>Es necesaria para garantizar el acceso de una persona con discapacidad.</li>
+      <li>No impone una carga desproporcionada o indebida al titular del entorno, producto o servicio.</li>
+      <li>Es técnicamente factible en las condiciones del entorno existente.</li>
+    </ul>
+    <p>Para determinar si un ajuste es razonable, debe valorarse el coste de la medida, el volumen de negocio de la entidad que debe adoptarla, los efectos económicos de la medida sobre la entidad y los beneficios para las personas con discapacidad. Si el coste es desproporcionado en relación con los recursos de la entidad y los beneficios obtenidos, el ajuste puede considerarse irrazonable.</p>
+
+    <h3>Los plazos de adecuación de edificios públicos</h3>
+    <p>La LF 12/2018 establece plazos para que los edificios existentes de titularidad pública se adecuen a las condiciones de accesibilidad exigidas para los edificios de nueva construcción. Estos plazos varían en función del tipo de edificio y de la entidad titular.</p>
+  </div>
+
+  <div class="sec" id="s13">
+    <h2>13. Accesibilidad en edificios existentes y rehabilitación</h2>
+    <p>Cuando se realizan obras de rehabilitación, reforma o ampliación en edificios existentes, la LF 12/2018 establece que deben aprovecharse las obras para mejorar las condiciones de accesibilidad del edificio, hasta alcanzar los estándares exigidos para los edificios de nueva construcción, siempre que sea técnicamente posible y que el coste de las medidas de accesibilidad no supere el porcentaje del presupuesto de la obra establecido en la normativa.</p>
+    <p>En las <strong>comunidades de propietarios</strong>, la LF 12/2018 establece que deben realizarse las obras de accesibilidad necesarias cuando sean requeridas por algún propietario o residente con discapacidad o mayores de 70 años, siempre que el coste de dichas obras no supere doce mensualidades ordinarias de gastos comunes. Si el coste supera este umbral, los propietarios deben contribuir a la financiación de las obras de accesibilidad.</p>
+  </div>
+
+  <div class="sec" id="s14">
+    <h2>14. Comunicación e información accesible</h2>
+    <p>La LF 12/2018 regula también la accesibilidad en el ámbito de la comunicación y la información, que es especialmente relevante para las personas con discapacidad sensorial (ciegos, sordos) y cognitiva.</p>
+
+    <h3>Señalización accesible en edificios</h3>
+    <p>Los edificios de uso público deben contar con señalización accesible que permita la orientación y la localización de los espacios y servicios a las personas con discapacidad visual y auditiva. La señalización accesible incluye:</p>
+    <ul>
+      <li>Señales visuales: pictogramas normalizados, contrastes de color suficientes entre señales y fondo (ratio de contraste mínimo de 3:1).</li>
+      <li>Señales en Braille y en relieve: en ascensores, paneles de información, identificación de espacios.</li>
+      <li>Sistemas de audio o bucle de inducción magnética: para la comunicación con personas con discapacidad auditiva que utilicen audífono.</li>
+      <li>Señales de emergencia visuales y sonoras: las alarmas de emergencia deben ser tanto visuales (destellos luminosos) como sonoras, para que sean percibidas tanto por personas con discapacidad auditiva como visual.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s15">
+    <h2>15. Inspección, régimen sancionador y garantías</h2>
+
+    <h3>Inspección y control</h3>
+    <p>El cumplimiento de las condiciones de accesibilidad establecidas en la LF 12/2018 es verificado por los servicios de inspección de la Administración de la Comunidad Foral de Navarra y de los Ayuntamientos, en el ámbito de sus respectivas competencias. El incumplimiento detectado puede dar lugar a la exigencia de las medidas correctoras y, en su caso, al inicio de un expediente sancionador.</p>
+
+    <h3>Régimen sancionador</h3>
+    <p>La LF 12/2018 establece un régimen sancionador específico para las infracciones en materia de accesibilidad. Las infracciones se clasifican en leves, graves y muy graves. Las <strong>infracciones leves</strong> incluyen incumplimientos de escasa entidad que no impiden el uso del espacio o servicio a las personas con discapacidad. Las <strong>infracciones graves</strong> comprenden incumplimientos significativos que dificultan gravemente el uso del espacio o servicio. Las <strong>infracciones muy graves</strong> son aquellas que impiden completamente el acceso de las personas con discapacidad o que suponen la construcción de elementos que crean barreras en espacios ya accesibles.</p>
+
+    <h3>Las garantías de accesibilidad: el Plan de Accesibilidad</h3>
+    <p>La LF 12/2018 prevé que la Administración de la Comunidad Foral de Navarra elabore y apruebe un <strong>Plan de Accesibilidad de Navarra</strong>, que establezca las actuaciones prioritarias para la mejora de la accesibilidad en el espacio público, los edificios públicos, el transporte y la comunicación, con los plazos y los recursos necesarios para su ejecución. El Plan de Accesibilidad es un instrumento de planificación que debe aprobarse y evaluarse periódicamente, con la participación de las organizaciones representativas de las personas con discapacidad.</p>
+  </div>
+
+  <div class="footer">Ley Foral 12/2018, de 14 de junio · RDL 1/2013 (LGDPD) · CTE DB-SUA · Convención ONU 2006 · CE arts. 9.2 y 49</div>
+</div>
+</body>
+</html>

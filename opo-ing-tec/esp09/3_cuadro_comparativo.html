@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuadro comparativo — CTE Parte I (Tema 9)</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.20);--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.18)}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2rem 1rem}
+  .page{max-width:1040px;margin:0 auto}
+  h1{font-size:20px;font-weight:500;margin-bottom:4px}
+  h2{font-size:17px;font-weight:500;margin:2.5rem 0 1rem;padding-bottom:8px;border-bottom:.5px solid var(--bm)}
+  .sub{font-size:13px;color:var(--t3);margin-bottom:28px}
+  .sub a{color:var(--t2);text-decoration:none}
+  .sub a:hover{color:var(--t1)}
+  .wrap{overflow-x:auto;background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r2);margin-bottom:16px}
+  table{width:100%;border-collapse:collapse;font-size:12px;min-width:580px}
+  thead tr{background:var(--bg2)}
+  th{font-weight:500;font-size:11.5px;color:var(--t2);text-align:left;padding:10px 12px;border-bottom:.5px solid var(--bm);white-space:nowrap}
+  td{padding:10px 12px;border-bottom:.5px solid var(--bl);vertical-align:top;line-height:1.65;color:var(--t2)}
+  tr:last-child td{border-bottom:none}
+  tr:hover td{background:var(--bg2)}
+  .dest{font-weight:500;color:var(--t1);font-size:12px;white-space:nowrap}
+  .in{font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap;display:inline-block}
+  .a{background:#EEEDFE;color:#3C3489}.b{background:#E6F1FB;color:#0C447C}.c{background:#E1F5EE;color:#085041}
+  .d{background:#FAEEDA;color:#633806}.e{background:#FAECE7;color:#712B13}.f{background:#EAF3DE;color:#27500A}.g{background:#F1EFE8;color:#444441}
+  .si{background:#EAF3DE;color:#27500A;font-size:11px;font-weight:500;padding:1px 6px;border-radius:4px;display:inline-block}
+  .no{background:#FCEBEB;color:#791F1F;font-size:11px;font-weight:500;padding:1px 6px;border-radius:4px;display:inline-block}
+  .cond{background:#FAEEDA;color:#633806;font-size:11px;font-weight:500;padding:1px 6px;border-radius:4px;display:inline-block}
+  @media(prefers-color-scheme:dark){.a{background:#3C3489;color:#CECBF6}.b{background:#0C447C;color:#B5D4F4}.c{background:#085041;color:#9FE1CB}.d{background:#633806;color:#FAC775}.e{background:#712B13;color:#F5C4B3}.f{background:#27500A;color:#C0DD97}.g{background:#444441;color:#D3D1C7}.si{background:#173404;color:#C0DD97}.no{background:#501313;color:#F7C1C1}.cond{background:#633806;color:#FAC775}}
+  .nota{font-size:12px;color:var(--t2);padding:10px 14px;background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r1);margin-bottom:20px;line-height:1.65}
+  .nota strong{color:var(--t1)}
+  .footer{margin-top:28px;font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>CTE Parte I — Condiciones Técnicas y Administrativas</h1>
+  <p class="sub">Cuadros comparativos · Ingeniero Técnico · RD 314/2006 · LOE 38/1999<br>
+    <a href="../index.html">Índice</a><br>
+    <a href="1_texto_explicativo.html"><< Texto completo</a>
+     | 
+    <a href="2_esquema_resumen.html">< Esquema-resumen</a>
+  </p>
+
+  <!-- TABLA 1: LOS 6 DB COMPARADOS -->
+  <h2>Los 6 Documentos Básicos del CTE — comparativa de exigencias</h2>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr><th>DB</th><th>Nombre completo</th><th>N.º de exigencias básicas</th><th>Exigencias específicas principales</th><th>Actualización relevante</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="in a">DB-SE</span></td>
+          <td>Seguridad Estructural</td>
+          <td>2</td>
+          <td>SE-1 Resistencia y estabilidad · SE-2 Aptitud al servicio. Subdocumentos: SE-AE, SE-C, SE-A, SE-F, SE-M</td>
+          <td>Alineamiento con Eurocódigos</td>
+        </tr>
+        <tr>
+          <td><span class="in e">DB-SI</span></td>
+          <td>Seguridad en caso de Incendio</td>
+          <td>6</td>
+          <td>SI-1 Propagación interior · SI-2 Propagación exterior · SI-3 Evacuación · SI-4 Instalaciones PCI · SI-5 Intervención bomberos · SI-6 Resistencia fuego estructura</td>
+          <td>RD 732/2019 (modificación puntual)</td>
+        </tr>
+        <tr>
+          <td><span class="in c">DB-SUA</span></td>
+          <td>Seguridad de Utilización y Accesibilidad</td>
+          <td>9</td>
+          <td>SUA-1 Caídas · SUA-2 Impacto/atrapamiento · SUA-3 Aprisionamiento · SUA-4 Iluminación · SUA-5 Alta ocupación · SUA-6 Ahogamiento · SUA-7 Vehículos · SUA-8 Rayo · SUA-9 Accesibilidad</td>
+          <td>RD 732/2019 (SUA-9 accesibilidad)</td>
+        </tr>
+        <tr>
+          <td><span class="in b">DB-HS</span></td>
+          <td>Salubridad</td>
+          <td>5</td>
+          <td>HS-1 Humedad · HS-2 Residuos · HS-3 Calidad aire interior · HS-4 Suministro de agua · HS-5 Evacuación de aguas</td>
+          <td>Actualización parcial</td>
+        </tr>
+        <tr>
+          <td><span class="in d">DB-HR</span></td>
+          <td>Protección frente al Ruido</td>
+          <td>3</td>
+          <td>HR-1 Aislamiento acústico · HR-2 Tiempo de reverberación · HR-3 Ruido de instalaciones</td>
+          <td><strong>RD 732/2019</strong> — actualización completa</td>
+        </tr>
+        <tr>
+          <td><span class="in f">DB-HE</span></td>
+          <td>Ahorro de Energía</td>
+          <td>6</td>
+          <td>HE-0 Consumo energético · HE-1 Demanda (envolvente térmica) · HE-2 Inst. térmicas (→RITE) · HE-3 Iluminación · HE-4 ACS renovable · HE-5 Fotovoltaica</td>
+          <td><strong>RD 732/2019</strong> — actualización completa (edificios de consumo casi nulo)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TABLA 2: PROYECTO BÁSICO vs. PROYECTO DE EJECUCIÓN -->
+  <h2>Proyecto básico vs. Proyecto de ejecución</h2>
+  <div class="nota"><strong>Confusión frecuente en test:</strong> el proyecto básico es suficiente para solicitar la licencia urbanística pero NO para iniciar las obras. El proyecto de ejecución es el documento de referencia para construir y para la dirección de obra.</div>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr><th>Aspecto</th><th><span class="in a">Proyecto básico</span></th><th><span class="in b">Proyecto de ejecución</span></th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="dest">¿Qué contiene?</td><td>Las características generales del edificio y sus prestaciones, mediante la adopción y justificación de las soluciones generales básicas. Define tipología y organización del edificio</td><td>El desarrollo completo del proyecto básico: todos los detalles constructivos, cálculos estructurales, especificaciones de instalaciones, pliegos de condiciones completos</td></tr>
+        <tr><td class="dest">¿Para qué sirve?</td><td>Para solicitar la licencia urbanística de obras (en muchos Ayuntamientos es suficiente)</td><td>Para iniciar y dirigir la construcción del edificio</td></tr>
+        <tr><td class="dest">¿Permite iniciar las obras?</td><td><span class="no">NO</span> — no contiene el detalle necesario para construir</td><td><span class="si">SÍ</span> — es el documento de referencia para la construcción</td></tr>
+        <tr><td class="dest">¿Quién debe firmarlo?</td><td>El proyectista competente para el tipo de obra (arquitecto, ingeniero, etc.)</td><td>El mismo proyectista o proyectistas que firmaron el proyecto básico</td></tr>
+        <tr><td class="dest">Contenido documental</td><td>Memoria descriptiva y justificativa (simplificada) · planos de planta, alzados y secciones · memoria de calidades</td><td>Memoria completa + justificación CTE + cálculos estructurales · planos completos (incluidos detalles constructivos e instalaciones) · pliego de condiciones completo · mediciones y presupuesto</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TABLA 3: AGENTES DE LA EDIFICACIÓN Y RESPONSABILIDADES LOE -->
+  <h2>Agentes de la edificación y plazos de responsabilidad (LOE 38/1999)</h2>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr><th>Agente</th><th>Función principal (CTE / LOE)</th><th>Plazo de responsabilidad</th><th>Tipo de defecto cubierto</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Promotor</strong></td>
+          <td>Decide, impulsa, programa y financia la obra. Designa al proyectista, al director de obra y al director de ejecución</td>
+          <td>Solidariamente con los demás agentes</td>
+          <td>En todos los plazos cuando la causa le sea imputable</td>
+        </tr>
+        <tr>
+          <td><strong>Proyectista</strong></td>
+          <td>Redacta el proyecto conforme al CTE y a la normativa urbanística</td>
+          <td><span class="in a">10 años</span> por defectos de cálculo o del proyecto</td>
+          <td>Vicios o defectos que afecten a la seguridad estructural del edificio</td>
+        </tr>
+        <tr>
+          <td><strong>Constructor</strong></td>
+          <td>Ejecuta las obras conforme al proyecto y a las instrucciones de la dirección facultativa</td>
+          <td><span class="in c">1 año</span> por vicios de terminación y acabado<br><span class="in d">3 años</span> por defectos que afecten a la habitabilidad<br><span class="in e">10 años</span> por defectos estructurales</td>
+          <td>1 año: acabados · 3 años: habitabilidad · 10 años: estructurales</td>
+        </tr>
+        <tr>
+          <td><strong>Director de Obra (DO)</strong></td>
+          <td>Dirige el desarrollo de la obra en los aspectos técnicos, estéticos, urbanísticos y medioambientales</td>
+          <td>Según el defecto imputable: hasta <span class="in e">10 años</span></td>
+          <td>Vicios o defectos imputables a errores de dirección</td>
+        </tr>
+        <tr>
+          <td><strong>Director de Ejecución de la Obra (DEO)</strong></td>
+          <td>Dirige la ejecución material y controla cualitativamente y cuantitativamente la construcción. Responsable del control de calidad de los materiales</td>
+          <td>Según el defecto imputable: hasta <span class="in e">10 años</span></td>
+          <td>Vicios o defectos imputables a incorrecta ejecución o control de calidad</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TABLA 4: CONTROL DE CALIDAD Y DOCUMENTACIÓN DEL SEGUIMIENTO -->
+  <h2>Documentación del seguimiento de la obra — tipos y responsabilidades</h2>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr><th>Documento / Control</th><th>¿Quién lo gestiona?</th><th>¿Cuándo?</th><th>Contenido / Finalidad</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="in a">Libro de Órdenes y Asistencias</span></td>
+          <td>Director de Obra · habilitado por el Colegio profesional del DO</td>
+          <td>Durante toda la ejecución</td>
+          <td>Órdenes e instrucciones del DO al constructor · actas de visita · incidencias · modificaciones del proyecto. Debe estar en la obra en todo momento</td>
+        </tr>
+        <tr>
+          <td><span class="in b">Libro de Incidencias (PRL)</span></td>
+          <td>Coordinador de SS en fase de ejecución (CSS-E) · RD 1627/1997</td>
+          <td>Durante toda la ejecución</td>
+          <td>Incumplimientos en materia de seguridad y salud · comunicación a autoridad laboral en 24 h si hay riesgo grave e inminente</td>
+        </tr>
+        <tr>
+          <td><span class="in c">Control de recepción de productos</span></td>
+          <td>Director de Ejecución de la Obra (DEO)</td>
+          <td>Al llegar los materiales a la obra</td>
+          <td>Verificar que los materiales tienen las prestaciones declaradas en el marcado CE o DIT y son conformes con las especificaciones del proyecto</td>
+        </tr>
+        <tr>
+          <td><span class="in d">Control de ejecución</span></td>
+          <td>Director de Ejecución de la Obra (DEO)</td>
+          <td>Durante la ejecución de cada unidad de obra</td>
+          <td>Verificar que la ejecución cumple el proyecto y las instrucciones del DO. Incluye los controles de los ensayos previstos en el plan de control de calidad</td>
+        </tr>
+        <tr>
+          <td><span class="in e">Acta de recepción</span></td>
+          <td>Promotor (acepta) + Constructor (entrega) + DO y DEO (presencia)</td>
+          <td>Al finalizar la obra</td>
+          <td>Formaliza la entrega de la obra. Puede ser con o sin reservas. <strong>Inicia los plazos de garantía LOE: 1/3/10 años</strong></td>
+        </tr>
+        <tr>
+          <td><span class="in f">Libro del Edificio</span></td>
+          <td>Elaborado por el Director de Obra · entregado al promotor al finalizar la obra</td>
+          <td>Al finalizar la obra</td>
+          <td>Planos as-built + manuales de uso y mantenimiento de todos los equipos e instalaciones + garantías + plan de mantenimiento. El promotor lo entrega a los usuarios del edificio</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="footer">Real Decreto 314/2006 (CTE) · Real Decreto 732/2019 · Ley 38/1999 (LOE) · Reglamento UE 305/2011</p>
+</div>
+</body>
+</html>

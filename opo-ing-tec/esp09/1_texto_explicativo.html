@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 9 — CTE Parte I: Condiciones Técnicas y Administrativas</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.22);--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.20)}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2.5rem 1rem;line-height:1.8}
+  .page{max-width:740px;margin:0 auto}
+  .header{margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:.5px solid var(--bm)}
+  .tlabel{font-size:12px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+  h1{font-size:22px;font-weight:500;line-height:1.3;margin-bottom:8px}
+  .meta{font-size:13px;color:var(--t3)}
+  .meta a{color:var(--t2);text-decoration:none}
+  .meta a:hover{color:var(--t1)}
+  .indice{background:var(--bg2);border:.5px solid var(--bl);border-radius:var(--r2);padding:16px 20px;margin-bottom:2.5rem}
+  .itit{font-size:11px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+  .indice ol{padding-left:18px}
+  .indice li{font-size:13px;color:var(--t2);padding:3px 0}
+  .indice a{color:var(--t2);text-decoration:none}
+  .indice a:hover{color:var(--t1)}
+  .sec{margin-bottom:2.8rem}
+  h2{font-size:18px;font-weight:500;margin-bottom:1rem;padding-bottom:8px;border-bottom:.5px solid var(--bl)}
+  h3{font-size:15px;font-weight:500;margin:1.6rem 0 .6rem}
+  h4{font-size:14px;font-weight:500;margin:1.2rem 0 .4rem;color:var(--t2)}
+  p{font-size:15px;color:var(--t2);margin-bottom:1rem}
+  p:last-child{margin-bottom:0}
+  strong{font-weight:500;color:var(--t1)}
+  .art{display:inline-block;font-size:11px;font-weight:500;background:var(--bg2);border:.5px solid var(--bm);border-radius:20px;padding:1px 8px;color:var(--t3);vertical-align:middle;margin-left:4px}
+  ul{padding-left:20px;margin-bottom:1rem}
+  ul li{font-size:15px;color:var(--t2);padding:3px 0}
+  ol.num{padding-left:20px;margin-bottom:1rem}
+  ol.num li{font-size:15px;color:var(--t2);padding:3px 0}
+  .nota{background:var(--bg2);border-left:2px solid var(--bm);padding:12px 16px;margin:1.2rem 0;font-size:13.5px;color:var(--t2);line-height:1.65}
+  .nota strong{color:var(--t1)}
+  .footer{margin-top:3rem;padding-top:1.2rem;border-top:.5px solid var(--bl);font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="tlabel">Tema 9 — CTE · Ingeniero Técnico</div>
+    <h1>Código Técnico de la Edificación — Parte I: Condiciones Técnicas y Administrativas</h1>
+    <div class="meta">RD 314/2006 · Ley 38/1999, de Ordenación de la Edificación (LOE) · Actualizado por RD 732/2019<br>
+      <a href="../index.html">Índice</a><br>
+      <a href="2_esquema_resumen.html">Esquema-resumen ></a>
+       | 
+      <a href="3_cuadro_comparativo.html">Cuadros comparativos >></a>
+    </div>
+  </div>
+  <div class="indice">
+    <div class="itit">Índice</div>
+    <ol>
+      <li><a href="#s1">El Código Técnico de la Edificación: naturaleza y estructura</a></li>
+      <li><a href="#s2">Ámbito de aplicación del CTE</a></li>
+      <li><a href="#s3">Exigencias básicas: los seis requisitos básicos</a></li>
+      <li><a href="#s4">Exigencias básicas de seguridad estructural (DB-SE)</a></li>
+      <li><a href="#s5">Exigencias básicas de seguridad en caso de incendio (DB-SI)</a></li>
+      <li><a href="#s6">Exigencias básicas de seguridad de utilización y accesibilidad (DB-SUA)</a></li>
+      <li><a href="#s7">Exigencias básicas de salubridad (DB-HS)</a></li>
+      <li><a href="#s8">Exigencias básicas de protección frente al ruido (DB-HR)</a></li>
+      <li><a href="#s9">Exigencias básicas de ahorro de energía (DB-HE)</a></li>
+      <li><a href="#s10">Condiciones en el proyecto: contenido del proyecto</a></li>
+      <li><a href="#s11">Documentación del seguimiento de la obra</a></li>
+      <li><a href="#s12">Las conformidades documentales: CE y DIT</a></li>
+      <li><a href="#s13">Terminología del CTE</a></li>
+      <li><a href="#s14">Los Documentos Reconocidos</a></li>
+    </ol>
+  </div>
+
+  <div class="sec" id="s1">
+    <h2>1. El Código Técnico de la Edificación: naturaleza y estructura</h2>
+    <p>El <strong>Código Técnico de la Edificación (CTE)</strong> es el marco normativo que establece las exigencias básicas de calidad que deben cumplir los edificios, incluidas sus instalaciones, para satisfacer los requisitos básicos de seguridad y habitabilidad. Fue aprobado por el <strong>Real Decreto 314/2006, de 17 de marzo</strong>, y ha sido objeto de múltiples actualizaciones, siendo las más relevantes las realizadas por el <strong>Real Decreto 732/2019, de 20 de diciembre</strong>, que actualizó principalmente los Documentos Básicos de Ahorro de Energía (DB-HE) y Protección frente al Ruido (DB-HR).</p>
+    <p>El CTE se dicta en desarrollo de la <strong>Ley 38/1999, de 5 de noviembre, de Ordenación de la Edificación (LOE)</strong>, que establece en su artículo 3 los requisitos básicos de la edificación y prevé la aprobación de un Código Técnico de la Edificación como instrumento para regularlos. El CTE tiene la consideración de reglamento técnico de aplicación obligatoria.</p>
+
+    <h3>Estructura del CTE</h3>
+    <p>El CTE se organiza en dos grandes partes:</p>
+    <ul>
+      <li><strong>Parte I</strong>: Condiciones Técnicas y Administrativas. Contiene las disposiciones generales sobre el ámbito de aplicación, los requisitos básicos, el contenido del proyecto, la documentación del seguimiento de obra y la terminología. Es el "marco normativo" del CTE.</li>
+      <li><strong>Parte II</strong>: Documentos Básicos (DB). Son los documentos técnicos que desarrollan cada una de las exigencias básicas y establecen los parámetros técnicos que debe cumplir el edificio para satisfacerlas. Cada Documento Básico responde a una o varias exigencias básicas. Los actuales DB son: SE (Seguridad Estructural), SI (Seguridad en caso de Incendio), SUA (Seguridad de Utilización y Accesibilidad), HS (Salubridad), HR (Protección frente al Ruido) y HE (Ahorro de Energía).</li>
+    </ul>
+    <p>El CTE establece que el cumplimiento de sus exigencias básicas puede acreditarse mediante la aplicación de los Documentos Básicos (que constituyen una <strong>presunción de conformidad</strong>) o mediante otras soluciones alternativas que demuestren documentalmente que se satisfacen los requisitos con el mismo nivel de prestaciones.</p>
+    <div class="nota"><strong>Relevancia para el ingeniero técnico:</strong> El CTE es la norma técnica de referencia en el ámbito de la edificación y su conocimiento es imprescindible para cualquier ingeniero técnico que intervenga en proyectos de edificación, tanto en la fase de redacción del proyecto como en la dirección de ejecución de la obra.</div>
+  </div>
+
+  <div class="sec" id="s2">
+    <h2>2. Ámbito de aplicación del CTE</h2>
+    <p>El <strong>artículo 2 del CTE</strong> establece el ámbito de aplicación de la norma. El CTE se aplica, en los términos establecidos en la LOE, a la edificación pública y privada cuyos proyectos precisen disponer de la correspondiente licencia o autorización legalmente exigida.</p>
+
+    <h3>Obras incluidas en el ámbito de aplicación</h3>
+    <p>El CTE se aplica a las siguientes obras:</p>
+    <ul>
+      <li><strong>Obras de nueva construcción</strong>: la aplicación es total e íntegra.</li>
+      <li><strong>Obras de ampliación, modificación, reforma o rehabilitación</strong>: la aplicación es parcial, en función de la naturaleza de las obras y de lo que determine el CTE para cada caso. Con carácter general, las obras de reforma deben mejorar las condiciones de cumplimiento de las exigencias básicas respecto al estado previo de la obra, y no pueden reducir el nivel de cumplimiento preexistente.</li>
+    </ul>
+
+    <h3>Obras excluidas del ámbito de aplicación</h3>
+    <p>Quedan excluidas del ámbito de aplicación del CTE:</p>
+    <ul>
+      <li>Las obras de nueva construcción <strong>de escasa entidad constructiva y sencillez técnica</strong> que no tengan carácter residencial ni público y se desarrollen en una sola planta.</li>
+      <li>Las construcciones de carácter provisional.</li>
+      <li>Las construcciones vinculadas a actividades de ingeniería civil (puentes, carreteras, presas, etc.), las obras de ingeniería y las instalaciones que no tengan la consideración de edificaciones a efectos de la LOE.</li>
+    </ul>
+
+    <h3>Obras de rehabilitación: la aplicación gradual</h3>
+    <p>El CTE establece que en las obras de rehabilitación y reforma, el cumplimiento de las exigencias básicas puede acreditarse de forma gradual: no es necesario que el edificio alcance de inmediato el nivel de cumplimiento exigido para los edificios de nueva construcción, sino que se requiere que la intervención suponga una mejora respecto al estado previo y que no se empeore ninguna de las exigencias básicas.</p>
+  </div>
+
+  <div class="sec" id="s3">
+    <h2>3. Exigencias básicas: los seis requisitos básicos</h2>
+    <p>El <strong>artículo 3 del CTE</strong> establece las <strong>exigencias básicas</strong> que deben satisfacer los edificios para cumplir los requisitos básicos de calidad establecidos en el artículo 3 de la LOE. Las exigencias básicas se agrupan en seis bloques, a cada uno de los cuales corresponde uno o varios Documentos Básicos:</p>
+    <ol class="num">
+      <li><strong>Seguridad Estructural (SE)</strong>: garantizar que el edificio tenga un comportamiento estructural adecuado frente a las acciones e influencias previsibles a las que pueda estar sometido durante su construcción y uso previsto.</li>
+      <li><strong>Seguridad en caso de Incendio (SI)</strong>: reducir a límites aceptables el riesgo de que los usuarios de un edificio sufran daños derivados de un incendio de origen accidental.</li>
+      <li><strong>Seguridad de Utilización y Accesibilidad (SUA)</strong>: reducir a límites aceptables el riesgo de que los usuarios sufran daños inmediatos en el uso previsto de los edificios, y facilitar el acceso y la utilización no discriminatoria, independiente y segura de los mismos a las personas con discapacidad.</li>
+      <li><strong>Salubridad (HS)</strong>: reducir a límites aceptables el riesgo de que los usuarios padezcan molestias o enfermedades, así como el riesgo de que los edificios se deterioren y de que deterioren el medio ambiente en su entorno inmediato, como consecuencia de las características de su proyecto, construcción, uso y mantenimiento.</li>
+      <li><strong>Protección frente al Ruido (HR)</strong>: limitar dentro de los edificios y en condiciones normales de utilización, el riesgo de molestias o enfermedades que el ruido producido en el propio recinto o procedente del exterior o de otros recintos del edificio pueda ocasionar a los usuarios.</li>
+      <li><strong>Ahorro de Energía (HE)</strong>: conseguir un uso racional de la energía necesaria para la utilización de los edificios, reduciendo a límites sostenibles su consumo y conseguir asimismo que una parte de este consumo proceda de fuentes de energía renovable.</li>
+    </ol>
+    <div class="nota"><strong>Mnemotecnia para recordar los 6 DB:</strong> SE · SI · SUA · HS · HR · HE. Los tres primeros son de Seguridad (Estructural, Incendio, Utilización), los tres últimos de Habitabilidad (Salubridad, Ruido, Energía). La distinción entre seguridad y habitabilidad coincide con la estructura del artículo 3 de la LOE.</div>
+  </div>
+
+  <div class="sec" id="s4">
+    <h2>4. Exigencias básicas de seguridad estructural (DB-SE)</h2>
+    <p>El <strong>DB-SE</strong> (Seguridad Estructural) está formado por el documento marco DB-SE y por varios documentos específicos para distintos materiales y tipos de acciones:</p>
+    <ul>
+      <li><strong>DB-SE</strong>: disposiciones generales de seguridad estructural.</li>
+      <li><strong>DB-SE-AE</strong>: Acciones en la Edificación.</li>
+      <li><strong>DB-SE-C</strong>: Cimientos.</li>
+      <li><strong>DB-SE-A</strong>: Estructuras de Acero.</li>
+      <li><strong>DB-SE-F</strong>: Estructuras de Fábrica.</li>
+      <li><strong>DB-SE-M</strong>: Estructuras de Madera.</li>
+    </ul>
+    <p>Las <strong>exigencias básicas de seguridad estructural</strong> son:</p>
+    <ul>
+      <li><strong>SE-1 Resistencia y estabilidad</strong>: la resistencia y la estabilidad serán las adecuadas para que no se generen riesgos indebidos, de forma que se mantenga la resistencia y la estabilidad frente a las acciones e influencias previsibles durante las fases de construcción y usos previstos de los edificios, y que un evento extraordinario no produzca consecuencias desproporcionadas respecto a la causa original y se facilite el mantenimiento previsto.</li>
+      <li><strong>SE-2 Aptitud al servicio</strong>: la aptitud al servicio será conforme con el uso previsto del edificio, de forma que no se produzcan deformaciones inadmisibles, se limite a un nivel aceptable la probabilidad de un comportamiento dinámico inadmisible y no se produzcan degradaciones o anomalías inadmisibles.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s5">
+    <h2>5. Exigencias básicas de seguridad en caso de incendio (DB-SI)</h2>
+    <p>El <strong>DB-SI</strong> contiene las exigencias básicas de seguridad en caso de incendio, que se articulan en seis exigencias básicas:</p>
+    <ul>
+      <li><strong>SI-1 Propagación interior</strong>: se limitará el riesgo de propagación del incendio por el interior del edificio.</li>
+      <li><strong>SI-2 Propagación exterior</strong>: se limitará el riesgo de propagación del incendio por el exterior, tanto en el edificio considerado como a otros edificios.</li>
+      <li><strong>SI-3 Evacuación de ocupantes</strong>: el edificio dispondrá de los medios de evacuación adecuados para que los ocupantes puedan abandonarlo o alcanzar un lugar seguro dentro del mismo en condiciones de seguridad.</li>
+      <li><strong>SI-4 Instalaciones de protección contra incendios</strong>: el edificio dispondrá de los equipos e instalaciones adecuados para hacer posible la detección, el control y la extinción del incendio, así como la transmisión de la alarma a los ocupantes.</li>
+      <li><strong>SI-5 Intervención de los bomberos</strong>: se facilitará la intervención de los equipos de rescate y de extinción de incendios.</li>
+      <li><strong>SI-6 Resistencia al fuego de la estructura</strong>: la estructura portante mantendrá su resistencia al fuego durante el tiempo necesario para que puedan cumplirse las anteriores exigencias básicas.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s6">
+    <h2>6. Exigencias básicas de seguridad de utilización y accesibilidad (DB-SUA)</h2>
+    <p>El <strong>DB-SUA</strong> articula sus exigencias en nueve apartados:</p>
+    <ul>
+      <li><strong>SUA-1 Seguridad frente al riesgo de caídas</strong>: resbaladicidad de suelos, discontinuidades en el pavimento, desniveles, escaleras y rampas, limpieza de acristalamientos exteriores.</li>
+      <li><strong>SUA-2 Seguridad frente al riesgo de impacto o de atrapamiento</strong>: impacto con elementos fijos o practicables y atrapamiento.</li>
+      <li><strong>SUA-3 Seguridad frente al riesgo de aprisionamiento</strong>: en recintos.</li>
+      <li><strong>SUA-4 Seguridad frente al riesgo causado por iluminación inadecuada</strong>: alumbrado normal y de emergencia.</li>
+      <li><strong>SUA-5 Seguridad frente al riesgo causado por situaciones de alta ocupación</strong>: graderíos de estadios, pabellones polideportivos y salas de espectáculos.</li>
+      <li><strong>SUA-6 Seguridad frente al riesgo de ahogamiento</strong>: piscinas y pozos.</li>
+      <li><strong>SUA-7 Seguridad frente al riesgo causado por vehículos en movimiento</strong>: aparcamientos y vías de circulación de vehículos.</li>
+      <li><strong>SUA-8 Seguridad frente al riesgo causado por la acción del rayo</strong>.</li>
+      <li><strong>SUA-9 Accesibilidad</strong>: condiciones de accesibilidad de los edificios.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s7">
+    <h2>7. Exigencias básicas de salubridad (DB-HS)</h2>
+    <p>El <strong>DB-HS</strong> articula sus exigencias en cinco secciones:</p>
+    <ul>
+      <li><strong>HS-1 Protección frente a la humedad</strong>: muros en contacto con el terreno, suelos en contacto con el terreno, fachadas, cubiertas.</li>
+      <li><strong>HS-2 Recogida y evacuación de residuos</strong>: almacenamiento de residuos en los edificios.</li>
+      <li><strong>HS-3 Calidad del aire interior</strong>: ventilación de los espacios interiores.</li>
+      <li><strong>HS-4 Suministro de agua</strong>: instalaciones de suministro de agua potable.</li>
+      <li><strong>HS-5 Evacuación de aguas</strong>: instalaciones de saneamiento y drenaje.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s8">
+    <h2>8. Exigencias básicas de protección frente al ruido (DB-HR)</h2>
+    <p>El <strong>DB-HR</strong> establece las condiciones de aislamiento acústico entre recintos, el aislamiento acústico frente al ruido exterior y la limitación del tiempo de reverberación en determinados usos. El DB-HR fue actualizado por el RD 732/2019. Sus principales exigencias son:</p>
+    <ul>
+      <li><strong>HR-1 Aislamiento acústico</strong>: aislamiento frente a ruido aéreo (entre recintos y frente al exterior), aislamiento frente a ruido de impacto y aislamiento frente a ruido y vibraciones de instalaciones.</li>
+      <li><strong>HR-2 Tiempo de reverberación</strong>: en aulas, salas de conferencias y restaurantes.</li>
+      <li><strong>HR-3 Ruido y vibraciones de las instalaciones</strong>: limitación del nivel de presión de ruido generado por las instalaciones del edificio (climatización, fontanería, ascensores, etc.).</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s9">
+    <h2>9. Exigencias básicas de ahorro de energía (DB-HE)</h2>
+    <p>El <strong>DB-HE</strong> es el Documento Básico que más ha evolucionado desde la aprobación del CTE, con actualizaciones en 2013 y 2019 (RD 732/2019) que han endurecido progresivamente los requisitos de eficiencia energética de los edificios, en línea con las Directivas europeas de eficiencia energética en edificación. Sus secciones son:</p>
+    <ul>
+      <li><strong>HE-0 Limitación del consumo energético</strong>: establece el consumo de energía primaria no renovable máximo admisible del edificio, en función de su uso y zona climática.</li>
+      <li><strong>HE-1 Condiciones para el control de la demanda energética</strong>: condiciones de la envolvente térmica (muros, cubiertas, suelos, huecos) para limitar la demanda de calefacción y refrigeración.</li>
+      <li><strong>HE-2 Rendimiento de las instalaciones térmicas</strong>: remite al Reglamento de Instalaciones Térmicas en Edificios (RITE).</li>
+      <li><strong>HE-3 Condiciones de las instalaciones de iluminación</strong>: eficiencia energética de las instalaciones de iluminación interior.</li>
+      <li><strong>HE-4 Contribución mínima de energía renovable para cubrir la demanda de agua caliente sanitaria</strong>.</li>
+      <li><strong>HE-5 Generación mínima de energía eléctrica</strong>: instalaciones de generación eléctrica mediante energía solar fotovoltaica en determinados usos de edificios.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s10">
+    <h2>10. Condiciones en el proyecto: contenido del proyecto</h2>
+    <p>El <strong>artículo 6 del CTE</strong> regula las condiciones en el proyecto, estableciendo el contenido mínimo que debe tener el proyecto de edificación para garantizar que puede verificarse el cumplimiento de las exigencias básicas del CTE.</p>
+
+    <h3>El proyecto como instrumento de cumplimiento del CTE</h3>
+    <p>El proyecto debe demostrar que el edificio proyectado cumple las exigencias básicas del CTE. Para ello, el proyectista puede:</p>
+    <ul>
+      <li>Adoptar soluciones técnicas basadas en los <strong>Documentos Básicos</strong>, que constituyen una presunción de conformidad con las exigencias básicas.</li>
+      <li>Adoptar <strong>soluciones alternativas</strong> a las previstas en los DB, siempre que quede suficientemente justificado que proporcionan el mismo nivel de prestaciones que las soluciones del DB correspondiente.</li>
+    </ul>
+
+    <h3>Contenido mínimo del proyecto</h3>
+    <p>El artículo 6 del CTE establece que el proyecto debe incluir la información necesaria para la verificación del cumplimiento de las exigencias básicas. El contenido del proyecto se estructura en los siguientes documentos:</p>
+
+    <h4>Memoria</h4>
+    <p>La memoria contiene la descripción del edificio, de sus prestaciones y del sistema de construcción empleado, así como la justificación del cumplimiento de las exigencias básicas del CTE. La justificación debe ser expresa y puede realizarse mediante:</p>
+    <ul>
+      <li>La indicación de las características de los materiales, elementos y sistemas constructivos elegidos y la verificación de que cumplen los parámetros establecidos en los DB.</li>
+      <li>La aportación de estudios, ensayos, cálculos u otros métodos de verificación que demuestren el cumplimiento de las exigencias básicas cuando se adoptan soluciones alternativas.</li>
+    </ul>
+    <p>La memoria debe contener un apartado específico denominado <strong>"Cumplimiento del CTE"</strong>, en el que se indica el nivel de prestaciones establecido para el edificio y los métodos utilizados para verificar que se alcanzan dichas prestaciones.</p>
+
+    <h4>Planos</h4>
+    <p>Los planos deben permitir definir y localizar todos los elementos del edificio con la suficiente precisión para que pueda verificarse el cumplimiento de las exigencias básicas. Los planos deben incluir la información necesaria para comprobar el cumplimiento de cada DB: plantas de evacuación (para SI), plantas de compartimentación (para SI), detalles constructivos de la envolvente térmica (para HE-1), etc.</p>
+
+    <h4>Pliego de condiciones</h4>
+    <p>El pliego de condiciones técnicas debe especificar las características técnicas mínimas que deben reunir los productos, equipos y sistemas que se incorporen de forma permanente al edificio, así como las condiciones de ejecución de cada unidad de obra. El pliego de condiciones garantiza que la obra se ejecutará con los materiales y sistemas previstos en el proyecto.</p>
+
+    <h4>Mediciones y presupuesto</h4>
+    <p>Las mediciones y el presupuesto deben cuantificar todas las unidades de obra del proyecto con la precisión necesaria. El presupuesto de ejecución material debe reflejar el coste real de los materiales y la mano de obra necesarios para ejecutar la obra tal como está proyectada.</p>
+
+    <h3>El proyecto básico y el proyecto de ejecución</h3>
+    <p>El CTE distingue entre:</p>
+    <ul>
+      <li>El <strong>proyecto básico</strong>: contiene las características generales de la obra y sus prestaciones mediante la adopción y justificación de las soluciones generales básicas. Define la tipología y organización del edificio pero no contiene el detalle necesario para la ejecución de la obra. Es suficiente para solicitar la licencia de obras urbanística (en muchos Ayuntamientos), aunque no para iniciar la construcción.</li>
+      <li>El <strong>proyecto de ejecución</strong>: desarrolla el proyecto básico con el detalle necesario para la construcción. Incluye toda la documentación gráfica y escrita necesaria para definir con precisión las características técnicas de todos los elementos y sistemas del edificio, así como los cálculos estructurales y las especificaciones de todas las instalaciones. Es el documento con el que se dirige la obra.</li>
+    </ul>
+    <div class="nota"><strong>Diferencia esencial:</strong> El proyecto básico es suficiente para obtener la licencia urbanística pero no para iniciar la construcción. Para dirigir la obra es imprescindible el proyecto de ejecución. Ambos documentos deben suscribirse por el mismo proyectista o proyectistas.</div>
+  </div>
+
+  <div class="sec" id="s11">
+    <h2>11. Documentación del seguimiento de la obra</h2>
+    <p>El <strong>artículo 7 del CTE</strong> regula la documentación del seguimiento de la obra, que es el conjunto de documentos generados durante la ejecución del edificio y que acreditan que la construcción se ha realizado conforme al proyecto y al CTE.</p>
+
+    <h3>El Libro de Órdenes y Asistencias</h3>
+    <p>El <strong>Libro de Órdenes y Asistencias</strong> es el documento en el que el Director de Obra anota las instrucciones que da al contratista y al Director de Ejecución de la Obra durante la construcción. En él se registran las órdenes de obra, las modificaciones del proyecto, los incidentes y las actas de visita. Es habilitado por el Colegio profesional del Director de Obra y debe estar en la obra durante toda su ejecución.</p>
+
+    <h3>El Libro de Incidencias</h3>
+    <p>El <strong>Libro de Incidencias</strong> es el documento regulado por el RD 1627/1997 en el que se anotan los incumplimientos en materia de seguridad y salud durante la construcción, como ya se vio en el Tema 2. Es gestionado por el coordinador de seguridad y salud en la fase de ejecución.</p>
+
+    <h3>El Libro de Control de Calidad</h3>
+    <p>El <strong>Libro de Control de Calidad</strong> recoge los resultados de los controles y ensayos realizados durante la construcción para verificar que los materiales y la ejecución de la obra cumplen con las especificaciones del proyecto y con las exigencias del CTE.</p>
+
+    <h3>El control de la documentación de los productos de construcción</h3>
+    <p>Durante la ejecución de la obra, el Director de Ejecución de la Obra debe verificar que los productos de construcción que se incorporan al edificio disponen de la documentación acreditativa de sus características técnicas y de su conformidad con las especificaciones del proyecto. Esta documentación puede ser el marcado CE, las declaraciones de prestaciones, los certificados de ensayo o cualquier otro documento acreditativo.</p>
+
+    <h3>El acta de recepción</h3>
+    <p>Al finalizar la construcción, se formaliza el <strong>acta de recepción</strong> de la obra, en la que el promotor acepta la obra ejecutada por el constructor. El acta de recepción puede ser con o sin reservas. Si existen defectos observados, se hacen constar en el acta y se establece un plazo para su subsanación. La fecha del acta de recepción es la referencia para el inicio del cómputo de los plazos de responsabilidad establecidos en la LOE (1 año por vicios o defectos de terminación o acabado, 3 años por vicios que afectan a la habitabilidad, 10 años por vicios o defectos que afectan a la seguridad estructural).</p>
+
+    <h3>El Libro del Edificio</h3>
+    <p>El <strong>Libro del Edificio</strong> es el documento que, al término de la construcción, debe entregar el promotor a los usuarios del edificio. Contiene toda la información necesaria para el uso y el mantenimiento del edificio: planos as-built (planos del estado final del edificio, incluyendo las modificaciones realizadas durante la construcción), manuales de uso y mantenimiento de todos los equipos e instalaciones, garantías de los materiales y equipos instalados, instrucciones de uso del edificio y plan de mantenimiento. El Libro del Edificio debe ser elaborado por el Director de Obra y entregado al promotor al finalizar la construcción.</p>
+
+    <h3>El control de calidad de la obra: tipos</h3>
+    <p>El artículo 7 del CTE distingue tres tipos de control durante la ejecución de la obra:</p>
+    <ul>
+      <li><strong>Control de recepción en obra de productos, equipos y sistemas</strong>: verificación de que los materiales que llegan a la obra tienen las características declaradas por el fabricante y son conformes con las especificaciones del proyecto. Este control es responsabilidad del Director de Ejecución de la Obra.</li>
+      <li><strong>Control de ejecución de la obra</strong>: verificación de que la ejecución de cada unidad de obra se realiza conforme a las especificaciones del proyecto y a las instrucciones del Director de Obra. Es la actividad principal del Director de Ejecución de la Obra.</li>
+      <li><strong>Control de la obra terminada</strong>: verificación del edificio terminado mediante pruebas e inspecciones para comprobar que el conjunto del edificio cumple las exigencias básicas del CTE.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s12">
+    <h2>12. Las conformidades documentales: marcado CE y DIT</h2>
+
+    <h3>El marcado CE</h3>
+    <p>El <strong>marcado CE</strong> es el sistema de certificación de la conformidad de los productos de construcción con las especificaciones de la norma armonizada europea correspondiente, establecido por el Reglamento UE 305/2011 (Reglamento de Productos de Construcción). El marcado CE indica que el fabricante ha declarado que el producto cumple los requisitos esenciales aplicables y que sus prestaciones han sido determinadas y declaradas conforme al procedimiento establecido.</p>
+    <p>El marcado CE no es un sello de calidad: indica que el producto tiene declaradas sus prestaciones (mediante la Declaración de Prestaciones), pero no garantiza que esas prestaciones sean adecuadas para el uso previsto. El Director de Ejecución de la Obra debe verificar que las prestaciones declaradas en el marcado CE son las requeridas por el proyecto.</p>
+
+    <h3>El Documento de Idoneidad Técnica (DIT)</h3>
+    <p>El <strong>Documento de Idoneidad Técnica (DIT)</strong> es un documento de evaluación técnica para productos, sistemas y equipos de construcción innovadores que no están cubiertos por una norma armonizada europea y para los que, por tanto, no es posible obtener el marcado CE. El DIT es emitido por el Instituto Eduardo Torroja (IETcc) y acredita que el producto ha sido evaluado técnicamente y que sus prestaciones son adecuadas para el uso previsto. El DIT europeo es el equivalente al DIT nacional: el ETA (Evaluación Técnica Europea), emitido por Organismos de Evaluación Técnica reconocidos.</p>
+  </div>
+
+  <div class="sec" id="s13">
+    <h2>13. Terminología del CTE</h2>
+    <p>El <strong>Anejo III del CTE</strong> contiene el glosario de términos utilizados en el CTE y sus Documentos Básicos. El conocimiento de esta terminología es esencial para la correcta aplicación del CTE. Los términos más relevantes son:</p>
+
+    <h3>Términos relativos a los agentes de la edificación</h3>
+    <ul>
+      <li><strong>Promotor</strong>: cualquier persona, física o jurídica, pública o privada, que, individual o colectivamente, decide, impulsa, programa y financia, con recursos propios o ajenos, las obras de edificación para sí o para su posterior enajenación, entrega o cesión a terceros.</li>
+      <li><strong>Proyectista</strong>: el agente que, por encargo del promotor y con sujeción a la normativa técnica y urbanística correspondiente, redacta el proyecto.</li>
+      <li><strong>Constructor</strong>: el agente que asume, contractualmente ante el promotor, el compromiso de ejecutar con medios humanos y materiales, propios o ajenos, las obras o parte de las mismas con sujeción al proyecto y al contrato.</li>
+      <li><strong>Director de Obra</strong>: el agente que, formando parte de la dirección facultativa, dirige el desarrollo de la obra en los aspectos técnicos, estéticos, urbanísticos y medioambientales, de conformidad con el proyecto que la define.</li>
+      <li><strong>Director de Ejecución de la Obra</strong>: el agente que, formando parte de la dirección facultativa, asume la función técnica de dirigir la ejecución material de la obra y de controlar cualitativa y cuantitativamente la construcción y la calidad de lo edificado. En el caso de las obras de edificación del grupo b) del artículo 2.1 de la LOE (edificios de uso exclusivamente residencial hasta 4 plantas o no residencial de las categorías establecidas) puede ser un arquitecto técnico o un aparejador.</li>
+      <li><strong>Entidades y laboratorios de control de calidad</strong>: entidades de control de calidad de la edificación aquellas capacitadas para prestar asistencia técnica en la verificación de la calidad del proyecto, de los materiales y de la ejecución de la obra y sus instalaciones de acuerdo con el proyecto y la normativa aplicable. Los laboratorios de ensayos para el control de calidad de la edificación son los capacitados para prestar asistencia técnica, mediante la realización de ensayos o pruebas de servicio de los materiales, sistemas o instalaciones de una obra de edificación.</li>
+    </ul>
+
+    <h3>Términos relativos al edificio y sus prestaciones</h3>
+    <ul>
+      <li><strong>Edificio</strong>: construcción fija hecha con materiales resistentes para habitación humana o para otros usos, en general cubierta y cerrada.</li>
+      <li><strong>Uso previsto</strong>: actividad o actividades para las que el edificio ha sido diseñado o para las que se prevé que sea utilizado.</li>
+      <li><strong>Prestación</strong>: cumplimiento de una exigencia básica, cuantificada mediante el nivel o clase de la misma.</li>
+      <li><strong>Nivel o clase</strong>: expresión del nivel de la prestación de una característica, que puede ser una medida, un valor, un grado, una categoría o un tipo que caracteriza la aptitud del edificio, del elemento constructivo o del producto para cumplir una exigencia básica.</li>
+      <li><strong>Vida útil</strong>: período de tiempo durante el que el edificio o sus partes deben cumplir la función para la que fueron concebidos sin requerir una intervención de reparación especial.</li>
+    </ul>
+
+    <h3>Términos relativos a las soluciones técnicas</h3>
+    <ul>
+      <li><strong>Soluciones técnicas</strong>: conjunto de materiales, elementos, sistemas y procedimientos que, en el ámbito de la edificación, poseen suficiente idoneidad técnica para satisfacer las exigencias básicas del CTE.</li>
+      <li><strong>Documento Básico (DB)</strong>: documento del CTE que especifica parámetros objetivos y procedimientos cuyo cumplimiento asegura la satisfacción de las exigencias básicas y la superación de los niveles mínimos de calidad propios del requisito básico correspondiente.</li>
+      <li><strong>Documento Reconocido del CTE</strong>: documento técnico, sin carácter reglamentario, que cuenta con el reconocimiento del Ministerio competente en materia de vivienda, que sirve de referencia para los agentes de la edificación para acreditar el cumplimiento de determinadas exigencias básicas del CTE.</li>
+      <li><strong>Presunción de conformidad</strong>: la conformidad de los productos, equipos y sistemas con los DB implica la conformidad con los requisitos básicos del CTE.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s14">
+    <h2>14. Los Documentos Reconocidos</h2>
+    <p>El CTE establece la categoría de <strong>Documentos Reconocidos</strong> como instrumentos complementarios de los Documentos Básicos, que facilitan la aplicación del CTE proporcionando información técnica adicional, métodos de cálculo alternativos o procedimientos de verificación complementarios. Los Documentos Reconocidos no tienen carácter reglamentario y su uso no es obligatorio, pero cuando se utilizan permiten presumir el cumplimiento de las exigencias básicas del CTE.</p>
+    <p>Los Documentos Reconocidos son elaborados por organismos técnicos de reconocido prestigio (institutos de investigación, asociaciones técnicas, fabricantes, etc.) y deben ser reconocidos por el Ministerio competente. Para obtener el reconocimiento, el documento debe superar un proceso de evaluación técnica que garantice su corrección técnica.</p>
+    <p>Entre los Documentos Reconocidos del CTE se encuentran, por ejemplo, guías de aplicación de los DB, catálogos de elementos constructivos, métodos de cálculo alternativos para la comprobación del aislamiento acústico, herramientas informáticas de simulación energética, etc.</p>
+  </div>
+
+  <div class="footer">Real Decreto 314/2006, de 17 de marzo (CTE) · Real Decreto 732/2019 · Ley 38/1999, de Ordenación de la Edificación (LOE)</div>
+</div>
+</body>
+</html>
