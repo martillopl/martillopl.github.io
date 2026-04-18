@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuadro comparativo y Test — Los Actos Administrativos (Tema 10)</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.20);--gbg:#eaf3de;--gbr:#639922;--gtx:#27500a;--rbg:#fcebeb;--rbr:#e24b4a;--rtx:#501313;--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.18);--gbg:#173404;--gbr:#3b6d11;--gtx:#c0dd97;--rbg:#501313;--rbr:#a32d2d;--rtx:#f7c1c1}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2rem 1rem}
+  .page{max-width:980px;margin:0 auto}
+  h1{font-size:20px;font-weight:500;margin-bottom:4px}
+  h2{font-size:17px;font-weight:500;margin:2.5rem 0 1rem;padding-bottom:8px;border-bottom:.5px solid var(--bm)}
+  .sub{font-size:13px;color:var(--t3);margin-bottom:28px}
+  .sub a{color:var(--t2);text-decoration:none}
+  .sub a:hover{color:var(--t1)}
+  .wrap{overflow-x:auto;background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r2);margin-bottom:16px}
+  table{width:100%;border-collapse:collapse;font-size:12px;min-width:580px}
+  thead tr{background:var(--bg2)}
+  th{font-weight:500;font-size:11.5px;color:var(--t2);text-align:left;padding:10px 12px;border-bottom:.5px solid var(--bm);white-space:nowrap}
+  td{padding:10px 12px;border-bottom:.5px solid var(--bl);vertical-align:top;line-height:1.6;color:var(--t2)}
+  tr:last-child td{border-bottom:none}
+  tr:hover td{background:var(--bg2)}
+  .dest{font-weight:500;color:var(--t1);font-size:12px}
+  .in{font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap;display:inline-block}
+  .n{background:#FCEBEB;color:#791F1F}.a{background:#FAEEDA;color:#633806}
+  .r1{background:#EEEDFE;color:#3C3489}.r2{background:#E6F1FB;color:#0C447C}.r3{background:#E1F5EE;color:#085041}
+  @media(prefers-color-scheme:dark){.n{background:#501313;color:#F7C1C1}.a{background:#633806;color:#FAC775}.r1{background:#3C3489;color:#CECBF6}.r2{background:#0C447C;color:#B5D4F4}.r3{background:#085041;color:#9FE1CB}}
+  .marc{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;font-size:13px;color:var(--t2)}
+  .sv{font-weight:500;color:var(--t1)}
+  .br{font-size:12px;padding:5px 14px;border:.5px solid var(--bm);border-radius:20px;background:transparent;color:var(--t2);cursor:pointer}
+  .br:hover{background:var(--bg2)}
+  .pc{background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r2);padding:18px;margin-bottom:12px}
+  .num{font-size:11px;font-weight:500;color:var(--t3);margin-bottom:6px}
+  .enun{font-size:14px;font-weight:500;margin-bottom:14px;line-height:1.55;color:var(--t1)}
+  .opts{display:flex;flex-direction:column;gap:7px}
+  .opt{display:flex;align-items:flex-start;gap:10px;padding:9px 13px;border:.5px solid var(--bl);border-radius:var(--r1);cursor:pointer;font-size:13px;background:var(--bg2);user-select:none;line-height:1.5;transition:border-color .15s;color:var(--t1)}
+  .opt:hover{border-color:var(--bm)}
+  .opt.ok{background:var(--gbg);border-color:var(--gbr);color:var(--gtx)}
+  .opt.ko{background:var(--rbg);border-color:var(--rbr);color:var(--rtx)}
+  .opt.off{cursor:default;pointer-events:none}
+  .let{font-weight:500;min-width:16px;flex-shrink:0}
+  .exp{font-size:12.5px;margin-top:12px;padding:10px 13px;color:var(--t2);background:var(--bg2);border-left:2px solid var(--bm);line-height:1.65;display:none}
+  .exp.v{display:block}
+  .footer{margin-top:24px;font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>Los Actos Administrativos</h1>
+  <p class="sub">Tema 10 · Cuadro comparativo y test interactivo · Ley 39/2015<br>
+    <a href="../index.html">Índice</a><br>
+    <a href="1_texto_explicativo.html"><< Texto completo</a>
+     | 
+    <a href="2_esquema_resumen.html">< Esquema-resumen</a>
+  </p>
+
+  <h2>Nulidad de pleno derecho vs. Anulabilidad</h2>
+  <div class="wrap">
+    <table>
+      <thead><tr><th>Aspecto</th><th><span class="in n">Nulidad de pleno derecho (art. 47)</span></th><th><span class="in a">Anulabilidad (art. 48)</span></th></tr></thead>
+      <tbody>
+        <tr><td class="dest">Causas</td><td>Tasadas y graves: lesión DDFF (arts. 14-30 CE), incompetencia manifiesta por materia/territorio, contenido imposible, infracción penal, ausencia total de procedimiento, adquisición de facultades sin requisitos esenciales, las previstas por ley</td><td>Cualquier infracción del ordenamiento jurídico, incluida la desviación de poder</td></tr>
+        <tr><td class="dest">Plazo para invocarla</td><td>En cualquier momento — sin prescripción</td><td>Solo dentro del plazo de recurso; si no se impugna deviene firme</td></tr>
+        <tr><td class="dest">Efectos temporales</td><td>Retroactivos — ex tunc (desde que se dictó el acto)</td><td>Ex nunc (desde la declaración), salvo acuerdo de retroactividad</td></tr>
+        <tr><td class="dest">Convalidación</td><td>No es convalidable</td><td>Puede convalidarse subsanando el vicio (art. 52 LPAC)</td></tr>
+        <tr><td class="dest">Vía de declaración</td><td>Revisión de oficio (art. 106) en cualquier momento · o por recurso</td><td>Solo mediante recurso o revisión en plazo</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Recursos administrativos — plazos clave</h2>
+  <div class="wrap">
+    <table>
+      <thead><tr><th>Recurso</th><th>Arts.</th><th>Actos recurribles</th><th>Órgano competente</th><th>Plazo interposición</th><th>Plazo resolución</th><th>Silencio</th></tr></thead>
+      <tbody>
+        <tr><td><span class="in r1">Alzada</span></td><td>121-122</td><td>No agotan la vía adm.</td><td>Superior jerárquico</td><td>1 mes (expreso) · 3 meses (presunto)</td><td>3 meses</td><td>Desestimatorio</td></tr>
+        <tr><td><span class="in r2">Reposición</span></td><td>123-124</td><td>Agotan la vía adm. (potestativo)</td><td>Mismo órgano que dictó el acto</td><td>1 mes (expreso) · 3 meses (presunto)</td><td>1 mes</td><td>Desestimatorio</td></tr>
+        <tr><td><span class="in r3">Revisión</span></td><td>125-126</td><td>Actos firmes (causas tasadas)</td><td>Mismo órgano que dictó el acto</td><td>4 años (error de hecho) · 3 meses (resto)</td><td>3 meses</td><td>Desestimatorio</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Test interactivo — 10 preguntas tipo test</h2>
+  <div class="marc">
+    <span>Respuestas correctas: <span class="sv" id="sc">0</span> / <span id="tot"></span></span>
+    <button class="br" onclick="rst()">Reiniciar test</button>
+  </div>
+  <div id="qq"></div>
+  <p class="footer">Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas · Arts. 34-126</p>
+</div>
+<script>
+const QQ=[
+  {e:"¿Cuál es el plazo para interponer el recurso de alzada contra un acto administrativo expreso?",o:["15 días hábiles","1 mes","3 meses","6 meses"],c:1,x:"El artículo 121 de la Ley 39/2015 establece que el recurso de alzada deberá interponerse en el plazo de 1 mes si el acto recurrido fuera expreso, y de 3 meses si el acto fuera presunto (silencio administrativo)."},
+  {e:"¿Qué vicio determina la nulidad de pleno derecho de un acto administrativo?",o:["Falta de motivación suficiente","Prescindimiento total y absoluto del procedimiento legalmente establecido","Error material en la fecha del acto","Incompetencia jerárquica del órgano que lo dictó"],c:1,x:"El artículo 47.1.e) de la Ley 39/2015 establece como causa de nulidad de pleno derecho que el acto haya sido dictado prescindiendo total y absolutamente del procedimiento legalmente establecido. La incompetencia jerárquica determina solo la anulabilidad."},
+  {e:"¿Cuál es el plazo máximo para resolver un recurso de reposición?",o:["15 días hábiles","1 mes","3 meses","6 meses"],c:1,x:"El artículo 124.2 de la Ley 39/2015 establece que el plazo máximo para resolver el recurso potestativo de reposición es de 1 mes. Transcurrido sin resolución, el recurso se entiende desestimado por silencio administrativo."},
+  {e:"¿Contra qué tipo de actos procede el recurso extraordinario de revisión?",o:["Contra cualquier acto que infrinja el ordenamiento","Contra los actos que no agotan la vía administrativa","Contra los actos firmes en vía administrativa cuando concurran las causas tasadas","Contra los actos del Consejo de Ministros sin motivación"],c:2,x:"El recurso extraordinario de revisión (arts. 125-126 Ley 39/2015) solo procede contra actos firmes en vía administrativa y únicamente cuando concurre alguna de las causas tasadas: error de hecho, documentos esenciales, falsedad o prevaricación."},
+  {e:"¿Qué sucede con la interposición de un recurso administrativo respecto a la ejecución del acto?",o:["La suspende automáticamente","No suspende automáticamente la ejecución, aunque el órgano puede acordarla","La suspende solo si se presta caución","La suspende siempre que se alegue nulidad de pleno derecho"],c:1,x:"La regla general es que la interposición de un recurso administrativo no suspende automáticamente la ejecución del acto. Sin embargo, el órgano puede acordar la suspensión cuando la ejecución pudiera causar perjuicios de difícil reparación o cuando la impugnación se base en nulidad de pleno derecho."},
+  {e:"¿Cuál es el plazo para declarar la lesividad de un acto anulable favorable para el interesado?",o:["1 año","2 años","4 años","Sin plazo, como la nulidad de pleno derecho"],c:2,x:"El artículo 107 de la Ley 39/2015 establece un plazo de 4 años desde que se dictó el acto para que la Administración declare su lesividad. Tras la declaración, dispone de 2 meses para interponer el recurso contencioso-administrativo."},
+  {e:"¿Qué órgano debe emitir informe preceptivo previo a la declaración de nulidad por revisión de oficio en la Administración del Estado?",o:["El Tribunal Constitucional","El Consejo de Estado","La Abogacía General del Estado","El mismo órgano que dictó el acto"],c:1,x:"El artículo 106 de la Ley 39/2015 establece que antes de declarar la nulidad de pleno derecho por revisión de oficio, la Administración debe recabar el dictamen del Consejo de Estado u órgano consultivo equivalente de la Comunidad Autónoma. En Navarra, ese órgano es el Consejo de Navarra."},
+  {e:"¿Cuál es la diferencia en los efectos temporales entre nulidad de pleno derecho y anulabilidad?",o:["La nulidad produce efectos ex nunc; la anulabilidad efectos ex tunc","La nulidad produce efectos retroactivos (ex tunc); la anulabilidad produce efectos desde la declaración (ex nunc)","Ambas producen efectos retroactivos desde que se dictó el acto","Ninguna tiene efectos retroactivos en el Derecho Administrativo"],c:1,x:"La nulidad de pleno derecho tiene efectos retroactivos (ex tunc): se retrotrae al momento en que se dictó el acto. La anulabilidad produce efectos ex nunc (desde la declaración), salvo que expresamente se acuerde la retroactividad."},
+  {e:"¿Cuál es el plazo del recurso extraordinario de revisión cuando la causa es el error de hecho?",o:["3 meses desde que se tuvo conocimiento del error","1 año desde la notificación","4 años desde la notificación de la resolución recurrida","Sin plazo, al tratarse de un recurso extraordinario"],c:2,x:"El artículo 125.1 de la Ley 39/2015 establece que el recurso extraordinario de revisión por error de hecho debe interponerse en el plazo de 4 años desde la notificación de la resolución. Para el resto de causas el plazo es de 3 meses desde el conocimiento de los hechos que lo motivan."},
+  {e:"¿Qué ocurre con un acto anulable que no ha sido impugnado dentro del plazo de recurso?",o:["Es declarado nulo de pleno derecho automáticamente","Deviene firme, siendo inatacable en vía ordinaria salvo por el recurso extraordinario de revisión si concurren sus causas","Puede ser revisado de oficio por la Administración en cualquier momento","Pierde su ejecutividad pero sigue produciendo efectos provisionales"],c:1,x:"Los actos anulables convalidan por el transcurso del tiempo si no son impugnados en el plazo establecido: devienen firmes e inatacables en vía ordinaria. Solo el recurso extraordinario de revisión, si concurre alguna de sus causas tasadas, permitiría su revisión posterior."}
+];
+let R={},A=0;
+function render(){
+  document.getElementById('tot').textContent=QQ.length;
+  const c=document.getElementById('qq');c.innerHTML='';
+  QQ.forEach((p,i)=>{
+    const L=['A','B','C','D'],d=document.createElement('div');
+    d.className='pc';
+    d.innerHTML=`<div class="num">Pregunta ${i+1} de ${QQ.length}</div><div class="enun">${p.e}</div><div class="opts" id="o${i}">${p.o.map((o,j)=>`<div class="opt" onclick="ans(${i},${j})"><span class="let">${L[j]}</span><span>${o}</span></div>`).join('')}</div><div class="exp" id="x${i}">${p.x}</div>`;
+    c.appendChild(d);
+  });
+  document.getElementById('sc').textContent=0;
+}
+function ans(i,j){
+  if(R[i]!==undefined)return;R[i]=j;
+  const c=QQ[i].c;
+  document.querySelectorAll(`#o${i} .opt`).forEach((el,k)=>{
+    el.classList.add('off');
+    if(k===c)el.classList.add('ok');
+    else if(k===j)el.classList.add('ko');
+  });
+  if(j===c)A++;
+  document.getElementById('sc').textContent=A;
+  document.getElementById('x'+i).classList.add('v');
+}
+function rst(){R={};A=0;render();}
+render();
+</script>
+</body>
+</html>

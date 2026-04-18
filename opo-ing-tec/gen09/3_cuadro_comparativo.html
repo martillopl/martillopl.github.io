@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuadro comparativo y Test — LF 11/2019 (Tema 9)</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.20);--gbg:#eaf3de;--gbr:#639922;--gtx:#27500a;--rbg:#fcebeb;--rbr:#e24b4a;--rtx:#501313;--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.18);--gbg:#173404;--gbr:#3b6d11;--gtx:#c0dd97;--rbg:#501313;--rbr:#a32d2d;--rtx:#f7c1c1}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2rem 1rem}
+  .page{max-width:980px;margin:0 auto}
+  h1{font-size:20px;font-weight:500;margin-bottom:4px}
+  h2{font-size:17px;font-weight:500;margin:2.5rem 0 1rem;padding-bottom:8px;border-bottom:.5px solid var(--bm)}
+  .sub{font-size:13px;color:var(--t3);margin-bottom:28px}
+  .sub a{color:var(--t2);text-decoration:none}
+  .sub a:hover{color:var(--t1)}
+  .wrap{overflow-x:auto;background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r2);margin-bottom:12px}
+  table{width:100%;border-collapse:collapse;font-size:12px;min-width:700px}
+  thead tr{background:var(--bg2)}
+  th{font-weight:500;font-size:11.5px;color:var(--t2);text-align:left;padding:10px 12px;border-bottom:.5px solid var(--bm);white-space:nowrap}
+  td{padding:10px 12px;border-bottom:.5px solid var(--bl);vertical-align:top;line-height:1.6;color:var(--t2)}
+  tr:last-child td{border-bottom:none}
+  tr:hover td{background:var(--bg2)}
+  .dest{font-weight:500;color:var(--t1);font-size:12px}
+  .tec{font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap;display:inline-block}
+  .t1{background:#E6F1FB;color:#0C447C}.t2{background:#E1F5EE;color:#085041}.t3{background:#FAEEDA;color:#633806}.t4{background:#FAECE7;color:#712B13}.t5{background:#EAF3DE;color:#27500A}
+  @media(prefers-color-scheme:dark){.t1{background:#0C447C;color:#B5D4F4}.t2{background:#085041;color:#9FE1CB}.t3{background:#633806;color:#FAC775}.t4{background:#712B13;color:#F5C4B3}.t5{background:#27500A;color:#C0DD97}}
+  .marc{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;font-size:13px;color:var(--t2)}
+  .sv{font-weight:500;color:var(--t1)}
+  .br{font-size:12px;padding:5px 14px;border:.5px solid var(--bm);border-radius:20px;background:transparent;color:var(--t2);cursor:pointer}
+  .br:hover{background:var(--bg2)}
+  .pc{background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r2);padding:18px;margin-bottom:12px}
+  .num{font-size:11px;font-weight:500;color:var(--t3);margin-bottom:6px}
+  .enun{font-size:14px;font-weight:500;margin-bottom:14px;line-height:1.55;color:var(--t1)}
+  .opts{display:flex;flex-direction:column;gap:7px}
+  .opt{display:flex;align-items:flex-start;gap:10px;padding:9px 13px;border:.5px solid var(--bl);border-radius:var(--r1);cursor:pointer;font-size:13px;background:var(--bg2);user-select:none;line-height:1.5;transition:border-color .15s;color:var(--t1)}
+  .opt:hover{border-color:var(--bm)}
+  .opt.ok{background:var(--gbg);border-color:var(--gbr);color:var(--gtx)}
+  .opt.ko{background:var(--rbg);border-color:var(--rbr);color:var(--rtx)}
+  .opt.off{cursor:default;pointer-events:none}
+  .let{font-weight:500;min-width:16px;flex-shrink:0}
+  .exp{font-size:12.5px;margin-top:12px;padding:10px 13px;color:var(--t2);background:var(--bg2);border-left:2px solid var(--bm);line-height:1.65;display:none}
+  .exp.v{display:block}
+  .footer{margin-top:24px;font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>LF 11/2019 — Administración de la CF de Navarra</h1>
+  <p class="sub">Tema 9 · Cuadro comparativo de técnicas competenciales y test interactivo<br>
+    <a href="../index.html">Índice</a><br>
+    <a href="1_texto_explicativo.html"><< Texto completo</a>
+     | 
+    <a href="2_esquema_resumen.html">< Esquema-resumen</a>
+  </p>
+
+  <h2>Técnicas de ejercicio de competencias (arts. 29-35 LF 11/2019)</h2>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr><th>Técnica</th><th>Arts.</th><th>Concepto</th><th>¿Cede la titularidad?</th><th>Particularidades navarras</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="tec t1">Delegación</span></td><td>29-31</td><td>Transferencia del ejercicio de competencias a otro órgano de la misma o distinta Consejería</td><td>No — solo el ejercicio</td><td>Publicación en el BON · no cabe subdelegación salvo autorización expresa · responsabilidad del delegante</td></tr>
+        <tr><td><span class="tec t2">Avocación</span></td><td>32</td><td>El órgano superior recaba para sí el conocimiento de un asunto que corresponde a un inferior</td><td>No — recuperación temporal del ejercicio</td><td>Debe motivarse y notificarse a los interesados en el procedimiento (especificidad navarra)</td></tr>
+        <tr><td><span class="tec t3">Encomienda de gestión</span></td><td>33</td><td>Encargo de actividades materiales, técnicas o de servicios a otro órgano o entidad</td><td>No — solo la ejecución material</td><td>Formalización mediante acuerdo publicado en el BON · responsabilidad del encomendante</td></tr>
+        <tr><td><span class="tec t4">Delegación de firma</span></td><td>34</td><td>El titular delega en un subordinado la firma de sus resoluciones y actos</td><td>No — solo la firma material</td><td>No cabe para disposiciones de carácter general ni resoluciones sancionadoras · debe constar expresamente en los actos</td></tr>
+        <tr><td><span class="tec t5">Suplencia</span></td><td>35</td><td>Sustitución del titular en casos de vacante, ausencia o enfermedad</td><td>No — sustitución personal temporal</td><td>No implica alteración de la competencia del órgano · el suplente actúa en nombre del órgano</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Test interactivo — 10 preguntas tipo test</h2>
+  <div class="marc">
+    <span>Respuestas correctas: <span class="sv" id="sc">0</span> / <span id="tot"></span></span>
+    <button class="br" onclick="rst()">Reiniciar test</button>
+  </div>
+  <div id="qq"></div>
+  <p class="footer">Ley Foral 11/2019, de 11 de marzo, de la Administración de la Comunidad Foral de Navarra y del Sector Público Institucional Foral · BON núm. 57, de 21 de marzo de 2019</p>
+</div>
+<script>
+const QQ=[
+  {e:"¿Cuál es el quórum para la válida constitución de un órgano colegiado en primera convocatoria según la LF 11/2019?",o:["La presencia de todos los miembros","La presencia del Presidente, el Secretario y la mayoría absoluta de sus miembros","La presencia del Presidente, el Secretario y un tercio de sus miembros","La presencia del Presidente y dos tercios de los vocales"],c:1,x:"La LF 11/2019 establece que para la válida constitución en primera convocatoria se requiere la presencia del Presidente, del Secretario y de la mayoría absoluta de sus miembros. En segunda convocatoria (media hora después) basta el Presidente, el Secretario y un tercio de los miembros."},
+  {e:"¿Qué antelación mínima debe respetarse para convocar las sesiones de los órganos colegiados según la LF 11/2019?",o:["24 horas","48 horas","72 horas","5 días hábiles"],c:1,x:"La LF 11/2019 establece una antelación mínima de 48 horas para la convocatoria de las sesiones de los órganos colegiados, salvo en casos de urgencia. La convocatoria debe incluir el orden del día."},
+  {e:"¿En qué casos no cabe la delegación de firma según el artículo 34 de la LF 11/2019?",o:["Cuando los actos tengan efectos económicos relevantes","Para disposiciones de carácter general y para resoluciones de carácter sancionador","Cuando el órgano delegante sea el Consejero","Cuando la delegación no haya sido publicada en el BON"],c:1,x:"El artículo 34 de la LF 11/2019 establece que no cabe la delegación de firma para la adopción de disposiciones de carácter general ni para las resoluciones de carácter sancionador."},
+  {e:"¿Qué entidades quedan expresamente excluidas del ámbito de aplicación de la LF 11/2019?",o:["Las sociedades mercantiles participadas por la Comunidad Foral","Las entidades locales navarras (municipios, concejos y mancomunidades)","Los organismos autónomos forales","Las fundaciones del sector público foral"],c:1,x:"El artículo 2 de la LF 11/2019 excluye expresamente de su ámbito de aplicación a las entidades locales navarras, que se rigen por su propia normativa de régimen local."},
+  {e:"¿Qué norma foral se necesita para crear, modificar o suprimir un Departamento de la Administración foral navarra?",o:["Una ley foral del Parlamento de Navarra","Un decreto foral del Gobierno de Navarra","Una orden foral del Consejero competente","Una resolución del Presidente del Gobierno"],c:1,x:"Los Departamentos de la Administración de la Comunidad Foral de Navarra se crean, modifican y suprimen por decreto foral del Gobierno de Navarra, a propuesta del Presidente o Presidenta del Gobierno. Las unidades administrativas se crean mediante orden foral."},
+  {e:"¿Qué especificidad introduce la LF 11/2019 respecto a la avocación en comparación con la Ley 40/2015?",o:["La avocación en Navarra no requiere motivación","La avocación debe notificarse a los interesados en el procedimiento","La avocación puede realizarse con carácter general en Navarra","La avocación puede producirse entre órganos de distintas Administraciones en Navarra"],c:1,x:"La LF 11/2019 exige expresamente que la avocación, además de motivarse, sea notificada a los interesados en el procedimiento, añadiendo una garantía de transparencia que no recoge con la misma explicitud la Ley 40/2015."},
+  {e:"¿A quién corresponde resolver los conflictos de atribuciones entre órganos de distintos Departamentos de la Administración foral?",o:["Al Presidente del Gobierno de Navarra","Al Gobierno de Navarra (Consejo de Gobierno)","Al Consejero del departamento que inició el procedimiento","Al Consejo de Navarra"],c:1,x:"Según los artículos 36 y 37 de la LF 11/2019, los conflictos de atribuciones entre órganos de un mismo Departamento los resuelve el Consejero de ese Departamento. Los conflictos entre órganos de distintos Departamentos los resuelve el Gobierno de Navarra."},
+  {e:"¿Qué derecho reconoce la LF 11/2019 en relación con los documentos que ya obran en poder de la Administración?",o:["El derecho a solicitar una copia certificada de esos documentos","El derecho a no aportar documentos que ya obren en poder de cualquier Administración Pública","El derecho a exigir que esos documentos sean destruidos tras el procedimiento","El derecho a que esos documentos sean tratados como confidenciales"],c:1,x:"El Título VI de la LF 11/2019 reconoce el derecho de las personas a no aportar documentos que ya obren en poder de la Administración actuante o de cualquier Administración Pública, vinculado al principio de interoperabilidad."},
+  {e:"¿Qué órgano directivo de los Departamentos ejerce funciones de coordinación, apoyo jurídico y técnico al Consejero en la LF 11/2019?",o:["El Director o Directora de Servicio","El Jefe o Jefa de Sección","El Secretario o Secretaria General Técnica","El Gabinete del Consejero"],c:2,x:"El Secretario o Secretaria General Técnica es el órgano directivo de mayor rango dentro de cada Departamento (por debajo del Consejero) que ejerce funciones de coordinación y apoyo jurídico y técnico: coordina la tramitación de expedientes y proyectos normativos y asiste al Consejero."},
+  {e:"¿Cuál es el carácter de la personalidad jurídica de la Administración de la Comunidad Foral de Navarra según el artículo 7 de la LF 11/2019?",o:["Tiene personalidad jurídica plural, una por cada Departamento","Tiene personalidad jurídica única, actuando todos sus órganos como una sola persona jurídica","Tiene personalidad jurídica funcional, diferenciada por sectores de actividad","No tiene personalidad jurídica propia, actuando en nombre del Gobierno de Navarra"],c:1,x:"El artículo 7 de la LF 11/2019 establece que la Administración de la Comunidad Foral actúa con personalidad jurídica única. Esto significa que todos sus departamentos, organismos y órganos actúan como una sola persona jurídica, con capacidad plena y responsabilidad patrimonial única."}
+];
+let R={},A=0;
+function render(){
+  document.getElementById('tot').textContent=QQ.length;
+  const c=document.getElementById('qq');c.innerHTML='';
+  QQ.forEach((p,i)=>{
+    const L=['A','B','C','D'],d=document.createElement('div');
+    d.className='pc';
+    d.innerHTML=`<div class="num">Pregunta ${i+1} de ${QQ.length}</div><div class="enun">${p.e}</div><div class="opts" id="o${i}">${p.o.map((o,j)=>`<div class="opt" onclick="ans(${i},${j})"><span class="let">${L[j]}</span><span>${o}</span></div>`).join('')}</div><div class="exp" id="x${i}">${p.x}</div>`;
+    c.appendChild(d);
+  });
+  document.getElementById('sc').textContent=0;
+}
+function ans(i,j){
+  if(R[i]!==undefined)return;R[i]=j;
+  const c=QQ[i].c;
+  document.querySelectorAll(`#o${i} .opt`).forEach((el,k)=>{
+    el.classList.add('off');
+    if(k===c)el.classList.add('ok');
+    else if(k===j)el.classList.add('ko');
+  });
+  if(j===c)A++;
+  document.getElementById('sc').textContent=A;
+  document.getElementById('x'+i).classList.add('v');
+}
+function rst(){R={};A=0;render();}
+render();
+</script>
+</body>
+</html>
