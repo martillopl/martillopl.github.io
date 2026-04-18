@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 1 — La Constitución Española de 1978</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg-primary: #ffffff; --bg-secondary: #f5f4f0; --bg-tertiary: #eeece6;
+    --text-primary: #1a1a18; --text-secondary: #5f5e5a; --text-tertiary: #888780;
+    --border-light: rgba(0,0,0,0.10); --border-mid: rgba(0,0,0,0.22);
+    --radius-md: 8px; --radius-lg: 12px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-primary: #1e1e1c; --bg-secondary: #282825; --bg-tertiary: #323230;
+      --text-primary: #e8e6de; --text-secondary: #9c9a92; --text-tertiary: #6e6d68;
+      --border-light: rgba(255,255,255,0.10); --border-mid: rgba(255,255,255,0.20);
+    }
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg-tertiary); color: var(--text-primary); padding: 2.5rem 1rem; min-height: 100vh; line-height: 1.75; }
+  .page { max-width: 740px; margin: 0 auto; }
+
+  /* Cabecera */
+  .header { margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 0.5px solid var(--border-mid); }
+  .tema-label { font-size: 12px; font-weight: 500; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+  h1 { font-size: 24px; font-weight: 500; line-height: 1.3; margin-bottom: 8px; }
+  .meta { font-size: 13px; color: var(--text-tertiary); }
+  .meta a{color:var(--text-secondary);text-decoration:none}
+  .meta a:hover{color:var(--text-primary)}
+
+  /* Índice */
+  .indice { background: var(--bg-secondary); border: 0.5px solid var(--border-light); border-radius: var(--radius-lg); padding: 16px 20px; margin-bottom: 2.5rem; }
+  .indice-titulo { font-size: 11px; font-weight: 500; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
+  .indice ol { padding-left: 18px; }
+  .indice li { font-size: 13px; color: var(--text-secondary); padding: 3px 0; }
+  .indice a { color: var(--text-secondary); text-decoration: none; }
+  .indice a:hover { color: var(--text-primary); }
+
+  /* Secciones */
+  .seccion { margin-bottom: 2.8rem; }
+  h2 { font-size: 18px; font-weight: 500; margin-bottom: 1rem; padding-bottom: 8px; border-bottom: 0.5px solid var(--border-light); }
+  h3 { font-size: 15px; font-weight: 500; margin: 1.6rem 0 0.6rem; color: var(--text-primary); }
+  p { font-size: 15px; color: var(--text-secondary); margin-bottom: 1rem; }
+  p:last-child { margin-bottom: 0; }
+
+  /* Destacado inline */
+  strong { font-weight: 500; color: var(--text-primary); }
+
+  /* Cita legal */
+  .cita { background: var(--bg-secondary); border-left: 2px solid var(--border-mid); padding: 10px 16px; margin: 1rem 0; font-size: 14px; color: var(--text-secondary); border-radius: 0; font-style: italic; }
+
+  /* Lista */
+  ul { padding-left: 20px; margin-bottom: 1rem; }
+  ul li { font-size: 15px; color: var(--text-secondary); padding: 3px 0; }
+
+  /* Badge artículo */
+  .art { display: inline-block; font-size: 11px; font-weight: 500; background: var(--bg-secondary); border: 0.5px solid var(--border-mid); border-radius: 20px; padding: 1px 8px; color: var(--text-tertiary); vertical-align: middle; margin-left: 4px; }
+
+  /* Pie */
+  .footer { margin-top: 3rem; padding-top: 1.2rem; border-top: 0.5px solid var(--border-light); font-size: 11px; color: var(--text-tertiary); text-align: center; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="tema-label">Tema 1</div>
+    <h1>La Constitución Española de 1978: principios generales, derechos y deberes fundamentales, Corona, Cortes Generales, Gobierno, Poder Judicial y Tribunal Constitucional</h1>
+    <div class="meta">Constitución Española · BOE núm. 311, de 29 de diciembre de 1978<br>
+      <a href="../index.html">Índice</a><br>
+      <a href="2_esquema_resumen.html">Esquema-resumen ></a>
+       | 
+      <a href="3_cuadro_comparativo.html">Cuadros comparativos >></a>
+    </div>
+  </div>
+
+  <div class="indice">
+    <div class="indice-titulo">Índice</div>
+    <ol>
+      <li><a href="#s1">Principios generales</a></li>
+      <li><a href="#s2">Derechos y deberes fundamentales</a></li>
+      <li><a href="#s3">La Corona</a></li>
+      <li><a href="#s4">Las Cortes Generales: composición y funciones</a></li>
+      <li><a href="#s5">El Gobierno y la Administración del Estado</a></li>
+      <li><a href="#s6">El Poder Judicial</a></li>
+      <li><a href="#s7">El Tribunal Constitucional: composición, naturaleza y competencias</a></li>
+    </ol>
+  </div>
+
+  <!-- 1 -->
+  <div class="seccion" id="s1">
+    <h2>1. Principios generales</h2>
+    <p>La Constitución Española de 1978 (CE) es la norma suprema del ordenamiento jurídico español, aprobada en referéndum el 6 de diciembre de 1978. Supone la culminación de la Transición democrática tras la dictadura franquista y establece el marco político, jurídico y social del Estado. Sus principios fundamentales se recogen en el Título Preliminar <span class="art">arts. 1–9</span>.</p>
+
+    <h3>Estado social y democrático de Derecho</h3>
+    <p>El <strong>artículo 1 CE</strong> proclama que España se constituye en un Estado que combina tres dimensiones. El <strong>Estado de Derecho</strong> implica la sumisión de todos los poderes públicos a la ley y al Derecho. El <strong>Estado democrático</strong> exige que la soberanía resida en el pueblo español, del que emanan todos los poderes del Estado. El <strong>Estado social</strong> obliga a los poderes públicos a promover la libertad e igualdad reales y efectivas, removiendo los obstáculos que las impidan.</p>
+    <p>La forma política del Estado es la <strong>monarquía parlamentaria</strong> <span class="art">art. 1.3</span>.</p>
+
+    <h3>Unidad nacional y autonomías</h3>
+    <p>El <strong>artículo 2 CE</strong> reconoce y garantiza el derecho a la autonomía de las nacionalidades y regiones que integran la Nación española, siendo el fundamento del Estado de las Autonomías. El <strong>castellano</strong> es la lengua oficial del Estado <span class="art">art. 3</span>, sin perjuicio de las demás lenguas cooficiales en sus respectivas Comunidades Autónomas.</p>
+
+    <h3>Principio de legalidad y jerarquía normativa</h3>
+    <p>El <strong>artículo 9 CE</strong> establece que los ciudadanos y los poderes públicos están sujetos a la Constitución y al resto del ordenamiento jurídico. Se garantizan los principios de legalidad, jerarquía normativa, publicidad de las normas, irretroactividad de las disposiciones sancionadoras no favorables, seguridad jurídica, responsabilidad e interdicción de la arbitrariedad de los poderes públicos.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="seccion" id="s2">
+    <h2>2. Derechos y deberes fundamentales</h2>
+    <p>Los derechos y libertades se regulan en el <strong>Título I</strong> <span class="art">arts. 10–55</span>, articulado en cinco capítulos.</p>
+
+    <h3>Artículo 10 CE — piedra angular</h3>
+    <p>Reconoce la dignidad de la persona y el libre desarrollo de la personalidad como fundamento del orden político y de la paz social. Los derechos fundamentales se interpretarán de conformidad con la Declaración Universal de Derechos Humanos y los tratados internacionales ratificados por España.</p>
+
+    <h3>Capítulo I. De los españoles y los extranjeros <span class="art">arts. 11–13</span></h3>
+    <p>Regula la nacionalidad, la mayoría de edad (18 años) y los derechos de los extranjeros.</p>
+
+    <h3>Capítulo II. Derechos y libertades <span class="art">arts. 14–38</span></h3>
+    <p>Es el núcleo esencial. Se divide en dos secciones:</p>
+    <ul>
+      <li><strong>Sección 1.ª. Derechos fundamentales y libertades públicas</strong> <span class="art">arts. 15–29</span>: derecho a la vida e integridad física, libertad ideológica y religiosa, libertad personal (habeas corpus), inviolabilidad del domicilio, secreto de las comunicaciones, libertad de expresión e información, derecho de reunión, asociación y participación política, tutela judicial efectiva, principio de legalidad penal, derecho a la educación, libertad de sindicación y huelga.</li>
+      <li><strong>Sección 2.ª. Derechos y deberes de los ciudadanos</strong> <span class="art">arts. 30–38</span>: deber de defender España, objeción de conciencia, derecho a contraer matrimonio, derecho a la propiedad privada y a la herencia, derecho de fundación, negociación colectiva.</li>
+    </ul>
+
+    <h3>Capítulo III. Principios rectores de la política social y económica <span class="art">arts. 39–52</span></h3>
+    <p>Recoge los denominados derechos sociales o de segunda generación (familia, seguridad social, salud, medio ambiente, vivienda…). No son derechos subjetivos directamente exigibles, sino principios que informan la legislación positiva y la actuación de los poderes públicos.</p>
+
+    <h3>Capítulo IV. Garantías de las libertades y derechos fundamentales <span class="art">arts. 53–54</span></h3>
+    <p>El <strong>artículo 53 CE</strong> establece tres niveles de protección según la categoría del derecho. Los derechos del Capítulo II vinculan a todos los poderes públicos y solo pueden regularse por ley. Los de la Sección 1.ª gozan además de protección especial: procedimiento preferente y sumario ante los tribunales ordinarios y <strong>recurso de amparo</strong> ante el Tribunal Constitucional. El <strong>artículo 54 CE</strong> crea la figura del <strong>Defensor del Pueblo</strong> como alto comisionado de las Cortes Generales.</p>
+
+    <h3>Capítulo V. Suspensión de los derechos y libertades <span class="art">art. 55</span></h3>
+    <p>Prevé la suspensión de ciertos derechos en estados de excepción y de sitio, y la suspensión individual para personas relacionadas con actividades de bandas armadas o terrorismo.</p>
+
+    <h3>Principales deberes constitucionales</h3>
+    <p>El deber de contribuir al sostenimiento de los gastos públicos según la capacidad económica <span class="art">art. 31</span> y el deber de defender España <span class="art">art. 30</span>.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="seccion" id="s3">
+    <h2>3. La Corona</h2>
+    <p>La Corona se regula en el <strong>Título II</strong> <span class="art">arts. 56–65</span>. El Rey es el Jefe del Estado, símbolo de su unidad y permanencia, árbitro y moderador del funcionamiento regular de las instituciones.</p>
+
+    <h3>Funciones del Rey</h3>
+    <p>Sus funciones son esencialmente de naturaleza simbólica, arbitral y moderadora, no decisoria. Entre ellas: sancionar y promulgar las leyes, convocar y disolver las Cortes Generales, convocar elecciones y referéndum, proponer el candidato a Presidente del Gobierno y nombrarlo, ejercer el mando supremo de las Fuerzas Armadas, ejercer el derecho de gracia, y acreditar a los embajadores.</p>
+
+    <h3>Irresponsabilidad regia y refrendo</h3>
+    <p>El principio de <strong>irresponsabilidad regia</strong> <span class="art">art. 56.3</span> establece que la persona del Rey es inviolable y no está sujeta a responsabilidad. Sus actos están siempre refrendados por el Presidente del Gobierno, los ministros o el Presidente del Congreso, según los casos, siendo los refrendantes quienes asumen la responsabilidad política.</p>
+
+    <h3>Sucesión</h3>
+    <p>La sucesión se rige por el principio de hereditariedad y primogenitura, con preferencia del varón sobre la mujer en la misma línea <span class="art">art. 57</span>. La tutela y la regencia están previstas para los supuestos de minoría de edad o incapacidad del Rey.</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="seccion" id="s4">
+    <h2>4. Las Cortes Generales: composición y funciones</h2>
+    <p>Las Cortes Generales se regulan en el <strong>Título III</strong> <span class="art">arts. 66–96</span>. Representan al pueblo español y ejercen la potestad legislativa del Estado. Son bicamerales, integradas por el <strong>Congreso de los Diputados</strong> y el <strong>Senado</strong>.</p>
+
+    <h3>Congreso de los Diputados</h3>
+    <p>Compuesto por un mínimo de 300 y un máximo de 400 diputados (actualmente 350). Se elige por sufragio universal, libre, igual, directo y secreto, por circunscripciones provinciales mediante el sistema D'Hondt (representación proporcional). El mandato es de cuatro años.</p>
+
+    <h3>Senado</h3>
+    <p>Es la cámara de representación territorial <span class="art">art. 69</span>. Sus miembros son elegidos en su mayoría por sufragio directo (cuatro por provincia). Las Comunidades Autónomas designan un senador y otro más por cada millón de habitantes. El mandato también es de cuatro años.</p>
+
+    <h3>Funciones</h3>
+    <p><strong>Función legislativa:</strong> elaborar y aprobar las leyes. El Congreso tiene primacía sobre el Senado; este puede vetar o enmendar los proyectos, pero el Congreso puede levantar el veto por mayoría absoluta (o simple transcurridos dos meses). Las <strong>leyes orgánicas</strong> requieren mayoría absoluta del Congreso en votación final sobre el conjunto.</p>
+    <p><strong>Función presupuestaria:</strong> aprobar los Presupuestos Generales del Estado.</p>
+    <p><strong>Función de control del Gobierno:</strong> preguntas, interpelaciones, comisiones de investigación, <strong>moción de censura</strong> (constructiva: debe proponer un candidato alternativo) y <strong>cuestión de confianza</strong>.</p>
+    <p><strong>Función constituyente:</strong> participar en los procedimientos de reforma constitucional <span class="art">arts. 167 y 168</span>.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="seccion" id="s5">
+    <h2>5. El Gobierno y la Administración del Estado</h2>
+    <p>El Gobierno se regula en el <strong>Título IV</strong> <span class="art">arts. 97–107</span>. Dirige la política interior y exterior, la Administración civil y militar y la defensa del Estado. Ejerce la función ejecutiva y la potestad reglamentaria. Se compone del Presidente del Gobierno, los Vicepresidentes (en su caso), los Ministros y los demás miembros que establezca la ley.</p>
+
+    <h3>Presidente del Gobierno</h3>
+    <p>Es la figura central del Ejecutivo. Es propuesto por el Rey e investido por el Congreso. Dirige la acción del Gobierno y fija las directrices de la política gubernamental. Para cesar al Presidente cabe la <strong>moción de censura</strong> (por iniciativa parlamentaria) o la <strong>cuestión de confianza</strong> (por iniciativa propia).</p>
+
+    <h3>Administración Pública</h3>
+    <p>El <strong>artículo 103 CE</strong> establece que la Administración Pública sirve con objetividad los intereses generales y actúa con sometimiento pleno a la ley y al Derecho. Sus principios rectores son la eficacia, la jerarquía, la descentralización, la desconcentración y la coordinación.</p>
+    <p>El control de la actividad administrativa corresponde a los Tribunales del orden contencioso-administrativo <span class="art">art. 106</span>. El Estado responde patrimonialmente por los daños causados a los particulares como consecuencia del funcionamiento de los servicios públicos.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="seccion" id="s6">
+    <h2>6. El Poder Judicial</h2>
+    <p>El Poder Judicial se regula en el <strong>Título VI</strong> <span class="art">arts. 117–127</span>. La justicia emana del pueblo y se administra en nombre del Rey por <strong>jueces y magistrados independientes, inamovibles, responsables y sometidos únicamente al imperio de la ley</strong>.</p>
+
+    <h3>Principio de unidad jurisdiccional</h3>
+    <p>El <strong>artículo 117.5 CE</strong> consagra el principio de unidad jurisdiccional como base de la organización y funcionamiento de los Tribunales. Se prohíben los tribunales de excepción y se limita estrictamente la jurisdicción militar.</p>
+
+    <h3>Consejo General del Poder Judicial (CGPJ)</h3>
+    <p>Es el órgano de gobierno de los jueces <span class="art">art. 122</span>. Compuesto por 20 vocales más su Presidente (que también lo es del Tribunal Supremo), tiene competencias en materia de nombramientos, ascensos, inspección y régimen disciplinario.</p>
+
+    <h3>Tribunal Supremo y Ministerio Fiscal</h3>
+    <p>El <strong>Tribunal Supremo</strong> es el órgano jurisdiccional superior en todos los órdenes (civil, penal, contencioso-administrativo, social y militar), salvo en materia de garantías constitucionales, que corresponde al Tribunal Constitucional. El <strong>Ministerio Fiscal</strong> <span class="art">art. 124</span> promueve la acción de la justicia en defensa de la legalidad, de los derechos de los ciudadanos y del interés público.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="seccion" id="s7">
+    <h2>7. El Tribunal Constitucional: composición, naturaleza y competencias</h2>
+    <p>El Tribunal Constitucional (TC) se regula en el <strong>Título IX</strong> <span class="art">arts. 159–165</span> y en la Ley Orgánica 2/1979, de 3 de octubre.</p>
+
+    <h3>Naturaleza</h3>
+    <p>El TC no es un órgano del Poder Judicial, sino un <strong>órgano constitucional independiente</strong>, situado fuera de la estructura judicial ordinaria. Es el <strong>intérprete supremo de la Constitución</strong> y sus decisiones tienen fuerza de ley. Ningún otro órgano del Estado puede revisar sus resoluciones.</p>
+
+    <h3>Composición</h3>
+    <p>Está integrado por <strong>12 magistrados</strong>, nombrados por el Rey a propuesta de los distintos órganos: 4 a propuesta del Congreso (mayoría de 3/5), 4 a propuesta del Senado (mayoría de 3/5), 2 a propuesta del Gobierno y 2 a propuesta del CGPJ. Los magistrados son juristas de reconocida competencia con más de 15 años de ejercicio profesional. Su mandato es de <strong>9 años</strong>, sin posibilidad de reelección inmediata, y se renuevan por tercios cada 3 años. El Presidente es elegido por los propios magistrados por un período de 3 años.</p>
+
+    <h3>Competencias</h3>
+    <p><strong>Recurso de inconstitucionalidad:</strong> controla la conformidad de las leyes y normas con fuerza de ley con la Constitución. Pueden interponerlo el Presidente del Gobierno, el Defensor del Pueblo, 50 diputados, 50 senadores o los órganos ejecutivos y legislativos de las CCAA.</p>
+    <p><strong>Cuestión de inconstitucionalidad:</strong> planteada por jueces y tribunales cuando, en un proceso, duden de la constitucionalidad de una norma aplicable al caso.</p>
+    <p><strong>Recurso de amparo:</strong> protege a los ciudadanos frente a la vulneración de los derechos y libertades de los arts. 14 a 30 CE por parte de los poderes públicos, una vez agotada la vía judicial ordinaria.</p>
+    <p><strong>Conflictos de competencia:</strong> resuelve los conflictos entre el Estado y las CCAA, o entre estas entre sí, sobre la titularidad de competencias.</p>
+    <p><strong>Control previo de tratados internacionales:</strong> el Gobierno o las Cámaras pueden solicitar al TC que declare si un tratado internacional contiene disposiciones contrarias a la Constitución, antes de su ratificación.</p>
+    <p><strong>Conflictos en defensa de la autonomía local:</strong> planteados por municipios y provincias frente a normas con rango de ley que lesionen dicha autonomía.</p>
+  </div>
+
+  <div class="footer">Constitución Española · BOE núm. 311, de 29 de diciembre de 1978 · LO 2/1979, de 3 de octubre, del Tribunal Constitucional</div>
+</div>
+</body>
+</html>

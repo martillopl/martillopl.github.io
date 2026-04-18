@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test — Constitución Española 1978</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg-primary: #ffffff; --bg-secondary: #f5f4f0; --bg-tertiary: #eeece6;
+    --text-primary: #1a1a18; --text-secondary: #5f5e5a; --text-tertiary: #888780;
+    --border-light: rgba(0,0,0,0.10); --border-mid: rgba(0,0,0,0.20);
+    --green-bg: #eaf3de; --green-border: #639922; --green-text: #27500a;
+    --red-bg: #fcebeb; --red-border: #e24b4a; --red-text: #501313;
+    --radius-md: 8px; --radius-lg: 12px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-primary: #1e1e1c; --bg-secondary: #282825; --bg-tertiary: #323230;
+      --text-primary: #e8e6de; --text-secondary: #9c9a92; --text-tertiary: #6e6d68;
+      --border-light: rgba(255,255,255,0.10); --border-mid: rgba(255,255,255,0.18);
+      --green-bg: #173404; --green-border: #3b6d11; --green-text: #c0dd97;
+      --red-bg: #501313; --red-border: #a32d2d; --red-text: #f7c1c1;
+    }
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg-tertiary); color: var(--text-primary); padding: 2rem 1rem; min-height: 100vh; }
+  .page { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 20px; font-weight: 500; margin-bottom: 4px; }
+  .subtitle { font-size: 13px; color: var(--text-tertiary); margin-bottom: 24px; }
+  .marcador { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; font-size: 13px; color: var(--text-secondary); }
+  .score-val { font-weight: 500; color: var(--text-primary); }
+  .btn-reset { font-size: 12px; padding: 5px 14px; border: 0.5px solid var(--border-mid); border-radius: 20px; background: transparent; color: var(--text-secondary); cursor: pointer; }
+  .btn-reset:hover { background: var(--bg-secondary); }
+  .pregunta-card { background: var(--bg-primary); border: 0.5px solid var(--border-light); border-radius: var(--radius-lg); padding: 18px; margin-bottom: 12px; }
+  .num { font-size: 11px; font-weight: 500; color: var(--text-tertiary); margin-bottom: 6px; }
+  .enunciado { font-size: 14px; font-weight: 500; margin-bottom: 14px; line-height: 1.55; }
+  .opciones { display: flex; flex-direction: column; gap: 7px; }
+  .opcion { display: flex; align-items: flex-start; gap: 10px; padding: 9px 13px; border: 0.5px solid var(--border-light); border-radius: var(--radius-md); cursor: pointer; font-size: 13px; background: var(--bg-secondary); transition: border-color 0.15s; user-select: none; line-height: 1.5; }
+  .opcion:hover { border-color: var(--border-mid); }
+  .opcion.correcta { background: var(--green-bg); border-color: var(--green-border); color: var(--green-text); }
+  .opcion.incorrecta { background: var(--red-bg); border-color: var(--red-border); color: var(--red-text); }
+  .opcion.desactivada { cursor: default; pointer-events: none; }
+  .letra { font-weight: 500; min-width: 16px; flex-shrink: 0; }
+  .explicacion { font-size: 12.5px; margin-top: 12px; padding: 10px 13px; color: var(--text-secondary); background: var(--bg-secondary); border-left: 2px solid var(--border-mid); line-height: 1.65; display: none; }
+  .explicacion.visible { display: block; }
+  .footer { margin-top: 20px; font-size: 11px; color: var(--text-tertiary); text-align: center; }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>Test — Constitución Española de 1978</h1>
+  <p class="subtitle">Tema 1 · 10 preguntas tipo test con corrección inmediata</p>
+
+  <div class="marcador">
+    <span>Respuestas correctas: <span class="score-val" id="score">0</span> / <span id="total"></span></span>
+    <button class="btn-reset" onclick="resetTest()">Reiniciar test</button>
+  </div>
+
+  <div id="preguntas"></div>
+  <p class="footer">Constitución Española · BOE núm. 311, de 29 de diciembre de 1978</p>
+</div>
+
+<script>
+const preguntas = [
+  {
+    enunciado: "¿Cuál es la forma política del Estado español según el artículo 1.3 de la Constitución?",
+    opciones: ["República federal", "Monarquía constitucional", "Monarquía parlamentaria", "Estado presidencialista"],
+    correcta: 2,
+    explicacion: "El art. 1.3 CE establece expresamente que la forma política del Estado español es la monarquía parlamentaria, no meramente constitucional."
+  },
+  {
+    enunciado: "¿Cuántos magistrados componen el Tribunal Constitucional?",
+    opciones: ["9", "12", "15", "20"],
+    correcta: 1,
+    explicacion: "El art. 159 CE establece que el TC se compone de 12 magistrados nombrados por el Rey."
+  },
+  {
+    enunciado: "Los derechos y libertades de la Sección 1.ª del Capítulo II del Título I pueden protegerse mediante:",
+    opciones: ["Solo recurso de inconstitucionalidad", "Recurso de amparo ante el TC, previo procedimiento preferente y sumario", "Únicamente ante el Defensor del Pueblo", "Solo por el procedimiento ordinario"],
+    correcta: 1,
+    explicacion: "El art. 53.2 CE prevé para los derechos de los arts. 15-29 un procedimiento especial preferente y sumario ante los tribunales ordinarios, y el recurso de amparo ante el TC."
+  },
+  {
+    enunciado: "¿Quién puede plantear una cuestión de inconstitucionalidad?",
+    opciones: ["Cualquier ciudadano con interés legítimo", "El Defensor del Pueblo únicamente", "Los jueces y tribunales ordinarios en el curso de un proceso", "Solo el Presidente del Gobierno"],
+    correcta: 2,
+    explicacion: "La cuestión de inconstitucionalidad es un mecanismo que solo pueden activar los jueces y tribunales cuando dudan de la constitucionalidad de una norma aplicable al caso concreto que están resolviendo."
+  },
+  {
+    enunciado: "¿Cuál es el mandato de los magistrados del Tribunal Constitucional?",
+    opciones: ["6 años, renovables", "9 años, sin reelección inmediata", "12 años, irrenunciables", "4 años, coincidiendo con la legislatura"],
+    correcta: 1,
+    explicacion: "Los magistrados del TC tienen un mandato de 9 años y no pueden ser reelegidos de forma inmediata. El TC se renueva por tercios cada 3 años."
+  },
+  {
+    enunciado: "La moción de censura en el sistema constitucional español es:",
+    opciones: ["Destructiva: basta con retirar la confianza al Presidente", "Constructiva: debe incluir un candidato alternativo a la Presidencia", "Facultad exclusiva del Senado", "Iniciativa del propio Presidente del Gobierno"],
+    correcta: 1,
+    explicacion: "El art. 113 CE establece una moción de censura de tipo constructivo, de modo que la proposición debe incluir necesariamente un candidato a la Presidencia del Gobierno. Esto da estabilidad al sistema."
+  },
+  {
+    enunciado: "El Senado se define constitucionalmente como:",
+    opciones: ["La cámara de representación ciudadana directa", "La cámara de representación territorial", "El órgano de control del Tribunal Constitucional", "La cámara de designación exclusivamente autonómica"],
+    correcta: 1,
+    explicacion: "El art. 69 CE define al Senado como la cámara de representación territorial, aunque en la práctica su función territorial es considerada insuficiente por muchos constitucionalistas."
+  },
+  {
+    enunciado: "Según el artículo 103 CE, la Administración Pública sirve con objetividad los intereses generales y actúa con sometimiento pleno a:",
+    opciones: ["Los criterios del Gobierno de turno", "La ley y al Derecho", "Las directrices del Defensor del Pueblo", "Las instrucciones del CGPJ"],
+    correcta: 1,
+    explicacion: "El art. 103 CE consagra el principio de legalidad de la Administración: actúa con sometimiento pleno a la ley y al Derecho, y no solo a las instrucciones gubernamentales."
+  },
+  {
+    enunciado: "¿Cuántos diputados propone el Congreso para la designación de magistrados del Tribunal Constitucional?",
+    opciones: ["2", "3", "4", "6"],
+    correcta: 2,
+    explicacion: "El art. 159 CE establece que el Congreso propone 4 magistrados (al igual que el Senado), el Gobierno propone 2 y el CGPJ otros 2."
+  },
+  {
+    enunciado: "El recurso de amparo protege los derechos y libertades recogidos en:",
+    opciones: ["Todos los artículos de la Constitución", "Los arts. 14 a 30 CE", "Solo los derechos económicos y sociales", "Únicamente el derecho a la vida y a la integridad física"],
+    correcta: 1,
+    explicacion: "El recurso de amparo protege los derechos del art. 14 (igualdad), la sección 1.ª del capítulo II (arts. 15-29) y la objeción de conciencia del art. 30, una vez agotada la vía judicial ordinaria."
+  }
+];
+
+let respondidas = {}, aciertos = 0;
+
+function renderTest() {
+  document.getElementById('total').textContent = preguntas.length;
+  const cont = document.getElementById('preguntas');
+  cont.innerHTML = '';
+  preguntas.forEach((p, i) => {
+    const letras = ['A','B','C','D'];
+    const card = document.createElement('div');
+    card.className = 'pregunta-card';
+    card.innerHTML = `
+      <div class="num">Pregunta ${i+1} de ${preguntas.length}</div>
+      <div class="enunciado">${p.enunciado}</div>
+      <div class="opciones" id="opc-${i}">
+        ${p.opciones.map((o,j) => `
+          <div class="opcion" id="opc-${i}-${j}" onclick="responder(${i},${j})">
+            <span class="letra">${letras[j]}</span><span>${o}</span>
+          </div>`).join('')}
+      </div>
+      <div class="explicacion" id="exp-${i}">${p.explicacion}</div>`;
+    cont.appendChild(card);
+  });
+  document.getElementById('score').textContent = 0;
+}
+
+function responder(preg, opcion) {
+  if (respondidas[preg] !== undefined) return;
+  respondidas[preg] = opcion;
+  const correcta = preguntas[preg].correcta;
+  document.querySelectorAll(`#opc-${preg} .opcion`).forEach((el, j) => {
+    el.classList.add('desactivada');
+    if (j === correcta) el.classList.add('correcta');
+    else if (j === opcion) el.classList.add('incorrecta');
+  });
+  if (opcion === correcta) aciertos++;
+  document.getElementById('score').textContent = aciertos;
+  document.getElementById('exp-' + preg).classList.add('visible');
+}
+
+function resetTest() {
+  respondidas = {}; aciertos = 0; renderTest();
+}
+
+renderTest();
+</script>
+</body>
+</html>
