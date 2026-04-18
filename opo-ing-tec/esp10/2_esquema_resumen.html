@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esquema-resumen — CTE DB-HE Ahorro de Energía (Tema 10)</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.20);--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.18)}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2rem 1rem}
+  .page{max-width:860px;margin:0 auto}
+  h1{font-size:20px;font-weight:500;margin-bottom:4px}
+  .sub{font-size:13px;color:var(--t3);margin-bottom:24px}
+  .sub a{color:var(--t2);text-decoration:none}
+  .sub a:hover{color:var(--t1)}
+  .bloque{background:var(--bg2);border:.5px solid var(--bl);border-radius:var(--r2);padding:14px 16px;margin-bottom:10px}
+  .bt{font-size:13px;font-weight:500;margin:0 0 10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .badge{font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap}
+  .bp{background:#EEEDFE;color:#3C3489}.bb{background:#E6F1FB;color:#0C447C}.btl{background:#E1F5EE;color:#085041}.ba{background:#FAEEDA;color:#633806}.bc{background:#FAECE7;color:#712B13}.bg{background:#EAF3DE;color:#27500A}.bx{background:#F1EFE8;color:#444441}
+  @media(prefers-color-scheme:dark){.bp{background:#3C3489;color:#CECBF6}.bb{background:#0C447C;color:#B5D4F4}.btl{background:#085041;color:#9FE1CB}.ba{background:#633806;color:#FAC775}.bc{background:#712B13;color:#F5C4B3}.bg{background:#27500A;color:#C0DD97}.bx{background:#444441;color:#D3D1C7}}
+  .items{display:flex;flex-wrap:wrap;gap:6px}
+  .item{font-size:12px;color:var(--t2);background:var(--bg1);border:.5px solid var(--bl);border-radius:6px;padding:3px 9px}
+  .itemd{font-size:12px;font-weight:500;color:var(--t1);background:var(--bg1);border:.5px solid var(--bm);border-radius:6px;padding:3px 9px}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .s{font-size:11px;color:var(--t3);font-weight:500;margin:0 0 6px}
+  .sep{margin-top:10px;padding-top:10px;border-top:.5px solid var(--bl)}
+  @media(max-width:560px){.g2,.g3{grid-template-columns:1fr}}
+  .footer{margin-top:20px;font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>CTE DB-HE — Documento Básico de Ahorro de Energía</h1>
+  <p class="sub">Tema 10 (Ingeniero Técnico) · Esquema-resumen · RD 314/2006 · RD 732/2019<br>
+    <a href="../index.html">Índice</a><br>
+    <a href="1_texto_explicativo.html">< Texto completo</a>
+     | 
+    <a href="3_cuadro_comparativo.html">Cuadros comparativos ></a>
+  </p>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bp">Marco normativo y zonas climáticas</span></div>
+    <div class="g3">
+      <div><div class="s">Base normativa</div>
+      <div class="items">
+        <span class="itemd">Directiva 2010/31/UE (EPBD) → EECN obligatorio desde 01/06/2020</span>
+        <span class="item">Directiva 2018/844/UE — modifica EPBD (smartness, VE, renovación 2050)</span>
+        <span class="itemd">RD 314/2006 (CTE) + RD 732/2019 — actualización completa HE</span>
+        <span class="item">RD 390/2021 — certificación energética de edificios</span>
+        <span class="item">RD 1027/2007 (RITE) — referencia de HE 2</span>
+      </div></div>
+      <div><div class="s">Zonas climáticas de invierno</div>
+      <div class="items">
+        <span class="item">A — clima templado (menos exigente)</span>
+        <span class="item">B — clima suave-moderado</span>
+        <span class="item">C — clima moderado-frío</span>
+        <span class="itemd">D — clima frío · Pamplona = D1</span>
+        <span class="item">E — clima muy frío (más exigente)</span>
+      </div></div>
+      <div><div class="s">Zonas climáticas de verano</div>
+      <div class="items">
+        <span class="item">1 — verano suave (menor radiación)</span>
+        <span class="item">2 — verano moderado</span>
+        <span class="itemd">3 — verano cálido · Madrid = D3</span>
+        <span class="item">4 — verano muy caluroso · Sevilla = B4</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bb">HE 0 — Limitación del consumo energético</span></div>
+    <div class="g2">
+      <div><div class="s">¿Qué limita?</div>
+      <div class="items">
+        <span class="itemd">Consumo de ENERGÍA PRIMARIA NO RENOVABLE del edificio en kWh/(m²·año)</span>
+        <span class="item">Energía primaria = energía total desde el origen (antes de transformación)</span>
+        <span class="item">Factor de paso electricidad de red: ~1,954 kWh primaria / kWh final</span>
+        <span class="item">Las renovables reducen el consumo de E. primaria no renovable → facilitan el cumplimiento</span>
+      </div></div>
+      <div><div class="s">Ámbito y relación con EECN</div>
+      <div class="items">
+        <span class="itemd">Aplicable a edificios nuevos residenciales y no residenciales + ampliaciones</span>
+        <span class="item">Mayor valor límite en zonas de invierno más severas (D, E)</span>
+        <span class="item">HE 0 = la capa más exterior: lo que no debe superar el consumo global</span>
+        <span class="itemd">EECN = HE 0 muy exigente + HE 1 muy exigente + renovables (HE 4 + HE 5)</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge btl">HE 1 — Limitación de la demanda energética (envolvente)</span></div>
+    <div class="g3">
+      <div><div class="s">¿Qué limita?</div>
+      <div class="items">
+        <span class="itemd">Demanda de calefacción: kWh/(m²·año) según zona climática de invierno</span>
+        <span class="itemd">Demanda de refrigeración: kWh/(m²·año) según zona climática de verano</span>
+        <span class="item">Actúa sobre la envolvente térmica del edificio</span>
+        <span class="item">También: transmitancias máximas (U) y factor solar máximo (F) de huecos</span>
+      </div></div>
+      <div><div class="s">Componentes de la envolvente térmica</div>
+      <div class="items">
+        <span class="item">Fachadas: partes opacas (muros) + huecos (ventanas)</span>
+        <span class="item">Cubiertas: planas + inclinadas + lucernarios</span>
+        <span class="item">Suelos: en contacto con terreno o con espacios no habitables</span>
+        <span class="itemd">Puentes térmicos — interrupciones del aislamiento · pilares · frentes de forjado · contornos de ventanas</span>
+      </div></div>
+      <div><div class="s">Métodos de verificación</div>
+      <div class="items">
+        <span class="itemd">Opción simplificada — verifica parámetros individuales (U de cada cerramiento, F de huecos) · más sencilla · más conservadora</span>
+        <span class="item">Opción general — simulación energética con programa reconocido (CE3X, CYPETHERM HE Plus, DesignBuilder…) · verifica demanda global</span>
+      </div></div>
+    </div>
+    <div class="sep"><div class="s">Transmitancias límite orientativas (W/m²·K) — varían según zona climática</div>
+    <div class="items">
+      <span class="item">Muros fachada: U ≤ 0,50-0,82</span>
+      <span class="item">Cubiertas: U ≤ 0,38-0,65</span>
+      <span class="item">Suelos: U ≤ 0,50-0,82</span>
+      <span class="item">Huecos (ventanas): U ≤ 1,80-3,10</span>
+      <span class="itemd">Cuanto más fría la zona → valores límite más bajos (mayor aislamiento exigido)</span>
+    </div></div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge ba">HE 4 — Contribución mínima de energía renovable para ACS</span></div>
+    <div class="g2">
+      <div><div class="s">¿Qué exige?</div>
+      <div class="items">
+        <span class="itemd">Cubrir un porcentaje mínimo de la demanda anual de ACS con energía renovable</span>
+        <span class="item">Se activa si la demanda de ACS del edificio &gt;100 l/día a 60 °C</span>
+        <span class="item">Desde 2019: NO solo solar térmica · vale aerotermia · geotermia · biomasa · FV + calent. eléctrico</span>
+        <span class="item">Mayor porcentaje exigido en zonas más soleadas o con mayor demanda</span>
+      </div></div>
+      <div><div class="s">Instalación solar térmica (solución habitual)</div>
+      <div class="items">
+        <span class="item">Captadores solares: planos o de tubo de vacío</span>
+        <span class="item">Acumulador: 50-180 l/m² de captador</span>
+        <span class="itemd">Temperatura ACS en generación: mínimo 60 °C (prevención Legionella)</span>
+        <span class="item">Sistema auxiliar convencional obligatorio (gas · ACS eléctrico · bomba de calor)</span>
+        <span class="item">Protección frente a sobrecalentamiento en verano</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bc">HE 5 — Generación mínima de energía eléctrica (renovable)</span></div>
+    <div class="g2">
+      <div><div class="s">¿Qué exige?</div>
+      <div class="items">
+        <span class="itemd">Potencia mínima de generación eléctrica renovable (habitualmente fotovoltaica)</span>
+        <span class="item">Proporcional a la superficie construida y dependiente del uso</span>
+        <span class="itemd">NO aplica a uso residencial privado (viviendas)</span>
+        <span class="item">Aplica a: administrativo · sanitario · comercial · hotelero · hostelero · docente · deportivo · pública concurrencia</span>
+      </div></div>
+      <div><div class="s">Umbrales y tecnología</div>
+      <div class="items">
+        <span class="item">Umbrales mínimos de superficie por uso (ej.: comercial &gt;3.000 m² · sanitario/hostelero &gt;1.000 m²)</span>
+        <span class="item">Instalación FV: cumple REBT + RD 244/2019 (autoconsumo)</span>
+        <span class="itemd">La producción FV reduce el consumo E. primaria no renovable → computa en HE 0</span>
+        <span class="item">Modalidad habitual: autoconsumo con excedentes + compensación simplificada</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bg">HE 2 y HE 3</span></div>
+    <div class="g2">
+      <div><div class="s">HE 2 — Rendimiento instalaciones térmicas</div>
+      <div class="items">
+        <span class="itemd">Remite al RITE (RD 1027/2007) — no establece requisitos propios</span>
+        <span class="item">El cumplimiento de HE 2 = cumplimiento del RITE</span>
+        <span class="item">RITE: rendimiento mínimo equipos · mantenimiento · inspecciones periódicas</span>
+      </div></div>
+      <div><div class="s">HE 3 — Eficiencia instalaciones de iluminación</div>
+      <div class="items">
+        <span class="itemd">Solo aplica a edificios NO residenciales</span>
+        <span class="item">Indicador: VEEI (W/m²·100 lux) — cuanto menor, más eficiente</span>
+        <span class="item">Requisito de sistemas de control: detectores de presencia · sensores luz natural · relojes</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bx">Edificios de Consumo de Energía Casi Nulo (EECN) y certificación</span></div>
+    <div class="items">
+      <span class="itemd">EECN = demanda muy baja (HE 1) + consumo E. primaria no renovable casi cero (HE 0) + alta proporción de renovables (HE 4 + HE 5)</span>
+      <span class="item">Obligatorio desde 01/06/2020 para edificios nuevos · desde 2018 para edificios públicos nuevos</span>
+      <span class="item">Certificación energética: RD 390/2021 · clases A (más eficiente) a G (menos eficiente)</span>
+      <span class="item">Obligatoria: para edificios nuevos antes de la primera ocupación · para edificios existentes en venta o alquiler</span>
+      <span class="itemd">Edificios nuevos con DB-HE 2019 → deben alcanzar clase A o B para cumplir EECN</span>
+    </div>
+  </div>
+
+  <p class="footer">RD 314/2006 (CTE) · RD 732/2019 · Directiva 2010/31/UE (EPBD) · RD 390/2021 (certificación) · RD 1027/2007 (RITE) · RD 244/2019 (autoconsumo)</p>
+</div>
+</body>
+</html>

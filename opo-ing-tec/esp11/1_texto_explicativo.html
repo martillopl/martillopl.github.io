@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 11 — CTE DB-SI: Seguridad en caso de Incendio</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.22);--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.20)}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2.5rem 1rem;line-height:1.8}
+  .page{max-width:740px;margin:0 auto}
+  .header{margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:.5px solid var(--bm)}
+  .tlabel{font-size:12px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+  h1{font-size:22px;font-weight:500;line-height:1.3;margin-bottom:8px}
+  .meta{font-size:13px;color:var(--t3)}
+  .meta a{color:var(--t2);text-decoration:none}
+  .meta a:hover{color:var(--t1)}
+  .indice{background:var(--bg2);border:.5px solid var(--bl);border-radius:var(--r2);padding:16px 20px;margin-bottom:2.5rem}
+  .itit{font-size:11px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+  .indice ol{padding-left:18px}
+  .indice li{font-size:13px;color:var(--t2);padding:3px 0}
+  .indice a{color:var(--t2);text-decoration:none}
+  .indice a:hover{color:var(--t1)}
+  .sec{margin-bottom:2.8rem}
+  h2{font-size:18px;font-weight:500;margin-bottom:1rem;padding-bottom:8px;border-bottom:.5px solid var(--bl)}
+  h3{font-size:15px;font-weight:500;margin:1.6rem 0 .6rem}
+  h4{font-size:14px;font-weight:500;margin:1.2rem 0 .4rem;color:var(--t2)}
+  p{font-size:15px;color:var(--t2);margin-bottom:1rem}
+  p:last-child{margin-bottom:0}
+  strong{font-weight:500;color:var(--t1)}
+  .art{display:inline-block;font-size:11px;font-weight:500;background:var(--bg2);border:.5px solid var(--bm);border-radius:20px;padding:1px 8px;color:var(--t3);vertical-align:middle;margin-left:4px}
+  ul{padding-left:20px;margin-bottom:1rem}
+  ul li{font-size:15px;color:var(--t2);padding:3px 0}
+  ol.num{padding-left:20px;margin-bottom:1rem}
+  ol.num li{font-size:15px;color:var(--t2);padding:3px 0}
+  .nota{background:var(--bg2);border-left:2px solid var(--bm);padding:12px 16px;margin:1.2rem 0;font-size:13.5px;color:var(--t2);line-height:1.65}
+  .nota strong{color:var(--t1)}
+  .footer{margin-top:3rem;padding-top:1.2rem;border-top:.5px solid var(--bl);font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="tlabel">Tema 11 — CTE DB-SI · Ingeniero Técnico</div>
+    <h1>Código Técnico de la Edificación — Documento Básico de Seguridad en caso de Incendio (DB-SI)</h1>
+    <div class="meta">RD 314/2006 · DB-SI (actualización 2019) · RD 513/2017 (RIPCI) · LOE 38/1999<br>
+      <a href="../index.html">Índice</a><br>
+      <a href="2_esquema_resumen.html">Esquema-resumen ></a>
+       | 
+      <a href="3_cuadro_comparativo.html">Cuadros comparativos >></a>
+    </div>
+  </div>
+  <div class="indice">
+    <div class="itit">Índice</div>
+    <ol>
+      <li><a href="#s1">Introducción: el DB-SI y la protección contra incendios en la edificación</a></li>
+      <li><a href="#s2">Estructura del DB-SI y los usos del edificio</a></li>
+      <li><a href="#s3">SI 1 — Propagación interior: los sectores de incendio</a></li>
+      <li><a href="#s4">SI 1 — Locales de riesgo especial</a></li>
+      <li><a href="#s5">SI 1 — Espacios ocultos y la reacción al fuego de los materiales</a></li>
+      <li><a href="#s6">SI 2 — Propagación exterior: fachadas y cubiertas</a></li>
+      <li><a href="#s7">SI 3 — Evacuación de ocupantes: conceptos fundamentales</a></li>
+      <li><a href="#s8">SI 3 — Cálculo de la ocupación</a></li>
+      <li><a href="#s9">SI 3 — Número y disposición de las salidas de planta</a></li>
+      <li><a href="#s10">SI 3 — Dimensionado de los medios de evacuación</a></li>
+      <li><a href="#s11">SI 3 — Protección de las escaleras</a></li>
+      <li><a href="#s12">SI 3 — Señalización e iluminación de emergencia</a></li>
+      <li><a href="#s13">SI 4 — Instalaciones de protección contra incendios</a></li>
+      <li><a href="#s14">SI 5 y SI 6</a></li>
+    </ol>
+  </div>
+
+  <div class="sec" id="s1">
+    <h2>1. Introducción: el DB-SI y la protección contra incendios en la edificación</h2>
+    <p>El <strong>Documento Básico de Seguridad en caso de Incendio (DB-SI)</strong> es el documento técnico del Código Técnico de la Edificación (CTE) que regula las condiciones que deben reunir los edificios para reducir a límites aceptables el riesgo de que los usuarios sufran daños derivados de un incendio de origen accidental y posibilitar que los ocupantes puedan desalojar el edificio en condiciones seguras.</p>
+    <p>El incendio en la edificación es uno de los riesgos más graves y frecuentes, y sus consecuencias pueden ser devastadoras tanto en términos de vidas humanas como de daños materiales. El DB-SI aborda la protección contra incendios desde una perspectiva integral, actuando simultáneamente sobre:</p>
+    <ul>
+      <li>La <strong>limitación de la propagación del incendio</strong> dentro del edificio (SI 1) y hacia el exterior o hacia edificios contiguos (SI 2).</li>
+      <li>La <strong>evacuación segura</strong> de los ocupantes del edificio cuando se produce un incendio (SI 3).</li>
+      <li>La <strong>dotación de instalaciones de detección y extinción</strong> que permitan detectar el incendio, alertar a los ocupantes y facilitar su control y extinción (SI 4).</li>
+      <li>La <strong>facilitación de la intervención de los bomberos</strong> para el rescate de personas y la extinción del incendio (SI 5).</li>
+      <li>La <strong>resistencia al fuego de la estructura</strong> durante el tiempo necesario para que se produzca la evacuación y la intervención de los bomberos (SI 6).</li>
+    </ul>
+    <p>El DB-SI complementa al <strong>Reglamento de Instalaciones de Protección Contra Incendios (RIPCI)</strong>, aprobado por el <strong>Real Decreto 513/2017, de 22 de mayo</strong>, que regula las condiciones técnicas de diseño, instalación, mantenimiento e inspección de las instalaciones de protección contra incendios.</p>
+    <div class="nota"><strong>Relevancia para el ingeniero técnico:</strong> El DB-SI es una de las normas técnicas más relevantes en la práctica profesional del ingeniero técnico en el ámbito de la edificación y las instalaciones. Su conocimiento detallado es imprescindible para proyectar sistemas de protección contra incendios, para dirigir obras de edificación y para verificar el cumplimiento de los requisitos de seguridad en caso de incendio.</div>
+  </div>
+
+  <div class="sec" id="s2">
+    <h2>2. Estructura del DB-SI y los usos del edificio</h2>
+    <p>El DB-SI organiza sus exigencias en seis secciones (SI 1 a SI 6), aunque el tema solo aborda las cuatro primeras. Una característica fundamental del DB-SI es que sus requisitos varían en función del <strong>uso del edificio</strong>, que es el parámetro que determina la ocupación, la naturaleza de los usuarios, la carga de fuego y el nivel de riesgo intrínseco de cada espacio.</p>
+
+    <h3>Los usos del edificio en el DB-SI</h3>
+    <p>El DB-SI clasifica los edificios en función de su uso principal. Los usos recogidos son:</p>
+    <ul>
+      <li><strong>Residencial Vivienda (V)</strong>: edificios de viviendas, residencias, apartamentos turísticos.</li>
+      <li><strong>Residencial Público (R)</strong>: hoteles, hostales, residencias para personas mayores, guarderías con alojamiento.</li>
+      <li><strong>Docente (D)</strong>: colegios, institutos, universidades, guarderías sin alojamiento.</li>
+      <li><strong>Sanitario (S)</strong>: hospitales, clínicas con internamiento, centros de salud y ambulatorios.</li>
+      <li><strong>Comercial (C)</strong>: tiendas, supermercados, centros comerciales, mercados, restaurantes.</li>
+      <li><strong>Pública concurrencia (P)</strong>: teatros, cines, salas de conciertos, estadios, aeropuertos, estaciones, casinos, discotecas, lugares de culto.</li>
+      <li><strong>Aparcamiento (A)</strong>: garajes y aparcamientos, tanto sobre rasante como bajo rasante.</li>
+      <li><strong>Administrativo (Ad)</strong>: oficinas, edificios de la Administración, bancos, despachos profesionales.</li>
+      <li><strong>Industrial (I)</strong>: edificios industriales (regulados principalmente por el RSCIEI).</li>
+      <li><strong>Hospitalario (H)</strong>: subclase del uso sanitario con hospitalización.</li>
+    </ul>
+    <p>Un mismo edificio puede tener distintas zonas con diferentes usos (edificio de uso mixto). En ese caso, cada zona se trata conforme a los requisitos de su uso propio, y deben establecerse las medidas de compartimentación adecuadas entre zonas de distinto uso.</p>
+  </div>
+
+  <div class="sec" id="s3">
+    <h2>3. SI 1 — Propagación interior: los sectores de incendio</h2>
+    <p>La sección <strong>SI 1</strong> establece las condiciones que deben cumplir los edificios para limitar el riesgo de propagación del incendio por su interior. El mecanismo básico es la <strong>compartimentación en sectores de incendio</strong>: la división del edificio en zonas con capacidad de resistencia al fuego suficiente para que un incendio que se origine en una zona no se propague a las zonas adyacentes, al menos durante el tiempo necesario para la evacuación y la intervención de los bomberos.</p>
+
+    <h3>El sector de incendio</h3>
+    <p>Un <strong>sector de incendio</strong> es la zona del edificio delimitada por elementos con una determinada resistencia al fuego, de tal forma que el incendio originado en su interior no puede propagarse al exterior de dicho sector, al menos durante el tiempo establecido. Los sectores de incendio son la unidad básica de compartimentación del DB-SI.</p>
+    <p>Las limitaciones más importantes de los sectores de incendio son:</p>
+    <ul>
+      <li><strong>Superficie máxima del sector</strong>: varía en función del uso del edificio. Para uso Residencial Vivienda, el sector máximo es de <strong>2.500 m²</strong>. Para uso Comercial, de <strong>2.500 m²</strong>. Para uso Administrativo, de <strong>2.500 m²</strong>. Para uso Aparcamiento, de <strong>500 m²</strong> (más restrictivo por la mayor carga de fuego). Para uso Hospitalario, los sectores son más pequeños (zonas de hospitalización: máx. <strong>1.500 m²</strong>).</li>
+      <li><strong>Resistencia al fuego de los elementos delimitadores</strong>: los muros, techos y suelos que delimitan el sector de incendio deben tener una resistencia al fuego expresada en términos de EI (Estanquidad e Integridad). La resistencia mínima exigida varía en función del uso del edificio y del número de plantas: para edificios de hasta 15 m de altura de evacuación, se exige generalmente EI 60; para edificios de mayor altura, EI 90 o EI 120.</li>
+      <li><strong>Las puertas de los sectores</strong>: las puertas que comunican distintos sectores de incendio deben ser puertas EI2 60-C5 o EI2 90-C5, es decir, puertas con resistencia al fuego durante 60 o 90 minutos y con dispositivo de cierre automático.</li>
+    </ul>
+
+    <h3>Las zonas de riesgo especial</h3>
+    <p>Dentro de los sectores de incendio, ciertas zonas con mayor riesgo de incendio deben quedar separadas del resto mediante una compartimentación específica. Estas zonas se denominan <strong>locales de riesgo especial</strong> y se regulan en SI 1-2.</p>
+
+    <h3>La escalera de comunicación entre plantas</h3>
+    <p>Las escaleras que comunican dos o más plantas de un edificio son un elemento fundamental de la propagación interior, ya que forman un conducto vertical a través del que el humo y el fuego pueden propagarse rápidamente. Por ello, el DB-SI establece que las escaleras deben estar protegidas o especialmente protegidas según corresponda a la altura del edificio y al uso.</p>
+  </div>
+
+  <div class="sec" id="s4">
+    <h2>4. SI 1 — Locales de riesgo especial</h2>
+    <p>El DB-SI establece que determinados locales o zonas de los edificios deben cumplir condiciones especiales de compartimentación, por razón de la mayor cantidad de materiales combustibles que contienen o de la actividad de riesgo que albergan. Estos son los <strong>locales de riesgo especial</strong>.</p>
+
+    <h3>Clasificación de los locales de riesgo especial</h3>
+    <p>Los locales de riesgo especial se clasifican en tres niveles de riesgo, en función de la carga de fuego de la actividad albergada o del volumen del local:</p>
+    <ul>
+      <li><strong>Riesgo especial bajo</strong>: salas de calderas con potencia entre 70 y 200 kW, almacenes de combustible entre 200 y 500 litros, cuartos de contadores de electricidad, almacenes de residuos de 5 a 15 m³, etc.</li>
+      <li><strong>Riesgo especial medio</strong>: salas de calderas con potencia entre 200 y 600 kW, almacenes de combustible entre 500 y 3.000 litros, salas de transformadores eléctricos con potencia entre 250 y 630 kVA, cocinas con potencia entre 20 y 50 kW, etc.</li>
+      <li><strong>Riesgo especial alto</strong>: salas de calderas con potencia superior a 600 kW, almacenes de combustible superiores a 3.000 litros, salas de transformadores con potencia superior a 630 kVA, cocinas con potencia superior a 50 kW, archivos y almacenes de papel con más de 400 m³, etc.</li>
+    </ul>
+
+    <h3>Condiciones de los locales de riesgo especial</h3>
+    <p>Las condiciones que deben cumplir los locales de riesgo especial son más exigentes que las del sector de incendio general:</p>
+    <ul>
+      <li>Las paredes, techos y suelos que delimitan el local deben tener una resistencia al fuego de <strong>EI 90 para riesgo bajo, EI 120 para riesgo medio y EI 180 para riesgo alto</strong>.</li>
+      <li>Las puertas de acceso deben tener resistencia al fuego de <strong>EI2 45-C5 para riesgo bajo, EI2 60-C5 para riesgo medio y EI2 90-C5 para riesgo alto</strong>.</li>
+      <li>El acceso al local no puede realizarse directamente desde el sector de evacuación: debe existir un <strong>vestíbulo previo</strong> para los locales de riesgo especial medio y alto.</li>
+      <li>En locales de riesgo especial alto, deben disponerse <strong>extintores y otros medios de extinción</strong> específicos según la naturaleza del riesgo.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s5">
+    <h2>5. SI 1 — Espacios ocultos y la reacción al fuego de los materiales</h2>
+
+    <h3>La reacción al fuego de los materiales</h3>
+    <p>La <strong>reacción al fuego</strong> es la respuesta de un material ante la acción del fuego: si contribuye a la propagación del incendio, si produce humo o si gotea material en llamas. Los materiales utilizados en el revestimiento de paredes, techos y suelos de los edificios deben cumplir las clases de reacción al fuego establecidas en el DB-SI, conforme a la norma europea de clasificación de productos de construcción (EN 13501-1).</p>
+    <p>La clasificación europea de reacción al fuego utiliza una escala de clases de la A1 a la F:</p>
+    <ul>
+      <li><strong>A1 y A2</strong>: materiales no combustibles o de combustión muy limitada (hormigón, ladrillos, morteros, vidrio, acero, etc.). Los mejores para la seguridad contra incendios.</li>
+      <li><strong>B, C, D</strong>: materiales combustibles de distintos grados, con limitaciones crecientes de humo (s1, s2, s3) y de goteo (d0, d1, d2).</li>
+      <li><strong>E y F</strong>: materiales de mayor combustibilidad, generalmente no admitidos en revestimientos de zonas de evacuación.</li>
+    </ul>
+    <p>El DB-SI establece las clases de reacción al fuego mínimas para los revestimientos de las zonas de circulación, las zonas de mayor riesgo y los espacios ocultos.</p>
+
+    <h3>Los espacios ocultos</h3>
+    <p>Los <strong>espacios ocultos</strong> son aquellos que están por encima de los techos suspendidos, por debajo de los suelos elevados o dentro de las cámaras de doble fachada, que pueden constituir un camino de propagación rápida del incendio al quedar fuera de la acción de los sistemas de extinción. El DB-SI exige que en los espacios ocultos se utilicen materiales de reacción al fuego adecuada (clase A2-s3,d0 como mínimo para estructuras de los techos suspendidos) y que se dispongan barreras cortafuego en la continuación de los elementos de compartimentación, para evitar que el incendio se propague por estos espacios ocultos.</p>
+  </div>
+
+  <div class="sec" id="s6">
+    <h2>6. SI 2 — Propagación exterior: fachadas y cubiertas</h2>
+    <p>La sección <strong>SI 2</strong> establece las condiciones que deben cumplir los edificios para limitar el riesgo de propagación del incendio hacia el exterior, tanto en el propio edificio (por la fachada o por la cubierta) como hacia edificios colindantes.</p>
+
+    <h3>Propagación por la fachada</h3>
+    <p>El incendio puede propagarse por la fachada de dos formas principales:</p>
+    <ul>
+      <li><strong>Propagación vertical</strong>: el fuego sube por la fachada desde una planta inferior hasta una superior, a través de la ventana o de materiales combustibles de la fachada. Para limitar esta propagación, el DB-SI establece que la fachada debe tener una franja de al menos <strong>1 metro de altura</strong> entre el antepecho de la ventana de una planta y el vuelo del forjado de la planta superior (o entre ventanas de plantas sucesivas), con resistencia al fuego EI 60.</li>
+      <li><strong>Propagación horizontal</strong>: el fuego se propaga horizontalmente por la fachada desde un sector de incendio al adyacente. Para limitar esta propagación, el DB-SI exige que la fachada tenga al menos <strong>2 metros de longitud sin huecos o con huecos de resistencia al fuego EI 60</strong> en la confluencia de dos sectores distintos en una misma fachada.</li>
+    </ul>
+
+    <h3>Materiales de la fachada: la reacción al fuego</h3>
+    <p>Los materiales del revestimiento exterior de la fachada deben cumplir condiciones de reacción al fuego en función de la altura del edificio. Para edificios con altura de evacuación superior a <strong>18 metros</strong>, los materiales del revestimiento exterior deben ser de clase <strong>B-s3,d2</strong> o superior en toda la altura. Esta exigencia tiene especial relevancia para las fachadas ventiladas con cámara de aire, que pueden actuar como chimenea si los materiales del revestimiento son combustibles.</p>
+
+    <h3>Propagación entre edificios</h3>
+    <p>Para limitar la propagación del incendio entre edificios colindantes, el DB-SI establece que:</p>
+    <ul>
+      <li>Los puntos de las fachadas de dos edificios distintos que están enfrentados entre sí deben separarse como mínimo <strong>3 metros</strong> cuando están en la misma alineación (sin escalonar) para limitar la radiación entre ellos.</li>
+      <li>Si la separación es menor, las fachadas enfrentadas deben tener resistencia al fuego EI 60.</li>
+    </ul>
+
+    <h3>Propagación por la cubierta</h3>
+    <p>La cubierta puede ser una vía de propagación del incendio entre edificios colindantes o desde el interior al exterior. El DB-SI establece que los materiales de la cubierta, incluida la cubierta del cuerpo superior, deben ser de clase <strong>BROOF(t1)</strong> o superior en la cubierta propiamente dicha. Cuando la cubierta es un atrio cubierto o un patio interior, debe prestarse especial atención a la acumulación de humos.</p>
+  </div>
+
+  <div class="sec" id="s7">
+    <h2>7. SI 3 — Evacuación de ocupantes: conceptos fundamentales</h2>
+    <p>La sección <strong>SI 3</strong> es la más extensa y compleja del DB-SI. Regula las condiciones que debe reunir el edificio para que, en caso de incendio, los ocupantes puedan desalojarlo de forma segura, bien abandonando el edificio por sus propios medios, bien alcanzando un lugar seguro dentro del mismo que esté protegido del incendio.</p>
+
+    <h3>Los conceptos clave de evacuación</h3>
+    <ul>
+      <li><strong>Recorrido de evacuación</strong>: el trayecto que debe realizar un ocupante desde su posición habitual hasta el espacio exterior seguro o hasta el espacio protegido más próximo (escalera protegida o especialmente protegida, vestíbulo de independencia, etc.). El DB-SI establece longitudes máximas para los recorridos de evacuación.</li>
+      <li><strong>Salida de recinto</strong>: la puerta o paso que conduce desde el interior de un recinto hacia el exterior de ese recinto o hacia un pasillo o zona de circulación.</li>
+      <li><strong>Salida de planta</strong>: la puerta o paso que comunica con una escalera, una rampa u otro medio de evacuación vertical hacia el espacio exterior seguro o hacia una planta de salida del edificio.</li>
+      <li><strong>Salida del edificio</strong>: la puerta o paso desde el edificio al espacio exterior seguro.</li>
+      <li><strong>Espacio exterior seguro</strong>: el espacio exterior al edificio con superficie suficiente para que puedan permanecer en él las personas evacuadas, a una distancia mínima del edificio de <strong>10 metros</strong> como norma general.</li>
+      <li><strong>Altura de evacuación</strong>: la diferencia de cota entre el nivel de la planta considerada y la cota del espacio exterior seguro más próximo accesible desde esa planta. Determina muchos de los requisitos de SI 3.</li>
+    </ul>
+
+    <h3>Recorridos de evacuación: longitudes máximas</h3>
+    <p>El DB-SI establece longitudes máximas para los recorridos de evacuación desde cualquier punto de la planta hasta la salida de planta o del edificio. Estas longitudes varían en función del uso del edificio y de si existe más de una salida disponible:</p>
+    <ul>
+      <li>Cuando el recorrido de evacuación puede discurrir en dos sentidos alternativos: la longitud máxima es mayor (generalmente <strong>50 metros</strong> para uso residencial vivienda o administrativo, medido hasta la escalera o salida del edificio).</li>
+      <li>Cuando el recorrido de evacuación solo puede discurrir en un sentido (recorrido sin alternativa): la longitud máxima se reduce a la mitad o incluso menos (generalmente <strong>25 metros</strong> hasta la escalera para uso residencial vivienda).</li>
+      <li>Para usos más restrictivos (hospitalario, uso docente con niños) las longitudes máximas son menores.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s8">
+    <h2>8. SI 3 — Cálculo de la ocupación</h2>
+    <p>El número de personas que se considera que puede haber simultáneamente en un espacio es la <strong>ocupación</strong>. La ocupación es el dato de partida para calcular el número mínimo de salidas, las anchuras mínimas de los medios de evacuación y las instalaciones de protección contra incendios necesarias.</p>
+    <p>El DB-SI establece la <strong>densidad de ocupación</strong> de los distintos usos del edificio, expresada en <strong>m² por persona</strong>. La ocupación de un recinto se calcula dividiendo su superficie por la densidad de ocupación establecida para su uso. Por ejemplo:</p>
+    <ul>
+      <li>Zonas de oficinas: <strong>10 m²/persona</strong>.</li>
+      <li>Zonas de uso comercial: <strong>3 m²/persona</strong> (mayor densidad, mayor ocupación).</li>
+      <li>Vestíbulos de uso general: <strong>2 m²/persona</strong>.</li>
+      <li>Salas de espera, salones de actos: <strong>1 m²/persona o 0,5 m²/persona</strong> con asientos fijos.</li>
+      <li>Vestuarios: <strong>3 m²/persona</strong>.</li>
+      <li>Zonas de dormitorios: <strong>20 m²/persona</strong>.</li>
+    </ul>
+    <p>La ocupación así calculada es la que se utiliza a efectos de la normativa contra incendios, independientemente de la ocupación real del local. Si la ocupación real es mayor que la calculada, se aplica la ocupación real.</p>
+  </div>
+
+  <div class="sec" id="s9">
+    <h2>9. SI 3 — Número y disposición de las salidas de planta</h2>
+    <p>El DB-SI establece las condiciones mínimas en cuanto al número de salidas de planta en función del número de ocupantes y de las longitudes de los recorridos de evacuación.</p>
+
+    <h3>Regla general: cuándo es suficiente una sola salida</h3>
+    <p>Una planta puede tener una única salida de planta (o única salida del edificio) cuando se cumplan <strong>simultáneamente</strong> todas las condiciones siguientes:</p>
+    <ul>
+      <li>La ocupación no supera las <strong>100 personas</strong> (en uso Residencial Vivienda, 500 personas en determinadas condiciones).</li>
+      <li>Los recorridos de evacuación hasta la salida tienen longitud no superior a <strong>25 metros</strong> (recorridos sin salida alternativa).</li>
+      <li>La altura de evacuación no supera los límites establecidos para cada uso.</li>
+    </ul>
+    <p>Cuando no se cumplen estas condiciones, son necesarias al menos <strong>dos salidas de planta</strong>. Las dos salidas deben estar situadas de forma que la evacuación pueda realizarse en sentidos alternativos desde cualquier punto de la planta, y deben estar separadas entre sí una distancia mínima para que un incendio no las bloquee simultáneamente.</p>
+
+    <h3>La separación mínima entre salidas</h3>
+    <p>Las salidas de planta deben estar separadas entre sí una distancia que sea al menos igual a la mitad de la diagonal del recinto servido, para garantizar que un incendio no pueda bloquear simultáneamente todas las salidas disponibles.</p>
+  </div>
+
+  <div class="sec" id="s10">
+    <h2>10. SI 3 — Dimensionado de los medios de evacuación</h2>
+    <p>El DB-SI establece las anchuras mínimas de los distintos elementos del recorrido de evacuación en función del número de personas que deben evacuar por ellos.</p>
+
+    <h3>Anchuras mínimas</h3>
+    <ul>
+      <li><strong>Puertas y pasos</strong>: anchura mínima de <strong>0,80 metros</strong>, con la hoja de puerta en posición de apertura, el paso libre debe ser ≥ 0,80 m. Las puertas de salida del edificio deben tener una anchura de al menos <strong>0,80 metros</strong> por cada 200 personas que deban usarlas.</li>
+      <li><strong>Pasillos</strong>: anchura mínima de <strong>1,00 metro</strong>.</li>
+      <li><strong>Escaleras no protegidas</strong>: anchura mínima de <strong>0,80 metros</strong> para hasta 100 personas en sentido descendente.</li>
+      <li><strong>Escaleras protegidas</strong>: anchura mínima de <strong>0,80 metros</strong>, calculada en función del número de personas que deban usarlas y del uso del edificio.</li>
+    </ul>
+
+    <h3>La fórmula de cálculo de la anchura</h3>
+    <p>El DB-SI establece que la anchura de los elementos de evacuación debe calcularse con las siguientes fórmulas:</p>
+    <ul>
+      <li>Para <strong>puertas y pasillos</strong>: A ≥ P / 200 metros (donde P es el número de personas que evacuan por ese elemento y A es la anchura en metros). La anchura mínima en todo caso es 0,80 m.</li>
+      <li>Para <strong>escaleras</strong> en sentido descendente: A ≥ P / 160 metros. La anchura mínima en todo caso es 0,80 m.</li>
+      <li>Para <strong>escaleras</strong> en sentido ascendente: A ≥ P / 80 metros. La anchura mínima en todo caso es 0,80 m.</li>
+    </ul>
+    <div class="nota"><strong>Importante:</strong> Todas las anchuras calculadas deben ser iguales o mayores que las anchuras mínimas absolutas establecidas por el DB-SI y por el DB-SUA para los recorridos accesibles.</div>
+  </div>
+
+  <div class="sec" id="s11">
+    <h2>11. SI 3 — Protección de las escaleras</h2>
+    <p>Las escaleras son el elemento de evacuación vertical por excelencia, pero también son una de las vías de propagación del incendio y del humo más importantes, al comunicar todas las plantas del edificio a través de un espacio continuo. Por ello, el DB-SI establece distintos niveles de protección para las escaleras, en función de la altura del edificio, el uso y el sentido del recorrido de evacuación.</p>
+
+    <h3>Tipos de escaleras según su protección</h3>
+    <ul>
+      <li><strong>Escalera no protegida</strong>: escalera abierta al resto del edificio, sin compartimentación específica. Solo se admite en edificios de baja altura y para determinados usos.</li>
+      <li><strong>Escalera protegida</strong>: escalera con caja de escalera delimitada por elementos EI 120 y acceso a través de puertas EI2 60-C5. La caja de escalera protegida constituye un sector de incendio independiente y los gases de combustión no pueden penetrar en ella en condiciones normales de incendio. Se admite en edificios de hasta <strong>28 metros de altura de evacuación</strong> para usos residencial vivienda y administrativo (hasta 14 metros para uso hospitalario).</li>
+      <li><strong>Escalera especialmente protegida</strong>: escalera con caja de escalera delimitada por elementos EI 120 y con vestíbulo previo de independencia en cada planta, dotado de dos puertas EI2 60-C5 y ventilación. Es la solución de mayor protección y es obligatoria cuando la escalera protegida no es suficiente para la altura o el uso del edificio (alturas de evacuación superiores a 28 metros en uso residencial o superiores a 14 metros en hospitalario).</li>
+    </ul>
+
+    <h3>El vestíbulo previo de independencia</h3>
+    <p>El <strong>vestíbulo previo</strong> o de independencia es un espacio interpuesto entre el sector de incendio y la caja de escalera o ascensor, dotado de puertas de resistencia al fuego en cada acceso. Su función es garantizar que los gases de combustión y el humo no penetren en la escalera, manteniendo esta libre de humo para que la evacuación pueda realizarse en condiciones seguras. El DB-SI exige que el vestíbulo previo tenga ventilación para eliminar los gases que puedan penetrar.</p>
+  </div>
+
+  <div class="sec" id="s12">
+    <h2>12. SI 3 — Señalización e iluminación de emergencia</h2>
+
+    <h3>Señalización de las vías de evacuación</h3>
+    <p>El DB-SI exige que las vías de evacuación estén señalizadas mediante rótulos o señales fotoluminiscentes conformes con la norma <strong>UNE 23034</strong> (seguridad contra incendios, señalización de las vías de evacuación). Las señales de evacuación deben ser visibles, incluso cuando falle la iluminación normal, gracias a su carácter fotoluminiscente o a la iluminación de emergencia que las ilumina.</p>
+    <p>Las señales de evacuación más importantes son:</p>
+    <ul>
+      <li>Señales de <strong>salida</strong>: señales de tipo "flecha verde" que indican la dirección de la evacuación o la localización de la salida.</li>
+      <li>Señales de <strong>equipo manual de alarma</strong>: señales que indican la localización de los pulsadores de alarma.</li>
+      <li>Señales de <strong>equipos de extinción</strong>: señales que indican la localización de los extintores, bocas de incendio equipadas, etc.</li>
+    </ul>
+
+    <h3>Alumbrado de emergencia</h3>
+    <p>El <strong>alumbrado de emergencia</strong> es la instalación de iluminación que entra en funcionamiento automáticamente cuando falla la alimentación normal del alumbrado, garantizando una iluminación mínima en los recorridos de evacuación para que los ocupantes puedan abandonar el edificio en condiciones de seguridad. El DB-SI establece que deben disponer de alumbrado de emergencia:</p>
+    <ul>
+      <li>Los recorridos de evacuación.</li>
+      <li>Los locales o espacios en que sea necesario el alumbrado de emergencia (locales con más de 100 personas, aparcamientos, servicios higiénicos de uso público, salas de cuadros eléctricos, etc.).</li>
+      <li>Las señales de evacuación.</li>
+    </ul>
+    <p>El alumbrado de emergencia debe proporcionar, en los recorridos de evacuación, una iluminancia mínima de <strong>1 lux</strong> en el eje central del recorrido y <strong>0,5 lux</strong> en la banda central del mismo. En los puntos donde están situados los equipos de seguridad, la iluminancia debe ser de al menos <strong>5 lux</strong>.</p>
+  </div>
+
+  <div class="sec" id="s13">
+    <h2>13. SI 4 — Instalaciones de protección contra incendios</h2>
+    <p>La sección <strong>SI 4</strong> establece la dotación de instalaciones de protección contra incendios que deben tener los edificios. Estas instalaciones sirven para detectar el incendio, alertar a los ocupantes y facilitar su control o extinción. El diseño, instalación, mantenimiento e inspección de estas instalaciones se regula en el <strong>RIPCI (RD 513/2017)</strong>.</p>
+
+    <h3>Extintores portátiles</h3>
+    <p>Los <strong>extintores portátiles</strong> son los medios de extinción más básicos y los de mayor universalidad. El DB-SI establece la obligación de instalar extintores portátiles en todos los edificios. Las reglas básicas de colocación son:</p>
+    <ul>
+      <li>Uno por cada <strong>15 metros</strong> de recorrido en cada planta, desde todo origen de evacuación (uso general).</li>
+      <li>En locales de riesgo especial: extintores adicionales junto a la puerta de acceso.</li>
+      <li>La eficacia mínima exigida en uso general es <strong>21A-113B</strong>, que corresponde a un extintor de polvo o de CO₂ de tamaño estándar de 6 kg.</li>
+      <li>Los extintores deben situarse a una altura máxima de <strong>1,70 metros</strong> (parte superior del extintor), para ser accesibles sin necesidad de medios auxiliares.</li>
+    </ul>
+
+    <h3>Bocas de incendio equipadas (BIE)</h3>
+    <p>Las <strong>bocas de incendio equipadas (BIE)</strong> son los puntos de la instalación de agua contra incendios desde los que el personal de seguridad o los bomberos pueden actuar contra el incendio con una manguera. El DB-SI exige su instalación en función del uso y la superficie del edificio:</p>
+    <ul>
+      <li>Uso Residencial Público y Administrativo: cuando la superficie construida supera los <strong>1.000 m²</strong>.</li>
+      <li>Uso Comercial: cuando la superficie construida supera los <strong>500 m²</strong>.</li>
+      <li>Uso Pública Concurrencia: cuando el aforo supera las <strong>500 personas</strong>.</li>
+      <li>Uso Hospitalario: cuando la superficie construida supera los <strong>1.000 m²</strong>.</li>
+      <li>Aparcamientos: cuando la superficie supera los <strong>500 m²</strong>.</li>
+    </ul>
+    <p>Las BIE pueden ser de diámetro nominal 25 mm (BIE-25) o 45 mm (BIE-45), siendo las BIE-25 las más habituales en edificios de uso no industrial, por ser manejables por personas sin formación específica.</p>
+
+    <h3>Columna seca</h3>
+    <p>La <strong>columna seca</strong> es una tubería seca (sin agua en condiciones normales) que recorre verticalmente el edificio y que los bomberos conectan a su camión cisterna para llevar agua a todas las plantas del edificio durante la intervención. El DB-SI exige su instalación en edificios cuya altura de evacuación sea superior a <strong>24 metros</strong>.</p>
+
+    <h3>Sistema de detección y alarma de incendios</h3>
+    <p>El <strong>sistema de detección automática de incendios</strong> está compuesto por detectores (de humo, térmicos o de llama), central de control, pulsadores de alarma y sirenas o altavoces de alarma. El DB-SI exige su instalación en función del uso y la superficie del edificio:</p>
+    <ul>
+      <li>Uso Residencial Público: en establecimientos con más de <strong>50 plazas de alojamiento</strong>.</li>
+      <li>Uso Hospitalario: en todos los edificios de este uso.</li>
+      <li>Uso Comercial: cuando la superficie supera los <strong>2.000 m²</strong>.</li>
+      <li>Uso Pública Concurrencia: cuando el aforo supera las <strong>500 personas</strong>.</li>
+      <li>Uso Administrativo: cuando la superficie supera los <strong>2.000 m²</strong>.</li>
+      <li>Aparcamientos: en todos los aparcamientos.</li>
+    </ul>
+
+    <h3>Sistema de rociadores automáticos</h3>
+    <p>Los <strong>rociadores automáticos</strong> (sprinklers) son dispositivos que se activan automáticamente cuando detectan el calor del incendio y rocían agua sobre la zona del incendio, controlando o extinguiendo el fuego. El DB-SI exige su instalación en:</p>
+    <ul>
+      <li>Uso Hospitalario: en todos los edificios.</li>
+      <li>Uso Residencial Público: en establecimientos con superficie superior a <strong>5.000 m²</strong> o más de <strong>8 plantas</strong>.</li>
+      <li>Uso Comercial: cuando la superficie construida supera los <strong>1.500 m²</strong>.</li>
+      <li>Uso Pública Concurrencia: cuando el aforo supera las <strong>500 personas</strong> (teatros, cines).</li>
+      <li>Aparcamientos: cuando la superficie supera los <strong>10.000 m²</strong>.</li>
+    </ul>
+
+    <h3>Sistema de extracción de humos</h3>
+    <p>El <strong>sistema de extracción de humos</strong> es una instalación de ventilación que extrae los gases de combustión para mantener los recorridos de evacuación libres de humo, facilitando así la evacuación de los ocupantes y la intervención de los bomberos. El DB-SI exige la instalación de sistemas de extracción de humos en aparcamientos (en todos los aparcamientos colectivos en edificio), en zonas de riesgo especial alto y en determinados usos con grandes concentraciones de personas.</p>
+  </div>
+
+  <div class="sec" id="s14">
+    <h2>14. SI 5 y SI 6</h2>
+
+    <h3>SI 5 — Intervención de los bomberos</h3>
+    <p>La sección <strong>SI 5</strong> establece las condiciones que deben reunir los edificios para facilitar la intervención de los equipos de extinción de incendios. Las condiciones principales son:</p>
+    <ul>
+      <li><strong>Aproximación al edificio</strong>: debe existir un vial de acceso para vehículos de bomberos hasta la fachada del edificio con anchura mínima de <strong>3,5 metros</strong>, altura libre mínima de <strong>4,5 metros</strong>, capacidad portante de al menos <strong>20 kN/m²</strong> y radio de giro mínimo de <strong>12,50 metros</strong>.</li>
+      <li><strong>Entorno del edificio</strong>: en edificios con altura de evacuación superior a 9 metros, debe existir una franja de terreno junto a las fachadas del edificio (espacio de maniobra para los bomberos) que permita la aproximación de los vehículos de extinción y de las escaleras mecánicas.</li>
+      <li><strong>Accesibilidad por fachada</strong>: el edificio debe tener ventanas o huecos accesibles desde el exterior en sus fachadas, con dimensiones mínimas y sin elementos que dificulten la entrada de los bomberos.</li>
+    </ul>
+
+    <h3>SI 6 — Resistencia al fuego de la estructura</h3>
+    <p>La sección <strong>SI 6</strong> establece los requisitos de resistencia al fuego de los elementos estructurales del edificio. La resistencia al fuego de la estructura garantiza que el edificio se mantenga en pie durante el tiempo suficiente para que se complete la evacuación de los ocupantes y los bomberos puedan actuar.</p>
+    <p>La resistencia al fuego de los elementos estructurales se expresa en términos de <strong>R</strong> (tiempo en minutos de resistencia mecánica). Los valores exigidos en función del uso y la altura de evacuación oscilan entre <strong>R 30</strong> (para estructuras de edificios de baja altura no habitados) y <strong>R 240</strong> (para estructuras bajo rasante de aparcamientos de gran altura).</p>
+  </div>
+
+  <div class="footer">CTE DB-SI (RD 314/2006 · actualización 2019) · RD 513/2017 (RIPCI) · UNE 23034 · LOE 38/1999</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esquema-resumen — CTE DB-SI Seguridad en caso de Incendio (Tema 11)</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.20);--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.18)}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2rem 1rem}
+  .page{max-width:860px;margin:0 auto}
+  h1{font-size:20px;font-weight:500;margin-bottom:4px}
+  .sub{font-size:13px;color:var(--t3);margin-bottom:24px}
+  .sub a{color:var(--t2);text-decoration:none}
+  .sub a:hover{color:var(--t1)}
+  .bloque{background:var(--bg2);border:.5px solid var(--bl);border-radius:var(--r2);padding:14px 16px;margin-bottom:10px}
+  .bt{font-size:13px;font-weight:500;margin:0 0 10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .badge{font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap}
+  .bp{background:#EEEDFE;color:#3C3489}.bb{background:#E6F1FB;color:#0C447C}.btl{background:#E1F5EE;color:#085041}.ba{background:#FAEEDA;color:#633806}.bc{background:#FAECE7;color:#712B13}.bg{background:#EAF3DE;color:#27500A}.bx{background:#F1EFE8;color:#444441}
+  @media(prefers-color-scheme:dark){.bp{background:#3C3489;color:#CECBF6}.bb{background:#0C447C;color:#B5D4F4}.btl{background:#085041;color:#9FE1CB}.ba{background:#633806;color:#FAC775}.bc{background:#712B13;color:#F5C4B3}.bg{background:#27500A;color:#C0DD97}.bx{background:#444441;color:#D3D1C7}}
+  .items{display:flex;flex-wrap:wrap;gap:6px}
+  .item{font-size:12px;color:var(--t2);background:var(--bg1);border:.5px solid var(--bl);border-radius:6px;padding:3px 9px}
+  .itemd{font-size:12px;font-weight:500;color:var(--t1);background:var(--bg1);border:.5px solid var(--bm);border-radius:6px;padding:3px 9px}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .s{font-size:11px;color:var(--t3);font-weight:500;margin:0 0 6px}
+  .sep{margin-top:10px;padding-top:10px;border-top:.5px solid var(--bl)}
+  @media(max-width:560px){.g2,.g3{grid-template-columns:1fr}}
+  .footer{margin-top:20px;font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>CTE DB-SI — Seguridad en caso de Incendio</h1>
+  <p class="sub">Tema 11 (Ingeniero Técnico) · Esquema-resumen · RD 314/2006 · RD 513/2017 (RIPCI)<br>
+    <a href="../index.html">Índice</a><br>
+    <a href="1_texto_explicativo.html">< Texto completo</a>
+     | 
+    <a href="3_cuadro_comparativo.html">Cuadros comparativos ></a>
+  </p>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bp">SI 1 — Propagación interior</span> Compartimentación</div>
+    <div class="g3">
+      <div><div class="s">Sectores de incendio — superficies máximas orientativas</div>
+      <div class="items">
+        <span class="item">Residencial vivienda: máx. 2.500 m²</span>
+        <span class="item">Administrativo / Comercial: máx. 2.500 m²</span>
+        <span class="itemd">Aparcamiento: máx. 500 m² (más restrictivo)</span>
+        <span class="item">Hospitalario (hospitalización): máx. 1.500 m²</span>
+        <span class="itemd">Resistencia al fuego delimitadores sector: EI 60 (≤15 m alt.) · EI 90/120 (mayor alt.)</span>
+        <span class="item">Puertas de sector: EI2 60-C5 o EI2 90-C5</span>
+      </div></div>
+      <div><div class="s">Locales de riesgo especial</div>
+      <div class="items">
+        <span class="item">Bajo: EI 90 paredes · EI2 45-C5 puerta</span>
+        <span class="item">Medio: EI 120 paredes · EI2 60-C5 puerta · vestíbulo previo</span>
+        <span class="itemd">Alto: EI 180 paredes · EI2 90-C5 puerta · vestíbulo previo</span>
+        <span class="item">Salas de calderas (&gt;70 kW → riesgo bajo; &gt;200 kW → medio; &gt;600 kW → alto)</span>
+        <span class="item">Cocinas (&gt;20 kW → medio; &gt;50 kW → alto)</span>
+      </div></div>
+      <div><div class="s">Reacción al fuego materiales</div>
+      <div class="items">
+        <span class="item">Clase A1/A2 — no combustible (mejor)</span>
+        <span class="item">Clases B · C · D — distintos grados de combustibilidad</span>
+        <span class="item">Zonas de circulación: clases más exigentes</span>
+        <span class="itemd">Espacios ocultos (techos suspendidos, cámaras): A2-s3,d0 mínimo · barreras cortafuego en prolongaciones de compartimentación</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bb">SI 2 — Propagación exterior</span></div>
+    <div class="g2">
+      <div><div class="s">Propagación por fachada</div>
+      <div class="items">
+        <span class="itemd">Franja vertical entre ventanas de plantas sucesivas: ≥1 m de height con EI 60</span>
+        <span class="itemd">Separación horizontal entre sectores en misma fachada: ≥2 m sin huecos o con huecos EI 60</span>
+        <span class="item">Fachadas ventiladas con altura &gt;18 m: materiales revestimiento exterior clase B-s3,d2 o superior</span>
+      </div></div>
+      <div><div class="s">Propagación entre edificios y cubierta</div>
+      <div class="items">
+        <span class="itemd">Separación mínima entre fachadas enfrentadas de distintos edificios: 3 m · si menor → EI 60</span>
+        <span class="item">Cubierta: clase BROOF(t1) o superior</span>
+        <span class="item">Atrios y patios: especial atención a acumulación de humos</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge btl">SI 3 — Evacuación de ocupantes</span> Datos clave</div>
+    <div class="g3">
+      <div><div class="s">Densidades de ocupación (m²/persona)</div>
+      <div class="items">
+        <span class="itemd">Oficinas: 10 m²/persona</span>
+        <span class="itemd">Comercial: 3 m²/persona</span>
+        <span class="item">Vestíbulos generales: 2 m²/persona</span>
+        <span class="item">Salas de espera / salones: 1-0,5 m²/persona</span>
+        <span class="item">Vestuarios: 3 m²/persona</span>
+        <span class="item">Dormitorios: 20 m²/persona</span>
+      </div></div>
+      <div><div class="s">Recorridos y salidas</div>
+      <div class="items">
+        <span class="itemd">Recorrido máx. hasta salida (2 salidas): 50 m (vivienda / administrativo)</span>
+        <span class="itemd">Recorrido máx. sin alternativa: 25 m (vivienda)</span>
+        <span class="itemd">Una sola salida admitida si: ocupación ≤100 personas + recorrido ≤25 m</span>
+        <span class="item">Espacio exterior seguro: a ≥10 m del edificio</span>
+        <span class="item">Separación mínima entre 2 salidas: ½ diagonal del recinto</span>
+      </div></div>
+      <div><div class="s">Anchuras mínimas</div>
+      <div class="items">
+        <span class="itemd">Puertas/pasos: ≥0,80 m · fórmula: A ≥ P/200 m</span>
+        <span class="itemd">Pasillos: ≥1,00 m</span>
+        <span class="itemd">Escaleras descend.: A ≥ P/160 m · mín. 0,80 m</span>
+        <span class="item">Escaleras ascend.: A ≥ P/80 m · mín. 0,80 m</span>
+        <span class="item">Extintores a ≤1,70 m (parte superior)</span>
+      </div></div>
+    </div>
+    <div class="sep">
+    <div class="s">Tipos de escaleras por protección</div>
+    <div class="items">
+      <span class="item">No protegida — abierta · solo en alturas bajas y determinados usos</span>
+      <span class="itemd">Protegida — caja EI 120 + puertas EI2 60-C5 · válida hasta 28 m (vivienda/administrativo) · hasta 14 m (hospitalario)</span>
+      <span class="itemd">Especialmente protegida — caja EI 120 + vestíbulo previo en cada planta con 2 puertas EI2 60-C5 · obligatoria a partir de los límites anteriores</span>
+    </div></div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge ba">SI 4 — Instalaciones de protección contra incendios</span></div>
+    <div class="g2">
+      <div><div class="s">Extintores portátiles (todos los edificios)</div>
+      <div class="items">
+        <span class="itemd">Uno cada 15 m de recorrido en cada planta desde todo origen de evacuación</span>
+        <span class="item">Eficacia mínima: 21A-113B</span>
+        <span class="itemd">Altura máxima de colocación (parte superior): 1,70 m</span>
+        <span class="item">Extintores adicionales junto a puerta de locales de riesgo especial</span>
+      </div></div>
+      <div><div class="s">BIE, columna seca, detección</div>
+      <div class="items">
+        <span class="item">BIE-25/45: Residencial Público/Administrativo &gt;1.000 m² · Comercial &gt;500 m² · Pública concurrencia &gt;500 personas</span>
+        <span class="itemd">Columna seca: edificios con alt. evacuación &gt;24 m</span>
+        <span class="item">Detección y alarma: Residencial Público &gt;50 plazas · Hospitalario siempre · Comercial &gt;2.000 m² · P. Concurrencia &gt;500 personas · Administrativo &gt;2.000 m² · Aparcamientos siempre</span>
+        <span class="item">Rociadores: Hospitalario siempre · Residencial Público &gt;5.000 m² u 8 plantas · Comercial &gt;1.500 m² · Aparcamiento &gt;10.000 m²</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bc">Alumbrado emergencia y señalización</span></div>
+    <div class="items">
+      <span class="itemd">Iluminancia mínima en eje del recorrido de evacuación: 1 lux</span>
+      <span class="itemd">Iluminancia mínima en banda central: 0,5 lux</span>
+      <span class="itemd">Iluminancia mínima en equipos de seguridad/extinción: 5 lux</span>
+      <span class="item">Señales de evacuación fotoluminiscentes: norma UNE 23034</span>
+      <span class="item">Obligatorio en: recorridos evacuación · locales &gt;100 personas · aparcamientos · servicios higiénicos uso público · cuadros eléctricos</span>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bg">SI 5 y SI 6</span></div>
+    <div class="g2">
+      <div><div class="s">SI 5 — Intervención de bomberos</div>
+      <div class="items">
+        <span class="itemd">Vial de acceso: ≥3,5 m anchura · ≥4,5 m altura libre · ≥20 kN/m² carga · radio giro ≥12,50 m</span>
+        <span class="item">Entorno del edificio: franja de maniobra junto a fachadas accesibles si alt. evacuación &gt;9 m</span>
+        <span class="item">Accesibilidad por fachada: huecos accesibles en cada planta (dimensiones mínimas definidas)</span>
+      </div></div>
+      <div><div class="s">SI 6 — Resistencia al fuego de la estructura</div>
+      <div class="items">
+        <span class="item">Se expresa en R (minutos de resistencia mecánica)</span>
+        <span class="item">R 30 — estructuras de baja altura no habitadas</span>
+        <span class="item">R 60 — uso residencial vivienda hasta 15 m de alt. evacuación</span>
+        <span class="item">R 90 / R 120 — usos de mayor riesgo o mayor altura</span>
+        <span class="itemd">R 240 — estructuras bajo rasante de aparcamientos</span>
+      </div></div>
+    </div>
+  </div>
+
+  <p class="footer">CTE DB-SI (RD 314/2006) · RD 513/2017 (RIPCI) · UNE 23034 · LOE 38/1999</p>
+</div>
+</body>
+</html>

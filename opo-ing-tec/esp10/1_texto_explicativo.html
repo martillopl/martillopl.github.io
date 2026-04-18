@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 10 — CTE DB-HE: Ahorro de Energía</title>
+<style>
+  *,*::before,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.22);--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.20)}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2.5rem 1rem;line-height:1.8}
+  .page{max-width:740px;margin:0 auto}
+  .header{margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:.5px solid var(--bm)}
+  .tlabel{font-size:12px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+  h1{font-size:22px;font-weight:500;line-height:1.3;margin-bottom:8px}
+  .meta{font-size:13px;color:var(--t3)}
+  .meta a{color:var(--t2);text-decoration:none}
+  .meta a:hover{color:var(--t1)}
+  .indice{background:var(--bg2);border:.5px solid var(--bl);border-radius:var(--r2);padding:16px 20px;margin-bottom:2.5rem}
+  .itit{font-size:11px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+  .indice ol{padding-left:18px}
+  .indice li{font-size:13px;color:var(--t2);padding:3px 0}
+  .indice a{color:var(--t2);text-decoration:none}
+  .indice a:hover{color:var(--t1)}
+  .sec{margin-bottom:2.8rem}
+  h2{font-size:18px;font-weight:500;margin-bottom:1rem;padding-bottom:8px;border-bottom:.5px solid var(--bl)}
+  h3{font-size:15px;font-weight:500;margin:1.6rem 0 .6rem}
+  h4{font-size:14px;font-weight:500;margin:1.2rem 0 .4rem;color:var(--t2)}
+  p{font-size:15px;color:var(--t2);margin-bottom:1rem}
+  p:last-child{margin-bottom:0}
+  strong{font-weight:500;color:var(--t1)}
+  .art{display:inline-block;font-size:11px;font-weight:500;background:var(--bg2);border:.5px solid var(--bm);border-radius:20px;padding:1px 8px;color:var(--t3);vertical-align:middle;margin-left:4px}
+  ul{padding-left:20px;margin-bottom:1rem}
+  ul li{font-size:15px;color:var(--t2);padding:3px 0}
+  ol.num{padding-left:20px;margin-bottom:1rem}
+  ol.num li{font-size:15px;color:var(--t2);padding:3px 0}
+  .nota{background:var(--bg2);border-left:2px solid var(--bm);padding:12px 16px;margin:1.2rem 0;font-size:13.5px;color:var(--t2);line-height:1.65}
+  .nota strong{color:var(--t1)}
+  .footer{margin-top:3rem;padding-top:1.2rem;border-top:.5px solid var(--bl);font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="tlabel">Tema 10 — CTE DB-HE · Ingeniero Técnico</div>
+    <h1>Código Técnico de la Edificación — Documento Básico de Ahorro de Energía (DB-HE)</h1>
+    <div class="meta">RD 314/2006 · RD 732/2019 · Directiva 2010/31/UE (EPBD) · Directiva 2018/844/UE · LOE 38/1999<br>
+      <a href="../index.html">Índice</a><br>
+      <a href="2_esquema_resumen.html">Esquema-resumen ></a>
+       | 
+      <a href="3_cuadro_comparativo.html">Cuadros comparativos >></a>
+    </div>
+  </div>
+  <div class="indice">
+    <div class="itit">Índice</div>
+    <ol>
+      <li><a href="#s1">Introducción: el DB-HE en el contexto europeo y nacional</a></li>
+      <li><a href="#s2">Estructura y alcance del DB-HE</a></li>
+      <li><a href="#s3">Las zonas climáticas de edificación</a></li>
+      <li><a href="#s4">HE 0 — Limitación del consumo energético</a></li>
+      <li><a href="#s5">HE 1 — Limitación de la demanda energética del edificio</a></li>
+      <li><a href="#s6">La envolvente térmica del edificio</a></li>
+      <li><a href="#s7">Los parámetros de la envolvente: transmitancias y factor solar</a></li>
+      <li><a href="#s8">La verificación de HE 1: indicadores y métodos</a></li>
+      <li><a href="#s9">HE 2 — Rendimiento de las instalaciones térmicas</a></li>
+      <li><a href="#s10">HE 3 — Condiciones de las instalaciones de iluminación</a></li>
+      <li><a href="#s11">HE 4 — Contribución mínima de energía renovable para ACS</a></li>
+      <li><a href="#s12">HE 5 — Generación mínima de energía eléctrica</a></li>
+      <li><a href="#s13">Edificios de consumo de energía casi nulo (EECN)</a></li>
+      <li><a href="#s14">Certificación energética de edificios</a></li>
+    </ol>
+  </div>
+
+  <div class="sec" id="s1">
+    <h2>1. Introducción: el DB-HE en el contexto europeo y nacional</h2>
+    <p>El <strong>Documento Básico de Ahorro de Energía (DB-HE)</strong> del Código Técnico de la Edificación es la norma técnica española que regula los requisitos de eficiencia energética que deben cumplir los edificios. Su evolución ha estado profundamente marcada por la normativa europea y por la creciente urgencia climática.</p>
+
+    <h3>Marco europeo</h3>
+    <p>La política energética europea en edificación se articula principalmente en torno a dos directivas:</p>
+    <ul>
+      <li>La <strong>Directiva 2010/31/UE del Parlamento Europeo y del Consejo, relativa a la eficiencia energética de los edificios (EPBD)</strong>: introdujo el concepto de <strong>edificio de consumo de energía casi nulo (EECN)</strong> como estándar obligatorio para los edificios nuevos a partir de 2020 (2018 para los edificios públicos). Estableció también la obligatoriedad del certificado de eficiencia energética y la realización de inspecciones periódicas de las instalaciones de calefacción y climatización.</li>
+      <li>La <strong>Directiva 2018/844/UE</strong>, que modifica la EPBD, introduyendo el concepto de indicador de preparación para la inteligencia (smartness indicator), reforzando los requisitos para las infraestructuras de recarga de vehículos eléctricos y la automatización de edificios, y estableciendo una visión a largo plazo de renovación del parque edificatorio hacia 2050.</li>
+    </ul>
+
+    <h3>La evolución del DB-HE en España</h3>
+    <p>En España, la transposición de las directivas europeas de eficiencia energética en edificación se ha realizado principalmente mediante la actualización del DB-HE del CTE:</p>
+    <ul>
+      <li>La versión original del DB-HE (2006) se limitaba principalmente a la limitación de la demanda energética (HE-1) y a la contribución solar mínima para ACS (HE-4).</li>
+      <li>La actualización de 2013 incorporó el concepto de consumo de energía primaria y endureció los requisitos de la envolvente térmica.</li>
+      <li>La actualización de <strong>2019 (RD 732/2019)</strong> supuso el salto decisivo hacia los edificios de consumo casi nulo, con la restructuración completa del HE-0 y HE-1, la introducción del HE-5 (fotovoltaica) y el endurecimiento de todos los requisitos.</li>
+    </ul>
+    <div class="nota"><strong>Dato clave:</strong> El RD 732/2019 transpone al ordenamiento español la obligación de construir todos los edificios nuevos como EECN a partir del 1 de junio de 2020, y los edificios nuevos de uso administrativo del sector público a partir de 2018.</div>
+  </div>
+
+  <div class="sec" id="s2">
+    <h2>2. Estructura y alcance del DB-HE</h2>
+    <p>El DB-HE (en su versión de 2019) se organiza en seis secciones, cada una con sus propias exigencias básicas y su propia metodología de verificación:</p>
+    <ul>
+      <li><strong>HE-0</strong>: Limitación del consumo energético.</li>
+      <li><strong>HE-1</strong>: Condiciones para el control de la demanda energética.</li>
+      <li><strong>HE-2</strong>: Rendimiento de las instalaciones térmicas (remite al RITE).</li>
+      <li><strong>HE-3</strong>: Condiciones de las instalaciones de iluminación.</li>
+      <li><strong>HE-4</strong>: Contribución mínima de energía renovable para cubrir la demanda de agua caliente sanitaria.</li>
+      <li><strong>HE-5</strong>: Generación mínima de energía eléctrica.</li>
+    </ul>
+
+    <h3>Ámbito de aplicación del DB-HE</h3>
+    <p>El DB-HE se aplica a:</p>
+    <ul>
+      <li>Edificios de nueva construcción (aplicación íntegra de todas las secciones).</li>
+      <li>Intervenciones en edificios existentes: la aplicación es parcial, dependiendo del tipo de intervención y de la sección afectada.</li>
+    </ul>
+    <p>El DB-HE no se aplica a determinados tipos de construcciones especiales: edificios históricos protegidos cuando las medidas de eficiencia sean incompatibles con su protección, edificios industriales o agrícolas de bajo consumo, edificaciones provisionales, etc.</p>
+  </div>
+
+  <div class="sec" id="s3">
+    <h2>3. Las zonas climáticas de edificación</h2>
+    <p>Un concepto estructural del DB-HE es la <strong>zonificación climática</strong>: los requisitos de eficiencia energética varían en función del clima donde se ubica el edificio, porque las necesidades de calefacción, refrigeración y protección solar son muy distintas en una ciudad costera mediterránea que en una ciudad interior de la meseta o del norte peninsular.</p>
+
+    <h3>Las zonas climáticas de invierno y de verano</h3>
+    <p>El DB-HE establece una clasificación climática en función de dos parámetros:</p>
+    <ul>
+      <li><strong>Zona climática de invierno</strong>: definida por la severidad climática de invierno (SCI), clasificada en letras de A (clima templado, menos riguroso) a E (clima muy frío). Las zonas más frías requieren mayor aislamiento en invierno.</li>
+      <li><strong>Zona climática de verano</strong>: definida por la severidad climática de verano (SCV), clasificada en números del 1 (menor radiación y temperaturas de verano) al 4 (mayor calor y radiación). Las zonas más calurosas requieren mayor protección solar.</li>
+    </ul>
+    <p>Combinando la letra de invierno y el número de verano se obtiene la <strong>zona climática</strong> del municipio: por ejemplo, Pamplona está en la zona <strong>D1</strong> (invierno severo, verano suave), mientras que Sevilla está en la zona <strong>B4</strong> (invierno suave, verano muy caluroso) y Madrid en la zona <strong>D3</strong>.</p>
+    <p>Las zonas climáticas de los distintos municipios se determinan mediante el <strong>Anejo B del DB-HE</strong>, que contiene la clasificación de la capital de provincia y permite determinar la zona climática de los municipios en función de la diferencia de altitud respecto a la capital de provincia.</p>
+  </div>
+
+  <div class="sec" id="s4">
+    <h2>4. HE 0 — Limitación del consumo energético</h2>
+    <p>La sección <strong>HE 0</strong> del DB-HE establece el requisito más global del documento: el límite máximo de consumo de <strong>energía primaria no renovable</strong> del edificio en su conjunto, expresado en kWh/(m²·año), en función del uso del edificio y de la zona climática.</p>
+
+    <h3>El concepto de energía primaria no renovable</h3>
+    <p>La <strong>energía primaria</strong> es la energía total necesaria para producir, transformar y transportar la energía que finalmente consume el edificio. Es la energía "en origen", antes de cualquier proceso de transformación. La <strong>energía primaria no renovable</strong> es la parte de la energía primaria procedente de fuentes no renovables (petróleo, gas natural, carbón, uranio, etc.), que es la que el DB-HE limita.</p>
+    <p>La diferencia entre energía final y energía primaria es importante: un edificio que utiliza electricidad de red consume energía final (la electricidad en el enchufe), pero la energía primaria no renovable asociada a esa electricidad depende del mix eléctrico nacional y de los rendimientos de los procesos de transformación y transporte. Por ello, el factor de paso de energía final a energía primaria no renovable es mayor que 1 para la electricidad de red (aproximadamente 1,954 en la actualidad en España) y menor para la energía procedente de renovables.</p>
+
+    <h3>Edificios afectados por HE 0</h3>
+    <p>La sección HE 0 se aplica a:</p>
+    <ul>
+      <li>Edificios de nueva construcción de uso <strong>residencial privado</strong> (viviendas).</li>
+      <li>Edificios de nueva construcción de otros usos (terciario, administrativo, sanitario, etc.) — con sus propios valores límite.</li>
+      <li>Ampliaciones de edificios existentes (para la parte ampliada).</li>
+    </ul>
+
+    <h3>Los valores límite de HE 0</h3>
+    <p>El DB-HE establece los valores máximos de consumo de energía primaria no renovable en función del uso y la zona climática. Para edificios de uso <strong>residencial privado</strong>, los valores son más exigentes en las zonas de invierno más severas (zonas C, D y E). Para edificios de otros usos, los límites se expresan de forma diferente (en función de la demanda de calefacción, refrigeración y ACS por separado).</p>
+
+    <h3>El balance energético y las energías renovables</h3>
+    <p>La incorporación de energías renovables (solar fotovoltaica, solar térmica, geotermia, biomasa, aerotermia, etc.) reduce el consumo de energía primaria no renovable del edificio, facilitando el cumplimiento de HE 0. Esta es precisamente la lógica del concepto de edificio de consumo casi nulo: el edificio reduce al máximo su demanda mediante una envolvente térmica muy eficiente (HE 1) y cubre la demanda restante con energías renovables, llegando a un consumo de energía primaria no renovable muy próximo a cero.</p>
+  </div>
+
+  <div class="sec" id="s5">
+    <h2>5. HE 1 — Limitación de la demanda energética del edificio</h2>
+    <p>La sección <strong>HE 1</strong> establece los requisitos de las características de la <strong>envolvente térmica</strong> del edificio, con el objetivo de reducir la demanda energética de calefacción y refrigeración hasta unos valores que puedan cubrirse de forma eficiente y con una proporción razonable de energías renovables.</p>
+    <div class="nota"><strong>Distinción clave:</strong> HE 0 limita el consumo de energía (lo que entra como combustible o electricidad al edificio), mientras que HE 1 limita la demanda energética (las pérdidas o ganancias de calor a través de la envolvente). HE 1 actúa sobre el "abrigo" del edificio; HE 0 actúa sobre el balance energético total.</div>
+
+    <h3>Edificios afectados por HE 1</h3>
+    <p>La sección HE 1 se aplica a:</p>
+    <ul>
+      <li>Edificios de nueva construcción de cualquier uso.</li>
+      <li>Ampliaciones de edificios existentes (para la parte ampliada).</li>
+      <li>Reformas en edificios existentes que afecten a más del 25% de la superficie de la envolvente.</li>
+      <li>Cambios de uso que incrementen la demanda energética del edificio.</li>
+    </ul>
+
+    <h3>Los dos indicadores de demanda de HE 1</h3>
+    <p>El DB-HE establece dos indicadores para verificar el cumplimiento de HE 1:</p>
+    <ul>
+      <li>La <strong>demanda de calefacción</strong> del edificio, expresada en kWh/(m²·año), que debe ser menor o igual que el valor límite establecido en función del uso y la zona climática de invierno.</li>
+      <li>La <strong>demanda de refrigeración</strong> del edificio, expresada en kWh/(m²·año), que debe ser menor o igual que el valor límite establecido en función del uso y la zona climática de verano.</li>
+    </ul>
+
+    <h3>Método de verificación de HE 1</h3>
+    <p>Para edificios de uso residencial, el HE 1 puede verificarse mediante dos métodos:</p>
+    <ul>
+      <li><strong>Opción simplificada</strong>: se verifican individualmente los parámetros de la envolvente (transmitancias de muros, cubiertas, suelos y huecos; factor solar de los huecos) y se comprueba que son menores o iguales que los valores máximos establecidos en el DB-HE. Si todos los parámetros individuales cumplen, se presume que la demanda global cumple. Es el método más sencillo pero más conservador.</li>
+      <li><strong>Opción general</strong>: se realiza una simulación energética del edificio con un programa informático reconocido (como CE3X, CYPETHERM HE Plus, DesignBuilder, EnergyPlus, etc.), que calcula la demanda de calefacción y refrigeración del edificio y verifica que son menores o iguales que los valores límite. Es más preciso y puede revelar que el edificio cumple aunque algún parámetro individual supere el valor límite de la opción simplificada, siempre que el balance global sea favorable.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s6">
+    <h2>6. La envolvente térmica del edificio</h2>
+    <p>La <strong>envolvente térmica</strong> del edificio es el conjunto de cerramientos que separan los espacios interiores habitables del ambiente exterior o de los locales no habitables o no calefactados. Es la "piel" del edificio desde el punto de vista energético: determina cuánto calor pierde el edificio en invierno y cuánto calor gana en verano.</p>
+
+    <h3>Componentes de la envolvente térmica</h3>
+    <p>La envolvente térmica está formada por:</p>
+    <ul>
+      <li><strong>Fachadas</strong>: cerramientos verticales en contacto con el exterior (aire exterior o terreno). Incluyen las partes opacas (muros) y los huecos (ventanas, puertas acristaladas, lucernarios en fachada vertical).</li>
+      <li><strong>Cubiertas</strong>: cerramientos horizontales o inclinados en contacto con el exterior (cubierta inclinada, cubierta plana) o con el terreno (cubierta enterrada). Incluyen los lucernarios y claraboyas.</li>
+      <li><strong>Suelos en contacto con el terreno o con espacios no habitables</strong>: soleras y losas en contacto directo con el terreno, o forjados sobre espacios no calefactados (locales no habitables, aparcamientos, etc.).</li>
+      <li><strong>Puentes térmicos</strong>: zonas de la envolvente donde la continuidad del aislamiento se interrumpe, dando lugar a una mayor transmisión de calor que en la zona corriente del cerramiento. Los puentes térmicos más comunes son los pilares integrados en fachada, los frentes de forjado, los contornos de ventanas, las esquinas de la fachada, etc. Los puentes térmicos deben limitarse o tratarse correctamente, porque pueden representar una fracción importante de las pérdidas de calor a través de la envolvente.</li>
+    </ul>
+
+    <h3>El concepto de compacidad</h3>
+    <p>La <strong>compacidad</strong> (o factor de forma) de un edificio es la relación entre el volumen interior calefactado y la superficie de su envolvente térmica. Un edificio compacto (con una relación superficie/volumen baja) pierde relativamente menos calor que un edificio de igual volumen pero más fraccionado o con mayor superficie de envolvente. El DB-HE tiene en cuenta la compacidad del edificio en el establecimiento de los valores límite de demanda.</p>
+  </div>
+
+  <div class="sec" id="s7">
+    <h2>7. Los parámetros de la envolvente: transmitancias y factor solar</h2>
+    <p>Los parámetros técnicos que caracterizan el comportamiento térmico de la envolvente son principalmente:</p>
+
+    <h3>La transmitancia térmica (U)</h3>
+    <p>La <strong>transmitancia térmica (U)</strong> es el flujo de calor que pasa a través de un elemento de la envolvente por unidad de superficie y por unidad de diferencia de temperatura entre los dos ambientes que separa. Se expresa en <strong>W/(m²·K)</strong>. Cuanto menor es U, mejor es el aislamiento del elemento. El inverso de U es la resistencia térmica (R), expresada en m²·K/W.</p>
+    <p>El DB-HE establece los <strong>valores límite de transmitancia</strong> para los distintos tipos de cerramientos (muros de fachada, cubiertas, suelos, huecos) en función de la zona climática. En general, las zonas más frías exigen transmitancias más bajas (mayor aislamiento). Los valores típicos oscilan entre:</p>
+    <ul>
+      <li><strong>Muros de fachada</strong>: U ≤ 0,50-0,82 W/(m²·K) según la zona climática.</li>
+      <li><strong>Cubiertas</strong>: U ≤ 0,38-0,65 W/(m²·K) según la zona.</li>
+      <li><strong>Suelos</strong>: U ≤ 0,50-0,82 W/(m²·K) según la zona.</li>
+      <li><strong>Huecos (ventanas)</strong>: U ≤ 1,80-3,10 W/(m²·K) según la zona y la orientación.</li>
+    </ul>
+
+    <h3>El factor solar modificado (F)</h3>
+    <p>El <strong>factor solar modificado (F)</strong> de un hueco es la fracción de la radiación solar incidente que pasa efectivamente al interior del edificio, teniendo en cuenta el acristalamiento, el marco, los dispositivos de sombra fijos (lamas, voladizos, retranqueos) y los dispositivos de sombra móviles (persianas, toldos). El factor solar se utiliza para verificar que los huecos no producen un exceso de ganancias solares en verano que incremente la demanda de refrigeración. El DB-HE establece valores límite del factor solar de los huecos para las zonas climáticas de verano más cálidas.</p>
+
+    <h3>El condensador de vapor de agua: la condición higrotérmica</h3>
+    <p>Además de las condiciones de transmitancia, el DB-HE establece condiciones higrotérmicas para los cerramientos de la envolvente: deben evitarse las condensaciones intersticiales (dentro del cerramiento) que puedan deteriorar los materiales o los aislamientos. La verificación de las condensaciones se realiza mediante el método de Glaser o mediante simulaciones higrotérmicas más detalladas.</p>
+  </div>
+
+  <div class="sec" id="s8">
+    <h2>8. La verificación de HE 1: indicadores y métodos</h2>
+    <p>El cumplimiento de HE 1 en edificios residenciales (desde 2019) se verifica principalmente mediante el cálculo de la demanda de calefacción y la demanda de refrigeración del edificio, expresadas en kWh/(m²·año). Los valores límite son función de la zona climática y de la compacidad del edificio.</p>
+
+    <h3>La demanda de calefacción y su límite</h3>
+    <p>La demanda de calefacción es la energía que el sistema de calefacción debe aportar al edificio para mantener las condiciones de confort interior durante el período de invierno. Cuanto mejor es el aislamiento de la envolvente, menor es la demanda de calefacción.</p>
+    <p>El DB-HE establece límites para la demanda de calefacción que son más exigentes en las zonas climáticas de invierno más severas (zonas D y E) y menos exigentes en las zonas más cálidas (zonas A y B). En la zona D1 (Pamplona), los valores límite para uso residencial son relativamente exigentes, dado el rigor del invierno navarro.</p>
+
+    <h3>La demanda de refrigeración y su límite</h3>
+    <p>La demanda de refrigeración es la energía que el sistema de refrigeración debe extraer del edificio para mantener las condiciones de confort interior durante el período de verano. La limitación de la demanda de refrigeración es especialmente importante en las zonas de verano cálido (zonas 3 y 4).</p>
+
+    <h3>Los programas de simulación reconocidos</h3>
+    <p>Para la verificación de HE 0 y HE 1 mediante la opción general, el DB-HE admite el uso de los <strong>programas informáticos reconocidos</strong> que figuran en el Registro General del CTE. Los más utilizados en la práctica son CE3X y CYPETHERM HE Plus para la certificación energética, y DesignBuilder (basado en EnergyPlus) para cálculos más detallados.</p>
+  </div>
+
+  <div class="sec" id="s9">
+    <h2>9. HE 2 — Rendimiento de las instalaciones térmicas</h2>
+    <p>La sección <strong>HE 2</strong> no establece requisitos propios, sino que remite al <strong>Reglamento de Instalaciones Térmicas en Edificios (RITE)</strong>, aprobado por el Real Decreto 1027/2007 y sus posteriores modificaciones. El RITE regula el rendimiento mínimo de los equipos generadores de calor y frío, las condiciones de diseño de las instalaciones de climatización y ventilación, el mantenimiento periódico de las instalaciones y las inspecciones obligatorias.</p>
+    <p>La remisión al RITE significa que el cumplimiento de HE 2 se verifica a través del cumplimiento del RITE, que es competencia de los ingenieros de instalaciones térmicas.</p>
+  </div>
+
+  <div class="sec" id="s10">
+    <h2>10. HE 3 — Condiciones de las instalaciones de iluminación</h2>
+    <p>La sección <strong>HE 3</strong> establece los requisitos de eficiencia energética de las instalaciones de iluminación interior de los edificios. Se aplica exclusivamente a edificios de uso <strong>no residencial</strong> (terciario, administrativo, sanitario, docente, etc.), ya que la iluminación residencial no se regula en el CTE por su menor impacto relativo.</p>
+    <p>El indicador principal es la <strong>eficiencia energética de la instalación (VEEI)</strong>, expresada en W/(m²·100 lux), que relaciona la potencia instalada de iluminación con el nivel de iluminancia obtenido y la superficie iluminada. Cuanto menor es el VEEI, más eficiente es la instalación. El DB-HE establece valores límite del VEEI en función del uso del espacio.</p>
+    <p>HE 3 también exige la dotación de <strong>sistemas de control y regulación</strong> de la iluminación (detectores de presencia, sensores de luz natural, relojes programadores) para reducir el consumo cuando los espacios no están ocupados o cuando la luz natural es suficiente.</p>
+  </div>
+
+  <div class="sec" id="s11">
+    <h2>11. HE 4 — Contribución mínima de energía renovable para ACS</h2>
+    <p>La sección <strong>HE 4</strong> establece la obligación de cubrir una parte mínima de la demanda de <strong>agua caliente sanitaria (ACS)</strong> mediante energía procedente de fuentes renovables. En la versión original del DB-HE (2006), esta sección se denominaba "Contribución solar mínima de agua caliente sanitaria" y exigía exclusivamente el uso de energía solar térmica. En la versión de 2019, la obligación se amplía a cualquier energía renovable, no solo la solar térmica.</p>
+
+    <h3>Edificios afectados por HE 4</h3>
+    <p>La sección HE 4 se aplica a:</p>
+    <ul>
+      <li>Edificios de nueva construcción con demanda de ACS superior a <strong>100 l/día</strong> a 60 °C.</li>
+      <li>Ampliaciones de edificios existentes si incrementan la demanda de ACS hasta superar los 100 l/día a 60 °C.</li>
+      <li>Rehabilitaciones de edificios existentes en que se cambien los sistemas de generación de ACS.</li>
+    </ul>
+
+    <h3>La contribución mínima de energía renovable</h3>
+    <p>HE 4 exige que una fracción mínima de la demanda anual de ACS (expresada como un porcentaje) sea cubierta por energía renovable. Los valores de esa fracción mínima son:</p>
+    <ul>
+      <li>Para el caso general: el porcentaje varía en función de la zona climática y de la demanda de ACS. En zonas más soleadas (zona III, IV y V de radiación solar según la nomenclatura anterior) o con mayor demanda, el porcentaje exigido es mayor.</li>
+      <li>La versión de 2019 del DB-HE permite cumplir esta exigencia con cualquier energía renovable, no solo con solar térmica: también vale la aerotermia (bomba de calor aire-agua), la geotermia, la biomasa, la solar fotovoltaica acoplada a un sistema de calentamiento eléctrico (aunque con restricciones), etc.</li>
+    </ul>
+
+    <h3>La instalación solar térmica para ACS</h3>
+    <p>Cuando se utiliza la energía solar térmica para cumplir HE 4, la instalación debe cumplir los requisitos técnicos del DB-HE y del RITE. Los principales componentes de una instalación solar térmica para ACS son:</p>
+    <ul>
+      <li><strong>Captadores solares</strong>: dispositivos que absorben la radiación solar y la transforman en calor. Los más habituales son los captadores planos y los de tubo de vacío. El DB-HE establece los requisitos de calidad de los captadores.</li>
+      <li><strong>Circuito primario</strong>: circuito que transporta el fluido caloportador (agua con anticongelante) desde los captadores hasta el intercambiador. Debe diseñarse para soportar las temperaturas de estancamiento.</li>
+      <li><strong>Interacumulador o depósito de acumulación</strong>: almacena el calor solar para suministrarlo cuando la demanda no coincide con la producción solar. El volumen del acumulador debe estar dimensionado correctamente (entre 50 y 180 litros por m² de captador, según el DB-HE).</li>
+      <li><strong>Sistema auxiliar</strong>: sistema convencional (caldera, calentador de gas, bomba de calor, etc.) que cubre la demanda de ACS en los períodos en que la producción solar es insuficiente (días nublados, períodos de alta demanda).</li>
+    </ul>
+
+    <h3>Requisitos técnicos de la instalación solar para ACS</h3>
+    <ul>
+      <li>El sistema solar debe poder satisfacer al menos el porcentaje de la demanda de ACS establecido en HE 4.</li>
+      <li>Deben evitarse las situaciones de <strong>sobrecalentamiento</strong>: en verano, la producción solar puede superar ampliamente la demanda, generando temperaturas excesivas que dañan los componentes. Para ello se utilizan sistemas de disipación de calor (disipadores de calor, by-pass, válvulas de seguridad).</li>
+      <li>El DB-HE establece que la temperatura de distribución del ACS debe ser al menos de <strong>60 °C</strong> en el punto de generación para prevenir la proliferación de la bacteria <em>Legionella pneumophila</em>.</li>
+      <li>En edificios de uso no residencial (hoteles, hospitales, gimnasios, etc.) con grandes demandas de ACS, la instalación solar térmica es especialmente rentable y los requisitos de HE 4 son más exigentes.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s12">
+    <h2>12. HE 5 — Generación mínima de energía eléctrica</h2>
+    <p>La sección <strong>HE 5</strong>, introducida en la actualización de 2019, establece la obligación de incorporar sistemas de <strong>generación de energía eléctrica mediante fuentes renovables</strong> en determinados tipos de edificios. En la práctica, la solución tecnológica más habitual para cumplir HE 5 es la instalación de <strong>paneles solares fotovoltaicos</strong>, aunque el DB-HE no limita las soluciones a esta tecnología.</p>
+
+    <h3>Edificios afectados por HE 5</h3>
+    <p>La sección HE 5 se aplica a edificios de nueva construcción de los siguientes usos:</p>
+    <ul>
+      <li>Uso <strong>administrativo</strong>: oficinas, dependencias de la Administración, etc.</li>
+      <li>Uso <strong>sanitario</strong>: hospitales, clínicas, centros de salud.</li>
+      <li>Uso <strong>comercial</strong>: centros comerciales, grandes almacenes, hipermercados.</li>
+      <li>Uso <strong>pública concurrencia</strong>: teatros, cines, auditorios, estaciones, aeropuertos, etc.</li>
+      <li>Uso <strong>hotelero y hostelero</strong>: hoteles, hostales, restaurantes.</li>
+      <li>Uso <strong>docente</strong>: colegios, institutos, universidades, guarderías.</li>
+      <li>Uso <strong>deportivo</strong>: pabellones deportivos, instalaciones deportivas.</li>
+    </ul>
+    <p>Quedan excluidos del ámbito de aplicación de HE 5 los edificios de uso exclusivamente residencial (viviendas). Sin embargo, los edificios residenciales con zonas comunes de gran superficie (garajes, locales comerciales en planta baja, etc.) pueden estar afectados si también contienen usos de los anteriores.</p>
+
+    <h3>La potencia mínima de generación eléctrica</h3>
+    <p>La potencia mínima que debe instalarse para la generación de energía eléctrica renovable se determina en función de la <strong>superficie construida del edificio</strong> y del <strong>uso</strong> del edificio. La fórmula del DB-HE establece una relación lineal entre la superficie y la potencia mínima requerida, con un coeficiente que varía según el uso. Por ejemplo:</p>
+    <ul>
+      <li>Para uso sanitario y hotelero: el coeficiente es mayor (mayor potencia requerida por m²) que para otros usos.</li>
+      <li>Para uso docente o deportivo: el coeficiente es menor.</li>
+    </ul>
+    <p>El DB-HE establece también una <strong>superficie mínima de construcción a partir de la cual se activa la obligación</strong>: para la mayoría de los usos, la obligación no se activa en edificios de muy pequeña superficie (hay umbrales mínimos de superficie por uso). En general, para uso comercial el umbral es de 3.000 m², para uso sanitario de 1.000 m², y para uso hostelero y hotelero de 1.000 m², entre otros.</p>
+
+    <h3>La instalación fotovoltaica para HE 5</h3>
+    <p>Cuando se utiliza la energía solar fotovoltaica para cumplir HE 5, la instalación debe cumplir los requisitos técnicos del Reglamento Electrotécnico de Baja Tensión (REBT) y de la normativa regulatoria del autoconsumo eléctrico (Real Decreto 244/2019, de 5 de abril, por el que se regulan las condiciones administrativas, técnicas y económicas del autoconsumo de energía eléctrica).</p>
+    <p>El DB-HE no especifica si la instalación fotovoltaica debe conectarse a la red eléctrica o ser de uso autónomo (isla), aunque lo más habitual en edificios conectados a la red es la instalación fotovoltaica en modalidad de autoconsumo con excedentes acogida a compensación simplificada.</p>
+
+    <h3>La reducción del consumo de energía primaria no renovable por HE 5</h3>
+    <p>La energía generada por la instalación fotovoltaica reduce el consumo de energía primaria no renovable del edificio, computando de forma favorable en la verificación de HE 0. La producción fotovoltaica del edificio se descuenta del consumo de energía eléctrica de red, reduciendo así el consumo neto de energía primaria no renovable.</p>
+  </div>
+
+  <div class="sec" id="s13">
+    <h2>13. Edificios de consumo de energía casi nulo (EECN)</h2>
+    <p>El concepto de <strong>edificio de consumo de energía casi nulo (EECN)</strong>, introducido por la Directiva 2010/31/UE, ha sido el motor de la actualización del DB-HE de 2019. Un EECN es un edificio que tiene un nivel de eficiencia energética muy elevado, de forma que la cantidad de energía casi nula o muy pequeña que requiere está cubierta, en muy amplia medida, por energía procedente de fuentes renovables, incluida la energía procedente de fuentes renovables producida in situ o en el entorno.</p>
+
+    <h3>El EECN en el DB-HE</h3>
+    <p>En la práctica del DB-HE, el concepto de EECN se traduce en:</p>
+    <ul>
+      <li>Una <strong>demanda energética muy baja</strong>, garantizada por los límites de HE 1.</li>
+      <li>Un <strong>consumo de energía primaria no renovable muy bajo</strong>, garantizado por los límites de HE 0.</li>
+      <li>Una <strong>incorporación significativa de energías renovables</strong>, requerida por HE 4 y HE 5.</li>
+    </ul>
+    <p>Los edificios nuevos en España deben ser EECN desde el 1 de junio de 2020 (y los edificios del sector público desde 2018).</p>
+  </div>
+
+  <div class="sec" id="s14">
+    <h2>14. Certificación energética de edificios</h2>
+    <p>La <strong>certificación energética de edificios</strong> es el procedimiento por el que se asigna una etiqueta energética a un edificio en función de su consumo de energía primaria no renovable. Es obligatoria para todos los edificios nuevos (antes de su ocupación) y para todos los edificios existentes cuando se vendan o alquilen.</p>
+
+    <h3>La etiqueta energética</h3>
+    <p>La etiqueta energética clasifica el edificio en una de siete clases, de la <strong>A</strong> (más eficiente, menor consumo) a la <strong>G</strong> (menos eficiente, mayor consumo). Los edificios nuevos construidos conforme al DB-HE actualizado de 2019 deben obtener, en general, una calificación de clase <strong>A o B</strong> para cumplir los requisitos de EECN.</p>
+
+    <h3>El certificado de eficiencia energética</h3>
+    <p>El certificado de eficiencia energética de los edificios en España está regulado por el <strong>Real Decreto 390/2021, de 1 de junio, por el que se aprueba el procedimiento básico para la certificación de la eficiencia energética de los edificios</strong>. El certificado es emitido por un técnico competente (arquitecto, ingeniero, ingeniero técnico, etc.) y debe registrarse en el órgano competente de la Comunidad Autónoma.</p>
+  </div>
+
+  <div class="footer">RD 314/2006 (CTE) · RD 732/2019 (actualización CTE) · Directiva 2010/31/UE (EPBD) · RD 390/2021 (certificación energética) · RD 1027/2007 (RITE)</div>
+</div>
+</body>
+</html>

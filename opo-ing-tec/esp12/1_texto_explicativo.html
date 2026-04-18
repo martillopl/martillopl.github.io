@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 12 — CTE DB-HS: Salubridad</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.22);--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.20)}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2.5rem 1rem;line-height:1.8}
+  .page{max-width:740px;margin:0 auto}
+  .header{margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:.5px solid var(--bm)}
+  .tlabel{font-size:12px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+  h1{font-size:22px;font-weight:500;line-height:1.3;margin-bottom:8px}
+  .meta{font-size:13px;color:var(--t3)}
+  .meta a{color:var(--t2);text-decoration:none}
+  .meta a:hover{color:var(--t1)}
+  .indice{background:var(--bg2);border:.5px solid var(--bl);border-radius:var(--r2);padding:16px 20px;margin-bottom:2.5rem}
+  .itit{font-size:11px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+  .indice ol{padding-left:18px}
+  .indice li{font-size:13px;color:var(--t2);padding:3px 0}
+  .indice a{color:var(--t2);text-decoration:none}
+  .indice a:hover{color:var(--t1)}
+  .sec{margin-bottom:2.8rem}
+  h2{font-size:18px;font-weight:500;margin-bottom:1rem;padding-bottom:8px;border-bottom:.5px solid var(--bl)}
+  h3{font-size:15px;font-weight:500;margin:1.6rem 0 .6rem}
+  h4{font-size:14px;font-weight:500;margin:1.2rem 0 .4rem;color:var(--t2)}
+  p{font-size:15px;color:var(--t2);margin-bottom:1rem}
+  p:last-child{margin-bottom:0}
+  strong{font-weight:500;color:var(--t1)}
+  .art{display:inline-block;font-size:11px;font-weight:500;background:var(--bg2);border:.5px solid var(--bm);border-radius:20px;padding:1px 8px;color:var(--t3);vertical-align:middle;margin-left:4px}
+  ul{padding-left:20px;margin-bottom:1rem}
+  ul li{font-size:15px;color:var(--t2);padding:3px 0}
+  ol.num{padding-left:20px;margin-bottom:1rem}
+  ol.num li{font-size:15px;color:var(--t2);padding:3px 0}
+  .nota{background:var(--bg2);border-left:2px solid var(--bm);padding:12px 16px;margin:1.2rem 0;font-size:13.5px;color:var(--t2);line-height:1.65}
+  .nota strong{color:var(--t1)}
+  .footer{margin-top:3rem;padding-top:1.2rem;border-top:.5px solid var(--bl);font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="tlabel">Tema 12 — CTE DB-HS · Ingeniero Técnico</div>
+    <h1>Código Técnico de la Edificación — Documento Básico de Salubridad (DB-HS)</h1>
+    <div class="meta">RD 314/2006 · DB-HS · RD 732/2019 · UNE-EN 806 · RD 140/2003 · RD 865/2003 (Legionella)<br>
+      <a href="../index.html">Índice</a><br>
+      <a href="2_esquema_resumen.html">Esquema-resumen ></a>
+       | 
+      <a href="3_cuadro_comparativo.html">Cuadros comparativos >></a>
+    </div>
+  </div>
+  <div class="indice">
+    <div class="itit">Índice</div>
+    <ol>
+      <li><a href="#s1">Introducción: el DB-HS y la salubridad en la edificación</a></li>
+      <li><a href="#s2">Estructura del DB-HS: las cinco secciones</a></li>
+      <li><a href="#s3">HS 1 — Protección frente a la humedad: introducción y principios</a></li>
+      <li><a href="#s4">HS 1 — Muros en contacto con el terreno</a></li>
+      <li><a href="#s5">HS 1 — Suelos en contacto con el terreno</a></li>
+      <li><a href="#s6">HS 1 — Fachadas</a></li>
+      <li><a href="#s7">HS 1 — Cubiertas</a></li>
+      <li><a href="#s8">HS 4 — Suministro de agua: principios generales</a></li>
+      <li><a href="#s9">HS 4 — Condiciones mínimas de suministro</a></li>
+      <li><a href="#s10">HS 4 — Diseño de la instalación de agua fría</a></li>
+      <li><a href="#s11">HS 4 — Instalación de agua caliente sanitaria (ACS)</a></li>
+      <li><a href="#s12">HS 4 — Dimensionado de la instalación</a></li>
+      <li><a href="#s13">HS 4 — Materiales, protección y mantenimiento</a></li>
+      <li><a href="#s14">HS 5 — Evacuación de aguas: principios y red separativa</a></li>
+      <li><a href="#s15">HS 5 — Red de aguas residuales</a></li>
+      <li><a href="#s16">HS 5 — Red de aguas pluviales</a></li>
+      <li><a href="#s17">HS 5 — Dimensionado de la red de evacuación</a></li>
+    </ol>
+  </div>
+
+  <div class="sec" id="s1">
+    <h2>1. Introducción: el DB-HS y la salubridad en la edificación</h2>
+    <p>El <strong>Documento Básico de Salubridad (DB-HS)</strong> del Código Técnico de la Edificación establece los requisitos que deben cumplir los edificios para reducir a límites aceptables el riesgo de que los usuarios padezcan molestias o enfermedades, que los edificios se deterioren, y que el medio ambiente en el entorno inmediato se deteriore como consecuencia de las características del proyecto, la construcción, el uso y el mantenimiento del edificio.</p>
+    <p>La salubridad en la edificación abarca un conjunto muy amplio de aspectos: la protección frente a la humedad, la calidad del aire interior, la gestión de los residuos, el suministro de agua potable y la evacuación de aguas. Todos ellos tienen en común que afectan directamente a las condiciones de higiene y salud de los ocupantes del edificio y al entorno.</p>
+    <div class="nota"><strong>Relevancia para el ingeniero técnico:</strong> Las instalaciones de fontanería (suministro de agua) y de saneamiento (evacuación de aguas) son dos de los sistemas de instalaciones más habituales en los proyectos de edificación, y su diseño y dimensionado conforme al DB-HS es una de las tareas técnicas más frecuentes del ingeniero técnico en el ámbito sanitario y de la edificación.</div>
+  </div>
+
+  <div class="sec" id="s2">
+    <h2>2. Estructura del DB-HS: las cinco secciones</h2>
+    <p>El DB-HS se organiza en cinco secciones, de las cuales el tema aborda la primera, la cuarta y la quinta:</p>
+    <ul>
+      <li><strong>HS 1 — Protección frente a la humedad</strong>: condiciones de los muros, suelos, fachadas y cubiertas para evitar la entrada de humedad del terreno, la lluvia y la condensación.</li>
+      <li><strong>HS 2 — Recogida y evacuación de residuos</strong>: condiciones de los espacios de almacenamiento de residuos en los edificios.</li>
+      <li><strong>HS 3 — Calidad del aire interior</strong>: condiciones de ventilación de los espacios habitables para garantizar la calidad del aire interior.</li>
+      <li><strong>HS 4 — Suministro de agua</strong>: condiciones de la instalación de fontanería para garantizar el suministro de agua potable en condiciones de calidad, caudal y presión adecuadas.</li>
+      <li><strong>HS 5 — Evacuación de aguas</strong>: condiciones de la red de saneamiento para la evacuación de aguas residuales y pluviales.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s3">
+    <h2>3. HS 1 — Protección frente a la humedad: introducción y principios</h2>
+    <p>La sección <strong>HS 1</strong> es la más extensa del DB-HS desde el punto de vista constructivo. Establece las condiciones que deben cumplir los cerramientos del edificio para evitar la penetración de humedad procedente del terreno, de la lluvia o del viento, así como las condensaciones en la superficie o el interior de los cerramientos.</p>
+
+    <h3>Las fuentes de humedad en los edificios</h3>
+    <p>La humedad en los edificios puede tener diversas procedencias:</p>
+    <ul>
+      <li><strong>Humedad del terreno</strong>: el agua del suelo puede ascender por capilaridad hacia los muros de cimentación y los suelos en contacto con el terreno, o presionar hidrostáticamente sobre los muros de sótano.</li>
+      <li><strong>Humedad de lluvia</strong>: la lluvia puede penetrar a través de las fachadas (especialmente en zonas de lluvia intensa y con viento) y de las cubiertas.</li>
+      <li><strong>Humedad de condensación</strong>: el vapor de agua del aire interior puede condensarse en la superficie interior de los cerramientos fríos (condensación superficial) o en el interior del cerramiento (condensación intersticial).</li>
+    </ul>
+
+    <h3>El sistema de cuantificación del DB-HS 1: los grados de impermeabilidad</h3>
+    <p>El DB-HS 1 establece un sistema de cuantificación del riesgo de humedad basado en el concepto de <strong>grado de impermeabilidad</strong>, que es un número del 1 al 5 que expresa el nivel de exigencia de impermeabilización requerido para un cerramiento determinado en función de las condiciones de exposición a la lluvia y al viento del lugar donde se construye el edificio y de las características del propio cerramiento.</p>
+    <p>El grado de impermeabilidad se determina a partir de:</p>
+    <ul>
+      <li>La <strong>zona pluviométrica</strong> del municipio (de I —menos lluviosa— a V —más lluviosa—).</li>
+      <li>El <strong>grado de exposición al viento</strong> (velocidad básica del viento en la zona).</li>
+      <li>Las <strong>características propias del cerramiento</strong> (tipo de fachada, presencia de revestimiento, etc.).</li>
+    </ul>
+    <p>Una vez determinado el grado de impermeabilidad exigido (de 1 a 5), el DB-HS 1 establece las condiciones técnicas que debe cumplir el cerramiento para satisfacer ese grado.</p>
+  </div>
+
+  <div class="sec" id="s4">
+    <h2>4. HS 1 — Muros en contacto con el terreno</h2>
+    <p>Los <strong>muros en contacto con el terreno</strong> están sometidos a la humedad del suelo, que puede penetrar por capilaridad (humedad freática o de lluvia infiltrada) o por presión hidrostática (en terrenos con nivel freático elevado o en zonas con lluvias muy intensas).</p>
+
+    <h3>Tipos de solución para muros en contacto con el terreno</h3>
+    <p>El DB-HS 1 clasifica las soluciones para muros en contacto con el terreno en función del sistema de impermeabilización:</p>
+    <ul>
+      <li><strong>Impermeabilización interior</strong>: la barrera de impermeabilización se sitúa en la cara interior del muro (en contacto con el ambiente interior del edificio). Es la solución más habitual cuando no es posible acceder a la cara exterior del muro.</li>
+      <li><strong>Impermeabilización exterior</strong>: la barrera de impermeabilización se sitúa en la cara exterior del muro (en contacto con el terreno). Es la solución más eficaz, ya que impide la entrada del agua antes de que llegue al muro. Requiere acceso a la cara exterior del muro durante la ejecución (trincheras o excavaciones).</li>
+      <li><strong>Drenaje exterior</strong>: complementario a la impermeabilización, el drenaje consiste en la colocación de materiales drenantes (gravas, geotextiles, láminas drenantes) en la interfaz entre el terreno y el muro, para conducir el agua hacia puntos de recogida y evacuación antes de que llegue a presionar sobre el muro impermeabilizado.</li>
+    </ul>
+
+    <h3>Los grados de impermeabilidad para muros</h3>
+    <p>El grado de impermeabilidad exigido para los muros en contacto con el terreno depende de la presencia de agua en el terreno (nivel freático) y de si existe drenaje o no. Para muros con presencia permanente de agua (nivel freático alto) se exigen los grados más elevados (4 o 5), mientras que para muros sin presencia de agua (terrenos permeables sin nivel freático) se admiten grados más bajos (1 o 2).</p>
+  </div>
+
+  <div class="sec" id="s5">
+    <h2>5. HS 1 — Suelos en contacto con el terreno</h2>
+    <p>Los <strong>suelos en contacto con el terreno</strong> (soleras, losas) están sometidos a la humedad del suelo por capilaridad. A diferencia de los muros, la presión del agua sobre los suelos es principalmente vertical (hacia arriba), lo que determina el tipo de soluciones de impermeabilización.</p>
+
+    <h3>Soluciones para suelos en contacto con el terreno</h3>
+    <ul>
+      <li><strong>Solera con membrana impermeabilizante</strong>: se coloca una lámina o membrana impermeabilizante entre la base de hormigón de limpieza y la solera de hormigón estructural, impidiendo el ascenso capilar del agua.</li>
+      <li><strong>Losa de hormigón impermeabilizada</strong>: la propia losa de cimentación actúa como barrera de impermeabilización, mediante la adición de productos hidrófugos o la reducción de la relación agua/cemento.</li>
+      <li><strong>Cámara sanitaria o espacio de ventilación bajo el suelo</strong>: en lugar de impermeabilizar el suelo, se crea un espacio ventilado entre el terreno y el suelo del edificio, de forma que la humedad del terreno no alcanza el suelo habitable. Es la solución más eficaz en terrenos con humedad pero sin nivel freático elevado.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s6">
+    <h2>6. HS 1 — Fachadas</h2>
+    <p>Las <strong>fachadas</strong> están expuestas a la lluvia y al viento, que pueden forzar la entrada de agua a través de fisuras, juntas y puntos débiles del cerramiento. El DB-HS 1 establece el grado de impermeabilidad requerido para cada fachada en función de la zona pluviométrica, el grado de exposición al viento y las características del cerramiento.</p>
+
+    <h3>Tipos de fachada y su resistencia a la lluvia</h3>
+    <ul>
+      <li><strong>Fachada de hoja exterior no revestida</strong>: ladrillo visto, piedra vista, bloques vistos. Mayor exposición al agua, mayor exigencia de impermeabilización de los materiales o de las juntas.</li>
+      <li><strong>Fachada de hoja exterior revestida</strong>: enfoscado, aplacado, revestimiento continuo. El revestimiento actúa como primera barrera contra la lluvia.</li>
+      <li><strong>Fachada ventilada con hoja exterior</strong>: fachada con cámara de aire ventilada entre la hoja exterior (de ladrillo, piedra, paneles, etc.) y el cerramiento interior. La cámara permite la evacuación del agua que pueda penetrar entre las piezas de la hoja exterior, sin que llegue al cerramiento interior.</li>
+    </ul>
+
+    <h3>Las juntas de la fachada</h3>
+    <p>Las juntas entre piezas de la hoja exterior de la fachada (juntas entre ladrillos, entre paneles, entre piezas de aplacado) son los puntos más vulnerables a la penetración del agua. El DB-HS 1 establece los requisitos de las juntas en función del grado de impermeabilidad exigido: sellado con mortero, sellado con masilla elástica, uso de juntas de goma, etc.</p>
+
+    <h3>Los puntos singulares de la fachada</h3>
+    <p>Los <strong>puntos singulares</strong> de la fachada son aquellos en los que la continuidad del cerramiento se interrumpe o cambia de geometría: dinteles de ventanas, alféizares, encuentros entre fachada y cubierta, encuentros entre fachada y balcones, etc. El DB-HS 1 establece soluciones específicas para cada tipo de punto singular, ya que son los puntos más vulnerables a la filtración de agua.</p>
+  </div>
+
+  <div class="sec" id="s7">
+    <h2>7. HS 1 — Cubiertas</h2>
+    <p>Las <strong>cubiertas</strong> son los cerramientos horizontales o inclinados que protegen el edificio de la lluvia por la parte superior. Son los elementos de la envolvente con mayor exposición al agua y, por tanto, con mayores exigencias de impermeabilización.</p>
+
+    <h3>Tipos de cubierta y sus requisitos</h3>
+    <ul>
+      <li><strong>Cubierta plana (cubierta horizontal)</strong>: cubierta con pendiente inferior al 15% (generalmente del 1% al 5%), en la que el agua de lluvia se evacua mediante desagües o sumideros. El DB-HS 1 establece los requisitos del sistema de impermeabilización de la cubierta plana (lámina impermeabilizante, pendiente mínima, sistema de evacuación, etc.).</li>
+      <li><strong>Cubierta inclinada</strong>: cubierta con pendiente superior al 15%, en la que el agua de lluvia se evacua por gravedad hacia los canalones o aleros. El DB-HS 1 establece las pendientes mínimas para cada tipo de material de cobertura (teja, pizarra, panel sándwich, etc.) y los requisitos de la impermeabilización bajo cobertura.</li>
+    </ul>
+
+    <h3>Los componentes de una cubierta plana</h3>
+    <p>La cubierta plana está formada por las siguientes capas, de abajo a arriba:</p>
+    <ul>
+      <li><strong>Forjado estructural</strong>: la base estructural de la cubierta.</li>
+      <li><strong>Capa de formación de pendientes</strong>: hormigón aligerado o material similar que crea la pendiente necesaria para la evacuación del agua hacia los sumideros.</li>
+      <li><strong>Barrera de vapor</strong>: lámina que impide que el vapor de agua del interior del edificio alcance y condense en el aislamiento térmico. Solo es necesaria en determinadas condiciones climáticas.</li>
+      <li><strong>Aislamiento térmico</strong>: el aislamiento de la cubierta para cumplir HE 1.</li>
+      <li><strong>Membrana impermeabilizante</strong>: la capa más importante desde el punto de vista de HS 1. Puede ser de lámina asfáltica, lámina de PVC u otro polímero, o de material líquido aplicado in situ. Impide la penetración del agua de lluvia.</li>
+      <li><strong>Capa de protección</strong>: capa que protege la membrana impermeabilizante de los daños mecánicos y de la degradación por la radiación ultravioleta. Puede ser de grava suelta, losas filtrantes, baldosas cerámicas, etc. En las cubiertas ajardinadas (cubiertas verdes), el sustrato y las plantas actúan como capa de protección.</li>
+    </ul>
+
+    <h3>Las cubiertas invertidas</h3>
+    <p>En las <strong>cubiertas invertidas</strong>, la posición de las capas es distinta a la cubierta convencional: el aislamiento térmico se sitúa por encima de la membrana impermeabilizante (en lugar de por debajo). Esta disposición tiene la ventaja de que la membrana queda protegida térmicamente y mecánicamente por el aislamiento, lo que alarga su vida útil, pero requiere que el aislamiento sea insensible al agua.</p>
+  </div>
+
+  <div class="sec" id="s8">
+    <h2>8. HS 4 — Suministro de agua: principios generales</h2>
+    <p>La sección <strong>HS 4</strong> establece las condiciones que deben reunir las instalaciones de suministro de agua de los edificios para garantizar que el agua llega a todos los puntos de consumo en condiciones de potabilidad, caudal y presión adecuadas, y que la instalación es segura, durable y de fácil mantenimiento.</p>
+
+    <h3>Ámbito de aplicación de HS 4</h3>
+    <p>La sección HS 4 se aplica a:</p>
+    <ul>
+      <li>Los edificios de nueva construcción.</li>
+      <li>Las ampliaciones o reformas de edificios existentes cuando se amplíe o modifique la instalación de fontanería.</li>
+    </ul>
+
+    <h3>Los principios de la instalación de suministro de agua</h3>
+    <p>El DB-HS 4 establece los siguientes principios que debe cumplir la instalación de suministro de agua:</p>
+    <ul>
+      <li><strong>Calidad del agua</strong>: el agua suministrada a todos los puntos de consumo debe ser apta para el consumo humano (agua potable), conforme a los criterios del <strong>Real Decreto 140/2003, de 7 de febrero, por el que se establecen los criterios sanitarios de la calidad del agua de consumo humano</strong>.</li>
+      <li><strong>Caudal suficiente</strong>: la instalación debe asegurar el caudal mínimo necesario en cada aparato o punto de consumo, simultáneamente con otros aparatos en uso.</li>
+      <li><strong>Presión adecuada</strong>: la presión en todos los puntos de consumo debe estar dentro del rango establecido: mínima de <strong>100 kPa para grifos comunes</strong> y <strong>150 kPa para fluxores y calentadores</strong>, y máxima de <strong>500 kPa</strong> en cualquier punto de la red (para evitar golpe de ariete y ruidos).</li>
+      <li><strong>Prevención de la contaminación</strong>: la instalación debe diseñarse para evitar el retorno del agua contaminada hacia la red de distribución pública (efecto sifón, conexiones cruzadas, etc.).</li>
+      <li><strong>Prevención de la Legionella</strong>: el diseño y el mantenimiento de la instalación deben prevenir la proliferación de la bacteria <em>Legionella pneumophila</em>, conforme al <strong>Real Decreto 865/2003, de 4 de julio</strong>. Esto implica mantener el agua fría por debajo de <strong>20 °C</strong> y el agua caliente sanitaria por encima de <strong>50 °C</strong> en la distribución (con generación a 60 °C mínimo).</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s9">
+    <h2>9. HS 4 — Condiciones mínimas de suministro</h2>
+    <p>El DB-HS 4 establece los <strong>caudales mínimos instantáneos</strong> para cada tipo de aparato sanitario. Estos caudales son los que debe garantizar la instalación en el punto de consumo, con independencia de otros aparatos que puedan estar funcionando simultáneamente. Los valores más importantes son:</p>
+    <ul>
+      <li><strong>Lavabo</strong>: 0,10 l/s (agua fría) y 0,065 l/s (agua caliente).</li>
+      <li><strong>Bañera ≥ 1,40 m</strong>: 0,30 l/s (agua fría) y 0,20 l/s (agua caliente).</li>
+      <li><strong>Ducha</strong>: 0,20 l/s (agua fría) y 0,10 l/s (agua caliente).</li>
+      <li><strong>Inodoro con cisterna</strong>: 0,10 l/s (solo agua fría).</li>
+      <li><strong>Inodoro con fluxor</strong>: 1,25 l/s (solo agua fría). Requiere presión mínima de 150 kPa.</li>
+      <li><strong>Fregadero doméstico</strong>: 0,20 l/s (agua fría) y 0,10 l/s (agua caliente).</li>
+      <li><strong>Lavavajillas doméstico</strong>: 0,15 l/s (agua fría).</li>
+      <li><strong>Lavadora doméstica</strong>: 0,20 l/s (agua fría).</li>
+      <li><strong>Grifo aislado</strong>: 0,15 l/s (agua fría).</li>
+    </ul>
+    <div class="nota"><strong>Para exámenes:</strong> Los valores de caudal mínimo del lavabo (0,10 l/s agua fría) y del inodoro con fluxor (1,25 l/s) son los más preguntados, así como los rangos de presión mínima (100 kPa / 150 kPa) y máxima (500 kPa).</div>
+  </div>
+
+  <div class="sec" id="s10">
+    <h2>10. HS 4 — Diseño de la instalación de agua fría</h2>
+
+    <h3>Esquema general de la instalación</h3>
+    <p>La instalación de suministro de agua de un edificio se organiza generalmente de la siguiente forma:</p>
+    <ol class="num">
+      <li><strong>Acometida</strong>: la tubería que conecta la red de distribución pública (red de la empresa suministradora) con la instalación interior del edificio. Incluye la llave de toma (en la red), la arqueta de registro y la llave de paso (en la entrada al edificio).</li>
+      <li><strong>Instalación interior general</strong>: el tramo de la instalación que va desde la llave de paso general hasta los contadores individuales. Incluye el filtro, el armario o cámara de contadores y el depósito de presión (si es necesario).</li>
+      <li><strong>Contador general</strong>: en edificios con un único punto de consumo o una única unidad de uso. El contador mide el consumo total del edificio.</li>
+      <li><strong>Baterías de contadores</strong>: en edificios con múltiples usuarios (viviendas, locales), los contadores individuales de cada usuario se agrupan en baterías situadas en un cuarto de contadores accesible.</li>
+      <li><strong>Instalación interior particular</strong>: las tuberías que van desde el contador individual hasta los aparatos sanitarios de cada vivienda o local.</li>
+    </ol>
+
+    <h3>Los elementos de regulación de presión</h3>
+    <p>Cuando la presión de la red de distribución pública es excesiva (superior a 500 kPa) o insuficiente para alcanzar los puntos de consumo de las plantas superiores, se requieren elementos de regulación:</p>
+    <ul>
+      <li><strong>Reductor de presión</strong>: válvula que reduce la presión del agua cuando esta supera los 500 kPa en la red. Se sitúa después del contador general.</li>
+      <li><strong>Grupo de presión</strong>: equipo formado por uno o varios motobombas, un depósito acumulador y un sistema de control de presión (presostatos), que eleva la presión del agua hasta la necesaria para que llegue a los pisos superiores cuando la presión de la red no es suficiente.</li>
+      <li><strong>Depósito de reserva</strong>: depósito que almacena agua de la red cuando la presión o el caudal son suficientes, y la suministra al grupo de presión cuando la red no puede abastecer la demanda (por cortes, por insuficiencia de caudal, etc.). Su capacidad mínima suele ser la demanda diaria del edificio.</li>
+    </ul>
+
+    <h3>Separación de las redes de agua fría y caliente</h3>
+    <p>Las tuberías de agua fría y de agua caliente deben instalarse a una distancia mínima de <strong>4 cm</strong> entre ellas (o separadas por una barrera térmica), para evitar que la tubería de agua fría se caliente por efecto de la tubería de agua caliente adyacente, lo que podría favorecer la proliferación de microorganismos.</p>
+  </div>
+
+  <div class="sec" id="s11">
+    <h2>11. HS 4 — Instalación de agua caliente sanitaria (ACS)</h2>
+    <p>La instalación de <strong>agua caliente sanitaria (ACS)</strong> es el sistema que calienta el agua de la red y la distribuye hasta los puntos de consumo (grifos de ducha, bañera, lavabo, fregadero, etc.) a la temperatura adecuada para el uso doméstico.</p>
+
+    <h3>Sistema de producción de ACS</h3>
+    <p>Los sistemas de producción de ACS más habituales en los edificios son:</p>
+    <ul>
+      <li><strong>Calentador instantáneo</strong>: calentador de gas que produce ACS en el momento de su uso, sin acumulación. Es el sistema más habitual en viviendas individuales.</li>
+      <li><strong>Caldera con acumulador</strong>: la caldera (de gas, gasóleo, biomasa o eléctrica) calienta el agua que se acumula en un depósito acumulador. Es el sistema habitual en viviendas con instalación de calefacción centralizada.</li>
+      <li><strong>Calentador eléctrico de acumulación (termo eléctrico)</strong>: resistencia eléctrica que calienta el agua en un depósito. Tiene alta eficiencia de almacenamiento pero menor eficiencia energética que los sistemas de gas.</li>
+      <li><strong>Sistema solar térmico con apoyo convencional</strong>: sistema de captadores solares térmicos que precalienta el agua antes de que llegue al sistema convencional, reduciendo el consumo de energía del sistema de apoyo. Es obligatorio en determinados edificios conforme a HE 4.</li>
+      <li><strong>Bomba de calor aerotérmica (aerotermia)</strong>: sistema que extrae calor del aire exterior y lo transfiere al agua de ACS. Tiene una alta eficiencia energética (COP > 2) y es una de las opciones para cumplir HE 4.</li>
+    </ul>
+
+    <h3>El circuito de retorno de ACS</h3>
+    <p>En los edificios de gran longitud de red (viviendas de más de 4 plantas, hoteles, edificios de uso sanitario, etc.), el DB-HS 4 exige la instalación de un <strong>circuito de retorno de ACS</strong>: una tubería de retorno que conecta el último punto de consumo con el acumulador, por la que el ACS circula continuamente cuando no hay consumo, evitando que el agua se enfríe en las tuberías de distribución. Sin el circuito de retorno, el usuario tendría que dejar correr el agua fría durante un tiempo hasta que llegara agua caliente, lo que supone un desperdicio de agua y energía.</p>
+    <p>El DB-HS 4 establece que la temperatura del agua en el circuito de distribución de ACS no debe ser inferior a <strong>50 °C</strong> en ningún punto de la red de distribución, para prevenir la proliferación de Legionella. El depósito acumulador debe mantener una temperatura de al menos <strong>60 °C</strong>.</p>
+  </div>
+
+  <div class="sec" id="s12">
+    <h2>12. HS 4 — Dimensionado de la instalación</h2>
+    <p>El dimensionado de la instalación de suministro de agua consiste en determinar los diámetros de las tuberías de la instalación para que el agua llegue a todos los puntos de consumo con el caudal y la presión mínimos exigidos por el DB-HS 4. El dimensionado es una de las tareas técnicas más importantes del proyectista de instalaciones de fontanería.</p>
+
+    <h3>El caudal simultáneo: el coeficiente de simultaneidad</h3>
+    <p>La demanda de agua de un edificio no es la suma de los caudales mínimos de todos sus aparatos, porque no todos los aparatos están en uso simultáneamente. El DB-HS 4 establece el concepto de <strong>caudal simultáneo</strong>: el caudal que debe suministrar la instalación en el tramo considerado, teniendo en cuenta la probabilidad de uso simultáneo de varios aparatos.</p>
+    <p>Para el cálculo del caudal simultáneo, el DB-HS 4 propone la utilización de <strong>coeficientes de simultaneidad</strong> que reducen el caudal total instalado en función del número de aparatos abastecidos por cada tramo de la instalación. Los coeficientes de simultaneidad varían en función del tipo de edificio y del número de aparatos: cuantos más aparatos hay en el tramo, menor es la probabilidad de uso simultáneo y menor es el coeficiente.</p>
+
+    <h3>El método de cálculo de las tuberías</h3>
+    <p>Una vez determinado el caudal simultáneo de cada tramo, el diámetro de la tubería se calcula mediante las fórmulas hidráulicas de Hazen-Williams, Darcy-Weisbach o similares, eligiendo el diámetro que garantice la velocidad del agua dentro del rango establecido por el DB-HS 4:</p>
+    <ul>
+      <li><strong>Velocidad mínima</strong>: 0,50 m/s para evitar sedimentaciones en la tubería.</li>
+      <li><strong>Velocidad máxima</strong>: 2,00 m/s en tuberías metálicas y 3,00 m/s en tuberías de material plástico, para evitar ruidos y erosión de la tubería.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s13">
+    <h2>13. HS 4 — Materiales, protección y mantenimiento</h2>
+
+    <h3>Materiales de la instalación</h3>
+    <p>Los materiales de las tuberías de la instalación de suministro de agua deben ser resistentes a la corrosión, compatibles con el agua potable (no deben alterar sus características organolépticas ni liberar sustancias tóxicas) y duraderos. Los materiales más habituales son:</p>
+    <ul>
+      <li><strong>Cobre</strong>: material clásico de alta durabilidad y resistencia a la corrosión, compatible con el agua potable. Se utiliza tanto en instalaciones de agua fría como de agua caliente. Tiene buena conductividad térmica (por lo que debe aislarse en la tubería de agua fría para evitar condensaciones).</li>
+      <li><strong>Polietileno reticulado (PEX)</strong>: material plástico de alta flexibilidad, resistencia a las altas temperaturas (apto para ACS) y bajo coste. Es el material más utilizado en las instalaciones de viviendas en la actualidad.</li>
+      <li><strong>Polipropileno (PP)</strong>: material plástico apto para agua fría y caliente, de alta resistencia química.</li>
+      <li><strong>Acero inoxidable</strong>: material de alta durabilidad, utilizado principalmente en instalaciones de uso sanitario (hospitales, cocinas industriales) donde se requiere una limpieza extrema.</li>
+      <li><strong>Acero galvanizado</strong>: material metálico con recubrimiento de zinc para protegerlo de la corrosión, utilizado principalmente en instalaciones de agua fría de uso no doméstico.</li>
+    </ul>
+
+    <h3>Protección contra la corrosión, los golpes de ariete y las incrustaciones</h3>
+    <ul>
+      <li><strong>Protección contra la corrosión</strong>: en las uniones entre materiales diferentes (por ejemplo, entre tubería de cobre y racores de acero galvanizado) deben utilizarse elementos de unión que eviten la corrosión galvánica.</li>
+      <li><strong>Protección contra el golpe de ariete</strong>: los aparatos de cierre brusco (llaves de cuarto de vuelta, electroválvulas) pueden producir golpes de ariete que dañan la instalación. El DB-HS 4 establece que deben instalarse cámaras de aire anti-ariete o amortiguadores de presión cuando se prevea este riesgo.</li>
+      <li><strong>Protección contra las incrustaciones</strong>: en zonas con agua dura (alta concentración de calcio y magnesio), pueden formarse incrustaciones calcáreas en las tuberías y en los aparatos. El DB-HS 4 permite la instalación de descalcificadores o inhibidores de incrustaciones en las instalaciones donde este riesgo sea significativo.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s14">
+    <h2>14. HS 5 — Evacuación de aguas: principios y red separativa</h2>
+    <p>La sección <strong>HS 5</strong> establece las condiciones que deben reunir las instalaciones de evacuación de aguas de los edificios. Las aguas a evacuar se dividen en dos categorías con características muy diferentes:</p>
+    <ul>
+      <li><strong>Aguas residuales</strong>: aguas procedentes del uso de los aparatos sanitarios (inodoros, lavabos, bañeras, duchas, fregaderos), que contienen materias orgánicas, detergentes y otros contaminantes. Su evacuación va a la red de alcantarillado o, en ausencia de esta, a fosas sépticas.</li>
+      <li><strong>Aguas pluviales</strong>: aguas de lluvia recogidas por la cubierta, los patios y las superficies del edificio. Su evacuación puede ir a la red de alcantarillado (red unitaria) o a la red de agua pluvial separada (red separativa), o al terreno (si este tiene capacidad de infiltración suficiente).</li>
+    </ul>
+
+    <h3>El sistema separativo de evacuación</h3>
+    <p>El DB-HS 5 establece la obligación de diseñar la red de evacuación como un <strong>sistema separativo</strong> dentro del edificio: las aguas residuales y las aguas pluviales deben circular por redes independientes hasta la salida del edificio, sin que ambas redes se mezclen dentro del edificio. Fuera del edificio, la unión o separación de las redes depende de las condiciones de la red de alcantarillado municipal (si es unitaria o separativa).</p>
+    <p>Las ventajas del sistema separativo son: facilita la depuración de las aguas residuales (menor caudal a depurar), permite la reutilización de las aguas pluviales, y previene la sobrecarga de la red de alcantarillado en episodios de lluvias intensas.</p>
+  </div>
+
+  <div class="sec" id="s15">
+    <h2>15. HS 5 — Red de aguas residuales</h2>
+    <p>La red de aguas residuales está formada por los siguientes elementos, desde el aparato sanitario hasta la conexión con la red exterior:</p>
+
+    <h3>Los sifones</h3>
+    <p>El <strong>sifón</strong> es el elemento que se intercala en la tubería de desagüe de cada aparato sanitario, con una curva en forma de S o de U que retiene permanentemente una cantidad de agua. Esta <strong>lámina de agua</strong> sella la tubería de desagüe e impide que los gases del alcantarillado (metano, sulfhídrico, etc.) penetren en el interior del edificio. El sifón debe tener el tamaño adecuado al aparato al que sirve y debe ser accesible para su limpieza y desatasco.</p>
+
+    <h3>Los ramales de enlace</h3>
+    <p>Los <strong>ramales de enlace</strong> son las tuberías que conectan los sifones de los aparatos sanitarios con los bajantes. Los ramales de enlace tienen una pendiente mínima del <strong>2%</strong> para facilitar el autolimpiado de la tubería (que los sólidos en suspensión sean arrastrados por el flujo de agua sin sedimentarse).</p>
+
+    <h3>Los bajantes</h3>
+    <p>Los <strong>bajantes</strong> son las tuberías verticales que recogen las aguas residuales de los ramales de enlace de todas las plantas del edificio y las conducen hasta los colectores enterrados. Los bajantes de aguas residuales no deben utilizarse para evacuar aguas pluviales (sistema separativo). Las principales condiciones de los bajantes son:</p>
+    <ul>
+      <li>Deben ser verticales: no deben tener desvíos ni curvas a menos que sean imprescindibles, y en ese caso deben disponerse con las piezas adecuadas.</li>
+      <li>El diámetro del bajante debe ser uniforme en toda su longitud (no puede reducirse hacia abajo).</li>
+      <li>Deben anclarse a la estructura del edificio mediante abrazaderas o collares, con separación máxima entre soportes de <strong>150 cm</strong>.</li>
+    </ul>
+
+    <h3>Los colectores</h3>
+    <p>Los <strong>colectores</strong> son las tuberías horizontales enterradas que recogen las aguas de los bajantes y las conducen hasta la arqueta general o la conexión con la red exterior. Los colectores tienen una pendiente mínima del <strong>2%</strong> para garantizar el autolimpiado. En los puntos de cambio de dirección o de encuentro de ramales, se disponen arquetas de registro para facilitar la limpieza y el mantenimiento de los colectores.</p>
+
+    <h3>La ventilación de la red de evacuación</h3>
+    <p>La ventilación de la red de aguas residuales es esencial para evitar el vaciado de los sifones por efecto de las variaciones de presión que se producen en el interior de los bajantes cuando grandes caudales de agua circulan por ellos. El DB-HS 5 establece distintos sistemas de ventilación en función del número de plantas del edificio y del caudal de aguas residuales:</p>
+    <ul>
+      <li><strong>Ventilación primaria</strong>: el propio bajante de aguas residuales se prolonga por encima de la cubierta del edificio, comunicando la red interior con la atmósfera exterior. Es la solución más sencilla y la mínima exigida.</li>
+      <li><strong>Ventilación secundaria</strong>: se añade una columna de ventilación secundaria paralela al bajante, conectada a este en cada planta, para compensar las variaciones de presión.</li>
+      <li><strong>Ventilación terciaria</strong>: válvula de aireación instalada en los sifones individuales cuando no es posible ventilación primaria ni secundaria.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s16">
+    <h2>16. HS 5 — Red de aguas pluviales</h2>
+    <p>La red de aguas pluviales está destinada a recoger y evacuar el agua de lluvia de las cubiertas, patios, terrazas y zonas exteriores del edificio.</p>
+
+    <h3>Los sumideros y canalones</h3>
+    <ul>
+      <li><strong>Sumideros</strong>: los puntos de recogida del agua de lluvia en las cubiertas planas. Deben diseñarse con una rejilla o cesto de retención de hojas y sólidos para evitar obstrucciones en los bajantes.</li>
+      <li><strong>Canalones</strong>: los elementos de recogida del agua de lluvia en las cubiertas inclinadas. Se sitúan en los aleros o vaguadas y conducen el agua hasta los bajantes de pluviales. Los canalones de PVC son los más habituales en la actualidad.</li>
+    </ul>
+
+    <h3>Los bajantes de pluviales</h3>
+    <p>Los <strong>bajantes de pluviales</strong> son las tuberías verticales que conducen el agua de lluvia desde los sumideros o canalones de la cubierta hasta los colectores o a la red de absorción en el terreno. Los bajantes de pluviales deben estar separados de los bajantes de aguas residuales (sistema separativo).</p>
+
+    <h3>Dimensionado de la red pluvial: la intensidad pluviométrica</h3>
+    <p>El dimensionado de la red pluvial se realiza en función de la <strong>intensidad pluviométrica</strong> del lugar (lluvia de referencia en l/h·m² para un período de retorno de 5 años), que varía en función de la zona pluviométrica del municipio. El DB-HS 5 establece los valores de intensidad pluviométrica de referencia para las distintas zonas de España, tomando como referencia una intensidad de <strong>100 l/h·m²</strong> para los cálculos, con un factor de corrección para las zonas con mayor o menor intensidad pluviométrica.</p>
+  </div>
+
+  <div class="sec" id="s17">
+    <h2>17. HS 5 — Dimensionado de la red de evacuación</h2>
+    <p>El dimensionado de la red de evacuación consiste en determinar los diámetros de las tuberías de la red de aguas residuales y de la red de pluviales para que puedan evacuar los caudales de diseño sin riesgo de obstrucciones, sin variar la presión en los sifones y sin ruidos molestos.</p>
+
+    <h3>Las unidades de desagüe (UD)</h3>
+    <p>El DB-HS 5 utiliza el concepto de <strong>unidad de desagüe (UD)</strong> para simplificar el cálculo de los caudales de aguas residuales. La UD es un número convencional que expresa el caudal de aguas residuales de cada aparato sanitario, teniendo en cuenta la probabilidad de uso simultáneo. Los valores de UD para los aparatos más comunes son:</p>
+    <ul>
+      <li><strong>Lavabo</strong>: 1 UD.</li>
+      <li><strong>Ducha</strong>: 2 UD.</li>
+      <li><strong>Bañera</strong>: 3 UD (con ducha) o 4 UD (sin ducha).</li>
+      <li><strong>Inodoro con cisterna</strong>: 4 UD.</li>
+      <li><strong>Inodoro con fluxor</strong>: 8 UD.</li>
+      <li><strong>Fregadero doméstico</strong>: 3 UD.</li>
+      <li><strong>Lavavajillas doméstico</strong>: 3 UD.</li>
+      <li><strong>Lavadora doméstica</strong>: 3 UD.</li>
+    </ul>
+    <p>La suma de las UD de todos los aparatos conectados a un ramal, bajante o colector determina el diámetro mínimo de ese tramo de la red, mediante las tablas del DB-HS 5.</p>
+
+    <h3>Diámetros mínimos de los bajantes</h3>
+    <p>El DB-HS 5 establece los diámetros mínimos de los bajantes de aguas residuales en función del número de unidades de desagüe que reciben. Para los casos más habituales en viviendas:</p>
+    <ul>
+      <li>Hasta 10 UD: diámetro mínimo 50 mm.</li>
+      <li>Hasta 19 UD: diámetro mínimo 63 mm.</li>
+      <li>Hasta 26 UD: diámetro mínimo 75 mm.</li>
+      <li>Hasta 200 UD: diámetro mínimo 90 mm.</li>
+      <li>Hasta 500 UD: diámetro mínimo 110 mm.</li>
+    </ul>
+    <p>En todo caso, el diámetro del bajante no puede ser inferior al máximo de los diámetros de los ramales que vierten en él.</p>
+  </div>
+
+  <div class="footer">CTE DB-HS (RD 314/2006) · RD 732/2019 · RD 140/2003 (calidad agua) · RD 865/2003 (Legionella) · UNE-EN 806 · UNE-EN 12056</div>
+</div>
+</body>
+</html>

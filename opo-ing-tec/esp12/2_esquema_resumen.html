@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esquema-resumen — CTE DB-HS Salubridad (Tema 12)</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.20);--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.18)}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2rem 1rem}
+  .page{max-width:860px;margin:0 auto}
+  h1{font-size:20px;font-weight:500;margin-bottom:4px}
+  .sub{font-size:13px;color:var(--t3);margin-bottom:24px}
+  .sub a{color:var(--t2);text-decoration:none}
+  .sub a:hover{color:var(--t1)}
+  .bloque{background:var(--bg2);border:.5px solid var(--bl);border-radius:var(--r2);padding:14px 16px;margin-bottom:10px}
+  .bt{font-size:13px;font-weight:500;margin:0 0 10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .badge{font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap}
+  .bp{background:#EEEDFE;color:#3C3489}.bb{background:#E6F1FB;color:#0C447C}.btl{background:#E1F5EE;color:#085041}.ba{background:#FAEEDA;color:#633806}.bc{background:#FAECE7;color:#712B13}.bg{background:#EAF3DE;color:#27500A}.bx{background:#F1EFE8;color:#444441}
+  @media(prefers-color-scheme:dark){.bp{background:#3C3489;color:#CECBF6}.bb{background:#0C447C;color:#B5D4F4}.btl{background:#085041;color:#9FE1CB}.ba{background:#633806;color:#FAC775}.bc{background:#712B13;color:#F5C4B3}.bg{background:#27500A;color:#C0DD97}.bx{background:#444441;color:#D3D1C7}}
+  .items{display:flex;flex-wrap:wrap;gap:6px}
+  .item{font-size:12px;color:var(--t2);background:var(--bg1);border:.5px solid var(--bl);border-radius:6px;padding:3px 9px}
+  .itemd{font-size:12px;font-weight:500;color:var(--t1);background:var(--bg1);border:.5px solid var(--bm);border-radius:6px;padding:3px 9px}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .s{font-size:11px;color:var(--t3);font-weight:500;margin:0 0 6px}
+  .sep{margin-top:10px;padding-top:10px;border-top:.5px solid var(--bl)}
+  @media(max-width:560px){.g2,.g3{grid-template-columns:1fr}}
+  .footer{margin-top:20px;font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>CTE DB-HS — Salubridad</h1>
+  <p class="sub">Tema 12 (Ingeniero Técnico) · Esquema-resumen · RD 314/2006<br>
+    <a href="../index.html">Índice</a><br>
+    <a href="1_texto_explicativo.html">< Texto completo</a>
+     | 
+    <a href="3_cuadro_comparativo.html">Cuadros comparativos ></a>
+  </p>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bp">HS 1 — Protección frente a la humedad</span></div>
+    <div class="g3">
+      <div><div class="s">Grados de impermeabilidad (1–5)</div>
+      <div class="items">
+        <span class="item">Determinados por zona pluviométrica (I–V) + grado de exposición al viento</span>
+        <span class="itemd">1 = menos exigente (zona poco lluviosa, terreno seco)</span>
+        <span class="itemd">5 = más exigente (zona muy lluviosa, nivel freático alto)</span>
+        <span class="item">Mayor grado → mayor exigencia de impermeabilización</span>
+      </div></div>
+      <div><div class="s">Muros y suelos en contacto con el terreno</div>
+      <div class="items">
+        <span class="item">Impermeabilización exterior (más eficaz) · interior · drenaje complementario</span>
+        <span class="item">Suelos: membrana impermeabilizante · losa de hormigón · cámara sanitaria ventilada</span>
+        <span class="itemd">Mayor presencia de agua freática → grado 4-5 obligatorio</span>
+      </div></div>
+      <div><div class="s">Fachadas y cubiertas</div>
+      <div class="items">
+        <span class="item">Fachada vista · revestida · ventilada (cámara evacua agua infiltrada)</span>
+        <span class="item">Puntos singulares: dinteles · alféizares · encuentros cubierta-fachada</span>
+        <span class="itemd">Cubierta plana: forjado → pendientes → barrera vapor → aislamiento → membrana → protección</span>
+        <span class="item">Cubierta invertida: aislamiento sobre la membrana (membrana más protegida)</span>
+        <span class="item">Cubierta inclinada: pendiente mínima según material de cobertura</span>
+        <span class="item">Cubierta: clase BROOF(t1) mínimo (también exigencia DB-SI 2)</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bb">HS 4 — Suministro de agua: presiones y caudales clave</span></div>
+    <div class="g3">
+      <div><div class="s">Presiones en la instalación</div>
+      <div class="items">
+        <span class="itemd">Presión mínima grifos comunes: 100 kPa</span>
+        <span class="itemd">Presión mínima fluxores y calentadores: 150 kPa</span>
+        <span class="itemd">Presión máxima en cualquier punto: 500 kPa</span>
+        <span class="item">Si presión red &gt;500 kPa → reductor de presión obligatorio</span>
+        <span class="item">Si presión insuficiente → grupo de presión + depósito de reserva</span>
+      </div></div>
+      <div><div class="s">Caudales mínimos instantáneos (l/s)</div>
+      <div class="items">
+        <span class="itemd">Lavabo: 0,10 AF · 0,065 AC</span>
+        <span class="itemd">Ducha: 0,20 AF · 0,10 AC</span>
+        <span class="item">Bañera ≥1,40 m: 0,30 AF · 0,20 AC</span>
+        <span class="itemd">Inodoro cisterna: 0,10 AF</span>
+        <span class="itemd">Inodoro fluxor: 1,25 AF (mayor caudal · presión mín. 150 kPa)</span>
+        <span class="item">Fregadero doméstico: 0,20 AF · 0,10 AC</span>
+        <span class="item">Lavadora/lavavajillas: 0,20 / 0,15 AF</span>
+      </div></div>
+      <div><div class="s">Diseño y ACS</div>
+      <div class="items">
+        <span class="item">Separación AF/ACS: ≥4 cm o barrera térmica</span>
+        <span class="itemd">Velocidad agua en tuberías: 0,50–2,00 m/s (metálicas) · 0,50–3,00 m/s (plásticas)</span>
+        <span class="itemd">ACS en acumulador: mínimo 60 °C (prevención Legionella)</span>
+        <span class="itemd">ACS en distribución: no inferior a 50 °C en ningún punto</span>
+        <span class="item">Circuito de retorno ACS: obligatorio en edificios de &gt;4 plantas o longitud significativa</span>
+        <span class="item">AF en distribución: mantener por debajo de 20 °C</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge btl">HS 5 — Evacuación de aguas: elementos y pendientes</span></div>
+    <div class="g3">
+      <div><div class="s">Principio fundamental</div>
+      <div class="items">
+        <span class="itemd">Sistema separativo obligatorio DENTRO del edificio: red residuales ≠ red pluviales</span>
+        <span class="item">Fuera del edificio: unitaria o separativa según red municipal</span>
+        <span class="item">Sifón individual en cada aparato: retiene lámina de agua que sella frente a gases</span>
+      </div></div>
+      <div><div class="s">Pendientes mínimas</div>
+      <div class="items">
+        <span class="itemd">Ramales de enlace: pendiente mínima 2%</span>
+        <span class="itemd">Colectores enterrados: pendiente mínima 2%</span>
+        <span class="item">Bajantes: verticales · sin desvíos salvo imprescindibles</span>
+        <span class="item">Separación máxima entre soportes de bajante: 150 cm</span>
+      </div></div>
+      <div><div class="s">Unidades de desagüe (UD)</div>
+      <div class="items">
+        <span class="itemd">Lavabo: 1 UD</span>
+        <span class="item">Ducha: 2 UD</span>
+        <span class="item">Bañera: 3-4 UD</span>
+        <span class="itemd">Inodoro cisterna: 4 UD</span>
+        <span class="itemd">Inodoro fluxor: 8 UD</span>
+        <span class="item">Fregadero/lavavajillas/lavadora: 3 UD</span>
+        <span class="item">Bajante hasta 200 UD → ∅90 mm · hasta 500 UD → ∅110 mm</span>
+        <span class="item">Intensidad pluviométrica referencia: 100 l/h·m²</span>
+      </div></div>
+    </div>
+    <div class="sep">
+    <div class="s">Ventilación de la red de residuales</div>
+    <div class="items">
+      <span class="itemd">Ventilación primaria — bajante prolonga sobre cubierta · mínimo exigido siempre</span>
+      <span class="item">Ventilación secundaria — columna paralela conectada al bajante en cada planta</span>
+      <span class="item">Ventilación terciaria — válvula de aireación en sifón individual (cuando no hay otra opción)</span>
+    </div></div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge ba">Legionella y calidad del agua — normativa cruzada</span></div>
+    <div class="items">
+      <span class="itemd">RD 140/2003 — criterios sanitarios calidad agua de consumo humano (potabilidad)</span>
+      <span class="itemd">RD 865/2003 — prevención y control de Legionella en instalaciones</span>
+      <span class="item">AF: mantener &lt;20 °C · aislar de fuentes de calor · purgar puntos sin uso</span>
+      <span class="item">ACS: generación ≥60 °C · distribución ≥50 °C · retorno garantiza temperatura mínima</span>
+      <span class="item">Depósitos acumuladores: material inerte · fácil limpieza · válvulas de vaciado</span>
+      <span class="item">Instalaciones de riesgo (torres de refrigeración · condensadores evaporativos): revisión periódica y tratamiento biocida</span>
+    </div>
+  </div>
+
+  <p class="footer">CTE DB-HS (RD 314/2006) · RD 732/2019 · RD 140/2003 · RD 865/2003 · UNE-EN 806 · UNE-EN 12056</p>
+</div>
+</body>
+</html>

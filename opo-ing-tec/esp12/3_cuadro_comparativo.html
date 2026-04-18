@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuadro comparativo — CTE DB-HS Salubridad (Tema 12)</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.20);--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.18)}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2rem 1rem}
+  .page{max-width:1040px;margin:0 auto}
+  h1{font-size:20px;font-weight:500;margin-bottom:4px}
+  h2{font-size:17px;font-weight:500;margin:2.5rem 0 1rem;padding-bottom:8px;border-bottom:.5px solid var(--bm)}
+  .sub{font-size:13px;color:var(--t3);margin-bottom:28px}
+  .sub a{color:var(--t2);text-decoration:none}
+  .sub a:hover{color:var(--t1)}
+  .wrap{overflow-x:auto;background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r2);margin-bottom:16px}
+  table{width:100%;border-collapse:collapse;font-size:12px;min-width:560px}
+  thead tr{background:var(--bg2)}
+  th{font-weight:500;font-size:11.5px;color:var(--t2);text-align:left;padding:10px 12px;border-bottom:.5px solid var(--bm);white-space:nowrap}
+  td{padding:10px 12px;border-bottom:.5px solid var(--bl);vertical-align:top;line-height:1.65;color:var(--t2)}
+  tr:last-child td{border-bottom:none}
+  tr:hover td{background:var(--bg2)}
+  .dest{font-weight:500;color:var(--t1);font-size:12px;white-space:nowrap}
+  .val{font-weight:700;color:var(--t1);background:var(--bg2);padding:1px 6px;border-radius:4px;font-size:12px;display:inline-block}
+  .in{font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap;display:inline-block}
+  .a{background:#EEEDFE;color:#3C3489}.b{background:#E6F1FB;color:#0C447C}.c{background:#E1F5EE;color:#085041}
+  .d{background:#FAEEDA;color:#633806}.e{background:#FAECE7;color:#712B13}.f{background:#EAF3DE;color:#27500A}
+  .si{background:#EAF3DE;color:#27500A;font-size:11px;font-weight:500;padding:1px 6px;border-radius:4px;display:inline-block}
+  .no{background:#FCEBEB;color:#791F1F;font-size:11px;font-weight:500;padding:1px 6px;border-radius:4px;display:inline-block}
+  .cond{background:#FAEEDA;color:#633806;font-size:11px;font-weight:500;padding:1px 6px;border-radius:4px;display:inline-block}
+  @media(prefers-color-scheme:dark){.a{background:#3C3489;color:#CECBF6}.b{background:#0C447C;color:#B5D4F4}.c{background:#085041;color:#9FE1CB}.d{background:#633806;color:#FAC775}.e{background:#712B13;color:#F5C4B3}.f{background:#27500A;color:#C0DD97}.si{background:#173404;color:#C0DD97}.no{background:#501313;color:#F7C1C1}.cond{background:#633806;color:#FAC775}.val{background:#323230}}
+  .nota{font-size:12px;color:var(--t2);padding:10px 14px;background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r1);margin-bottom:20px;line-height:1.65}
+  .nota strong{color:var(--t1)}
+  .footer{margin-top:28px;font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>CTE DB-HS — Salubridad</h1>
+  <p class="sub">Cuadros comparativos · Ingeniero Técnico · RD 314/2006<br>
+    <a href="../index.html">Índice</a><br>
+    <a href="1_texto_explicativo.html"><< Texto completo</a>
+     | 
+    <a href="2_esquema_resumen.html">< Esquema-resumen</a>
+  </p>
+
+  <!-- TABLA 1: CAUDALES Y PRESIONES HS 4 -->
+  <h2>HS 4 — Caudales mínimos y presiones de suministro por aparato</h2>
+  <div class="nota"><strong>Los valores de caudal y presión del inodoro con fluxor son los más diferenciales en test:</strong> el fluxor exige 1,25 l/s (frente a 0,10 l/s del inodoro con cisterna) y una presión mínima de 150 kPa (frente a 100 kPa de los grifos comunes). Esta diferencia determina el tipo de instalación necesaria.</div>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr><th>Aparato sanitario</th><th>Caudal mínimo AF (l/s)</th><th>Caudal mínimo ACS (l/s)</th><th>Presión mínima (kPa)</th><th>UD (evacuación HS 5)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="dest">Lavabo</td><td><span class="val">0,10</span></td><td><span class="val">0,065</span></td><td>100</td><td><span class="val">1</span></td></tr>
+        <tr><td class="dest">Ducha</td><td><span class="val">0,20</span></td><td><span class="val">0,10</span></td><td>100</td><td><span class="val">2</span></td></tr>
+        <tr><td class="dest">Bañera ≥ 1,40 m</td><td><span class="val">0,30</span></td><td><span class="val">0,20</span></td><td>100</td><td><span class="val">3-4</span></td></tr>
+        <tr><td class="dest">Inodoro con cisterna</td><td><span class="val">0,10</span></td><td>—</td><td>100</td><td><span class="val">4</span></td></tr>
+        <tr><td class="dest">Inodoro con fluxor</td><td><span class="val">1,25</span></td><td>—</td><td><span class="val">150</span></td><td><span class="val">8</span></td></tr>
+        <tr><td class="dest">Fregadero doméstico</td><td><span class="val">0,20</span></td><td><span class="val">0,10</span></td><td>100</td><td><span class="val">3</span></td></tr>
+        <tr><td class="dest">Lavavajillas doméstico</td><td><span class="val">0,15</span></td><td>—</td><td>100</td><td><span class="val">3</span></td></tr>
+        <tr><td class="dest">Lavadora doméstica</td><td><span class="val">0,20</span></td><td>—</td><td>100</td><td><span class="val">3</span></td></tr>
+        <tr><td class="dest">Grifo aislado</td><td><span class="val">0,15</span></td><td>—</td><td>100</td><td>—</td></tr>
+        <tr><td class="dest">Fluxor de urinario</td><td><span class="val">0,50</span></td><td>—</td><td><span class="val">150</span></td><td>—</td></tr>
+        <tr><td class="dest"><em>Presión máxima (cualquier punto)</em></td><td colspan="4"><span class="val">500 kPa</span> — si se supera: reductor de presión obligatorio</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TABLA 2: RED RESIDUALES vs RED PLUVIALES -->
+  <h2>HS 5 — Red de aguas residuales vs. red de aguas pluviales</h2>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr><th>Aspecto</th><th><span class="in a">Red de aguas residuales</span></th><th><span class="in b">Red de aguas pluviales</span></th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="dest">Origen de las aguas</td><td>Aparatos sanitarios: inodoros, lavabos, duchas, bañeras, fregaderos, lavadoras</td><td>Lluvia recogida por cubiertas, patios, terrazas y superficies exteriores del edificio</td></tr>
+        <tr><td class="dest">¿Llevan contaminantes?</td><td><span class="si">SÍ</span> — materia orgánica, detergentes, microorganismos patógenos</td><td><span class="no">NO en origen</span> (agua relativamente limpia, aunque puede arrastrar partículas del ambiente)</td></tr>
+        <tr><td class="dest">¿Requieren depuración?</td><td><span class="si">SÍ</span> — deben ir a la red de alcantarillado y a la EDAR</td><td><span class="cond">En general NO</span>, aunque la primera lluvia puede arrastrar contaminantes del tejado</td></tr>
+        <tr><td class="dest">Elemento de recogida en cubierta</td><td>Desagüe de aparatos sanitarios (no aplica a cubierta directamente)</td><td>Sumideros (cubierta plana) y canalones (cubierta inclinada)</td></tr>
+        <tr><td class="dest">Elemento de transporte vertical</td><td>Bajante de aguas residuales (separado de pluviales)</td><td>Bajante de aguas pluviales (separado de residuales)</td></tr>
+        <tr><td class="dest">Pendiente mínima de ramales y colectores</td><td><span class="val">2%</span></td><td><span class="val">2%</span></td></tr>
+        <tr><td class="dest">Sistema de cuantificación</td><td>Unidades de desagüe (UD) según tipo de aparato</td><td>Superficie de cubierta + intensidad pluviométrica (referencia: 100 l/h·m²)</td></tr>
+        <tr><td class="dest">¿Lleva sifón en cada aparato?</td><td><span class="si">SÍ — obligatorio</span> para impedir el paso de gases</td><td><span class="no">NO</span> — aunque los sumideros tienen cestillo para retener sólidos</td></tr>
+        <tr><td class="dest">¿Necesita ventilación de la red?</td><td><span class="si">SÍ — ventilación primaria mínima</span> (el bajante prolonga sobre la cubierta)</td><td><span class="no">NO</span> en general</td></tr>
+        <tr><td class="dest">Destino fuera del edificio</td><td>Red municipal de alcantarillado (saneamiento) → EDAR</td><td>Red municipal separativa de pluviales, o red unitaria, o terreno (infiltración)</td></tr>
+        <tr><td class="dest">¿Pueden mezclarse dentro del edificio?</td><td colspan="2"><span class="no">NO</span> — el DB-HS 5 exige sistema separativo dentro del edificio. La mezcla solo puede producirse fuera, si la red municipal es unitaria</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TABLA 3: UD Y DIÁMETROS DE BAJANTES -->
+  <h2>HS 5 — Unidades de desagüe (UD) y diámetros mínimos de bajantes de residuales</h2>
+  <div class="nota"><strong>La relación UD → diámetro de bajante</strong> es uno de los datos más habituales en test de instalaciones. Recuerda que el diámetro del bajante nunca puede ser inferior al máximo de los ramales que vierten en él.</div>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr><th>UD máximas en el bajante</th><th>Diámetro mínimo bajante residuales</th><th>Aparatos típicos que generan ese total</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Hasta 10 UD</td><td><span class="val">∅ 50 mm</span></td><td>10 lavabos · o 5 duchas</td></tr>
+        <tr><td>Hasta 19 UD</td><td><span class="val">∅ 63 mm</span></td><td>4 inodoros con cisterna (16 UD) + 1 lavabo (1 UD)</td></tr>
+        <tr><td>Hasta 26 UD</td><td><span class="val">∅ 75 mm</span></td><td>6 inodoros con cisterna (24 UD) + 2 lavabos (2 UD)</td></tr>
+        <tr><td>Hasta 200 UD</td><td><span class="val">∅ 90 mm</span></td><td>50 lavabos + 25 duchas + 12 inodoros cisterna — vivienda plurifamiliar media</td></tr>
+        <tr><td>Hasta 500 UD</td><td><span class="val">∅ 110 mm</span></td><td>Edificio de viviendas de varias escaleras o edificio terciario de tamaño medio</td></tr>
+        <tr><td>Hasta 1.200 UD</td><td><span class="val">∅ 125 mm</span></td><td>Edificio de gran tamaño</td></tr>
+        <tr><td>Hasta 2.500 UD</td><td><span class="val">∅ 160 mm</span></td><td>Gran edificio o uso hotelero/hospitalario</td></tr>
+        <tr><td colspan="3"><em>Nota: El inodoro con fluxor genera 8 UD (el doble que el de cisterna) y requiere ∅ mínimo de ramal de 100 mm</em></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TABLA 4: HS 4 AF vs ACS comparativa -->
+  <h2>HS 4 — Instalación de agua fría (AF) vs. agua caliente sanitaria (ACS)</h2>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr><th>Aspecto</th><th><span class="in c">Agua Fría (AF)</span></th><th><span class="in e">Agua Caliente Sanitaria (ACS)</span></th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="dest">Temperatura de distribución</td><td>Mantener por debajo de <span class="val">20 °C</span> en la distribución</td><td>No inferior a <span class="val">50 °C</span> en ningún punto · generación a mínimo <span class="val">60 °C</span></td></tr>
+        <tr><td class="dest">Riesgo sanitario principal</td><td>Calentamiento excesivo → riesgo de Legionella si supera 20 °C</td><td>Enfriamiento excesivo → riesgo de Legionella si baja de 50 °C en distribución</td></tr>
+        <tr><td class="dest">¿Requiere circuito de retorno?</td><td><span class="no">NO</span></td><td><span class="si">SÍ en edificios con &gt;4 plantas o redes largas</span> — para mantener la temperatura ≥50 °C en todos los puntos</td></tr>
+        <tr><td class="dest">Separación entre tuberías AF y ACS</td><td colspan="2"><span class="val">≥4 cm</span> de separación o barrera térmica entre ambas tuberías cuando discurran paralelas</td></tr>
+        <tr><td class="dest">¿Se puede usar cualquier material?</td><td>Cobre · PEX · PP · acero galvanizado · acero inoxidable</td><td>Cobre · PEX (resistente a alta temperatura) · PP · acero inoxidable. NO acero galvanizado para ACS (corrosión a alta temperatura)</td></tr>
+        <tr><td class="dest">¿Requiere aislamiento térmico?</td><td><span class="cond">Sí en zonas cálidas</span> — para evitar calentamiento de la AF por conducción del calor ambiente</td><td><span class="si">SÍ siempre</span> — para evitar pérdidas de calor en la distribución</td></tr>
+        <tr><td class="dest">Normativa de calidad adicional</td><td>RD 140/2003 — criterios sanitarios de calidad del agua potable</td><td>RD 865/2003 — prevención y control de Legionella · temperaturas mínimas de diseño</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="footer">CTE DB-HS (RD 314/2006) · RD 732/2019 · RD 140/2003 · RD 865/2003 (Legionella) · UNE-EN 806 · UNE-EN 12056</p>
+</div>
+</body>
+</html>
