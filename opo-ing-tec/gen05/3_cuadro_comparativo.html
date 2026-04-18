@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuadro comparativo y Test — Instituciones de Navarra (Tema 5)</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.20);--gbg:#eaf3de;--gbr:#639922;--gtx:#27500a;--rbg:#fcebeb;--rbr:#e24b4a;--rtx:#501313;--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.18);--gbg:#173404;--gbr:#3b6d11;--gtx:#c0dd97;--rbg:#501313;--rbr:#a32d2d;--rtx:#f7c1c1}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2rem 1rem}
+  .page{max-width:980px;margin:0 auto}
+  h1{font-size:20px;font-weight:500;margin-bottom:4px}
+  h2{font-size:17px;font-weight:500;margin:2.5rem 0 1rem;padding-bottom:8px;border-bottom:.5px solid var(--bm)}
+  .sub{font-size:13px;color:var(--t3);margin-bottom:28px}
+  .sub a{color:var(--t2);text-decoration:none}
+  .sub a:hover{color:var(--t1)}
+  .wrap{overflow-x:auto;background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r2);margin-bottom:12px}
+  table{width:100%;border-collapse:collapse;font-size:12px;min-width:700px}
+  thead tr{background:var(--bg2)}
+  th{font-weight:500;font-size:11.5px;color:var(--t2);text-align:left;padding:10px 12px;border-bottom:.5px solid var(--bm);white-space:nowrap}
+  td{padding:10px 12px;border-bottom:.5px solid var(--bl);vertical-align:top;line-height:1.6;color:var(--t2)}
+  tr:last-child td{border-bottom:none}
+  tr:hover td{background:var(--bg2)}
+  .dest{font-weight:500;color:var(--t1);font-size:12px}
+  .ib{background:#E6F1FB;color:#0C447C;font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap;display:inline-block}
+  .ia{background:#FAEEDA;color:#633806;font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap;display:inline-block}
+  .it{background:#E1F5EE;color:#085041;font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap;display:inline-block}
+  @media(prefers-color-scheme:dark){.ib{background:#0C447C;color:#B5D4F4}.ia{background:#633806;color:#FAC775}.it{background:#085041;color:#9FE1CB}}
+  .marc{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;font-size:13px;color:var(--t2)}
+  .sv{font-weight:500;color:var(--t1)}
+  .br{font-size:12px;padding:5px 14px;border:.5px solid var(--bm);border-radius:20px;background:transparent;color:var(--t2);cursor:pointer}
+  .br:hover{background:var(--bg2)}
+  .pc{background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r2);padding:18px;margin-bottom:12px}
+  .num{font-size:11px;font-weight:500;color:var(--t3);margin-bottom:6px}
+  .enun{font-size:14px;font-weight:500;margin-bottom:14px;line-height:1.55;color:var(--t1)}
+  .opts{display:flex;flex-direction:column;gap:7px}
+  .opt{display:flex;align-items:flex-start;gap:10px;padding:9px 13px;border:.5px solid var(--bl);border-radius:var(--r1);cursor:pointer;font-size:13px;background:var(--bg2);user-select:none;line-height:1.5;transition:border-color .15s;color:var(--t1)}
+  .opt:hover{border-color:var(--bm)}
+  .opt.ok{background:var(--gbg);border-color:var(--gbr);color:var(--gtx)}
+  .opt.ko{background:var(--rbg);border-color:var(--rbr);color:var(--rtx)}
+  .opt.off{cursor:default;pointer-events:none}
+  .let{font-weight:500;min-width:16px;flex-shrink:0}
+  .exp{font-size:12.5px;margin-top:12px;padding:10px 13px;color:var(--t2);background:var(--bg2);border-left:2px solid var(--bm);line-height:1.65;display:none}
+  .exp.v{display:block}
+  .footer{margin-top:24px;font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>Instituciones de Navarra — Parlamento · Cámara de Comptos · Defensor del Pueblo</h1>
+  <p class="sub">Tema 5 · Cuadro comparativo y test interactivo<br>
+    <a href="../index.html">Índice</a><br>
+    <a href="1_texto_explicativo.html"><< Texto completo</a>
+     | 
+    <a href="2_esquema_resumen.html">< Esquema-resumen</a>
+  </p>
+
+  <h2>Cuadro comparativo de las tres instituciones</h2>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr><th>Aspecto</th><th><span class="ib">Parlamento de Navarra</span></th><th><span class="ia">Cámara de Comptos</span></th><th><span class="it">Defensor del Pueblo</span></th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="dest">Norma reguladora</td><td>Arts. 11–26 LORAFNA · Reglamento del Parlamento</td><td>LF 19/1984, de 20 de diciembre</td><td>LF 4/2000, de 3 de julio</td></tr>
+        <tr><td class="dest">Denominación en euskera</td><td>Nafarroako Parlamentua</td><td>Nafarroako Kontu-Ganbera</td><td>Nafarroako Arartekoa</td></tr>
+        <tr><td class="dest">Naturaleza</td><td>Órgano representativo y legislativo del pueblo navarro</td><td>Órgano de control externo económico-financiero</td><td>Comisionado parlamentario para la defensa de derechos ciudadanos</td></tr>
+        <tr><td class="dest">Composición / titular</td><td>50 parlamentarios elegidos por sufragio universal</td><td>Consejero Mayor + Consejeros (elegidos por el Parlamento)</td><td>Titular unipersonal (elegido por el Parlamento)</td></tr>
+        <tr><td class="dest">Forma de designación</td><td>Sufragio universal directo · D'Hondt · barrera 3%</td><td>Mayoría de 3/5 del Parlamento de Navarra</td><td>Mayoría de 3/5 del Parlamento de Navarra</td></tr>
+        <tr><td class="dest">Mandato</td><td>4 años</td><td>6 años · no renovable</td><td>5 años · reelegible 1 vez</td></tr>
+        <tr><td class="dest">Función principal</td><td>Legislar · controlar al Gobierno · aprobar Presupuestos</td><td>Fiscalizar la actividad económico-financiera del sector público navarro</td><td>Supervisar las administraciones navarras en defensa de los derechos ciudadanos</td></tr>
+        <tr><td class="dest">Resoluciones / actos</td><td>Leyes forales · resoluciones parlamentarias</td><td>Informes de fiscalización · resoluciones de responsabilidad contable</td><td>Recomendaciones · sugerencias · recordatorios · advertencias (no vinculantes)</td></tr>
+        <tr><td class="dest">Equivalente estatal</td><td>Cortes Generales (Congreso + Senado)</td><td>Tribunal de Cuentas</td><td>Defensor del Pueblo (art. 54 CE)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Test interactivo — 10 preguntas tipo test</h2>
+  <div class="marc">
+    <span>Respuestas correctas: <span class="sv" id="sc">0</span> / <span id="tot"></span></span>
+    <button class="br" onclick="rst()">Reiniciar test</button>
+  </div>
+  <div id="qq"></div>
+  <p class="footer">LORAFNA (LO 13/1982) · LF 19/1984, de 20 de diciembre · LF 4/2000, de 3 de julio</p>
+</div>
+<script>
+const QQ=[
+  {e:"¿Cuántos parlamentarios integran el Parlamento de Navarra?",o:["25","40","50","75"],c:2,x:"El Parlamento de Navarra está integrado por 50 parlamentarios, elegidos por sufragio universal mediante el sistema D'Hondt en circunscripción única (la provincia de Navarra) con una barrera electoral del 3%."},
+  {e:"¿Cuál es la barrera electoral establecida para acceder al Parlamento de Navarra?",o:["5% de los votos válidos emitidos","3% de los votos válidos emitidos","2% del censo electoral","1% de los votos emitidos en la circunscripción"],c:1,x:"La barrera electoral del Parlamento de Navarra es el 3% de los votos válidos emitidos en la circunscripción, inferior al 5% aplicable en las elecciones al Congreso de los Diputados."},
+  {e:"¿Cuántos parlamentarios se necesitan como mínimo para constituir un Grupo Parlamentario en el Parlamento de Navarra?",o:["5 parlamentarios","4 parlamentarios","3 parlamentarios","2 parlamentarios"],c:2,x:"Para constituir Grupo Parlamentario en el Parlamento de Navarra se requiere un mínimo de 3 parlamentarios. Los que no alcancen ese mínimo se integran en el Grupo Mixto."},
+  {e:"¿Qué tipo de moción de censura regula el sistema parlamentario navarro?",o:["Destructiva: basta con retirar la confianza al Presidente","Constructiva: debe incluir un candidato alternativo a la Presidencia del Gobierno","Mixta: puede ser destructiva o constructiva según la mayoría que la presente","El Parlamento de Navarra no puede aprobar mociones de censura"],c:1,x:"La moción de censura en Navarra es de tipo constructivo, igual que en el sistema constitucional español: debe incluir necesariamente un candidato alternativo a la Presidencia del Gobierno de Navarra."},
+  {e:"¿Cuál es la norma reguladora de la Cámara de Comptos de Navarra?",o:["La Ley Foral 4/2000, de 3 de julio","La Ley Foral 19/1984, de 20 de diciembre","El Reglamento del Parlamento de Navarra","La LORAFNA, en su Título III"],c:1,x:"La Cámara de Comptos de Navarra se regula en la Ley Foral 19/1984, de 20 de diciembre. No debe confundirse con la LF 4/2000, que regula al Defensor del Pueblo de Navarra."},
+  {e:"¿Quién elige al Consejero Mayor de la Cámara de Comptos y qué mayoría se requiere?",o:["El Gobierno de Navarra por mayoría absoluta","El Parlamento de Navarra por mayoría de tres quintos","El Presidente del Gobierno de Navarra de forma directa","El propio Pleno de la Cámara por mayoría simple"],c:1,x:"El Consejero Mayor de la Cámara de Comptos es elegido por el Parlamento de Navarra por mayoría de tres quintos de sus miembros, para un mandato de seis años no renovable."},
+  {e:"¿Cuál es el mandato del Defensor del Pueblo de la Comunidad Foral de Navarra?",o:["4 años, renovables indefinidamente","5 años, reelegible una sola vez","6 años, no renovables","3 años, prorrogables otros 3"],c:1,x:"El Defensor del Pueblo de Navarra tiene un mandato de 5 años y puede ser reelegido una sola vez. Es elegido por el Parlamento de Navarra por mayoría de tres quintos."},
+  {e:"¿Cuál es el plazo para presentar una queja ante el Defensor del Pueblo de Navarra?",o:["6 meses desde que se produjeron los hechos","2 años desde el conocimiento de los hechos","1 año desde que el interesado tuvo conocimiento de los hechos","Sin plazo, puede presentarse en cualquier momento"],c:2,x:"La queja debe presentarse en el plazo de un año desde que el interesado tuvo conocimiento de los hechos que la motivan. Transcurrido ese plazo, la queja puede ser inadmitida."},
+  {e:"¿Pueden las resoluciones del Defensor del Pueblo de Navarra suspender o anular actos administrativos?",o:["Sí, cuando aprecia una vulneración grave de derechos fundamentales","Sí, pero solo respecto de actos de la Administración local","No, el Defensor no tiene potestad coercitiva ni puede suspender ni anular actos","Sí, pero requiere autorización previa del Parlamento de Navarra"],c:2,x:"El Defensor del Pueblo de Navarra no puede suspender ni anular actos administrativos. Su poder descansa exclusivamente en la autoridad moral, la publicidad de sus actuaciones y el control parlamentario a través de sus informes anuales."},
+  {e:"¿Cuál es el equivalente estatal de la Cámara de Comptos de Navarra?",o:["El Consejo de Estado","El Defensor del Pueblo","El Tribunal de Cuentas","El Banco de España"],c:2,x:"La Cámara de Comptos de Navarra es el equivalente navarro del Tribunal de Cuentas estatal. Ambas instituciones tienen como función principal la fiscalización externa de la actividad económico-financiera del sector público, aunque con diferente ámbito territorial."}
+];
+let R={},A=0;
+function render(){
+  document.getElementById('tot').textContent=QQ.length;
+  const c=document.getElementById('qq');c.innerHTML='';
+  QQ.forEach((p,i)=>{
+    const L=['A','B','C','D'],d=document.createElement('div');
+    d.className='pc';
+    d.innerHTML=`<div class="num">Pregunta ${i+1} de ${QQ.length}</div><div class="enun">${p.e}</div><div class="opts" id="o${i}">${p.o.map((o,j)=>`<div class="opt" onclick="ans(${i},${j})"><span class="let">${L[j]}</span><span>${o}</span></div>`).join('')}</div><div class="exp" id="x${i}">${p.x}</div>`;
+    c.appendChild(d);
+  });
+  document.getElementById('sc').textContent=0;
+}
+function ans(i,j){
+  if(R[i]!==undefined)return;R[i]=j;
+  const c=QQ[i].c;
+  document.querySelectorAll(`#o${i} .opt`).forEach((el,k)=>{
+    el.classList.add('off');
+    if(k===c)el.classList.add('ok');
+    else if(k===j)el.classList.add('ko');
+  });
+  if(j===c)A++;
+  document.getElementById('sc').textContent=A;
+  document.getElementById('x'+i).classList.add('v');
+}
+function rst(){R={};A=0;render();}
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuadro comparativo y Test — El Gobierno de Navarra (Tema 6)</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.20);--gbg:#eaf3de;--gbr:#639922;--gtx:#27500a;--rbg:#fcebeb;--rbr:#e24b4a;--rtx:#501313;--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.18);--gbg:#173404;--gbr:#3b6d11;--gtx:#c0dd97;--rbg:#501313;--rbr:#a32d2d;--rtx:#f7c1c1}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2rem 1rem}
+  .page{max-width:960px;margin:0 auto}
+  h1{font-size:20px;font-weight:500;margin-bottom:4px}
+  h2{font-size:17px;font-weight:500;margin:2.5rem 0 1rem;padding-bottom:8px;border-bottom:.5px solid var(--bm)}
+  .sub{font-size:13px;color:var(--t3);margin-bottom:28px}
+  .sub a{color:var(--t2);text-decoration:none}
+  .sub a:hover{color:var(--t1)}
+  .wrap{overflow-x:auto;background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r2);margin-bottom:12px}
+  table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:560px}
+  thead tr{background:var(--bg2)}
+  th{font-weight:500;font-size:11.5px;color:var(--t2);text-align:left;padding:11px 14px;border-bottom:.5px solid var(--bm);white-space:nowrap}
+  td{padding:11px 14px;border-bottom:.5px solid var(--bl);vertical-align:top;line-height:1.6;color:var(--t2)}
+  tr:last-child td{border-bottom:none}
+  tr:hover td{background:var(--bg2)}
+  .dest{font-weight:500;color:var(--t1);font-size:12px}
+  .im{background:#EEEDFE;color:#3C3489;font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap;display:inline-block}
+  .ic{background:#E6F1FB;color:#0C447C;font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap;display:inline-block}
+  @media(prefers-color-scheme:dark){.im{background:#3C3489;color:#CECBF6}.ic{background:#0C447C;color:#B5D4F4}}
+  .marc{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;font-size:13px;color:var(--t2)}
+  .sv{font-weight:500;color:var(--t1)}
+  .br{font-size:12px;padding:5px 14px;border:.5px solid var(--bm);border-radius:20px;background:transparent;color:var(--t2);cursor:pointer}
+  .br:hover{background:var(--bg2)}
+  .pc{background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r2);padding:18px;margin-bottom:12px}
+  .num{font-size:11px;font-weight:500;color:var(--t3);margin-bottom:6px}
+  .enun{font-size:14px;font-weight:500;margin-bottom:14px;line-height:1.55;color:var(--t1)}
+  .opts{display:flex;flex-direction:column;gap:7px}
+  .opt{display:flex;align-items:flex-start;gap:10px;padding:9px 13px;border:.5px solid var(--bl);border-radius:var(--r1);cursor:pointer;font-size:13px;background:var(--bg2);user-select:none;line-height:1.5;transition:border-color .15s;color:var(--t1)}
+  .opt:hover{border-color:var(--bm)}
+  .opt.ok{background:var(--gbg);border-color:var(--gbr);color:var(--gtx)}
+  .opt.ko{background:var(--rbg);border-color:var(--rbr);color:var(--rtx)}
+  .opt.off{cursor:default;pointer-events:none}
+  .let{font-weight:500;min-width:16px;flex-shrink:0}
+  .exp{font-size:12.5px;margin-top:12px;padding:10px 13px;color:var(--t2);background:var(--bg2);border-left:2px solid var(--bm);line-height:1.65;display:none}
+  .exp.v{display:block}
+  .footer{margin-top:24px;font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>El Gobierno de Navarra</h1>
+  <p class="sub">Tema 6 · Cuadro comparativo y test interactivo<br>
+    <a href="../index.html">Índice</a><br>
+    <a href="1_texto_explicativo.html"><< Texto completo</a>
+     | 
+    <a href="2_esquema_resumen.html">< Esquema-resumen</a>
+  </p>
+
+  <h2>Moción de censura vs. cuestión de confianza</h2>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr><th>Aspecto</th><th><span class="im">Moción de censura (art. 49 LORAFNA)</span></th><th><span class="ic">Cuestión de confianza (art. 50 LORAFNA)</span></th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="dest">¿Quién la inicia?</td><td>El Parlamento — mínimo 1/5 de parlamentarios (10 de 50)</td><td>El Presidente del Gobierno de Navarra</td></tr>
+        <tr><td class="dest">Finalidad</td><td>Retirar la confianza al Gobierno y nombrar un candidato alternativo</td><td>Recabar la confianza del Parlamento sobre el programa o política general del Gobierno</td></tr>
+        <tr><td class="dest">Tipo</td><td>Constructiva — debe incluir un candidato alternativo a la Presidencia del Gobierno</td><td>Simple — no requiere candidato alternativo</td></tr>
+        <tr><td class="dest">Mayoría para prosperar</td><td>Mayoría absoluta del Parlamento (mínimo 26 votos de 50)</td><td>Mayoría simple (más votos a favor que en contra)</td></tr>
+        <tr><td class="dest">Efecto si prospera</td><td>El candidato incluido en la moción queda investido como nuevo Presidente del Gobierno</td><td>El Gobierno cesa; el Presidente debe dimitir e iniciarse nuevo proceso de investidura</td></tr>
+        <tr><td class="dest">Efecto si no prospera</td><td>Los firmantes no pueden presentar otra moción de censura durante el mismo período de sesiones</td><td>El Gobierno recibe la confianza del Parlamento y continúa en el ejercicio de sus funciones</td></tr>
+        <tr><td class="dest">Referencia normativa</td><td>Art. 49 LORAFNA</td><td>Art. 50 LORAFNA</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Test interactivo — 10 preguntas tipo test</h2>
+  <div class="marc">
+    <span>Respuestas correctas: <span class="sv" id="sc">0</span> / <span id="tot"></span></span>
+    <button class="br" onclick="rst()">Reiniciar test</button>
+  </div>
+  <div id="qq"></div>
+  <p class="footer">LORAFNA (LO 13/1982) · Ley Foral 14/2004, de 3 de diciembre, del Gobierno de Navarra y de su Presidente · LF 8/1999, de 6 de abril, del Consejo de Navarra</p>
+</div>
+<script>
+const QQ=[
+  {e:"¿Cuál es la mayoría necesaria para investir al Presidente del Gobierno de Navarra en primera votación?",o:["Mayoría simple en primera votación","Mayoría de tres quintos del Parlamento","Mayoría absoluta en primera votación","Dos tercios del Parlamento de Navarra"],c:2,x:"En la primera votación de investidura se requiere mayoría absoluta (26 de los 50 parlamentarios). Si no se obtiene, 48 horas después se celebra una segunda votación en la que basta la mayoría simple."},
+  {e:"¿Qué ocurre si el Parlamento de Navarra no inviste a ningún candidato en el plazo de dos meses desde la primera votación?",o:["El Presidente del Parlamento asume provisionalmente la Presidencia del Gobierno","El Gobierno anterior continúa indefinidamente en funciones","El Parlamento queda disuelto automáticamente y se convocan nuevas elecciones","El Consejo de Navarra propone un candidato de consenso"],c:2,x:"Si transcurren dos meses desde la primera votación de investidura sin que ningún candidato obtenga la confianza del Parlamento, este queda disuelto automáticamente y se convocan nuevas elecciones."},
+  {e:"¿Qué mayoría se requiere para aprobar una moción de censura en el Parlamento de Navarra?",o:["Mayoría simple de los votos emitidos","Mayoría de dos tercios del Parlamento","Mayoría absoluta del Parlamento (mínimo 26 votos)","Tres quintos de los miembros del Parlamento"],c:2,x:"Para que prospere una moción de censura se requiere mayoría absoluta, es decir, el voto favorable de al menos 26 de los 50 parlamentarios. Además, la moción debe ser constructiva e incluir un candidato alternativo."},
+  {e:"¿Cuántos parlamentarios navarros deben suscribir como mínimo una moción de censura para que sea admitida a trámite?",o:["Al menos 10 parlamentarios (1/5 del total)","Al menos 13 parlamentarios (1/4 del total)","Al menos 6 parlamentarios","Al menos 26 parlamentarios (mayoría absoluta)"],c:0,x:"La moción de censura debe ser suscrita por al menos una quinta parte de los parlamentarios navarros, es decir, un mínimo de 10 de los 50 parlamentarios, y debe incluir necesariamente un candidato alternativo."},
+  {e:"¿Cuál es el órgano supremo consultivo de la Comunidad Foral de Navarra?",o:["La Cámara de Comptos de Navarra","El Consejo de Navarra","La Secretaría del Gobierno de Navarra","El Defensor del Pueblo de Navarra"],c:1,x:"El Consejo de Navarra es el supremo órgano consultivo de la Comunidad Foral, equivalente al Consejo de Estado. Se regula por la LF 8/1999, de 6 de abril, y está compuesto por un máximo de doce consejeros designados por el Gobierno para un mandato de cuatro años."},
+  {e:"¿Requieren los Vicepresidentes y Consejeros del Gobierno de Navarra ratificación parlamentaria para su nombramiento?",o:["Sí, deben ser ratificados por el Parlamento por mayoría simple","No, son nombrados libremente por el Presidente del Gobierno mediante decreto foral","Sí, pero solo si la moción de investidura así lo autorizó","No, pero deben comparecer ante la comisión parlamentaria correspondiente"],c:1,x:"Los Vicepresidentes y Consejeros son nombrados y cesados libremente por el Presidente del Gobierno de Navarra mediante decreto foral, sin necesidad de ningún tipo de ratificación o aprobación parlamentaria."},
+  {e:"¿Qué forma adoptan los acuerdos del Consejo de Gobierno de Navarra cuando tienen contenido normativo?",o:["Instrucciones del Presidente","Decretos forales","Circulares de los Consejeros","Resoluciones del Consejo de Navarra"],c:1,x:"Los acuerdos del Consejo de Gobierno adoptan la forma de decretos forales cuando tienen contenido normativo o cuando se trata de actos de relevancia singular, y la forma de acuerdos del Gobierno para resoluciones de carácter no normativo."},
+  {e:"¿Cuándo NO puede el Presidente del Gobierno de Navarra disolver anticipadamente el Parlamento?",o:["Cuando el Gobierno se encuentre en funciones","Cuando esté en tramitación una moción de censura o durante el primer período de sesiones de la legislatura","Cuando el Parlamento esté debatiendo los Presupuestos Generales","Cuando el Consejo de Navarra haya emitido un informe desfavorable"],c:1,x:"El Presidente no puede disolver el Parlamento cuando esté en tramitación una moción de censura, ni durante el primer período de sesiones de la legislatura. Fuera de estos límites, la disolución es una facultad discrecional del Presidente."},
+  {e:"¿Cuál es la norma que regula el Gobierno de Navarra y su Presidente?",o:["La Ley Foral 4/2000, de 3 de julio","La Ley Foral 8/1999, de 6 de abril","La Ley Foral 14/2004, de 3 de diciembre","El Reglamento del Parlamento de Navarra"],c:2,x:"El Gobierno de Navarra y su Presidente se regulan por la Ley Foral 14/2004, de 3 de diciembre, del Gobierno de Navarra y de su Presidente, que desarrolla las previsiones de la LORAFNA en esta materia."},
+  {e:"¿Qué límites tiene el Gobierno de Navarra cuando está en funciones?",o:["Puede ejercer todas sus funciones con normalidad","Solo puede atender el despacho ordinario, sin poder adoptar medidas de especial trascendencia política ni aprobar proyectos de ley de especial relevancia","Solo puede actuar en materias de urgencia declarada por el Presidente del Parlamento","Queda suspendido y sus funciones las asume la Diputación Permanente"],c:1,x:"El Gobierno en funciones limita su actuación al despacho ordinario de los asuntos, sin poder adoptar medidas de especial trascendencia política, aprobar el proyecto de Presupuestos Generales ni presentar proyectos de ley de especial relevancia."}
+];
+let R={},A=0;
+function render(){
+  document.getElementById('tot').textContent=QQ.length;
+  const c=document.getElementById('qq');c.innerHTML='';
+  QQ.forEach((p,i)=>{
+    const L=['A','B','C','D'],d=document.createElement('div');
+    d.className='pc';
+    d.innerHTML=`<div class="num">Pregunta ${i+1} de ${QQ.length}</div><div class="enun">${p.e}</div><div class="opts" id="o${i}">${p.o.map((o,j)=>`<div class="opt" onclick="ans(${i},${j})"><span class="let">${L[j]}</span><span>${o}</span></div>`).join('')}</div><div class="exp" id="x${i}">${p.x}</div>`;
+    c.appendChild(d);
+  });
+  document.getElementById('sc').textContent=0;
+}
+function ans(i,j){
+  if(R[i]!==undefined)return;R[i]=j;
+  const c=QQ[i].c;
+  document.querySelectorAll(`#o${i} .opt`).forEach((el,k)=>{
+    el.classList.add('off');
+    if(k===c)el.classList.add('ok');
+    else if(k===j)el.classList.add('ko');
+  });
+  if(j===c)A++;
+  document.getElementById('sc').textContent=A;
+  document.getElementById('x'+i).classList.add('v');
+}
+function rst(){R={};A=0;render();}
+render();
+</script>
+</body>
+</html>
