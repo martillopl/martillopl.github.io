@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 17 — Protección de Datos Personales y Derechos Digitales</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.22);--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.20)}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2.5rem 1rem;line-height:1.8}
+  .page{max-width:740px;margin:0 auto}
+  .header{margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:.5px solid var(--bm)}
+  .tlabel{font-size:12px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+  h1{font-size:22px;font-weight:500;line-height:1.3;margin-bottom:8px}
+  .meta{font-size:13px;color:var(--t3)}
+  .meta a{color:var(--t2);text-decoration:none}
+  .meta a:hover{color:var(--t1)}
+  .indice{background:var(--bg2);border:.5px solid var(--bl);border-radius:var(--r2);padding:16px 20px;margin-bottom:2.5rem}
+  .itit{font-size:11px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+  .indice ol{padding-left:18px}
+  .indice li{font-size:13px;color:var(--t2);padding:3px 0}
+  .indice a{color:var(--t2);text-decoration:none}
+  .indice a:hover{color:var(--t1)}
+  .sec{margin-bottom:2.8rem}
+  h2{font-size:18px;font-weight:500;margin-bottom:1rem;padding-bottom:8px;border-bottom:.5px solid var(--bl)}
+  h3{font-size:15px;font-weight:500;margin:1.6rem 0 .6rem}
+  h4{font-size:14px;font-weight:500;margin:1.2rem 0 .4rem;color:var(--t2)}
+  p{font-size:15px;color:var(--t2);margin-bottom:1rem}
+  p:last-child{margin-bottom:0}
+  strong{font-weight:500;color:var(--t1)}
+  .art{display:inline-block;font-size:11px;font-weight:500;background:var(--bg2);border:.5px solid var(--bm);border-radius:20px;padding:1px 8px;color:var(--t3);vertical-align:middle;margin-left:4px}
+  ul{padding-left:20px;margin-bottom:1rem}
+  ul li{font-size:15px;color:var(--t2);padding:3px 0}
+  .nota{background:var(--bg2);border-left:2px solid var(--bm);padding:12px 16px;margin:1.2rem 0;font-size:13.5px;color:var(--t2);line-height:1.65}
+  .nota strong{color:var(--t1)}
+  .footer{margin-top:3rem;padding-top:1.2rem;border-top:.5px solid var(--bl);font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="tlabel">Tema 17</div>
+    <h1>La Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales: disposiciones generales, principios y derechos de las personas</h1>
+    <div class="meta">LO 3/2018, de 5 de diciembre (LOPDGDD) · Reglamento (UE) 2016/679 (RGPD)<br>
+      <a href="../index.html">Índice</a><br>
+      <a href="2_esquema_resumen.html">Esquema-resumen ></a>
+       | 
+      <a href="3_cuadro_comparativo.html">Cuadros comparativos >></a>
+    </div>
+  </div>
+  <div class="indice">
+    <div class="itit">Índice</div>
+    <ol>
+      <li><a href="#s1">Marco normativo y contexto</a></li>
+      <li><a href="#s2">Disposiciones generales: objeto, ámbito y definiciones</a></li>
+      <li><a href="#s3">Las bases jurídicas del tratamiento</a></li>
+      <li><a href="#s4">Principios de protección de datos</a></li>
+      <li><a href="#s5">Categorías especiales de datos y datos de condenas penales</a></li>
+      <li><a href="#s6">Derechos de las personas: panorama general</a></li>
+      <li><a href="#s7">El derecho de información</a></li>
+      <li><a href="#s8">El derecho de acceso</a></li>
+      <li><a href="#s9">El derecho de rectificación</a></li>
+      <li><a href="#s10">El derecho de supresión (derecho al olvido)</a></li>
+      <li><a href="#s11">El derecho a la limitación del tratamiento</a></li>
+      <li><a href="#s12">El derecho a la portabilidad de los datos</a></li>
+      <li><a href="#s13">El derecho de oposición</a></li>
+      <li><a href="#s14">Derechos frente a decisiones automatizadas y elaboración de perfiles</a></li>
+      <li><a href="#s15">El ejercicio de los derechos: normas procedimentales</a></li>
+      <li><a href="#s16">La Agencia Española de Protección de Datos (AEPD)</a></li>
+      <li><a href="#s17">Los derechos digitales</a></li>
+    </ol>
+  </div>
+
+  <div class="sec" id="s1">
+    <h2>1. Marco normativo y contexto</h2>
+    <p>La protección de datos personales es un derecho fundamental reconocido en el <strong>artículo 18.4 de la Constitución Española</strong> de 1978, que establece que la ley limitará el uso de la informática para garantizar el honor y la intimidad personal y familiar de los ciudadanos y el pleno ejercicio de sus derechos. El Tribunal Constitucional ha desarrollado este mandato constitucional reconociendo la existencia de un derecho fundamental autónomo a la <strong>autodeterminación informativa</strong>, que faculta a su titular a controlar el flujo de informaciones que le conciernen (STC 292/2000).</p>
+    <p>En el ámbito europeo, el derecho a la protección de datos está reconocido en el <strong>artículo 8 de la Carta de los Derechos Fundamentales de la Unión Europea</strong> y en el <strong>artículo 16 del Tratado de Funcionamiento de la Unión Europea (TFUE)</strong>. La norma fundamental europea en esta materia es el <strong>Reglamento (UE) 2016/679, de 27 de abril, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales (RGPD)</strong>, que es directamente aplicable en todos los Estados miembros de la UE desde el 25 de mayo de 2018.</p>
+    <p>El RGPD armonizó la normativa europea de protección de datos, sustituyendo a la anterior Directiva 95/46/CE, pero dejó a los Estados miembros un margen de configuración para adaptar determinados aspectos a sus ordenamientos nacionales. En ejercicio de ese margen, España aprobó la <strong>Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD)</strong>, que adapta el RGPD al ordenamiento español, complementa sus disposiciones y regula además un amplio catálogo de <strong>derechos digitales</strong> en el ámbito laboral y de la ciudadanía digital.</p>
+    <p>La LOPDGDD derogó la anterior Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal (LOPD), que había sido el marco normativo nacional durante casi veinte años.</p>
+    <div class="nota"><strong>Nota sobre la relación entre el RGPD y la LOPDGDD:</strong> el RGPD es una norma directamente aplicable en España como Derecho de la UE, con primacía sobre la LOPDGDD en caso de conflicto. La LOPDGDD complementa el RGPD en los aspectos que este permite regular a los Estados miembros, y añade el catálogo de derechos digitales que no tiene equivalente en el RGPD. En las oposiciones, las preguntas pueden referirse indistintamente al RGPD o a la LOPDGDD.</div>
+  </div>
+
+  <div class="sec" id="s2">
+    <h2>2. Disposiciones generales: objeto, ámbito y definiciones</h2>
+
+    <h3>Objeto de la LOPDGDD</h3>
+    <p>El <strong>artículo 1 LOPDGDD</strong> establece que la ley tiene un doble objeto:</p>
+    <ul>
+      <li>Adaptar el ordenamiento jurídico español al RGPD y completar sus disposiciones.</li>
+      <li>Garantizar los derechos digitales de la ciudadanía conforme al mandato establecido en el artículo 18.4 CE.</li>
+    </ul>
+
+    <h3>Ámbito de aplicación</h3>
+    <p>Conforme al <strong>artículo 2 RGPD</strong>, la normativa de protección de datos se aplica al tratamiento de datos personales, total o parcialmente automatizado, así como al tratamiento no automatizado de datos personales contenidos o destinados a ser incluidos en un fichero. Quedan excluidos del ámbito de aplicación del RGPD (y de la LOPDGDD) los tratamientos realizados en el ejercicio de actividades exclusivamente personales o domésticas.</p>
+    <p>El RGPD se aplica también a los responsables y encargados de tratamiento establecidos fuera de la UE cuando tratan datos de personas que se encuentran en la UE, si las actividades de tratamiento están relacionadas con la oferta de bienes o servicios a dichos ciudadanos o con el control de su comportamiento dentro de la UE (principio de aplicación extraterritorial).</p>
+
+    <h3>Definiciones clave del RGPD</h3>
+    <p>El artículo 4 RGPD establece las definiciones fundamentales:</p>
+    <ul>
+      <li><strong>Datos personales</strong>: toda información sobre una persona física identificada o identificable. Se considera identificable a la persona que puede ser identificada directa o indirectamente, en particular mediante un identificador (nombre, número de identificación, datos de localización, identificador en línea) o mediante uno o más elementos propios de su identidad física, fisiológica, genética, psíquica, económica, cultural o social.</li>
+      <li><strong>Tratamiento</strong>: cualquier operación o conjunto de operaciones realizadas sobre datos personales, ya sea por procedimientos automatizados o no, tales como la recogida, registro, organización, estructuración, conservación, adaptación, modificación, extracción, consulta, utilización, comunicación por transmisión, difusión o cualquier otra forma de habilitación de acceso, cotejo, interconexión, limitación, supresión o destrucción.</li>
+      <li><strong>Fichero</strong>: todo conjunto estructurado de datos personales, accesibles con arreglo a criterios determinados, ya sea centralizado, descentralizado o repartido de forma funcional o geográfica.</li>
+      <li><strong>Responsable del tratamiento</strong>: la persona física o jurídica, autoridad pública, servicio u otro organismo que, solo o junto con otros, determine los fines y medios del tratamiento.</li>
+      <li><strong>Encargado del tratamiento</strong>: la persona física o jurídica, autoridad pública, servicio u otro organismo que trate datos personales por cuenta del responsable.</li>
+      <li><strong>Destinatario</strong>: la persona física o jurídica, autoridad pública, servicio u otro organismo al que se comuniquen datos personales.</li>
+      <li><strong>Tercero</strong>: la persona física o jurídica, autoridad pública, servicio u organismo distinto del interesado, del responsable, del encargado y de las personas autorizadas para tratar los datos.</li>
+      <li><strong>Consentimiento del interesado</strong>: toda manifestación de voluntad libre, específica, informada e inequívoca por la que el interesado acepta el tratamiento de sus datos personales.</li>
+      <li><strong>Violación de la seguridad de los datos</strong>: toda brecha de seguridad que ocasione la destrucción, pérdida o alteración accidental o ilícita de datos personales transmitidos, conservados o tratados de otra forma, o la comunicación o acceso no autorizados a dichos datos.</li>
+      <li><strong>Datos biométricos</strong>: datos personales obtenidos a partir de un tratamiento técnico específico, relativos a las características físicas, fisiológicas o conductuales de una persona física que permitan o confirmen la identificación única de dicha persona.</li>
+      <li><strong>Datos genéticos</strong>: datos personales relativos a las características genéticas heredadas o adquiridas de una persona física que proporcionen información única sobre la fisiología o la salud de esa persona.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s3">
+    <h2>3. Las bases jurídicas del tratamiento</h2>
+    <p>El RGPD establece en su <strong>artículo 6</strong> que todo tratamiento de datos personales debe ampararse en al menos una de las siguientes <strong>bases jurídicas</strong> (también llamadas bases de licitud o legitimación):</p>
+    <ul>
+      <li><strong>El consentimiento del interesado</strong>: el interesado ha dado su consentimiento para el tratamiento de sus datos personales para uno o varios fines específicos. El consentimiento debe ser libre, específico, informado e inequívoco, y puede retirarse en cualquier momento sin que ello afecte a la licitud del tratamiento anterior a su retirada. Para el tratamiento de datos de menores, la LOPDGDD establece la edad de <strong>14 años</strong> como límite a partir del cual el menor puede prestar consentimiento por sí solo (el RGPD la fija en 16, pero permite a los Estados bajarla hasta 13).</li>
+      <li><strong>La ejecución de un contrato</strong>: el tratamiento es necesario para la ejecución de un contrato en el que el interesado es parte, o para la aplicación a petición de este de medidas precontractuales.</li>
+      <li><strong>El cumplimiento de una obligación legal</strong>: el tratamiento es necesario para el cumplimiento de una obligación legal aplicable al responsable.</li>
+      <li><strong>La protección de intereses vitales</strong>: el tratamiento es necesario para proteger intereses vitales del interesado o de otra persona física.</li>
+      <li><strong>El cumplimiento de una misión en interés público o en el ejercicio de poderes públicos</strong>: el tratamiento es necesario para el cumplimiento de una misión realizada en interés público o en el ejercicio de poderes públicos conferidos al responsable.</li>
+      <li><strong>El interés legítimo del responsable o de un tercero</strong>: el tratamiento es necesario para la satisfacción de intereses legítimos del responsable o de un tercero, siempre que sobre dichos intereses no prevalezcan los intereses o los derechos y libertades fundamentales del interesado. Esta base jurídica no puede aplicarse cuando el responsable sea una autoridad pública en el ejercicio de sus funciones.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s4">
+    <h2>4. Principios de protección de datos</h2>
+    <p>Los <strong>principios de protección de datos</strong> están recogidos en el <strong>artículo 5 del RGPD</strong> y constituyen el núcleo del sistema normativo de protección de datos. El RGPD establece que el responsable del tratamiento es el garante del cumplimiento de estos principios y debe poder demostrar dicho cumplimiento (principio de responsabilidad proactiva o accountability).</p>
+
+    <h3>Principio de licitud, lealtad y transparencia</h3>
+    <p>Los datos personales deben ser tratados de manera lícita (amparada en alguna de las bases jurídicas del art. 6 RGPD), leal (sin engaño ni ocultación de los fines reales del tratamiento) y transparente (el interesado debe recibir información clara y comprensible sobre el tratamiento de sus datos). El principio de transparencia obliga al responsable a informar al interesado de forma activa sobre el tratamiento.</p>
+
+    <h3>Principio de limitación de la finalidad</h3>
+    <p>Los datos deben recogerse con fines <strong>determinados, explícitos y legítimos</strong>, y no pueden tratarse ulteriormente de manera incompatible con dichos fines. Esta regla tiene como excepción los tratamientos con fines de archivo en interés público, investigación científica o histórica, o estadísticos, que pueden ser compatibles con los fines originales aunque no coincidan plenamente con ellos.</p>
+
+    <h3>Principio de minimización de datos</h3>
+    <p>Los datos tratados deben ser <strong>adecuados, pertinentes y limitados</strong> a lo necesario en relación con los fines para los que son tratados. Se prohíbe recoger más datos de los estrictamente necesarios para la finalidad del tratamiento. Es el principio de "solo lo que hace falta".</p>
+
+    <h3>Principio de exactitud</h3>
+    <p>Los datos deben ser <strong>exactos</strong> y, si fuera necesario, actualizados. Deben adoptarse todas las medidas razonables para que se supriman o rectifiquen sin dilación los datos inexactos con respecto a los fines para los que se tratan. Este principio fundamenta el derecho de rectificación del interesado.</p>
+
+    <h3>Principio de limitación del plazo de conservación</h3>
+    <p>Los datos deben conservarse de forma que permita la identificación de los interesados durante <strong>no más tiempo del necesario</strong> para los fines del tratamiento. Una vez cumplida la finalidad, los datos deben suprimirse o anonimizarse. Excepcionalmente, pueden conservarse durante períodos más largos si el tratamiento tiene fines de archivo en interés público, de investigación científica o histórica o estadísticos, con las salvaguardias adecuadas.</p>
+
+    <h3>Principio de integridad y confidencialidad</h3>
+    <p>Los datos deben tratarse de tal manera que se garantice una <strong>seguridad adecuada</strong>, incluida la protección contra el tratamiento no autorizado o ilícito y contra su pérdida, destrucción o daño accidental. El responsable debe adoptar las <strong>medidas técnicas y organizativas</strong> adecuadas para garantizar la seguridad de los datos. Este principio fundamenta las obligaciones de seguridad del responsable y del encargado del tratamiento.</p>
+
+    <h3>Principio de responsabilidad proactiva (accountability)</h3>
+    <p>El <strong>responsable del tratamiento</strong> es el garante del cumplimiento de todos los principios anteriores y debe poder <strong>demostrar</strong> dicho cumplimiento. Este principio de accountability supone una inversión de la carga de la prueba: no es la autoridad de control la que debe demostrar el incumplimiento, sino el responsable el que debe acreditar el cumplimiento. Para ello, el RGPD prevé mecanismos como la evaluación de impacto, el registro de actividades de tratamiento, la designación del delegado de protección de datos, los códigos de conducta y los mecanismos de certificación.</p>
+
+    <h3>El principio de privacidad desde el diseño y por defecto (privacy by design y privacy by default)</h3>
+    <p>El artículo 25 RGPD establece que el responsable debe implementar medidas técnicas y organizativas para garantizar la protección de datos desde el diseño de los sistemas y procesos (privacy by design) y que, por defecto, solo se traten los datos personales necesarios para cada finalidad específica (privacy by default). Esto obliga a que la protección de datos se integre desde el inicio en el diseño de cualquier sistema o proceso de tratamiento.</p>
+  </div>
+
+  <div class="sec" id="s5">
+    <h2>5. Categorías especiales de datos y datos de condenas penales</h2>
+
+    <h3>Categorías especiales de datos</h3>
+    <p>El <strong>artículo 9 RGPD</strong> prohíbe con carácter general el tratamiento de las siguientes <strong>categorías especiales de datos</strong>, también denominados datos sensibles, por el especial riesgo que su tratamiento supone para los derechos y libertades de las personas:</p>
+    <ul>
+      <li>Datos que revelen el <strong>origen étnico o racial</strong>.</li>
+      <li>Datos que revelen las <strong>opiniones políticas</strong>.</li>
+      <li>Datos que revelen las <strong>convicciones religiosas o filosóficas</strong>.</li>
+      <li>Datos que revelen la <strong>afiliación sindical</strong>.</li>
+      <li><strong>Datos genéticos</strong>.</li>
+      <li><strong>Datos biométricos</strong> dirigidos a identificar de manera unívoca a una persona física.</li>
+      <li>Datos relativos a la <strong>salud</strong>.</li>
+      <li>Datos relativos a la <strong>vida sexual u orientación sexual</strong>.</li>
+    </ul>
+    <p>La prohibición de tratar estas categorías especiales tiene las siguientes <strong>excepciones</strong> (bases jurídicas adicionales que habilitan su tratamiento):</p>
+    <ul>
+      <li>El <strong>consentimiento explícito</strong> del interesado (más exigente que el consentimiento ordinario).</li>
+      <li>Fines de <strong>medicina preventiva o laboral</strong>, diagnóstico médico o prestación de asistencia sanitaria.</li>
+      <li>Razones de <strong>interés público esencial</strong>, en los términos que establezca el Derecho de la UE o de los Estados miembros.</li>
+      <li>Fines de <strong>archivo en interés público</strong>, investigación científica o histórica o estadísticos.</li>
+      <li>Protección de los <strong>intereses vitales</strong> del interesado cuando este no esté en condiciones de dar su consentimiento.</li>
+    </ul>
+
+    <h3>Datos relativos a condenas e infracciones penales</h3>
+    <p>El <strong>artículo 10 RGPD</strong> establece que el tratamiento de datos personales relativos a condenas e infracciones penales solo puede llevarse a cabo bajo la supervisión de las autoridades públicas o cuando esté autorizado por el Derecho nacional con las salvaguardias adecuadas. La LOPDGDD desarrolla este precepto estableciendo las condiciones concretas en que puede realizarse este tipo de tratamiento en España.</p>
+  </div>
+
+  <div class="sec" id="s6">
+    <h2>6. Derechos de las personas: panorama general</h2>
+    <p>El RGPD y la LOPDGDD reconocen a los interesados un amplio catálogo de derechos en relación con el tratamiento de sus datos personales. Estos derechos se agrupan bajo el acrónimo <strong>ARSOPOL</strong> (aunque la LOPDGDD añade los derechos digitales):</p>
+    <ul>
+      <li><strong>A</strong>cceso</li>
+      <li><strong>R</strong>ectificación</li>
+      <li><strong>S</strong>upresión (derecho al olvido)</li>
+      <li><strong>O</strong>posición</li>
+      <li><strong>P</strong>ortabilidad</li>
+      <li><strong>O</strong>posición a decisiones automatizadas</li>
+      <li><strong>L</strong>imitación del tratamiento</li>
+    </ul>
+    <p>Además de estos derechos, el interesado tiene el derecho a ser informado sobre el tratamiento de sus datos (derecho de información), que es previo a todos los demás.</p>
+    <p>Los derechos son de ejercicio personal por el interesado o por su representante legal. Son gratuitos en su ejercicio ordinario, aunque cuando las solicitudes sean manifiestamente infundadas o excesivas (en particular por su carácter repetitivo), el responsable puede cobrar una tasa razonable o negarse a actuar.</p>
+    <p>El plazo general para responder a las solicitudes de ejercicio de derechos es de <strong>un mes</strong> desde la recepción de la solicitud, ampliable hasta dos meses más en casos de especial complejidad o elevado número de solicitudes.</p>
+  </div>
+
+  <div class="sec" id="s7">
+    <h2>7. El derecho de información</h2>
+    <p>El <strong>derecho de información</strong> <span class="art">arts. 13 y 14 RGPD</span> es el derecho del interesado a ser informado sobre el tratamiento de sus datos personales. Es el derecho más básico, pues sin información el interesado no puede ejercer eficazmente ninguno de los demás derechos. El RGPD distingue entre dos situaciones:</p>
+
+    <h3>Información cuando los datos se obtienen del propio interesado (art. 13 RGPD)</h3>
+    <p>Cuando el responsable recoge los datos directamente del interesado, debe facilitarle en el momento de la recogida la siguiente información:</p>
+    <ul>
+      <li>La <strong>identidad y los datos de contacto</strong> del responsable y, en su caso, de su representante.</li>
+      <li>Los <strong>datos de contacto del delegado de protección de datos</strong> (DPD), si lo hay.</li>
+      <li>Los <strong>fines del tratamiento</strong> y la base jurídica que lo legitima.</li>
+      <li>Los <strong>intereses legítimos</strong> del responsable o de un tercero, cuando el tratamiento se base en dicha base jurídica.</li>
+      <li>Los <strong>destinatarios</strong> de los datos o las categorías de destinatarios.</li>
+      <li>La posible <strong>transferencia internacional</strong> de datos y las garantías aplicables.</li>
+      <li>El <strong>plazo de conservación</strong> de los datos o los criterios para determinarlo.</li>
+      <li>La <strong>existencia de los derechos</strong> de acceso, rectificación, supresión, limitación, portabilidad y oposición.</li>
+      <li>El <strong>derecho a retirar el consentimiento</strong> en cualquier momento, cuando el tratamiento se base en él.</li>
+      <li>El <strong>derecho a presentar una reclamación</strong> ante la autoridad de control.</li>
+      <li>Si el tratamiento incluye <strong>decisiones automatizadas</strong> y elaboración de perfiles, información significativa sobre la lógica aplicada.</li>
+    </ul>
+
+    <h3>Información cuando los datos no se obtienen del interesado (art. 14 RGPD)</h3>
+    <p>Cuando los datos se han obtenido de fuentes distintas al propio interesado, la información debe facilitarse en el plazo de un mes desde que el responsable obtenga los datos o, si va a comunicárselos a un tercero, antes de la primera comunicación.</p>
+  </div>
+
+  <div class="sec" id="s8">
+    <h2>8. El derecho de acceso</h2>
+    <p>El <strong>derecho de acceso</strong> <span class="art">art. 15 RGPD</span> es el derecho del interesado a obtener confirmación de si el responsable está tratando o no datos personales que le conciernen, y en caso afirmativo, a acceder a dichos datos y a la siguiente información:</p>
+    <ul>
+      <li>Los <strong>fines del tratamiento</strong>.</li>
+      <li>Las <strong>categorías de datos personales</strong> tratados.</li>
+      <li>Los <strong>destinatarios</strong> o categorías de destinatarios a quienes se comunicaron o van a comunicarse los datos.</li>
+      <li>El <strong>plazo de conservación</strong> previsto o los criterios para determinarlo.</li>
+      <li>La existencia del <strong>derecho a solicitar rectificación, supresión, limitación u oposición</strong> al tratamiento.</li>
+      <li>El derecho a <strong>presentar una reclamación</strong> ante la autoridad de control.</li>
+      <li>Cuando los datos no se hayan obtenido del interesado, información sobre su <strong>origen</strong>.</li>
+      <li>La existencia de <strong>decisiones automatizadas</strong> y elaboración de perfiles.</li>
+    </ul>
+    <p>El responsable debe facilitar una <strong>copia</strong> de los datos personales objeto de tratamiento. Por las copias adicionales que solicite el interesado, el responsable puede cobrar una tasa razonable basada en los costes administrativos. Cuando el interesado presente la solicitud por medios electrónicos, la información se facilitará en un formato electrónico de uso común.</p>
+    <p>La LOPDGDD establece <span class="art">art. 13 LOPDGDD</span> que el ejercicio del derecho de acceso no puede realizarse con una periodicidad inferior a un mes, salvo que el interesado acredite un interés legítimo.</p>
+  </div>
+
+  <div class="sec" id="s9">
+    <h2>9. El derecho de rectificación</h2>
+    <p>El <strong>derecho de rectificación</strong> <span class="art">art. 16 RGPD</span> es el derecho del interesado a obtener sin dilación indebida del responsable la <strong>rectificación de los datos personales inexactos</strong> que le conciernan. Teniendo en cuenta los fines del tratamiento, el interesado tiene también derecho a que se completen los datos personales que sean incompletos, inclusive mediante una declaración adicional.</p>
+    <p>El ejercicio del derecho de rectificación es fundamental para garantizar el principio de exactitud de los datos. Cuando el responsable haya comunicado los datos a terceros destinatarios, debe notificarles la rectificación, salvo que sea imposible o exija un esfuerzo desproporcionado.</p>
+  </div>
+
+  <div class="sec" id="s10">
+    <h2>10. El derecho de supresión (derecho al olvido)</h2>
+    <p>El <strong>derecho de supresión</strong> o <strong>derecho al olvido</strong> <span class="art">art. 17 RGPD</span> es el derecho del interesado a obtener sin dilación indebida del responsable la <strong>supresión de los datos personales</strong> que le conciernan, cuando concurra alguno de los siguientes supuestos:</p>
+    <ul>
+      <li>Los datos ya no son <strong>necesarios</strong> en relación con los fines para los que fueron recogidos o tratados.</li>
+      <li>El interesado <strong>retira el consentimiento</strong> en que se basó el tratamiento y este no tiene otra base jurídica.</li>
+      <li>El interesado se <strong>opone al tratamiento</strong> con arreglo al artículo 21 RGPD y no prevalecen otros motivos legítimos para el tratamiento.</li>
+      <li>Los datos han sido tratados <strong>ilícitamente</strong>.</li>
+      <li>Los datos deben suprimirse para el <strong>cumplimiento de una obligación legal</strong>.</li>
+      <li>Los datos han sido obtenidos en relación con la oferta de servicios de la sociedad de la información a niños <strong>menores de la edad de consentimiento</strong>.</li>
+    </ul>
+    <p>La <strong>dimensión del "derecho al olvido" en internet</strong> implica que, cuando el responsable haya hecho públicos los datos y esté obligado a suprimirlos, debe adoptar medidas razonables, incluidas medidas técnicas, para informar a los responsables que estén tratando esos datos de la solicitud de supresión de cualesquiera enlaces, copias o réplicas de esos datos.</p>
+    <p>El derecho de supresión no es absoluto. No procede cuando el tratamiento sea necesario para el ejercicio de la <strong>libertad de expresión e información</strong>, para el cumplimiento de una <strong>obligación legal</strong>, para fines de <strong>interés público</strong> o para el ejercicio o la defensa de <strong>reclamaciones</strong>.</p>
+  </div>
+
+  <div class="sec" id="s11">
+    <h2>11. El derecho a la limitación del tratamiento</h2>
+    <p>El <strong>derecho a la limitación del tratamiento</strong> <span class="art">art. 18 RGPD</span> es el derecho del interesado a obtener del responsable la <strong>limitación del tratamiento</strong> de los datos cuando se cumpla alguna de las condiciones siguientes:</p>
+    <ul>
+      <li>El interesado impugne la <strong>exactitud</strong> de los datos personales, durante un plazo que permita al responsable verificar su exactitud.</li>
+      <li>El tratamiento sea <strong>ilícito</strong> y el interesado se oponga a la supresión de los datos y solicite en su lugar la limitación de su uso.</li>
+      <li>El responsable ya no necesite los datos para los fines del tratamiento, pero el interesado los necesite para la <strong>formulación, el ejercicio o la defensa de reclamaciones</strong>.</li>
+      <li>El interesado se haya opuesto al tratamiento en virtud del artículo 21.1 RGPD, mientras se verifica si los motivos legítimos del responsable prevalecen sobre los del interesado.</li>
+    </ul>
+    <p>Cuando el tratamiento se haya limitado, los datos solo podrán ser objeto de tratamiento (salvo conservación) con el consentimiento del interesado, o para la formulación, el ejercicio o la defensa de reclamaciones, o para la protección de los derechos de otra persona física o jurídica, o por razones de interés público.</p>
+  </div>
+
+  <div class="sec" id="s12">
+    <h2>12. El derecho a la portabilidad de los datos</h2>
+    <p>El <strong>derecho a la portabilidad</strong> <span class="art">art. 20 RGPD</span> es un derecho nuevo introducido por el RGPD sin precedente en la normativa anterior. Es el derecho del interesado a recibir los datos personales que haya facilitado al responsable en un <strong>formato estructurado, de uso común y lectura mecánica</strong>, y a transmitirlos a otro responsable del tratamiento sin que el responsable al que se los hubiera facilitado pueda impedirlo, cuando:</p>
+    <ul>
+      <li>El tratamiento esté basado en el <strong>consentimiento</strong> o en la ejecución de un <strong>contrato</strong>, y</li>
+      <li>El tratamiento se realice por medios <strong>automatizados</strong>.</li>
+    </ul>
+    <p>El interesado tiene también derecho a que los datos se transmitan directamente de responsable a responsable cuando sea técnicamente posible. Este derecho no se aplica cuando el tratamiento sea necesario para el cumplimiento de una misión de interés público o en el ejercicio de poderes públicos.</p>
+  </div>
+
+  <div class="sec" id="s13">
+    <h2>13. El derecho de oposición</h2>
+    <p>El <strong>derecho de oposición</strong> <span class="art">art. 21 RGPD</span> es el derecho del interesado a oponerse en cualquier momento, por motivos relacionados con su situación particular, a que datos personales que le conciernan sean objeto de tratamiento, incluida la elaboración de perfiles.</p>
+    <p>Cuando el tratamiento esté basado en el <strong>interés legítimo</strong> o en el ejercicio de <strong>poderes públicos</strong>, el responsable deberá dejar de tratar los datos salvo que acredite motivos legítimos imperiosos para el tratamiento que prevalezcan sobre los intereses, los derechos y las libertades del interesado, o para la formulación, el ejercicio o la defensa de reclamaciones.</p>
+    <p>Cuando el tratamiento tenga por objeto el <strong>marketing directo</strong>, el interesado tiene derecho a oponerse en todo momento y el responsable deberá cesar el tratamiento para dicha finalidad sin posibilidad de excepciones. Es el supuesto más absoluto del derecho de oposición.</p>
+  </div>
+
+  <div class="sec" id="s14">
+    <h2>14. Derechos frente a decisiones automatizadas y elaboración de perfiles</h2>
+    <p>El <strong>artículo 22 RGPD</strong> reconoce el derecho del interesado a no ser objeto de una <strong>decisión basada únicamente en el tratamiento automatizado</strong>, incluida la elaboración de perfiles, que produzca efectos jurídicos en él o le afecte significativamente de modo similar.</p>
+    <p>Este derecho tiene excepciones: la decisión automatizada es posible cuando sea necesaria para la celebración o la ejecución de un contrato entre el interesado y un responsable del tratamiento, esté autorizada por el Derecho de la UE o de los Estados miembros, o se base en el consentimiento explícito del interesado. En los dos primeros casos, el responsable debe adoptar las medidas adecuadas para salvaguardar los derechos y libertades del interesado, como mínimo el derecho a obtener intervención humana en la decisión, a expresar su punto de vista y a impugnar la decisión.</p>
+    <p>La <strong>elaboración de perfiles</strong> (profiling) es el tratamiento automatizado de datos personales destinado a evaluar ciertos aspectos personales de una persona física (rendimiento profesional, situación económica, salud, preferencias, comportamiento, etc.). El RGPD prohíbe que las decisiones se basen únicamente en la elaboración de perfiles sin que un ser humano intervenga en el proceso decisorio.</p>
+  </div>
+
+  <div class="sec" id="s15">
+    <h2>15. El ejercicio de los derechos: normas procedimentales</h2>
+
+    <h3>Cómo se ejercen los derechos</h3>
+    <p>El interesado puede ejercer sus derechos mediante solicitud dirigida al responsable del tratamiento, identificándose debidamente. El responsable debe facilitar al interesado medios sencillos de ejercicio. La solicitud puede realizarse por cualquier medio que permita identificar al solicitante y acreditar la fecha de la solicitud.</p>
+
+    <h3>Plazos de respuesta</h3>
+    <p>El responsable debe responder a la solicitud en el plazo de <strong>un mes</strong> desde su recepción. Este plazo puede prorrogarse otros dos meses cuando sea necesario, teniendo en cuenta la complejidad y el número de solicitudes. El responsable debe informar al interesado de la prórroga dentro del primer mes. Si el responsable no da curso a la solicitud, debe informar al interesado en el plazo de un mes de los motivos y de su derecho a presentar una reclamación ante la autoridad de control y a ejercitar acciones judiciales.</p>
+
+    <h3>Gratuidad y solicitudes excesivas</h3>
+    <p>El ejercicio de los derechos es <strong>gratuito</strong>. Sin embargo, cuando las solicitudes sean manifiestamente infundadas o excesivas, en particular debido a su carácter repetitivo, el responsable podrá cobrar un canon razonable basándose en los costes administrativos, o negarse a actuar. En todo caso, el responsable deberá demostrar el carácter manifiestamente infundado o excesivo de la solicitud.</p>
+
+    <h3>Reclamación ante la AEPD</h3>
+    <p>Si el responsable no responde a la solicitud o no lo hace satisfactoriamente, el interesado puede presentar una <strong>reclamación ante la Agencia Española de Protección de Datos (AEPD)</strong>, que es la autoridad de control competente en España. La AEPD investigará la reclamación y puede imponer sanciones al responsable. El interesado también tiene derecho a ejercitar acciones judiciales.</p>
+  </div>
+
+  <div class="sec" id="s16">
+    <h2>16. La Agencia Española de Protección de Datos (AEPD)</h2>
+    <p>La <strong>Agencia Española de Protección de Datos (AEPD)</strong> es la autoridad de control independiente encargada de velar por el cumplimiento de la normativa de protección de datos en España. Es una entidad de derecho público, con personalidad jurídica propia y plena capacidad de obrar, que actúa con plena independencia de la Administración General del Estado en el ejercicio de sus funciones.</p>
+    <p>Las <strong>funciones principales</strong> de la AEPD son: supervisar el cumplimiento del RGPD y de la LOPDGDD, investigar las reclamaciones de los interesados, imponer sanciones administrativas a los responsables infractores, promover la sensibilización sobre la protección de datos, y asesorar al legislador y al Gobierno sobre las cuestiones de protección de datos.</p>
+    <p>El régimen sancionador del RGPD establece dos niveles de sanción: infracciones que pueden dar lugar a multas de hasta <strong>10 millones de euros o el 2% del volumen de negocio anual global</strong> (el importe mayor), e infracciones más graves que pueden dar lugar a multas de hasta <strong>20 millones de euros o el 4% del volumen de negocio anual global</strong> (el importe mayor). Para las Administraciones Públicas, la LOPDGDD establece un régimen sancionador específico que no incluye multas económicas sino otras medidas correctivas.</p>
+  </div>
+
+  <div class="sec" id="s17">
+    <h2>17. Los derechos digitales</h2>
+    <p>El <strong>Título X de la LOPDGDD</strong> (arts. 79 a 97) regula un amplio catálogo de <strong>derechos digitales</strong>, que constituyen la principal aportación novedosa de la ley respecto al RGPD. Estos derechos regulan el ejercicio de los derechos fundamentales en el entorno digital y en el ámbito de las relaciones laborales mediadas por la tecnología.</p>
+    <p>Los principales derechos digitales reconocidos son:</p>
+    <ul>
+      <li><strong>Derecho de acceso universal a internet</strong>: garantía del acceso a internet como instrumento para el ejercicio de derechos y la participación en la sociedad.</li>
+      <li><strong>Derecho a la neutralidad de internet</strong>: los operadores de comunicaciones electrónicas deben garantizar un acceso abierto e igualitario a los servicios de internet.</li>
+      <li><strong>Derecho a la seguridad digital</strong>: los ciudadanos tienen derecho a que los poderes públicos garanticen la seguridad de sus comunicaciones digitales.</li>
+      <li><strong>Derecho a la educación digital</strong>: el sistema educativo debe garantizar la incorporación de las competencias digitales al currículo.</li>
+      <li><strong>Derecho a la intimidad en el uso de dispositivos digitales en el ámbito laboral</strong> <span class="art">art. 87</span>: los trabajadores tienen derecho a la protección de su intimidad en el uso de dispositivos digitales facilitados por el empleador. El empleador puede establecer reglas de uso con finalidades de control, pero debe informar previamente a los trabajadores.</li>
+      <li><strong>Derecho a la desconexión digital en el ámbito laboral</strong> <span class="art">art. 88</span>: los trabajadores tienen derecho a no responder a comunicaciones digitales laborales fuera del horario de trabajo, para garantizar el descanso y la conciliación.</li>
+      <li><strong>Derecho a la intimidad frente al uso de dispositivos de videovigilancia y de grabación de sonidos en el lugar de trabajo</strong> <span class="art">art. 89</span>.</li>
+      <li><strong>Derecho a la intimidad ante la utilización de sistemas de geolocalización en el ámbito laboral</strong> <span class="art">art. 90</span>.</li>
+      <li><strong>Derecho al olvido en búsquedas de internet</strong> <span class="art">art. 93</span>: los interesados tienen derecho a que los motores de búsqueda eliminen de los resultados los vínculos que incluyan información relativa al afectado que sea inadecuada, inexacta, no relevante o excesiva.</li>
+      <li><strong>Derecho al olvido en servicios de redes sociales y servicios equivalentes</strong> <span class="art">art. 94</span>.</li>
+      <li><strong>Derecho de portabilidad en servicios de redes sociales</strong> <span class="art">art. 95</span>.</li>
+      <li><strong>Derecho al testamento digital</strong> <span class="art">art. 96</span>: los herederos pueden acceder a los contenidos digitales del fallecido y, en su caso, solicitar su supresión.</li>
+    </ul>
+  </div>
+
+  <div class="footer">LO 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD) · Reglamento (UE) 2016/679 (RGPD)</div>
+</div>
+</body>
+</html>
