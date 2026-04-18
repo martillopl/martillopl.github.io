@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esquema-resumen — La Unión Europea</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg-primary: #ffffff; --bg-secondary: #f5f4f0; --bg-tertiary: #eeece6;
+    --text-primary: #1a1a18; --text-secondary: #5f5e5a; --text-tertiary: #888780;
+    --border-light: rgba(0,0,0,0.10); --border-mid: rgba(0,0,0,0.20);
+    --radius-md: 8px; --radius-lg: 12px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-primary: #1e1e1c; --bg-secondary: #282825; --bg-tertiary: #323230;
+      --text-primary: #e8e6de; --text-secondary: #9c9a92; --text-tertiary: #6e6d68;
+      --border-light: rgba(255,255,255,0.10); --border-mid: rgba(255,255,255,0.18);
+    }
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg-tertiary); color: var(--text-primary); padding: 2rem 1rem; min-height: 100vh; }
+  .page { max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 20px; font-weight: 500; margin-bottom: 4px; }
+  .subtitle { font-size: 13px; color: var(--text-tertiary); margin-bottom: 24px; }
+  .subtitle a{color:var(--text-secondary);text-decoration:none}
+  .subtitle a:hover{color:var(--text-primary)}
+  .bloque { background: var(--bg-secondary); border: 0.5px solid var(--border-light); border-radius: var(--radius-lg); padding: 14px 16px; margin-bottom: 10px; }
+  .bloque-titulo { font-size: 13px; font-weight: 500; margin: 0 0 8px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .badge { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 20px; white-space: nowrap; }
+  .badge-purple { background: #EEEDFE; color: #3C3489; }
+  .badge-blue   { background: #E6F1FB; color: #0C447C; }
+  .badge-teal   { background: #E1F5EE; color: #085041; }
+  .badge-amber  { background: #FAEEDA; color: #633806; }
+  .badge-coral  { background: #FAECE7; color: #712B13; }
+  .badge-green  { background: #EAF3DE; color: #27500A; }
+  @media (prefers-color-scheme: dark) {
+    .badge-purple { background: #3C3489; color: #CECBF6; }
+    .badge-blue   { background: #0C447C; color: #B5D4F4; }
+    .badge-teal   { background: #085041; color: #9FE1CB; }
+    .badge-amber  { background: #633806; color: #FAC775; }
+    .badge-coral  { background: #712B13; color: #F5C4B3; }
+    .badge-green  { background: #27500A; color: #C0DD97; }
+  }
+  .items { display: flex; flex-wrap: wrap; gap: 6px; }
+  .item { font-size: 12px; color: var(--text-secondary); background: var(--bg-primary); border: 0.5px solid var(--border-light); border-radius: 6px; padding: 3px 9px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  @media (max-width: 520px) { .grid2 { grid-template-columns: 1fr; } }
+  .sub { font-size: 11px; color: var(--text-tertiary); margin: 0 0 6px; }
+  .nota { background: transparent; border: 0.5px solid var(--border-light); border-left: 2px solid var(--border-mid); border-radius: 0; padding: 10px 14px; margin-bottom: 10px; }
+  .footer { margin-top: 20px; font-size: 11px; color: var(--text-tertiary); text-align: center; }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>La Unión Europea</h1>
+  <p class="subtitle">Tema 2 · Esquema-resumen<br>
+    <a href="../index.html">Índice</a><br>
+    <a href="1_texto_explicativo.html">< Texto completo</a>
+     | 
+    <a href="3_cuadro_comparativo.html">Cuadros comparativos ></a>
+  </p>
+
+  <div class="bloque">
+    <div class="bloque-titulo"><span class="badge badge-blue">Art. 14 TUE</span> Parlamento Europeo</div>
+    <div class="grid2">
+      <div>
+        <div class="sub">Composición</div>
+        <div class="items">
+          <span class="item">720 eurodiputados (2024-29)</span>
+          <span class="item">Sufragio universal directo</span>
+          <span class="item">Mandato 5 años</span>
+          <span class="item">Proporcionalidad degresiva</span>
+          <span class="item">Mín. 6 / Máx. 96 escaños por Estado</span>
+          <span class="item">Sede: Estrasburgo</span>
+        </div>
+      </div>
+      <div>
+        <div class="sub">Funciones</div>
+        <div class="items">
+          <span class="item">Colegislador (proc. ordinario)</span>
+          <span class="item">Función presupuestaria</span>
+          <span class="item">Control político</span>
+          <span class="item">Moción de censura a Comisión</span>
+          <span class="item">Elige Presidente de la Comisión</span>
+          <span class="item">Elige al Defensor del Pueblo Europeo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bloque-titulo"><span class="badge badge-amber">Art. 15 TUE</span> Consejo Europeo</div>
+    <div class="grid2">
+      <div>
+        <div class="sub">Composición</div>
+        <div class="items">
+          <span class="item">Jefes de Estado o de Gobierno</span>
+          <span class="item">Presidente del Consejo Europeo</span>
+          <span class="item">Presidente de la Comisión</span>
+          <span class="item">Presidente: mandato 2,5 años (renov. 1 vez)</span>
+        </div>
+      </div>
+      <div>
+        <div class="sub">Funciones y funcionamiento</div>
+        <div class="items">
+          <span class="item">Impulso político y orientaciones generales</span>
+          <span class="item">No ejerce función legislativa</span>
+          <span class="item">Decide por consenso (regla general)</span>
+          <span class="item">4 reuniones ordinarias al año</span>
+          <span class="item">Propone candidato a Presidente Comisión</span>
+          <span class="item">Nombra al Alto Representante</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bloque-titulo"><span class="badge badge-teal">Art. 16 TUE</span> Consejo de la Unión Europea</div>
+    <div class="grid2">
+      <div>
+        <div class="sub">Composición y estructura</div>
+        <div class="items">
+          <span class="item">1 ministro por Estado miembro</span>
+          <span class="item">10 formaciones según materia</span>
+          <span class="item">Presidencia rotatoria cada 6 meses</span>
+          <span class="item">COREPER — órgano preparatorio</span>
+          <span class="item">Sesiones públicas en materia legislativa</span>
+        </div>
+      </div>
+      <div>
+        <div class="sub">Sistemas de votación</div>
+        <div class="items">
+          <span class="item">Mayoría simple — cuestiones de procedimiento</span>
+          <span class="item">May. cualificada — regla general</span>
+          <span class="item">55% Estados + 65% población</span>
+          <span class="item">Minoría de bloqueo: mín. 4 Estados</span>
+          <span class="item">Unanimidad — fiscalidad, PESC, Tratados</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bloque-titulo"><span class="badge badge-coral">Art. 17 TUE</span> Comisión Europea</div>
+    <div class="grid2">
+      <div>
+        <div class="sub">Composición y nombramiento</div>
+        <div class="items">
+          <span class="item">27 comisarios (1 por Estado)</span>
+          <span class="item">Mandato 5 años</span>
+          <span class="item">Investida por el PE</span>
+          <span class="item">Independencia de gobiernos nacionales</span>
+          <span class="item">Órgano colegiado</span>
+          <span class="item">Direcciones Generales (DG)</span>
+        </div>
+      </div>
+      <div>
+        <div class="sub">Funciones</div>
+        <div class="items">
+          <span class="item">Iniciativa legislativa exclusiva</span>
+          <span class="item">Guardiana de los Tratados</span>
+          <span class="item">Proc. de infracción (arts. 258-260 TFUE)</span>
+          <span class="item">Ejecuta el presupuesto de la UE</span>
+          <span class="item">Control de la competencia</span>
+          <span class="item">Representa a la UE en política comercial</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bloque-titulo"><span class="badge badge-purple">Art. 19 TUE</span> Tribunal de Justicia de la UE (TJUE)</div>
+    <div class="grid2">
+      <div>
+        <div class="sub">Estructura</div>
+        <div class="items">
+          <span class="item">Tribunal de Justicia — 27 jueces</span>
+          <span class="item">11 abogados generales</span>
+          <span class="item">Tribunal General — 54 jueces</span>
+          <span class="item">Mandato: 6 años renovables</span>
+          <span class="item">Sede: Luxemburgo</span>
+        </div>
+      </div>
+      <div>
+        <div class="sub">Procedimientos principales</div>
+        <div class="items">
+          <span class="item">Cuestión prejudicial (art. 267 TFUE)</span>
+          <span class="item">Recurso por incumplimiento (arts. 258-260)</span>
+          <span class="item">Recurso de anulación (art. 263)</span>
+          <span class="item">Recurso por omisión (art. 265)</span>
+          <span class="item">Recurso de casación (contra TG)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nota">
+    <div class="sub" style="margin-bottom:6px;">Tratados de referencia</div>
+    <div class="items">
+      <span class="item">TUE — Tratado de la Unión Europea</span>
+      <span class="item">TFUE — Tratado de Funcionamiento de la UE</span>
+      <span class="item">Tratado de Lisboa 2007 · en vigor desde el 1-XII-2009</span>
+      <span class="item">27 Estados miembros</span>
+    </div>
+  </div>
+
+  <p class="footer">Unión Europea · TUE y TFUE en versión consolidada (Tratado de Lisboa, 2009)</p>
+</div>
+</body>
+</html>

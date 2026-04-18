@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuadro comparativo y Test — La LORAFNA</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.20);--gbg:#eaf3de;--gbr:#639922;--gtx:#27500a;--rbg:#fcebeb;--rbr:#e24b4a;--rtx:#501313;--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.18);--gbg:#173404;--gbr:#3b6d11;--gtx:#c0dd97;--rbg:#501313;--rbr:#a32d2d;--rtx:#f7c1c1}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2rem 1rem}
+  .page{max-width:960px;margin:0 auto}
+  h1{font-size:20px;font-weight:500;margin-bottom:4px}
+  h2{font-size:17px;font-weight:500;margin:2.5rem 0 1rem;padding-bottom:8px;border-bottom:.5px solid var(--bm)}
+  .sub{font-size:13px;color:var(--t3);margin-bottom:28px}
+  .sub a{color:var(--t2);text-decoration:none}
+  .sub a:hover{color:var(--t1)}
+  /* Tabla */
+  .wrap{overflow-x:auto;background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r2);margin-bottom:12px}
+  table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:620px}
+  thead tr{background:var(--bg2)}
+  th{font-weight:500;font-size:11.5px;color:var(--t2);text-align:left;padding:11px 14px;border-bottom:.5px solid var(--bm);white-space:nowrap}
+  td{padding:11px 14px;border-bottom:.5px solid var(--bl);vertical-align:top;line-height:1.6;color:var(--t2)}
+  tr:last-child td{border-bottom:none}
+  tr:hover td{background:var(--bg2)}
+  .dest{font-weight:500;color:var(--t1)}
+  .bp{background:#EEEDFE;color:#3C3489;font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap;display:inline-block}
+  .bb{background:#E6F1FB;color:#0C447C;font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap;display:inline-block}
+  @media(prefers-color-scheme:dark){.bp{background:#3C3489;color:#CECBF6}.bb{background:#0C447C;color:#B5D4F4}}
+  /* Test */
+  .marc{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;font-size:13px;color:var(--t2)}
+  .sv{font-weight:500;color:var(--t1)}
+  .br{font-size:12px;padding:5px 14px;border:.5px solid var(--bm);border-radius:20px;background:transparent;color:var(--t2);cursor:pointer}
+  .br:hover{background:var(--bg2)}
+  .pc{background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r2);padding:18px;margin-bottom:12px}
+  .num{font-size:11px;font-weight:500;color:var(--t3);margin-bottom:6px}
+  .enun{font-size:14px;font-weight:500;margin-bottom:14px;line-height:1.55;color:var(--t1)}
+  .opts{display:flex;flex-direction:column;gap:7px}
+  .opt{display:flex;align-items:flex-start;gap:10px;padding:9px 13px;border:.5px solid var(--bl);border-radius:var(--r1);cursor:pointer;font-size:13px;background:var(--bg2);user-select:none;line-height:1.5;transition:border-color .15s;color:var(--t1)}
+  .opt:hover{border-color:var(--bm)}
+  .opt.ok{background:var(--gbg);border-color:var(--gbr);color:var(--gtx)}
+  .opt.ko{background:var(--rbg);border-color:var(--rbr);color:var(--rtx)}
+  .opt.off{cursor:default;pointer-events:none}
+  .let{font-weight:500;min-width:16px;flex-shrink:0}
+  .exp{font-size:12.5px;margin-top:12px;padding:10px 13px;color:var(--t2);background:var(--bg2);border-left:2px solid var(--bm);line-height:1.65;display:none}
+  .exp.v{display:block}
+  .footer{margin-top:24px;font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>La LORAFNA — LO 13/1982, de 10 de agosto</h1>
+  <p class="sub">Tema 4 · Cuadro comparativo y test interactivo<br>
+    <a href="../index.html">Índice</a><br>
+    <a href="1_texto_explicativo.html"><< Texto completo</a>
+     | 
+    <a href="2_esquema_resumen.html">< Esquema-resumen</a>
+  </p>
+
+  <h2>LORAFNA vs. Estatuto de Autonomía ordinario</h2>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr><th>Aspecto</th><th><span class="bp">LORAFNA (Navarra)</span></th><th><span class="bb">Estatuto de Autonomía ordinario</span></th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="dest">Fundamento constitucional</td><td>Disposición Adicional 1.ª CE — derechos históricos de los territorios forales</td><td>Título VIII CE — arts. 143, 151 y concordantes</td></tr>
+        <tr><td class="dest">Naturaleza jurídica</td><td>Ley Orgánica paccionada — acuerdo previo Estado / Navarra (Diputación Foral + Parlamento Foral)</td><td>Ley Orgánica aprobada por las Cortes Generales a propuesta de la Comunidad Autónoma</td></tr>
+        <tr><td class="dest">Vía de acceso a la autonomía</td><td>Vía foral singular — reintegración y amejoramiento del régimen foral preexistente</td><td>Vía del art. 143 CE (vía lenta) o art. 151 CE (vía rápida)</td></tr>
+        <tr><td class="dest">Procedimiento de reforma</td><td>Requiere acuerdo entre el Gobierno de Navarra y el Estado + aprobación del Parlamento Foral y de las Cortes Generales</td><td>Iniciativa autonómica + aprobación por las Cortes Generales (en algunos casos, referéndum)</td></tr>
+        <tr><td class="dest">Sistema de financiación</td><td>Convenio Económico propio — Navarra recauda los tributos y abona una aportación ("cupo") al Estado</td><td>Sistema de financiación autonómica común (LOFCA) — financiación mediante transferencias del Estado</td></tr>
+        <tr><td class="dest">Policía propia</td><td>Policía Foral de Navarra — policía integral con competencias plenas en orden público</td><td>Solo algunas CCAA tienen policía propia (Ertzaintza, Mossos d'Esquadra); la mayoría no</td></tr>
+        <tr><td class="dest">Denominación de la norma</td><td>Ley Orgánica de Reintegración y Amejoramiento del Régimen Foral — LORAFNA</td><td>Estatuto de Autonomía de [nombre de la Comunidad]</td></tr>
+        <tr><td class="dest">Posibilidad de unión con otra CA</td><td>Art. 8 — posibilidad de incorporarse al régimen autonómico vasco (requiere referéndum)</td><td>No hay previsión específica equivalente en los Estatutos ordinarios</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Test interactivo — 10 preguntas tipo test</h2>
+  <div class="marc">
+    <span>Respuestas correctas: <span class="sv" id="sc">0</span> / <span id="tot"></span></span>
+    <button class="br" onclick="reset()">Reiniciar test</button>
+  </div>
+  <div id="qq"></div>
+
+  <p class="footer">LO 13/1982, de 10 de agosto, de Reintegración y Amejoramiento del Régimen Foral de Navarra · BOE núm. 195, de 16 de agosto de 1982</p>
+</div>
+<script>
+const QQ=[
+  {e:"¿Cuál es la denominación completa de la LORAFNA?",o:["Ley Orgánica del Régimen Autonómico Foral de Navarra","Ley Orgánica de Reintegración y Amejoramiento del Régimen Foral de Navarra","Ley Orgánica de Reforma y Autonomía del Régimen Foral de Navarra","Ley Orgánica del Régimen Foral y Autonómico de Navarra"],c:1,x:"La LORAFNA es la Ley Orgánica 13/1982, de 10 de agosto, de Reintegración y Amejoramiento del Régimen Foral de Navarra. Su nombre refleja su doble naturaleza: reintegración (devolución de competencias históricas) y amejoramiento (actualización del régimen foral)."},
+  {e:"¿Cuál es el fundamento constitucional de la LORAFNA?",o:["El artículo 151 CE, que regula la vía rápida de acceso a la autonomía","El artículo 143 CE, que establece el derecho a la autonomía","La Disposición Adicional Primera CE, que ampara los derechos históricos de los territorios forales","El artículo 81 CE, que regula las leyes orgánicas"],c:2,x:"La LORAFNA se fundamenta en la Disposición Adicional Primera de la Constitución, que ampara y respeta los derechos históricos de los territorios forales. Navarra no accedió a la autonomía por la vía del Título VIII CE."},
+  {e:"¿Cuál es la capital de Navarra según el artículo 4 de la LORAFNA?",o:["Tudela","Estella-Lizarra","Pamplona-Iruña","Tafalla"],c:2,x:"El artículo 4 de la LORAFNA establece expresamente que Pamplona (Iruña) es la capital de Navarra."},
+  {e:"¿Qué carácter tiene el vascuence (euskera) en Navarra según el artículo 6 de la LORAFNA?",o:["Es la lengua cooficial en todo el territorio de Navarra junto con el castellano","Es lengua oficial únicamente en las zonas vascoparlantes de Navarra","Es lengua oficial en todo el territorio, con mayor rango que el castellano en las zonas vascoparlantes","No tiene reconocimiento oficial en la LORAFNA"],c:1,x:"Según el art. 6 LORAFNA, el castellano es la lengua oficial de Navarra. El vascuence también tendrá carácter de lengua oficial, pero únicamente en las zonas vascoparlantes, cuya determinación corresponde a la ley foral."},
+  {e:"¿Qué es el Convenio Económico de Navarra?",o:["El acuerdo por el que Navarra recibe transferencias del Estado dentro del sistema de financiación autonómica común","La norma que regula las relaciones financieras entre el Estado y Navarra, por la que Navarra recauda sus tributos y abona una aportación al Estado","El convenio por el que el Estado delega en Navarra la gestión de los tributos estatales","El acuerdo de colaboración entre la Hacienda de Navarra y la AEAT"],c:1,x:"El Convenio Económico regula las relaciones financieras entre el Estado y Navarra. Navarra tiene potestad para mantener su propio régimen tributario, recauda la mayoría de los tributos en su territorio y abona al Estado una aportación ('cupo') en concepto de contribución a las cargas generales del Estado no asumidas por Navarra."},
+  {e:"¿Qué prevé el artículo 8 de la LORAFNA?",o:["La posibilidad de que Navarra se integre en la UE de forma directa","La creación de la Policía Foral de Navarra","La posibilidad de que Navarra se incorpore al régimen autonómico vasco, previa aprobación del órgano foral competente y referéndum","La regulación del Convenio Económico"],c:2,x:"El artículo 8 de la LORAFNA recoge la posibilidad de que Navarra se incorpore al Consejo General Vasco o al régimen autonómico vasco, con la condición de que dicha iniciativa sea aprobada por el órgano foral competente y ratificada por referéndum expresamente convocado al efecto."},
+  {e:"¿Cuál de las siguientes competencias es exclusiva de Navarra según el art. 44 LORAFNA?",o:["La legislación mercantil","La legislación laboral y el régimen de la Seguridad Social","La conservación, modificación y desarrollo del Derecho Civil Foral de Navarra","La legislación penal"],c:2,x:"El art. 44 LORAFNA atribuye a Navarra competencia exclusiva sobre la conservación, modificación y desarrollo del Derecho Civil Foral de Navarra (Fuero Nuevo). La legislación mercantil, laboral, penal y la Seguridad Social son competencias exclusivas del Estado."},
+  {e:"¿Cuál es la principal diferencia entre el sistema de financiación de Navarra y el sistema de financiación autonómica común?",o:["Navarra recibe más financiación per cápita del Estado que el resto de CCAA","En el sistema común el Estado recauda y distribuye; en el navarro, Navarra recauda en su territorio y abona una aportación al Estado","Navarra no contribuye a la solidaridad interterritorial a diferencia del resto de CCAA","El sistema navarro está regulado por la UE, mientras que el común lo regula el Estado"],c:1,x:"La diferencia clave es que en el sistema foral navarro es Navarra quien recauda los tributos en su territorio y luego abona al Estado una aportación ('cupo') por las cargas generales no asumidas. En el sistema común (LOFCA), es el Estado quien recauda y luego transfiere recursos a las CCAA."},
+  {e:"¿Qué establece el principio de mejora recogido en el artículo 39 de la LORAFNA?",o:["Que en caso de conflicto entre legislación del Estado y la de Navarra prevalece siempre la estatal","Que en los conflictos entre legislación estatal y navarra se aplica la que sea más favorable al ejercicio de las competencias navarras","Que Navarra puede mejorar unilateralmente las condiciones del Convenio Económico","Que Navarra puede ampliar sus competencias por decisión del Parlamento Foral sin acuerdo con el Estado"],c:1,x:"El art. 39 LORAFNA establece el principio de mejora o favor competentiae: en los conflictos que puedan surgir entre la legislación del Estado y la de Navarra, se aplicará la legislación que, en cada caso, sea más favorable al ejercicio de las competencias de Navarra."},
+  {e:"¿Cuál es la naturaleza paccionada de la LORAFNA?",o:["Significa que fue aprobada por referéndum del pueblo navarro","Significa que su contenido fue negociado y acordado entre el Gobierno de la Nación y la Diputación Foral, y aprobado por el Parlamento Foral antes de su tramitación en las Cortes Generales","Significa que las Cortes Generales y el Parlamento Foral la aprueban simultáneamente","Significa que solo puede ser modificada por el Parlamento Foral de Navarra"],c:1,x:"La naturaleza paccionada de la LORAFNA implica que su contenido fue objeto de negociación y acuerdo entre el Gobierno de la Nación y la Diputación Foral de Navarra, y fue previamente aprobado por el Parlamento Foral antes de su tramitación en las Cortes Generales. Su modificación también requiere el acuerdo de ambas partes."}
+];
+let R={},A=0;
+function render(){
+  document.getElementById('tot').textContent=QQ.length;
+  const c=document.getElementById('qq');c.innerHTML='';
+  QQ.forEach((p,i)=>{
+    const L=['A','B','C','D'],d=document.createElement('div');
+    d.className='pc';
+    d.innerHTML=`<div class="num">Pregunta ${i+1} de ${QQ.length}</div><div class="enun">${p.e}</div><div class="opts" id="o${i}">${p.o.map((o,j)=>`<div class="opt" id="o${i}${j}" onclick="ans(${i},${j})"><span class="let">${L[j]}</span><span>${o}</span></div>`).join('')}</div><div class="exp" id="x${i}">${p.x}</div>`;
+    c.appendChild(d);
+  });
+  document.getElementById('sc').textContent=0;
+}
+function ans(i,j){
+  if(R[i]!==undefined)return;R[i]=j;
+  const c=QQ[i].c;
+  document.querySelectorAll(`#o${i} .opt`).forEach((el,k)=>{
+    el.classList.add('off');
+    if(k===c)el.classList.add('ok');
+    else if(k===j)el.classList.add('ko');
+  });
+  if(j===c)A++;
+  document.getElementById('sc').textContent=A;
+  document.getElementById('x'+i).classList.add('v');
+}
+function reset(){R={};A=0;render();}
+render();
+</script>
+</body>
+</html>

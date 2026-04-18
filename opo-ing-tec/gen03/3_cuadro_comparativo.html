@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuadro comparativo y Test — El Derecho de la Unión Europea</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg-primary: #ffffff; --bg-secondary: #f5f4f0; --bg-tertiary: #eeece6;
+    --text-primary: #1a1a18; --text-secondary: #5f5e5a; --text-tertiary: #888780;
+    --border-light: rgba(0,0,0,0.10); --border-mid: rgba(0,0,0,0.20);
+    --green-bg: #eaf3de; --green-border: #639922; --green-text: #27500a;
+    --red-bg: #fcebeb; --red-border: #e24b4a; --red-text: #501313;
+    --radius-md: 8px; --radius-lg: 12px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-primary: #1e1e1c; --bg-secondary: #282825; --bg-tertiary: #323230;
+      --text-primary: #e8e6de; --text-secondary: #9c9a92; --text-tertiary: #6e6d68;
+      --border-light: rgba(255,255,255,0.10); --border-mid: rgba(255,255,255,0.18);
+      --green-bg: #173404; --green-border: #3b6d11; --green-text: #c0dd97;
+      --red-bg: #501313; --red-border: #a32d2d; --red-text: #f7c1c1;
+    }
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg-tertiary); color: var(--text-primary); padding: 2rem 1rem; min-height: 100vh; }
+  .page { max-width: 960px; margin: 0 auto; }
+  h1 { font-size: 20px; font-weight: 500; margin-bottom: 4px; }
+  h2 { font-size: 17px; font-weight: 500; margin: 2.5rem 0 1rem; padding-bottom: 8px; border-bottom: 0.5px solid var(--border-mid); }
+  .subtitle { font-size: 13px; color: var(--text-tertiary); margin-bottom: 28px; }
+  .subtitle a{color:var(--text-secondary);text-decoration:none}
+  .subtitle a:hover{color:var(--text-primary)}
+
+  /* Tabla comparativa */
+  .wrap { overflow-x: auto; background: var(--bg-primary); border: 0.5px solid var(--border-light); border-radius: var(--radius-lg); margin-bottom: 12px; }
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; min-width: 680px; }
+  thead tr { background: var(--bg-secondary); }
+  th { font-weight: 500; font-size: 11.5px; color: var(--text-secondary); text-align: left; padding: 11px 14px; border-bottom: 0.5px solid var(--border-mid); white-space: nowrap; }
+  td { padding: 11px 14px; border-bottom: 0.5px solid var(--border-light); vertical-align: top; line-height: 1.6; color: var(--text-secondary); }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--bg-secondary); }
+  .inst { font-weight: 500; font-size: 11.5px; padding: 3px 10px; border-radius: 20px; white-space: nowrap; display: inline-block; }
+  .i-purple { background: #EEEDFE; color: #3C3489; }
+  .i-blue   { background: #E6F1FB; color: #0C447C; }
+  .i-teal   { background: #E1F5EE; color: #085041; }
+  .i-gray   { background: #F1EFE8; color: #444441; }
+  @media (prefers-color-scheme: dark) {
+    .i-purple { background: #3C3489; color: #CECBF6; }
+    .i-blue   { background: #0C447C; color: #B5D4F4; }
+    .i-teal   { background: #085041; color: #9FE1CB; }
+    .i-gray   { background: #444441; color: #D3D1C7; }
+  }
+  .si  { color: var(--green-text); font-weight: 500; }
+  .no  { color: var(--red-text); font-weight: 500; }
+
+  /* Test */
+  .marcador { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; font-size: 13px; color: var(--text-secondary); }
+  .score-val { font-weight: 500; color: var(--text-primary); }
+  .btn-reset { font-size: 12px; padding: 5px 14px; border: 0.5px solid var(--border-mid); border-radius: 20px; background: transparent; color: var(--text-secondary); cursor: pointer; }
+  .btn-reset:hover { background: var(--bg-secondary); }
+  .pregunta-card { background: var(--bg-primary); border: 0.5px solid var(--border-light); border-radius: var(--radius-lg); padding: 18px; margin-bottom: 12px; }
+  .num { font-size: 11px; font-weight: 500; color: var(--text-tertiary); margin-bottom: 6px; }
+  .enunciado { font-size: 14px; font-weight: 500; margin-bottom: 14px; line-height: 1.55; }
+  .opciones { display: flex; flex-direction: column; gap: 7px; }
+  .opcion { display: flex; align-items: flex-start; gap: 10px; padding: 9px 13px; border: 0.5px solid var(--border-light); border-radius: var(--radius-md); cursor: pointer; font-size: 13px; background: var(--bg-secondary); transition: border-color 0.15s; user-select: none; line-height: 1.5; }
+  .opcion:hover { border-color: var(--border-mid); }
+  .opcion.correcta { background: var(--green-bg); border-color: var(--green-border); color: var(--green-text); }
+  .opcion.incorrecta { background: var(--red-bg); border-color: var(--red-border); color: var(--red-text); }
+  .opcion.desactivada { cursor: default; pointer-events: none; }
+  .letra { font-weight: 500; min-width: 16px; flex-shrink: 0; }
+  .explicacion { font-size: 12.5px; margin-top: 12px; padding: 10px 13px; color: var(--text-secondary); background: var(--bg-secondary); border-left: 2px solid var(--border-mid); line-height: 1.65; display: none; }
+  .explicacion.visible { display: block; }
+  .footer { margin-top: 24px; font-size: 11px; color: var(--text-tertiary); text-align: center; }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>El Derecho de la Unión Europea</h1>
+  <p class="subtitle">Tema 3 · Cuadro comparativo de actos jurídicos y test interactivo<br>
+    <a href="../index.html">Índice</a><br>
+    <a href="1_texto_explicativo.html"><< Texto completo</a>
+     | 
+    <a href="2_esquema_resumen.html">< Esquema-resumen</a>
+  </p>
+
+  <h2>Cuadro comparativo: actos jurídicos de la UE (art. 288 TFUE)</h2>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Acto jurídico</th>
+          <th>Vinculante</th>
+          <th>Destinatarios</th>
+          <th>Directamente aplicable</th>
+          <th>Requiere transposición</th>
+          <th>Efecto directo horizontal</th>
+          <th>Uso típico</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="inst i-purple">Reglamento</span></td>
+          <td><span class="si">Sí</span> — en todos sus elementos</td>
+          <td>General (todos)</td>
+          <td><span class="si">Sí</span></td>
+          <td><span class="no">No</span> (está prohibida)</td>
+          <td><span class="si">Sí</span></td>
+          <td>Unificación normativa: competencia, agricultura, protección de datos (RGPD)</td>
+        </tr>
+        <tr>
+          <td><span class="inst i-blue">Directiva</span></td>
+          <td><span class="si">Sí</span> — en cuanto al resultado</td>
+          <td>Estados miembros</td>
+          <td><span class="no">No</span> (requiere transposición)</td>
+          <td><span class="si">Sí</span> — plazo fijado en la directiva</td>
+          <td><span class="no">No</span> (solo efecto directo vertical si no se transpone en plazo)</td>
+          <td>Armonización normativa: consumo, medio ambiente, mercado interior</td>
+        </tr>
+        <tr>
+          <td><span class="inst i-teal">Decisión</span></td>
+          <td><span class="si">Sí</span> — en todos sus elementos</td>
+          <td>Específicos o alcance general</td>
+          <td><span class="si">Sí</span> (para sus destinatarios)</td>
+          <td><span class="no">No</span> (cuando va a particulares)</td>
+          <td>Depende del contenido</td>
+          <td>Competencia, PESC, materia institucional</td>
+        </tr>
+        <tr>
+          <td><span class="inst i-gray">Recomendación / Dictamen</span></td>
+          <td><span class="no">No</span></td>
+          <td>Variable</td>
+          <td><span class="no">No</span></td>
+          <td><span class="no">No</span></td>
+          <td><span class="no">No</span></td>
+          <td>Orientación política, interpretación del Derecho de la UE</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Test interactivo — 10 preguntas tipo test</h2>
+  <div class="marcador">
+    <span>Respuestas correctas: <span class="score-val" id="score">0</span> / <span id="total"></span></span>
+    <button class="btn-reset" onclick="resetTest()">Reiniciar test</button>
+  </div>
+  <div id="preguntas"></div>
+
+  <p class="footer">Unión Europea · TUE y TFUE en versión consolidada · Tratado de Lisboa, en vigor desde el 1 de diciembre de 2009</p>
+</div>
+
+<script>
+const preguntas = [
+  {
+    enunciado: "¿Qué acto del Derecho derivado de la UE es directamente aplicable en todos los Estados miembros sin necesidad de transposición?",
+    opciones: ["La directiva", "La recomendación", "El reglamento", "La decisión dirigida a un Estado miembro"],
+    correcta: 2,
+    explicacion: "El reglamento (art. 288 TFUE) tiene alcance general, es obligatorio en todos sus elementos y es directamente aplicable en todos los Estados miembros sin necesidad de ningún acto de transposición. De hecho, está prohibido que los Estados lo transpongan."
+  },
+  {
+    enunciado: "¿Cuál es el principio que establece que el Derecho de la UE prevalece sobre el Derecho nacional en caso de conflicto?",
+    opciones: ["Principio de efecto directo — Van Gend en Loos (1963)", "Principio de primacía — Costa c. ENEL (1964)", "Principio de responsabilidad del Estado — Francovich (1991)", "Principio de cooperación leal — art. 4.3 TUE"],
+    correcta: 1,
+    explicacion: "El principio de primacía fue establecido por el TJUE en la sentencia Costa c. ENEL de 1964. Implica que el juez nacional que aprecia una contradicción entre una norma nacional y el Derecho de la UE debe inaplicar la norma nacional."
+  },
+  {
+    enunciado: "¿Qué instrumento normativo de la UE es el principal instrumento de armonización legislativa entre los Estados miembros?",
+    opciones: ["El reglamento, por ser directamente aplicable", "La directiva, que fija un resultado pero deja a los Estados la elección de la forma", "La decisión, porque obliga en todos sus elementos", "La recomendación, porque orienta sin obligar"],
+    correcta: 1,
+    explicacion: "La directiva es el instrumento de armonización por excelencia: obliga a los Estados en cuanto al resultado que deben conseguirse, pero deja a las autoridades nacionales la elección de la forma y los medios de aplicación, permitiendo adaptarla al ordenamiento jurídico nacional."
+  },
+  {
+    enunciado: "Según el principio establecido en la sentencia Francovich (1991), ¿qué ocurre cuando un Estado miembro no transpone una directiva y causa daños a un particular?",
+    opciones: ["El particular solo puede reclamar daños al Estado si el TJUE ha declarado previamente el incumplimiento", "El Estado puede quedar obligado a reparar los daños sufridos por el particular", "La Comisión asume la indemnización del particular con cargo al presupuesto de la UE", "El particular puede invocar la directiva directamente frente a otro particular"],
+    correcta: 1,
+    explicacion: "La sentencia Francovich establece la responsabilidad patrimonial del Estado por violación del Derecho de la UE. Para que nazca esta responsabilidad deben concurrir: que la norma confiera derechos a los particulares, que la violación sea suficientemente caracterizada y que exista nexo causal."
+  },
+  {
+    enunciado: "¿Qué tratado dotó a la Carta de los Derechos Fundamentales de la UE de valor jurídico vinculante, equiparándola a los Tratados?",
+    opciones: ["El Tratado de Maastricht (1992)", "El Tratado de Niza (2001)", "El Tratado de Lisboa (2007)", "El Tratado de Ámsterdam (1997)"],
+    correcta: 2,
+    explicacion: "El Tratado de Lisboa (2007), en vigor desde el 1 de diciembre de 2009, fue el que dotó a la Carta de los Derechos Fundamentales de la UE de valor jurídico vinculante, otorgándole el mismo rango jurídico que los Tratados."
+  },
+  {
+    enunciado: "¿En qué categoría de competencias de la UE se encuadra la política comercial común?",
+    opciones: ["Competencias compartidas entre la UE y los Estados miembros", "Competencias de apoyo, coordinación o complemento", "Competencias exclusivas de la UE", "Competencias intergubernamentales"],
+    correcta: 2,
+    explicacion: "La política comercial común es una competencia exclusiva de la UE (art. 3 TFUE). Esto significa que solo la UE puede legislar y adoptar actos jurídicamente vinculantes en este ámbito; los Estados miembros no pueden actuar por su cuenta."
+  },
+  {
+    enunciado: "¿Cuál es la diferencia entre el efecto directo vertical y el efecto directo horizontal?",
+    opciones: ["El vertical afecta a los reglamentos y el horizontal a las directivas", "El vertical permite al particular invocar el Derecho UE frente al Estado; el horizontal, frente a otro particular", "El vertical es aplicable en todos los Estados; el horizontal solo en los que no han transpuesto la directiva", "El vertical lo ejerce el TJUE; el horizontal lo ejercen los tribunales nacionales"],
+    correcta: 1,
+    explicacion: "El efecto directo vertical permite a un particular invocar una norma de la UE ante los tribunales nacionales frente al Estado (relación particular-Estado). El efecto directo horizontal opera en las relaciones entre particulares. Los reglamentos tienen ambos efectos; las directivas, solo efecto vertical."
+  },
+  {
+    enunciado: "La Política Exterior y de Seguridad Común (PESC) de la UE tiene carácter:",
+    opciones: ["Supranacional, con decisiones por mayoría cualificada como regla general", "Intergubernamental, con decisiones generalmente por unanimidad", "Exclusivo de la Comisión, que tiene iniciativa exclusiva en este ámbito", "Compartido entre el Parlamento Europeo y el Consejo en igualdad de condiciones"],
+    correcta: 1,
+    explicacion: "La PESC tiene carácter intergubernamental, regulado en el Título V TUE. Las decisiones se adoptan generalmente por unanimidad en el Consejo Europeo y el Consejo. La Comisión no tiene iniciativa exclusiva en este ámbito y el PE tiene un papel limitado."
+  },
+  {
+    enunciado: "¿A través de qué fondos se instrumenta principalmente la Política de Cohesión de la UE?",
+    opciones: ["El BCE y el Fondo Europeo de Inversiones", "El FEDER, el FSE y el Fondo de Cohesión", "La PAC y el Fondo de Desarrollo Rural", "El Fondo Social Europeo y el programa Erasmus+"],
+    correcta: 1,
+    explicacion: "La Política de Cohesión se instrumenta principalmente a través del Fondo Europeo de Desarrollo Regional (FEDER), el Fondo Social Europeo (FSE) y el Fondo de Cohesión. Su objetivo es reducir las disparidades entre los niveles de desarrollo de las distintas regiones de la UE."
+  },
+  {
+    enunciado: "¿Qué consecuencia tiene el principio de cooperación leal recogido en el artículo 4.3 TUE para los Estados miembros?",
+    opciones: ["Los Estados deben trasladar a la UE todas sus competencias legislativas", "Los Estados deben adoptar todas las medidas necesarias para cumplir el Derecho de la UE y abstenerse de medidas contrarias a sus objetivos", "Los Estados deben someter sus proyectos de ley a la aprobación previa de la Comisión", "Los Estados quedan exonerados de responsabilidad por el incumplimiento del Derecho de la UE si actúan de buena fe"],
+    correcta: 1,
+    explicacion: "El principio de cooperación leal (art. 4.3 TUE) obliga a los Estados a adoptar todas las medidas necesarias para garantizar el cumplimiento del Derecho de la UE y a abstenerse de cualquier medida que pueda poner en peligro la realización de los objetivos de la Unión."
+  }
+];
+
+let respondidas = {}, aciertos = 0;
+
+function renderTest() {
+  document.getElementById('total').textContent = preguntas.length;
+  const cont = document.getElementById('preguntas');
+  cont.innerHTML = '';
+  preguntas.forEach((p, i) => {
+    const letras = ['A','B','C','D'];
+    const card = document.createElement('div');
+    card.className = 'pregunta-card';
+    card.innerHTML = `
+      <div class="num">Pregunta ${i+1} de ${preguntas.length}</div>
+      <div class="enunciado">${p.enunciado}</div>
+      <div class="opciones" id="opc-${i}">
+        ${p.opciones.map((o,j) => `
+          <div class="opcion" id="opc-${i}-${j}" onclick="responder(${i},${j})">
+            <span class="letra">${letras[j]}</span><span>${o}</span>
+          </div>`).join('')}
+      </div>
+      <div class="explicacion" id="exp-${i}">${p.explicacion}</div>`;
+    cont.appendChild(card);
+  });
+  document.getElementById('score').textContent = 0;
+}
+
+function responder(preg, opcion) {
+  if (respondidas[preg] !== undefined) return;
+  respondidas[preg] = opcion;
+  const correcta = preguntas[preg].correcta;
+  document.querySelectorAll(`#opc-${preg} .opcion`).forEach((el, j) => {
+    el.classList.add('desactivada');
+    if (j === correcta) el.classList.add('correcta');
+    else if (j === opcion) el.classList.add('incorrecta');
+  });
+  if (opcion === correcta) aciertos++;
+  document.getElementById('score').textContent = aciertos;
+  document.getElementById('exp-' + preg).classList.add('visible');
+}
+
+function resetTest() { respondidas = {}; aciertos = 0; renderTest(); }
+renderTest();
+</script>
+</body>
+</html>

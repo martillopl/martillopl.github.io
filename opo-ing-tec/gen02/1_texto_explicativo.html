@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 2 — La Unión Europea</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg-primary: #ffffff; --bg-secondary: #f5f4f0; --bg-tertiary: #eeece6;
+    --text-primary: #1a1a18; --text-secondary: #5f5e5a; --text-tertiary: #888780;
+    --border-light: rgba(0,0,0,0.10); --border-mid: rgba(0,0,0,0.22);
+    --radius-md: 8px; --radius-lg: 12px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-primary: #1e1e1c; --bg-secondary: #282825; --bg-tertiary: #323230;
+      --text-primary: #e8e6de; --text-secondary: #9c9a92; --text-tertiary: #6e6d68;
+      --border-light: rgba(255,255,255,0.10); --border-mid: rgba(255,255,255,0.20);
+    }
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg-tertiary); color: var(--text-primary); padding: 2.5rem 1rem; min-height: 100vh; line-height: 1.75; }
+  .page { max-width: 740px; margin: 0 auto; }
+
+  .header { margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 0.5px solid var(--border-mid); }
+  .tema-label { font-size: 12px; font-weight: 500; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+  h1 { font-size: 24px; font-weight: 500; line-height: 1.3; margin-bottom: 8px; }
+  .meta { font-size: 13px; color: var(--text-tertiary); }
+  .meta a{color:var(--text-secondary);text-decoration:none}
+  .meta a:hover{color:var(--text-primary)}
+
+  .indice { background: var(--bg-secondary); border: 0.5px solid var(--border-light); border-radius: var(--radius-lg); padding: 16px 20px; margin-bottom: 2.5rem; }
+  .indice-titulo { font-size: 11px; font-weight: 500; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
+  .indice ol { padding-left: 18px; }
+  .indice li { font-size: 13px; color: var(--text-secondary); padding: 3px 0; }
+  .indice a { color: var(--text-secondary); text-decoration: none; }
+  .indice a:hover { color: var(--text-primary); }
+
+  .seccion { margin-bottom: 2.8rem; }
+  h2 { font-size: 18px; font-weight: 500; margin-bottom: 1rem; padding-bottom: 8px; border-bottom: 0.5px solid var(--border-light); }
+  h3 { font-size: 15px; font-weight: 500; margin: 1.6rem 0 0.6rem; color: var(--text-primary); }
+  p { font-size: 15px; color: var(--text-secondary); margin-bottom: 1rem; }
+  p:last-child { margin-bottom: 0; }
+  strong { font-weight: 500; color: var(--text-primary); }
+
+  .art { display: inline-block; font-size: 11px; font-weight: 500; background: var(--bg-secondary); border: 0.5px solid var(--border-mid); border-radius: 20px; padding: 1px 8px; color: var(--text-tertiary); vertical-align: middle; margin-left: 4px; }
+
+  ul { padding-left: 20px; margin-bottom: 1rem; }
+  ul li { font-size: 15px; color: var(--text-secondary); padding: 3px 0; }
+
+  .alerta { background: var(--bg-secondary); border-left: 2px solid var(--border-mid); padding: 12px 16px; margin: 1.2rem 0; font-size: 13.5px; color: var(--text-secondary); border-radius: 0; line-height: 1.65; }
+  .alerta strong { color: var(--text-primary); }
+
+  .footer { margin-top: 3rem; padding-top: 1.2rem; border-top: 0.5px solid var(--border-light); font-size: 11px; color: var(--text-tertiary); text-align: center; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="tema-label">Tema 2</div>
+    <h1>La Unión Europea: el Parlamento Europeo, el Consejo Europeo, el Consejo de la Unión Europea, la Comisión Europea y el Tribunal de Justicia</h1>
+    <div class="meta">TUE y TFUE en versión consolidada · Tratado de Lisboa, en vigor desde el 1 de diciembre de 2009<br>
+      <a href="../index.html">Índice</a><br>
+      <a href="2_esquema_resumen.html">Esquema-resumen ></a>
+       | 
+      <a href="3_cuadro_comparativo.html">Cuadros comparativos >></a>
+    </div>
+  </div>
+
+  <div class="indice">
+    <div class="indice-titulo">Índice</div>
+    <ol>
+      <li><a href="#s1">Marco institucional de la Unión Europea</a></li>
+      <li><a href="#s2">El Parlamento Europeo</a></li>
+      <li><a href="#s3">El Consejo Europeo</a></li>
+      <li><a href="#s4">El Consejo de la Unión Europea: competencias, estructura y funcionamiento</a></li>
+      <li><a href="#s5">La Comisión Europea: composición, organización y funcionamiento</a></li>
+      <li><a href="#s6">El Tribunal de Justicia de la Unión Europea</a></li>
+    </ol>
+  </div>
+
+  <!-- 1 -->
+  <div class="seccion" id="s1">
+    <h2>1. Marco institucional de la Unión Europea</h2>
+    <p>La Unión Europea (UE) es una organización supranacional de integración política y económica, actualmente integrada por <strong>27 Estados miembros</strong>. Su marco institucional actual está definido fundamentalmente por el <strong>Tratado de la Unión Europea (TUE)</strong> y el <strong>Tratado de Funcionamiento de la Unión Europea (TFUE)</strong>, en la versión consolidada tras el <strong>Tratado de Lisboa de 2007</strong>, en vigor desde el 1 de diciembre de 2009.</p>
+    <p>El <strong>artículo 13 TUE</strong> establece el cuadro institucional de la UE, integrado por: el Parlamento Europeo, el Consejo Europeo, el Consejo, la Comisión Europea, el Tribunal de Justicia de la Unión Europea, el Banco Central Europeo y el Tribunal de Cuentas. Las instituciones actúan dentro de los límites de las competencias que les atribuyen los Tratados, conforme al principio de <strong>equilibrio institucional</strong>: cada institución actúa en el marco de sus atribuciones sin invadir las de las demás.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="seccion" id="s2">
+    <h2>2. El Parlamento Europeo</h2>
+    <p>El Parlamento Europeo (PE) se regula en los <strong>arts. 14 TUE y 223-234 TFUE</strong>. Es la institución que representa directamente a los ciudadanos de la Unión.</p>
+
+    <h3>Composición</h3>
+    <p>El PE está compuesto por representantes de los ciudadanos de la Unión, elegidos por <strong>sufragio universal directo, libre y secreto</strong>, por un mandato de cinco años. El número de escaños es actualmente de <strong>720 eurodiputados</strong> (legislatura 2024-2029). La distribución sigue el principio de <strong>proporcionalidad degresiva</strong>: los Estados más poblados tienen más escaños, pero los menos poblados están sobrerrepresentados en relación con su población. Ningún Estado puede tener menos de 6 ni más de 96 escaños. España cuenta con 61 escaños en la legislatura 2024-2029.</p>
+    <p>Los diputados se agrupan en <strong>grupos políticos</strong> (no por nacionalidades), siendo necesario un mínimo de 23 diputados de al menos una cuarta parte de los Estados miembros para constituir grupo. El PE tiene su sede principal en <strong>Estrasburgo</strong> (sesiones plenarias), mientras las comisiones parlamentarias sesionan en Bruselas.</p>
+
+    <h3>Funciones</h3>
+    <p><strong>Función legislativa:</strong> el PE ejerce la función legislativa conjuntamente con el Consejo mediante el procedimiento legislativo ordinario (codecisión), convirtiéndolo en colegislador en igualdad con el Consejo en la mayoría de las materias.</p>
+    <p><strong>Función presupuestaria:</strong> el PE aprueba el presupuesto anual de la UE conjuntamente con el Consejo, teniendo la última palabra sobre el presupuesto en su conjunto.</p>
+    <p><strong>Función de control político:</strong> el PE ejerce el control democrático sobre las demás instituciones, especialmente sobre la Comisión. Puede aprobar una <strong>moción de censura</strong> contra la Comisión (requiere mayoría de dos tercios de los votos emitidos que representen a su vez la mayoría de los miembros), lo que obliga a la Comisión a dimitir en bloque. Elige al Presidente de la Comisión a propuesta del Consejo Europeo. El <strong>Defensor del Pueblo Europeo</strong> (Ombudsman) es elegido por el PE.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="seccion" id="s3">
+    <h2>3. El Consejo Europeo</h2>
+    <p>El Consejo Europeo se regula en los <strong>arts. 15 TUE y 235-236 TFUE</strong>. Fue elevado al rango de institución de la UE por el Tratado de Lisboa.</p>
+
+    <div class="alerta"><strong>Atención:</strong> El Consejo Europeo (Jefes de Estado o de Gobierno) es una institución completamente distinta del Consejo de la UE (ministros). Esta es una de las confusiones más frecuentes en examen.</div>
+
+    <h3>Composición</h3>
+    <p>Está compuesto por los <strong>Jefes de Estado o de Gobierno</strong> de los Estados miembros, el <strong>Presidente del Consejo Europeo</strong> y el <strong>Presidente de la Comisión Europea</strong>. El Alto Representante de la Unión para Asuntos Exteriores y Política de Seguridad participa en sus trabajos.</p>
+    <p>El <strong>Presidente del Consejo Europeo</strong> es elegido por el propio Consejo por mayoría cualificada para un mandato de <strong>dos años y medio, renovable una vez</strong>. Preside y dinamiza los trabajos del Consejo Europeo, facilita la cohesión y el consenso, y representa exteriormente a la UE en los asuntos de política exterior.</p>
+
+    <h3>Funciones y funcionamiento</h3>
+    <p>El Consejo Europeo proporciona a la Unión los <strong>impulsos necesarios para su desarrollo</strong> y define sus <strong>orientaciones y prioridades políticas generales</strong>. <strong>No ejerce función legislativa.</strong> Se reúne dos veces por semestre (cuatro reuniones anuales ordinarias). Sus decisiones se adoptan, en general, por <strong>consenso</strong>, salvo que los Tratados dispongan otra cosa.</p>
+    <p>Es la institución que adopta las grandes decisiones políticas: la ampliación de la UE, las reformas de los Tratados, el marco financiero plurianual, y el nombramiento de altos cargos (propone al PE el candidato a Presidente de la Comisión, nombra al Alto Representante).</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="seccion" id="s4">
+    <h2>4. El Consejo de la Unión Europea: competencias, estructura y funcionamiento</h2>
+    <p>El Consejo de la Unión Europea (también llamado "el Consejo" o, informalmente, "Consejo de Ministros") se regula en los <strong>arts. 16 TUE y 237-243 TFUE</strong>.</p>
+
+    <h3>Composición y estructura</h3>
+    <p>El Consejo está integrado por <strong>un representante de cada Estado miembro a nivel ministerial</strong>, facultado para comprometer al gobierno de dicho Estado. Su composición varía según la materia tratada, existiendo <strong>diez formaciones</strong> del Consejo (Asuntos Generales, Asuntos Exteriores, ECOFIN, Agricultura, etc.).</p>
+    <p>La <strong>Presidencia del Consejo</strong> rota entre los Estados miembros cada seis meses, conforme al sistema de tríos de presidencias. España ostentó la Presidencia en el segundo semestre de 2023. La excepción es el Consejo de Asuntos Exteriores, presidido de forma permanente por el <strong>Alto Representante</strong>.</p>
+    <p>El <strong>COREPER</strong> (Comité de Representantes Permanentes) es el órgano preparatorio fundamental: integrado por los embajadores de los Estados miembros ante la UE, prepara los trabajos del Consejo. Las sesiones son <strong>públicas</strong> cuando el Consejo delibera y vota sobre proyectos de actos legislativos.</p>
+
+    <h3>Competencias</h3>
+    <p><strong>Legislativa:</strong> el Consejo ejerce la función legislativa conjuntamente con el PE mediante el procedimiento legislativo ordinario.</p>
+    <p><strong>Presupuestaria:</strong> aprueba el presupuesto de la UE conjuntamente con el PE.</p>
+    <p><strong>De coordinación:</strong> coordina las políticas de los Estados miembros, especialmente en materia económica y de empleo.</p>
+    <p><strong>PESC:</strong> en la Política Exterior y de Seguridad Común tiene un papel decisorio central.</p>
+    <p><strong>Acuerdos internacionales:</strong> el Consejo autoriza la apertura de negociaciones y celebra los acuerdos internacionales en nombre de la UE.</p>
+
+    <h3>Sistemas de votación</h3>
+    <p><strong>Mayoría simple:</strong> para cuestiones de procedimiento.</p>
+    <p><strong>Mayoría cualificada</strong> (regla general): requiere al menos el <strong>55% de los Estados miembros</strong> (15 de 27) que representen al menos el <strong>65% de la población</strong> de la UE. La minoría de bloqueo debe incluir al menos cuatro Estados miembros.</p>
+    <p><strong>Unanimidad:</strong> para materias especialmente sensibles como fiscalidad, política exterior, revisión de los Tratados o adhesión de nuevos miembros.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="seccion" id="s5">
+    <h2>5. La Comisión Europea: composición, organización y funcionamiento</h2>
+    <p>La Comisión Europea se regula en los <strong>arts. 17 TUE y 244-250 TFUE</strong>. Es la institución que encarna el interés general de la Unión y actúa con plena independencia de los gobiernos nacionales.</p>
+
+    <h3>Composición</h3>
+    <p>La Comisión está compuesta actualmente por <strong>27 comisarios</strong> (un nacional de cada Estado miembro), incluidos su Presidente y el Alto Representante de la Unión (que es al mismo tiempo Vicepresidente de la Comisión).</p>
+
+    <h3>Nombramiento</h3>
+    <p>El procedimiento de nombramiento se desarrolla en varias fases: el <strong>Consejo Europeo</strong> propone, por mayoría cualificada y teniendo en cuenta el resultado de las elecciones al PE, un candidato a <strong>Presidente de la Comisión</strong>. El PE lo elige por mayoría de sus miembros. A continuación, el Consejo adopta, de común acuerdo con el Presidente electo, la lista de los demás comisarios. El conjunto del colegio debe ser aprobado mediante votación por el PE (<strong>investidura</strong>). Finalmente, el Consejo Europeo los nombra por mayoría cualificada. El mandato es de <strong>cinco años</strong>.</p>
+
+    <h3>Organización interna</h3>
+    <p>La Comisión actúa como <strong>órgano colegiado</strong> bajo la autoridad política de su Presidente. Cada comisario dirige una o varias <strong>Direcciones Generales (DG)</strong>, que son los servicios administrativos de la Comisión. Existen Vicepresidencias Ejecutivas para coordinar grupos de políticas prioritarias.</p>
+
+    <h3>Funciones</h3>
+    <p><strong>Iniciativa legislativa exclusiva:</strong> la Comisión tiene, en general, el monopolio de la iniciativa legislativa en el procedimiento ordinario. Salvo excepciones, el Consejo y el PE solo pueden legislar a partir de una propuesta de la Comisión.</p>
+    <p><strong>Guardiana de los Tratados:</strong> la Comisión vela por la aplicación del Derecho de la Unión. Puede iniciar un <strong>procedimiento de infracción</strong> contra los Estados miembros que incumplan el Derecho de la UE <span class="art">arts. 258-260 TFUE</span>, que puede desembocar en una demanda ante el Tribunal de Justicia e incluso en la imposición de multas.</p>
+    <p><strong>Ejecutiva:</strong> ejecuta el presupuesto de la UE y gestiona los programas de la Unión (fondos estructurales, Horizon, Erasmus+, etc.).</p>
+    <p><strong>Control de la competencia:</strong> la Comisión es la autoridad europea de competencia, con amplias facultades para prohibir concentraciones empresariales, investigar cárteles y controlar las ayudas de Estado.</p>
+    <p><strong>Responsabilidad política:</strong> la Comisión responde colectivamente ante el PE, que puede aprobar una moción de censura obligando a la dimisión en bloque de todos los comisarios.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="seccion" id="s6">
+    <h2>6. El Tribunal de Justicia de la Unión Europea</h2>
+    <p>El Tribunal de Justicia de la Unión Europea (TJUE) se regula en los <strong>arts. 19 TUE y 251-281 TFUE</strong>. Garantiza el respeto del Derecho en la interpretación y aplicación de los Tratados.</p>
+
+    <div class="alerta"><strong>Atención:</strong> El TJUE (sede en Luxemburgo, institución de la UE) es completamente distinto del Tribunal Europeo de Derechos Humanos — TEDH (sede en Estrasburgo, pertenece al Consejo de Europa, organización ajena a la UE).</div>
+
+    <h3>Estructura</h3>
+    <p>El TJUE comprende dos órganos jurisdiccionales:</p>
+    <p><strong>El Tribunal de Justicia</strong> (en sentido estricto): órgano supremo, compuesto por <strong>27 jueces</strong> (uno por Estado miembro) y <strong>11 abogados generales</strong>. Los abogados generales emiten conclusiones motivadas e imparciales sobre los asuntos que se les asignen. Actúa en Salas de 3 o 5 jueces, en <strong>Gran Sala</strong> (15 jueces) o en Pleno, según la importancia del asunto.</p>
+    <p><strong>El Tribunal General:</strong> compuesto actualmente por <strong>54 jueces</strong> (dos por Estado miembro). Conoce en primera instancia de los recursos directos interpuestos por particulares y empresas. Sus sentencias pueden ser recurridas en casación ante el Tribunal de Justicia.</p>
+    <p>Ambos tienen su sede en <strong>Luxemburgo</strong>. Los jueces y abogados generales son nombrados de común acuerdo por los Gobiernos para un mandato de <strong>seis años renovables</strong>.</p>
+
+    <h3>Principales procedimientos</h3>
+    <p><strong>Cuestión prejudicial</strong> <span class="art">art. 267 TFUE</span>: es el mecanismo más relevante en la práctica. Cuando un órgano jurisdiccional nacional tiene dudas sobre la interpretación o validez del Derecho de la UE, puede (y en última instancia, debe) plantear una cuestión prejudicial al TJUE. La respuesta vincula al tribunal nacional y, en la práctica, a todos los tribunales de los demás Estados miembros. Es el mecanismo que ha permitido el desarrollo del Derecho de la UE a través de sentencias fundamentales (Van Gend en Loos, Costa c. ENEL, Francovich, etc.).</p>
+    <p><strong>Recurso por incumplimiento</strong> <span class="art">arts. 258-260 TFUE</span>: la Comisión (o un Estado miembro) demanda ante el TJUE a un Estado que incumple el Derecho de la UE. Si el TJUE declara el incumplimiento y el Estado no lo corrige, puede imponerle una suma a tanto alzado y/o una multa coercitiva.</p>
+    <p><strong>Recurso de anulación</strong> <span class="art">art. 263 TFUE</span>: se impugna la legalidad de actos de las instituciones de la UE. Lo pueden interponer los Estados miembros, el PE, el Consejo y la Comisión sin necesidad de acreditar interés. Los particulares tienen legitimación más restringida.</p>
+    <p><strong>Recurso por omisión</strong> <span class="art">art. 265 TFUE</span>: cuando una institución de la UE incumple una obligación de actuar establecida en los Tratados.</p>
+    <p><strong>Recurso de casación:</strong> contra las sentencias del Tribunal General, ante el Tribunal de Justicia, limitado a cuestiones de Derecho.</p>
+  </div>
+
+  <div class="footer">Unión Europea · TUE y TFUE en versión consolidada · Tratado de Lisboa, en vigor desde el 1 de diciembre de 2009</div>
+</div>
+</body>
+</html>
