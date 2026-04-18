@@ -1,2 +1,2 @@
 # martillopl.github.io
-[Google](https://www.google.com)
+[Ing. Tec.](index.html)
