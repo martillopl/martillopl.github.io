@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 15 — Funcionamiento Electrónico del Sector Público y Administración Electrónica en Navarra</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.22);--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.20)}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2.5rem 1rem;line-height:1.8}
+  .page{max-width:740px;margin:0 auto}
+  .header{margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:.5px solid var(--bm)}
+  .tlabel{font-size:12px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+  h1{font-size:22px;font-weight:500;line-height:1.3;margin-bottom:8px}
+  .meta{font-size:13px;color:var(--t3)}
+  .meta a{color:var(--t2);text-decoration:none}
+  .meta a:hover{color:var(--t1)}
+  .indice{background:var(--bg2);border:.5px solid var(--bl);border-radius:var(--r2);padding:16px 20px;margin-bottom:2.5rem}
+  .itit{font-size:11px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+  .indice ol{padding-left:18px}
+  .indice li{font-size:13px;color:var(--t2);padding:3px 0}
+  .indice a{color:var(--t2);text-decoration:none}
+  .indice a:hover{color:var(--t1)}
+  .sec{margin-bottom:2.8rem}
+  h2{font-size:18px;font-weight:500;margin-bottom:1rem;padding-bottom:8px;border-bottom:.5px solid var(--bl)}
+  h3{font-size:15px;font-weight:500;margin:1.6rem 0 .6rem}
+  h4{font-size:14px;font-weight:500;margin:1.2rem 0 .4rem;color:var(--t2)}
+  p{font-size:15px;color:var(--t2);margin-bottom:1rem}
+  p:last-child{margin-bottom:0}
+  strong{font-weight:500;color:var(--t1)}
+  .art{display:inline-block;font-size:11px;font-weight:500;background:var(--bg2);border:.5px solid var(--bm);border-radius:20px;padding:1px 8px;color:var(--t3);vertical-align:middle;margin-left:4px}
+  ul{padding-left:20px;margin-bottom:1rem}
+  ul li{font-size:15px;color:var(--t2);padding:3px 0}
+  .divider{height:.5px;background:var(--bm);margin:2.5rem 0}
+  .nota{background:var(--bg2);border-left:2px solid var(--bm);padding:12px 16px;margin:1.2rem 0;font-size:13.5px;color:var(--t2);line-height:1.65}
+  .nota strong{color:var(--t1)}
+  .footer{margin-top:3rem;padding-top:1.2rem;border-top:.5px solid var(--bl);font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="tlabel">Tema 15</div>
+    <h1>Funcionamiento electrónico del sector público y Administración Electrónica en Navarra</h1>
+    <div class="meta">Ley 40/2015, de 1 de octubre (LRJSP) · Ley 39/2015, de 1 de octubre (LPAC) · LF 11/2019 · Decreto Foral 32/2021<br>
+      <a href="../index.html">Índice</a><br>
+      <a href="2_esquema_resumen.html">Esquema-resumen ></a>
+       | 
+      <a href="3_cuadro_comparativo.html">Cuadros comparativos >></a>
+    </div>
+  </div>
+  <div class="indice">
+    <div class="itit">Índice</div>
+    <ol>
+      <li><a href="#s1">Marco normativo y contexto</a></li>
+      <li><a href="#s2">Funcionamiento electrónico del sector público en la Ley 40/2015</a></li>
+      <li><a href="#s3">La sede electrónica y el punto de acceso general</a></li>
+      <li><a href="#s4">Identificación y firma electrónica de las Administraciones Públicas</a></li>
+      <li><a href="#s5">Identificación y firma electrónica de los ciudadanos</a></li>
+      <li><a href="#s6">El registro electrónico y el archivo electrónico</a></li>
+      <li><a href="#s7">Interoperabilidad y seguridad</a></li>
+      <li><a href="#s8">La Administración Electrónica en la CF de Navarra</a></li>
+      <li><a href="#s9">Instrumentos específicos de la Adm. Electrónica navarra</a></li>
+    </ol>
+  </div>
+
+  <!-- S1 -->
+  <div class="sec" id="s1">
+    <h2>1. Marco normativo y contexto</h2>
+    <p>La <strong>administración electrónica</strong> es el conjunto de medios, técnicas y procedimientos mediante los cuales las Administraciones Públicas desarrollan su actividad utilizando tecnologías de la información y la comunicación (TIC), tanto en sus relaciones internas como en sus relaciones con los ciudadanos y con otras Administraciones.</p>
+    <p>El marco normativo básico en España está constituido por dos leyes aprobadas simultáneamente el 1 de octubre de 2015:</p>
+    <ul>
+      <li><strong>Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas (LPAC)</strong>: regula las relaciones ad extra (Administración-ciudadanos), incluyendo los derechos y obligaciones en materia de comunicación electrónica, el registro electrónico y la tramitación electrónica de los procedimientos.</li>
+      <li><strong>Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público (LRJSP)</strong>: regula el funcionamiento electrónico del sector público en su Título II (arts. 38 a 53), incluyendo la sede electrónica, la identificación y firma electrónica de las Administraciones, el intercambio electrónico de datos y la infraestructura compartida.</li>
+    </ul>
+    <p>En el ámbito navarro, la regulación básica se complementa con la <strong>Ley Foral 11/2019, de 11 de marzo, de la Administración de la Comunidad Foral de Navarra</strong>, que dedica parte de su articulado a los medios electrónicos, y con el <strong>Decreto Foral 32/2021, de 14 de abril</strong>, sobre la administración electrónica en la Comunidad Foral de Navarra, que desarrolla de forma específica el marco técnico y organizativo de la administración digital navarra.</p>
+    <p>El trasfondo europeo lo proporcionan el <strong>Reglamento eIDAS (UE) 910/2014</strong> sobre identificación electrónica y servicios de confianza, y el <strong>Reglamento (UE) 2016/679 (RGPD)</strong> sobre protección de datos, que condicionan el marco jurídico de la administración electrónica en todos los Estados miembros.</p>
+  </div>
+
+  <!-- S2 -->
+  <div class="sec" id="s2">
+    <h2>2. Funcionamiento electrónico del sector público en la Ley 40/2015</h2>
+    <p>El <strong>Título II de la Ley 40/2015</strong> (arts. 38 a 53), denominado "Funcionamiento electrónico del sector público", establece el régimen jurídico del uso de los medios electrónicos en la organización interna y en las relaciones interadministrativas del sector público.</p>
+
+    <h3>Principios del funcionamiento electrónico</h3>
+    <p>El artículo 38 LRJSP establece los <strong>principios</strong> que rigen el uso de los medios electrónicos por las Administraciones Públicas:</p>
+    <ul>
+      <li><strong>Principio de neutralidad tecnológica</strong>: la regulación no debe condicionar a las Administraciones a utilizar una tecnología concreta; deben poder elegir libremente la tecnología más adecuada para cada función.</li>
+      <li><strong>Principio de adaptabilidad al progreso</strong>: el marco normativo debe poder adaptarse a la evolución tecnológica sin necesidad de reformas legislativas constantes.</li>
+      <li><strong>Principio de accesibilidad</strong>: los sistemas de información de las Administraciones deben ser accesibles para las personas con discapacidad y para las personas mayores, conforme a los estándares de accesibilidad reconocidos internacionalmente.</li>
+      <li><strong>Principio de usabilidad</strong>: las sedes electrónicas y los servicios digitales deben ser intuitivos y fáciles de usar para la ciudadanía.</li>
+      <li><strong>Principio de interoperabilidad</strong>: los sistemas de información de las distintas Administraciones deben ser compatibles y estar en condiciones de intercambiar datos entre sí, evitando que los ciudadanos deban aportar datos que ya obran en poder de alguna Administración.</li>
+      <li><strong>Principio de proporcionalidad</strong>: solo se exigirán las garantías e información estrictamente necesarias para garantizar la seguridad e integridad de los sistemas, sin imponer cargas desproporcionadas.</li>
+      <li><strong>Principio de protección de datos</strong>: el tratamiento de datos personales en el ámbito de la administración electrónica debe respetar la normativa de protección de datos (RGPD y LOPDGDD).</li>
+    </ul>
+
+    <h3>El uso obligatorio de medios electrónicos por las Administraciones</h3>
+    <p>La LRJSP establece que las Administraciones Públicas deben utilizar medios electrónicos en su funcionamiento interno, en las relaciones entre ellas y en la tramitación de los procedimientos administrativos. Este mandato tiene especial relevancia en las relaciones <strong>interadministrativas</strong>: las Administraciones Públicas están obligadas a relacionarse entre sí por medios electrónicos en todo caso, de modo que las comunicaciones entre ellas deben realizarse a través de redes y sistemas telemáticos, evitando el intercambio de documentos en papel.</p>
+  </div>
+
+  <!-- S3 -->
+  <div class="sec" id="s3">
+    <h2>3. La sede electrónica y el punto de acceso general</h2>
+
+    <h3>La sede electrónica</h3>
+    <p>La <strong>sede electrónica</strong> <span class="art">art. 38 LRJSP</span> es la dirección electrónica disponible para los ciudadanos a través de redes de telecomunicaciones cuya titularidad, gestión y administración corresponde a una Administración Pública o a un organismo público en el ejercicio de sus competencias. Es, en definitiva, la "oficina virtual" de la Administración en internet, con la misma validez jurídica que la sede física.</p>
+    <p>La sede electrónica presenta las siguientes <strong>características</strong>:</p>
+    <ul>
+      <li>Debe garantizar la <strong>seguridad de las comunicaciones</strong> mediante el uso de certificados reconocidos y conexiones cifradas (protocolo HTTPS).</li>
+      <li>Tiene <strong>dirección electrónica propia</strong> e identificable (URL), que debe estar publicada en el BOE o en el boletín oficial correspondiente.</li>
+      <li>La <strong>Administración es responsable</strong> de la integridad, veracidad y actualización de los contenidos e informaciones que se publican en ella.</li>
+      <li>Debe incluir los <strong>servicios electrónicos</strong> que permitan a los ciudadanos realizar trámites, presentar solicitudes, obtener información y recibir notificaciones.</li>
+      <li>Debe garantizar su disponibilidad permanente: acceso <strong>24 horas al día, 365 días al año</strong>, con las únicas interrupciones planificadas de mantenimiento que deban comunicarse con antelación.</li>
+    </ul>
+    <p>La sede electrónica cuenta con una <strong>sede asociada</strong> cuando una entidad dependiente publica sus trámites dentro de la sede principal de la entidad de la que depende.</p>
+
+    <h3>El punto de acceso general</h3>
+    <p>El <strong>punto de acceso general electrónico</strong> <span class="art">art. 38.2 LRJSP</span> es la puerta de entrada única del ciudadano a los servicios electrónicos del conjunto de la Administración General del Estado. A través de este punto, los ciudadanos pueden acceder a información, trámites y servicios de cualquier organismo de la AGE. En España, este punto de acceso es la plataforma <strong>administracion.gob.es</strong>.</p>
+    <p>Cada Administración Pública debe disponer de un punto de acceso general electrónico que funcione como portal centralizado de sus servicios digitales. En el caso de la Comunidad Foral de Navarra, este portal es <strong>navarra.es</strong>, desde el que se accede a todos los servicios digitales de la Administración foral.</p>
+
+    <h3>La sede electrónica como lugar de publicación oficial</h3>
+    <p>La sede electrónica es también el lugar desde el que se accede al <strong>tablón de edictos electrónico</strong> y a determinadas publicaciones oficiales con efectos jurídicos. La publicación en la sede electrónica del boletín oficial correspondiente tiene los mismos efectos jurídicos que la publicación en papel.</p>
+  </div>
+
+  <!-- S4 -->
+  <div class="sec" id="s4">
+    <h2>4. Identificación y firma electrónica de las Administraciones Públicas</h2>
+    <p>Las Administraciones Públicas utilizan sistemas específicos de identificación y firma electrónica distintos de los que usan los ciudadanos. La LRJSP regula esta materia en sus artículos 40 a 45.</p>
+
+    <h3>Sistemas de identificación de las Administraciones</h3>
+    <p>Las Administraciones Públicas pueden identificarse electrónicamente mediante los siguientes sistemas <span class="art">art. 40 LRJSP</span>:</p>
+    <ul>
+      <li><strong>Sello electrónico</strong>: sistema de identificación de los órganos y entidades de las Administraciones Públicas, basado en certificado electrónico reconocido. Es el equivalente al sello o estampilla de la Administración en el entorno digital. Se utiliza para autenticar actuaciones automatizadas (sin intervención directa de un funcionario).</li>
+      <li><strong>Firma electrónica del personal al servicio de las Administraciones Públicas</strong>: los empleados públicos utilizan su firma electrónica personal (basada en certificado reconocido, como el del DNI electrónico o los certificados de empleado público) para firmar los actos y documentos que dictan en el ejercicio de sus funciones.</li>
+    </ul>
+
+    <h3>La actuación administrativa automatizada</h3>
+    <p>La <strong>actuación administrativa automatizada</strong> <span class="art">art. 41 LRJSP</span> es la actividad de instrucción o resolución de procedimientos administrativos que se realiza de forma íntegra mediante sistemas de información, sin intervención directa de un empleado público. Es el caso, por ejemplo, de la resolución automática de solicitudes de certificados, de liquidaciones tributarias o de notificaciones. Para la actuación automatizada, las Administraciones utilizan el sello electrónico del órgano o la firma electrónica basada en certificado de dispositivo seguro.</p>
+
+    <h3>La firma electrónica del personal al servicio de las Administraciones</h3>
+    <p>Los empleados públicos utilizan sistemas de firma electrónica para la emisión de actos y documentos en el ejercicio de sus funciones <span class="art">art. 43 LRJSP</span>. Los sistemas admitidos son: el <strong>DNI electrónico</strong>, los <strong>certificados electrónicos reconocidos</strong> expedidos por prestadores de servicios de certificación, y los sistemas de firma electrónica corporativa que cada Administración establezca para sus empleados.</p>
+
+    <h3>El intercambio electrónico de datos entre Administraciones</h3>
+    <p>La LRJSP establece la obligación de las Administraciones de intercambiar datos entre sí por medios electrónicos. Las plataformas de intermediación de datos (como la <strong>Plataforma de Intermediación de Datos del Estado</strong>) permiten que una Administración consulte directamente los datos que otra Administración tiene sobre un ciudadano, evitando que este deba aportar documentos que ya obran en poder de alguna Administración.</p>
+  </div>
+
+  <!-- S5 -->
+  <div class="sec" id="s5">
+    <h2>5. Identificación y firma electrónica de los ciudadanos</h2>
+    <p>La LPAC y la LRJSP regulan conjuntamente los sistemas de identificación y firma electrónica que los ciudadanos pueden utilizar en sus relaciones con las Administraciones Públicas.</p>
+
+    <h3>Sistemas de identificación</h3>
+    <p>Los ciudadanos pueden identificarse ante las Administraciones Públicas mediante <span class="art">art. 9 LPAC</span>:</p>
+    <ul>
+      <li><strong>DNI electrónico (DNIe)</strong>: el documento nacional de identidad con chip electrónico que incorpora un certificado de identidad reconocido, que permite la identificación del titular en el entorno digital.</li>
+      <li><strong>Certificados electrónicos reconocidos o cualificados</strong>: emitidos por prestadores de servicios de certificación acreditados conforme al Reglamento eIDAS.</li>
+      <li><strong>Sistemas de clave concertada</strong>: sistemas de usuario y contraseña, o sistemas de código de un solo uso (OTP), que la Administración puede utilizar para procedimientos de baja seguridad.</li>
+      <li><strong>Cualquier otro sistema que las Administraciones consideren válido</strong>, como la Cl@ve, el sistema de identificación electrónica del Estado.</li>
+    </ul>
+
+    <h3>El sistema Cl@ve</h3>
+    <p><strong>Cl@ve</strong> es el sistema de identificación electrónica centralizado del Estado español para las relaciones de los ciudadanos con las Administraciones Públicas. Integra distintos mecanismos de identificación en una plataforma única, ofreciendo dos modalidades: <strong>Cl@ve PIN</strong> (sistema de contraseña de un solo uso, de validez limitada, para usuarios ocasionales) y <strong>Cl@ve permanente</strong> (usuario y contraseña de validez duradera, reforzada con un segundo factor de autenticación). Cl@ve está homologado conforme al Reglamento eIDAS y es reconocido en toda la Unión Europea.</p>
+
+    <h3>Sistemas de firma electrónica</h3>
+    <p>Para firmar documentos y solicitudes en sus relaciones con la Administración, los ciudadanos pueden utilizar:</p>
+    <ul>
+      <li><strong>Firma electrónica reconocida o cualificada</strong>: basada en certificado reconocido expedido por prestador acreditado; tiene los mismos efectos jurídicos que la firma manuscrita.</li>
+      <li><strong>Firma electrónica avanzada</strong>: permite identificar al firmante y detectar cualquier alteración posterior de los datos firmados, aunque con menor nivel de garantía que la firma reconocida.</li>
+      <li><strong>Sistemas de firma mediante clave concertada</strong>: válidos para trámites de baja o media exigencia de seguridad, cuando la Administración así lo admita.</li>
+    </ul>
+
+    <h3>Sujetos obligados a relacionarse electrónicamente con la Administración</h3>
+    <p>La LPAC establece que determinados sujetos están <strong>obligados</strong> a relacionarse electrónicamente con la Administración en todo caso <span class="art">art. 14.2 LPAC</span>:</p>
+    <ul>
+      <li>Las <strong>personas jurídicas</strong>.</li>
+      <li>Las <strong>entidades sin personalidad jurídica</strong>.</li>
+      <li>Quienes ejerzan una actividad profesional para la que se requiera <strong>colegiación obligatoria</strong>, para los trámites relacionados con dicha actividad.</li>
+      <li>Quienes representen a un interesado que esté obligado a relacionarse electrónicamente.</li>
+      <li>Los <strong>empleados públicos</strong>, para los trámites realizados en razón de su condición de empleado público.</li>
+    </ul>
+    <p>Para los demás ciudadanos (personas físicas no incluidas en los supuestos anteriores), la relación electrónica es un derecho, no una obligación, aunque la Administración debe fomentarla.</p>
+  </div>
+
+  <!-- S6 -->
+  <div class="sec" id="s6">
+    <h2>6. El registro electrónico y el archivo electrónico</h2>
+
+    <h3>El registro electrónico</h3>
+    <p>El <strong>registro electrónico</strong> <span class="art">art. 16 LPAC</span> es el instrumento a través del cual los ciudadanos y las Administraciones presentan documentos y solicitudes en soporte electrónico. La LPAC establece que cada Administración dispondrá de un <strong>registro electrónico general</strong>, en el que se hará el correspondiente asiento de todo documento que sea presentado o que se reciba. Los registros electrónicos de todos los organismos y entidades vinculadas o dependientes se integrarán en el registro electrónico general de la Administración correspondiente.</p>
+    <p>El registro electrónico tiene las siguientes características:</p>
+    <ul>
+      <li>Es accesible <strong>24 horas al día, todos los días del año</strong>, a través de la sede electrónica.</li>
+      <li>El <strong>cómputo de plazos</strong> se rige por la fecha y hora oficial de la sede electrónica en que esté integrado el registro, siendo la presentación en día inhábil equivalente a la realizada el primer día hábil siguiente a efectos de plazos, salvo que el plazo deba computarse en días naturales.</li>
+      <li>El registro electrónico emite automáticamente un <strong>recibo de presentación</strong> electrónico que acredita la fecha y hora de la presentación del documento.</li>
+    </ul>
+
+    <h3>El archivo electrónico de documentos</h3>
+    <p>La LPAC establece que las Administraciones Públicas deben mantener un <strong>archivo electrónico único</strong> de los documentos electrónicos que correspondan a procedimientos finalizados. Los documentos electrónicos deben conservarse en un formato que permita garantizar la <strong>autenticidad, integridad, confidencialidad, disponibilidad y trazabilidad</strong> de los mismos a lo largo del tiempo. Para garantizar estas propiedades, los documentos electrónicos se sellan electrónicamente con metadatos que certifican su autenticidad e integridad, y pueden utilizarse técnicas de resellado periódico para mantener la validez de la firma a lo largo del tiempo.</p>
+
+    <h3>La digitalización de documentos</h3>
+    <p>La LPAC permite la <strong>digitalización</strong> de los documentos en papel aportados por los ciudadanos, otorgando a las copias digitalizadas la misma validez jurídica que los originales, siempre que se garantice su autenticidad mediante la firma o sello electrónico del órgano competente. La digitalización auténtica permite reducir drásticamente el uso del papel en la tramitación administrativa.</p>
+  </div>
+
+  <!-- S7 -->
+  <div class="sec" id="s7">
+    <h2>7. Interoperabilidad y seguridad</h2>
+
+    <h3>El Esquema Nacional de Interoperabilidad (ENI)</h3>
+    <p>El <strong>Esquema Nacional de Interoperabilidad (ENI)</strong>, aprobado por el Real Decreto 4/2010, de 8 de enero, establece los criterios y recomendaciones de seguridad, normalización y conservación de la información, de los formatos y de las aplicaciones que deben ser tenidos en cuenta por las Administraciones Públicas para asegurar un adecuado nivel de interoperabilidad organizativa, semántica y técnica de los datos, informaciones y servicios que gestionen. El ENI garantiza que los sistemas de información de las distintas Administraciones puedan intercambiar datos de forma coherente y segura.</p>
+    <p>El ENI establece principios básicos de interoperabilidad: la interoperabilidad debe ser <strong>multidimensional</strong> (organizativa, semántica y técnica), debe garantizarse la conservación de la información a largo plazo, y los formatos de los documentos electrónicos deben ser abiertos y estandarizados.</p>
+
+    <h3>El Esquema Nacional de Seguridad (ENS)</h3>
+    <p>El <strong>Esquema Nacional de Seguridad (ENS)</strong>, aprobado por el Real Decreto 311/2022, de 3 de mayo (que sustituyó al anterior RD 3/2010), establece la política de seguridad en la utilización de medios electrónicos por las Administraciones Públicas. Su finalidad es crear las condiciones necesarias de confianza en el uso de los medios electrónicos, a través de medidas para garantizar la seguridad de los sistemas, los datos, las comunicaciones y los servicios electrónicos.</p>
+    <p>El ENS clasifica los sistemas de información en tres categorías de seguridad —<strong>básica, media y alta</strong>— en función del impacto que tendría un incidente de seguridad sobre los servicios prestados o los datos tratados. En función de la categoría, se aplican medidas de seguridad más o menos exigentes.</p>
+
+    <h3>Las plataformas de intermediación de datos</h3>
+    <p>La interoperabilidad entre Administraciones se hace efectiva mediante las <strong>plataformas de intermediación de datos</strong>, que permiten el intercambio electrónico de información entre Administraciones sin que el ciudadano deba aportarla de nuevo. La principal es la <strong>Plataforma de Intermediación de Datos (PID)</strong> del Ministerio de Hacienda y Función Pública, que integra servicios de consulta de datos de distintos organismos (Hacienda, Seguridad Social, DGT, Catastro, Registro Civil, etc.).</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- S8 -->
+  <div class="sec" id="s8">
+    <h2>8. La Administración Electrónica en la Comunidad Foral de Navarra</h2>
+
+    <h3>Marco normativo navarro</h3>
+    <p>La administración electrónica en la Comunidad Foral de Navarra se regula fundamentalmente por:</p>
+    <ul>
+      <li>La <strong>Ley Foral 11/2019, de 11 de marzo, de la Administración de la Comunidad Foral de Navarra</strong>, que en su Título V recoge las disposiciones sobre relaciones electrónicas de la Administración foral con los ciudadanos y con otras Administraciones.</li>
+      <li>El <strong>Decreto Foral 32/2021, de 14 de abril, sobre la administración electrónica en la Comunidad Foral de Navarra</strong>, que desarrolla de forma específica la organización y funcionamiento de la administración digital navarra.</li>
+      <li>El <strong>Decreto Foral 75/2011, de 30 de mayo</strong>, sobre el registro electrónico del Gobierno de Navarra (parcialmente en vigor en lo que no ha sido sustituido por normativa posterior).</li>
+    </ul>
+    <p>La Comunidad Foral de Navarra ha sido pionera en España en el impulso de la administración electrónica, y cuenta con una infraestructura técnica y organizativa avanzada para la tramitación electrónica de sus procedimientos.</p>
+
+    <h3>Principios específicos de la Adm. Electrónica navarra</h3>
+    <p>La LF 11/2019 establece, en sintonía con la LPAC y la LRJSP, los principios que rigen la administración electrónica en Navarra:</p>
+    <ul>
+      <li><strong>Derecho a la relación electrónica</strong>: los ciudadanos tienen derecho a relacionarse con la Administración foral por medios electrónicos.</li>
+      <li><strong>Obligación de relación electrónica</strong> para determinados sujetos: personas jurídicas, entes sin personalidad, profesionales colegiados y empleados públicos.</li>
+      <li><strong>Digitalización por defecto</strong>: los procedimientos administrativos deben diseñarse y tramitarse en soporte electrónico desde su inicio.</li>
+      <li><strong>No aportación de datos y documentos</strong>: los ciudadanos no tienen que aportar datos ni documentos que ya obren en poder de la Administración foral o de cualquier otra Administración.</li>
+    </ul>
+  </div>
+
+  <!-- S9 -->
+  <div class="sec" id="s9">
+    <h2>9. Instrumentos específicos de la Administración Electrónica navarra</h2>
+
+    <h3>La sede electrónica del Gobierno de Navarra</h3>
+    <p>La <strong>sede electrónica del Gobierno de Navarra</strong> es el punto de acceso digital centralizado a los servicios y trámites de la Administración foral, accesible desde el portal <strong>navarra.es</strong>. Desde la sede electrónica, los ciudadanos pueden acceder al catálogo de trámites, presentar solicitudes, consultar el estado de sus expedientes, recibir notificaciones y acceder a todos los servicios digitales de la Comunidad Foral. La sede electrónica del Gobierno de Navarra incorpora el <strong>tablón electrónico oficial</strong> y publica el <strong>Boletín Oficial de Navarra (BON)</strong> en formato electrónico con plena validez jurídica.</p>
+
+    <h3>El registro electrónico del Gobierno de Navarra</h3>
+    <p>El <strong>registro electrónico general del Gobierno de Navarra</strong> es el instrumento de recepción y tramitación electrónica de documentos y solicitudes dirigidos a la Administración foral. Está disponible las 24 horas del día, los 365 días del año, a través de la sede electrónica. El registro emite automáticamente un recibo de presentación electrónico con fecha y hora oficial. Los documentos presentados en el registro electrónico fuera del horario de los días hábiles se entienden presentados al inicio del siguiente día hábil, a efectos del cómputo de plazos, salvo que el plazo sea en días naturales.</p>
+
+    <h3>La Carpeta Ciudadana de Navarra</h3>
+    <p>La <strong>Carpeta Ciudadana de Navarra</strong> es el espacio personal y privado del ciudadano en la sede electrónica del Gobierno de Navarra, accesible mediante identificación electrónica. Desde la Carpeta Ciudadana, el ciudadano puede consultar el estado de sus expedientes y trámites en curso con la Administración foral, acceder a sus notificaciones electrónicas, descargar los documentos y resoluciones que le han sido emitidos, y gestionar sus datos personales en poder de la Administración foral.</p>
+
+    <h3>La notificación electrónica en Navarra</h3>
+    <p>La <strong>notificación electrónica</strong> es el sistema preferente de notificación de la Administración foral a los ciudadanos. Las notificaciones electrónicas se realizan a través del <strong>Sistema de Notificaciones Electrónicas de Navarra</strong>, integrado en la sede electrónica. Los sujetos obligados a relacionarse electrónicamente con la Administración reciben sus notificaciones de forma exclusivamente electrónica. Para el resto de ciudadanos, la Administración puede elegir entre la notificación electrónica y la notificación en papel. La notificación electrónica se entenderá practicada en el momento en que el interesado acceda al contenido del acto notificado; si no accede en el plazo de diez días naturales desde que estuvo disponible, la notificación se entenderá rechazada.</p>
+
+    <h3>El sistema de firma electrónica y Autofirma en Navarra</h3>
+    <p>La Administración foral utiliza la aplicación <strong>AutoFirma</strong> (desarrollada por el Ministerio de Hacienda y Función Pública) para la firma electrónica de documentos desde el navegador, permitiendo al ciudadano firmar electrónicamente con su DNIe o certificado reconocido sin necesidad de instalar plugins adicionales. Los empleados públicos de la Administración foral utilizan los certificados de empleado público emitidos por la Fábrica Nacional de Moneda y Timbre (FNMT) o por la propia Administración foral.</p>
+
+    <h3>La plataforma de tramitación electrónica: PLATEA y Gestiona</h3>
+    <p>La Administración de la Comunidad Foral de Navarra utiliza <strong>PLATEA</strong> como plataforma integral de tramitación electrónica de los procedimientos administrativos. PLATEA integra los distintos componentes de la tramitación electrónica: el registro de entrada y salida, la gestión del expediente electrónico, la firma electrónica, las notificaciones y el archivo electrónico. Adicionalmente, <strong>Gestiona</strong> es la plataforma de gestión documental y administración electrónica utilizada por algunas entidades locales navarras que se han adherido a la solución compartida ofrecida por el Gobierno de Navarra.</p>
+
+    <h3>La interoperabilidad de la Administración foral navarra</h3>
+    <p>La Administración foral de Navarra está conectada a las <strong>plataformas de intermediación de datos</strong> del Estado (PID) y comparte datos con otras Administraciones a través del <strong>nodo de interoperabilidad navarro</strong>. Esto permite que la Administración foral consulte directamente datos de otras Administraciones (como datos fiscales de la Agencia Tributaria del Estado, datos de empadronamiento, situaciones de incapacidad laboral de la Seguridad Social, etc.) sin necesidad de que el ciudadano los aporte. Del mismo modo, la Agencia Tributaria de Navarra (ATN) comparte datos con otras Administraciones en el ámbito de sus competencias tributarias forales.</p>
+
+    <h3>El Esquema Navarro de Seguridad</h3>
+    <p>La Comunidad Foral de Navarra aplica su propio marco de seguridad en el ámbito de la administración electrónica, alineado con el Esquema Nacional de Seguridad (ENS) estatal, pero adaptado a las especificidades de la organización y los sistemas de información forales. El <strong>Centro de Seguridad TIC de Navarra</strong> (CSI) es el organismo responsable de la ciberseguridad de los sistemas de información de la Administración foral, velando por la protección de los datos y la continuidad de los servicios digitales.</p>
+
+    <h3>La factura electrónica</h3>
+    <p>La Comunidad Foral de Navarra está adherida al sistema de <strong>factura electrónica</strong>, siendo obligatoria la presentación de facturas en formato electrónico (formato Facturae) para todos los proveedores del sector público foral a partir de los umbrales establecidos. La recepción de facturas electrónicas se realiza a través del <strong>Punto General de Entrada de Facturas Electrónicas de Navarra</strong> (PFENA), integrado con el sistema estatal FACe (Punto general de entrada de facturas de la AGE).</p>
+  </div>
+
+  <div class="footer">Ley 40/2015 (LRJSP) · Ley 39/2015 (LPAC) · LF 11/2019 · DF 32/2021 · ENI (RD 4/2010) · ENS (RD 311/2022) · Reglamento eIDAS (UE) 910/2014</div>
+</div>
+</body>
+</html>

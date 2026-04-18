@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuadro comparativo y Test — LF 13/2007 Hacienda Pública de Navarra (Tema 13)</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.20);--gbg:#eaf3de;--gbr:#639922;--gtx:#27500a;--rbg:#fcebeb;--rbr:#e24b4a;--rtx:#501313;--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.18);--gbg:#173404;--gbr:#3b6d11;--gtx:#c0dd97;--rbg:#501313;--rbr:#a32d2d;--rtx:#f7c1c1}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2rem 1rem}
+  .page{max-width:980px;margin:0 auto}
+  h1{font-size:20px;font-weight:500;margin-bottom:4px}
+  h2{font-size:17px;font-weight:500;margin:2.5rem 0 1rem;padding-bottom:8px;border-bottom:.5px solid var(--bm)}
+  .sub{font-size:13px;color:var(--t3);margin-bottom:28px}
+  .sub a{color:var(--t2);text-decoration:none}
+  .sub a:hover{color:var(--t1)}
+  .wrap{overflow-x:auto;background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r2);margin-bottom:16px}
+  table{width:100%;border-collapse:collapse;font-size:12px;min-width:560px}
+  thead tr{background:var(--bg2)}
+  th{font-weight:500;font-size:11.5px;color:var(--t2);text-align:left;padding:10px 12px;border-bottom:.5px solid var(--bm);white-space:nowrap}
+  td{padding:10px 12px;border-bottom:.5px solid var(--bl);vertical-align:top;line-height:1.6;color:var(--t2)}
+  tr:last-child td{border-bottom:none}
+  tr:hover td{background:var(--bg2)}
+  .dest{font-weight:500;color:var(--t1);font-size:12px}
+  .in{font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap;display:inline-block}
+  .fa{background:#EEEDFE;color:#3C3489}.fb{background:#E6F1FB;color:#0C447C}.fc{background:#E1F5EE;color:#085041}.fd{background:#FAEEDA;color:#633806}.fe{background:#FAECE7;color:#712B13}
+  .m1{background:#EAF3DE;color:#27500A}.m2{background:#FAEEDA;color:#633806}.m3{background:#FAECE7;color:#712B13}.m4{background:#E6F1FB;color:#0C447C}.m5{background:#EEEDFE;color:#3C3489}
+  @media(prefers-color-scheme:dark){.fa{background:#3C3489;color:#CECBF6}.fb{background:#0C447C;color:#B5D4F4}.fc{background:#085041;color:#9FE1CB}.fd{background:#633806;color:#FAC775}.fe{background:#712B13;color:#F5C4B3}.m1{background:#27500A;color:#C0DD97}.m2{background:#633806;color:#FAC775}.m3{background:#712B13;color:#F5C4B3}.m4{background:#0C447C;color:#B5D4F4}.m5{background:#3C3489;color:#CECBF6}}
+  .marc{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;font-size:13px;color:var(--t2)}
+  .sv{font-weight:500;color:var(--t1)}
+  .br{font-size:12px;padding:5px 14px;border:.5px solid var(--bm);border-radius:20px;background:transparent;color:var(--t2);cursor:pointer}
+  .br:hover{background:var(--bg2)}
+  .pc{background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r2);padding:18px;margin-bottom:12px}
+  .num{font-size:11px;font-weight:500;color:var(--t3);margin-bottom:6px}
+  .enun{font-size:14px;font-weight:500;margin-bottom:14px;line-height:1.55;color:var(--t1)}
+  .opts{display:flex;flex-direction:column;gap:7px}
+  .opt{display:flex;align-items:flex-start;gap:10px;padding:9px 13px;border:.5px solid var(--bl);border-radius:var(--r1);cursor:pointer;font-size:13px;background:var(--bg2);user-select:none;line-height:1.5;transition:border-color .15s;color:var(--t1)}
+  .opt:hover{border-color:var(--bm)}
+  .opt.ok{background:var(--gbg);border-color:var(--gbr);color:var(--gtx)}
+  .opt.ko{background:var(--rbg);border-color:var(--rbr);color:var(--rtx)}
+  .opt.off{cursor:default;pointer-events:none}
+  .let{font-weight:500;min-width:16px;flex-shrink:0}
+  .exp{font-size:12.5px;margin-top:12px;padding:10px 13px;color:var(--t2);background:var(--bg2);border-left:2px solid var(--bm);line-height:1.65;display:none}
+  .exp.v{display:block}
+  .footer{margin-top:24px;font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>LF 13/2007 — Hacienda Pública de Navarra</h1>
+  <p class="sub">Tema 13 · Cuadro comparativo de fases de ejecución y modificaciones presupuestarias · Test interactivo<br>
+    <a href="../index.html">Índice</a><br>
+    <a href="1_texto_explicativo.html"><< Texto completo</a>
+     | 
+    <a href="2_esquema_resumen.html">< Esquema-resumen</a>
+  </p>
+
+  <h2>Fases de ejecución del presupuesto de gastos</h2>
+  <div class="wrap">
+    <table>
+      <thead><tr><th>Fase</th><th>Denominación</th><th>Concepto</th><th>¿Genera obligación frente a terceros?</th><th>Requisito previo</th></tr></thead>
+      <tbody>
+        <tr><td><span class="in fa">A</span></td><td>Autorización / Aprobación</td><td>El órgano competente decide destinar un crédito presupuestario a una actuación concreta y reserva el crédito</td><td>No — es una reserva interna de crédito</td><td>Existencia de crédito presupuestario suficiente y adecuado</td></tr>
+        <tr><td><span class="in fb">D</span></td><td>Compromiso / Disposición</td><td>La Administración contrae una obligación jurídica con un tercero (contratista, beneficiario de subvención…)</td><td>Sí — vincula jurídicamente a la Administración con el tercero</td><td>Autorización (fase A) previa</td></tr>
+        <tr><td><span class="in fc">O</span></td><td>Reconocimiento de la obligación</td><td>La Administración verifica que el acreedor ha cumplido sus condiciones (entrega, servicio, actividad) y reconoce la obligación de pago</td><td>Sí — nace definitivamente el deber de pago en el debe del presupuesto</td><td>Compromiso (fase D) previo y acreditación del cumplimiento por el acreedor</td></tr>
+        <tr><td><span class="in fd">P</span></td><td>Ordenación del pago</td><td>Orden de la autoridad competente al Tesoro de Navarra para que efectúe el pago de la obligación reconocida</td><td>Inicia el proceso de pago material</td><td>Reconocimiento de la obligación (fase O) previo</td></tr>
+        <tr><td><span class="in fe">Pago material</span></td><td>Pago efectivo</td><td>Transferencia efectiva de los fondos al acreedor con cargo a la cuenta del Tesoro de Navarra</td><td>Extingue la obligación</td><td>Ordenación del pago (fase P) previa</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:12px;color:var(--t2);margin-bottom:24px;padding:8px 12px;background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r1)">Las fases <strong>A + D</strong> pueden acumularse en un único acto (<strong>AD</strong>) y las fases <strong>O + P</strong> también pueden acumularse (<strong>OP</strong>) en los supuestos previstos por la normativa de ejecución presupuestaria.</p>
+
+  <h2>Modificaciones presupuestarias — quién las autoriza</h2>
+  <div class="wrap">
+    <table>
+      <thead><tr><th>Modalidad</th><th>Supuesto</th><th>Órgano que autoriza</th><th>Particularidades</th></tr></thead>
+      <tbody>
+        <tr><td><span class="in m1">Crédito extraordinario</span></td><td>Necesidad urgente e inaplazable sin consignación en el presupuesto</td><td><strong>Parlamento de Navarra</strong> — mediante ley foral</td><td>Requiere financiación: nuevos ingresos o baja en otro crédito</td></tr>
+        <tr><td><span class="in m1">Suplemento de crédito</span></td><td>Crédito insuficiente para atender una obligación determinada</td><td><strong>Parlamento de Navarra</strong> — mediante ley foral</td><td>Requiere financiación análoga al crédito extraordinario</td></tr>
+        <tr><td><span class="in m2">Ampliación de crédito</span></td><td>Partidas predeterminadas en la ley de presupuestos (gastos de personal, deuda…)</td><td>Automática — sin autorización expresa</td><td>Solo para las partidas expresamente declaradas ampliables por la ley de presupuestos</td></tr>
+        <tr><td><span class="in m3">Transferencia entre capítulos</span></td><td>Traslado de crédito de un capítulo a otro distinto</td><td><strong>Gobierno de Navarra</strong></td><td>Existen límites y restricciones: no pueden financiar aumentos de retribuciones ni cubrir créditos declarados insuficientes por el Parlamento</td></tr>
+        <tr><td><span class="in m3">Transferencia dentro del mismo capítulo</span></td><td>Traslado de crédito dentro del mismo capítulo presupuestario</td><td><strong>Consejero/a de Hacienda</strong></td><td>Procedimiento más ágil que la transferencia entre capítulos</td></tr>
+        <tr><td><span class="in m4">Generación de crédito</span></td><td>Ingresos no previstos o superiores a los previstos de naturaleza no tributaria</td><td><strong>Gobierno de Navarra</strong> o el Consejero según cuantía</td><td>Los nuevos créditos quedan vinculados a los ingresos que los generan</td></tr>
+        <tr><td><span class="in m5">Incorporación de crédito</span></td><td>Remanentes de crédito no utilizados al cierre del ejercicio</td><td><strong>Gobierno de Navarra</strong></td><td>Solo en supuestos tasados: créditos con financiación afectada, créditos comprometidos no pagados, inversiones con plurianualidad declarada</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Test interactivo — 10 preguntas tipo test</h2>
+  <div class="marc">
+    <span>Respuestas correctas: <span class="sv" id="sc">0</span> / <span id="tot"></span></span>
+    <button class="br" onclick="rst()">Reiniciar test</button>
+  </div>
+  <div id="qq"></div>
+  <p class="footer">Ley Foral 13/2007, de 4 de abril, de la Hacienda Pública de Navarra · BON núm. 51, de 27 de abril de 2007</p>
+</div>
+<script>
+const QQ=[
+  {e:"¿Qué fase de ejecución del presupuesto de gastos supone el primer acto formal por el que se reserva el crédito para una actuación concreta, sin generar obligación frente a terceros?",o:["Fase D — Compromiso","Fase O — Reconocimiento de la obligación","Fase A — Autorización o Aprobación","Fase P — Ordenación del pago"],c:2,x:"La fase A (Autorización o Aprobación) es el primer acto formal de ejecución del presupuesto de gastos. Implica la reserva del crédito presupuestario para una finalidad concreta, pero no crea ninguna obligación jurídica frente a terceros. Requiere que exista crédito presupuestario suficiente y adecuado."},
+  {e:"¿En qué fase de ejecución del presupuesto nace definitivamente la obligación de pago a favor del acreedor?",o:["Fase A — Autorización","Fase D — Compromiso","Fase O — Reconocimiento de la obligación","Fase P — Ordenación del pago"],c:2,x:"La fase O (Reconocimiento de la obligación) es aquella en que la Administración verifica que el acreedor ha cumplido las condiciones establecidas (ha entregado el bien, prestado el servicio o realizado la actividad subvencionada) y, en consecuencia, reconoce la existencia de la obligación de pago. Es en esta fase cuando nace definitivamente el deber de pago en el debe del presupuesto."},
+  {e:"¿Qué modificación presupuestaria requiere necesariamente aprobación del Parlamento de Navarra mediante ley foral?",o:["La ampliación de crédito","La transferencia de crédito entre capítulos","El crédito extraordinario y el suplemento de crédito","La generación de crédito por ingresos no previstos"],c:2,x:"Los créditos extraordinarios (cuando no existe consignación presupuestaria) y los suplementos de crédito (cuando el crédito es insuficiente) requieren aprobación por el Parlamento de Navarra mediante ley foral. Las demás modificaciones (ampliaciones, transferencias, generaciones e incorporaciones) pueden autorizarlas el Gobierno o el Consejero de Hacienda según los casos."},
+  {e:"¿Antes de qué fecha debe presentarse el proyecto de ley de Presupuestos Generales de Navarra ante el Parlamento de Navarra?",o:["Antes del 1 de septiembre del año anterior","Antes del 1 de octubre del año anterior","Antes del 1 de noviembre del año anterior","Antes del 15 de diciembre del año anterior"],c:1,x:"La LFHPN establece que el proyecto de ley de Presupuestos Generales de Navarra debe presentarse ante el Parlamento de Navarra antes del 1 de octubre del año anterior al que deba entrar en vigor, para permitir su debate y tramitación parlamentaria antes del inicio del ejercicio."},
+  {e:"¿Qué ocurre si los Presupuestos Generales de Navarra no son aprobados por el Parlamento antes del 31 de diciembre del año anterior?",o:["El Gobierno puede aprobar un presupuesto provisional por decreto foral","Los presupuestos del ejercicio anterior se prorrogan automáticamente","Se convocan elecciones automáticamente al Parlamento de Navarra","El Gobierno debe presentar un nuevo proyecto de presupuestos en un plazo de 30 días"],c:1,x:"Si los Presupuestos Generales de Navarra no son aprobados por el Parlamento antes del 31 de diciembre, se prorrogan automáticamente los del ejercicio anterior con sus créditos iniciales, hasta la aprobación de los nuevos. La prórroga tiene carácter automático y no requiere acto formal del Gobierno ni del Parlamento."},
+  {e:"¿Qué órgano ejerce el control interno de la actividad económico-financiera de la Comunidad Foral de Navarra?",o:["La Cámara de Comptos de Navarra","El Tribunal de Cuentas del Estado","La Intervención General de Navarra","El Consejo de Navarra"],c:2,x:"El control interno de la actividad económico-financiera de la Comunidad Foral corresponde a la Intervención General de Navarra. Sus funciones son la función interventora (control previo de legalidad), la auditoría pública (verificación posterior) y la llevanza de la contabilidad pública foral. La Cámara de Comptos ejerce el control externo, y el Consejo de Navarra es el órgano consultivo."},
+  {e:"¿Qué órgano ejerce el control externo de la gestión económico-financiera de la Comunidad Foral de Navarra?",o:["La Intervención General de Navarra","El Tribunal de Cuentas del Estado","La Cámara de Comptos de Navarra","El Departamento de Economía y Hacienda"],c:2,x:"El control externo de la gestión económico-financiera de la Comunidad Foral corresponde a la Cámara de Comptos de Navarra, equivalente al Tribunal de Cuentas en el ámbito estatal. La Cámara fiscaliza la cuenta general elaborada por la Intervención General y eleva su informe de fiscalización al Parlamento de Navarra."},
+  {e:"¿Cuál de los siguientes caracteres NO corresponde a los bienes de dominio público de la Comunidad Foral de Navarra?",o:["Inalienabilidad","Imprescriptibilidad","Inembargabilidad","Alienabilidad"],c:3,x:"Los bienes de dominio público son inalienables (no pueden venderse), imprescriptibles (no pueden ser adquiridos por prescripción) e inembargables (no pueden ser objeto de embargo). La alienabilidad es una característica de los bienes de dominio privado o patrimonio privado de la Comunidad Foral, que sí pueden transmitirse."},
+  {e:"¿Qué tipo de clasificación presupuestaria responde a la pregunta 'para qué se gasta' en los Presupuestos Generales de Navarra?",o:["Clasificación orgánica","Clasificación funcional o por programas","Clasificación económica","Clasificación territorial"],c:1,x:"La clasificación funcional o por programas responde a la pregunta 'para qué se gasta', organizando el presupuesto según las funciones y programas de actuación pública (sanidad, educación, infraestructuras, bienestar social…). La clasificación orgánica responde a 'quién gasta' (departamentos), y la clasificación económica a 'cómo se gasta' (capítulos 1 a 9)."},
+  {e:"¿Qué fase de ejecución del presupuesto vincula jurídicamente a la Administración foral con un tercero mediante la contracción de una obligación?",o:["Fase A — Autorización","Fase D — Compromiso o Disposición","Fase O — Reconocimiento de la obligación","Fase P — Ordenación del pago"],c:1,x:"La fase D (Compromiso o Disposición) es el acto mediante el cual la Administración contrae una obligación jurídica con un tercero (contratista, beneficiario de una subvención, etc.). Es el acto que vincula jurídicamente a la Administración con el tercero, y debe apoyarse en una autorización previa (fase A)."}
+];
+let R={},A=0;
+function render(){
+  document.getElementById('tot').textContent=QQ.length;
+  const c=document.getElementById('qq');c.innerHTML='';
+  QQ.forEach((p,i)=>{
+    const L=['A','B','C','D'],d=document.createElement('div');
+    d.className='pc';
+    d.innerHTML=`<div class="num">Pregunta ${i+1} de ${QQ.length}</div><div class="enun">${p.e}</div><div class="opts" id="o${i}">${p.o.map((o,j)=>`<div class="opt" onclick="ans(${i},${j})"><span class="let">${L[j]}</span><span>${o}</span></div>`).join('')}</div><div class="exp" id="x${i}">${p.x}</div>`;
+    c.appendChild(d);
+  });
+  document.getElementById('sc').textContent=0;
+}
+function ans(i,j){
+  if(R[i]!==undefined)return;R[i]=j;
+  const c=QQ[i].c;
+  document.querySelectorAll(`#o${i} .opt`).forEach((el,k)=>{
+    el.classList.add('off');
+    if(k===c)el.classList.add('ok');
+    else if(k===j)el.classList.add('ko');
+  });
+  if(j===c)A++;
+  document.getElementById('sc').textContent=A;
+  document.getElementById('x'+i).classList.add('v');
+}
+function rst(){R={};A=0;render();}
+render();
+</script>
+</body>
+</html>
