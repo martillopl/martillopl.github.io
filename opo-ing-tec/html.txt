@@ -1,0 +1,20 @@
+<br>
+      <a href="../index.html">Índice</a><br>
+      <a href="2_esquema_resumen.html">Esquema-resumen ></a>
+       | 
+      <a href="3_cuadro_comparativo.html">Cuadros comparativos >></a>
+    
+--
+<br>
+    <a href="../index.html">Índice</a><br>
+    <a href="1_texto_explicativo.html">< Texto completo</a>
+     | 
+    <a href="3_cuadro_comparativo.html">Cuadros comparativos ></a>
+  
+--
+<br>
+    <a href="../index.html">Índice</a><br>
+    <a href="1_texto_explicativo.html"><< Texto completo</a>
+     | 
+    <a href="2_esquema_resumen.html">< Esquema-resumen</a>
+  

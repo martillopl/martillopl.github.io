@@ -1,0 +1,11 @@
+  .meta{font-size:13px;color:var(--t3)}
+  .meta a{color:var(--t2);text-decoration:none}
+  .meta a:hover{color:var(--t1)}
+--
+  .sub{font-size:13px;color:var(--t3);margin-bottom:24px}
+  .sub a{color:var(--t2);text-decoration:none}
+  .sub a:hover{color:var(--t1)}
+--
+  .sub{font-size:13px;color:var(--t3);margin-bottom:28px}
+  .sub a{color:var(--t2);text-decoration:none}
+  .sub a:hover{color:var(--t1)}
