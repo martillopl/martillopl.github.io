@@ -1,0 +1,235 @@
+TEMA 16 – RD 842/2002 REGLAMENTO ELECTROTÉCNICO PARA BAJA TENSIÓN (I)
+Arts. 1-29 · ITC-BT-03 · ITC-BT-04 · ITC-BT-05 · ITC-BT-09 · ITC-BT-28 · ITC-BT-52
+
+═══════════════════════════════════════════════════
+ESTRUCTURA DEL RD 842/2002 (ARTÍCULOS 1-29)
+═══════════════════════════════════════════════════
+
+Art. 1 – Objeto
+  Establecer las condiciones técnicas y garantías exigibles a las instalaciones de baja tensión
+  para preservar la seguridad de personas y bienes, y garantizar la regularidad en el suministro.
+
+Art. 2 – Ámbito de aplicación
+  Instalaciones eléctricas cuya tensión nominal no supere los 1.000 V en corriente alterna
+  y los 1.500 V en corriente continua, incluyendo las de generación, transporte, distribución y utilización.
+
+Art. 3 – Instalaciones eléctricas de baja tensión
+  Definición y clasificación de las instalaciones sujetas al reglamento.
+
+Art. 4 – Excepciones
+  Quedan fuera del ámbito: instalaciones en barcos, aeronaves, ferrocarriles, minas,
+  instalaciones de telecomunicaciones y las de baja tensión de AT.
+
+Art. 5 – Tensión de suministro
+  Las instalaciones receptoras deben ser adecuadas a la tensión de suministro.
+
+Art. 6 – Instaladores
+  Sólo podrán realizar instalaciones los instaladores habilitados conforme al reglamento.
+
+Arts. 7-9 – Obligaciones de los instaladores
+  Ejecutar conforme al REBT, emitir certificado de instalación, facilitar información al titular.
+
+Art. 10 – Organismos de control
+  Habilita a los OC acreditados por ENAC para verificar las instalaciones.
+
+Art. 12 – Puesta en servicio
+  Las instalaciones deben presentar ante el órgano territorial competente la documentación establecida.
+
+Art. 13 – Inspecciones iniciales y periódicas
+  Establece la obligación de inspección inicial y periódica para determinadas instalaciones.
+
+Art. 14 – Proyectos
+  Instalaciones que requieren proyecto firmado por técnico titulado competente.
+
+Art. 15 – Documentación previa
+  Documentación a aportar antes del inicio de las obras en instalaciones con proyecto.
+
+Arts. 16-18 – Obras, modificaciones y ampliaciones
+  Cualquier modificación o ampliación relevante requiere nuevo certificado o proyecto.
+
+Art. 19 – Mantenimiento y conservación
+  El titular es responsable de mantener la instalación en buen estado de seguridad.
+
+Art. 20 – Limitación de responsabilidades
+  No exime de responsabilidades civiles o penales.
+
+Art. 25 – Infracciones y sanciones
+  Remite a la Ley 21/1992, de Industria.
+
+═══════════════════════════════════════════════════
+ITC-BT-03 – INSTALADORES AUTORIZADOS EN BAJA TENSIÓN
+═══════════════════════════════════════════════════
+
+Categorías de instaladores:
+  - Instalador Electricista BÁSICO (IB): instalaciones generales en viviendas y locales ≤ 10 kW de potencia prevista
+  - Instalador Electricista de CATEGORÍA ESPECIALISTA (IE): instalaciones en locales de pública concurrencia, industriales, infraestructuras VE, etc.
+  - Instalador en LÍNEAS DE ALTA TENSIÓN en baja tensión: tendido de cables de distribución
+
+Habilitación: mediante DECLARACIÓN RESPONSABLE ante la CA donde ejercen
+Efectos: habilita para todo el territorio nacional desde su presentación
+El instalador habilitado debe disponer de seguro de RC y medios técnicos suficientes
+
+Trampa de examen: la declaración responsable NO necesita renovación periódica
+El instalador BÁSICO no puede intervenir en locales de pública concurrencia (ITC-BT-28)
+
+═══════════════════════════════════════════════════
+ITC-BT-04 – DOCUMENTACIÓN Y PUESTA EN SERVICIO
+═══════════════════════════════════════════════════
+
+Documentos a presentar ante la CA para la puesta en servicio:
+  A) Con proyecto: Proyecto + Certificado de dirección de obra + Certificado de instalación
+  B) Sin proyecto (instalaciones de menor entidad): sólo Certificado de instalación
+
+Certificado de instalación: emitido y firmado por el instalador autorizado que ejecuta la obra
+  - Acredita que la instalación se ha ejecutado conforme al REBT
+  - Necesario para contratar el suministro con la distribuidora
+
+El organismo de control (OC) emite Acta de Inspección tras verificar la instalación
+  - Solo para instalaciones que lo requieren (ITC-BT-05)
+
+Plazos: la puesta en servicio debe comunicarse en el plazo fijado por cada CA
+Conservación de documentación: mínimo 5 años
+
+═══════════════════════════════════════════════════
+ITC-BT-05 – VERIFICACIONES E INSPECCIONES
+═══════════════════════════════════════════════════
+
+Tipos de verificaciones e inspecciones:
+  1. VERIFICACIONES: realizadas por el propio instalador antes de la puesta en servicio
+     - Examen visual (comprobación de montaje, secciones, protecciones)
+     - Ensayos (continuidad, resistencia de aislamiento, polaridad, impedancia de bucle…)
+
+  2. INSPECCIONES INICIALES: por Organismo de Control (OC) antes de la puesta en servicio
+     Obligatoria para:
+     - Instalaciones industriales > 100 kW
+     - Locales con riesgo de incendio o explosión (art. 32 ITC-BT-29)
+     - Locales mojados con potencia > 25 kW
+     - Piscinas y fuentes (> 10 kW)
+     - Locales de pública concurrencia (ITC-BT-28)
+     - Quirófanos y locales de uso médico
+     - Garajes y aparcamientos (> 25 plazas)
+     - Instalaciones con potencia > 100 kW en cualquier otro caso
+     - Infraestructuras de recarga de VE (ITC-BT-52) de cierta entidad
+
+  3. INSPECCIONES PERIÓDICAS: por OC cada cierto plazo
+     - Locales de pública concurrencia, industrias y oficinas: cada 5 AÑOS
+     - Locales con riesgo de incendio o explosión: cada 5 AÑOS
+     - Locales mojados con potencia > 25 kW: cada 5 AÑOS
+     - Instalaciones generales con potencia > 100 kW: cada 10 AÑOS
+     DATO CLAVE: Los 5 años son el plazo más preguntado en test
+
+═══════════════════════════════════════════════════
+ITC-BT-09 – INSTALACIONES DE ALUMBRADO EXTERIOR
+═══════════════════════════════════════════════════
+
+Objeto: regulación de las instalaciones de alumbrado exterior (público, viales, parques, etc.)
+
+Condiciones de instalación:
+  - Las lámparas y aparatos de alumbrado exterior deben cumplir los requisitos de la norma UNE-EN 60598
+  - Los conductores en canalizaciones enterradas deben ser de tensión asignada 0,6/1 kV mínimo
+  - La profundidad mínima de enterramiento es de 0,4 m en aceras y 0,6 m en calzada
+
+Protecciones obligatorias:
+  - Protección contra contactos directos e indirectos
+  - Interruptores automáticos o fusibles para protección contra sobreintensidades
+  - Dispositivos de protección diferencial (sensibilidad máxima 300 mA)
+  - Protección contra sobretensiones en zonas con riesgo de descargas atmosféricas
+
+Cuadro de protección, medida y control (CPMC):
+  - Debe estar dotado de interruptor general automático y diferencial general
+  - Equipo de medida de energía activa
+  - Sistema de regulación del flujo luminoso cuando la normativa lo exija (eficiencia energética)
+
+Trampa de examen: la sensibilidad máxima del diferencial en alumbrado exterior es 300 mA
+(en instalaciones de viviendas la sensibilidad es 30 mA)
+
+Conductores de neutro:
+  - En redes de distribución en BT, el neutro debe estar puesto a tierra
+  - En alumbrado exterior: obligatorio puesta a tierra de las luminarias con partes metálicas accesibles
+
+═══════════════════════════════════════════════════
+ITC-BT-28 – INSTALACIONES EN LOCALES DE PÚBLICA CONCURRENCIA
+═══════════════════════════════════════════════════
+
+Definición de local de pública concurrencia:
+  Locales de espectáculos y actividades recreativas, locales de reunión, trabajo y usos sanitarios,
+  locales de culto, museos, recintos feriales, estaciones de transporte, zonas comunes en
+  edificios de viviendas (más de 12 plantas o con más de 4 plantas con garaje colectivo > 25 plazas)
+
+Requisitos específicos:
+  - Las instalaciones deben ejecutarse necesariamente por instalador de CATEGORÍA ESPECIALISTA (IE), no básico
+  - Inspección inicial obligatoria por OC antes de la puesta en servicio
+  - Inspección periódica por OC cada 5 años
+
+Alumbrado de emergencia obligatorio:
+  - En todos los locales de pública concurrencia
+  - Debe garantizar iluminación mínima de 1 lux en el eje de los pasillos de evacuación
+  - 5 lux en los cuadros de protección y mando
+  - Tiempo de funcionamiento autónomo mínimo: 1 HORA
+  - Debe entrar en funcionamiento automáticamente al fallar la alimentación principal
+  - El alumbrado de emergencia debe ir en circuito independiente
+
+Fuentes propias de energía (grupos electrógenos o SAI):
+  - Obligatorias cuando la normativa sectorial lo exige o la potencia instalada supera ciertos umbrales
+  - Tiempo máximo de arranque del grupo electrógeno: 15 segundos
+
+Prescripciones específicas: teatros, cines, hospitales y clínicas, hoteles, garajes, estaciones de servicio
+
+Trampas de examen:
+  - Instalador básico NO puede intervenir en locales de pública concurrencia
+  - Tiempo de autonomía del alumbrado de emergencia: 1 hora (no 30 minutos)
+  - Iluminación mínima en pasillos de evacuación: 1 lux (no 5)
+  - 5 lux solo en cuadros de protección
+
+═══════════════════════════════════════════════════
+ITC-BT-52 – INFRAESTRUCTURA PARA LA RECARGA DE VE
+═══════════════════════════════════════════════════
+
+Incorporada al REBT por RD 1053/2014; actualizada con posterioridad
+Regula la infraestructura para la recarga de vehículos eléctricos (VE) y vehículos eléctricos híbridos enchufables (VEHI)
+
+Modos de carga (UNE-EN 61851-1):
+  - Modo 1: carga lenta desde toma de corriente doméstica estándar (schuko) con protecciones en el domicilio
+  - Modo 2: carga lenta desde toma con cable provisto de dispositivo de protección en el propio cable (ICCPE)
+  - Modo 3: carga desde punto de recarga fijo (SAVE/CPCS) con control y protección integrada
+  - Modo 4: carga rápida en corriente continua con cargador externo al vehículo
+
+Tipos de puntos de recarga:
+  - BCRV (Base de Corriente para la Recarga de VE): punto de recarga de uso privado en domicilio/garaje
+  - SAVE (Sistema de Alimentación para VE): tipo estándar de punto de recarga, modos 1, 2 y 3 en CA
+  - CPCS (Cargador Privado de Corriente Continua de Supercarga): modo 4
+
+Prescripciones de la instalación:
+  - Los circuitos para recarga de VE deben ser CIRCUITOS EXCLUSIVOS e independientes
+  - Protección diferencial de 30 mA (alta sensibilidad) para puntos de recarga en garajes y zonas interiores
+  - Protección diferencial de tipo A o B según modo de carga
+  - Los puntos de recarga deben disponer de interruptor automático y diferencial propios
+  - La potencia máxima por punto de recarga en modo 3 monofásico: hasta 22 kW (intensidad ≤ 32 A)
+  - La potencia máxima por punto en modo 3 trifásico: hasta 43,5 kW
+
+Inspección inicial por OC:
+  - Obligatoria para instalaciones de recarga con potencia total > 10 kW (en locales y aparcamientos)
+
+Datos de examen especialmente relevantes:
+  - Modo 4 = carga rápida en CC (corriente continua), con cargador externo al VE
+  - Los circuitos de recarga son SIEMPRE exclusivos
+  - Diferencial de 30 mA para puntos en garajes (igual que en viviendas)
+  - Modo 1: solo se admite en viviendas y no en garajes colectivos ni en público
+
+═══════════════════════════════════════════════════
+CIFRAS CLAVE PARA TEST – TEMA 16
+═══════════════════════════════════════════════════
+
+Tensión límite BT:           ≤ 1.000 V (CA) / ≤ 1.500 V (CC)
+Diferencial vivienda:        30 mA (alta sensibilidad)
+Diferencial alumbrado ext.:  300 mA (máximo)
+Inspección periódica LPC:   5 AÑOS
+Inspección periódica >100kW: 10 AÑOS
+Autonomía alumbrado emerg.: 1 HORA
+Iluminación emergencia pasillos: 1 lux
+Iluminación emergencia cuadros:  5 lux
+Arranque máx. grupo electrógeno: 15 segundos
+Conservación documentación: 5 años
+Instalador LPC:              CATEGORÍA ESPECIALISTA (IE), no básico
+Modo 4 VE:                   Carga rápida en CC con cargador externo
+Circuito recarga VE:         SIEMPRE EXCLUSIVO e independiente
