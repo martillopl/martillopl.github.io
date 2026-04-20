@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Esquema-resumen RAT Tema 17</title>
+  <style>
+    *,*:before,*:after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.20);--r12:12px}
+    @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.18)}}
+    body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;background:var(--bg3);color:var(--t1);padding:2rem 1rem}.page{max-width:900px;margin:0 auto}
+    h1{font-size:20px;font-weight:500;margin-bottom:4px}.sub{font-size:13px;color:var(--t3);margin-bottom:24px}
+    .bloque{background:var(--bg2);border:.5px solid var(--bl);border-radius:var(--r12);padding:14px 16px;margin-bottom:10px}
+    .bt{font-size:13px;font-weight:500;margin:0 0 10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .badge{font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap}
+    .bp{background:#EEEDFE;color:#3C3489}.bb{background:#E6F1FB;color:#0C447C}.btl{background:#E1F5EE;color:#085041}.ba{background:#FAEEDA;color:#633806}.bc{background:#FAECE7;color:#712B13}.bg{background:#EAF3DE;color:#27500A}.br{background:#FDECEC;color:#7D1A1A}.bn{background:#F3F0E6;color:#4A4530}
+    @media(prefers-color-scheme:dark){.bp{background:#3C3489;color:#CECBF6}.bb{background:#0C447C;color:#B5D4F4}.btl{background:#085041;color:#9FE1CB}.ba{background:#633806;color:#FAC775}.bc{background:#712B13;color:#F5C4B3}.bg{background:#27500A;color:#C0DD97}.br{background:#7D1A1A;color:#F7C1C1}.bn{background:#3A3720;color:#D4C97A}}
+    .items{display:flex;flex-wrap:wrap;gap:6px}.item,.itemd{font-size:12px;background:var(--bg1);border:.5px solid var(--bl);border-radius:6px;padding:3px 9px;color:var(--t2)}.itemd{font-weight:500;color:var(--t1);border:.5px solid var(--bm)}
+    .g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}.g4{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+    .s{font-size:11px;color:var(--t3);font-weight:500;margin:0 0 6px}
+    @media(max-width:620px){.g2,.g3,.g4{grid-template-columns:1fr}}
+    .si{background:#EAF3DE;color:#27500A;font-size:11px;font-weight:500;padding:1px 6px;border-radius:4px;display:inline-block}
+    .no{background:#FCEBEB;color:#791F1F;font-size:11px;font-weight:500;padding:1px 6px;border-radius:4px;display:inline-block}
+    .footer{margin-top:20px;font-size:11px;color:var(--t3);text-align:center}
+  </style>
+</head>
+<body>
+<div class="page">
+  <h1>RD 337/2014 – Reglamento de Alta Tensión (RAT)</h1>
+  <p class="sub">Tema 17 – Ingeniero Técnico – Esquema-resumen · ITC-RAT 03, 06, 07, 08, 09, 13, 14, 21, 22, 23</p>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bp">Categorías de AT</span></div>
+    <div class="g4">
+      <div><div class="s">1ª categoría</div><div class="items"><span class="itemd">1 kV &lt; U ≤ 30 kV</span><span class="item">Media tensión distribución</span></div></div>
+      <div><div class="s">2ª categoría</div><div class="items"><span class="itemd">30 kV &lt; U ≤ 66 kV</span><span class="item">Subtransporte regional</span></div></div>
+      <div><div class="s">3ª categoría</div><div class="items"><span class="itemd">66 kV &lt; U ≤ 145 kV</span><span class="item">Transporte</span></div></div>
+      <div><div class="s">4ª categoría</div><div class="items"><span class="itemd">145 kV &lt; U ≤ 245 kV</span></div></div>
+      <div><div class="s">5ª categoría</div><div class="items"><span class="itemd">U &gt; 245 kV</span><span class="item">Red de transporte REE</span></div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bb">ITC-RAT 03 · Instaladores autorizados en AT</span></div>
+    <div class="g3">
+      <div><div class="s">Categoría A</div><div class="items"><span class="itemd">1ª y 2ª categoría</span><span class="item">Hasta 66 kV</span></div></div>
+      <div><div class="s">Categoría B</div><div class="items"><span class="itemd">Todas las categorías</span><span class="item">Incluye &gt; 245 kV</span></div></div>
+      <div><div class="s">Habilitación</div><div class="items"><span class="itemd">Declaración responsable</span><span class="itemd">Todo el territorio nacional</span><span class="item">Sin autorización previa</span></div></div>
+    </div>
+    <div style="margin-top:8px"><div class="s">Trampa clave</div><div class="items"><span class="itemd">Cat. A del instalador ≠ 1ª categoría de instalación. Cat. A habilita para 1ª Y 2ª categoría</span></div></div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge btl">Líneas aéreas y cables subterráneos</span></div>
+    <div class="g3">
+      <div><div class="s">ITC-RAT 06 · Líneas aéreas 1ª cat.</div><div class="items"><span class="item">Hasta 30 kV</span><span class="item">Redes distribución MT</span><span class="item">Conductores desnudos o aislados</span><span class="item">Distancias al suelo y a edificios</span></div></div>
+      <div><div class="s">ITC-RAT 07 · Cables subterráneos AT</div><div class="items"><span class="itemd">0,60 m en aceras</span><span class="itemd">0,80 m en calzadas</span><span class="itemd">Banda señalización a 0,25 m</span><span class="item">Más profundo que BT (0,4/0,6)</span></div></div>
+      <div><div class="s">ITC-RAT 08 y 09 · Líneas &gt; 30 kV</div><div class="items"><span class="item">RAT 08: 30-66 kV</span><span class="item">RAT 09: &gt;66 kV</span><span class="item">Mayor exigencia en distancias</span><span class="item">Conductores ACSR habituales</span></div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge ba">ITC-RAT 13 · Subestaciones y centros de transformación</span></div>
+    <div class="g3">
+      <div><div class="s">Tipos de CT</div><div class="items"><span class="item">Intemperie (poste, caseta)</span><span class="item">Interior (cabina prefabricada)</span><span class="item">Integrado en edificio</span></div></div>
+      <div><div class="s">Puesta a tierra</div><div class="items"><span class="itemd">Dos circuitos: masas + neutro</span><span class="itemd">Vc seco: 50 V</span><span class="itemd">Vc mojado: 24 V</span></div></div>
+      <div><div class="s">Acceso y seguridad</div><div class="items"><span class="item">Acceso restringido</span><span class="item">Enclavamientos</span><span class="item">Señalización peligro</span><span class="item">Pavimento aislante</span></div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bc">ITC-RAT 14 · Transformadores</span></div>
+    <div class="g2">
+      <div><div class="s">Con aceite mineral</div><div class="items"><span class="itemd">Cubeto de retención</span><span class="item">Barrera cortafuego</span><span class="item">Protección contra incendios</span></div></div>
+      <div><div class="s">Secos o baja inflamabilidad</div><div class="items"><span class="itemd">Sin cubeto exigido</span><span class="item">Válidos para interiores</span><span class="item">Preferidos en edificios</span></div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bg">ITC-RAT 21 y 22 · AT en locales de uso no eléctrico y médico</span></div>
+    <div class="g2">
+      <div><div class="s">ITC-RAT 21 · Locales generales</div><div class="items"><span class="itemd">Acceso exclusivo al CT</span><span class="item">Puertas con enclavamiento</span><span class="item">Señalización peligro</span><span class="item">Equipotencialización masas</span></div></div>
+      <div><div class="s">ITC-RAT 22 · Locales médicos</div><div class="items"><span class="itemd">+ separación sistemas tierra AT/BT</span><span class="itemd">+ detección falta a tierra sensible</span><span class="item">Complementa a RAT 21</span></div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge br">ITC-RAT 23 · Verificaciones e inspecciones en AT</span></div>
+    <div class="g3">
+      <div><div class="s">Verificación</div><div class="items"><span class="itemd">La hace el instalador</span><span class="item">Antes de puesta en servicio</span></div></div>
+      <div><div class="s">Inspección inicial</div><div class="items"><span class="itemd">La hace OC</span><span class="itemd">SIEMPRE obligatoria en AT</span><span class="item">(en BT solo en ciertos casos)</span></div></div>
+      <div><div class="s">Inspección periódica</div><div class="items"><span class="itemd">6 AÑOS (no 5 ni 10)</span><span class="item">La hace OC</span><span class="item">Todas las instalaciones AT</span></div></div>
+    </div>
+    <div style="margin-top:8px"><div class="s">Documentación puesta en servicio</div><div class="items"><span class="itemd">Certificado instalación</span><span class="itemd">Acta inspección inicial (OC)</span><span class="item">Proyecto técnico si procede</span></div></div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bn">Cifras clave para test · Tema 17</span></div>
+    <div class="items">
+      <span class="itemd">AT: &gt;1.000 V CA / &gt;1.500 V CC</span>
+      <span class="itemd">Cables AT aceras: 0,60 m</span>
+      <span class="itemd">Cables AT calzadas: 0,80 m</span>
+      <span class="itemd">Banda señalización: 0,25 m sobre cable</span>
+      <span class="itemd">Tensión contacto seco: 50 V</span>
+      <span class="itemd">Tensión contacto mojado: 24 V</span>
+      <span class="itemd">Inspección periódica AT: 6 años</span>
+      <span class="itemd">Inspección inicial AT: SIEMPRE</span>
+      <span class="itemd">Cat. A instalador: 1ª + 2ª categoría</span>
+    </div>
+  </div>
+
+  <p class="footer">RD 337/2014 · RAT · ITC-RAT 03 · 06 · 07 · 08 · 09 · 13 · 14 · 21 · 22 · 23</p>
+</div>
+</body>
+</html>
