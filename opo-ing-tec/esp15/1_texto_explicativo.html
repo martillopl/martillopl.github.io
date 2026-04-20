@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tema 15 – RD 513/2017 RIPCI (II)</title>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.22);--r1:18px;--r2:12px}
+    @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.20)}}
+    body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;background:var(--bg3);color:var(--t1);padding:2.5rem 1rem;line-height:1.8}
+    .page{max-width:740px;margin:0 auto}
+    .header{margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:.5px solid var(--bm)}
+    .tlabel{font-size:12px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+    h1{font-size:22px;font-weight:500;line-height:1.3;margin-bottom:8px}
+    .meta{font-size:13px;color:var(--t3)}
+    .indice{background:var(--bg2);border:.5px solid var(--bl);border-radius:var(--r2);padding:16px 20px;margin-bottom:2.5rem}
+    .itit{font-size:11px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+    .indice ol{padding-left:18px}.indice li{font-size:13px;color:var(--t2);padding:3px 0}
+    .indice a{color:var(--t2);text-decoration:none}.indice a:hover{color:var(--t1)}
+    .sec{margin-bottom:2.8rem}
+    h2{font-size:18px;font-weight:500;margin-bottom:1rem;padding-bottom:8px;border-bottom:.5px solid var(--bl)}
+    h3{font-size:15px;font-weight:500;margin:1.6rem 0 .6rem}
+    h4{font-size:14px;font-weight:500;margin:1.2rem 0 .4rem;color:var(--t2)}
+    p{font-size:15px;color:var(--t2);margin-bottom:1rem}p:last-child{margin-bottom:0}
+    strong{font-weight:500;color:var(--t1)}
+    .art{display:inline-block;font-size:11px;font-weight:500;background:var(--bg2);border:.5px solid var(--bm);border-radius:20px;padding:1px 8px;color:var(--t3);vertical-align:middle;margin-left:4px}
+    ul{padding-left:20px;margin-bottom:1rem}ul li{font-size:15px;color:var(--t2);padding:3px 0}
+    .nota{background:var(--bg2);border-left:2px solid var(--bm);padding:12px 16px;margin:1.2rem 0;font-size:13.5px;color:var(--t2);line-height:1.65}.nota strong{color:var(--t1)}
+    .footer{margin-top:3rem;padding-top:1.2rem;border-top:.5px solid var(--bl);font-size:11px;color:var(--t3);text-align:center}
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="tlabel">Tema 15 – Protección contra incendios – Ingeniero Técnico</div>
+    <h1>Real Decreto 513/2017 – RIPCI (II). Características e instalación de los equipos y sistemas de protección contra incendios</h1>
+    <div class="meta">Anexo I RIPCI · Sistemas regulados · Mantenimiento Anexo II · Vidas útiles · Puesta en servicio</div>
+  </div>
+
+  <div class="indice">
+    <div class="itit">Índice</div>
+    <ol>
+      <li><a href="#s1">El Anexo I como eje técnico del RIPCI</a></li>
+      <li><a href="#s2">Sistemas de detección y alarma de incendios</a></li>
+      <li><a href="#s3">Sistemas de abastecimiento de agua y hidrantes</a></li>
+      <li><a href="#s4">Extintores de incendios</a></li>
+      <li><a href="#s5">Bocas de incendio equipadas (BIE) y columnas secas</a></li>
+      <li><a href="#s6">Sistemas fijos de extinción: rociadores y agua pulverizada</a></li>
+      <li><a href="#s7">Sistemas fijos de extinción por agentes gaseosos, polvo y espuma</a></li>
+      <li><a href="#s8">Sistemas de extinción por agua nebulizada y aerosoles condensados</a></li>
+      <li><a href="#s9">Sistemas de control de humos y de calor</a></li>
+      <li><a href="#s10">Alumbrado de emergencia y señalización luminiscente</a></li>
+      <li><a href="#s11">Mantas ignífugas</a></li>
+      <li><a href="#s12">El Anexo II: mantenimiento y periodicidades</a></li>
+      <li><a href="#s13">Vidas útiles de los productos</a></li>
+      <li><a href="#s14">Puesta en servicio: documentación exigida</a></li>
+    </ol>
+  </div>
+
+  <div class="sec" id="s1">
+    <h2>1. El Anexo I como eje técnico del RIPCI</h2>
+    <p>Si el articulado del RD 513/2017 regula quién puede instalar y mantener, el <strong>Anexo I</strong> es donde se establece realmente cómo deben ser y cómo deben instalarse los equipos y sistemas de protección activa contra incendios. Es la parte más técnica del reglamento y la que más relevancia práctica tiene para el ingeniero técnico en el ejercicio de sus funciones.</p>
+    <p>El Anexo I contiene las exigencias relativas al <strong>diseño e instalación</strong> de los equipos y sistemas; el Anexo II fija el <strong>mantenimiento mínimo</strong> con sus periodicidades; y el Anexo III establece los <strong>medios humanos mínimos</strong> de las empresas instaladoras y mantenedoras. El tema de la oposición se centra en el Anexo I y en la parte técnica del Anexo II.</p>
+    <div class="nota"><strong>Relevancia para el Ingeniero Técnico:</strong> en el ejercicio del puesto, el conocimiento del Anexo I es imprescindible para verificar y dirigir instalaciones, redactar o revisar proyectos y certificar la correcta ejecución de los sistemas. Es también el apartado más explotado en los test de oposición de esta materia.</div>
+  </div>
+
+  <div class="sec" id="s2">
+    <h2>2. Sistemas de detección y alarma de incendios</h2>
+    <p>Los sistemas de detección automática de incendios tienen por función detectar el incendio en su fase inicial y transmitir la señal de alarma para iniciar la evacuación y la actuación de los medios de extinción. Se componen de <strong>central de detección</strong>, <strong>detectores automáticos</strong> (de humo, térmicos, de llama, de gases…), <strong>pulsadores manuales de alarma</strong>, <strong>sirenas y dispositivos de alarma</strong>, y los circuitos que los interconectan.</p>
+    <p>Las normas de referencia del Anexo I para estos sistemas son las de la serie <strong>UNE-EN 54</strong>, que regulan cada componente del sistema de forma individual. El diseño del sistema debe garantizar que cualquier punto del área protegida sea detectable por al menos un detector, con las distancias máximas y zonas de cobertura fijadas en cada norma.</p>
+    <h3>Puesta en servicio de los sistemas de detección</h3>
+    <p>Antes de la puesta en servicio, el instalador debe realizar <strong>pruebas de funcionamiento</strong> de todos los detectores y pulsadores, verificar las zonas de detección y comprobar que las señales se transmiten correctamente a la central. Estas pruebas deben documentarse en el certificado de instalación.</p>
+  </div>
+
+  <div class="sec" id="s3">
+    <h2>3. Sistemas de abastecimiento de agua y hidrantes</h2>
+    <p>El <strong>sistema de abastecimiento de agua contra incendios</strong> garantiza la disposición del caudal y la presión necesarios para los sistemas de extinción que lo requieren. Se distinguen tres tipos de fuente de abastecimiento: depósito o aljibe, conexión a la red pública, y combinaciones de ambas. Las normas de referencia son la <strong>UNE 23500</strong> y las de los sistemas a los que abastece.</p>
+    <p>Los <strong>sistemas de hidrantes</strong> son instalaciones fijas conectadas a la red de agua, dotadas de bocas de salida normalizadas, que permiten a los bomberos conectar sus mangueras directamente a la red de agua a pie de calle o en el interior del edificio. Los hidrantes exteriores deben cumplir la norma <strong>UNE-EN 14384</strong> y los de columna húmeda la <strong>UNE-EN 14339</strong>.</p>
+    <div class="nota"><strong>Diferencia clave:</strong> el sistema de abastecimiento alimenta a los sistemas de extinción automáticos (rociadores, BIE, columnas húmedas). Los hidrantes son elementos terminales de uso por los servicios de emergencias, no instalaciones de extinción automática.</div>
+  </div>
+
+  <div class="sec" id="s4">
+    <h2>4. Extintores de incendios</h2>
+    <p>El extintor es el equipo portátil más básico y universal de la protección activa contra incendios. El RIPCI remite a la norma <strong>UNE-EN 3</strong> para extintores portátiles y a la <strong>UNE-EN 1866</strong> para extintores sobre ruedas, que regulan sus características constructivas, el marcado y los ensayos de tipo.</p>
+    <p>La ubicación de los extintores debe ser accesible y visible, con la parte superior del extintor a una altura máxima de <strong>1,70 m</strong> sobre el suelo. La normativa que fija cuántos extintores debe tener cada edificio y de qué tipo es la externa al RIPCI (CTE DB-SI o RSCIEI), pero el RIPCI regula cómo deben ser esos extintores y cómo se instalan y mantienen.</p>
+    <h3>Retimbrado y vida útil</h3>
+    <p>Los extintores tienen una <strong>vida útil de 20 años</strong> y deben someterse hasta tres <strong>pruebas de presión (retimbrado)</strong> durante ese periodo. Transcurrida la vida útil, deben retirarse de servicio. Esta cifra —20 años con hasta 3 retimbrados— es habitual en test.</p>
+  </div>
+
+  <div class="sec" id="s5">
+    <h2>5. Bocas de incendio equipadas (BIE) y columnas secas</h2>
+    <p>Las <strong>bocas de incendio equipadas (BIE)</strong> son instalaciones fijas formadas por una toma de agua, una manguera y una lanza o boquilla, alojadas en un armario normalizado. Se distinguen dos tipos: <strong>BIE de 45 mm</strong> (para uso de los equipos de primera intervención del propio establecimiento) y <strong>BIE de 25 mm</strong> (de uso más sencillo). Las normas de referencia son la <strong>UNE-EN 671-1</strong> (mangueras semirrígidas) y la <strong>UNE-EN 671-2</strong> (mangueras planas). La manguera de BIE tiene una <strong>vida útil de 20 años</strong>.</p>
+    <p>Las <strong>columnas secas</strong> son tuberías vacías (sin agua) instaladas verticalmente en el edificio, con una toma de alimentación en la fachada y bocas de salida en cada planta, que permiten a los bomberos conectar sus equipos directamente en el punto de intervención. Al ser una tubería seca, su mantenimiento es más sencillo y se centra en verificar la estanqueidad y la accesibilidad de las bocas.</p>
+  </div>
+
+  <div class="sec" id="s6">
+    <h2>6. Sistemas fijos de extinción: rociadores y agua pulverizada</h2>
+    <p>Los <strong>sistemas de rociadores automáticos</strong> son los más extendidos en grandes edificaciones y establecimientos industriales. El rociador actúa individualmente cuando la temperatura en su entorno alcanza el umbral de activación (determinado por el elemento termosensible), descargando agua en forma de lluvia sobre la zona afectada. La norma técnica de referencia es la <strong>UNE-EN 12845</strong>.</p>
+    <p>Desde 2018, los sistemas de rociadores requieren una <strong>inspección adicional a los 25 años</strong> desde la puesta en servicio, que incluye inspección interna de la tubería y análisis de los rociadores por laboratorio acreditado. Este dato es recurrente en test porque es una obligación periódica excepcional que se suma al mantenimiento ordinario.</p>
+    <p>Los <strong>sistemas de agua pulverizada</strong> descargan el agua en partículas muy finas para actuar sobre fuegos de clase B (líquidos inflamables) o como sistema de refrigeración de estructuras y equipos. La norma de referencia es la <strong>UNE 23502</strong>.</p>
+  </div>
+
+  <div class="sec" id="s7">
+    <h2>7. Sistemas fijos de extinción por agentes gaseosos, polvo y espuma</h2>
+    <p>Los <strong>sistemas de extinción por agentes gaseosos</strong> son una incorporación destacada del RD 513/2017 respecto al anterior reglamento. Actúan desplazando el oxígeno o interrumpiendo la reacción química de la combustión, sin dejar residuos ni causar daños por mojado o corrosión. Son especialmente adecuados para proteger salas de servidores, archivos y cuadros eléctricos. Las normas de referencia son la serie <strong>UNE-EN 15004</strong>. Para su instalación y mantenimiento con gases fluorados se exige la cualificación específica del <strong>RD 115/2017</strong>.</p>
+    <p>Los <strong>sistemas de extinción por polvo</strong> actúan por sofocación e inhibición química de la llama. Son muy efectivos en fuegos de clase B y C, pero generan residuos que pueden dañar equipos. La norma de referencia es la <strong>UNE 23110</strong>.</p>
+    <p>Los <strong>sistemas de extinción por espuma</strong> actúan principalmente por sofocación, cubriendo la superficie del combustible e impidiendo el acceso del oxígeno. Son los sistemas de elección para grandes superficies de combustibles líquidos. La norma de referencia es la <strong>UNE 23522</strong>.</p>
+  </div>
+
+  <div class="sec" id="s8">
+    <h2>8. Sistemas de extinción por agua nebulizada y aerosoles condensados</h2>
+    <p>Los <strong>sistemas de agua nebulizada</strong> son otra incorporación del RD 513/2017. Proyectan el agua en gotículas muy finas (inferior a 1.000 micras), lo que maximiza la superficie de evaporación y multiplica la eficacia de extinción con volúmenes de agua mucho menores que los rociadores convencionales. Tienen un efecto combinado: absorción de calor, desplazamiento del oxígeno y atenuación de la radiación térmica. Las normas de referencia son la <strong>NFPA 750</strong> o equivalentes UNE cuando existen.</p>
+    <p>Los <strong>sistemas de extinción por aerosoles condensados</strong> son también nuevos en el RIPCI de 2017. Generan una nube de partículas sólidas y gaseosas que inhiben la reacción química de la combustión con una efectividad superior a los agentes halon. Su uso está especialmente indicado en espacios cerrados y equipos eléctricos. Al no existir norma UNE propia, su acreditación debe realizarse por la vía de la <strong>evaluación técnica favorable de la idoneidad</strong> del artículo 5.3 del RIPCI.</p>
+  </div>
+
+  <div class="sec" id="s9">
+    <h2>9. Sistemas para el control de humos y de calor</h2>
+    <p>Los <strong>sistemas para el control de humos y de calor (SCSHE)</strong> son otra incorporación del RD 513/2017. Su función no es extinguir el incendio sino mantener las vías de evacuación libres de humo el tiempo suficiente para que los ocupantes puedan evacuar con seguridad y los equipos de intervención puedan actuar. Actúan extrayendo los humos hacia el exterior o dirigiéndolos hacia zonas seguras mediante presurización diferencial.</p>
+    <p>Las normas de referencia son la serie <strong>UNE-EN 12101</strong>, que regula los diferentes componentes del sistema: ventiladores, aireadores naturales, sistemas de presurización y sistemas de gestión. Su diseño debe realizarse mediante proyecto técnico firmado por técnico competente, dado que implica cálculos de flujos de humo, temperaturas y presiones.</p>
+  </div>
+
+  <div class="sec" id="s10">
+    <h2>10. Alumbrado de emergencia y señalización luminiscente</h2>
+    <p>El <strong>alumbrado de emergencia</strong> es otra novedad del RIPCI respecto al RD 1942/1993. Anteriormente solo quedaba bajo el ámbito del <strong>Reglamento Electrotécnico de Baja Tensión (REBT)</strong>; ahora el RIPCI también lo recoge, estableciendo que para su instalación y mantenimiento las empresas instaladoras y mantenedoras solo deben cumplir el REBT y su ITC-BT correspondiente, sin necesidad de habilitarse específicamente por el RIPCI para este sistema <span class="art">art. 10.1.g</span>.</p>
+    <p>Los <strong>sistemas de señalización luminiscente</strong> incluyen las señales fotoluminiscentes de evacuación. Sus principales normas de referencia son la <strong>UNE 23034</strong> (señalización de seguridad) y la <strong>UNE-EN ISO 7010</strong> (pictogramas normalizados). Las señales fotoluminiscentes tienen una <strong>vida útil de 10 años</strong> y solo requieren mantenimiento de periodicidad <strong>trimestral</strong> (sin semestral, anual ni quinquenal), lo que las diferencia del resto de sistemas.</p>
+  </div>
+
+  <div class="sec" id="s11">
+    <h2>11. Mantas ignífugas</h2>
+    <p>Las <strong>mantas ignífugas</strong> son dispositivos de extinción manual que actúan por sofocación, privando de oxígeno al fuego al cubrirlo. Son especialmente útiles en fuegos incipientes en cocinas y en fuegos que afectan a personas. También son una incorporación del RD 513/2017 al ámbito de regulación del RIPCI.</p>
+    <p>Su instalación y colocación tienen el régimen más flexible del reglamento: pueden ser instaladas y mantenidas tanto por empresas instaladoras como por empresas mantenedoras, y el usuario puede colocarlas directamente cuando la superficie del establecimiento no supere <strong>100 m²</strong> o se trate de una vivienda unifamiliar. Específicamente, las mantas ignífugas están excluidas de la obligación de que su mantenimiento lo realice una empresa mantenedora <span class="art">art. 13.3</span>.</p>
+  </div>
+
+  <div class="sec" id="s12">
+    <h2>12. El Anexo II: mantenimiento y periodicidades</h2>
+    <p>El Anexo II del RIPCI establece las operaciones mínimas de mantenimiento para cada sistema y la periodicidad máxima entre revisiones consecutivas. Las periodicidades contempladas son <strong>trimestral, semestral, anual y quinquenal</strong>. Algunos sistemas tienen además la inspección adicional a los <strong>25 años</strong> (rociadores).</p>
+    <h3>Quién puede realizar cada tipo de operación</h3>
+    <ul>
+      <li>Las operaciones de periodicidad <strong>trimestral o semestral</strong> pueden ser realizadas por personal del fabricante, empresa mantenedora habilitada, o personal del propio usuario o titular de la instalación.</li>
+      <li>Las operaciones de periodicidad <strong>anual o quinquenal</strong> solo pueden ser realizadas por personal del fabricante o empresa mantenedora habilitada. No puede hacerlas el usuario por sí mismo.</li>
+    </ul>
+    <p>Este es uno de los puntos más explotados en test: la distinción entre lo que puede hacer el usuario y lo que queda reservado al fabricante o mantenedor habilitado según la periodicidad de la operación.</p>
+  </div>
+
+  <div class="sec" id="s13">
+    <h2>13. Vidas útiles de los productos</h2>
+    <p>El RIPCI establece vidas útiles mínimas para determinados productos cuando el fabricante no las especifica. Transcurrida la vida útil, el producto debe ser sustituido por personal del fabricante o empresa mantenedora. Las vidas útiles fijadas reglamentariamente son:</p>
+    <ul>
+      <li><strong>Detectores de incendios:</strong> 10 años.</li>
+      <li><strong>Extintores de incendios:</strong> 20 años (con hasta 3 retimbrados durante ese periodo).</li>
+      <li><strong>Mangueras contra incendios en BIE:</strong> 20 años.</li>
+      <li><strong>Señales fotoluminiscentes:</strong> 10 años.</li>
+    </ul>
+    <div class="nota"><strong>Dato importante:</strong> estas vidas útiles solo aplican a instalaciones nuevas o a equipos instalados tras la entrada en vigor del RIPCI. La disposición transitoria segunda del RD 513/2017 exime a los equipos ya instalados antes del 12 de diciembre de 2017 de adaptarse a los nuevos requisitos, salvo en lo relativo a mantenimiento e inspecciones periódicas.</div>
+  </div>
+
+  <div class="sec" id="s14">
+    <h2>14. Puesta en servicio: documentación exigida</h2>
+    <p>Antes de la puesta en servicio de los sistemas de protección contra incendios, el titular debe presentar ante el órgano competente en materia de industria de la comunidad autónoma la siguiente documentación:</p>
+    <ul>
+      <li><strong>Certificado de instalación</strong>, emitido por la empresa instaladora habilitada y firmado por un técnico titulado competente, que acredita que la instalación se ha ejecutado conforme al RIPCI y al proyecto o documentación técnica. Si han intervenido varias empresas instaladoras, cada una emite su propio certificado.</li>
+      <li><strong>Contrato de mantenimiento</strong> con una empresa mantenedora debidamente habilitada, que cubra todos los equipos y sistemas instalados. El titular queda exento de este requisito si se habilita como mantenedor propio y dispone de los medios exigidos.</li>
+    </ul>
+    <p>Esta documentación debe conservarse y estar disponible ante una eventual inspección periódica o requerimiento administrativo. En caso de modificación, cambio de titularidad o baja de la instalación, debe comunicarse al órgano competente de la comunidad autónoma.</p>
+  </div>
+
+  <div class="footer">RD 513/2017 · Ley 21/1992 de Industria · RIPCI Anexo I y Anexo II · Normas UNE de referencia</div>
+</div>
+</body>
+</html>

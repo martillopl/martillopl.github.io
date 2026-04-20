@@ -1,0 +1,47 @@
+Sistemas de protección activa regulados por el RIPCI (Anexo I)
+- Sistemas de detección y alarma de incendios
+- Sistemas de abastecimiento de agua contra incendios
+- Sistemas de hidrantes contra incendios
+- Extintores de incendios
+- Sistemas de bocas de incendio equipadas (BIE)
+- Sistemas de columna seca
+- Sistemas fijos de extinción por rociadores automáticos y agua pulverizada
+- Sistemas fijos de extinción por agua nebulizada (nuevo en 2017)
+- Sistemas fijos de extinción por espuma física
+- Sistemas fijos de extinción por polvo
+- Sistemas fijos de extinción por agentes extintores gaseosos (nuevo en 2017)
+- Sistemas fijos de extinción por aerosoles condensados (nuevo en 2017)
+- Sistemas para el control de humos y de calor (nuevo en 2017)
+- Mantas ignífugas (nuevo en 2017)
+- Alumbrado de emergencia (nuevo en 2017)
+- Sistemas de señalización luminiscente (nuevo en 2017)
+
+Periodicidades de mantenimiento (Anexo II) — datos clásicos de test
+- Extintores: trimestral, anual, quinquenal
+- Bocas de incendio equipadas (BIE): trimestral, anual, quinquenal
+- Detectores de incendio / detección y alarma: trimestral, semestral, anual
+- Hidrantes: trimestral, semestral, anual, quinquenal
+- Columnas secas: semestral, anual
+- Rociadores automáticos y sistemas fijos de extinción: trimestral, anual, quinquenal (+ inspección interna tubería y análisis a 25 años)
+- Sistemas de control de humos y de calor: trimestral, anual, quinquenal
+- Señalización luminiscente: trimestral
+- Las operaciones TRIMESTRALES/SEMESTRALES pueden hacerlas personal del fabricante, empresa mantenedora o personal del propio usuario
+- Las operaciones ANUALES/QUINQUENALES solo pueden realizarlas el fabricante o empresa mantenedora habilitada
+
+Vidas útiles de producto según RIPCI
+- Detectores de incendios: 10 años
+- Extintores: 20 años (con 3 retimbrados)
+- Mangueras de BIE: 20 años
+- Señales fotoluminiscentes: 10 años
+
+Puesta en servicio — documentación obligatoria ante la CA
+- Certificado de instalación emitido por la empresa instaladora habilitada, firmado por técnico competente
+- Contrato de mantenimiento con empresa mantenedora habilitada (o declaración si el titular se habilita como mantenedor)
+
+Puntos trampa frecuentes en test
+- Los sistemas nuevos del RIPCI respecto al RD 1942/1993 son: agua nebulizada, agentes gaseosos, aerosoles condensados, control de humos, mantas ignífugas, alumbrado de emergencia y señalización luminiscente
+- Las operaciones anuales/quinquenales solo las hacen fabricante o empresa mantenedora habilitada
+- Los rociadores requieren inspección adicional a los 25 años (interna de tuberías + análisis de rociadores)
+- La puesta en servicio requiere dos documentos: certificado de instalación + contrato de mantenimiento
+- Las señales fotoluminiscentes solo tienen mantenimiento trimestral (sin semestral, anual ni quinquenal)
+- La columna seca no tiene mantenimiento trimestral (solo semestral y anual)

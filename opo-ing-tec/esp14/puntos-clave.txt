@@ -1,0 +1,44 @@
+Marco normativo y objeto
+- Deroga el RD 1942/1993 (antiguo RIPCI) y la Orden de 16 de abril de 1998
+- Habilitación: Ley 21/1992, de Industria (art. 12) + Constitución art. 149.1.13ª
+- Ámbito: instalaciones de protección ACTIVA contra incendios (no pasiva)
+- Excepciones al ámbito: túneles de carreteras del Estado (RD 635/2006), sector minero, nuclear
+- El RIPCI se aplica supletoriamente en lo no regulado por normativa específica (RSCIEI, CTE DB-SI4, etc.)
+
+Productos de PCI
+- Tres vías de acreditación del producto: (1) marcado CE si existe norma armonizada, (2) marca de conformidad a norma (organismo acreditado por ENAC) si no hay norma armonizada, (3) evaluación técnica favorable para productos no tradicionales/innovadores
+- Los organismos de certificación/evaluación técnica remiten al Ministerio la relación de productos certificados
+- Productos de modelo único para una instalación concreta: no necesitan marca/certificado, pero sí proyecto firmado por técnico titulado + informe de tercero independiente (OC habilitado)
+
+Empresas instaladoras y mantenedoras – habilitación
+- Sistema de declaración responsable (no autorización previa) → habilita por tiempo indefinido en todo el territorio nacional desde el momento de presentación
+- Requisitos comunes instaladoras y mantenedoras:
+  · Identificación legal (persona física o jurídica constituida legalmente)
+  · Medios humanos mínimos del Anexo III
+  · Medios técnicos suficientes
+  · Seguro de RC profesional: mínimo 800.000 € por siniestro
+  · Certificado de sistema de gestión de la calidad (entidad acreditada por ENAC); en el inicio de actividad, plazo máximo de 1 año para obtenerlo
+- El usuario de equipos/sistemas puede ser su propio mantenedor si tiene medios humanos, técnicos y seguro de RC (salvo mantas ignífugas)
+- Extintores: pueden ser colocados también por la persona usuaria cuando superficie ≤ 100 m² o vivienda unifamiliar
+- Documentación que conserva la empresa mantenedora: al menos 5 años
+
+Instalación, puesta en servicio y mantenimiento
+- La empresa instaladora no puede instalar productos que no cumplan la normativa; debe comunicarlo por escrito al titular y abstenerse hasta corrección
+- Si la empresa instaladora discrepa con el proyecto: comunicación escrita al autor del proyecto y al titular; si no hay acuerdo, el órgano competente de la CA resuelve en plazo máximo de 2 meses
+- Una vez concluida la instalación: entrega de documentación técnica e instrucciones de mantenimiento al titular y a la dirección facultativa
+- Certificado de mantenimiento periódico: obligatorio tras cada operación; debe incluir referencia a los equipos, copia de las listas de comprobación y resultados
+
+Inspecciones periódicas (art. 22)
+- Sujetas a inspección: instalaciones de PCI no reguladas por reglamentación específica (no RSCIEI, no CTE DB-SI si ya tienen régimen propio)
+- Organismo que realiza la inspección: Organismo de Control (OC) acreditado, NO la empresa mantenedora
+- Periodicidad: cada 10 años
+- Primera inspección de instalaciones existentes con más de 10 años: se somete a inspección en los plazos de la DT del RD
+- El titular es quien debe solicitar la inspección periódica al OC
+
+Puntos trampa frecuentes en test
+- La declaración responsable habilita en todo el territorio español: NO es necesaria una declaración por cada CA
+- Seguro de RC: 800.000 € mínimo, igual para instaladoras y mantenedoras
+- Conservación de documentación de mantenimiento: 5 años (no 3, no 10)
+- Inspecciones periódicas: las realiza un OC habilitado, NO la empresa mantenedora
+- Periodicidad de inspecciones: 10 años (no 5, no 15)
+- El RIPCI no obliga qué instalaciones deben tener los edificios: eso lo determina el CTE DB-SI, el RSCIEI u otras normas
