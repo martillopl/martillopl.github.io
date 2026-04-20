@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 13 — CTE DB-SUA: Seguridad de Utilización y Accesibilidad</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.22);--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.20)}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2.5rem 1rem;line-height:1.8}
+  .page{max-width:740px;margin:0 auto}
+  .header{margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:.5px solid var(--bm)}
+  .tlabel{font-size:12px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+  h1{font-size:22px;font-weight:500;line-height:1.3;margin-bottom:8px}
+  .meta{font-size:13px;color:var(--t3)}
+  .indice{background:var(--bg2);border:.5px solid var(--bl);border-radius:var(--r2);padding:16px 20px;margin-bottom:2.5rem}
+  .itit{font-size:11px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+  .indice ol{padding-left:18px}
+  .indice li{font-size:13px;color:var(--t2);padding:3px 0}
+  .indice a{color:var(--t2);text-decoration:none}
+  .indice a:hover{color:var(--t1)}
+  .sec{margin-bottom:2.8rem}
+  h2{font-size:18px;font-weight:500;margin-bottom:1rem;padding-bottom:8px;border-bottom:.5px solid var(--bl)}
+  h3{font-size:15px;font-weight:500;margin:1.6rem 0 .6rem}
+  h4{font-size:14px;font-weight:500;margin:1.2rem 0 .4rem;color:var(--t2)}
+  p{font-size:15px;color:var(--t2);margin-bottom:1rem}
+  p:last-child{margin-bottom:0}
+  strong{font-weight:500;color:var(--t1)}
+  ul{padding-left:20px;margin-bottom:1rem}
+  ul li{font-size:15px;color:var(--t2);padding:3px 0}
+  ol.num{padding-left:20px;margin-bottom:1rem}
+  ol.num li{font-size:15px;color:var(--t2);padding:3px 0}
+  .nota{background:var(--bg2);border-left:2px solid var(--bm);padding:12px 16px;margin:1.2rem 0;font-size:13.5px;color:var(--t2);line-height:1.65}
+  .nota strong{color:var(--t1)}
+  .footer{margin-top:3rem;padding-top:1.2rem;border-top:.5px solid var(--bl);font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="tlabel">Tema 13 — CTE DB-SUA · Ingeniero Técnico</div>
+    <h1>Código Técnico de la Edificación — Documento Básico de Seguridad de Utilización y Accesibilidad (DB-SUA)</h1>
+    <div class="meta">RD 314/2006 · DB-SUA (actualización 2019) · RDL 1/2013 (LGDPD) · LF 12/2018 (Navarra)</div>
+  </div>
+  <div class="indice">
+    <div class="itit">Índice</div>
+    <ol>
+      <li><a href="#s1">Introducción: el DB-SUA y su doble objetivo</a></li>
+      <li><a href="#s2">Estructura del DB-SUA: las nueve secciones</a></li>
+      <li><a href="#s3">SUA 1 — Seguridad frente al riesgo de caídas: introducción</a></li>
+      <li><a href="#s4">SUA 1 — Resbaladicidad de los suelos</a></li>
+      <li><a href="#s5">SUA 1 — Discontinuidades en el pavimento</a></li>
+      <li><a href="#s6">SUA 1 — Desniveles: protección de desniveles y barandillas</a></li>
+      <li><a href="#s7">SUA 1 — Escaleras de uso general</a></li>
+      <li><a href="#s8">SUA 1 — Escaleras de uso restringido</a></li>
+      <li><a href="#s9">SUA 1 — Rampas</a></li>
+      <li><a href="#s10">SUA 1 — Pasillos escalonados y escaleras de uso general en sentido descendente</a></li>
+      <li><a href="#s11">SUA 1 — Limpieza de los acristalamientos exteriores</a></li>
+      <li><a href="#s12">SUA 9 — Accesibilidad: ámbito y condiciones funcionales</a></li>
+      <li><a href="#s13">SUA 9 — El itinerario accesible en el edificio</a></li>
+      <li><a href="#s14">SUA 9 — Dotación de elementos accesibles</a></li>
+      <li><a href="#s15">SUA 9 — Condiciones y características de la información y señalización</a></li>
+      <li><a href="#s16">Relación entre el DB-SUA y la LF 12/2018 de Navarra</a></li>
+    </ol>
+  </div>
+
+  <div class="sec" id="s1">
+    <h2>1. Introducción: el DB-SUA y su doble objetivo</h2>
+    <p>El <strong>Documento Básico de Seguridad de Utilización y Accesibilidad (DB-SUA)</strong> del Código Técnico de la Edificación tiene un doble objetivo, que se refleja en su propio nombre:</p>
+    <ul>
+      <li><strong>Seguridad de utilización</strong>: reducir a límites aceptables el riesgo de que los usuarios de los edificios sufran daños inmediatos durante el uso previsto, como consecuencia de las características del proyecto, la construcción, el uso y el mantenimiento. Los riesgos cubiertos son las caídas, los impactos, el aprisionamiento, la iluminación inadecuada, los riesgos de alta ocupación, ahogamiento, vehículos en movimiento y la acción del rayo.</li>
+      <li><strong>Accesibilidad</strong>: facilitar el acceso y la utilización no discriminatoria, independiente y segura de los edificios a las personas con discapacidad. Esta sección (SUA 9) conecta directamente con el derecho fundamental a la igualdad de oportunidades y con la normativa específica de accesibilidad (RDL 1/2013 y, en Navarra, LF 12/2018).</li>
+    </ul>
+    <p>El DB-SUA fue profundamente reformado cuando se fusionaron los anteriores documentos DB-SU (Seguridad de Utilización) y el capítulo de accesibilidad, que anteriormente se regulaba separadamente. La actualización de <strong>2019 (RD 732/2019)</strong> actualizó la sección SUA 9 para adaptarla a la nueva normativa de accesibilidad.</p>
+    <div class="nota"><strong>Relevancia para el ingeniero técnico:</strong> El DB-SUA afecta directamente al diseño de los edificios en sus aspectos más cotidianos: la elección del pavimento, el diseño de las escaleras, la disposición de las barandillas, la instalación de ascensores y rampas, y la dotación de servicios accesibles. Su cumplimiento debe verificarse en todos los proyectos de edificación de nueva construcción y en las reformas que afecten a los elementos regulados.</div>
+  </div>
+
+  <div class="sec" id="s2">
+    <h2>2. Estructura del DB-SUA: las nueve secciones</h2>
+    <p>El DB-SUA se organiza en nueve secciones:</p>
+    <ul>
+      <li><strong>SUA 1</strong>: Seguridad frente al riesgo de caídas.</li>
+      <li><strong>SUA 2</strong>: Seguridad frente al riesgo de impacto o de atrapamiento.</li>
+      <li><strong>SUA 3</strong>: Seguridad frente al riesgo de aprisionamiento en recintos.</li>
+      <li><strong>SUA 4</strong>: Seguridad frente al riesgo causado por iluminación inadecuada.</li>
+      <li><strong>SUA 5</strong>: Seguridad frente al riesgo causado por situaciones de alta ocupación.</li>
+      <li><strong>SUA 6</strong>: Seguridad frente al riesgo de ahogamiento.</li>
+      <li><strong>SUA 7</strong>: Seguridad frente al riesgo causado por vehículos en movimiento.</li>
+      <li><strong>SUA 8</strong>: Seguridad frente al riesgo causado por la acción del rayo.</li>
+      <li><strong>SUA 9</strong>: Accesibilidad.</li>
+    </ul>
+    <p>Este tema aborda exclusivamente SUA 1 y SUA 9, que son las dos secciones con mayor impacto práctico en el diseño de los edificios y las más explotadas en las oposiciones de ingeniero técnico.</p>
+  </div>
+
+  <div class="sec" id="s3">
+    <h2>3. SUA 1 — Seguridad frente al riesgo de caídas: introducción</h2>
+    <p>La sección <strong>SUA 1</strong> es la más extensa del DB-SUA. Regula las condiciones que deben cumplir los edificios para reducir el riesgo de caídas de sus usuarios. Las caídas son el tipo de accidente doméstico y en entornos construidos más frecuente y con mayor incidencia en términos de lesiones graves, especialmente para las personas mayores.</p>
+    <p>SUA 1 aborda el riesgo de caídas desde múltiples perspectivas:</p>
+    <ul>
+      <li>La <strong>resbaladicidad del suelo</strong>: la selección de pavimentos con el nivel de resistencia al deslizamiento adecuado al uso y al riesgo de mojado.</li>
+      <li>Las <strong>discontinuidades del pavimento</strong>: los escalones aislados, las juntas, los cambios de nivel y los obstáculos que pueden hacer tropezar a los usuarios.</li>
+      <li>Los <strong>desniveles</strong>: la protección de huecos, desniveles y bordes de forjado mediante barandillas y otros elementos de protección.</li>
+      <li>Las <strong>escaleras y rampas</strong>: las condiciones geométricas y de diseño de las escaleras y rampas para minimizar el riesgo de caída durante su uso.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s4">
+    <h2>4. SUA 1 — Resbaladicidad de los suelos</h2>
+    <p>El DB-SUA establece que los suelos de los edificios deben tener una <strong>clase de resbaladicidad</strong> adecuada al uso y al riesgo de mojado, para prevenir el riesgo de resbalamiento y caída de los usuarios.</p>
+
+    <h3>La clasificación de la resbaladicidad</h3>
+    <p>La resbaladicidad de los suelos se mide mediante el <strong>valor de resistencia al deslizamiento (Rd)</strong>, determinado según la norma UNE-ENV 12633, y se clasifica en tres clases:</p>
+    <ul>
+      <li><strong>Clase 0</strong>: Rd &lt; 15. Suelos de muy baja resistencia al deslizamiento. No admisibles en ningún caso en los edificios regulados por el DB-SUA.</li>
+      <li><strong>Clase 1</strong>: 15 ≤ Rd &lt; 35. Suelos de resistencia al deslizamiento baja-media. Admisibles en zonas interiores secas (pavimentos de zonas secas sin riesgo de mojado).</li>
+      <li><strong>Clase 2</strong>: 35 ≤ Rd &lt; 45. Suelos de resistencia al deslizamiento media. Admisibles en zonas interiores con posibilidad de mojado (baños, aseos, cocinas, vestuarios, zonas de acceso desde el exterior).</li>
+      <li><strong>Clase 3</strong>: Rd ≥ 45. Suelos de alta resistencia al deslizamiento. Necesarios en zonas exteriores, piscinas, y zonas con pendiente superior al 6% con posibilidad de mojado.</li>
+    </ul>
+
+    <h3>Aplicación de las clases por zonas</h3>
+    <p>El DB-SUA establece la clase mínima de resbaladicidad exigida para cada tipo de zona:</p>
+    <ul>
+      <li>Zonas interiores <strong>secas</strong> con pendiente &lt; 6%: <strong>clase 1</strong>.</li>
+      <li>Zonas interiores <strong>secas</strong> con pendiente ≥ 6%: <strong>clase 2</strong>.</li>
+      <li>Zonas interiores <strong>húmedas</strong> (baños, aseos, cocinas, zonas de piscinas, etc.) con pendiente &lt; 6%: <strong>clase 2</strong>.</li>
+      <li>Zonas interiores húmedas con pendiente ≥ 6% o zonas exteriores: <strong>clase 3</strong>.</li>
+      <li>Zonas <strong>exteriores</strong> y zonas en escaleras de uso público: <strong>clase 3</strong>.</li>
+    </ul>
+    <div class="nota"><strong>Regla mnemotécnica:</strong> Interior seco = 1, interior húmedo = 2, exterior o pendiente = 3. Cada "grado de riesgo" sube una clase.</div>
+  </div>
+
+  <div class="sec" id="s5">
+    <h2>5. SUA 1 — Discontinuidades en el pavimento</h2>
+    <p>Las discontinuidades en el pavimento (escalones aislados, salientes, cambios de nivel, juntas) son fuentes frecuentes de tropiezos y caídas, especialmente para las personas mayores y con discapacidad. El DB-SUA establece las siguientes condiciones para evitarlas:</p>
+    <ul>
+      <li>El suelo no debe presentar imperfecciones ni irregularidades que supongan un riesgo para las personas. En particular, no deben existir resaltos en el suelo de altura superior a <strong>6 mm</strong>, salvo en las juntas de dilatación que, si están abiertas, no deben tener anchura superior a <strong>8 mm</strong>.</li>
+      <li>Los <strong>escalones aislados</strong> o cambios de nivel de menos de <strong>550 mm</strong> de altura en zonas de circulación con peatones deben señalizarse. En las zonas de uso público, los escalones aislados o las series de escalones deben señalizarse con una franja de <strong>pavimento visual diferenciado</strong> en el arranque y en el final de cada tramo (franja de color y/o textura distinta).</li>
+      <li>En las zonas de circulación no deben disponerse escalones aislados cuando la diferencia de cota sea inferior a <strong>550 mm</strong>, debiendo resolverse mediante rampa o itinerario alternativo sin escalones. En las zonas exteriores de uso público, esta restricción es especialmente importante por las consecuencias del riesgo de caída.</li>
+      <li>Los <strong>felpudos y alfombras</strong> encastrados en el pavimento deben quedar al mismo nivel que el pavimento contiguo. Los felpudos no encastrados deben fijarse al suelo para evitar deslizamientos.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s6">
+    <h2>6. SUA 1 — Desniveles: protección de desniveles y barandillas</h2>
+    <p>Los desniveles en los edificios (bordes de terrazas, escaleras, balcones, huecos de escalera, cambios bruscos de nivel) son uno de los principales riesgos de caída grave. El DB-SUA establece las condiciones que deben cumplir los elementos de protección de los desniveles.</p>
+
+    <h3>¿Cuándo es obligatoria la protección?</h3>
+    <p>Deben protegerse con barandillas u otros elementos de protección los desniveles cuya diferencia de cota sea superior a <strong>550 mm</strong>. Por debajo de esta cota, los desniveles solo deben señalizarse, sin necesidad de barandilla. Sin embargo, en zonas de uso público con afluencia de público (escaleras de uso general, balcones, terrazas) se recomienda la protección incluso para diferencias de cota menores.</p>
+
+    <h3>Altura mínima de las barandillas</h3>
+    <p>La altura mínima de las barandillas varía en función de la diferencia de cota que protegen:</p>
+    <ul>
+      <li>Diferencia de cota de hasta <strong>6 metros</strong>: altura mínima de la barandilla <strong>0,90 metros</strong>.</li>
+      <li>Diferencia de cota superior a <strong>6 metros</strong>: altura mínima <strong>1,10 metros</strong>.</li>
+      <li>En las escaleras de uso público: altura mínima <strong>1,10 metros</strong> cuando la diferencia de cota supera 6 metros, y <strong>0,90 metros</strong> en los demás casos.</li>
+    </ul>
+    <p>La altura de la barandilla se mide desde la línea de inclinación de la escalera (desde el borde del escalón) o desde el suelo de la terraza.</p>
+
+    <h3>Resistencia de las barandillas</h3>
+    <p>Las barandillas deben soportar las fuerzas horizontales y verticales establecidas en el DB-SE-AE (Acciones en la Edificación), que varían en función del uso del edificio y de la zona (barandilla de terraza privada, de escalera de uso público, de graderío, etc.). En general, se exige que soporten una fuerza horizontal de <strong>0,8 kN/m</strong> en zonas de uso privado y de <strong>3,0 kN/m</strong> en zonas de uso público.</p>
+
+    <h3>Condiciones de diseño de las barandillas</h3>
+    <p>Las barandillas no deben ser escalables por niños: no deben disponer de elementos horizontales o salientes que permitan el trepe, ni aperturas que permitan el paso de una esfera de diámetro superior a <strong>100 mm</strong> (para evitar el paso de la cabeza de un niño). La parte inferior de la barandilla debe extenderse hasta el suelo o estar a una distancia máxima de <strong>50 mm</strong> del mismo, para evitar que los niños se deslicen por debajo.</p>
+  </div>
+
+  <div class="sec" id="s7">
+    <h2>7. SUA 1 — Escaleras de uso general</h2>
+    <p>Las <strong>escaleras de uso general</strong> son las que pueden ser utilizadas por todos los usuarios del edificio, incluidas las personas mayores y con movilidad reducida. Sus condiciones geométricas son más exigentes que las de las escaleras de uso restringido (acceso exclusivo a zonas privadas de viviendas o a zonas de mantenimiento).</p>
+
+    <h3>Tramos de escalera</h3>
+    <ul>
+      <li>Cada tramo tendrá <strong>3 peldaños como mínimo</strong> y <strong>18 peldaños como máximo</strong> (para evitar que sean muy fatigosos sin descansillo).</li>
+      <li>La anchura mínima de la escalera en uso general depende del uso del edificio: en uso residencial vivienda, la anchura mínima del tramo es de <strong>0,90 metros</strong>; en zonas de uso público (administrativo, comercial, pública concurrencia), la anchura mínima es de <strong>1,00 metro</strong>.</li>
+      <li>En escaleras de evacuación, la anchura mínima viene determinada por las exigencias del DB-SI.</li>
+    </ul>
+
+    <h3>Peldaños</h3>
+    <p>Las dimensiones de los peldaños de las escaleras de uso general deben cumplir las siguientes condiciones:</p>
+    <ul>
+      <li><strong>Huella (H)</strong>: la dimensión horizontal del peldaño, medida en planta. Debe ser de al menos <strong>28 cm</strong> en escaleras de uso general.</li>
+      <li><strong>Contrahuella (C)</strong>: la dimensión vertical del peldaño. Debe estar comprendida entre <strong>13 cm y 18,5 cm</strong>.</li>
+      <li>Deben cumplir la <strong>fórmula de Blondel</strong>: 54 cm ≤ 2C + H ≤ 70 cm. Esta fórmula garantiza que la relación entre huella y contrahuella es ergonómica para la marcha humana.</li>
+      <li>En cada tramo, todos los peldaños deben tener la misma contrahuella. En el mismo edificio, la contrahuella de todas las escaleras puede variar un máximo de ±5 mm entre ellas.</li>
+      <li>La huella se medirá en la dirección de la marcha, descontando el vuelo de la nariz del escalón. La nariz del escalón no debe sobresaler más de <strong>25 mm</strong>.</li>
+    </ul>
+
+    <h3>Descansillos</h3>
+    <ul>
+      <li>Los descansillos entre tramos de escalera deben tener una profundidad mínima igual a la anchura del tramo de escalera y, como mínimo, de <strong>1,00 metro</strong>.</li>
+      <li>No deben disponerse peldaños en los descansillos.</li>
+    </ul>
+
+    <h3>Pasamanos</h3>
+    <ul>
+      <li>Las escaleras de uso general deben disponer de pasamanos continuo al menos en un lado cuando la anchura sea inferior a <strong>1,20 metros</strong>, y en ambos lados cuando la anchura sea igual o superior a <strong>1,20 metros</strong>.</li>
+      <li>La altura del pasamanos debe estar comprendida entre <strong>0,90 m y 1,10 m</strong>.</li>
+      <li>El pasamanos debe prolongarse <strong>30 cm</strong> más allá del último peldaño (en el inicio y en el final del tramo de escalera).</li>
+      <li>El pasamanos debe ser firme y fácil de asir, con una sección circular de diámetro entre <strong>45 y 50 mm</strong> o de perfil equivalente, y debe tener separación de la pared de al menos <strong>40 mm</strong>.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s8">
+    <h2>8. SUA 1 — Escaleras de uso restringido</h2>
+    <p>Las <strong>escaleras de uso restringido</strong> son aquellas que solo sirven a zonas de ocupación muy limitada (acceso a zonas privadas de una vivienda desde otra habitación de la misma vivienda, a zonas de mantenimiento de instalaciones, etc.). Sus condiciones geométricas son menos exigentes que las de uso general:</p>
+    <ul>
+      <li>La anchura mínima puede ser de <strong>0,80 metros</strong>.</li>
+      <li>La contrahuella puede ser de hasta <strong>20 cm</strong> (más alta que en uso general).</li>
+      <li>La huella mínima se reduce a <strong>17 cm</strong> (mucho menor que los 28 cm de uso general).</li>
+      <li>Pueden no disponer de pasamanos en ambos lados si la anchura es inferior a 1,20 m.</li>
+      <li>Pueden ser escaleras de "peldaño compensado" (peldaños con huella variable en escaleras en caracol o mixtas).</li>
+    </ul>
+    <div class="nota"><strong>Diferencia clave:</strong> La huella mínima pasa de 28 cm (uso general) a 17 cm (uso restringido). La contrahuella máxima pasa de 18,5 cm (uso general) a 20 cm (uso restringido). Estas diferencias son frecuentes en test.</div>
+  </div>
+
+  <div class="sec" id="s9">
+    <h2>9. SUA 1 — Rampas</h2>
+    <p>Las rampas son la solución alternativa a las escaleras para salvar diferencias de nivel, especialmente en el diseño de itinerarios accesibles. El DB-SUA establece condiciones específicas para las rampas según su uso:</p>
+
+    <h3>Rampas para uso general (no exclusivamente accesible)</h3>
+    <ul>
+      <li><strong>Pendiente máxima</strong>: las rampas para uso general deben tener una pendiente máxima del <strong>12%</strong>.</li>
+      <li><strong>Anchura mínima</strong>: la anchura libre mínima de la rampa es de <strong>1,00 metro</strong>.</li>
+      <li>Deben disponer de pasamanos en ambos lados cuando tengan una pendiente superior al 6%.</li>
+    </ul>
+
+    <h3>Rampas accesibles (itinerario accesible)</h3>
+    <p>Las rampas que forman parte del itinerario accesible del edificio (SUA 9) tienen condiciones más exigentes:</p>
+    <ul>
+      <li><strong>Pendiente máxima</strong>:
+        <ul>
+          <li>Longitud del tramo superior a <strong>3 m</strong>: pendiente máxima del <strong>8%</strong>.</li>
+          <li>Longitud del tramo entre <strong>3 y 0,5 m</strong>: pendiente máxima del <strong>10%</strong>.</li>
+          <li>Longitud del tramo inferior a <strong>0,5 m</strong>: pendiente máxima del <strong>12%</strong>.</li>
+        </ul>
+      </li>
+      <li><strong>Anchura mínima</strong>: la anchura libre mínima de la rampa accesible es de <strong>1,20 metros</strong>.</li>
+      <li><strong>Pendiente transversal</strong>: máxima del <strong>2%</strong> para garantizar el drenaje sin dificultad.</li>
+      <li><strong>Descansillos</strong>: en los cambios de dirección y cuando la longitud del tramo supera <strong>9 m</strong>, deben disponerse descansillos de longitud mínima de <strong>1,50 m</strong>.</li>
+      <li><strong>Pasamanos</strong>: obligatorios a ambos lados, en doble altura (<strong>0,65-0,75 m y 0,90-1,10 m</strong>) y prolongados <strong>30 cm</strong> más allá del inicio y el final.</li>
+      <li><strong>Pavimento</strong>: el pavimento de la rampa accesible debe ser de clase de resbaladicidad 3 cuando haya posibilidad de mojado.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s10">
+    <h2>10. SUA 1 — Pasillos escalonados y escaleras de uso general en sentido descendente</h2>
+    <p>Los <strong>pasillos escalonados</strong> son zonas de circulación horizontal con uno o varios escalones que no constituyen una escalera propiamente dicha. Son especialmente peligrosos porque el usuario no espera encontrar un escalón en una zona que parece un pasillo. El DB-SUA establece que en los pasillos de uso general no deben disponerse escalones aislados, siendo obligatorio resolverlos mediante rampa accesible.</p>
+
+    <h3>Las escaleras de mano y las escaleras fijas de servicio</h3>
+    <p>Las escaleras de mano (portátiles) y las escaleras fijas de acceso a espacios de mantenimiento o de servicio tienen requisitos mínimos de resistencia, pero no están sometidas a los requisitos de las escaleras de uso general o restringido, por su uso muy limitado.</p>
+  </div>
+
+  <div class="sec" id="s11">
+    <h2>11. SUA 1 — Limpieza de los acristalamientos exteriores</h2>
+    <p>El DB-SUA establece condiciones para la limpieza segura de los acristalamientos exteriores de los edificios. Cuando los acristalamientos no sean accesibles desde el interior o no puedan limpiarse desde el suelo, deben disponerse dispositivos que permitan la limpieza segura desde el interior o desde el exterior en condiciones de seguridad, sin necesidad de utilizar escaleras de mano o medios auxiliares no permanentes.</p>
+    <p>En edificios de uso residencial de más de seis plantas, los acristalamientos exteriores deben ser abatibles o disponer de acceso desde el exterior mediante plataformas o grúas de limpieza de fachada.</p>
+  </div>
+
+  <div class="sec" id="s12">
+    <h2>12. SUA 9 — Accesibilidad: ámbito y condiciones funcionales</h2>
+    <p>La sección <strong>SUA 9</strong> establece las condiciones de accesibilidad que deben cumplir los edificios para facilitar el acceso y la utilización no discriminatoria, independiente y segura de los mismos a las personas con discapacidad.</p>
+
+    <h3>Ámbito de aplicación de SUA 9</h3>
+    <p>La sección SUA 9 se aplica a los edificios de nueva construcción en los que deba cumplirse el DB-SUA. En los edificios existentes, se aplica cuando se realicen reformas que afecten a los elementos regulados. Los edificios de uso exclusivo privado residencial (viviendas unifamiliares para uso propio) tienen requisitos menos exigentes que los edificios de uso público.</p>
+
+    <h3>Las condiciones funcionales de accesibilidad</h3>
+    <p>El DB-SUA establece que los edificios deben cumplir las condiciones funcionales de accesibilidad que se especifican para cada uso. Las condiciones funcionales se refieren principalmente a la existencia de:</p>
+    <ul>
+      <li><strong>Itinerario accesible</strong> que comunique los accesos accesibles del edificio con todos los espacios de uso por el público y con las viviendas accesibles.</li>
+      <li><strong>Elementos accesibles</strong> en número suficiente (plazas de aparcamiento, servicios higiénicos, piscinas, etc.).</li>
+      <li><strong>Señalización e información accesible</strong> para las personas con discapacidad sensorial.</li>
+    </ul>
+
+    <h3>Condiciones funcionales por tipo de edificio</h3>
+    <p>Las condiciones funcionales de SUA 9 varían según el uso del edificio:</p>
+    <ul>
+      <li><strong>Edificios de uso residencial vivienda</strong>: al menos una entrada al edificio debe ser accesible. El itinerario accesible debe comunicar el acceso con las viviendas accesibles y con las zonas comunes accesibles. El ascensor debe ser accesible cuando sea obligatorio.</li>
+      <li><strong>Edificios de uso no residencial</strong>: todas las plantas de uso por el público deben ser accesibles. Las zonas de uso público deben conectarse mediante itinerario accesible con los accesos y entre sí.</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="s13">
+    <h2>13. SUA 9 — El itinerario accesible en el edificio</h2>
+    <p>El <strong>itinerario accesible</strong> dentro del edificio es el recorrido que, cumpliendo los requisitos establecidos en SUA 9, permite la utilización autónoma y segura del edificio a las personas con discapacidad. Debe existir al menos un itinerario accesible que comunique el exterior con los espacios interiores de uso público y con las viviendas accesibles.</p>
+
+    <h3>Características del itinerario accesible en el edificio</h3>
+    <p>El itinerario accesible dentro del edificio debe cumplir las siguientes condiciones (en sintonía con la LF 12/2018 y el RDL 1/2013):</p>
+    <ul>
+      <li><strong>Anchura libre mínima</strong>: <strong>1,20 metros</strong> en pasillos de circulación general, con ensanchamiento hasta <strong>1,50 metros</strong> en los cambios de dirección.</li>
+      <li><strong>Altura libre mínima</strong>: <strong>2,20 metros</strong>.</li>
+      <li><strong>Espacio de maniobra</strong>: el espacio delante de las puertas debe permitir inscribir una circunferencia de diámetro <strong>1,20 metros</strong> en la dirección de paso, o de <strong>1,50 metros</strong> en las condiciones de mayor demanda (giro de 90°).</li>
+      <li><strong>Puertas</strong>: la anchura libre mínima de las puertas del itinerario accesible es de <strong>0,80 metros</strong>. Las puertas de dos hojas deben tener al menos una hoja con esa anchura libre.</li>
+      <li><strong>Umbral</strong>: el umbral de las puertas accesibles no debe superar <strong>2 cm</strong> de altura y debe tener los bordes achaflanados.</li>
+      <li><strong>Pendiente longitudinal</strong>: el itinerario no debe tener pendiente superior al <strong>4%</strong> en su configuración horizontal (pasillos). Las diferencias de nivel se resuelven con rampas accesibles o ascensores.</li>
+      <li><strong>Pavimento</strong>: firme, antideslizante y sin irregularidades que puedan suponer riesgo de caída.</li>
+    </ul>
+
+    <h3>El ascensor accesible</h3>
+    <p>El ascensor es el elemento principal del itinerario accesible vertical en edificios de más de una planta. El DB-SUA establece que los ascensores deben ser accesibles cuando el itinerario accesible los incluya. Las condiciones del ascensor accesible son:</p>
+    <ul>
+      <li><strong>Dimensiones mínimas de la cabina</strong>: <strong>1,00 × 1,25 metros</strong>.</li>
+      <li><strong>Anchura libre mínima de la puerta</strong>: <strong>0,80 metros</strong>.</li>
+      <li>El ascensor debe disponer de señalización visual y acústica de las plantas, con números en Braille y en relieve en los botones y en las jambas.</li>
+      <li>El suelo de la cabina debe estar al mismo nivel que el rellano en todos los puntos de parada (nivelación automática).</li>
+    </ul>
+
+    <h3>¿Cuándo es obligatorio el ascensor accesible?</h3>
+    <p>En edificios de uso residencial vivienda, el ascensor es obligatorio cuando el edificio tiene más de <strong>2 plantas sobre rasante</strong> (es decir, cuando hay 3 o más plantas sobre la planta baja) o cuando la diferencia de cota entre el nivel de acceso y la planta más alta de uso es superior a <strong>6 metros</strong>. Esta regla es la misma que establece la LF 12/2018 de Navarra.</p>
+  </div>
+
+  <div class="sec" id="s14">
+    <h2>14. SUA 9 — Dotación de elementos accesibles</h2>
+    <p>El DB-SUA establece la dotación mínima de elementos accesibles que deben tener los edificios en función de su uso. Los elementos accesibles más importantes son:</p>
+
+    <h3>Plazas de aparcamiento accesibles</h3>
+    <p>En los aparcamientos de uso público de los edificios deben reservarse plazas accesibles en la siguiente proporción:</p>
+    <ul>
+      <li>En aparcamientos de uso público: una plaza accesible por cada <strong>33 plazas</strong> o fracción.</li>
+      <li>En aparcamientos de uso residencial con más de <strong>200 plazas</strong>: una plaza accesible adicional por cada 200 plazas o fracción.</li>
+    </ul>
+    <p>Las plazas de aparcamiento accesibles deben tener unas dimensiones mínimas de <strong>2,20 × 4,50 metros</strong>, más una zona de transferencia lateral de <strong>1,20 metros de anchura</strong>, contigua a la plaza y comunicada con el itinerario accesible del aparcamiento.</p>
+
+    <h3>Servicios higiénicos accesibles</h3>
+    <p>Los edificios de uso público deben disponer de servicios higiénicos accesibles. El número mínimo varía en función del uso y del número de aseos disponibles:</p>
+    <ul>
+      <li>En cada planta de uso público: al menos un aseo accesible por sexo, o un aseo mixto accesible cuando solo existe un aseo por planta.</li>
+      <li>En estadios y recintos de espectáculos: una cabina de WC accesible por cada 10 cabinas o fracción.</li>
+    </ul>
+    <p>Las condiciones del aseo accesible coinciden con las establecidas en la LF 12/2018 de Navarra: espacio de maniobra de 1,50 m de diámetro, espacio de transferencia lateral al inodoro de 80 cm, lavabo sin pedestal con espacio libre inferior de 70 × 50 cm, barras de apoyo abatibles, puerta de apertura exterior o corredera.</p>
+
+    <h3>Piscinas accesibles</h3>
+    <p>Las piscinas de uso público deben disponer de algún medio de acceso al vaso accesible para personas con discapacidad (rampa de acceso al agua, grúa de transferencia). Las condiciones específicas varían en función del tipo de piscina.</p>
+
+    <h3>Mostradores de atención al público</h3>
+    <p>Los mostradores, taquillas y elementos de atención al público deben tener al menos una parte accesible a una altura entre <strong>0,80 y 0,85 metros</strong>, con espacio libre inferior de al menos <strong>0,70 metros de alto y 0,50 metros de fondo</strong> para aproximación de personas en silla de ruedas.</p>
+  </div>
+
+  <div class="sec" id="s15">
+    <h2>15. SUA 9 — Condiciones y características de la información y señalización</h2>
+    <p>El DB-SUA establece que los edificios accesibles deben contar con información y señalización que permitan a las personas con discapacidad orientarse, localizarse y utilizar el edificio de forma autónoma. Las condiciones de la señalización accesible se refieren a:</p>
+
+    <h3>Señalización visual</h3>
+    <ul>
+      <li>Las señales deben tener contraste cromático suficiente entre el fondo y el texto o pictograma (ratio mínimo de contraste de luminosidad <strong>3:1</strong> en general y <strong>7:1</strong> para información importante).</li>
+      <li>El tamaño de la letra y los pictogramas debe ser legible desde la distancia de lectura prevista.</li>
+      <li>Las señales deben situarse en lugares bien iluminados y libres de deslumbramiento.</li>
+    </ul>
+
+    <h3>Señalización en Braille y en relieve</h3>
+    <ul>
+      <li>Los ascensores deben tener señalización en Braille y en relieve en los botones de llamada y en las jambas de las puertas.</li>
+      <li>Los paneles de información deben incluir información en Braille cuando contengan información esencial para la orientación de los usuarios.</li>
+    </ul>
+
+    <h3>Sistemas de bucle de inducción magnética</h3>
+    <p>En los edificios de uso público con espacios de atención al público (mostradores, taquillas, salas de espera, etc.), deben instalarse <strong>bucles de inducción magnética</strong> (sistemas de asistencia auditiva para personas con audífono) cuando el número de plazas supere determinados umbrales. Estos sistemas permiten a las personas con discapacidad auditiva que utilizan audífonos escuchar directamente el sonido amplificado del sistema de megafonía o de la persona que les atiende, sin interferencias del ruido ambiente.</p>
+
+    <h3>Señalización de los elementos accesibles</h3>
+    <p>Los elementos accesibles del edificio (accesos accesibles, ascensores accesibles, aseos accesibles, plazas de aparcamiento accesibles) deben estar señalizados con el <strong>Símbolo Internacional de Accesibilidad (SIA)</strong> para que las personas con discapacidad puedan localizarlos fácilmente.</p>
+  </div>
+
+  <div class="sec" id="s16">
+    <h2>16. Relación entre el DB-SUA y la LF 12/2018 de Navarra</h2>
+    <p>En Navarra, la accesibilidad en la edificación se regula simultáneamente por el DB-SUA del CTE y por la <strong>Ley Foral 12/2018, de 14 de junio, de Accesibilidad Universal</strong>. La relación entre ambas normas es la siguiente:</p>
+    <ul>
+      <li>El DB-SUA es la norma técnica estatal básica en materia de accesibilidad en la edificación. Establece los requisitos mínimos que debe cumplir cualquier edificio en todo el territorio español.</li>
+      <li>La LF 12/2018 es la norma autonómica navarra. Puede establecer requisitos más exigentes que el DB-SUA, pero no puede ser menos restrictiva. En la práctica, los requisitos de la LF 12/2018 son en su mayor parte coincidentes con los del DB-SUA, con algunas especificaciones adicionales para el espacio urbano y para determinados tipos de edificios.</li>
+      <li>Cuando existe contradicción entre el DB-SUA y la LF 12/2018, y la LF 12/2018 es más exigente, debe aplicarse la LF 12/2018 en los edificios ubicados en Navarra.</li>
+    </ul>
+    <div class="nota"><strong>Punto de confluencia práctico:</strong> La tabla de parámetros numéricos de accesibilidad (anchuras mínimas, diámetros de maniobra, alturas de mostradores, dimensiones de aseos accesibles, etc.) es esencialmente la misma en el DB-SUA y en la LF 12/2018. Para el examen, basta con conocer los valores numéricos, independientemente de en cuál de las dos normas figura el dato concreto.</div>
+  </div>
+
+  <div class="footer">CTE DB-SUA (RD 314/2006 · actualización 2019) · RDL 1/2013 (LGDPD) · LF 12/2018 (Navarra) · UNE-ENV 12633</div>
+</div>
+</body>
+</html>

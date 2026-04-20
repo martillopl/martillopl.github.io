@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esquema-resumen — CTE DB-SUA (Tema 13)</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.20);--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.18)}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2rem 1rem}
+  .page{max-width:860px;margin:0 auto}
+  h1{font-size:20px;font-weight:500;margin-bottom:4px}
+  .sub{font-size:13px;color:var(--t3);margin-bottom:24px}
+  .bloque{background:var(--bg2);border:.5px solid var(--bl);border-radius:var(--r2);padding:14px 16px;margin-bottom:10px}
+  .bt{font-size:13px;font-weight:500;margin:0 0 10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .badge{font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap}
+  .bp{background:#EEEDFE;color:#3C3489}.bb{background:#E6F1FB;color:#0C447C}.btl{background:#E1F5EE;color:#085041}.ba{background:#FAEEDA;color:#633806}.bc{background:#FAECE7;color:#712B13}.bg{background:#EAF3DE;color:#27500A}.bx{background:#F1EFE8;color:#444441}
+  @media(prefers-color-scheme:dark){.bp{background:#3C3489;color:#CECBF6}.bb{background:#0C447C;color:#B5D4F4}.btl{background:#085041;color:#9FE1CB}.ba{background:#633806;color:#FAC775}.bc{background:#712B13;color:#F5C4B3}.bg{background:#27500A;color:#C0DD97}.bx{background:#444441;color:#D3D1C7}}
+  .items{display:flex;flex-wrap:wrap;gap:6px}
+  .item{font-size:12px;color:var(--t2);background:var(--bg1);border:.5px solid var(--bl);border-radius:6px;padding:3px 9px}
+  .itemd{font-size:12px;font-weight:500;color:var(--t1);background:var(--bg1);border:.5px solid var(--bm);border-radius:6px;padding:3px 9px}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .s{font-size:11px;color:var(--t3);font-weight:500;margin:0 0 6px}
+  .sep{margin-top:10px;padding-top:10px;border-top:.5px solid var(--bl)}
+  @media(max-width:560px){.g2,.g3{grid-template-columns:1fr}}
+  .footer{margin-top:20px;font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>CTE DB-SUA — Seguridad de Utilización y Accesibilidad</h1>
+  <p class="sub">Tema 13 (Ingeniero Técnico) · Esquema-resumen · RD 314/2006 · RD 732/2019</p>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bp">SUA 1 — Resbaladicidad de suelos</span></div>
+    <div class="g3">
+      <div><div class="s">Clases de resbaladicidad (Rd)</div>
+      <div class="items">
+        <span class="item">Clase 0: Rd &lt;15 — no admisible</span>
+        <span class="item">Clase 1: 15≤Rd&lt;35 — zona interior seca</span>
+        <span class="itemd">Clase 2: 35≤Rd&lt;45 — zona interior húmeda (baños, cocinas, acceso exterior)</span>
+        <span class="itemd">Clase 3: Rd≥45 — zona exterior o pendiente ≥6% con mojado</span>
+      </div></div>
+      <div><div class="s">Regla de aplicación</div>
+      <div class="items">
+        <span class="item">Interior seco + pendiente &lt;6% → clase 1</span>
+        <span class="item">Interior seco + pendiente ≥6% → clase 2</span>
+        <span class="item">Interior húmedo + pendiente &lt;6% → clase 2</span>
+        <span class="itemd">Interior húmedo + pendiente ≥6% → clase 3</span>
+        <span class="itemd">Exterior siempre → clase 3</span>
+      </div></div>
+      <div><div class="s">Discontinuidades en el pavimento</div>
+      <div class="items">
+        <span class="itemd">Resaltes máximos: 6 mm · juntas abiertas: máx. 8 mm</span>
+        <span class="item">Escalones aislados en zonas peatonales: señalización obligatoria + franja de pavimento diferenciado</span>
+        <span class="item">En zonas peatonales: no disponer escalón si diferencia de cota &lt;550 mm → resolver con rampa</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bb">SUA 1 — Desniveles y barandillas</span></div>
+    <div class="g2">
+      <div><div class="s">¿Cuándo es obligatoria la barandilla?</div>
+      <div class="items">
+        <span class="itemd">Desnivel &gt;550 mm → barandilla o protección obligatoria</span>
+        <span class="item">Por debajo de 550 mm → señalización suficiente</span>
+      </div></div>
+      <div><div class="s">Altura de barandillas</div>
+      <div class="items">
+        <span class="itemd">Desnivel hasta 6 m: altura mínima 0,90 m</span>
+        <span class="itemd">Desnivel &gt;6 m: altura mínima 1,10 m</span>
+        <span class="item">En escaleras de uso público: 1,10 m si desnivel &gt;6 m · 0,90 m en los demás casos</span>
+        <span class="item">Apertura máxima: esfera de ∅100 mm no debe pasar</span>
+        <span class="item">Sin elementos horizontales que permitan el trepe a niños</span>
+        <span class="item">Parte inferior: máximo 50 mm del suelo</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge btl">SUA 1 — Escaleras: parámetros comparativos</span></div>
+    <div class="g2">
+      <div><div class="s">Escaleras de uso GENERAL</div>
+      <div class="items">
+        <span class="itemd">Huella mínima: 28 cm</span>
+        <span class="itemd">Contrahuella: 13–18,5 cm</span>
+        <span class="item">Fórmula de Blondel: 54 ≤ 2C+H ≤ 70 cm</span>
+        <span class="item">Peldaños por tramo: 3 mínimo · 18 máximo</span>
+        <span class="itemd">Anchura mínima residencial: 0,90 m · uso público: 1,00 m</span>
+        <span class="item">Descansillo: profundidad ≥ anchura del tramo · mín. 1,00 m</span>
+        <span class="item">Nariz de escalón: vuelo máx. 25 mm</span>
+        <span class="itemd">Pasamanos: un lado si anchura &lt;1,20 m · ambos lados si ≥1,20 m</span>
+        <span class="item">Altura pasamanos: 0,90-1,10 m · prolongación 30 cm al inicio y al final</span>
+        <span class="item">Pasamanos: sección ∅45-50 mm · separación de pared ≥40 mm</span>
+      </div></div>
+      <div><div class="s">Escaleras de uso RESTRINGIDO</div>
+      <div class="items">
+        <span class="itemd">Huella mínima: 17 cm (mucho menor)</span>
+        <span class="itemd">Contrahuella: hasta 20 cm (mayor permitida)</span>
+        <span class="item">Anchura mínima: 0,80 m</span>
+        <span class="item">Se admiten peldaños compensados (caracol, escalera mixta)</span>
+        <span class="item">Sin obligación de pasamanos en ambos lados si anchura &lt;1,20 m</span>
+      </div>
+      <div class="s" style="margin-top:8px">Rampas accesibles</div>
+      <div class="items">
+        <span class="itemd">Pendiente: &gt;3 m → 8% máx. · 0,5-3 m → 10% máx. · &lt;0,5 m → 12% máx.</span>
+        <span class="itemd">Anchura libre mínima: 1,20 m</span>
+        <span class="item">Pendiente transversal máx.: 2%</span>
+        <span class="item">Descansillo cada 9 m: longitud mín. 1,50 m</span>
+        <span class="item">Pasamanos doble: 0,65-0,75 m y 0,90-1,10 m · prolongados 30 cm</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge ba">SUA 9 — Accesibilidad: itinerario accesible en el edificio</span></div>
+    <div class="g3">
+      <div><div class="s">Parámetros del itinerario accesible interior</div>
+      <div class="items">
+        <span class="itemd">Anchura libre mínima pasillos: 1,20 m</span>
+        <span class="item">Ensanchamiento en cambios de dirección: 1,50 m</span>
+        <span class="itemd">Altura libre mínima: 2,20 m</span>
+        <span class="itemd">Puerta: anchura libre mínima 0,80 m</span>
+        <span class="itemd">Umbral máximo: 2 cm (bordes achaflanados)</span>
+        <span class="item">Pendiente longitudinal máx. en horizontal: 4%</span>
+      </div></div>
+      <div><div class="s">Ascensor accesible</div>
+      <div class="items">
+        <span class="itemd">Cabina mínima: 1,00 × 1,25 m</span>
+        <span class="itemd">Puerta: anchura libre ≥0,80 m</span>
+        <span class="item">Nivelación automática con el rellano</span>
+        <span class="item">Señalización en Braille y en relieve en botones y jambas</span>
+        <span class="itemd">Obligatorio en residencial con &gt;2 plantas sobre rasante O diferencia de cota &gt;6 m</span>
+      </div></div>
+      <div><div class="s">Dotación mínima de elementos accesibles</div>
+      <div class="items">
+        <span class="item">Aparcamiento público: 1 plaza accesible por cada 33 plazas · dimensiones 2,20×4,50 m + zona transferencia 1,20 m</span>
+        <span class="item">Aseo accesible: ≥1 por sexo en cada planta de uso público · espacio maniobra ∅1,50 m · transferencia inodoro 80 cm</span>
+        <span class="item">Lavabo: sin pedestal · espacio libre inferior 70×50 cm</span>
+        <span class="item">Barras de apoyo abatibles a ambos lados inodoro: 70-75 cm</span>
+        <span class="itemd">Mostrador: parte accesible a 0,80-0,85 m · espacio libre inferior 70 alto × 50 cm fondo</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <div class="bt"><span class="badge bc">SUA 9 — Señalización accesible</span></div>
+    <div class="items">
+      <span class="itemd">Símbolo Internacional de Accesibilidad (SIA) en todos los elementos accesibles</span>
+      <span class="item">Señalización visual: contraste mínimo 3:1 (general) · 7:1 (información importante)</span>
+      <span class="item">Señalización en Braille y en relieve: ascensores · paneles de información esenciales</span>
+      <span class="item">Bucle de inducción magnética: en espacios de atención al público de uso masivo</span>
+      <span class="item">Señales de emergencia: visuales (destello) + sonoras para discapacidad auditiva</span>
+    </div>
+  </div>
+
+  <p class="footer">CTE DB-SUA (RD 314/2006 · RD 732/2019) · RDL 1/2013 (LGDPD) · LF 12/2018 (Navarra) · UNE-ENV 12633</p>
+</div>
+</body>
+</html>
