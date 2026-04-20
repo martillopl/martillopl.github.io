@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cuadro comparativo REBT Tema 16</title>
+  <style>
+    *,*:before,*:after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.20);--r12:12px}
+    @media (prefers-color-scheme: dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.18)}}
+    body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;background:var(--bg3);color:var(--t1);padding:2rem 1rem}.page{max-width:1060px;margin:0 auto}
+    h1{font-size:20px;font-weight:500;margin-bottom:4px} h2{font-size:17px;font-weight:500;margin:2.5rem 0 1rem;padding-bottom:8px;border-bottom:.5px solid var(--bm)}
+    .sub{font-size:13px;color:var(--t3);margin-bottom:28px}.wrap{overflow-x:auto;background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r12);margin-bottom:16px}
+    table{width:100%;border-collapse:collapse;font-size:12px;min-width:620px} thead tr{background:var(--bg2)} th{font-weight:500;font-size:11.5px;color:var(--t2);text-align:left;padding:10px 12px;border-bottom:.5px solid var(--bm);white-space:nowrap}
+    td{padding:9px 12px;border-bottom:.5px solid var(--bl);vertical-align:top;line-height:1.65;color:var(--t2)} tr:last-child td{border-bottom:none}.dest{font-weight:500;color:var(--t1);font-size:12px;white-space:nowrap}
+    .in{font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap;display:inline-block}.a{background:#EEEDFE;color:#3C3489}.b{background:#E6F1FB;color:#0C447C}.c{background:#E1F5EE;color:#085041}.d{background:#FAEEDA;color:#633806}.e{background:#FAECE7;color:#712B13}.f{background:#EAF3DE;color:#27500A}
+    .si{background:#EAF3DE;color:#27500A;font-size:11px;font-weight:500;padding:1px 6px;border-radius:4px;display:inline-block}.no{background:#FCEBEB;color:#791F1F;font-size:11px;font-weight:500;padding:1px 6px;border-radius:4px;display:inline-block}
+    @media (prefers-color-scheme: dark){.a{background:#3C3489;color:#CECBF6}.b{background:#0C447C;color:#B5D4F4}.c{background:#085041;color:#9FE1CB}.d{background:#633806;color:#FAC775}.e{background:#712B13;color:#F5C4B3}.f{background:#27500A;color:#C0DD97}.si{background:#173404;color:#C0DD97}.no{background:#501313;color:#F7C1C1}}
+    .nota{font-size:12px;color:var(--t2);padding:10px 14px;background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r12);margin-bottom:20px;line-height:1.65}.nota strong{color:var(--t1)} .footer{margin-top:28px;font-size:11px;color:var(--t3);text-align:center}
+  </style>
+</head>
+<body>
+<div class="page">
+  <h1>RD 842/2002 – Reglamento Electrotécnico para Baja Tensión (I)</h1>
+  <p class="sub">Cuadros comparativos – Ingeniero Técnico</p>
+
+  <h2>Instalador básico vs. especialista</h2>
+  <div class="wrap"><table>
+    <thead><tr><th>Aspecto</th><th><span class="in a">Básico</span></th><th><span class="in b">Especialista</span></th></tr></thead>
+    <tbody>
+      <tr><td class="dest">Ámbito general</td><td>Instalaciones comunes de baja tensión dentro del ámbito ordinario</td><td>Instalaciones con exigencias especiales o mayor riesgo</td></tr>
+      <tr><td class="dest">Locales de pública concurrencia</td><td><span class="no">No</span></td><td><span class="si">Sí</span></td></tr>
+      <tr><td class="dest">Nivel de exigencia</td><td>General</td><td>Más alto, con especialización técnica</td></tr>
+      <tr><td class="dest">Dato típico de examen</td><td>Se confunde con LPC</td><td>Es la categoría exigible en LPC</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Verificación vs. inspección</h2>
+  <div class="wrap"><table>
+    <thead><tr><th>Aspecto</th><th><span class="in c">Verificación</span></th><th><span class="in d">Inspección</span></th></tr></thead>
+    <tbody>
+      <tr><td class="dest">Quién la realiza</td><td>Instalador</td><td>Organismo de control</td></tr>
+      <tr><td class="dest">Momento</td><td>Antes de la puesta en servicio</td><td>Inicial o periódica según el caso</td></tr>
+      <tr><td class="dest">Contenido</td><td>Examen visual y ensayos</td><td>Control reglamentario independiente</td></tr>
+      <tr><td class="dest">Ejemplo típico</td><td>Continuidad, aislamiento, polaridad</td><td>LPC, garajes, quirófanos, >100 kW</td></tr>
+      <tr><td class="dest">Trampa frecuente</td><td>Confundirla con la inspección oficial</td><td>Creer que siempre existe</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Alumbrado exterior vs. pública concurrencia</h2>
+  <div class="nota"><strong>Dato de contraste:</strong> en alumbrado exterior aparece el diferencial de 300 mA; en pública concurrencia destacan 1 lux, 5 lux y 1 hora en alumbrado de emergencia.</div>
+  <div class="wrap"><table>
+    <thead><tr><th>Aspecto</th><th><span class="in e">ITC-BT-09</span></th><th><span class="in f">ITC-BT-28</span></th></tr></thead>
+    <tbody>
+      <tr><td class="dest">Tipo de instalación</td><td>Alumbrado exterior</td><td>Locales de pública concurrencia</td></tr>
+      <tr><td class="dest">Riesgo principal</td><td>Intemperie, enterramiento, masas metálicas accesibles</td><td>Alta ocupación y necesidad de evacuación segura</td></tr>
+      <tr><td class="dest">Dato numérico clave</td><td>Diferencial máx. 300 mA</td><td>Inspección cada 5 años</td></tr>
+      <tr><td class="dest">Otro dato clave</td><td>0,4 m en aceras; 0,6 m en calzadas</td><td>1 lux en evacuación; 5 lux en cuadros; 1 hora de autonomía</td></tr>
+      <tr><td class="dest">Instalador exigible</td><td>Según régimen general</td><td>Especialista</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Modos de carga en ITC-BT-52</h2>
+  <div class="wrap"><table>
+    <thead><tr><th>Modo</th><th>Tipo de suministro</th><th>Característica principal</th><th>Idea de examen</th></tr></thead>
+    <tbody>
+      <tr><td class="dest">Modo 1</td><td>CA</td><td>Toma convencional</td><td>Muy limitado; no es el esquema típico moderno</td></tr>
+      <tr><td class="dest">Modo 2</td><td>CA</td><td>Cable con dispositivo de protección incorporado</td><td>Protección intermedia</td></tr>
+      <tr><td class="dest">Modo 3</td><td>CA</td><td>Punto de recarga fijo con control integrado</td><td>Modo habitual en infraestructura fija</td></tr>
+      <tr><td class="dest">Modo 4</td><td>CC</td><td>Cargador externo al vehículo</td><td><strong>Carga rápida</strong></td></tr>
+      <tr><td class="dest">Regla común</td><td colspan="3">Circuito exclusivo e independiente para la recarga</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Plazos y cifras del Tema 16</h2>
+  <div class="wrap"><table>
+    <thead><tr><th>Concepto</th><th>Dato clave</th><th>Observación</th></tr></thead>
+    <tbody>
+      <tr><td class="dest">Límite BT en CA</td><td>1.000 V</td><td>Tensión nominal máxima en corriente alterna</td></tr>
+      <tr><td class="dest">Límite BT en CC</td><td>1.500 V</td><td>Tensión nominal máxima en corriente continua</td></tr>
+      <tr><td class="dest">Inspección periódica LPC</td><td>5 años</td><td>Dato clásico de test</td></tr>
+      <tr><td class="dest">Inspección periódica otras grandes instalaciones</td><td>10 años</td><td>En supuestos generales de gran potencia</td></tr>
+      <tr><td class="dest">Diferencial alumbrado exterior</td><td>300 mA</td><td>Sensibilidad máxima típica</td></tr>
+      <tr><td class="dest">Canalización enterrada en acera</td><td>0,4 m</td><td>ITC-BT-09</td></tr>
+      <tr><td class="dest">Canalización enterrada en calzada</td><td>0,6 m</td><td>ITC-BT-09</td></tr>
+      <tr><td class="dest">Alumbrado evacuación LPC</td><td>1 lux</td><td>En eje de pasillos o recorridos</td></tr>
+      <tr><td class="dest">Cuadros en LPC</td><td>5 lux</td><td>Iluminancia superior por seguridad de maniobra</td></tr>
+      <tr><td class="dest">Autonomía alumbrado emergencia</td><td>1 hora</td><td>Dato muy repetido</td></tr>
+      <tr><td class="dest">Arranque grupo electrógeno</td><td>15 s</td><td>Referencia típica de examen</td></tr>
+    </tbody>
+  </table></div>
+
+  <p class="footer">REBT · RD 842/2002 · ITC-BT-03 · ITC-BT-04 · ITC-BT-05 · ITC-BT-09 · ITC-BT-28 · ITC-BT-52</p>
+</div>
+</body>
+</html>

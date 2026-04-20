@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema 16 – REBT (I)</title>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.22);--r1:18px;--r2:12px}
+    @media (prefers-color-scheme: dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.20)}}
+    body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;background:var(--bg3);color:var(--t1);padding:2.5rem 1rem;line-height:1.8}
+    .page{max-width:740px;margin:0 auto}.header{margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:.5px solid var(--bm)}
+    .tlabel{font-size:12px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+    h1{font-size:22px;font-weight:500;line-height:1.3;margin-bottom:8px}.meta{font-size:13px;color:var(--t3)}
+    .indice{background:var(--bg2);border:.5px solid var(--bl);border-radius:var(--r2);padding:16px 20px;margin-bottom:2.5rem}
+    .itit{font-size:11px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+    .indice ol{padding-left:18px}.indice li{font-size:13px;color:var(--t2);padding:3px 0}.indice a{color:var(--t2);text-decoration:none}.indice a:hover{color:var(--t1)}
+    .sec{margin-bottom:2.8rem} h2{font-size:18px;font-weight:500;margin-bottom:1rem;padding-bottom:8px;border-bottom:.5px solid var(--bl)}
+    h3{font-size:15px;font-weight:500;margin:1.6rem 0 .6rem} p{font-size:15px;color:var(--t2);margin-bottom:1rem} p:last-child{margin-bottom:0}
+    strong{font-weight:500;color:var(--t1)} .art{display:inline-block;font-size:11px;font-weight:500;background:var(--bg2);border:.5px solid var(--bm);border-radius:20px;padding:1px 8px;color:var(--t3);vertical-align:middle;margin-left:4px}
+    ul{padding-left:20px;margin-bottom:1rem} ul li{font-size:15px;color:var(--t2);padding:3px 0}
+    .nota{background:var(--bg2);border-left:2px solid var(--bm);padding:12px 16px;margin:1.2rem 0;font-size:13.5px;color:var(--t2);line-height:1.65}.nota strong{color:var(--t1)}
+    .footer{margin-top:3rem;padding-top:1.2rem;border-top:.5px solid var(--bl);font-size:11px;color:var(--t3);text-align:center}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="tlabel">Tema 16 – Reglamento electrotécnico para baja tensión – Ingeniero Técnico</div>
+      <h1>Real Decreto 842/2002, de 2 de agosto, por el que se aprueba el Reglamento Electrotécnico para Baja Tensión (I)</h1>
+      <div class="meta">Artículos 1 a 29 · ITC-BT-03 · ITC-BT-04 · ITC-BT-05 · ITC-BT-09 · ITC-BT-28 · ITC-BT-52</div>
+    </div>
+
+    <div class="indice">
+      <div class="itit">Índice</div>
+      <ol>
+        <li><a href="#s1">Objeto, ámbito y estructura del REBT</a></li>
+        <li><a href="#s2">Artículos 1 a 29: contenido esencial</a></li>
+        <li><a href="#s3">Instaladores autorizados: ITC-BT-03</a></li>
+        <li><a href="#s4">Documentación y puesta en servicio: ITC-BT-04</a></li>
+        <li><a href="#s5">Verificaciones e inspecciones: ITC-BT-05</a></li>
+        <li><a href="#s6">Instalaciones de alumbrado exterior: ITC-BT-09</a></li>
+        <li><a href="#s7">Locales de pública concurrencia: ITC-BT-28</a></li>
+        <li><a href="#s8">Recarga de vehículos eléctricos: ITC-BT-52</a></li>
+        <li><a href="#s9">Cifras y trampas de examen</a></li>
+      </ol>
+    </div>
+
+    <div class="sec" id="s1">
+      <h2>1. Objeto, ámbito y estructura del REBT</h2>
+      <p>El <strong>Real Decreto 842/2002</strong> aprueba el Reglamento Electrotécnico para Baja Tensión y fija las condiciones técnicas y garantías que deben reunir las instalaciones eléctricas de baja tensión para preservar la seguridad de las personas y los bienes, asegurar el normal funcionamiento de dichas instalaciones y contribuir a la fiabilidad técnica del suministro eléctrico.</p>
+      <p>Su ámbito se extiende a las instalaciones cuya tensión nominal no supere los <strong>1.000 V en corriente alterna</strong> o los <strong>1.500 V en corriente continua</strong>. La norma se articula mediante un texto reglamentario de <strong>29 artículos</strong> y un conjunto de <strong>Instrucciones Técnicas Complementarias (ITC-BT)</strong>, donde se desarrolla el contenido técnico de aplicación práctica.</p>
+      <div class="nota"><strong>Idea clave:</strong> los artículos 1 a 29 contienen el marco jurídico-administrativo general del REBT, mientras que las ITC concretan las exigencias técnicas según el tipo de instalación o situación.</div>
+    </div>
+
+    <div class="sec" id="s2">
+      <h2>2. Artículos 1 a 29: contenido esencial</h2>
+      <p>Los primeros artículos del reglamento delimitan el objeto, el ámbito de aplicación, las exclusiones y las definiciones generales de las instalaciones de baja tensión. A partir de ahí, el REBT regula cuestiones nucleares como la ejecución de las instalaciones por instaladores habilitados, la intervención de organismos de control, la documentación exigible, la puesta en servicio, las verificaciones, inspecciones y las obligaciones de mantenimiento y conservación.</p>
+      <p>En este bloque también se establece la relación del reglamento con la <strong>Ley 21/1992, de Industria</strong>, especialmente en materia de responsabilidad, control administrativo e infracciones y sanciones. De cara al examen, interesa retener que el titular de la instalación asume la obligación de conservarla en condiciones de seguridad y que las modificaciones, ampliaciones y reformas relevantes deben documentarse adecuadamente.</p>
+      <p>Los artículos 12 a 19 son especialmente importantes porque conectan el plano técnico con el administrativo: determinan cuándo procede proyecto, cuándo basta memoria técnica o certificado, qué debe aportarse para la puesta en servicio y cómo se articula el régimen de inspecciones.</p>
+    </div>
+
+    <div class="sec" id="s3">
+      <h2>3. Instaladores autorizados: ITC-BT-03</h2>
+      <p>La <strong>ITC-BT-03</strong> regula la habilitación de los instaladores en baja tensión, que son los profesionales o empresas autorizadas para ejecutar, modificar, reparar y mantener determinadas instalaciones. La clasificación tradicional distingue entre <strong>categoría básica</strong> y <strong>categoría especialista</strong>, con un ámbito de actuación diferente según la complejidad o el riesgo de la instalación.</p>
+      <p>La <strong>categoría básica</strong> permite actuar en instalaciones comunes de baja tensión dentro de los límites reglamentarios ordinarios, mientras que la <strong>categoría especialista</strong> es exigible para instalaciones con especiales requisitos técnicos o de seguridad, como los <strong>locales de pública concurrencia</strong>, determinados locales con riesgo especial o instalaciones vinculadas a infraestructuras específicas como la recarga de vehículo eléctrico.</p>
+      <div class="nota"><strong>Trampa clásica:</strong> el instalador de categoría básica no puede intervenir en locales de pública concurrencia sometidos a la ITC-BT-28; para ellos se exige categoría especialista.</div>
+    </div>
+
+    <div class="sec" id="s4">
+      <h2>4. Documentación y puesta en servicio: ITC-BT-04</h2>
+      <p>La <strong>ITC-BT-04</strong> regula la documentación que debe acompañar a las instalaciones eléctricas para su puesta en servicio. La lógica es sencilla: si la instalación requiere <strong>proyecto</strong>, deberá aportarse dicho proyecto junto con el certificado correspondiente; si no lo requiere, bastará normalmente con el <strong>certificado de instalación eléctrica</strong> emitido por el instalador habilitado.</p>
+      <p>El certificado de instalación acredita que la ejecución material se ha realizado conforme al REBT y a la documentación técnica aplicable. Esta documentación es esencial no solo para la legalización administrativa, sino también para la contratación del suministro y para acreditar la regularidad de la instalación frente a distribuidora, administración y titular.</p>
+      <p>En instalaciones sometidas a inspección inicial, la intervención del organismo de control se integra en la puesta en servicio mediante el correspondiente acta o resultado favorable. Por tanto, la ITC-BT-04 no puede entenderse aisladamente: se coordina directamente con la ITC-BT-05.</p>
+    </div>
+
+    <div class="sec" id="s5">
+      <h2>5. Verificaciones e inspecciones: ITC-BT-05</h2>
+      <p>La <strong>ITC-BT-05</strong> distingue con claridad entre <strong>verificación</strong> e <strong>inspección</strong>. La verificación la realiza el propio instalador antes de la puesta en servicio y comprende tanto la comprobación visual como los ensayos reglamentarios. La inspección, en cambio, corresponde a un <strong>organismo de control</strong> y puede ser inicial o periódica, según los casos previstos por la norma.</p>
+      <p>Las <strong>inspecciones iniciales</strong> son obligatorias, entre otros supuestos, para locales de pública concurrencia, locales con riesgo de incendio o explosión, garajes de cierta entidad, piscinas, quirófanos, instalaciones industriales de potencia elevada y otras instalaciones con especial relevancia técnica o de seguridad. Las <strong>inspecciones periódicas</strong> son especialmente frecuentes en instalaciones de pública concurrencia y en otras instalaciones especiales, donde el plazo típico de examen es de <strong>5 años</strong>.</p>
+      <div class="nota"><strong>Dato muy preguntado:</strong> la inspección periódica de los locales de pública concurrencia es cada <strong>5 años</strong>. En otras instalaciones generales de gran potencia puede aparecer el plazo de <strong>10 años</strong>.</div>
+    </div>
+
+    <div class="sec" id="s6">
+      <h2>6. Instalaciones de alumbrado exterior: ITC-BT-09</h2>
+      <p>La <strong>ITC-BT-09</strong> regula las instalaciones de alumbrado exterior, como alumbrado público, jardines, parques, viales y otros espacios abiertos. Estas instalaciones presentan particularidades propias por su exposición a la intemperie, la presencia de canalizaciones enterradas y el riesgo de contactos indirectos en elementos metálicos accesibles.</p>
+      <p>Entre sus exigencias más características está la profundidad mínima de enterramiento de las canalizaciones, que se fija como regla habitual en <strong>0,4 m en aceras</strong> y <strong>0,6 m en calzadas</strong>. También destaca la protección diferencial, donde se admite con carácter general una sensibilidad máxima de <strong>300 mA</strong>, siempre que se cumplan las condiciones reglamentarias de puesta a tierra.</p>
+      <p>La instalación debe disponer de protección contra contactos directos e indirectos, dispositivos de corte y protección adecuados, puesta a tierra de las partes metálicas accesibles y cuadro de mando y protección con los elementos reglamentarios. En test suele caer la comparación con viviendas, donde el diferencial típico es de <strong>30 mA</strong>, frente a los <strong>300 mA</strong> característicos del alumbrado exterior.</p>
+    </div>
+
+    <div class="sec" id="s7">
+      <h2>7. Locales de pública concurrencia: ITC-BT-28</h2>
+      <p>La <strong>ITC-BT-28</strong> establece las exigencias especiales para las instalaciones eléctricas en locales de pública concurrencia, entendidos como aquellos en los que puede concentrarse un número elevado de personas o cuyo uso exige mayores garantías de seguridad. La importancia de esta ITC es muy alta en oposiciones porque combina prescripciones de ejecución, inspección y alumbrado de emergencia.</p>
+      <p>Estas instalaciones deben ser ejecutadas por <strong>instalador de categoría especialista</strong> y están sometidas a <strong>inspección inicial</strong> antes de la puesta en servicio y a <strong>inspección periódica cada 5 años</strong>. Además, deben disponer de <strong>alumbrado de emergencia</strong> que entre en funcionamiento automáticamente cuando falle la alimentación normal.</p>
+      <h3>Alumbrado de emergencia</h3>
+      <p>El alumbrado de emergencia en evacuación debe proporcionar al menos <strong>1 lux</strong> en el eje de los pasillos o recorridos de evacuación, mientras que en cuadros de distribución o mando debe alcanzarse una iluminancia superior, típicamente de <strong>5 lux</strong>. La autonomía mínima exigida es de <strong>1 hora</strong>, dato que se repite constantemente en los ejercicios tipo test.</p>
+      <p>Cuando exista grupo electrógeno como fuente complementaria o de seguridad, el tiempo máximo de arranque suele recordarse como <strong>15 segundos</strong>. Son magnitudes muy características de esta ITC y conviene memorizarlas de forma conjunta.</p>
+      <div class="nota"><strong>Trío básico para memorizar:</strong> pública concurrencia = especialista + inspección cada 5 años + alumbrado de emergencia 1 hora.</div>
+    </div>
+
+    <div class="sec" id="s8">
+      <h2>8. Recarga de vehículos eléctricos: ITC-BT-52</h2>
+      <p>La <strong>ITC-BT-52</strong>, incorporada al REBT con posterioridad a su aprobación inicial, regula la infraestructura para la recarga de vehículos eléctricos. Se ha convertido en una instrucción muy importante por su uso creciente en edificios residenciales, aparcamientos colectivos, espacios públicos y flotas empresariales.</p>
+      <p>La ITC distingue los <strong>modos de carga 1, 2, 3 y 4</strong>. El <strong>modo 4</strong> identifica la <strong>carga rápida en corriente continua</strong> con cargador externo al vehículo, mientras que el modo 3 se asocia a puntos de recarga fijos en corriente alterna con control integrado. Otro principio esencial es que los <strong>circuitos de recarga deben ser exclusivos</strong>, es decir, independientes para esa función.</p>
+      <p>En cuanto a la protección, la infraestructura de recarga exige dispositivos específicos de protección contra sobreintensidades y contactos indirectos, con presencia habitual de <strong>diferenciales de 30 mA</strong> y del tipo adecuado según el modo de carga. En determinadas instalaciones de cierta entidad se requiere además <strong>inspección inicial por organismo de control</strong>.</p>
+    </div>
+
+    <div class="sec" id="s9">
+      <h2>9. Cifras y trampas de examen</h2>
+      <p>En este tema conviene fijar especialmente los siguientes datos: <strong>1.000 V en corriente alterna</strong> y <strong>1.500 V en continua</strong> como límites de baja tensión; <strong>300 mA</strong> como sensibilidad diferencial característica en alumbrado exterior; <strong>5 años</strong> para la inspección periódica típica de pública concurrencia; <strong>1 hora</strong> de autonomía del alumbrado de emergencia; <strong>1 lux</strong> en evacuación y <strong>5 lux</strong> en cuadros; y <strong>15 segundos</strong> como referencia del arranque del grupo electrógeno.</p>
+      <p>También son muy frecuentes las preguntas de contraste: instalador <strong>básico</strong> frente a <strong>especialista</strong>; <strong>verificación</strong> frente a <strong>inspección</strong>; alumbrado exterior con <strong>300 mA</strong> frente a circuitos interiores típicos con <strong>30 mA</strong>; y modo <strong>4</strong> de recarga frente a los demás modos por tratarse de corriente continua y carga rápida.</p>
+      <div class="nota"><strong>Resumen mental útil:</strong> este tema gira sobre cuatro ideas: habilitación profesional, documentación y legalización, inspección reglamentaria y especialidades técnicas concretas de alumbrado exterior, pública concurrencia y recarga de vehículo eléctrico.</div>
+    </div>
+
+    <div class="footer">RD 842/2002 · REBT · ITC-BT-03 · ITC-BT-04 · ITC-BT-05 · ITC-BT-09 · ITC-BT-28 · ITC-BT-52</div>
+  </div>
+</body>
+</html>
