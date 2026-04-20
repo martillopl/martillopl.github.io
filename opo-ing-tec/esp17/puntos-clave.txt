@@ -1,0 +1,197 @@
+TEMA 17 – RD 337/2014, DE 9 DE MAYO – REGLAMENTO DE ALTA TENSIÓN (RAT)
+ITC-RAT 03 · ITC-RAT 06 · ITC-RAT 07 · ITC-RAT 08 · ITC-RAT 09 · ITC-RAT 13 · ITC-RAT 14 · ITC-RAT 21 · ITC-RAT 22 · ITC-RAT 23
+
+NOTA: El enunciado del tema indica RD 337/2017; la norma correcta y vigente es el RD 337/2014, de 9 de mayo.
+
+═══════════════════════════════════════════════════
+ESTRUCTURA GENERAL DEL RAT
+═══════════════════════════════════════════════════
+
+Objeto (art. 1): condiciones técnicas y garantías de seguridad en instalaciones eléctricas de AT
+Ámbito: instalaciones de tensión nominal > 1.000 V CA o > 1.500 V CC
+Categorías de AT:
+  - 1ª categoría: 1 kV < U ≤ 30 kV
+  - 2ª categoría: 30 kV < U ≤ 66 kV
+  - 3ª categoría: 66 kV < U ≤ 145 kV
+  - 4ª categoría: 145 kV < U ≤ 245 kV
+  - 5ª categoría: U > 245 kV
+
+Las ITC del RAT se agrupan en instalaciones de transporte, distribución, centros de transformación,
+instalaciones de usuario y líneas aéreas, y procedimientos de verificación e inspección.
+
+═══════════════════════════════════════════════════
+ITC-RAT 03 – INSTALADORES AUTORIZADOS EN AT
+═══════════════════════════════════════════════════
+
+Categorías de instaladores en AT:
+  - Categoría A: instalaciones de 1ª y 2ª categoría (hasta 66 kV)
+  - Categoría B: instalaciones de 1ª, 2ª, 3ª, 4ª y 5ª categoría (hasta y más de 245 kV)
+
+Requisitos: personal técnico, medios materiales y seguro de RC
+Habilitación: declaración responsable ante la CA de establecimiento
+  → Habilita para TODO el territorio nacional desde su presentación
+  → Sin necesidad de autorización previa
+
+Obligaciones: ejecutar conforme al RAT, emitir certificado de instalación,
+mantener la documentación de las instalaciones ejecutadas.
+
+Trampa de examen: categoría A ≠ 1ª categoría del RAT
+  Categoría A habilita para 1ª y 2ª categoría de instalaciones
+
+═══════════════════════════════════════════════════
+ITC-RAT 06 – REDES DE AT: LÍNEAS AÉREAS > 1 kV Y ≤ 30 kV (1ª CATEGORÍA)
+═══════════════════════════════════════════════════
+
+Objeto: condiciones técnicas de las líneas aéreas de alta tensión de 1ª categoría (MT)
+Flechas y distancias de seguridad obligatorias:
+  - Distancia mínima al suelo en cruce de carreteras: 7 m
+  - Distancia mínima al suelo en zonas normales: 6 m (sobre terreno no accesible)
+  - Distancia mínima a edificios y construcciones: según tabla del RAT
+Conductores: desnudos o con aislamiento, según la zona y el nivel de tensión
+Protecciones: autoválvulas, seccionadores y fusibles en redes de distribución en MT
+
+═══════════════════════════════════════════════════
+ITC-RAT 07 – CABLES SUBTERRÁNEOS DE AT (1ª Y 2ª CATEGORÍA)
+═══════════════════════════════════════════════════
+
+Objeto: instalación de cables subterráneos de AT de 1ª y 2ª categoría (hasta 66 kV)
+Profundidades mínimas de enterramiento:
+  - En aceras y terrenos no rodados: 0,60 m
+  - En calzadas: 0,80 m
+  - En cruce de vías de comunicación (carreteras/ferrocarriles): profundidad reforzada bajo tubo
+Distancias entre cables o respecto a otras canalizaciones: según tablas RAT
+Señalización: banda de señalización a 0,25 m sobre el cable
+Protección mecánica: tubo o arena y losa según el caso
+
+DATO CLAVE: la profundidad de enterramiento en BT (REBT/ITC-BT-09) era 0,4/0,6 m;
+en AT (ITC-RAT 07) es 0,6/0,8 m → más profundo en AT
+
+═══════════════════════════════════════════════════
+ITC-RAT 08 – REDES AÉREAS DE AT: LÍNEAS > 30 kV Y ≤ 66 kV (2ª CATEGORÍA)
+═══════════════════════════════════════════════════
+
+Objeto: condiciones técnicas de líneas aéreas de AT de 2ª categoría (entre 30 kV y 66 kV)
+Las exigencias son más severas que en 1ª categoría por el mayor nivel de tensión
+Distancias de seguridad mayores que en ITC-RAT 06
+Conductores: generalmente desnudos ACSR (aluminio-acero)
+Protecciones: relés de distancia y diferenciales longitudinales
+
+═══════════════════════════════════════════════════
+ITC-RAT 09 – REDES AÉREAS DE AT: > 66 kV (3ª, 4ª Y 5ª CATEGORÍA)
+═══════════════════════════════════════════════════
+
+Objeto: líneas aéreas de AT de 3ª, 4ª y 5ª categoría (> 66 kV)
+Aplicación principalmente a redes de transporte de energía (REE)
+Criterios más exigentes de distancias de seguridad, flechas y cimentaciones de apoyos
+Incluyen líneas de 110 kV, 220 kV y 400 kV (redes de transporte)
+Los ingenieros de las empresas de transporte trabajan principalmente bajo esta ITC
+
+═══════════════════════════════════════════════════
+ITC-RAT 13 – INSTALACIONES DE AT EN SUBESTACIONES Y CENTROS DE TRANSFORMACIÓN
+═══════════════════════════════════════════════════
+
+Objeto: subestaciones, centros de transformación (CT) y centros de distribución en AT
+Tipos de CT:
+  - CT de intemperie (tipo caseta, poste transformador o cabina prefabricada)
+  - CT interior (en edificio o local propio, o integrado en edificio de uso principal)
+
+Condiciones técnicas:
+  - Separación mínima entre partes en tensión y partes accesibles
+  - Puertas de acceso con enclavamientos o carteles de peligro
+  - Mallazo o barrera de equipotencialidad en el suelo
+  - Ventilación suficiente para disipar calor del transformador
+
+Puesta a tierra:
+  - Dos circuitos de puesta a tierra: uno para masas y otro para neutro
+  - La tensión de paso y de contacto no pueden superar los valores límite del RAT
+  - La tensión de paso en el exterior del recinto no debe superar 1.000 V (en condiciones de falta)
+  - La tensión de contacto no debe superar 50 V en locales secos y 24 V en locales mojados
+
+Distancias en el aire:
+  - Las distancias mínimas en el aire entre partes activas y tierra dependen de la categoría de AT
+  - Están tabuladas en el Apéndice 1 del RAT
+
+═══════════════════════════════════════════════════
+ITC-RAT 14 – TRANSFORMADORES Y AUTOTRANSFORMADORES EN AT
+═══════════════════════════════════════════════════
+
+Objeto: transformadores de potencia en instalaciones de AT
+Los transformadores con aceite (fluido dieléctrico inflamable) requieren:
+  - Cubeto de retención de aceite
+  - Separación o barrera de protección contra incendios
+  - Equipo de extinción de incendios según la masa de aceite
+Los transformadores secos o con líquidos de baja inflamabilidad se pueden instalar en interiores
+  sin las mismas exigencias del cubeto
+Potencias de cortocircuito y características eléctricas reguladas según las normas UNE-EN aplicables (serie UNE-EN 60076)
+
+═══════════════════════════════════════════════════
+ITC-RAT 21 – INSTALACIONES DE AT EN LOCALES Y EDIFICIOS DE OTRO USO PRINCIPAL
+═══════════════════════════════════════════════════
+
+Objeto: instalaciones de AT dentro de locales o edificios cuyo uso principal no es eléctrico
+  (hospitales, fábricas, centros comerciales, etc. con CT propio integrado)
+
+Requisitos específicos:
+  - Acceso exclusivo al CT, independiente del acceso al resto del edificio
+  - Puertas de acceso con llave o enclavamiento; señalización de peligro
+  - Pavimento aislante en el recinto del CT
+  - Las masas metálicas deben estar equipotencializadas
+
+El instalador necesita categoría A o B según el nivel de tensión.
+Inspección inicial obligatoria por Organismo de Control.
+
+═══════════════════════════════════════════════════
+ITC-RAT 22 – CONDICIONES ADICIONALES PARA INSTALACIONES DE AT EN LOCALES PARA USO MÉDICO
+═══════════════════════════════════════════════════
+
+Objeto: instalaciones de AT vinculadas a centros hospitalarios o de uso médico
+Exige condiciones adicionales de seguridad respecto a la ITC-RAT 21:
+  - Separación de sistemas de tierras entre AT y BT
+  - Detección de faltas a tierra más sensible
+  - Restricciones adicionales de acceso y señalización
+
+═══════════════════════════════════════════════════
+ITC-RAT 23 – VERIFICACIONES E INSPECCIONES EN AT
+═══════════════════════════════════════════════════
+
+Es la ITC-RAT más importante para examen junto con la ITC-RAT 03.
+
+Tipos:
+  1. VERIFICACIONES: las realiza el propio instalador antes de la puesta en servicio
+     - Comprobaciones visuales y eléctricas documentadas
+  2. INSPECCIONES INICIALES: por Organismo de Control habilitado (antes de puesta en servicio)
+     → Obligatorias para TODAS las instalaciones de AT
+  3. INSPECCIONES PERIÓDICAS: por Organismo de Control
+
+PLAZOS DE INSPECCIÓN PERIÓDICA:
+  - Líneas aéreas 1ª categoría (hasta 30 kV): cada 6 años
+  - Líneas aéreas 2ª categoría (30-66 kV): cada 6 años
+  - Líneas aéreas 3ª, 4ª y 5ª categoría (> 66 kV): cada 6 años
+  - Cables subterráneos: cada 6 años
+  - Centros de transformación (instalaciones de usuario): cada 6 años
+  - Subestaciones (instalaciones de empresa distribuidora): cada 6 años
+  → DATO CLAVE: en AT el plazo dominante es 6 AÑOS (frente a 5 o 10 años en REBT)
+
+Documentación para la puesta en servicio:
+  - Certificado de instalación (del instalador habilitado)
+  - Acta de inspección inicial favorable (del OC)
+  - Proyecto firmado por técnico titulado competente (cuando es exigible)
+
+═══════════════════════════════════════════════════
+CIFRAS Y TRAMPAS CLAVE PARA TEST – TEMA 17
+═══════════════════════════════════════════════════
+
+Límite AT:                > 1.000 V CA / > 1.500 V CC
+1ª categoría:             1 kV < U ≤ 30 kV
+2ª categoría:             30 kV < U ≤ 66 kV
+3ª, 4ª, 5ª categoría:    > 66 kV hasta > 245 kV
+Instalador cat. A:        1ª y 2ª categoría (hasta 66 kV)
+Instalador cat. B:        todas las categorías
+Habilitación:             declaración responsable → todo el territorio
+Cables AT enterrados acera: 0,60 m (BT era 0,40 m)
+Cables AT enterrados calzada: 0,80 m (BT era 0,60 m)
+Tensión contacto lím. seco: 50 V / mojado: 24 V
+Inspección periódica AT:  6 AÑOS (ni 5 ni 10)
+Inspección inicial AT:    SIEMPRE obligatoria por OC (en BT no siempre)
+Trampa: ITC-RAT 03 cat. A ≠ 1ª categoría de instalaciones
+Trampa: en BT la inspección no es siempre obligatoria; en AT sí

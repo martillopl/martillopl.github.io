@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema 17 – RAT (I)</title>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.22);--r2:12px}
+    @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.20)}}
+    body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;background:var(--bg3);color:var(--t1);padding:2.5rem 1rem;line-height:1.8}
+    .page{max-width:740px;margin:0 auto}.header{margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:.5px solid var(--bm)}
+    .tlabel{font-size:12px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+    h1{font-size:22px;font-weight:500;line-height:1.3;margin-bottom:8px}.meta{font-size:13px;color:var(--t3)}
+    .indice{background:var(--bg2);border:.5px solid var(--bl);border-radius:var(--r2);padding:16px 20px;margin-bottom:2.5rem}
+    .itit{font-size:11px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+    .indice ol{padding-left:18px}.indice li{font-size:13px;color:var(--t2);padding:3px 0}.indice a{color:var(--t2);text-decoration:none}.indice a:hover{color:var(--t1)}
+    .sec{margin-bottom:2.8rem} h2{font-size:18px;font-weight:500;margin-bottom:1rem;padding-bottom:8px;border-bottom:.5px solid var(--bl)}
+    h3{font-size:15px;font-weight:500;margin:1.6rem 0 .6rem} p{font-size:15px;color:var(--t2);margin-bottom:1rem} p:last-child{margin-bottom:0}
+    strong{font-weight:500;color:var(--t1)} .art{display:inline-block;font-size:11px;font-weight:500;background:var(--bg2);border:.5px solid var(--bm);border-radius:20px;padding:1px 8px;color:var(--t3);vertical-align:middle;margin-left:4px}
+    ul{padding-left:20px;margin-bottom:1rem} ul li{font-size:15px;color:var(--t2);padding:3px 0}
+    .nota{background:var(--bg2);border-left:2px solid var(--bm);padding:12px 16px;margin:1.2rem 0;font-size:13.5px;color:var(--t2);line-height:1.65}.nota strong{color:var(--t1)}
+    .footer{margin-top:3rem;padding-top:1.2rem;border-top:.5px solid var(--bl);font-size:11px;color:var(--t3);text-align:center}
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="tlabel">Tema 17 – Alta tensión – Ingeniero Técnico</div>
+    <h1>Real Decreto 337/2014, de 9 de mayo – Reglamento sobre condiciones técnicas y garantías de seguridad en instalaciones eléctricas de alta tensión</h1>
+    <div class="meta">ITC-RAT 03 · 06 · 07 · 08 · 09 · 13 · 14 · 21 · 22 · 23</div>
+  </div>
+
+  <div class="indice">
+    <div class="itit">Índice</div>
+    <ol>
+      <li><a href="#s1">Marco normativo y estructura del RAT</a></li>
+      <li><a href="#s2">Categorías de instalaciones de AT</a></li>
+      <li><a href="#s3">ITC-RAT 03: Instaladores autorizados en AT</a></li>
+      <li><a href="#s4">ITC-RAT 06: Líneas aéreas 1ª categoría (≤ 30 kV)</a></li>
+      <li><a href="#s5">ITC-RAT 07: Cables subterráneos de AT</a></li>
+      <li><a href="#s6">ITC-RAT 08: Líneas aéreas 2ª categoría (30-66 kV)</a></li>
+      <li><a href="#s7">ITC-RAT 09: Líneas aéreas ≥ 3ª categoría (> 66 kV)</a></li>
+      <li><a href="#s8">ITC-RAT 13: Subestaciones y centros de transformación</a></li>
+      <li><a href="#s9">ITC-RAT 14: Transformadores y autotransformadores</a></li>
+      <li><a href="#s10">ITC-RAT 21: AT en locales de uso no eléctrico</a></li>
+      <li><a href="#s11">ITC-RAT 22: AT en locales de uso médico</a></li>
+      <li><a href="#s12">ITC-RAT 23: Verificaciones e inspecciones en AT</a></li>
+      <li><a href="#s13">Cifras y trampas de examen</a></li>
+    </ol>
+  </div>
+
+  <div class="sec" id="s1">
+    <h2>1. Marco normativo y estructura del RAT</h2>
+    <p>El <strong>Real Decreto 337/2014, de 9 de mayo</strong>, aprueba el Reglamento sobre condiciones técnicas y garantías de seguridad en instalaciones eléctricas de alta tensión y sus Instrucciones Técnicas Complementarias (ITC-RAT). Esta norma sustituye al anterior RAT de 1984 y adapta la regulación a la realidad tecnológica actual y al marco comunitario.</p>
+    <p>El reglamento se estructura en un articulado general y en un conjunto de ITC-RAT que desarrollan las exigencias técnicas específicas para cada tipo de instalación de AT. Las ITC cubren las líneas aéreas por categorías de tensión, los cables subterráneos, las subestaciones y centros de transformación, las instalaciones de usuario, los transformadores y los procedimientos de verificación e inspección.</p>
+    <div class="nota"><strong>Nota aclaratoria:</strong> el enunciado del tema cita "RD 337/2017", pero la norma correcta es el <strong>RD 337/2014</strong>, de 9 de mayo. No existe un RD 337/2017 sobre alta tensión; se trata de un error tipográfico habitual en algunos programas de oposición.</div>
+  </div>
+
+  <div class="sec" id="s2">
+    <h2>2. Categorías de instalaciones de AT</h2>
+    <p>El RAT clasifica las instalaciones de alta tensión en <strong>cinco categorías</strong> según su nivel de tensión nominal, lo que determina las exigencias técnicas aplicables y la categoría de instalador requerida. Las instalaciones de AT comprenden todas aquellas con tensión nominal superior a <strong>1.000 V en corriente alterna</strong> o <strong>1.500 V en corriente continua</strong>.</p>
+    <ul>
+      <li><strong>1ª categoría:</strong> 1 kV &lt; U ≤ 30 kV (media tensión de distribución)</li>
+      <li><strong>2ª categoría:</strong> 30 kV &lt; U ≤ 66 kV</li>
+      <li><strong>3ª categoría:</strong> 66 kV &lt; U ≤ 145 kV</li>
+      <li><strong>4ª categoría:</strong> 145 kV &lt; U ≤ 245 kV</li>
+      <li><strong>5ª categoría:</strong> U &gt; 245 kV (red de transporte de muy alta tensión)</li>
+    </ul>
+    <p>Esta clasificación es el hilo conductor de todo el RAT: cada ITC se aplica a una o varias categorías y los requisitos de distancias, protecciones y verificaciones dependen directamente de la categoría de la instalación.</p>
+  </div>
+
+  <div class="sec" id="s3">
+    <h2>3. ITC-RAT 03: Instaladores autorizados en AT</h2>
+    <p>La <strong>ITC-RAT 03</strong> regula la habilitación de los instaladores que pueden ejecutar, modificar y mantener instalaciones de alta tensión. Distingue dos categorías de instalador: la <strong>categoría A</strong>, que habilita para instalaciones de <strong>1ª y 2ª categoría</strong> (hasta 66 kV), y la <strong>categoría B</strong>, que habilita para instalaciones de cualquier categoría, incluyendo las de 3ª, 4ª y 5ª (hasta y más de 245 kV).</p>
+    <p>La habilitación se obtiene mediante <strong>declaración responsable</strong> ante la comunidad autónoma donde la empresa se establezca, y produce efectos en <strong>todo el territorio nacional</strong> desde el momento de su presentación, sin necesidad de autorización administrativa previa. La empresa debe acreditar disponer de personal técnico cualificado, medios materiales adecuados y seguro de responsabilidad civil.</p>
+    <div class="nota"><strong>Trampa clásica:</strong> la <strong>categoría A</strong> del instalador no equivale a la <strong>1ª categoría</strong> de instalaciones. La categoría A de instalador habilita para 1ª <em>y</em> 2ª categoría de instalaciones. Son clasificaciones paralelas pero con criterios distintos.</div>
+  </div>
+
+  <div class="sec" id="s4">
+    <h2>4. ITC-RAT 06: Líneas aéreas de AT de 1ª categoría (≤ 30 kV)</h2>
+    <p>La <strong>ITC-RAT 06</strong> establece las condiciones técnicas de las líneas aéreas de alta tensión de <strong>1ª categoría</strong>, es decir, aquellas cuya tensión nominal está entre 1 kV y 30 kV. Son las redes de distribución en media tensión que alimentan a los centros de transformación.</p>
+    <p>Las exigencias se centran en las <strong>distancias mínimas de seguridad</strong>: al suelo, a edificios y construcciones, a otras líneas eléctricas y a vías de comunicación. La norma establece condiciones diferenciadas para conductores desnudos y conductores con aislamiento, que permiten reducir ciertas distancias gracias al nivel de aislamiento del conductor.</p>
+    <p>En cuanto a los conductores desnudos, la distancia mínima al suelo en zonas accesibles a personas o vehículos debe garantizarse en la condición de flecha máxima, lo que obliga a un cálculo mecánico de la línea. Las protecciones habituales en estas redes son fusibles de expulsión, autoválvulas y seccionadores en las derivaciones.</p>
+  </div>
+
+  <div class="sec" id="s5">
+    <h2>5. ITC-RAT 07: Cables subterráneos de AT</h2>
+    <p>La <strong>ITC-RAT 07</strong> regula la instalación de cables subterráneos de alta tensión de <strong>1ª y 2ª categoría</strong>. Es especialmente relevante por las <strong>profundidades mínimas de enterramiento</strong>, que son más exigentes que las previstas para instalaciones de baja tensión en el REBT y la ITC-BT-09.</p>
+    <p>Las profundidades mínimas reglamentarias son: <strong>0,60 m en aceras y terrenos no rodados</strong> y <strong>0,80 m en calzadas</strong>. En cruces de vías de comunicación (carreteras y ferrocarriles), el cable debe ir protegido bajo tubo a profundidades superiores. Sobre el cable debe colocarse una <strong>banda de señalización</strong> a unos <strong>0,25 m</strong> de profundidad sobre el cable, que advierta de la existencia de la instalación eléctrica.</p>
+    <div class="nota"><strong>Comparación esencial para test:</strong> baja tensión: 0,40 m en aceras / 0,60 m en calzadas. Alta tensión: 0,60 m en aceras / 0,80 m en calzadas. En AT todo es 0,20 m más profundo.</div>
+  </div>
+
+  <div class="sec" id="s6">
+    <h2>6. ITC-RAT 08: Líneas aéreas de AT de 2ª categoría (30-66 kV)</h2>
+    <p>La <strong>ITC-RAT 08</strong> regula las líneas aéreas cuya tensión nominal se sitúa entre <strong>30 kV y 66 kV</strong>, que corresponden a la <strong>2ª categoría</strong> del RAT. Son líneas que frecuentemente se utilizan para el transporte de energía a escala regional o para la alimentación de subestaciones de distribución.</p>
+    <p>Las exigencias técnicas son más estrictas que las de 1ª categoría en cuanto a distancias mínimas, secciones de conductores y sistemas de protección. Los conductores empleados son habitualmente ACSR (aluminio con alma de acero), que combinan buena conductividad con la resistencia mecánica necesaria para grandes vanos. Las protecciones de distancia y diferenciales longitudinales son características de este nivel de tensión.</p>
+  </div>
+
+  <div class="sec" id="s7">
+    <h2>7. ITC-RAT 09: Líneas aéreas de AT de 3ª, 4ª y 5ª categoría (> 66 kV)</h2>
+    <p>La <strong>ITC-RAT 09</strong> se aplica a las líneas aéreas de alta tensión de <strong>3ª, 4ª y 5ª categoría</strong>, es decir, para tensiones superiores a 66 kV. Estas líneas forman parte esencialmente de la <strong>red de transporte</strong> gestionada por Red Eléctrica de España (REE), aunque también pueden existir en instalaciones de grandes usuarios industriales.</p>
+    <p>Las distancias de seguridad, la altura de los apoyos, las secciones de conductores y los criterios de diseño mecánico son sensiblemente más exigentes que en las categorías inferiores. Esta ITC es la de mayor complejidad técnica del RAT y su diseño corresponde en la práctica a los equipos de ingeniería de las empresas de transporte y grandes distribuidoras.</p>
+  </div>
+
+  <div class="sec" id="s8">
+    <h2>8. ITC-RAT 13: Subestaciones y centros de transformación</h2>
+    <p>La <strong>ITC-RAT 13</strong> regula las condiciones técnicas y de seguridad de las <strong>subestaciones eléctricas</strong> y los <strong>centros de transformación (CT)</strong>. Es una de las ITC más relevantes para el ingeniero técnico, dado que los CT forman parte de las instalaciones de usuario en media tensión y su diseño, construcción y mantenimiento son tareas habituales en el ámbito industrial y de servicios.</p>
+    <p>Los centros de transformación pueden ser de intemperie (poste de transformación o caseta exterior) o de interior (cabina prefabricada o local propio integrado en edificio). Las exigencias clave son el cumplimiento de las <strong>distancias mínimas en el aire</strong> entre partes en tensión y tierra o partes accesibles, la <strong>puesta a tierra</strong> de masas y neutro por circuitos independientes, y las condiciones de acceso restringido con enclavamientos y señalización.</p>
+    <h3>Tensiones límite de seguridad</h3>
+    <p>La ITC-RAT 13 establece los límites de <strong>tensión de paso y de contacto</strong> admisibles en el exterior del recinto del CT. La tensión de contacto en condiciones de falta no debe superar los <strong>50 V en locales secos</strong> ni los <strong>24 V en locales mojados</strong>. Estos valores son iguales a los reconocidos en el REBT como tensiones de contacto máximas admisibles y son datos muy preguntados en test.</p>
+  </div>
+
+  <div class="sec" id="s9">
+    <h2>9. ITC-RAT 14: Transformadores y autotransformadores</h2>
+    <p>La <strong>ITC-RAT 14</strong> establece las condiciones que deben reunir los <strong>transformadores de potencia</strong> y los <strong>autotransformadores</strong> instalados en instalaciones de alta tensión. La distinción más relevante para el instalador y para el examen es la que afecta a los transformadores según el tipo de fluido dieléctrico empleado.</p>
+    <p>Los transformadores con <strong>aceite mineral</strong> (el tipo más habitual en grandes potencias) son inflamables, por lo que exigen <strong>cubeto de retención de aceite</strong> con capacidad suficiente y medidas de protección contra incendios. Si la masa de aceite es significativa, se exige además la separación del transformador respecto a otras instalaciones o edificios mediante barreras cortafuego o distancias mínimas.</p>
+    <p>Los transformadores <strong>secos o de resina</strong> y los que utilizan fluidos dieléctricos de elevado punto de ignición (menos inflamables) tienen menores restricciones y pueden instalarse en interiores sin las exigencias del cubeto, lo que los hace preferidos en edificios de uso general o en instalaciones donde el riesgo de incendio debe minimizarse.</p>
+  </div>
+
+  <div class="sec" id="s10">
+    <h2>10. ITC-RAT 21: AT en locales de uso no eléctrico</h2>
+    <p>La <strong>ITC-RAT 21</strong> se aplica cuando una instalación de alta tensión se ubica dentro de un edificio o local cuyo uso principal no es eléctrico: hospitales, centros comerciales, edificios de oficinas, instalaciones industriales, etc. que disponen de su propio centro de transformación integrado.</p>
+    <p>Las condiciones específicas se orientan a garantizar la total separación entre el recinto eléctrico de AT y el resto del edificio: <strong>acceso exclusivo y restringido</strong> para personal cualificado, puertas con enclavamiento o llave, señalización de peligro eléctrico, pavimento aislante en el interior del recinto y equipotencialización de todas las masas metálicas. La inspección inicial por organismo de control es siempre obligatoria.</p>
+  </div>
+
+  <div class="sec" id="s11">
+    <h2>11. ITC-RAT 22: AT en locales de uso médico</h2>
+    <p>La <strong>ITC-RAT 22</strong> añade condiciones adicionales de seguridad para las instalaciones de AT situadas en <strong>centros hospitalarios o de uso médico</strong>. Estas condiciones son más exigentes que las de la ITC-RAT 21 por la especial vulnerabilidad de los pacientes y la necesidad de garantizar la continuidad del suministro.</p>
+    <p>Las exigencias específicas incluyen una mayor separación de los sistemas de puesta a tierra entre la instalación de AT y la de baja tensión, sistemas de detección de falta a tierra con mayor sensibilidad y restricciones adicionales de acceso y señalización. Esta ITC se lee necesariamente de forma complementaria a la ITC-RAT 21.</p>
+  </div>
+
+  <div class="sec" id="s12">
+    <h2>12. ITC-RAT 23: Verificaciones e inspecciones en AT</h2>
+    <p>La <strong>ITC-RAT 23</strong> es la más relevante del tema desde el punto de vista procedimental y la más explotada en los ejercicios de test. Distingue entre <strong>verificaciones</strong>, que realiza el instalador, e <strong>inspecciones</strong>, que realiza un <strong>organismo de control habilitado</strong>. A diferencia del REBT, donde la inspección inicial por OC no es siempre obligatoria, en el RAT la inspección inicial por OC es <strong>obligatoria para todas las instalaciones de AT</strong> sin excepción.</p>
+    <p>Las <strong>inspecciones periódicas</strong> deben realizarse cada <strong>6 años</strong> con carácter general para la mayoría de instalaciones de AT. Este dato es el más explotado en test porque contrasta con los plazos del REBT (5 años para LPC y 10 años para grandes instalaciones generales) y con los del RIPCI (10 años).</p>
+    <p>La documentación exigida para la puesta en servicio comprende el <strong>certificado de instalación</strong> emitido por el instalador habilitado, el <strong>acta de inspección inicial favorable</strong> del organismo de control y, cuando sea preceptivo, el <strong>proyecto técnico</strong> firmado por técnico titulado competente.</p>
+  </div>
+
+  <div class="sec" id="s13">
+    <h2>13. Cifras y trampas de examen</h2>
+    <p>Los datos numéricos más frecuentes en test son: los límites de AT (<strong>&gt; 1.000 V CA / &gt; 1.500 V CC</strong>), las profundidades de cables subterráneos de AT (<strong>0,60 m en aceras / 0,80 m en calzadas</strong>), las tensiones de contacto máximas (<strong>50 V en seco / 24 V en húmedo</strong>) y el plazo de inspección periódica de <strong>6 años</strong>.</p>
+    <p>Las trampas habituales son confundir la <strong>categoría A del instalador</strong> con la <strong>1ª categoría de instalación</strong> (son conceptos distintos), creer que en AT la inspección inicial no siempre es obligatoria (en AT <em>siempre</em> lo es), o igualar los plazos de inspección del REBT con los del RAT (en AT son 6 años, no 5 ni 10).</p>
+    <div class="nota"><strong>Resumen mental del Tema 17:</strong> AT empieza donde acaba BT · cinco categorías por tensión · instalador A o B · cables más profundos que en BT · CT con puesta a tierra dual · inspección periódica 6 años y siempre inicial.</div>
+  </div>
+
+  <div class="footer">RD 337/2014 · RAT · ITC-RAT 03 · 06 · 07 · 08 · 09 · 13 · 14 · 21 · 22 · 23</div>
+</div>
+</body>
+</html>
