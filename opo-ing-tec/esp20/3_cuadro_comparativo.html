@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cuadro comparativo Tema 20</title>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.20);--r12:12px}
+    @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.18)}}
+    body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;background:var(--bg3);color:var(--t1);padding:2rem 1rem}.page{max-width:1060px;margin:0 auto}
+    h1{font-size:20px;font-weight:500;margin-bottom:4px} h2{font-size:17px;font-weight:500;margin:2.5rem 0 1rem;padding-bottom:8px;border-bottom:.5px solid var(--bm)}
+    .sub{font-size:13px;color:var(--t3);margin-bottom:28px}.wrap{overflow-x:auto;background:var(--bg1);border:.5px solid var(--bl);border-radius:var(--r12);margin-bottom:16px}
+    table{width:100%;border-collapse:collapse;font-size:12px;min-width:610px} thead tr{background:var(--bg2)} th{font-weight:500;font-size:11.5px;color:var(--t2);text-align:left;padding:10px 12px;border-bottom:.5px solid var(--bm);white-space:nowrap}
+    td{padding:9px 12px;border-bottom:.5px solid var(--bl);vertical-align:top;line-height:1.65;color:var(--t2)} tr:last-child td{border-bottom:none}.dest{font-weight:500;color:var(--t1);font-size:12px;white-space:nowrap}
+    .in{font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap;display:inline-block}.a{background:#EEEDFE;color:#3C3489}.b{background:#E6F1FB;color:#0C447C}.c{background:#E1F5EE;color:#085041}.d{background:#FAEEDA;color:#633806}.e{background:#FAECE7;color:#712B13}.f{background:#EAF3DE;color:#27500A}
+    @media(prefers-color-scheme:dark){.a{background:#3C3489;color:#CECBF6}.b{background:#0C447C;color:#B5D4F4}.c{background:#085041;color:#9FE1CB}.d{background:#633806;color:#FAC775}.e{background:#712B13;color:#F5C4B3}.f{background:#27500A;color:#C0DD97}}
+    .footer{margin-top:28px;font-size:11px;color:var(--t3);text-align:center}
+  </style>
+</head>
+<body>
+<div class="page">
+  <h1>RD 809/2021 – Reglamento de equipos a presión</h1>
+  <p class="sub">Cuadros comparativos – Tema 20</p>
+
+  <h2>PS, presión de tarado y presión de prueba</h2>
+  <div class="wrap"><table>
+    <thead><tr><th>Concepto</th><th>Definición</th><th>Uso</th></tr></thead>
+    <tbody>
+      <tr><td class="dest">PS</td><td>Presión máxima admisible del equipo, definida por el fabricante</td><td>Clasificación y diseño</td></tr>
+      <tr><td class="dest">Presión de tarado</td><td>Presión a la que actúa el dispositivo de seguridad</td><td>Protección del equipo</td></tr>
+      <tr><td class="dest">Presión de prueba</td><td>Presión usada para comprobar la resistencia del equipo</td><td>Inspecciones y ensayos</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Caldera de agua caliente vs. agua sobrecalentada</h2>
+  <div class="wrap"><table>
+    <thead><tr><th>Aspecto</th><th><span class="in a">Agua caliente</span></th><th><span class="in b">Agua sobrecalentada</span></th></tr></thead>
+    <tbody>
+      <tr><td class="dest">Límite térmico</td><td><strong>≤ 110 °C</strong></td><td><strong>&gt; 110 °C</strong></td></tr>
+      <tr><td class="dest">Riesgo / uso</td><td>Calefacción y ACS</td><td>Mayor exigencia de control</td></tr>
+      <tr><td class="dest">Exigencia habitual</td><td>Salas de calderas, ventilación y documentación</td><td>Vigilancia y seguridad reforzadas</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Inspecciones A, B y C</h2>
+  <div class="wrap"><table>
+    <thead><tr><th>Nivel</th><th>Profundidad</th><th>Quién puede hacerla</th><th>Ejemplo de contenido</th></tr></thead>
+    <tbody>
+      <tr><td class="dest">A</td><td>Básica</td><td>Empresa instaladora / según ITC</td><td>Revisión visual y funcional</td></tr>
+      <tr><td class="dest">B</td><td>Intermedia</td><td>Empresa habilitada / OC según caso</td><td>Comprobaciones más amplias</td></tr>
+      <tr><td class="dest">C</td><td>Más exhaustiva</td><td>OC o EIP-2 cuando la ITC lo permite</td><td>Ensayos no destructivos, prueba hidráulica</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>ITC EP-1: ventilación y conducción</h2>
+  <div class="wrap"><table>
+    <thead><tr><th>Aspecto</th><th>Valor / regla</th><th>Observación</th></tr></thead>
+    <tbody>
+      <tr><td class="dest">Ventilación</td><td>S = Qt / 0,58</td><td>Superficie mínima de aberturas</td></tr>
+      <tr><td class="dest">Ventilación canalizada</td><td>2 Nm3/h por kW</td><td>Casos sin combustión en locales aislados</td></tr>
+      <tr><td class="dest">Vigilancia indirecta</td><td>Paso a directa ante fallo</td><td>Instrucciones de emergencia</td></tr>
+      <tr><td class="dest">Formación del operador</td><td>Fabricante / instalador / usuario con técnico competente</td><td>Debe quedar acreditada</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Documentación y empresas</h2>
+  <div class="wrap"><table>
+    <thead><tr><th>Elemento</th><th>Régimen</th><th>Dato clave</th></tr></thead>
+    <tbody>
+      <tr><td class="dest">Empresa instaladora/reparadora</td><td>Declaración responsable</td><td>Validez nacional</td></tr>
+      <tr><td class="dest">Documentación de instalación</td><td>Proyecto / certificado / acta</td><td>Según nivel y tipo de equipo</td></tr>
+      <tr><td class="dest">Calderas existentes sin CE</td><td>Adaptación con proyecto técnico</td><td>Puede requerir informe de OC</td></tr>
+      <tr><td class="dest">Equipos usados</td><td>Inspección de nivel C y documentación específica</td><td>Según origen y marcado</td></tr>
+    </tbody>
+  </table></div>
+
+  <p class="footer">RD 809/2021 · REP · ITC EP-1 Calderas</p>
+</div>
+</body>
+</html>
