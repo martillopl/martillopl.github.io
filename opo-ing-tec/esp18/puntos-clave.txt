@@ -1,0 +1,218 @@
+TEMA 18 – RD 1027/2007, DE 20 DE JULIO – RITE
+REGLAMENTO DE INSTALACIONES TÉRMICAS EN LOS EDIFICIOS
+Artículos 1 a 47 · IT 1 · IT 2 · IT 3 · IT 4
+
+═══════════════════════════════════════════════════
+ESTRUCTURA DEL RITE
+═══════════════════════════════════════════════════
+
+El RITE se compone de:
+  - Articulado reglamentario (arts. 1 a 47): marco jurídico-administrativo
+  - IT 1 – Diseño y dimensionado
+  - IT 2 – Montaje
+  - IT 3 – Mantenimiento y uso
+  - IT 4 – Inspección
+
+Objeto (art. 1): fijar las exigencias de eficiencia energética y seguridad que
+deben cumplir las instalaciones térmicas en los edificios
+Ámbito (art. 2): instalaciones de calefacción, climatización y ACS en edificios de nueva
+construcción y en edificios existentes cuando se reformen o amplíen
+
+Definición de instalación térmica: instalación de climatización (calefacción, refrigeración
+y ventilación) y de producción de agua caliente sanitaria
+
+EXCLUSIONES del ámbito:
+  - Procesos industriales, procesos agrícolas y ganaderos
+  - Instalaciones con potencia útil nominal ≤ 70 W/m² (de aplicación voluntaria)
+
+═══════════════════════════════════════════════════
+ARTÍCULOS 1 A 47: CONTENIDO ESENCIAL
+═══════════════════════════════════════════════════
+
+Art. 1 – Objeto: eficiencia energética + bienestar + higiene + seguridad
+Art. 2 – Ámbito: nuevas instalaciones, ampliaciones y reformas
+Art. 3 – Definiciones clave
+Art. 4 – Exigencias técnicas: IT 1 a IT 4
+Art. 5 – Responsabilidad de los agentes
+Art. 6 – Documentación del proyecto (cuando se requiera)
+Arts. 7 a 12 – Proceso de puesta en servicio (documentación, registro, comunicación previa)
+Art. 13 – Empresas instaladoras: habilitación obligatoria
+Art. 14 – Categorías de empresas instaladoras
+Arts. 15 a 22 – Empresas mantenedoras: habilitación y obligaciones
+Arts. 23 a 27 – Técnicos directores de la instalación
+Arts. 28 a 35 – Documentación: proyecto, memoria técnica, libro del edificio, certificado de instalación
+Arts. 36 a 42 – Puesta en servicio y registro
+Arts. 43 a 47 – Inspecciones y régimen sancionador
+
+PROYECTO vs. MEMORIA TÉCNICA:
+  - Se exige PROYECTO firmado por ingeniero cuando la potencia útil nominal sea > 70 kW
+  - Se admite MEMORIA TÉCNICA cuando la potencia útil nominal ≤ 70 kW
+  - DATO CLAVE: el umbral entre proyecto y memoria técnica es 70 kW
+
+EMPRESAS INSTALADORAS (art. 13-14):
+  Categoría A: instalaciones sin límite de potencia → requiere titulado competente
+  Categoría B: instalaciones con potencia útil nominal ≤ 70 kW
+  Categoría C: instalaciones de climatización con potencia ≤ 70 kW
+  Categoría D: instalaciones de calefacción y climatización con potencia ≤ 70 kW
+  → Habilitación: declaración responsable ante la CA de establecimiento
+  → Habilita para todo el territorio nacional
+
+CERTIFICADO DE INSTALACIÓN:
+  - Lo emite el instalador habilitado
+  - Acredita que la instalación cumple el RITE
+  - Necesario para la puesta en servicio
+
+═══════════════════════════════════════════════════
+IT 1 – DISEÑO Y DIMENSIONADO
+═══════════════════════════════════════════════════
+
+La IT 1 desarrolla las exigencias de BIENESTAR E HIGIENE, EFICIENCIA ENERGÉTICA
+y SEGURIDAD que deben cumplir las instalaciones en su diseño.
+
+IT 1.1 – EXIGENCIA DE BIENESTAR E HIGIENE:
+  - Calidad del ambiente térmico
+    · Temperatura operativa de calefacción: 21 °C (±3 °C)
+    · Temperatura operativa de refrigeración: 26 °C (±3 °C)
+    · Humedad relativa calefacción: 40-50%
+    · Humedad relativa refrigeración: 45-60%
+  - Calidad del aire interior (renovación de aire)
+    · Categorías IDA 1 a IDA 4 (IDA 1 = aire de óptima calidad)
+    · IDA 1: hospitales, clínicas
+    · IDA 2: oficinas, residencias, salas de conferencias
+    · IDA 3: edificios comerciales, cines, teatros
+    · IDA 4: construcciones rurales (mínima exigencia)
+  - Higiene: temperatura mínima del ACS en acumuladores: 60 °C (prevención Legionella)
+    ACS en punto de consumo: ≥ 50 °C (máx. 65 °C en boca de grifo)
+  - Calidad del ambiente acústico: niveles sonoros máximos según uso
+
+IT 1.2 – EXIGENCIA DE EFICIENCIA ENERGÉTICA:
+  - Rendimiento energético de los equipos (calderas, bombas de calor, etc.)
+  - Redes de tuberías y conductos: aislamiento obligatorio
+  - Control: regulación y zonificación de la instalación
+  - Contabilización de consumos (instalaciones con potencia > 70 kW)
+  - Recuperación de energía: obligatoria en instalaciones de climatización > 6 l/s por persona
+  - Energías renovables: contribución solar mínima para ACS (coordinada con CTE HE4)
+
+IT 1.3 – EXIGENCIA DE SEGURIDAD:
+  - Generadores de calor y frío: presiones y temperaturas máximas
+  - Redes de tuberías: expansión, vaciado, purga de aire
+  - Sala de máquinas: condiciones de acceso, ventilación y seguridad
+    · Sala de máquinas de categoría A (potencia > 70 kW): local específico
+    · Sala de máquinas de categoría B (potencia ≤ 70 kW): condiciones reducidas
+
+DATO CRÍTICO: temperatura ACS en depósito: 60 °C mínimo (Legionella)
+DATO CRÍTICO: temperatura en punto de consumo: ≥ 50 °C
+
+═══════════════════════════════════════════════════
+IT 2 – MONTAJE
+═══════════════════════════════════════════════════
+
+La IT 2 establece las condiciones de ejecución material de las instalaciones térmicas.
+Regula la compatibilidad de materiales, la ejecución de redes de tuberías y conductos,
+el montaje de equipos y el cumplimiento de las instrucciones del fabricante.
+
+Puntos clave:
+  - Los equipos y materiales deben tener las características declaradas en proyecto
+  - Las uniones y conexiones deben ser estancas (ensayos de estanqueidad)
+  - Las redes deben estar identificadas (colores o etiquetado) y accesibles para mantenimiento
+  - El instalador debe dejar la instalación lista para las pruebas de puesta en marcha
+
+Pruebas previas a la puesta en servicio:
+  - Prueba de estanqueidad de redes de agua
+  - Prueba de estanqueidad de conductos de aire
+  - Prueba de libre dilatación
+  - Comprobación de los sistemas de seguridad
+  - Limpieza interior de las redes
+
+═══════════════════════════════════════════════════
+IT 3 – MANTENIMIENTO Y USO
+═══════════════════════════════════════════════════
+
+La IT 3 establece las operaciones de mantenimiento preventivo y las condiciones de uso
+que garantizan la eficiencia energética y la seguridad a lo largo de la vida útil.
+
+El mantenimiento puede ser realizado por:
+  - La empresa mantenedora habilitada (contrato de mantenimiento)
+  - El titular de la instalación, si dispone de medios propios cualificados
+
+LIBRO DE MANTENIMIENTO o LIBRO DEL EDIFICIO:
+  - Debe estar disponible en la instalación
+  - Recoge todas las operaciones de mantenimiento y sus fechas
+
+PERIODICIDADES DE MANTENIMIENTO (más preguntadas):
+  Calderas:
+    - Limpieza de la cámara de combustión: cada 2 años (potencia ≤ 70 kW) / anual (> 70 kW)
+    - Análisis de combustión: anual
+    - Comprobación de emisiones y rendimiento: anual
+  Equipos de climatización:
+    - Revisión general: anual
+    - Limpieza de filtros: según instalación (mensual en zonas de alta ocupación)
+  Redes de agua:
+    - Comprobación de la estanqueidad: semestral
+  Torres de refrigeración y sistemas evaporativos:
+    - Protocolo de Legionella y revisión: semestral (en la práctica)
+  ACS:
+    - Control de temperatura en acumuladores: mensual
+    - Tratamiento antilegal (Legionella): según plan de mantenimiento higiénico-sanitario
+
+DATO CLAVE: el propietario o usuario es responsable de mantener la instalación
+en las condiciones del RITE y de contratar el mantenimiento cuando proceda.
+
+═══════════════════════════════════════════════════
+IT 4 – INSPECCIÓN
+═══════════════════════════════════════════════════
+
+La IT 4 regula las inspecciones periódicas de las instalaciones térmicas.
+Las inspecciones las realiza un TÉCNICO COMPETENTE o un ORGANISMO DE CONTROL HABILITADO.
+
+TIPOS DE INSPECCIÓN:
+  1. Inspección inicial: antes de la puesta en servicio (cuando el RITE lo exige)
+  2. Inspección periódica: durante la vida útil de la instalación
+
+PLAZOS DE INSPECCIÓN PERIÓDICA (datos más preguntados):
+
+Instalaciones de calefacción con calderas de:
+  - Potencia útil nominal entre 20 kW y 70 kW:
+    · Cada 4 AÑOS si el rendimiento comprobado es < al rendimiento mínimo reglamentario
+    · Cada 2 AÑOS si el combustible es gasóleo o carbón
+    · Las comunidades autónomas pueden reducir estos plazos
+  - Potencia útil nominal > 70 kW: cada 2 AÑOS (inspección de la instalación de calefacción)
+
+Instalaciones de climatización:
+  - Potencia útil nominal > 12 kW (refrigeración o calor): cada 5 AÑOS
+
+Instalaciones de ACS:
+  - Con acumulador y superficie de captación solar > 20 m²: cada 4 AÑOS
+  - Las instalaciones de ACS se inspeccionan junto con la calefacción cuando están integradas
+
+DATO CRÍTICO: el umbral de 20 kW y 70 kW delimita cuándo hay inspección y cada cuánto
+DATO CRÍTICO: inspección de calderas > 70 kW → cada 2 AÑOS
+DATO CRÍTICO: inspección de climatización > 12 kW → cada 5 AÑOS
+
+TÉCNICO QUE INSPECCIONA:
+  - Puede ser un técnico competente independiente o un organismo de control habilitado
+  - El resultado de la inspección se recoge en un CERTIFICADO DE INSPECCIÓN
+  - Los resultados desfavorables obligan al titular a subsanar en plazo
+
+═══════════════════════════════════════════════════
+CIFRAS Y TRAMPAS CLAVE PARA TEST – TEMA 18
+═══════════════════════════════════════════════════
+
+Umbral proyecto/memoria técnica:         70 kW
+Empresa cat. A:                          sin límite de potencia
+Empresa cat. B:                          ≤ 70 kW
+Temperatura calefacción:                 21 °C (±3 °C)
+Temperatura refrigeración:               26 °C (±3 °C)
+Humedad relativa calefacción:            40-50%
+Humedad relativa refrigeración:          45-60%
+ACS en acumulador (Legionella):          60 °C mínimo
+ACS en punto de consumo:                 ≥ 50 °C
+IDA 1 (mejor calidad de aire):           hospitales, clínicas
+IDA 4 (calidad mínima):                  construcciones rurales
+Inspección calderas > 70 kW:             cada 2 AÑOS
+Inspección calderas 20-70 kW:            cada 4 AÑOS (o 2 si gasóleo/carbón)
+Inspección climatización > 12 kW:        cada 5 AÑOS
+Sala de máquinas cat. A:                 potencia > 70 kW → local específico
+Trampa: el umbral de 12 kW es solo para inspección de climatización
+Trampa: ACS Legionella es 60 °C en acumulador, pero 50 °C en grifo
+Trampa: IT 4 inspecciones son de técnico competente, no solo de OC
