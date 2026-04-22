@@ -1,0 +1,79 @@
+PUNTOS CLAVE TEMA 38 – DF 23/2011 · RESIDUOS DE CONSTRUCCIÓN Y DEMOLICIÓN (RCDs) · NAVARRA
+
+=== MARCO NORMATIVO ===
+1. Norma de referencia: DECRETO FORAL 23/2011, de 28 de marzo, publicado en el BON n.º 69 de 8 de abril de 2011. Entró en vigor el 9 de abril de 2011.
+2. La norma foral desarrolla y adapta en Navarra el Real Decreto 105/2008, de 1 de febrero, por el que se regula la producción y gestión de los residuos de construcción y demolición a nivel estatal.
+3. Habilitación competencial: artículo 57.c) de la Ley Orgánica 13/1982, de 10 de agosto, de Reintegración y Amejoramiento del Régimen Foral de Navarra (LORAFNA), sobre desarrollo legislativo y ejecución en materia de medio ambiente y ecología.
+4. Marco estatal superior: Ley 7/2022, de 8 de abril, de residuos y suelos contaminados para una economía circular (derogó la Ley 10/1998 y la Ley 22/2011).
+5. Navarra también tiene la Ley Foral 14/2018, de 18 de junio, de Residuos y su Fiscalidad, y el Plan de Residuos de Navarra 2017-2027.
+
+=== OBJETO ===
+6. El DF 23/2011 tiene como objeto:
+   a) Establecer el régimen jurídico de la producción, posesión y gestión de RCDs en Navarra.
+   b) Fijar el estudio de gestión y el plan de gestión de RCDs como documentos obligatorios en proyectos y obras.
+   c) Establecer las fianzas exigibles por las Administraciones Públicas a productores, poseedores y/o gestores de RCDs.
+   d) Establecer los requisitos técnicos mínimos de las plantas de tratamiento de RCDs para garantizar su adecuada gestión.
+
+=== DEFINICIONES CLAVE ===
+7. Residuos de construcción y demolición (RCDs): cualquier sustancia u objeto que, cumpliendo la definición de residuo, se genere en una obra de construcción o demolición.
+8. Residuo inerte: aquel que no experimenta transformaciones físicas, químicas ni biológicas significativas; cuya lixiviabilidad, contenido de contaminantes y ecotoxicidad del lixiviado son insignificantes y no suponen riesgo para las aguas superficiales o subterráneas.
+9. Productor de RCDs: la persona física o jurídica titular de la licencia urbanística en una obra de construcción o demolición. Si la obra no necesita licencia, el titular del bien inmueble.
+10. Poseedor de RCDs: el productor o cualquier persona física o jurídica que tenga RCDs en su poder y no tenga la condición de gestor.
+11. Gestor de RCDs: persona o entidad, pública o privada, que realiza la gestión (recogida, transporte, reciclado, eliminación) y que debe estar autorizada para ello.
+
+=== ÁMBITO DE APLICACIÓN ===
+12. El DF 23/2011 se aplica a la producción, posesión y gestión de RCDs en el ámbito territorial de la Comunidad Foral de Navarra.
+13. EXCLUSIONES (quedan fuera de su ámbito de aplicación):
+   - Tierras y piedras no contaminadas reutilizadas fuera de la obra en la misma CCAA.
+   - Residuos de industrias extractivas regulados por su legislación específica.
+   - Residuos de obras menores de construcción o reparación domiciliaria cuando no superen los 50 KG DE PESO.
+
+=== OBLIGACIONES DEL PRODUCTOR (Art. 4) ===
+14. Incluir en el proyecto de obra un ESTUDIO DE GESTIÓN DE RESIDUOS que contenga:
+   a) Estimación de la cantidad de RCDs que se generarán en la obra (en toneladas y m³).
+   b) Medidas para la prevención de generación de residuos en la obra.
+   c) Operaciones de reutilización, valorización o eliminación a que se destinarán los RCDs.
+   d) Medidas para la separación de los residuos en obra (por fracciones).
+   e) Planos de las instalaciones previstas para almacenamiento, manejo y separación de RCDs.
+   f) Pliego de condiciones específico de gestión de RCDs.
+   g) Valoración económica del coste previsto de la gestión de RCDs.
+15. Constituir una FIANZA o garantía financiera (ver art. 6):
+   - Obras cuyo RCD no supere 50 m³: 1.000 €.
+   - Obras cuyo RCD supere 50 m³: 50.000 €.
+
+=== OBLIGACIONES DEL POSEEDOR (Art. 5) ===
+16. Presentar a la propiedad un PLAN DE GESTIÓN DE RESIDUOS derivado del estudio de gestión del proyecto y que refleje cómo se va a efectuar la gestión de los RCDs durante la obra.
+17. Obligación de separación por fracciones en la obra: obligatoria cuando la cantidad supere determinados umbrales por tipo de residuo (hormigón, metales, madera, vidrio, plásticos, papel y cartón, asfalto, etc.).
+18. Entregar los residuos a un gestor autorizado. El poseedor solo puede entregar los RCDs a gestores autorizados.
+
+=== SISTEMA DE FIANZAS (Art. 6) ===
+19. Las administraciones públicas que otorguen licencias urbanísticas exigirán la constitución de una fianza o garantía financiera equivalente que asegure el cumplimiento de los requisitos de gestión de RCDs.
+20. Cuantías:
+   - RCDs ≤ 50 m³: FIANZA de 1.000 euros.
+   - RCDs > 50 m³: FIANZA de 50.000 euros.
+21. La fianza se devuelve al productor cuando acredita documentalmente que los RCDs han sido gestionados de forma correcta (entregados a gestor autorizado con la correspondiente certificación).
+22. Las fianzas no devueltas se destinan al FONDO PARA LA RECUPERACIÓN DE ZONAS DEGRADADAS (art. 11).
+
+=== VALORIZACIÓN EN OBRA (Art. 8) ===
+23. El uso de RCDs como áridos reciclados en la propia obra (valorización en obra) está permitido siempre que se cumplan los requisitos establecidos: los materiales deben acreditar su aptitud para el uso previsto y cumplir la normativa técnica aplicable (instrucciones EHE, PG-3, etc.).
+
+=== GESTORES DE RCDs (Art. 7) ===
+24. Los gestores de RCDs deben estar autorizados por el órgano ambiental competente (Departamento de Desarrollo Rural y Medio Ambiente / hoy Medio Ambiente del Gobierno de Navarra).
+25. Las plantas de tratamiento de RCDs deben cumplir los requisitos técnicos mínimos del Anejo 1 del Decreto Foral.
+
+=== RÉGIMEN SANCIONADOR (Art. 12) ===
+26. Las infracciones en materia de gestión de RCDs se tipifican como leves, graves o muy graves según la normativa de residuos.
+27. El régimen sancionador aplicable es el de la legislación de residuos de Navarra.
+
+=== FOMENTO Y ADMINISTRACIONES PÚBLICAS (Art. 13) ===
+28. Las administraciones públicas navarras deben fomentar la prevención y la utilización de productos procedentes de la valorización de RCDs en sus propias obras, licitaciones y contratos.
+
+=== PUNTOS MÁS PREGUNTADOS EN OPOSICIÓN ===
+29. El DF 23/2011 desarrolla el RD 105/2008 en Navarra.
+30. Exclusión por peso en obras menores: < 50 kg quedan excluidas.
+31. El estudio de gestión lo elabora el productor e incluye la valoración económica del coste de gestión de residuos.
+32. El plan de gestión lo presenta el poseedor/contratista y adapta el estudio a la obra real.
+33. Cuantías de fianza: 1.000 € (≤ 50 m³) y 50.000 € (> 50 m³).
+34. Las fianzas no devueltas van al Fondo para la Recuperación de Zonas Degradadas.
+35. Definición de residuo inerte: no contamina aguas superficiales ni subterráneas.
+36. El productor = titular de la licencia urbanística.
