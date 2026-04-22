@@ -1,0 +1,58 @@
+PUNTOS CLAVE TEMA 37 – TIPOLOGÍA Y GESTIÓN DE RESIDUOS SANITARIOS · PLAN DE GESTIÓN
+
+=== MARCO NORMATIVO ===
+1. Normativa estatal vigente: Ley 7/2022, de 8 de abril, de residuos y suelos contaminados para una economía circular (transpone Directiva 2018/851/UE). Deroga la Ley 22/2011.
+2. Normativa específica de Navarra: Decreto Foral 296/1993, de 13 de septiembre, sobre Gestión de Residuos Sanitarios en la Comunidad Foral de Navarra. Complementado por el Decreto Foral 181/1994, de 3 de octubre, que desarrolla el modelo y contenido mínimo del plan de gestión.
+3. El responsable de la gestión es el Director-Gerente o Director del centro sanitario productor, quien debe elaborar y garantizar el cumplimiento del Plan de Gestión de Residuos Sanitarios.
+
+=== CLASIFICACIÓN DE RESIDUOS SANITARIOS (DF 296/1993 Navarra / clasificación general CCAA) ===
+4. GRUPO I – Residuos generales o asimilables a urbanos: residuos producidos en actividades auxiliares (administración, cocinas, jardinería, mantenimiento) sin contacto con el paciente. Sin riesgo específico. Gestión: recogida municipal.
+5. GRUPO II – Residuos sanitarios no específicos (asimilables a urbanos): generados en la actividad sanitaria directa pero sin riesgo de infección para el manipulador (vendajes, gasas sin contaminación apreciable, yesos, guantes, etc.). Gestión: recogida municipal o similar a urbanos.
+6. GRUPO III – Residuos sanitarios específicos o de riesgo (PELIGROSOS): requieren gestión diferenciada por su riesgo de infección o peligrosidad. Incluyen:
+   a) Residuos infecciosos: procedentes de pacientes con enfermedades infecciosas transmisibles.
+   b) Residuos anatómicos no identificables (fragmentos humanos de escasa entidad).
+   c) Sangre y hemoderivados líquidos y sus recipientes.
+   d) Material punzante y cortante (agujas, bisturís, lancetas) independientemente de si está contaminado o no.
+   e) Cultivos y material de laboratorio de microbiología e inmunología.
+   f) Residuos de animales inoculados en investigación.
+   Gestión: gestor autorizado; contenedores homologados; tratamiento previo o directamente a instalación autorizada (incineración, tratamiento físico-químico).
+7. GRUPO IV – Residuos tipificados como peligrosos por normativa específica:
+   - Residuos químicos peligrosos (reactivos, reveladores fotográficos, mercurio, etc.).
+   - Residuos de medicamentos citostáticos y citotóxicos.
+   - Residuos radiactivos (regulados por CSN).
+   Gestión: según su normativa específica (peligrosos: RD 833/1988; citostáticos: protocolos específicos; radiactivos: CSN/ENRESA).
+8. GRUPO V (en algunas CCAA) – Cadáveres y restos humanos de entidad suficiente: Reglamento de Policía Sanitaria Mortuoria.
+
+=== JERARQUÍA DE RESIDUOS (Ley 7/2022) ===
+9. El principio de jerarquía establece el orden de prioridad: 1. PREVENCIÓN → 2. PREPARACIÓN PARA LA REUTILIZACIÓN → 3. RECICLADO → 4. OTROS TIPOS DE VALORIZACIÓN (incluida la energética) → 5. ELIMINACIÓN. Este orden es el más preguntado en test de esta normativa.
+
+=== GESTIÓN INTRACENTRO ===
+10. Fases de la gestión intracentro: SEGREGACIÓN en el punto de producción → ENVASADO y etiquetado → TRANSPORTE interno → ALMACENAMIENTO temporal en el centro → ENTREGA al gestor externo autorizado.
+11. Los contenedores del Grupo III deben ser: rígidos (para punzantes y cortantes), herméticos, de un solo uso, con pictograma de biopeligro (biohazard), resistentes a la perforación y sin posibilidad de apertura una vez cerrados. Los contenedores de agujas y objetos cortantes son los más regulados.
+12. Los residuos de Grupos I y II tienen la consideración de residuos municipales y su gestión exterior corresponde a los entes locales.
+13. REGLA DE ORO: nunca mezclar residuos de diferentes grupos, y especialmente nunca mezclar residuos de los Grupos III, IV o V con los de Grupos I y II.
+14. Tiempo máximo de almacenamiento temporal intracentro: variable según CCAA; en Navarra (DF 296/1993), los residuos del Grupo III no pueden almacenarse más de 72 horas en el punto de producción ni más de 7 días en el almacén temporal del centro (en determinadas condiciones).
+
+=== PLAN DE GESTIÓN DE RESIDUOS SANITARIOS ===
+15. Contenido mínimo del Plan de Gestión (Navarra: DF 181/1994):
+   a) Identificación del centro y del responsable del plan.
+   b) Cuantificación y caracterización de los residuos generados (por grupos).
+   c) Procedimientos de segregación, envasado, etiquetado y almacenamiento.
+   d) Sistema de recogida interna y externa (gestores autorizados).
+   e) Sistemas de tratamiento y eliminación empleados.
+   f) Medidas de formación e información al personal.
+   g) Registros y documentación de control.
+16. El Plan de Gestión debe estar actualizado y disponible para inspección. Los registros de entrega de residuos peligrosos a gestores autorizados deben conservarse al menos 5 años (Ley 7/2022).
+
+=== CITOSTÁTICOS ===
+17. Los residuos de citostáticos y citotóxicos (Grupo IV) son especialmente peligrosos (mutágenos, carcinógenos, teratógenos). Todo el material que haya estado en contacto con citostáticos (guantes, mascarillas, envases, agujas, ropa) se considera residuo citostático y debe gestionarse de forma diferenciada en contenedores específicos de color amarillo con pictograma de riesgo citotóxico.
+
+=== PUNTOS MÁS PREGUNTADOS EN OPOSICIÓN ===
+18. Clasificación por grupos (I, II, III, IV) con ejemplos de cada uno.
+19. Los punzantes y cortantes van SIEMPRE al Grupo III, independientemente de si están contaminados.
+20. El responsable del plan es el Director-Gerente del centro.
+21. Jerarquía de residuos: prevención primero, eliminación como último recurso.
+22. Los Grupos I y II = gestión municipal; Grupos III, IV = gestores autorizados.
+23. Residuos radiactivos: Grupo IV, regulados por el CSN/ENRESA.
+24. Conservar registros de residuos peligrosos: mínimo 5 años.
+25. Norma de Navarra: DF 296/1993 + DF 181/1994 (plan).
