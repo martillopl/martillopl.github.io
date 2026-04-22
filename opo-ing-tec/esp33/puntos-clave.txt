@@ -1,0 +1,31 @@
+PUNTOS CLAVE TEMA 33 – LEGIONELOSIS (RD 487/2022, DF 54/2006, DF 298/2001)
+
+=== NORMATIVA: ESTRUCTURA Y JERARQUÍA ===
+1. Jerarquía normativa: RD 487/2022 (estatal, básico) → DF 54/2006 (Navarra, complementario al RD 865/2003) → DF 298/2001 (aplicación en Navarra del RD 909/2001, ya derogado).
+2. RD 487/2022 entró en vigor el 2 de enero de 2023 (6 meses después de su publicación en el BOE de 22/06/2022). Deroga el RD 865/2003.
+3. RD 614/2024 (2 de julio de 2024) modificó el RD 487/2022. Las instalaciones debían actualizar su PPCL o PSL antes del 1 de julio de 2025.
+4. El DF 54/2006 fue motivado por el brote de legionelosis que afectó a Pamplona en junio de 2006. Entró en vigor el 11 de agosto de 2006.
+5. El DF 298/2001 desarrolla en Navarra el RD 909/2001, que fue el primer decreto específico sobre legionelosis. Ambos han sido superados por normativa posterior.
+
+=== RD 487/2022: CONTENIDO ESENCIAL ===
+6. Objeto: prevención y control de la legionelosis mediante medidas sanitarias en instalaciones que utilicen agua y puedan producir aerosoles.
+7. Los titulares deben elaborar un PPCL (Plan de Prevención y Control de Legionella) o, alternativamente, un PSL (Plan Sanitario frente a Legionella). Son las dos opciones, no simultáneas.
+8. El PPCL incluye: diagnóstico inicial, esquemas de instalación con puntos de muestreo, programa de mantenimiento/limpieza/desinfección, programa de muestreo, formación del personal, documentación y registros.
+9. Los registros deben conservarse durante al menos 5 años.
+10. Cuatro principios preventivos: evaluación del riesgo, diseño y mantenimiento, gestión del agua y vigilancia.
+11. Instalaciones de mayor riesgo: torres de refrigeración, condensadores evaporativos, sistemas de agua caliente sanitaria (ACS), instalaciones de agua fría de consumo humano, spas, fuentes ornamentales.
+12. En hospitales, las instalaciones de ACS y los sistemas de agua fría son especialmente críticos por la vulnerabilidad de los pacientes.
+
+=== DF 54/2006 (NAVARRA): ASPECTOS ESPECÍFICOS ===
+13. Aplica medidas complementarias a la normativa estatal para instalaciones de riesgo en Navarra, especialmente torres de refrigeración.
+14. Torres de refrigeración: obliga a tratamiento del agua para control microbiológico, biocidas autorizados, control de pH, conductividad y dosificación de biocidas.
+15. El titular de una torre debe comunicar a la Administración la presencia de Legionella pneumophila en el agua y tomar medidas correctoras inmediatas.
+16. Ante la presencia de Legionella pneumophila: desinfección urgente, paralización si es necesario, notificación a autoridad sanitaria.
+
+=== ASPECTOS TÉCNICOS DE OPOSICIÓN ===
+17. Legionella pneumophila prolifera entre 20 °C y 45 °C. Por encima de 60 °C muere (en segundos); por debajo de 20 °C queda inactiva.
+18. Temperatura de ACS en acumuladores: mínimo 60 °C. En los puntos de uso: mínimo 50 °C.
+19. Agua fría de consumo: debe mantenerse por debajo de 25 °C en toda la red.
+20. Métodos de desinfección: cloración, dióxido de cloro, cobre-plata (ionización), radiación UV, calor.
+21. La formación del personal que interviene en instalaciones de riesgo es obligatoria y debe ser continua (novedad del RD 487/2022).
+22. En oposición suelen preguntar: temperatura de proliferación (20-45 °C), temperatura de muerte (>60 °C), plazo de conservación de registros (5 años), diferencia entre PPCL y PSL, y qué motivó el DF 54/2006 (brote de Pamplona 2006).
