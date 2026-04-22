@@ -1,0 +1,17 @@
+PUNTOS CLAVE TEMA 26 – SALA BLANCA: CONCEPTO, ÁREAS DE RIESGO, CLASIFICACIÓN, PARÁMETROS, TIPOS Y COSTE EN HOSPITALES
+
+1. Una sala blanca (cleanroom) es un espacio con parámetros ambientales estrictamente controlados para minimizar la contaminación por partículas y microorganismos.
+2. La norma de referencia es la ISO 14644-1, que clasifica las salas de ISO 1 (más limpia) a ISO 9 (menos limpia).
+3. La clasificación se basa en la concentración máxima de partículas por metro cúbico de aire, para tamaños ≥0,1 µm.
+4. Las anteriores clasificaciones US FED STD 209E (clase 100, 10.000, etc.) son equivalentes a la ISO: clase 100 ≈ ISO 5.
+5. Las normativas específicas en hospitales son la UNE 100713 (climatización en hospitales) y la UNE 171340 (validación y control de salas de ambiente controlado).
+6. Áreas de riesgo en centros sanitarios: zona de alto riesgo (quirófanos, UCI, neonatos), zona de riesgo moderado, zona de bajo riesgo.
+7. Parámetros a controlar: partículas en aire (≥0,5 µm), microbiología, temperatura, humedad relativa, presión diferencial, renovaciones de aire/hora, velocidad del flujo, niveles de luz y ruido.
+8. Flujo laminar (unidireccional): para ISO 1-4 (quirófanos de alto nivel). Flujo turbulento: para ISO 5-8 (la mayoría de zonas hospitalarias).
+9. Tipos de salas blancas en un hospital: quirófano convencional (ISO 7-8), quirófano ultra-limpio (ISO 5), unidad de farmacia-citostáticos (ISO 5-7), unidad de mezclas IV (ISO 5), laboratorios de microbiología/PCR, banco de sangre y trasplante.
+10. La presión positiva protege al paciente (quirófanos, inmunodeprimidos). La presión negativa protege al exterior del paciente (aislamientos infecciosos).
+11. Cada nivel ISO supone multiplicar el coste por un factor significativo respecto al nivel inferior.
+12. Los costes de inversión se incrementan por: sistema de filtración (pre-filtros + filtros HEPA o ULPA), UTAs higiénicas, materiales de construcción sin porosidad, esclusas, control de acceso, monitorización y validación periódica.
+13. Los costes de explotación aumentan con las renovaciones de aire: a mayor clasificación, más caudal de aire tratado = más energía.
+14. La validación inicial y periódica (anual obligatoria, mensual o trimestral en áreas críticas) es un requisito reglamentario.
+15. En oposición suelen preguntar: la tabla ISO, la diferencia entre flujo laminar y turbulento, la presión positiva vs. negativa, las renovaciones en quirófanos y la relación entre clasificación ISO y coste.
