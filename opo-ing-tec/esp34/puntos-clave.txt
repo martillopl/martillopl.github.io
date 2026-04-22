@@ -1,0 +1,28 @@
+PUNTOS CLAVE TEMA 34 – RD 783/2001 · RADIACIONES IONIZANTES · RAYOS X DIAGNÓSTICO MÉDICO
+
+=== ESTADO NORMATIVO ===
+1. ATENCIÓN: El RD 783/2001 fue derogado el 22 de diciembre de 2022. No obstante, forma parte del temario por su importancia histórica y porque el Anexo IV (instalaciones de rayos X para diagnóstico médico) y el procedimiento de declaración y registro siguen siendo la base de referencia hasta que se implante la normativa completa que lo sustituyó (RD 1100/2022 y normativa de desarrollo).
+2. La norma que sustituyó al RD 783/2001 como reglamento general de protección radiológica es el Real Decreto 1100/2022, de 27 de diciembre, que transpone la Directiva Euratom 2013/59.
+3. La regulación específica de instalaciones de rayos X de diagnóstico médico está en el RD 1085/2009, de 3 de julio, que regula su instalación, utilización y el procedimiento de declaración y registro.
+
+=== PRINCIPIOS FUNDAMENTALES DEL RD 783/2001 ===
+4. Tres principios básicos de la protección radiológica (EURATOM / CIPR): JUSTIFICACIÓN (ninguna práctica sin beneficio neto), OPTIMIZACIÓN (ALARA: dosis tan bajas como sea razonablemente posible) y LIMITACIÓN DE DOSIS (los trabajadores y público no superarán los límites establecidos).
+5. Límites de dosis efectiva para trabajadores clasificados: 20 mSv/año (promedio en 5 años), con máximo de 50 mSv en un solo año.
+6. Límite de dosis efectiva para el público general: 1 mSv/año.
+7. Los trabajadores expuestos a radiaciones ionizantes se clasifican en: Categoría A (pueden recibir más de 3/10 de los límites) y Categoría B (menor exposición).
+8. El Consejo de Seguridad Nuclear (CSN) es el organismo regulador en materia de protección radiológica en España.
+
+=== INSTALACIONES DE RAYOS X · DIAGNÓSTICO MÉDICO (RD 1085/2009) ===
+9. Los equipos de rayos X de diagnóstico médico deben corresponder a modelos homologados. El certificado de homologación es emitido por el CSN.
+10. El titular de la instalación es responsable de cumplir todos los requisitos de seguridad y de mantener en buen estado los equipos y la sala.
+11. Las instalaciones deben ser dirigidas por médicos, odontólogos, veterinarios u otros titulados acreditados por el CSN según el tipo de instalación.
+12. Exigencias técnicas de la sala de rayos X: blindaje suficiente en paredes, suelo y techo (plomo o equivalente) para que la dosis en zonas adyacentes no supere los límites. El informe de blindaje debe ser favorable del CSN.
+13. Control de calidad obligatorio: los equipos de rayos X deben someterse a pruebas de aceptación antes de la puesta en servicio y a controles de calidad periódicos.
+
+=== PROCEDIMIENTO DE DECLARACIÓN Y REGISTRO (RD 1085/2009) ===
+14. Sistema de DECLARACIÓN (no autorización previa): antes de la puesta en funcionamiento, el titular declara la instalación ante el órgano competente de la Comunidad Autónoma donde esté ubicada.
+15. Documentación de la declaración: Anexo Ia (declaración del titular), Anexo Ib (descripción del proyecto y planos de las salas), Anexo II (certificado de conformidad del equipo, emitido por una EVAT autorizada), y el informe de blindaje favorable del CSN.
+16. Plazo: si transcurre 1 mes sin que se inste la subsanación de deficiencias, la declaración se entiende inscrita en el registro de la Comunidad Autónoma.
+17. Doble registro: la inscripción se realiza en el Registro de la CCAA correspondiente Y en el Registro Central de instalaciones de rayos X de diagnóstico médico adscrito al Ministerio de Industria (hoy Ministerio para la Transición Ecológica).
+18. Las EVAT (Empresas de Venta y Asistencia Técnica) deben estar autorizadas por el CSN previo informe favorable, con validez en todo el territorio nacional.
+19. En oposición suelen preguntar: los tres principios (justificación, optimización/ALARA, limitación), los límites de dosis (20 mSv/año trabajadores, 1 mSv/año público), el sistema de declaración (no autorización previa), el doble registro (CCAA + central), qué son las EVAT y la acreditación del CSN para dirigir instalaciones de rayos X.
