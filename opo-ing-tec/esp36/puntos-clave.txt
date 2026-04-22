@@ -1,0 +1,55 @@
+PUNTOS CLAVE TEMA 36 – MEDICINA PREVENTIVA · INFECCIÓN NOSOCOMIAL · ASPERGILOSIS EN OBRAS · LEGIONELOSIS HOSPITALARIA
+
+=== 1. MEDICINA PREVENTIVA: SALUD Y ENFERMEDAD ===
+1. Definición OMS de salud (1946, vigente): "Estado de completo bienestar físico, mental y social, y no solamente la ausencia de enfermedad o afección."
+2. Determinantes de salud (modelo de Lalonde, 1974): biología humana (genética, herencia); entorno o medio ambiente; estilo de vida (conductas); sistema sanitario (prestaciones). El estilo de vida es el mayor determinante de la salud en los países desarrollados.
+3. Historia natural de la enfermedad (Leavell y Clark): período prepatogénico (sin manifestación), período patogénico (desde el estímulo hasta la enfermedad clínica) y resultado (curación, cronicidad, discapacidad, muerte). Los niveles de prevención se aplican en cada etapa.
+4. Niveles de prevención: primaria (antes de la enfermedad: vacunación, educación sanitaria, saneamiento ambiental); secundaria (diagnóstico precoz y tratamiento: cribados); terciaria (limitar daño y rehabilitar).
+
+=== 2. EL SERVICIO DE MEDICINA PREVENTIVA ===
+5. Funciones del Servicio de Medicina Preventiva en un hospital:
+   - Vigilancia y control de la infección nosocomial (IRAS).
+   - Gestión del programa de vacunación de trabajadores.
+   - Bioseguridad ambiental: agua, aire, superficies.
+   - Seguridad del paciente y gestión de riesgos clínicos.
+   - Medicina del viaje y salud internacional.
+   - Formación de profesionales en medidas de prevención y control.
+6. La Comisión de Infecciones, Profilaxis y Política Antibiótica (CIPPA) es el órgano colegiado hospitalario de referencia en materia de infección nosocomial. El Servicio de Medicina Preventiva participa activamente en ella.
+7. La vigilancia epidemiológica de IRAS en España se realiza a través del proyecto ENVIN-HELICS (UCI) y EPINE (prevalencia nacional).
+
+=== 3. CRITERIOS DE FIABILIDAD Y SEGURIDAD DEL PACIENTE ===
+8. La OMS define la seguridad del paciente como "la reducción del riesgo de daño innecesario asociado con la atención sanitaria hasta un mínimo aceptable".
+9. Evento adverso: daño no intencionado causado por la atención sanitaria (no por la enfermedad de base). Puede ser prevenible o no prevenible.
+10. Las "Soluciones para la seguridad del paciente" de la OMS (2007) incluyen: identificación del paciente (doble verificador), comunicación durante el traspaso de cuidados, seguridad con medicamentos de alto riesgo, cirugía segura, higiene de manos, caídas y úlceras por presión.
+11. Lista de verificación quirúrgica (OMS, 2009): tres momentos: ANTES de la inducción anestésica, ANTES de la incisión cutánea, y ANTES de que el paciente salga del quirófano.
+12. Los 7 pasos para la seguridad del paciente (NHS, adoptados por el Ministerio de Sanidad): construir cultura segura; liderazgo en seguridad; integrar la gestión de riesgos; fomentar la notificación; involucrar y comunicar con los pacientes; aprender y compartir; aplicar soluciones.
+13. Indicadores clave de IRAS: tasa de infección de localización quirúrgica (ILQ), tasa de bacteriemia asociada a catéter (BAC), neumonía asociada a ventilación mecánica (NAVM), infección urinaria asociada a sonda (IUAS).
+
+=== 4. CONTROL DE LA INFECCIÓN NOSOCOMIAL ===
+14. Definición: infección nosocomial (o IRAS) es la infección que se detecta al menos 48 horas después del ingreso hospitalario y que no estaba presente ni en período de incubación en el momento del ingreso.
+15. La higiene de manos es la MEDIDA MÁS EFECTIVA para prevenir la transmisión de infecciones nosocomiales. Los 5 momentos de higiene de manos (OMS): antes del contacto con el paciente, antes de tarea aséptica, después de exposición a fluidos corporales, después del contacto con el paciente, después del contacto con el entorno del paciente.
+16. Precauciones estándar: se aplican a TODOS los pacientes independientemente del diagnóstico. Incluyen: higiene de manos, uso de guantes, mascarilla, bata y gafas según riesgo de salpicadura.
+17. Precauciones basadas en la transmisión: por contacto, por gotas y por vía aérea.
+18. Las medidas de eficacia probada (nivel I) incluyen: esterilización y desinfección, higiene de manos, sondaje urinario cerrado, cuidados del catéter intravenoso.
+
+=== 5. EL HOSPITAL EN OBRAS: ASPERGILOSIS E HIGIENE AMBIENTAL ===
+19. Aspergillus spp. (principalmente A. fumigatus) es un hongo ambiental que se dispersa mediante ESPORAS (conidias) presentes en el polvo. Las obras y demoliciones aumentan drásticamente la concentración de esporas en el aire.
+20. Pacientes de alto riesgo de aspergilosis invasiva nosocomial (AIN): trasplantados de médula ósea/progenitores hematopoyéticos, leucémicos en inducción, VIH avanzado, tratamiento con corticosteroides a dosis altas o prolongados, otros inmunodeprimidos graves.
+21. Umbral de bioseguridad ambiental: 10 UFC/m³ de hongos oportunistas en áreas de alto riesgo.
+22. Medidas durante obras hospitalarias:
+   - Levantar BARRERAS HERMÉTICAS impermeables entre la zona de obras y las áreas de hospitalización.
+   - SELLAR los sistemas de ventilación que comuniquen la zona de obras con áreas clínicas (NO debe haber comunicación de ventilación entre obras y hospitalización).
+   - Limitar o prohibir el acceso de los pacientes de riesgo a zonas próximas a obras.
+   - Los escombros se eliminarán por vías reservadas, lejos de las zonas de pacientes.
+   - Limpieza y desinfección exhaustiva antes de ocupar una zona remodelada.
+   - Monitorización ambiental (muestreo de aire) en unidades de alto riesgo durante las obras.
+23. Salas de aislamiento protector para inmunodeprimidos: presión POSITIVA (el aire sale hacia el pasillo, impidiendo la entrada de esporas), filtros HEPA (High Efficiency Particulate Air), al menos 12 renovaciones de aire por hora.
+24. A diferencia de las salas de aislamiento de pacientes infectocontagiosos, que precisan PRESIÓN NEGATIVA (el aire entra desde el pasillo hacia la habitación, evitando que los patógenos salgan).
+
+=== 6. PREVENCIÓN Y CONTROL DE LA LEGIONELOSIS EN EL ÁMBITO HOSPITALARIO ===
+25. Normativa aplicable: RD 487/2022 (estatal, deroga RD 865/2003) y, en Navarra, DF 54/2006 y DF 298/2001. Los hospitales son instalaciones de especial vigilancia.
+26. Los hospitales concentran pacientes de ALTO RIESGO de formas graves de legionelosis: inmunodeprimidos, trasplantados, pacientes en UCI con ventilación mecánica, diabéticos, fumadores.
+27. Instalaciones hospitalarias de riesgo: torres de refrigeración (condensadores evaporativos), sistemas de ACS (acumuladores, red de distribución), sistemas de agua fría, spas/bañeras de hidromasaje, fuentes ornamentales, equipos de terapia respiratoria con nebulización.
+28. El hospital debe disponer de PPCL (Plan de Prevención y Control de Legionella) o PSL (Plan Sanitario frente a Legionella) con diagnóstico inicial, esquemas de instalaciones, puntos de muestreo, programa de mantenimiento y formación del personal. Los registros se conservan 5 años.
+29. Ante un brote nosocomial de legionelosis: notificación inmediata al servicio de salud pública, investigación epidemiológica urgente, toma de muestras de agua y ambientales, y adopción de medidas de control (hiperdesinfección del sistema, revisión del PPCL). El Servicio de Medicina Preventiva coordina la respuesta.
+30. Para la oposición suelen preguntar: los 5 momentos de higiene de manos, la diferencia entre presión positiva (inmunodeprimidos) y negativa (aislamiento de infecciosos), el umbral de 10 UFC/m³ para hongos, los pacientes de alto riesgo de aspergilosis, los 7 pasos de seguridad del paciente, y los tres criterios que definen infección nosocomial (≥48h; no incubando al ingreso; relacionada con asistencia).
