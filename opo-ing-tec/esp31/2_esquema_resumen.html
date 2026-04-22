@@ -1,0 +1,30 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Tema 31 – Esquema-resumen</title><style>
+*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}:root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.20);--r12:12px}
+@media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.18)}}
+body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;background:var(--bg3);color:var(--t1);padding:2rem 1rem}.page{max-width:980px;margin:0 auto}h1{font-size:20px;font-weight:500;margin-bottom:4px}.sub{font-size:13px;color:var(--t3);margin-bottom:24px}.bloque{background:var(--bg2);border:.5px solid var(--bl);border-radius:var(--r12);padding:14px 16px;margin-bottom:10px}.bt{font-size:13px;font-weight:500;margin:0 0 10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}.badge{font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap}.bp{background:#EEEDFE;color:#3C3489}.bb{background:#E6F1FB;color:#0C447C}.bc{background:#E1F5EE;color:#085041}.bd{background:#FAEEDA;color:#633806}.be{background:#FAECE7;color:#712B13}.bf{background:#EAF3DE;color:#27500A}.bg{background:#FDECEC;color:#7D1A1A}.items{display:flex;flex-wrap:wrap;gap:6px}.item,.itemd{font-size:12px;background:var(--bg1);border:.5px solid var(--bl);border-radius:6px;padding:3px 9px;color:var(--t2)}.itemd{font-weight:500;color:var(--t1);border:.5px solid var(--bm)}.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}.s{font-size:11px;color:var(--t3);font-weight:500;margin:0 0 6px}@media(max-width:700px){.g2,.g3{grid-template-columns:1fr}}.footer{margin-top:20px;font-size:11px;color:var(--t3);text-align:center}</style></head><body><div class="page">
+<h1>Comunicaciones hospitalarias – Tema 31</h1><p class="sub">Esquema-resumen · Voz · Datos · Imagen · IP · RIS · PACS</p>
+
+<div class="bloque"><div class="bt"><span class="badge bp">Red convergente IP</span></div><div class="items">
+<span class="itemd">Una infraestructura → voz + datos + imagen + control</span><span class="item">Cableado estructurado Cat 6A</span><span class="item">Fibra óptica</span><span class="item">WiFi 802.11</span><span class="item">CPD centralizado</span></div></div>
+
+<div class="bloque"><div class="bt"><span class="badge bb">Voz – VoIP</span></div><div class="items">
+<span class="itemd">Voz en paquetes IP</span><span class="itemd">Protocolo SIP</span><span class="item">PBX IP</span><span class="item">DECT hospitalario</span><span class="item">Megafonía IP</span></div></div>
+
+<div class="bloque"><div class="bt"><span class="badge bc">Datos</span></div><div class="items">
+<span class="itemd">VLANs segmentadas</span><span class="itemd">HIS · HCE · LIS · Farmacia</span><span class="item">1 Gbps por puesto clínico</span><span class="item">WiFi para dispositivos móviles</span></div></div>
+
+<div class="bloque"><div class="bt"><span class="badge bd">Imagen – DICOM</span></div><div class="items">
+<span class="itemd">Estándar internacional de imagen médica</span><span class="itemd">Rx · TC · RM · PET · Eco</span><span class="item">Gigabit / fibra óptica obligatorio</span><span class="item">SAN/NAS para almacenamiento</span></div></div>
+
+<div class="bloque"><div class="bt"><span class="badge be">RIS vs. PACS</span></div><div class="g2">
+<div><div class="s">RIS</div><div class="items"><span class="itemd">Gestión del flujo de trabajo radiológico</span><span class="item">Citas, órdenes, informes</span><span class="item">No almacena imágenes</span></div></div>
+<div><div class="s">PACS</div><div class="items"><span class="itemd">Almacena y distribuye imágenes DICOM</span><span class="item">Acceso desde red hospitalaria</span><span class="item">Sustituye el archivo de placas</span></div></div>
+</div></div>
+
+<div class="bloque"><div class="bt"><span class="badge bf">Integración HIS – RIS – PACS</span></div><div class="items">
+<span class="itemd">HIS → petición</span><span class="itemd">RIS → gestión</span><span class="itemd">Equipo → imagen</span><span class="itemd">PACS → almacenamiento</span><span class="itemd">RIS → informe</span><span class="itemd">HIS → resultado</span></div></div>
+
+<div class="bloque"><div class="bt"><span class="badge bg">Seguridad</span></div><div class="items">
+<span class="itemd">RGPD + LOPDGDD</span><span class="itemd">VLANs + cortafuegos</span><span class="itemd">QoS</span><span class="item">SAI para sistemas críticos</span><span class="item">Redundancia</span></div></div>
+
+<p class="footer">VoIP · RIS · PACS · DICOM · HIS · Red convergente IP</p></div></body></html>

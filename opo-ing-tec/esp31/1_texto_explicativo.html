@@ -1,0 +1,63 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Tema 31 – Texto explicativo</title><style>
+*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}:root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.22);--r2:12px}
+@media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.20)}}
+body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;background:var(--bg3);color:var(--t1);padding:2.5rem 1rem;line-height:1.8}.page{max-width:740px;margin:0 auto}.header{margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:.5px solid var(--bm)}.tlabel{font-size:12px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}h1{font-size:22px;font-weight:500;line-height:1.3;margin-bottom:8px}.meta{font-size:13px;color:var(--t3)}.indice{background:var(--bg2);border:.5px solid var(--bl);border-radius:var(--r2);padding:16px 20px;margin-bottom:2.5rem}.itit{font-size:11px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}.indice ol{padding-left:18px}.indice li{font-size:13px;color:var(--t2);padding:3px 0}.indice a{color:var(--t2);text-decoration:none}.sec{margin-bottom:2.8rem}h2{font-size:18px;font-weight:500;margin-bottom:1rem;padding-bottom:8px;border-bottom:.5px solid var(--bl)}p{font-size:15px;color:var(--t2);margin-bottom:1rem}strong{font-weight:500;color:var(--t1)}.nota{background:var(--bg2);border-left:2px solid var(--bm);padding:12px 16px;margin:1.2rem 0;font-size:13.5px;color:var(--t2);line-height:1.65}ul{padding-left:20px;margin-bottom:1rem}ul li{font-size:15px;color:var(--t2);padding:3px 0}.footer{margin-top:3rem;padding-top:1.2rem;border-top:.5px solid var(--bl);font-size:11px;color:var(--t3);text-align:center}</style></head>
+<body><div class="page"><div class="header"><div class="tlabel">Tema 31 – Comunicaciones hospitalarias</div>
+<h1>Infraestructura y tecnología de las comunicaciones: voz, datos, imagen, IP, RIS/PACS</h1>
+<div class="meta">VoIP · WiFi · RIS · PACS · DICOM · HIS · Red convergente</div></div>
+<div class="indice"><div class="itit">Índice</div><ol>
+<li><a href="#s1">Red convergente IP hospitalaria</a></li>
+<li><a href="#s2">Voz: telefonía IP y VoIP</a></li>
+<li><a href="#s3">Datos: red corporativa hospitalaria</a></li>
+<li><a href="#s4">Imagen médica: DICOM</a></li>
+<li><a href="#s5">RIS: Sistema de información radiológica</a></li>
+<li><a href="#s6">PACS: Archivado y comunicación de imágenes</a></li>
+<li><a href="#s7">Integración RIS + PACS + HIS</a></li>
+<li><a href="#s8">Seguridad y calidad de servicio</a></li>
+<li><a href="#s9">Puntos de oposición</a></li>
+</ol></div>
+
+<div class="sec" id="s1"><h2>1. Red convergente IP hospitalaria</h2>
+<p>El modelo actual de infraestructura de comunicaciones hospitalaria es la <strong>red convergente IP</strong>: una única plataforma física (cableado estructurado categoría 6A o superior, fibra óptica multimodo/monomodo y WiFi IEEE 802.11) que transporta simultáneamente tráfico de voz, datos, imagen médica y señalización de sistemas de control. La ventaja principal es la simplificación de la infraestructura, la reducción de costes de mantenimiento y la escalabilidad.</p>
+<p>La infraestructura se organiza jerárquicamente: <strong>núcleo (core)</strong> de alta velocidad para interconexión de edificios y CPD, <strong>distribución</strong> por planta o servicio y <strong>acceso</strong> en cada puesto de trabajo o dispositivo. El <strong>CPD</strong> (Centro de Proceso de Datos) concentra los servidores, el almacenamiento y los sistemas de gestión hospitalaria.</p></div>
+
+<div class="sec" id="s2"><h2>2. Voz: telefonía IP y VoIP</h2>
+<p>La <strong>VoIP</strong> (Voice over IP) transforma la señal analógica de voz en paquetes digitales IP, que se transmiten por la misma red de datos. En un hospital, esto permite integrar en una sola red la centralita (PBX IP), los teléfonos de planta, los terminales DECT inalámbricos del personal clínico, el interfono de llamada de paciente y el sistema de megafonía IP.</p>
+<p>Entre las ventajas de la telefonía IP en el hospital destacan la reducción de costes de infraestructura (no hace falta red de voz separada), la movilidad del personal clínico con terminales portátiles y la posibilidad de integrar alarmas y comunicaciones de emergencia en el mismo sistema. El protocolo más usado es <strong>SIP</strong> (Session Initiation Protocol).</p></div>
+
+<div class="sec" id="s3"><h2>3. Datos: red corporativa hospitalaria</h2>
+<p>La red de datos conecta todos los puestos clínicos y administrativos del hospital con los sistemas de información: HIS, HCE (Historia Clínica Electrónica), laboratorio (LIS), farmacia, gestión de camas, y otros. La red inalámbrica WiFi es imprescindible en áreas clínicas para los dispositivos móviles de enfermería, tabletas y carros de medicación.</p>
+<p>La red se segmenta en <strong>VLANs</strong> (redes virtuales) para separar el tráfico clínico, administrativo, de imagen médica, de gestión de edificio (BMS) y de invitados/pacientes, limitando el impacto de incidentes de seguridad. El <strong>ancho de banda mínimo</strong> para puestos clínicos es de 1 Gbps; la red de imagen médica requiere conexiones de al menos 1-10 Gbps por su volumen de datos.</p></div>
+
+<div class="sec" id="s4"><h2>4. Imagen médica: DICOM</h2>
+<p>Toda la imagen médica digital (Rx, TC, RM, PET, ecografía, mamografía) se genera, almacena y transmite en formato <strong>DICOM</strong> (Digital Imaging and Communications in Medicine). Es el estándar internacional que define el formato de archivo y el protocolo de comunicación entre los equipos de imagen, el PACS, el RIS y las estaciones de diagnóstico. Sin compatibilidad DICOM, los sistemas no pueden intercambiar imágenes.</p>
+<p>Las imágenes DICOM tienen un tamaño elevado (desde unos MB para una Rx hasta cientos de MB para un estudio de TC o RM), lo que impone requisitos de almacenamiento masivo (SAN o NAS) y de ancho de banda elevado en la red, justificando el uso de fibra óptica y Gigabit Ethernet para la red de imagen.</p></div>
+
+<div class="sec" id="s5"><h2>5. RIS: Sistema de Información Radiológica</h2>
+<p>El <strong>RIS</strong> (Radiology Information System) es el sistema de gestión del departamento de radiología. Gestiona el flujo de trabajo completo: programación de citas, órdenes de exploración, registro de pacientes, asignación de modalidades (sala de Rx, TC, RM), informes radiológicos, estadísticas y facturación. El radiólogo usa el RIS para dictar y validar sus informes.</p>
+<p>El RIS se conecta con el HIS del hospital para recibir las peticiones clínicas, y con el PACS para recuperar las imágenes asociadas al estudio. El RIS no almacena imágenes: su misión es la gestión de la información y el flujo de trabajo administrativo-clínico del departamento.</p></div>
+
+<div class="sec" id="s6"><h2>6. PACS: Archivado y comunicación de imágenes</h2>
+<p>El <strong>PACS</strong> (Picture Archiving and Communication System) es el sistema que recibe, almacena, gestiona y distribuye las imágenes médicas en formato DICOM procedentes de todos los equipos de imagen del hospital (TC, RM, Rx, PET, ecógrafo, etc.). Sustituye físicamente al archivo de placas radiológicas analógicas, eliminando su gestión, almacenaje y transporte físico.</p>
+<p>Las imágenes almacenadas en el PACS son accesibles desde cualquier estación autorizada de la red hospitalaria (o incluso de forma remota con acceso seguro), permitiendo que el radiólogo, el médico solicitante o el especialista consulten el estudio en tiempo real. La arquitectura de almacenamiento usa sistemas de alto rendimiento (SAN, NAS o nube) con redundancia y copias de seguridad.</p></div>
+
+<div class="sec" id="s7"><h2>7. Integración RIS + PACS + HIS</h2>
+<p>La plena integración de los tres sistemas es el nivel más avanzado de gestión de la información clínica:</p>
+<ul>
+<li><strong>HIS</strong> → recibe la petición clínica del médico y la envía al RIS.</li>
+<li><strong>RIS</strong> → programa la exploración, gestiona el flujo de trabajo y notifica al PACS qué estudio se va a realizar.</li>
+<li><strong>PACS</strong> → recibe las imágenes del equipo de imagen, las almacena y las pone a disposición del radiólogo.</li>
+<li>El radiólogo informa en el <strong>RIS</strong> y el informe se adjunta al estudio en el PACS y vuelve al HIS.</li>
+</ul>
+<div class="nota"><strong>Flujo integrado:</strong> HIS (petición) → RIS (gestión) → equipo imagen (producción) → PACS (almacenamiento) → RIS (informe) → HIS (resultado).</div></div>
+
+<div class="sec" id="s8"><h2>8. Seguridad y calidad de servicio</h2>
+<p>La red hospitalaria maneja datos de salud de carácter especialmente sensible, lo que obliga a aplicar medidas de seguridad rigurosas: segmentación en VLANs, cortafuegos con política restrictiva, cifrado del tráfico (TLS/SSL), autenticación de usuarios, auditoría de accesos y cumplimiento del <strong>RGPD</strong> y la <strong>LOPDGDD</strong>. Los sistemas críticos (PACS, HIS, laboratorio, quirófanos) deben tener alimentación eléctrica ininterrumpida (SAI) y redundancia de red.</p>
+<p>El mecanismo de <strong>QoS</strong> (Quality of Service) prioriza el tráfico de voz, videoconferencia y señales clínicas críticas sobre el tráfico administrativo general, garantizando latencia baja y ausencia de cortes en las aplicaciones asistenciales.</p></div>
+
+<div class="sec" id="s9"><h2>9. Puntos de oposición</h2>
+<p>Los más preguntados: diferencia entre RIS (gestión de información y flujo de trabajo) y PACS (almacenamiento y distribución de imágenes), qué es DICOM y para qué sirve, cuál es la relación HIS-RIS-PACS, por qué la red de imagen necesita Gigabit, y qué es VoIP. También suele caer la diferencia entre cableado estructurado y fibra óptica, y el concepto de red convergente IP.</p>
+<div class="nota"><strong>Miniresumen:</strong> IP convergente; RIS = flujo de trabajo; PACS = imágenes; DICOM = estándar; HIS = todo integrado; Gigabit para imagen; VoIP para voz.</div></div>
+
+<div class="footer">VoIP · RIS · PACS · DICOM · HIS · Red convergente IP · Hospital</div>
+</div></body></html>

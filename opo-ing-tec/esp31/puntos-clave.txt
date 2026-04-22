@@ -1,0 +1,17 @@
+PUNTOS CLAVE TEMA 31 – INFRAESTRUCTURA Y TECNOLOGÍA DE LAS COMUNICACIONES EN EL HOSPITAL
+
+1. La infraestructura de comunicaciones hospitalaria integra cuatro grandes tipos de tráfico: voz, datos, imagen y señalización/control.
+2. El modelo de referencia es la red convergente IP: una sola infraestructura física (cableado estructurado + fibra óptica + WiFi) que transporta todos los tipos de tráfico.
+3. La red de cableado estructurado en un hospital sigue la norma ANSI/TIA 568 y EN 50173.
+4. VoIP (Voz sobre IP): transforma la señal de voz en paquetes IP. Permite integrar telefonía interna, dect hospitalario y centralita virtual (PBX IP) sobre la misma red de datos.
+5. La tecnología WiFi hospitalaria (IEEE 802.11) permite el uso de dispositivos móviles clínicos, enfermería electrónica y sistemas de llamada de paciente.
+6. El CPD (Centro de Proceso de Datos) es el corazón de la infraestructura hospitalaria: concentra servidores, almacenamiento y electrónica de red.
+7. RIS (Radiology Information System): sistema de información radiológica. Gestiona citas, órdenes de exploración, informes y facturación del departamento de radiología.
+8. PACS (Picture Archiving and Communication System): sistema de archivado y comunicación de imágenes médicas. Almacena, recupera y distribuye imágenes digitales (Rx, TC, RM, PET, etc.) en formato DICOM.
+9. DICOM (Digital Imaging and Communications in Medicine): estándar internacional para el almacenamiento e intercambio de imágenes médicas. Sin DICOM, el RIS y el PACS no se comunican entre sí ni con los equipos de imagen.
+10. HIS (Hospital Information System): sistema de información hospitalaria que integra datos clínicos, administrativos y económicos de todo el hospital.
+11. La integración RIS + PACS + HIS es el nivel más completo: el RIS gestiona el flujo de trabajo, el PACS gestiona las imágenes y el HIS integra todo con la historia clínica electrónica.
+12. La red de imagen médica necesita alta capacidad (Gigabit Ethernet o mejor, fibra óptica) por el volumen de datos de las imágenes DICOM.
+13. QoS (Quality of Service): mecanismo que prioriza el tráfico de voz y señales críticas sobre la red IP para garantizar latencia y ausencia de cortes.
+14. La seguridad de la red hospitalaria es crítica: segmentación por VLANs, cortafuegos, cifrado de datos, control de accesos y cumplimiento del RGPD y la Ley Orgánica de Protección de Datos.
+15. En oposición: saben preguntar la diferencia entre RIS y PACS, qué es DICOM, la relación HIS-RIS-PACS, la necesidad de Gigabit para imagen y el concepto de red convergente IP.
