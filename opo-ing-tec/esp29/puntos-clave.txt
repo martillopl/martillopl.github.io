@@ -1,0 +1,15 @@
+PUNTOS CLAVE TEMA 29 – UNE 171340 VALIDACIÓN Y CUALIFICACIÓN DE SALAS DE AMBIENTE CONTROLADO
+
+1. La UNE 171340:2020 es la norma española que establece los principios y metodología para la validación y cualificación de salas de ambiente controlado en hospitales.
+2. Complementa a la UNE 100713 (climatización de hospitales). Juntas forman el par normativo esencial para quirófanos y zonas críticas.
+3. DIFERENCIA CLAVE: cualificación = demostrar que una instalación cumple unas especificaciones; validación = demostrar documentalmente que un proceso mantiene un nivel de cumplimiento en todas las etapas.
+4. Las zonas hospitalarias se clasifican en 5 niveles de riesgo: del 1 (ligero) al 5 (muy alto).
+5. Las fases del proceso de validación son: URS (especificación de requisitos del usuario) → DQ (verificación del diseño) → IQ (cualificación de la instalación) → OQ (cualificación operativa) → PQ (cualificación de rendimiento).
+6. La sala puede estar en dos estados: "en reposo" (construcción terminada sin personal ni actividad) y "en funcionamiento" (actividad real de trabajo).
+7. Los parámetros de ensayo obligatorios incluyen: velocidad y caudal de aire, renovaciones/hora, presión diferencial, temperatura, humedad relativa, concentración de partículas (ISO 14644-1), microbiología ambiental (UFC), eficiencia de filtros HEPA (DOP o PAO test), estanqueidad de conductos.
+8. La periodicidad mínima de cualificación: anual en zonas de alto riesgo (quirófanos, UCI); semestral si hay no conformidades históricas; después de cualquier modificación o reparación significativa.
+9. El técnico que realiza la validación debe ser un TSCAI (Técnico Superior de Calidad Ambiental en Interiores) con especialización hospitalaria.
+10. El informe de validación es el documento que certifica el cumplimiento. Debe recoger metodología, resultados, incidencias y conclusiones.
+11. Los límites de partículas se toman de la ISO 14644-1. Los límites microbiológicos (UFC) son específicos de la UNE 171340 y del tipo de zona.
+12. La presión diferencial mínima suele ser +15 Pa entre el quirófano y la zona adyacente (zona crítica respecto a la zona periférica).
+13. En oposición suelen preguntar: diferencia entre cualificación y validación, fases (URS-DQ-IQ-OQ-PQ), estados de la sala (reposo/funcionamiento), 5 niveles de riesgo, periodicidad anual y quién realiza la validación (TSCAI).
