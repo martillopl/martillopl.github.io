@@ -1,0 +1,36 @@
+PUNTOS CLAVE TEMA 35 – RD 1836/1999 · INSTALACIONES NUCLEARES Y RADIACTIVAS · ALTA TECNOLOGÍA MÉDICA
+
+=== ESTADO NORMATIVO ===
+1. ATENCIÓN: El RD 1836/1999 fue derogado el 3 de diciembre de 2024 por un nuevo Reglamento sobre instalaciones nucleares y radiactivas (publicado en el BOE de 3/12/2024). El RD 1836/1999 forma parte del temario por su vigencia histórica de 25 años y porque estructura los conceptos que sigue usando la normativa nueva.
+2. El RD 1836/1999 fue modificado por el RD 35/2008, de 18 de enero, que actualizó la clasificación de instalaciones radiactivas, los requisitos de exención y los aparatos productores de rayos X.
+3. La Ley habilitante es la Ley 25/1964, de 29 de abril, sobre Energía Nuclear. El organismo de control es el Consejo de Seguridad Nuclear (CSN).
+
+=== OBJETO Y ÁMBITO ===
+4. Objeto del RD 1836/1999: regulación del régimen de autorizaciones administrativas para instalaciones nucleares y radiactivas y otras actividades relacionadas con la aplicación de radiaciones ionizantes; incluye acreditaciones de personal, obligaciones de los titulares e inspección y control.
+5. Las instalaciones se clasifican en: NUCLEARES (central nuclear, reactor nuclear, fábrica de combustible, instalación de almacenamiento, de reprocesamiento o de residuos de alta actividad) e INSTALACIONES RADIACTIVAS (categorías 1ª, 2ª y 3ª según peligrosidad del material o equipo).
+
+=== CLASIFICACIÓN DE INSTALACIONES RADIACTIVAS ===
+6. Las instalaciones radiactivas se dividen en tres categorías según la peligrosidad de las fuentes:
+   - 1ª categoría: mayor nivel de peligrosidad. Requieren autorización de construcción, autorización de explotación y autorización de clausura.
+   - 2ª categoría: nivel de peligrosidad intermedio. Requieren autorización de puesta en servicio y autorización de clausura.
+   - 3ª categoría: menor nivel de peligrosidad. Requieren licencia de funcionamiento.
+7. Los aparatos productores de rayos X con fines de diagnóstico médico están EXENTOS de la cobertura de riesgos del artículo 57 de la Ley 25/1964.
+
+=== INSTALACIONES MÉDICAS CON RADIACIONES IONIZANTES ===
+8. RADIODIAGNÓSTICO: utiliza radiaciones X para obtener imágenes diagnósticas (Rx convencional, TC). Son instalaciones radiactivas de 3ª categoría. Se rigen además por el RD 1085/2009 y las Instrucciones del CSN IS-01 e IS-23.
+9. MEDICINA NUCLEAR: utiliza radiofármacos (fuentes abiertas de radionucleidos) para diagnóstico (gammagrafía, PET) y tratamiento. Son instalaciones de 1ª o 2ª categoría según la actividad utilizada. Requieren zona controlada, laboratorios calientes, blindajes específicos y gestión de residuos radiactivos.
+10. PET (Tomografía por Emisión de Positrones): utiliza radionucleidos emisores de positrones (F-18, Ga-68). La actividad manejada puede ser elevada, por lo que generalmente se clasifican como instalaciones de 2ª categoría. Requieren ciclotrón propio o suministro externo de radiofármacos.
+11. RADIOTERAPIA: utiliza radiaciones ionizantes con finalidad terapéutica (destrucción de tejido tumoral). Incluye: radioterapia externa (acelerador lineal, cobalto-60), braquiterapia (fuentes selladas en contacto con el tumor) y radioterapia metabólica (radiofármacos). Los aceleradores lineales son instalaciones de 1ª categoría.
+12. INTERVENCIONISMO radiológico: procedimientos diagnóstico-terapéuticos guiados por imagen (angiografía, cateterismo, TIPS, etc.). Utiliza equipos de rayos X pero puede conllevar dosis significativas al paciente y al personal por la duración de los procedimientos. Requiere dosimetría individual y monitorización de dosis.
+13. Los físicos médicos (especialistas en radiofísica hospitalaria) son los responsables de la protección radiológica en las unidades de medicina nuclear, radioterapia y, cada vez más, en radiodiagnóstico intervencionista.
+
+=== AUTORIZACIONES ===
+14. Instalaciones de 1ª categoría (aceleradores, medicina nuclear de alta actividad): autorización de construcción + autorización de explotación + autorización de clausura.
+15. Instalaciones de 2ª categoría (medicina nuclear de media actividad, PET): autorización de puesta en servicio + autorización de clausura.
+16. Instalaciones de 3ª categoría (radiodiagnóstico convencional, TC): licencia de funcionamiento.
+17. Las AUTORIZACIONES las concede el Ministerio competente en materia de energía, previo informe PRECEPTIVO Y VINCULANTE del CSN.
+
+=== SUPERVISORES DE PROTECCIÓN RADIOLÓGICA ===
+18. Las instalaciones de 1ª y 2ª categoría deben contar con un Supervisor de Protección Radiológica (SPR), personal acreditado por el CSN.
+19. Los Físicos Médicos son los especialistas sanitarios responsables de la dosimetría, la calibración de equipos y los controles de calidad en las instalaciones de radioterapia y medicina nuclear.
+20. En oposición suelen preguntar: la clasificación de instalaciones (nucleares vs. radiactivas; 1ª-2ª-3ª categoría), qué tipo de autorización corresponde a cada categoría, qué es un SPR, la diferencia entre fuentes selladas (braquiterapia) y abiertas (medicina nuclear), y por qué los rayos X de diagnóstico están exentos de la cobertura de riesgos de la Ley 25/1964.
