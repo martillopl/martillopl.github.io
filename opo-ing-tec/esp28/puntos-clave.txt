@@ -1,0 +1,18 @@
+PUNTOS CLAVE TEMA 28 – UNE 100713 INSTALACIONES DE ACONDICIONAMIENTO DE AIRE EN HOSPITALES
+
+1. La UNE 100713:2005 es la norma española de referencia para instalaciones de climatización y ventilación en hospitales y edificios similares.
+2. Los locales se clasifican en DOS clases: Clase I (exigencias muy elevadas) y Clase II (exigencias habituales).
+3. Clase I: quirófanos, UCI, salas estériles, esterilización (lado limpio), neonatos, trasplantes.
+4. Clase II: consultas, habitaciones, pasillos, vestuarios, salas de exploración general.
+5. Filtración: Clase I exige TRES etapas (F5 + F9 + H13/H14); Clase II exige DOS etapas (F5 + F9).
+6. Quirófanos: clasificados en tipo A (alta complejidad), tipo B y tipo C.
+7. En quirófanos: caudal mínimo de aire exterior = 1.200 m³/h; caudal total impulsado ≥ 2.400 m³/h; ≥ 20 renovaciones/hora.
+8. Temperatura en quirófanos: 22-26 °C; HR: 45-55 %.
+9. Nivel de presión sonora en quirófanos: ≤ 40 dB(A); en UCI y reanimación: ≤ 35 dB(A).
+10. Presión positiva en quirófanos: +20 a +25 Pa respecto a la zona adyacente.
+11. La cascada de presiones va de mayor a menor desde la zona más limpia hacia el exterior del circuito.
+12. Las puertas entre salas con diferentes presiones deben estar enclavadas para evitar apertura simultánea.
+13. La norma exige pruebas de recepción (técnica e higiénica) antes de la puesta en servicio.
+14. La prueba de recepción higiénica verifica microbiología del aire, partículas, presiones y caudales.
+15. El mantenimiento y la inspección periódica son obligatorios e incluyen limpieza de conductos, cambio de filtros, comprobación de presiones y calidad del aire.
+16. En oposición, los datos más preguntados: Clase I vs. II, número de etapas de filtración, caudales y renovaciones en quirófanos, temperaturas y HR, presiones, y los tres tipos de quirófano A-B-C.
