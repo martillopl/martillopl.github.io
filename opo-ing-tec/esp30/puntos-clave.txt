@@ -1,0 +1,17 @@
+PUNTOS CLAVE TEMA 30 – MANTENIMIENTO DE QUIRÓFANOS Y SALAS BLANCAS
+
+1. Los tres tipos de mantenimiento son: programado (preventivo), correctivo y conductivo. Los tres deben coexistir en un plan de mantenimiento hospitalario.
+2. Mantenimiento programado (preventivo): actuaciones planificadas a intervalos fijos para evitar averías: cambio de filtros, revisión de presostatos, lubricación, calibración de sensores.
+3. Mantenimiento correctivo: reparación de fallos ya ocurridos. Puede ser inmediato (si afecta a la seguridad del paciente) o diferido (si puede esperar sin riesgo).
+4. En quirófanos, toda avería en la instalación de climatización tiene la máxima prioridad y se trata como correctivo inmediato.
+5. Mantenimiento conductivo: inspección diaria de los sistemas en funcionamiento, normalmente realizada por el técnico de turno. Se basa en la observación del comportamiento de los equipos sin intervención programada.
+6. Aspectos específicos en quirófanos y salas blancas: filtros HEPA deben sustituirse por pérdida de carga (ΔP) o por tiempo; los prefiltros se cambian con mayor frecuencia.
+7. La descontaminación de la instalación de climatización incluye: limpieza de secciones húmedas de la UTA, limpieza de conductos, bandeja de condensados y rejillas.
+8. La desinfección de la instalación de climatización se realiza mediante: biocidas (clorados, quaternarios, peróxidos), luz UV, nebulización o termonebulización. Se exige documentación y validación posterior.
+9. Tipos de limpieza del quirófano: entre intervenciones (rápida, superficies críticas), diaria-matutina (general), terminal (al final del programa), profunda periódica (paredes, techos, rejillas).
+10. El protocolo de limpieza siempre avanza de limpio a sucio y de arriba hacia abajo.
+11. Los desinfectantes de uso habitual en quirófanos: glutaraldehído, cloruro de benzalconio (amonio cuaternario), clorhexidina, lejía diluida (hipoclorito sódico), peróxido de hidrógeno.
+12. La limpieza terminal incluye paredes, suelos, mobiliario, lámparas y equipos. Finaliza con ventilación y control ambiental.
+13. El tiempo de recuperación de la sala blanca (de funcionamiento a reposo ISO) es un parámetro clave que debe verificarse y documentarse.
+14. El plan de mantenimiento debe recoger: procedimientos, frecuencias, responsables, registros, control de calidad y umbral de intervención.
+15. En oposición: saben preguntar el tipo de mantenimiento que corresponde a una avería urgente en quirófano (correctivo inmediato), la secuencia de limpieza (arriba a abajo, limpio a sucio), los tipos de limpieza del quirófano y cuáles son los desinfectantes habituales.
