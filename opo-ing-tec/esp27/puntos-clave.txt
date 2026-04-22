@@ -1,0 +1,17 @@
+PUNTOS CLAVE TEMA 27 – SALA BLANCA: PLANIFICACIÓN, CLASIFICACIONES, ZONIFICACIÓN Y FLUJOS
+
+1. La sala blanca se planifica por función y por riesgo: no todo el hospital necesita el mismo nivel de asepsia.
+2. La regla de oro es la asepsia progresiva: ir de lo más limpio a lo menos limpio y evitar cruces de flujos.
+3. La zonificación clásica incluye áreas sucias, semisucias, limpias y ultralimpias.
+4. La clasificación puede hacerse por nivel de riesgo, por grado de asepsia, por partículas en aire, por presión y por procedimientos.
+5. La referencia técnica internacional es ISO 14644-1 para clasificación por partículas.
+6. En hospitales, ISO 5-8 son las clases más relevantes según la actividad.
+7. Por presión, la sala puede ser positiva, negativa o neutra.
+8. La presión positiva protege el interior de la entrada de contaminantes.
+9. La presión negativa protege el exterior y se usa en aislamientos infecciosos.
+10. Los accesos deben estar controlados mediante esclusas, SAS, vestuarios y barreras físicas.
+11. Los flujos de pacientes, personal y material deben separarse siempre que sea posible.
+12. El material limpio entra por circuitos limpios; el material sucio sale por circuitos sucios.
+13. El personal debe cambiarse, lavarse y vestirse según un protocolo estricto antes de entrar.
+14. Las barreras de riesgo incluyen puertas interbloqueadas, paneles lisos, filtros HEPA, presurización y control de accesos.
+15. En oposiciones suelen preguntar la zonificación, los circuitos, la presión positiva/negativa y las barreras arquitectónicas y funcionales.
