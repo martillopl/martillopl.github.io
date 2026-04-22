@@ -1,0 +1,17 @@
+PUNTOS CLAVE TEMA 32 – TRATAMIENTO DE AGUA Y SALAS DE DIÁLISIS
+
+1. El agua para hemodiálisis NO puede ser simplemente agua potable: sus límites de contaminantes son mucho más estrictos porque el paciente entra en contacto directo con unos 400 litros de líquido de diálisis por sesión.
+2. La norma de referencia internacional es la familia ISO 23500 (que sustituyó a la ISO 13959). En España, la Guía de Gestión de Calidad del Líquido de Diálisis de la Sociedad Española de Nefrología (SEN) y la Sociedad Española de Enfermería Nefrológica (SEDEN) es el documento de referencia asistencial.
+3. El estándar anterior fue la norma AAMI (Association for the Advancement of Medical Instrumentation), que fijaba el límite bacteriológico en < 200 UFC/ml para el agua y < 2000 UFC/ml para el líquido de diálisis.
+4. Los límites actuales de agua purificada estándar son: bacterias < 100 UFC/ml y endotoxinas < 0,25 UE/ml.
+5. El agua ultrapura para diálisis (hemodiafiltración online - HDF) exige: bacterias < 0,1 UFC/ml y endotoxinas < 0,03 UE/ml.
+6. Las ETAPAS del tratamiento del agua son: Pretratamiento → Ósmosis inversa (OI) → Distribución.
+7. Pretratamiento incluye: filtración de partículas (5 µm), descalcificador (ablandador de resinas catiónicas) y filtro(s) de carbón activado (eliminan cloro y cloraminas).
+8. La Ósmosis Inversa (OI) es el núcleo del sistema: elimina el 95-99 % de los iones y contaminantes disueltos mediante membranas semipermeables a presión.
+9. Para aguas con alto contenido de cloraminas u otros contaminantes, se recomienda doble etapa de carbón activado o doble paso de OI.
+10. El circuito de distribución debe ser CERRADO (retorno al inicio), con velocidad del agua > 1 m/s para evitar la formación de biofilm bacteriano.
+11. La sala de tratamiento de agua debe estar lo más cerca posible de la unidad de hemodiálisis.
+12. El control microbiológico del agua se realiza MENSUALMENTE como mínimo. Ante resultados positivos, se procede a desinfección del circuito y nueva toma de muestra.
+13. La desinfección del circuito se realiza con calor (>85 °C) o con desinfectantes químicos (peróxido de hidrógeno, ácido peracético). La desinfección térmica es más efectiva contra el biofilm.
+14. La sala de diálisis requiere: suministro de agua tratada, desagüe adecuado, suministro eléctrico con SAI, tomas de gases médicos, accesibilidad para sillas de ruedas y espaciado mínimo entre puestos.
+15. En oposición: suelen preguntar las etapas del tratamiento del agua, qué elimina la OI, los límites de UFC para agua estándar y ultrapura, por qué el circuito debe ser cerrado y la frecuencia del control microbiológico (mensual).
