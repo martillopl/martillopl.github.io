@@ -1,0 +1,17 @@
+PUNTOS CLAVE TEMA 25 – EFICIENCIA ENERGÉTICA · RENOVABLES · COGENERACIÓN · GESTIÓN DE LA ENERGÍA · CLIMATIZACIÓN, CALEFACCIÓN Y ACS EN HOSPITALES
+
+1. La eficiencia energética en edificios se regula principalmente a través del RITE (RD 1027/2007 mod. 238/2013) y el CTE (DB-HE).
+2. El diseño energético eficiente prioriza: reducción de demanda (envolvente), optimización de sistemas y uso de energías renovables.
+3. El principio de jerarquía: primero reducir consumo, luego cubrir lo que quede con renovables.
+4. La cogeneración (producción simultánea de electricidad y calor útil) tiene alta eficiencia global (>80%).
+5. La cogeneración de alta eficiencia se define como la que supera el umbral de ahorro de energía primaria fijado por la UE (≥10% para instalaciones > 1 MWe; ≥0% para ≤ 1 MWe).
+6. En hospitales la cogeneración suele acoplarse a absorción para trigeneración (frío + calor + electricidad), lo que maximiza el aprovechamiento del calor residual.
+7. La gestión energética en grandes edificios implica SGE (ISO 50001), auditorías energéticas y sistemas de monitorización BMS/BAS.
+8. La Ley 18/2022 y el RD 56/2016 transponen la Directiva de Eficiencia Energética para grandes empresas (auditorías cada 4 años).
+9. Las energías renovables más usadas en hospitales: solar térmica (ACS), fotovoltaica (autoconsumo), biomasa y geotermia.
+10. En hospitales la climatización es crítica: temperatura, humedad y calidad del aire son exigencias sanitarias, no solo de confort.
+11. Los hospitales requieren: zonas de presión positiva (quirófanos), zonas de presión negativa (aislamientos), control preciso de temperatura y humedad, y alta renovación de aire.
+12. Las renovaciones de aire en quirófanos: mínimo 20 ren/h, con 100% aire exterior o filtración HEPA.
+13. El ACS en hospitales se mantiene a ≥60 °C en acumulación y ≥50 °C en retorno para prevenir Legionella.
+14. Los hospitales tienen alta inercia de demanda (24h/365d): no admiten interrupciones en climatización, calefacción ni ACS.
+15. En oposición suelen caer la cogeneración, los requisitos de temperatura de ACS, las renovaciones de aire en zonas críticas y las particularidades del BMS hospitalario.
