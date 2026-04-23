@@ -1,0 +1,145 @@
+PUNTOS CLAVE – TEMA 1
+INSTALACIONES DE CLIMATIZACIÓN DE EDIFICIOS
+Gestor de Mantenimiento (Nivel B) · Universidad Pública de Navarra
+
+=== NORMATIVA DE REFERENCIA ===
+1. RITE: Real Decreto 1027/2007, de 20 de julio, por el que se aprueba el Reglamento
+   de Instalaciones Térmicas en los Edificios (modificado por RD 238/2013 y RD 178/2021).
+   Es la norma central del tema: cubre diseño, ejecución, mantenimiento y eficiencia.
+2. CTE DB-HE: Código Técnico de la Edificación, Documento Básico de Ahorro de Energía.
+   Fija las exigencias de demanda energética y eficiencia de los edificios.
+3. Reglamento (UE) 517/2014 sobre gases fluorados (F-Gas): afecta a refrigerantes HFC
+   (R-410A, R-32). Establece calendario de eliminación progresiva.
+4. RD 115/2017: desarrolla la aplicación del Reglamento F-Gas en España; establece
+   requisitos de certificación para manipuladores de equipos con F-Gas.
+5. Reglamento de Seguridad para Instalaciones Frigoríficas: RD 552/2019 (deroga al
+   RD 138/2011). Regula instalaciones con refrigerantes, clasificación de sistemas,
+   obligaciones de mantenimiento e inspecciones periódicas.
+6. RD 487/2022: Criterios higiénico-sanitarios para la prevención y control de la
+   legionelosis. Deroga el RD 865/2003. Afecta directamente a torres de refrigeración.
+7. ATENCIÓN: En Navarra, la autoridad competente en materia de industria es el
+   Departamento de Desarrollo Económico y Empresarial del Gobierno de Navarra
+   (Servicio de Industria). Las inspecciones periódicas del RITE se gestionan a través
+   de los Organismos de Control Autorizados (OCA) acreditados en Navarra.
+
+=== CLASIFICACIÓN DE INSTALACIONES TÉRMICAS (RITE) ===
+8. El RITE clasifica las instalaciones según potencia útil nominal total:
+   - Potencia < 5 kW: NO está sujeta al RITE.
+   - Potencia ≥ 5 kW: sujeta al RITE (diseño, proyecto, legalización).
+   - Potencia ≥ 70 kW: requieren proyecto firmado por técnico competente
+     + sistema de gestión centralizada (BMS) + inspección por OCA.
+9. TRAMPA FRECUENTE: la potencia de referencia en el RITE es la potencia ÚTIL
+   NOMINAL TOTAL del conjunto de generadores, NO la potencia eléctrica consumida.
+10. Inspecciones periódicas por OCA:
+    - Instalaciones de calefacción/ACS: cada 4 años (potencia ≥ 70 kW).
+    - Instalaciones de refrigeración/climatización: cada 2 años (potencia ≥ 12 kW).
+
+=== TIPOLOGÍAS DE SISTEMAS ===
+11. Clasificación por fluido portador:
+    - TODO AIRE: UTA/UTAS + red de conductos. Control centralizado.
+      Hospitales, grandes superficies, salas de operaciones.
+    - TODO AGUA: fancoils + red de tuberías (2 o 4 tubos). Flexible por zonas.
+    - AIRE-AGUA: inductores o vigas frías + conductos de aire primario.
+    - EXPANSIÓN DIRECTA: refrigerante llega al terminal. Splits, multisplits, VRF/VRV.
+12. Sistemas VRF/VRV (Variable Refrigerant Flow/Volume): permiten funcionamiento
+    simultáneo en modo frío y calor en distintas zonas gracias a válvulas de expansión
+    electrónicas. Mayor eficiencia parcial. Regulados por RD 552/2019.
+13. TRAMPA: un sistema "todo agua" NO elimina la necesidad de ventilación; debe
+    complementarse con aportación de aire exterior (IT 1.1.4.2.3 del RITE).
+
+=== EQUIPOS DE PRODUCCIÓN ===
+14. Calderas de condensación: rendimiento > 100% PCI (recuperan calor latente del vapor
+    de agua de los humos). Obligatorias en instalaciones nuevas > 70 kW (CTE DB-HE).
+    Trabajan con temperatura de retorno baja (< 57 °C) para condensar.
+15. Enfriadoras (chillers): producen agua fría (6 °C ida / 12 °C retorno, típicamente).
+    Por compresión mecánica (eléctrica) o por absorción (gas/calor residual).
+    Indicadores de eficiencia: EER (a plena carga) y ESEER (estacional europeo).
+16. Bombas de calor: producen calor (COP) y frío (EER).
+    - Aerotérmica: aire-agua o aire-aire.
+    - Geotérmica: agua-agua o tierra-agua.
+    El RD 178/2021 reconoce la energía aerotérmica como renovable (modifica el RITE).
+17. Torres de refrigeración: rechazan calor al ambiente por evaporación. Son foco
+    potencial de Legionella → protocolo de mantenimiento obligatorio según RD 487/2022,
+    con revisiones periódicas, desinfecciones y registros documentales.
+18. Grupos de expansión directa: no requieren sala de máquinas si la carga de
+    refrigerante por m³ no supera los límites del RD 552/2019.
+
+=== REDES DE DISTRIBUCIÓN ===
+19. Tuberías: acero negro soldado, cobre, acero inoxidable o polipropileno según
+    temperatura y uso. Aislamiento obligatorio según IT 1.2.4.2.1.2 del RITE
+    (espesores mínimos tabulados por diámetro y temperatura del fluido).
+    TRAMPA: el aislamiento es obligatorio en TODAS las instalaciones RITE, sin
+    excepción por potencia.
+20. Conductos: chapa de acero galvanizado (más frecuente), fibra de vidrio o
+    poliisocianurato. Velocidades: 4-8 m/s en principales, 2-4 m/s en ramales.
+    El RITE exige estanqueidad clase A, B o C según presión de servicio.
+21. Válvulas clave: equilibrado hidráulico (estático/dinámico), zona (2 o 3 vías),
+    seguridad (obligatorias en circuitos cerrados a presión), retención, corte.
+
+=== ELEMENTOS TERMINALES ===
+22. Fancoils: 2 tubos (solo frío O solo calor según la temporada) o 4 tubos
+    (frío Y calor simultáneos en distintas zonas). Más frecuentes en hoteles,
+    oficinas y hospitales.
+23. UTA (Unidad de Tratamiento de Aire): trata el aire con mezcla de retorno y
+    aire exterior. UTAS: solo 100% aire exterior, sin mezcla (zonas quirúrgicas).
+24. Radiadores y suelo radiante: calefacción por agua caliente. El suelo radiante
+    trabaja a 35-45 °C (baja temperatura): ideal para bombas de calor.
+25. Difusores y rejillas: distribuyen el aire en el local. Velocidad en zona ocupada
+    < 0,2 m/s para confort. Diseño condiciona el nivel sonoro.
+26. Vigas frías activas (inducción de aire primario) y pasivas (convección natural):
+    alta eficiencia para oficinas abiertas. La activa requiere aire primario.
+
+=== REGULACIÓN Y CONTROL ===
+27. RITE IT 1.2.4.3: instalaciones ≥ 70 kW → sistema de gestión centralizada (BMS/SCADA)
+    con contabilización de energía térmica.
+28. Zonificación obligatoria: al menos orientaciones norte/sur y zonas
+    interiores/perimetrales deben regularse independientemente.
+29. Contadores de energía térmica: obligatorios en instalaciones ≥ 70 kW y en edificios
+    residenciales con instalación centralizada (para reparto de costes entre usuarios).
+
+=== DISEÑO Y MANTENIMIENTO ===
+30. Documentación obligatoria: "Registro de las instalaciones térmicas" (libro del edificio),
+    actualizado y disponible para la autoridad competente en todo momento.
+31. Figuras clave:
+    - TITULAR: responsable legal de la instalación.
+    - MANTENEDOR HABILITADO: empresa con certificación RITE; realiza el mantenimiento
+      y emite el Certificado de Mantenimiento anual al titular.
+    - OCA (Organismo de Control Autorizado): realiza las inspecciones periódicas
+      obligatorias. Son entidades INDEPENDIENTES del mantenedor.
+32. TRAMPA: el Certificado de Mantenimiento (IT 3) lo emite el MANTENEDOR al titular
+    ANUALMENTE. La inspección periódica la realiza el OCA (cada 2 o 4 años según tipo).
+    Son dos figuras y dos documentos distintos.
+33. Revisión de calderas y equipos de calor:
+    - Potencia > 20 kW: revisión anual obligatoria.
+    - Potencia ≤ 20 kW: cada 2 años.
+
+=== EFICIENCIA ENERGÉTICA ===
+34. Indicadores de eficiencia:
+    - COP (Coefficient Of Performance): eficiencia en modo calefacción.
+    - EER (Energy Efficiency Ratio): eficiencia en modo refrigeración.
+    - SCOP / SEER: valores estacionales (más representativos del uso real).
+      Exigidos por los reglamentos europeos ErP (Ecodesign Directive).
+    - ESEER: eficiencia estacional europea para enfriadoras, ponderada al
+      100% / 75% / 50% / 25% de carga.
+35. Free-cooling: aprovechamiento del aire exterior frío para enfriar el edificio sin
+    activar el compresor. Obligatorio en UTA con potencia de refrigeración > 12 kW
+    cuando las condiciones exteriores lo permiten (IT 1.2.4.5.2 del RITE).
+36. Aerotermia: reconocida como energía renovable por el RD 178/2021 (modifica el RITE).
+    Facilita la transición a sistemas sin combustión fósil.
+37. Directiva EPBD (2024): nuevos edificios deben ser de consumo casi nulo (NZEB) y se
+    prevé la descarbonización progresiva de los sistemas de calefacción.
+
+=== LO MÁS PREGUNTADO EN OPOSICIÓN ===
+38. Umbrales del RITE: < 5 kW (no aplica), ≥ 5 kW (aplica), ≥ 70 kW (proyecto + BMS
+    + inspección OCA).
+39. Diferencia UTA vs. UTAS: UTA mezcla retorno + exterior; UTAS = 100% aire exterior.
+40. Fancoil 2 tubos vs. 4 tubos: 2T = o frío o calor; 4T = frío Y calor simultáneos.
+41. Free-cooling: qué es, cuándo es obligatorio (UTA > 12 kW refrigeración).
+42. Torre de refrigeración → Legionella → RD 487/2022 (deroga RD 865/2003).
+43. Gases fluorados: R-410A en eliminación; R-32 y R-290 como alternativas.
+    Certificación obligatoria para manipuladores (RD 115/2017).
+44. Dos figuras distintas: Mantenedor habilitado (certifica mantenimiento anual) vs.
+    OCA (inspección periódica independiente, cada 2-4 años).
+45. COP = calor; EER = frío. La "S" delante (SCOP, SEER) = valor estacional.
+46. Suelo radiante: 35-45 °C → compatible con bomba de calor aerotérmica.
+47. Aislamiento de tuberías: obligatorio en TODAS las instalaciones sujetas al RITE.

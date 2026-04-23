@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esquema-resumen T01 – Climatización</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green:  #01696f; --green-lt: #d4e8e6; --green-dk: #0c4e54;
+    --gold:   #d19900; --gold-lt:  #f5e9c0;
+    --orange: #964219; --orange-lt: #f5e0d0;
+    --blue:   #005f73; --blue-lt:   #cce3e8;
+    --purple: #5a3e8c; --purple-lt: #e4ddf5;
+    --bg: #f7f6f2; --surface: #ffffff; --border: #d4d1ca;
+    --text: #28251d; --muted: #6b6a65; --faint: #a8a7a2;
+    --font-d: 'Cabinet Grotesk', sans-serif;
+    --font-b: 'Satoshi', sans-serif;
+    --r: 0.75rem; --r-lg: 1rem;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-b); background: var(--bg); color: var(--text); font-size: 0.92rem; line-height: 1.55; -webkit-font-smoothing: antialiased; padding: 2rem 1.5rem 4rem; }
+  .file-nav { display:flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+  .file-nav a { padding: 0.35rem 1rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); font-size: 0.8rem; text-decoration: none; color: var(--muted); transition: all 0.15s; }
+  .file-nav a:hover { background: var(--green); color: white; border-color: var(--green); }
+  .file-nav a.active { background: var(--green); color: white; border-color: var(--green); }
+  h1 { font-family: var(--font-d); font-size: 1.6rem; font-weight: 800; color: var(--green); margin-bottom: 0.25rem; }
+  .subtitle { color: var(--muted); font-size: 0.82rem; margin-bottom: 2rem; }
+  /* GRID */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
+  .grid-wide { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  /* CARD */
+  .card { background: var(--surface); border-radius: var(--r-lg); border: 1px solid var(--border); padding: 1.25rem 1.25rem 1rem; box-shadow: 0 1px 3px rgba(40,37,29,.06); }
+  .card-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.85rem; }
+  .card-icon { width: 32px; height: 32px; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+  .card h2 { font-family: var(--font-d); font-size: 0.95rem; font-weight: 800; }
+  /* ACCENT CARDS */
+  .card-green { border-top: 3px solid var(--green); }
+  .card-gold  { border-top: 3px solid var(--gold); }
+  .card-orange{ border-top: 3px solid var(--orange); }
+  .card-blue  { border-top: 3px solid var(--blue); }
+  .card-purple{ border-top: 3px solid var(--purple); }
+  .icon-green  { background: var(--green-lt); }
+  .icon-gold   { background: var(--gold-lt); }
+  .icon-orange { background: var(--orange-lt); }
+  .icon-blue   { background: var(--blue-lt); }
+  .icon-purple { background: var(--purple-lt); }
+  /* ROWS inside cards */
+  .row { display: flex; gap: 0.4rem; margin-bottom: 0.4rem; align-items: flex-start; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; margin-top: 0.42rem; }
+  .dot-green  { background: var(--green); }
+  .dot-gold   { background: var(--gold); }
+  .dot-orange { background: var(--orange); }
+  .dot-blue   { background: var(--blue); }
+  .dot-purple { background: var(--purple); }
+  /* BADGE */
+  .badge { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; padding: 1px 7px; border-radius: 999px; vertical-align: middle; }
+  .b-green  { background: var(--green-lt); color: var(--green-dk); }
+  .b-gold   { background: var(--gold-lt);  color: #7a5500; }
+  .b-orange { background: var(--orange-lt); color: var(--orange); }
+  .b-red    { background: #fde8e8; color: #8b1a1a; }
+  /* PILL ROW */
+  .pills { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+  .pill { padding: 3px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; border: 1px solid; }
+  .pill-green  { background: var(--green-lt); color: var(--green-dk); border-color: #9fcfcc; }
+  .pill-gold   { background: var(--gold-lt);  color: #7a5500; border-color: #d9c280; }
+  .pill-blue   { background: var(--blue-lt);  color: var(--blue);  border-color: #8fcdd9; }
+  .pill-orange { background: var(--orange-lt); color: var(--orange); border-color: #d9a080; }
+  /* UMBRALES BOX */
+  .umbral-box { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; margin-top: 0.5rem; }
+  .umbral { border-radius: 0.5rem; padding: 0.6rem 0.75rem; text-align: center; }
+  .u1 { background: #e8f4f8; }
+  .u2 { background: var(--green-lt); }
+  .u3 { background: #0c4e54; color: white; }
+  .umbral .kw { font-family: var(--font-d); font-size: 1.1rem; font-weight: 800; display: block; }
+  .umbral .desc { font-size: 0.7rem; margin-top: 2px; opacity: 0.85; }
+  /* TIPOLOGIAS GRID */
+  .tipo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 0.5rem; }
+  .tipo { border-radius: 0.5rem; padding: 0.6rem 0.75rem; border: 1px solid var(--border); }
+  .tipo strong { display: block; font-size: 0.82rem; font-weight: 700; margin-bottom: 0.2rem; }
+  .tipo span { font-size: 0.75rem; color: var(--muted); }
+  /* ALERT */
+  .alert { background: #fef3eb; border-left: 3px solid var(--orange); border-radius: var(--r); padding: 0.65rem 0.85rem; font-size: 0.83rem; margin-top: 0.6rem; }
+  .alert strong { color: var(--orange); }
+  /* SECTION LABEL */
+  .section-label { font-family: var(--font-d); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); margin: 1.5rem 0 0.5rem; }
+  /* COP BOX */
+  .kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem; margin-top: 0.5rem; }
+  .kpi { border-radius: 0.5rem; padding: 0.5rem 0.4rem; text-align: center; background: var(--bg); border: 1px solid var(--border); }
+  .kpi .key { font-family: var(--font-d); font-size: 1rem; font-weight: 800; color: var(--green); }
+  .kpi .val { font-size: 0.68rem; color: var(--muted); margin-top: 2px; }
+  @media (max-width: 640px) {
+    .grid-wide { grid-template-columns: 1fr; }
+    .umbral-box { grid-template-columns: 1fr; }
+    .kpi-row { grid-template-columns: 1fr 1fr; }
+    .tipo-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="file-nav">
+  <a href="1_texto_explicativo_t01.html">📄 Texto explicativo</a>
+  <a href="2_esquema_resumen_t01.html" class="active">🗂 Esquema-resumen</a>
+  <a href="3_cuadro_comparativo_t01.html">📊 Cuadros comparativos</a>
+</div>
+
+<h1>Instalaciones de climatización de edificios</h1>
+<div class="subtitle">Tema 1 · Gestor de Mantenimiento (Nivel B) · UPNA · Esquema-resumen para memorización</div>
+
+<!-- NORMATIVA -->
+<div class="section-label">Normativa clave</div>
+<div class="grid">
+  <div class="card card-green">
+    <div class="card-header"><div class="card-icon icon-green">⚖️</div><h2>RITE — RD 1027/2007</h2></div>
+    <div class="row"><div class="dot dot-green"></div><span>Reglamento de Instalaciones Térmicas en los Edificios</span></div>
+    <div class="row"><div class="dot dot-green"></div><span>Modificado: RD 238/2013 · RD 178/2021 (aerotermia = renovable)</span></div>
+    <div class="row"><div class="dot dot-green"></div><span>IT 1 diseño · IT 2 ejecución · IT 3 mantenimiento · IT 4 inspecciones</span></div>
+    <div class="pills">
+      <span class="pill pill-green">Norma central</span>
+      <span class="pill pill-green">Potencia útil nominal</span>
+    </div>
+  </div>
+  <div class="card card-blue">
+    <div class="card-header"><div class="card-icon icon-blue">🏗️</div><h2>CTE DB-HE</h2></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Límites de demanda energética (kWh/m²·año) en calef. y refrig.</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Calderas condensación obligatorias en instalaciones nuevas &gt;70 kW</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Exige contribución mínima renovable (NZEB en edificios nuevos)</span></div>
+  </div>
+  <div class="card card-orange">
+    <div class="card-header"><div class="card-icon icon-orange">⚠️</div><h2>Otras normas esenciales</h2></div>
+    <div class="row"><div class="dot dot-orange"></div><span><strong>RD 552/2019</strong> — Instalaciones frigoríficas (VRF, splits, chillers)</span></div>
+    <div class="row"><div class="dot dot-orange"></div><span><strong>Regl. (UE) 517/2014 + RD 115/2017</strong> — F-Gas (R-410A fuera; R-32 y R-290 dentro)</span></div>
+    <div class="row"><div class="dot dot-orange"></div><span><strong>RD 487/2022</strong> — Legionella (deroga RD 865/2003). Torres refrigeración</span></div>
+  </div>
+</div>
+
+<!-- UMBRALES -->
+<div class="section-label">Umbrales del RITE — la regla de los tres niveles</div>
+<div class="card card-green" style="margin-bottom:1rem;">
+  <div class="card-header"><div class="card-icon icon-green">⚡</div><h2>Potencia útil nominal total de generadores</h2></div>
+  <div class="umbral-box">
+    <div class="umbral u1"><span class="kw">&lt; 5 kW</span><span class="desc">No sujeta al RITE</span></div>
+    <div class="umbral u2"><span class="kw">≥ 5 kW</span><span class="desc">Sujeta al RITE (legalización + mantenedor)</span></div>
+    <div class="umbral u3"><span class="kw">≥ 70 kW</span><span class="desc">Proyecto técnico + BMS + inspección OCA</span></div>
+  </div>
+  <div class="alert" style="margin-top:0.75rem;"><strong>⚠ Trampa:</strong> Es la potencia <em>útil nominal</em>, no la potencia eléctrica absorbida.</div>
+</div>
+
+<!-- TIPOLOGÍAS -->
+<div class="section-label">Tipologías por fluido portador</div>
+<div class="card card-blue" style="margin-bottom:1rem;">
+  <div class="card-header"><div class="card-icon icon-blue">🌬️</div><h2>Clasificación de sistemas</h2></div>
+  <div class="tipo-grid">
+    <div class="tipo"><strong>TODO AIRE</strong><span>UTA/UTAS + conductos. Control centralizado. Hospitales, salas quirúrgicas, grandes superficies.</span></div>
+    <div class="tipo"><strong>TODO AGUA</strong><span>Fancoils + tuberías 2 o 4 tubos. Flexible por zonas. NO elimina necesidad de ventilación.</span></div>
+    <div class="tipo"><strong>AIRE-AGUA</strong><span>Inductores o vigas frías + conductos de aire primario. Alta eficiencia en oficinas.</span></div>
+    <div class="tipo"><strong>EXPANSIÓN DIRECTA</strong><span>Refrigerante al terminal. Splits, multisplits, VRF/VRV. Regulado por RD 552/2019.</span></div>
+  </div>
+  <div class="alert"><strong>UTA ≠ UTAS:</strong> UTA mezcla retorno + exterior. UTAS = 100% aire exterior (quirófanos, zonas críticas).</div>
+</div>
+
+<!-- EQUIPOS PRODUCCIÓN -->
+<div class="section-label">Equipos de producción</div>
+<div class="grid">
+  <div class="card card-orange">
+    <div class="card-header"><div class="card-icon icon-orange">🔥</div><h2>Producción de calor</h2></div>
+    <div class="row"><div class="dot dot-orange"></div><span><strong>Caldera de condensación</strong>: rendimiento &gt;100% PCI. Retorno &lt;57 °C. Obligatoria &gt;70 kW (CTE).</span></div>
+    <div class="row"><div class="dot dot-orange"></div><span><strong>Bomba de calor</strong>: aerotérmica (aire-agua/aire-aire) o geotérmica (tierra-agua). Aerotermia = renovable (RD 178/2021).</span></div>
+    <div class="row"><div class="dot dot-orange"></div><span><strong>Suelo radiante</strong>: 35–45 °C. Ideal con bomba de calor y caldera de condensación.</span></div>
+  </div>
+  <div class="card card-blue">
+    <div class="card-header"><div class="card-icon icon-blue">❄️</div><h2>Producción de frío</h2></div>
+    <div class="row"><div class="dot dot-blue"></div><span><strong>Enfriadora / chiller</strong>: agua fría 6/12 °C. Por compresión (eléctrica) o absorción (calor residual).</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span><strong>EER</strong>: eficiencia plena carga. <strong>ESEER</strong>: estacional europeo (100/75/50/25%).</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span><strong>Torre de refrigeración</strong>: rechazo de calor por evaporación. Riesgo Legionella → RD 487/2022.</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span><strong>VRF/VRV</strong>: expansión directa variable. Frío y calor simultáneos por zonas.</span></div>
+  </div>
+</div>
+
+<!-- REDES Y TERMINALES -->
+<div class="section-label">Redes de distribución y elementos terminales</div>
+<div class="grid-wide">
+  <div class="card card-purple">
+    <div class="card-header"><div class="card-icon icon-purple">🔧</div><h2>Redes de distribución</h2></div>
+    <div class="row"><div class="dot dot-purple"></div><span><strong>Tuberías</strong>: acero negro, cobre, PP. Aislamiento obligatorio SIEMPRE (IT 1.2.4.2.1.2) — espesores tabulados por Ø y Tª.</span></div>
+    <div class="row"><div class="dot dot-purple"></div><span><strong>Conductos</strong>: chapa galvanizada, fibra vidrio. Velocidad: 4–8 m/s principales, 2–4 m/s ramales. Clases A/B/C.</span></div>
+    <div class="row"><div class="dot dot-purple"></div><span><strong>Válvulas</strong>: corte, retención, equilibrado (estático/dinámico), zona (2/3 vías), seguridad (obligatoria en circuito cerrado).</span></div>
+  </div>
+  <div class="card card-green">
+    <div class="card-header"><div class="card-icon icon-green">🌡️</div><h2>Elementos terminales</h2></div>
+    <div class="row"><div class="dot dot-green"></div><span><strong>Fancoil 2T</strong>: o frío O calor (según temporada). <strong>Fancoil 4T</strong>: frío Y calor simultáneos.</span></div>
+    <div class="row"><div class="dot dot-green"></div><span><strong>Radiadores</strong>: convección/radiación. Solo calor.</span></div>
+    <div class="row"><div class="dot dot-green"></div><span><strong>Difusores/rejillas</strong>: vel. zona ocupada &lt;0,2 m/s. Condicionan nivel sonoro.</span></div>
+    <div class="row"><div class="dot dot-green"></div><span><strong>Viga fría activa</strong>: aire primario + inducción. <strong>Pasiva</strong>: solo convección natural.</span></div>
+  </div>
+</div>
+
+<!-- EFICIENCIA / MANTENIMIENTO -->
+<div class="section-label">Eficiencia energética e indicadores</div>
+<div class="card card-gold" style="margin-bottom:1rem;">
+  <div class="card-header"><div class="card-icon icon-gold">📊</div><h2>Indicadores de eficiencia</h2></div>
+  <div class="kpi-row">
+    <div class="kpi"><div class="key">COP</div><div class="val">Calefacción plena carga</div></div>
+    <div class="kpi"><div class="key">EER</div><div class="val">Refrigeración plena carga</div></div>
+    <div class="kpi"><div class="key">SCOP</div><div class="val">COP estacional (temporada)</div></div>
+    <div class="kpi"><div class="key">SEER</div><div class="val">EER estacional (temporada)</div></div>
+  </div>
+  <div style="margin-top:0.6rem;">
+    <div class="row"><div class="dot dot-gold"></div><span><strong>ESEER</strong>: eficiencia estacional enfriadoras. Ponderación a 100/75/50/25% de carga.</span></div>
+    <div class="row"><div class="dot dot-gold"></div><span><strong>Free-cooling obligatorio</strong> (IT 1.2.4.5.2) en UTA con potencia refrigeración &gt;12 kW.</span></div>
+    <div class="row"><div class="dot dot-gold"></div><span><strong>Aerotermia = renovable</strong> desde RD 178/2021. EPBD 2024: edificios NZEB obligatorios.</span></div>
+  </div>
+</div>
+
+<div class="section-label">Mantenimiento — figuras y documentos</div>
+<div class="card card-orange" style="margin-bottom:1rem;">
+  <div class="card-header"><div class="card-icon icon-orange">📋</div><h2>Quién hace qué</h2></div>
+  <div class="row"><div class="dot dot-orange"></div><span><strong>Titular</strong>: responsable legal. Conserva el Registro de Instalaciones Térmicas. Contrata al mantenedor.</span></div>
+  <div class="row"><div class="dot dot-orange"></div><span><strong>Mantenedor habilitado</strong>: empresa certificada RITE. Emite <em>Certificado de Mantenimiento</em> (IT 3) al titular → periodicidad ANUAL.</span></div>
+  <div class="row"><div class="dot dot-orange"></div><span><strong>OCA</strong>: organismo de control independiente. Realiza <em>inspección periódica</em>: cada 4 años (calefacción/ACS ≥70 kW) o cada 2 años (refrigeración ≥12 kW).</span></div>
+  <div class="alert"><strong>⚠ Trampa:</strong> Certificado de mantenimiento (mantenedor, anual) ≠ Inspección periódica (OCA, cada 2–4 años). Son documentos distintos emitidos por figuras distintas.</div>
+</div>
+
+</body>
+</html>

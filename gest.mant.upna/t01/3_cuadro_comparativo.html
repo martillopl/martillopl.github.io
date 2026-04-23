@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuadros comparativos T01 – Climatización</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #01696f; --green-lt: #d4e8e6; --green-dk: #0c4e54;
+    --gold: #d19900; --gold-lt: #f5e9c0;
+    --orange: #964219; --orange-lt: #f5e0d0;
+    --blue: #005f73; --blue-lt: #cce3e8;
+    --red: #8b1a1a; --red-lt: #fde8e8;
+    --bg: #f7f6f2; --surface: #ffffff; --border: #d4d1ca;
+    --text: #28251d; --muted: #6b6a65; --faint: #a8a7a2;
+    --font-d: 'Cabinet Grotesk', sans-serif;
+    --font-b: 'Satoshi', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-b); background: var(--bg); color: var(--text); font-size: 0.88rem; line-height: 1.55; -webkit-font-smoothing: antialiased; padding: 2rem 1.5rem 4rem; }
+  .file-nav { display:flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+  .file-nav a { padding: 0.35rem 1rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); font-size: 0.8rem; text-decoration: none; color: var(--muted); transition: all 0.15s; }
+  .file-nav a:hover { background: var(--green); color: white; border-color: var(--green); }
+  .file-nav a.active { background: var(--green); color: white; border-color: var(--green); }
+  h1 { font-family: var(--font-d); font-size: 1.5rem; font-weight: 800; color: var(--green); margin-bottom: 0.2rem; }
+  .subtitle { color: var(--muted); font-size: 0.8rem; margin-bottom: 2.5rem; }
+  .section-label { font-family: var(--font-d); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); margin: 2rem 0 0.6rem; }
+  h2 { font-family: var(--font-d); font-size: 1rem; font-weight: 800; color: var(--green-dk); margin-bottom: 0.75rem; }
+  /* TABLE */
+  .tbl-wrap { overflow-x: auto; margin-bottom: 2rem; border-radius: 0.75rem; border: 1px solid var(--border); box-shadow: 0 1px 4px rgba(40,37,29,.07); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+  thead tr { background: var(--green); color: white; }
+  thead th { padding: 0.65rem 0.85rem; text-align: left; font-family: var(--font-d); font-weight: 700; font-size: 0.8rem; white-space: nowrap; }
+  tbody tr:nth-child(even) { background: var(--bg); }
+  tbody tr:nth-child(odd)  { background: var(--surface); }
+  tbody td { padding: 0.55rem 0.85rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tbody tr:last-child td { border-bottom: none; }
+  .hl { font-weight: 700; }
+  /* Chips */
+  .chip { display:inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; padding: 1px 7px; border-radius: 999px; white-space: nowrap; }
+  .c-green  { background: var(--green-lt); color: var(--green-dk); }
+  .c-orange { background: var(--orange-lt); color: var(--orange); }
+  .c-blue   { background: var(--blue-lt); color: var(--blue); }
+  .c-gold   { background: var(--gold-lt); color: #7a5500; }
+  .c-red    { background: var(--red-lt); color: var(--red); }
+  .c-gray   { background: #ebebeb; color: #555; }
+  /* Alert */
+  .alert { background: var(--orange-lt); border-left: 3px solid var(--orange); border-radius: 0.5rem; padding: 0.6rem 0.8rem; font-size: 0.82rem; margin-top: -1rem; margin-bottom: 2rem; }
+  .alert strong { color: var(--orange); }
+</style>
+</head>
+<body>
+
+<div class="file-nav">
+  <a href="1_texto_explicativo_t01.html">📄 Texto explicativo</a>
+  <a href="2_esquema_resumen_t01.html">🗂 Esquema-resumen</a>
+  <a href="3_cuadro_comparativo_t01.html" class="active">📊 Cuadros comparativos</a>
+</div>
+
+<h1>Cuadros comparativos · Tema 1</h1>
+<div class="subtitle">Instalaciones de climatización · Gestor de Mantenimiento (Nivel B) · UPNA</div>
+
+<!-- CUADRO 1: TIPOLOGÍAS -->
+<div class="section-label">Cuadro 1 — Tipologías de sistemas por fluido portador</div>
+<h2>Clasificación operativa para examen</h2>
+<div class="tbl-wrap">
+  <table>
+    <thead><tr>
+      <th>Sistema</th><th>Fluido portador</th><th>Terminal en local</th><th>Distribución</th><th>Ventilación incluida</th><th>Usos típicos</th>
+    </tr></thead>
+    <tbody>
+      <tr><td class="hl">Todo aire</td><td>Aire</td><td>Difusores / rejillas</td><td>Conductos</td><td><span class="chip c-green">Sí</span></td><td>Hospitales, quirófanos, salas limpias, grandes superficies</td></tr>
+      <tr><td class="hl">Todo agua</td><td>Agua</td><td>Fancoils, radiadores</td><td>Tuberías</td><td><span class="chip c-red">No (requiere ventilación independiente)</span></td><td>Hoteles, oficinas, residenciales</td></tr>
+      <tr><td class="hl">Aire-agua</td><td>Aire + agua</td><td>Inductores, vigas frías</td><td>Conductos + tuberías</td><td><span class="chip c-green">Sí (aire primario)</span></td><td>Oficinas abiertas, plantas densas</td></tr>
+      <tr><td class="hl">Expansión directa</td><td>Refrigerante</td><td>Unidades interiores (cassette, consola)</td><td>Tuberías de refrigerante</td><td><span class="chip c-red">No (requiere ventilación independiente)</span></td><td>Despachos, pequeños comercios, VRF en hoteles</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- CUADRO 2: FANCOIL 2T vs 4T -->
+<div class="section-label">Cuadro 2 — Fancoil 2 tubos vs. 4 tubos</div>
+<h2>Distinción clásica de examen</h2>
+<div class="tbl-wrap">
+  <table>
+    <thead><tr>
+      <th>Aspecto</th><th>Fancoil 2 tubos (2T)</th><th>Fancoil 4 tubos (4T)</th>
+    </tr></thead>
+    <tbody>
+      <tr><td class="hl">Circuitos hidráulicos</td><td>1 circuito (un tubo ida, un retorno)</td><td>2 circuitos independientes (frío + calor)</td></tr>
+      <tr><td class="hl">Simultaneidad frío/calor</td><td><span class="chip c-red">No</span> — toda la instalación en frío O calor</td><td><span class="chip c-green">Sí</span> — zonas en frío y otras en calor a la vez</td></tr>
+      <tr><td class="hl">Periodos de transición</td><td>Problemático (cambio de temporada)</td><td>Óptimo (cada zona decide)</td></div></tr>
+      <tr><td class="hl">Coste instalación</td><td>Menor (menos tuberías)</td><td>Mayor (doble red)</td></tr>
+      <tr><td class="hl">Uso habitual</td><td>Edificios residenciales, pequeñas oficinas</td><td>Hospitales, hoteles de categoría, grandes oficinas</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- CUADRO 3: UTA vs UTAS -->
+<div class="section-label">Cuadro 3 — UTA vs. UTAS</div>
+<h2>Error frecuente en examen</h2>
+<div class="tbl-wrap">
+  <table>
+    <thead><tr>
+      <th>Aspecto</th><th>UTA (Unidad de Tratamiento de Aire)</th><th>UTAS (Una Sola Zona, 100% exterior)</th>
+    </tr></thead>
+    <tbody>
+      <tr><td class="hl">Composición del aire</td><td>Mezcla de aire de retorno + aire exterior</td><td>100% aire exterior, sin mezcla de retorno</td></tr>
+      <tr><td class="hl">Recirculación</td><td><span class="chip c-green">Sí</span> — reduce consumo energético</td><td><span class="chip c-red">No</span> — mayor consumo pero mayor higiene</td></tr>
+      <tr><td class="hl">Aplicación</td><td>Oficinas, hoteles, aulas, centros comerciales</td><td>Quirófanos, UCI, salas de aislamiento, laboratorios</td></tr>
+      <tr><td class="hl">Eficiencia energética</td><td>Mejor (recupera energía del aire de retorno)</td><td>Menor (trata siempre aire exterior, a veces con récupérador)</td></tr>
+      <tr><td class="hl">Exigencia RITE</td><td>Filtración, control T y Hr, caudal mínimo exterior</td><td>Ídem, con mayor exigencia de filtración y caudal</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- CUADRO 4: INDICADORES EFICIENCIA -->
+<div class="section-label">Cuadro 4 — Indicadores de eficiencia energética</div>
+<h2>COP · EER · SCOP · SEER · ESEER</h2>
+<div class="tbl-wrap">
+  <table>
+    <thead><tr>
+      <th>Indicador</th><th>Significado</th><th>Modo</th><th>Carga</th><th>Quién lo usa</th>
+    </tr></thead>
+    <tbody>
+      <tr><td class="hl">COP</td><td>Potencia calor entregada / potencia eléctrica</td><td><span class="chip c-orange">Calefacción</span></td><td>Plena (100%)</td><td>Calderas bomba calor, radiadores</td></tr>
+      <tr><td class="hl">EER</td><td>Potencia frío entregada / potencia eléctrica</td><td><span class="chip c-blue">Refrigeración</span></td><td>Plena (100%)</td><td>Enfriadoras, splits, VRF</td></tr>
+      <tr><td class="hl">SCOP</td><td>COP estacional (toda la temporada)</td><td><span class="chip c-orange">Calefacción</span></td><td>Estacional</td><td>Regl. ErP — bombas de calor</td></tr>
+      <tr><td class="hl">SEER</td><td>EER estacional (toda la temporada)</td><td><span class="chip c-blue">Refrigeración</span></td><td>Estacional</td><td>Regl. ErP — splits, enfriadoras</td></tr>
+      <tr><td class="hl">ESEER</td><td>EER estacional europeo para enfriadoras. Pondera: 3%×100% + 33%×75% + 41%×50% + 23%×25%</td><td><span class="chip c-blue">Refrigeración</span></td><td>Estacional (4 puntos)</td><td>Chillers de gran potencia</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="alert"><strong>Regla mnemotécnica:</strong> COP = <em>calor</em>. EER = <em>frío</em>. La "S" delante (SCOP, SEER) significa <em>Seasonal</em> = estacional (toda la temporada, no solo a plena carga). Mayor estacional = más representativo del consumo real.</div>
+
+<!-- CUADRO 5: FIGURAS DE MANTENIMIENTO -->
+<div class="section-label">Cuadro 5 — Figuras y documentos de mantenimiento (RITE)</div>
+<h2>Quién emite qué y con qué frecuencia</h2>
+<div class="tbl-wrap">
+  <table>
+    <thead><tr>
+      <th>Figura</th><th>Quién es</th><th>Qué hace / emite</th><th>Periodicidad</th><th>Umbral de potencia</th>
+    </tr></thead>
+    <tbody>
+      <tr><td class="hl">Titular</td><td>Propietario o gestor del edificio</td><td>Responsable legal. Contrata mantenedor. Conserva el Registro de Instalaciones Térmicas.</td><td>Permanente</td><td>Toda instalación RITE</td></tr>
+      <tr><td class="hl">Mantenedor habilitado</td><td>Empresa certificada RITE</td><td>Mantenimiento preventivo + correctivo. Emite <strong>Certificado de Mantenimiento</strong> (IT 3) al titular.</td><td><span class="chip c-green">Anual</span></td><td>Toda instalación RITE</td></tr>
+      <tr><td class="hl">OCA</td><td>Organismo de Control Autorizado (entidad independiente)</td><td>Inspección periódica obligatoria. Emite <strong>Informe de Inspección</strong>.</td><td><span class="chip c-orange">Cada 4 años</span> (calef./ACS ≥70 kW) <br><span class="chip c-blue">Cada 2 años</span> (refrig. ≥12 kW)</td><td>≥ 70 kW (calef.) / ≥ 12 kW (refrig.)</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="alert"><strong>⚠ Trampa clásica:</strong> El Certificado de Mantenimiento y el Informe de Inspección periódica son dos documentos distintos, emitidos por dos figuras distintas (mantenedor y OCA respectivamente) con periodicidades distintas (anual y cada 2–4 años).</div>
+
+<!-- CUADRO 6: EQUIPOS PRODUCCIÓN -->
+<div class="section-label">Cuadro 6 — Comparativa de equipos de producción</div>
+<h2>Resumen operativo para examen</h2>
+<div class="tbl-wrap">
+  <table>
+    <thead><tr>
+      <th>Equipo</th><th>Función</th><th>Tecnología</th><th>Indicador eficiencia</th><th>Normativa / nota clave</th>
+    </tr></thead>
+    <tbody>
+      <tr><td class="hl">Caldera condensación</td><td>Solo calor</td><td>Combustión gas. Recupera calor latente humos.</td><td>Rendimiento &gt;100% PCI</td><td>CTE: obligatoria en inst. nuevas &gt;70 kW. Retorno &lt;57 °C.</td></tr>
+      <tr><td class="hl">Bomba de calor aerotérmica</td><td>Calor + frío</td><td>Ciclo frigorífico reversible. Fuente: aire exterior.</td><td>COP (calor) / EER (frío)</td><td>RD 178/2021: energía renovable. Rendimiento varía con Tª exterior.</td></tr>
+      <tr><td class="hl">Bomba de calor geotérmica</td><td>Calor + frío</td><td>Ciclo frigorífico reversible. Fuente: subsuelo/agua.</td><td>COP / EER (más estable)</td><td>Mayor inversión inicial. SCOP/SEER más altos. Fuente renovable.</td></tr>
+      <tr><td class="hl">Enfriadora (compresión)</td><td>Solo frío</td><td>Compresor mecánico (scroll, tornillo, centrífugo).</td><td>EER / ESEER</td><td>Agua fría 6/12 °C. RD 552/2019 si usa refrigerante F-Gas.</td></tr>
+      <tr><td class="hl">Enfriadora (absorción)</td><td>Solo frío</td><td>Ciclo termoquímico (LiBr-agua). Se alimenta con calor.</td><td>COP absorción (&lt;1 eléctrico, eficiente si hay calor residual)</td><td>Sin compresor eléctrico. Trigeneración, calor residual.</td></tr>
+      <tr><td class="hl">Torre de refrigeración</td><td>Rechazo de calor</td><td>Evaporación de agua. Reduce temperatura condensación.</td><td>— (auxiliar de enfriadora)</td><td>RD 487/2022: protocolo Legionella obligatorio.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

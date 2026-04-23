@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 1 – Instalaciones de climatización de edificios</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg: #f7f6f2; --color-surface: #f9f8f5; --color-surface-2: #ffffff;
+    --color-surface-offset: #edeae5; --color-border: #d4d1ca; --color-divider: #dcd9d5;
+    --color-text: #28251d; --color-text-muted: #6b6a65; --color-text-faint: #a8a7a2;
+    --color-primary: #01696f; --color-primary-hover: #0c4e54; --color-primary-highlight: #d4e8e6;
+    --color-accent: #d19900; --color-accent-light: #f5e9c0;
+    --color-warning: #964219; --color-warning-light: #f5e0d0;
+    --font-display: 'Cabinet Grotesk', sans-serif;
+    --font-body: 'Satoshi', sans-serif;
+    --radius-sm: 0.375rem; --radius-md: 0.5rem; --radius-lg: 0.75rem; --radius-xl: 1rem;
+    --shadow-sm: 0 1px 3px rgba(40,37,29,0.08); --shadow-md: 0 4px 16px rgba(40,37,29,0.10);
+    --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
+    --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body); font-size: 1rem; line-height: 1.75;
+    color: var(--color-text); background: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+  }
+  /* ── LAYOUT ── */
+  .page-wrap { display: flex; min-height: 100vh; }
+  nav.sidebar {
+    position: sticky; top: 0; height: 100vh; overflow-y: auto;
+    width: 260px; min-width: 260px; background: var(--color-surface);
+    border-right: 1px solid var(--color-border); padding: var(--space-8) var(--space-6);
+    font-size: 0.85rem;
+  }
+  nav.sidebar .nav-title {
+    font-family: var(--font-display); font-size: 0.7rem; font-weight: 800;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-faint);
+    margin-bottom: var(--space-4);
+  }
+  nav.sidebar a {
+    display: block; padding: var(--space-1) var(--space-2);
+    color: var(--color-text-muted); text-decoration: none; border-radius: var(--radius-sm);
+    margin-bottom: 2px; transition: all 0.15s;
+  }
+  nav.sidebar a:hover { background: var(--color-surface-offset); color: var(--color-primary); }
+  nav.sidebar a.sub { padding-left: var(--space-4); font-size: 0.82rem; }
+  .content { flex: 1; max-width: 820px; padding: var(--space-10) var(--space-12); }
+  /* ── HEADER ── */
+  .doc-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #0c4e54 100%);
+    color: white; border-radius: var(--radius-xl); padding: var(--space-10) var(--space-10);
+    margin-bottom: var(--space-10);
+  }
+  .doc-header .meta { font-size: 0.78rem; opacity: 0.75; margin-bottom: var(--space-3); letter-spacing: 0.06em; text-transform: uppercase; }
+  .doc-header h1 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; line-height: 1.2; margin-bottom: var(--space-3); }
+  .doc-header .subtitle { font-size: 0.92rem; opacity: 0.85; }
+  /* ── NAV BAR (ficheros) ── */
+  .file-nav { display:flex; gap: var(--space-2); margin-bottom: var(--space-8); flex-wrap: wrap; }
+  .file-nav a {
+    padding: var(--space-2) var(--space-4); border-radius: var(--radius-full);
+    background: var(--color-surface-2); border: 1px solid var(--color-border);
+    font-size: 0.82rem; text-decoration: none; color: var(--color-text-muted); transition: all 0.15s;
+  }
+  .file-nav a:hover { background: var(--color-primary); color: white; border-color: var(--color-primary); }
+  .file-nav a.active { background: var(--color-primary); color: white; border-color: var(--color-primary); }
+  /* ── SECTIONS ── */
+  section { margin-bottom: var(--space-10); }
+  h2 {
+    font-family: var(--font-display); font-size: 1.35rem; font-weight: 800;
+    color: var(--color-primary); border-bottom: 2px solid var(--color-primary-highlight);
+    padding-bottom: var(--space-2); margin-bottom: var(--space-6); margin-top: var(--space-10);
+  }
+  h2:first-child { margin-top: 0; }
+  h3 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; margin: var(--space-6) 0 var(--space-3) 0; color: var(--color-text); }
+  p { margin-bottom: var(--space-4); max-width: 70ch; color: var(--color-text); }
+  /* ── CALLOUTS ── */
+  .callout {
+    border-radius: var(--radius-lg); padding: var(--space-4) var(--space-6);
+    margin: var(--space-6) 0; font-size: 0.92rem; line-height: 1.65;
+  }
+  .callout-norm { background: var(--color-primary-highlight); border-left: 4px solid var(--color-primary); }
+  .callout-warn { background: var(--color-warning-light); border-left: 4px solid var(--color-warning); }
+  .callout-tip  { background: var(--color-accent-light); border-left: 4px solid var(--color-accent); }
+  .callout strong { font-weight: 700; display: block; margin-bottom: var(--space-1); }
+  /* ── INLINE BADGE ── */
+  .badge {
+    display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;
+    text-transform: uppercase; padding: 2px 8px; border-radius: var(--radius-full);
+    vertical-align: middle; margin-left: var(--space-1);
+  }
+  .badge-norm { background: var(--color-primary-highlight); color: var(--color-primary-hover); }
+  .badge-num  { background: #e8f4f8; color: #005f73; }
+  /* ── DEFINITION LIST ── */
+  dl { margin: var(--space-4) 0; }
+  dt { font-weight: 700; color: var(--color-primary); margin-top: var(--space-3); }
+  dd { margin-left: var(--space-6); color: var(--color-text-muted); }
+  /* ── UL ── */
+  ul { margin: var(--space-3) 0 var(--space-4) var(--space-6); }
+  li { margin-bottom: var(--space-1); }
+  /* ── DIVIDER ── */
+  hr { border: none; border-top: 1px solid var(--color-divider); margin: var(--space-8) 0; }
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav.sidebar { display: none; }
+    .content { padding: var(--space-6) var(--space-4); }
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+<nav class="sidebar">
+  <div class="nav-title">Tema 1 – Climatización</div>
+  <a href="#intro">1. Introducción y normativa</a>
+  <a href="#tipologias">2. Tipologías de sistemas</a>
+  <a class="sub" href="#todo-aire">2.1 Todo aire</a>
+  <a class="sub" href="#todo-agua">2.2 Todo agua</a>
+  <a class="sub" href="#expansion">2.3 Expansión directa</a>
+  <a href="#produccion">3. Equipos de producción</a>
+  <a class="sub" href="#calor">3.1 Calor</a>
+  <a class="sub" href="#frio">3.2 Frío</a>
+  <a class="sub" href="#bombas">3.3 Bombas de calor</a>
+  <a class="sub" href="#torres">3.4 Torres de refrigeración</a>
+  <a href="#redes">4. Redes de distribución</a>
+  <a class="sub" href="#tuberias">4.1 Tuberías</a>
+  <a class="sub" href="#conductos">4.2 Conductos</a>
+  <a class="sub" href="#valvulas">4.3 Válvulas</a>
+  <a href="#terminales">5. Elementos terminales</a>
+  <a href="#regulacion">6. Regulación y control</a>
+  <a href="#disenyo">7. Diseño y mantenimiento</a>
+  <a href="#eficiencia">8. Eficiencia energética</a>
+</nav>
+
+<main class="content">
+
+  <div class="doc-header">
+    <div class="meta">Tema 1 · Gestor de Mantenimiento (Nivel B) · UPNA</div>
+    <h1>Instalaciones de climatización de edificios</h1>
+    <div class="subtitle">Tipologías · Equipos · Redes · Terminales · Regulación · Diseño y mantenimiento · Eficiencia energética · Normativa</div>
+  </div>
+
+  <div class="file-nav">
+    <a href="1_texto_explicativo_t01.html" class="active">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen_t01.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo_t01.html">📊 Cuadros comparativos</a>
+  </div>
+
+  <!-- 1. INTRODUCCIÓN -->
+  <section id="intro">
+    <h2>1. Introducción y marco normativo</h2>
+    <p>Las instalaciones de climatización tienen como función mantener las condiciones de temperatura, humedad, calidad del aire y, en su caso, presión dentro de los locales en valores de confort o de proceso. Son instalaciones complejas que integran generación de energía térmica, distribución y entrega al local, y que deben diseñarse, ejecutarse y mantenerse conforme a una normativa específica.</p>
+
+    <div class="callout callout-norm">
+      <strong>Norma central: Real Decreto 1027/2007, de 20 de julio — RITE</strong>
+      Aprueba el <em>Reglamento de Instalaciones Térmicas en los Edificios</em>. Modificado por el RD 238/2013 y por el RD 178/2021 (que incorpora la aerotermia como fuente renovable). El RITE fija las Instrucciones Técnicas IT 1 (diseño) e IT 2–4 (ejecución, mantenimiento, inspecciones).
+    </div>
+
+    <p>El RITE se apoya en una constelación normativa que el técnico debe conocer:</p>
+    <ul>
+      <li><strong>CTE DB-HE</strong> (Código Técnico de la Edificación, Documento Básico de Ahorro de Energía): exige límites de demanda energética en calefacción y refrigeración expresados en kWh/m²·año. Condiciona el dimensionado de los equipos.</li>
+      <li><strong>RD 552/2019</strong>: Reglamento de Seguridad para Instalaciones Frigoríficas. Regula los sistemas con refrigerantes (VRF, chillers, splits).</li>
+      <li><strong>Reglamento (UE) 517/2014</strong> y <strong>RD 115/2017</strong>: régimen de gases fluorados (F-Gas). El R-410A está en proceso de eliminación; R-32 y R-290 son alternativas. Los manipuladores deben estar certificados.</li>
+      <li><strong>RD 487/2022</strong>: prevención y control de la legionelosis. Deroga el RD 865/2003. Afecta directamente a las torres de refrigeración.</li>
+    </ul>
+
+    <div class="callout callout-tip">
+      <strong>Contexto Navarra</strong>
+      La autoridad competente en inspecciones de instalaciones térmicas en Navarra es el <strong>Departamento de Desarrollo Económico y Empresarial</strong> del Gobierno de Navarra (Servicio de Industria). Las inspecciones periódicas obligatorias las realizan los <strong>Organismos de Control Autorizados (OCA)</strong> acreditados en el territorio foral.
+    </div>
+
+    <h3>Umbrales del RITE: la regla de los tres niveles</h3>
+    <p>El RITE estructura sus exigencias en función de la potencia útil nominal total del conjunto de generadores. Es imprescindible manejar con soltura estos tres umbrales:</p>
+    <dl>
+      <dt>Potencia &lt; 5 kW <span class="badge badge-num">umbral 1</span></dt>
+      <dd>La instalación NO está sujeta al RITE. Quedan fuera los equipos autónomos muy pequeños (splits domésticos de baja potencia).</dd>
+      <dt>Potencia ≥ 5 kW <span class="badge badge-num">umbral 2</span></dt>
+      <dd>La instalación está sujeta al RITE: diseño conforme a las IT, legalización ante la autoridad competente, mantenimiento por empresa habilitada.</dd>
+      <dt>Potencia ≥ 70 kW <span class="badge badge-num">umbral 3</span></dt>
+      <dd>Además, se exige proyecto firmado por técnico competente, sistema de gestión energética centralizada (BMS) y sometimiento a inspección periódica por OCA.</dd>
+    </dl>
+
+    <div class="callout callout-warn">
+      <strong>⚠ Trampa frecuente</strong>
+      La potencia de referencia del RITE es la potencia <em>útil nominal total</em> del conjunto de generadores de calor y/o frío, no la potencia eléctrica absorbida por los equipos. Un técnico que confunda ambos conceptos puede equivocarse al valorar si una instalación requiere o no proyecto obligatorio.
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- 2. TIPOLOGÍAS -->
+  <section id="tipologias">
+    <h2>2. Tipologías de sistemas de climatización</h2>
+    <p>Los sistemas de climatización se clasifican habitualmente por el tipo de fluido portador que transporta la energía térmica desde los equipos de generación hasta los locales. Esta clasificación es fundamental porque determina el tipo de red de distribución, los elementos terminales y las condiciones de confort que se pueden alcanzar.</p>
+
+    <h3 id="todo-aire">2.1 Sistemas todo aire</h3>
+    <p>En estos sistemas, el aire es el único fluido que transporta la energía térmica hasta los locales. El aire se trata centralmente en una <strong>Unidad de Tratamiento de Aire (UTA)</strong> o una <strong>UTAS</strong> (Unidad de Tratamiento de Aire de una Sola Zona, con 100% de aire exterior), que lo filtra, calienta o enfría, y humidifica o deshumidifica según las necesidades. A continuación, el aire tratado se distribuye por una red de conductos hasta los difusores de los locales.</p>
+    <p>Son los sistemas más habituales en edificios con elevadas exigencias de calidad del aire interior: hospitales (salas de operaciones, UCI), laboratorios, grandes superficies comerciales y salas de reuniones de gran aforo. Permiten un control preciso de la temperatura, la humedad y la presión diferencial del local.</p>
+    <div class="callout callout-tip">
+      <strong>UTA vs. UTAS — distinción de examen</strong>
+      La <strong>UTA</strong> mezcla aire de retorno del local con aire exterior nuevo antes de tratarlo; la <strong>UTAS</strong> trabaja exclusivamente con aire exterior (100%), sin mezcla de retorno. La UTAS se emplea en zonas que por razones higiénicas no admiten recirculación (quirófanos, salas de aislamiento).
+    </div>
+
+    <h3 id="todo-agua">2.2 Sistemas todo agua</h3>
+    <p>En estos sistemas, el agua es el fluido que transporta el calor o el frío desde las plantas enfriadoras o calderas hasta los elementos terminales instalados en los locales (fancoils, inductores). El agua circula por una red de tuberías de dos o cuatro tubos. Este sistema ofrece gran flexibilidad de zonificación, pues cada fancoil puede regularse de forma independiente.</p>
+    <p>La configuración de <strong>2 tubos</strong> (un tubo de ida y uno de retorno) solo puede proporcionar calor o frío a todos los fancoils a la vez, dependiendo de la temporada. La de <strong>4 tubos</strong> (dos circuitos independientes: calor y frío) permite suministrar simultáneamente calor a zonas con orientación norte y frío a zonas con orientación sur en periodos de transición.</p>
+    <div class="callout callout-warn">
+      <strong>⚠ Trampa frecuente</strong>
+      Un sistema "todo agua" NO elimina la necesidad de ventilación. El RITE exige en todo caso la aportación de un caudal mínimo de aire exterior para garantizar la calidad del aire interior (IT 1.1.4.2.3). Esta ventilación puede resolverse mediante una red independiente de conductos de aire primario o mediante ventilación natural controlada.
+    </div>
+
+    <h3 id="expansion">2.3 Sistemas de expansión directa</h3>
+    <p>En los sistemas de expansión directa, el refrigerante es el propio fluido que circula hasta los elementos terminales, donde se evapora o condensa directamente para ceder o absorber calor del local. Esto elimina la necesidad de un circuito de agua intermedio, reduciendo la complejidad hidráulica y las pérdidas de transmisión.</p>
+    <p>Los sistemas más extendidos son los <strong>splits</strong> (unidad exterior + una unidad interior), los <strong>multisplits</strong> (una unidad exterior + varias interiores) y, para grandes edificios, los sistemas <strong>VRF/VRV</strong> (Variable Refrigerant Flow/Volume). Estos últimos usan válvulas de expansión electrónicas que permiten regular individualmente la cantidad de refrigerante que llega a cada unidad interior, pudiendo además funcionar simultáneamente en modo calefacción y refrigeración en distintas zonas del edificio gracias a unidades de recuperación de calor.</p>
+    <p>Los sistemas de expansión directa están regulados por el <strong>RD 552/2019</strong> (instalaciones frigoríficas). Si la carga de refrigerante total excede ciertos umbrales en relación con el volumen del local, se requieren medidas adicionales de seguridad (detectores, ventilación de emergencia).</p>
+  </section>
+
+  <hr>
+
+  <!-- 3. EQUIPOS DE PRODUCCIÓN -->
+  <section id="produccion">
+    <h2>3. Equipos de producción de calor y frío</h2>
+
+    <h3 id="calor">3.1 Producción de calor</h3>
+    <p>La caldera es el equipo más tradicional de producción de calor mediante la combustión de gas natural, gasoil u otros combustibles. La evolución tecnológica más relevante son las <strong>calderas de condensación</strong>, que recuperan el calor latente contenido en el vapor de agua de los gases de combustión, alcanzando rendimientos superiores al 100% referidos al Poder Calorífico Inferior (PCI). Para condensar correctamente, necesitan una temperatura de retorno inferior a 57 °C, por lo que son especialmente compatibles con sistemas de suelo radiante y fancoils de baja temperatura.</p>
+    <div class="callout callout-norm">
+      <strong>Exigencia del CTE</strong>
+      El CTE DB-HE establece que las instalaciones nuevas de calefacción con potencia superior a 70 kW deben emplear calderas de condensación o sistemas de eficiencia equivalente.
+    </div>
+
+    <h3 id="frio">3.2 Producción de frío: enfriadoras (chillers)</h3>
+    <p>Las <strong>enfriadoras o chillers</strong> son equipos que producen agua fría (típicamente a 6–7 °C de temperatura de impulsión y 12 °C de retorno) mediante un ciclo frigorífico. Según el tipo de ciclo:</p>
+    <ul>
+      <li><strong>Por compresión mecánica</strong>: las más habituales. El compresor puede ser de tipo scroll, tornillo o centrífugo. Su rendimiento se expresa mediante el <strong>EER</strong> (a plena carga) y el <strong>ESEER</strong> (eficiencia estacional europea, que pondera el rendimiento a 100%, 75%, 50% y 25% de carga).</li>
+      <li><strong>Por absorción</strong>: no usan compresor mecánico sino un ciclo termoquímico (par agua-bromuro de litio o amoniaco-agua). Se alimentan con calor residual, vapor o gas. Son útiles cuando hay disponibilidad de calor sobrante o en instalaciones de trigeneración.</li>
+    </ul>
+
+    <h3 id="bombas">3.3 Bombas de calor</h3>
+    <p>Las bombas de calor son equipos reversibles capaces de producir tanto calor como frío con una eficiencia significativamente superior a la calefacción eléctrica directa. Funcionan extrayendo calor de una fuente (aire exterior, agua del subsuelo, terreno) y transfiriéndolo al local o al circuito de agua del edificio.</p>
+    <dl>
+      <dt>Aerotérmica (aire-agua o aire-aire)</dt>
+      <dd>Extrae calor del aire exterior. Más afectada por las condiciones climáticas (menor rendimiento a bajas temperaturas exteriores). El <strong>RD 178/2021</strong> (modificación del RITE) reconoce la energía aerotérmica como fuente renovable, equiparándola a la solar térmica o la geotérmica.</dd>
+      <dt>Geotérmica (agua-agua o tierra-agua)</dt>
+      <dd>Extrae calor del subsuelo o de capas freáticas. Rendimiento más estable al aprovechar la temperatura casi constante del suelo (10–15 °C). Mayor inversión inicial pero mayor eficiencia estacional.</dd>
+    </dl>
+    <p>La eficiencia de una bomba de calor en modo calefacción se expresa mediante el <strong>COP</strong> (Coefficient Of Performance) y en modo refrigeración mediante el <strong>EER</strong>. Los valores estacionales equivalentes son el <strong>SCOP</strong> y el <strong>SEER</strong>, requeridos por los reglamentos europeos ErP (Ecodesign).</p>
+
+    <h3 id="torres">3.4 Torres de refrigeración</h3>
+    <p>Las torres de refrigeración son elementos auxiliares que rechazan al ambiente el calor absorbido por el condensador de las enfriadoras. Lo hacen mediante evaporación de una parte del agua de circulación, lo que permite alcanzar temperaturas de condensación más bajas que el rechazo por aire, mejorando la eficiencia de la enfriadora.</p>
+    <div class="callout callout-warn">
+      <strong>⚠ Riesgo de Legionella — RD 487/2022</strong>
+      Las torres de refrigeración son instalaciones de especial riesgo microbiológico porque mantienen agua a temperatura templada con aerosoles. El <strong>RD 487/2022</strong> (que deroga el RD 865/2003) establece los criterios higiénico-sanitarios y los protocolos de mantenimiento preventivo obligatorios: limpiezas y desinfecciones periódicas, análisis microbiológicos del agua, registros documentales y plan de autocontrol. El incumplimiento puede derivar en responsabilidad penal.
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- 4. REDES DE DISTRIBUCIÓN -->
+  <section id="redes">
+    <h2>4. Redes de distribución</h2>
+
+    <h3 id="tuberias">4.1 Tuberías</h3>
+    <p>Las redes de agua caliente y fría se ejecutan habitualmente en <strong>acero negro soldado</strong> (redes grandes, sala de máquinas), <strong>cobre</strong> (diámetros pequeños y medios), <strong>acero inoxidable</strong> (instalaciones de agua sanitaria o procesos especiales) o <strong>polipropileno/PEX</strong> (instalaciones de suelo radiante y pequeñas redes).</p>
+    <p>El RITE exige el <strong>aislamiento térmico de todas las tuberías</strong> de las instalaciones térmicas para limitar las pérdidas de calor o frío hacia el ambiente. Los espesores mínimos están tabulados en la <strong>IT 1.2.4.2.1.2</strong> en función del diámetro exterior de la tubería y la temperatura del fluido. Este requisito se aplica a todas las instalaciones sujetas al RITE, independientemente de su potencia.</p>
+
+    <h3 id="conductos">4.2 Conductos de aire</h3>
+    <p>La distribución de aire acondicionado se realiza mediante conductos, habitualmente de <strong>chapa de acero galvanizado</strong> (el material más extendido), <strong>panel de fibra de vidrio</strong> (con aislamiento incorporado, uso en instalaciones de baja velocidad) o <strong>paneles de poliisocianurato</strong>. Las velocidades de diseño recomendadas son de <strong>4–8 m/s</strong> en conductos principales y <strong>2–4 m/s</strong> en ramales secundarios para limitar la generación de ruido.</p>
+    <p>El RITE establece clases de estanqueidad para los conductos (A, B, C) según la presión de servicio. Una mala estanqueidad provoca pérdidas de caudal que pueden suponer un aumento de consumo energético significativo y un deterioro de las condiciones de confort.</p>
+
+    <h3 id="valvulas">4.3 Válvulas y elementos de red</h3>
+    <p>Las redes hidráulicas incorporan una variedad de válvulas con funciones específicas:</p>
+    <ul>
+      <li><strong>Válvulas de corte</strong>: aíslan tramos o equipos para mantenimiento.</li>
+      <li><strong>Válvulas de retención</strong>: impiden el retroceso del fluido.</li>
+      <li><strong>Válvulas de equilibrado hidráulico</strong> (estáticas y dinámicas): garantizan que cada circuito recibe el caudal de diseño, evitando que los más próximos a la bomba reciban más agua que los alejados.</li>
+      <li><strong>Válvulas de zona</strong> (2 o 3 vías): regulan el caudal que llega a cada zona o terminal en función de la demanda.</li>
+      <li><strong>Válvulas de seguridad</strong>: obligatorias en todos los circuitos cerrados a presión; se abren automáticamente si la presión supera el valor de tarado, protegiendo los equipos.</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <!-- 5. ELEMENTOS TERMINALES -->
+  <section id="terminales">
+    <h2>5. Elementos terminales en los locales</h2>
+    <p>Los elementos terminales son los encargados de transferir finalmente la energía térmica al local, ya sea calentando o enfriando el aire del espacio o las superficies del mismo.</p>
+    <dl>
+      <dt>Fancoils (unidades fan-coil)</dt>
+      <dd>Unidades locales con batería de agua (caliente o fría) y ventilador. Los de <strong>2 tubos</strong> solo pueden suministrar calor O frío según la temporada (el circuito lleva uno u otro fluido). Los de <strong>4 tubos</strong> tienen dos baterías independientes y pueden suministrar calor y frío simultáneamente en zonas distintas del mismo edificio. Son el terminal más habitual en hoteles, hospitales y edificios de oficinas.</dd>
+      <dt>Radiadores</dt>
+      <dd>Elementos de calefacción por convección y radiación, alimentados con agua caliente. Simples y robustos; no permiten enfriamiento.</dd>
+      <dt>Suelo radiante</dt>
+      <dd>Red de tuberías embebidas en el suelo por las que circula agua a baja temperatura (35–45 °C). Proporciona un confort térmico excelente por radiación uniforme. Su baja temperatura de trabajo lo hace especialmente compatible con calderas de condensación y bombas de calor.</dd>
+      <dt>Difusores y rejillas</dt>
+      <dd>Distribuyen el aire tratado en el local. El diseño debe garantizar que la velocidad en la zona ocupada (hasta 1,8 m del suelo) sea inferior a 0,2 m/s para no generar molestias. También condicionan el nivel sonoro de la instalación.</dd>
+      <dt>Vigas frías activas y pasivas</dt>
+      <dd>Elementos de alta eficiencia para climatización de grandes plantas abiertas de oficinas. La <strong>viga activa</strong> incorpora un plenum de aire primario que induce por efecto Venturi el aire del local a través de una batería de agua fría. La <strong>viga pasiva</strong> funciona únicamente por convección natural (sin ventilador ni aire primario). Proporcionan enfriamiento silencioso y eficiente sin los problemas de condensación si se controla la humedad del local.</dd>
+    </dl>
+  </section>
+
+  <hr>
+
+  <!-- 6. REGULACIÓN Y CONTROL -->
+  <section id="regulacion">
+    <h2>6. Elementos de regulación de la instalación</h2>
+    <p>La regulación y el control son determinantes para que una instalación de climatización funcione de manera eficiente. Una instalación mal regulada puede duplicar su consumo energético respecto a una equivalente bien ajustada.</p>
+    <p>El RITE (IT 1.2.4.3) establece que todas las instalaciones con potencia nominal superior a <strong>70 kW</strong> deben disponer de un <strong>sistema de gestión energética centralizada</strong> (comúnmente denominado BMS, Building Management System, o SCADA) que permita controlar, supervisar y contabilizar el consumo de energía de cada subsistema.</p>
+    <p>La <strong>zonificación</strong> es otro requisito clave del RITE: el sistema debe poder regular independientemente, al menos, las zonas con diferente orientación (norte/sur) y las zonas interiores respecto a las perimetrales, porque sus cargas térmicas son distintas y varían de forma diferente a lo largo del día.</p>
+    <p>Los <strong>contadores de energía térmica</strong> son obligatorios en instalaciones de potencia ≥ 70 kW y en edificios de uso residencial con instalación centralizada, para poder repartir los costes energéticos entre los usuarios en proporción a su consumo real.</p>
+    <p>Los elementos básicos de regulación incluyen termostatos de ambiente, sondas de temperatura en tuberías y conductos, válvulas motorizadas de zona, variadores de frecuencia en bombas y ventiladores (para ajustar el caudal a la demanda real), y actuadores electrotérmicos en válvulas de fancoils de suelo radiante.</p>
+  </section>
+
+  <hr>
+
+  <!-- 7. DISEÑO Y MANTENIMIENTO -->
+  <section id="disenyo">
+    <h2>7. Diseño y mantenimiento</h2>
+    <p>El <strong>diseño</strong> de una instalación de climatización parte de la realización del <strong>cálculo de cargas térmicas</strong> del edificio (carga de calefacción y de refrigeración en condiciones de proyecto, expresadas en kW), a partir de las cuales se dimensionan los equipos de generación, las redes de distribución y los elementos terminales. El CTE DB-HE limita la demanda energética del edificio en función de su zona climática y uso, por lo que el diseño de la envolvente térmica (aislamiento, vidrios, protecciones solares) condiciona directamente el tamaño de los equipos.</p>
+    <p>En cuanto al <strong>mantenimiento</strong>, el RITE diferencia claramente entre dos figuras:</p>
+    <dl>
+      <dt>Titular de la instalación</dt>
+      <dd>Es el propietario o gestor del edificio. Es el responsable legal ante la administración del correcto mantenimiento, de conservar el <em>Registro de las Instalaciones Térmicas</em> (equivalente al "libro del edificio" de la instalación) y de contratar una empresa mantenedora habilitada.</dd>
+      <dt>Mantenedor habilitado</dt>
+      <dd>Empresa certificada para realizar las operaciones de mantenimiento preventivo y correctivo de las instalaciones RITE. Emite al titular el <strong>Certificado de Mantenimiento</strong> anualmente (IT 3), que acredita que la instalación se ha mantenido conforme al RITE.</dd>
+    </dl>
+    <div class="callout callout-warn">
+      <strong>⚠ Trampa frecuente — dos documentos distintos</strong>
+      El <strong>Certificado de Mantenimiento</strong> (IT 3) lo emite el <em>mantenedor habilitado</em> al titular, con periodicidad anual. La <strong>inspección periódica</strong> la realiza una <em>OCA independiente</em>, con periodicidad de 2 años (refrigeración ≥ 12 kW) o 4 años (calefacción/ACS ≥ 70 kW). Son dos documentos, dos figuras y dos frecuencias distintas.
+    </div>
+    <p>Las operaciones de mantenimiento incluyen la revisión y limpieza de filtros de aire, la comprobación de parámetros de funcionamiento de calderas y enfriadoras, el control de la carga de refrigerante, la verificación del correcto funcionamiento de los sistemas de control y la realización de los análisis de agua de los circuitos hidráulicos para detectar incrustaciones, corrosión o contaminación microbiológica.</p>
+  </section>
+
+  <hr>
+
+  <!-- 8. EFICIENCIA ENERGÉTICA -->
+  <section id="eficiencia">
+    <h2>8. Eficiencia energética</h2>
+    <p>La climatización supone un porcentaje muy elevado del consumo energético de los edificios (puede superar el 50% en edificios terciarios). Su optimización es, por tanto, una prioridad normativa y económica.</p>
+    <p>Los principales indicadores de eficiencia son:</p>
+    <ul>
+      <li><strong>COP</strong> (Coefficient Of Performance): potencia térmica entregada en calefacción / potencia eléctrica absorbida. Cuanto mayor, más eficiente.</li>
+      <li><strong>EER</strong> (Energy Efficiency Ratio): potencia de refrigeración entregada / potencia eléctrica absorbida.</li>
+      <li><strong>SCOP / SEER</strong>: valores estacionales del COP y EER, calculados a lo largo de la temporada completa. Más representativos del comportamiento real del equipo. Exigidos por los reglamentos europeos ErP (Ecodesign Directive).</li>
+      <li><strong>ESEER</strong>: eficiencia estacional europea para enfriadoras. Se calcula como una media ponderada del EER a 100%, 75%, 50% y 25% de carga, con pesos fijados por la norma europea.</li>
+    </ul>
+
+    <h3>Free-cooling</h3>
+    <p>El <strong>free-cooling</strong> es la técnica que aprovecha las condiciones del aire exterior (o del agua de una fuente exterior fría) para enfriar el edificio o el fluido de la red sin activar el compresor de la enfriadora. Cuando la temperatura exterior es suficientemente baja, la UTA puede emplear directamente ese aire frío para enfriar el local, ahorrando toda la energía del compresor.</p>
+    <div class="callout callout-norm">
+      <strong>Obligatoriedad del free-cooling — RITE IT 1.2.4.5.2</strong>
+      El RITE obliga a instalar sistemas de free-cooling en las UTA cuya potencia de refrigeración supere los <strong>12 kW</strong>, cuando las condiciones climáticas del emplazamiento lo hagan viable. El free-cooling puede ser adiabático (por agua) o seco (solo por aire).
+    </div>
+
+    <h3>Aerotermia como fuente renovable</h3>
+    <p>El <strong>RD 178/2021</strong>, que modifica el RITE, reconoce oficialmente la energía aerotérmica como fuente de energía renovable. Esto tiene implicaciones en el cumplimiento de las exigencias de contribución mínima renovable que el CTE establece para los edificios nuevos y en las grandes rehabilitaciones.</p>
+
+    <h3>Marco europeo: Directiva EPBD</h3>
+    <p>La Directiva Europea de Eficiencia Energética de los Edificios (EPBD, revisión de 2024) establece que todos los edificios nuevos deben ser de consumo casi nulo (<em>Nearly Zero Energy Building</em>, NZEB) y prevé la eliminación progresiva de los sistemas de calefacción basados en combustibles fósiles. La climatización mediante bombas de calor aerotérmicas y geotérmicas es la tecnología central de esta transición.</p>
+  </section>
+
+</main>
+</div>
+</body>
+</html>
