@@ -1,0 +1,453 @@
+﻿PUNTOS CLAVE – TEMA 8
+INSTALACIONES DE ACS: TIPOLOGÍAS, DISEÑO, MANTENIMIENTO,
+EFICIENCIA ENERGÉTICA, PREVENCIÓN DE LEGIONELOSIS
+Gestor de Mantenimiento (Nivel B) · Universidad Pública de Navarra
+
+=== NORMATIVA DE REFERENCIA (lo más preguntado) ===
+
+1. RITE – Reglamento de Instalaciones Térmicas en los Edificios
+   Aprobado por RD 1027/2007, modificado por RD 178/2021.
+   Norma principal que regula el DISEÑO, la EFICIENCIA ENERGÉTICA
+   y el MANTENIMIENTO de las instalaciones de ACS en edificios.
+   Las instrucciones técnicas IT 1 (diseño) e IT 2 (mantenimiento)
+   son las más relevantes para el examen.
+
+2. CTE DB-HE4 (ahora DB-HE Sección HE4 → HE Renovables)
+   "Contribución mínima de energía renovable para cubrir la demanda
+   de agua caliente sanitaria."
+   Desde la actualización de 2019-2022 exige que una fracción de la
+   demanda de ACS se cubra con energía RENOVABLE (solar térmica,
+   bomba de calor, biomasa...). Ya no es solo "solar térmica".
+   TRAMPA: antes solo se hablaba de "solar mínima"; ahora es
+   "renovable mínima". La solar es una opción, no la única.
+
+3. CTE DB-HS4
+   Suministro de agua. Regula presiones, caudales, protección contra
+   retornos, red de retorno de ACS (obligatoria >15 m de tubería).
+   Ver Tema 7 para el detalle.
+
+4. RD 487/2022 (derogó al RD 865/2003)
+   Criterios higiénico-sanitarios para la PREVENCIÓN Y CONTROL
+   DE LA LEGIONELOSIS. Vigente desde el 21 de junio de 2022.
+   Regula las instalaciones de ACS con acumulador y circuito de
+   retorno como instalaciones de MAYOR RIESGO de proliferación
+   y dispersión de Legionella.
+   TRAMPA: el RD 487/2022 DEROGÓ al RD 865/2003. Si en el examen
+   aparece el 865/2003, es normativa derogada (aunque puede
+   aparecer como opción de distractor).
+
+5. RD 140/2003
+   Criterios sanitarios del agua de consumo humano. Los materiales
+   de la instalación no deben alterar la calidad del agua potable
+   según este decreto.
+
+6. RD 178/2021
+   Modifica el RITE. Reconoce la aerotermia (bomba de calor aire-agua)
+   como fuente de energía renovable para ACS. Muy relevante en
+   eficiencia energética.
+
+7. RD 187/2011 (Ecodiseño)
+   Los equipos de producción de calor deben cumplir los requisitos
+   mínimos de eficiencia según el diseño ecológico.
+
+=== TIPOLOGÍAS DE SISTEMAS ACS (diferenciación examinable) ===
+
+8. CLASIFICACIÓN POR ÁMBITO DE PRODUCCIÓN:
+   a) Sistema INDIVIDUAL: cada vivienda o local tiene su propio
+      equipo de producción (termo eléctrico, calentador a gas,
+      caldera mural con plato ACS). Sin red de distribución
+      colectiva. Sencillo, bajo coste inicial, sin riesgo de
+      Legionella colectiva (no hay aerosoles en circuito colectivo).
+   b) Sistema CENTRALIZADO: un único equipo (o sala de calderas)
+      produce ACS para todo el edificio. Requiere red de distribución
+      y red de retorno. Mayor eficiencia energética pero mayor
+      complejidad de mantenimiento y mayor riesgo de Legionella.
+   c) Sistema MIXTO o SEMI-CENTRALIZADO: producción centralizada
+      (una sala de calderas) pero distribución por zonas o plantas,
+      con acumuladores secundarios por planta o sector. Se usa en
+      hospitales y hoteles de gran tamaño.
+
+9. CLASIFICACIÓN POR TIPO DE ACUMULACIÓN:
+   a) Sin acumulación (instantáneos / de paso):
+      - Calentadores a gas instantáneos (junkers): calientan el agua
+        al paso. No hay depósito. Sin riesgo de Legionella por
+        estancamiento (el agua está en movimiento durante el uso).
+        Requieren MAYOR POTENCIA instantánea.
+      - Calderas murales con módulo ACS instantáneo (tipo combi):
+        producen ACS al paso usando el intercambiador de la caldera.
+      VENTAJA: sin agua estancada → menor riesgo de Legionella,
+               menores pérdidas de calor en standby.
+      DESVENTAJA: necesita más potencia, menor estabilidad de
+                  temperatura, espera hasta que llega el agua caliente.
+
+   b) Con acumulación (termos / acumuladores):
+      - Termos eléctricos: acumulador con resistencia eléctrica.
+        Sencillos pero el sistema de calentamiento menos eficiente.
+      - Acumuladores a gas: quemador más acumulador.
+      - Acumuladores solares: el campo de captadores solares
+        precalienta el agua en un depósito de acumulación solar;
+        un equipo de apoyo (caldera, bomba de calor) aporta el calor
+        complementario.
+      - Acumuladores con bomba de calor (aerotermia): la bomba de
+        calor calienta el acumulador. Alta eficiencia (COP 3-4).
+      VENTAJA: responde bien a puntas de demanda, potencia
+               instantánea de producción menor.
+      DESVENTAJA: agua estancada → MAYOR RIESGO DE LEGIONELLA.
+                  Pérdidas de calor en standby. Mayor espacio.
+                  Mayor mantenimiento.
+
+10. CLASIFICACIÓN POR FUENTE DE ENERGÍA:
+    a) Gas natural / GLP (propano): caldera o calentador instantáneo.
+       Muy extendido. Rendimiento estacional típico 85-95% (condensación >100% en PCI).
+    b) Eléctrico (resistencia): rendimiento 100% (toda la electricidad
+       se convierte en calor), pero el kWh eléctrico es más caro que
+       el del gas. Bajo en CO₂ si la electricidad es renovable.
+    c) Solar térmica: captadores solares planos o de tubo de vacío
+       transfieren calor al agua mediante un circuito cerrado con
+       fluido caloportador. Cobertura típica: 50-70% de la demanda
+       anual de ACS. SIEMPRE necesita equipo de apoyo para el 100%.
+    d) Bomba de calor (aerotermia): extrae calor del aire exterior.
+       COP típico: 3-4 (por cada kWh eléctrico genera 3-4 kWh de calor).
+       Reconocida como RENOVABLE por el RD 178/2021 y la Directiva
+       Europea 2018/2001 (RED II).
+    e) Biomasa: caldera de pellets, astilla o leña. Renovable.
+       Muy eficaz en edificios con alta demanda (residencias,
+       hoteles rurales, polideportivos).
+    f) Cogeneración / District Heating (redes de calor urbanas):
+       ACS producida como subproducto de la generación eléctrica
+       o en centrales de calor urbanas. Alta eficiencia global.
+
+=== DISEÑO DE LA INSTALACIÓN ===
+
+11. PARÁMETROS DE DISEÑO (examinables con cifras concretas):
+    - Demanda de ACS: según el CTE HE4 se calcula a partir de
+      la TIPOLOGÍA del edificio y el número de usuarios/viviendas.
+      La temperatura de referencia para el cálculo de la demanda
+      es 60°C.
+    - Consumo de referencia por vivienda (CTE HE4): 28 l/día
+      a 60°C por persona. En hoteles, hospitales y otros usos
+      hay tablas específicas en el CTE HE4.
+    - Temperatura de acumulación: ≥ 60°C (CTE HS4 y RD 487/2022).
+    - Temperatura en la red de distribución: ≥ 50°C en cualquier punto.
+    - Temperatura en el punto de uso (grifo): 38-43°C (válvula
+      mezcladora termoestática, VMT).
+    - Red de retorno: OBLIGATORIA cuando la longitud de la red de
+      ACS supera los 15 metros (CTE HS4).
+
+12. COMPONENTES PRINCIPALES DE UNA INSTALACIÓN CENTRALIZADA DE ACS:
+    - Equipo de producción: caldera, bomba de calor, captadores solares,
+      calentador a gas...
+    - Acumulador (depósito de ACS): almacena el agua caliente producida.
+      Puede ser de acero inoxidable, vitrificado o con revestimiento
+      protector. La capacidad se calcula en función de la demanda
+      de punta (horas de mayor consumo).
+    - Intercambiador de calor: separa el circuito primario (con
+      anticongelante en instalaciones solares) del agua sanitaria.
+    - Red de distribución: tuberías de ida (ACS a 60°C) y retorno
+      (circulación continua para mantener ≥50°C en toda la red).
+    - Bomba de circulación del retorno: mantiene el ACS circulando.
+    - Válvula mezcladora termoestática (VMT): en la salida del
+      acumulador o en el ramal de distribución. Mezcla ACS (60°C)
+      con agua fría hasta obtener 38-43°C en el punto de uso.
+      PROTEGE al usuario de quemaduras. OBLIGATORIA en edificios
+      con usuarios vulnerables (hospitales, residencias de mayores,
+      guarderías).
+    - Válvulas de seguridad, vasos de expansión, purgadores.
+    - Sistema de regulación y control: termostatos, sondas de
+      temperatura, control de la bomba de retorno.
+
+13. CAPTADORES SOLARES (diferenciación para examen):
+    a) Captador plano (o de placa plana):
+       - Más económico. El más extendido en vivienda.
+       - Rendimiento adecuado con sol moderado (clima mediterráneo
+         y atlántico).
+       - Trabaja bien hasta temperaturas exteriores moderadas.
+    b) Captador de tubo de vacío:
+       - Mayor rendimiento en climas fríos o con radiación difusa.
+       - Pérdidas de calor muy bajas (el vacío actúa como aislante).
+       - Mayor coste. Se usa en climas más adversos o cuando se
+         necesita más temperatura (calefacción + ACS).
+    El circuito solar es SIEMPRE CERRADO, con fluido caloportador
+    (agua + anticongelante), que transfiere el calor al agua sanitaria
+    a través de un intercambiador. El agua sanitaria NUNCA circula
+    por el captador (riesgo de Legionella y congelación).
+    TRAMPA: el circuito primario solar NO es agua sanitaria.
+    Es agua con anticongelante (glicol). El intercambiador separa
+    ambos circuitos.
+
+=== LEGIONELOSIS: LO MÁS PREGUNTADO EN EXAMEN ===
+
+14. LEGIONELLA PNEUMOPHILA:
+    - Bacteria gramnegativa del agua dulce.
+    - Causante de la LEGIONELOSIS (enfermedad del legionario):
+      neumonía grave con mortalidad del 5-15% en casos hospitalizados.
+    - También causa la FIEBRE DE PONTIAC: forma leve, sin neumonía,
+      síndrome gripal, resolución espontánea en 2-5 días.
+    - Vía de transmisión: inhalación de aerosoles de agua contaminada.
+      NUNCA por beber agua ni por contacto persona a persona.
+
+15. CONDICIONES DE CRECIMIENTO DE LEGIONELLA:
+    - Temperatura óptima de crecimiento: 35-37°C (pero prolifera
+      entre 20°C y 45°C).
+    - Por encima de 50°C: no prolifera.
+    - A 60°C: muere en 32 minutos.
+    - A 70°C: muerte instantánea.
+    - Por debajo de 20°C: la bacteria está en estado latente
+      (no prolifera pero tampoco muere).
+    - Factores que favorecen la proliferación:
+      · Agua estancada (poco movimiento).
+      · Presencia de biofilm (biopelícula en tuberías y acumuladores).
+      · Cal, sedimentos y materia orgánica.
+      · Temperatura entre 20-45°C.
+      · Materiales que favorecen el biofilm (caucho, materiales
+        porosos, tuberías de goma envejecidas).
+
+16. INSTALACIONES DE MAYOR RIESGO (RD 487/2022):
+    - Torres de refrigeración y condensadores evaporativos.
+    - Instalaciones de ACS con acumulador Y circuito de retorno.
+    - Spas, jacuzzis, bañeras de hidromasaje de uso colectivo.
+    - Fuentes ornamentales con aerosolización.
+    - Sistemas de riego por aspersión con agua no potable.
+    - Instalaciones en centros sanitarios y sociosanitarios.
+    TRAMPA: la fontanería doméstica individual (un piso) NO está
+    en el ámbito de aplicación del RD 487/2022. El RIESGO
+    SIGNIFICATIVO requiere acumulador + circuito de retorno
+    + aerosoles + uso colectivo.
+
+17. MEDIDAS PREVENTIVAS PRINCIPALES (temperatura es la clave):
+    a) Acumulador: mantener ≥ 60°C siempre.
+    b) Red de distribución: mantener ≥ 50°C en cualquier punto.
+    c) Punto de uso: VMT que baja a 38-43°C (evita quemaduras).
+    d) Red de retorno: mantener circulación continua (bomba 24h).
+    e) Eliminación de puntos muertos (ramas ciegas donde el agua
+       se estanca y se enfría).
+    f) Limpieza y desinfección periódica de acumuladores, redes,
+       alcachofas de ducha, aireadores de grifo.
+    g) Tratamiento del agua: cloración, dióxido de cloro,
+       ionización cobre-plata, radiación UV.
+
+18. CHOQUE TÉRMICO:
+    - Se eleva la temperatura del sistema hasta 70°C mínimo.
+    - Se mantiene al menos 1 hora.
+    - Se purga desde todos los puntos terminales (duchas, grifos)
+      hasta que el agua sale a ≥ 70°C.
+    - A 70°C la Legionella muere instantáneamente.
+    - Es la medida correctora ante colonización confirmada y
+      también una medida preventiva periódica.
+    TRAMPA: el choque térmico NO es el funcionamiento normal
+    de la instalación. El funcionamiento normal es 60°C en el
+    acumulador. El choque es una medida de choque puntual a 70°C.
+
+19. PERIODICIDADES DE MANTENIMIENTO (RD 487/2022):
+    - Control diario/continuo de temperaturas (acumulador y red).
+    - Limpieza y desinfección de acumuladores: al menos 1 vez/año.
+    - Limpieza de terminales (alcachofas, aireadores): trimestral
+      o semestral según el plan de mantenimiento.
+    - Análisis microbiológicos del agua: según el programa de
+      mantenimiento y el tipo de instalación. En instalaciones de
+      mayor riesgo, análisis periódicos con laboratorio acreditado.
+    - Registro documental de todas las acciones: OBLIGATORIO.
+    - Instalaciones de mayor riesgo: mantenimiento por empresa
+      AUTORIZADA. La responsabilidad recae en el TITULAR
+      de la instalación.
+
+=== EFICIENCIA ENERGÉTICA ===
+
+20. INDICADORES DE EFICIENCIA EN ACS:
+    - COP (Coefficient of Performance): relación calor útil /
+      energía eléctrica consumida. Se aplica a BOMBAS DE CALOR.
+      COP típico bomba de calor para ACS: 3-4.
+    - Rendimiento de caldera (η): calor útil / poder calorífico
+      del combustible consumido. Caldera convencional: 85-90%.
+      Caldera de condensación: >100% en PCI (recupera calor de
+      los humos).
+    - Factor solar (f): fracción de la demanda de ACS cubierta
+      por la instalación solar respecto al total anual.
+      Objetivo típico CTE HE4: 50-70% según zona climática.
+    - Cobertura solar: = Factor solar × 100 (en %).
+
+21. CTE DB-HE4 → AHORA "HE: RENOVABLES":
+    Exige que una parte de la demanda de ACS se cubra con
+    energía RENOVABLE. El porcentaje depende de:
+    - La zona climática del edificio (I a V en España, según
+      la radiación solar).
+    - El uso del edificio (vivienda, hotel, hospital...).
+    - La demanda total de ACS.
+    TRAMPA histórica: antes el CTE HE4 exigía "energía solar
+    térmica" específicamente. Desde la revisión del CTE (2019)
+    se acepta cualquier fuente renovable (solar, aerotermia,
+    biomasa). Muchas preguntas de oposición siguen con el
+    enfoque antiguo ("solar obligatoria"). La respuesta correcta
+    actualizada es "energía RENOVABLE obligatoria".
+
+22. CALDERA DE CONDENSACIÓN:
+    - Recupera el calor latente de los vapores de agua de los
+      gases de combustión.
+    - Rendimiento >100% respecto al PCI (poder calorífico
+      inferior) porque aprovecha también la energía del vapor.
+    - Rendimiento puede llegar al 108-110% en PCI.
+    - Requiere temperatura de retorno baja (<55°C) para condensar.
+    - La pareja perfecta: caldera condensación + suelo radiante
+      (baja temperatura de impulsión).
+
+23. BOMBAS DE CALOR PARA ACS (aerotermia):
+    - La bomba de calor extrae calor del aire exterior (incluso
+      a -15°C el equipo puede funcionar) y lo cede al agua del
+      acumulador.
+    - COP estacional típico (SCOP): 3-4.
+    - Un COP de 3 significa que con 1 kWh eléctrico se generan
+      3 kWh de calor para el ACS.
+    - Reconocida como RENOVABLE desde el RD 178/2021 (si el
+      SPF —factor de rendimiento estacional— supera el umbral
+      establecido en la Directiva de Energías Renovables).
+    - Opciones:
+      · Bomba de calor monobloc: la unidad exterior y el
+        acumulador están separados.
+      · Aerotermo (split): compresor exterior + acumulador interior.
+      · Bomba de calor integrada (todo en uno): compacta,
+        ideal para vivienda unifamiliar.
+
+24. SOLAR TÉRMICA: ESQUEMA DE FUNCIONAMIENTO BÁSICO:
+    CAPTADORES SOLARES (circuito primario: agua + anticongelante)
+    → INTERCAMBIADOR DE CALOR
+    → ACUMULADOR SOLAR (agua sanitaria precalentada)
+    → EQUIPO DE APOYO (caldera/bomba de calor, si T < 60°C)
+    → RED DE DISTRIBUCIÓN → USUARIOS
+    El circuito primario solar es CERRADO. Nunca mezcla con el
+    agua sanitaria. La temperatura en el acumulador solar puede
+    ser menor de 60°C → siempre con equipo de apoyo que garantice
+    los 60°C finales.
+
+=== MANTENIMIENTO DE INSTALACIONES ACS ===
+
+25. PLAN DE MANTENIMIENTO SEGÚN EL RITE (IT 2):
+    El RITE establece dos niveles de mantenimiento:
+    a) Mantenimiento PREVENTIVO: programa de revisiones periódicas
+       establecido en el manual de uso y mantenimiento del edificio.
+    b) Mantenimiento CORRECTIVO: reparación de averías y fallos.
+    Las instalaciones de ACS con potencia > 70 kW requieren
+    mantenimiento por empresa MANTENEDORA AUTORIZADA
+    (equivalente al mantenedor del RITE, empresa instaladora
+    habilitada con carnet de instalador térmico).
+
+26. ACCIONES DE MANTENIMIENTO PREVENTIVO EN ACS (examen):
+    - Revisión del equipo de producción: caldera, quemador, bomba
+      de calor → cada 1-2 años (según el RITE y fabricante).
+    - Control de temperatura del acumulador (≥60°C): diario/continuo.
+    - Revisión de la bomba de recirculación del retorno:
+      funcionamiento, caudal, consumo.
+    - Purga y limpieza del acumulador: retira sedimentos calcáreos
+      y biofilm. Al menos 1 vez/año.
+    - Revisión y ajuste de la VMT (válvula mezcladora termoestática):
+      comprobar que entrega la temperatura correcta en el punto
+      de uso.
+    - Revisión de vaso de expansión: presión de precarga, membrana.
+    - Revisión de válvulas de seguridad: tarado correcto, sin fugas.
+    - Revisión de captadores solares: estado del vidrio, sellado,
+      nivel de presión del circuito primario, concentración de
+      anticongelante.
+    - Análisis del agua: dureza, pH, presencia de Legionella
+      (según RD 487/2022 en instalaciones de riesgo).
+
+27. AVERÍAS TÍPICAS DE LA INSTALACIÓN ACS (para preguntas prácticas):
+    - No hay ACS o es insuficiente: termostato desajustado,
+      resistencia averiada (termo eléctrico), quemador sucio
+      (caldera), captadores sucios o circuito solar con fuga
+      de presión.
+    - Agua muy caliente o quemaduras: VMT averiada o mal ajustada.
+    - Ruidos en la red: golpe de ariete (válvula antirretorno),
+      bomba de retorno en mal estado.
+    - Olor a huevo podrido (H₂S): Legionella o bacterias
+      sulfatorreductoras. Actuar con choque térmico + desinfección.
+    - Agua turbia o marrón: corrosión del acumulador (revestimiento
+      deteriorado o ánodo de magnesio agotado). Sustituir ánodo.
+    - Pérdida de eficiencia solar: incrustaciones calcáreas en
+      el intercambiador (agua dura), nivel de anticongelante bajo.
+
+=== VERSIÓN DE OPOSICIÓN — FRASES MEMORIZABLES ===
+
+⚡ "El RITE regula el DISEÑO y el MANTENIMIENTO del ACS.
+    El RD 487/2022 regula la LEGIONELA. Son normas distintas
+    con objetos distintos."
+
+⚡ "ACS con acumulador = mayor riesgo de Legionella.
+    ACS instantáneo = menor riesgo (sin agua estancada)."
+
+⚡ "60°C en el acumulador, 50°C en la red, 38-43°C en el grifo.
+    Tres puntos, tres temperaturas, tres razones."
+
+⚡ "70°C mata la Legionella al instante. Es la temperatura del
+    choque térmico, no la del funcionamiento normal."
+
+⚡ "La Legionella NO se transmite por beber agua.
+    Se transmite por INHALAR AEROSOLES."
+
+⚡ "Bomba de calor para ACS: COP 3-4 → por 1 kWh eléctrico
+    obtenemos 3-4 kWh de calor. Es RENOVABLE desde el RD 178/2021."
+
+⚡ "El captador solar usa circuito CERRADO con anticongelante.
+    El agua sanitaria NUNCA circula por el captador."
+
+⚡ "La VMT (válvula mezcladora termoestática) baja el ACS de 60°C
+    a 38-43°C en el punto de uso. Evita quemaduras. Obligatoria
+    en hospitales, residencias y guarderías."
+
+⚡ "Red de retorno obligatoria cuando la tubería de ACS supera
+    15 metros. Sin retorno, el agua se enfría y entra en zona
+    de riesgo de Legionella."
+
+⚡ "La caldera de CONDENSACIÓN rinde >100% en PCI porque recupera
+    el calor latente del vapor de agua de los humos."
+
+⚡ "El CTE HE4 ya no exige SOLO solar. Desde 2019 exige energía
+    RENOVABLE (solar, aerotermia, biomasa). La solar es una opción."
+
+⚡ "El ánodo de magnesio del termo eléctrico protege el depósito
+    de la corrosión. Cuando se agota → agua turbia/marrón.
+    Hay que sustituirlo cada 2-4 años."
+
+⚡ "El RD 487/2022 DEROGÓ al RD 865/2003. Si ves 865/2003 en el
+    examen, es la norma DEROGADA."
+
+⚡ "La Legionella prolifera entre 20°C y 45°C.
+    Óptimo: 35-37°C. Paralización: <20°C. Muerte: >60°C en 32 min."
+
+⚡ "La responsabilidad del plan de mantenimiento anti-Legionella
+    recae en el TITULAR de la instalación, no en la empresa
+    mantenedora. La empresa mantenedora ejecuta; el titular responde."
+
+=== CONCEPTOS QUE SIEMPRE APARECEN EN TIPO TEST ===
+
+A. ¿Qué norma regula el ACS en edificios? → RITE (RD 1027/2007)
+B. ¿Qué norma regula la Legionela? → RD 487/2022
+C. ¿Temperatura mínima en el acumulador? → 60°C
+D. ¿Temperatura mínima en la red de distribución? → 50°C
+E. ¿Temperatura en el grifo (tras VMT)? → 38-43°C
+F. ¿Temperatura del choque térmico? → 70°C (al menos 1 hora)
+G. ¿Por qué la Legionella es peligrosa en ACS con acumulador?
+   → Agua estancada a temperatura entre 20-45°C + aerosoles.
+H. ¿Por qué el circuito solar es cerrado?
+   → Para separar el fluido caloportador (con anticongelante)
+     del agua sanitaria. Seguridad e higiene.
+I. ¿Qué es la VMT y para qué sirve?
+   → Válvula Mezcladora Termoestática. Mezcla ACS (60°C) con
+     agua fría hasta 38-43°C. Evita quemaduras al usuario.
+J. ¿Qué es el ánodo de magnesio?
+   → Protección catódica del depósito del termo. Se sacrifica
+     para evitar la corrosión del acero. Se sustituye cada 2-4 años.
+K. ¿Cuándo es obligatoria la red de retorno de ACS?
+   → Cuando la longitud de la tubería supera 15 metros (CTE HS4).
+L. ¿Qué ventaja tiene el ACS instantáneo frente al de acumulación?
+   → Sin agua estancada → menor riesgo de Legionella y
+     menores pérdidas de calor en standby.
+M. ¿Qué ventaja tiene la caldera de condensación?
+   → Rendimiento >100% en PCI porque recupera el calor latente
+     del vapor de agua de los gases de combustión.
+N. ¿Qué COP tiene típicamente una bomba de calor para ACS?
+   → 3-4 (por cada kWh eléctrico produce 3-4 kWh de calor).
+O. ¿Qué instalaciones están sujetas al RD 487/2022?
+   → Torres de refrigeración, ACS colectiva con acumulador y
+     retorno, spas, jacuzzis colectivos, fuentes ornamentales.
+P. ¿La fontanería doméstica individual está sujeta al RD 487/2022?
+   → NO. Solo las instalaciones de mayor riesgo (colectivas,
+     con acumulador y retorno, con aerosolización).
