@@ -1,0 +1,549 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 8 – Cuadros comparativos · Instalaciones de ACS</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#f5f7fa;--surface:#fff;--surface-2:#f8f9fb;
+    --border:#ccd3de;--divider:#d8dde8;
+    --text:#1a2233;--muted:#4e5f7a;--faint:#8a9abb;
+    --teal:#00707a;--teal-lt:#ccedf0;--teal-dk:#004a52;
+    --blue:#0d4f8b;--blue-lt:#dceaf7;--blue-dk:#082f57;
+    --green:#1a6633;--green-lt:#d4eedd;
+    --gold:#c47d00;--gold-lt:#faefd0;
+    --orange:#8b3a0d;--orange-lt:#fce8d8;
+    --purple:#5b3690;--purple-lt:#ece4f8;
+    --red:#8b1a1a;--red-lt:#fde8e8;
+    --flame:#c0392b;
+    --font-d:'Cabinet Grotesk',sans-serif;
+    --font-b:'Satoshi',sans-serif;
+    --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.88rem;line-height:1.65;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 5rem;}
+
+  .file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+  .file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s;}
+  .file-nav a:hover,.file-nav a.active{background:var(--flame);color:white;border-color:var(--flame);}
+
+  .page-header{background:linear-gradient(135deg,#c0392b 0%,#7b1a1a 100%);color:white;border-radius:var(--r-xl);padding:2rem 2.5rem;margin-bottom:2rem;}
+  .page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;}
+  .page-header h1{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,1.85rem);font-weight:800;line-height:1.2;margin-bottom:.4rem;}
+  .page-header .sub{font-size:.83rem;opacity:.8;}
+
+  .section-label{font-family:var(--font-d);font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:2.5rem 0 .7rem;}
+
+  /* TABLE CARD */
+  .table-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.5rem;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+  .table-card-header{padding:.85rem 1.25rem;display:flex;align-items:center;gap:.65rem;border-bottom:1px solid var(--border);}
+  .table-card-header .icon{font-size:1.1rem;}
+  .table-card-header h2{font-family:var(--font-d);font-size:.95rem;font-weight:800;}
+  .table-card-note{padding:.6rem 1.25rem;background:var(--surface-2);border-top:1px solid var(--border);font-size:.79rem;color:var(--muted);}
+
+  /* COLOR TOPS */
+  .top-flame {border-top:4px solid var(--flame);}
+  .top-teal  {border-top:4px solid var(--teal);}
+  .top-blue  {border-top:4px solid var(--blue);}
+  .top-green {border-top:4px solid var(--green);}
+  .top-gold  {border-top:4px solid var(--gold);}
+  .top-orange{border-top:4px solid var(--orange);}
+  .top-purple{border-top:4px solid var(--purple);}
+
+  /* CHIPS */
+  .chip{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:2px 8px;border-radius:999px;white-space:nowrap;margin-left:auto;}
+  .ch-flame {background:var(--red-lt);   color:var(--flame);}
+  .ch-teal  {background:var(--teal-lt);  color:var(--teal);}
+  .ch-blue  {background:var(--blue-lt);  color:var(--blue-dk);}
+  .ch-green {background:var(--green-lt); color:var(--green);}
+  .ch-gold  {background:var(--gold-lt);  color:#7a4e00;}
+  .ch-orange{background:var(--orange-lt);color:var(--orange);}
+  .ch-purple{background:var(--purple-lt);color:var(--purple);}
+  .ch-grey  {background:#eef0f5;         color:var(--muted);}
+
+  /* CALLOUTS */
+  .callout{border-radius:var(--r-md);padding:.75rem 1rem;font-size:.83rem;margin:.75rem 1.25rem;line-height:1.55;}
+  .al-warn  {background:#fff7ed;         border-left:3px solid var(--orange);}
+  .al-red   {background:var(--red-lt);   border-left:3px solid var(--flame);}
+  .al-teal  {background:var(--teal-lt);  border-left:3px solid var(--teal);}
+  .al-blue  {background:var(--blue-lt);  border-left:3px solid var(--blue);}
+  .al-green {background:var(--green-lt); border-left:3px solid var(--green);}
+  .al-purple{background:var(--purple-lt);border-left:3px solid var(--purple);}
+
+  /* MAIN COMPARISON TABLES */
+  .cmp-table{width:100%;border-collapse:collapse;font-size:.84rem;}
+  .cmp-table th{font-family:var(--font-d);font-weight:800;font-size:.78rem;padding:.55rem .9rem;text-align:left;border-bottom:2px solid var(--border);}
+  .cmp-table th.hd-flame {background:var(--flame);  color:white;}
+  .cmp-table th.hd-teal  {background:var(--teal);   color:white;}
+  .cmp-table th.hd-blue  {background:var(--blue);   color:white;}
+  .cmp-table th.hd-green {background:var(--green);  color:white;}
+  .cmp-table th.hd-gold  {background:var(--gold);   color:white;}
+  .cmp-table th.hd-orange{background:var(--orange); color:white;}
+  .cmp-table th.hd-purple{background:var(--purple); color:white;}
+  .cmp-table th.hd-grey  {background:#e8edf0;       color:var(--text);}
+  .cmp-table td{padding:.5rem .9rem;border-bottom:1px solid #eef3f6;vertical-align:top;}
+  .cmp-table tr:last-child td{border-bottom:none;}
+  .cmp-table tr:hover td{background:#f8f9fb;}
+  .cmp-table tr.sep td{background:var(--surface-2);font-family:var(--font-d);font-weight:800;font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--border);}
+  .cmp-table tr.hi td{background:#e6f7f8!important;font-weight:700;}
+  .cmp-table tr.hi-red td{background:#fde8e8!important;font-weight:700;}
+  .cmp-table tr.hi-green td{background:#d4eedd!important;font-weight:700;}
+  .cmp-table tr.hi-gold td{background:var(--gold-lt)!important;font-weight:700;}
+  .cmp-table .feat{font-weight:700;color:var(--muted);font-size:.79rem;white-space:nowrap;}
+  .ok {color:var(--green);font-weight:800;}
+  .no {color:var(--flame);font-weight:800;}
+  .warn{color:var(--orange);font-weight:700;}
+  .num-big{font-family:var(--font-d);font-weight:800;font-size:1.25rem;}
+
+  /* TEMP VISUAL */
+  .temp-vis{display:flex;gap:.5rem;margin:.75rem 1.25rem;flex-wrap:wrap;}
+  .temp-box{flex:1;min-width:90px;border-radius:var(--r-md);padding:.85rem .7rem;text-align:center;border:1px solid var(--border);}
+  .temp-box .tv{font-family:var(--font-d);font-weight:800;font-size:1.25rem;display:block;}
+  .temp-box .tl{font-size:.68rem;font-weight:700;margin-top:3px;display:block;}
+  .temp-box .td{font-size:.67rem;color:var(--muted);margin-top:2px;}
+
+  /* TRAMPA BADGE */
+  .trampa{display:inline-flex;align-items:center;gap:.3rem;background:var(--red-lt);border:1px solid #e8b0b0;border-radius:var(--r-sm);padding:.2rem .65rem;font-size:.72rem;font-weight:700;color:var(--flame);}
+
+  /* PRES SCALE */
+  .pres-scale{display:flex;flex-direction:column;gap:.45rem;margin:.75rem 1.25rem;}
+  .pres-row{display:flex;align-items:center;gap:.85rem;}
+  .pres-bar{height:28px;border-radius:4px;display:flex;align-items:center;padding:0 .75rem;font-family:var(--font-d);font-weight:800;font-size:.77rem;color:white;white-space:nowrap;}
+  .pres-label{font-size:.8rem;}
+
+  /* EFICIENCIA VISUAL */
+  .efic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.65rem;margin:.75rem 1.25rem;}
+  .efic-box{border-radius:var(--r-md);padding:.8rem .85rem;border:1px solid var(--border);border-top:3px solid var(--border);text-align:center;}
+  .efic-box .ev{font-family:var(--font-d);font-weight:800;font-size:1.3rem;display:block;}
+  .efic-box .el{font-size:.72rem;font-weight:700;display:block;margin-top:2px;}
+  .efic-box .ed{font-size:.7rem;color:var(--muted);margin-top:3px;}
+  .efic-box .et{font-size:.63rem;font-weight:700;padding:1px 6px;border-radius:999px;display:inline-block;margin-top:5px;}
+
+  @media(max-width:680px){
+    .efic-grid{grid-template-columns:1fr 1fr;}
+    .temp-vis{flex-wrap:wrap;}
+    .temp-box{min-width:80px;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html" class="active">📊 Cuadros comparativos</a>
+  </div>
+
+<div class="page-header">
+  <div class="meta">Tema 8 · Gestor de Mantenimiento (Nivel B) · UPNA · Cuadros comparativos</div>
+  <h1>Tablas operativas para examen — Instalaciones de ACS</h1>
+  <div class="sub">8 tablas · Normativa · Tipologías · Temperaturas · Legionela · Eficiencia · Captadores · Componentes · Mantenimiento</div>
+</div>
+
+
+<!-- ══════════════ TABLA 1: NORMATIVA ══════════════ -->
+<div class="section-label">Tabla 1 — Normativa comparada ACS</div>
+<div class="table-card top-flame">
+  <div class="table-card-header">
+    <span class="icon">📋</span>
+    <h2>Normas aplicables: objeto, ámbito y dato clave de examen</h2>
+    <span class="chip ch-flame">6 normas</span>
+  </div>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="hd-grey" style="width:160px;">Norma</th>
+        <th class="hd-flame">Objeto / Qué regula</th>
+        <th class="hd-flame">Aplica a</th>
+        <th class="hd-flame">Dato clave de examen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="hi-red">
+        <td><strong>RITE (RD 1027/2007 mod. RD 178/2021)</strong></td>
+        <td>Diseño, eficiencia energética y mantenimiento de instalaciones térmicas. IT1 = diseño. IT2 = mantenimiento.</td>
+        <td>Todas las instalaciones térmicas en edificios (ACS, calefacción, climatización).</td>
+        <td>Es la norma PRINCIPAL para el ACS. Regula DISEÑO + MANTENIMIENTO. No regula la Legionela.</td>
+      </tr>
+      <tr class="hi-red">
+        <td><strong>RD 487/2022</strong></td>
+        <td>Prevención y control de la legionelosis. Instalaciones de mayor riesgo.</td>
+        <td>ACS centralizada con acumulador + retorno, torres de refrigeración, spas, fuentes ornamentales.</td>
+        <td><strong>DEROGÓ al RD 865/2003</strong>. Norma vigente sobre Legionela. Si aparece 865/2003 → derogada.</td>
+      </tr>
+      <tr>
+        <td><strong>CTE DB-HE (Sección Renovables, antes HE4)</strong></td>
+        <td>Fracción mínima de la demanda de ACS cubierta con energía renovable.</td>
+        <td>Edificios nuevos y grandes rehabilitaciones.</td>
+        <td>Desde 2019: exige RENOVABLE (no solo solar). Aerotermia y biomasa son igualmente válidas.</td>
+      </tr>
+      <tr>
+        <td><strong>CTE DB-HS4</strong></td>
+        <td>Suministro de agua: presiones, caudales mínimos, red de retorno ACS.</td>
+        <td>Todos los edificios nuevos y grandes rehabilitaciones.</td>
+        <td>Red de retorno ACS obligatoria cuando la tubería supera <strong>15 metros</strong>.</td>
+      </tr>
+      <tr>
+        <td><strong>RD 140/2003</strong></td>
+        <td>Criterios sanitarios del agua de consumo humano (agua potable).</td>
+        <td>Toda instalación que suministre agua de consumo humano.</td>
+        <td>Los materiales de la instalación no deben alterar la calidad del agua según este RD.</td>
+      </tr>
+      <tr>
+        <td><strong>RD 178/2021</strong></td>
+        <td>Modifica el RITE. Reconoce la aerotermia (bomba de calor) como energía renovable.</td>
+        <td>Instalaciones de ACS con bomba de calor.</td>
+        <td>Aerotermia = RENOVABLE. Alineación con Directiva Europea RED II (2018/2001).</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-red">
+    <strong>⚠ Trampa nº 1 de examen:</strong> El RITE regula DISEÑO y MANTENIMIENTO. El RD 487/2022 regula la LEGIONELA. Son normas con objetos distintos. Confundirlas es el error más frecuente.<br>
+    <strong>⚠ Trampa nº 2:</strong> RD 865/2003 está <strong>DEROGADO</strong>. Si aparece como opción de respuesta, es el distractor incorrecto.
+  </div>
+</div>
+
+
+<!-- ══════════════ TABLA 2: TIPOLOGÍAS POR ÁMBITO ══════════════ -->
+<div class="section-label">Tabla 2 — Tipologías por ámbito de producción</div>
+<div class="table-card top-teal">
+  <div class="table-card-header">
+    <span class="icon">🏗</span>
+    <h2>Individual vs Centralizado vs Mixto — ventajas, desventajas y Legionela</h2>
+    <span class="chip ch-teal">Tipologías</span>
+  </div>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="hd-grey">Característica</th>
+        <th class="hd-teal">🏠 Individual</th>
+        <th class="hd-flame">🏢 Centralizado</th>
+        <th class="hd-purple">🏨 Mixto / Semi-centralizado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="feat">Equipos típicos</td><td>Termo eléctrico, junker, caldera combi</td><td>Caldera central, solar centralizada, bomba de calor</td><td>Caldera central + acumuladores por planta/zona</td></tr>
+      <tr><td class="feat">Red de distribución</td><td class="ok">No necesaria</td><td class="no">Sí — ida y retorno</td><td class="warn">Sí — reducida por zonas</td></tr>
+      <tr><td class="feat">Red de retorno</td><td class="ok">No</td><td class="no">Sí (obligatoria si >15 m)</td><td class="warn">Sí, por zonas</td></tr>
+      <tr class="hi-red"><td class="feat">⚠ Riesgo Legionela</td><td class="ok">BAJO (sin aerosoles colectivos)</td><td class="no">ALTO (acumulador + retorno + uso colectivo)</td><td class="warn">MEDIO-ALTO</td></tr>
+      <tr><td class="feat">Sujeto a RD 487/2022</td><td class="ok">NO (uso individual)</td><td class="no">SÍ (mayor riesgo)</td><td class="warn">SÍ (según configuración)</td></tr>
+      <tr><td class="feat">Eficiencia energética</td><td class="warn">Menor (sin economías de escala)</td><td class="ok">Mayor (equipo único + renovables)</td><td class="ok">Alta (producción central + distribución corta)</td></tr>
+      <tr><td class="feat">Uso habitual</td><td>Viviendas y locales pequeños</td><td>Edificios residenciales, hoteles, hospitales</td><td>Hospitales, hoteles grandes, residencias de mayores</td></tr>
+      <tr><td class="feat">Complejidad de mantenimiento</td><td class="ok">Baja</td><td class="no">Alta</td><td class="no">Muy alta</td></tr>
+      <tr><td class="feat">Empresa mantenedora autorizada</td><td class="ok">No obligatorio (&lt;70 kW)</td><td class="no">Sí si &gt;70 kW (RITE IT2)</td><td class="no">Sí si &gt;70 kW (RITE IT2)</td></tr>
+    </tbody>
+  </table>
+  <div class="callout al-warn">
+    <strong>📌 Clave de selección:</strong> hasta 4-6 viviendas → sistema individual más económico. A partir de 8-10 viviendas y en edificios de uso intensivo → sistema centralizado con renovables, más eficiente y exigible por el CTE HE.
+  </div>
+</div>
+
+
+<!-- ══════════════ TABLA 3: ACUMULACIÓN VS INSTANTÁNEO ══════════════ -->
+<div class="section-label">Tabla 3 — Acumulación vs instantáneo: la diferencia clave en Legionela</div>
+<div class="table-card top-blue">
+  <div class="table-card-header">
+    <span class="icon">💧</span>
+    <h2>Sistemas con y sin acumulación — comparativa detallada</h2>
+    <span class="chip ch-blue">Examinable</span>
+  </div>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="hd-grey">Característica</th>
+        <th class="hd-green">⚡ Sin acumulación (instantáneo)</th>
+        <th class="hd-flame">🛢 Con acumulación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="feat">Equipos típicos</td><td>Calentador a gas instantáneo (junker), caldera combi</td><td>Termo eléctrico, acumulador a gas, acumulador solar, aerotermo</td></tr>
+      <tr><td class="feat">Depósito de almacenamiento</td><td class="ok">NO</td><td class="no">SÍ</td></tr>
+      <tr><td class="feat">Agua estancada</td><td class="ok">NO — pasa directamente al grifo</td><td class="no">SÍ — puede quedarse a temp. de riesgo</td></tr>
+      <tr class="hi-green"><td class="feat">✓ Riesgo de Legionela</td><td class="ok">MENOR (sin estancamiento)</td><td class="no">MAYOR (agua estancada posible)</td></tr>
+      <tr><td class="feat">Potencia instantánea necesaria</td><td class="no">MAYOR (calienta al paso)</td><td class="ok">MENOR (calor acumulado previamente)</td></tr>
+      <tr><td class="feat">Estabilidad de temperatura</td><td class="warn">Menor (depende del caudal)</td><td class="ok">Mayor (masa de agua caliente acumulada)</td></tr>
+      <tr><td class="feat">Respuesta a puntas de demanda</td><td class="warn">Limitada por la potencia</td><td class="ok">Buena (depósito de reserva)</td></tr>
+      <tr><td class="feat">Pérdidas en standby</td><td class="ok">NULAS (no hay agua caliente almacenada)</td><td class="no">Existen (el depósito pierde calor continuamente)</td></tr>
+      <tr><td class="feat">Espacio necesario</td><td class="ok">Reducido</td><td class="no">Mayor (depósito + equipo)</td></tr>
+      <tr><td class="feat">Ánodo de magnesio</td><td class="ok">No necesario</td><td class="warn">Necesario en acumuladores de acero. Sustituir cada 2-4 años.</td></tr>
+      <tr><td class="feat">Mantenimiento</td><td class="ok">Más sencillo</td><td class="no">Mayor (limpieza acumulador, ánodo, análisis de Legionela)</td></tr>
+    </tbody>
+  </table>
+  <div class="callout al-red">
+    <strong>⚠ Trampa frecuente:</strong> el sistema instantáneo tiene MENOR riesgo de Legionela, pero NO es inmune. Si hay un intercambiador con agua estancada aguas arriba, sí puede haber riesgo. La ausencia de depósito propio es la ventaja, no una garantía absoluta.
+  </div>
+</div>
+
+
+<!-- ══════════════ TABLA 4: TEMPERATURAS ══════════════ -->
+<div class="section-label">Tabla 4 — Las cinco temperaturas clave de ACS y Legionela</div>
+<div class="table-card top-flame">
+  <div class="table-card-header">
+    <span class="icon">🌡</span>
+    <h2>Temperaturas críticas: función, normativa y consecuencia</h2>
+    <span class="chip ch-flame">RD 487/2022 · CTE HS4</span>
+  </div>
+  <div class="temp-vis">
+    <div class="temp-box" style="background:#e8f4ff;border-color:var(--blue);">
+      <span class="tv" style="color:var(--blue);">&lt;20°C</span>
+      <span class="tl" style="color:var(--blue);">LATENCIA</span>
+      <div class="td">La bacteria sobrevive pero no prolifera. No es suficiente para desinfectar.</div>
+    </div>
+    <div class="temp-box" style="background:var(--red-lt);border-color:var(--flame);">
+      <span class="tv" style="color:var(--flame);">20–45°C</span>
+      <span class="tl" style="color:var(--flame);">⚠ PELIGRO</span>
+      <div class="td">Proliferación óptima. Óptimo: 35-37°C. Evitar agua estancada en este rango.</div>
+    </div>
+    <div class="temp-box" style="background:var(--gold-lt);border-color:var(--gold);">
+      <span class="tv" style="color:var(--gold);">≥50°C</span>
+      <span class="tl" style="color:#7a4e00;">RED</span>
+      <div class="td">Mínimo en la red de distribución. Sin proliferación. CTE HS4 + RD 487/2022.</div>
+    </div>
+    <div class="temp-box" style="background:var(--orange-lt);border-color:var(--orange);">
+      <span class="tv" style="color:var(--orange);">≥60°C</span>
+      <span class="tl" style="color:var(--orange);">ACUMULADOR</span>
+      <div class="td">Mínimo en el acumulador. Muere en 32 min. Funcionamiento normal.</div>
+    </div>
+    <div class="temp-box" style="background:var(--purple-lt);border-color:var(--purple);">
+      <span class="tv" style="color:var(--purple);">70°C</span>
+      <span class="tl" style="color:var(--purple);">CHOQUE</span>
+      <div class="td">Muerte instantánea. Medida correctora o preventiva. Mínimo 1 hora.</div>
+    </div>
+  </div>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="hd-grey" style="width:100px;">Temperatura</th>
+        <th class="hd-flame">Punto de aplicación</th>
+        <th class="hd-flame">Norma</th>
+        <th class="hd-flame">Por qué ese valor / Consecuencia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>&lt;20°C</strong></td><td>Agua en estado de latencia</td><td>RD 487/2022</td><td>La bacteria no prolifera pero tampoco muere. No es una temperatura de control útil.</td></tr>
+      <tr class="hi-red"><td><strong>20–45°C</strong></td><td>Zona de proliferación — a evitar en agua estancada</td><td>RD 487/2022</td><td>Rango óptimo de multiplicación de L. pneumophila. Óptimo: 35-37°C. El agua en tuberías frías o acumuladores mal mantenidos puede entrar en este rango.</td></tr>
+      <tr><td><strong>≥ 50°C</strong></td><td>Red de distribución de ACS (cualquier punto)</td><td>CTE HS4 + RD 487/2022</td><td>Por encima de 50°C la Legionella no puede reproducirse. Garantiza seguridad durante la distribución. La red de retorno debe mantener ≥50°C en el punto más desfavorable.</td></tr>
+      <tr class="hi"><td><strong>≥ 60°C</strong></td><td>Acumulador de ACS</td><td>CTE HS4 + RD 487/2022</td><td>A 60°C la bacteria muere en 32 minutos. Es el umbral de pasteurización continua. Temperatura normal de funcionamiento del acumulador.</td></tr>
+      <tr><td><strong>38–43°C</strong></td><td>Punto de uso (grifo), tras VMT</td><td>CTE HS4</td><td>Temperatura de confort para el usuario. La VMT mezcla ACS (60°C) + agua fría. Evita quemaduras. La VMT NO baja la temperatura del acumulador.</td></tr>
+      <tr class="hi-red"><td><strong>70°C</strong></td><td>Todo el sistema (choque térmico)</td><td>RD 487/2022</td><td>A 70°C la Legionella muere instantáneamente. Medida correctora ante colonización confirmada y preventiva periódica. Mantener ≥70°C durante al menos 1 hora en toda la red.</td></tr>
+    </tbody>
+  </table>
+  <div class="callout al-red">
+    <strong>⚠ El choque térmico (70°C) NO es el funcionamiento normal.</strong> El funcionamiento normal es 60°C en el acumulador. El choque es una medida puntual correctora o preventiva. Confundirlos es una trampa habitual en tipo test.
+  </div>
+</div>
+
+
+<!-- ══════════════ TABLA 5: FUENTES DE ENERGÍA ══════════════ -->
+<div class="section-label">Tabla 5 — Fuentes de energía para ACS: eficiencia y clasificación renovable</div>
+<div class="table-card top-gold">
+  <div class="table-card-header">
+    <span class="icon">⚡</span>
+    <h2>Comparativa de fuentes energéticas para ACS</h2>
+    <span class="chip ch-gold">Eficiencia · Renovables</span>
+  </div>
+  <div class="efic-grid">
+    <div class="efic-box" style="border-top-color:var(--orange);">
+      <span class="ev" style="color:var(--orange);">η 85-90%</span>
+      <span class="el" style="color:var(--orange);">🔥 Caldera convencional (gas)</span>
+      <div class="ed">Sin recuperación de calor latente de humos. Rendimiento sobre PCI.</div>
+      <span class="et" style="background:var(--orange-lt);color:var(--orange);">No renovable</span>
+    </div>
+    <div class="efic-box" style="border-top-color:var(--flame);">
+      <span class="ev" style="color:var(--flame);">&gt;100% PCI</span>
+      <span class="el" style="color:var(--flame);">🔥 Caldera condensación (gas)</span>
+      <div class="ed">Recupera calor latente del vapor de los humos. Hasta 108-110% en PCI. Retorno &lt;55°C.</div>
+      <span class="et" style="background:var(--red-lt);color:var(--flame);">No renovable</span>
+    </div>
+    <div class="efic-box" style="border-top-color:var(--gold);">
+      <span class="ev" style="color:var(--gold);">η 100%</span>
+      <span class="el" style="color:var(--gold);">⚡ Eléctrico (resistencia)</span>
+      <div class="ed">100% conversión eléctrico→calor. El kWh eléctrico es más caro que el gas.</div>
+      <span class="et" style="background:var(--gold-lt);color:#7a4e00;">Mix eléctrico</span>
+    </div>
+    <div class="efic-box" style="border-top-color:var(--blue);">
+      <span class="ev" style="color:var(--blue);">COP 3-4</span>
+      <span class="el" style="color:var(--blue);">💨 Bomba de calor (aerotermia)</span>
+      <div class="ed">1 kWh eléctrico → 3-4 kWh de calor. Funciona hasta -15°C ext. RD 178/2021.</div>
+      <span class="et" style="background:var(--blue-lt);color:var(--blue-dk);">✓ RENOVABLE</span>
+    </div>
+    <div class="efic-box" style="border-top-color:var(--teal);">
+      <span class="ev" style="color:var(--teal);">50-70% cobertura</span>
+      <span class="el" style="color:var(--teal);">☀ Solar térmica</span>
+      <div class="ed">Siempre necesita equipo de apoyo para cubrir el 100%. Captador plano o tubo de vacío.</div>
+      <span class="et" style="background:var(--teal-lt);color:var(--teal);">✓ RENOVABLE</span>
+    </div>
+    <div class="efic-box" style="border-top-color:var(--green);">
+      <span class="ev" style="color:var(--green);">η 85-92%</span>
+      <span class="el" style="color:var(--green);">🌿 Biomasa (pellets, astilla)</span>
+      <div class="ed">Alta demanda: residencias, hoteles rurales, polideportivos. CO₂ neutro.</div>
+      <span class="et" style="background:var(--green-lt);color:var(--green);">✓ RENOVABLE</span>
+    </div>
+  </div>
+  <table class="cmp-table" style="margin-top:.5rem;">
+    <thead>
+      <tr>
+        <th class="hd-grey">Fuente</th>
+        <th class="hd-gold">Indicador eficiencia</th>
+        <th class="hd-gold">¿Renovable? (norma)</th>
+        <th class="hd-gold">Pareja ideal / uso típico</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Gas (caldera convencional)</td><td>η 85-90%</td><td class="no">No</td><td>Vivienda con gas. Sistema más extendido en España.</td></tr>
+      <tr class="hi-gold"><td>Gas (caldera condensación)</td><td>&gt;100% PCI (hasta 110%)</td><td class="no">No</td><td>Pareja perfecta: suelo radiante (baja T de retorno). Ahorro 15-20% vs caldera convencional.</td></tr>
+      <tr><td>Eléctrico (resistencia)</td><td>η 100%</td><td class="warn">Depende del mix eléctrico</td><td>Vivienda sin gas. Termo eléctrico. Alto coste de operación.</td></tr>
+      <tr class="hi-green"><td>Bomba de calor (aerotermia)</td><td>COP 3-4 / SCOP estacional</td><td class="ok">SÍ — RD 178/2021 + RED II</td><td>Vivienda unifamiliar y colectiva. Alta eficiencia. Aerotermo o split.</td></tr>
+      <tr class="hi-green"><td>Solar térmica</td><td>Factor solar 50-70%</td><td class="ok">SÍ — CTE HE Renovables</td><td>Requiere siempre equipo de apoyo. Captador plano (clima suave) o tubo de vacío (clima frío).</td></tr>
+      <tr class="hi-green"><td>Biomasa</td><td>η 85-92%</td><td class="ok">SÍ — CTE HE Renovables</td><td>Edificios con alta demanda: residencias de mayores, hoteles rurales, polideportivos.</td></tr>
+    </tbody>
+  </table>
+  <div class="callout al-warn">
+    <strong>⚠ CTE HE4 → ahora CTE HE "Renovables":</strong> antes (hasta 2019) exigía solar térmica específicamente. Desde la revisión del CTE (2019-2022) exige energía RENOVABLE en general. La aerotermia, la biomasa y la solar son igualmente válidas para cumplir la exigencia. Si el examen dice "solar obligatoria" como respuesta única → respuesta desactualizada.
+  </div>
+</div>
+
+
+<!-- ══════════════ TABLA 6: CAPTADORES SOLARES ══════════════ -->
+<div class="section-label">Tabla 6 — Captadores solares: plano vs tubo de vacío</div>
+<div class="table-card top-gold">
+  <div class="table-card-header">
+    <span class="icon">☀</span>
+    <h2>Captador plano vs tubo de vacío — cuándo usar cada uno</h2>
+    <span class="chip ch-gold">Solar térmica</span>
+  </div>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="hd-grey">Característica</th>
+        <th class="hd-gold">☀ Captador plano (placa plana)</th>
+        <th class="hd-blue">🔵 Captador de tubo de vacío</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="feat">Principio de funcionamiento</td><td>Placa absorbedora (Cu o Al con tratamiento selectivo) + vidrio templado de baja reflectancia + carcasa aislada.</td><td>Tubos de vidrio al vacío. El vacío actúa como aislante térmico, eliminando las pérdidas por convección y conducción.</td></tr>
+      <tr><td class="feat">Temperatura de trabajo habitual</td><td>40-80°C</td><td>60-150°C</td></tr>
+      <tr><td class="feat">Rendimiento en días fríos / nublados</td><td class="warn">Menor (pierde calor al exterior)</td><td class="ok">Mayor (el vacío aísla, pérdidas mínimas)</td></tr>
+      <tr><td class="feat">Rendimiento en clima cálido y radiación directa</td><td class="ok">Adecuado (clima mediterráneo y atlántico)</td><td class="ok">Alto (también en radiación difusa)</td></tr>
+      <tr><td class="feat">Coste inicial</td><td class="ok">MENOR — el más económico</td><td class="no">MAYOR</td></tr>
+      <tr><td class="feat">Uso más habitual</td><td class="ok">Vivienda residencial. El más extendido en España.</td><td>Clima frío o con frecuente nubosidad (norte de España). Calefacción + ACS combinados.</td></tr>
+      <tr><td class="feat">Estancamiento (sobrocalentamiento en verano)</td><td class="warn">Puede alcanzar 120-130°C. Riesgo de ebullición del fluido.</td><td class="no">Puede superar 150°C. Mayor riesgo de estancamiento. Requiere medidas de protección adicionales.</td></tr>
+      <tr><td class="feat">Mantenimiento</td><td class="ok">Sencillo. Limpieza del vidrio, revisión de sellado y presión del circuito.</td><td class="warn">Mayor atención. Los tubos pueden romperse. Más delicado en zonas con granizo.</td></tr>
+    </tbody>
+  </table>
+  <div class="callout al-red">
+    <strong>⚠ El circuito primario solar es siempre CERRADO.</strong> Circula agua + anticongelante (glicol), NO agua sanitaria. El intercambiador separa ambos circuitos. El equipo de apoyo es SIEMPRE necesario: ninguna instalación solar cubre el 100% de la demanda anual.
+  </div>
+  <div class="table-card-note">Circuito primario (cerrado, con glicol): captadores → bomba → intercambiador → retorno. | Circuito sanitario: red → intercambiador → acumulador solar → equipo apoyo → acumulador final (≥60°C) → VMT → usuarios.</div>
+</div>
+
+
+<!-- ══════════════ TABLA 7: COMPONENTES ══════════════ -->
+<div class="section-label">Tabla 7 — Componentes de la instalación centralizada: función y dato de examen</div>
+<div class="table-card top-blue">
+  <div class="table-card-header">
+    <span class="icon">🔩</span>
+    <h2>Componentes, función y avería típica asociada</h2>
+    <span class="chip ch-blue">Diseño · Mantenimiento</span>
+  </div>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="hd-grey" style="width:150px;">Componente</th>
+        <th class="hd-blue">Función</th>
+        <th class="hd-blue">Dato clave de examen</th>
+        <th class="hd-blue">Avería / señal de fallo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Acumulador</strong></td><td>Almacena el ACS producido. Mantiene la reserva de agua caliente para cubrir las puntas de demanda.</td><td>≥60°C siempre. Materiales: acero vitrificado, inoxidable o con revestimiento protector.</td><td>Agua marrón o con olor → ánodo agotado o corrosión. Agua turbia → sedimentos. T insuficiente → termostato o resistencia.</td></tr>
+      <tr class="hi"><td><strong>VMT (Válvula Mezcladora Termoestática)</strong></td><td>Mezcla ACS (60°C) con agua fría hasta 38-43°C en el punto de uso. Protege de quemaduras sin bajar la T del acumulador.</td><td>Obligatoria en hospitales, residencias de mayores y guarderías. No baja la T del acumulador.</td><td>Agua muy caliente → VMT falla abierta hacia ACS. Sin ACS o agua fría → VMT falla hacia fría. Avería de seguridad urgente.</td></tr>
+      <tr><td><strong>Intercambiador de calor</strong></td><td>Separa circuito primario del sanitario. Transfiere el calor sin mezclar los fluidos.</td><td>De placas (eficiente, compacto) o de serpentín (sumergido en el acumulador).</td><td>Pérdida de eficiencia → incrustaciones calcáreas. Si hay contaminación del agua sanitaria → fuga en el intercambiador.</td></tr>
+      <tr><td><strong>Bomba de recirculación del retorno</strong></td><td>Mantiene circulación continua en la red de retorno. Garantiza ≥50°C en toda la red.</td><td>Funciona 24h o controlada por termostato diferencial. Sin bomba → el agua se enfría → zona de riesgo.</td><td>Ruidos → rodamientos. Sin circulación → temperatura en red baja de 50°C → riesgo de Legionela.</td></tr>
+      <tr><td><strong>Vaso de expansión</strong></td><td>Absorbe la dilatación del agua al calentarse (~4% entre 10°C y 60°C). Evita sobrepresiones.</td><td>Puede ser abierto (antiguo) o cerrado con membrana (actual). La precarga de aire debe revisarse periódicamente.</td><td>Válvula de seguridad abre con frecuencia → vaso agotado o mal dimensionado. Presión de precarga incorrecta.</td></tr>
+      <tr><td><strong>Válvula de seguridad</strong></td><td>Protege el circuito contra sobrepresiones abriendo automáticamente si se supera el tarado.</td><td>Tarada a 6-8 bar en instalaciones de ACS. Puede bloquearse por cal → revisión periódica.</td><td>Pérdida de agua continua → válvula bloqueada en abierto por cal. No abre → bloqueada por cal en cerrado. Peligroso.</td></tr>
+      <tr class="hi-red"><td><strong>Ánodo de magnesio</strong></td><td>Protección catódica del depósito de acero. Se sacrifica (se corroe él) para proteger el depósito.</td><td>Sustituir cada 2-4 años. Señal de agotamiento: agua turbia o de color marrón-rojizo.</td><td>Agua marrón o rojiza → ánodo agotado, depósito oxidándose. Sustituir ánodo y limpiar depósito urgente.</td></tr>
+      <tr><td><strong>Red de retorno</strong></td><td>Circuito de vuelta del ACS desde los puntos terminales al acumulador. Mantiene circulación continua.</td><td>Obligatoria cuando la tubería de ACS supera 15 metros (CTE HS4). Temperatura mínima en retorno: ≥50°C.</td><td>Temperatura en red baja de 50°C → agua fría estancada → riesgo de Legionela.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- ══════════════ TABLA 8: MANTENIMIENTO ══════════════ -->
+<div class="section-label">Tabla 8 — Periodicidades de mantenimiento (RITE IT2 + RD 487/2022)</div>
+<div class="table-card top-green">
+  <div class="table-card-header">
+    <span class="icon">🔧</span>
+    <h2>Acciones de mantenimiento, frecuencia y responsable</h2>
+    <span class="chip ch-green">Mantenimiento</span>
+  </div>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="hd-grey">Frecuencia</th>
+        <th class="hd-green">Acción de mantenimiento</th>
+        <th class="hd-green">Objetivo / Normativa</th>
+        <th class="hd-green">Señal de alarma si no se hace</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="sep"><td colspan="4">Continuo / Diario</td></tr>
+      <tr class="hi-red">
+        <td><strong>Diario / Continuo</strong></td>
+        <td>Control de temperatura del acumulador (≥60°C) mediante sonda o sistema de control automático.</td>
+        <td>RD 487/2022. La acción más crítica. Primera en ser auditada.</td>
+        <td>Temperatura baja de 60°C → proliferación de Legionela. Actuar de inmediato.</td>
+      </tr>
+      <tr class="sep"><td colspan="4">Trimestral</td></tr>
+      <tr>
+        <td>Trimestral</td>
+        <td>Limpieza y desinfección de alcachofas de ducha y aireadores de grifo.</td>
+        <td>RD 487/2022. Eliminación de biofilm y cal en terminales.</td>
+        <td>Biofilm acumulado → foco de Legionela en los terminales.</td>
+      </tr>
+      <tr class="sep"><td colspan="4">Semestral</td></tr>
+      <tr>
+        <td>Semestral</td>
+        <td>Revisión de VMT: comprobar temperatura de entrega (38-43°C). Revisión de bomba de retorno y válvulas de seguridad.</td>
+        <td>RITE IT2. Seguridad y eficiencia de la instalación.</td>
+        <td>VMT averiada → quemaduras o falta de ACS. Bomba parada → red se enfría.</td>
+      </tr>
+      <tr class="sep"><td colspan="4">Anual</td></tr>
+      <tr class="hi">
+        <td>Anual</td>
+        <td>Limpieza y desinfección del acumulador. Eliminación de sedimentos y biofilm interior. Revisión del equipo de producción (caldera, BdC, captadores). Análisis microbiológico del agua (Legionela) en instalaciones de mayor riesgo.</td>
+        <td>RITE IT2 + RD 487/2022. La revisión más completa del sistema.</td>
+        <td>Sedimentos → reducción de la capacidad del depósito y del rendimiento. Biofilm → riesgo de Legionela.</td>
+      </tr>
+      <tr class="sep"><td colspan="4">Cada 2-4 años</td></tr>
+      <tr>
+        <td>Cada 2-4 años</td>
+        <td>Sustitución del ánodo de magnesio en acumuladores de acero con protección catódica.</td>
+        <td>Protección contra la corrosión del depósito. Inspeccionar en cada revisión anual.</td>
+        <td>Ánodo agotado → agua turbia o marrón → corrosión del depósito → fuga o rotura.</td>
+      </tr>
+      <tr class="sep"><td colspan="4">Ante colonización confirmada de Legionela</td></tr>
+      <tr class="hi-red">
+        <td>Inmediato</td>
+        <td><strong>Choque térmico:</strong> elevar toda la instalación a ≥70°C durante ≥1 hora. Purgar desde todos los terminales hasta que el agua salga a ≥70°C.</td>
+        <td>RD 487/2022. Medida correctora urgente. También preventiva periódica.</td>
+        <td>Sin choque → la colonización se extiende. Riesgo de brote de legionelosis en los usuarios.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-warn">
+    <strong>📌 Responsabilidad (RD 487/2022 + RITE IT2):</strong> la responsabilidad del plan de mantenimiento y del cumplimiento de la normativa de Legionela recae en el <strong>TITULAR de la instalación</strong> (el propietario del edificio o la empresa gestora). La empresa mantenedora <em>ejecuta</em>; el titular <em>responde</em> legalmente. En instalaciones con potencia &gt;70 kW, el RITE obliga a que el mantenimiento lo realice una <strong>empresa mantenedora autorizada</strong>.
+  </div>
+  <div class="callout al-purple">
+    <strong>📌 Registro documental obligatorio:</strong> todas las acciones de mantenimiento, análisis y resultados deben quedar registradas por escrito y estar disponibles para la inspección. La falta de registros es una infracción administrativa. En instalaciones de mayor riesgo, los registros deben conservarse un mínimo de 5 años.
+  </div>
+</div>
+
+</body>
+</html>
