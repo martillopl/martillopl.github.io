@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 13 – Cuadros comparativos · Energías Renovables y Fotovoltaica</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f7fa;--surface:#fff;--surface-2:#f8f9fb;
+  --border:#ccd3de;--text:#1a2233;--muted:#4e5f7a;--faint:#8a9abb;
+  --blue:#0d4f8b;--blue-lt:#dceaf7;--blue-dk:#082f57;
+  --teal:#00707a;--teal-lt:#ccedf0;
+  --green:#1a6633;--green-lt:#d4eedd;
+  --gold:#c47d00;--gold-lt:#faefd0;
+  --orange:#8b3a0d;--orange-lt:#fce8d8;
+  --purple:#5b3690;--purple-lt:#ece4f8;
+  --flame:#c0392b;--red-lt:#fde8e8;
+  --amber:#b85c00;--amber-lt:#fdf0d8;
+  --font-d:'Cabinet Grotesk',sans-serif;
+  --font-b:'Satoshi',sans-serif;
+  --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.88rem;line-height:1.65;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 5rem;}
+.file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s;}
+.file-nav a:hover,.file-nav a.active{background:var(--amber);color:white;border-color:var(--amber);}
+.page-header{background:linear-gradient(135deg,#b85c00 0%,#5c2d00 100%);color:white;border-radius:var(--r-xl);padding:2rem 2.5rem;margin-bottom:2rem;}
+.page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;}
+.page-header h1{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,1.85rem);font-weight:800;line-height:1.2;margin-bottom:.4rem;}
+.page-header .sub{font-size:.83rem;opacity:.8;}
+.section-label{font-family:var(--font-d);font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:2.5rem 0 .7rem;}
+.table-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.5rem;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+.table-card-header{padding:.85rem 1.25rem;display:flex;align-items:center;gap:.65rem;border-bottom:1px solid var(--border);}
+.table-card-header .icon{font-size:1.1rem;}
+.table-card-header h2{font-family:var(--font-d);font-size:.95rem;font-weight:800;}
+.top-blue{border-top:4px solid var(--blue);}
+.top-teal{border-top:4px solid var(--teal);}
+.top-green{border-top:4px solid var(--green);}
+.top-gold{border-top:4px solid var(--gold);}
+.top-orange{border-top:4px solid var(--orange);}
+.top-purple{border-top:4px solid var(--purple);}
+.top-flame{border-top:4px solid var(--flame);}
+.top-amber{border-top:4px solid var(--amber);}
+.chip{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:2px 8px;border-radius:999px;white-space:nowrap;margin-left:auto;}
+.ch-blue{background:var(--blue-lt);color:var(--blue-dk);}
+.ch-teal{background:var(--teal-lt);color:var(--teal);}
+.ch-green{background:var(--green-lt);color:var(--green);}
+.ch-gold{background:var(--gold-lt);color:#7a4e00;}
+.ch-orange{background:var(--orange-lt);color:var(--orange);}
+.ch-purple{background:var(--purple-lt);color:var(--purple);}
+.ch-flame{background:var(--red-lt);color:var(--flame);}
+.ch-amber{background:var(--amber-lt);color:var(--amber);}
+.callout{border-radius:var(--r-md);padding:.75rem 1rem;font-size:.83rem;margin:.75rem 1.25rem;line-height:1.55;}
+.al-red{background:var(--red-lt);border-left:3px solid var(--flame);}
+.al-blue{background:var(--blue-lt);border-left:3px solid var(--blue);}
+.al-teal{background:var(--teal-lt);border-left:3px solid var(--teal);}
+.al-green{background:var(--green-lt);border-left:3px solid var(--green);}
+.al-gold{background:var(--gold-lt);border-left:3px solid var(--gold);}
+.al-purple{background:var(--purple-lt);border-left:3px solid var(--purple);}
+.al-orange{background:var(--orange-lt);border-left:3px solid var(--orange);}
+.al-amber{background:var(--amber-lt);border-left:3px solid var(--amber);}
+.cmp-table{width:100%;border-collapse:collapse;font-size:.84rem;}
+.cmp-table th{font-family:var(--font-d);font-weight:800;font-size:.78rem;padding:.55rem .9rem;text-align:left;border-bottom:2px solid var(--border);}
+.cmp-table th.hd-blue{background:var(--blue);color:white;}
+.cmp-table th.hd-flame{background:var(--flame);color:white;}
+.cmp-table th.hd-teal{background:var(--teal);color:white;}
+.cmp-table th.hd-green{background:var(--green);color:white;}
+.cmp-table th.hd-gold{background:var(--gold);color:white;}
+.cmp-table th.hd-orange{background:var(--orange);color:white;}
+.cmp-table th.hd-purple{background:var(--purple);color:white;}
+.cmp-table th.hd-amber{background:var(--amber);color:white;}
+.cmp-table th.hd-grey{background:#e8edf0;color:var(--text);}
+.cmp-table td{padding:.5rem .9rem;border-bottom:1px solid #eef3f6;vertical-align:top;}
+.cmp-table tr:last-child td{border-bottom:none;}
+.cmp-table tr:hover td{background:#f8f9fb;}
+.cmp-table tr.hi td{background:#dceaf7!important;font-weight:700;}
+.cmp-table tr.hi-red td{background:#fde8e8!important;font-weight:700;}
+.cmp-table tr.hi-green td{background:#d4eedd!important;font-weight:700;}
+.cmp-table tr.hi-gold td{background:var(--gold-lt)!important;font-weight:700;}
+.cmp-table tr.hi-purple td{background:var(--purple-lt)!important;font-weight:700;}
+.cmp-table tr.hi-teal td{background:var(--teal-lt)!important;font-weight:700;}
+.cmp-table tr.hi-orange td{background:var(--orange-lt)!important;font-weight:700;}
+.cmp-table tr.hi-amber td{background:var(--amber-lt)!important;font-weight:700;}
+.cmp-table .feat{font-weight:700;color:var(--muted);font-size:.79rem;white-space:nowrap;}
+.ok{color:var(--green);font-weight:800;}
+.no{color:var(--flame);font-weight:800;}
+.warn{color:var(--orange);font-weight:700;}
+.mem-section{background:linear-gradient(135deg,#b85c00,#5c2d00);border-radius:var(--r-xl);padding:1.75rem 2rem;margin-bottom:1.5rem;}
+.mem-section h2{font-family:var(--font-d);font-weight:800;color:white;font-size:1.05rem;margin-bottom:1.1rem;}
+.mem-grid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;}
+.mem-item{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:var(--r-lg);padding:.75rem 1rem;}
+.mem-label{font-size:.65rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#ffd09a;display:block;margin-bottom:3px;}
+.mem-text{font-size:.84rem;color:#fdf5ec;line-height:1.5;}
+@media(max-width:680px){
+  .cmp-table{font-size:.78rem;}
+  .cmp-table td,.cmp-table th{padding:.4rem .6rem;}
+  .mem-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html" class="active">📊 Cuadros comparativos</a>
+  </div>
+
+<div class="page-header">
+  <div class="meta">Tema 13 · Gestor de Mantenimiento (Nivel B) · UPNA · Cuadros comparativos</div>
+  <h1>Renovables y Fotovoltaica — Tablas operativas para examen</h1>
+  <div class="sub">8 tablas · Renovables en edificios · Componentes FV · Tipos de paneles · Inversores · Modalidades de autoconsumo · Acumulación · Gestión · Normativa</div>
+</div>
+
+
+<!-- ══════════ TABLA 1: RENOVABLES EN EDIFICIOS ══════════ -->
+<div class="section-label">Tabla 1 — Energías renovables aplicables a edificios: comparativa general</div>
+<div class="table-card top-green">
+  <div class="table-card-header"><span class="icon">🌿</span><h2>Solar FV · Solar térmica · Aerotermia · Geotermia · Biomasa · Mini-eólica</h2><span class="chip ch-green">Renovables en edificios</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:145px;">Tecnología</th>
+      <th class="hd-green">Energía que produce</th>
+      <th class="hd-green">Aplicación principal en edificios</th>
+      <th class="hd-green">Normativa de referencia</th>
+      <th class="hd-green">¿Obligatoria en nuevos?</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi-amber">
+        <td><strong>Solar fotovoltaica</strong></td>
+        <td>Electricidad</td>
+        <td>Autoconsumo eléctrico: iluminación, equipos, climatización, recarga VE.</td>
+        <td>RD 244/2019 (autoconsumo). CTE DB-HE5 (contribución FV mínima).</td>
+        <td class="ok"><strong>SÍ</strong> en edificios nuevos y grandes rehabilitaciones (CTE-HE5 y HE0).</td>
+      </tr>
+      <tr>
+        <td><strong>Solar térmica</strong></td>
+        <td>Calor (ACS y apoyo calefacción)</td>
+        <td>Producción de ACS. Apoyo a calefacción (suelo radiante). Piscinas.</td>
+        <td>CTE DB-HE4. RITE.</td>
+        <td class="ok"><strong>SÍ</strong> en edificios con demanda de ACS (CTE-HE4), aunque puede sustituirse por otras renovables.</td>
+      </tr>
+      <tr>
+        <td><strong>Aerotermia</strong></td>
+        <td>Calor y frío (bomba de calor)</td>
+        <td>Calefacción, refrigeración y ACS. Sustitución de caldera de gas.</td>
+        <td>RD 178/2021 (renovable). RITE.</td>
+        <td class="warn">No directamente obligatoria, pero computa como renovable para cumplir CTE-HE.</td>
+      </tr>
+      <tr>
+        <td><strong>Geotermia</strong></td>
+        <td>Calor y frío (bomba de calor)</td>
+        <td>Calefacción, refrigeración y ACS. Mayor rendimiento que aerotermia.</td>
+        <td>RD 178/2021 (renovable). RITE. Ley de Minas (perforaciones).</td>
+        <td class="warn">No obligatoria, pero computa como renovable. Requiere autorización de perforación.</td>
+      </tr>
+      <tr>
+        <td><strong>Biomasa</strong></td>
+        <td>Calor</td>
+        <td>Calefacción y ACS. Sustitución de caldera de gas en zonas con acceso a biomasa.</td>
+        <td>RITE. RD 178/2021 (renovable). Normativa de calidad del aire.</td>
+        <td class="warn">Computa como renovable. Limitaciones en zonas urbanas por calidad del aire.</td>
+      </tr>
+      <tr>
+        <td><strong>Mini-eólica</strong></td>
+        <td>Electricidad</td>
+        <td>Muy limitada en edificios. Aplicación en cubiertas de edificios singulares o rurales.</td>
+        <td>RD 244/2019 si se conecta a red. Normativa urbanística local.</td>
+        <td class="no">NO obligatoria. Uso muy restringido en entorno urbano.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-amber">
+    <strong>📌 La fotovoltaica es la renovable eléctrica de referencia en edificios.</strong> El CTE-HE5 exige una potencia fotovoltaica mínima instalada en edificios nuevos y grandes rehabilitaciones, calculada en función de la superficie construida y el uso del edificio. Es el precepto normativo más preguntado del tema.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 2: COMPONENTES DE UNA INSTALACIÓN FV ══════════ -->
+<div class="section-label">Tabla 2 — Componentes de una instalación fotovoltaica: función y dato de examen</div>
+<div class="table-card top-amber">
+  <div class="table-card-header"><span class="icon">☀</span><h2>Panel · Inversor · Estructura · Contador · Protecciones · Batería · Monitorización</h2><span class="chip ch-amber">Componentes FV</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:160px;">Componente</th>
+      <th class="hd-amber">Función</th>
+      <th class="hd-amber">Tipo / Variantes</th>
+      <th class="hd-amber">Dato clave de examen</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi-amber">
+        <td><strong>Panel / Módulo FV</strong></td>
+        <td>Convierte la radiación solar en corriente continua (CC) mediante el efecto fotovoltaico.</td>
+        <td>Monocristalino, policristalino, capa fina (thin-film).</td>
+        <td>Genera corriente continua (CC). El inversor la convierte a corriente alterna (CA). Rendimiento típico 17–24%.</td>
+      </tr>
+      <tr class="hi-green">
+        <td><strong>Inversor</strong></td>
+        <td>Convierte la CC del generador FV en CA compatible con la red eléctrica o la instalación interior.</td>
+        <td>String inversor, microinversor, inversor híbrido (con batería).</td>
+        <td><strong>EL COMPONENTE MÁS IMPORTANTE.</strong> Sin inversor no hay CA. Incorpora el seguidor del punto de máxima potencia (MPPT).</td>
+      </tr>
+      <tr>
+        <td><strong>Estructura de soporte</strong></td>
+        <td>Sujeta los paneles en la orientación e inclinación óptimas.</td>
+        <td>Fija en cubierta inclinada, coplanar, con inclinación optimizada, seguidor solar (tracker).</td>
+        <td>Orientación óptima en España: sur, inclinación 30–35°. El seguidor solar aumenta la producción hasta un 30% pero añade coste y mantenimiento.</td>
+      </tr>
+      <tr>
+        <td><strong>Contador bidireccional</strong></td>
+        <td>Mide la energía consumida de la red y la energía vertida a la red (excedentes).</td>
+        <td>Contador inteligente (smart meter), bidireccional.</td>
+        <td><strong>Obligatorio en autoconsumo con excedentes</strong> para contabilizar la compensación de excedentes. Lo instala la distribuidora.</td>
+      </tr>
+      <tr>
+        <td><strong>Protecciones eléctricas</strong></td>
+        <td>Protegen la instalación y a las personas: sobretensiones, cortocircuito, fallo de aislamiento, antiisla.</td>
+        <td>Fusibles CC, interruptor CC, protección antiisla (en el inversor), descargadores de sobretensión.</td>
+        <td><strong>Protección antiisla:</strong> desconecta el inversor automáticamente si falta la red. Imprescindible para la seguridad de los trabajadores de la distribuidora.</td>
+      </tr>
+      <tr class="hi-purple">
+        <td><strong>Sistema de acumulación (batería)</strong></td>
+        <td>Almacena la energía FV generada para consumirla cuando no hay sol (noche, días nublados).</td>
+        <td>Litio (LFP, NMC), plomo-ácido, flujo redox. El litio LFP es el estándar actual.</td>
+        <td>Aumenta el autoconsumo. Requiere inversor híbrido o cargador adicional. Ver Tabla 6 para detalle completo.</td>
+      </tr>
+      <tr>
+        <td><strong>Sistema de monitorización</strong></td>
+        <td>Mide y registra en tiempo real la producción, el consumo, el estado de la batería y los excedentes.</td>
+        <td>Datalogger + portal web/app. Integrable con BMS del edificio.</td>
+        <td>Permite detectar fallos (panel sombreado, inversor degradado), calcular el rendimiento real y verificar el cumplimiento del CTE.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- ══════════ TABLA 3: TIPOS DE PANELES ══════════ -->
+<div class="section-label">Tabla 3 — Tipos de paneles fotovoltaicos: monocristalino vs policristalino vs capa fina</div>
+<div class="table-card top-gold">
+  <div class="table-card-header"><span class="icon">🔆</span><h2>Monocristalino · Policristalino · Capa fina (thin-film) — comparativa técnica</h2><span class="chip ch-gold">Tipos de paneles</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey">Característica</th>
+      <th class="hd-gold">Monocristalino</th>
+      <th class="hd-gold">Policristalino</th>
+      <th class="hd-gold">Capa fina (thin-film)</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td class="feat">Rendimiento típico</td>
+        <td class="ok"><strong>19–24%</strong> (el más alto)</td>
+        <td>16–18%</td>
+        <td>10–13% (menor)</td>
+      </tr>
+      <tr>
+        <td class="feat">Eficiencia con calor</td>
+        <td class="warn">Pierde rendimiento a alta Tª (coef. térmico negativo)</td>
+        <td class="warn">Pierde menos que el monocristalino</td>
+        <td class="ok">El menos afectado por la temperatura</td>
+      </tr>
+      <tr>
+        <td class="feat">Comportamiento con sombras parciales</td>
+        <td class="no">Sensible. Una sombra parcial puede afectar a toda la cadena (string).</td>
+        <td class="no">Similar al monocristalino. Sensible a sombras.</td>
+        <td class="ok">Más tolerante a sombras parciales</td>
+      </tr>
+      <tr class="hi-gold">
+        <td class="feat">Espacio necesario</td>
+        <td class="ok">Menor (más eficiente por m²)</td>
+        <td class="warn">Mayor que el mono</td>
+        <td class="no">Mayor (menor eficiencia por m²)</td>
+      </tr>
+      <tr>
+        <td class="feat">Coste</td>
+        <td class="warn">Mayor coste unitario, pero mejor relación Wp/m²</td>
+        <td class="ok">Menor coste</td>
+        <td class="ok">Bajo coste de fabricación</td>
+      </tr>
+      <tr>
+        <td class="feat">Vida útil / Garantía</td>
+        <td colspan="2" style="text-align:center;">25–30 años. Garantía de producción: 80% a 25 años.</td>
+        <td>15–20 años. Degradación más rápida.</td>
+      </tr>
+      <tr class="hi-green">
+        <td class="feat">Uso dominante actual</td>
+        <td class="ok"><strong>Estándar actual en edificios y plantas.</strong> El más instalado en España.</td>
+        <td>En declive frente al monocristalino.</td>
+        <td>Integración arquitectónica (BIPV), tejados curvos, fachadas.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-gold">
+    <strong>📌 El panel monocristalino es el estándar actual</strong> en instalaciones de edificios y plantas fotovoltaicas. Ofrece el mayor rendimiento por metro cuadrado, lo que es crítico cuando el espacio de cubierta es limitado. El policristalino está en declive. La capa fina destaca en integración arquitectónica (BIPV: Building Integrated PhotoVoltaics).
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 4: TIPOS DE INVERSORES ══════════ -->
+<div class="section-label">Tabla 4 — Tipos de inversores fotovoltaicos: string, microinversor e híbrido</div>
+<div class="table-card top-teal">
+  <div class="table-card-header"><span class="icon">⚡</span><h2>Inversor string · Microinversor · Optimizador de potencia · Inversor híbrido</h2><span class="chip ch-teal">Inversores</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:165px;">Tipo</th>
+      <th class="hd-teal">Descripción</th>
+      <th class="hd-teal">Ventaja</th>
+      <th class="hd-teal">Inconveniente</th>
+      <th class="hd-teal">Cuándo usar</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi-teal">
+        <td><strong>Inversor string (central)</strong></td>
+        <td>Un solo inversor gestiona una cadena (string) de paneles en serie. El más común.</td>
+        <td class="ok">Menor coste. Simple. Fácil mantenimiento. Alta eficiencia en condiciones óptimas.</td>
+        <td class="no">Si un panel se sombrea, afecta al rendimiento de todos los de la cadena.</td>
+        <td>Cubiertas sin sombras, orientación única, instalaciones medianas-grandes.</td>
+      </tr>
+      <tr>
+        <td><strong>Microinversor</strong></td>
+        <td>Un inversor por cada panel. Cada panel trabaja de forma independiente.</td>
+        <td class="ok">Inmune a sombras parciales. Monitorización panel a panel. Mayor producción en condiciones complejas.</td>
+        <td class="no">Mayor coste. Más puntos de fallo. Mantenimiento más complejo (en cubierta).</td>
+        <td>Cubiertas con sombras parciales (chimeneas, antenas, árboles). Instalaciones pequeñas.</td>
+      </tr>
+      <tr>
+        <td><strong>Optimizador de potencia</strong></td>
+        <td>Dispositivo que se instala en cada panel y trabaja con un inversor string. Optimiza el MPPT panel a panel.</td>
+        <td class="ok">Mitiga el efecto sombra. Monitorización individual. Menor coste que microinversor.</td>
+        <td>Añade un componente más por panel. Requiere igualmente un inversor string.</td>
+        <td>Solución intermedia entre el string puro y el microinversor. Cubiertas con sombras ocasionales.</td>
+      </tr>
+      <tr class="hi-purple">
+        <td><strong>Inversor híbrido</strong></td>
+        <td>Gestiona a la vez la generación FV, la batería de acumulación y el consumo del edificio.</td>
+        <td class="ok">Integra generación + acumulación en un solo equipo. Gestión inteligente de flujos de energía.</td>
+        <td>Mayor coste inicial. Requiere sistema de baterías.</td>
+        <td>Instalaciones con acumulación. Viviendas con gestión de autoconsumo optimizada.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-teal">
+    <strong>📌 MPPT (Maximum Power Point Tracking):</strong> todos los inversores incorporan un seguidor del punto de máxima potencia. Ajusta continuamente la tensión e intensidad de trabajo del generador FV para extraer la máxima potencia posible en cada momento, independientemente de la irradiancia o la temperatura. Es el algoritmo de control más importante del inversor.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 5: MODALIDADES DE AUTOCONSUMO ══════════ -->
+<div class="section-label">Tabla 5 — Modalidades de autoconsumo fotovoltaico (RD 244/2019)</div>
+<div class="table-card top-blue">
+  <div class="table-card-header"><span class="icon">🏠</span><h2>Sin excedentes · Con excedentes compensados · Con excedentes no compensados · Colectivo</h2><span class="chip ch-blue">RD 244/2019</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:185px;">Modalidad</th>
+      <th class="hd-blue">Descripción</th>
+      <th class="hd-blue">¿Vierte excedentes a la red?</th>
+      <th class="hd-blue">¿Cobra por excedentes?</th>
+      <th class="hd-blue">Cuándo elegirla</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Sin excedentes</strong></td>
+        <td>La instalación está limitada para no verter nunca a la red. Requiere un equipo antivertido (limitador de inyección).</td>
+        <td class="no">NO. El limitador corta la producción si supera el consumo.</td>
+        <td class="no">NO</td>
+        <td>Cuando la comercializadora no permite el vertido o en zonas con red saturada. Comunidades de propietarios con restricciones.</td>
+      </tr>
+      <tr class="hi-green">
+        <td><strong>Con excedentes — compensación simplificada</strong></td>
+        <td>Los excedentes se vierten a la red y se descuentan de la factura eléctrica del mismo mes (compensación económica simplificada).</td>
+        <td class="ok">SÍ</td>
+        <td class="ok"><strong>SÍ — se descuenta de la factura.</strong> La comercializadora paga al precio acordado (precio pool o precio fijo).</td>
+        <td><strong>La modalidad más habitual en viviendas y pequeños consumidores.</strong> Potencia instalada ≤100 kW.</td>
+      </tr>
+      <tr>
+        <td><strong>Con excedentes — no acogido a compensación</strong></td>
+        <td>Los excedentes se vierten a la red y se venden al mercado mayorista. No hay compensación simplificada.</td>
+        <td class="ok">SÍ</td>
+        <td class="ok">SÍ — se vende al mercado (precio pool). Requiere contrato de venta de energía.</td>
+        <td>Instalaciones grandes (&gt;100 kW) o consumidores que prefieren gestionar la venta de excedentes en el mercado.</td>
+      </tr>
+      <tr class="hi-teal">
+        <td><strong>Autoconsumo colectivo</strong></td>
+        <td>Varios consumidores comparten una instalación FV y se reparten la energía generada según coeficientes de reparto acordados.</td>
+        <td class="ok">SÍ (si hay excedentes)</td>
+        <td class="ok">SÍ si están acogidos a compensación</td>
+        <td><strong>Comunidades de propietarios, polígonos industriales, edificios de viviendas.</strong> Permite compartir una sola instalación en cubierta entre varios consumidores.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-blue">
+    <strong>📌 El RD 244/2019 es la norma más preguntada del tema.</strong> Regula todas las modalidades de autoconsumo. Elimina el impuesto al sol que existía antes de 2019. Los puntos más examinados: qué es la compensación simplificada, qué es el autoconsumo colectivo y qué límite de potencia aplica a cada modalidad (≤100 kW para compensación simplificada).
+  </div>
+  <div class="callout al-red">
+    <strong>⚠ Pregunta trampa:</strong> "¿El autoconsumo sin excedentes es más eficiente?" → <strong>NO necesariamente.</strong> Al limitar la producción cuando supera el consumo, se desperdicia energía FV. El autoconsumo con excedentes + compensación aprovecha toda la energía generada: lo que no se consume se vende y descuenta en factura.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 6: ACUMULACIÓN ELÉCTRICA ══════════ -->
+<div class="section-label">Tabla 6 — Acumulación eléctrica: tecnologías de baterías comparadas</div>
+<div class="table-card top-purple">
+  <div class="table-card-header"><span class="icon">🔋</span><h2>Litio LFP · Litio NMC · Plomo-ácido · Flujo redox — comparativa técnica</h2><span class="chip ch-purple">Acumulación</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey">Característica</th>
+      <th class="hd-purple">Litio LFP</th>
+      <th class="hd-purple">Litio NMC</th>
+      <th class="hd-purple">Plomo-ácido</th>
+      <th class="hd-purple">Flujo redox</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td class="feat">Química</td>
+        <td>Litio Hierro Fosfato</td>
+        <td>Litio Níquel Manganeso Cobalto</td>
+        <td>Plomo-ácido (gel/AGM)</td>
+        <td>Vanadio u otras sales</td>
+      </tr>
+      <tr class="hi-purple">
+        <td class="feat">Seguridad</td>
+        <td class="ok"><strong>Muy alta.</strong> No presenta thermal runaway. El más seguro.</td>
+        <td class="warn">Alta pero inferior al LFP. Riesgo de thermal runaway a altas temperaturas.</td>
+        <td class="ok">Alta (tecnología madura)</td>
+        <td class="ok">Muy alta. No inflamable.</td>
+      </tr>
+      <tr>
+        <td class="feat">Densidad de energía</td>
+        <td class="warn">Media (90–160 Wh/kg)</td>
+        <td class="ok">Alta (150–220 Wh/kg). Más compacto.</td>
+        <td class="no">Baja (30–50 Wh/kg). Pesado y voluminoso.</td>
+        <td class="no">Baja (15–25 Wh/L)</td>
+      </tr>
+      <tr>
+        <td class="feat">Ciclos de vida</td>
+        <td class="ok"><strong>3.000–6.000 ciclos</strong> (el mejor)</td>
+        <td class="ok">1.000–3.000 ciclos</td>
+        <td class="no">300–700 ciclos</td>
+        <td class="ok">&gt;10.000 ciclos (prácticamente ilimitado)</td>
+      </tr>
+      <tr>
+        <td class="feat">DOD (Profundidad de descarga)</td>
+        <td class="ok">80–100%</td>
+        <td class="ok">80–100%</td>
+        <td class="no"><strong>Máx. 50%.</strong> Superar el 50% DOD reduce drásticamente la vida útil.</td>
+        <td class="ok">100%</td>
+      </tr>
+      <tr>
+        <td class="feat">Coste inicial</td>
+        <td class="warn">Medio-alto (pero bajando)</td>
+        <td class="warn">Medio-alto</td>
+        <td class="ok">Bajo</td>
+        <td class="no">Muy alto</td>
+      </tr>
+      <tr class="hi-green">
+        <td class="feat">Uso dominante actual</td>
+        <td class="ok"><strong>Estándar en edificios residenciales y comerciales.</strong> El más instalado en autoconsumo FV.</td>
+        <td>Vehículo eléctrico principalmente. También en almacenamiento estacionario.</td>
+        <td class="no">En declive. Solo en instalaciones pequeñas o de bajo presupuesto.</td>
+        <td>Grandes almacenes de red. No habitual en edificios.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-purple">
+    <strong>📌 LFP es el estándar actual en acumulación doméstica e industrial por su combinación de seguridad, ciclos de vida y coste creciente-mente competitivo.</strong> La limitación del 50% de DOD del plomo-ácido es el dato más preguntado sobre baterías: si una batería de plomo tiene 10 kWh de capacidad nominal, solo se pueden usar 5 kWh de forma segura.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 7: GESTIÓN DE INSTALACIONES FV ══════════ -->
+<div class="section-label">Tabla 7 — Gestión de instalaciones fotovoltaicas: monitorización, mantenimiento y KPIs</div>
+<div class="table-card top-orange">
+  <div class="table-card-header"><span class="icon">📊</span><h2>Monitorización · KPIs · Mantenimiento preventivo · Mantenimiento correctivo · Fallos más frecuentes</h2><span class="chip ch-orange">Gestión FV</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:165px;">Aspecto</th>
+      <th class="hd-orange">Descripción</th>
+      <th class="hd-orange">Dato clave / Frecuencia</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi-amber">
+        <td colspan="3" style="font-family:var(--font-d);font-weight:800;font-size:.78rem;color:var(--amber);background:var(--amber-lt);">MONITORIZACIÓN Y KPIs</td>
+      </tr>
+      <tr>
+        <td><strong>PR (Performance Ratio)</strong></td>
+        <td>Indicador global de rendimiento de la instalación. Compara la energía producida real con la teórica máxima. PR = Energía producida (kWh) / Energía teórica (irradiancia × potencia pico).</td>
+        <td><strong>PR &gt;80%: instalación en buen estado. PR &lt;75%: investigar causas.</strong> Es el KPI más importante de una instalación FV.</td>
+      </tr>
+      <tr>
+        <td><strong>Energía específica (yield)</strong></td>
+        <td>Producción anual por kWp instalado (kWh/kWp/año). Permite comparar instalaciones de diferente tamaño.</td>
+        <td>En España: 1.200–1.600 kWh/kWp/año según zona climática.</td>
+      </tr>
+      <tr>
+        <td><strong>Tasa de autoconsumo</strong></td>
+        <td>% de la energía FV generada que se consume directamente en el edificio (no se vierte).</td>
+        <td>Sin batería: 30–50%. Con batería: 60–90%. Objetivo: maximizarla.</td>
+      </tr>
+      <tr>
+        <td><strong>Tasa de autosuficiencia</strong></td>
+        <td>% de la demanda eléctrica del edificio que se cubre con energía FV propia.</td>
+        <td>Sin batería: 20–40%. Con batería: 50–80%. Objetivo: maximizarla.</td>
+      </tr>
+      <tr class="hi-green">
+        <td colspan="3" style="font-family:var(--font-d);font-weight:800;font-size:.78rem;color:var(--green);background:var(--green-lt);">MANTENIMIENTO PREVENTIVO</td>
+      </tr>
+      <tr>
+        <td><strong>Limpieza de paneles</strong></td>
+        <td>Eliminación de polvo, hojas, excrementos de aves y suciedad que reducen la producción.</td>
+        <td><strong>1–2 veces al año.</strong> En zonas polvorientas o con contaminación, cada 3–4 meses. Una capa de polvo puede reducir la producción un 5–15%.</td>
+      </tr>
+      <tr>
+        <td><strong>Inspección visual de paneles</strong></td>
+        <td>Detección de microfisuras, delaminaciones, bypass diodes fundidos, células quemadas (hot spots).</td>
+        <td>Anual. Complementar con termografía infrarroja para detectar hot spots no visibles a simple vista.</td>
+      </tr>
+      <tr>
+        <td><strong>Revisión del inversor</strong></td>
+        <td>Limpieza de filtros de ventilación, revisión de conexiones, comprobación de alarmas, actualización de firmware.</td>
+        <td>Anual. El inversor es el componente con más probabilidad de fallo y el de mayor impacto en la producción.</td>
+      </tr>
+      <tr>
+        <td><strong>Revisión de estructura y cableado</strong></td>
+        <td>Comprobación de tornillería, corrosión en la estructura, estado del cableado CC y CA, conectores MC4.</td>
+        <td>Anual. Los conectores MC4 mal apretados son una de las causas más frecuentes de avería.</td>
+      </tr>
+      <tr class="hi-red">
+        <td colspan="3" style="font-family:var(--font-d);font-weight:800;font-size:.78rem;color:var(--flame);background:var(--red-lt);">FALLOS MÁS FRECUENTES</td>
+      </tr>
+      <tr>
+        <td><strong>Hot spot (punto caliente)</strong></td>
+        <td>Célula sombreada o defectuosa que se convierte en receptora de energía en lugar de generadora. Se calienta excesivamente y puede dañar el panel.</td>
+        <td>Detección: termografía infrarroja. Solución: diodo bypass (actúa automáticamente para derivar la célula afectada).</td>
+      </tr>
+      <tr>
+        <td><strong>Efecto sombra en string</strong></td>
+        <td>Una sombra parcial sobre un panel de una cadena (string) reduce la producción de todos los paneles de esa cadena.</td>
+        <td>Solución: microinversores u optimizadores de potencia (MPPT individual por panel).</td>
+      </tr>
+      <tr>
+        <td><strong>Fallo del inversor</strong></td>
+        <td>Avería del componente más crítico. La instalación deja de producir completamente hasta su reparación o sustitución.</td>
+        <td>Vida útil del inversor: 10–15 años (vs 25–30 del panel). Prever su sustitución en el plan de mantenimiento.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- ══════════ TABLA 8: NORMATIVA ══════════ -->
+<div class="section-label">Tabla 8 — Normativa aplicable a instalaciones fotovoltaicas y renovables en edificios</div>
+<div class="table-card top-blue">
+  <div class="table-card-header"><span class="icon">📋</span><h2>RD 244/2019 · CTE-HE · REBT · RD 178/2021 · Directiva RED III · ITC-BT-40</h2><span class="chip ch-blue">Normativa</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:200px;">Normativa</th>
+      <th class="hd-blue">Qué regula</th>
+      <th class="hd-blue">Dato clave de examen</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi-amber">
+        <td><strong>RD 244/2019</strong></td>
+        <td>Autoconsumo eléctrico. Regula todas las modalidades, los trámites administrativos, la compensación de excedentes y el autoconsumo colectivo.</td>
+        <td><strong>LA NORMA MÁS IMPORTANTE DEL TEMA.</strong> Elimina el impuesto al sol. Establece compensación simplificada para instalaciones ≤100 kW. Define autoconsumo con y sin excedentes, y autoconsumo colectivo.</td>
+      </tr>
+      <tr>
+        <td><strong>CTE DB-HE5</strong></td>
+        <td>Exige una potencia fotovoltaica mínima en edificios nuevos y grandes rehabilitaciones, en función del uso y la superficie construida.</td>
+        <td>Fórmula simplificada: P (kWp) = C × S, donde C es un coeficiente según uso (residencial, comercial, hospitalario…) y S es la superficie construida. Valores concretos en el Apéndice del DB-HE5.</td>
+      </tr>
+      <tr>
+        <td><strong>CTE DB-HE0 y HE1</strong></td>
+        <td>HE0: consumo de energía primaria no renovable máximo en edificios nuevos. HE1: demanda energética máxima (envolvente).</td>
+        <td>La FV contribuye a reducir el consumo de energía primaria no renovable del edificio, ayudando a cumplir HE0. Los edificios nuevos deben ser casi de energía cero (nZEB).</td>
+      </tr>
+      <tr class="hi-green">
+        <td><strong>RD 178/2021</strong></td>
+        <td>Declara la aerotermia y la geotermia como energías renovables. Modifica el RITE y el CTE.</td>
+        <td>Muy preguntado. "¿Es renovable la aerotermia?" → SÍ desde este RD. Las bombas de calor computan como renovables para el cumplimiento de HE0 y HE4.</td>
+      </tr>
+      <tr>
+        <td><strong>REBT — ITC-BT-40</strong></td>
+        <td>Reglamento Electrotécnico de Baja Tensión. La ITC-BT-40 regula específicamente las instalaciones generadoras de baja tensión (fotovoltaica y otras).</td>
+        <td><strong>ITC-BT-40 es la instrucción técnica de referencia para la instalación eléctrica FV.</strong> Establece requisitos de protecciones, conexión a red, protección antiisla y esquemas de conexión.</td>
+      </tr>
+      <tr>
+        <td><strong>Directiva RED III</strong><br>(UE) 2023/2413</td>
+        <td>Directiva de Energías Renovables de la UE (revisión III). Fija objetivo del 42,5% de renovables en el mix energético europeo en 2030.</td>
+        <td>Impulsa la aceleración del autoconsumo, comunidades energéticas y simplificación administrativa para instalaciones renovables. Marco europeo de referencia.</td>
+      </tr>
+      <tr class="hi-teal">
+        <td><strong>RD 1183/2020</strong></td>
+        <td>Acceso y conexión a las redes de transporte y distribución de energía eléctrica.</td>
+        <td>Regula los permisos de acceso y conexión que deben obtener las instalaciones de autoconsumo para poder verter excedentes a la red.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-blue">
+    <strong>📌 Jerarquía normativa para FV en edificios:</strong><br>
+    Directiva RED III (UE) → RD 244/2019 (autoconsumo) → CTE DB-HE5 (potencia mínima FV) → REBT ITC-BT-40 (instalación eléctrica) → RD 178/2021 (renovables) → Ordenanzas municipales.
+  </div>
+</div>
+
+
+<!-- ══════════ FRASES MEMORIZABLES ══════════ -->
+<div class="section-label">Versión de oposición — Frases memorizables del Tema 13</div>
+<div class="mem-section">
+  <h2>☀ Las 16 frases que hay que tener grabadas para el examen</h2>
+  <div class="mem-grid">
+    <div class="mem-item">
+      <span class="mem-label">RD 244/2019</span>
+      <span class="mem-text">"La norma más importante del tema. Regula el autoconsumo, elimina el impuesto al sol y crea la compensación simplificada para instalaciones ≤100 kW."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Panel FV</span>
+      <span class="mem-text">"El panel genera corriente continua (CC). El inversor la convierte en corriente alterna (CA). Sin inversor no hay CA."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">El inversor: componente crítico</span>
+      <span class="mem-text">"El inversor es el componente más importante y el más propenso a averiarse. Vida útil 10–15 años vs 25–30 años del panel."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">MPPT</span>
+      <span class="mem-text">"El inversor incorpora el MPPT (seguidor del punto de máxima potencia). Extrae siempre la máxima potencia posible del generador FV."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Protección antiisla</span>
+      <span class="mem-text">"La protección antiisla desconecta el inversor automáticamente si falta la red. Obligatoria para proteger a los trabajadores de la distribuidora."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Autoconsumo colectivo</span>
+      <span class="mem-text">"Varios consumidores comparten una instalación FV y se reparten la energía según coeficientes acordados. La solución para comunidades de propietarios."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Sin excedentes vs con excedentes</span>
+      <span class="mem-text">"Sin excedentes: limitador evita verter a la red (desperdicia energía). Con excedentes + compensación: toda la energía FV se aprovecha."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Panel monocristalino</span>
+      <span class="mem-text">"El estándar actual en edificios. Mayor rendimiento por m² (19–24%). Más eficiente cuando el espacio de cubierta es limitado."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Capa fina (thin-film)</span>
+      <span class="mem-text">"Menor rendimiento pero más tolerante a sombras parciales y a altas temperaturas. Su nicho: integración arquitectónica (BIPV), fachadas y tejados curvos."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Batería LFP</span>
+      <span class="mem-text">"Litio LFP = estándar actual en acumulación. Muy segura (sin thermal runaway), 3.000–6.000 ciclos, DOD del 80–100%."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Plomo-ácido: la trampa</span>
+      <span class="mem-text">"DOD máximo del 50% en baterías de plomo. Una batería de 10 kWh de plomo solo puede usarse hasta 5 kWh de forma segura."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Performance Ratio (PR)</span>
+      <span class="mem-text">"PR &gt;80%: instalación en buen estado. PR &lt;75%: investigar causas. Es el KPI más importante de una instalación FV."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Hot spot</span>
+      <span class="mem-text">"Célula sombreada o defectuosa que se calienta en exceso. Detección con termografía infrarroja. El diodo bypass la cortocircuita automáticamente."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Limpieza de paneles</span>
+      <span class="mem-text">"1–2 veces al año. El polvo puede reducir la producción un 5–15%. En zonas polvorientas, cada 3–4 meses."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">CTE-HE5</span>
+      <span class="mem-text">"Exige potencia FV mínima en edificios nuevos y grandes rehabilitaciones. Se calcula en función del uso y la superficie construida."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">ITC-BT-40</span>
+      <span class="mem-text">"La instrucción técnica del REBT que regula la instalación eléctrica del generador FV. Es la norma eléctrica de referencia para la instalación, junto con el RD 244/2019."</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 13 – Texto explicativo · Energía Fotovoltaica</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f6f2;--surface:#fff;--surface-2:#f8faf7;
+  --border:#c8d4c5;--text:#1a2318;--muted:#4a5e47;--faint:#8aaa87;
+  --green:#1a6633;--green-lt:#d4eedd;--green-dk:#0e3d1e;
+  --teal:#007070;--teal-lt:#ccedf0;
+  --blue:#0d4f8b;--blue-lt:#dceaf7;
+  --gold:#c47d00;--gold-lt:#faefd0;
+  --orange:#8b3a0d;--orange-lt:#fce8d8;
+  --purple:#5b3690;--purple-lt:#ece4f8;
+  --flame:#c0392b;--red-lt:#fde8e8;
+  --font-d:'Cabinet Grotesk',sans-serif;
+  --font-b:'Satoshi',sans-serif;
+  --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.9rem;line-height:1.75;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 5rem;}
+.file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s;}
+.file-nav a:hover,.file-nav a.active{background:var(--green);color:white;border-color:var(--green);}
+.page-header{background:linear-gradient(135deg,#1a6633 0%,#0a2f15 100%);color:white;border-radius:var(--r-xl);padding:2rem 2.5rem;margin-bottom:2rem;}
+.page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;}
+.page-header h1{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,1.85rem);font-weight:800;line-height:1.2;margin-bottom:.4rem;}
+.page-header .sub{font-size:.83rem;opacity:.8;}
+.section{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:1.6rem 1.8rem;margin-bottom:1.4rem;box-shadow:0 1px 4px rgba(0,0,0,.04);}
+.section.top-green{border-top:4px solid var(--green);}
+.section.top-blue{border-top:4px solid var(--blue);}
+.section.top-gold{border-top:4px solid var(--gold);}
+.section.top-teal{border-top:4px solid var(--teal);}
+.section.top-orange{border-top:4px solid var(--orange);}
+.section.top-purple{border-top:4px solid var(--purple);}
+.section.top-flame{border-top:4px solid var(--flame);}
+.section h2{font-family:var(--font-d);font-size:1.05rem;font-weight:800;margin-bottom:.9rem;display:flex;align-items:center;gap:.5rem;}
+.section h3{font-family:var(--font-d);font-size:.9rem;font-weight:800;margin:1.1rem 0 .4rem;color:var(--green-dk);}
+p{margin-bottom:.75rem;max-width:76ch;}
+p:last-child{margin-bottom:0;}
+strong{font-weight:700;}
+ul,ol{padding-left:1.3rem;margin-bottom:.75rem;}
+li{margin-bottom:.3rem;}
+.callout{border-radius:var(--r-md);padding:.75rem 1rem;font-size:.84rem;margin:1rem 0;line-height:1.55;}
+.al-red{background:var(--red-lt);border-left:3px solid var(--flame);}
+.al-blue{background:var(--blue-lt);border-left:3px solid var(--blue);}
+.al-green{background:var(--green-lt);border-left:3px solid var(--green);}
+.al-gold{background:var(--gold-lt);border-left:3px solid var(--gold);}
+.al-teal{background:var(--teal-lt);border-left:3px solid var(--teal);}
+.al-orange{background:var(--orange-lt);border-left:3px solid var(--orange);}
+.al-purple{background:var(--purple-lt);border-left:3px solid var(--purple);}
+.chip-inline{display:inline-block;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;padding:1px 7px;border-radius:999px;background:var(--green-lt);color:var(--green-dk);margin-left:.4rem;vertical-align:middle;}
+.def-box{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-lg);padding:.9rem 1.1rem;margin:.75rem 0;}
+.def-box .dt{font-family:var(--font-d);font-weight:800;font-size:.88rem;color:var(--green);margin-bottom:.2rem;}
+.def-box .dd{font-size:.85rem;color:var(--muted);}
+.grid-def{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:.75rem 0;}
+@media(max-width:640px){.grid-def{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo.html" class="active">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </div>
+
+<div class="page-header">
+  <div class="meta">Tema 13 · Gestor de Mantenimiento (Nivel B) · UPNA · Texto explicativo</div>
+  <h1>Instalaciones de energías renovables en los edificios. Energía fotovoltaica, acumulación eléctrica y gestión.</h1>
+  <div class="sub">Desarrollo narrativo para comprensión y estudio · Normativa · Componentes · Acumulación · Gestión · Eficiencia</div>
+</div>
+
+
+<!-- 1. INTRODUCCIÓN -->
+<div class="section top-green">
+  <h2>☀ 1. Introducción: la energía renovable en el edificio del siglo XXI</h2>
+  <p>La integración de energías renovables en los edificios es hoy una exigencia normativa, no una opción. El <strong>Código Técnico de la Edificación (CTE)</strong> en su Documento Básico de Ahorro de Energía (DB-HE) exige que los edificios nuevos y las grandes rehabilitaciones incorporen sistemas de generación a partir de fuentes renovables, con el objetivo de alcanzar el modelo de <strong>edificio de energía casi nula (nZEB)</strong> que impone la Directiva Europea de Eficiencia Energética de Edificios (EPBD).</p>
+  <p>Entre todas las tecnologías renovables aplicables a los edificios — solar fotovoltaica, solar térmica, aerotermia, geotermia, biomasa — la <strong>energía solar fotovoltaica</strong> ha experimentado la mayor reducción de costes en la última década (más del 90% desde 2010) y se ha consolidado como la tecnología renovable más implantada en edificios. Su versatilidad (cubiertas planas, inclinadas, fachadas, aparcamientos), la ausencia de partes móviles y la posibilidad de autoconsumo instantáneo la convierten en la primera opción para la generación distribuida en el entorno urbano.</p>
+  <div class="callout al-green"><strong>📌 Contexto normativo en España:</strong> el <strong>RD 244/2019</strong> simplificó radicalmente el marco del autoconsumo eléctrico, eliminando el llamado "impuesto al sol" y permitiendo el autoconsumo colectivo sin limitación de distancia. Fue el catalizador del boom fotovoltaico en edificios residenciales y terciarios.</div>
+</div>
+
+
+<!-- 2. PRINCIPIO DE FUNCIONAMIENTO -->
+<div class="section top-blue">
+  <h2>⚡ 2. El efecto fotovoltaico: de la luz a la electricidad</h2>
+  <p>La célula fotovoltaica aprovecha el <strong>efecto fotoeléctrico</strong>: cuando los fotones de la luz solar inciden sobre un material semiconductor (silicio), liberan electrones que generan una diferencia de potencial y, por tanto, una <strong>corriente eléctrica continua (DC)</strong>. Este fenómeno fue descrito por Einstein en 1905, y su primera aplicación práctica en células solares se desarrolló en los laboratorios de Bell en 1954.</p>
+  <h3>Tipos de células fotovoltaicas</h3>
+  <ul>
+    <li><strong>Silicio monocristalino:</strong> la más eficiente (18–23%). Se reconoce por su color negro uniforme. Mayor coste de fabricación. La dominante en instalaciones de edificios.</li>
+    <li><strong>Silicio policristalino:</strong> eficiencia del 15–17%. Color azulado moteado. Menor coste. Menos frecuente en nuevas instalaciones por la caída de precios del monocristalino.</li>
+    <li><strong>Capa fina (CdTe, CIGS, a-Si):</strong> eficiencia del 10–13%. Flexible e integrable en fachadas, vidrios o tejados curvos (BIPV). Menor rendimiento pero máxima versatilidad de integración arquitectónica.</li>
+  </ul>
+  <div class="callout al-blue"><strong>📌 STC (Standard Test Conditions):</strong> la potencia del módulo se mide en condiciones estándar de laboratorio: irradiancia de <strong>1.000 W/m²</strong>, temperatura de célula de <strong>25 °C</strong> y espectro solar AM 1,5. En condiciones reales, la potencia es un <strong>10–20% inferior</strong> a la STC porque los módulos trabajan a temperaturas superiores a 25 °C y la irradiancia rara vez alcanza los 1.000 W/m² de forma sostenida. El <strong>Wp (Watio-pico)</strong> es la unidad de potencia del módulo medida en STC.</div>
+</div>
+
+
+<!-- 3. TIPOLOGÍAS DE INSTALACIÓN -->
+<div class="section top-teal">
+  <h2>🔌 3. Tipologías de instalaciones fotovoltaicas en edificios</h2>
+  <h3>3.1 Instalación aislada (off-grid)</h3>
+  <p>No está conectada a la red eléctrica. Toda la energía producida se consume o almacena en baterías. Es imprescindible el sistema de <strong>acumulación</strong> y el <strong>regulador de carga</strong>, que protege las baterías de sobrecargas y descargas excesivas. Se usa en edificios o instalaciones sin acceso a la red (refugios de montaña, instalaciones rurales, zonas remotas).</p>
+  <h3>3.2 Instalación conectada a red (on-grid) con autoconsumo</h3>
+  <p>Es la modalidad dominante en edificios urbanos. La instalación está conectada a la red eléctrica, que actúa como "batería infinita": cuando se produce más de lo que se consume, los excedentes se vierten a la red (compensación); cuando se produce menos, se toma energía de la red. No requiere baterías, aunque pueden añadirse para maximizar el autoconsumo.</p>
+  <ul>
+    <li><strong>Autoconsumo con vertido de excedentes:</strong> los excedentes se inyectan a la red y se compensan en la factura eléctrica (compensación simplificada según el RD 244/2019 para instalaciones ≤100 kW).</li>
+    <li><strong>Autoconsumo sin vertido (inyección cero):</strong> el inversor incorpora una función de <strong>limitación dinámica de potencia (antivertido)</strong> que reduce la producción para que nunca se vierta a la red. Requerido en algunos contratos de acceso.</li>
+    <li><strong>Autoconsumo colectivo:</strong> varios consumidores del mismo edificio o edificios próximos comparten una instalación fotovoltaica común. Regulado por el RD 244/2019 sin limitación de distancia desde 2021.</li>
+  </ul>
+  <div class="callout al-teal"><strong>📌 RD 244/2019:</strong> es la norma clave del autoconsumo en España. Eliminó el "impuesto al sol", simplificó los trámites, reconoció el autoconsumo colectivo y estableció la compensación simplificada de excedentes para instalaciones de hasta 100 kW. Es la norma más preguntada del tema.</div>
+</div>
+
+
+<!-- 4. COMPONENTES -->
+<div class="section top-gold">
+  <h2>🧩 4. Componentes de una instalación fotovoltaica</h2>
+  <h3>4.1 Módulo fotovoltaico</h3>
+  <p>Conjunto de células fotovoltaicas encapsuladas entre vidrio y lámina posterior, formando un panel rígido. Se agrupan en <strong>strings</strong> (cadenas en serie) para elevar el voltaje, y los strings se conectan en paralelo para aumentar la corriente. Su potencia se mide en <strong>Wp</strong> (vatios-pico).</p>
+  <h3>4.2 Inversor / Ondulador <span class="chip-inline">El más crítico</span></h3>
+  <p>Convierte la corriente continua (DC) generada por los módulos en corriente alterna (AC) compatible con la red eléctrica. En sistemas conectados a red, el inversor también realiza el <strong>seguimiento del punto de máxima potencia (MPPT)</strong> para extraer siempre la máxima energía posible de los módulos. Puede incorporar la función <strong>antivertido</strong> para instalaciones sin inyección a red.</p>
+  <h3>4.3 Regulador de carga</h3>
+  <p>Solo presente en instalaciones <strong>aisladas</strong>. Gestiona la carga y descarga de las baterías, protegiéndolas de sobrecargas (que acortan su vida) y descargas profundas (que las dañan irreversiblemente). En sistemas conectados a red, esta función la realiza el inversor híbrido.</p>
+  <h3>4.4 Sistema de acumulación (baterías)</h3>
+  <p>Almacena la energía para consumirla cuando no hay producción solar. Su capacidad se mide en <strong>kWh</strong>. Las principales tecnologías son plomo-ácido y litio-ion (ver Tema 13.5).</p>
+  <h3>4.5 Contador bidireccional</h3>
+  <p>Obligatorio en instalaciones de autoconsumo con vertido. Mide tanto la <strong>energía consumida de la red</strong> como la <strong>energía vertida</strong>, permitiendo la compensación económica de los excedentes en la factura eléctrica.</p>
+  <h3>4.6 Protecciones eléctricas</h3>
+  <p>Conforme al <strong>REBT (RD 842/2002), ITC-BT-40</strong>: interruptor magnetotérmico, diferencial, desconectador DC, fusibles de string, protección contra sobretensiones (descargadores). Son obligatorias para la seguridad de la instalación y del personal técnico.</p>
+  <div class="callout al-gold"><strong>📌 REBT ITC-BT-40:</strong> es la instrucción técnica complementaria del Reglamento Electrotécnico de Baja Tensión que regula las instalaciones generadoras de baja tensión (incluidas las fotovoltaicas). Establece los requisitos de seguridad, las protecciones obligatorias y las condiciones de conexión. Es la norma de diseño eléctrico del tema.</div>
+</div>
+
+
+<!-- 5. ACUMULACIÓN ELÉCTRICA -->
+<div class="section top-purple">
+  <h2>🔋 5. Acumulación eléctrica: tecnologías de baterías</h2>
+  <p>La acumulación eléctrica permite desacoplar la producción fotovoltaica (solar, diurna e intermitente) del consumo (nocturno, variable). Aumenta el <strong>autoconsumo</strong> (porcentaje de la energía fotovoltaica producida que se consume directamente) y la <strong>autosuficiencia</strong> (porcentaje de la demanda cubierta por la FV).</p>
+  <h3>5.1 Baterías de plomo-ácido</h3>
+  <p>Tecnología tradicional y madura. Bajo coste inicial pero menor vida útil. La <strong>profundidad de descarga (DoD)</strong> recomendada es del 50–60% para no degradar prematuramente las células. Requieren ventilación (emiten hidrógeno en la carga) y mantenimiento periódico (revisión del nivel del electrolito en las no selladas).</p>
+  <h3>5.2 Baterías de litio-ion</h3>
+  <p>Tecnología dominante en nuevas instalaciones por su alta densidad energética, larga vida útil y ausencia de mantenimiento. La variante <strong>LFP (litio-ferrofosfato o litio-fosfato de hierro)</strong> es la más segura: no presenta riesgo de fuga térmica (<em>thermal runaway</em>) y soporta un mayor número de ciclos. La variante <strong>NMC (níquel-manganeso-cobalto)</strong> ofrece mayor densidad energética pero menor estabilidad térmica.</p>
+  <h3>5.3 Parámetros clave de las baterías</h3>
+  <div class="grid-def">
+    <div class="def-box"><div class="dt">SoC — State of Charge</div><div class="dd">Estado de carga actual expresado como % de la capacidad total. SoC 100% = batería llena. SoC 20% = casi vacía.</div></div>
+    <div class="def-box"><div class="dt">DoD — Depth of Discharge</div><div class="dd">Profundidad de descarga: % de la capacidad descargada. A mayor DoD, menor vida útil. LFP: DoD 80–90%. Plomo-ácido: DoD 50%.</div></div>
+    <div class="def-box"><div class="dt">Ciclos de vida</div><div class="dd">Número de ciclos carga/descarga antes de que la capacidad caiga al 80% de la nominal. LFP: 3.000–6.000 ciclos. Plomo-ácido: 500–1.200 ciclos.</div></div>
+    <div class="def-box"><div class="dt">Capacidad útil (kWh)</div><div class="dd">Energía realmente aprovechable: Capacidad nominal × DoD. Ejemplo: 10 kWh × 0,8 DoD = 8 kWh útiles.</div></div>
+  </div>
+  <div class="callout al-purple"><strong>📌 La regla de oro de las baterías:</strong> cuanto mayor es el DoD (descarga más profunda), menor es el número de ciclos de vida. Ciclar una batería al 100% DoD la degrada mucho más rápido que hacerlo al 50% DoD. Por eso los sistemas de gestión de baterías (BMS de batería) limitan el DoD máximo.</div>
+</div>
+
+
+<!-- 6. PRODUCCIÓN Y CÁLCULO -->
+<div class="section top-green">
+  <h2>📐 6. Producción energética: parámetros de cálculo</h2>
+  <p>La energía producida por una instalación fotovoltaica se estima con la fórmula:</p>
+  <div class="def-box" style="text-align:center;font-family:var(--font-d);font-size:1.05rem;font-weight:800;letter-spacing:.02em;">E (kWh/día) = Pp (kWp) × HSP (h/día) × PR</div>
+  <div class="grid-def" style="margin-top:.75rem;">
+    <div class="def-box"><div class="dt">Pp — Potencia pico (kWp)</div><div class="dd">Potencia total instalada del campo fotovoltaico en condiciones STC.</div></div>
+    <div class="def-box"><div class="dt">HSP — Horas de Sol Pico</div><div class="dd">Equivale al número de horas de irradiancia a 1.000 W/m² que tiene un emplazamiento. Navarra: ~4,5–5 HSP/día (media anual). Zona sur: ~5,5–6 HSP/día.</div></div>
+    <div class="def-box"><div class="dt">PR — Performance Ratio</div><div class="dd">Factor de rendimiento global del sistema (pérdidas por temperatura, cableado, inversor, suciedad, sombras). Valor típico: 0,75–0,85.</div></div>
+    <div class="def-box"><div class="dt">Ejemplo práctico</div><div class="dd">Instalación de 10 kWp, HSP=5 h/día, PR=0,80 → E = 10 × 5 × 0,80 = <strong>40 kWh/día</strong>.</div></div>
+  </div>
+  <div class="callout al-green"><strong>📌 El PR es el parámetro más preguntado en cálculo fotovoltaico.</strong> Un PR de 0,80 significa que el sistema produce el 80% de lo que produciría si todos los módulos trabajasen en condiciones STC el número de horas equivalentes. Las pérdidas principales que reducen el PR son: temperatura (los módulos calientes producen menos), cableado, inversor, suciedad y sombras parciales.</div>
+</div>
+
+
+<!-- 7. GESTIÓN -->
+<div class="section top-teal">
+  <h2>📊 7. Gestión de instalaciones fotovoltaicas</h2>
+  <h3>7.1 Monitorización</h3>
+  <p>Todo sistema fotovoltaico moderno incorpora un sistema de <strong>monitorización</strong> que registra en tiempo real la producción de cada inversor o incluso de cada módulo (con optimizadores o microinversores), el consumo del edificio, la energía de la red y el estado de las baterías. Permite detectar fallos, sombras, degradación de módulos y comparar la producción real con la teórica (PR).</p>
+  <h3>7.2 EMS — Energy Management System</h3>
+  <p>El <strong>gestor energético (EMS)</strong> coordina los flujos de energía entre la instalación fotovoltaica, las baterías, la red eléctrica y las cargas del edificio. Su lógica de prioridad habitual es: primero cubrir el consumo propio con la producción FV, después cargar las baterías, y finalmente verter los excedentes a la red. Puede integrarse con el BMS del edificio para coordinar la carga de vehículos eléctricos, el encendido de cargas diferibles y la gestión de la demanda.</p>
+  <h3>7.3 Mantenimiento de la instalación FV</h3>
+  <ul>
+    <li><strong>Limpieza de módulos:</strong> la suciedad puede reducir la producción un 5–15%. Frecuencia según zona y precipitaciones.</li>
+    <li><strong>Revisión de conexiones:</strong> oxidación, aflojamiento de conectores MC4, resistencia de aislamiento del cableado DC.</li>
+    <li><strong>Termografía infrarroja:</strong> detecta células o módulos con puntos calientes (<em>hot spots</em>) que indican fallos internos sin necesidad de desmontar.</li>
+    <li><strong>Curva I-V:</strong> verificación de la curva corriente-tensión del string. Permite detectar módulos degradados, sombras o fallos de bypass.</li>
+    <li><strong>Revisión del inversor:</strong> filtros de ventilación, firmware actualizado, registro de errores.</li>
+  </ul>
+  <div class="callout al-teal"><strong>📌 La termografía infrarroja</strong> es la técnica de mantenimiento predictivo más usada en instalaciones fotovoltaicas. Permite localizar <em>hot spots</em> (puntos calientes) en módulos sin desmontarlos, normalmente causados por células rotas, sombreado parcial o fallos de bypass. Es barata, rápida y no invasiva.</div>
+</div>
+
+
+<!-- 8. NORMATIVA -->
+<div class="section top-flame">
+  <h2>📋 8. Normativa aplicable a las instalaciones fotovoltaicas en edificios</h2>
+  <ul>
+    <li><strong>CTE DB-HE5:</strong> contribución fotovoltaica mínima en edificios nuevos y grandes rehabilitaciones de determinados usos (terciario, industrial, residencial colectivo sobre cierto umbral de superficie). Obligatoria desde la actualización del CTE de 2019.</li>
+    <li><strong>RD 244/2019:</strong> condiciones administrativas, técnicas y económicas del autoconsumo. La norma de referencia del autoconsumo en España. Incluye autoconsumo colectivo y compensación simplificada.</li>
+    <li><strong>REBT — RD 842/2002, ITC-BT-40:</strong> instalaciones generadoras de baja tensión. Regula el diseño, las protecciones y la seguridad eléctrica de la instalación FV.</li>
+    <li><strong>RD 1699/2011:</strong> conexión a red de instalaciones de producción de pequeña potencia (≤100 kW). Establece los requisitos técnicos y el procedimiento de conexión.</li>
+    <li><strong>Ley 24/2013 del Sector Eléctrico:</strong> marco general de la electricidad en España. Define los sujetos del mercado eléctrico y el régimen del autoconsumo.</li>
+    <li><strong>RD 178/2021:</strong> modifica el RITE y reconoce la aerotermia y la geotermia como renovables. También actualiza las exigencias de eficiencia energética que impulsan la integración fotovoltaica.</li>
+    <li><strong>Directiva EPBD 2018/844/UE (mod. 2024):</strong> obliga a los edificios nuevos a ser nZEB. La fotovoltaica es la principal herramienta para cumplirlo.</li>
+    <li><strong>Reglamento UE 2016/631 (RfG):</strong> código de red para instalaciones de generación. Establece requisitos de conexión a la red para inversores.</li>
+  </ul>
+  <div class="callout al-red"><strong>⚠ Jerarquía normativa:</strong> Directivas UE (EPBD) → Legislación estatal (CTE, REBT, RD 244/2019, RD 1699/2011, Ley 24/2013) → Normativa autonómica → Ordenanzas municipales. En Navarra, además aplica la normativa foral en materia de energía.</div>
+</div>
+
+</body>
+</html>

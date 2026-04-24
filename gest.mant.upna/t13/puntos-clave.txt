@@ -1,0 +1,108 @@
+TEMA 13 — INSTALACIONES DE ENERGÍAS RENOVABLES EN LOS EDIFICIOS
+Energía Fotovoltaica · Acumulación eléctrica · Gestión de instalaciones fotovoltaicas
+======================================================================
+
+PUNTOS CLAVE Y LO MÁS PREGUNTADO EN OPOSICIÓN
+================================================
+
+1. NORMATIVA — LAS MÁS PREGUNTADAS
+------------------------------------
+- CTE DB-HE5: contribución fotovoltaica mínima obligatoria en edificios nuevos y grandes
+  rehabilitaciones de determinados usos. Es la norma más preguntada del tema.
+- RD 244/2019: regula las condiciones administrativas, técnicas y económicas del autoconsumo
+  eléctrico. El autoconsumo colectivo está incluido. Sin cargo al autoconsumo = "Royal Decree".
+- RD 1699/2011: regula la conexión a red de instalaciones de pequeña potencia (<100 kW).
+- Ley 24/2013 del Sector Eléctrico: marco general de la electricidad en España.
+- Reglamento Electrotécnico de Baja Tensión (REBT) — RD 842/2002, ITC-BT-40:
+  Instalaciones generadoras de baja tensión. Rige el diseño y seguridad de la instalación FV.
+
+2. TIPOS DE INSTALACIONES FOTOVOLTAICAS
+-----------------------------------------
+- Aislada (off-grid): no conectada a la red. Imprescindible acumulación.
+- Conectada a red (on-grid): vierte excedentes a la red. Obligatorio inversor homologado.
+- Autoconsumo con vertido (excedentes): produce y vierte lo que no consume.
+- Autoconsumo sin vertido: no vierte a la red (antivertido obligatorio según contrato).
+- Autoconsumo colectivo: varios consumidores comparten una misma instalación FV.
+
+3. COMPONENTES — LOS MÁS PREGUNTADOS
+---------------------------------------
+- Módulo fotovoltaico: transforma la luz en electricidad (efecto fotoeléctrico). Produce DC.
+- Inversor/ondulador: convierte DC → AC. Es el componente más crítico del sistema.
+  El inversor en autoconsumo con inyección 0 lleva función antivertido (limitador dinámico).
+- Regulador de carga: gestiona la carga de las baterías en instalaciones aisladas.
+  En sistemas conectados a red NO hay regulador de carga (lo gestiona el inversor).
+- Baterías/acumuladores: almacenan la energía eléctrica. Tecnologías: plomo-ácido,
+  litio-ion (LFP = Li-fosfato de hierro, la más segura y duradera).
+- Contador bidireccional: mide energía consumida de la red Y energía vertida. Obligatorio
+  en autoconsumo con vertido.
+- Estructura soporte: fija los módulos en cubierta, fachada o suelo.
+- Protecciones eléctricas: magnetotérmicos, diferenciales, desconectador DC, fusibles.
+
+4. PARÁMETROS TÉCNICOS CLAVE
+------------------------------
+- Wp (Watio-pico): potencia del módulo FV en condiciones STC (irradiancia 1000 W/m²,
+  Tª célula 25 °C, AM 1,5).
+- STC: Standard Test Conditions. Las condiciones de laboratorio en las que se mide el Wp.
+  En la realidad, la potencia real suele ser un 10-20% inferior a la STC.
+- Factor de rendimiento del sistema (PR - Performance Ratio): relación entre la energía
+  producida real y la energía teórica máxima. PR típico: 0,75-0,85.
+- Horas de sol pico (HSP): equivale a las horas de irradiancia a 1000 W/m². Se usa para
+  el cálculo de producción: E(kWh) = Pp(kWp) × HSP × PR.
+- NOCT: temperatura de operación nominal de la célula. Define el comportamiento térmico real.
+
+5. ACUMULACIÓN ELÉCTRICA
+--------------------------
+- Plomo-ácido: tecnología tradicional. Bajo coste. Profundidad de descarga (DoD) del 50-60%.
+  Requiere mantenimiento. Vida útil 3-8 años.
+- Litio-ion (LFP/NMC): alta densidad energética. DoD 80-90%. Sin mantenimiento.
+  Vida útil 10-15 años. LFP = más segura (sin riesgo térmico).
+- Estado de carga (SoC - State of Charge): % de carga actual respecto a la capacidad total.
+- Profundidad de descarga (DoD): % de capacidad descargada. Afecta directamente a la
+  vida útil de la batería.
+- La regla de oro: DoD × ciclos = vida útil. Más ciclos a menor DoD = más vida.
+
+6. EFECTO FOTOELÉCTRICO
+------------------------
+- La luz (fotones) incide en las células de silicio → libera electrones → genera corriente DC.
+- Silicio monocristalino: mayor eficiencia (18-23%). Mayor coste. Panel negro uniforme.
+- Silicio policristalino: menor eficiencia (15-17%). Menor coste. Panel azulado moteado.
+- Capa fina (CdTe, CIGS): menor eficiencia (10-13%) pero flexible. Para integraciones especiales.
+
+7. GESTIÓN Y MONITORIZACIÓN
+-----------------------------
+- El sistema de monitorización registra la producción, el consumo y el estado de las baterías.
+- Permite detectar módulos con sombras, degradación o fallos (curva I-V).
+- EMS (Energy Management System): gestiona flujos energéticos entre FV, batería, red y cargas.
+- El gestor de cargas prioriza: 1º carga de baterías, 2º cargas propias, 3º vertido a red.
+
+8. LO MÁS PREGUNTADO EN TIPO TEST
+------------------------------------
+- ¿Qué mide el Wp? → La potencia pico del módulo en condiciones STC.
+- ¿Qué es el PR? → Performance Ratio (factor de rendimiento del sistema 0,75-0,85).
+- ¿Qué norma regula el autoconsumo? → RD 244/2019.
+- ¿Qué norma obliga a fotovoltaica en edificios nuevos? → CTE DB-HE5.
+- ¿Qué componente convierte DC en AC? → El inversor/ondulador.
+- ¿Qué es el SoC? → State of Charge (estado de carga de la batería).
+- ¿Qué batería es la más segura? → LFP (litio-fosfato de hierro).
+- ¿Qué es el autoconsumo colectivo? → Varios consumidores comparten una instalación FV (RD 244/2019).
+- ¿Qué es el contador bidireccional? → Mide consumo de red Y vertido a red.
+- ¿Qué norma regula el diseño eléctrico? → REBT ITC-BT-40.
+
+======================================================================
+VERSIÓN DE OPOSICIÓN — FRASES MEMORIZABLES
+======================================================================
+1. "El módulo FV produce DC. El inversor lo convierte en AC. Sin inversor homologado, no hay autoconsumo conectado a red."
+2. "STC = 1000 W/m², 25 °C, AM 1,5. Es donde se mide el Wp. En la realidad, la potencia real es un 10-20% menor."
+3. "PR (Performance Ratio) = producción real / producción teórica. Valor típico: 0,75-0,85."
+4. "Producción estimada = Potencia pico (kWp) × HSP × PR."
+5. "RD 244/2019 = la norma del autoconsumo. Incluye autoconsumo colectivo sin límite de distancia."
+6. "CTE DB-HE5 = fotovoltaica obligatoria en edificios nuevos y grandes rehabilitaciones de ciertos usos."
+7. "REBT ITC-BT-40 = instalaciones generadoras de baja tensión. Rige el diseño eléctrico de la instalación FV."
+8. "Litio LFP: DoD 80-90%, vida útil 10-15 años, sin mantenimiento, la más segura."
+9. "Plomo-ácido: DoD 50-60%, vida 3-8 años, bajo coste, requiere mantenimiento."
+10. "Más DoD → menos ciclos de vida. La regla de oro de las baterías."
+11. "SoC = State of Charge = % de carga de la batería. DoD = profundidad de descarga."
+12. "Monocristalino > policristalino > capa fina en eficiencia. Monocristalino = negro uniforme, policristalino = azul moteado."
+13. "El autoconsumo sin vertido lleva antivertido (limitador dinámico) en el inversor."
+14. "Contador bidireccional: obligatorio en autoconsumo con vertido. Mide lo que consumes de la red Y lo que viertes."
+15. "EMS = Energy Management System. Gestiona los flujos entre FV, batería, red y cargas del edificio."

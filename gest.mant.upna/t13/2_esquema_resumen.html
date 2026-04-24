@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 13 – Esquema resumen · Energía Fotovoltaica</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f6f2;--surface:#fff;--surface-2:#f8faf7;
+  --border:#c8d4c5;--text:#1a2318;--muted:#4a5e47;--faint:#8aaa87;
+  --green:#1a6633;--green-lt:#d4eedd;--green-dk:#0e3d1e;
+  --teal:#007070;--teal-lt:#ccedf0;
+  --blue:#0d4f8b;--blue-lt:#dceaf7;
+  --gold:#c47d00;--gold-lt:#faefd0;
+  --orange:#8b3a0d;--orange-lt:#fce8d8;
+  --purple:#5b3690;--purple-lt:#ece4f8;
+  --flame:#c0392b;--red-lt:#fde8e8;
+  --font-d:'Cabinet Grotesk',sans-serif;
+  --font-b:'Satoshi',sans-serif;
+  --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.88rem;line-height:1.65;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 5rem;}
+.file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s;}
+.file-nav a:hover,.file-nav a.active{background:var(--green);color:white;border-color:var(--green);}
+.page-header{background:linear-gradient(135deg,#1a6633 0%,#0a2f15 100%);color:white;border-radius:var(--r-xl);padding:2rem 2.5rem;margin-bottom:2rem;}
+.page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;}
+.page-header h1{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,1.85rem);font-weight:800;line-height:1.2;margin-bottom:.4rem;}
+.page-header .sub{font-size:.83rem;opacity:.8;}
+.section-label{font-family:var(--font-d);font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:2.5rem 0 .7rem;}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin-bottom:1.5rem;}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:1.2rem 1.3rem;box-shadow:0 1px 4px rgba(0,0,0,.04);}
+.card.tg{border-top:4px solid var(--green);}
+.card.tb{border-top:4px solid var(--blue);}
+.card.tt{border-top:4px solid var(--teal);}
+.card.tgo{border-top:4px solid var(--gold);}
+.card.tp{border-top:4px solid var(--purple);}
+.card.to{border-top:4px solid var(--orange);}
+.card.tf{border-top:4px solid var(--flame);}
+.card-title{font-family:var(--font-d);font-weight:800;font-size:.9rem;margin-bottom:.7rem;display:flex;align-items:center;gap:.4rem;}
+.card ul{padding-left:1.1rem;}
+.card li{margin-bottom:.25rem;font-size:.84rem;}
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin-bottom:1.5rem;}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:1rem 1.1rem;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.04);}
+.kpi .num{font-family:var(--font-d);font-size:1.55rem;font-weight:800;line-height:1;}
+.kpi .lbl{font-size:.72rem;color:var(--muted);margin-top:.3rem;line-height:1.3;}
+.kpi.c-green .num{color:var(--green);}
+.kpi.c-blue .num{color:var(--blue);}
+.kpi.c-gold .num{color:var(--gold);}
+.kpi.c-purple .num{color:var(--purple);}
+.kpi.c-teal .num{color:var(--teal);}
+.callout{border-radius:var(--r-md);padding:.75rem 1rem;font-size:.84rem;margin:.75rem 0;line-height:1.55;}
+.al-red{background:var(--red-lt);border-left:3px solid var(--flame);}
+.al-green{background:var(--green-lt);border-left:3px solid var(--green);}
+.al-gold{background:var(--gold-lt);border-left:3px solid var(--gold);}
+.al-blue{background:var(--blue-lt);border-left:3px solid var(--blue);}
+.al-purple{background:var(--purple-lt);border-left:3px solid var(--purple);}
+.al-teal{background:var(--teal-lt);border-left:3px solid var(--teal);}
+.formula-box{background:var(--green-dk);color:white;border-radius:var(--r-xl);padding:1.5rem 2rem;margin-bottom:1.5rem;text-align:center;}
+.formula-box .f-lbl{font-size:.72rem;opacity:.7;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem;}
+.formula-box .f-formula{font-family:var(--font-d);font-size:1.4rem;font-weight:800;margin-bottom:.5rem;}
+.formula-box .f-sub{font-size:.8rem;opacity:.8;}
+.norm-list{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.5rem;}
+.norm-item{display:grid;grid-template-columns:180px 1fr;gap:1rem;padding:.7rem 1.2rem;border-bottom:1px solid #eef2ee;align-items:start;}
+.norm-item:last-child{border-bottom:none;}
+.norm-item:hover{background:#f5faf4;}
+.norm-item .norm-name{font-family:var(--font-d);font-weight:800;font-size:.82rem;color:var(--green);}
+.norm-item .norm-desc{font-size:.82rem;color:var(--muted);}
+.mem-section{background:linear-gradient(135deg,#1a6633,#0a2f15);border-radius:var(--r-xl);padding:1.75rem 2rem;margin-bottom:1.5rem;}
+.mem-section h2{font-family:var(--font-d);font-weight:800;color:white;font-size:1.05rem;margin-bottom:1.1rem;}
+.mem-grid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;}
+.mem-item{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:var(--r-lg);padding:.75rem 1rem;}
+.mem-label{font-size:.65rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#a8f0b8;display:block;margin-bottom:3px;}
+.mem-text{font-size:.84rem;color:#e8f5e8;line-height:1.5;}
+@media(max-width:680px){.kpi-row{grid-template-columns:repeat(2,1fr);}.mem-grid{grid-template-columns:1fr;}.norm-item{grid-template-columns:1fr;gap:.2rem;}}
+</style>
+</head>
+<body>
+
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html" class="active">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </div>
+
+<div class="page-header">
+  <div class="meta">Tema 13 · Gestor de Mantenimiento (Nivel B) · UPNA · Esquema-resumen</div>
+  <h1>Instalaciones de energías renovables · Energía Fotovoltaica</h1>
+  <div class="sub">Esquema visual · Componentes · Parámetros · Acumulación · Normativa · Frases memorizables</div>
+</div>
+
+
+<!-- KPIs -->
+<div class="section-label">Parámetros técnicos clave</div>
+<div class="kpi-row">
+  <div class="kpi c-green"><div class="num">Wp</div><div class="lbl">Watio-pico: potencia del módulo en STC (1000 W/m², 25 °C)</div></div>
+  <div class="kpi c-blue"><div class="num">PR</div><div class="lbl">Performance Ratio: rendimiento real del sistema. Típico: 0,75–0,85</div></div>
+  <div class="kpi c-gold"><div class="num">HSP</div><div class="lbl">Horas de Sol Pico. Navarra: ~4,5–5 h/día. Sur de España: ~5,5–6</div></div>
+  <div class="kpi c-purple"><div class="num">SoC</div><div class="lbl">State of Charge: % de carga de la batería (0% vacía, 100% llena)</div></div>
+  <div class="kpi c-teal"><div class="num">DoD</div><div class="lbl">Depth of Discharge: % descargado. Mayor DoD = menos ciclos de vida</div></div>
+</div>
+
+<!-- FÓRMULA -->
+<div class="formula-box">
+  <div class="f-lbl">Fórmula de producción fotovoltaica</div>
+  <div class="f-formula">E (kWh/día) = Pp (kWp) × HSP (h/día) × PR</div>
+  <div class="f-sub">Ejemplo: 10 kWp × 5 HSP × 0,80 PR = 40 kWh/día</div>
+</div>
+
+<!-- COMPONENTES Y TIPOLOGÍAS -->
+<div class="section-label">Componentes y tipologías de instalación</div>
+<div class="card-grid">
+  <div class="card tg">
+    <div class="card-title">🔲 Módulo fotovoltaico</div>
+    <ul>
+      <li>Monocristalino: 18–23% eficiencia, negro uniforme</li>
+      <li>Policristalino: 15–17%, azulado moteado</li>
+      <li>Capa fina: 10–13%, flexible, BIPV</li>
+      <li>Produce corriente continua (DC)</li>
+      <li>Potencia medida en <strong>Wp</strong> (condiciones STC)</li>
+    </ul>
+  </div>
+  <div class="card tb">
+    <div class="card-title">⚡ Inversor / Ondulador</div>
+    <ul>
+      <li>Convierte DC → AC</li>
+      <li>El componente más crítico del sistema</li>
+      <li>Incorpora MPPT (seguimiento punto máx. potencia)</li>
+      <li>Puede incluir antivertido (inyección cero)</li>
+      <li>Tipos: string, central, microinversor, híbrido (con baterías)</li>
+    </ul>
+  </div>
+  <div class="card tt">
+    <div class="card-title">🔋 Regulador de carga</div>
+    <ul>
+      <li>Solo en instalaciones <strong>aisladas</strong></li>
+      <li>Gestiona carga/descarga de baterías</li>
+      <li>Tipos: PWM y MPPT (el MPPT es más eficiente)</li>
+      <li>En sistemas conectados a red lo sustituye el inversor híbrido</li>
+    </ul>
+  </div>
+  <div class="card tgo">
+    <div class="card-title">🔌 Contador bidireccional</div>
+    <ul>
+      <li>Obligatorio en autoconsumo con vertido</li>
+      <li>Mide consumo de red Y energía vertida</li>
+      <li>Permite la compensación de excedentes (RD 244/2019)</li>
+    </ul>
+  </div>
+  <div class="card tp">
+    <div class="card-title">🔌 Tipologías de instalación</div>
+    <ul>
+      <li><strong>Aislada (off-grid):</strong> sin red, requiere baterías</li>
+      <li><strong>Conectada a red, con vertido:</strong> compensación de excedentes</li>
+      <li><strong>Conectada a red, sin vertido:</strong> antivertido activo</li>
+      <li><strong>Autoconsumo colectivo:</strong> varios consumidores, 1 instalación</li>
+    </ul>
+  </div>
+  <div class="card to">
+    <div class="card-title">🛡 Protecciones eléctricas (REBT ITC-BT-40)</div>
+    <ul>
+      <li>Magnetotérmico + diferencial en AC</li>
+      <li>Desconectador DC (seguridad de la instalación)</li>
+      <li>Fusibles de string</li>
+      <li>Descargadores de sobretensión</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ACUMULACIÓN -->
+<div class="section-label">Acumulación eléctrica: tecnologías de baterías</div>
+<div class="card-grid">
+  <div class="card tf">
+    <div class="card-title">🪫 Plomo-ácido</div>
+    <ul>
+      <li>Tecnología madura, bajo coste inicial</li>
+      <li>DoD recomendado: <strong>50–60%</strong></li>
+      <li>Ciclos de vida: 500–1.200</li>
+      <li>Vida útil: 3–8 años</li>
+      <li>Requiere ventilación y mantenimiento</li>
+    </ul>
+  </div>
+  <div class="card tg">
+    <div class="card-title">🔋 Litio-ion LFP (Li-FePO₄)</div>
+    <ul>
+      <li>La tecnología dominante y más segura</li>
+      <li>DoD: <strong>80–90%</strong></li>
+      <li>Ciclos de vida: 3.000–6.000</li>
+      <li>Vida útil: 10–15 años</li>
+      <li>Sin mantenimiento. Sin riesgo térmico.</li>
+    </ul>
+  </div>
+  <div class="card tb">
+    <div class="card-title">📊 Gestión de la batería (BMS)</div>
+    <ul>
+      <li>Battery Management System: protege la batería</li>
+      <li>Limita DoD máximo, equilibra celdas</li>
+      <li>Monitora SoC, temperatura y voltaje</li>
+      <li>Comunica con el EMS del edificio</li>
+    </ul>
+  </div>
+</div>
+
+<!-- NORMATIVA -->
+<div class="section-label">Normativa aplicable — las más preguntadas en oposición</div>
+<div class="norm-list">
+  <div class="norm-item"><div class="norm-name">CTE DB-HE5</div><div class="norm-desc">Contribución fotovoltaica mínima obligatoria en edificios nuevos y grandes rehabilitaciones. La norma más importante del tema.</div></div>
+  <div class="norm-item"><div class="norm-name">RD 244/2019</div><div class="norm-desc">Regula el autoconsumo eléctrico en España. Compensación simplificada ≤100 kW. Autoconsumo colectivo sin límite de distancia. La más preguntada junto con el CTE-HE5.</div></div>
+  <div class="norm-item"><div class="norm-name">REBT — ITC-BT-40</div><div class="norm-desc">Instalaciones generadoras de baja tensión. Protecciones obligatorias, diseño eléctrico y seguridad de la instalación FV.</div></div>
+  <div class="norm-item"><div class="norm-name">RD 1699/2011</div><div class="norm-desc">Conexión a red de instalaciones de pequeña potencia (≤100 kW). Procedimiento técnico y administrativo de conexión.</div></div>
+  <div class="norm-item"><div class="norm-name">Ley 24/2013</div><div class="norm-desc">Ley del Sector Eléctrico. Marco general de la electricidad en España.</div></div>
+  <div class="norm-item"><div class="norm-name">Directiva EPBD 2018/844</div><div class="norm-desc">Edificios de energía casi nula (nZEB). La FV es la principal herramienta para cumplirlo en edificios nuevos.</div></div>
+</div>
+
+<div class="callout al-red"><strong>⚠ Las 3 preguntas más frecuentes en tipo test:</strong><br>
+1. "¿Qué norma regula el autoconsumo en España?" → <strong>RD 244/2019</strong><br>
+2. "¿Qué norma obliga a fotovoltaica en edificios nuevos?" → <strong>CTE DB-HE5</strong><br>
+3. "¿Qué norma regula el diseño eléctrico de la instalación FV?" → <strong>REBT ITC-BT-40</strong></div>
+
+<!-- MEMORIZABLES -->
+<div class="mem-section">
+  <h2>⚡ Versión de oposición — Frases memorizables del Tema 13</h2>
+  <div class="mem-grid">
+    <div class="mem-item"><span class="mem-label">Producción</span><span class="mem-text">"E = Pp × HSP × PR. Si 10 kWp, 5 HSP, PR=0,8 → 40 kWh/día."</span></div>
+    <div class="mem-item"><span class="mem-label">STC</span><span class="mem-text">"1.000 W/m², 25 °C, AM 1,5. En la realidad, 10–20% menos que el Wp."</span></div>
+    <div class="mem-item"><span class="mem-label">Inversor</span><span class="mem-text">"El inversor convierte DC en AC. Es el componente más crítico."</span></div>
+    <div class="mem-item"><span class="mem-label">Autoconsumo</span><span class="mem-text">"RD 244/2019 = la norma del autoconsumo. Incluye colectivo y compensación ≤100 kW."</span></div>
+    <div class="mem-item"><span class="mem-label">FV obligatoria</span><span class="mem-text">"CTE DB-HE5: fotovoltaica obligatoria en edificios nuevos y grandes rehabilitaciones."</span></div>
+    <div class="mem-item"><span class="mem-label">LFP</span><span class="mem-text">"Litio LFP: DoD 80–90%, 3.000–6.000 ciclos, 10–15 años, sin mantenimiento, la más segura."</span></div>
+    <div class="mem-item"><span class="mem-label">Plomo-ácido</span><span class="mem-text">"DoD 50–60%, 500–1.200 ciclos, 3–8 años. Ventilación obligatoria."</span></div>
+    <div class="mem-item"><span class="mem-label">DoD y ciclos</span><span class="mem-text">"Mayor DoD → menos ciclos de vida. Ciclar al 100% la destruye antes."</span></div>
+    <div class="mem-item"><span class="mem-label">Contador</span><span class="mem-text">"Contador bidireccional: mide lo que consumes de la red Y lo que viertes."</span></div>
+    <div class="mem-item"><span class="mem-label">Termografía IR</span><span class="mem-text">"Detecta hot spots sin desmontar módulos. La técnica predictiva más usada en FV."</span></div>
+    <div class="mem-item"><span class="mem-label">EMS</span><span class="mem-text">"EMS gestiona los flujos: 1º consumo propio, 2º baterías, 3º vertido a red."</span></div>
+    <div class="mem-item"><span class="mem-label">REBT</span><span class="mem-text">"REBT ITC-BT-40: instalaciones generadoras de BT. Diseño eléctrico y protecciones FV."</span></div>
+  </div>
+</div>
+
+</body>
+</html>
