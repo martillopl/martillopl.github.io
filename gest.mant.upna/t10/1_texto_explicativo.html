@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 10 – Texto explicativo · GMAO</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f7fa;--surface:#fff;--surface-2:#f8f9fb;
+  --border:#ccd3de;--divider:#d8dde8;
+  --text:#1a2233;--muted:#4e5f7a;--faint:#8a9abb;
+  --blue:#0d4f8b;--blue-lt:#dceaf7;--blue-dk:#082f57;
+  --teal:#00707a;--teal-lt:#ccedf0;
+  --green:#1a6633;--green-lt:#d4eedd;
+  --gold:#c47d00;--gold-lt:#faefd0;
+  --orange:#8b3a0d;--orange-lt:#fce8d8;
+  --purple:#5b3690;--purple-lt:#ece4f8;
+  --flame:#c0392b;--red-lt:#fde8e8;
+  --font-d:'Cabinet Grotesk',sans-serif;
+  --font-b:'Satoshi',sans-serif;
+  --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.9rem;line-height:1.75;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 5rem;}
+.file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s;}
+.file-nav a:hover,.file-nav a.active{background:var(--blue);color:white;border-color:var(--blue);}
+.page-header{background:linear-gradient(135deg,#143d6e 0%,#0a2448 100%);color:white;border-radius:var(--r-xl);padding:2rem 2.5rem;margin-bottom:2rem;}
+.page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;}
+.page-header h1{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800;line-height:1.2;margin-bottom:.4rem;}
+.page-header .sub{font-size:.83rem;opacity:.8;}
+.section-label{font-family:var(--font-d);font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:2.5rem 0 .7rem;}
+.prose-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:1.75rem 2rem;margin-bottom:1.25rem;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+.prose-card.top-blue{border-top:4px solid var(--blue);}
+.prose-card.top-teal{border-top:4px solid var(--teal);}
+.prose-card.top-green{border-top:4px solid var(--green);}
+.prose-card.top-gold{border-top:4px solid var(--gold);}
+.prose-card.top-orange{border-top:4px solid var(--orange);}
+.prose-card.top-purple{border-top:4px solid var(--purple);}
+.prose-card.top-flame{border-top:4px solid var(--flame);}
+.prose-card h2{font-family:var(--font-d);font-size:1.1rem;font-weight:800;margin-bottom:.9rem;display:flex;align-items:center;gap:.5rem;}
+.prose-card h3{font-family:var(--font-d);font-size:.95rem;font-weight:800;margin:1.25rem 0 .4rem;color:var(--blue);}
+.prose-card p{margin-bottom:.8rem;max-width:72ch;}
+.prose-card ul,.prose-card ol{padding-left:1.4rem;margin-bottom:.8rem;}
+.prose-card li{margin-bottom:.35rem;}
+.prose-card strong{font-weight:700;}
+.callout{border-radius:var(--r-md);padding:.75rem 1rem;font-size:.84rem;margin:.85rem 0;line-height:1.55;}
+.al-red{background:var(--red-lt);border-left:3px solid var(--flame);}
+.al-blue{background:var(--blue-lt);border-left:3px solid var(--blue);}
+.al-teal{background:var(--teal-lt);border-left:3px solid var(--teal);}
+.al-green{background:var(--green-lt);border-left:3px solid var(--green);}
+.al-gold{background:var(--gold-lt);border-left:3px solid var(--gold);}
+.al-purple{background:var(--purple-lt);border-left:3px solid var(--purple);}
+.al-orange{background:var(--orange-lt);border-left:3px solid var(--orange);}
+.def-term{background:var(--blue-lt);border-radius:var(--r-md);padding:.6rem 1rem;margin:.6rem 0;font-size:.86rem;border-left:3px solid var(--blue);}
+.def-term strong{color:var(--blue);}
+.chip{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:2px 8px;border-radius:999px;white-space:nowrap;margin-left:auto;}
+.ch-blue{background:var(--blue-lt);color:var(--blue-dk);}
+.ch-teal{background:var(--teal-lt);color:var(--teal);}
+.ch-green{background:var(--green-lt);color:var(--green);}
+.ch-orange{background:var(--orange-lt);color:var(--orange);}
+.ch-purple{background:var(--purple-lt);color:var(--purple);}
+.ch-gold{background:var(--gold-lt);color:#7a4e00;}
+.ch-flame{background:var(--red-lt);color:var(--flame);}
+@media(max-width:680px){.prose-card{padding:1.25rem 1.1rem;}}
+</style>
+</head>
+<body>
+
+<div class="file-nav">
+  <a href="1_texto_explicativo_t10.html" class="active">📄 Texto explicativo</a>
+  <a href="2_esquema_resumen_t10.html">🗂 Esquema-resumen</a>
+  <a href="3_cuadro_comparativo_t10.html">📊 Cuadros comparativos</a>
+</div>
+
+<div class="page-header">
+  <div class="meta">Tema 10 · Gestor de Mantenimiento (Nivel B) · UPNA · Texto explicativo</div>
+  <h1>GMAO — Gestión del Mantenimiento Asistido por Ordenador</h1>
+  <div class="sub">Implantación · Mantenimiento correctivo y preventivo · Gestión y utilidad de la información · KPIs</div>
+</div>
+
+<!-- ══════════ 1. QUÉ ES EL GMAO ══════════ -->
+<div class="section-label">1 — Definición y concepto</div>
+<div class="prose-card top-blue">
+  <h2>🖥 ¿Qué es el GMAO?</h2>
+  <p>El GMAO (<strong>Gestión del Mantenimiento Asistido por Ordenador</strong>) es un software especializado que permite a los departamentos de mantenimiento planificar, controlar, registrar y optimizar todas las intervenciones sobre los activos de una organización. Su equivalente en inglés es <strong>CMMS</strong> (Computerized Maintenance Management System), denominación habitual en contextos internacionales y en algunos temarios de oposición.</p>
+  <p>Antes de los GMAO, el mantenimiento se gestionaba mediante registros en papel, hojas de cálculo o sistemas aislados. El resultado era información dispersa, dificultad para planificar el mantenimiento preventivo y ausencia de indicadores fiables para la toma de decisiones. El GMAO resuelve todos estos problemas centralizando la información en una única plataforma digital.</p>
+  <div class="def-term"><strong>Definición oficial para examen:</strong> software que centraliza y automatiza la gestión del mantenimiento de activos e instalaciones, integrando órdenes de trabajo, historial de intervenciones, gestión de inventario, planificación de preventivos e indicadores de rendimiento (KPIs).</div>
+  <p>Un GMAO moderno no es solo una base de datos de averías. Es el núcleo del sistema de información del departamento de mantenimiento, capaz de integrarse con sistemas ERP (SAP, Oracle), sistemas BMS/BAS de gestión de edificios, sistemas SCADA de control de proceso e incluso sensores IoT para el mantenimiento predictivo basado en condición.</p>
+  <div class="callout al-blue"><strong>📌 Distinción GMAO vs ERP:</strong> un ERP gestiona los recursos globales de la empresa (finanzas, compras, RRHH). El GMAO se especializa en mantenimiento. Se complementan e integran, pero no son lo mismo. La integración GMAO-ERP permite que una orden de trabajo genere automáticamente una solicitud de compra de repuestos.</div>
+</div>
+
+<!-- ══════════ 2. MÓDULOS ══════════ -->
+<div class="section-label">2 — Módulos principales de un GMAO</div>
+<div class="prose-card top-teal">
+  <h2>🧩 Arquitectura modular del GMAO <span class="chip ch-teal">7 módulos clave</span></h2>
+  <p>Los sistemas GMAO se estructuran en módulos funcionales interconectados. Cada módulo gestiona un área específica del mantenimiento. La clave de su valor reside en que todos los módulos comparten la misma base de datos, lo que permite trazabilidad completa desde el activo hasta el coste.</p>
+
+  <h3>Módulo de gestión de activos</h3>
+  <p>Es la base de todo el sistema. Contiene el <strong>inventario de todos los activos</strong> (equipos, instalaciones, vehículos, infraestructuras) con sus datos técnicos: número de serie, fabricante, modelo, fecha de instalación, ubicación física (árbol de localizaciones), documentación técnica y garantías. La jerarquía de activos (planta → sistema → subsistema → componente) permite localizar cualquier elemento y relacionarlo con sus intervenciones. <strong>Sin un inventario de activos fiable, el GMAO no funciona.</strong> Es el dato más examinado sobre implantación.</p>
+
+  <h3>Módulo de órdenes de trabajo (OT)</h3>
+  <p>Es el <strong>módulo más importante en el día a día</strong>. Una <strong>Orden de Trabajo (OT)</strong> es el documento digital que registra una intervención de mantenimiento: activo afectado, descripción de la tarea, técnico o equipo asignado, materiales utilizados, tiempo real empleado, fecha de apertura y cierre. Las OT pueden ser correctivas (generadas por una avería) o preventivas (generadas automáticamente por el calendario del GMAO). El módulo de OT permite seguimiento en tiempo real del estado de cada intervención: pendiente, en curso, en espera de repuesto, cerrada.</p>
+
+  <h3>Módulo de mantenimiento preventivo</h3>
+  <p>Gestiona las <strong>gamas de mantenimiento</strong> de cada activo. Una gama es la lista de tareas periódicas (revisiones, lubricaciones, ajustes, sustituciones de consumibles) que se deben realizar sobre un activo. La gama se asocia a una frecuencia de activación: por <strong>tiempo calendario</strong> (cada 3 meses, cada año) o por <strong>contador</strong> (cada 500 horas de funcionamiento, cada 10.000 ciclos). Cuando se alcanza el umbral definido, el GMAO genera automáticamente una OT preventiva. Esto elimina el riesgo de olvido y garantiza el cumplimiento del Plan de Mantenimiento Preventivo (PMP).</p>
+
+  <h3>Módulo de inventario y almacén</h3>
+  <p>Gestiona el <strong>stock de repuestos y consumibles</strong>. Permite definir un stock mínimo por referencia; cuando el nivel cae por debajo del mínimo, el GMAO genera automáticamente una solicitud de pedido. Cada repuesto está vinculado a los activos que lo utilizan, lo que permite anticipar las necesidades de aprovisionamiento antes de que se ejecute una OT preventiva.</p>
+
+  <h3>Módulo de informes y KPIs</h3>
+  <p>Genera los <strong>indicadores de rendimiento</strong> del departamento de mantenimiento a partir de los datos de las OT. Los indicadores más importantes (MTBF, MTTR, disponibilidad, coste por activo, ratio preventivo/correctivo) se analizan en el apartado 7 de este tema. Los informes del GMAO son la base para la toma de decisiones estratégicas: qué activos sustituir, dónde reforzar el preventivo, qué técnicos tienen mayor carga de trabajo.</p>
+</div>
+
+<!-- ══════════ 3. IMPLANTACIÓN ══════════ -->
+<div class="section-label">3 — Implantación del GMAO: fases y errores frecuentes</div>
+<div class="prose-card top-green">
+  <h2>🚀 Las seis fases de implantación <span class="chip ch-green">Examinable</span></h2>
+  <p>La implantación de un GMAO no es solo una instalación de software. Es un proyecto de cambio organizativo que afecta a los procesos, al personal y a la información del departamento de mantenimiento. Requiere planificación, formación y un periodo de ajuste. Las fases son:</p>
+
+  <h3>Fase 1 — Análisis y auditoría inicial</h3>
+  <p>Antes de elegir el software, hay que conocer la situación actual del departamento: qué activos existen, cómo se registran actualmente las intervenciones, qué indicadores se necesitan, qué integraciones son necesarias (ERP, BMS, SCADA). Esta fase produce el <strong>inventario de activos</strong>, que es la materia prima del GMAO. Es la fase más crítica: si el inventario está incompleto o es incorrecto, todo lo que se construya sobre él será incorrecto.</p>
+
+  <h3>Fase 2 — Selección del software</h3>
+  <p>En función del análisis, se elige el GMAO más adecuado según: tamaño de la organización, número de activos, presupuesto, necesidad de módulos específicos y capacidad de integración. Existen soluciones SaaS (en la nube, pago por uso) y on-premise (instaladas en servidores propios). Las soluciones SaaS son más ágiles y económicas para organizaciones medianas; las on-premise ofrecen mayor control de los datos.</p>
+
+  <h3>Fase 3 — Configuración y carga de datos</h3>
+  <p>Se parametriza el software: estructura de localizaciones, jerarquía de activos, definición de tipos de OT, creación de gamas de mantenimiento preventivo, configuración de alertas de stock. A continuación, se <strong>carga el inventario de activos</strong> y los datos históricos de intervenciones si están disponibles. Esta fase es laboriosa pero determinante: los errores de carga aquí se arrastran durante años.</p>
+
+  <h3>Fase 4 — Formación del equipo</h3>
+  <p>La formación debe alcanzar a <strong>todos los niveles</strong>: técnicos de mantenimiento (que abrirán y cerrarán OT), responsables de mantenimiento (que consultarán los informes y gestionarán las gamas) y personal de almacén (que gestionará el inventario de repuestos). Un GMAO sin usuarios formados se convierte rápidamente en una base de datos desordenada y abandonada.</p>
+
+  <h3>Fase 5 — Puesta en marcha y periodo de prueba</h3>
+  <p>Se recomienda un periodo de <strong>funcionamiento en paralelo</strong> con el sistema anterior (aunque sea papel o Excel) durante las primeras semanas, para detectar errores de configuración sin riesgo. Después del arranque definitivo, se establece un periodo de soporte intensivo del proveedor.</p>
+
+  <h3>Fase 6 — Seguimiento y mejora continua</h3>
+  <p>Una vez en marcha, el GMAO no es un sistema estático. Los indicadores que genera deben revisarse periódicamente para ajustar las gamas de preventivo (¿estamos haciendo demasiado preventivo? ¿hay activos con muchos correctivos que deberían entrar en preventivo?), actualizar el inventario de activos con altas y bajas, y mejorar los procesos del departamento.</p>
+
+  <div class="callout al-red"><strong>⚠ El error de implantación más frecuente en examen:</strong> comenzar a configurar el GMAO sin haber realizado previamente un inventario de activos fiable y completo. Sin el inventario, no es posible crear gamas de preventivo ni analizar indicadores por activo. El inventario de activos es el prerequisito de todo lo demás.</div>
+</div>
+
+<!-- ══════════ 4. CORRECTIVO ══════════ -->
+<div class="section-label">4 — Mantenimiento correctivo en el GMAO</div>
+<div class="prose-card top-flame">
+  <h2>🔴 Mantenimiento correctivo: gestión mediante OT <span class="chip ch-flame">Examinable</span></h2>
+  <p>El mantenimiento <strong>correctivo</strong> es la intervención que se realiza después de que un activo ha fallado o ha manifestado una anomalía. Aunque el objetivo del mantenimiento moderno es reducirlo al mínimo mediante el preventivo, el correctivo nunca desaparece por completo; siempre habrá fallos imprevistos.</p>
+
+  <h3>Correctivo inmediato (urgente)</h3>
+  <p>Se produce cuando el fallo impide el funcionamiento del activo y su parada tiene consecuencias directas sobre la operación o la seguridad. Ejemplos: un ascensor bloqueado con personas dentro, una caldera que deja de dar servicio en invierno, un cuadro eléctrico con disparo por cortocircuito. En el GMAO se abre una <strong>OT urgente</strong> de forma inmediata, con prioridad máxima. El tiempo de respuesta es crítico.</p>
+
+  <h3>Correctivo diferido (planificado)</h3>
+  <p>Se produce cuando el activo funciona pero con una anomalía que no impide el servicio pero que debe corregirse antes de que evolucione a un fallo mayor. Ejemplos: una vibración inusual en un ventilador, una pequeña fuga en una junta de tubería, un piloto de señalización fundido. En el GMAO se crea una <strong>OT correctiva diferida</strong> que se programa para ejecutarse en el próximo hueco disponible o en la próxima parada del equipo.</p>
+
+  <h3>Contenido de una OT correctiva</h3>
+  <p>Una OT correctiva bien registrada debe incluir: activo afectado (con su código en el GMAO), descripción del síntoma o avería, técnico asignado, fecha y hora de apertura, materiales o repuestos utilizados (vinculados al módulo de almacén), tiempo real de intervención, <strong>causa raíz del fallo</strong> y solución aplicada. El campo "causa raíz" es el más importante para el análisis posterior: permite identificar si el mismo fallo se repite en el mismo activo (fallo crónico) o si es un fallo puntual.</p>
+
+  <div class="callout al-orange"><strong>📌 Análisis de fallos repetitivos:</strong> si el GMAO muestra que un mismo activo acumula muchas OT correctivas por el mismo motivo, la decisión del responsable puede ser: (1) incorporar ese activo a una gama de preventivo, (2) sustituir el activo, o (3) rediseñar el proceso para eliminar la causa raíz. Sin el GMAO, este análisis es prácticamente imposible de hacer de forma sistemática.</div>
+</div>
+
+<!-- ══════════ 5. PREVENTIVO ══════════ -->
+<div class="section-label">5 — Mantenimiento preventivo en el GMAO</div>
+<div class="prose-card top-green">
+  <h2>🟢 Mantenimiento preventivo: gamas y plan de mantenimiento <span class="chip ch-green">Clave del GMAO</span></h2>
+  <p>El mantenimiento <strong>preventivo</strong> es el conjunto de intervenciones programadas que se realizan antes de que el activo falle, con el objetivo de mantenerlo en condiciones de funcionamiento óptimas, reducir la probabilidad de avería y alargar su vida útil. El GMAO es la herramienta que hace posible gestionar el preventivo de forma sistemática y automática a gran escala.</p>
+
+  <h3>La gama de mantenimiento</h3>
+  <p>Una <strong>gama</strong> es la lista ordenada de tareas o rutinas de mantenimiento que se deben ejecutar periódicamente sobre un activo específico. Cada activo tiene su propia gama, aunque activos del mismo tipo (por ejemplo, todos los ventiladores de extracción) pueden compartir la misma gama tipo. La gama define qué se hace (lubricar, revisar, sustituir, medir, ajustar), quién lo hace (técnico de qué especialidad) y con qué frecuencia (activación por tiempo o por contador).</p>
+
+  <h3>Activación por tiempo vs por contador</h3>
+  <p>La <strong>activación por tiempo calendario</strong> es la más sencilla: la OT se genera cada X días, semanas o meses, independientemente del uso real del equipo. Es adecuada para activos que funcionan de forma continua o cuyo deterioro depende principalmente del tiempo (como una batería de un SAI o un filtro de aire). La <strong>activación por contador</strong> vincula la generación de la OT al uso real del activo: cada X horas de funcionamiento, cada X ciclos, cada X kilómetros. Es más precisa que la activación por tiempo pero requiere que el activo tenga un contador real conectado al GMAO o que el técnico registre las lecturas manualmente.</p>
+
+  <h3>El Plan de Mantenimiento Preventivo (PMP)</h3>
+  <p>El PMP es el documento (o la vista del GMAO) que recoge todas las gamas de todos los activos con sus frecuencias. Es el "mapa" del preventivo de la organización. Un PMP bien diseñado permite visualizar la carga de trabajo preventivo mes a mes, distribuirla de forma equilibrada entre los técnicos y garantizar que ningún activo quede sin su mantenimiento programado. El GMAO convierte el PMP de un documento estático en un sistema activo que genera, asigna y controla las OT automáticamente.</p>
+
+  <div class="callout al-green"><strong>📌 La ventaja fundamental del preventivo vs el correctivo:</strong> el coste de una intervención preventiva planificada es siempre menor que el coste de reparar un fallo imprevisto, porque en el correctivo se suman: el coste de la reparación urgente (horas extra, envío urgente de repuestos), el coste de la parada no planificada (producción perdida, penalizaciones de servicio) y el posible daño secundario a otros componentes causado por el fallo. Este razonamiento aparece frecuentemente en preguntas de examen sobre justificación del preventivo.</div>
+</div>
+
+<!-- ══════════ 6. KPIs ══════════ -->
+<div class="section-label">6 — Indicadores clave (KPIs) en la gestión del GMAO</div>
+<div class="prose-card top-gold">
+  <h2>📊 KPIs del mantenimiento: definiciones y fórmulas <span class="chip ch-gold">Fórmulas examinables</span></h2>
+  <p>Los <strong>KPIs</strong> (Key Performance Indicators) son los indicadores que permiten medir el rendimiento del departamento de mantenimiento. El GMAO los calcula automáticamente a partir de los datos de las OT. Son la herramienta de gestión más importante del responsable de mantenimiento y los más preguntados en oposición.</p>
+
+  <h3>MTBF — Mean Time Between Failures (Tiempo Medio Entre Fallos)</h3>
+  <p>Mide la <strong>fiabilidad</strong> de un activo: cuánto tiempo funciona de media entre dos fallos consecutivos. Un MTBF alto indica un activo fiable. <strong>Fórmula:</strong> MTBF = Tiempo total de funcionamiento / Número de fallos en ese periodo. <strong>Interpretación:</strong> si un compresor tiene 1.000 horas de funcionamiento y ha sufrido 4 averías, su MTBF = 250 horas. Un MTBF que disminuye con el tiempo indica que el activo se está deteriorando y puede necesitar sustitución.</p>
+
+  <h3>MTTR — Mean Time To Repair (Tiempo Medio de Reparación)</h3>
+  <p>Mide la <strong>mantenibilidad</strong> de un activo: cuánto tiempo se tarda de media en repararlo una vez que ha fallado. Un MTTR bajo indica que las averías se resuelven rápidamente (buenos técnicos, repuestos disponibles, buen diagnóstico). <strong>Fórmula:</strong> MTTR = Tiempo total de reparación / Número de reparaciones. <strong>Interpretación:</strong> si las 4 averías del compresor anterior sumaron 8 horas de reparación, su MTTR = 2 horas por avería.</p>
+
+  <h3>Disponibilidad</h3>
+  <p>Es el <strong>indicador global</strong> que combina fiabilidad y mantenibilidad. Expresa el porcentaje de tiempo que el activo está disponible para ser utilizado. <strong>Fórmula:</strong> Disponibilidad = MTBF / (MTBF + MTTR). <strong>Ejemplo:</strong> MTBF=250 h, MTTR=2 h → Disponibilidad = 250/(250+2) = 0,992 = 99,2%. Una disponibilidad del 99% se considera excelente en muchos sectores.</p>
+
+  <h3>Backlog</h3>
+  <p>El <strong>backlog</strong> es el número (o carga en horas) de OT abiertas y pendientes de ejecutar. Es un indicador de la carga de trabajo acumulada del departamento. Un backlog creciente indica que el departamento está infradimensionado o que hay un pico de trabajo. Un backlog cero tampoco es ideal: puede indicar que el preventivo es insuficiente. El GMAO permite visualizar el backlog por técnico, por tipo de OT y por activo.</p>
+
+  <h3>Ratio preventivo / correctivo</h3>
+  <p>Expresa qué proporción del trabajo del departamento es preventivo y qué proporción es correctivo. <strong>Un departamento maduro tiene un ratio alto de preventivo</strong> (más del 70-80% de las OT son preventivas). Un departamento reactivo tiene la mayoría de sus OT como correctivas. El GMAO permite calcular este ratio en cualquier momento y evaluar la evolución en el tiempo.</p>
+
+  <div class="callout al-gold"><strong>⚠ La fórmula de disponibilidad es la más preguntada en tipo test:</strong><br>Disponibilidad = MTBF / (MTBF + MTTR)<br>Si el enunciado da MTBF=200 h y MTTR=4 h → D = 200/(200+4) = 200/204 ≈ 0,98 = 98%.<br>Recuerda: ↑ MTBF = más fiable. ↓ MTTR = más rápido de reparar. Ambos mejoran la disponibilidad.</div>
+</div>
+
+<!-- ══════════ 7. UTILIDAD DE LA INFORMACIÓN ══════════ -->
+<div class="section-label">7 — Gestión y utilidad de la información en el GMAO</div>
+<div class="prose-card top-purple">
+  <h2>📂 La información como activo estratégico <span class="chip ch-purple">Diferencial de nivel</span></h2>
+  <p>El verdadero valor de un GMAO no está solo en gestionar las OT del día a día. Está en el <strong>historial de información acumulada</strong> a lo largo del tiempo, que permite tomar decisiones basadas en datos en lugar de en intuiciones. Un GMAO bien alimentado durante varios años es uno de los activos más valiosos del departamento de mantenimiento.</p>
+
+  <h3>Historial de intervenciones</h3>
+  <p>Cada OT cerrada queda registrada permanentemente en el GMAO, asociada al activo intervenido. El historial permite: conocer el coste acumulado de mantenimiento de cada activo, identificar activos con fallos repetitivos (candidatos a sustitución), detectar patrones estacionales (equipos que fallan más en verano o en invierno) y justificar inversiones en renovación ante la dirección con datos objetivos.</p>
+
+  <h3>Trazabilidad y cumplimiento normativo</h3>
+  <p>El GMAO proporciona <strong>trazabilidad completa</strong> de todas las intervenciones: qué técnico realizó cada tarea, qué materiales se usaron, en qué fecha y con qué resultado. Esta trazabilidad es imprescindible para cumplir con las exigencias de normas como la <strong>ISO 55001</strong> (gestión de activos físicos), para superar auditorías de calidad (ISO 9001) y para acreditar el cumplimiento de las periodicidades de mantenimiento exigidas por reglamentos (RITE, ITC AEM 1, REBT…) ante organismos reguladores o durante inspecciones de OCA.</p>
+
+  <h3>Integración con otros sistemas</h3>
+  <p>Un GMAO moderno no opera en aislamiento. Se integra con: <strong>ERP</strong> (para generar pedidos de compra desde las OT y controlar costes), <strong>BMS/BAS</strong> (sistema de gestión técnica del edificio, que puede enviar alarmas de avería directamente al GMAO como OT correctivas), <strong>SCADA</strong> (que puede generar OT basadas en alarmas de proceso) e <strong>IoT/sensores</strong> (que alimentan al GMAO con lecturas de vibración, temperatura, presión o contador de horas para activar OT basadas en condición real del equipo, es decir, mantenimiento predictivo).</p>
+
+  <h3>Toma de decisiones con datos</h3>
+  <p>Los informes del GMAO permiten al responsable de mantenimiento responder preguntas clave: ¿Qué activo cuesta más mantener? ¿Qué técnico tiene mayor carga de trabajo? ¿En qué mes del año se concentran más averías? ¿Qué tipo de fallo es el más frecuente? ¿Estamos cumpliendo el PMP? ¿Ha mejorado la disponibilidad de los activos críticos respecto al año anterior? Sin GMAO, estas preguntas solo tienen respuestas subjetivas. Con GMAO, tienen respuestas numéricas y verificables.</p>
+
+  <div class="callout al-purple"><strong>📌 ISO 55001 y el GMAO:</strong> la norma ISO 55001 (Gestión de Activos Físicos) exige que la organización disponga de información documentada sobre todos sus activos físicos y su mantenimiento. El GMAO es la herramienta natural para cumplir con este requisito. En organizaciones certificadas en ISO 55001, el GMAO es obligatorio en la práctica. Esta asociación ISO 55001 – GMAO es un punto diferencial de nivel B que puede aparecer en preguntas de desarrollo.</div>
+</div>
+
+</body>
+</html>

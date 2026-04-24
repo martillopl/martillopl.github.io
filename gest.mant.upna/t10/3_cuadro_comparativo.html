@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 10 – Cuadros comparativos · GMAO</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f7fa;--surface:#fff;--surface-2:#f8f9fb;
+  --border:#ccd3de;--text:#1a2233;--muted:#4e5f7a;--faint:#8a9abb;
+  --blue:#0d4f8b;--blue-lt:#dceaf7;--blue-dk:#082f57;
+  --teal:#00707a;--teal-lt:#ccedf0;
+  --green:#1a6633;--green-lt:#d4eedd;
+  --gold:#c47d00;--gold-lt:#faefd0;
+  --orange:#8b3a0d;--orange-lt:#fce8d8;
+  --purple:#5b3690;--purple-lt:#ece4f8;
+  --flame:#c0392b;--red-lt:#fde8e8;
+  --font-d:'Cabinet Grotesk',sans-serif;
+  --font-b:'Satoshi',sans-serif;
+  --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.88rem;line-height:1.65;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 5rem;}
+.file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s;}
+.file-nav a:hover,.file-nav a.active{background:var(--blue);color:white;border-color:var(--blue);}
+.page-header{background:linear-gradient(135deg,#143d6e 0%,#0a2448 100%);color:white;border-radius:var(--r-xl);padding:2rem 2.5rem;margin-bottom:2rem;}
+.page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;}
+.page-header h1{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,1.85rem);font-weight:800;line-height:1.2;margin-bottom:.4rem;}
+.page-header .sub{font-size:.83rem;opacity:.8;}
+.section-label{font-family:var(--font-d);font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:2.5rem 0 .7rem;}
+.table-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.5rem;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+.table-card-header{padding:.85rem 1.25rem;display:flex;align-items:center;gap:.65rem;border-bottom:1px solid var(--border);}
+.table-card-header .icon{font-size:1.1rem;}
+.table-card-header h2{font-family:var(--font-d);font-size:.95rem;font-weight:800;}
+.top-blue{border-top:4px solid var(--blue);}
+.top-teal{border-top:4px solid var(--teal);}
+.top-green{border-top:4px solid var(--green);}
+.top-gold{border-top:4px solid var(--gold);}
+.top-orange{border-top:4px solid var(--orange);}
+.top-purple{border-top:4px solid var(--purple);}
+.top-flame{border-top:4px solid var(--flame);}
+.chip{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:2px 8px;border-radius:999px;white-space:nowrap;margin-left:auto;}
+.ch-blue{background:var(--blue-lt);color:var(--blue-dk);}
+.ch-teal{background:var(--teal-lt);color:var(--teal);}
+.ch-green{background:var(--green-lt);color:var(--green);}
+.ch-gold{background:var(--gold-lt);color:#7a4e00;}
+.ch-orange{background:var(--orange-lt);color:var(--orange);}
+.ch-purple{background:var(--purple-lt);color:var(--purple);}
+.ch-flame{background:var(--red-lt);color:var(--flame);}
+.callout{border-radius:var(--r-md);padding:.75rem 1rem;font-size:.83rem;margin:.75rem 1.25rem;line-height:1.55;}
+.al-red{background:var(--red-lt);border-left:3px solid var(--flame);}
+.al-blue{background:var(--blue-lt);border-left:3px solid var(--blue);}
+.al-teal{background:var(--teal-lt);border-left:3px solid var(--teal);}
+.al-green{background:var(--green-lt);border-left:3px solid var(--green);}
+.al-gold{background:var(--gold-lt);border-left:3px solid var(--gold);}
+.al-purple{background:var(--purple-lt);border-left:3px solid var(--purple);}
+.al-orange{background:var(--orange-lt);border-left:3px solid var(--orange);}
+.cmp-table{width:100%;border-collapse:collapse;font-size:.84rem;}
+.cmp-table th{font-family:var(--font-d);font-weight:800;font-size:.78rem;padding:.55rem .9rem;text-align:left;border-bottom:2px solid var(--border);}
+.cmp-table th.hd-blue{background:var(--blue);color:white;}
+.cmp-table th.hd-flame{background:var(--flame);color:white;}
+.cmp-table th.hd-teal{background:var(--teal);color:white;}
+.cmp-table th.hd-green{background:var(--green);color:white;}
+.cmp-table th.hd-gold{background:var(--gold);color:white;}
+.cmp-table th.hd-orange{background:var(--orange);color:white;}
+.cmp-table th.hd-purple{background:var(--purple);color:white;}
+.cmp-table th.hd-grey{background:#e8edf0;color:var(--text);}
+.cmp-table td{padding:.5rem .9rem;border-bottom:1px solid #eef3f6;vertical-align:top;}
+.cmp-table tr:last-child td{border-bottom:none;}
+.cmp-table tr:hover td{background:#f8f9fb;}
+.cmp-table tr.sep td{background:var(--surface-2);font-family:var(--font-d);font-weight:800;font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--border);}
+.cmp-table tr.hi td{background:#dceaf7!important;font-weight:700;}
+.cmp-table tr.hi-red td{background:#fde8e8!important;font-weight:700;}
+.cmp-table tr.hi-green td{background:#d4eedd!important;font-weight:700;}
+.cmp-table tr.hi-gold td{background:var(--gold-lt)!important;font-weight:700;}
+.cmp-table tr.hi-purple td{background:var(--purple-lt)!important;font-weight:700;}
+.cmp-table .feat{font-weight:700;color:var(--muted);font-size:.79rem;white-space:nowrap;}
+.ok{color:var(--green);font-weight:800;}
+.no{color:var(--flame);font-weight:800;}
+.warn{color:var(--orange);font-weight:700;}
+.dato{font-family:var(--font-d);font-weight:800;font-size:1.15rem;}
+@media(max-width:680px){.cmp-table{font-size:.78rem;}.cmp-table td,.cmp-table th{padding:.4rem .6rem;}}
+</style>
+</head>
+<body>
+
+<div class="file-nav">
+  <a href="1_texto_explicativo_t10.html">📄 Texto explicativo</a>
+  <a href="2_esquema_resumen_t10.html">🗂 Esquema-resumen</a>
+  <a href="3_cuadro_comparativo_t10.html" class="active">📊 Cuadros comparativos</a>
+</div>
+
+<div class="page-header">
+  <div class="meta">Tema 10 · Gestor de Mantenimiento (Nivel B) · UPNA · Cuadros comparativos</div>
+  <h1>GMAO — Tablas operativas para examen</h1>
+  <div class="sub">7 tablas · Módulos · Implantación · Correctivo vs Preventivo · KPIs · Tipos de mantenimiento · Información · GMAO vs ERP</div>
+</div>
+
+
+<!-- TABLA 1: MÓDULOS -->
+<div class="section-label">Tabla 1 — Módulos del GMAO: función, qué contiene y dato de examen</div>
+<div class="table-card top-blue">
+  <div class="table-card-header"><span class="icon">🧩</span><h2>Los 7 módulos clave de un GMAO</h2><span class="chip ch-blue">Arquitectura</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:165px;">Módulo</th>
+      <th class="hd-blue">Función principal</th>
+      <th class="hd-blue">Qué contiene / gestiona</th>
+      <th class="hd-blue">Dato clave de examen</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi"><td><strong>Activos (equipos)</strong></td><td>Inventario centralizado de todos los activos de la organización.</td><td>Datos técnicos, número de serie, ubicación, jerarquía (planta→sistema→componente), documentación técnica.</td><td><strong>ES LA BASE DE TODO.</strong> Sin inventario fiable, el GMAO no funciona. Primer paso de implantación.</td></tr>
+      <tr class="hi-red"><td><strong>Órdenes de Trabajo (OT)</strong></td><td>Gestión de todas las intervenciones de mantenimiento.</td><td>Activo, descripción de tarea, técnico asignado, materiales, tiempo, causa raíz, estado (pendiente/en curso/cerrada).</td><td><strong>EL MÓDULO MÁS IMPORTANTE del día a día.</strong> Toda intervención = una OT.</td></tr>
+      <tr><td><strong>Mantenimiento preventivo</strong></td><td>Planificación y automatización de las intervenciones programadas.</td><td>Gamas de mantenimiento, frecuencias (tiempo o contador), generación automática de OT preventivas, PMP.</td><td>Gama = lista de tareas periódicas. Se activa por tiempo o por contador.</td></tr>
+      <tr><td><strong>Inventario y almacén</strong></td><td>Control del stock de repuestos y consumibles.</td><td>Referencias, stock actual, stock mínimo, ubicación en almacén, vinculación a activos y OT.</td><td>Stock mínimo → pedido automático. Evita paradas por falta de repuesto.</td></tr>
+      <tr><td><strong>Informes y KPIs</strong></td><td>Generación de indicadores de rendimiento del mantenimiento.</td><td>MTBF, MTTR, disponibilidad, backlog, ratio prev/cor, coste por activo.</td><td>Base para la toma de decisiones del responsable de mantenimiento.</td></tr>
+      <tr><td><strong>RRHH y recursos</strong></td><td>Gestión del personal técnico y sus cargas de trabajo.</td><td>Disponibilidad de técnicos, horas asignadas, especialidades, planificación de turnos.</td><td>Permite equilibrar la carga de trabajo entre técnicos y evitar cuellos de botella.</td></tr>
+      <tr><td><strong>Compras y proveedores</strong></td><td>Gestión de pedidos de materiales y servicios externos.</td><td>Proveedores, solicitudes de pedido, historial de costes, integración con ERP.</td><td>Integrado con ERP: una OT puede generar automáticamente una solicitud de compra.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- TABLA 2: FASES IMPLANTACIÓN -->
+<div class="section-label">Tabla 2 — Fases de implantación del GMAO</div>
+<div class="table-card top-green">
+  <div class="table-card-header"><span class="icon">🚀</span><h2>Las 6 fases: qué se hace, quién lo hace y error frecuente</h2><span class="chip ch-green">Implantación</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:110px;">Fase</th>
+      <th class="hd-green">Qué se hace</th>
+      <th class="hd-green">Resultado / Entregable</th>
+      <th class="hd-green">Error frecuente</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi"><td><strong>1 — Análisis</strong></td><td>Auditoría de la situación actual. Inventario de activos. Definición de necesidades e integraciones requeridas.</td><td>Inventario de activos. Mapa de procesos de mantenimiento. Requisitos del sistema.</td><td><strong>El más frecuente:</strong> saltar esta fase o hacer el inventario incompleto. Consecuencia: el GMAO arranca con datos incorrectos.</td></tr>
+      <tr><td><strong>2 — Selección</strong></td><td>Elección del software según tamaño, presupuesto y funcionalidades. SaaS vs on-premise.</td><td>Contrato con proveedor. Pliego técnico aprobado.</td><td>Elegir el software antes de hacer el análisis. Comprar funcionalidades que no se necesitan.</td></tr>
+      <tr><td><strong>3 — Configuración</strong></td><td>Parametrización del software. Carga del inventario de activos. Creación de gamas de preventivo.</td><td>GMAO configurado con datos de la organización. Gamas listas para generar OT.</td><td>Carga de datos errónea o incompleta. Los errores de esta fase se arrastran años.</td></tr>
+      <tr><td><strong>4 — Formación</strong></td><td>Capacitación de técnicos, responsables y personal de almacén en el uso del GMAO.</td><td>Equipo capaz de abrir, gestionar y cerrar OT correctamente.</td><td>Formar solo a los jefes y no a los técnicos. Sin formación, el GMAO se abandona.</td></tr>
+      <tr><td><strong>5 — Puesta en marcha</strong></td><td>Arranque del sistema. Periodo de funcionamiento en paralelo con el sistema anterior.</td><td>GMAO en producción. Primeras OT reales generadas y cerradas.</td><td>Arrancar sin periodo en paralelo. Un error de configuración no detectado puede generar caos.</td></tr>
+      <tr><td><strong>6 — Seguimiento</strong></td><td>Revisión periódica de KPIs. Ajuste de gamas. Altas y bajas de activos. Mejora continua.</td><td>GMAO evolucionado y ajustado a la realidad de la organización.</td><td>Considerar el GMAO "terminado" tras el arranque. Es un sistema vivo que necesita mantenimiento.</td></tr>
+    </tbody>
+  </table>
+  <div class="callout al-red"><strong>⚠ El error de implantación más preguntado:</strong> implantar el GMAO sin haber realizado previamente un inventario de activos fiable y completo. Sin el inventario, no se pueden crear gamas de preventivo ni analizar indicadores por activo.</div>
+</div>
+
+
+<!-- TABLA 3: CORRECTIVO vs PREVENTIVO -->
+<div class="section-label">Tabla 3 — Mantenimiento correctivo vs preventivo: comparativa completa</div>
+<div class="table-card top-flame">
+  <div class="table-card-header"><span class="icon">⚖</span><h2>Correctivo vs Preventivo — diferencias, tipos y gestión en el GMAO</h2><span class="chip ch-flame">Examinable</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey">Característica</th>
+      <th class="hd-flame">🔴 Correctivo</th>
+      <th class="hd-green">🟢 Preventivo</th>
+    </tr></thead>
+    <tbody>
+      <tr><td class="feat">Cuándo se actúa</td><td>Después de que el activo ha fallado</td><td>Antes de que el activo falle</td></tr>
+      <tr><td class="feat">Cómo se genera la OT</td><td>Manualmente, al detectar la avería</td><td>Automáticamente por el GMAO según la gama</td></tr>
+      <tr class="hi-red"><td class="feat">Tipos</td><td><strong>Inmediato (urgente):</strong> el equipo no funciona.<br><strong>Diferido (planificado):</strong> funciona con anomalía.</td><td><strong>Sistemático por tiempo:</strong> cada X días/meses.<br><strong>Sistemático por contador:</strong> cada X horas/ciclos.<br><strong>Predictivo/condición:</strong> generado por sensor IoT.</td></tr>
+      <tr><td class="feat">Indicador clave</td><td><strong>MTTR</strong> (Tiempo Medio de Reparación). ↓ mejor.</td><td><strong>MTBF</strong> (Tiempo Medio Entre Fallos). ↑ mejor.</td></tr>
+      <tr><td class="feat">Coste</td><td class="no">Mayor: reparación urgente + parada no planificada + posibles daños secundarios</td><td class="ok">Menor: intervención planificada con recursos y repuestos preparados</td></tr>
+      <tr><td class="feat">Impacto en la operación</td><td class="no">Alto: parada imprevista, pérdida de servicio o producción</td><td class="ok">Bajo: se programa en el momento menos impactante</td></tr>
+      <tr><td class="feat">Información que genera en el GMAO</td><td>Historial de averías, causa raíz, tiempo de reparación, coste. Identifica activos problemáticos.</td><td>Historial de intervenciones programadas, coste acumulado, cumplimiento del PMP.</td></tr>
+      <tr class="hi-green"><td class="feat">Objetivo del GMAO respecto a este tipo</td><td class="no">Reducirlo al mínimo. Si hay muchos correctivos → revisar el preventivo.</td><td class="ok">Aumentarlo hasta superar el 70–80% del total de OT. Indica madurez del departamento.</td></tr>
+    </tbody>
+  </table>
+  <div class="callout al-green"><strong>📌 Justificación del preventivo frente al correctivo:</strong> el coste del correctivo incluye la reparación urgente + la parada no planificada + el posible daño secundario + las horas extra. El preventivo, aunque tiene un coste, siempre es menor que la suma de estos conceptos. Esta justificación es un punto frecuente en preguntas de desarrollo.</div>
+</div>
+
+
+<!-- TABLA 4: TIPOS DE MANTENIMIENTO GESTIONABLES -->
+<div class="section-label">Tabla 4 — Tipos de mantenimiento gestionables con un GMAO</div>
+<div class="table-card top-teal">
+  <div class="table-card-header"><span class="icon">🔧</span><h2>Los 5 tipos de mantenimiento y cómo los gestiona el GMAO</h2><span class="chip ch-teal">Tipología</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:160px;">Tipo</th>
+      <th class="hd-teal">Descripción</th>
+      <th class="hd-teal">Cómo se gestiona en el GMAO</th>
+      <th class="hd-teal">Ventaja / Limitación</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi-red"><td><strong>Correctivo inmediato</strong></td><td>Fallo que impide el funcionamiento. Intervención urgente.</td><td>OT urgente creada manualmente al detectar el fallo. Prioridad máxima.</td><td class="no">El más costoso. El GMAO lo registra para análisis posterior de causa raíz.</td></tr>
+      <tr><td><strong>Correctivo diferido</strong></td><td>Anomalía que no impide el funcionamiento pero debe corregirse.</td><td>OT correctiva planificada para el próximo hueco disponible o parada programada.</td><td class="warn">Menos costoso que el inmediato. Permite preparar recursos con antelación.</td></tr>
+      <tr class="hi"><td><strong>Preventivo sistemático por tiempo</strong></td><td>Intervención programada según calendario, independiente del uso real.</td><td>Gama con activación por frecuencia temporal. El GMAO genera OT automáticamente.</td><td class="ok">Simple de implementar. Puede generar mantenimiento innecesario en activos poco usados.</td></tr>
+      <tr><td><strong>Preventivo sistemático por contador</strong></td><td>Intervención programada según uso real (horas, ciclos, km).</td><td>Gama con activación por contador. Requiere lectura periódica del contador o conexión IoT.</td><td class="ok">Más eficiente que por tiempo. Requiere sistema de captura de datos del activo.</td></tr>
+      <tr class="hi-green"><td><strong>Predictivo / basado en condición</strong></td><td>Intervención generada por la lectura en tiempo real de sensores (vibración, temperatura, presión…).</td><td>El sensor IoT envía la alarma al GMAO que genera la OT automáticamente cuando supera el umbral.</td><td class="ok">El más eficiente. Interviene solo cuando es necesario. Requiere inversión en sensores e integración IoT.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- TABLA 5: KPIs -->
+<div class="section-label">Tabla 5 — KPIs del mantenimiento: definición, fórmula e interpretación</div>
+<div class="table-card top-gold">
+  <div class="table-card-header"><span class="icon">📊</span><h2>Los 6 indicadores más preguntados con fórmulas y ejemplos resueltos</h2><span class="chip ch-gold">Fórmulas</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:120px;">KPI</th>
+      <th class="hd-gold">Qué mide</th>
+      <th class="hd-gold">Fórmula</th>
+      <th class="hd-gold">Ejemplo resuelto</th>
+      <th class="hd-gold">Interpretación</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi"><td><strong>MTBF</strong></td><td>Fiabilidad: tiempo medio entre dos fallos consecutivos</td><td>MTBF = Horas funcionamiento / Nº fallos</td><td>1.000 h funcionamiento, 4 fallos → MTBF = <strong>250 h</strong></td><td>↑ MTBF = más fiable. Mejora con buen preventivo.</td></tr>
+      <tr class="hi-red"><td><strong>MTTR</strong></td><td>Mantenibilidad: tiempo medio de reparación</td><td>MTTR = Horas de reparación / Nº reparaciones</td><td>8 h de reparación en 4 averías → MTTR = <strong>2 h</strong></td><td>↓ MTTR = más rápido. Mejora con repuestos disponibles y técnicos formados.</td></tr>
+      <tr class="hi-green"><td><strong>Disponibilidad</strong></td><td>% tiempo que el activo está disponible para su uso</td><td><strong>D = MTBF / (MTBF + MTTR)</strong></td><td>MTBF=250, MTTR=2 → D = 250/252 = <strong>99,2%</strong></td><td>El indicador global. ↑ MTBF y/o ↓ MTTR → mejora la disponibilidad.</td></tr>
+      <tr><td><strong>Backlog</strong></td><td>Carga de trabajo acumulada pendiente</td><td>Nº de OT abiertas pendientes de ejecutar</td><td>35 OT abiertas sin asignar = backlog de 35 OT</td><td>↑ creciente = dpto. saturado. Cero backlog = puede indicar preventivo insuficiente.</td></tr>
+      <tr><td><strong>% Prev/Cor</strong></td><td>Madurez del departamento de mantenimiento</td><td>OT preventivas / Total OT × 100</td><td>80 OT prev + 20 OT cor = <strong>80% preventivo</strong></td><td>&gt;70-80% preventivo = dpto. maduro. &lt;50% = dpto. reactivo.</td></tr>
+      <tr><td><strong>OEE</strong></td><td>Eficiencia global del equipo</td><td>OEE = Disponibilidad × Rendimiento × Calidad</td><td>D=0,95 × R=0,90 × Q=0,98 = <strong>OEE 83,8%</strong></td><td>OEE &gt;85% se considera de clase mundial. Integra disponibilidad, velocidad y calidad.</td></tr>
+    </tbody>
+  </table>
+  <div class="callout al-gold"><strong>⚠ La fórmula más examinada en tipo test: Disponibilidad = MTBF / (MTBF + MTTR)</strong><br>Si el enunciado da MTBF=100 h y MTTR=5 h → D = 100/105 ≈ 95,2%.<br>Si el enunciado da MTBF=500 h y MTTR=2 h → D = 500/502 ≈ 99,6%.<br>Siempre el denominador es MTBF + MTTR.</div>
+</div>
+
+
+<!-- TABLA 6: UTILIDAD DE LA INFORMACIÓN -->
+<div class="section-label">Tabla 6 — Utilidad de la información generada por el GMAO</div>
+<div class="table-card top-purple">
+  <div class="table-card-header"><span class="icon">📂</span><h2>Qué información genera el GMAO, para qué sirve y quién la usa</h2><span class="chip ch-purple">Gestión info</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey">Tipo de información</th>
+      <th class="hd-purple">Qué contiene</th>
+      <th class="hd-purple">Para qué se usa</th>
+      <th class="hd-purple">Quién la usa</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi"><td><strong>Historial de intervenciones</strong></td><td>Todas las OT cerradas (correctivas y preventivas) asociadas a cada activo.</td><td>Detectar fallos repetitivos, justificar sustituciones, identificar patrones estacionales, calcular el coste acumulado por activo.</td><td>Responsable de mantenimiento, dirección técnica.</td></tr>
+      <tr><td><strong>KPIs e informes de rendimiento</strong></td><td>MTBF, MTTR, disponibilidad, ratio prev/cor, backlog, coste por activo.</td><td>Toma de decisiones: reforzar preventivo en activos críticos, dimensionar el equipo técnico, planificar inversiones en renovación.</td><td>Responsable de mantenimiento, gerencia.</td></tr>
+      <tr><td><strong>Trazabilidad de intervenciones</strong></td><td>Técnico, materiales, tiempo, solución aplicada y causa raíz de cada OT.</td><td>Auditorías de calidad (ISO 9001), inspecciones de OCA, cumplimiento de reglamentos (RITE, ITC AEM 1, REBT). Acredita que se ha realizado el mantenimiento reglamentario.</td><td>Auditores, inspectores, OCAs, responsable de mantenimiento.</td></tr>
+      <tr class="hi-purple"><td><strong>Plan de Mantenimiento Preventivo (PMP)</strong></td><td>Todas las gamas de todos los activos con sus frecuencias. Vista de carga de trabajo mes a mes.</td><td>Distribuir equilibradamente el preventivo entre los técnicos. Garantizar que ningún activo quede sin mantenimiento programado.</td><td>Responsable de mantenimiento, técnicos de mantenimiento.</td></tr>
+      <tr><td><strong>Análisis de criticidad de activos</strong></td><td>Ranking de activos por número de averías, coste de mantenimiento o impacto en la operación.</td><td>Priorizar recursos. Decidir qué activos deben incorporarse al preventivo. Planificar sustituciones.</td><td>Responsable de mantenimiento, dirección técnica.</td></tr>
+    </tbody>
+  </table>
+  <div class="callout al-purple"><strong>📌 ISO 55001:</strong> exige información documentada sobre todos los activos físicos y su mantenimiento. El GMAO es la herramienta práctica para cumplirla. En organizaciones certificadas en ISO 55001, el GMAO es obligatorio en la práctica.</div>
+</div>
+
+
+<!-- TABLA 7: GMAO vs ERP vs BMS -->
+<div class="section-label">Tabla 7 — GMAO vs ERP vs BMS: diferencias y relaciones</div>
+<div class="table-card top-blue">
+  <div class="table-card-header"><span class="icon">🔗</span><h2>Qué es cada sistema, qué gestiona y cómo se integran</h2><span class="chip ch-blue">Integraciones</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey">Sistema</th>
+      <th class="hd-blue">Qué es</th>
+      <th class="hd-blue">Qué gestiona</th>
+      <th class="hd-blue">Relación con el GMAO</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi"><td><strong>GMAO</strong></td><td>Software especializado en mantenimiento.</td><td>Activos, OT, gamas de preventivo, inventario de repuestos, KPIs de mantenimiento.</td><td>Es el núcleo. Se integra con todos los demás sistemas.</td></tr>
+      <tr><td><strong>ERP</strong> (SAP, Oracle…)</td><td>Sistema de Planificación de Recursos Empresariales. Gestiona todos los recursos de la empresa.</td><td>Finanzas, compras, RRHH, producción, logística.</td><td>El GMAO le envía solicitudes de compra de repuestos generadas desde las OT. El ERP le devuelve datos de costes.</td></tr>
+      <tr><td><strong>BMS/BAS</strong></td><td>Building Management System. Sistema de gestión técnica del edificio.</td><td>Climatización, iluminación, seguridad, accesos, consumos energéticos del edificio.</td><td>Las alarmas del BMS (avería en equipo) se envían automáticamente al GMAO como OT correctivas.</td></tr>
+      <tr><td><strong>SCADA</strong></td><td>Supervisory Control and Data Acquisition. Control de procesos industriales.</td><td>Variables de proceso: temperaturas, presiones, caudales, estados de equipos.</td><td>Las alarmas de proceso del SCADA generan OT correctivas en el GMAO. El GMAO puede recibir lecturas de contadores para activar OT preventivas por horas de uso.</td></tr>
+      <tr class="hi-green"><td><strong>IoT / Sensores</strong></td><td>Dispositivos conectados que monitorean el estado real de los equipos en tiempo real.</td><td>Vibración, temperatura, presión, consumo eléctrico, contador de horas.</td><td>Alimentan al GMAO con datos de condición real. Cuando se supera un umbral de alarma, el GMAO genera automáticamente una OT de mantenimiento predictivo.</td></tr>
+    </tbody>
+  </table>
+  <div class="callout al-blue"><strong>📌 La integración más examinada: GMAO + ERP.</strong> Una OT del GMAO puede generar automáticamente una solicitud de compra en el ERP sin intervención manual. Esto elimina errores, acelera el aprovisionamiento y garantiza que los repuestos estén disponibles cuando se necesitan.</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+PUNTOS CLAVE — TEMA 10: GMAO
+Gestor de Mantenimiento (Nivel B) · UPNA · Oposición
+
+════════════════════════════════════════════════════════
+1. DEFINICIÓN Y CONCEPTO
+════════════════════════════════════════════════════════
+01. GMAO = Gestión del Mantenimiento Asistido por Ordenador (CMMS en inglés).
+02. Software especializado para planificar, controlar y optimizar todas las tareas de mantenimiento.
+03. Centraliza en una sola plataforma: activos, órdenes de trabajo, inventario, historial e informes.
+04. Su objetivo principal es reducir costes, evitar paradas no planificadas y alargar la vida útil de los activos.
+05. No es solo un software: requiere un cambio organizativo y de procesos (gestión del cambio).
+
+════════════════════════════════════════════════════════
+2. MÓDULOS PRINCIPALES DE UN GMAO
+════════════════════════════════════════════════════════
+06. Módulo de ACTIVOS (equipos): registro de todos los activos con sus datos técnicos, ubicación y jerarquía.
+07. Módulo de ÓRDENES DE TRABAJO (OT): creación, asignación, seguimiento y cierre de todas las intervenciones.
+08. Módulo de MANTENIMIENTO PREVENTIVO: planificación de gamas de mantenimiento por tiempo o contador.
+09. Módulo de INVENTARIO Y ALMACÉN: control de repuestos, stock mínimo, pedidos automáticos.
+10. Módulo de RECURSOS HUMANOS: asignación de técnicos, control de disponibilidad y horas.
+11. Módulo de INFORMES Y KPIs: generación de indicadores de rendimiento (MTBF, MTTR, disponibilidad).
+12. Módulo de COMPRAS: gestión de proveedores, solicitudes de pedido, historial de costes.
+
+════════════════════════════════════════════════════════
+3. IMPLANTACIÓN DEL GMAO: FASES
+════════════════════════════════════════════════════════
+13. Fase 1 — ANÁLISIS: auditoría de la situación actual, inventario de activos, definición de necesidades.
+14. Fase 2 — SELECCIÓN: elección del software según tamaño, presupuesto y funcionalidades requeridas.
+15. Fase 3 — CONFIGURACIÓN: parametrización del software, carga de datos de activos y repuestos.
+16. Fase 4 — FORMACIÓN: capacitación del equipo de mantenimiento y de los responsables.
+17. Fase 5 — PUESTA EN MARCHA: arranque del sistema, periodo de prueba en paralelo con el sistema anterior.
+18. Fase 6 — SEGUIMIENTO: revisión de indicadores, ajuste de gamas y mejora continua.
+19. El error más frecuente en la implantación: cargar datos incorrectos o incompletos en la fase de inventario.
+20. Sin inventario de activos fiable, el GMAO no funciona correctamente. El inventario es la base de todo.
+
+════════════════════════════════════════════════════════
+4. MANTENIMIENTO CORRECTIVO EN EL GMAO
+════════════════════════════════════════════════════════
+21. Mantenimiento CORRECTIVO: intervención después de que el equipo ha fallado.
+22. Correctivo INMEDIATO (urgente): la avería impide el funcionamiento → actuar sin demora.
+23. Correctivo DIFERIDO (planificado): la avería no impide el funcionamiento → se programa en el GMAO.
+24. En el GMAO, el correctivo se gestiona mediante ÓRDENES DE TRABAJO (OT) correctivas.
+25. La OT correctiva recoge: activo afectado, síntoma/descripción del fallo, técnico asignado, materiales usados, tiempo de intervención, causa raíz y solución aplicada.
+26. El GMAO permite analizar las OT correctivas para identificar activos con mayor número de averías (análisis de criticidad).
+27. Indicador clave del correctivo: MTTR (Mean Time To Repair) = tiempo medio de reparación.
+
+════════════════════════════════════════════════════════
+5. MANTENIMIENTO PREVENTIVO EN EL GMAO
+════════════════════════════════════════════════════════
+28. Mantenimiento PREVENTIVO: intervenciones programadas antes de que ocurra el fallo.
+29. GAMA de mantenimiento: lista de tareas/rutinas periódicas asociadas a un activo.
+30. La gama se puede activar por TIEMPO (cada X días/semanas/meses) o por CONTADOR (cada X horas de uso, km, ciclos).
+31. El GMAO genera automáticamente las OT preventivas según las gamas configuradas.
+32. Ventaja clave: el preventivo reduce el correctivo a lo largo del tiempo → menos paradas imprevistas.
+33. Indicador clave del preventivo: MTBF (Mean Time Between Failures) = tiempo medio entre fallos.
+34. Plan de mantenimiento preventivo (PMP): documento que recoge todas las gamas y frecuencias de todos los activos.
+
+════════════════════════════════════════════════════════
+6. TIPOS DE MANTENIMIENTO GESTIONABLES CON GMAO
+════════════════════════════════════════════════════════
+35. Correctivo inmediato → OT urgente, sin programar.
+36. Correctivo diferido → OT planificada.
+37. Preventivo sistemático (por tiempo o contador) → OT programada automáticamente.
+38. Preventivo predictivo / basado en condición → generado por alarmas de sensores IoT conectados al GMAO.
+39. Conductivo (rondas de operadores) → OT de inspección periódica de baja complejidad.
+
+════════════════════════════════════════════════════════
+7. INDICADORES CLAVE (KPIs) EN GMAO
+════════════════════════════════════════════════════════
+40. MTBF (Mean Time Between Failures): tiempo medio entre dos fallos consecutivos. ↑ MTBF = mejor.
+41. MTTR (Mean Time To Repair): tiempo medio de reparación desde que ocurre el fallo hasta restablecer el servicio. ↓ MTTR = mejor.
+42. DISPONIBILIDAD = MTBF / (MTBF + MTTR). El indicador global de fiabilidad de un activo.
+43. OEE (Overall Equipment Effectiveness): eficiencia global del equipo = Disponibilidad × Rendimiento × Calidad.
+44. % OT preventivas / total OT: mide si el departamento es proactivo (más preventivo) o reactivo (más correctivo).
+45. Coste de mantenimiento por activo: permite comparar activos y decidir si reparar o sustituir.
+46. Backlog: número de OT pendientes de ejecutar. Mide la carga de trabajo acumulada.
+
+════════════════════════════════════════════════════════
+8. GESTIÓN Y UTILIDAD DE LA INFORMACIÓN EN EL GMAO
+════════════════════════════════════════════════════════
+47. El GMAO genera un HISTORIAL DE INTERVENCIONES de cada activo: todas las OT (preventivas y correctivas).
+48. El historial permite: análisis de fallos repetitivos, decisiones de sustitución, planificación de repuestos.
+49. Los INFORMES del GMAO alimentan la toma de decisiones del responsable de mantenimiento.
+50. Integración con otros sistemas: ERP (SAP, Oracle), BMS/BAS (control de edificios), SCADA (control de proceso), IoT.
+51. La integración ERP-GMAO permite que una OT genere automáticamente un pedido de compra.
+52. Trazabilidad total: cada intervención queda registrada con técnico, materiales, coste y tiempo.
+53. Datos del GMAO son obligatorios para la certificación ISO 55001 (gestión de activos).
+54. La información del GMAO es clave en auditorías de mantenimiento y en inspecciones de organismos reguladores.
+
+════════════════════════════════════════════════════════
+9. LO MÁS PREGUNTADO EN OPOSICIÓN — TEMA 10
+════════════════════════════════════════════════════════
+A. ¿Qué significa GMAO? → Gestión del Mantenimiento Asistido por Ordenador.
+B. ¿Cuál es el módulo más importante del GMAO? → Módulo de órdenes de trabajo (OT).
+C. ¿Qué es una gama de mantenimiento? → Lista de tareas periódicas de un activo.
+D. ¿Cómo se activa una OT preventiva? → Por tiempo (calendario) o por contador (horas de uso).
+E. ¿Qué diferencia hay entre correctivo inmediato y diferido? → Inmediato: el equipo no funciona. Diferido: funciona pero con anomalía.
+F. ¿Qué mide el MTBF? → Tiempo medio entre fallos. Indica fiabilidad.
+G. ¿Qué mide el MTTR? → Tiempo medio de reparación. Indica mantenibilidad.
+H. ¿Cómo se calcula la disponibilidad? → MTBF / (MTBF + MTTR).
+I. ¿Qué es el backlog? → Acumulado de OT pendientes de ejecutar.
+J. ¿Con qué sistemas se integra el GMAO? → ERP, SCADA, BMS/BAS, IoT.
+K. ¿Cuál es la primera fase de implantación de un GMAO? → Análisis e inventario de activos.
+L. ¿Qué norma obliga a disponer de trazabilidad de mantenimiento? → ISO 55001 (gestión de activos).
