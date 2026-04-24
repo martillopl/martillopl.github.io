@@ -1,0 +1,382 @@
+﻿PUNTOS CLAVE – TEMA 6
+INSTALACIONES ELÉCTRICAS DE BAJA TENSIÓN — DISTRIBUCIÓN EN EDIFICIOS,
+CUADROS, PROTECCIONES, SAI Y GRUPOS ELECTRÓGENOS
+Gestor de Mantenimiento (Nivel B) · Universidad Pública de Navarra
+
+=== NORMATIVA DE REFERENCIA ===
+1. REBT (RD 842/2002): norma madre de toda instalación eléctrica BT
+   en España. Define BT como tensión ≤ 1.000 V en CA y ≤ 1.500 V en CC.
+   Se desarrolla en 51 Instrucciones Técnicas Complementarias (ITC-BT).
+   ITC más relevantes para este tema:
+   - ITC-BT-10: Previsión de cargas para suministros en BT.
+   - ITC-BT-14: Línea general de alimentación (LGA).
+   - ITC-BT-15: Derivaciones individuales (DI).
+   - ITC-BT-16: Contadores: ubicación y sistemas de instalación.
+   - ITC-BT-17: Dispositivos generales e individuales de mando
+     y protección. ICP.
+   - ITC-BT-18: Instalaciones de puesta a tierra.
+   - ITC-BT-19: Instalaciones interiores o receptoras.
+   - ITC-BT-20: Sistemas de instalación — canalizaciones.
+   - ITC-BT-21: Tubos protectores.
+   - ITC-BT-22: Protección contra sobreintensidades.
+   - ITC-BT-23: Protección contra sobretensiones.
+   - ITC-BT-24: Protección contra contactos directos e indirectos.
+   - ITC-BT-40: Instalaciones generadoras de baja tensión
+     (grupos electrógenos y autoconsumo solar).
+
+2. UNE-EN 60947: interruptores y dispositivos de maniobra BT.
+3. UNE-EN 61439: cuadros de distribución BT.
+4. UNE-EN 62040: SAI (sistemas de alimentación ininterrumpida).
+5. UNE-EN ISO 8528: grupos electrógenos de CA.
+6. CTE DB-SI (Seguridad en caso de incendio): el grupo electrógeno
+   y el SAI son exigidos por el CTE DB-SI en ciertos edificios como
+   suministro de seguridad para alumbrado de emergencia, ascensores,
+   sistemas de detección y extinción de incendios, etc.
+
+=== ESQUEMA DE DISTRIBUCIÓN EN EDIFICIOS ===
+7. La distribución eléctrica en un edificio sigue una cadena
+   lógica desde la red de distribución pública hasta los receptores:
+   RED DE DISTRIBUCIÓN (empresa distribuidora)
+   → ACOMETIDA (red → CGP)
+   → CAJA GENERAL DE PROTECCIÓN (CGP)
+   → LÍNEA GENERAL DE ALIMENTACIÓN (LGA)
+   → CENTRALIZACIÓN DE CONTADORES (CC)
+   → DERIVACIÓN INDIVIDUAL (DI)
+   → CUADRO GENERAL DE MANDO Y PROTECCIÓN (CGMP)
+   → CIRCUITOS INTERIORES (C1, C2, C3...)
+   → RECEPTORES
+
+8. ACOMETIDA: parte de la red de distribución que enlaza la
+   red pública con la instalación del usuario. Puede ser
+   aérea o subterránea. Es propiedad de la empresa distribuidora.
+
+9. CAJA GENERAL DE PROTECCIÓN (CGP): protege la LGA y señala
+   el inicio de la instalación del usuario. Contiene fusibles
+   de protección de la LGA. Ubicada en límite de la propiedad.
+   TRAMPA: La CGP está en el límite de la propiedad, no dentro
+   del edificio. Si hay un único abonado, puede combinarse con el
+   cuadro de medida (esquema simplificado).
+
+10. LÍNEA GENERAL DE ALIMENTACIÓN (LGA): une la CGP con la
+    centralización de contadores. Discurre por zonas de uso común.
+    Sin derivaciones ni empalmes. Sección mínima: 10 mm² en Cu.
+    TRAMPA: La LGA no puede tener empalmes ni derivaciones. Va
+    directa desde la CGP hasta el cuadro de contadores.
+
+11. DERIVACIÓN INDIVIDUAL (DI): une el contador de cada abonado
+    con su cuadro de mando y protección. Es la parte de la instalación
+    de la que es responsable el abonado. Incluye ICP (Interruptor
+    de Control de Potencia) en el inicio de la DI (en el cuadro
+    de contadores o en la entrada del cuadro del abonado).
+    Sección mínima de la DI: 6 mm² en Cu para usos domésticos.
+
+12. ICP (INTERRUPTOR DE CONTROL DE POTENCIA): limitador de
+    corriente que protege la instalación de la empresa distribuidora
+    de las sobrecargas causadas por el usuario. Está precintado por
+    la empresa distribuidora. Actúa si el usuario consume más potencia
+    de la contratada. NO es un elemento de seguridad del usuario,
+    sino de control tarifario. Puede estar integrado en el IGA.
+    TRAMPA: El ICP lo instala y precinta la empresa distribuidora.
+    El usuario no puede manipularlo.
+
+=== CUADRO GENERAL DE MANDO Y PROTECCIÓN (CGMP) ===
+13. El CGMP (o cuadro de distribución) es el elemento central de
+    la instalación interior. Contiene los dispositivos de mando y
+    protección de todos los circuitos interiores del edificio.
+    Debe estar ubicado lo más cerca posible del punto de entrada
+    de la derivación individual, en lugar accesible y de fácil
+    maniobra, pero no en baños ni cocinas.
+
+14. Dispositivos obligatorios en el CGMP (ITC-BT-17):
+    a) IGA (Interruptor General Automático): protege la instalación
+       contra sobrecargas y cortocircuitos. Permite cortar
+       manualmente toda la instalación. Debe ser de corte
+       omnipolar (corta todos los polos, incluido el neutro).
+       Calibre máximo según la DI y la potencia contratada.
+    b) ID (Interruptor Diferencial): protege contra contactos
+       indirectos y fugas a tierra. Actúa cuando detecta una
+       diferencia entre la corriente de fase y la de neutro
+       (= corriente de fuga). Sensibilidad estándar: 30 mA
+       (alta sensibilidad, para protección de personas).
+       También existen de 300 mA (media, para protección
+       de instalaciones) y 500 mA.
+    c) PIAs (Pequeños Interruptores Automáticos) o
+       magnetotérmicos: protegen cada circuito individual
+       contra sobrecargas y cortocircuitos. Actúan por
+       efecto térmico (sobrecarga lenta) y por efecto
+       magnético (cortocircuito rápido). Calibres típicos:
+       10 A, 16 A, 20 A, 25 A.
+    d) PCS (Protector Contra Sobretensiones): protege los
+       equipos de sobretensiones transitorias (rayos, maniobras
+       en la red). Obligatorio en instalaciones nuevas de
+       viviendas (ITC-BT-23). Conecta entre fase y tierra y
+       entre neutro y tierra.
+
+15. Circuitos interiores obligatorios en viviendas (ITC-BT-25):
+    C1: alumbrado (10 A, 1,5 mm² Cu) — hasta 30 puntos
+    C2: tomas de uso general y frigorífico (16 A, 2,5 mm² Cu)
+    C3: cocina y horno (25 A, 6 mm² Cu)
+    C4: lavadora, lavavajillas y termo (20 A, 4 mm² Cu)
+    C5: tomas de corriente de cuartos de baño y cocina (16 A, 2,5 mm²)
+    C6 y siguientes: según grado de electrificación elevada
+      (aire acondicionado, secadora, automatización del hogar...)
+    TRAMPA: C3 (cocina y horno) necesita 6 mm² de sección mínima.
+    C1 (alumbrado) solo 1,5 mm². Confundirlas es error frecuente.
+
+=== ELEMENTOS DE PROTECCIÓN ===
+16. FUSIBLE: elemento de protección contra sobreintensidades
+    basado en la fusión de un filamento conductor cuando la
+    corriente supera un valor. Es un elemento NO rearma ble:
+    una vez actuado, debe sustituirse. Tipos:
+    - Cartucho (para CGP y cuadros industriales): NH, nH.
+    - De base (doméstico): tipos D, E.
+    - Limitador de corriente (muy rápido): para protección de
+      semiconductores.
+    VENTAJA: actúa más rápido que el magnetotérmico en cortocircuito.
+    DESVENTAJA: no rearma ble. Hay que sustituirlo.
+
+17. MAGNETOTÉRMICO (PIA / MCCB):
+    - Actúa por efecto TÉRMICO ante sobrecargas (bimetálico).
+    - Actúa por efecto MAGNÉTICO (electroimán) ante cortocircuitos.
+    - Rearma ble: una vez actuado, se puede reiniciar manualmente.
+    - Curvas de disparo:
+      · Curva B: disparo magnético entre 3 y 5 × In. Instalaciones
+        domésticas y cargas resistivas.
+      · Curva C: disparo entre 5 y 10 × In. Uso general, motores
+        pequeños, iluminación fluorescente.
+      · Curva D: disparo entre 10 y 20 × In. Cargas con altas
+        corrientes de arranque (motores grandes, transformadores).
+    TRAMPA: la curva B dispara antes que la C y D en cortocircuito.
+    Para cargas con alto arranque se usa curva D para evitar
+    disparos intempestivos.
+
+18. INTERRUPTOR DIFERENCIAL (ID):
+    - Principio: compara la corriente de fase con la de neutro
+      mediante un toroide. Si hay diferencia (= fuga a tierra),
+      actúa el relé de disparo.
+    - Sensibilidad 30 mA: alta sensibilidad, protección de personas
+      (valor mínimo que puede ser mortal en condiciones adversas).
+    - Sensibilidad 300 mA: media sensibilidad, protección de
+      instalaciones contra incendios por fuga a tierra.
+    - Tipos: AC (solo detecta corrientes alternas de fuga),
+      A (CA + continua pulsante), F (CA + continua + altas frecuencias,
+      para inversores y variadores de velocidad).
+    TRAMPA: Los variadores de velocidad y los cargadores de
+    vehículo eléctrico generan corrientes de fuga de forma continua
+    o de alta frecuencia, que el diferencial tipo AC NO detecta.
+    Se necesita diferencial tipo A o F.
+
+19. PROTECTOR CONTRA SOBRETENSIONES (PCS / DPS):
+    - Actúa ante sobretensiones transitorias (rayos, maniobras
+      de la red). Las descarga a tierra antes de que dañen
+      los equipos.
+    - Clase I (o B): instalado en la CGP o en el inicio de la LGA.
+      Para sobretensiones de rayo directo (muy energéticas).
+    - Clase II (o C): instalado en el CGMP de cada vivienda o local.
+      Para sobretensiones de rayo indirecto y maniobras.
+    - Clase III (o D): instalado junto a los receptores sensibles.
+      Última línea de defensa.
+    El PCS de clase II es el obligatorio en viviendas nuevas
+    (ITC-BT-23). Los de clase I son más habituales en instalaciones
+    con riesgo de rayo directo.
+
+=== PUESTA A TIERRA (ITC-BT-18) ===
+20. La puesta a tierra tiene por objeto limitar la tensión que
+    con respecto a tierra puedan presentar las masas metálicas
+    en un momento dado, asegurar la actuación de las protecciones
+    y eliminar el riesgo que supone un fallo de aislamiento.
+    Componentes:
+    - ELECTRODO (pica de tierra, placa, conductor enterrado).
+    - LÍNEA PRINCIPAL DE TIERRA: conductor de Cu desnudo o
+      aislado que une el electrodo con el borne principal de tierra.
+    - BORNE PRINCIPAL DE TIERRA (o barra colectora de tierra):
+      punto de centralización de la puesta a tierra.
+    - CONDUCTORES DE PROTECCIÓN (PE): unen las masas metálicas
+      al borne principal de tierra.
+    - CONDUCTOR DE EQUIPOTENCIALIDAD: une masas metálicas entre
+      sí sin pasar por el borne principal.
+    El conductor de protección NUNCA puede ser interrumpido por
+    fusibles, interruptores ni dispositivos similares.
+
+=== SAI — SISTEMAS DE ALIMENTACIÓN ININTERRUMPIDA ===
+21. El SAI (Sistema de Alimentación Ininterrumpida; en inglés UPS,
+    Uninterruptible Power Supply) es un equipo que proporciona
+    alimentación eléctrica de calidad y sin interrupción a las
+    cargas críticas cuando se producen fallos en la red eléctrica
+    (cortes, variaciones de tensión, distorsiones armónicas,
+    microcortes).
+    Normativa: UNE-EN 62040. Clasificación por topología (IEC 62040-3).
+
+22. TOPOLOGÍAS DE SAI (clasificación IEC 62040-3):
+    a) SAI OFFLINE (o stand-by, pasivo): en condiciones normales,
+       las cargas se alimentan directamente de la red. Solo actúa
+       cuando detecta un fallo. Tiempo de conmutación: 4-10 ms.
+       Ventaja: bajo coste, alta eficiencia en modo normal.
+       Desventaja: no filtra armónicos ni variaciones de red.
+       Aplicación: PCs de oficina, periféricos no críticos.
+    b) SAI LINE-INTERACTIVE: en condiciones normales, incluye
+       un regulador de tensión (AVR) en la línea de red antes
+       de alimentar las cargas. Actúa ante cortes. Tiempo de
+       conmutación: 2-4 ms.
+       Ventaja: regula la tensión de red. Buena relación calidad/precio.
+       Aplicación: servidores pequeños, equipos de red, PCs críticos.
+    c) SAI ONLINE (doble conversión): las cargas se alimentan
+       SIEMPRE a través del inversor del SAI, independientemente
+       del estado de la red. La red carga las baterías y el inversor
+       alimenta las cargas continuamente. Tiempo de conmutación: 0 ms
+       (no hay conmutación, la alimentación es continua).
+       Ventaja: aislamiento total de la red. Protección completa.
+       Desventaja: mayor coste y calor generado.
+       Aplicación: CPDs (centros de procesamiento de datos), quirófanos,
+       sistemas de control críticos, salas de servidores.
+    TRAMPA: el SAI online es el único que garantiza tiempo de
+    conmutación = 0 ms. Los SAI offline y line-interactive tienen
+    un tiempo de conmutación que puede ser problemático para
+    ciertos equipos sensibles.
+
+23. COMPONENTES PRINCIPALES DE UN SAI:
+    - RECTIFICADOR/CARGADOR: convierte la CA de red en CC para
+      cargar las baterías.
+    - BATERÍAS: almacenen la energía. Tecnologías: plomo-ácido
+      (VRLA, la más extendida), AGM, gel, ion-litio (Li-ion, cada
+      vez más frecuente). Vida útil: 3-5 años (plomo), 8-10 años (Li).
+    - INVERSOR: convierte la CC de las baterías en CA para alimentar
+      las cargas.
+    - BYPASS ESTÁTICO: circuito alternativo que permite alimentar
+      las cargas directamente de la red (sin pasar por el inversor)
+      en caso de sobrecarga o fallo del SAI, sin corte de suministro.
+    - BYPASS DE MANTENIMIENTO (manual): permite aislar el SAI
+      para mantenimiento sin cortar el suministro a las cargas.
+
+24. AUTONOMÍA DEL SAI: tiempo durante el cual el SAI puede
+    alimentar las cargas con las baterías. Depende de la capacidad
+    de las baterías y de la potencia de las cargas. Típicamente:
+    - SAI de pequeña potencia (< 3 kVA): 10-30 minutos estándar.
+    - SAI con baterías externas: horas (dimensionadas por proyecto).
+    El SAI no es un sustituto del grupo electrógeno para autonomías
+    largas. SAI = protección contra cortes cortos y calidad de onda.
+    Grupo = generación de energía para cortes prolongados.
+
+=== GRUPOS ELECTRÓGENOS ===
+25. Un GRUPO ELECTRÓGENO es un equipo que genera energía eléctrica
+    mediante un motor de combustión interna (normalmente diésel)
+    acoplado a un alternador. Proporciona suministro eléctrico
+    autónomo cuando falla la red o en lugares sin acceso a ella.
+    Normativa: UNE-EN ISO 8528 (grupos electrógenos CA).
+    Regulado también por la ITC-BT-40 del REBT.
+
+26. CLASIFICACIÓN POR TIPO DE SUMINISTRO:
+    a) SUMINISTRO DE SEGURIDAD (o socorro): obligatorio por
+       normativa (CTE DB-SI, REBT) en determinados edificios
+       para alimentar cargas de seguridad: alumbrado de emergencia,
+       bombas de incendio, sistemas de detección, ascensores de
+       evacuación, etc. El grupo debe arrancar automáticamente
+       en menos de 15 segundos desde el fallo de la red.
+    b) SUMINISTRO DE RESERVA: complementa o sustituye el
+       suministro normal para cargas que no pueden permitirse
+       una interrupción prolongada (hospitales, data centers,
+       industria continua).
+    c) SUMINISTRO COMPLEMENTARIO: para optimizar costes
+       energéticos (generación en horas de tarifa alta) o para
+       zonas sin acceso a la red.
+
+27. TIEMPO DE ARRANQUE DEL GRUPO ELECTRÓGENO:
+    El grupo electrógeno no arranca instantáneamente. El motor
+    necesita tiempo para calentarse y alcanzar la velocidad nominal
+    (3.000 rpm para grupos de 2 polos a 50 Hz). El tiempo de
+    arranque típico es de 10-30 segundos. Por ello, para cubrir
+    ese tiempo de arranque, los circuitos de seguridad deben
+    complementarse con un SAI o baterías de emergencia que
+    mantengan la alimentación hasta que el grupo esté disponible.
+    TRAMPA: el grupo electrógeno no elimina la necesidad del SAI
+    en cargas que no toleran ni 15 segundos de interrupción. SAI
+    y grupo son complementarios, no sustitutos.
+
+28. COMPONENTES DEL GRUPO ELECTRÓGENO:
+    - MOTOR DIESEL (o de gas): proporciona la energía mecánica.
+    - ALTERNADOR SÍNCRONO: convierte la energía mecánica en CA.
+    - REGULADOR DE VELOCIDAD (GOVERNOR): mantiene la frecuencia
+      nominal (50 Hz) controlando la inyección de combustible.
+    - REGULADOR DE TENSIÓN AUTOMÁTICO (AVR): mantiene la tensión
+      nominal (400/230 V) controlando la excitación del alternador.
+    - CUADRO DE TRANSFERENCIA AUTOMÁTICA (CTA): detecta el fallo
+      de la red y ordena el arranque del grupo. Cuando el grupo
+      alcanza los parámetros nominales, transfiere la carga.
+      Cuando se restaura la red, retransfiere y para el grupo.
+    - SISTEMA DE REFRIGERACIÓN: por agua (la más extendida en
+      grupos de potencia media-alta) o por aire (grupos pequeños).
+    - SISTEMA DE ESCAPE Y SILENCIADOR: exigencia acústica y
+      medioambiental.
+    - DEPÓSITO DE COMBUSTIBLE: capacidad mínima para la autonomía
+      exigida (normalmente 8-24 horas en grupos de seguridad).
+
+29. CUADRO DE TRANSFERENCIA AUTOMÁTICA (CTA):
+    Elemento clave entre la red y el grupo electrógeno. Garantiza
+    que NUNCA se produzca una conexión simultánea de la red y el
+    grupo (conmutación de dos fuentes), lo que provocaría daños
+    graves al grupo y posiblemente a la red. El CTA tiene
+    enclavamiento mecánico y/o eléctrico que impide la
+    posición "ambas fuentes conectadas".
+    TRAMPA: el enclavamiento mecánico del CTA que impide la
+    conexión simultánea de red y grupo es un requisito de seguridad
+    fundamental. Su ausencia es una no-conformidad grave.
+
+30. INSTALACIÓN DEL GRUPO ELECTRÓGENO:
+    - Local propio (sala de máquinas), con:
+      · Ventilación suficiente (entrada y salida de aire).
+      · Conducto de escape al exterior.
+      · Cubeto de retención para el gasoil del depósito.
+      · Nivel acústico: cumplir RD 1367/2007 (ruido ambiental).
+      · Acceso para mantenimiento y reposición de combustible.
+    - Conexión a tierra independiente o a la misma tierra del edificio
+      (según la topología de la red IT, TN-S o TT usada).
+
+=== ESQUEMAS ELÉCTRICOS ===
+31. Los esquemas eléctricos son representaciones gráficas de las
+    instalaciones eléctricas usando símbolos normalizados (UNE-EN
+    60617). Tipos principales:
+    a) ESQUEMA UNIFILAR: representa los conductores y dispositivos
+       con una sola línea, indicando el número de conductores.
+       Es el esquema de proyecto. Muestra la distribución completa
+       de la instalación de forma clara y simplificada.
+    b) ESQUEMA MULTIFILAR (o desarrollado): representa cada
+       conductor por separado. Se usa para el cableado detallado
+       de cuadros y automatismos.
+    c) ESQUEMA DE POTENCIA: representa los circuitos de potencia
+       (alimentación de motores, transformadores, etc.).
+    d) ESQUEMA DE MANDO (o control): representa los circuitos de
+       mando y señalización que controlan los elementos de potencia.
+    TRAMPA: el esquema unifilar es el que se presenta en el
+    PROYECTO de instalación. El esquema multifilar es el que
+    usa el instalador para el cableado en el cuadro.
+
+32. SIMBOLOGÍA NORMALIZADA (UNE-EN 60617):
+    - Interruptor automático (magnetotérmico): rectángulo con diagonal.
+    - Interruptor diferencial: rectángulo con flecha y tierra.
+    - Fusible: rectángulo simple.
+    - Contador: letra E en círculo.
+    - Toma de corriente: semicírculo con líneas.
+    - Motor: letra M en círculo.
+    - Transformador: dos círculos unidos.
+    - Puesta a tierra: líneas decrecientes horizontales.
+
+=== LO MÁS PREGUNTADO EN OPOSICIÓN ===
+33. REBT = RD 842/2002. 51 ITC-BT. BT ≤ 1.000 V CA / ≤ 1.500 V CC.
+34. Cadena de distribución: CGP → LGA → CC → DI → CGMP → circuitos.
+35. ICP = precintado por la distribuidora. Control tarifario. No de seguridad.
+36. IGA = corte omnipolar. Protege contra sobrecargas y cortocircuito.
+37. ID 30 mA = protección de personas. ID 300 mA = protección instalación.
+38. Curvas magnetotérmico: B (3-5×In) doméstico, C (5-10×In) general,
+    D (10-20×In) motores con alto arranque.
+39. Diferencial tipo AC: solo CA. Tipo A: CA + CC pulsante.
+    Variadores y cargadores VE: necesitan tipo A o F.
+40. PCS clase II: obligatorio en viviendas nuevas (ITC-BT-23).
+41. Circuitos vivienda: C1 alumbrado 1,5 mm², C2 general 2,5 mm²,
+    C3 cocina 6 mm², C4 lavadora 4 mm², C5 baños/cocina 2,5 mm².
+42. SAI offline: 4-10 ms. SAI line-interactive: 2-4 ms. SAI online: 0 ms.
+43. SAI online = doble conversión = único con tiempo 0 ms = CPD/quirófanos.
+44. Grupo electrógeno: arranca en 10-30 s. SAI cubre ese tiempo de arranque.
+45. CTA: enclavamiento mecánico impide conexión simultánea red + grupo.
+46. Grupo de seguridad: arranca en < 15 s (exigencia CTE DB-SI).
+47. Esquema unifilar = proyecto. Esquema multifilar = cableado en cuadro.
+48. Puesta a tierra: conductor PE nunca puede tener fusibles ni interruptores.

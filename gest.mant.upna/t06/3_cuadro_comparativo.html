@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 6 – Cuadros comparativos · Instalaciones eléctricas BT</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#f7f6f2;--surface:#fff;--surface-2:#f9f8f5;--border:#d4d1ca;--divider:#dcd9d5;
+    --text:#28251d;--muted:#6b6a65;--faint:#a8a7a2;
+    --blue:#1a4a8b;--blue-lt:#e0eaf8;--blue-dk:#0d2f5e;
+    --green:#1a5c2e;--green-lt:#d6ecd6;
+    --gold:#d19900;--gold-lt:#f5e9c0;
+    --teal:#005f73;--teal-lt:#cce3e8;
+    --orange:#964219;--orange-lt:#f5e0d0;
+    --purple:#5a3e8c;--purple-lt:#e4ddf5;
+    --red:#8b1a1a;--red-lt:#fde8e8;
+    --font-d:"Cabinet Grotesk",sans-serif;--font-b:"Satoshi",sans-serif;
+    --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.88rem;line-height:1.6;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 4rem}
+  .file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap}
+  .file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s}
+  .file-nav a:hover,.file-nav a.active{background:var(--blue);color:white;border-color:var(--blue)}
+  .page-header{background:linear-gradient(135deg,#1a4a8b 0%,#0d2f5e 100%);color:white;border-radius:var(--r-xl);padding:2rem 2.5rem;margin-bottom:2rem}
+  .page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem}
+  .page-header h1{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800;line-height:1.2;margin-bottom:.4rem}
+  .page-header .sub{font-size:.85rem;opacity:.8}
+  .section-label{font-family:var(--font-d);font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:2.5rem 0 .75rem}
+  .tbl-wrap{background:var(--surface);border-radius:var(--r-xl);border:1px solid var(--border);overflow:hidden;margin-bottom:1.25rem;box-shadow:0 1px 4px rgba(26,74,139,.07)}
+  .tbl-header{padding:.75rem 1.25rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.65rem}
+  .tbl-header .th-icon{font-size:1.1rem}
+  .tbl-header h2{font-family:var(--font-d);font-size:.93rem;font-weight:800}
+  .tbl-header .th-badge{margin-left:auto;font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:999px}
+  table{width:100%;border-collapse:collapse;font-size:.83rem}
+  thead th{font-family:var(--font-d);font-weight:800;padding:.5rem .85rem;text-align:left;font-size:.79rem;border-bottom:1px solid var(--border)}
+  tbody td{padding:.45rem .85rem;border-bottom:1px solid #f0ede8;vertical-align:top}
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:hover td{background:#f7f9ff}
+  tbody tr.best td{background:#eef3ff}
+  tbody tr.warn td{background:#fff7ed}
+  .th-blue thead th{background:var(--blue);color:white}
+  .th-green thead th{background:var(--green);color:white}
+  .th-teal thead th{background:var(--teal);color:white}
+  .th-gold thead th{background:var(--gold);color:white}
+  .th-orange thead th{background:var(--orange);color:white}
+  .th-purple thead th{background:var(--purple);color:white}
+  .top-blue{border-top:4px solid var(--blue)}
+  .top-green{border-top:4px solid var(--green)}
+  .top-teal{border-top:4px solid var(--teal)}
+  .top-gold{border-top:4px solid var(--gold)}
+  .top-orange{border-top:4px solid var(--orange)}
+  .top-purple{border-top:4px solid var(--purple)}
+  .chip{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:1px 7px;border-radius:999px;white-space:nowrap}
+  .ch-blue{background:var(--blue-lt);color:var(--blue-dk)}
+  .ch-green{background:var(--green-lt);color:var(--green)}
+  .ch-gold{background:var(--gold-lt);color:#7a5500}
+  .ch-teal{background:var(--teal-lt);color:var(--teal)}
+  .ch-orange{background:var(--orange-lt);color:var(--orange)}
+  .ch-purple{background:var(--purple-lt);color:var(--purple)}
+  .ch-red{background:var(--red-lt);color:var(--red)}
+  .ch-grey{background:#f0f0ee;color:var(--muted)}
+  .hl-blue{color:var(--blue);font-weight:700}
+  .hl-green{color:var(--green);font-weight:700}
+  .hl-teal{color:var(--teal);font-weight:700}
+  .hl-gold{color:var(--gold);font-weight:700}
+  .hl-orange{color:var(--orange);font-weight:700}
+  .hl-red{color:var(--red);font-weight:700}
+  .hl-muted{color:var(--muted)}
+  .callout{border-radius:var(--r-md);padding:.7rem 1rem;font-size:.83rem;margin:.75rem 0;line-height:1.55}
+  .callout strong{font-weight:700}
+  .al-blue{background:var(--blue-lt);border-left:3px solid var(--blue)}
+  .al-green{background:var(--green-lt);border-left:3px solid var(--green)}
+  .al-orange{background:var(--orange-lt);border-left:3px solid var(--orange)}
+  .al-red{background:var(--red-lt);border-left:3px solid var(--red)}
+  .al-warn{background:#fff7ed;border-left:3px solid var(--orange)}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  @media(max-width:700px){.grid-2{grid-template-columns:1fr}table{font-size:.77rem}thead th,tbody td{padding:.35rem .55rem}}
+</style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html" class="active">📊 Cuadros comparativos</a>
+  </div>
+<div class="page-header">
+  <div class="meta">Tema 6 · Gestor de Mantenimiento (Nivel B) · UPNA · Tablas operativas para examen</div>
+  <h1>Cuadros comparativos — Instalaciones eléctricas BT</h1>
+  <div class="sub">7 tablas operativas · Normativa · Cadena distribución · Protecciones · Circuitos vivienda · SAI · Grupos electrógenos · Esquemas</div>
+</div>
+
+<!-- TABLA 1: NORMATIVA -->
+<div class="section-label">Tabla 1 — Normativa aplicable: qué regula cada norma</div>
+<div class="tbl-wrap top-blue">
+  <div class="tbl-header"><span class="th-icon">📋</span><h2>Marco normativo del Tema 6</h2><span class="th-badge ch-blue">TRAMPA: REBT ≠ CTE DB-HE3</span></div>
+  <table class="th-blue">
+    <thead><tr><th>Norma</th><th>RD / código</th><th>Ámbito</th><th>Qué regula</th><th>Indicador/umbral clave</th></tr></thead>
+    <tbody>
+      <tr class="best"><td><strong>REBT</strong></td><td class="hl-blue">RD 842/2002</td><td><span class="chip ch-blue">BT ELÉCTRICO</span></td><td>Toda instalación eléctrica BT en España. 51 ITC-BT. Seguridad, distribución, protecciones.</td><td class="hl-blue">BT ≤ 1.000 V CA / ≤ 1.500 V CC</td></tr>
+      <tr><td><strong>UNE-EN 61439</strong></td><td class="hl-muted">Norma UNE</td><td><span class="chip ch-blue">CUADROS BT</span></td><td>Requisitos de fabricación, ensayo y prestaciones de cuadros eléctricos BT.</td><td class="hl-muted">Temperatura, IP, Icc</td></tr>
+      <tr><td><strong>UNE-EN 62040</strong></td><td class="hl-muted">Norma UNE</td><td><span class="chip ch-teal">SAI / UPS</span></td><td>Clasificación, requisitos y ensayos de SAI. Topologías offline, line-interactive, online.</td><td class="hl-teal">Tiempo conmutación: 0 ms (online)</td></tr>
+      <tr><td><strong>UNE-EN ISO 8528</strong></td><td class="hl-muted">Norma UNE</td><td><span class="chip ch-orange">GRUPOS GE</span></td><td>Prestaciones, diseño, instalación y mantenimiento de grupos electrógenos de CA.</td><td class="hl-orange">Arranque &lt; 15 s (seguridad)</td></tr>
+      <tr><td><strong>CTE DB-SI</strong></td><td class="hl-muted">RD 732/2019</td><td><span class="chip ch-red">INCENDIO</span></td><td>Exige suministros de seguridad (SAI + grupo) para alumbrado emergencia, bombas, detección, ascensores.</td><td class="hl-red">Arranque grupo &lt; 15 s</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- TABLA 2: CADENA DISTRIBUCIÓN -->
+<div class="section-label">Tabla 2 — Elementos de la cadena de distribución: características y responsabilidades</div>
+<div class="tbl-wrap top-blue">
+  <div class="tbl-header"><span class="th-icon">🔗</span><h2>Cadena CGP → Receptores — quién es responsable de qué</h2><span class="th-badge ch-blue">ITC-BT-14 a BT-17</span></div>
+  <table class="th-blue">
+    <thead><tr><th>Elemento</th><th>ITC</th><th>Función</th><th>Restricción clave</th><th>Responsable</th></tr></thead>
+    <tbody>
+      <tr class="warn"><td><strong>Acometida</strong></td><td class="hl-muted">—</td><td>Une la red pública con la CGP del edificio</td><td>Propiedad de la distribuidora. Usuario no puede manipular.</td><td><span class="chip ch-orange">Distribuidora</span></td></tr>
+      <tr class="warn"><td><strong>CGP</strong></td><td class="hl-blue">ITC-BT-13</td><td>Contiene fusibles de protección de la LGA. Marca fin de la red pública.</td><td>En el límite de la propiedad. Accesible desde vía pública.</td><td><span class="chip ch-orange">Distribuidora</span></td></tr>
+      <tr class="warn"><td><strong>LGA</strong></td><td class="hl-blue">ITC-BT-14</td><td>Une CGP con centralización de contadores.</td><td><strong>Sin empalmes ni derivaciones.</strong> Sección mín. 10 mm² Cu.</td><td><span class="chip ch-orange">Distribuidora</span></td></tr>
+      <tr class="warn"><td><strong>ICP</strong></td><td class="hl-blue">ITC-BT-17</td><td>Limita potencia al valor contratado. Control tarifario.</td><td>Instalado y precintado por la distribuidora. Usuario no lo puede manipular.</td><td><span class="chip ch-orange">Distribuidora</span></td></tr>
+      <tr class="best"><td><strong>DI</strong></td><td class="hl-blue">ITC-BT-15</td><td>Une contador de cada abonado con su CGMP.</td><td>Sección mín. 6 mm² Cu (doméstico). Incluye el ICP al inicio.</td><td><span class="chip ch-green">Usuario</span></td></tr>
+      <tr class="best"><td><strong>CGMP</strong></td><td class="hl-blue">ITC-BT-17</td><td>Cuadro principal del abonado: IGA + ID + PIAs + PCS.</td><td>No en baños/cocinas. Accesible. IGA de corte omnipolar.</td><td><span class="chip ch-green">Usuario</span></td></tr>
+      <tr class="best"><td><strong>Circuitos C1-C5+</strong></td><td class="hl-blue">ITC-BT-25</td><td>Distribución interior de la vivienda.</td><td>Secciones mínimas obligatorias por circuito (ver tabla 3).</td><td><span class="chip ch-green">Usuario</span></td></tr>
+    </tbody>
+  </table>
+  <div class="callout al-warn" style="margin:.6rem .75rem .75rem;"><strong>⚠ ICP ≠ IGA:</strong> El ICP es de la distribuidora (tarifa, precintado). El IGA es del usuario (seguridad, rearma ble). Confundirlos es uno de los errores más frecuentes en el examen.</div>
+</div>
+
+<!-- TABLA 3: CIRCUITOS VIVIENDA -->
+<div class="section-label">Tabla 3 — Circuitos interiores de viviendas: secciones y calibres (ITC-BT-25)</div>
+<div class="tbl-wrap top-teal">
+  <div class="tbl-header"><span class="th-icon">🏠</span><h2>Circuitos obligatorios en viviendas — Grado básico</h2><span class="th-badge ch-teal">DATOS EXACTOS DE EXAMEN</span></div>
+  <table class="th-teal">
+    <thead><tr><th>Circuito</th><th>Uso</th><th>Calibre (A)</th><th>Sección Cu (mm²)</th><th>Límite tomas/puntos</th><th>Trampa</th></tr></thead>
+    <tbody>
+      <tr><td class="hl-blue"><strong>C1</strong></td><td>Alumbrado</td><td>10 A</td><td class="hl-muted"><strong>1,5 mm²</strong></td><td>Máx. 30 puntos de luz</td><td>La más fina. Solo 1,5 mm².</td></tr>
+      <tr><td class="hl-blue"><strong>C2</strong></td><td>Tomas de uso general + frigorífico</td><td>16 A</td><td>2,5 mm²</td><td>Máx. 20 tomas</td><td>—</td></tr>
+      <tr class="warn"><td class="hl-orange"><strong>C3 ⭐</strong></td><td>Cocina y horno</td><td class="hl-orange"><strong>25 A</strong></td><td class="hl-orange"><strong>6 mm²</strong></td><td>Circuito único</td><td>La más GRUESA. Se confunde con C4.</td></tr>
+      <tr><td class="hl-blue"><strong>C4</strong></td><td>Lavadora, lavavajillas y termo</td><td>20 A</td><td>4 mm²</td><td>Circuito único</td><td>4 mm², no 6 mm².</td></tr>
+      <tr><td class="hl-blue"><strong>C5</strong></td><td>Tomas baños y cocina</td><td>16 A</td><td>2,5 mm²</td><td>Máx. 6 tomas</td><td>Igual sección que C2.</td></tr>
+      <tr class="best"><td class="hl-teal"><strong>C6+</strong></td><td>Electrificación elevada: aire acond., secadora, domótica…</td><td>Variable</td><td>Variable</td><td>Según proyecto</td><td>Solo en grado elevado.</td></tr>
+    </tbody>
+  </table>
+  <div class="callout al-warn" style="margin:.6rem .75rem .75rem;"><strong>⚠ Orden de secciones para memorizar:</strong> C3 (6) &gt; C4 (4) &gt; C2 = C5 (2,5) &gt; C1 (1,5). El orden de calibres: C3 (25A) &gt; C4 (20A) &gt; C2=C5 (16A) &gt; C1 (10A).</div>
+</div>
+
+<!-- TABLA 4: PROTECCIONES -->
+<div class="section-label">Tabla 4 — Elementos de protección eléctrica: comparativa operativa</div>
+<div class="tbl-wrap top-blue">
+  <div class="tbl-header"><span class="th-icon">🛡</span><h2>Fusible vs. Magnetotérmico vs. Diferencial vs. PCS</h2><span class="th-badge ch-blue">ITC-BT-22 a BT-24</span></div>
+  <table class="th-blue">
+    <thead><tr><th>Elemento</th><th>Protege contra</th><th>Principio de actuación</th><th>Rearma ble</th><th>Calibres / sensibilidades</th><th>Ubicación típica</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Fusible</strong></td><td>Sobreintensidades (sobrecarga + cortocircuito)</td><td>Fusión de filamento conductor por efecto térmico</td><td class="hl-red"><strong>NO</strong> — hay que sustituirlo</td><td>NH, nH, tipo D/E. Más rápido que magnetotérmico en CC.</td><td>CGP (NH), cuadros industriales</td></tr>
+      <tr class="best"><td><strong>Magnetotérmico (PIA)</strong></td><td>Sobrecargas (térmico) + cortocircuitos (magnético)</td><td>Bimetálico (sobrecarga lenta) + electroimán (cortocircuito rápido)</td><td class="hl-green"><strong>SÍ</strong> — rearma manual</td><td>Curva B (3-5×In) · C (5-10×In) · D (10-20×In)</td><td>CGMP — un PIA por circuito</td></tr>
+      <tr><td><strong>Diferencial (ID)</strong></td><td>Contactos indirectos + fugas a tierra</td><td>Toroide detecta diferencia entre I-fase e I-neutro</td><td class="hl-green"><strong>SÍ</strong> — rearma manual</td><td>30 mA (personas) · 300 mA (instalación). Tipos: AC / A / F</td><td>CGMP — uno o varios</td></tr>
+      <tr><td><strong>PCS / DPS</strong></td><td>Sobretensiones transitorias (rayos, maniobras red)</td><td>Descarga la sobretensión a tierra antes de que alcance los equipos</td><td class="hl-muted">Sí (tipo varistor) / No (tipo fusible)</td><td>Clase I (CGP) · Clase II (CGMP) · Clase III (receptor)</td><td>CGMP — clase II obligatorio viviendas</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- TABLA 5: CURVAS MAGNETOTÉRMICO + DIFERENCIAL TIPOS -->
+<div class="section-label">Tabla 5 — Curvas magnetotérmico y tipos de diferencial</div>
+<div class="grid-2">
+  <div class="tbl-wrap top-blue">
+    <div class="tbl-header"><span class="th-icon">⚡</span><h2>Curvas de disparo del magnetotérmico</h2></div>
+    <table class="th-blue">
+      <thead><tr><th>Curva</th><th>Disparo magnético</th><th>Aplicación</th></tr></thead>
+      <tbody>
+        <tr><td class="hl-green"><strong>B</strong></td><td>3–5 × In</td><td>Resistivo, doméstico, cables largos. Dispara antes.</td></tr>
+        <tr class="best"><td class="hl-blue"><strong>C</strong></td><td>5–10 × In</td><td>Uso general, iluminación fluorescente/LED. Más común.</td></tr>
+        <tr><td class="hl-orange"><strong>D</strong></td><td>10–20 × In</td><td>Motores alto arranque, transformadores. Evita disparos intempestivos en arranque.</td></tr>
+      </tbody>
+    </table>
+    <div class="callout al-warn" style="margin:.6rem .75rem .75rem;"><strong>⚠ Para motores de alto arranque: curva D.</strong> La curva B dispara antes, provocaría disparos intempestivos en el arranque del motor.</div>
+  </div>
+  <div class="tbl-wrap top-teal">
+    <div class="tbl-header"><span class="th-icon">🌊</span><h2>Tipos de diferencial según corriente de fuga</h2></div>
+    <table class="th-teal">
+      <thead><tr><th>Tipo</th><th>Detecta</th><th>Aplicación obligatoria</th></tr></thead>
+      <tbody>
+        <tr class="warn"><td class="hl-muted"><strong>AC</strong></td><td>Solo CA senoidal</td><td>Instalaciones domésticas simples. NO para variadores ni VE.</td></tr>
+        <tr class="best"><td class="hl-teal"><strong>A</strong></td><td>CA senoidal + CC pulsante</td><td>Cargadores de vehículo eléctrico, lavadoras con inverter, electrodomésticos con electrónica.</td></tr>
+        <tr><td class="hl-blue"><strong>F</strong></td><td>CA + CC pulsante + alta frecuencia</td><td>Variadores de velocidad, inversores FV, industria avanzada.</td></tr>
+      </tbody>
+    </table>
+    <div class="callout al-warn" style="margin:.6rem .75rem .75rem;"><strong>⚠ Tipo AC NO detecta fugas continuas ni de alta frecuencia.</strong> Con variadores de velocidad y cargadores VE: tipo A (mínimo) o tipo F.</div>
+  </div>
+</div>
+
+<!-- TABLA 6: SAI -->
+<div class="section-label">Tabla 6 — SAI: comparativa de topologías (IEC 62040-3)</div>
+<div class="tbl-wrap top-teal">
+  <div class="tbl-header"><span class="th-icon">🔋</span><h2>Topologías de SAI — tabla operativa de examen</h2><span class="th-badge ch-teal">UNE-EN 62040</span></div>
+  <table class="th-teal">
+    <thead><tr><th>Topología</th><th>Alimentación normal</th><th>Tiempo conmutación</th><th>Regula tensión</th><th>Aislamiento de red</th><th>Coste relativo</th><th>Aplicación</th></tr></thead>
+    <tbody>
+      <tr class="warn"><td><strong>Offline (stand-by)</strong></td><td>Directa de la red</td><td class="hl-orange"><strong>4–10 ms</strong></td><td class="hl-red">NO</td><td class="hl-red">NO</td><td class="hl-green">Bajo</td><td>PCs de oficina, periféricos no críticos</td></tr>
+      <tr><td><strong>Line-interactive</strong></td><td>Red + AVR regulador</td><td class="hl-gold"><strong>2–4 ms</strong></td><td class="hl-green">SÍ (AVR)</td><td class="hl-orange">PARCIAL</td><td class="hl-gold">Medio</td><td>Servidores pequeños, equipos de red, PCs críticos</td></tr>
+      <tr class="best"><td><strong>Online ⭐ (doble conversión)</strong></td><td>SIEMPRE por el inversor</td><td class="hl-green"><strong>0 ms</strong></td><td class="hl-green">SÍ (total)</td><td class="hl-green">TOTAL</td><td class="hl-orange">Alto</td><td>CPD, quirófanos, sistemas de control críticos</td></tr>
+    </tbody>
+  </table>
+  <div style="padding:.6rem .75rem .75rem;">
+    <table style="font-size:.81rem;border-collapse:collapse;width:100%;">
+      <thead><tr style="background:var(--teal-lt);"><th style="padding:.35rem .7rem;text-align:left;font-size:.76rem;font-family:var(--font-d);color:var(--teal);border-bottom:1px solid var(--border);">Componente SAI</th><th style="padding:.35rem .7rem;text-align:left;font-size:.76rem;font-family:var(--font-d);color:var(--teal);border-bottom:1px solid var(--border);">Función</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:.35rem .7rem;border-bottom:1px solid var(--border);"><strong>Rectificador/cargador</strong></td><td style="padding:.35rem .7rem;border-bottom:1px solid var(--border);">Convierte CA de red en CC para cargar baterías</td></tr>
+        <tr><td style="padding:.35rem .7rem;border-bottom:1px solid var(--border);"><strong>Baterías (VRLA / Li-ion)</strong></td><td style="padding:.35rem .7rem;border-bottom:1px solid var(--border);">Almacenan energía. Plomo-ácido: 3-5 años. Li-ion: 8-10 años.</td></tr>
+        <tr><td style="padding:.35rem .7rem;border-bottom:1px solid var(--border);"><strong>Inversor</strong></td><td style="padding:.35rem .7rem;border-bottom:1px solid var(--border);">Convierte CC de baterías en CA para las cargas</td></tr>
+        <tr><td style="padding:.35rem .7rem;border-bottom:1px solid var(--border);"><strong>Bypass estático</strong></td><td style="padding:.35rem .7rem;border-bottom:1px solid var(--border);">Alimenta cargas de la red si el SAI falla o hay sobrecarga. Sin corte de suministro.</td></tr>
+        <tr><td style="padding:.35rem .7rem;"><strong>Bypass mantenimiento (manual)</strong></td><td style="padding:.35rem .7rem;">Aísla el SAI para mantenimiento sin cortar el suministro a las cargas.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- TABLA 7: GRUPOS ELECTRÓGENOS -->
+<div class="section-label">Tabla 7 — Grupo electrógeno vs. SAI: comparativa y datos de examen</div>
+<div class="tbl-wrap top-orange">
+  <div class="tbl-header"><span class="th-icon">⚙️</span><h2>SAI vs. Grupo electrógeno — cuándo se usa cada uno</h2><span class="th-badge ch-orange">COMPLEMENTARIOS, NO SUSTITUTOS</span></div>
+  <table class="th-orange">
+    <thead><tr><th>Característica</th><th>SAI (UPS)</th><th>Grupo electrógeno</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Función principal</strong></td><td>Protección contra cortes cortos y calidad de onda eléctrica</td><td>Generación de energía durante cortes prolongados</td></tr>
+      <tr><td><strong>Tiempo de disponibilidad</strong></td><td class="hl-teal">Inmediato (0-10 ms según topología)</td><td class="hl-orange">10-30 s para arranque y estabilización</td></tr>
+      <tr><td><strong>Autonomía típica</strong></td><td class="hl-gold">10-30 minutos (sin baterías externas)</td><td class="hl-green">Horas (según depósito de combustible)</td></tr>
+      <tr><td><strong>Cargas que protege</strong></td><td>Equipos sensibles a microcortes, variaciones de tensión, armónicos</td><td>Todas las cargas del edificio (o las designadas)</td></tr>
+      <tr><td><strong>Mantenimiento principal</strong></td><td>Sustitución de baterías (3-5 años plomo, 8-10 años Li-ion)</td><td>Motor: aceite, filtros, refrigerante, bujías/inyectores. Anual.</td></tr>
+      <tr class="best"><td><strong>Uso conjunto</strong></td><td colspan="2"><strong>SAI cubre el tiempo de arranque del grupo (10-30 s). Grupo asume la carga cuando está disponible.</strong> Esta combinación es la solución estándar para hospitales, CPD y edificios con suministro de seguridad exigido por CTE DB-SI.</td></tr>
+    </tbody>
+  </table>
+  <div style="padding:.6rem .75rem .75rem;">
+    <div style="font-family:var(--font-d);font-weight:800;font-size:.78rem;color:var(--muted);margin-bottom:.5rem;">INSPECIONES Y PRUEBAS DEL GRUPO ELECTRÓGENO (datos de examen)</div>
+    <table style="font-size:.81rem;border-collapse:collapse;width:100%;">
+      <thead><tr style="background:var(--orange-lt);"><th style="padding:.35rem .7rem;text-align:left;font-size:.76rem;font-family:var(--font-d);color:var(--orange);border-bottom:1px solid var(--border);">Prueba / revisión</th><th style="padding:.35rem .7rem;text-align:left;font-size:.76rem;font-family:var(--font-d);color:var(--orange);border-bottom:1px solid var(--border);">Periodicidad</th><th style="padding:.35rem .7rem;text-align:left;font-size:.76rem;font-family:var(--font-d);color:var(--orange);border-bottom:1px solid var(--border);">Objetivo</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:.35rem .7rem;border-bottom:1px solid var(--border);">Arranque y prueba en vacío</td><td style="padding:.35rem .7rem;border-bottom:1px solid var(--border);"><strong>Semanal / mensual</strong></td><td style="padding:.35rem .7rem;border-bottom:1px solid var(--border);">Verificar que el grupo arranca y alcanza parámetros nominales</td></tr>
+        <tr><td style="padding:.35rem .7rem;border-bottom:1px solid var(--border);">Prueba con carga real (mín. 30% carga nominal)</td><td style="padding:.35rem .7rem;border-bottom:1px solid var(--border);"><strong>Anual</strong></td><td style="padding:.35rem .7rem;border-bottom:1px solid var(--border);">Verificar comportamiento del motor y alternador bajo carga</td></tr>
+        <tr><td style="padding:.35rem .7rem;border-bottom:1px solid var(--border);">Cambio de aceite y filtros</td><td style="padding:.35rem .7rem;border-bottom:1px solid var(--border);">Según fabricante (200-500 h o anual)</td><td style="padding:.35rem .7rem;border-bottom:1px solid var(--border);">Mantenimiento preventivo del motor</td></tr>
+        <tr><td style="padding:.35rem .7rem;border-bottom:1px solid var(--border);">Verificación del CTA (transferencia automática)</td><td style="padding:.35rem .7rem;border-bottom:1px solid var(--border);"><strong>Mensual</strong></td><td style="padding:.35rem .7rem;border-bottom:1px solid var(--border);">Simular fallo de red y verificar transferencia correcta en &lt;15 s</td></tr>
+        <tr><td style="padding:.35rem .7rem;">Inspección del sistema de escape, ventilación y cubeto</td><td style="padding:.35rem .7rem;">Anual</td><td style="padding:.35rem .7rem;">Seguridad: gases de escape, refrigeración, contención de gasoil</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- TABLA 8: ESQUEMAS ELÉCTRICOS -->
+<div class="section-label">Tabla 8 — Tipos de esquemas eléctricos (UNE-EN 60617)</div>
+<div class="tbl-wrap top-purple">
+  <div class="tbl-header"><span class="th-icon">📐</span><h2>Tipos de esquemas eléctricos — qué es cada uno</h2><span class="th-badge ch-purple">TRAMPA: unifilar ≠ multifilar</span></div>
+  <table class="th-purple">
+    <thead><tr><th>Tipo de esquema</th><th>Representación</th><th>Para qué se usa</th><th>Quién lo utiliza</th></tr></thead>
+    <tbody>
+      <tr class="best"><td><strong>Unifilar ⭐</strong></td><td>Una sola línea por circuito. Trazos cortos = n.º de conductores.</td><td>Documento de PROYECTO. Muestra distribución completa de la instalación de forma simplificada.</td><td class="hl-blue"><strong>Técnico competente</strong> (lo firma en el proyecto)</td></tr>
+      <tr><td><strong>Multifilar (desarrollado)</strong></td><td>Cada conductor representado por separado.</td><td>Cableado real de cuadros y automatismos. Detalle exacto.</td><td class="hl-green"><strong>Instalador</strong> (para cablear el cuadro)</td></tr>
+      <tr><td><strong>De potencia</strong></td><td>Circuitos de potencia con sus elementos: contactores, motores, transformadores.</td><td>Representa la parte de fuerza de la instalación.</td><td class="hl-muted">Técnico / ingeniero</td></tr>
+      <tr><td><strong>De mando / control</strong></td><td>Circuitos de baja potencia: bobinas, relés, pulsadores, temporizadores.</td><td>Explica cómo se controlan los elementos de potencia. Complementa al esquema de potencia.</td><td class="hl-muted">Técnico / automatizador</td></tr>
+    </tbody>
+  </table>
+  <div class="callout al-blue" style="margin:.6rem .75rem .75rem;">
+    <strong>📌 Simbología normalizada UNE-EN 60617:</strong> Magnetotérmico = rectángulo con diagonal · Diferencial = rectángulo con flecha y tierra · Fusible = rectángulo simple · Contador = "E" en círculo · Motor = "M" en círculo · Transformador = dos círculos · Puesta a tierra = líneas horizontales decrecientes · Conductor PE = línea de trazos verde-amarillo.
+  </div>
+</div>
+
+</body>
+</html>

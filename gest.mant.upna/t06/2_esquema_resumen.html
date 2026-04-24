@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 6 – Esquema-resumen · Instalaciones eléctricas BT</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#f7f6f2;--surface:#fff;--surface-2:#f9f8f5;--border:#d4d1ca;--divider:#dcd9d5;
+    --text:#28251d;--muted:#6b6a65;--faint:#a8a7a2;
+    --blue:#1a4a8b;--blue-lt:#e0eaf8;--blue-dk:#0d2f5e;
+    --green:#1a5c2e;--green-lt:#d6ecd6;
+    --gold:#d19900;--gold-lt:#f5e9c0;
+    --teal:#005f73;--teal-lt:#cce3e8;
+    --orange:#964219;--orange-lt:#f5e0d0;
+    --purple:#5a3e8c;--purple-lt:#e4ddf5;
+    --red:#8b1a1a;--red-lt:#fde8e8;
+    --font-d:"Cabinet Grotesk",sans-serif;--font-b:"Satoshi",sans-serif;
+    --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.88rem;line-height:1.6;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 4rem}
+  .file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap}
+  .file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s}
+  .file-nav a:hover,.file-nav a.active{background:var(--blue);color:white;border-color:var(--blue)}
+  .page-header{background:linear-gradient(135deg,#1a4a8b 0%,#0d2f5e 100%);color:white;border-radius:var(--r-xl);padding:2rem 2.5rem;margin-bottom:2rem}
+  .page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem}
+  .page-header h1{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800;line-height:1.2;margin-bottom:.4rem}
+  .page-header .sub{font-size:.85rem;opacity:.8}
+  .section-label{font-family:var(--font-d);font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:2.5rem 0 .75rem}
+  .block-card{background:var(--surface);border-radius:var(--r-xl);border:1px solid var(--border);overflow:hidden;margin-bottom:1.25rem;box-shadow:0 1px 4px rgba(26,74,139,.07)}
+  .block-card-header{padding:.85rem 1.25rem;display:flex;align-items:center;gap:.65rem;border-bottom:1px solid var(--border)}
+  .block-card-header .icon{font-size:1.15rem}
+  .block-card-header h2{font-family:var(--font-d);font-size:.95rem;font-weight:800}
+  .block-card-body{padding:1rem 1.25rem}
+  .hdr-blue{border-top:4px solid var(--blue)}
+  .hdr-green{border-top:4px solid var(--green)}
+  .hdr-gold{border-top:4px solid var(--gold)}
+  .hdr-teal{border-top:4px solid var(--teal)}
+  .hdr-orange{border-top:4px solid var(--orange)}
+  .hdr-purple{border-top:4px solid var(--purple)}
+  .hdr-red{border-top:4px solid var(--red)}
+  .chip{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:1px 7px;border-radius:999px;white-space:nowrap}
+  .ch-blue{background:var(--blue-lt);color:var(--blue-dk)}
+  .ch-green{background:var(--green-lt);color:var(--green)}
+  .ch-gold{background:var(--gold-lt);color:#7a5500}
+  .ch-teal{background:var(--teal-lt);color:var(--teal)}
+  .ch-orange{background:var(--orange-lt);color:var(--orange)}
+  .ch-purple{background:var(--purple-lt);color:var(--purple)}
+  .ch-red{background:var(--red-lt);color:var(--red)}
+  .ch-grey{background:#f0f0ee;color:var(--muted)}
+  .callout{border-radius:var(--r-md);padding:.7rem 1rem;font-size:.83rem;margin:.75rem 0;line-height:1.55}
+  .callout strong{font-weight:700}
+  .al-blue{background:var(--blue-lt);border-left:3px solid var(--blue)}
+  .al-green{background:var(--green-lt);border-left:3px solid var(--green)}
+  .al-gold{background:var(--gold-lt);border-left:3px solid var(--gold)}
+  .al-teal{background:var(--teal-lt);border-left:3px solid var(--teal)}
+  .al-orange{background:var(--orange-lt);border-left:3px solid var(--orange)}
+  .al-red{background:var(--red-lt);border-left:3px solid var(--red)}
+  .al-warn{background:#fff7ed;border-left:3px solid var(--orange)}
+  .kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:.75rem 0}
+  .kpi{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-lg);padding:.85rem;text-align:center}
+  .kpi .val{font-family:var(--font-d);font-size:1.4rem;font-weight:800;display:block;line-height:1}
+  .kpi .lbl{font-size:.68rem;color:var(--muted);margin-top:4px;display:block}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+  .step-list{list-style:none;padding:0;margin:.5rem 0}
+  .step-list li{display:flex;gap:.75rem;align-items:flex-start;padding:.45rem 0;border-bottom:1px solid #f0ede8;font-size:.84rem}
+  .step-list li:last-child{border-bottom:none}
+  .step-list .step-num{font-family:var(--font-d);font-weight:800;font-size:.9rem;min-width:22px;text-align:center;color:var(--blue)}
+  .step-list .step-body strong{font-weight:700;display:block}
+  .step-list .step-body span{color:var(--muted);font-size:.8rem}
+  /* CADENA */
+  .chain{display:flex;flex-wrap:wrap;gap:0;align-items:center;margin:.75rem 0}
+  .cstep{background:var(--blue);color:white;font-family:var(--font-d);font-weight:800;font-size:.72rem;padding:.35rem .75rem;white-space:nowrap;border-radius:var(--r-sm)}
+  .cstep.resp{background:var(--green)}
+  .carrow{color:var(--blue);padding:0 .15rem;font-weight:700;font-size:.9rem}
+  /* CIRCUITOS */
+  .circ-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:.55rem;margin:.75rem 0}
+  .circ-card{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-md);padding:.65rem;text-align:center}
+  .circ-card .cn{font-family:var(--font-d);font-weight:800;font-size:1rem;color:var(--blue);display:block}
+  .circ-card .cname{font-weight:700;font-size:.72rem;display:block;margin:2px 0}
+  .circ-card .cdata{font-size:.67rem;color:var(--muted)}
+  /* SAI STRIP */
+  .sai-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:.75rem 0}
+  .sai-block{border-radius:var(--r-md);border:1px solid var(--border);padding:.85rem;background:var(--surface-2);text-align:center}
+  .sai-block .sb-tipo{font-family:var(--font-d);font-weight:800;font-size:.8rem;display:block;margin-bottom:4px}
+  .sai-block .sb-ms{font-family:var(--font-d);font-size:1.6rem;font-weight:800;display:block;line-height:1}
+  .sai-block .sb-desc{font-size:.7rem;color:var(--muted);margin-top:4px}
+  /* NORM LIST */
+  .norm-list{list-style:none;padding:0}
+  .norm-list li{display:flex;align-items:flex-start;gap:.75rem;padding:.5rem 0;border-bottom:1px solid #f0ede8;font-size:.84rem}
+  .norm-list li:last-child{border-bottom:none}
+  .norm-badge{font-family:var(--font-d);font-weight:800;font-size:.7rem;padding:2px 8px;border-radius:4px;white-space:nowrap;min-width:88px;text-align:center}
+  .norm-body strong{font-weight:700;display:block;font-size:.84rem}
+  .norm-body span{color:var(--muted);font-size:.79rem}
+  /* FLASH */
+  .flash-grid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin:.75rem 0}
+  .flash-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:.85rem 1rem}
+  .flash-card .fc-q{font-weight:700;color:var(--muted);font-size:.75rem;margin-bottom:.3rem}
+  .flash-card .fc-a{font-family:var(--font-d);font-weight:800;font-size:.93rem;color:var(--text)}
+  @media(max-width:700px){
+    .grid-2,.grid-3,.kpi-grid,.sai-strip,.circ-grid{grid-template-columns:1fr 1fr}
+    .flash-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html" class="active">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </div>
+<div class="page-header">
+  <div class="meta">Tema 6 · Gestor de Mantenimiento (Nivel B) · UPNA · Esquema-resumen</div>
+  <h1>Instalaciones eléctricas BT — Esquema visual para memorización</h1>
+  <div class="sub">REBT · Cadena de distribución · CGMP · Protecciones · SAI · Grupos electrógenos · Esquemas</div>
+</div>
+
+<!-- KPIs -->
+<div class="section-label">Cifras clave para memorización inmediata</div>
+<div class="kpi-grid">
+  <div class="kpi"><span class="val" style="color:var(--blue);">RD 842/2002</span><span class="lbl">Norma REBT</span></div>
+  <div class="kpi"><span class="val" style="color:var(--blue);">51</span><span class="lbl">ITC-BT del REBT</span></div>
+  <div class="kpi"><span class="val" style="color:var(--orange);">≤1.000 V</span><span class="lbl">BT en CA</span></div>
+  <div class="kpi"><span class="val" style="color:var(--teal);">30 mA</span><span class="lbl">ID protección personas</span></div>
+  <div class="kpi"><span class="val" style="color:var(--green);">300 mA</span><span class="lbl">ID protección instalación</span></div>
+  <div class="kpi"><span class="val" style="color:var(--red);">0 ms</span><span class="lbl">SAI online (doble conv.)</span></div>
+  <div class="kpi"><span class="val" style="color:var(--gold);">&lt;15 s</span><span class="lbl">Arranque grupo seguridad</span></div>
+  <div class="kpi"><span class="val" style="color:var(--blue);">6 mm²</span><span class="lbl">C3 cocina y horno (máx.)</span></div>
+  <div class="kpi"><span class="val" style="color:var(--purple);">10 mm²</span><span class="lbl">Sección mínima LGA</span></div>
+</div>
+
+<!-- NORMATIVA -->
+<div class="section-label">Bloque 1 — Normativa de referencia</div>
+<div class="block-card hdr-blue">
+  <div class="block-card-header"><span class="icon">📋</span><h2>Marco normativo del Tema 6</h2><span class="chip ch-blue" style="margin-left:auto;">REBT + SAI + GE</span></div>
+  <div class="block-card-body">
+    <ul class="norm-list">
+      <li><span class="norm-badge" style="background:var(--blue-lt);color:var(--blue-dk);">RD 842/2002<br>REBT</span><div class="norm-body"><strong>Reglamento Electrotécnico de Baja Tensión — 51 ITC-BT</strong><span>Norma madre de toda instalación eléctrica BT en España. BT ≤ 1.000 V CA / ≤ 1.500 V CC.</span></div></li>
+      <li><span class="norm-badge" style="background:var(--teal-lt);color:var(--teal);">UNE-EN 61439</span><div class="norm-body"><strong>Cuadros de distribución BT</strong><span>Requisitos de fabricación, ensayo y prestaciones de cuadros eléctricos de baja tensión.</span></div></li>
+      <li><span class="norm-badge" style="background:var(--green-lt);color:var(--green);">UNE-EN 62040</span><div class="norm-body"><strong>SAI — Sistemas de Alimentación Ininterrumpida</strong><span>Clasificación y ensayos de UPS. Topologías offline, line-interactive y online.</span></div></li>
+      <li><span class="norm-badge" style="background:var(--gold-lt);color:#7a5500;">UNE-EN ISO 8528</span><div class="norm-body"><strong>Grupos electrógenos de CA</strong><span>Prestaciones, diseño, instalación y mantenimiento de grupos electrógenos.</span></div></li>
+      <li><span class="norm-badge" style="background:var(--orange-lt);color:var(--orange);">CTE DB-SI</span><div class="norm-body"><strong>Suministros de seguridad en edificios</strong><span>Exige SAI + grupo electrógeno para alumbrado emergencia, bombas incendio, detección, ascensores evacuación.</span></div></li>
+    </ul>
+  </div>
+</div>
+
+<!-- CADENA DE DISTRIBUCIÓN -->
+<div class="section-label">Bloque 2 — La cadena de distribución eléctrica en edificios</div>
+<div class="block-card hdr-blue">
+  <div class="block-card-header"><span class="icon">🔗</span><h2>Cadena CGP → Receptores</h2><span class="chip ch-blue" style="margin-left:auto;">ITC-BT-14 a BT-17</span></div>
+  <div class="block-card-body">
+    <div class="chain">
+      <span class="cstep">Red distribuidora</span><span class="carrow">→</span>
+      <span class="cstep">Acometida</span><span class="carrow">→</span>
+      <span class="cstep">CGP</span><span class="carrow">→</span>
+      <span class="cstep">LGA</span><span class="carrow">→</span>
+      <span class="cstep">Contadores + ICP</span><span class="carrow">→</span>
+      <span class="cstep resp">DI (responsabilidad usuario)</span><span class="carrow">→</span>
+      <span class="cstep resp">CGMP</span><span class="carrow">→</span>
+      <span class="cstep resp">Circuitos C1-C5+</span><span class="carrow">→</span>
+      <span class="cstep resp">Receptores</span>
+    </div>
+    <div class="callout al-blue" style="margin-top:.75rem;"><strong>🔵 Azul oscuro = empresa distribuidora. Verde = responsabilidad del usuario abonado.</strong> La CGP está en el límite de la propiedad. La LGA no puede tener empalmes ni derivaciones. Sección mínima LGA: 10 mm² Cu.</div>
+    <ul class="step-list">
+      <li><span class="step-num">CGP</span><div class="step-body"><strong>Caja General de Protección</strong><span>Fusibles de protección de la LGA. Límite entre red pública y instalación privada. En el límite de la propiedad.</span></div></li>
+      <li><span class="step-num">ICP</span><div class="step-body"><strong>Interruptor de Control de Potencia — precintado por la distribuidora</strong><span>Control tarifario: limita la potencia al valor contratado. NO es un elemento de seguridad del usuario. El usuario no puede manipularlo.</span></div></li>
+      <li><span class="step-num">IGA</span><div class="step-body"><strong>Interruptor General Automático — corte omnipolar</strong><span>Protege toda la instalación del abonado contra sobrecargas y cortocircuitos. Corta fase Y neutro.</span></div></li>
+    </ul>
+    <div class="callout al-warn"><strong>⚠ ICP ≠ IGA:</strong> el ICP es de la distribuidora (tarifa). El IGA es del usuario (seguridad). Los confunden con frecuencia en el examen.</div>
+  </div>
+</div>
+
+<!-- CIRCUITOS VIVIENDA -->
+<div class="section-label">Bloque 3 — Circuitos interiores de viviendas (ITC-BT-25)</div>
+<div class="block-card hdr-teal">
+  <div class="block-card-header"><span class="icon">🏠</span><h2>Circuitos mínimos obligatorios — Grado básico</h2><span class="chip ch-teal" style="margin-left:auto;">ITC-BT-25</span></div>
+  <div class="block-card-body">
+    <div class="circ-grid">
+      <div class="circ-card"><span class="cn">C1</span><span class="cname">Alumbrado</span><div class="cdata">10 A<br><strong>1,5 mm²</strong><br>Máx. 30 puntos</div></div>
+      <div class="circ-card"><span class="cn">C2</span><span class="cname">Tomas generales + frigorif.</span><div class="cdata">16 A<br>2,5 mm²<br>Máx. 20 tomas</div></div>
+      <div class="circ-card" style="border-color:var(--orange);background:var(--orange-lt);"><span class="cn" style="color:var(--orange);">C3</span><span class="cname">Cocina y horno ⭐</span><div class="cdata">25 A<br><strong style="color:var(--orange);">6 mm²</strong><br>La más gruesa</div></div>
+      <div class="circ-card"><span class="cn">C4</span><span class="cname">Lavadora, lavavajillas, termo</span><div class="cdata">20 A<br>4 mm²</div></div>
+      <div class="circ-card"><span class="cn">C5</span><span class="cname">Tomas baños y cocina</span><div class="cdata">16 A<br>2,5 mm²<br>Máx. 6 tomas</div></div>
+    </div>
+    <div class="callout al-warn"><strong>⚠ La sección de C3 (6 mm²) es la más gruesa y la más preguntada.</strong> Orden de secciones: C3 (6) &gt; C4 (4) &gt; C2=C5 (2,5) &gt; C1 (1,5).</div>
+  </div>
+</div>
+
+<!-- PROTECCIONES -->
+<div class="section-label">Bloque 4 — Elementos de protección en el CGMP</div>
+<div class="grid-2">
+  <div class="block-card hdr-blue">
+    <div class="block-card-header"><span class="icon">⚡</span><h2>Magnetotérmico — curvas de disparo</h2></div>
+    <div class="block-card-body">
+      <ul class="step-list">
+        <li><span class="step-num" style="color:var(--green);">B</span><div class="step-body"><strong>3–5 × In</strong><span>Cargas resistivas, doméstico, cables largos. Dispara antes.</span></div></li>
+        <li><span class="step-num" style="color:var(--blue);">C</span><div class="step-body"><strong>5–10 × In</strong><span>Uso general, iluminación, motores pequeños. Más común.</span></div></li>
+        <li><span class="step-num" style="color:var(--orange);">D</span><div class="step-body"><strong>10–20 × In</strong><span>Motores alto arranque, transformadores. Evita disparos intempestivos.</span></div></li>
+      </ul>
+    </div>
+  </div>
+  <div class="block-card hdr-teal">
+    <div class="block-card-header"><span class="icon">🌊</span><h2>Diferencial — tipos según corriente de fuga</h2></div>
+    <div class="block-card-body">
+      <ul class="step-list">
+        <li><span class="step-num" style="color:var(--muted);">AC</span><div class="step-body"><strong>Solo corriente alterna senoidal</strong><span>Tipo básico. NO válido para variadores de velocidad ni cargadores VE.</span></div></li>
+        <li><span class="step-num" style="color:var(--teal);">A</span><div class="step-body"><strong>CA + corriente continua pulsante</strong><span>Obligatorio para cargadores VE y equipos con electrónica de potencia.</span></div></li>
+        <li><span class="step-num" style="color:var(--blue);">F</span><div class="step-body"><strong>CA + CC pulsante + alta frecuencia</strong><span>Para variadores de velocidad, inversores fotovoltaicos, industria avanzada.</span></div></li>
+      </ul>
+      <div class="callout al-warn"><strong>⚠ Variadores VE = tipo A o F obligatorio.</strong></div>
+    </div>
+  </div>
+</div>
+
+<div class="block-card hdr-orange">
+  <div class="block-card-header"><span class="icon">🛡</span><h2>PCS — Protector Contra Sobretensiones (ITC-BT-23)</h2><span class="chip ch-orange" style="margin-left:auto;">OBLIGATORIO VIVIENDAS NUEVAS</span></div>
+  <div class="block-card-body">
+    <div class="grid-3">
+      <div style="background:var(--blue-lt);border-radius:var(--r-md);padding:.75rem;border:1px solid var(--blue);">
+        <div style="font-family:var(--font-d);font-weight:800;font-size:.85rem;color:var(--blue);">Clase I (tipo B)</div>
+        <div style="font-size:.76rem;margin-top:4px;">CGP o inicio LGA. Rayo directo (muy energético).</div>
+      </div>
+      <div style="background:var(--orange-lt);border-radius:var(--r-md);padding:.75rem;border:2px solid var(--orange);">
+        <div style="font-family:var(--font-d);font-weight:800;font-size:.85rem;color:var(--orange);">Clase II (tipo C) ⭐</div>
+        <div style="font-size:.76rem;margin-top:4px;"><strong>OBLIGATORIO en viviendas nuevas (ITC-BT-23).</strong> Rayo indirecto y maniobras de red.</div>
+      </div>
+      <div style="background:var(--purple-lt);border-radius:var(--r-md);padding:.75rem;border:1px solid var(--purple);">
+        <div style="font-family:var(--font-d);font-weight:800;font-size:.85rem;color:var(--purple);">Clase III (tipo D)</div>
+        <div style="font-size:.76rem;margin-top:4px;">Junto a receptores sensibles. Última línea de defensa.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SAI -->
+<div class="section-label">Bloque 5 — SAI: topologías y componentes</div>
+<div class="block-card hdr-blue">
+  <div class="block-card-header"><span class="icon">🔋</span><h2>Topologías SAI (IEC 62040-3) — el dato clave para el examen</h2></div>
+  <div class="block-card-body">
+    <div class="sai-strip">
+      <div class="sai-block" style="border-top:3px solid var(--gold);">
+        <span class="sb-tipo">OFFLINE</span>
+        <span class="sb-ms" style="color:var(--gold);">4–10 ms</span>
+        <div class="sb-desc">Alimenta de red normalmente. Solo actúa al detectar fallo. Bajo coste.</div>
+        <div style="margin-top:6px;"><span class="chip ch-gold">PCs oficina</span></div>
+      </div>
+      <div class="sai-block" style="border-top:3px solid var(--teal);">
+        <span class="sb-tipo">LINE-INTERACTIVE</span>
+        <span class="sb-ms" style="color:var(--teal);">2–4 ms</span>
+        <div class="sb-desc">AVR en línea. Regula tensión sin baterías. Conmuta a baterías en corte.</div>
+        <div style="margin-top:6px;"><span class="chip ch-teal">Servidores pequeños</span></div>
+      </div>
+      <div class="sai-block" style="border-top:3px solid var(--blue);background:var(--blue-lt);">
+        <span class="sb-tipo">ONLINE ⭐ doble conversión</span>
+        <span class="sb-ms" style="color:var(--blue);">0 ms</span>
+        <div class="sb-desc">Cargas alimentadas SIEMPRE por el inversor. Aislamiento total. Sin conmutación.</div>
+        <div style="margin-top:6px;"><span class="chip ch-blue">CPD · Quirófanos · Control</span></div>
+      </div>
+    </div>
+    <div class="callout al-blue"><strong>El SAI online es el único con tiempo 0 ms</strong> porque las cargas nunca se alimentan de la red directamente. Para CPD y quirófanos solo es válido el SAI online de doble conversión.</div>
+  </div>
+</div>
+
+<!-- GRUPOS ELECTRÓGENOS -->
+<div class="section-label">Bloque 6 — Grupo electrógeno</div>
+<div class="block-card hdr-orange">
+  <div class="block-card-header"><span class="icon">⚙️</span><h2>Grupo electrógeno — componentes y suministros</h2><span class="chip ch-orange" style="margin-left:auto;">UNE-EN ISO 8528 · ITC-BT-40</span></div>
+  <div class="block-card-body">
+    <div class="grid-2">
+      <div>
+        <div style="font-family:var(--font-d);font-weight:800;font-size:.8rem;color:var(--muted);margin-bottom:.5rem;">COMPONENTES PRINCIPALES</div>
+        <ul class="step-list">
+          <li><span class="step-num" style="font-size:.75rem;">Motor</span><div class="step-body"><strong>Motor diésel</strong><span>3.000 rpm (2 polos) o 1.500 rpm (4 polos, más duradero).</span></div></li>
+          <li><span class="step-num" style="font-size:.75rem;">Alt.</span><div class="step-body"><strong>Alternador síncrono</strong><span>Genera 400/230 V CA trifásica.</span></div></li>
+          <li><span class="step-num" style="font-size:.75rem;">Gov.</span><div class="step-body"><strong>Governor (regulador velocidad)</strong><span>Mantiene la frecuencia en 50 Hz.</span></div></li>
+          <li><span class="step-num" style="font-size:.75rem;">AVR</span><div class="step-body"><strong>Regulador de tensión automático</strong><span>Mantiene la tensión nominal.</span></div></li>
+          <li><span class="step-num" style="font-size:.75rem;">CTA</span><div class="step-body"><strong>Cuadro Transferencia Automática ⭐</strong><span>Enclavamiento mecánico: IMPOSIBLE conectar red y grupo simultáneamente.</span></div></li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-family:var(--font-d);font-weight:800;font-size:.8rem;color:var(--muted);margin-bottom:.5rem;">TIPOS DE SUMINISTRO</div>
+        <div style="background:var(--red-lt);border-radius:var(--r-md);padding:.75rem;border-left:3px solid var(--red);margin-bottom:.6rem;font-size:.83rem;"><strong style="color:var(--red);">Suministro de SEGURIDAD (CTE DB-SI)</strong><br>Alumbrado emergencia, bombas incendio, detección, ascensores evacuación.<br><strong>Arranque en &lt; 15 segundos — obligatorio.</strong></div>
+        <div style="background:var(--orange-lt);border-radius:var(--r-md);padding:.75rem;border-left:3px solid var(--orange);margin-bottom:.6rem;font-size:.83rem;"><strong style="color:var(--orange);">Suministro de RESERVA</strong><br>Hospitales, data centers, industria de proceso continuo.</div>
+        <div style="background:var(--gold-lt);border-radius:var(--r-md);padding:.75rem;border-left:3px solid var(--gold);font-size:.83rem;"><strong style="color:#7a5500;">Suministro COMPLEMENTARIO</strong><br>Optimización costes energéticos o zonas sin acceso a red.</div>
+      </div>
+    </div>
+    <div class="callout al-warn" style="margin-top:.75rem;"><strong>⚠ SAI y grupo son COMPLEMENTARIOS, no sustitutos.</strong> El grupo arranca en 10-30 s. El SAI cubre ese tiempo de arranque. Para cargas que no toleran ni un segundo de interrupción: SAI online + grupo electrógeno.</div>
+  </div>
+</div>
+
+<!-- FLASH EXAMEN -->
+<div class="section-label">Bloque 7 — Tarjetas de memorización rápida para el examen</div>
+<div class="flash-grid">
+  <div class="flash-card"><div class="fc-q">¿Qué es el REBT y qué RD lo aprueba?</div><div class="fc-a">RD 842/2002 · 51 ITC-BT · BT ≤ 1.000 V CA / ≤ 1.500 V CC</div></div>
+  <div class="flash-card"><div class="fc-q">¿Dónde está la CGP?</div><div class="fc-a">En el límite de la propiedad. Marca el fin de la red pública.</div></div>
+  <div class="flash-card"><div class="fc-q">¿Puede tener empalmes la LGA?</div><div class="fc-a">NO. Va directa de CGP a contadores. Sección mín. 10 mm² Cu.</div></div>
+  <div class="flash-card"><div class="fc-q">¿Quién instala el ICP?</div><div class="fc-a">La empresa distribuidora. Lo precinta. Control tarifario, NO de seguridad.</div></div>
+  <div class="flash-card"><div class="fc-q">Sensibilidad del ID para proteger personas</div><div class="fc-a">30 mA (alta sensibilidad)</div></div>
+  <div class="flash-card"><div class="fc-q">Sensibilidad del ID para proteger instalaciones</div><div class="fc-a">300 mA (media sensibilidad)</div></div>
+  <div class="flash-card"><div class="fc-q">¿Qué tipo diferencial para variadores de velocidad?</div><div class="fc-a">Tipo A (mínimo) o tipo F. Nunca tipo AC.</div></div>
+  <div class="flash-card"><div class="fc-q">Sección de C3 (cocina y horno)</div><div class="fc-a">6 mm² Cu · 25 A. La más gruesa de todos los circuitos.</div></div>
+  <div class="flash-card"><div class="fc-q">SAI con tiempo de conmutación = 0 ms</div><div class="fc-a">SAI online de doble conversión. Para CPD y quirófanos.</div></div>
+  <div class="flash-card"><div class="fc-q">¿En cuánto tiempo arranca el grupo de seguridad?</div><div class="fc-a">Menos de 15 segundos (exigencia CTE DB-SI).</div></div>
+  <div class="flash-card"><div class="fc-q">¿Puede el PE llevar fusibles o interruptores?</div><div class="fc-a">NUNCA. El conductor de protección no puede interrumpirse.</div></div>
+  <div class="flash-card"><div class="fc-q">Esquema de proyecto vs. esquema de cableado</div><div class="fc-a">Unifilar = proyecto (técnico). Multifilar = cableado en cuadro (instalador).</div></div>
+</div>
+
+</body>
+</html>
