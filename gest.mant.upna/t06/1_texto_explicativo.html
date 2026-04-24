@@ -1,0 +1,453 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 6 – Texto explicativo · Instalaciones eléctricas BT</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f6f2; --surface: #ffffff; --surface-2: #f9f8f5;
+    --border: #d4d1ca; --divider: #dcd9d5;
+    --text: #28251d; --muted: #6b6a65; --faint: #a8a7a2;
+    --blue:   #1a4a8b; --blue-lt:   #e0eaf8; --blue-dk:  #0d2f5e;
+    --green:  #1a5c2e; --green-lt:  #d6ecd6;
+    --gold:   #d19900; --gold-lt:   #f5e9c0;
+    --teal:   #005f73; --teal-lt:   #cce3e8;
+    --orange: #964219; --orange-lt: #f5e0d0;
+    --purple: #5a3e8c; --purple-lt: #e4ddf5;
+    --red:    #8b1a1a; --red-lt:    #fde8e8;
+    --font-d: 'Cabinet Grotesk', sans-serif;
+    --font-b: 'Satoshi', sans-serif;
+    --r-sm: 0.375rem; --r-md: 0.5rem; --r-lg: 0.75rem; --r-xl: 1rem;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
+  body { font-family: var(--font-b); background: var(--bg); color: var(--text); font-size: 0.92rem; line-height: 1.75; -webkit-font-smoothing: antialiased; padding: 2rem 1.5rem 5rem; max-width: 860px; margin: 0 auto; }
+
+  /* FILE NAV */
+  .file-nav { display:flex; gap:0.5rem; margin-bottom:1.5rem; flex-wrap:wrap; }
+  .file-nav a { padding:0.3rem 1rem; border-radius:999px; background:var(--surface); border:1px solid var(--border); font-size:0.8rem; text-decoration:none; color:var(--muted); transition:all 0.15s; }
+  .file-nav a:hover, .file-nav a.active { background:var(--blue); color:white; border-color:var(--blue); }
+
+  /* PAGE HEADER */
+  .page-header { background:linear-gradient(135deg, #1a4a8b 0%, #0d2f5e 100%); color:white; border-radius:var(--r-xl); padding:2rem 2.5rem; margin-bottom:2.5rem; }
+  .page-header .meta { font-size:0.72rem; opacity:0.7; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.5rem; }
+  .page-header h1 { font-family:var(--font-d); font-size:clamp(1.4rem,3vw,2rem); font-weight:800; line-height:1.2; margin-bottom:0.4rem; }
+  .page-header .sub { font-size:0.85rem; opacity:0.8; }
+
+  /* TOC */
+  .toc { background:var(--surface); border:1px solid var(--border); border-radius:var(--r-lg); padding:1.25rem 1.5rem; margin-bottom:2rem; }
+  .toc-title { font-family:var(--font-d); font-weight:800; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted); margin-bottom:0.75rem; }
+  .toc ol { padding-left:1.25rem; }
+  .toc li { margin-bottom:0.2rem; }
+  .toc a { color:var(--blue); text-decoration:none; font-size:0.85rem; }
+  .toc a:hover { text-decoration:underline; }
+
+  /* SECTION HEADERS */
+  .section-block { margin-bottom:2.5rem; }
+  .section-block h2 { font-family:var(--font-d); font-size:1.15rem; font-weight:800; color:var(--blue); border-bottom:2px solid var(--blue-lt); padding-bottom:0.4rem; margin-bottom:1rem; line-height:1.3; }
+  .section-block h3 { font-family:var(--font-d); font-size:0.97rem; font-weight:800; color:var(--text); margin:1.25rem 0 0.5rem; }
+  .section-block p { margin-bottom:0.85rem; max-width:72ch; }
+  .section-block ul, .section-block ol { padding-left:1.4rem; margin-bottom:0.85rem; }
+  .section-block li { margin-bottom:0.3rem; max-width:72ch; }
+  strong { font-weight:700; }
+
+  /* CALLOUTS */
+  .callout { border-radius:var(--r-md); padding:0.8rem 1.1rem; font-size:0.86rem; margin:1rem 0; line-height:1.6; }
+  .callout strong { font-weight:700; display:block; margin-bottom:0.2rem; }
+  .al-blue   { background:var(--blue-lt);   border-left:4px solid var(--blue); }
+  .al-green  { background:var(--green-lt);  border-left:4px solid var(--green); }
+  .al-gold   { background:var(--gold-lt);   border-left:4px solid var(--gold); }
+  .al-teal   { background:var(--teal-lt);   border-left:4px solid var(--teal); }
+  .al-orange { background:var(--orange-lt); border-left:4px solid var(--orange); }
+  .al-purple { background:var(--purple-lt); border-left:4px solid var(--purple); }
+  .al-red    { background:var(--red-lt);    border-left:4px solid var(--red); }
+  .al-warn   { background:#fff7ed; border-left:4px solid var(--orange); }
+
+  /* CHAIN */
+  .chain { display:flex; flex-wrap:wrap; gap:0; margin:1rem 0; align-items:center; }
+  .chain-step { background:var(--blue); color:white; font-family:var(--font-d); font-weight:800; font-size:0.75rem; padding:0.4rem 0.85rem; border-radius:var(--r-sm); white-space:nowrap; }
+  .chain-arrow { color:var(--blue); font-size:1rem; padding:0 0.2rem; font-weight:700; }
+
+  /* DEFINITION LIST */
+  .def-list { margin:0.75rem 0; }
+  .def-item { display:grid; grid-template-columns:130px 1fr; gap:0.5rem 1rem; padding:0.5rem 0; border-bottom:1px solid #f0ede8; font-size:0.87rem; }
+  .def-item:last-child { border-bottom:none; }
+  .def-term { font-family:var(--font-d); font-weight:800; color:var(--blue); font-size:0.82rem; }
+  .def-desc { color:var(--text); }
+
+  /* CIRCUITOS GRID */
+  .circ-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0.65rem; margin:1rem 0; }
+  .circ-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--r-md); padding:0.75rem; }
+  .circ-card .cc-num { font-family:var(--font-d); font-weight:800; font-size:1.1rem; color:var(--blue); display:block; }
+  .circ-card .cc-name { font-weight:700; font-size:0.82rem; display:block; margin:2px 0; }
+  .circ-card .cc-data { font-size:0.76rem; color:var(--muted); }
+
+  /* TOPOLOGIA SAI */
+  .sai-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0.75rem; margin:1rem 0; }
+  .sai-card { border-radius:var(--r-md); border:1px solid var(--border); padding:0.85rem; background:var(--surface); }
+  .sai-card .sc-tipo { font-family:var(--font-d); font-weight:800; font-size:0.85rem; display:block; margin-bottom:4px; }
+  .sai-card .sc-ms { font-size:1.1rem; font-weight:800; font-family:var(--font-d); }
+  .sai-card .sc-desc { font-size:0.77rem; color:var(--muted); margin-top:4px; }
+  .sai-card .sc-uso { font-size:0.75rem; margin-top:6px; font-weight:600; }
+
+  /* PROTECCIONES TABLA */
+  .prot-table { width:100%; border-collapse:collapse; font-size:0.84rem; margin:1rem 0; }
+  .prot-table th { font-family:var(--font-d); font-weight:800; font-size:0.78rem; padding:0.45rem 0.85rem; background:var(--blue); color:white; text-align:left; }
+  .prot-table td { padding:0.4rem 0.85rem; border-bottom:1px solid #f0ede8; vertical-align:top; }
+  .prot-table tr:last-child td { border-bottom:none; }
+  .prot-table tr:hover td { background:#f7f9ff; }
+  .prot-table tr.best td { background:#f0f4ff; }
+
+  /* DIVIDER */
+  .sec-divider { border:none; border-top:1px solid var(--divider); margin:2rem 0; }
+
+  @media(max-width:640px){
+    .circ-grid, .sai-grid { grid-template-columns:1fr 1fr; }
+    .def-item { grid-template-columns:1fr; }
+    .chain { gap:4px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo.html" class="active">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </div>
+
+<div class="page-header">
+  <div class="meta">Tema 6 · Gestor de Mantenimiento (Nivel B) · UPNA · Texto explicativo</div>
+  <h1>Instalaciones eléctricas de baja tensión</h1>
+  <div class="sub">Distribución en edificios · Cuadros · Protecciones · SAI · Grupos electrógenos · Normativa · Esquemas</div>
+</div>
+
+<div class="toc">
+  <div class="toc-title">Índice de contenidos</div>
+  <ol>
+    <li><a href="#s1">Marco normativo: REBT y las ITC-BT</a></li>
+    <li><a href="#s2">Distribución eléctrica en edificios: la cadena completa</a></li>
+    <li><a href="#s3">El cuadro general de mando y protección (CGMP)</a></li>
+    <li><a href="#s4">Elementos de protección: fusible, magnetotérmico, diferencial y PCS</a></li>
+    <li><a href="#s5">Puesta a tierra (ITC-BT-18)</a></li>
+    <li><a href="#s6">SAI — Sistemas de alimentación ininterrumpida</a></li>
+    <li><a href="#s7">Grupos electrógenos</a></li>
+    <li><a href="#s8">Esquemas eléctricos</a></li>
+  </ol>
+</div>
+
+
+<!-- SECCIÓN 1 -->
+<div class="section-block" id="s1">
+  <h2>1. Marco normativo: el REBT y las ITC-BT</h2>
+
+  <p>La normativa fundamental que regula todas las instalaciones eléctricas de baja tensión en España es el <strong>Reglamento Electrotécnico de Baja Tensión (REBT)</strong>, aprobado por el <strong>Real Decreto 842/2002</strong>. Este reglamento define la baja tensión como aquella con tensión nominal igual o inferior a <strong>1.000 V en corriente alterna</strong> y a <strong>1.500 V en corriente continua</strong>. Por encima de esos valores, la instalación ya se considera de media o alta tensión y queda fuera del ámbito del REBT.</p>
+
+  <p>El REBT se desarrolla a través de <strong>51 Instrucciones Técnicas Complementarias (ITC-BT)</strong>, cada una dedicada a un aspecto específico de la instalación. Para este tema, las ITC más relevantes son:</p>
+
+  <ul>
+    <li><strong>ITC-BT-10:</strong> Previsión de cargas para suministros en baja tensión.</li>
+    <li><strong>ITC-BT-14:</strong> Línea general de alimentación (LGA).</li>
+    <li><strong>ITC-BT-15:</strong> Derivaciones individuales.</li>
+    <li><strong>ITC-BT-16:</strong> Contadores: ubicación y sistemas de instalación.</li>
+    <li><strong>ITC-BT-17:</strong> Dispositivos generales e individuales de mando y protección. ICP.</li>
+    <li><strong>ITC-BT-18:</strong> Instalaciones de puesta a tierra.</li>
+    <li><strong>ITC-BT-19:</strong> Instalaciones interiores o receptoras.</li>
+    <li><strong>ITC-BT-22:</strong> Protección contra sobreintensidades.</li>
+    <li><strong>ITC-BT-23:</strong> Protección contra sobretensiones.</li>
+    <li><strong>ITC-BT-24:</strong> Protección contra contactos directos e indirectos.</li>
+    <li><strong>ITC-BT-25:</strong> Instalaciones interiores de viviendas: circuitos.</li>
+    <li><strong>ITC-BT-40:</strong> Instalaciones generadoras de BT (grupos electrógenos, autoconsumo).</li>
+  </ul>
+
+  <div class="callout al-blue">
+    <strong>📌 Dato de examen:</strong> El REBT es el RD 842/2002. Tiene 51 ITC-BT. BT ≤ 1.000 V CA y ≤ 1.500 V CC. Estas tres cifras aparecen con mucha frecuencia en preguntas de tipo test.
+  </div>
+
+  <p>Complementariamente, otras normas de referencia son la <strong>UNE-EN 61439</strong> (cuadros de distribución BT), la <strong>UNE-EN 62040</strong> (SAI) y la <strong>UNE-EN ISO 8528</strong> (grupos electrógenos). El <strong>CTE DB-SI</strong> (Seguridad en caso de incendio) impone la obligatoriedad de suministros de seguridad (SAI + grupo electrógeno) en determinados edificios para garantizar el funcionamiento de sistemas de evacuación, detección y extinción de incendios.</p>
+</div>
+
+<hr class="sec-divider">
+
+<!-- SECCIÓN 2 -->
+<div class="section-block" id="s2">
+  <h2>2. Distribución eléctrica en edificios: la cadena completa</h2>
+
+  <p>La electricidad recorre un camino bien definido desde la red de distribución pública hasta cada toma de corriente o luminaria del edificio. Comprender cada eslabón de esa cadena es fundamental para entender quién es responsable de qué, y qué norma regula cada parte.</p>
+
+  <div class="chain">
+    <span class="chain-step">Red distribuidora</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-step">Acometida</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-step">CGP</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-step">LGA</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-step">Contadores</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-step">DI</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-step">CGMP</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-step">Circuitos</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-step">Receptores</span>
+  </div>
+
+  <h3>Acometida</h3>
+  <p>La <strong>acometida</strong> es la parte de la red de distribución pública que enlaza la red con la instalación del usuario. Puede ser aérea o subterránea. Es propiedad de la empresa distribuidora y, por tanto, el usuario no puede manipularla. Termina en la <strong>Caja General de Protección (CGP)</strong>.</p>
+
+  <h3>Caja General de Protección (CGP)</h3>
+  <p>La <strong>CGP</strong> marca el límite entre la red de la distribuidora y la instalación del usuario. Contiene <strong>fusibles de protección de la LGA</strong> que evitan que un defecto en la instalación del edificio afecte a la red general. Se ubica en el límite de la propiedad, en un lugar accesible desde la vía pública para la empresa distribuidora.</p>
+
+  <div class="callout al-warn">
+    <strong>⚠ Trampa frecuente:</strong> La CGP está en el LÍMITE de la propiedad, no dentro del edificio. En edificios de un solo abonado, puede combinarse con el cuadro de medida, pero sigue siendo el punto de separación entre la red pública y la instalación privada.
+  </div>
+
+  <h3>Línea General de Alimentación (LGA)</h3>
+  <p>La <strong>LGA</strong> une la CGP con la centralización de contadores. Discurre por zonas comunes del edificio (cuartos de instalaciones, patinillos). El REBT impone una restricción fundamental: <strong>la LGA no puede tener empalmes ni derivaciones</strong>. Va directa desde la CGP hasta el cuadro de contadores. La sección mínima en cobre es de <strong>10 mm²</strong>.</p>
+
+  <h3>Centralización de contadores y derivaciones individuales</h3>
+  <p>La <strong>centralización de contadores</strong> agrupa todos los contadores de los abonados del edificio en un único espacio normalizado. Desde cada contador parte una <strong>Derivación Individual (DI)</strong> que lleva la electricidad hasta el cuadro de mando y protección de cada abonado. La DI es la parte de la instalación de la que es responsable el abonado y debe incluir, en su inicio, el <strong>ICP (Interruptor de Control de Potencia)</strong>.</p>
+
+  <div class="callout al-blue">
+    <strong>📌 El ICP:</strong> Es instalado y precintado por la empresa distribuidora. Su función es limitar la corriente para que el usuario no consuma más potencia de la contratada. NO es un dispositivo de seguridad del usuario, sino un elemento de control tarifario. Si salta el ICP, es porque se ha superado la potencia contratada. Puede estar integrado en el IGA en instalaciones modernas.
+  </div>
+</div>
+
+<hr class="sec-divider">
+
+<!-- SECCIÓN 3 -->
+<div class="section-block" id="s3">
+  <h2>3. El cuadro general de mando y protección (CGMP)</h2>
+
+  <p>El <strong>Cuadro General de Mando y Protección (CGMP)</strong> es el corazón de la instalación interior de cada abonado. Contiene todos los dispositivos de protección y mando que distribuyen y protegen los distintos circuitos del edificio o vivienda. Debe ubicarse lo más cerca posible del punto de entrada de la derivación individual, en un lugar accesible, pero nunca en cuartos de baño, cocinas ni zonas húmedas.</p>
+
+  <h3>Dispositivos obligatorios en el CGMP (ITC-BT-17)</h3>
+
+  <div class="def-list">
+    <div class="def-item"><span class="def-term">IGA</span><span class="def-desc"><strong>Interruptor General Automático:</strong> protege toda la instalación contra sobrecargas y cortocircuitos. Permite cortar manualmente el suministro completo. Debe ser de <strong>corte omnipolar</strong> (corta todos los polos, incluido el neutro). Su calibre está determinado por la potencia contratada y la sección de la derivación individual.</span></div>
+    <div class="def-item"><span class="def-term">ID</span><span class="def-desc"><strong>Interruptor Diferencial:</strong> protege a las personas contra contactos indirectos detectando corrientes de fuga a tierra. Actúa cuando hay diferencia entre la corriente de fase y la de neutro. Sensibilidad estándar: <strong>30 mA</strong> para protección de personas; <strong>300 mA</strong> para protección de instalaciones contra incendios.</span></div>
+    <div class="def-item"><span class="def-term">PIAs</span><span class="def-desc"><strong>Pequeños Interruptores Automáticos (magnetotérmicos):</strong> uno por cada circuito interior. Protegen contra sobrecargas (efecto térmico) y cortocircuitos (efecto magnético). Calibres típicos: 10, 16, 20 y 25 A.</span></div>
+    <div class="def-item"><span class="def-term">PCS</span><span class="def-desc"><strong>Protector Contra Sobretensiones:</strong> obligatorio en viviendas nuevas desde la actualización de ITC-BT-23. Protege los equipos de sobretensiones transitorias provocadas por rayos o maniobras en la red. Se conecta entre fase y tierra y entre neutro y tierra.</span></div>
+  </div>
+
+  <h3>Circuitos interiores obligatorios en viviendas (ITC-BT-25)</h3>
+  <p>La ITC-BT-25 define los circuitos mínimos obligatorios en viviendas según el grado de electrificación (básico o elevado). Para el grado básico son obligatorios cinco circuitos:</p>
+
+  <div class="circ-grid">
+    <div class="circ-card"><span class="cc-num">C1</span><span class="cc-name">Alumbrado</span><div class="cc-data">10 A · 1,5 mm² Cu<br>Máx. 30 puntos de luz</div></div>
+    <div class="circ-card"><span class="cc-num">C2</span><span class="cc-name">Tomas uso general + frigorífico</span><div class="cc-data">16 A · 2,5 mm² Cu<br>Máx. 20 tomas</div></div>
+    <div class="circ-card"><span class="cc-num">C3</span><span class="cc-name">Cocina y horno</span><div class="cc-data">25 A · <strong>6 mm² Cu</strong><br>Sección mayor</div></div>
+    <div class="circ-card"><span class="cc-num">C4</span><span class="cc-name">Lavadora, lavavajillas y termo</span><div class="cc-data">20 A · 4 mm² Cu</div></div>
+    <div class="circ-card"><span class="cc-num">C5</span><span class="cc-name">Tomas baños y cocina</span><div class="cc-data">16 A · 2,5 mm² Cu<br>Máx. 6 tomas</div></div>
+    <div class="circ-card" style="background:var(--blue-lt); border-color:var(--blue);"><span class="cc-num" style="color:var(--blue-dk);">C6+</span><span class="cc-name">Electrificación elevada</span><div class="cc-data">Aire acond., secadora,<br>automatización del hogar...</div></div>
+  </div>
+
+  <div class="callout al-warn">
+    <strong>⚠ Trampa clásica de examen:</strong> C3 (cocina y horno) necesita <strong>6 mm²</strong> de sección mínima, el mayor de todos. C1 (alumbrado) solo 1,5 mm². Confundir las secciones de C1, C3 y C4 es el error más habitual en las preguntas sobre este punto.
+  </div>
+</div>
+
+<hr class="sec-divider">
+
+<!-- SECCIÓN 4 -->
+<div class="section-block" id="s4">
+  <h2>4. Elementos de protección: fusible, magnetotérmico, diferencial y PCS</h2>
+
+  <h3>Fusible</h3>
+  <p>El <strong>fusible</strong> es el elemento de protección más sencillo. Protege contra sobreintensidades mediante la fusión de un filamento conductor cuando la corriente supera el valor calibrado. Su principal característica es que es <strong>no rearma ble</strong>: una vez que actúa, hay que sustituirlo. En compensación, actúa más rápido que el magnetotérmico ante cortocircuitos. Se usa en la CGP (tipo NH o nH de cartucho) y en cuadros industriales.</p>
+
+  <h3>Magnetotérmico (PIA / MCCB)</h3>
+  <p>El <strong>interruptor magnetotérmico</strong> combina dos mecanismos de protección en un mismo dispositivo:</p>
+  <ul>
+    <li><strong>Protección térmica:</strong> un bimetálico se curva con el calor generado por la sobrecarga y, tras un tiempo dependiente de la intensidad, dispara el interruptor. Es la protección contra sobrecargas lentas.</li>
+    <li><strong>Protección magnética:</strong> un electroimán actúa instantáneamente ante corrientes de cortocircuito muy elevadas.</li>
+  </ul>
+  <p>El magnetotérmico es <strong>rearma ble</strong>: una vez solucionado el problema, se puede reiniciar manualmente. Las <strong>curvas de disparo</strong> definen el múltiplo de la intensidad nominal (In) al que actúa el disparo magnético:</p>
+
+  <table class="prot-table">
+    <thead><tr><th>Curva</th><th>Disparo magnético</th><th>Aplicación típica</th></tr></thead>
+    <tbody>
+      <tr><td><strong>B</strong></td><td>3 – 5 × In</td><td>Cargas resistivas, instalaciones domésticas, cables largos</td></tr>
+      <tr class="best"><td><strong>C</strong></td><td>5 – 10 × In</td><td>Uso general, iluminación fluorescente/LED, motores pequeños</td></tr>
+      <tr><td><strong>D</strong></td><td>10 – 20 × In</td><td>Motores con alta corriente de arranque, transformadores</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout al-warn">
+    <strong>⚠ Trampa frecuente:</strong> Para motores con alto arranque se usa curva D precisamente para EVITAR disparos intempestivos durante el arranque. La curva B dispara antes, lo que sería problemático con cargas de alto arranque. La curva C es la más utilizada en instalaciones de uso general.
+  </div>
+
+  <h3>Interruptor Diferencial (ID)</h3>
+  <p>El <strong>diferencial</strong> compara permanentemente la corriente que sale por la fase con la que vuelve por el neutro mediante un toroide de corriente. Si hay diferencia (la corriente "se escapa" a tierra a través de una persona o un defecto de aislamiento), actúa el relé de disparo. Los tipos de diferencial según la forma de la corriente de fuga que detectan son fundamentales en las instalaciones modernas:</p>
+
+  <div class="def-list">
+    <div class="def-item"><span class="def-term">Tipo AC</span><span class="def-desc">Solo detecta corrientes de fuga <strong>alternas senoidales</strong>. Es el tipo básico y más económico. <strong>NO es adecuado</strong> para instalaciones con variadores de velocidad, cargadores de vehículo eléctrico o fuentes de alimentación conmutadas.</span></div>
+    <div class="def-item"><span class="def-term">Tipo A</span><span class="def-desc">Detecta corrientes alternas senoidales + <strong>corrientes continuas pulsantes</strong>. Obligatorio para circuitos con cargadores de VE, electrodomésticos con electrónica de potencia.</span></div>
+    <div class="def-item"><span class="def-term">Tipo F</span><span class="def-desc">Detecta CA senoidal + CC pulsante + <strong>corrientes de alta frecuencia</strong>. Para instalaciones con variadores de velocidad, inversores fotovoltaicos e industria con electrónica de potencia avanzada.</span></div>
+  </div>
+
+  <div class="callout al-orange">
+    <strong>⚠ Trampa muy habitual en oposición:</strong> Los variadores de velocidad y los cargadores de vehículo eléctrico generan corrientes de fuga continuas o de alta frecuencia que el diferencial tipo AC <strong>no detecta</strong>. En estos circuitos es obligatorio usar tipo A (mínimo) o tipo F. Instalar un tipo AC sería una no-conformidad grave.
+  </div>
+
+  <h3>Protector Contra Sobretensiones (PCS / DPS)</h3>
+  <p>El <strong>PCS</strong> o DPS (Dispositivo de Protección contra Sobretensiones) protege los equipos eléctricos de sobretensiones transitorias de origen atmosférico (rayos) o de maniobras en la red (conexión/desconexión de grandes cargas). Actúa descargando la energía de la sobretensión a tierra antes de que dañe los aparatos. Existen tres clases:</p>
+  <ul>
+    <li><strong>Clase I (tipo B):</strong> instalado en la CGP o inicio de la LGA. Absorbe sobretensiones de rayo directo (muy energéticas).</li>
+    <li><strong>Clase II (tipo C):</strong> instalado en el CGMP de cada abonado. Para rayos indirectos y maniobras en la red. <strong>Es el obligatorio en viviendas nuevas (ITC-BT-23).</strong></li>
+    <li><strong>Clase III (tipo D):</strong> junto a los receptores más sensibles. Última línea de defensa.</li>
+  </ul>
+</div>
+
+<hr class="sec-divider">
+
+<!-- SECCIÓN 5 -->
+<div class="section-block" id="s5">
+  <h2>5. Puesta a tierra (ITC-BT-18)</h2>
+
+  <p>La <strong>puesta a tierra</strong> tiene tres objetivos fundamentales: limitar la tensión que pueden alcanzar las masas metálicas con respecto a tierra en caso de fallo de aislamiento; asegurar la actuación de los dispositivos de protección; y eliminar o reducir el riesgo de electrocución por contacto indirecto.</p>
+
+  <p>Los componentes de la instalación de tierra son:</p>
+  <ul>
+    <li><strong>Electrodo:</strong> conductor o conjunto de conductores enterrados en contacto directo con el terreno (pica de acero cobrizado, placa, conductor desnudo enterrado).</li>
+    <li><strong>Línea principal de tierra:</strong> conductor de cobre desnudo o aislado que une el electrodo con el borne principal de tierra.</li>
+    <li><strong>Borne principal de tierra (BPT):</strong> punto central de conexión de todos los conductores de protección, de equipotencialidad y de la línea principal de tierra.</li>
+    <li><strong>Conductores de protección (PE, color verde-amarillo):</strong> unen las masas metálicas de los equipos al BPT.</li>
+    <li><strong>Conductores de equipotencialidad:</strong> unen entre sí masas metálicas (tuberías, estructuras) para mantenerlas al mismo potencial.</li>
+  </ul>
+
+  <div class="callout al-red">
+    <strong>⚠ Regla absoluta de examen:</strong> El conductor de protección (PE) <strong>NUNCA puede ser interrumpido</strong> por fusibles, interruptores ni ningún otro dispositivo de maniobra o protección. Cualquier interrupción del PE implica que las masas metálicas quedarían sin conexión a tierra en caso de fallo, con riesgo grave de electrocución.
+  </div>
+</div>
+
+<hr class="sec-divider">
+
+<!-- SECCIÓN 6 -->
+<div class="section-block" id="s6">
+  <h2>6. SAI — Sistemas de Alimentación Ininterrumpida</h2>
+
+  <p>Un <strong>SAI</strong> (Sistema de Alimentación Ininterrumpida; en inglés <em>UPS, Uninterruptible Power Supply</em>) es un equipo electrónico que proporciona alimentación eléctrica de calidad y sin interrupción a las cargas críticas cuando se producen problemas en la red: cortes, microcortes, variaciones de tensión, armónicos o sobretensiones transitorias. Se rige por la norma <strong>UNE-EN 62040</strong>.</p>
+
+  <p>La clasificación más relevante para el examen es la de las <strong>topologías o modos de funcionamiento (IEC 62040-3)</strong>:</p>
+
+  <div class="sai-grid">
+    <div class="sai-card" style="border-color:var(--gold); border-top:3px solid var(--gold);">
+      <span class="sc-tipo">SAI OFFLINE</span>
+      <span class="sc-ms" style="color:var(--gold);">4–10 ms</span>
+      <div class="sc-desc">En condiciones normales, las cargas se alimentan directamente de la red. El SAI solo interviene al detectar un fallo. Bajo coste, alta eficiencia en modo normal.</div>
+      <div class="sc-uso" style="color:var(--gold);">▶ PCs de oficina, periféricos no críticos</div>
+    </div>
+    <div class="sai-card" style="border-color:var(--teal); border-top:3px solid var(--teal);">
+      <span class="sc-tipo">LINE-INTERACTIVE</span>
+      <span class="sc-ms" style="color:var(--teal);">2–4 ms</span>
+      <div class="sc-desc">Incluye un regulador de tensión (AVR) en la línea de red. Regula la tensión sin usar baterías. Solo conmuta a baterías ante cortes.</div>
+      <div class="sc-uso" style="color:var(--teal);">▶ Servidores pequeños, equipos de red</div>
+    </div>
+    <div class="sai-card" style="border-color:var(--blue); border-top:3px solid var(--blue);">
+      <span class="sc-tipo">ONLINE ⭐ (doble conversión)</span>
+      <span class="sc-ms" style="color:var(--blue);">0 ms</span>
+      <div class="sc-desc">Las cargas se alimentan SIEMPRE a través del inversor, con independencia del estado de la red. Aislamiento total. Protección completa. Sin tiempo de conmutación.</div>
+      <div class="sc-uso" style="color:var(--blue);">▶ CPD, quirófanos, sistemas de control críticos</div>
+    </div>
+  </div>
+
+  <div class="callout al-blue">
+    <strong>📌 El SAI online es el único con tiempo de conmutación = 0 ms.</strong> Esto es posible porque las cargas siempre están alimentadas por el inversor. En los otros tipos (offline y line-interactive), hay un instante de conmutación al pasar de la red a las baterías. Para cargas que no toleran ni un microsegundo de interrupción (quirófanos, grandes servidores, salas de control), solo es válido el SAI online de doble conversión.
+  </div>
+
+  <h3>Componentes principales de un SAI</h3>
+  <ul>
+    <li><strong>Rectificador/cargador:</strong> convierte la CA de la red en CC para cargar las baterías.</li>
+    <li><strong>Baterías:</strong> acumulan la energía. Las más extendidas son de <strong>plomo-ácido (VRLA)</strong>, con vida útil de 3-5 años. Las de <strong>ion-litio (Li-ion)</strong> tienen mayor vida útil (8-10 años) y menor peso, pero mayor coste inicial.</li>
+    <li><strong>Inversor:</strong> convierte la CC de las baterías en CA para alimentar las cargas.</li>
+    <li><strong>Bypass estático:</strong> permite alimentar las cargas directamente de la red (sin inversor) en caso de sobrecarga o avería del SAI, sin corte de suministro.</li>
+    <li><strong>Bypass de mantenimiento (manual):</strong> permite aislar completamente el SAI para mantenimiento, sin interrumpir el suministro a las cargas.</li>
+  </ul>
+
+  <div class="callout al-warn">
+    <strong>⚠ SAI ≠ Grupo electrógeno:</strong> El SAI protege contra cortes cortos y garantiza la calidad de onda, con autonomía típica de 10-30 minutos. El grupo electrógeno genera energía durante horas ante cortes prolongados, pero necesita 10-30 segundos para arrancar. Son equipos complementarios: el SAI cubre el tiempo de arranque del grupo.
+  </div>
+</div>
+
+<hr class="sec-divider">
+
+<!-- SECCIÓN 7 -->
+<div class="section-block" id="s7">
+  <h2>7. Grupos electrógenos</h2>
+
+  <p>Un <strong>grupo electrógeno</strong> es un equipo autónomo de generación de energía eléctrica compuesto por un <strong>motor de combustión interna</strong> (normalmente diésel) acoplado mecánicamente a un <strong>alternador síncrono</strong>. Cuando el motor gira, el alternador genera tensión alterna. La normativa de referencia es la <strong>UNE-EN ISO 8528</strong> y la <strong>ITC-BT-40</strong> del REBT.</p>
+
+  <h3>Clasificación por tipo de suministro</h3>
+  <ul>
+    <li><strong>Suministro de seguridad (o socorro):</strong> exigido por el CTE DB-SI en hospitales, hoteles, grandes almacenes, edificios de pública concurrencia, garajes y otros. Debe alimentar cargas de seguridad: alumbrado de emergencia, bombas de incendio, sistemas de detección y alarma, ascensores de evacuación. <strong>El grupo debe arrancar automáticamente en menos de 15 segundos.</strong></li>
+    <li><strong>Suministro de reserva:</strong> para instalaciones que no pueden permitirse una interrupción prolongada aunque no sean estrictamente de seguridad (hospitales, data centers, industria de proceso continuo).</li>
+    <li><strong>Suministro complementario:</strong> para optimizar costes energéticos (generación en punta) o para zonas sin acceso a la red.</li>
+  </ul>
+
+  <h3>Componentes principales</h3>
+  <ul>
+    <li><strong>Motor diésel:</strong> proporciona la energía mecánica. Gira a 3.000 rpm (grupos de 2 polos, 50 Hz) o 1.500 rpm (grupos de 4 polos, 50 Hz). Los de 1.500 rpm son más duraderos para uso continuo.</li>
+    <li><strong>Alternador síncrono:</strong> genera la tensión alterna trifásica (400/230 V).</li>
+    <li><strong>Regulador de velocidad (governor):</strong> mantiene la frecuencia en 50 Hz controlando la inyección de combustible según la carga.</li>
+    <li><strong>Regulador de tensión automático (AVR):</strong> mantiene la tensión nominal controlando la excitación del alternador.</li>
+    <li><strong>Cuadro de Transferencia Automática (CTA):</strong> detecta el fallo de la red, ordena el arranque del grupo y, cuando el grupo alcanza los parámetros nominales, transfiere la carga del suministro de red al grupo. Al restaurarse la red, retransfiere y para el grupo.</li>
+    <li><strong>Sistema de refrigeración:</strong> por agua (grupos de potencia media-alta) o por aire (grupos pequeños).</li>
+    <li><strong>Depósito de combustible:</strong> capacidad para la autonomía requerida, típicamente 8-24 horas en grupos de seguridad.</li>
+  </ul>
+
+  <div class="callout al-orange">
+    <strong>⚠ El CTA — enclavamiento mecánico:</strong> El Cuadro de Transferencia Automática debe tener un <strong>enclavamiento mecánico</strong> (y/o eléctrico) que haga <strong>físicamente imposible</strong> conectar simultáneamente la red y el grupo electrógeno. Si ambas fuentes se conectan a la vez, se pueden producir daños gravísimos al alternador del grupo y a la red. Este enclavamiento es un requisito de seguridad fundamental cuya ausencia constituye una no-conformidad grave.
+  </div>
+
+  <h3>Instalación del grupo electrógeno</h3>
+  <p>El grupo electrógeno requiere una sala propia (sala de máquinas) con ventilación suficiente para la entrada y salida del aire de refrigeración y del motor, un conducto de escape de gases al exterior, un cubeto de retención para el gasoil del depósito diario, y niveles acústicos conformes con el RD 1367/2007 sobre ruido ambiental. El acceso debe permitir el mantenimiento y la reposición de combustible.</p>
+</div>
+
+<hr class="sec-divider">
+
+<!-- SECCIÓN 8 -->
+<div class="section-block" id="s8">
+  <h2>8. Esquemas eléctricos</h2>
+
+  <p>Los <strong>esquemas eléctricos</strong> son la representación gráfica normalizada de las instalaciones eléctricas. Utilizan simbología definida en la norma <strong>UNE-EN 60617</strong> y son documentos obligatorios del proyecto de instalación (ITC-BT-05). Los tipos más importantes son:</p>
+
+  <div class="def-list">
+    <div class="def-item"><span class="def-term">Esquema unifilar</span><span class="def-desc">Representa los conductores y dispositivos con <strong>una sola línea</strong>, indicando el número de conductores mediante trazos cortos. Es el esquema de proyecto: muestra la distribución completa de la instalación de forma clara y simplificada. Es el documento que firman el proyectista y el director de obra.</span></div>
+    <div class="def-item"><span class="def-term">Esquema multifilar</span><span class="def-desc">Representa <strong>cada conductor por separado</strong>. Se usa para el cableado detallado de cuadros eléctricos y automatismos. Lo utilizan los instaladores para realizar el cableado real en el cuadro.</span></div>
+    <div class="def-item"><span class="def-term">Esquema de potencia</span><span class="def-desc">Representa los circuitos que transportan la energía: alimentación de motores, transformadores, barras de distribución. Muestra los elementos de potencia (contactores, disyuntores, transformadores).</span></div>
+    <div class="def-item"><span class="def-term">Esquema de mando / control</span><span class="def-desc">Representa los circuitos de baja potencia que controlan los elementos de potencia: bobinas de contactores, relés, pulsadores, temporizadores, señalización. Complementa al esquema de potencia.</span></div>
+  </div>
+
+  <div class="callout al-blue">
+    <strong>📌 Dato de examen:</strong> El esquema UNIFILAR es el que se presenta en el PROYECTO de la instalación y firma el técnico competente. El esquema MULTIFILAR es el que usa el instalador para cablear físicamente el cuadro. Esta distinción aparece con frecuencia en preguntas de tipo test.
+  </div>
+
+  <h3>Simbología normalizada (UNE-EN 60617)</h3>
+  <ul>
+    <li><strong>Interruptor automático (magnetotérmico):</strong> rectángulo con diagonal en su interior.</li>
+    <li><strong>Interruptor diferencial:</strong> rectángulo con flecha y símbolo de tierra.</li>
+    <li><strong>Fusible:</strong> rectángulo simple.</li>
+    <li><strong>Contador (medida de energía):</strong> letra E en círculo.</li>
+    <li><strong>Toma de corriente:</strong> semicírculo con líneas perpendiculares.</li>
+    <li><strong>Motor:</strong> letra M en círculo.</li>
+    <li><strong>Transformador:</strong> dos círculos tangentes o superpuestos.</li>
+    <li><strong>Puesta a tierra:</strong> tres líneas horizontales decrecientes.</li>
+    <li><strong>Conductor de protección (PE):</strong> línea de trazos verde-amarillo.</li>
+  </ul>
+
+  <div class="callout al-green">
+    <strong>📌 En el esquema unifilar:</strong> Los trazos cortos perpendiculares a la línea general indican el número de conductores. Un trazo = 1 conductor; dos trazos = 2 conductores (monofásico); tres trazos = 3 conductores (trifásico sin neutro); cuatro trazos = 3 fases + neutro. Si el conductor de protección (PE) está incluido, aparece un trazo con el símbolo de tierra.
+  </div>
+</div>
+
+</body>
+</html>
