@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esquema-resumen T03 – Detección de incendios</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue:   #1a4a8b; --blue-lt:   #e0eaf8; --blue-dk:  #0d2f5e;
+    --gold:   #d19900; --gold-lt:   #f5e9c0;
+    --orange: #964219; --orange-lt: #f5e0d0;
+    --teal:   #005f73; --teal-lt:   #cce3e8;
+    --green:  #2d6a2d; --green-lt:  #d6ecd6;
+    --purple: #5a3e8c; --purple-lt: #e4ddf5;
+    --red:    #8b1a1a; --red-lt:    #fde8e8;
+    --bg: #f7f6f2; --surface: #ffffff; --border: #d4d1ca; --divider: #dcd9d5;
+    --text: #28251d; --muted: #6b6a65; --faint: #a8a7a2;
+    --font-d: 'Cabinet Grotesk', sans-serif;
+    --font-b: 'Satoshi', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-b); background: var(--bg); color: var(--text); font-size: 0.9rem; line-height: 1.55; -webkit-font-smoothing: antialiased; padding: 2rem 1.5rem 4rem; }
+
+  /* NAV */
+  .file-nav { display:flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+  .file-nav a { padding: 0.35rem 1rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); font-size: 0.8rem; text-decoration: none; color: var(--muted); transition: all 0.15s; }
+  .file-nav a:hover, .file-nav a.active { background: var(--blue); color: white; border-color: var(--blue); }
+
+  h1 { font-family: var(--font-d); font-size: 1.6rem; font-weight: 800; color: var(--blue); margin-bottom: 0.25rem; }
+  .subtitle { color: var(--muted); font-size: 0.82rem; margin-bottom: 2rem; }
+  .section-label { font-family: var(--font-d); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); margin: 2rem 0 0.6rem; }
+
+  /* GRIDS */
+  .grid   { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+
+  /* CARDS */
+  .card { background: var(--surface); border-radius: 0.75rem; border: 1px solid var(--border); padding: 1.1rem 1.2rem 1rem; box-shadow: 0 1px 3px rgba(26,74,139,.06); }
+  .card-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.8rem; }
+  .card-icon { width: 32px; height: 32px; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+  .card h2 { font-family: var(--font-d); font-size: 0.92rem; font-weight: 800; }
+  .card-blue   { border-top: 3px solid var(--blue); }
+  .card-gold   { border-top: 3px solid var(--gold); }
+  .card-orange { border-top: 3px solid var(--orange); }
+  .card-teal   { border-top: 3px solid var(--teal); }
+  .card-green  { border-top: 3px solid var(--green); }
+  .card-purple { border-top: 3px solid var(--purple); }
+  .card-red    { border-top: 3px solid var(--red); }
+  .icon-blue   { background: var(--blue-lt); }
+  .icon-gold   { background: var(--gold-lt); }
+  .icon-orange { background: var(--orange-lt); }
+  .icon-teal   { background: var(--teal-lt); }
+  .icon-green  { background: var(--green-lt); }
+  .icon-purple { background: var(--purple-lt); }
+  .icon-red    { background: var(--red-lt); }
+
+  /* ROWS */
+  .row { display: flex; gap: 0.4rem; margin-bottom: 0.35rem; align-items: flex-start; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; margin-top: 0.42rem; }
+  .dot-blue   { background: var(--blue); }
+  .dot-gold   { background: var(--gold); }
+  .dot-orange { background: var(--orange); }
+  .dot-teal   { background: var(--teal); }
+  .dot-green  { background: var(--green); }
+  .dot-purple { background: var(--purple); }
+  .dot-red    { background: var(--red); }
+
+  /* BADGES */
+  .badge { display: inline-block; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; padding: 1px 7px; border-radius: 999px; }
+  .b-blue   { background: var(--blue-lt);   color: var(--blue-dk); }
+  .b-gold   { background: var(--gold-lt);   color: #7a5500; }
+  .b-orange { background: var(--orange-lt); color: var(--orange); }
+  .b-teal   { background: var(--teal-lt);   color: var(--teal); }
+  .b-green  { background: var(--green-lt);  color: var(--green); }
+  .b-purple { background: var(--purple-lt); color: var(--purple); }
+  .b-red    { background: var(--red-lt);    color: var(--red); }
+
+  /* ALERT */
+  .alert { background: var(--orange-lt); border-left: 3px solid var(--orange); border-radius: 0.5rem; padding: 0.6rem 0.85rem; font-size: 0.82rem; margin-top: 0.6rem; }
+  .alert strong { color: var(--orange); }
+  .alert-blue { background: var(--blue-lt); border-left-color: var(--blue); }
+  .alert-blue strong { color: var(--blue); }
+  .alert-green { background: var(--green-lt); border-left-color: var(--green); }
+  .alert-green strong { color: var(--green); }
+
+  /* PILLS */
+  .pills { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.5rem; }
+  .pill { padding: 2px 9px; border-radius: 999px; font-size: 0.72rem; font-weight: 600; border: 1px solid; }
+  .pill-blue   { background: var(--blue-lt);   color: var(--blue-dk); border-color: #adc5e8; }
+  .pill-gold   { background: var(--gold-lt);   color: #7a5500;        border-color: #d9c280; }
+  .pill-teal   { background: var(--teal-lt);   color: var(--teal);    border-color: #8fcdd9; }
+  .pill-green  { background: var(--green-lt);  color: var(--green);   border-color: #8fc08f; }
+  .pill-orange { background: var(--orange-lt); color: var(--orange);  border-color: #d9a080; }
+  .pill-purple { background: var(--purple-lt); color: var(--purple);  border-color: #b9a8d9; }
+  .pill-red    { background: var(--red-lt);    color: var(--red);     border-color: #d9a0a0; }
+
+  /* FUNCIONES FLOW */
+  .flow { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; margin: 0.6rem 0; }
+  .flow-step { background: var(--blue-lt); border: 1px solid #adc5e8; border-radius: 0.5rem; padding: 0.5rem 0.85rem; text-align: center; flex: 1; min-width: 100px; }
+  .flow-step .fs-num { font-family: var(--font-d); font-size: 1.1rem; font-weight: 800; color: var(--blue); display: block; line-height: 1; }
+  .flow-step .fs-label { font-size: 0.75rem; color: var(--muted); display: block; margin-top: 2px; font-weight: 600; }
+  .flow-arrow { color: var(--faint); font-size: 1.1rem; flex-shrink: 0; }
+
+  /* DETECTORES GRID */
+  .det-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 0.85rem; margin-bottom: 1rem; }
+  .det-card { background: var(--surface); border-radius: 0.65rem; border: 1px solid var(--border); padding: 0.9rem 1rem; }
+  .det-top { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
+  .det-emoji { font-size: 1.3rem; }
+  .det-title { font-family: var(--font-d); font-size: 0.88rem; font-weight: 800; }
+  .det-norm { font-size: 0.7rem; color: var(--muted); }
+  .det-tag { display: inline-block; font-size: 0.68rem; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-bottom: 0.4rem; }
+  .det-row { font-size: 0.82rem; margin-bottom: 0.2rem; }
+  .det-row span { color: var(--muted); }
+
+  /* SISTEMA COMPARATIVA */
+  .sis-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.85rem; margin-bottom: 1rem; }
+  .sis-card { background: var(--surface); border-radius: 0.65rem; border: 1px solid var(--border); padding: 0.9rem 1rem; }
+  .sis-title { font-family: var(--font-d); font-size: 0.88rem; font-weight: 800; margin-bottom: 0.5rem; }
+
+  /* MANTENIMIENTO */
+  .mant-grid { display: grid; grid-template-columns: auto 1fr; gap: 0.35rem 0.85rem; align-items: center; }
+  .mant-freq { font-family: var(--font-d); font-size: 0.78rem; font-weight: 800; padding: 3px 9px; border-radius: 999px; white-space: nowrap; text-align: center; }
+  .mf-trim  { background: var(--teal-lt);   color: var(--teal); }
+  .mf-sem   { background: var(--green-lt);  color: var(--green); }
+  .mf-anual { background: var(--gold-lt);   color: #7a5500; }
+  .mant-desc { font-size: 0.82rem; border-bottom: 1px solid var(--divider); padding-bottom: 0.35rem; }
+
+  /* KPI FILA */
+  .kpi-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.85rem; margin-bottom: 1rem; }
+  .kpi { background: var(--surface); border-radius: 0.65rem; border: 1px solid var(--border); padding: 0.9rem 1rem; text-align: center; }
+  .kpi-val { font-family: var(--font-d); font-size: 1.6rem; font-weight: 800; display: block; line-height: 1; }
+  .kpi-label { font-size: 0.72rem; color: var(--muted); display: block; margin-top: 4px; }
+  .kpi-blue   .kpi-val { color: var(--blue); }
+  .kpi-teal   .kpi-val { color: var(--teal); }
+  .kpi-orange .kpi-val { color: var(--orange); }
+
+  /* NORMATIVA TABLE */
+  table { width: 100%; border-collapse: collapse; margin: 0.5rem 0; font-size: 0.82rem; }
+  thead th { background: var(--blue); color: white; font-family: var(--font-d); font-weight: 700; padding: 0.5rem 0.75rem; text-align: left; font-size: 0.78rem; }
+  tbody td { padding: 0.4rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  tbody tr:nth-child(even) { background: #fafaf8; }
+  tbody tr:last-child td { border-bottom: none; }
+
+  @media (max-width: 680px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    .grid-3 { grid-template-columns: 1fr; }
+    .sis-grid { grid-template-columns: 1fr; }
+    .kpi-row { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo" class="active">?? Texto explicativo</a>
+    <a href="2_esquema_resumen">?? Esquema-resumen</a>
+    <a href="3_cuadro_comparativo">?? Cuadros comparativos</a>
+  </div>
+
+<h1>Detección de incendios — Esquema-resumen</h1>
+<div class="subtitle">Tema 3 · Gestor de Mantenimiento (Nivel B) · UPNA · Bloques visuales para memorización</div>
+
+
+<!-- NORMATIVA -->
+<div class="section-label">Normativa clave</div>
+<div class="grid-2">
+  <div class="card card-blue">
+    <div class="card-header"><div class="card-icon icon-blue">??</div><h2>Marco normativo — dos niveles</h2></div>
+    <div class="row"><div class="dot dot-blue"></div><span><strong>RIPCI (RD 513/2017)</strong>: Anexo I = requisitos técnicos · Anexo II = mantenimiento</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span><strong>CTE DB-SI</strong>: cuándo es obligatorio en edificios generales</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span><strong>RD 164/2025</strong>: cuándo es obligatorio en industria (nuevo RSCIEI)</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span><strong>UNE-EN 54</strong>: norma de PRODUCTO de detectores, central, sirenas…</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span><strong>UNE 23007-14</strong>: norma de DISEÑO, instalación y mantenimiento</span></div>
+    <div class="alert alert-blue"><strong>Distinción clave:</strong> UNE-EN 54 = qué debe cumplir el componente. UNE 23007-14 = cómo se diseña el sistema.</div>
+  </div>
+  <div class="card card-teal">
+    <div class="card-header"><div class="card-icon icon-teal">??</div><h2>Partes UNE-EN 54 más preguntadas</h2></div>
+    <table>
+      <thead><tr><th>Parte</th><th>Componente</th></tr></thead>
+      <tbody>
+        <tr><td><strong>54-2</strong></td><td>Central de control (ECS)</td></tr>
+        <tr><td><strong>54-3</strong></td><td>Sirenas (dispositivos sonoros)</td></tr>
+        <tr><td><strong>54-4</strong></td><td>Alimentación eléctrica</td></tr>
+        <tr><td><strong>54-5</strong></td><td>Detectores de calor puntual</td></tr>
+        <tr><td><strong>54-7</strong></td><td>Detectores de humo puntual (óptico e iónico)</td></tr>
+        <tr><td><strong>54-10</strong></td><td>Detectores de llama</td></tr>
+        <tr><td><strong>54-11</strong></td><td>Pulsadores manuales (PMA)</td></tr>
+        <tr><td><strong>54-12</strong></td><td>Detector lineal (haz de luz)</td></tr>
+        <tr><td><strong>54-20</strong></td><td>Detector por aspiración (ASD)</td></tr>
+        <tr><td><strong>54-25</strong></td><td>Componentes inalámbricos (RF)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!-- FUNCIONES SDAI -->
+<div class="section-label">Funciones del SDAI en secuencia</div>
+<div class="card card-blue" style="margin-bottom:1rem;">
+  <div class="card-header"><div class="card-icon icon-blue">??</div><h2>Las 4 funciones del sistema de detección y alarma</h2></div>
+  <div class="flow">
+    <div class="flow-step"><span class="fs-num">1</span><span class="fs-label">DETECTAR</span></div>
+    <div class="flow-arrow">?</div>
+    <div class="flow-step"><span class="fs-num">2</span><span class="fs-label">PROCESAR</span></div>
+    <div class="flow-arrow">?</div>
+    <div class="flow-step"><span class="fs-num">3</span><span class="fs-label">SEÑALIZAR</span></div>
+    <div class="flow-arrow">?</div>
+    <div class="flow-step"><span class="fs-num">4</span><span class="fs-label">ACTIVAR</span></div>
+  </div>
+  <div style="margin-top:0.6rem;">
+    <div class="row"><div class="dot dot-blue"></div><span><strong>Detectar</strong>: captación de humo, calor, llama o gases por detectores o PMA</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span><strong>Procesar</strong>: la central evalúa señales y determina si hay alarma real</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span><strong>Señalizar</strong>: indicación de zona/punto en alarma (óptica + acústica)</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span><strong>Activar</strong>: extinción automática · control de humos · BMS · CRA · ascensores · compuertas</span></div>
+  </div>
+  <div class="alert"><strong>? Trampa:</strong> El SDAI detecta y alerta. NO extingue. La extinción es otro sistema separado.</div>
+</div>
+
+
+<!-- DATOS KPI -->
+<div class="section-label">Datos numéricos clave para el examen</div>
+<div class="kpi-row">
+  <div class="kpi kpi-blue"><span class="kpi-val">72 h</span><span class="kpi-label">Batería en modo vigilancia</span></div>
+  <div class="kpi kpi-teal"><span class="kpi-val">30 min</span><span class="kpi-label">Batería en modo alarma (tras 72 h)</span></div>
+  <div class="kpi kpi-orange"><span class="kpi-val">25 m</span><span class="kpi-label">Recorrido máximo hasta PMA</span></div>
+  <div class="kpi kpi-blue"><span class="kpi-val">80 m²</span><span class="kpi-label">Cobertura máx. detector óptico puntual</span></div>
+  <div class="kpi kpi-teal"><span class="kpi-val">30 m²</span><span class="kpi-label">Cobertura máx. detector de calor puntual</span></div>
+  <div class="kpi kpi-orange"><span class="kpi-val">1.600 m²</span><span class="kpi-label">Superficie máx. por zona de detección</span></div>
+</div>
+<div class="alert" style="margin-bottom:1rem;"><strong>? Confusión clásica de examen:</strong> Extintor ? recorrido máx. <strong>15 m</strong>. Pulsador manual (PMA) ? recorrido máx. <strong>25 m</strong>. Son distintos y aparecen juntos en el mismo examen.</div>
+
+
+<!-- TIPOS DE DETECTORES -->
+<div class="section-label">Tipos de detectores automáticos</div>
+<div class="det-grid">
+
+  <div class="det-card" style="border-top:3px solid var(--blue);">
+    <div class="det-top">
+      <span class="det-emoji">??</span>
+      <div>
+        <div class="det-title">Óptico (fotoeléctrico)</div>
+        <div class="det-norm">UNE-EN 54-7</div>
+      </div>
+    </div>
+    <span class="det-tag b-blue">Efecto Tyndall — dispersión de luz IR</span>
+    <div class="det-row">? <span>Humos lentos y visibles (madera, plástico, espuma)</span></div>
+    <div class="det-row">? <span>Fuegos rápidos con poca humo (gasolina)</span></div>
+    <div class="det-row">? <span>Falsa alarma por polvo acumulado ? limpiar anualmente</span></div>
+    <div class="pills"><span class="pill pill-blue">Más común en edificios</span><span class="pill pill-blue">Oficinas · Hoteles · Pasillos</span></div>
+  </div>
+
+  <div class="det-card" style="border-top:3px solid var(--orange);">
+    <div class="det-top">
+      <span class="det-emoji">?</span>
+      <div>
+        <div class="det-title">Iónico</div>
+        <div class="det-norm">UNE-EN 54-7</div>
+      </div>
+    </div>
+    <span class="det-tag b-orange">Ionización — americio-241</span>
+    <div class="det-row">? <span>Fuegos rápidos con llama y partículas pequeñas</span></div>
+    <div class="det-row">? <span>Humos lentos y visibles (menos sensible)</span></div>
+    <div class="det-row">? <span>Material radiactivo ? gestión especial al retirar</span></div>
+    <div class="pills"><span class="pill pill-orange">En retirada progresiva</span><span class="pill pill-orange">Sustituido por multicriterio</span></div>
+  </div>
+
+  <div class="det-card" style="border-top:3px solid var(--gold);">
+    <div class="det-top">
+      <span class="det-emoji">???</span>
+      <div>
+        <div class="det-title">Calor puntual</div>
+        <div class="det-norm">UNE-EN 54-5</div>
+      </div>
+    </div>
+    <span class="det-tag b-gold">Tres variantes</span>
+    <div class="det-row">?? <strong>Termovelocimétrico</strong>: <span>subida rápida (&gt;8-10 °C/min). No detecta fuego lento.</span></div>
+    <div class="det-row">?? <strong>Termostático</strong>: <span>temperatura fija (57°C, 70°C…). No detecta subida rápida sin superar umbral.</span></div>
+    <div class="det-row">? <strong>Combinado</strong>: <span>cualquiera de los dos. El más habitual.</span></div>
+    <div class="pills"><span class="pill pill-gold">Cocinas</span><span class="pill pill-gold">Garajes</span><span class="pill pill-gold">Zonas con vapores o polvo</span></div>
+  </div>
+
+  <div class="det-card" style="border-top:3px solid var(--teal);">
+    <div class="det-top">
+      <span class="det-emoji">??</span>
+      <div>
+        <div class="det-title">Lineal (haz de luz)</div>
+        <div class="det-norm">UNE-EN 54-12</div>
+      </div>
+    </div>
+    <span class="det-tag b-teal">Atenuación del haz IR — 5 a 100 m</span>
+    <div class="det-row">? <span>Grandes espacios de gran altura (naves, atrios, iglesias)</span></div>
+    <div class="det-row">? <span>Donde el acceso al techo para mantenimiento es difícil</span></div>
+    <div class="det-row">? <span>Requiere alineación precisa emisor-reflector-receptor</span></div>
+    <div class="pills"><span class="pill pill-teal">Naves industriales</span><span class="pill pill-teal">Almacenes altura</span><span class="pill pill-teal">Hangares</span></div>
+  </div>
+
+  <div class="det-card" style="border-top:3px solid var(--red);">
+    <div class="det-top">
+      <span class="det-emoji">??</span>
+      <div>
+        <div class="det-title">Detector de llama</div>
+        <div class="det-norm">UNE-EN 54-10</div>
+      </div>
+    </div>
+    <span class="det-tag b-red">Radiación UV / IR de las llamas</span>
+    <div class="det-row">? <span>Fuego abierto con llama ? respuesta instantánea</span></div>
+    <div class="det-row">? <span>Smoldering (combustión lenta sin llama)</span></div>
+    <div class="det-row">?? <span>Modelos: UV · IR · UV+IR · multibanda IR</span></div>
+    <div class="pills"><span class="pill pill-red">Exterior petroquímica</span><span class="pill pill-red">Hangares aviación</span><span class="pill pill-red">Salas máquinas</span></div>
+  </div>
+
+  <div class="det-card" style="border-top:3px solid var(--purple);">
+    <div class="det-top">
+      <span class="det-emoji">??</span>
+      <div>
+        <div class="det-title">Aspiración (ASD)</div>
+        <div class="det-norm">UNE-EN 54-20</div>
+      </div>
+    </div>
+    <span class="det-tag b-purple">El más sensible — detección incipiente</span>
+    <div class="det-row">? <span>Detecta concentraciones de humo extremadamente bajas</span></div>
+    <div class="det-row">? <span>Pre-alarma antes de que el humo sea visible</span></div>
+    <div class="det-row">? <span>Mantenimiento de tubos, orificios y filtros obligatorio</span></div>
+    <div class="pills"><span class="pill pill-purple">CPD · Servidores</span><span class="pill pill-purple">Museos · Archivos</span><span class="pill pill-purple">Salas limpias</span></div>
+  </div>
+
+  <div class="det-card" style="border-top:3px solid var(--green);">
+    <div class="det-top">
+      <span class="det-emoji">??</span>
+      <div>
+        <div class="det-title">Multicriterio</div>
+        <div class="det-norm">Evolución tecnológica</div>
+      </div>
+    </div>
+    <span class="det-tag b-green">Humo óptico + CO + temperatura</span>
+    <div class="det-row">? <span>Reduce drásticamente las falsas alarmas</span></div>
+    <div class="det-row">? <span>La central evalúa la combinación de señales</span></div>
+    <div class="det-row">? <span>Desplaza progresivamente a los detectores simples</span></div>
+    <div class="pills"><span class="pill pill-green">Alta fiabilidad</span><span class="pill pill-green">Entornos complejos</span></div>
+  </div>
+
+  <div class="det-card" style="border-top:3px solid var(--muted);">
+    <div class="det-top">
+      <span class="det-emoji">??</span>
+      <div>
+        <div class="det-title">Gas combustible / CO</div>
+        <div class="det-norm">No son detectores de incendio</div>
+      </div>
+    </div>
+    <span class="det-tag" style="background:#f0f0ee;color:var(--muted);">Riesgo previo al incendio</span>
+    <div class="det-row">? <span>Gas combustible: antes de la ignición (metano, propano)</span></div>
+    <div class="det-row">? <span>CO: combustión incompleta (garajes, calderas)</span></div>
+    <div class="pills"><span class="pill" style="background:#f0f0ee;color:var(--muted);border-color:var(--border);">Garajes</span><span class="pill" style="background:#f0f0ee;color:var(--muted);border-color:var(--border);">Cocinas industriales</span></div>
+  </div>
+
+</div>
+
+
+<!-- TIPOS DE SISTEMA -->
+<div class="section-label">Tipos de sistema según la central</div>
+<div class="sis-grid">
+  <div class="sis-card" style="border-top:3px solid var(--teal);">
+    <div class="sis-title" style="color:var(--teal);">?? Sistema convencional</div>
+    <div class="row"><div class="dot dot-teal"></div><span>Edificio dividido en <strong>ZONAS</strong></span></div>
+    <div class="row"><div class="dot dot-teal"></div><span>Todos los detectores de una zona en el mismo lazo</span></div>
+    <div class="row"><div class="dot dot-teal"></div><span>Central identifica: <strong>ZONA en alarma</strong></span></div>
+    <div class="row"><div class="dot dot-teal"></div><span>No sabe qué detector concreto se ha activado</span></div>
+    <div class="row"><div class="dot dot-teal"></div><span>Económico · edificios pequeños y medianos</span></div>
+  </div>
+  <div class="sis-card" style="border-top:3px solid var(--blue);">
+    <div class="sis-title" style="color:var(--blue);">?? Analógico direccionable</div>
+    <div class="row"><div class="dot dot-blue"></div><span>Cada detector tiene <strong>DIRECCIÓN única</strong></span></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Bucle cerrado en <strong>anillo</strong>: resistente a cortes de cable</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Central identifica: <strong>DETECTOR concreto en alarma</strong></span></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Lee valor analógico continuo de cada detector</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Pre-alarma inteligente · filtrado de falsas alarmas</span></div>
+  </div>
+  <div class="sis-card" style="border-top:3px solid var(--purple);">
+    <div class="sis-title" style="color:var(--purple);">?? Inalámbrico (RF)</div>
+    <div class="row"><div class="dot dot-purple"></div><span>Comunicación por <strong>radiofrecuencia</strong></span></div>
+    <div class="row"><div class="dot dot-purple"></div><span>Sin cableado de señal</span></div>
+    <div class="row"><div class="dot dot-purple"></div><span>Cada dispositivo lleva su propia batería</span></div>
+    <div class="row"><div class="dot dot-purple"></div><span>Ideal: edificios históricos, patrimonio, ampliaciones</span></div>
+    <div class="row"><div class="dot dot-purple"></div><span>Norma: <strong>UNE-EN 54-25</strong></span></div>
+  </div>
+</div>
+<div class="alert" style="margin-bottom:1rem;"><strong>? La diferencia más preguntada:</strong> Convencional = identifica <strong>ZONA</strong>. Analógico = identifica <strong>DETECTOR</strong> (punto concreto). El analógico es más caro pero mucho más preciso en la localización.</div>
+
+
+<!-- DISEÑO -->
+<div class="section-label">Diseño del sistema — criterios clave (UNE 23007-14)</div>
+<div class="grid-2">
+  <div class="card card-teal">
+    <div class="card-header"><div class="card-icon icon-teal">??</div><h2>Criterios de selección de detectores</h2></div>
+    <div class="row"><div class="dot dot-teal"></div><span>Analizar el <strong>tipo de incendio previsible</strong> en cada local</span></div>
+    <div class="row"><div class="dot dot-teal"></div><span>Verificar condiciones ambientales: polvo, humedad, T° habitual, flujos de aire</span></div>
+    <div class="row"><div class="dot dot-teal"></div><span>Considerar la <strong>altura del techo</strong>: a más altura, menor sensibilidad del detector puntual</span></div>
+    <div class="row"><div class="dot dot-teal"></div><span>Cocinas, garajes, zonas con vapores ? <strong>calor</strong>, no humo</span></div>
+    <div class="row"><div class="dot dot-teal"></div><span>CPD, museos, archivos ? <strong>ASD</strong> (máxima sensibilidad)</span></div>
+    <div class="row"><div class="dot dot-teal"></div><span>Naves de gran altura ? <strong>detector lineal</strong></span></div>
+  </div>
+  <div class="card card-blue">
+    <div class="card-header"><div class="card-icon icon-blue">???</div><h2>Zonas de detección</h2></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Superficie máxima por zona: <strong>1.600 m²</strong></span></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Una zona no puede abarcar más de <strong>un solo piso</strong></span></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Detector óptico puntual: cobertura ~60-80 m²</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Detector de calor puntual: cobertura ~20-30 m²</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span>El sistema supervisa continuamente todos sus componentes</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Avería ? alarma: deben señalizarse de forma diferenciada</span></div>
+  </div>
+</div>
+
+
+<!-- MANTENIMIENTO -->
+<div class="section-label">Mantenimiento — periodicidades (Anexo II RIPCI)</div>
+<div class="card card-gold" style="margin-bottom:1rem;">
+  <div class="card-header"><div class="card-icon icon-gold">??</div><h2>Operaciones y frecuencias obligatorias</h2></div>
+  <div class="mant-grid">
+    <span class="mant-freq mf-trim">Trimestral</span>
+    <span class="mant-desc">Comprobación del funcionamiento de la central (indicadores, alarma, avería). Verificación visual de detectores y pulsadores. Sin desmontaje.</span>
+    <span class="mant-freq mf-sem">Semestral</span>
+    <span class="mant-desc">Comprobación de cada detector con equipo de prueba (generador de humo / fuente de calor calibrada). Verificación de PMA, sirenas y balizas. Verificación de transmisión a CRA y sistemas auxiliares.</span>
+    <span class="mant-freq mf-anual">Anual</span>
+    <span class="mant-desc">Mantenimiento completo por empresa habilitada. Prueba de descarga de batería. Limpieza de detectores ópticos. Verificación de tubos y filtros en sistemas ASD.</span>
+  </div>
+  <div class="alert alert-green" style="margin-top:0.75rem;"><strong>Limpieza de detectores ópticos:</strong> el polvo acumulado en la cámara es la causa más frecuente de falsas alarmas. Limpieza con aire comprimido al menos anualmente. Verificar funcionamiento con generador de humo tras la limpieza.</div>
+</div>
+
+
+<!-- INSPECCIONES OCA -->
+<div class="section-label">Inspecciones OCA — establecimientos industriales (RD 164/2025)</div>
+<div class="grid-3" style="margin-bottom:1.5rem;">
+  <div style="background:var(--green-lt);border-radius:0.65rem;padding:0.9rem;text-align:center;border:1px solid var(--border);">
+    <div style="font-family:var(--font-d);font-size:1.4rem;font-weight:800;color:var(--green);">6 años</div>
+    <div style="font-size:0.75rem;color:var(--muted);margin-top:3px;">Riesgo intrínseco BAJO</div>
+  </div>
+  <div style="background:var(--gold-lt);border-radius:0.65rem;padding:0.9rem;text-align:center;border:1px solid var(--border);">
+    <div style="font-family:var(--font-d);font-size:1.4rem;font-weight:800;color:var(--gold);">4 años</div>
+    <div style="font-size:0.75rem;color:var(--muted);margin-top:3px;">Riesgo intrínseco MEDIO</div>
+  </div>
+  <div style="background:var(--red-lt);border-radius:0.65rem;padding:0.9rem;text-align:center;border:1px solid var(--border);">
+    <div style="font-family:var(--font-d);font-size:1.4rem;font-weight:800;color:var(--red);">2 años</div>
+    <div style="font-size:0.75rem;color:var(--muted);margin-top:3px;">Riesgo intrínseco ALTO</div>
+  </div>
+</div>
+
+</body>
+</html>

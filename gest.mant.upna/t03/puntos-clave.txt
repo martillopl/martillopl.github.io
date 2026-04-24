@@ -1,0 +1,232 @@
+PUNTOS CLAVE – TEMA 3
+INSTALACIONES DE PROTECCIÓN CONTRA INCENDIOS — DETECCIÓN
+Gestor de Mantenimiento (Nivel B) · Universidad Pública de Navarra
+
+=== NORMATIVA DE REFERENCIA ===
+1. RIPCI: Real Decreto 513/2017, de 22 de mayo. Norma central de toda la PCI.
+   El Anexo I regula los requisitos técnicos de los equipos y sistemas de detección
+   y alarma de incendios. El Anexo II establece las operaciones de mantenimiento
+   y su periodicidad.
+2. CTE DB-SI (Seguridad en caso de Incendio): determina en qué edificios y bajo
+   qué condiciones de uso, superficie y altura de evacuación es obligatoria la
+   instalación de sistemas de detección y alarma de incendios.
+3. Norma UNE-EN 54: familia de normas europeas que regulan los SISTEMAS DE
+   DETECCIÓN Y ALARMA DE INCENDIOS. Es la norma técnica de producto y diseño
+   de referencia para todos los componentes del sistema. Partes más importantes:
+   - UNE-EN 54-1: Introducción. Define el sistema y sus componentes.
+   - UNE-EN 54-2: Centrales de control e indicación (equipos de control y señalización, ECS).
+   - UNE-EN 54-3: Dispositivos sonoros de alarma de incendio.
+   - UNE-EN 54-4: Equipos de alimentación eléctrica.
+   - UNE-EN 54-5: Detectores de calor puntual.
+   - UNE-EN 54-7: Detectores de humo puntual por dispersión de luz (ópticos).
+   - UNE-EN 54-10: Detectores de llama puntual.
+   - UNE-EN 54-11: Pulsadores manuales de alarma.
+   - UNE-EN 54-12: Detectores de humo lineales (haz de luz).
+   - UNE-EN 54-20: Detectores de humo por aspiración (ASD).
+   - UNE-EN 54-25: Componentes que usan enlaces de radiofrecuencia (sistemas inalámbricos).
+4. Norma UNE 23007: familia de normas nacionales que complementan a la UNE-EN 54
+   con criterios de diseño, instalación, puesta en servicio y mantenimiento.
+   UNE 23007-14: diseño, instalación, puesta en marcha, mantenimiento y uso de
+   los sistemas de detección y alarma de incendios. Es la norma de DISEÑO principal.
+5. Para establecimientos industriales: RD 164/2025 (nuevo RSCIEI, en vigor desde
+   marzo 2025). Determina cuándo es obligatorio el sistema de detección automática
+   en función de la configuración del edificio y el nivel de riesgo intrínseco.
+
+=== FUNCIONES DEL SISTEMA DE DETECCIÓN Y ALARMA ===
+6. Un sistema de detección y alarma de incendios (SDAI) tiene cuatro funciones
+   secuenciales:
+   a) DETECTAR: captar los indicios físicos del incendio (humo, calor, llama, gases).
+   b) PROCESAR: la central evalúa las señales recibidas y determina si hay alarma.
+   c) SEÑALIZAR: indicar la zona o punto en alarma (indicación óptica y acústica).
+   d) ACTIVAR: enviar señales de mando a otros sistemas (extinción, BMS, ascensores,
+      compuertas cortafuego, ventilación de humos, transmisión a CRA o bomberos).
+7. TRAMPA: Detectar y extinguir son funciones de sistemas distintos. El SDAI detecta
+   y alerta; la extinción corresponde a un sistema específico separado (rociadores,
+   gases, etc.), aunque el SDAI puede actuar como disparador del sistema de extinción.
+
+=== COMPONENTES PRINCIPALES DEL SDAI ===
+8. Los componentes de un SDAI son (según UNE-EN 54-1):
+   - Detectores automáticos (puntuales o lineales).
+   - Pulsadores manuales de alarma (PMA).
+   - Central de control e indicación (CCI o ECS).
+   - Dispositivos de alarma acústica (sirenas) y óptica (balizas).
+   - Equipo de alimentación eléctrica (fuente principal + batería de respaldo).
+   - Dispositivos de transmisión de alarma (a CRA, bomberos, BMS).
+   - Dispositivos de salida para activación de sistemas auxiliares.
+9. La alimentación eléctrica debe incluir una fuente de energía de reserva
+   (batería o grupo electrógeno) capaz de mantener el sistema en vigilancia
+   durante al menos 72 horas y, tras ese periodo, en alarma durante al menos
+   30 minutos. DATO CLAVE DE EXAMEN: 72 horas en vigilancia + 30 minutos en alarma.
+
+=== TIPOS DE DETECTORES AUTOMÁTICOS ===
+10. DETECTORES DE HUMO PUNTUAL ÓPTICO (fotoeléctrico):
+    - Principio: dispersión de luz infrarroja (efecto Tyndall). Una partícula de
+      humo en la cámara desvía el haz de luz hacia el receptor, disparando la alarma.
+    - Responde bien a: humos de combustión lenta y con mucho humo visible (incendios
+      de plásticos, espumas, madera húmeda).
+    - No responde bien a: fuegos rápidos con llama y poco humo (gasolina, etanol).
+    - Uso: el detector de humo más común en edificios de uso general (oficinas,
+      hoteles, viviendas, pasillos, salas).
+    - Norma de producto: UNE-EN 54-7.
+11. DETECTORES DE HUMO PUNTUAL IÓNICO:
+    - Principio: ionización de la cámara de aire por una pequeña fuente radiactiva
+      (americio-241). El humo reduce la corriente de ionización, disparando la alarma.
+    - Responde bien a: incendios de combustión rápida con partículas muy pequeñas
+      (fuegos de llama, gasolina).
+    - Inconveniente: contiene material radiactivo (gestión especial al final de su vida).
+    - Tendencia: en retirada progresiva en favor de los ópticos multicriterio.
+    - Norma de producto: UNE-EN 54-7.
+    TRAMPA: El iónico es mejor para fuegos rápidos con llama; el óptico, para
+    humos lentos y visibles. Se suelen confundir en el examen.
+12. DETECTORES DE CALOR PUNTUAL:
+    - Tipos:
+      a) TERMOVELOCIMÉTRICO (ROR, Rate Of Rise): detecta aumentos rápidos de
+         temperatura (más de 8-10 °C/min). No actúa ante subidas lentas sostenidas.
+      b) TERMOSTÁTICO (fijo o de temperatura fija): actúa cuando la temperatura
+         supera un umbral fijo (por ejemplo, 57 °C, 70 °C, 90 °C).
+      c) COMBINADO (termovelocimétrico + termostático): actúa por cualquiera
+         de los dos mecanismos. El más habitual en la práctica.
+    - Uso: zonas donde el humo sería una falsa alarma habitual (cocinas, garajes,
+      áreas de producción con vapores, lavanderías, zonas polvorientas).
+    - Norma de producto: UNE-EN 54-5.
+    TRAMPA: El termovelocimétrico no detecta incendios lentos de temperatura
+    sostenida. El termostático no detecta incendios rápidos si el umbral no se
+    alcanza. El combinado cubre ambos casos.
+13. DETECTORES DE HUMO LINEAL (haz de luz):
+    - Principio: un emisor de luz infrarroja proyecta un haz hacia un reflector o
+      receptor. El humo entre ambos atenúa el haz, disparando la alarma.
+    - Cubre grandes distancias: entre 5 y 100 m de longitud del haz.
+    - Uso: naves industriales de gran altura, almacenes, atrios, iglesias, hangares.
+      Donde un detector puntual no alcanzaría el techo fácilmente o la altura
+      dificulta el acceso para mantenimiento.
+    - Norma de producto: UNE-EN 54-12.
+14. DETECTORES DE LLAMA (flama):
+    - Principio: detectan la radiación ultravioleta (UV) o infrarroja (IR) emitida
+      por las llamas. Existen detectores UV, IR, UV+IR y multibanda IR.
+    - Respuesta: muy rápida ante fuego abierto con llama.
+    - No detectan: incendios sin llama (smoldering, combustión lenta con humo).
+    - Uso: exteriores, hangares de aviación, plantas petroquímicas, salas de
+      máquinas, zonas con riesgo de fuego de origen explosivo.
+    - Norma de producto: UNE-EN 54-10.
+15. DETECTORES DE HUMO POR ASPIRACIÓN (ASD — Aspirating Smoke Detection):
+    - Principio: una red de tubos con orificios aspira muestras de aire del recinto
+      hacia una cámara de detección centralizada (cámara laser de alta sensibilidad).
+    - Ventajas: detectan concentraciones de humo extremadamente bajas
+      (etapa de pre-alarma, incendios incipientes). Se pueden instalar en zonas
+      de difícil acceso para detectores puntuales.
+    - Uso: CPD (centros de proceso de datos), salas de servidores, museos,
+      archivos históricos, salas limpias, zonas de alta tensión.
+    - Norma de producto: UNE-EN 54-20.
+    TRAMPA: Los ASD son los más sensibles de todos los detectores. Detectan el
+    humo antes de que sea visible. Son más caros y requieren mantenimiento
+    específico de los tubos y filtros.
+16. DETECTORES MULTICRITERIO:
+    - Combinan dos o más variables (humo óptico + CO + temperatura) para reducir
+      falsas alarmas y mejorar la detección. Cada vez más habituales en edificios
+      donde se requiere alta fiabilidad.
+17. DETECTORES DE GAS COMBUSTIBLE o CO:
+    - No son detectores de incendio propiamente dichos, sino de riesgo previo al incendio.
+    - Detectan concentraciones de gas combustible (metano, propano, butano) o
+      monóxido de carbono. Habituales en garajes (CO), cocinas industriales
+      y locales con aparatos de combustión.
+
+=== PULSADORES MANUALES DE ALARMA (PMA) ===
+18. Permiten la activación manual de la alarma por parte de un ocupante.
+    Deben instalarse en zonas visibles y accesibles, preferiblemente junto a las
+    salidas de emergencia y en las vías de evacuación.
+    Distancia máxima de recorrido hasta un PMA: 25 metros (criterio CTE DB-SI).
+    Norma de producto: UNE-EN 54-11.
+    TRAMPA: La distancia máxima de recorrido hasta un extintor es 15 m; hasta un
+    pulsador de alarma es 25 m. Se confunden frecuentemente en el examen.
+
+=== TIPOS DE SISTEMAS SEGÚN LA CENTRAL ===
+19. SISTEMA CONVENCIONAL:
+    - La central divide el edificio en ZONAS. Todos los detectores de una misma
+      zona están conectados en paralelo a un mismo bucle (lazo).
+    - Cuando salta la alarma, la central indica la ZONA en alarma, pero no el
+      detector concreto.
+    - Económico. Adecuado para edificios pequeños y medianos con pocas zonas.
+    - Inconveniente: localización de la alarma menos precisa (solo zona, no punto).
+20. SISTEMA ANALÓGICO DIRECCIONABLE (por bucle o lazo):
+    - Cada detector tiene una DIRECCIÓN única. La central puede identificar el
+      detector específico que ha entrado en alarma.
+    - La central lee continuamente el valor analógico de cada detector (nivel de
+      humo, temperatura) y toma decisiones inteligentes (pre-alarma, alarma).
+    - Puede detectar derivaciones a tierra y averías en el bucle.
+    - Los bucles son cerrados (en anillo), lo que garantiza la supervisión aunque
+      se produzca un corte en un punto del cable.
+    - Adecuado para edificios grandes, complejos o con altas exigencias de gestión.
+    TRAMPA: En el convencional se identifica la ZONA; en el analógico se identifica
+    el DETECTOR concreto (punto). Es la diferencia más preguntada en examen.
+21. SISTEMA INALÁMBRICO (radiofrecuencia):
+    - Los detectores y dispositivos se comunican con la central por RF.
+    - Elimina el cableado. Ideal para edificios históricos o de difícil cableado.
+    - Norma de producto: UNE-EN 54-25.
+    - Inconveniente: gestión de baterías de cada dispositivo.
+
+=== DISEÑO DEL SISTEMA DE DETECCIÓN ===
+22. El diseño se rige por la UNE 23007-14. Los criterios fundamentales son:
+    - Selección del tipo de detector según el riesgo, el uso del local y las
+      condiciones ambientales (polvo, humedad, temperatura habitual, flujos de aire).
+    - Superficie máxima de cobertura por detector puntual: depende de la norma
+      y del tipo de local, pero como referencia general:
+      · Detector de humo puntual: hasta 60-80 m² en planta abierta; hasta 7,5 m
+        de radio desde el detector.
+      · Detector de calor puntual: hasta 20-30 m² en planta abierta.
+    - Los detectores se instalan en el techo o en la parte alta de las paredes.
+    - Las zonas de detección no deben superar los 1.600 m² ni abarcar más de
+      un piso (criterio general de la UNE 23007-14).
+23. El sistema debe supervisar continuamente el estado de todos sus componentes
+    (vigilancia). Cualquier avería (cable cortado, detector sucio, pérdida de
+    alimentación) debe señalizarse en la central de forma diferenciada de la alarma.
+24. La señal de alarma puede transmitirse automáticamente a:
+    - Central Receptora de Alarmas (CRA), con comunicación a servicios de emergencia.
+    - Sistema de gestión del edificio (BMS).
+    - Sistemas automáticos de extinción (como disparador de una descarga de gas
+      limpio o de un sistema de diluvio).
+    - Sistemas de control de humos, presurización de escaleras, retención de puertas
+      cortafuego, bloqueo de ascensores en planta baja.
+
+=== MANTENIMIENTO (RIPCI — ANEXO II) ===
+25. Periodicidades de mantenimiento de los sistemas de detección y alarma:
+    - TRIMESTRAL:
+      · Comprobación de funcionamiento de la central (indicadores, alarmas y averías).
+      · Verificación de accesibilidad y señalización de pulsadores manuales.
+      · Comprobación visual del estado de los detectores (sin desmontaje).
+    - SEMESTRAL:
+      · Comprobación del funcionamiento de cada detector con equipo de prueba adecuado.
+      · Verificación del funcionamiento de los pulsadores manuales.
+      · Comprobación de dispositivos de alarma (sirenas y balizas).
+      · Verificación de la transmisión de señales a CRA y sistemas auxiliares.
+    - ANUAL:
+      · Mantenimiento completo por empresa mantenedora habilitada.
+      · Verificación del funcionamiento de la batería de reserva (prueba de descarga).
+      · Limpieza de detectores (especialmente los ópticos, sensibles al polvo).
+      · Comprobación de la red de tubos en sistemas ASD.
+26. La LIMPIEZA DE DETECTORES ÓPTICOS es especialmente importante: el polvo
+    acumulado en la cámara produce falsas alarmas. Periodicidad: según fabricante
+    y condiciones ambientales, habitualmente anual o bienal.
+27. Todas las operaciones se registran en el Libro de Registro de Instalaciones PCI.
+
+=== LO MÁS PREGUNTADO EN OPOSICIÓN ===
+28. La norma de DISEÑO es la UNE 23007-14. La norma de PRODUCTO de la familia de
+    detectores y componentes es la UNE-EN 54 (partes 2, 3, 4, 5, 7, 10, 11, 12, 20…).
+29. Detector óptico (fotoeléctrico): efecto Tyndall, humos lentos visibles, UNE-EN 54-7.
+30. Detector iónico: ionización (americio-241), fuegos rápidos con llama. En retirada.
+31. Detector termovelocimétrico: detecta subida rápida de temperatura (>8-10 °C/min).
+    No detecta incendios lentos de temperatura sostenida.
+32. Detector termostático: temperatura fija (umbral). No detecta incendios rápidos
+    que no superan el umbral.
+33. Detector lineal (haz): grandes espacios (naves, atrios), UNE-EN 54-12.
+34. Detector de llama: UV/IR, fuego con llama, exterior y petroquímica, UNE-EN 54-10.
+35. Detector ASD (aspiración): el más sensible, CPD y museos, UNE-EN 54-20.
+36. PMA: distancia máxima de recorrido 25 m (no confundir con 15 m de extintores).
+37. Batería de reserva: 72 horas en vigilancia + 30 minutos en alarma.
+38. Sistema convencional: identifica ZONA. Sistema analógico direccionable: identifica
+    DETECTOR (punto concreto). Es la diferencia más preguntada.
+39. Zonas de detección: máximo 1.600 m² y sin abarcar más de un piso.
+40. Detector óptico puntual: cobertura hasta ~60-80 m²; detector de calor: ~20-30 m².
+41. Mantenimiento trimestral (visual), semestral (funcional con equipo de prueba),
+    anual (completo con empresa habilitada + prueba de batería + limpieza).
+42. Señal de alarma puede activar: extinción automática, control de humos, BMS,
+    ascensores, compuertas cortafuego, transmisión a CRA/bomberos.

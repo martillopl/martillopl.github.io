@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 3 – Instalaciones de detección de incendios</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg: #f7f6f2; --color-surface: #f9f8f5; --color-surface-2: #ffffff;
+    --color-surface-offset: #edeae5; --color-border: #d4d1ca; --color-divider: #dcd9d5;
+    --color-text: #28251d; --color-text-muted: #6b6a65; --color-text-faint: #a8a7a2;
+    --color-primary: #1a4a8b; --color-primary-hover: #123570; --color-primary-highlight: #e0eaf8;
+    --color-accent: #d19900; --color-accent-light: #f5e9c0;
+    --color-info: #005f73; --color-info-light: #cce3e8;
+    --color-warn: #964219; --color-warn-light: #f5e0d0;
+    --color-green: #2d6a2d; --color-green-light: #d6ecd6;
+    --font-display: 'Cabinet Grotesk', sans-serif;
+    --font-body: 'Satoshi', sans-serif;
+    --radius-sm: 0.375rem; --radius-md: 0.5rem; --radius-lg: 0.75rem; --radius-xl: 1rem;
+    --shadow-sm: 0 1px 3px rgba(26,74,139,0.08); --shadow-md: 0 4px 16px rgba(26,74,139,0.10);
+    --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
+    --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body); font-size: 1rem; line-height: 1.75;
+    color: var(--color-text); background: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+  }
+  .page-wrap { display: flex; min-height: 100vh; }
+  nav.sidebar {
+    position: sticky; top: 0; height: 100vh; overflow-y: auto;
+    width: 260px; min-width: 260px; background: var(--color-surface);
+    border-right: 1px solid var(--color-border); padding: var(--space-8) var(--space-6);
+    font-size: 0.85rem;
+  }
+  nav.sidebar .nav-title {
+    font-family: var(--font-display); font-size: 0.7rem; font-weight: 800;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-faint);
+    margin-bottom: var(--space-4);
+  }
+  nav.sidebar a {
+    display: block; padding: var(--space-1) var(--space-2);
+    color: var(--color-text-muted); text-decoration: none; border-radius: var(--radius-sm);
+    margin-bottom: 2px; transition: all 0.15s;
+  }
+  nav.sidebar a:hover { background: var(--color-surface-offset); color: var(--color-primary); }
+  nav.sidebar a.sub { padding-left: var(--space-4); font-size: 0.82rem; }
+  .content { flex: 1; max-width: 820px; padding: var(--space-10) var(--space-12); }
+  .doc-header {
+    background: linear-gradient(135deg, #1a4a8b 0%, #0d2f5e 100%);
+    color: white; border-radius: var(--radius-xl); padding: var(--space-10);
+    margin-bottom: var(--space-10);
+  }
+  .doc-header .meta { font-size: 0.78rem; opacity: 0.75; margin-bottom: var(--space-3); letter-spacing: 0.06em; text-transform: uppercase; }
+  .doc-header h1 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; line-height: 1.2; margin-bottom: var(--space-3); }
+  .doc-header .subtitle { font-size: 0.92rem; opacity: 0.85; }
+  .file-nav { display:flex; gap: var(--space-2); margin-bottom: var(--space-8); flex-wrap: wrap; }
+  .file-nav a {
+    padding: var(--space-2) var(--space-4); border-radius: 999px;
+    background: var(--color-surface-2); border: 1px solid var(--color-border);
+    font-size: 0.82rem; text-decoration: none; color: var(--color-text-muted); transition: all 0.15s;
+  }
+  .file-nav a:hover, .file-nav a.active {
+    background: var(--color-primary); color: white; border-color: var(--color-primary);
+  }
+  section { margin-bottom: var(--space-10); }
+  h2 {
+    font-family: var(--font-display); font-size: 1.35rem; font-weight: 800;
+    color: var(--color-primary); border-bottom: 2px solid var(--color-primary-highlight);
+    padding-bottom: var(--space-2); margin-bottom: var(--space-6); margin-top: var(--space-10);
+  }
+  h2:first-child { margin-top: 0; }
+  h3 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; margin: var(--space-6) 0 var(--space-3) 0; color: var(--color-text); }
+  p { margin-bottom: var(--space-4); max-width: 70ch; }
+  .callout {
+    border-radius: var(--radius-lg); padding: var(--space-4) var(--space-6);
+    margin: var(--space-6) 0; font-size: 0.92rem; line-height: 1.65;
+  }
+  .callout-norm { background: var(--color-primary-highlight); border-left: 4px solid var(--color-primary); }
+  .callout-warn { background: var(--color-warn-light); border-left: 4px solid var(--color-warn); }
+  .callout-tip  { background: var(--color-accent-light); border-left: 4px solid var(--color-accent); }
+  .callout-info { background: var(--color-info-light); border-left: 4px solid var(--color-info); }
+  .callout-green { background: var(--color-green-light); border-left: 4px solid var(--color-green); }
+  .callout strong { font-weight: 700; display: block; margin-bottom: var(--space-1); }
+  .badge {
+    display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;
+    text-transform: uppercase; padding: 2px 8px; border-radius: 999px; vertical-align: middle; margin-left: var(--space-1);
+  }
+  .badge-norm { background: var(--color-primary-highlight); color: var(--color-primary-hover); }
+  .badge-num  { background: #e8f4f8; color: #005f73; }
+  .badge-warn { background: var(--color-warn-light); color: var(--color-warn); }
+  dl { margin: var(--space-4) 0; }
+  dt { font-weight: 700; color: var(--color-primary); margin-top: var(--space-3); }
+  dd { margin-left: var(--space-6); color: var(--color-text-muted); margin-bottom: var(--space-1); }
+  ul, ol { margin: var(--space-3) 0 var(--space-4) var(--space-6); }
+  li { margin-bottom: var(--space-1); }
+  hr { border: none; border-top: 1px solid var(--color-divider); margin: var(--space-8) 0; }
+  table { width: 100%; border-collapse: collapse; margin: var(--space-4) 0; font-size: 0.88rem; }
+  thead th { background: var(--color-primary); color: white; font-family: var(--font-display); font-weight: 700; padding: 0.55rem 0.85rem; text-align: left; font-size: 0.82rem; }
+  tbody td { padding: 0.5rem 0.85rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+  tbody tr:nth-child(even) { background: #fafaf8; }
+  tbody tr:last-child td { border-bottom: none; }
+  .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); margin: var(--space-6) 0; }
+  .kpi { background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-4); text-align: center; }
+  .kpi .kpi-val { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--color-primary); display: block; line-height: 1; }
+  .kpi .kpi-label { font-size: 0.75rem; color: var(--color-text-muted); margin-top: var(--space-1); display: block; }
+  @media (max-width: 768px) {
+    nav.sidebar { display: none; }
+    .content { padding: var(--space-6) var(--space-4); }
+    .kpi-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+<nav class="sidebar">
+  <div class="nav-title">Tema 3 – Detección PCI</div>
+  <a href="#intro">1. Introducción y normativa</a>
+  <a href="#funciones">2. Funciones del SDAI</a>
+  <a href="#componentes">3. Componentes del sistema</a>
+  <a class="sub" href="#central">3.1 Central de control</a>
+  <a class="sub" href="#alimentacion">3.2 Alimentación eléctrica</a>
+  <a class="sub" href="#pma">3.3 Pulsadores manuales</a>
+  <a href="#detectores">4. Tipos de detectores</a>
+  <a class="sub" href="#optico">4.1 Óptico (fotoeléctrico)</a>
+  <a class="sub" href="#ionico">4.2 Iónico</a>
+  <a class="sub" href="#calor">4.3 Calor puntual</a>
+  <a class="sub" href="#lineal">4.4 Lineal (haz de luz)</a>
+  <a class="sub" href="#llama">4.5 Detector de llama</a>
+  <a class="sub" href="#asd">4.6 Aspiración (ASD)</a>
+  <a class="sub" href="#multicriterio">4.7 Multicriterio y gas</a>
+  <a href="#tipossistema">5. Tipos de sistema</a>
+  <a class="sub" href="#convencional">5.1 Convencional</a>
+  <a class="sub" href="#analogico">5.2 Analógico direccionable</a>
+  <a class="sub" href="#inalambrico">5.3 Inalámbrico</a>
+  <a href="#diseno">6. Diseño</a>
+  <a href="#mantenimiento">7. Mantenimiento</a>
+</nav>
+
+<main class="content">
+
+  <div class="doc-header">
+    <div class="meta">Tema 3 · Gestor de Mantenimiento (Nivel B) · UPNA</div>
+    <h1>Instalaciones de protección contra incendios — Detección</h1>
+    <div class="subtitle">Tipos de instalaciones · Diseño y mantenimiento · Normativa aplicable</div>
+  </div>
+
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo" class="active">?? Texto explicativo</a>
+    <a href="2_esquema_resumen">?? Esquema-resumen</a>
+    <a href="3_cuadro_comparativo">?? Cuadros comparativos</a>
+  </div>
+
+  <!-- 1. NORMATIVA -->
+  <section id="intro">
+    <h2>1. Introducción y marco normativo</h2>
+    <p>La detección automática de incendios es la primera línea de actuación en la cadena de seguridad contra el fuego. Un sistema de detección y alarma de incendios (SDAI) bien diseñado permite identificar el incendio en su fase más incipiente, cuando el fuego es aún pequeño y controlable, antes de que el humo o el calor pongan en riesgo a las personas o la estructura del edificio. El tiempo ganado en la detección es tiempo ganado para la evacuación y la extinción.</p>
+
+    <div class="callout callout-norm">
+      <strong>Norma central: Real Decreto 513/2017, de 22 de mayo — RIPCI</strong>
+      El Anexo I del RIPCI regula los requisitos técnicos que deben cumplir los equipos y sistemas de detección y alarma de incendios comercializados en España. El Anexo II establece las operaciones de mantenimiento y su periodicidad mínima obligatoria para todas las instalaciones PCI, incluidas las de detección.
+    </div>
+
+    <p>El marco normativo de los sistemas de detección se articula en dos niveles complementarios:</p>
+
+    <dl>
+      <dt>Normativa de exigencia (cuándo es obligatorio el sistema)</dt>
+      <dd><strong>CTE DB-SI</strong>: para edificios de uso general (residencial, hospitalario, hotelero, docente, comercial). Determina en qué tipos de edificio y a partir de qué superficie o altura de evacuación es obligatoria la instalación de un SDAI.</dd>
+      <dd><strong>RD 164/2025</strong> (nuevo RSCIEI): para establecimientos industriales. Determina la obligatoriedad del sistema de detección en función de la configuración del edificio (tipos A a E) y del nivel de riesgo intrínseco (bajo, medio, alto).</dd>
+      <dt>Normativa técnica (cómo se diseña e instala)</dt>
+      <dd><strong>UNE-EN 54</strong>: familia de normas europeas que regulan los requisitos de producto de cada componente del sistema (centrales, detectores, sirenas, alimentación). Es la norma de producto de referencia.</dd>
+      <dd><strong>UNE 23007-14</strong>: norma nacional que establece los criterios de diseño, instalación, puesta en marcha, mantenimiento y uso de los sistemas de detección y alarma. Es la norma de diseño de referencia.</dd>
+    </dl>
+
+    <div class="callout callout-tip">
+      <strong>Distinción clave de examen</strong>
+      La <strong>UNE-EN 54</strong> dice <em>qué debe cumplir cada componente</em> (requisitos de producto). La <strong>UNE 23007-14</strong> dice <em>cómo se diseña e instala el sistema completo</em>. En el examen pueden preguntar a cuál de las dos pertenece cada aspecto.
+    </div>
+
+    <p>Las partes de la UNE-EN 54 más frecuentemente citadas en oposiciones son:</p>
+    <table>
+      <thead><tr><th>Parte</th><th>Componente regulado</th></tr></thead>
+      <tbody>
+        <tr><td>UNE-EN 54-2</td><td>Centrales de control e indicación (ECS)</td></tr>
+        <tr><td>UNE-EN 54-3</td><td>Dispositivos sonoros de alarma (sirenas)</td></tr>
+        <tr><td>UNE-EN 54-4</td><td>Equipos de alimentación eléctrica</td></tr>
+        <tr><td>UNE-EN 54-5</td><td>Detectores de calor puntual</td></tr>
+        <tr><td>UNE-EN 54-7</td><td>Detectores de humo puntual (ópticos e iónicos)</td></tr>
+        <tr><td>UNE-EN 54-10</td><td>Detectores de llama puntual</td></tr>
+        <tr><td>UNE-EN 54-11</td><td>Pulsadores manuales de alarma</td></tr>
+        <tr><td>UNE-EN 54-12</td><td>Detectores de humo lineal (haz de luz)</td></tr>
+        <tr><td>UNE-EN 54-20</td><td>Detectores de humo por aspiración (ASD)</td></tr>
+        <tr><td>UNE-EN 54-25</td><td>Componentes con enlace de radiofrecuencia (inalámbricos)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr>
+
+  <!-- 2. FUNCIONES -->
+  <section id="funciones">
+    <h2>2. Funciones del sistema de detección y alarma</h2>
+    <p>Un SDAI no es solo un conjunto de detectores: es un sistema integrado que debe realizar cuatro funciones en secuencia, desde el momento en que se produce el incendio hasta que se desencadenan todas las respuestas necesarias para proteger a las personas y los bienes.</p>
+    <ol>
+      <li><strong>Detectar</strong>: captar los productos físicos del incendio (humo, calor, llama, gases de combustión) mediante los detectores automáticos o por acción humana mediante los pulsadores manuales.</li>
+      <li><strong>Procesar</strong>: la central de control evalúa las señales recibidas, las compara con los umbrales de alarma programados, filtra falsas alarmas y determina si existe una situación de incendio real.</li>
+      <li><strong>Señalizar</strong>: indicar la zona o el punto exacto en alarma mediante indicadores ópticos (en la central y en los dispositivos de campo) y señales acústicas y visuales (sirenas, balizas estroboscópicas) que alertan a los ocupantes.</li>
+      <li><strong>Activar</strong>: enviar señales de mando a otros sistemas: sistemas de extinción automática, control de humos, presurización de escaleras, bloqueo de ascensores en planta baja, cierre de compuertas cortafuego, transmisión de alarma a la Central Receptora de Alarmas (CRA) o directamente a los servicios de emergencia, y señalización en el sistema de gestión del edificio (BMS).</li>
+    </ol>
+
+    <div class="callout callout-warn">
+      <strong>? Trampa de examen</strong>
+      El SDAI <strong>detecta y alerta</strong>, pero <strong>no extingue</strong>. La extinción es función de un sistema separado y específico (rociadores, sistema de gases, etc.). El SDAI puede actuar como disparador de la extinción automática (enviando la señal de mando), pero son dos instalaciones distintas, con su propio diseño, mantenimiento y normativa.
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- 3. COMPONENTES -->
+  <section id="componentes">
+    <h2>3. Componentes principales del SDAI</h2>
+    <p>Según la UNE-EN 54-1, un sistema de detección y alarma de incendios está compuesto por los siguientes elementos principales:</p>
+
+    <h3 id="central">3.1 Central de control e indicación (CCI / ECS)</h3>
+    <p>Es el cerebro del sistema. Recibe las señales de todos los detectores y pulsadores, las procesa y toma las decisiones de alarma, pre-alarma y avería. Muestra en todo momento el estado de cada zona o punto del sistema. Debe estar ubicada en un lugar de vigilancia permanente o en el puesto de control del edificio, con acceso restringido. La central debe supervisar continuamente el estado de todos sus componentes: cualquier avería (cable cortado, detector desconectado, baja tensión de batería) debe señalizarse de forma clara y diferenciada de la señal de alarma. La norma de producto que regula la central es la <strong>UNE-EN 54-2</strong>.</p>
+
+    <h3 id="alimentacion">3.2 Alimentación eléctrica</h3>
+    <p>El sistema debe disponer de dos fuentes de alimentación independientes: la red eléctrica general (fuente principal) y una batería de acumuladores (fuente de reserva). La fuente de reserva debe ser capaz de mantener el sistema en modo de vigilancia normal durante al menos <strong>72 horas</strong> y, al término de ese período, sostener el sistema en modo de alarma plena durante al menos <strong>30 minutos</strong>. La norma de producto de la alimentación es la <strong>UNE-EN 54-4</strong>.</p>
+
+    <div class="callout callout-warn">
+      <strong>? Dato clave de examen: 72 horas + 30 minutos</strong>
+      La batería de reserva debe garantizar <strong>72 horas en modo vigilancia</strong> seguidas de <strong>30 minutos en modo alarma</strong>. Ambos datos aparecen juntos en el examen. El error frecuente es recordar solo uno de los dos.
+    </div>
+
+    <h3 id="pma">3.3 Pulsadores manuales de alarma (PMA)</h3>
+    <p>Los pulsadores manuales permiten que cualquier ocupante del edificio active la alarma de incendio de forma manual al detectar un incendio, incluso antes de que los detectores automáticos lo hayan hecho. Deben instalarse en zonas visibles y accesibles, preferentemente junto a las salidas de planta y en las vías de evacuación. La distancia máxima de recorrido horizontal desde cualquier punto de la planta hasta el pulsador más próximo es de <strong>25 metros</strong>. La norma de producto es la <strong>UNE-EN 54-11</strong>.</p>
+
+    <div class="callout callout-warn">
+      <strong>? Trampa frecuente: 15 m vs. 25 m</strong>
+      La distancia máxima de recorrido hasta un <strong>extintor</strong> es de <strong>15 metros</strong>. La distancia máxima de recorrido hasta un <strong>pulsador de alarma</strong> es de <strong>25 metros</strong>. Se confunden con mucha frecuencia en el examen.
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- 4. DETECTORES -->
+  <section id="detectores">
+    <h2>4. Tipos de detectores automáticos</h2>
+    <p>El detector es el elemento sensor del sistema. Cada tipo de detector responde a uno o varios de los productos físicos del incendio (humo, calor, llama), y la elección del tipo adecuado depende del riesgo del local, las condiciones ambientales y el tipo de incendio previsible. Elegir el detector equivocado puede provocar falsas alarmas frecuentes o, peor, no detectar un incendio real.</p>
+
+    <h3 id="optico">4.1 Detector de humo puntual óptico (fotoeléctrico)</h3>
+    <p>Es el detector de humo más extendido en edificios de uso general. Funciona por el principio de <strong>dispersión de luz</strong> (efecto Tyndall): en el interior de la cámara de detección, un diodo emisor de luz infrarroja proyecta un haz que, en condiciones normales, no alcanza el receptor. Cuando las partículas de humo penetran en la cámara, dispersan la luz en todas las direcciones; parte de esa luz dispersada llega al receptor fotoeléctrico, cuya señal aumenta hasta superar el umbral de alarma.</p>
+    <p>Responde bien a los incendios de <strong>combustión lenta con mucho humo visible</strong> (madera húmeda, plásticos, espumas, cables). No responde bien a los incendios de combustión rápida con llama y poco humo (gasolina, etanol). Su talón de Aquiles es el <strong>polvo</strong>: las partículas de polvo acumuladas en la cámara producen falsas alarmas y exigen limpieza periódica. La norma de producto es la <strong>UNE-EN 54-7</strong>.</p>
+
+    <h3 id="ionico">4.2 Detector de humo puntual iónico</h3>
+    <p>El detector iónico utiliza una pequeña fuente radiactiva de <strong>americio-241</strong> que ioniza el aire en el interior de la cámara, creando una pequeña corriente eléctrica continua. Cuando las partículas de humo (especialmente las muy pequeñas, invisibles para el ojo humano) penetran en la cámara, interrumpen parcialmente la corriente de ionización. La caída de corriente dispara la alarma.</p>
+    <p>Es más sensible que el óptico a los incendios de <strong>combustión rápida con llama y partículas muy pequeñas</strong> (gasolina, alcohol). Sin embargo, contiene material radiactivo y su gestión al final de su vida útil requiere un tratamiento especial como residuo radiactivo de baja actividad. Por esta razón, los detectores iónicos están en retirada progresiva en favor de los detectores ópticos multicriterio, que combinan humo óptico con CO y temperatura. La norma de producto también es la <strong>UNE-EN 54-7</strong>.</p>
+
+    <div class="callout callout-warn">
+      <strong>? Trampa frecuente: óptico vs. iónico</strong>
+      El detector <strong>óptico</strong> es mejor para humos lentos y visibles (plásticos, madera). El detector <strong>iónico</strong> es mejor para fuegos rápidos con llama y partículas muy pequeñas (gasolina). Se suelen intercambiar en el examen. Regla mnemotécnica: <em>Óptico = humo Oscuro y lento. Iónico = fuego rápIdo con llama</em>.
+    </div>
+
+    <h3 id="calor">4.3 Detector de calor puntual</h3>
+    <p>Los detectores de calor no detectan humo, sino la elevación de la temperatura ambiente. Se usan en locales donde el humo estaría siempre presente en condiciones normales y causaría falsas alarmas constantes: cocinas, garajes, zonas de producción con vapores, lavanderías, áreas polvorientas. Existen tres variantes:</p>
+    <dl>
+      <dt>Termovelocimétrico (ROR — Rate Of Rise)</dt>
+      <dd>Detecta aumentos <em>rápidos</em> de temperatura: se activa cuando la temperatura sube más de 8-10 °C por minuto. Es ideal para detectar incendios que se desarrollan con rapidez. <strong>No detecta incendios lentos</strong> en los que la temperatura sube de forma sostenida pero gradual sin superar el umbral de velocidad.</dd>
+      <dt>Termostático (temperatura fija)</dt>
+      <dd>Se activa cuando la temperatura supera un umbral fijo predeterminado (por ejemplo, 57 °C, 70 °C o 90 °C). Detecta cualquier incendio que caliente suficientemente el ambiente, con independencia de la velocidad. <strong>No detecta incendios rápidos</strong> si la temperatura no llega a alcanzar el umbral fijo a tiempo.</dd>
+      <dt>Combinado (termovelocimétrico + termostático)</dt>
+      <dd>Se activa por cualquiera de los dos mecanismos: subida rápida de temperatura O superación del umbral fijo. Es el más completo y el más habitual en la práctica, ya que cubre ambos tipos de incendio.</dd>
+    </dl>
+    <p>La norma de producto es la <strong>UNE-EN 54-5</strong>.</p>
+
+    <h3 id="lineal">4.4 Detector de humo lineal (haz de luz)</h3>
+    <p>El detector lineal proyecta un haz de luz infrarroja desde un emisor hasta un receptor (o hasta un reflector en los modelos de un solo extremo). El haz puede cubrir distancias de entre 5 y 100 metros. Cuando el humo penetra en la trayectoria del haz, atenúa la luz recibida en el receptor. Si la atenuación supera el umbral programado, se dispara la alarma.</p>
+    <p>Su principal ventaja es la capacidad de cubrir <strong>grandes espacios abiertos de gran altura</strong> donde sería imposible o muy costoso instalar detectores puntuales en el techo: naves industriales, almacenes de gran altura, atrios de edificios, iglesias, hangares y espacios similares. También se usa cuando el acceso al techo para el mantenimiento de detectores puntuales es muy difícil. La norma de producto es la <strong>UNE-EN 54-12</strong>.</p>
+
+    <h3 id="llama">4.5 Detector de llama (detector de flama)</h3>
+    <p>Los detectores de llama detectan la <strong>radiación electromagnética</strong> emitida por las llamas: luz ultravioleta (UV), luz infrarroja (IR) o ambas. Existen modelos UV, IR, UV+IR y de múltiples bandas IR. Su respuesta es prácticamente instantánea ante un fuego con llama visible. No detectan incendios sin llama (combustión lenta, smoldering), lo que los hace inadecuados para humos de combustión lenta.</p>
+    <p>Se usan en entornos donde se esperan fuegos de desarrollo muy rápido con llama abierta: exteriores de plantas petroquímicas y de proceso, hangares de aviación (donde el combustible de los aviones generaría un fuego explosivo), salas de máquinas con aceite mineral, almacenes de líquidos inflamables con estanterías altas y zonas donde la presencia de humo o calor en condiciones normales de trabajo impediría el uso de otros tipos de detectores. La norma de producto es la <strong>UNE-EN 54-10</strong>.</p>
+
+    <h3 id="asd">4.6 Detector de humo por aspiración (ASD)</h3>
+    <p>Los detectores de humo por aspiración (también llamados sistemas ASD, del inglés <em>Aspirating Smoke Detection</em>) son los detectores de mayor sensibilidad disponibles. En lugar de esperar a que el humo llegue hasta el detector, una bomba o ventilador aspira continuamente muestras de aire del recinto a través de una red de tuberías con orificios calibrados, y lleva ese aire hasta una cámara de detección centralizada que incorpora un sistema óptico de alta precisión (habitualmente láser).</p>
+    <p>Esta tecnología permite detectar concentraciones de humo extremadamente bajas, mucho antes de que el humo sea visible o perceptible por el olfato humano. Esto hace posible una <strong>detección incipiente en etapa de pre-alarma</strong>, ideal para proteger equipos de alto valor o instalaciones donde un incendio, incluso pequeño, tendría consecuencias catastróficas.</p>
+    <p>Sus aplicaciones típicas son los centros de proceso de datos (CPD), salas de servidores, archivos históricos, museos y colecciones patrimoniales, salas limpias de fabricación de semiconductores y zonas de alta tensión. La norma de producto es la <strong>UNE-EN 54-20</strong>.</p>
+
+    <div class="callout callout-info">
+      <strong>ASD: el más sensible, el más exigente en mantenimiento</strong>
+      Los sistemas ASD requieren un mantenimiento específico de la red de tubos y filtros: los orificios de aspiración pueden obstruirse con polvo, insectos o suciedad, y los filtros deben limpiarse o sustituirse periódicamente. Un tubo obstruido puede inutilizar una zona de detección sin que la avería sea evidente. Es importante verificar el caudal de aspiración en cada revisión.
+    </div>
+
+    <h3 id="multicriterio">4.7 Detectores multicriterio y detectores de gas</h3>
+    <p>Los detectores <strong>multicriterio</strong> combinan dos o más variables de detección en un mismo dispositivo: habitualmente humo óptico, temperatura y monóxido de carbono (CO). La central evalúa la combinación de señales para confirmar la alarma, lo que reduce drásticamente las falsas alarmas en entornos complejos. Son la evolución tecnológica más avanzada de los detectores puntuales y están desplazando progresivamente a los detectores simples en aplicaciones exigentes.</p>
+    <p>Los <strong>detectores de gas combustible y de CO</strong> no son detectores de incendio en sentido estricto, sino detectores de riesgo previo al incendio. Detectan concentraciones peligrosas de gas antes de que se produzca la ignición (gas natural, propano, butano en cocinas industriales y locales de combustión) o concentraciones peligrosas de monóxido de carbono (CO) producidas por la combustión incompleta de motores o calderas (garajes, salas de calderas).</p>
+  </section>
+
+  <hr>
+
+  <!-- 5. TIPOS DE SISTEMA -->
+  <section id="tipossistema">
+    <h2>5. Tipos de sistema según la central</h2>
+    <p>Más allá del tipo de detector, los sistemas de detección se clasifican según la arquitectura de la central y la forma en que se identifican los puntos de alarma. La elección del tipo de sistema depende del tamaño del edificio, el nivel de precisión requerido y el presupuesto disponible.</p>
+
+    <h3 id="convencional">5.1 Sistema convencional</h3>
+    <p>En el sistema convencional, el edificio se divide en <strong>zonas de detección</strong>. Todos los detectores y pulsadores de una misma zona están conectados en paralelo a un mismo conductor (lazo o bucle). Cuando cualquier detector de una zona entra en alarma, la central indica que esa zona está en alarma, pero no puede saber cuál de los detectores de la zona ha sido el que se ha activado.</p>
+    <p>Es el sistema más sencillo y económico, adecuado para edificios pequeños y medianos con pocas zonas de detección bien delimitadas. Su principal limitación es la <strong>localización imprecisa de la alarma</strong>: hay que recorrer físicamente la zona para identificar el detector en alarma o el foco del incendio.</p>
+
+    <h3 id="analogico">5.2 Sistema analógico direccionable (por bucle o lazo)</h3>
+    <p>En el sistema analógico, cada detector y cada dispositivo tiene asignada una <strong>dirección única</strong> en el sistema. La central se comunica con cada dispositivo de forma individual a través del bucle (lazo en anillo cerrado), leyendo continuamente su valor analógico (nivel exacto de humo, temperatura, etc.) y no solo un estado binario de alarma/no alarma.</p>
+    <p>Esto permite que la central identifique exactamente <strong>qué detector concreto</strong> ha entrado en alarma o pre-alarma, con una precisión de localización que facilita enormemente la respuesta de los equipos de emergencia. Además, la central puede aplicar algoritmos de filtrado inteligente para distinguir entre una alarma real y una falsa alarma (por ejemplo, un detector en pre-alarma sin confirmación de un segundo detector adyacente).</p>
+    <p>El bucle en <strong>anillo cerrado</strong> es una característica de seguridad fundamental: si el cable se corta en un punto, la comunicación puede seguir fluyendo en el sentido contrario del anillo, manteniendo la supervisión de todos los dispositivos excepto los que queden físicamente entre los dos extremos del corte.</p>
+
+    <div class="callout callout-warn">
+      <strong>? La diferencia más preguntada en examen</strong>
+      Sistema <strong>convencional</strong>: la central identifica la <strong>ZONA</strong> en alarma (por ejemplo, "Zona 3 — Planta 2 pasillo norte"). Sistema <strong>analógico direccionable</strong>: la central identifica el <strong>DETECTOR CONCRETO</strong> en alarma (por ejemplo, "Detector 047 — Sala de reuniones 2B"). El analógico es más caro pero mucho más preciso.
+    </div>
+
+    <h3 id="inalambrico">5.3 Sistema inalámbrico (radiofrecuencia)</h3>
+    <p>En los sistemas inalámbricos, los detectores, pulsadores y demás dispositivos se comunican con la central por <strong>radiofrecuencia (RF)</strong>, eliminando la necesidad de cableado de señal. Cada dispositivo incorpora su propia batería. Son especialmente adecuados para edificios históricos o patrimoniales donde el cableado empotrado causaría daños irreversibles, para instalaciones temporales o para ampliaciones puntuales de sistemas existentes. La norma de producto es la <strong>UNE-EN 54-25</strong>. Su principal desafío operativo es la gestión del estado de las baterías de cada dispositivo.</p>
+  </section>
+
+  <hr>
+
+  <!-- 6. DISEÑO -->
+  <section id="diseno">
+    <h2>6. Diseño del sistema de detección</h2>
+    <p>La norma de diseño de referencia es la <strong>UNE 23007-14</strong>. El proceso de diseño de un SDAI parte del análisis del uso del edificio, las características de cada local (dimensiones, altura, condiciones ambientales, tipo de carga de fuego) y el nivel de prestaciones exigido por la normativa y por el titular.</p>
+
+    <div class="kpi-grid">
+      <div class="kpi"><span class="kpi-val">80 m²</span><span class="kpi-label">Cobertura máx. detector óptico puntual (aprox.)</span></div>
+      <div class="kpi"><span class="kpi-val">30 m²</span><span class="kpi-label">Cobertura máx. detector de calor puntual (aprox.)</span></div>
+      <div class="kpi"><span class="kpi-val">1.600 m²</span><span class="kpi-label">Superficie máxima por zona de detección</span></div>
+    </div>
+
+    <p>Los criterios de diseño más importantes que deben dominarse para el examen son:</p>
+    <ul>
+      <li><strong>Selección del tipo de detector</strong>: según el riesgo del local (clase de fuego previsible), las condiciones ambientales (temperatura, humedad, polvo, flujos de aire) y la altura del techo. Un detector óptico puntual en una cocina produciría falsas alarmas constantes; la elección correcta es un detector de calor.</li>
+      <li><strong>Superficie de cobertura</strong>: los detectores puntuales tienen una superficie máxima de cobertura que depende de la altura del techo y la geometría del local. La norma UNE 23007-14 proporciona tablas detalladas. Como referencia general: detector de humo puntual hasta ~60-80 m², detector de calor puntual hasta ~20-30 m².</li>
+      <li><strong>Zonas de detección</strong>: no deben superar los 1.600 m² ni abarcar más de un piso. Una zona debe poder ser inspeccionada físicamente en un tiempo razonable por el equipo de emergencia.</li>
+      <li><strong>Supervisión y redundancia</strong>: el sistema debe supervisar continuamente todos sus componentes y señalizar cualquier avería (cable cortado, detector sucio, batería baja) de forma claramente diferenciada de la alarma.</li>
+      <li><strong>Salidas de mando</strong>: el sistema debe estar integrado con todos los sistemas auxiliares que deben activarse en caso de incendio: extinción automática, control de humos, presurización de escaleras, retención de puertas cortafuego, bloqueo de ascensores, transmisión a CRA.</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <!-- 7. MANTENIMIENTO -->
+  <section id="mantenimiento">
+    <h2>7. Mantenimiento de los sistemas de detección</h2>
+    <p>El Anexo II del RIPCI (RD 513/2017) establece las operaciones de mantenimiento mínimas y su periodicidad para los sistemas de detección y alarma de incendios. El mantenimiento debe ser realizado por una <strong>empresa mantenedora habilitada</strong> e inscrita en el registro de la comunidad autónoma (en Navarra, el Gobierno de Navarra). Todas las operaciones quedan registradas en el <strong>Libro de Registro de Instalaciones PCI</strong>.</p>
+
+    <table>
+      <thead><tr><th>Periodicidad</th><th>Operación</th><th>¿Quién?</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Trimestral</strong></td>
+          <td>Comprobación del funcionamiento de la central (indicadores, señales de alarma y avería). Verificación visual del estado y accesibilidad de detectores y pulsadores. Sin desmontaje.</td>
+          <td>Titular o empresa mantenedora</td>
+        </tr>
+        <tr>
+          <td><strong>Semestral</strong></td>
+          <td>Comprobación del funcionamiento de cada detector con equipo de prueba específico (generador de humo artificial para ópticos, fuente de calor calibrada para térmicos). Verificación de pulsadores, sirenas y balizas. Verificación de transmisión de señales a CRA y sistemas auxiliares.</td>
+          <td>Empresa mantenedora habilitada</td>
+        </tr>
+        <tr>
+          <td><strong>Anual</strong></td>
+          <td>Mantenimiento completo. Prueba de batería de reserva (prueba de descarga). Limpieza de detectores (especialmente ópticos). Verificación de la red de tubos y filtros en sistemas ASD. Comprobación de todos los componentes.</td>
+          <td>Empresa mantenedora habilitada</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout callout-green">
+      <strong>Limpieza de detectores ópticos</strong>
+      El polvo acumulado en la cámara de un detector óptico es la causa más frecuente de falsas alarmas. La limpieza debe realizarse al menos anualmente, o con mayor frecuencia en entornos con polvo ambiental. La limpieza se realiza con aire comprimido o con el equipo específico del fabricante, sin introducir ningún objeto en la cámara. Tras la limpieza se comprueba el correcto funcionamiento con el generador de humo de prueba.
+    </div>
+
+    <p>Para los <strong>establecimientos industriales</strong>, el RD 164/2025 establece además la obligación de inspección periódica del conjunto de las instalaciones PCI (incluida la detección) por un <strong>Organismo de Control Autorizado (OCA)</strong>, con una periodicidad de 6, 4 o 2 años según el nivel de riesgo intrínseco del establecimiento (bajo, medio o alto, respectivamente).</p>
+  </section>
+
+</main>
+</div>
+</body>
+</html>

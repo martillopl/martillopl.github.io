@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuadros comparativos T03 – Detección de incendios</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue:   #1a4a8b; --blue-lt:   #e0eaf8; --blue-dk:  #0d2f5e;
+    --gold:   #d19900; --gold-lt:   #f5e9c0;
+    --orange: #964219; --orange-lt: #f5e0d0;
+    --teal:   #005f73; --teal-lt:   #cce3e8;
+    --green:  #2d6a2d; --green-lt:  #d6ecd6;
+    --purple: #5a3e8c; --purple-lt: #e4ddf5;
+    --red:    #8b1a1a; --red-lt:    #fde8e8;
+    --bg: #f7f6f2; --surface: #ffffff; --border: #d4d1ca; --divider: #dcd9d5;
+    --text: #28251d; --muted: #6b6a65; --faint: #a8a7a2;
+    --font-d: 'Cabinet Grotesk', sans-serif;
+    --font-b: 'Satoshi', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-b); background: var(--bg); color: var(--text); font-size: 0.88rem; line-height: 1.55; -webkit-font-smoothing: antialiased; padding: 2rem 1.5rem 4rem; }
+
+  .file-nav { display:flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+  .file-nav a { padding: 0.35rem 1rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); font-size: 0.8rem; text-decoration: none; color: var(--muted); transition: all 0.15s; }
+  .file-nav a:hover, .file-nav a.active { background: var(--blue); color: white; border-color: var(--blue); }
+
+  h1 { font-family: var(--font-d); font-size: 1.6rem; font-weight: 800; color: var(--blue); margin-bottom: 0.25rem; }
+  .subtitle { color: var(--muted); font-size: 0.82rem; margin-bottom: 2rem; }
+  .section-label { font-family: var(--font-d); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); margin: 2.5rem 0 0.75rem; }
+
+  /* TABLAS */
+  .tbl-wrap { background: var(--surface); border-radius: 0.75rem; border: 1px solid var(--border); overflow: hidden; margin-bottom: 1rem; box-shadow: 0 1px 3px rgba(26,74,139,.06); }
+  .tbl-title { font-family: var(--font-d); font-size: 0.92rem; font-weight: 800; padding: 0.85rem 1.1rem 0.7rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 0.5rem; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { font-family: var(--font-d); font-weight: 700; padding: 0.5rem 0.85rem; text-align: left; font-size: 0.78rem; background: var(--blue); color: white; }
+  thead th.th-teal   { background: var(--teal); }
+  thead th.th-gold   { background: var(--gold); }
+  thead th.th-orange { background: var(--orange); }
+  thead th.th-green  { background: var(--green); }
+  thead th.th-purple { background: var(--purple); }
+  thead th.th-red    { background: var(--red); }
+  thead th.th-muted  { background: #5a5957; }
+  tbody td { padding: 0.45rem 0.85rem; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:nth-child(even) { background: #fafaf8; }
+  .td-cat { font-weight: 700; color: var(--blue); white-space: nowrap; }
+  .td-cat-teal   { color: var(--teal); }
+  .td-cat-gold   { color: #8a5b00; }
+  .td-cat-orange { color: var(--orange); }
+  .td-cat-green  { color: var(--green); }
+  .td-cat-purple { color: var(--purple); }
+  .td-cat-red    { color: var(--red); }
+
+  /* CHIPS */
+  .chip { display: inline-block; font-size: 0.68rem; font-weight: 700; padding: 1px 7px; border-radius: 999px; }
+  .chip-si  { background: var(--green-lt);  color: var(--green); }
+  .chip-no  { background: var(--red-lt);    color: var(--red); }
+  .chip-par { background: var(--gold-lt);   color: #7a5500; }
+  .chip-blue   { background: var(--blue-lt);   color: var(--blue-dk); }
+  .chip-teal   { background: var(--teal-lt);   color: var(--teal); }
+  .chip-purple { background: var(--purple-lt); color: var(--purple); }
+  .chip-orange { background: var(--orange-lt); color: var(--orange); }
+  .chip-red    { background: var(--red-lt);    color: var(--red); }
+  .chip-gold   { background: var(--gold-lt);   color: #7a5500; }
+  .chip-grey   { background: #f0f0ee; color: var(--muted); }
+
+  /* ALERT */
+  .alert { border-radius: 0.5rem; padding: 0.6rem 0.9rem; font-size: 0.82rem; margin-bottom: 1rem; }
+  .alert-orange { background: var(--orange-lt); border-left: 3px solid var(--orange); }
+  .alert-blue   { background: var(--blue-lt);   border-left: 3px solid var(--blue); }
+  .alert-green  { background: var(--green-lt);  border-left: 3px solid var(--green); }
+  .alert strong { font-weight: 700; }
+
+  /* GRID 2 */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+
+  /* NOTA */
+  .nota { font-size: 0.78rem; color: var(--muted); padding: 0.5rem 1.1rem 0.75rem; }
+
+  @media (max-width: 700px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    table { font-size: 0.78rem; }
+    thead th, tbody td { padding: 0.4rem 0.5rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo" class="active">?? Texto explicativo</a>
+    <a href="2_esquema_resumen">?? Esquema-resumen</a>
+    <a href="3_cuadro_comparativo">?? Cuadros comparativos</a>
+  </div>
+
+<h1>Cuadros comparativos — Tablas operativas para examen</h1>
+<div class="subtitle">Tema 3 · Instalaciones de detección de incendios · Gestor de Mantenimiento (Nivel B) · UPNA</div>
+
+
+<!-- TABLA 1: DETECTORES -->
+<div class="section-label">Tabla 1 — Comparativa completa de detectores automáticos</div>
+<div class="tbl-wrap">
+  <div class="tbl-title">?? Todos los detectores automáticos — características operativas</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Detector</th>
+        <th>Principio físico</th>
+        <th>Detecta bien</th>
+        <th>NO detecta bien</th>
+        <th>Uso típico</th>
+        <th>Norma</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-cat">Óptico (fotoeléctrico)</td>
+        <td>Dispersión de luz IR<br><em>(efecto Tyndall)</em></td>
+        <td>Humos lentos y visibles<br>(madera, plástico, espuma)</td>
+        <td>Fuegos rápidos con llama<br>y poco humo (gasolina)</td>
+        <td>Oficinas, hoteles, pasillos,<br>habitaciones, centros comerciales</td>
+        <td><span class="chip chip-blue">54-7</span></td>
+      </tr>
+      <tr>
+        <td class="td-cat">Iónico</td>
+        <td>Ionización por<br>americio-241</td>
+        <td>Fuegos rápidos con llama,<br>partículas muy pequeñas</td>
+        <td>Humos lentos y visibles<br>(menos sensible)</td>
+        <td>En retirada. Sustituido<br>por multicriterio</td>
+        <td><span class="chip chip-blue">54-7</span></td>
+      </tr>
+      <tr>
+        <td class="td-cat td-cat-gold">Calor — Termovelocimétrico</td>
+        <td>Velocidad de subida<br>de temperatura<br>(&gt;8-10 °C/min)</td>
+        <td>Incendios de desarrollo<br>rápido</td>
+        <td>Fuego lento con<br>temperatura sostenida</td>
+        <td rowspan="3">Cocinas, garajes,<br>zonas con vapores,<br>áreas polvorientas</td>
+        <td rowspan="3"><span class="chip chip-gold">54-5</span></td>
+      </tr>
+      <tr>
+        <td class="td-cat td-cat-gold">Calor — Termostático</td>
+        <td>Temperatura fija<br>(57°C / 70°C / 90°C)</td>
+        <td>Cualquier fuego que<br>supere el umbral</td>
+        <td>Fuego rápido que no<br>alcanza el umbral fijo</td>
+      </tr>
+      <tr>
+        <td class="td-cat td-cat-gold">Calor — Combinado ?</td>
+        <td>ROR + temperatura<br>fija combinados</td>
+        <td>Cualquier tipo de<br>incendio por calor</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td class="td-cat td-cat-teal">Lineal (haz de luz)</td>
+        <td>Atenuación del haz IR<br>emisor–receptor<br>(5 a 100 m)</td>
+        <td>Espacios grandes<br>de gran altura</td>
+        <td>Espacios con obstáculos<br>en la trayectoria del haz</td>
+        <td>Naves industriales,<br>almacenes, atrios,<br>iglesias, hangares</td>
+        <td><span class="chip chip-teal">54-12</span></td>
+      </tr>
+      <tr>
+        <td class="td-cat td-cat-red">Detector de llama</td>
+        <td>Radiación UV / IR<br>emitida por llamas</td>
+        <td>Fuego abierto con llama<br>(respuesta instantánea)</td>
+        <td>Smoldering: combustión<br>lenta sin llama</td>
+        <td>Exteriores petroquímica,<br>hangares aviación,<br>salas de máquinas</td>
+        <td><span class="chip chip-red">54-10</span></td>
+      </tr>
+      <tr>
+        <td class="td-cat td-cat-purple">Aspiración (ASD)</td>
+        <td>Cámara láser analiza<br>aire aspirado por<br>red de tubos</td>
+        <td>Concentraciones<br>extremadamente bajas<br>(pre-alarma incipiente)</td>
+        <td>Entornos con obstrucción<br>de tubos (polvo excesivo)</td>
+        <td>CPD, servidores,<br>museos, archivos,<br>salas limpias</td>
+        <td><span class="chip chip-purple">54-20</span></td>
+      </tr>
+      <tr>
+        <td class="td-cat">Multicriterio</td>
+        <td>Humo óptico + CO<br>+ temperatura</td>
+        <td>Alta fiabilidad,<br>mínimas falsas alarmas</td>
+        <td>—</td>
+        <td>Entornos complejos<br>con altas exigencias</td>
+        <td><span class="chip chip-grey">54-7 base</span></td>
+      </tr>
+      <tr>
+        <td class="td-cat">Gas / CO</td>
+        <td>Electroquímico /<br>semiconductor</td>
+        <td>Gas combustible antes<br>de la ignición / CO</td>
+        <td>No detectan incendio<br>(solo riesgo previo)</td>
+        <td>Garajes (CO),<br>cocinas industriales,<br>salas de calderas</td>
+        <td><span class="chip chip-grey">No EN-54</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="nota">? El detector iónico responde a fuegos rápidos (gasolina); el óptico, a humos lentos (madera). Dato que aparece invertido frecuentemente en los exámenes.</div>
+</div>
+
+
+<!-- TABLA 2: CALOR — LOS TRES TIPOS -->
+<div class="section-label">Tabla 2 — Los tres tipos de detector de calor comparados</div>
+<div class="tbl-wrap">
+  <div class="tbl-title" style="border-bottom-color:var(--border);">??? Termovelocimétrico vs. Termostático vs. Combinado</div>
+  <table>
+    <thead>
+      <tr>
+        <th class="th-gold">Característica</th>
+        <th class="th-gold">Termovelocimétrico (ROR)</th>
+        <th class="th-gold">Termostático (fijo)</th>
+        <th class="th-gold">Combinado ?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-cat td-cat-gold">Principio</td>
+        <td>Velocidad de subida (&gt;8-10 °C/min)</td>
+        <td>Temperatura fija (umbral: 57°C, 70°C, 90°C…)</td>
+        <td>Cualquiera de los dos mecanismos</td>
+      </tr>
+      <tr>
+        <td class="td-cat td-cat-gold">Detecta fuego rápido</td>
+        <td><span class="chip chip-si">SÍ</span></td>
+        <td><span class="chip chip-par">Solo si supera el umbral</span></td>
+        <td><span class="chip chip-si">SÍ</span></td>
+      </tr>
+      <tr>
+        <td class="td-cat td-cat-gold">Detecta fuego lento</td>
+        <td><span class="chip chip-no">NO</span></td>
+        <td><span class="chip chip-si">SÍ (si llega al umbral)</span></td>
+        <td><span class="chip chip-si">SÍ</span></td>
+      </tr>
+      <tr>
+        <td class="td-cat td-cat-gold">Punto débil</td>
+        <td>No detecta subida gradual sostenida</td>
+        <td>No detecta fuego que no supera el umbral fijo</td>
+        <td>Sin punto débil significativo</td>
+      </tr>
+      <tr>
+        <td class="td-cat td-cat-gold">Uso habitual</td>
+        <td>Incendios de desarrollo rápido</td>
+        <td>Zonas con T° ambiental estable y elevada</td>
+        <td>Uso general. El más instalado</td>
+      </tr>
+      <tr>
+        <td class="td-cat td-cat-gold">Norma</td>
+        <td colspan="3" style="text-align:center;"><span class="chip chip-gold">UNE-EN 54-5</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- TABLA 3: CONVENCIONAL vs. ANALÓGICO -->
+<div class="section-label">Tabla 3 — Sistema convencional vs. analógico direccionable vs. inalámbrico</div>
+<div class="tbl-wrap">
+  <div class="tbl-title">?? Tipos de sistema según la arquitectura de la central</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Característica</th>
+        <th class="th-teal">Convencional</th>
+        <th>Analógico direccionable</th>
+        <th class="th-purple">Inalámbrico (RF)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-cat">Identificación en alarma</td>
+        <td><strong>ZONA</strong> (grupo de detectores)</td>
+        <td><strong>DETECTOR concreto</strong> (punto exacto)</td>
+        <td>DETECTOR concreto (como analógico)</td>
+      </tr>
+      <tr>
+        <td class="td-cat">Dirección individual</td>
+        <td><span class="chip chip-no">NO</span></td>
+        <td><span class="chip chip-si">SÍ — cada dispositivo</span></td>
+        <td><span class="chip chip-si">SÍ</span></td>
+      </tr>
+      <tr>
+        <td class="td-cat">Tipo de señal</td>
+        <td>Digital (alarma / no alarma)</td>
+        <td>Analógica continua (valor exacto)</td>
+        <td>Digital por RF</td>
+      </tr>
+      <tr>
+        <td class="td-cat">Topología del cableado</td>
+        <td>Ramificado (lazo abierto)</td>
+        <td>Anillo cerrado (bucle)</td>
+        <td>Sin cableado de señal</td>
+      </tr>
+      <tr>
+        <td class="td-cat">Resistencia a corte de cable</td>
+        <td><span class="chip chip-no">NO</span></td>
+        <td><span class="chip chip-si">SÍ — el anillo sigue activo</span></td>
+        <td><span class="chip chip-si">SÍ (sin cable)</span></td>
+      </tr>
+      <tr>
+        <td class="td-cat">Pre-alarma inteligente</td>
+        <td><span class="chip chip-no">NO</span></td>
+        <td><span class="chip chip-si">SÍ</span></td>
+        <td><span class="chip chip-par">Según modelo</span></td>
+      </tr>
+      <tr>
+        <td class="td-cat">Coste</td>
+        <td>Bajo</td>
+        <td>Alto</td>
+        <td>Medio-Alto</td>
+      </tr>
+      <tr>
+        <td class="td-cat">Aplicación típica</td>
+        <td>Edificios pequeños y medianos</td>
+        <td>Edificios grandes y complejos</td>
+        <td>Edificios históricos, ampliaciones</td>
+      </tr>
+      <tr>
+        <td class="td-cat">Norma dispositivos inalámbricos</td>
+        <td>—</td>
+        <td>—</td>
+        <td><span class="chip chip-purple">UNE-EN 54-25</span></td>
+      </tr>
+      <tr>
+        <td class="td-cat">Gestión batería</td>
+        <td>Centralizada</td>
+        <td>Centralizada</td>
+        <td>Individual por dispositivo</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="nota">? La distinción ZONA (convencional) vs. DETECTOR CONCRETO (analógico) es la más preguntada en examen sobre tipos de sistema.</div>
+</div>
+
+
+<!-- TABLA 4: COMPONENTES Y NORMAS -->
+<div class="section-label">Tabla 4 — Componentes del SDAI y su norma UNE-EN 54</div>
+<div class="grid-2">
+  <div class="tbl-wrap">
+    <div class="tbl-title">?? Partes UNE-EN 54 — componentes del sistema</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Parte</th>
+          <th>Componente</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="td-cat">54-1</td><td>Introducción. Define el sistema y componentes</td></tr>
+        <tr><td class="td-cat">54-2</td><td>Central de control e indicación (ECS / CCI)</td></tr>
+        <tr><td class="td-cat">54-3</td><td>Dispositivos sonoros de alarma (sirenas)</td></tr>
+        <tr><td class="td-cat">54-4</td><td>Equipos de alimentación eléctrica</td></tr>
+        <tr><td class="td-cat">54-5</td><td>Detectores de calor puntual</td></tr>
+        <tr><td class="td-cat">54-7</td><td>Detectores de humo puntual (óptico e iónico)</td></tr>
+        <tr><td class="td-cat">54-10</td><td>Detectores de llama puntual</td></tr>
+        <tr><td class="td-cat">54-11</td><td>Pulsadores manuales de alarma (PMA)</td></tr>
+        <tr><td class="td-cat">54-12</td><td>Detectores de humo lineal (haz de luz)</td></tr>
+        <tr><td class="td-cat">54-20</td><td>Detectores de humo por aspiración (ASD)</td></tr>
+        <tr><td class="td-cat">54-25</td><td>Componentes con enlace de radiofrecuencia</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tbl-wrap">
+    <div class="tbl-title">?? Normas de exigencia — cuándo es obligatorio el SDAI</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Norma</th>
+          <th>Ámbito</th>
+          <th>Criterio de obligatoriedad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-cat">CTE DB-SI</td>
+          <td>Edificios generales (uso residencial, hotelero, hospitalario, docente, comercial…)</td>
+          <td>Uso + superficie + altura de evacuación</td>
+        </tr>
+        <tr>
+          <td class="td-cat">RD 164/2025 (RSCIEI)</td>
+          <td>Establecimientos industriales</td>
+          <td>Configuración (tipos A-E) + nivel de riesgo intrínseco (bajo / medio / alto)</td>
+        </tr>
+        <tr>
+          <td class="td-cat">RIPCI RD 513/2017</td>
+          <td>Toda instalación PCI en España</td>
+          <td>Requisitos técnicos (Anexo I) y mantenimiento (Anexo II)</td>
+        </tr>
+        <tr>
+          <td class="td-cat">UNE 23007-14</td>
+          <td>Diseño de cualquier SDAI</td>
+          <td>Norma de diseño, instalación, puesta en marcha y mantenimiento</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!-- TABLA 5: MANTENIMIENTO -->
+<div class="section-label">Tabla 5 — Mantenimiento: periodicidades y operaciones (Anexo II RIPCI)</div>
+<div class="tbl-wrap">
+  <div class="tbl-title">?? Operaciones de mantenimiento obligatorias — sistemas de detección y alarma</div>
+  <table>
+    <thead>
+      <tr>
+        <th class="th-green">Periodicidad</th>
+        <th class="th-green">Operación</th>
+        <th class="th-green">¿Quién ejecuta?</th>
+        <th class="th-green">Notas</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="chip chip-teal">TRIMESTRAL</span></td>
+        <td>Comprobación del funcionamiento de la central: indicadores, señales de alarma y avería. Verificación visual de accesibilidad y estado de detectores y PMA. Sin desmontaje.</td>
+        <td>Titular o empresa mantenedora</td>
+        <td>Visual. Sin equipo de prueba específico.</td>
+      </tr>
+      <tr>
+        <td><span class="chip chip-blue">SEMESTRAL</span></td>
+        <td>Comprobación funcional de cada detector con equipo de prueba (generador de humo artificial para ópticos; fuente de calor calibrada para detectores de calor). Verificación de PMA, sirenas y balizas. Verificación de transmisión a CRA y sistemas auxiliares.</td>
+        <td>Empresa mantenedora habilitada</td>
+        <td>Requiere equipo de prueba. Se verifica CADA detector individualmente.</td>
+      </tr>
+      <tr>
+        <td><span class="chip chip-gold">ANUAL</span></td>
+        <td>Mantenimiento completo. Prueba de descarga de batería de reserva. Limpieza de detectores ópticos (aire comprimido). Verificación de tubos, orificios y filtros en sistemas ASD. Comprobación integral de todos los componentes.</td>
+        <td>Empresa mantenedora habilitada</td>
+        <td>Incluye prueba de batería (72 h vigilancia + 30 min alarma). Limpieza de detectores.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="nota">Todas las operaciones quedan registradas en el Libro de Registro de Instalaciones PCI. La empresa mantenedora debe estar inscrita en el registro del órgano competente de la comunidad autónoma.</div>
+</div>
+
+
+<!-- TABLA 6: DATOS NUMÉRICOS -->
+<div class="section-label">Tabla 6 — Datos numéricos críticos para el examen</div>
+<div class="tbl-wrap">
+  <div class="tbl-title">?? Cifras, distancias y umbrales que aparecen en los exámenes</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Dato</th>
+        <th>Valor</th>
+        <th>Contexto / Norma</th>
+        <th>Confusión frecuente</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-cat">Batería — modo vigilancia</td>
+        <td><strong>72 horas</strong></td>
+        <td>UNE-EN 54-4 / RIPCI Anexo I</td>
+        <td>Se olvida el segundo dato (30 min alarma)</td>
+      </tr>
+      <tr>
+        <td class="td-cat">Batería — modo alarma</td>
+        <td><strong>30 minutos</strong> (tras 72 h en vigilancia)</td>
+        <td>UNE-EN 54-4 / RIPCI Anexo I</td>
+        <td>Se confunde con la duración en vigilancia</td>
+      </tr>
+      <tr>
+        <td class="td-cat">Recorrido máximo — PMA</td>
+        <td><strong>25 metros</strong></td>
+        <td>CTE DB-SI / UNE 23007-14</td>
+        <td>Se confunde con los 15 m de los extintores</td>
+      </tr>
+      <tr>
+        <td class="td-cat">Recorrido máximo — extintor</td>
+        <td><strong>15 metros</strong></td>
+        <td>CTE DB-SI</td>
+        <td>Se confunde con los 25 m de los PMA</td>
+      </tr>
+      <tr>
+        <td class="td-cat">Cobertura detector óptico puntual</td>
+        <td><strong>~60-80 m²</strong></td>
+        <td>UNE 23007-14</td>
+        <td>Varía con la altura del techo</td>
+      </tr>
+      <tr>
+        <td class="td-cat">Cobertura detector calor puntual</td>
+        <td><strong>~20-30 m²</strong></td>
+        <td>UNE 23007-14</td>
+        <td>Menor que la del óptico</td>
+      </tr>
+      <tr>
+        <td class="td-cat">Sup. máx. por zona de detección</td>
+        <td><strong>1.600 m²</strong></td>
+        <td>UNE 23007-14</td>
+        <td>Además: máximo un piso por zona</td>
+      </tr>
+      <tr>
+        <td class="td-cat">Alcance detector lineal (haz)</td>
+        <td><strong>5 a 100 metros</strong></td>
+        <td>UNE-EN 54-12</td>
+        <td>No confundir con detector puntual</td>
+      </tr>
+      <tr>
+        <td class="td-cat">Termovelocimétrico — umbral</td>
+        <td><strong>&gt; 8-10 °C/min</strong></td>
+        <td>UNE-EN 54-5</td>
+        <td>No detecta subidas graduales lentas</td>
+      </tr>
+      <tr>
+        <td class="td-cat">Termostático — umbral típico</td>
+        <td><strong>57 °C / 70 °C / 90 °C</strong></td>
+        <td>UNE-EN 54-5</td>
+        <td>No detecta fuego rápido sin alcanzar el umbral</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="alert alert-orange">
+  <strong>? Las dos trampas más frecuentes en examen:</strong><br>
+  1. <strong>15 m (extintor) vs. 25 m (PMA):</strong> la distancia de recorrido hasta el extintor es 15 m; hasta el pulsador de alarma, 25 m. Aparecen juntas en el mismo examen.<br>
+  2. <strong>Óptico vs. iónico:</strong> el óptico detecta humos lentos y visibles (plástico, madera); el iónico detecta fuegos rápidos con llama (gasolina). En el examen se presentan con las características intercambiadas.
+</div>
+
+
+<!-- TABLA 7: OCA INDUSTRIA -->
+<div class="section-label">Tabla 7 — Inspecciones OCA en establecimientos industriales (RD 164/2025 — RSCIEI)</div>
+<div class="tbl-wrap">
+  <div class="tbl-title">?? Periodicidad de inspección por Organismo de Control Autorizado</div>
+  <table>
+    <thead>
+      <tr>
+        <th class="th-orange">Nivel de riesgo intrínseco</th>
+        <th class="th-orange">Periodicidad de inspección OCA</th>
+        <th class="th-orange">Referencia normativa</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="chip chip-green">BAJO</span></td>
+        <td><strong>Cada 6 años</strong></td>
+        <td>RD 164/2025 (RSCIEI)</td>
+      </tr>
+      <tr>
+        <td><span class="chip chip-gold">MEDIO</span></td>
+        <td><strong>Cada 4 años</strong></td>
+        <td>RD 164/2025 (RSCIEI)</td>
+      </tr>
+      <tr>
+        <td><span class="chip chip-red">ALTO</span></td>
+        <td><strong>Cada 2 años</strong></td>
+        <td>RD 164/2025 (RSCIEI)</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="nota">La OCA inspecciona el conjunto de las instalaciones PCI del establecimiento (incluida la detección). Es distinta e independiente del mantenimiento periódico realizado por la empresa mantenedora habilitada.</div>
+</div>
+
+
+<!-- TABLA 8: FUNCIONES SDAI + ACTIVACIONES -->
+<div class="section-label">Tabla 8 — Señales de activación del SDAI sobre otros sistemas</div>
+<div class="tbl-wrap">
+  <div class="tbl-title">?? ¿Qué activa el SDAI cuando entra en alarma?</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Sistema activado</th>
+        <th>Función</th>
+        <th>Tipo de señal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-cat">Extinción automática</td>
+        <td>Disparo de rociadores, sistema de gases limpios o diluvio</td>
+        <td>Señal de mando</td>
+      </tr>
+      <tr>
+        <td class="td-cat">Control de humos</td>
+        <td>Apertura de aireadores o activación de ventilación de extracción de humos</td>
+        <td>Señal de mando</td>
+      </tr>
+      <tr>
+        <td class="td-cat">Presurización de escaleras</td>
+        <td>Activa ventiladores para mantener presión positiva en vías de evacuación</td>
+        <td>Señal de mando</td>
+      </tr>
+      <tr>
+        <td class="td-cat">Ascensores</td>
+        <td>Retorno a planta baja y bloqueo de puertas abiertas</td>
+        <td>Señal de mando</td>
+      </tr>
+      <tr>
+        <td class="td-cat">Compuertas cortafuego</td>
+        <td>Cierre automático de compuertas en conductos de ventilación</td>
+        <td>Señal de mando</td>
+      </tr>
+      <tr>
+        <td class="td-cat">Puertas cortafuego retenidas</td>
+        <td>Liberación del electroimán ? cierre de puertas normalmente abiertas</td>
+        <td>Señal de mando</td>
+      </tr>
+      <tr>
+        <td class="td-cat">CRA (Central Receptora de Alarmas)</td>
+        <td>Transmisión de la alarma a la central de monitorización 24 h y posterior aviso a bomberos</td>
+        <td>Señal de transmisión</td>
+      </tr>
+      <tr>
+        <td class="td-cat">BMS (Gestión del edificio)</td>
+        <td>Señalización en el sistema centralizado de gestión del edificio</td>
+        <td>Señal de integración</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="nota">? El SDAI activa estos sistemas pero NO extingue por sí mismo. La extinción corresponde al sistema de extinción automática, que es una instalación PCI independiente.</div>
+</div>
+
+</body>
+</html>
