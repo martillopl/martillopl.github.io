@@ -1,0 +1,605 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 8 – Texto explicativo · Instalaciones de ACS</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#f5f7fa;--surface:#fff;--surface-2:#f8f9fb;
+    --border:#ccd3de;--divider:#d8dde8;
+    --text:#1a2233;--muted:#4e5f7a;--faint:#8a9abb;
+    --teal:#00707a;--teal-lt:#ccedf0;--teal-dk:#004a52;
+    --blue:#0d4f8b;--blue-lt:#dceaf7;--blue-dk:#082f57;
+    --green:#1a6633;--green-lt:#d4eedd;
+    --gold:#c47d00;--gold-lt:#faefd0;
+    --orange:#8b3a0d;--orange-lt:#fce8d8;
+    --purple:#5b3690;--purple-lt:#ece4f8;
+    --red:#8b1a1a;--red-lt:#fde8e8;
+    --flame:#c0392b;--flame-lt:#fde8e8;
+    --font-d:'Cabinet Grotesk',sans-serif;
+    --font-b:'Satoshi',sans-serif;
+    --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;scroll-padding-top:4rem;}
+  body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.92rem;line-height:1.78;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 5rem;max-width:860px;margin:0 auto;}
+
+  .file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+  .file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s;}
+  .file-nav a:hover,.file-nav a.active{background:var(--teal);color:white;border-color:var(--teal);}
+
+  .page-header{background:linear-gradient(135deg,#c0392b 0%,#7b1a1a 100%);color:white;border-radius:var(--r-xl);padding:2rem 2.5rem;margin-bottom:2.5rem;}
+  .page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;}
+  .page-header h1{font-family:var(--font-d);font-size:clamp(1.4rem,3vw,2rem);font-weight:800;line-height:1.2;margin-bottom:.4rem;}
+  .page-header .sub{font-size:.85rem;opacity:.8;}
+
+  .toc{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.25rem 1.5rem;margin-bottom:2rem;}
+  .toc-title{font-family:var(--font-d);font-weight:800;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:.75rem;}
+  .toc ol{padding-left:1.25rem;}
+  .toc li{margin-bottom:.2rem;}
+  .toc a{color:var(--flame);text-decoration:none;font-size:.85rem;}
+  .toc a:hover{text-decoration:underline;}
+
+  .section-block{margin-bottom:2.5rem;}
+  .section-block h2{font-family:var(--font-d);font-size:1.13rem;font-weight:800;color:var(--flame);border-bottom:2px solid #fde8e8;padding-bottom:.4rem;margin-bottom:1rem;line-height:1.3;}
+  .section-block h3{font-family:var(--font-d);font-size:.97rem;font-weight:800;color:var(--text);margin:1.25rem 0 .45rem;}
+  .section-block p{margin-bottom:.85rem;max-width:72ch;}
+  .section-block ul,.section-block ol{padding-left:1.4rem;margin-bottom:.85rem;}
+  .section-block li{margin-bottom:.3rem;max-width:72ch;}
+  strong{font-weight:700;}
+
+  .callout{border-radius:var(--r-md);padding:.8rem 1.1rem;font-size:.86rem;margin:1rem 0;line-height:1.6;}
+  .callout strong{font-weight:700;display:block;margin-bottom:.2rem;}
+  .al-red   {background:var(--red-lt);   border-left:4px solid var(--flame);}
+  .al-teal  {background:var(--teal-lt);  border-left:4px solid var(--teal);}
+  .al-blue  {background:var(--blue-lt);  border-left:4px solid var(--blue);}
+  .al-green {background:var(--green-lt); border-left:4px solid var(--green);}
+  .al-gold  {background:var(--gold-lt);  border-left:4px solid var(--gold);}
+  .al-orange{background:var(--orange-lt);border-left:4px solid var(--orange);}
+  .al-purple{background:var(--purple-lt);border-left:4px solid var(--purple);}
+  .al-warn  {background:#fff7ed;         border-left:4px solid var(--orange);}
+
+  .chain{display:flex;flex-wrap:wrap;gap:.3rem;margin:1rem 0;align-items:center;}
+  .chain-step{background:var(--flame);color:white;font-family:var(--font-d);font-weight:800;font-size:.72rem;padding:.35rem .8rem;border-radius:var(--r-sm);white-space:nowrap;}
+  .chain-step.alt{background:var(--teal);}
+  .chain-arrow{color:var(--flame);font-size:.95rem;padding:0 .1rem;font-weight:700;}
+
+  .def-list{margin:.75rem 0;}
+  .def-item{display:grid;grid-template-columns:160px 1fr;gap:.5rem 1rem;padding:.5rem 0;border-bottom:1px solid #eef0f5;font-size:.87rem;}
+  .def-item:last-child{border-bottom:none;}
+  .def-term{font-family:var(--font-d);font-weight:800;color:var(--flame);font-size:.82rem;}
+
+  .temp-scale{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem;margin:1rem 0;}
+  .temp-card{border-radius:var(--r-md);padding:.85rem .75rem;text-align:center;border:1px solid var(--border);}
+  .temp-card .tc-val{font-family:var(--font-d);font-weight:800;font-size:1.4rem;display:block;line-height:1;}
+  .temp-card .tc-lbl{font-size:.72rem;margin-top:4px;display:block;font-weight:700;}
+  .temp-card .tc-desc{font-size:.68rem;color:var(--muted);margin-top:3px;}
+
+  .tipo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.85rem;margin:1rem 0;}
+  .tipo-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:1rem 1.1rem;}
+  .tipo-card .tc-head{font-family:var(--font-d);font-weight:800;font-size:.9rem;margin-bottom:.4rem;}
+  .tipo-card .tc-body{font-size:.83rem;color:var(--muted);}
+  .tipo-card ul{padding-left:1.2rem;margin:.4rem 0;}
+  .tipo-card li{font-size:.82rem;color:var(--muted);margin-bottom:.2rem;}
+
+  .fuente-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:1rem 0;}
+  .fuente-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:.85rem;border-top:3px solid var(--border);}
+  .fuente-card .fc-name{font-family:var(--font-d);font-weight:800;font-size:.85rem;display:block;margin-bottom:3px;}
+  .fuente-card .fc-cop{font-family:var(--font-d);font-weight:800;font-size:1.2rem;display:block;}
+  .fuente-card .fc-desc{font-size:.75rem;color:var(--muted);}
+  .fuente-card .fc-tag{display:inline-block;font-size:.65rem;font-weight:700;padding:1px 6px;border-radius:999px;margin-top:5px;}
+
+  .sec-divider{border:none;border-top:1px solid var(--divider);margin:2rem 0;}
+
+  @media(max-width:640px){
+    .temp-scale,.tipo-grid{grid-template-columns:1fr 1fr;}
+    .fuente-grid{grid-template-columns:1fr 1fr;}
+    .def-item{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo.html" class="active">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </div>
+
+<div class="page-header">
+  <div class="meta">Tema 8 · Gestor de Mantenimiento (Nivel B) · UPNA · Texto explicativo</div>
+  <h1>Instalaciones de ACS: tipologías, diseño, mantenimiento y eficiencia energética</h1>
+  <div class="sub">RITE · RD 487/2022 · CTE HE4 · Legionelosis · Solar térmica · Aerotermia · Condensación</div>
+</div>
+
+<div class="toc">
+  <div class="toc-title">Índice de contenidos</div>
+  <ol>
+    <li><a href="#s1">Marco normativo: RITE, CTE HE4 y RD 487/2022</a></li>
+    <li><a href="#s2">Tipologías de sistemas ACS: individual vs centralizado</a></li>
+    <li><a href="#s3">Tipologías por tipo de acumulación: instantáneo vs acumulador</a></li>
+    <li><a href="#s4">Fuentes de energía para ACS</a></li>
+    <li><a href="#s5">Diseño de la instalación: componentes y parámetros</a></li>
+    <li><a href="#s6">Solar térmica: esquema y componentes</a></li>
+    <li><a href="#s7">Legionelosis: bacteria, riesgo y temperaturas clave</a></li>
+    <li><a href="#s8">Medidas de prevención de Legionela</a></li>
+    <li><a href="#s9">Eficiencia energética: indicadores y equipos eficientes</a></li>
+    <li><a href="#s10">Mantenimiento de instalaciones de ACS</a></li>
+  </ol>
+</div>
+
+
+<!-- S1 NORMATIVA -->
+<div class="section-block" id="s1">
+  <h2>1. Marco normativo</h2>
+  <p>Las instalaciones de agua caliente sanitaria (ACS) están reguladas por un conjunto de normas que cubren tres aspectos diferenciados: el <strong>diseño y la eficiencia energética</strong>, la <strong>calidad sanitaria del agua</strong> y la <strong>prevención de la legionelosis</strong>. Conocer qué norma regula qué aspecto es fundamental para el examen, ya que las preguntas suelen cruzar estos ámbitos.</p>
+
+  <div class="def-list">
+    <div class="def-item">
+      <span class="def-term">RITE (RD 1027/2007 mod. RD 178/2021)</span>
+      <span>Reglamento de Instalaciones Térmicas en los Edificios. <strong>Es la norma principal</strong> que regula el diseño, dimensionado, eficiencia energética y mantenimiento de las instalaciones de ACS. Sus instrucciones técnicas IT 1 (diseño) e IT 2 (mantenimiento) son las más relevantes para el examen.</span>
+    </div>
+    <div class="def-item">
+      <span class="def-term">CTE DB-HE (Sección HE Renovables, antes HE4)</span>
+      <span>Exige que una fracción de la demanda de ACS se cubra con <strong>energía renovable</strong>. Desde la revisión de 2019, ya no se limita a la energía solar térmica: la aerotermia (bomba de calor) y la biomasa también son válidas. El porcentaje obligatorio depende de la zona climática y el uso del edificio.</span>
+    </div>
+    <div class="def-item">
+      <span class="def-term">CTE DB-HS4</span>
+      <span>Regula el suministro de agua: presiones, caudales mínimos, protección contra retornos y red de retorno de ACS (obligatoria cuando la longitud supera 15 m). Complementa al RITE en lo relativo a la distribución de ACS.</span>
+    </div>
+    <div class="def-item">
+      <span class="def-term">RD 487/2022</span>
+      <span>Criterios higiénico-sanitarios para la prevención y control de la legionelosis. <strong>Derogó al RD 865/2003</strong>. Regula las instalaciones de mayor riesgo: ACS con acumulador y circuito de retorno, torres de refrigeración, spas y fuentes ornamentales.</span>
+    </div>
+    <div class="def-item">
+      <span class="def-term">RD 140/2003</span>
+      <span>Criterios sanitarios del agua de consumo humano. Los materiales de la instalación de ACS no deben alterar la calidad del agua según este decreto.</span>
+    </div>
+    <div class="def-item">
+      <span class="def-term">RD 178/2021</span>
+      <span>Modifica el RITE y reconoce la <strong>aerotermia</strong> (bomba de calor aire-agua) como fuente de energía renovable para cubrir la demanda de ACS, alineándose con la Directiva Europea de Energías Renovables (RED II).</span>
+    </div>
+  </div>
+
+  <div class="callout al-warn">
+    <strong>⚠ Trampa frecuente en examen:</strong> el RD 487/2022 <strong>DEROGÓ</strong> al RD 865/2003. Si una pregunta menciona el 865/2003 como norma vigente sobre Legionela, es una respuesta incorrecta. La norma vigente es el RD 487/2022. El RITE es la norma de DISEÑO y MANTENIMIENTO; el RD 487/2022 es la norma SANITARIA sobre Legionela. Son normas distintas con objetos distintos.
+  </div>
+</div>
+
+<hr class="sec-divider">
+
+<!-- S2 TIPOLOGÍAS: INDIVIDUAL VS CENTRALIZADO -->
+<div class="section-block" id="s2">
+  <h2>2. Tipologías de sistemas ACS: individual vs centralizado</h2>
+  <p>La primera y más importante clasificación de los sistemas ACS distingue según el ámbito de producción: si cada usuario tiene su propio equipo o si existe un sistema compartido para todo el edificio.</p>
+
+  <div class="tipo-grid">
+    <div class="tipo-card" style="border-top:3px solid var(--teal);">
+      <div class="tc-head" style="color:var(--teal);">🏠 Sistema INDIVIDUAL</div>
+      <div class="tc-body">
+        <p>Cada vivienda o local tiene su propio equipo de producción de ACS.</p>
+        <ul>
+          <li>Termo eléctrico por vivienda</li>
+          <li>Calentador a gas instantáneo (junker)</li>
+          <li>Caldera mural con módulo ACS (combi)</li>
+        </ul>
+        <p><strong>Ventajas:</strong> sencillo, bajo coste inicial, autonomía total de cada usuario, sin red de distribución colectiva, sin riesgo de Legionela colectiva.</p>
+        <p><strong>Desventajas:</strong> menor eficiencia energética global, más equipos que mantener, no permite aprovechar economías de escala.</p>
+      </div>
+    </div>
+    <div class="tipo-card" style="border-top:3px solid var(--flame);">
+      <div class="tc-head" style="color:var(--flame);">🏢 Sistema CENTRALIZADO</div>
+      <div class="tc-body">
+        <p>Un único equipo (o sala de calderas) produce ACS para todo el edificio o comunidad.</p>
+        <ul>
+          <li>Caldera central + acumulador colectivo</li>
+          <li>Solar térmica centralizada</li>
+          <li>Bomba de calor centralizada</li>
+          <li>District heating (red de calor urbana)</li>
+        </ul>
+        <p><strong>Ventajas:</strong> mayor eficiencia energética, mejor aprovechamiento de energías renovables, un solo equipo de producción y mantenimiento.</p>
+        <p><strong>Desventajas:</strong> mayor complejidad de diseño y mantenimiento, red de distribución y retorno con pérdidas de calor, <strong>mayor riesgo de Legionela</strong> (agua en circuito colectivo con acumulador).</p>
+      </div>
+    </div>
+  </div>
+
+  <h3>Sistema MIXTO o SEMI-CENTRALIZADO</h3>
+  <p>Una variante intermedia muy usada en edificios de gran tamaño (hospitales, hoteles de gran volumen, residencias de mayores) es el sistema <strong>semi-centralizado</strong>: la producción de calor es centralizada (una sala de calderas o de bombas de calor), pero existen <strong>acumuladores secundarios distribuidos</strong> por plantas o sectores. Esto reduce las pérdidas de distribución y facilita un control más fino de la temperatura en cada zona, a costa de mayor complejidad.</p>
+
+  <div class="callout al-teal">
+    <strong>📌 Criterio de selección:</strong> en edificios residenciales pequeños (hasta 4-6 viviendas) el sistema individual suele ser más económico y sencillo. A partir de 8-10 viviendas y en edificios de uso intensivo (hoteles, hospitales, residencias) el sistema centralizado con renovables es obligatorio o claramente más rentable energéticamente.
+  </div>
+</div>
+
+<hr class="sec-divider">
+
+<!-- S3 TIPOLOGÍAS: INSTANTÁNEO VS ACUMULADOR -->
+<div class="section-block" id="s3">
+  <h2>3. Tipologías por tipo de acumulación: instantáneo vs acumulador</h2>
+  <p>Independientemente de si el sistema es individual o centralizado, existe una segunda clasificación fundamental según cómo se gestiona el almacenamiento del agua caliente.</p>
+
+  <h3>Sistemas sin acumulación (instantáneos o de paso)</h3>
+  <p>El agua se calienta en el momento en que se demanda, al pasar por el equipo de producción. No existe depósito de almacenamiento. Los más comunes son:</p>
+  <ul>
+    <li><strong>Calentador a gas instantáneo</strong> (calentador mural, "junker"): es el sistema más extendido en vivienda individual en España. Cuando se abre un grifo de ACS, el calentador detecta el caudal y enciende el quemador. Produce ACS de manera continua mientras haya demanda.</li>
+    <li><strong>Caldera mural con módulo ACS instantáneo</strong> (tipo "combi"): la caldera de calefacción incorpora un intercambiador de placas que produce ACS al paso, con prioridad sobre el circuito de calefacción cuando se demanda agua caliente.</li>
+  </ul>
+  <p><strong>Ventaja clave frente a la Legionela:</strong> al no existir depósito de almacenamiento, no hay agua estancada a temperatura de riesgo. El agua pasa directamente al grifo sin posibilidad de proliferación bacteriana. Esto los hace <strong>intrínsecamente más seguros</strong> frente a la Legionela.</p>
+  <p><strong>Desventaja:</strong> requieren más potencia instantánea (la caldera o el calentador debe calentar el agua en segundos), y la estabilidad de la temperatura puede ser menor que con un acumulador.</p>
+
+  <h3>Sistemas con acumulación</h3>
+  <p>El equipo de producción calienta un volumen de agua que se almacena en un depósito (acumulador) a la temperatura de uso. Los más comunes:</p>
+  <ul>
+    <li><strong>Termo eléctrico</strong>: acumulador con resistencia eléctrica. Muy sencillo, sin necesidad de gas ni quemador. Bajo rendimiento energético (el kWh eléctrico es más caro). Habitual en viviendas sin suministro de gas.</li>
+    <li><strong>Acumulador a gas</strong>: depósito calentado por un quemador a gas, con piloto o encendido electrónico. Mayor capacidad que el termo eléctrico.</li>
+    <li><strong>Acumulador solar</strong>: el campo de captadores solares precalienta el agua en un depósito solar; un equipo de apoyo (caldera o bomba de calor) aporta el calor complementario para garantizar los 60°C.</li>
+    <li><strong>Acumulador con bomba de calor (aerotermo)</strong>: la bomba de calor extrae calor del aire y lo cede al acumulador. Alta eficiencia (COP 3-4). Sistema en rápida expansión.</li>
+  </ul>
+
+  <div class="callout al-warn">
+    <strong>⚠ Los sistemas con acumulación tienen MAYOR RIESGO de Legionela</strong> porque el agua puede quedarse estancada en el depósito a temperatura de riesgo (20-45°C) si la instalación no está correctamente mantenida. El acumulador debe mantenerse siempre a ≥ 60°C y el ánodo de magnesio (en termos con depósito de acero) debe revisarse y sustituirse cada 2-4 años.
+  </div>
+
+  <h3>El ánodo de magnesio</h3>
+  <p>Los termos eléctricos y acumuladores de acero incorporan un <strong>ánodo de magnesio</strong> como sistema de <strong>protección catódica</strong>. El magnesio, al ser un metal más activo que el acero, se "sacrifica" corroiéndose él para proteger el depósito. Cuando el ánodo se agota, el acero comienza a oxidarse, el agua sale turbia o marrón y el sabor se deteriora. La sustitución periódica (cada 2-4 años, o según inspección) es una operación de mantenimiento básica en termos eléctricos.</p>
+</div>
+
+<hr class="sec-divider">
+
+<!-- S4 FUENTES DE ENERGÍA -->
+<div class="section-block" id="s4">
+  <h2>4. Fuentes de energía para ACS</h2>
+  <p>La elección de la fuente de energía condiciona la eficiencia, el coste de operación, el impacto ambiental y el cumplimiento normativo (CTE HE Renovables). Las principales opciones son:</p>
+
+  <div class="fuente-grid">
+    <div class="fuente-card" style="border-top-color:var(--orange);">
+      <span class="fc-name">🔥 Gas natural / GLP</span>
+      <span class="fc-cop" style="color:var(--orange);">η 85-95%</span>
+      <div class="fc-desc">Caldera o calentador instantáneo. Muy extendido. Convencional o condensación (>100% en PCI).</div>
+      <span class="fc-tag" style="background:var(--orange-lt);color:var(--orange);">No renovable</span>
+    </div>
+    <div class="fuente-card" style="border-top-color:var(--gold);">
+      <span class="fc-name">⚡ Eléctrico (resistencia)</span>
+      <span class="fc-cop" style="color:var(--gold);">η 100%</span>
+      <div class="fc-desc">Termo eléctrico. 100% de conversión eléctrico→calor. Pero el kWh eléctrico es más caro que el gas.</div>
+      <span class="fc-tag" style="background:var(--gold-lt);color:#7a4e00;">No renovable (salvo mix verde)</span>
+    </div>
+    <div class="fuente-card" style="border-top-color:var(--teal);">
+      <span class="fc-name">☀ Solar térmica</span>
+      <span class="fc-cop" style="color:var(--teal);">50-70% cobertura</span>
+      <div class="fc-desc">Captadores planos o tubo de vacío. Siempre necesita equipo de apoyo para cubrir el 100% de la demanda.</div>
+      <span class="fc-tag" style="background:var(--teal-lt);color:var(--teal);">✓ RENOVABLE</span>
+    </div>
+    <div class="fuente-card" style="border-top-color:var(--blue);">
+      <span class="fc-name">💨 Bomba de calor (aerotermia)</span>
+      <span class="fc-cop" style="color:var(--blue);">COP 3-4</span>
+      <div class="fc-desc">Extrae calor del aire exterior. Por 1 kWh eléctrico genera 3-4 kWh de calor. Renovable desde RD 178/2021.</div>
+      <span class="fc-tag" style="background:var(--blue-lt);color:var(--blue-dk);">✓ RENOVABLE (RD 178/2021)</span>
+    </div>
+    <div class="fuente-card" style="border-top-color:var(--green);">
+      <span class="fc-name">🌿 Biomasa</span>
+      <span class="fc-cop" style="color:var(--green);">η 85-92%</span>
+      <div class="fc-desc">Pellets, astilla o leña. Ideal para edificios con alta demanda (residencias, hoteles rurales, polideportivos).</div>
+      <span class="fc-tag" style="background:var(--green-lt);color:var(--green);">✓ RENOVABLE</span>
+    </div>
+    <div class="fuente-card" style="border-top-color:var(--purple);">
+      <span class="fc-name">🏙 District heating / Cogeneración</span>
+      <span class="fc-cop" style="color:var(--purple);">η global &gt;80%</span>
+      <div class="fc-desc">ACS como subproducto de generación eléctrica o red de calor urbana. Muy alta eficiencia global del sistema.</div>
+      <span class="fc-tag" style="background:var(--purple-lt);color:var(--purple);">Depende de la fuente primaria</span>
+    </div>
+  </div>
+
+  <div class="callout al-warn">
+    <strong>⚠ Trampa histórica sobre el CTE HE4:</strong> antes de 2019, el CTE HE4 exigía específicamente <strong>energía solar térmica</strong>. Desde la revisión del CTE (actualización 2019-2022), el documento pasó a denominarse "HE Renovables" y exige <strong>energía renovable</strong> en general, sin especificar que tenga que ser solar. La aerotermia, la biomasa y otras renovables son igualmente válidas. Muchas preguntas de oposiciones anteriores a 2022 dan como correcta "solar obligatoria": la respuesta actualizada es "renovable obligatoria".
+  </div>
+</div>
+
+<hr class="sec-divider">
+
+<!-- S5 DISEÑO Y COMPONENTES -->
+<div class="section-block" id="s5">
+  <h2>5. Diseño de la instalación: componentes y parámetros</h2>
+
+  <h3>Parámetros de diseño (cifras examinables)</h3>
+  <ul>
+    <li><strong>Temperatura de referencia para el cálculo de la demanda:</strong> 60°C (CTE HE Renovables).</li>
+    <li><strong>Consumo de referencia por persona y día:</strong> 28 litros/día a 60°C (en viviendas, según CTE HE). Para hoteles, hospitales y otros usos existen tablas específicas en el CTE HE.</li>
+    <li><strong>Temperatura de acumulación:</strong> ≥ 60°C.</li>
+    <li><strong>Temperatura mínima en la red de distribución:</strong> ≥ 50°C en cualquier punto.</li>
+    <li><strong>Temperatura en el punto de uso (grifo):</strong> 38-43°C tras la válvula mezcladora termoestática (VMT).</li>
+    <li><strong>Red de retorno:</strong> obligatoria cuando la longitud de la red de ACS supera los 15 metros.</li>
+  </ul>
+
+  <h3>Cadena de componentes en un sistema centralizado</h3>
+  <div class="chain">
+    <span class="chain-step">Equipo de producción</span><span class="chain-arrow">→</span>
+    <span class="chain-step">Intercambiador</span><span class="chain-arrow">→</span>
+    <span class="chain-step">Acumulador (≥60°C)</span><span class="chain-arrow">→</span>
+    <span class="chain-step">VMT (baja a 38-43°C)</span><span class="chain-arrow">→</span>
+    <span class="chain-step">Red distribución (≥50°C)</span><span class="chain-arrow">→</span>
+    <span class="chain-step">Usuarios</span>
+    <span class="chain-arrow">⟲</span>
+    <span class="chain-step alt">Red de retorno</span>
+  </div>
+
+  <h3>Componentes clave y su función</h3>
+  <div class="def-list">
+    <div class="def-item">
+      <span class="def-term">Acumulador (depósito de ACS)</span>
+      <span>Almacena el agua caliente producida. Puede ser de acero vitrificado (más económico), acero inoxidable (más duradero y resistente a la corrosión) o acero al carbono con revestimiento interior. La capacidad se calcula en función de la demanda de punta (horas de mayor consumo simultáneo).</span>
+    </div>
+    <div class="def-item">
+      <span class="def-term">Intercambiador de calor</span>
+      <span>Separa el circuito primario (que puede contener fluido caloportador con anticongelante, en el caso de la solar térmica) del circuito de agua sanitaria. Impide la mezcla entre ambos circuitos. Puede ser de placas (mayor eficiencia, compacto) o de serpentín (sumergido en el acumulador).</span>
+    </div>
+    <div class="def-item">
+      <span class="def-term">VMT (válvula mezcladora termoestática)</span>
+      <span>Mezcla automáticamente el agua caliente del acumulador (60°C) con agua fría de la red hasta alcanzar la temperatura de uso (38-43°C). <strong>Protege al usuario de quemaduras</strong>. Es obligatoria en edificios con usuarios vulnerables: hospitales, residencias de mayores, guarderías. También protege frente a bacterias al mantener el acumulador a 60°C mientras entrega agua a temperatura segura.</span>
+    </div>
+    <div class="def-item">
+      <span class="def-term">Bomba de recirculación del retorno</span>
+      <span>Mantiene el ACS circulando continuamente por el circuito de distribución y retorno. Garantiza que en cualquier punto de la red la temperatura no baje de 50°C. Funciona 24 horas al día o controlada por termostato diferencial. Consume energía eléctrica pero evita el enfriamiento del agua y el riesgo de Legionela.</span>
+    </div>
+    <div class="def-item">
+      <span class="def-term">Vaso de expansión</span>
+      <span>Absorbe las variaciones de volumen del agua al calentarse (el agua se dilata un 4% al pasar de 10°C a 60°C). Evita sobrepresiones en el circuito. Puede ser abierto (comunicado con la atmósfera, en instalaciones antiguas) o cerrado con membrana (el más usado en instalaciones modernas).</span>
+    </div>
+    <div class="def-item">
+      <span class="def-term">Válvula de seguridad</span>
+      <span>Protege el circuito contra sobrepresiones. Se abre automáticamente si la presión supera el valor de tarado (normalmente 6-8 bar en instalaciones de ACS). Debe estar tarada correctamente y revisarse periódicamente (puede quedar bloqueada por cal).</span>
+    </div>
+  </div>
+</div>
+
+<hr class="sec-divider">
+
+<!-- S6 SOLAR TÉRMICA -->
+<div class="section-block" id="s6">
+  <h2>6. Solar térmica: esquema y tipos de captadores</h2>
+  <p>La instalación solar térmica para ACS es la solución tecnológica más madura y extendida para cubrir la fracción renovable exigida por el CTE. Su principio de funcionamiento se basa en captar la radiación solar mediante captadores y transferir ese calor al agua sanitaria a través de un circuito cerrado.</p>
+
+  <h3>Esquema de funcionamiento</h3>
+  <div class="chain">
+    <span class="chain-step alt">Captadores solares</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-step alt">Circuito primario (agua + anticongelante)</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-step alt">Intercambiador</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-step alt">Acumulador solar</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-step">Equipo de apoyo (caldera/BdC)</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-step">Acumulador final (≥60°C)</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-step">Usuarios</span>
+  </div>
+
+  <div class="callout al-red">
+    <strong>⚠ El circuito primario solar es CERRADO y usa fluido con anticongelante (glicol).</strong> El agua sanitaria NUNCA circula por los captadores. Esta separación es obligatoria por dos razones: (1) el fluido del captador puede alcanzar temperaturas muy altas (estancamiento >150°C en verano) que dañarían el agua potable; (2) el anticongelante no debe mezclarse con el agua de consumo. El intercambiador garantiza la separación entre ambos circuitos.
+  </div>
+
+  <h3>Tipos de captadores solares</h3>
+  <div class="tipo-grid">
+    <div class="tipo-card" style="border-top:3px solid var(--gold);">
+      <div class="tc-head" style="color:var(--gold);">☀ Captador plano (o de placa plana)</div>
+      <div class="tc-body">
+        <p>El más económico y extendido en vivienda residencial. Consiste en una placa absorbedora (normalmente cobre o aluminio con tratamiento selectivo) cubierta por un vidrio templado de baja reflectancia, todo en una carcasa aislada.</p>
+        <ul>
+          <li>Rendimiento adecuado con sol moderado (climas mediterráneo y atlántico).</li>
+          <li>Temperatura de trabajo: 40-80°C.</li>
+          <li>Menor coste inicial.</li>
+          <li>Mayor pérdida de rendimiento en días fríos o muy nublados.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tipo-card" style="border-top:3px solid var(--blue);">
+      <div class="tc-head" style="color:var(--blue);">🔵 Captador de tubo de vacío</div>
+      <div class="tc-body">
+        <p>Formado por tubos de vidrio al vacío. El vacío actúa como aislante térmico, reduciendo drásticamente las pérdidas de calor al exterior. Cada tubo contiene un absorbedor y un heat pipe (tubo de calor) que transfiere el calor al colector.</p>
+        <ul>
+          <li>Mayor rendimiento en climas fríos, con radiación difusa (norte de España, clima atlántico).</li>
+          <li>Temperatura de trabajo: 60-150°C.</li>
+          <li>Mayor coste inicial.</li>
+          <li>Ideal cuando se necesita más temperatura (calefacción + ACS combinados).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout al-teal">
+    <strong>📌 Equipo de apoyo siempre necesario:</strong> ninguna instalación solar puede garantizar el 100% de la demanda de ACS durante todo el año (hay días sin sol suficiente). Por ello, SIEMPRE se instala un equipo de apoyo (caldera de gas, bomba de calor, eléctrico) que garantiza los 60°C en el acumulador cuando la energía solar no es suficiente. El equipo de apoyo NO es un complemento optativo: es un elemento obligatorio del sistema solar.
+  </div>
+</div>
+
+<hr class="sec-divider">
+
+<!-- S7 LEGIONELOSIS -->
+<div class="section-block" id="s7">
+  <h2>7. Legionelosis: bacteria, riesgo y temperaturas clave</h2>
+
+  <h3>La bacteria y la enfermedad</h3>
+  <p>La <em>Legionella pneumophila</em> es una bacteria gramnegativa que vive de forma natural en el agua dulce. En las instalaciones de edificios puede proliferar si las condiciones son favorables (temperatura, agua estancada, materia orgánica) y dispersarse en forma de <strong>aerosoles</strong>: microgotas de agua en suspensión que se inhalan y alcanzan los pulmones.</p>
+  <p>Causa dos formas clínicas diferenciadas:</p>
+  <ul>
+    <li><strong>Enfermedad del legionario:</strong> neumonía grave, con fiebre alta, tos, dificultad respiratoria. Mortalidad del 5-15% en casos hospitalizados. Requiere tratamiento antibiótico (eritromicina, fluoroquinolonas). Período de incubación: 2-10 días.</li>
+    <li><strong>Fiebre de Pontiac:</strong> forma leve, sin neumonía. Síndrome gripal (fiebre, malestar, dolores musculares). Resolución espontánea en 2-5 días sin tratamiento. Alta tasa de ataque (hasta el 95% de los expuestos).</li>
+  </ul>
+
+  <div class="callout al-red">
+    <strong>⚠ Vía de transmisión:</strong> la Legionela <strong>NO se transmite por beber agua</strong>, ni por contacto persona a persona. La única vía de infección es la <strong>inhalación de aerosoles</strong> de agua contaminada. Un grifo sin duchador no genera aerosoles apreciables; una ducha o una torre de refrigeración sí.
+  </div>
+
+  <h3>Temperaturas clave (las cinco a memorizar)</h3>
+  <div class="temp-scale" style="grid-template-columns:repeat(5,1fr);">
+    <div class="temp-card" style="background:#e8f8ff;border-color:var(--blue);">
+      <span class="tc-val" style="color:var(--blue);">&lt;20°C</span>
+      <span class="tc-lbl" style="color:var(--blue);">Latencia</span>
+      <div class="tc-desc">La bacteria sobrevive pero no prolifera. Estado latente.</div>
+    </div>
+    <div class="temp-card" style="background:var(--red-lt);border-color:var(--flame);">
+      <span class="tc-val" style="color:var(--flame);">20–45°C</span>
+      <span class="tc-lbl" style="color:var(--flame);">ZONA PELIGRO</span>
+      <div class="tc-desc">Proliferación. Óptimo: 35-37°C.</div>
+    </div>
+    <div class="temp-card" style="background:var(--gold-lt);border-color:var(--gold);">
+      <span class="tc-val" style="color:var(--gold);">≥50°C</span>
+      <span class="tc-lbl" style="color:#7a4e00;">Red distribución</span>
+      <div class="tc-desc">No prolifera. Mínimo exigido en la red de ACS.</div>
+    </div>
+    <div class="temp-card" style="background:var(--orange-lt);border-color:var(--orange);">
+      <span class="tc-val" style="color:var(--orange);">≥60°C</span>
+      <span class="tc-lbl" style="color:var(--orange);">Acumulador</span>
+      <div class="tc-desc">Muere en 32 minutos. Temperatura normal del acumulador.</div>
+    </div>
+    <div class="temp-card" style="background:var(--purple-lt);border-color:var(--purple);">
+      <span class="tc-val" style="color:var(--purple);">70°C</span>
+      <span class="tc-lbl" style="color:var(--purple);">Choque térmico</span>
+      <div class="tc-desc">Muerte instantánea. Medida correctora o preventiva periódica.</div>
+    </div>
+  </div>
+
+  <h3>Factores que favorecen la proliferación</h3>
+  <ul>
+    <li><strong>Temperatura entre 20-45°C</strong> (zona de confort de la bacteria).</li>
+    <li><strong>Agua estancada</strong>: poco o ningún movimiento facilita la proliferación. Los puntos muertos (ramas ciegas en la instalación donde el agua no circula) son especialmente peligrosos.</li>
+    <li><strong>Biofilm</strong>: biopelícula de microorganismos que se forma en las paredes interiores de tuberías, acumuladores y accesorios. Protege a la Legionela de los biocidas y facilita su proliferación.</li>
+    <li><strong>Materia orgánica, sedimentos y cal</strong>: sustratos que alimentan a la bacteria y a los microorganismos del biofilm.</li>
+    <li><strong>Materiales que favorecen el biofilm</strong>: caucho, goma envejecida, materiales porosos.</li>
+  </ul>
+</div>
+
+<hr class="sec-divider">
+
+<!-- S8 MEDIDAS PREVENCIÓN LEGIONELA -->
+<div class="section-block" id="s8">
+  <h2>8. Medidas de prevención de Legionela (RD 487/2022)</h2>
+
+  <h3>Instalaciones de mayor riesgo sujetas al RD 487/2022</h3>
+  <p>No todas las instalaciones de agua están sujetas al mismo nivel de exigencia. El RD 487/2022 identifica las instalaciones de <strong>mayor riesgo</strong>:</p>
+  <ul>
+    <li>Torres de refrigeración y condensadores evaporativos.</li>
+    <li>Instalaciones de ACS con <strong>acumulador Y circuito de retorno</strong> (es decir, sistemas centralizados colectivos).</li>
+    <li>Spas, jacuzzis y bañeras de hidromasaje de uso colectivo.</li>
+    <li>Fuentes ornamentales con aerosolización.</li>
+    <li>Instalaciones en centros sanitarios y sociosanitarios.</li>
+  </ul>
+  <div class="callout al-warn">
+    <strong>⚠ La fontanería doméstica individual NO está sujeta al RD 487/2022.</strong> El termo eléctrico de una vivienda unifamiliar o el calentador a gas de un piso no generan aerosoles colectivos y no tienen circuito de retorno. El riesgo significativo requiere: acumulador + circuito de retorno + uso colectivo + posibilidad de generar aerosoles.
+  </div>
+
+  <h3>Medidas preventivas principales</h3>
+  <ul>
+    <li><strong>Control de temperatura:</strong> mantener ≥ 60°C en el acumulador y ≥ 50°C en toda la red de distribución. Esta es la medida más eficaz y la más examinada.</li>
+    <li><strong>Red de retorno con circulación continua:</strong> la bomba de retorno funciona 24 horas para garantizar que el agua no se enfría en las tuberías.</li>
+    <li><strong>Eliminación de puntos muertos:</strong> suprimir ramas ciegas donde el agua queda estancada y se enfría. Si no se puede eliminar, se instalan válvulas de vaciado para purgar periódicamente.</li>
+    <li><strong>VMT en el punto de uso:</strong> la válvula mezcladora termoestática baja la temperatura de 60°C a 38-43°C, protegiendo al usuario de quemaduras sin afectar a la temperatura de acumulación.</li>
+    <li><strong>Limpieza y desinfección periódica:</strong> de acumuladores, redes, alcachofas de ducha y aireadores de grifo, donde se acumula biofilm y cal.</li>
+    <li><strong>Tratamiento del agua:</strong> cloración, dióxido de cloro, ionización cobre-plata o radiación UV como complemento al control de temperatura.</li>
+    <li><strong>Análisis microbiológicos:</strong> con periodicidad establecida en el plan de mantenimiento, en laboratorio acreditado.</li>
+    <li><strong>Registro documental obligatorio:</strong> todas las acciones, análisis y resultados deben quedar registrados por escrito. La responsabilidad recae en el <strong>titular de la instalación</strong>.</li>
+  </ul>
+
+  <h3>Choque térmico</h3>
+  <p>Es la medida correctora ante una colonización confirmada de Legionela y también una medida preventiva periódica. El procedimiento consiste en:</p>
+  <ol>
+    <li>Elevar la temperatura de todo el sistema hasta <strong>70°C</strong>.</li>
+    <li>Mantener esa temperatura durante al menos <strong>1 hora</strong>.</li>
+    <li>Purgar desde todos los puntos terminales (duchas, grifos) hasta que el agua sale a ≥ 70°C, para garantizar que el choque alcanza toda la red.</li>
+  </ol>
+  <div class="callout al-red">
+    <strong>⚠ El choque térmico NO es el funcionamiento normal de la instalación.</strong> El funcionamiento normal es 60°C en el acumulador. El choque a 70°C es una medida puntual (correctora o preventiva periódica). A 70°C la Legionela muere instantáneamente. A 60°C muere en 32 minutos. Ambas temperaturas son letales para la bacteria; la diferencia es el tiempo de exposición necesario.
+  </div>
+</div>
+
+<hr class="sec-divider">
+
+<!-- S9 EFICIENCIA ENERGÉTICA -->
+<div class="section-block" id="s9">
+  <h2>9. Eficiencia energética: indicadores y equipos eficientes</h2>
+
+  <h3>Indicadores de eficiencia</h3>
+  <div class="def-list">
+    <div class="def-item">
+      <span class="def-term">COP (Coefficient of Performance)</span>
+      <span>Relación entre el calor útil producido y la energía eléctrica consumida. Se aplica a las <strong>bombas de calor</strong>. COP = Q_útil / W_eléctrico. Un COP de 3 significa que por cada kWh eléctrico consumido se generan 3 kWh de calor. COP típico de bomba de calor para ACS: <strong>3-4</strong>.</span>
+    </div>
+    <div class="def-item">
+      <span class="def-term">SCOP (Seasonal COP)</span>
+      <span>COP estacional: valor medio del COP a lo largo de un año completo, considerando las variaciones de temperatura exterior. Es más representativo que el COP instantáneo. Los equipos de bomba de calor certificados como renovables deben superar un SCOP mínimo según la Directiva RED II.</span>
+    </div>
+    <div class="def-item">
+      <span class="def-term">Rendimiento de caldera (η)</span>
+      <span>Relación entre el calor útil suministrado al circuito y el poder calorífico del combustible. Caldera convencional: 85-90%. Caldera de condensación: <strong>&gt;100% en PCI</strong> (porque recupera el calor latente del vapor de agua de los humos de combustión).</span>
+    </div>
+    <div class="def-item">
+      <span class="def-term">Factor solar (f) / Cobertura solar</span>
+      <span>Fracción de la demanda anual de ACS cubierta por la instalación solar respecto al total. Expresado en tanto por uno (f) o en porcentaje (cobertura). El CTE HE Renovables exige que la cobertura con renovables supere un mínimo que depende de la zona climática y la demanda total. La cobertura solar típica: <strong>50-70%</strong>.</span>
+    </div>
+  </div>
+
+  <h3>Caldera de condensación</h3>
+  <p>Las calderas de condensación recuperan el calor latente contenido en el vapor de agua de los gases de combustión. Al enfriar los gases por debajo del punto de rocío (entre 55-60°C), el vapor condensa y libera su calor latente, que se recupera para calentar el agua del circuito. Esto permite rendir <strong>más del 100% del PCI</strong> (poder calorífico inferior), alcanzando rendimientos del 108-110%.</p>
+  <p>Para funcionar en modo condensación, la caldera necesita que el agua de retorno llegue a menos de 55°C, de modo que los gases puedan condensar. Por ello, <strong>la pareja perfecta es la caldera de condensación con suelo radiante</strong> (que trabaja a 35-45°C de impulsión y 30-40°C de retorno), mientras que con radiadores convencionales (75°C de impulsión) la caldera condensa solo durante los arranques, perdiendo eficiencia.</p>
+
+  <h3>Bomba de calor para ACS (aerotermia)</h3>
+  <p>La bomba de calor para ACS extrae calor del aire exterior y lo cede al agua del acumulador. Funciona incluso con temperaturas exteriores negativas (hasta -15°C en equipos modernos), aunque el COP disminuye cuanto más frío está el aire. Sus principales ventajas son:</p>
+  <ul>
+    <li>COP 3-4: multiplicador de la energía eléctrica consumida.</li>
+    <li>Reconocida como energía renovable desde el RD 178/2021.</li>
+    <li>Puede funcionar como único equipo de producción de ACS (con acumulador incluido en el equipo).</li>
+    <li>Emisiones de CO₂ muy bajas si la electricidad proviene de fuentes renovables.</li>
+  </ul>
+  <div class="callout al-teal">
+    <strong>📌 Aerotermia como renovable:</strong> la Directiva Europea 2018/2001 (RED II) y el RD 178/2021 reconocen la aerotermia como fuente de energía renovable cuando el SCOP supera el umbral establecido (2,5 para generación de calor en la mayoría de las condiciones climáticas europeas). Esto significa que un edificio puede cumplir la exigencia de renovables del CTE HE instalando una bomba de calor para ACS, sin necesidad de captadores solares.
+  </div>
+</div>
+
+<hr class="sec-divider">
+
+<!-- S10 MANTENIMIENTO -->
+<div class="section-block" id="s10">
+  <h2>10. Mantenimiento de instalaciones de ACS</h2>
+
+  <h3>Marco reglamentario del mantenimiento: el RITE (IT 2)</h3>
+  <p>El RITE establece en su Instrucción Técnica IT 2 las obligaciones de mantenimiento de las instalaciones térmicas. Define dos tipos de mantenimiento:</p>
+  <ul>
+    <li><strong>Mantenimiento preventivo:</strong> programa de revisiones periódicas establecido en el manual de uso y mantenimiento del edificio. Su objetivo es conservar la instalación en condiciones óptimas de funcionamiento, eficiencia y seguridad.</li>
+    <li><strong>Mantenimiento correctivo:</strong> reparación de averías y fallos una vez que se han producido.</li>
+  </ul>
+  <p>Las instalaciones con <strong>potencia total instalada superior a 70 kW</strong> requieren que el mantenimiento sea realizado por una <strong>empresa mantenedora autorizada</strong> (empresa instaladora de instalaciones térmicas habilitada, con el certificado correspondiente). Para instalaciones de menor potencia, el propio titular puede realizar el mantenimiento básico, pero la revisión periódica sigue siendo obligatoria.</p>
+
+  <h3>Acciones de mantenimiento preventivo</h3>
+  <ul>
+    <li><strong>Control de temperatura del acumulador (≥60°C):</strong> diario o continuo mediante sonda de temperatura. Es la acción más importante y la primera en ser inspeccionada.</li>
+    <li><strong>Revisión del equipo de producción</strong> (caldera, bomba de calor, captadores solares): cada 1-2 años según el RITE y el fabricante. Incluye quemador, intercambiador, circuito de fluido, presiones.</li>
+    <li><strong>Revisión y ajuste de la VMT:</strong> comprobar que entrega la temperatura correcta en el punto de uso (38-43°C). Una VMT averiada puede causar quemaduras (si falla abierta hacia el ACS) o falta de agua caliente (si falla hacia el agua fría).</li>
+    <li><strong>Revisión de la bomba de retorno:</strong> caudal, presión, consumo eléctrico. Comprobar que la red de retorno mantiene ≥50°C en los puntos más desfavorables.</li>
+    <li><strong>Purga y limpieza del acumulador:</strong> eliminar los sedimentos calcáreos del fondo y el biofilm de las paredes. Al menos 1 vez al año. Incluye vaciado, limpieza interior y desinfección.</li>
+    <li><strong>Sustitución del ánodo de magnesio</strong> (en acumuladores de acero con protección catódica): cada 2-4 años o cuando la inspección revele agotamiento. Señal de agotamiento: agua turbia o de color marrón-rojizo.</li>
+    <li><strong>Revisión del vaso de expansión:</strong> comprobar la presión de precarga de la cámara de aire y el estado de la membrana. Un vaso agotado hace que la válvula de seguridad dispare con frecuencia.</li>
+    <li><strong>Revisión de la válvula de seguridad:</strong> tarado correcto, sin fugas ni incrustaciones de cal que impidan su apertura.</li>
+    <li><strong>Revisión de captadores solares:</strong> estado del vidrio (limpieza, fisuras), sellado perimetral, presión del circuito primario y concentración de anticongelante (la mezcla agua-glicol degrada con el tiempo y puede perder su capacidad anticongelante y anticorrosiva).</li>
+    <li><strong>Análisis del agua:</strong> dureza, pH, conductividad. En instalaciones sujetas al RD 487/2022: análisis microbiológico con detección de Legionela.</li>
+  </ul>
+
+  <h3>Averías típicas y su diagnóstico</h3>
+  <ul>
+    <li><strong>No hay ACS o es insuficiente:</strong> termostato desajustado o averiado, resistencia averiada (termo eléctrico), quemador sucio o apagado (caldera), presión del circuito solar insuficiente (fuga de anticongelante), bomba de circulación parada.</li>
+    <li><strong>Agua muy caliente / quemaduras en el grifo:</strong> VMT averiada o mal ajustada. Es una avería de seguridad que debe corregirse de inmediato.</li>
+    <li><strong>Olor a huevo podrido (H₂S):</strong> presencia de bacterias sulfatorreductoras o Legionela. Actuar con choque térmico y desinfección urgente.</li>
+    <li><strong>Agua turbia o de color marrón:</strong> corrosión del acumulador por agotamiento del ánodo de magnesio. Sustituir el ánodo y limpiar el depósito.</li>
+    <li><strong>Pérdida de eficiencia solar:</strong> incrustaciones calcáreas en el intercambiador (agua dura), nivel de anticongelante bajo, captadores sucios o sombreados.</li>
+    <li><strong>Válvula de seguridad que abre con frecuencia:</strong> vaso de expansión agotado o mal dimensionado. Revisar y sustituir el vaso.</li>
+    <li><strong>Ruidos en la red / golpe de ariete:</strong> revisión de válvulas antirretorno y bomba de retorno.</li>
+  </ul>
+</div>
+
+</body>
+</html>
