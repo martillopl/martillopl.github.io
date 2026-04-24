@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 4 – Instalaciones eléctricas BT · Alumbrado interior</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg: #f7f6f2; --color-surface: #f9f8f5; --color-surface-2: #ffffff;
+    --color-surface-offset: #edeae5; --color-border: #d4d1ca; --color-divider: #dcd9d5;
+    --color-text: #28251d; --color-text-muted: #6b6a65; --color-text-faint: #a8a7a2;
+    --color-primary: #1a4a8b; --color-primary-hover: #123570; --color-primary-highlight: #e0eaf8;
+    --color-accent: #d19900; --color-accent-light: #f5e9c0;
+    --color-info: #005f73; --color-info-light: #cce3e8;
+    --color-warn: #964219; --color-warn-light: #f5e0d0;
+    --color-green: #2d6a2d; --color-green-light: #d6ecd6;
+    --color-purple: #5a3e8c; --color-purple-light: #e4ddf5;
+    --font-display: 'Cabinet Grotesk', sans-serif;
+    --font-body: 'Satoshi', sans-serif;
+    --radius-sm: 0.375rem; --radius-md: 0.5rem; --radius-lg: 0.75rem; --radius-xl: 1rem;
+    --shadow-sm: 0 1px 3px rgba(26,74,139,.08); --shadow-md: 0 4px 16px rgba(26,74,139,.10);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body); font-size: 1rem; line-height: 1.75;
+    color: var(--color-text); background: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+  }
+  .page-wrap { display: flex; min-height: 100vh; }
+
+  /* SIDEBAR */
+  nav.sidebar {
+    position: sticky; top: 0; height: 100vh; overflow-y: auto;
+    width: 260px; min-width: 260px; background: var(--color-surface);
+    border-right: 1px solid var(--color-border); padding: 2rem 1.5rem;
+    font-size: 0.85rem;
+  }
+  nav.sidebar .nav-title {
+    font-family: var(--font-display); font-size: 0.68rem; font-weight: 800;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-faint);
+    margin-bottom: 1rem;
+  }
+  nav.sidebar a {
+    display: block; padding: 0.2rem 0.5rem; color: var(--color-text-muted);
+    text-decoration: none; border-radius: var(--radius-sm); margin-bottom: 2px; transition: all 0.15s;
+  }
+  nav.sidebar a:hover { background: var(--color-surface-offset); color: var(--color-primary); }
+  nav.sidebar a.sub { padding-left: 1rem; font-size: 0.8rem; }
+
+  /* CONTENT */
+  .content { flex: 1; max-width: 820px; padding: 2.5rem 3rem; }
+
+  /* HEADER */
+  .doc-header {
+    background: linear-gradient(135deg, #1a4a8b 0%, #0d2f5e 100%);
+    color: white; border-radius: var(--radius-xl); padding: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .doc-header .meta { font-size: 0.75rem; opacity: 0.7; margin-bottom: 0.75rem; letter-spacing: 0.07em; text-transform: uppercase; }
+  .doc-header h1 { font-family: var(--font-display); font-size: clamp(1.4rem, 3vw, 2.1rem); font-weight: 800; line-height: 1.2; margin-bottom: 0.6rem; }
+  .doc-header .subtitle { font-size: 0.9rem; opacity: 0.82; }
+
+  /* FILE NAV */
+  .file-nav { display:flex; gap: 0.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+  .file-nav a {
+    padding: 0.3rem 1rem; border-radius: 999px; background: var(--color-surface-2);
+    border: 1px solid var(--color-border); font-size: 0.8rem; text-decoration: none;
+    color: var(--color-text-muted); transition: all 0.15s;
+  }
+  .file-nav a:hover, .file-nav a.active { background: var(--color-primary); color: white; border-color: var(--color-primary); }
+
+  /* TYPOGRAPHY */
+  section { margin-bottom: 2.5rem; }
+  h2 {
+    font-family: var(--font-display); font-size: 1.3rem; font-weight: 800;
+    color: var(--color-primary); border-bottom: 2px solid var(--color-primary-highlight);
+    padding-bottom: 0.5rem; margin-bottom: 1.5rem; margin-top: 2.5rem;
+  }
+  h2:first-child { margin-top: 0; }
+  h3 { font-family: var(--font-display); font-size: 1.02rem; font-weight: 700; margin: 1.5rem 0 0.75rem; color: var(--color-text); }
+  p { margin-bottom: 1rem; max-width: 70ch; }
+  ul, ol { margin: 0.75rem 0 1rem 1.5rem; }
+  li { margin-bottom: 0.3rem; }
+  hr { border: none; border-top: 1px solid var(--color-divider); margin: 2rem 0; }
+
+  /* CALLOUTS */
+  .callout {
+    border-radius: var(--radius-lg); padding: 1rem 1.5rem;
+    margin: 1.5rem 0; font-size: 0.91rem; line-height: 1.65;
+  }
+  .callout strong { font-weight: 700; display: block; margin-bottom: 0.25rem; }
+  .callout-norm  { background: var(--color-primary-highlight); border-left: 4px solid var(--color-primary); }
+  .callout-warn  { background: var(--color-warn-light);        border-left: 4px solid var(--color-warn); }
+  .callout-tip   { background: var(--color-accent-light);      border-left: 4px solid var(--color-accent); }
+  .callout-info  { background: var(--color-info-light);        border-left: 4px solid var(--color-info); }
+  .callout-green { background: var(--color-green-light);       border-left: 4px solid var(--color-green); }
+  .callout-purple{ background: var(--color-purple-light);      border-left: 4px solid var(--color-purple); }
+
+  /* TABLES */
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.87rem; }
+  thead th { background: var(--color-primary); color: white; font-family: var(--font-display); font-weight: 700; padding: 0.5rem 0.85rem; text-align: left; font-size: 0.8rem; }
+  tbody td { padding: 0.45rem 0.85rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+  tbody tr:nth-child(even) { background: #fafaf8; }
+  tbody tr:last-child td { border-bottom: none; }
+
+  /* KPI */
+  .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+  .kpi { background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1rem; text-align: center; }
+  .kpi .kpi-val { font-family: var(--font-display); font-size: 1.7rem; font-weight: 800; color: var(--color-primary); display: block; line-height: 1; }
+  .kpi .kpi-label { font-size: 0.73rem; color: var(--color-text-muted); margin-top: 4px; display: block; }
+
+  /* FORMULA */
+  .formula-box {
+    background: var(--color-surface-2); border: 2px solid var(--color-primary);
+    border-radius: var(--radius-lg); padding: 1.25rem 1.5rem; margin: 1.5rem 0;
+    text-align: center;
+  }
+  .formula-box .formula { font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; color: var(--color-primary); }
+  .formula-box .formula-legend { font-size: 0.8rem; color: var(--color-text-muted); margin-top: 0.5rem; }
+
+  /* DL */
+  dl { margin: 0.75rem 0; }
+  dt { font-weight: 700; color: var(--color-primary); margin-top: 0.75rem; }
+  dd { margin-left: 1.5rem; color: var(--color-text-muted); margin-bottom: 0.25rem; }
+
+  @media (max-width: 768px) {
+    nav.sidebar { display: none; }
+    .content { padding: 1.5rem 1rem; }
+    .kpi-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+<nav class="sidebar">
+  <div class="nav-title">Tema 4 – Alumbrado BT</div>
+  <a href="#normativa">1. Normativa</a>
+  <a class="sub" href="#rebt">1.1 REBT y las ITC</a>
+  <a class="sub" href="#cte-he3">1.2 CTE DB-HE3</a>
+  <a class="sub" href="#une12464">1.3 UNE-EN 12464-1</a>
+  <a href="#magnitudes">2. Magnitudes luminotécnicas</a>
+  <a class="sub" href="#flujo">2.1 Flujo e iluminancia</a>
+  <a class="sub" href="#eficiencia">2.2 Eficiencia y temperatura</a>
+  <a class="sub" href="#irc">2.3 IRC y UGR</a>
+  <a href="#lamparas">3. Tipologías de fuentes de luz</a>
+  <a class="sub" href="#incandescente">3.1 Incandescente / halógena</a>
+  <a class="sub" href="#fluorescente">3.2 Fluorescente</a>
+  <a class="sub" href="#hid">3.3 Descarga HID</a>
+  <a class="sub" href="#led">3.4 LED</a>
+  <a href="#veei">4. VEEI y eficiencia (HE3)</a>
+  <a href="#diseno">5. Diseño de instalaciones</a>
+  <a class="sub" href="#flujo-metodo">5.1 Método del flujo</a>
+  <a class="sub" href="#fm">5.2 Factor de mantenimiento</a>
+  <a class="sub" href="#ugr-diseno">5.3 UGR en el diseño</a>
+  <a href="#itc28">6. ITC-BT-28 · Pública concurrencia</a>
+  <a href="#emergencia">7. Alumbrado de emergencia</a>
+  <a href="#control">8. Control y regulación</a>
+  <a href="#mantenimiento">9. Mantenimiento</a>
+</nav>
+
+<main class="content">
+
+  <div class="doc-header">
+    <div class="meta">Tema 4 · Gestor de Mantenimiento (Nivel B) · UPNA</div>
+    <h1>Instalaciones eléctricas de baja tensión — Alumbrado interior</h1>
+    <div class="subtitle">Tipologías · Diseño y mantenimiento · Eficiencia energética · Normativa aplicable</div>
+  </div>
+
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo" class="active">Texto explicativo</a>
+    <a href="2_esquema_resumen">Esquema-resumen</a>
+    <a href="3_cuadro_comparativo">Cuadros comparativos</a>
+  </div>
+
+  <!-- 1. NORMATIVA -->
+  <section id="normativa">
+    <h2>1. Marco normativo</h2>
+    <p>La instalación eléctrica de baja tensión destinada al alumbrado interior es uno de los subsistemas más presentes en cualquier edificio. Su diseño, ejecución y mantenimiento están regulados por un conjunto articulado de normas que abordan la seguridad eléctrica, la eficiencia energética y la calidad lumínica del resultado final.</p>
+
+    <h3 id="rebt">1.1 El REBT y sus instrucciones técnicas complementarias</h3>
+    <p>La norma central de toda instalación eléctrica de baja tensión en España es el <strong>Reglamento Electrotécnico para Baja Tensión</strong>, aprobado por el <strong>Real Decreto 842/2002, de 2 de agosto</strong>. El REBT establece las condiciones técnicas y garantías que deben reunir las instalaciones eléctricas conectadas a una fuente de suministro en los límites de baja tensión (tensiones nominales hasta 1.000 V en corriente alterna y hasta 1.500 V en corriente continua), con la finalidad de preservar la seguridad de las personas y los bienes, asegurar el normal funcionamiento de dichas instalaciones y prevenir las perturbaciones en otras instalaciones y servicios.</p>
+    <p>El REBT se desarrolla en <strong>51 Instrucciones Técnicas Complementarias (ITC-BT-01 a ITC-BT-51)</strong>. Para el alumbrado interior, las más relevantes son:</p>
+
+    <div class="callout callout-norm">
+      <strong>ITC-BT más importantes para alumbrado interior</strong>
+      <ul style="margin-top:0.5rem;">
+        <li><strong>ITC-BT-19</strong>: Instalaciones interiores o receptoras. Prescripciones generales (secciones de conductores, caídas de tensión).</li>
+        <li><strong>ITC-BT-20</strong>: Sistemas de instalación de los conductores (tubos, canales, bandejas).</li>
+        <li><strong>ITC-BT-22</strong>: Protección contra sobreintensidades (fusibles, interruptores automáticos).</li>
+        <li><strong>ITC-BT-23</strong>: Protección contra sobretensiones.</li>
+        <li><strong>ITC-BT-24</strong>: Protección contra contactos directos e indirectos.</li>
+        <li><strong>ITC-BT-25</strong>: Instalaciones interiores en viviendas. Número de circuitos y características.</li>
+        <li><strong>ITC-BT-28</strong>: Instalaciones en locales de pública concurrencia. Alumbrado de emergencia y regla del tercio.</li>
+        <li><strong>ITC-BT-44</strong>: Instalaciones de receptores. Receptores de alumbrado. Requisitos específicos de las luminarias como receptores.</li>
+      </ul>
+    </div>
+
+    <h3 id="cte-he3">1.2 CTE DB-HE3 — Eficiencia energética del alumbrado interior</h3>
+    <p>La <strong>Sección HE3 del Documento Básico de Ahorro de Energía del Código Técnico de la Edificación (CTE DB-HE3)</strong> establece los requisitos de eficiencia energética que deben cumplir las instalaciones de iluminación de los edificios. Es la norma de eficiencia energética aplicable al alumbrado interior de nueva construcción y grandes rehabilitaciones.</p>
+    <p>El parámetro central del CTE DB-HE3 es el <strong>VEEI</strong> (Valor de Eficiencia Energética de la Instalación), que mide la potencia instalada por unidad de superficie para cada 100 lux de iluminancia media. Además del VEEI, la norma exige la implantación de sistemas de control (adaptación a la ocupación) y sistemas de regulación (aprovechamiento de la luz natural).</p>
+
+    <div class="callout callout-warn">
+      <strong>? Ámbito de NO aplicación del CTE DB-HE3 — dato de examen</strong>
+      El CTE DB-HE3 <strong>NO aplica</strong> a: interiores de viviendas, edificios o partes de edificios de uso industrial o agrícola (naves, talleres), instalaciones provisionales de obra de duración inferior a 2 años, edificios independientes con superficie útil inferior a 50 m², y al alumbrado de emergencia. Estos ámbitos se citan frecuentemente en el examen para verificar que el candidato conoce las exclusiones.
+    </div>
+
+    <h3 id="une12464">1.3 UNE-EN 12464-1 — Iluminación de lugares de trabajo en interiores</h3>
+    <p>La <strong>UNE-EN 12464-1</strong> es la norma europea de referencia para el diseño de la iluminación de lugares de trabajo en interiores. Define, para cada tipo de actividad laboral, los requisitos mínimos de iluminancia media mantenida (Em), el índice máximo de deslumbramiento unificado (UGR) y el índice mínimo de reproducción cromática (IRC). Es la norma de calidad de diseño: el CTE DB-HE3 limita el consumo; la UNE-EN 12464-1 garantiza la calidad lumínica para el trabajador.</p>
+    <p>Adicionalmente, el <strong>CTE DB-SUA4</strong> establece los niveles mínimos de iluminancia para la seguridad en las zonas de circulación (escaleras, rampas, pasillos). Por su parte, el <strong>RD 1890/2008 — REAE</strong> regula la eficiencia energética del alumbrado <em>exterior</em> (viales, aparcamientos, fachadas); es la norma equivalente al CTE DB-HE3 pero para el exterior, y se menciona en este tema únicamente para distinguirla del HE3.</p>
+  </section>
+
+  <hr>
+
+  <!-- 2. MAGNITUDES -->
+  <section id="magnitudes">
+    <h2>2. Magnitudes luminotécnicas fundamentales</h2>
+    <p>Para diseñar, mantener y evaluar una instalación de alumbrado interior es imprescindible dominar las magnitudes luminotécnicas básicas. Son las herramientas de medida del sistema: cada una mide un aspecto diferente de la luz, y confundirlas es uno de los errores más frecuentes en el examen.</p>
+
+    <h3 id="flujo">2.1 Flujo luminoso e iluminancia</h3>
+    <dl>
+      <dt>Flujo luminoso (F) — lumen (lm)</dt>
+      <dd>Cantidad total de energía luminosa emitida por una fuente de luz en todas las direcciones por unidad de tiempo. Es la "producción" total de luz de la fuente. Una bombilla LED estándar emite entre 400 y 800 lm.</dd>
+      <dt>Intensidad luminosa (I) — candela (cd)</dt>
+      <dd>Flujo luminoso emitido en una dirección específica por unidad de ángulo sólido. Describe cómo se distribuye la luz en el espacio. Se representa gráficamente mediante curvas polares (fotométricas) en los catálogos de luminarias.</dd>
+      <dt>Iluminancia (E) — lux (lx)</dt>
+      <dd>Flujo luminoso recibido por unidad de superficie. 1 lux = 1 lm/m². Es el parámetro de diseño más utilizado en la práctica: el diseñador establece cuántos lux son necesarios en el plano de trabajo y calcula el número de luminarias para alcanzarlo. Un día nublado al exterior: ~10.000 lx. Oficina bien iluminada: 500 lx. Pasillo: 100-150 lx.</dd>
+      <dt>Luminancia (L) — candela por metro cuadrado (cd/m²)</dt>
+      <dd>Intensidad luminosa emitida o reflejada por una superficie por unidad de área aparente en una dirección dada. Es la magnitud que realmente percibe el ojo humano. El deslumbramiento es causado por una luminancia excesiva en el campo visual del observador. Una pantalla de ordenador: 100-250 cd/m²; el sol directo: ~1.000.000.000 cd/m².</dd>
+    </dl>
+
+    <div class="callout callout-tip">
+      <strong>Regla mnemotécnica: iluminancia vs. luminancia</strong>
+      La <strong>iluminancia</strong> (lux) mide la luz que <em>llega</em> a una superficie: lo que el diseñador controla. La <strong>luminancia</strong> (cd/m²) mide la luz que <em>sale</em> de una superficie: lo que el ojo percibe y lo que produce deslumbramiento. Diseñamos en lux; el problema del deslumbramiento ocurre en cd/m².
+    </div>
+
+    <h3 id="eficiencia">2.2 Eficiencia luminosa y temperatura de color</h3>
+    <dl>
+      <dt>Eficiencia luminosa (?) — lúmenes por vatio (lm/W)</dt>
+      <dd>Relación entre el flujo luminoso emitido y la potencia eléctrica consumida. Es el indicador de "rendimiento energético" de una fuente de luz. Valores de referencia: incandescente 10-15 lm/W; fluorescente T8 80-100 lm/W; LED de gama alta 100-200 lm/W.</dd>
+      <dt>Temperatura de color (Tc) — Kelvin (K)</dt>
+      <dd>Describe el aspecto cálido o frío de la luz emitida por una fuente. Los valores bajos (2.700-3.000 K) producen luz cálida, de tonalidad amarilla-anaranjada, asociada a ambientes residenciales y de restauración. Los valores medios (3.000-4.000 K) producen luz neutra, adecuada para oficinas y comercios. Los valores altos (más de 4.000 K) producen luz fría o blanca, apropiada para zonas de trabajo con alta exigencia visual, quirófanos y salas técnicas.</dd>
+    </dl>
+
+    <h3 id="irc">2.3 IRC y UGR — los dos indicadores de calidad</h3>
+    <p>Más allá de la cantidad de luz (iluminancia), la calidad del alumbrado se evalúa mediante dos indicadores fundamentales: el IRC y el UGR.</p>
+    <dl>
+      <dt>Índice de Reproducción Cromática (IRC / Ra) — escala 0 a 100</dt>
+      <dd>Capacidad de una fuente de luz para reproducir los colores de los objetos con fidelidad respecto a una fuente de referencia (luz solar o incandescente). Cuanto más alto, mejor reproducción del color. La UNE-EN 12464-1 exige <strong>IRC = 80</strong> para la mayoría de los puestos de trabajo en interiores. Para tareas de discriminación de color muy exigente (joyería, museos, control de calidad de pintura), se exige IRC = 90.</dd>
+      <dt>UGR (Unified Glare Rating) — índice unificado de deslumbramiento</dt>
+      <dd>Valora el nivel de deslumbramiento molesto producido por las luminarias en el campo visual del observador. Se define como <em>límite máximo</em>: cuanto más bajo el UGR requerido, más exigente es la especificación. Valores de referencia según UNE-EN 12464-1: UGR = 16 para salas de dibujo técnico y CAD; UGR = 19 para oficinas con pantallas de visualización de datos (PVD); UGR = 22 para industria de precisión y aulas; UGR = 25 para zonas de circulación industrial.</dd>
+    </dl>
+
+    <div class="callout callout-warn">
+      <strong>? Trampa frecuente: UGR e iluminancia van en sentido contrario</strong>
+      La <strong>iluminancia</strong> se especifica como valor <em>mínimo</em> (hay que superar al menos X lux). El <strong>UGR</strong> se especifica como valor <em>máximo</em> (no se puede superar Y). En el examen se presentan con la lógica invertida para verificar que el candidato conoce la diferencia.
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- 3. TIPOLOGÍAS -->
+  <section id="lamparas">
+    <h2>3. Tipologías de fuentes de luz (lámparas)</h2>
+    <p>La elección de la fuente de luz adecuada es la primera decisión técnica de diseño de una instalación de alumbrado. Cada tecnología tiene un perfil de eficiencia, calidad de luz, vida útil y comportamiento en la instalación completamente diferente. La evolución tecnológica de las últimas décadas ha llevado al LED a una posición dominante, pero el conocimiento de las tecnologías previas es imprescindible para el mantenimiento de instalaciones existentes.</p>
+
+    <h3 id="incandescente">3.1 Incandescente y halógena</h3>
+    <p>La lámpara <strong>incandescente</strong> funciona por el calentamiento de un filamento de wolframio hasta la incandescencia. Su eficiencia luminosa es muy baja (10-15 lm/W) y la mayor parte de la energía consumida se convierte en calor, no en luz. Tiene un IRC prácticamente perfecto (˜100) y una temperatura de color cálida (2.700 K). Fue prohibida en la Unión Europea de forma progresiva y ya no se comercializa. Su mención en el temario es exclusivamente de contexto histórico y comparativo.</p>
+    <p>La lámpara <strong>halógena</strong> es una variante de la incandescente en la que la ampolla está rellena de gas halógeno, que produce un ciclo que devuelve el wolframio evaporado al filamento, alargando su vida útil y mejorando ligeramente la eficiencia (15-25 lm/W). Mantiene el IRC ˜ 100 y una excelente calidad de luz. También está en retirada progresiva, sustituida por el LED.</p>
+
+    <h3 id="fluorescente">3.2 Fluorescente tubular y compacta</h3>
+    <p>La lámpara <strong>fluorescente tubular</strong> (tipos T8 y T5) es una lámpara de descarga en gas de baja presión. Su interior contiene mercurio y un gas de arranque; la descarga eléctrica produce radiación ultravioleta que excita el recubrimiento de polvo fluorescente del tubo, generando luz visible. Su eficiencia es considerablemente superior a la incandescente (80-100 lm/W), con un IRC entre 80 y 90 y una vida útil de 10.000-20.000 horas.</p>
+    <p>Requiere un <strong>equipo auxiliar de encendido</strong>: en las instalaciones antiguas, un cebador y un balasto electromagnético (inductivo); en las instalaciones más modernas, un <strong>balasto electrónico</strong>, que elimina el parpadeo a 50 Hz, mejora la eficiencia y permite la regulación del flujo. La fluorescente tubular fue la tecnología dominante en edificios de oficinas, comercios y centros educativos durante décadas, y aún está muy presente en instalaciones existentes que requieren mantenimiento. Se está sustituyendo progresivamente por tubos LED.</p>
+    <p>La <strong>fluorescente compacta</strong> (o lámpara de bajo consumo, CFL) es una versión compacta del tubo fluorescente, diseñada para sustituir a las incandescentes en portalámparas estándar. Tiene las mismas características físicas que el tubo pero en formato compacto. Una limitación relevante es el tiempo de calentamiento hasta alcanzar el flujo pleno (puede tardar varios minutos).</p>
+
+    <h3 id="hid">3.3 Lámparas de descarga de alta intensidad (HID)</h3>
+    <p>Las lámparas HID (High Intensity Discharge) generan luz mediante una descarga eléctrica de alta presión entre dos electrodos en una ampolla de cuarzo o cerámica. Las principales tecnologías son el <strong>halogenuro metálico</strong> y el <strong>vapor de sodio de alta presión</strong>.</p>
+    <p>El <strong>halogenuro metálico (HM)</strong> ofrece una eficiencia de 70-110 lm/W, un IRC de 80-95 (el mejor de las HID) y una excelente reproducción del color. Tiene dos inconvenientes operativos importantes: el <em>arranque lento</em> (varios minutos hasta alcanzar el flujo estabilizado) y el <em>rearranque en caliente</em> (si se apaga accidentalmente, necesita un tiempo de enfriamiento de varios minutos antes de poder volver a arrancar). Se usa en industria de alto techo, grandes superficies comerciales de calidad y espacios deportivos.</p>
+    <p>El <strong>vapor de sodio de alta presión (VSAP)</strong> tiene una eficiencia muy alta (80-130 lm/W) pero un IRC muy bajo (20-30), lo que produce una luz dorada que distorsiona gravemente los colores. Su uso en interiores está prácticamente limitado a almacenes y zonas industriales donde la discriminación de colores no es relevante. Es más habitual en el alumbrado exterior de viales.</p>
+
+    <h3 id="led">3.4 LED — La tecnología dominante</h3>
+    <p>El <strong>LED</strong> (Light Emitting Diode o diodo emisor de luz) es una fuente de estado sólido: genera luz mediante el movimiento de electrones en materiales semiconductores dopados. No hay filamento que quemar ni gas que ionizar. Esto le confiere características operativas completamente diferentes a todas las tecnologías anteriores.</p>
+
+    <div class="kpi-grid">
+      <div class="kpi"><span class="kpi-val">100-200</span><span class="kpi-label">lm/W — eficiencia luminosa (alta gama)</span></div>
+      <div class="kpi"><span class="kpi-val">25.000-50.000</span><span class="kpi-label">horas de vida útil</span></div>
+      <div class="kpi"><span class="kpi-val">L70</span><span class="kpi-label">Mantiene =70% flujo al 70% de su vida útil</span></div>
+    </div>
+
+    <p>El LED es regulable desde el 0 al 100% de flujo sin parpadeo y sin daño para la fuente, lo que facilita su integración con sistemas de control y regulación (DALI, 0-10V, PWM). Su temperatura de color es configurable en el momento de compra (cálida, neutra, fría) o incluso ajustable dinámicamente en los sistemas de iluminación circadiana (tunable white). El IRC puede superar 90 en los módulos de alta calidad, aunque en los de menor precio puede quedar por debajo de 80.</p>
+
+    <div class="callout callout-info">
+      <strong>El parámetro L70 — dato de examen sobre vida útil LED</strong>
+      A diferencia de las lámparas tradicionales (que se "funden"), el LED no falla repentinamente: su flujo se degrada gradualmente. El parámetro <strong>L70</strong> define el momento en que el LED mantiene el 70% de su flujo luminoso inicial. Se usa como referencia de fin de vida útil y para calcular el factor de mantenimiento de la instalación. Un LED con L70 = 50.000 h garantiza que, a las 50.000 horas de funcionamiento, su flujo no será inferior al 70% del flujo inicial.
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- 4. VEEI -->
+  <section id="veei">
+    <h2>4. VEEI y eficiencia energética — CTE DB-HE3</h2>
+    <p>El <strong>Valor de Eficiencia Energética de la Instalación (VEEI)</strong> es el indicador que el CTE DB-HE3 utiliza para controlar y limitar el consumo energético del alumbrado interior. Permite comparar instalaciones de distintos tamaños y tipos de uso sobre una base común: la potencia instalada por cada metro cuadrado y por cada 100 lux de iluminancia media conseguida.</p>
+
+    <div class="formula-box">
+      <div class="formula">VEEI = (P × 100) / (S × Em)</div>
+      <div class="formula-legend">
+        P = potencia total instalada (W) · S = superficie del local (m²) · Em = iluminancia media horizontal mantenida (lux)
+      </div>
+    </div>
+
+    <p>El resultado del VEEI se expresa en W/(m²·100lux). Cuanto más bajo sea el VEEI, más eficiente es la instalación: se consiguen los mismos lux consumiendo menos vatios por metro cuadrado. El CTE DB-HE3 establece en su tabla 3.1 los <strong>valores VEEI límite</strong> para cada tipo de uso de recinto. La instalación diseñada NO puede superar ese valor límite.</p>
+
+    <div class="callout callout-norm">
+      <strong>Dos categorías en la tabla VEEI del CTE DB-HE3</strong>
+      La tabla 3.1 distingue para cada uso entre <strong>"zonas de representación"</strong> (áreas con mayor exigencia estética y donde se permite un VEEI límite más alto, porque la calidad del diseño lumínico puede requerir luminarias de mayor potencia) y <strong>"resto de zonas"</strong> (donde el VEEI límite es más bajo y la eficiencia se exige de forma más estricta). Ejemplos orientativos: administrativo en general ? 3,5 (resto); tiendas ? 4,0; hospitales zonas de pacientes ? 4,0.
+    </div>
+
+    <p>Además del VEEI, el CTE DB-HE3 exige obligatoriamente en todo edificio sujeto a su ámbito:</p>
+    <ul>
+      <li><strong>Sistema de control</strong>: encendido y apagado adaptado a la ocupación real del espacio. Puede ser mediante detector de presencia/movimiento (infrarrojo pasivo PIR o ultrasónico), temporizador o interruptor manual con zona de influencia definida. La finalidad es no mantener la iluminación encendida cuando el local está vacío.</li>
+      <li><strong>Sistema de regulación</strong>: aprovechamiento de la luz natural disponible mediante sensores de luminosidad (célula fotoeléctrica) que regulan el flujo de las luminarias para compensar la aportación de luz natural. Obligatorio en todas las zonas que reciban iluminación natural suficiente.</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <!-- 5. DISEÑO -->
+  <section id="diseno">
+    <h2>5. Diseño de instalaciones de alumbrado interior</h2>
+    <p>El diseño de una instalación de alumbrado interior parte de los requisitos de iluminancia y calidad lumínica definidos por la UNE-EN 12464-1 para cada tipo de actividad, y tiene como objetivo determinar la disposición y número de luminarias que permiten alcanzar esos requisitos de la forma más eficiente posible.</p>
+
+    <h3 id="flujo-metodo">5.1 Método del flujo luminoso (cavidades zonales)</h3>
+    <p>El <strong>método del flujo luminoso</strong> (también llamado método del factor de utilización o de las cavidades zonales) es el método de cálculo más extendido para determinar el número de luminarias necesarias en una instalación de alumbrado general uniforme. El procedimiento consiste en aplicar la fórmula:</p>
+
+    <div class="formula-box">
+      <div class="formula">N = (Em × S) / (F_lum × Cu × Fm)</div>
+      <div class="formula-legend">
+        N = número de luminarias · Em = iluminancia media mantenida (lux) · S = superficie (m²)<br>
+        F_lum = flujo luminoso total de cada luminaria (lm) · Cu = coeficiente de utilización · Fm = factor de mantenimiento
+      </div>
+    </div>
+
+    <p>El <strong>coeficiente de utilización (Cu)</strong> expresa qué fracción del flujo total emitido por las luminarias llega realmente al plano de trabajo. Depende de la geometría del local (expresada mediante el <em>índice del local K</em>, que relaciona largo, ancho y altura de montaje), de las reflectancias de techo, paredes y suelo, y de la fotometría de la luminaria. Su valor se obtiene de las tablas fotométricas del fabricante de la luminaria.</p>
+
+    <h3 id="fm">5.2 Factor de mantenimiento (Fm)</h3>
+    <p>El <strong>factor de mantenimiento (Fm)</strong> es uno de los parámetros más importantes del diseño y a la vez uno de los más relacionados directamente con el mantenimiento del edificio. Representa la relación entre la iluminancia media de una instalación después de un cierto tiempo de funcionamiento y la iluminancia inicial. Su valor siempre es menor que 1 y típicamente se sitúa entre 0,60 y 0,80.</p>
+    <p>El Fm se calcula como el producto de cuatro subfactores: el <em>factor de depreciación del flujo de las lámparas</em> (LLMF, cómo pierde flujo la lámpara con el tiempo), el <em>factor de supervivencia de las lámparas</em> (LSF, probabilidad de que una lámpara siga funcionando), el <em>factor de mantenimiento de la luminaria</em> (LMF, pérdida por suciedad del óptico de la luminaria) y el <em>factor de mantenimiento del local</em> (RSMF, pérdida por suciedad de techos y paredes).</p>
+
+    <div class="callout callout-warn">
+      <strong>? Lógica del factor de mantenimiento en el cálculo</strong>
+      Un Fm bajo (instalación sucia o con lámparas muy degradadas) implica que al final del período de mantenimiento la iluminancia habrá caído mucho. Para garantizar que al final del período se sigan cumpliendo los requisitos mínimos de la UNE-EN 12464-1, el diseñador debe instalar <em>más luminarias</em> al inicio. En otras palabras: descuidar el mantenimiento obliga a sobredimensionar la instalación. El mantenimiento regular (limpieza de luminarias, reposición de lámparas) mantiene el Fm alto y permite diseñar instalaciones más ajustadas y eficientes.
+    </div>
+
+    <h3 id="ugr-diseno">5.3 Control del deslumbramiento (UGR)</h3>
+    <p>El control del deslumbramiento es tan importante como alcanzar la iluminancia adecuada. Una instalación con 500 lux pero con luminarias que producen un UGR de 28 sería inaceptable para una oficina con pantallas (donde el límite es UGR = 19). El control del UGR se consigue mediante la elección de luminarias con óptica adecuada (reflectores, difusores, lamas anti-deslumbramiento o microprismáticos), la correcta orientación de las luminarias respecto a los puestos de trabajo, y la separación entre luminarias y el plano visual de los usuarios.</p>
+  </section>
+
+  <hr>
+
+  <!-- 6. ITC-BT-28 -->
+  <section id="itc28">
+    <h2>6. ITC-BT-28 — Locales de pública concurrencia</h2>
+    <p>Los <strong>locales de pública concurrencia</strong> son aquellos que, por su uso y capacidad de concentración de personas, requieren unas garantías de seguridad eléctrica superiores a las instalaciones ordinarias. La ITC-BT-28 del REBT define como locales de pública concurrencia los teatros, cines, salas de conciertos, casinos, salas de reunión y espectáculos, lugares de culto, museos, establecimientos sanitarios, locales comerciales con superficie superior a 400 m², estaciones y aeropuertos, entre otros.</p>
+    <p>Para el alumbrado, la ITC-BT-28 introduce dos requisitos especialmente relevantes que aparecen con regularidad en los exámenes de oposición:</p>
+
+    <div class="callout callout-warn">
+      <strong>? La regla del tercio (ITC-BT-28) — el dato más preguntado</strong>
+      En los locales de pública concurrencia, el corte de corriente en una cualquiera de las líneas de alumbrado general <strong>no puede afectar a más de un tercio del total de puntos de luz del local o dependencia</strong>. Esto implica que el alumbrado de cada local debe distribuirse en al menos <strong>3 circuitos independientes</strong>, con las luminarias repartidas equitativamente entre ellos. La finalidad es garantizar una iluminación residual suficiente ante el fallo de cualquier circuito, facilitando la evacuación y evitando la oscuridad total.
+    </div>
+
+    <p>El segundo requisito destacado de la ITC-BT-28 se refiere al alumbrado de emergencia instalado en estos locales:</p>
+    <ul>
+      <li>Las líneas que alimentan el alumbrado de emergencia deben estar protegidas con interruptores automáticos de <strong>máximo 10 A</strong>.</li>
+      <li>Una misma línea no puede alimentar más de <strong>12 puntos de luz de emergencia</strong>.</li>
+      <li>Si existen varios puntos de luz de emergencia, deben repartirse en al menos 2 líneas distintas aunque el número total sea inferior a 12.</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <!-- 7. EMERGENCIA -->
+  <section id="emergencia">
+    <h2>7. Alumbrado de emergencia</h2>
+    <p>El alumbrado de emergencia es la instalación destinada a garantizar, ante un fallo del suministro eléctrico normal, la visibilidad mínima necesaria para la evacuación segura de los ocupantes del edificio y la continuidad de las actividades críticas. Se rige por la ITC-BT-28, el CTE DB-SUA4 y, en algunos casos específicos, por el RIPCI.</p>
+
+    <p>Existen dos tipos principales:</p>
+    <dl>
+      <dt>Alumbrado de seguridad</dt>
+      <dd>Garantiza la seguridad de las personas durante la evacuación y las operaciones de emergencia. Se subdivide en: <em>alumbrado de evacuación</em> (señaliza las vías y salidas de emergencia), <em>alumbrado antipánico</em> (evita el pánico en grandes espacios iluminando con una iluminancia mínima uniforme) y <em>alumbrado de zonas de alto riesgo</em> (protege a las personas en operaciones peligrosas que deben interrumpirse de forma segura).</dd>
+      <dt>Alumbrado de reemplazamiento (sustitución)</dt>
+      <dd>Permite continuar la actividad normal del local cuando falla el suministro general. Solo es obligatorio en locales donde la continuidad de la actividad es crítica: quirófanos, salas de UCI, salas de control. No es un requisito universal.</dd>
+    </dl>
+
+    <div class="callout callout-norm">
+      <strong>Requisitos del alumbrado de evacuación (CTE DB-SUA4) — datos de examen</strong>
+      <ul style="margin-top:0.5rem;">
+        <li>Iluminancia mínima en el eje de las vías de evacuación: <strong>1 lux</strong>.</li>
+        <li>Relación máxima entre iluminancia máxima e iluminancia mínima en la vía: <strong>= 40:1</strong> (para evitar zonas muy brillantes junto a zonas muy oscuras).</li>
+        <li>Tiempo de funcionamiento garantizado tras el fallo del suministro: <strong>mínimo 1 hora</strong>.</li>
+        <li>La fuente propia de energía de los equipos autónomos debe proporcionar esa 1 hora de autonomía plena.</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- 8. CONTROL -->
+  <section id="control">
+    <h2>8. Sistemas de control y regulación de la iluminación</h2>
+    <p>Los sistemas de control y regulación son la clave para que una instalación de alumbrado sea realmente eficiente en la práctica. Sin ellos, la instalación consume energía independientemente de si hay personas en el local o de si la luz natural es suficiente. El CTE DB-HE3 los exige obligatoriamente: el sistema de control (para adaptar el encendido a la ocupación) y el sistema de regulación (para aprovechar la luz natural).</p>
+
+    <dl>
+      <dt>Interruptor manual</dt>
+      <dd>La solución más básica. La zona de influencia de cada interruptor debe estar claramente delimitada para que el usuario pueda apagar solo la zona que no ocupa.</dd>
+      <dt>Detector de presencia o movimiento</dt>
+      <dd>Detecta la ocupación del local mediante sensores infrarrojo pasivo (PIR) o ultrasónicos. Apaga o reduce la iluminación automáticamente cuando no detecta presencia durante un tiempo programado. Habitual en pasillos, aseos, salas de reunión y despachos individuales.</dd>
+      <dt>Sensor de luminosidad (célula fotoeléctrica)</dt>
+      <dd>Mide la iluminancia real en el plano de trabajo (suma de luz artificial y luz natural) y regula el flujo de las luminarias para mantener el nivel objetivo, reduciendo el consumo cuando hay luz natural suficiente. Es el componente del "sistema de regulación" exigido por el CTE DB-HE3.</dd>
+      <dt>Temporizador</dt>
+      <dd>Apaga la instalación tras un tiempo programado sin que se produzca ninguna acción manual o detección de presencia. Útil en zonas de paso con ocupación corta y predecible.</dd>
+      <dt>Sistema DALI (Digital Addressable Lighting Interface)</dt>
+      <dd>Bus digital de control de iluminación que permite direccionar individualmente cada luminaria o grupo de luminarias, regular el flujo de 0 al 100%, programar escenas lumínicas y horarios, obtener información de estado de cada dispositivo e integrar la iluminación con el BMS del edificio. Es el protocolo de control de iluminación técnica más extendido en edificios de oficinas, hospitales y uso terciario en general. Permite una gestión muy granular y flexible de la iluminación y es la plataforma natural para la iluminación inteligente y los sistemas de "human centric lighting" (iluminación centrada en el ser humano, que adapta la temperatura de color e intensidad al ritmo circadiano de los ocupantes).</dd>
+    </dl>
+  </section>
+
+  <hr>
+
+  <!-- 9. MANTENIMIENTO -->
+  <section id="mantenimiento">
+    <h2>9. Mantenimiento de instalaciones de alumbrado interior</h2>
+    <p>El mantenimiento del alumbrado interior tiene un impacto directo sobre la eficiencia energética real de la instalación y sobre el cumplimiento continuado de los niveles de iluminancia diseñados. Una instalación perfectamente diseñada puede quedar fuera de los requisitos de la UNE-EN 12464-1 si el mantenimiento es deficiente, porque la acumulación de suciedad en las luminarias y la degradación de las fuentes de luz reducen progresivamente la iluminancia hasta niveles inaceptables.</p>
+
+    <p>Las operaciones de mantenimiento del alumbrado comprenden:</p>
+    <ul>
+      <li><strong>Limpieza de luminarias</strong>: la suciedad y el polvo acumulados en los reflectores, difusores y ópticas de las luminarias reduce el flujo luminoso útil que llega al plano de trabajo. Es el factor que más degrada el factor de mantenimiento (Fm) en la práctica cotidiana. La periodicidad depende de las condiciones ambientales del local: anual en oficinas limpias; semestral o trimestral en naves industriales con polvo o grasa en suspensión.</li>
+      <li><strong>Reposición de fuentes de luz</strong>: puede hacerse de forma <em>individual</em> (se sustituye cada lámpara o módulo LED en el momento en que falla o su flujo queda por debajo del umbral) o de forma <em>en grupo</em> (se sustituyen todas las fuentes de luz de una zona simultáneamente al final de la vida útil estimada). La reposición en grupo es más eficiente logísticamente en instalaciones con muchas luminarias, reduce los costes de intervención por acceso a altura y garantiza uniformidad cromática.</li>
+      <li><strong>Verificación de equipos auxiliares</strong>: balastos electrónicos en instalaciones de fluorescente, <em>drivers</em> LED, detectores de presencia, sensores de luminosidad, equipos de baterías del alumbrado de emergencia.</li>
+      <li><strong>Revisión periódica del cuadro eléctrico</strong>: estado de las protecciones (interruptores automáticos, diferencial), apriete de conexiones, comprobación del diferencial de emergencia.</li>
+    </ul>
+
+    <div class="callout callout-green">
+      <strong>Plan de mantenimiento del alumbrado</strong>
+      Toda instalación de alumbrado de cierta entidad debe contar con un plan de mantenimiento documentado que incluya: periodicidad de limpieza de luminarias según condiciones del local, criterio de reposición de fuentes de luz (individual o en grupo, basado en la vida útil L70 del LED o en la vida media de otras lámparas), registro de consumos eléctricos del alumbrado y comparación con valores de referencia para detectar desviaciones que indiquen degradación de la instalación o fugas de consumo. Este registro forma parte del sistema de gestión energética del edificio.
+    </div>
+
+    <p>Adicionalmente, el alumbrado de emergencia requiere una verificación mensual del encendido de todos los equipos autónomos (mediante el pulsador de prueba de cada equipo) y una prueba anual de autonomía completa de 1 hora, que debe quedar registrada en el Libro de Registro de Instalaciones PCI.</p>
+  </section>
+
+</main>
+</div>
+</body>
+</html>

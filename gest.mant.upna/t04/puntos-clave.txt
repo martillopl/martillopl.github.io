@@ -1,0 +1,267 @@
+PUNTOS CLAVE – TEMA 4
+INSTALACIONES ELÉCTRICAS DE BAJA TENSIÓN — ALUMBRADO INTERIOR
+Gestor de Mantenimiento (Nivel B) · Universidad Pública de Navarra
+
+=== NORMATIVA DE REFERENCIA ===
+1. REBT: Real Decreto 842/2002 — Reglamento Electrotécnico para Baja Tensión.
+   Norma central de toda instalación eléctrica BT. Contiene 51 Instrucciones
+   Técnicas Complementarias (ITC-BT-01 a ITC-BT-51). Las más importantes
+   para alumbrado interior son:
+   - ITC-BT-19: Instalaciones interiores o receptoras. Prescripciones generales.
+   - ITC-BT-20: Sistemas de instalación de los conductores.
+   - ITC-BT-22: Protección contra sobreintensidades.
+   - ITC-BT-23: Protección contra sobretensiones.
+   - ITC-BT-24: Protección contra contactos directos e indirectos.
+   - ITC-BT-25: Instalaciones interiores en viviendas. Circuitos.
+   - ITC-BT-28: Instalaciones en locales de pública concurrencia.
+     Clave para alumbrado de emergencia y requisitos especiales.
+   - ITC-BT-44: Instalaciones de receptores. Receptores de alumbrado.
+2. CTE DB-HE3 (Eficiencia Energética de las Instalaciones de Iluminación):
+   Sección del Código Técnico de la Edificación que establece los requisitos
+   de eficiencia energética del alumbrado interior de edificios. Introduce
+   el VEEI como parámetro de control. Ámbito de aplicación: edificios de
+   nueva construcción y grandes rehabilitaciones. NO aplica a interiores
+   de viviendas, industrias/talleres, instalaciones provisionales <2 años,
+   edificios independientes <50 m², ni alumbrado de emergencia.
+3. CTE DB-SUA4 (Seguridad de Utilización y Accesibilidad — Iluminación):
+   Establece los niveles mínimos de iluminancia para la seguridad en las
+   zonas de circulación (escaleras, pasillos, zonas de tránsito).
+4. RD 1890/2008 — REAE (Reglamento de Eficiencia Energética en Instalaciones
+   de Alumbrado Exterior): ITC-EA-01 a ITC-EA-07. Aplica al alumbrado
+   EXTERIOR, no al interior. Se cita en este tema para distinguirlo del
+   CTE DB-HE3, que es el aplicable al alumbrado interior.
+5. UNE-EN 12464-1: Norma europea de iluminación de lugares de trabajo en
+   interiores. Define los requisitos de iluminancia (Em), UGR (deslumbramiento)
+   e IRC (índice de reproducción cromática) para cada tipo de tarea visual.
+   Referencia de diseño por excelencia para alumbrado de oficinas, talleres,
+   aulas, etc.
+
+=== MAGNITUDES LUMINOTÉCNICAS FUNDAMENTALES ===
+6. FLUJO LUMINOSO (F): cantidad total de luz emitida por una fuente en todas
+   las direcciones. Unidad: lumen (lm).
+7. INTENSIDAD LUMINOSA (I): flujo luminoso emitido en una dirección concreta.
+   Unidad: candela (cd). Se representa en curvas polares (fotométricas).
+8. ILUMINANCIA (E): flujo luminoso recibido por unidad de superficie.
+   Unidad: lux (lx). 1 lux = 1 lm/m².
+   Es el parámetro de diseño más usado en la práctica: "se necesitan X lux
+   sobre el plano de trabajo".
+9. LUMINANCIA (L): intensidad luminosa emitida o reflejada por unidad de
+   superficie en una dirección. Unidad: cd/m². Es la magnitud que percibe
+   el ojo; el deslumbramiento es causado por exceso de luminancia.
+10. EFICIENCIA LUMINOSA (?): relación flujo luminoso emitido / potencia
+    eléctrica consumida. Unidad: lm/W. Cuanto mayor, más eficiente.
+    LED de alta calidad: 100-200 lm/W. Fluorescente T8: ~80-100 lm/W.
+    Incandescente: 10-15 lm/W (prácticamente obsoleta).
+11. TEMPERATURA DE COLOR (Tc): aspecto cálido o frío de la luz.
+    Unidad: Kelvin (K).
+    - <3.000 K: luz cálida (blanco cálido). Ambientes residenciales, restaurantes.
+    - 3.000–4.000 K: luz neutra (blanco neutro). Oficinas, comercios.
+    - >4.000 K: luz fría (blanco frío / daylight). Zonas de trabajo de precisión,
+      quirófanos, salas limpias.
+12. ÍNDICE DE REPRODUCCIÓN CROMÁTICA (IRC / Ra): capacidad de una fuente
+    de luz para reproducir los colores de los objetos con fidelidad respecto
+    a una fuente de referencia. Escala de 0 a 100.
+    - IRC = 90: excelente (clase 1A). Museos, joyerías, control de calidad.
+    - IRC 80-89: muy bueno (clase 1B). Oficinas, aulas, comercios.
+    - IRC 70-79: bueno (clase 2A). Zonas de tránsito, almacenes.
+    - IRC <60: uso muy limitado en interiores de trabajo.
+    TRAMPA: La UNE-EN 12464-1 exige IRC = 80 para la mayoría de los puestos
+    de trabajo en interiores. Por debajo de 80, no se considera adecuado para
+    tareas visuales exigentes.
+
+=== TIPOS DE LÁMPARAS (TIPOLOGÍAS DE FUENTES DE LUZ) ===
+13. INCANDESCENTE: filamento de wolframio. ?: 10-15 lm/W. IRC ˜ 100. Tc: ~2.700 K.
+    Prohibida en la UE (retirada progresiva completada). Solo referencia histórica.
+14. HALÓGENA: variante de incandescente con gas halógeno en la ampolla.
+    ?: 15-25 lm/W. IRC ˜ 100. Alta calidad de luz. Consumo elevado.
+    En retirada. Sustituida por LED.
+15. FLUORESCENTE TUBULAR (T8, T5): descarga en gas (mercurio + fósforos).
+    ?: 80-100 lm/W. IRC: 80-90. Requiere equipo auxiliar (balasto + cebador
+    o balasto electrónico). El balasto electrónico elimina el parpadeo y mejora
+    la eficiencia. Temperatura de arranque: pueden tener dificultades a <0 °C.
+    En retirada progresiva. Sustituida por LED tipo tubo.
+16. FLUORESCENTE COMPACTA (bajo consumo / CFL): similar al tubular pero
+    compacta. ?: 60-80 lm/W. IRC: 80-85. Tiempo de calentamiento hasta luz plena.
+    También en retirada por el LED.
+17. HALOGENURO METÁLICO (HM): lámpara de descarga de alta intensidad (HID).
+    ?: 70-110 lm/W. IRC: 80-95. Alta eficiencia luminosa. Arranque lento (varios
+    minutos hasta luz estabilizada). Rearranque en caliente: necesita enfriarse.
+    Uso: industria, grandes espacios, estadios, iluminación de tiendas premium.
+18. VAPOR DE SODIO ALTA PRESIÓN (VSAP): HID de alta eficiencia.
+    ?: 80-130 lm/W. IRC: 20-30 (muy bajo). Luz dorada. Uso principalmente exterior
+    (viales). En interiores: solo donde el IRC no importa (almacenes, industria
+    sin discriminación de colores).
+19. LED (Light Emitting Diode): estado sólido. ?: 100-200 lm/W (alta gama).
+    IRC: 80-98 según calidad. Vida útil: 25.000-50.000 h. Sin arranque, sin
+    rearranque, regulable con DALI o PWM. Temperatura de color configurable.
+    Norma de producto: UNE-EN 62031 (módulos LED), UNE-EN 61347 (equipos auxiliares).
+    TECNOLOGÍA DOMINANTE HOY. Sustitución de cualquier otra fuente en la práctica.
+
+=== VEEI — VALOR DE EFICIENCIA ENERGÉTICA DE LA INSTALACIÓN ===
+20. El VEEI es el indicador de eficiencia energética del CTE DB-HE3. Mide la
+    potencia instalada de iluminación por unidad de superficie y por cada
+    100 lux de iluminancia media mantenida. Fórmula:
+    VEEI = (P × 100) / (S × Em)
+    Donde: P = potencia total instalada (W), S = superficie del local (m²),
+    Em = iluminancia media horizontal mantenida (lux).
+    Unidades del VEEI: W/m² · (100 lux)?¹ = W/(m²·100lux).
+21. El CTE DB-HE3 establece valores VEEI LÍMITE para cada tipo de uso de recinto.
+    Los valores son distintos para "zonas de representación" (mayor exigencia
+    estética, VEEI límite más alto permitido) y "resto de zonas" (VEEI límite
+    más bajo). Ejemplos orientativos:
+    - Administrativo en general: VEEI límite 3,5 (resto de zonas)
+    - Tiendas y pequeño comercio: VEEI límite 4,0
+    - Zonas de reunión y salas de conferencias: VEEI límite 4,5
+    - Hospitalario: VEEI límite 4,0 (zonas de pacientes)
+    El valor de VEEI de la instalación calculada NO puede superar el valor límite.
+22. Además del VEEI, el CTE DB-HE3 limita la POTENCIA INSTALADA TOTAL en el
+    edificio (W/m²) mediante la tabla 3.2-HE3.
+23. Todo edificio sujeto al CTE DB-HE3 debe disponer de:
+    a) SISTEMA DE CONTROL: para ajustar el encendido a la ocupación real
+       (detector de presencia, temporizado o interruptor manual con zona
+       de influencia definida).
+    b) SISTEMA DE REGULACIÓN: para aprovechar la luz natural (sensor de
+       luminosidad / regulación de flujo). Obligatorio en zonas con iluminación
+       natural suficiente.
+
+=== DISEÑO DE INSTALACIONES DE ALUMBRADO INTERIOR ===
+24. El MÉTODO DE LAS CAVIDADES ZONALES (o método del flujo luminoso / método
+    del factor de utilización) es el método de cálculo más utilizado para
+    determinar el número de luminarias necesarias para conseguir una iluminancia
+    media objetivo. Fórmula general:
+    N = (Em × S) / (F_lum × ?_lum × Fm)
+    Donde: N = número de luminarias, Em = iluminancia media mantenida (lux),
+    S = superficie (m²), F_lum = flujo luminoso de cada luminaria (lm),
+    ?_lum = factor de utilización (eficiencia de la luminaria en el local),
+    Fm = factor de mantenimiento.
+25. FACTOR DE MANTENIMIENTO (Fm): relación entre la iluminancia media de una
+    instalación después de cierto tiempo de funcionamiento y la iluminancia
+    inicial. Fm = LLMF × LSF × LMF × RSMF, donde intervienen la depreciación
+    del flujo de la lámpara, la supervivencia de las lámparas, la suciedad
+    de la luminaria y la suciedad del local. Valores típicos: 0,60-0,80.
+    TRAMPA: Un Fm más bajo (instalación más sucia o con lámparas más degradadas)
+    obliga a instalar más luminarias inicialmente para mantener el nivel de
+    iluminancia al final del periodo de mantenimiento.
+26. ÍNDICE DEL LOCAL (K): parámetro geométrico que relaciona las dimensiones
+    del local con la altura de montaje de las luminarias. A mayor K, mayor
+    eficiencia del reparto de luz en el local. Usado para obtener el factor
+    de utilización de las tablas fotométricas del fabricante.
+27. UGR (Unified Glare Rating): índice unificado de deslumbramiento. Cuanto
+    menor, mejor. La UNE-EN 12464-1 fija UGR límite por tipo de actividad.
+    - UGR = 16: salas de dibujo técnico, CAD.
+    - UGR = 19: oficinas con pantallas de visualización.
+    - UGR = 22: industria de precisión, aulas.
+    - UGR = 25: zonas de circulación industrial, almacenes con tareas.
+    TRAMPA: el UGR se define como límite máximo: cuanto más bajo, más exigente.
+    No confundir con la iluminancia, que se define como mínimo.
+
+=== ITC-BT-28: LOCALES DE PÚBLICA CONCURRENCIA ===
+28. Los locales de pública concurrencia están regulados específicamente por
+    la ITC-BT-28 del REBT. Incluye: teatros, cines, salas de conciertos,
+    salas de reunión, locales de espectáculos, lugares de culto, museos,
+    establecimientos sanitarios, locales comerciales >400 m², estaciones,
+    aeropuertos, etc.
+29. Regla del tercio (ITC-BT-28): en locales de pública concurrencia, el
+    corte de corriente en una cualquiera de las líneas de alumbrado NO puede
+    afectar a más de un tercio del total de lámparas del local o dependencia.
+    CONSECUENCIA: el alumbrado debe distribuirse en al menos 3 circuitos
+    independientes con las lámparas repartidas equitativamente entre ellos.
+30. Alumbrado de emergencia en locales de pública concurrencia (ITC-BT-28):
+    - Líneas protegidas con automáticos de 10 A máximo.
+    - Una misma línea no alimentará más de 12 puntos de luz de emergencia.
+    - Si hay varios puntos de luz de emergencia, deben repartirse en al menos
+      2 líneas distintas aunque sean menos de 12.
+    TRAMPA: Máximo 12 puntos de luz de emergencia por línea y 10 A de protección.
+    Ambos datos aparecen juntos en el examen.
+
+=== ALUMBRADO DE EMERGENCIA (REBT + CTE DB-SUA) ===
+31. Tipos de alumbrado de emergencia:
+    a) ALUMBRADO DE SEGURIDAD: garantiza la seguridad de las personas durante
+       la evacuación. Subtipo: alumbrado de evacuación + alumbrado antipánico
+       + alumbrado de zonas de alto riesgo.
+    b) ALUMBRADO DE SUSTITUCIÓN o REEMPLAZAMIENTO: permite continuar la actividad
+       normal del local cuando falla el suministro (quirófanos, salas de UVI, etc.).
+       No es obligatorio en todos los locales; solo en los que requieran continuidad.
+32. Requisitos del alumbrado de evacuación (CTE DB-SUA4):
+    - Iluminancia mínima en el eje de vías de evacuación: 1 lux.
+    - Iluminancia mínima en bandas centrales de evacuación: 1 lux (eje).
+    - Relación iluminancia máxima / mínima en la vía: = 40:1.
+    - Tiempo de funcionamiento: mínimo 1 hora tras el corte de suministro.
+    TRAMPA: La iluminancia de 1 lux es un mínimo muy bajo (no es una zona de
+    trabajo, sino de evacuación de emergencia). En condiciones normales no sería
+    suficiente para trabajar.
+33. Autonomía mínima de los equipos de alumbrado de emergencia autónomos:
+    1 hora. Este dato aparece con mucha frecuencia en el examen.
+
+=== SISTEMAS DE CONTROL Y REGULACIÓN DE LA ILUMINACIÓN ===
+34. Sistemas de control principales:
+    a) Interruptor manual: el más básico. La zona de influencia de cada
+       interruptor debe estar claramente definida.
+    b) Detector de presencia / movimiento (PIR o ultrasónico): detecta la
+       ocupación del local y apaga o reduce la iluminación cuando no hay
+       nadie. Muy habitual en pasillos, aseos, zonas de paso.
+    c) Detector de luminosidad (sensor de luz diurna / célula fotoeléctrica):
+       regula el flujo de las luminarias en función de la luz natural disponible.
+       Complemento esencial del sistema de regulación exigido por el CTE DB-HE3.
+    d) Temporizador: apaga las luminarias tras un tiempo programado sin acción.
+    e) Sistema DALI (Digital Addressable Lighting Interface): bus digital de
+       control de iluminación. Permite direccionar individualmente cada
+       luminaria o grupo, regular el flujo (0-100%), programar escenas y
+       horarios, e integrar la iluminación con el BMS del edificio.
+       El protocolo DALI es el estándar de control de iluminación técnica
+       más extendido en edificios de oficinas y uso terciario.
+35. SISTEMAS DE GESTIÓN DE ILUMINACIÓN (LMS / BACS):
+    Permiten integrar el control de iluminación con el sistema de gestión
+    del edificio (BMS / BACS según EN 15232). En edificios de alta eficiencia
+    energética, la iluminación es uno de los subsistemas gestionados de forma
+    centralizada y automatizada.
+
+=== MANTENIMIENTO DE INSTALACIONES DE ALUMBRADO INTERIOR ===
+36. El mantenimiento del alumbrado interior comprende:
+    - Limpieza de luminarias (reflectores y difusores): la acumulación de
+      polvo y suciedad reduce el flujo luminoso útil. Periodicidad: según
+      condiciones del local (anual en oficinas; más frecuente en industria
+      con polvo o grasa). Es el factor que más degrada el Fm en la práctica.
+    - Reposición de lámparas: puede ser individual (se cambia cada lámpara
+      al fundirse) o en grupo (se cambian todas las lámparas de una zona
+      simultáneamente al final de su vida útil estimada). La reposición
+      en grupo es más eficiente en instalaciones con muchas lámparas.
+    - Verificación de equipos auxiliares: balastos electrónicos, drivers LED,
+      detectores de presencia, sensores de luminosidad.
+    - Revisión del cuadro eléctrico: protecciones, diferencial, estado de
+      conexiones.
+37. DEPRECIACIÓN DEL FLUJO LUMINOSO: las lámparas pierden flujo con el tiempo.
+    Los LED de calidad mantienen =70% del flujo inicial al 70% de su vida útil
+    (valor L70). Este parámetro se usa para calcular el factor de mantenimiento.
+38. Documento fundamental del mantenimiento: el PLAN DE MANTENIMIENTO de la
+    instalación de alumbrado, que debe incluir:
+    - Periodicidad de limpieza de luminarias.
+    - Criterio de reposición de fuentes de luz.
+    - Registro de consumos y comparación con valores de referencia.
+
+=== LO MÁS PREGUNTADO EN OPOSICIÓN ===
+39. REBT = RD 842/2002. ITC más importantes: ITC-BT-22 (sobreintensidades),
+    ITC-BT-24 (contactos), ITC-BT-28 (pública concurrencia), ITC-BT-44 (receptores
+    de alumbrado).
+40. CTE DB-HE3: eficiencia energética del alumbrado interior. Parámetro central:
+    VEEI. Fórmula: VEEI = (P × 100) / (S × Em). Cuanto más bajo, más eficiente.
+41. VEEI no puede superar el VEEI límite de la tabla 3.1-HE3 del CTE DB-HE3.
+42. El CTE DB-HE3 NO aplica a: viviendas, industria y talleres, edificios <50 m²,
+    alumbrado de emergencia, instalaciones provisionales <2 años.
+43. Magnitudes: flujo (lm) · intensidad luminosa (cd) · iluminancia (lux) ·
+    luminancia (cd/m²) · eficiencia luminosa (lm/W). La iluminancia es el
+    parámetro de diseño; la luminancia es la que percibe el ojo.
+44. IRC = 80 para trabajos de interior según UNE-EN 12464-1. IRC = 90 para
+    tareas de discriminación de color muy exigente.
+45. Temperatura de color: <3.000 K cálida; 3.000-4.000 K neutra; >4.000 K fría.
+46. UGR: cuanto más bajo, menos deslumbramiento. UGR = 19 para oficinas con PVD.
+47. Regla del tercio (ITC-BT-28): corte de una línea ? máximo 1/3 del total de
+    lámparas del local afectadas. Requiere al menos 3 circuitos de alumbrado.
+48. Alumbrado de emergencia (ITC-BT-28): máx. 12 puntos/línea · automático 10 A.
+49. Autonomía mínima del alumbrado de emergencia: 1 hora.
+50. Iluminancia mínima en vía de evacuación: 1 lux en el eje.
+51. DALI: protocolo digital de control de iluminación. Estándar en edificios
+    terciarios y de oficinas.
+52. LED: tecnología dominante. 100-200 lm/W. Vida útil 25.000-50.000 h. L70.
+53. Factor de mantenimiento (Fm): valores típicos 0,60-0,80. A mayor suciedad y
+    degradación, menor Fm y más luminarias necesarias en el diseño.
