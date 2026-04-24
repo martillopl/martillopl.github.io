@@ -1,0 +1,321 @@
+﻿PUNTOS CLAVE – TEMA 5
+INSTALACIONES ELÉCTRICAS DE BAJA TENSIÓN — ALUMBRADO EXTERIOR
+Gestor de Mantenimiento (Nivel B) · Universidad Pública de Navarra
+
+=== NORMATIVA DE REFERENCIA ===
+1. REBT (RD 842/2002): norma madre de toda instalación eléctrica BT.
+   Para alumbrado exterior, las ITC más relevantes son:
+   - ITC-BT-09: Instalaciones de alumbrado exterior. Norma específica
+     para redes de alumbrado de vías públicas, carreteras, parques,
+     jardines, aparcamientos y túneles. Establece los requisitos de
+     protección, control, medida y distribución de las instalaciones
+     de alumbrado exterior conectadas a redes de BT.
+   - ITC-BT-06 e ITC-BT-07: líneas aéreas y subterráneas.
+   - ITC-BT-24: protección contra contactos directos e indirectos.
+
+2. RD 1890/2008 — REAE (Reglamento de Eficiencia Energética en
+   Instalaciones de Alumbrado Exterior): la norma central de
+   eficiencia energética del alumbrado exterior. Contiene 7
+   Instrucciones Técnicas Complementarias (ITC-EA-01 a ITC-EA-07):
+   - ITC-EA-01: Clasificación de las vías y zonas. Define la clase
+     de alumbrado (ME, CE, S, P, E, ES, F, C) según el tipo de vía.
+   - ITC-EA-02: Niveles de servicio. Requisitos de iluminancia y
+     luminancia para cada clase de alumbrado.
+   - ITC-EA-03: Resplandor luminoso nocturno y luz intrusa o molesta.
+     Limita la contaminación lumínica. Define zonas E1 a E4.
+   - ITC-EA-04: Componentes de las instalaciones. Lámparas,
+     luminarias, equipos auxiliares, soportes.
+   - ITC-EA-05: Documentación técnica de las instalaciones.
+   - ITC-EA-06: Mantenimiento de las instalaciones.
+   - ITC-EA-07: Inspecciones. Periodicidades y entidades inspectoras.
+
+3. UNE-EN 13201 (series): norma europea de alumbrado de carreteras.
+   Partes principales:
+   - UNE-EN 13201-1: selección de la clase de alumbrado.
+   - UNE-EN 13201-2: requisitos de prestaciones (tablas de niveles).
+   - UNE-EN 13201-3: cálculo de prestaciones.
+   - UNE-EN 13201-4: métodos de medida.
+   - UNE-EN 13201-5: indicadores de eficiencia energética (IPE, ILE).
+
+4. CTE DB-SUA4: iluminancia mínima en zonas de uso peatonal y
+   circulación del entorno de los edificios.
+
+5. RD 337/2014: actualiza el REAE en lo referente al alumbrado
+   de carreteras y autovías (modificación del RD 1890/2008).
+
+=== CLASES DE ALUMBRADO (ITC-EA-01 / UNE-EN 13201) ===
+6. El REAE clasifica el alumbrado exterior en series:
+   ME (Motor-vehicle roads with median illuminance): vías para
+     tráfico motorizado. Subclases ME1 a ME6.
+   CE (Conflict areas): zonas de conflicto (intersecciones,
+     rotondas). CE0 a CE5.
+   S  (Subsidiary roads): vías secundarias, peatonales.
+   P  (Pedestrian): zonas peatonales y carriles bici. P1 a P6.
+   E  (Extended): zonas de trabajo, aparcamientos. E1 a E6.
+   ES (Extended with speed reduction): zona con reducción de
+     velocidad.
+   F  (Floodlighting): iluminación de fachadas y monumentos.
+   C  (Car parks): aparcamientos.
+
+7. Las clases ME definen niveles de LUMINANCIA media mantenida
+   (Lm) en cd/m² sobre la calzada. Es el parámetro principal
+   para vías de tráfico rodado.
+   ME1: Lm = 2,0 cd/m² (vía rápida, alta densidad de tráfico)
+   ME2: Lm = 1,5 cd/m²
+   ME3: Lm = 1,0 cd/m²
+   ME4: Lm = 0,75 cd/m²
+   ME5: Lm = 0,5 cd/m²
+   ME6: Lm = 0,3 cd/m² (vía local de baja velocidad)
+   TRAMPA: En vías de tráfico rodado el parámetro principal es
+   la LUMINANCIA (cd/m²), no la iluminancia (lux). Al contrario
+   que el alumbrado interior (UNE-EN 12464-1), donde el parámetro
+   de diseño es la iluminancia.
+
+8. Las clases P (peatonal) definen niveles de ILUMINANCIA
+   horizontal media mantenida (Em) en lux.
+   P1: Em = 15 lux (zona peatonal de alto uso, riesgo de crimen)
+   P2: Em = 10 lux
+   P3: Em = 7,5 lux
+   P4: Em = 5 lux
+   P5: Em = 3 lux
+   P6: Em = 2 lux (paso peatonal de muy bajo uso)
+
+=== MAGNITUDES ESPECÍFICAS DEL ALUMBRADO EXTERIOR ===
+9. LUMINANCIA MEDIA MANTENIDA (Lm): valor medio de luminancia
+   sobre la calzada al final del periodo de mantenimiento.
+   Parámetro principal en vías ME. Unidad: cd/m².
+
+10. UNIFORMIDAD GLOBAL (Uo): relación entre la luminancia mínima
+    y la luminancia media en la calzada. Uo = Lmin/Lm.
+    Cuanto más próximo a 1, más uniforme es la instalación.
+    Evita zonas de oscuridad relativa que dificulten la visión
+    y causen accidentes.
+
+11. UNIFORMIDAD LONGITUDINAL (Ul): relación entre la luminancia
+    mínima y la máxima a lo largo del eje del carril.
+    Ul = Lmin/Lmax (en el carril más desfavorable).
+
+12. INCREMENTO DE UMBRAL (TI): parámetro de deslumbramiento
+    perturbador (disability glare). Expresado en %. Cuanto más
+    bajo, mejor. Límite habitual: TI ≤ 10% para ME1-ME4.
+
+13. RELACIÓN ENTORNO (SR): uniformidad en las zonas de borde
+    (arcenes, aceras) respecto a la calzada.
+
+=== EFICIENCIA ENERGÉTICA — REAE (ITC-EA-01) ===
+14. El REAE establece dos indicadores de eficiencia energética
+    del alumbrado exterior:
+    a) EFICIENCIA ENERGÉTICA DE LA INSTALACIÓN (ε):
+       ε = (Φ_total × fm) / P_total
+       Donde Φ_total = flujo total emitido por las luminarias (lm),
+       fm = factor de mantenimiento, P_total = potencia total
+       instalada incluyendo equipos auxiliares (W).
+       Unidades: lm/W.
+    b) ÍNDICE DE EFICIENCIA ENERGÉTICA (Iε):
+       Iε = ε_ref / ε_inst
+       Donde ε_ref es el valor de referencia de la tabla del REAE
+       para esa clase de alumbrado. Iε ≤ 1 → instalación eficiente.
+
+15. CALIFICACIÓN ENERGÉTICA: el REAE establece un sistema de
+    calificación energética de A a G (como los electrodomésticos),
+    basado en el Índice de Consumo Energético (ICE):
+    ICE = P_total / (S × Em_media)
+    - A: ICE ≤ 0,63 (más eficiente)
+    - B: 0,63 < ICE ≤ 0,80
+    - C: 0,80 < ICE ≤ 1,00 (referencia)
+    - D: 1,00 < ICE ≤ 1,26
+    - E: 1,26 < ICE ≤ 1,59
+    - F: 1,59 < ICE ≤ 2,00
+    - G: ICE > 2,00 (menos eficiente)
+    TRAMPA: La calificación A es la más eficiente y la G la menos
+    eficiente. Igual que los electrodomésticos.
+
+=== CONTAMINACIÓN LUMÍNICA (ITC-EA-03) ===
+16. El REAE limita la CONTAMINACIÓN LUMÍNICA mediante:
+    a) Límite de flujo hemisférico superior (FHS): fracción del
+       flujo total emitido hacia el hemisferio superior (hacia el
+       cielo). Cuanto menor, menos contaminación lumínica.
+    b) Zonas de protección contra la contaminación lumínica
+       (E1 a E4):
+       E1: áreas con entornos oscuros (parques nacionales,
+           observatorios astronómicos). FHS ≤ 0%.
+       E2: áreas rurales de baja densidad de población.
+           FHS ≤ 5%.
+       E3: áreas suburbanas (afueras de ciudades).
+           FHS ≤ 15%.
+       E4: áreas urbanas de alta densidad (centros de ciudad).
+           FHS ≤ 25%.
+    TRAMPA: La zona E1 exige FHS = 0%: ningún flujo hacia el
+    cielo. Solo se permiten luminarias de distribución estrictamente
+    horizontal (full cut-off).
+
+17. LUZ INTRUSA O MOLESTA: la ITC-EA-03 también limita la luz
+    que penetra en propiedades privadas (ventanas de viviendas),
+    fachadas de edificios y en los ojos de los conductores
+    (luminancia de deslumbramiento). Es distinta de la
+    contaminación lumínica (flujo al cielo).
+
+=== TIPOLOGÍAS DE LUMINARIAS DE ALUMBRADO EXTERIOR ===
+18. Según la distribución fotométrica:
+    - FULL CUT-OFF (corte total): no emiten flujo por encima de
+      los 90° (plano horizontal). FHS = 0%. Obligatorias en E1.
+    - CUT-OFF: FHS ≤ 2,5%. Para zonas E2.
+    - SEMI CUT-OFF: FHS ≤ 5%. Para zonas E3.
+    - NO CUT-OFF: sin límite de flujo superior. Solo en E4 bajo
+      condiciones estrictas.
+
+19. Según el tipo de soporte:
+    - BÁCULO: soporte metálico de altura variable (generalmente
+      6-12 m). Para viales de tráfico rodado.
+    - COLUMNA: soporte de menor altura (4-6 m). Para zonas
+      peatonales, parques, aparcamientos.
+    - BRAZO MURAL: luminaria anclada directamente a fachada.
+    - LUMINARIA PROYECTABLE (REFLECTOR / FLOODLIGHT): para
+      iluminación de fachadas, monumentos, campos deportivos.
+    - BALIZA: luminaria de baja altura (0,5-1,5 m). Señalización
+      de caminos peatonales, jardines.
+    - LUMINARIA EMPOTRADA EN SUELO: para iluminación de zonas
+      peatonales, jardines, fachadas.
+
+20. Fuentes de luz en alumbrado exterior:
+    - VAPOR DE SODIO ALTA PRESIÓN (VSAP): durante décadas la
+      tecnología dominante. η: 80-130 lm/W. IRC: 20-30 (muy bajo,
+      luz dorada). Actualmente en sustitución masiva por LED.
+    - VAPOR DE SODIO BAJA PRESIÓN (VSBP): η hasta 200 lm/W
+      (la más eficiente de las tradicionales). IRC ≈ 0 (luz
+      monocromática amarilla). Solo para viales donde el color
+      no importa. En desuso.
+    - HALOGENURO METÁLICO (HM): IRC 80-95, buena reproducción
+      del color. Uso en zonas comerciales, monumentos, estadios.
+    - LED: tecnología dominante actual. η: 100-180 lm/W.
+      IRC: 70-90. Vida útil 50.000-100.000 h. Regulable.
+      Temperatura de color: típicamente 3.000-4.000 K para
+      viales (evitar >5.000 K por impacto en fauna nocturna
+      y seres humanos).
+
+=== ITC-BT-09: INSTALACIONES DE ALUMBRADO EXTERIOR ===
+21. La ITC-BT-09 establece los requisitos técnicos específicos
+    de las instalaciones eléctricas de alumbrado exterior:
+    - Las redes de distribución de alumbrado exterior pueden
+      ser aéreas o subterráneas.
+    - Los circuitos estarán protegidos contra sobreintensidades
+      y corrientes de defecto.
+    - Los puntos de luz deben conectarse a tierra.
+    - Las luminarias instaladas en báculos y columnas deben
+      estar protegidas contra contactos mediante carcasas de
+      clase II (doble aislamiento) o mediante puesta a tierra.
+    - Los cuadros de mando del alumbrado exterior deben
+      incluir: contador de energía, protecciones generales
+      (interruptor general automático), protecciones de los
+      circuitos de salida (automáticos + diferencial 300 mA),
+      sistema de telegestión o control horario.
+    - Cada cuadro de mando puede alimentar un máximo de
+      circuitos de alumbrado según la potencia total.
+
+22. PUESTA A TIERRA en alumbrado exterior (ITC-BT-09):
+    - Las masas metálicas de los báculos, columnas y luminarias
+      deben conectarse al conductor de protección (PE) y a
+      la puesta a tierra de la instalación.
+    - La resistencia de tierra debe ser ≤ 37 Ω en terrenos
+      con resistividad normal.
+    - TRAMPA: en alumbrado exterior, la puesta a tierra es
+      especialmente crítica porque los soportes están en
+      la vía pública y el contacto accidental puede afectar
+      a peatones (voltaje de paso y de contacto).
+
+=== SISTEMAS DE CONTROL Y REGULACIÓN ===
+23. Sistemas de encendido/apagado del alumbrado exterior:
+    a) RELOJ ASTRONÓMICO: calcula la hora de orto y ocaso
+       para cada día del año y latitud. Enciende al anochecer
+       y apaga al amanecer. El más extendido para alumbrado
+       viario. Sin necesidad de sensor exterior.
+    b) FOTOCÉLULA (CÉLULA FOTOELÉCTRICA): detecta la luminancia
+       del cielo y enciende/apaga según un umbral de iluminancia
+       (típicamente 20-30 lux para encendido; 30-50 lux para
+       apagado). Puede verse afectada por suciedad, sombras
+       o luces artificiales cercanas.
+    c) COMBINACIÓN RELOJ + FOTOCÉLULA: el reloj actúa como
+       seguridad ante fallo de la fotocélula.
+
+24. SISTEMAS DE REGULACIÓN DE FLUJO (REDUCCIÓN DE NIVEL):
+    Permiten reducir el flujo luminoso de las luminarias en
+    horas de menor tráfico (normalmente de medianoche a las
+    5-6 de la madrugada), con el consiguiente ahorro energético.
+    Modalidades:
+    a) REGULACIÓN DEL NIVEL DE TENSIÓN: el cuadro de mando
+       reduce la tensión de alimentación de las luminarias
+       (estabilizador-reductor de flujo). Aplicable a VSAP y
+       fluorescente. NO compatible con LED sin driver regulable.
+    b) REDUCTOR DE FLUJO EN CABECERA (estabilizador-reductor):
+       dispositivo instalado en el cuadro de mando que regula
+       la tensión de toda la línea. Bajo coste de instalación.
+    c) REGULACIÓN PUNTO A PUNTO (drivers regulables / DALI):
+       cada luminaria LED tiene un driver regulable que recibe
+       la orden de nivel de flujo deseado. Permite regulación
+       individualizada. Integrable con telegestión.
+    d) TELEGESTIÓN DEL ALUMBRADO: sistema de gestión remota
+       que permite controlar y monitorizar individualmente
+       cada punto de luz. Encendido/apagado, nivel de flujo,
+       detección de averías, medida de consumo en tiempo real.
+       Es el sistema más avanzado y el que habilita el
+       "alumbrado adaptativo" (adaptación del nivel al tráfico
+       real detectado por sensores).
+
+=== MANTENIMIENTO (ITC-EA-06 y ITC-EA-07) ===
+25. El REAE (ITC-EA-06) exige que toda instalación de alumbrado
+    exterior disponga de un PLAN DE MANTENIMIENTO que incluya:
+    - Periodicidad de limpieza de luminarias.
+    - Periodicidad de reposición de lámparas (individual o
+      en grupo).
+    - Revisión de cuadros de mando y protecciones.
+    - Revisión de la instalación eléctrica (conductores,
+      puestas a tierra, conexiones).
+
+26. El FACTOR DE MANTENIMIENTO (fm) del alumbrado exterior
+    se calcula igual que el interior: fm = LLMF × LSF × LMF × RSMF.
+    En exteriores, la suciedad ambiental (tráfico, lluvia,
+    polvo) tiene un efecto mayor sobre el LMF y el RSMF.
+    Valores típicos: fm = 0,60-0,70 en zonas urbanas con
+    tráfico; fm = 0,70-0,80 en zonas limpias.
+
+27. INSPECCIONES (ITC-EA-07):
+    - Instalaciones de hasta 5 kW: inspección inicial antes
+      de la puesta en servicio por instalador autorizado.
+    - Instalaciones de más de 5 kW: inspección inicial por
+      Organismo de Control Autorizado (OCA).
+    - Inspecciones periódicas:
+      · Instalaciones de 5-25 kW: cada 5 años (OCA).
+      · Instalaciones de más de 25 kW: cada 2 años (OCA).
+    TRAMPA: los umbrales y las periodicidades de inspección
+    del REAE son distintos a los del RITE (que es para
+    instalaciones térmicas). No mezclarlos.
+
+=== LO MÁS PREGUNTADO EN OPOSICIÓN ===
+28. REAE = RD 1890/2008. 7 ITC (EA-01 a EA-07). Norma de
+    eficiencia energética del alumbrado EXTERIOR (≠ CTE DB-HE3
+    que es para interior).
+29. ITC-BT-09 = instalaciones eléctricas de alumbrado exterior
+    (dentro del REBT, RD 842/2002).
+30. Clases de alumbrado: ME (luminancia, cd/m²) para viales
+    de tráfico; P (iluminancia, lux) para zonas peatonales.
+31. En viales ME el parámetro de diseño es la LUMINANCIA (cd/m²),
+    no la iluminancia. Al contrario del interior.
+32. Calificación energética A-G. A = más eficiente. Basada en ICE.
+33. Zonas E1-E4 de contaminación lumínica. E1: FHS = 0% (full
+    cut-off obligatorio). E4: FHS ≤ 25%.
+34. VSAP: tecnología tradicional dominante en exterior.
+    IRC 20-30. En sustitución por LED.
+35. LED exterior: evitar >5.000 K por impacto en fauna nocturna
+    y salud humana. Tipicamente 3.000-4.000 K.
+36. Regulación de flujo: estabilizador-reductor en cabecera
+    (toda la línea) o driver regulable punto a punto (LED).
+    Telegestión = control individual de cada punto de luz.
+37. Reloj astronómico: enciende y apaga según orto y ocaso.
+    No necesita sensor. El más fiable para alumbrado viario.
+38. Inspecciones REAE (ITC-EA-07): >5 kW → OCA inicial.
+    5-25 kW → OCA cada 5 años. >25 kW → OCA cada 2 años.
+39. Puesta a tierra (ITC-BT-09): masas metálicas de báculos
+    y columnas conectadas a tierra. R ≤ 37 Ω.
+40. FHS (flujo hemisférico superior): fracción del flujo que va
+    al cielo. Cuanto menor, menos contaminación lumínica.
+    E1: 0% · E2: 5% · E3: 15% · E4: 25%.

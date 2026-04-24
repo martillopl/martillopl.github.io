@@ -1,0 +1,575 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 5 – Esquema-resumen · Alumbrado exterior BT</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f6f2; --surface: #ffffff; --surface-2: #f9f8f5;
+    --border: #d4d1ca; --divider: #dcd9d5;
+    --text: #28251d; --muted: #6b6a65; --faint: #a8a7a2;
+    --green:  #1a5c2e; --green-lt:  #d6ecd6; --green-dk: #0f3d1d;
+    --gold:   #d19900; --gold-lt:   #f5e9c0;
+    --blue:   #1a4a8b; --blue-lt:   #e0eaf8; --blue-dk:  #0d2f5e;
+    --teal:   #005f73; --teal-lt:   #cce3e8;
+    --orange: #964219; --orange-lt: #f5e0d0;
+    --purple: #5a3e8c; --purple-lt: #e4ddf5;
+    --red:    #8b1a1a; --red-lt:    #fde8e8;
+    --font-d: 'Cabinet Grotesk', sans-serif;
+    --font-b: 'Satoshi', sans-serif;
+    --r-sm: 0.375rem; --r-md: 0.5rem; --r-lg: 0.75rem; --r-xl: 1rem;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-b); background: var(--bg); color: var(--text); font-size: 0.88rem; line-height: 1.6; -webkit-font-smoothing: antialiased; padding: 2rem 1.5rem 4rem; }
+
+  /* FILE NAV */
+  .file-nav { display:flex; gap:0.5rem; margin-bottom:1.5rem; flex-wrap:wrap; }
+  .file-nav a { padding:0.3rem 1rem; border-radius:999px; background:var(--surface); border:1px solid var(--border); font-size:0.8rem; text-decoration:none; color:var(--muted); transition:all 0.15s; }
+  .file-nav a:hover, .file-nav a.active { background:var(--green); color:white; border-color:var(--green); }
+
+  /* PAGE HEADER */
+  .page-header { background:linear-gradient(135deg, #1a5c2e 0%, #0c3518 100%); color:white; border-radius:var(--r-xl); padding:2rem 2.5rem; margin-bottom:2rem; }
+  .page-header .meta { font-size:0.72rem; opacity:0.7; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.5rem; }
+  .page-header h1 { font-family:var(--font-d); font-size:clamp(1.3rem,3vw,1.9rem); font-weight:800; line-height:1.2; margin-bottom:0.4rem; }
+  .page-header .sub { font-size:0.85rem; opacity:0.8; }
+
+  /* SECTION LABEL */
+  .section-label { font-family:var(--font-d); font-size:0.65rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:var(--faint); margin:2.5rem 0 0.75rem; }
+
+  /* BLOCK CARDS */
+  .block-card { background:var(--surface); border-radius:var(--r-xl); border:1px solid var(--border); overflow:hidden; margin-bottom:1.25rem; box-shadow:0 1px 4px rgba(26,92,46,.07); }
+  .block-card-header { padding:0.85rem 1.25rem; display:flex; align-items:center; gap:0.65rem; border-bottom:1px solid var(--border); }
+  .block-card-header .icon { font-size:1.15rem; }
+  .block-card-header h2 { font-family:var(--font-d); font-size:0.95rem; font-weight:800; }
+  .block-card-body { padding:1rem 1.25rem; }
+
+  /* COLOR HEADERS */
+  .hdr-green  { border-top:4px solid var(--green); }
+  .hdr-blue   { border-top:4px solid var(--blue); }
+  .hdr-teal   { border-top:4px solid var(--teal); }
+  .hdr-gold   { border-top:4px solid var(--gold); }
+  .hdr-purple { border-top:4px solid var(--purple); }
+  .hdr-orange { border-top:4px solid var(--orange); }
+  .hdr-red    { border-top:4px solid var(--red); }
+
+  /* CHIPS */
+  .chip { display:inline-block; font-size:0.65rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:1px 7px; border-radius:999px; white-space:nowrap; }
+  .ch-green  { background:var(--green-lt);  color:var(--green); }
+  .ch-blue   { background:var(--blue-lt);   color:var(--blue-dk); }
+  .ch-gold   { background:var(--gold-lt);   color:#7a5500; }
+  .ch-orange { background:var(--orange-lt); color:var(--orange); }
+  .ch-teal   { background:var(--teal-lt);   color:var(--teal); }
+  .ch-purple { background:var(--purple-lt); color:var(--purple); }
+  .ch-red    { background:var(--red-lt);    color:var(--red); }
+  .ch-grey   { background:#f0f0ee;          color:var(--muted); }
+
+  /* CALLOUTS */
+  .callout { border-radius:var(--r-md); padding:0.7rem 1rem; font-size:0.83rem; margin:0.75rem 0; line-height:1.55; }
+  .callout strong { font-weight:700; }
+  .al-warn   { background:var(--orange-lt); border-left:3px solid var(--orange); }
+  .al-green  { background:var(--green-lt);  border-left:3px solid var(--green); }
+  .al-blue   { background:var(--blue-lt);   border-left:3px solid var(--blue); }
+  .al-gold   { background:var(--gold-lt);   border-left:3px solid var(--gold); }
+  .al-teal   { background:var(--teal-lt);   border-left:3px solid var(--teal); }
+  .al-purple { background:var(--purple-lt); border-left:3px solid var(--purple); }
+  .al-red    { background:var(--red-lt);    border-left:3px solid var(--red); }
+
+  /* PILL LISTS */
+  .pill-list { display:flex; flex-wrap:wrap; gap:0.4rem; margin:0.5rem 0; }
+  .pill { display:inline-flex; align-items:center; gap:0.35rem; padding:0.25rem 0.75rem; border-radius:999px; font-size:0.79rem; font-weight:600; border:1px solid transparent; }
+  .pill-green  { background:var(--green-lt);  color:var(--green);  border-color:#c0dfc0; }
+  .pill-blue   { background:var(--blue-lt);   color:var(--blue-dk);border-color:#c0d4f0; }
+  .pill-gold   { background:var(--gold-lt);   color:#7a5500;       border-color:#e0d090; }
+  .pill-teal   { background:var(--teal-lt);   color:var(--teal);   border-color:#a0cfd8; }
+  .pill-orange { background:var(--orange-lt); color:var(--orange); border-color:#e0b090; }
+  .pill-purple { background:var(--purple-lt); color:var(--purple); border-color:#c8b8e8; }
+  .pill-red    { background:var(--red-lt);    color:var(--red);    border-color:#e8b0b0; }
+  .pill-grey   { background:#f0f0ee; color:var(--muted); border-color:#ddd; }
+
+  /* KPI GRID */
+  .kpi-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0.75rem; margin:0.75rem 0; }
+  .kpi { background:var(--surface-2); border:1px solid var(--border); border-radius:var(--r-lg); padding:0.85rem; text-align:center; }
+  .kpi .val { font-family:var(--font-d); font-size:1.4rem; font-weight:800; display:block; line-height:1; }
+  .kpi .lbl { font-size:0.68rem; color:var(--muted); margin-top:4px; display:block; }
+  .kpi-green .val  { color:var(--green); }
+  .kpi-blue .val   { color:var(--blue); }
+  .kpi-gold .val   { color:var(--gold); }
+  .kpi-orange .val { color:var(--orange); }
+  .kpi-teal .val   { color:var(--teal); }
+  .kpi-purple .val { color:var(--purple); }
+  .kpi-red .val    { color:var(--red); }
+
+  /* GRID 2 */
+  .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+  .grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:0.75rem; }
+
+  /* STEP LIST */
+  .step-list { list-style:none; padding:0; margin:0.5rem 0; }
+  .step-list li { display:flex; gap:0.75rem; align-items:flex-start; padding:0.45rem 0; border-bottom:1px solid #f0ede8; font-size:0.84rem; }
+  .step-list li:last-child { border-bottom:none; }
+  .step-list .step-num { font-family:var(--font-d); font-weight:800; font-size:0.9rem; min-width:22px; text-align:center; }
+  .step-list .step-body strong { font-weight:700; display:block; }
+  .step-list .step-body span { color:var(--muted); font-size:0.8rem; }
+
+  /* NORMATIVA BADGE LIST */
+  .norm-list { list-style:none; padding:0; }
+  .norm-list li { display:flex; align-items:flex-start; gap:0.75rem; padding:0.5rem 0; border-bottom:1px solid #f0ede8; font-size:0.84rem; }
+  .norm-list li:last-child { border-bottom:none; }
+  .norm-badge { font-family:var(--font-d); font-weight:800; font-size:0.72rem; padding:2px 8px; border-radius:4px; white-space:nowrap; min-width:90px; text-align:center; }
+  .norm-body strong { font-weight:700; display:block; font-size:0.84rem; }
+  .norm-body span { color:var(--muted); font-size:0.79rem; }
+
+  /* CLASE ME / P */
+  .clase-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0.6rem; margin:0.75rem 0; }
+  .clase-card { border-radius:var(--r-md); border:1px solid var(--border); padding:0.65rem 0.75rem; background:var(--surface-2); }
+  .clase-card .cl-id { font-family:var(--font-d); font-weight:800; font-size:1rem; }
+  .clase-card .cl-val { font-size:0.79rem; font-weight:700; margin:2px 0; }
+  .clase-card .cl-desc { font-size:0.7rem; color:var(--muted); }
+
+  /* ZONAS E */
+  .zona-strip { display:grid; grid-template-columns:repeat(4,1fr); gap:0.65rem; margin:0.75rem 0; }
+  .zona-block { border-radius:var(--r-md); padding:0.85rem 0.65rem; text-align:center; }
+  .zona-block .z-id { font-family:var(--font-d); font-size:1.5rem; font-weight:800; display:block; line-height:1; }
+  .zona-block .z-name { font-size:0.67rem; font-weight:700; margin:3px 0 2px; display:block; }
+  .zona-block .z-fhs { font-size:0.85rem; font-weight:800; display:block; }
+  .zona-block .z-desc { font-size:0.65rem; margin-top:3px; }
+  .z1 { background:#0a0a14; color:#8099cc; } .z1 .z-fhs { color:#60a0ff; }
+  .z2 { background:#1a2a1a; color:#70b070; } .z2 .z-fhs { color:#60c060; }
+  .z3 { background:var(--green-lt); color:var(--green); } .z3 .z-fhs { color:var(--green-dk); }
+  .z4 { background:var(--gold-lt); color:#7a5500; } .z4 .z-fhs { color:var(--gold); }
+
+  /* CALIFICACIÓN ENERGÉTICA */
+  .cal-bar { margin:0.75rem 0; }
+  .cal-row { display:flex; align-items:center; gap:0.65rem; margin-bottom:3px; }
+  .cal-letter { font-family:var(--font-d); font-weight:800; font-size:0.9rem; width:18px; text-align:center; }
+  .cal-seg { height:24px; border-radius:0 3px 3px 0; display:flex; align-items:center; padding:0 0.7rem; font-size:0.72rem; font-weight:700; color:white; }
+  .cal-lbl { font-size:0.72rem; color:var(--muted); }
+
+  /* ITC TABLE */
+  .itc-table { width:100%; border-collapse:collapse; font-size:0.82rem; }
+  .itc-table th { font-family:var(--font-d); font-weight:800; font-size:0.76rem; text-align:left; padding:0.4rem 0.75rem; border-bottom:2px solid var(--border); color:var(--muted); }
+  .itc-table td { padding:0.4rem 0.75rem; border-bottom:1px solid #f0ede8; vertical-align:top; }
+  .itc-table tr:last-child td { border-bottom:none; }
+  .itc-table tr:hover td { background:#fafaf8; }
+
+  /* FORMULA */
+  .formula-box { background:var(--blue-lt); border:2px solid var(--blue); border-radius:var(--r-md); padding:0.75rem 1.1rem; margin:0.6rem 0; text-align:center; }
+  .formula { font-family:var(--font-d); font-size:1rem; font-weight:800; color:var(--blue); }
+  .formula-leg { font-size:0.72rem; color:var(--muted); margin-top:0.3rem; }
+
+  /* ICON GRID */
+  .icon-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0.65rem; margin:0.75rem 0; }
+  .icon-card { background:var(--surface-2); border:1px solid var(--border); border-radius:var(--r-md); padding:0.75rem; text-align:center; }
+  .icon-card .ic-sym { font-size:1.5rem; display:block; margin-bottom:4px; }
+  .icon-card .ic-name { font-family:var(--font-d); font-weight:800; font-size:0.78rem; color:var(--text); display:block; }
+  .icon-card .ic-val { font-size:0.7rem; color:var(--muted); }
+
+  /* INSPECCIONES TABLE */
+  .insp-table { width:100%; border-collapse:collapse; font-size:0.82rem; }
+  .insp-table th { background:var(--green); color:white; font-family:var(--font-d); font-weight:800; font-size:0.76rem; padding:0.45rem 0.85rem; text-align:left; }
+  .insp-table td { padding:0.4rem 0.85rem; border-bottom:1px solid var(--border); vertical-align:top; }
+  .insp-table tr:last-child td { border-bottom:none; }
+  .insp-table tr:nth-child(even) td { background:#fafaf8; }
+
+  /* LED LAMP STRIP */
+  .lamp-strip { display:grid; grid-template-columns:repeat(4,1fr); gap:0.65rem; margin:0.75rem 0; }
+  .lamp-card { border-radius:var(--r-md); border:1px solid var(--border); padding:0.65rem; text-align:center; background:var(--surface-2); }
+  .lamp-card .lc-name { font-family:var(--font-d); font-weight:800; font-size:0.75rem; display:block; margin-bottom:3px; }
+  .lamp-card .lc-η { font-size:0.72rem; }
+  .lamp-card .lc-irc { font-size:0.7rem; color:var(--muted); }
+  .lamp-card .lc-badge { margin-top:4px; }
+
+  /* CONTROL LIST */
+  .ctrl-list { list-style:none; padding:0; }
+  .ctrl-list li { display:flex; align-items:flex-start; gap:0.75rem; padding:0.5rem 0; border-bottom:1px solid #f0ede8; }
+  .ctrl-list li:last-child { border-bottom:none; }
+  .ctrl-icon { font-size:1.1rem; }
+  .ctrl-body strong { font-weight:700; font-size:0.84rem; display:block; }
+  .ctrl-body span { font-size:0.79rem; color:var(--muted); }
+
+  /* MEMORIA FLASH */
+  .flash-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.65rem; }
+  .flash-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--r-md); padding:0.85rem 1rem; font-size:0.83rem; }
+  .flash-card .fc-q { font-weight:700; color:var(--muted); font-size:0.75rem; margin-bottom:0.3rem; }
+  .flash-card .fc-a { font-family:var(--font-d); font-weight:800; font-size:0.93rem; color:var(--text); }
+
+  @media(max-width:700px){
+    .grid-2,.grid-3,.clase-grid,.kpi-grid,.icon-grid,.lamp-strip { grid-template-columns:1fr 1fr; }
+    .zona-strip,.flash-grid { grid-template-columns:1fr 1fr; }
+  }
+  @media(max-width:480px){
+    .zona-strip { grid-template-columns:1fr 1fr; }
+    .flash-grid { grid-template-columns:1fr; }
+    .lamp-strip { grid-template-columns:1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html" class="active">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </div>
+
+<div class="page-header">
+  <div class="meta">Tema 5 · Gestor de Mantenimiento (Nivel B) · UPNA · Esquema-resumen</div>
+  <h1>Alumbrado exterior BT — Esquema visual para memorización</h1>
+  <div class="sub">Normativa · Clases · Magnitudes · Contaminación lumínica · Tipologías · Eficiencia · Control · Mantenimiento</div>
+</div>
+
+
+<!-- NORMATIVA -->
+<div class="section-label">Bloque 1 — Marco normativo: dos normas, dos objetivos</div>
+<div class="block-card hdr-green">
+  <div class="block-card-header">
+    <span class="icon">📋</span>
+    <h2>Normativa de referencia</h2>
+    <span class="chip ch-green" style="margin-left:auto;">REBT + REAE + UNE</span>
+  </div>
+  <div class="block-card-body">
+    <ul class="norm-list">
+      <li>
+        <span class="norm-badge" style="background:var(--blue-lt);color:var(--blue-dk);">RD 842/2002<br>ITC-BT-09</span>
+        <div class="norm-body">
+          <strong>REBT — Seguridad eléctrica de la instalación</strong>
+          <span>Protecciones, puesta a tierra de báculos/columnas (R ≤ 37 Ω), cuadros de mando, redes de distribución. No regula niveles de iluminación.</span>
+        </div>
+      </li>
+      <li>
+        <span class="norm-badge" style="background:var(--green-lt);color:var(--green);">RD 1890/2008<br>REAE</span>
+        <div class="norm-body">
+          <strong>REAE — Eficiencia energética del alumbrado EXTERIOR</strong>
+          <span>7 ITC (EA-01 a EA-07): clases de alumbrado, niveles, contaminación lumínica, componentes, documentación, mantenimiento, inspecciones.</span>
+        </div>
+      </li>
+      <li>
+        <span class="norm-badge" style="background:var(--teal-lt);color:var(--teal);">UNE-EN<br>13201</span>
+        <div class="norm-body">
+          <strong>Norma europea de alumbrado de carreteras</strong>
+          <span>Partes 1-5: selección de clase, requisitos de prestaciones, métodos de cálculo, medida, indicadores energéticos (IPE, ILE).</span>
+        </div>
+      </li>
+      <li>
+        <span class="norm-badge" style="background:var(--gold-lt);color:#7a5500;">CTE<br>DB-SUA4</span>
+        <div class="norm-body">
+          <strong>CTE DB-SUA4 — Entorno de edificios</strong>
+          <span>Iluminancia mínima en zonas de circulación peatonal en el entorno inmediato de los edificios.</span>
+        </div>
+      </li>
+    </ul>
+    <div class="callout al-warn" style="margin-top:0.75rem;">
+      <strong>⚠ REAE (exterior) ≠ CTE DB-HE3 (interior)</strong> — Son normas distintas, con indicadores distintos. El REAE usa el ICE y calificación A-G. El CTE DB-HE3 usa el VEEI. No mezclarlas en el examen.
+    </div>
+  </div>
+</div>
+
+
+<!-- 7 ITC REAE -->
+<div class="section-label">Bloque 2 — Las 7 ITC del REAE (memoriza el orden)</div>
+<div class="block-card hdr-green">
+  <div class="block-card-header">
+    <span class="icon">🗂</span>
+    <h2>ITC-EA-01 a ITC-EA-07</h2>
+    <span class="chip ch-green" style="margin-left:auto;">RD 1890/2008</span>
+  </div>
+  <div class="block-card-body">
+    <ul class="step-list">
+      <li><span class="step-num" style="color:var(--green);">EA-01</span><div class="step-body"><strong>Clasificación de vías y zonas</strong><span>Define las clases de alumbrado: ME, CE, S, P, E, ES, F, C. Asigna cada tipo de vía a su clase.</span></div></li>
+      <li><span class="step-num" style="color:var(--green);">EA-02</span><div class="step-body"><strong>Niveles de servicio</strong><span>Requisitos cuantitativos de luminancia (cd/m²) e iluminancia (lux) para cada clase de alumbrado.</span></div></li>
+      <li><span class="step-num" style="color:var(--green);">EA-03</span><div class="step-body"><strong>Contaminación lumínica</strong><span>Límites de FHS (flujo hemisférico superior) por zonas E1-E4. Límites de luz intrusa o molesta.</span></div></li>
+      <li><span class="step-num" style="color:var(--green);">EA-04</span><div class="step-body"><strong>Componentes de las instalaciones</strong><span>Requisitos de fuentes de luz, luminarias, equipos auxiliares y soportes.</span></div></li>
+      <li><span class="step-num" style="color:var(--green);">EA-05</span><div class="step-body"><strong>Documentación técnica</strong><span>Memoria, planos, cálculos justificativos y calificación energética del proyecto.</span></div></li>
+      <li><span class="step-num" style="color:var(--green);">EA-06</span><div class="step-body"><strong>Mantenimiento</strong><span>Plan de mantenimiento obligatorio: limpieza, reposición de lámparas, revisión de cuadros e instalación eléctrica.</span></div></li>
+      <li><span class="step-num" style="color:var(--green);">EA-07</span><div class="step-body"><strong>Inspecciones</strong><span>Periodicidades y entidades inspectoras (OCA). Umbrales: 5 kW y 25 kW.</span></div></li>
+    </ul>
+    <div class="callout al-green"><strong>Mnemotécnica:</strong> CLA-NIV-CON-COM-DOC-MAN-INS (Clasificación · Niveles · Contaminación · Componentes · Documentación · Mantenimiento · Inspecciones)</div>
+  </div>
+</div>
+
+
+<!-- CLASES DE ALUMBRADO -->
+<div class="section-label">Bloque 3 — Clases de alumbrado: ME y P (las más preguntadas)</div>
+<div class="grid-2">
+
+  <div class="block-card hdr-blue">
+    <div class="block-card-header">
+      <span class="icon">🚗</span>
+      <h2>Serie ME — Tráfico rodado</h2>
+    </div>
+    <div class="block-card-body">
+      <div class="callout al-warn"><strong>⚠ Parámetro: LUMINANCIA (cd/m²)</strong> — No iluminancia. Lo que percibe el conductor = luz reflejada por la calzada.</div>
+      <div class="clase-grid">
+        <div class="clase-card"><div class="cl-id" style="color:var(--blue);">ME1</div><div class="cl-val">2,0 cd/m²</div><div class="cl-desc">Autopista, alta densidad</div></div>
+        <div class="clase-card"><div class="cl-id" style="color:var(--blue);">ME2</div><div class="cl-val">1,5 cd/m²</div><div class="cl-desc">Carretera velocidad media</div></div>
+        <div class="clase-card"><div class="cl-id" style="color:var(--blue);">ME3</div><div class="cl-val">1,0 cd/m²</div><div class="cl-desc">Vía urbana principal</div></div>
+        <div class="clase-card"><div class="cl-id" style="color:var(--blue);">ME4</div><div class="cl-val">0,75 cd/m²</div><div class="cl-desc">Vía colectora urbana</div></div>
+        <div class="clase-card"><div class="cl-id" style="color:var(--blue);">ME5</div><div class="cl-val">0,50 cd/m²</div><div class="cl-desc">Acceso residencial</div></div>
+        <div class="clase-card"><div class="cl-id" style="color:var(--blue);">ME6</div><div class="cl-val">0,30 cd/m²</div><div class="cl-desc">Vía local baja velocidad</div></div>
+      </div>
+      <div class="callout al-blue"><strong>Regla:</strong> Mayor número de clase ME = menor nivel exigido. ME1 es la más exigente (autopista). ME6 la menos (callejón local).</div>
+    </div>
+  </div>
+
+  <div class="block-card hdr-teal">
+    <div class="block-card-header">
+      <span class="icon">🚶</span>
+      <h2>Serie P — Zonas peatonales</h2>
+    </div>
+    <div class="block-card-body">
+      <div class="callout al-teal"><strong>Parámetro: ILUMINANCIA (lux)</strong> — Em horizontal media mantenida sobre el suelo. Igual que el alumbrado interior.</div>
+      <div class="clase-grid">
+        <div class="clase-card"><div class="cl-id" style="color:var(--teal);">P1</div><div class="cl-val">15 lux</div><div class="cl-desc">Alto uso, riesgo inseguridad</div></div>
+        <div class="clase-card"><div class="cl-id" style="color:var(--teal);">P2</div><div class="cl-val">10 lux</div><div class="cl-desc">Uso moderado-alto</div></div>
+        <div class="clase-card"><div class="cl-id" style="color:var(--teal);">P3</div><div class="cl-val">7,5 lux</div><div class="cl-desc">Uso moderado</div></div>
+        <div class="clase-card"><div class="cl-id" style="color:var(--teal);">P4</div><div class="cl-val">5 lux</div><div class="cl-desc">Uso bajo</div></div>
+        <div class="clase-card"><div class="cl-id" style="color:var(--teal);">P5</div><div class="cl-val">3 lux</div><div class="cl-desc">Muy bajo uso</div></div>
+        <div class="clase-card"><div class="cl-id" style="color:var(--teal);">P6</div><div class="cl-val">2 lux</div><div class="cl-desc">Uso mínimo excepcional</div></div>
+      </div>
+      <div style="margin-top:0.65rem;">
+        <div class="pill-list">
+          <span class="chip ch-grey">CE — Intersecciones / rotondas</span>
+          <span class="chip ch-grey">E — Aparcamientos / zonas trabajo</span>
+          <span class="chip ch-grey">F — Fachadas / monumentos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- MAGNITUDES ESPECÍFICAS -->
+<div class="section-label">Bloque 4 — Magnitudes de calidad del alumbrado exterior</div>
+<div class="block-card hdr-blue">
+  <div class="block-card-header">
+    <span class="icon">📐</span>
+    <h2>Los 4 parámetros de calidad en vías ME</h2>
+    <span class="chip ch-blue" style="margin-left:auto;">DATOS DE DISEÑO</span>
+  </div>
+  <div class="block-card-body">
+    <div class="kpi-grid">
+      <div class="kpi kpi-blue"><span class="val">Lm</span><span class="lbl">Luminancia media mantenida (cd/m²) — el nivel</span></div>
+      <div class="kpi kpi-teal"><span class="val">Uo</span><span class="lbl">Uniformidad global = Lmin/Lm — sin manchas oscuras</span></div>
+      <div class="kpi kpi-green"><span class="val">Ul</span><span class="lbl">Uniformidad longitudinal = Lmin/Lmax — sin parpadeo</span></div>
+      <div class="kpi kpi-orange"><span class="val">TI</span><span class="lbl">Incremento de umbral (%) — deslumbramiento perturbador</span></div>
+      <div class="kpi kpi-purple"><span class="val">SR</span><span class="lbl">Relación entorno — uniformidad en bordes de calzada</span></div>
+      <div class="kpi kpi-red"><span class="val">fm</span><span class="lbl">Factor de mantenimiento — degradación con el tiempo</span></div>
+    </div>
+    <div class="callout al-blue"><strong>Mnemotécnica L-U-U-TI:</strong> Luminancia (nivel) · Uniformidad global (sin manchas) · Uniformidad longitudinal (sin parpadeo) · TI (sin deslumbramiento).</div>
+  </div>
+</div>
+
+
+<!-- CONTAMINACIÓN LUMÍNICA -->
+<div class="section-label">Bloque 5 — Contaminación lumínica: zonas E1-E4 (ITC-EA-03)</div>
+<div class="block-card hdr-purple">
+  <div class="block-card-header">
+    <span class="icon">🌙</span>
+    <h2>Zonas de protección y límites de FHS</h2>
+    <span class="chip ch-purple" style="margin-left:auto;">ITC-EA-03</span>
+  </div>
+  <div class="block-card-body">
+    <div class="zona-strip">
+      <div class="zona-block z1"><span class="z-id">E1</span><span class="z-name">ENTORNO OSCURO</span><span class="z-fhs">FHS = 0%</span><div class="z-desc">Parques nacionales, observatorios. Solo full cut-off.</div></div>
+      <div class="zona-block z2"><span class="z-id">E2</span><span class="z-name">RURAL BAJA DENSIDAD</span><span class="z-fhs">FHS ≤ 5%</span><div class="z-desc">Zonas rurales, áreas naturales protegidas.</div></div>
+      <div class="zona-block z3"><span class="z-id">E3</span><span class="z-name">SUBURBANA</span><span class="z-fhs">FHS ≤ 15%</span><div class="z-desc">Afueras de ciudades, polígonos industriales.</div></div>
+      <div class="zona-block z4"><span class="z-id">E4</span><span class="z-name">URBANA DENSA</span><span class="z-fhs">FHS ≤ 25%</span><div class="z-desc">Centros urbanos de alta densidad.</div></div>
+    </div>
+    <div class="callout al-warn"><strong>⚠ E1: FHS = 0% absoluto.</strong> Solo luminarias full cut-off (corte total). Ningún flujo puede ir al hemisferio superior. El más restrictivo. El orden E1→E4 va de más oscuro/protegido a más urbano/tolerante.</div>
+    <div class="grid-2" style="margin-top:0.75rem;">
+      <div class="callout al-purple" style="margin:0;"><strong>FHS (flujo hemisférico superior):</strong> fracción del flujo total que va hacia el cielo. Cuanto menor, menos contaminación lumínica y menos desperdicio de energía.</div>
+      <div class="callout al-blue" style="margin:0;"><strong>Luz intrusa o molesta:</strong> diferente del FHS. Es la luz que penetra en ventanas de viviendas o deslumbra a conductores. También limitada por ITC-EA-03.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- TIPOLOGÍAS LUMINARIAS -->
+<div class="section-label">Bloque 6 — Tipologías de luminarias y fuentes de luz</div>
+<div class="grid-2">
+
+  <div class="block-card hdr-teal">
+    <div class="block-card-header">
+      <span class="icon">🏮</span>
+      <h2>Soportes y distribución fotométrica</h2>
+    </div>
+    <div class="block-card-body">
+      <div class="pill-list" style="margin-bottom:0.75rem;">
+        <span class="pill pill-teal">Full cut-off — FHS=0% — E1</span>
+        <span class="pill pill-green">Cut-off — FHS≤2,5% — E2</span>
+        <span class="pill pill-gold">Semi cut-off — FHS≤5% — E3</span>
+        <span class="pill pill-orange">No cut-off — E4 solo</span>
+      </div>
+      <ul class="step-list">
+        <li><span class="step-num">🏗</span><div class="step-body"><strong>Báculo</strong><span>6-12 m. Brazo curvo. Viales de tráfico rodado.</span></div></li>
+        <li><span class="step-num">🏛</span><div class="step-body"><strong>Columna</strong><span>4-6 m. Sin brazo. Zonas peatonales y parques.</span></div></li>
+        <li><span class="step-num">🧱</span><div class="step-body"><strong>Brazo mural</strong><span>Anclado a fachada. Sin ocupar acera.</span></div></li>
+        <li><span class="step-num">🔦</span><div class="step-body"><strong>Proyectable (floodlight)</strong><span>Haz concentrado. Fachadas, monumentos, estadios.</span></div></li>
+        <li><span class="step-num">🕯</span><div class="step-body"><strong>Baliza</strong><span>0,5-1,5 m. Señalización de caminos y jardines.</span></div></li>
+        <li><span class="step-num">⬛</span><div class="step-body"><strong>Empotrada en suelo</strong><span>IP67/68. Fachadas, vegetación. Requiere resistencia mecánica.</span></div></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="block-card hdr-gold">
+    <div class="block-card-header">
+      <span class="icon">💡</span>
+      <h2>Fuentes de luz en exterior</h2>
+    </div>
+    <div class="block-card-body">
+      <div class="lamp-strip">
+        <div class="lamp-card">
+          <span class="lc-name">VSAP</span>
+          <div class="lc-η">80-130 lm/W</div>
+          <div class="lc-irc">IRC: 20-30 ⚠</div>
+          <div class="lc-badge"><span class="chip ch-orange">EN RETIRADA</span></div>
+        </div>
+        <div class="lamp-card">
+          <span class="lc-name">VSBP</span>
+          <div class="lc-η">hasta 200 lm/W</div>
+          <div class="lc-irc">IRC ≈ 0 (amarillo monocrom.)</div>
+          <div class="lc-badge"><span class="chip ch-grey">DESUSO</span></div>
+        </div>
+        <div class="lamp-card">
+          <span class="lc-name">HM</span>
+          <div class="lc-η">70-110 lm/W</div>
+          <div class="lc-irc">IRC: 80-95 ✓</div>
+          <div class="lc-badge"><span class="chip ch-orange">SUSTITUCIÓN</span></div>
+        </div>
+        <div class="lamp-card" style="background:var(--green-lt); border-color:#b0dab0;">
+          <span class="lc-name" style="color:var(--green);">LED ⭐</span>
+          <div class="lc-η" style="font-weight:700;">100-180 lm/W</div>
+          <div class="lc-irc">IRC: 70-90 · 50.000-100.000 h</div>
+          <div class="lc-badge"><span class="chip ch-green">DOMINANTE</span></div>
+        </div>
+      </div>
+      <div class="callout al-warn"><strong>⚠ Temperatura de color LED en exterior:</strong> Usar 3.000-4.000 K. Evitar >5.000 K por impacto en fauna nocturna (insectos, aves) y supresión de melatonina en personas.</div>
+      <div class="callout al-orange"><strong>⚠ VSAP: IRC 20-30 (muy bajo).</strong> Alta eficiencia energética pero muy mala reproducción del color. La luz dorada característica. No apto donde se requiera discriminación cromática.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- EFICIENCIA ENERGÉTICA -->
+<div class="section-label">Bloque 7 — Eficiencia energética: ICE y calificación A-G</div>
+<div class="block-card hdr-green">
+  <div class="block-card-header">
+    <span class="icon">⚡</span>
+    <h2>Índice de Consumo Energético (ICE) y calificación energética</h2>
+    <span class="chip ch-green" style="margin-left:auto;">REAE — ITC-EA-01</span>
+  </div>
+  <div class="block-card-body">
+    <div class="formula-box">
+      <div class="formula">ICE = P_total / (S × Em_media)</div>
+      <div class="formula-leg">P_total (W) · S = superficie (m²) · Em_media = iluminancia media mantenida (lux)</div>
+    </div>
+    <div class="cal-bar">
+      <div class="cal-row"><span class="cal-letter" style="color:#1a8b1a;">A</span><div class="cal-seg" style="background:#1a8b1a;width:38%;">ICE ≤ 0,63</div><span class="cal-lbl">✅ Más eficiente — objetivo del diseño</span></div>
+      <div class="cal-row"><span class="cal-letter" style="color:#4aaa1a;">B</span><div class="cal-seg" style="background:#4aaa1a;width:48%;">0,63 &lt; ICE ≤ 0,80</div></div>
+      <div class="cal-row"><span class="cal-letter" style="color:#8aaa1a;">C</span><div class="cal-seg" style="background:#8aaa1a;width:58%;">0,80 &lt; ICE ≤ 1,00</div><span class="cal-lbl">Referencia media del parque</span></div>
+      <div class="cal-row"><span class="cal-letter" style="color:var(--gold);">D</span><div class="cal-seg" style="background:var(--gold);width:68%;">1,00 &lt; ICE ≤ 1,26</div></div>
+      <div class="cal-row"><span class="cal-letter" style="color:#d17000;">E</span><div class="cal-seg" style="background:#d17000;width:78%;">1,26 &lt; ICE ≤ 1,59</div></div>
+      <div class="cal-row"><span class="cal-letter" style="color:var(--orange);">F</span><div class="cal-seg" style="background:var(--orange);width:88%;">1,59 &lt; ICE ≤ 2,00</div></div>
+      <div class="cal-row"><span class="cal-letter" style="color:var(--red);">G</span><div class="cal-seg" style="background:var(--red);width:100%;">ICE &gt; 2,00</div><span class="cal-lbl">❌ Menos eficiente</span></div>
+    </div>
+    <div class="callout al-green"><strong>Regla:</strong> A = más eficiente. G = menos eficiente. Igual que los electrodomésticos. Toda instalación nueva debe incluir la calificación energética en el proyecto.</div>
+  </div>
+</div>
+
+
+<!-- CONTROL Y REGULACIÓN -->
+<div class="section-label">Bloque 8 — Sistemas de control y regulación de flujo</div>
+<div class="block-card hdr-blue">
+  <div class="block-card-header">
+    <span class="icon">🎛</span>
+    <h2>Encendido/apagado y regulación de nivel</h2>
+  </div>
+  <div class="block-card-body">
+    <div class="grid-2">
+      <div>
+        <div style="font-family:var(--font-d);font-weight:800;font-size:0.82rem;color:var(--muted);margin-bottom:0.5rem;">ENCENDIDO / APAGADO</div>
+        <ul class="ctrl-list">
+          <li><span class="ctrl-icon">🕐</span><div class="ctrl-body"><strong>Reloj astronómico</strong><span>Calcula orto/ocaso por día y latitud. Sin sensor. El más fiable para viales. Encendido preciso cada noche del año.</span></div></li>
+          <li><span class="ctrl-icon">☀️</span><div class="ctrl-body"><strong>Fotocélula</strong><span>Detecta luminancia del cielo. Encendido a ~20-30 lux, apagado a ~30-50 lux. Puede fallar por suciedad o luz artificial cercana.</span></div></li>
+          <li><span class="ctrl-icon">🔗</span><div class="ctrl-body"><strong>Reloj + fotocélula</strong><span>Combinación habitual: el reloj actúa como respaldo si la fotocélula falla.</span></div></li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-family:var(--font-d);font-weight:800;font-size:0.82rem;color:var(--muted);margin-bottom:0.5rem;">REGULACIÓN DE FLUJO (ahorro nocturno)</div>
+        <ul class="ctrl-list">
+          <li><span class="ctrl-icon">🏭</span><div class="ctrl-body"><strong>Estabilizador-reductor en cabecera</strong><span>Reduce tensión de toda la línea. Compatible con VSAP y LED con driver compatible. Sin regulación individual.</span></div></li>
+          <li><span class="ctrl-icon">🔌</span><div class="ctrl-body"><strong>Driver LED regulable (0-10V / DALI)</strong><span>Regulación punto a punto. Cada luminaria independiente. Mayor granularidad y ahorro.</span></div></li>
+          <li><span class="ctrl-icon">📡</span><div class="ctrl-body"><strong>Telegestión</strong><span>Control y supervisión individual de cada punto de luz. Detección de averías, medida de consumo, alumbrado adaptativo.</span></div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout al-blue"><strong>Alumbrado adaptativo:</strong> telegestión + sensores de presencia/tráfico → las luminarias suben al 100% al detectar movimiento y bajan al mínimo permitido cuando no hay actividad. Máximo ahorro en zonas de tráfico variable.</div>
+  </div>
+</div>
+
+
+<!-- MANTENIMIENTO E INSPECCIONES -->
+<div class="section-label">Bloque 9 — Mantenimiento e inspecciones (ITC-EA-06 y EA-07)</div>
+<div class="block-card hdr-orange">
+  <div class="block-card-header">
+    <span class="icon">🔧</span>
+    <h2>Plan de mantenimiento y periodicidades de inspección OCA</h2>
+    <span class="chip ch-orange" style="margin-left:auto;">ITC-EA-06 / EA-07</span>
+  </div>
+  <div class="block-card-body">
+    <div class="grid-2">
+      <div>
+        <div style="font-family:var(--font-d);font-weight:800;font-size:0.82rem;color:var(--muted);margin-bottom:0.5rem;">PLAN DE MANTENIMIENTO (ITC-EA-06)</div>
+        <ul class="step-list">
+          <li><span class="step-num" style="color:var(--orange);">1</span><div class="step-body"><strong>Limpieza de luminarias</strong><span>Reflectores, difusores y cierres. Periodicidad según zona (tráfico, polvo).</span></div></li>
+          <li><span class="step-num" style="color:var(--orange);">2</span><div class="step-body"><strong>Reposición de lámparas</strong><span>Individual (fundidas) o en grupo (preventiva antes del fin de vida útil).</span></div></li>
+          <li><span class="step-num" style="color:var(--orange);">3</span><div class="step-body"><strong>Revisión de cuadros de mando</strong><span>Protecciones, reloj astronómico, sistemas de regulación.</span></div></li>
+          <li><span class="step-num" style="color:var(--orange);">4</span><div class="step-body"><strong>Revisión de la instalación eléctrica</strong><span>Conductores, puestas a tierra, conexiones, red subterránea.</span></div></li>
+          <li><span class="step-num" style="color:var(--orange);">5</span><div class="step-body"><strong>Medida de iluminancia/luminancia</strong><span>Verificar que se mantienen los niveles de la clase de alumbrado.</span></div></li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-family:var(--font-d);font-weight:800;font-size:0.82rem;color:var(--muted);margin-bottom:0.5rem;">INSPECCIONES (ITC-EA-07) — ⭐ EXAMEN</div>
+        <table class="insp-table">
+          <thead>
+            <tr><th>Potencia</th><th>Inspección inicial</th><th>Periódica</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>≤ 5 kW</strong></td><td>Instalador autorizado</td><td>—</td></tr>
+            <tr><td><strong>5 – 25 kW</strong></td><td><span class="chip ch-orange">OCA</span></td><td><strong>Cada 5 años</strong></td></tr>
+            <tr><td><strong>&gt; 25 kW</strong></td><td><span class="chip ch-orange">OCA</span></td><td><strong>Cada 2 años</strong></td></tr>
+          </tbody>
+        </table>
+        <div class="callout al-warn" style="margin-top:0.75rem;"><strong>⚠ Umbrales REAE ≠ umbrales RITE.</strong> Las periodicidades del REAE son para alumbrado exterior. No mezclarlas con las inspecciones de instalaciones térmicas (RITE). Error frecuente en examen.</div>
+        <div class="callout al-green" style="margin-top:0.5rem;"><strong>fm exterior típico:</strong> 0,60-0,70 en zonas urbanas con tráfico · 0,70-0,80 en zonas rurales o limpias.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- FLASH MEMORIA -->
+<div class="section-label">⚡ Flash de memorización — preguntas rápidas de oposición</div>
+<div class="flash-grid">
+  <div class="flash-card"><div class="fc-q">¿Qué norma regula la eficiencia energética del alumbrado EXTERIOR?</div><div class="fc-a">REAE — RD 1890/2008 (≠ CTE DB-HE3 que es para interior)</div></div>
+  <div class="flash-card"><div class="fc-q">¿Cuántas ITC tiene el REAE y cuál es la última?</div><div class="fc-a">7 ITC (EA-01 a EA-07). La EA-07 regula las inspecciones.</div></div>
+  <div class="flash-card"><div class="fc-q">¿Cuál es el parámetro de diseño en vías ME?</div><div class="fc-a">Luminancia media mantenida (Lm) en cd/m² — NO iluminancia</div></div>
+  <div class="flash-card"><div class="fc-q">¿Cuál es el parámetro de diseño en zonas peatonales (serie P)?</div><div class="fc-a">Iluminancia horizontal media mantenida (Em) en lux</div></div>
+  <div class="flash-card"><div class="fc-q">¿Qué FHS corresponde a la zona E1?</div><div class="fc-a">FHS = 0% (full cut-off obligatorio). Parques nacionales, observatorios.</div></div>
+  <div class="flash-card"><div class="fc-q">¿Qué FHS corresponde a la zona E4?</div><div class="fc-a">FHS ≤ 25%. Centros urbanos de alta densidad.</div></div>
+  <div class="flash-card"><div class="fc-q">¿Cuál es la calificación energética más eficiente del REAE?</div><div class="fc-a">A (ICE ≤ 0,63). La G es la menos eficiente (ICE > 2,00).</div></div>
+  <div class="flash-card"><div class="fc-q">¿Qué temperatura de color se recomienda para LED exterior?</div><div class="fc-a">3.000-4.000 K. Evitar &gt;5.000 K (impacto fauna y melatonina).</div></div>
+  <div class="flash-card"><div class="fc-q">¿Cuál es la periodicidad de inspección OCA para &gt;25 kW?</div><div class="fc-a">Cada 2 años. Para 5-25 kW: cada 5 años.</div></div>
+  <div class="flash-card"><div class="fc-q">¿Qué es el reloj astronómico?</div><div class="fc-a">Calcula orto/ocaso por día y latitud. Sin sensor. El más fiable para viales.</div></div>
+  <div class="flash-card"><div class="fc-q">¿Qué norma regula la seguridad eléctrica del alumbrado exterior?</div><div class="fc-a">REBT — RD 842/2002, concretamente la ITC-BT-09.</div></div>
+  <div class="flash-card"><div class="fc-q">¿Cuál es la resistencia de tierra máxima en báculos (ITC-BT-09)?</div><div class="fc-a">R ≤ 37 Ω en condiciones normales de terreno.</div></div>
+</div>
+
+</body>
+</html>
