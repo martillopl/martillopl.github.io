@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 2 – Instalaciones de protección contra incendios</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg: #f7f6f2; --color-surface: #f9f8f5; --color-surface-2: #ffffff;
+    --color-surface-offset: #edeae5; --color-border: #d4d1ca; --color-divider: #dcd9d5;
+    --color-text: #28251d; --color-text-muted: #6b6a65; --color-text-faint: #a8a7a2;
+    --color-primary: #8b1a1a; --color-primary-hover: #6b1212; --color-primary-highlight: #fde8e8;
+    --color-accent: #d19900; --color-accent-light: #f5e9c0;
+    --color-info: #005f73; --color-info-light: #cce3e8;
+    --color-warn: #964219; --color-warn-light: #f5e0d0;
+    --font-display: 'Cabinet Grotesk', sans-serif;
+    --font-body: 'Satoshi', sans-serif;
+    --radius-sm: 0.375rem; --radius-md: 0.5rem; --radius-lg: 0.75rem; --radius-xl: 1rem;
+    --shadow-sm: 0 1px 3px rgba(40,37,29,0.08); --shadow-md: 0 4px 16px rgba(40,37,29,0.10);
+    --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
+    --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body); font-size: 1rem; line-height: 1.75;
+    color: var(--color-text); background: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+  }
+  .page-wrap { display: flex; min-height: 100vh; }
+  nav.sidebar {
+    position: sticky; top: 0; height: 100vh; overflow-y: auto;
+    width: 260px; min-width: 260px; background: var(--color-surface);
+    border-right: 1px solid var(--color-border); padding: var(--space-8) var(--space-6);
+    font-size: 0.85rem;
+  }
+  nav.sidebar .nav-title {
+    font-family: var(--font-display); font-size: 0.7rem; font-weight: 800;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-faint);
+    margin-bottom: var(--space-4);
+  }
+  nav.sidebar a {
+    display: block; padding: var(--space-1) var(--space-2);
+    color: var(--color-text-muted); text-decoration: none; border-radius: var(--radius-sm);
+    margin-bottom: 2px; transition: all 0.15s;
+  }
+  nav.sidebar a:hover { background: var(--color-surface-offset); color: var(--color-primary); }
+  nav.sidebar a.sub { padding-left: var(--space-4); font-size: 0.82rem; }
+  .content { flex: 1; max-width: 820px; padding: var(--space-10) var(--space-12); }
+  .doc-header {
+    background: linear-gradient(135deg, #8b1a1a 0%, #5a0f0f 100%);
+    color: white; border-radius: var(--radius-xl); padding: var(--space-10);
+    margin-bottom: var(--space-10);
+  }
+  .doc-header .meta { font-size: 0.78rem; opacity: 0.75; margin-bottom: var(--space-3); letter-spacing: 0.06em; text-transform: uppercase; }
+  .doc-header h1 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; line-height: 1.2; margin-bottom: var(--space-3); }
+  .doc-header .subtitle { font-size: 0.92rem; opacity: 0.85; }
+  .file-nav { display:flex; gap: var(--space-2); margin-bottom: var(--space-8); flex-wrap: wrap; }
+  .file-nav a {
+    padding: var(--space-2) var(--space-4); border-radius: 999px;
+    background: var(--color-surface-2); border: 1px solid var(--color-border);
+    font-size: 0.82rem; text-decoration: none; color: var(--color-text-muted); transition: all 0.15s;
+  }
+  .file-nav a:hover, .file-nav a.active {
+    background: var(--color-primary); color: white; border-color: var(--color-primary);
+  }
+  section { margin-bottom: var(--space-10); }
+  h2 {
+    font-family: var(--font-display); font-size: 1.35rem; font-weight: 800;
+    color: var(--color-primary); border-bottom: 2px solid var(--color-primary-highlight);
+    padding-bottom: var(--space-2); margin-bottom: var(--space-6); margin-top: var(--space-10);
+  }
+  h2:first-child { margin-top: 0; }
+  h3 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; margin: var(--space-6) 0 var(--space-3) 0; color: var(--color-text); }
+  p { margin-bottom: var(--space-4); max-width: 70ch; }
+  .callout {
+    border-radius: var(--radius-lg); padding: var(--space-4) var(--space-6);
+    margin: var(--space-6) 0; font-size: 0.92rem; line-height: 1.65;
+  }
+  .callout-norm { background: var(--color-primary-highlight); border-left: 4px solid var(--color-primary); }
+  .callout-warn { background: var(--color-warn-light); border-left: 4px solid var(--color-warn); }
+  .callout-tip  { background: var(--color-accent-light); border-left: 4px solid var(--color-accent); }
+  .callout-info { background: var(--color-info-light); border-left: 4px solid var(--color-info); }
+  .callout strong { font-weight: 700; display: block; margin-bottom: var(--space-1); }
+  .badge {
+    display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;
+    text-transform: uppercase; padding: 2px 8px; border-radius: 999px; vertical-align: middle; margin-left: var(--space-1);
+  }
+  .badge-norm { background: var(--color-primary-highlight); color: var(--color-primary-hover); }
+  .badge-num  { background: #e8f4f8; color: #005f73; }
+  dl { margin: var(--space-4) 0; }
+  dt { font-weight: 700; color: var(--color-primary); margin-top: var(--space-3); }
+  dd { margin-left: var(--space-6); color: var(--color-text-muted); }
+  ul { margin: var(--space-3) 0 var(--space-4) var(--space-6); }
+  li { margin-bottom: var(--space-1); }
+  hr { border: none; border-top: 1px solid var(--color-divider); margin: var(--space-8) 0; }
+  @media (max-width: 768px) {
+    nav.sidebar { display: none; }
+    .content { padding: var(--space-6) var(--space-4); }
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+<nav class="sidebar">
+  <div class="nav-title">Tema 2 – PCI</div>
+  <a href="#intro">1. Introducción y normativa</a>
+  <a href="#fuego">2. El fuego y sus clases</a>
+  <a class="sub" href="#triangulo">2.1 Triángulo del fuego</a>
+  <a class="sub" href="#clases">2.2 Clases de fuego</a>
+  <a href="#agentes">3. Agentes extintores</a>
+  <a class="sub" href="#agua">3.1 Agua</a>
+  <a class="sub" href="#polvo">3.2 Polvo</a>
+  <a class="sub" href="#co2">3.3 CO₂</a>
+  <a class="sub" href="#espuma">3.4 Espuma</a>
+  <a class="sub" href="#gaseosos">3.5 Gases limpios</a>
+  <a class="sub" href="#agentef">3.6 Agente K (clase F)</a>
+  <a href="#instalaciones">4. Instalaciones fijas</a>
+  <a class="sub" href="#extintores">4.1 Extintores</a>
+  <a class="sub" href="#bie">4.2 BIEs</a>
+  <a class="sub" href="#hidrantes">4.3 Hidrantes</a>
+  <a class="sub" href="#rociadores">4.4 Rociadores</a>
+  <a class="sub" href="#watermist">4.5 Water mist</a>
+  <a class="sub" href="#gas">4.6 Gases y espuma</a>
+  <a href="#diseno">5. Diseño</a>
+  <a href="#mantenimiento">6. Mantenimiento</a>
+</nav>
+
+<main class="content">
+
+  <div class="doc-header">
+    <div class="meta">Tema 2 · Gestor de Mantenimiento (Nivel B) · UPNA</div>
+    <h1>Instalaciones de protección contra incendios</h1>
+    <div class="subtitle">Extinción · Agentes extintores · Instalaciones fijas · Diseño y mantenimiento · Normativa aplicable</div>
+  </div>
+
+  <div class="file-nav">
+    <a href="1_texto_explicativo_t02.html" class="active">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen_t02.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo_t02.html">📊 Cuadros comparativos</a>
+  </div>
+
+  <!-- 1. NORMATIVA -->
+  <section id="intro">
+    <h2>1. Introducción y marco normativo</h2>
+    <p>Las instalaciones de protección contra incendios (PCI) tienen como misión detectar, alertar y extinguir los incendios, o al menos controlarlos el tiempo suficiente para permitir la evacuación de las personas y la intervención de los servicios de emergencia. Su diseño, instalación, mantenimiento e inspección están regulados por una normativa específica que el gestor de mantenimiento debe dominar.</p>
+
+    <div class="callout callout-norm">
+      <strong>Norma central: Real Decreto 513/2017, de 22 de mayo — RIPCI</strong>
+      Aprueba el <em>Reglamento de Instalaciones de Protección Contra Incendios</em>. Deroga el anterior RD 1942/1993. Regula las condiciones que deben reunir los equipos y sistemas de PCI, así como su instalación, puesta en servicio, mantenimiento e inspección periódica. Las empresas instaladoras y mantenedoras deben estar inscritas en el registro de la comunidad autónoma.
+    </div>
+
+    <p>La normativa de PCI se articula en torno a tres grandes marcos según el tipo de edificio o actividad:</p>
+    <dl>
+      <dt>Edificios de uso general (residencial, hospitalario, hotelero, docente, comercial…)</dt>
+      <dd>Se rige por el <strong>CTE DB-SI</strong> (Documento Básico de Seguridad en caso de Incendio), que establece qué instalaciones PCI son exigibles en función del uso, la superficie y la altura de evacuación del edificio, y por el RIPCI para su diseño y mantenimiento.</dd>
+      <dt>Establecimientos industriales</dt>
+      <dd>Se rige por el <strong>RD 164/2025, de 4 de marzo</strong>, que aprueba el nuevo Reglamento de Seguridad contra Incendios en Establecimientos Industriales (RSCIEI). Entró en vigor el 17 de marzo de 2025 y deroga expresamente el anterior RD 2267/2004.</dd>
+      <dt>Otros usos específicos</dt>
+      <dd>Túneles de carretera (RD 635/2006), aparcamientos (CTE DB-SI con criterios específicos), instalaciones petroquímicas, etc.</dd>
+    </dl>
+
+    <div class="callout callout-warn">
+      <strong>⚠ Novedad normativa de examen — RD 164/2025</strong>
+      El RD 164/2025 es muy reciente (marzo 2025) y puede aparecer como novedad normativa. Mantiene la estructura de clasificación de establecimientos industriales por <strong>configuración</strong> (tipo A: bajo rasante o en edificio habitado; B: planta baja adosada; C: edificio aislado; D y E: al aire libre) y por <strong>nivel de riesgo intrínseco</strong> (bajo, medio, alto), calculado a partir de la carga de fuego ponderada.
+    </div>
+
+    <div class="callout callout-tip">
+      <strong>Contexto Navarra</strong>
+      En Navarra, la autoridad competente para la inscripción de empresas instaladoras-mantenedoras de PCI y para la tramitación de las inspecciones periódicas en establecimientos industriales es el <strong>Departamento de Desarrollo Económico y Empresarial</strong> del Gobierno de Navarra (Servicio de Industria).
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- 2. EL FUEGO -->
+  <section id="fuego">
+    <h2>2. El fuego: bases físico-químicas y clases</h2>
+
+    <h3 id="triangulo">2.1 El triángulo del fuego</h3>
+    <p>El fuego es una reacción química de oxidación rápida y exotérmica que requiere la concurrencia simultánea de tres elementos: <strong>combustible</strong> (material que se oxida), <strong>comburente</strong> (habitualmente el oxígeno del aire) y <strong>calor</strong> (energía de activación suficiente para iniciar y mantener la reacción). La extinción consiste en eliminar al menos uno de estos tres factores:</p>
+    <ul>
+      <li><strong>Enfriamiento</strong>: reducción de la temperatura por debajo del punto de ignición (agua).</li>
+      <li><strong>Sofocación</strong>: reducción o eliminación del comburente (espuma, CO₂, gases inertes).</li>
+      <li><strong>Inhibición química</strong>: interrupción de la reacción en cadena (halones, algunos polvos y gases limpios).</li>
+      <li><strong>Dilución o eliminación del combustible</strong>: cierre de válvulas de gas, retirada de materiales.</li>
+    </ul>
+    <p>A estos tres vértices se añade a veces la <strong>reacción en cadena</strong>, dando lugar al llamado tetraedro del fuego, que explica mejor la acción de los agentes inhibidores.</p>
+
+    <h3 id="clases">2.2 Clases de fuego (norma UNE-EN 2)</h3>
+    <p>La norma europea UNE-EN 2 clasifica los fuegos según la naturaleza del combustible. Esta clasificación determina directamente qué agente extintor es adecuado:</p>
+    <dl>
+      <dt>Clase A — Fuegos de sólidos</dt>
+      <dd>Materiales sólidos de naturaleza orgánica que al arder forman brasas: madera, papel, cartón, tejidos, paja. El mecanismo de extinción principal es el <strong>enfriamiento</strong>. El agente más eficaz es el agua.</dd>
+      <dt>Clase B — Fuegos de líquidos</dt>
+      <dd>Líquidos inflamables o sólidos licuables: gasolina, fuel, aceites minerales, disolventes, parafinas. La extinción se consigue principalmente por <strong>sofocación</strong>. Agentes: espuma, polvo BC o ABC, CO₂.</dd>
+      <dt>Clase C — Fuegos de gases</dt>
+      <dd>Gases inflamables: gas natural, propano, butano, hidrógeno. La extinción solo es segura si previamente se puede cortar el suministro del gas; de lo contrario, extinguir sin cerrar el gas puede generar una nube explosiva. Agente: polvo BC o ABC.</dd>
+      <dt>Clase D — Fuegos de metales</dt>
+      <dd>Metales combustibles: magnesio, sodio, potasio, titanio, circonio. Requieren agentes extintores específicos para cada metal (polvo D). El agua reacciona violentamente con algunos metales (sodio, potasio), por lo que está estrictamente prohibida.</dd>
+      <dt>Clase F — Fuegos de aceites y grasas en cocina</dt>
+      <dd>Aceites y grasas vegetales o animales en equipos de cocción (freidoras, sartenes basculantes). Requieren el <strong>agente K</strong> (solución acuosa de acetato potásico), que actúa por saponificación creando una capa aislante sobre la superficie.</dd>
+    </dl>
+
+    <div class="callout callout-warn">
+      <strong>⚠ Trampa frecuente — La clase E no existe</strong>
+      La antigua "clase E" de fuegos eléctricos fue eliminada de la norma UNE-EN 2. Los fuegos en presencia de electricidad no constituyen una clase independiente: se trata de un riesgo añadido (el de electrocución) que condiciona qué agentes se pueden usar (no conductores), pero la clase de fuego sigue siendo la del combustible implicado (A, B, etc.).
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- 3. AGENTES EXTINTORES -->
+  <section id="agentes">
+    <h2>3. Agentes extintores</h2>
+    <p>El agente extintor es la sustancia que, aplicada sobre el fuego, provoca su extinción. La elección del agente correcto es crítica: un agente inadecuado puede ser ineficaz o incluso peligroso (por ejemplo, el agua sobre fuegos de clase D provoca reacciones explosivas).</p>
+
+    <h3 id="agua">3.1 Agua</h3>
+    <p>El agua es el agente extintor por excelencia para los fuegos de clase A. Su extraordinaria capacidad de absorción de calor (calor específico elevado y alto calor de vaporización) la convierte en el agente de enfriamiento más eficiente. El agua en forma de <strong>chorro</strong> es conductora de la electricidad y está prohibida en presencia de tensión; el agua en forma de <strong>niebla o pulverización fina</strong> reduce significativamente este riesgo al atomizar el fluido. Está estrictamente prohibida en fuegos de clase D y C, y no es adecuada en fuegos de clase F (provoca proyecciones de aceite ardiendo).</p>
+
+    <h3 id="polvo">3.2 Polvo extintor</h3>
+    <p>Existen varios tipos de polvo según la clase de fuego que deben combatir:</p>
+    <ul>
+      <li><strong>Polvo BC</strong> (bicarbonato sódico o potásico): actúa sobre fuegos de clase B y C por inhibición química de la reacción en cadena.</li>
+      <li><strong>Polvo ABC o polivalente</strong> (sulfato amónico): el más versátil; es eficaz en A, B y C. Es el tipo de polvo más utilizado en extintores de uso general.</li>
+      <li><strong>Polvo D</strong>: específico para metales combustibles (clase D). Cada metal puede requerir un polvo específico diferente.</li>
+    </ul>
+    <p>El polvo produce daños significativos en equipos electrónicos, maquinaria de precisión y archivos documentales. No debe usarse en salas de servidores o en presencia de equipos sensibles.</p>
+
+    <h3 id="co2">3.3 Dióxido de carbono (CO₂)</h3>
+    <p>El CO₂ es un gas inerte que extingue el fuego fundamentalmente por <strong>sofocación</strong> (desplaza el oxígeno y reduce su concentración por debajo del límite de combustión) y, en menor medida, por enfriamiento al expandirse. Sus principales ventajas son que <strong>no deja residuo</strong>, es eléctricamente no conductor y no daña los equipos. Por ello es el agente preferido en salas de servidores, cuadros eléctricos y laboratorios con equipos de valor.</p>
+    <p>Su principal riesgo es la <strong>asfixia</strong> en espacios confinados: a concentraciones de diseño para extinción (34-75% v/v), el CO₂ es incompatible con la presencia humana. Los sistemas de extinción por CO₂ exigen un retardo de descarga mínimo de 30 segundos para la evacuación del personal y señalización acústica y visual de "descarga inminente".</p>
+
+    <h3 id="espuma">3.4 Espuma física</h3>
+    <p>La espuma actúa principalmente por <strong>sofocación</strong>: crea una capa sobre la superficie del combustible líquido que impide el acceso del oxígeno y la evaporación de vapores inflamables. También tiene cierta capacidad de enfriamiento al contener agua. Es especialmente eficaz en fuegos de clase B (hidrocarburos, disolventes) y también es válida para clase A.</p>
+    <p>La espuma más utilizada es la <strong>AFFF</strong> (Aqueous Film Forming Foam), que forma además una película acuosa sobre el combustible. Sin embargo, los espumógenos AFFF basados en compuestos PFAS (sustancias perfluoroalquiladas y polifluoroalquiladas) están siendo progresivamente prohibidos en la Unión Europea por su persistencia ambiental y toxicidad.</p>
+    <p>Según la relación de expansión, la espuma puede ser de <strong>baja expansión</strong> (ratio inferior a 20:1, para fuegos de líquidos en depósitos), <strong>media expansión</strong> (20-200:1) o <strong>alta expansión</strong> (superior a 200:1, para inundar grandes volúmenes como garajes subterráneos o almacenes).</p>
+
+    <h3 id="gaseosos">3.5 Agentes gaseosos limpios</h3>
+    <p>Los agentes gaseosos limpios son sustancias gaseosas o licuadas que, al evaporarse, no dejan residuo y no dañan los equipos electrónicos o los bienes de valor. Se emplean en sistemas de inundación total de recintos cerrados (salas de servidores, centros de proceso de datos, archivos, museos, salas de control).</p>
+    <ul>
+      <li><strong>Gases inertes</strong> (IG-541 Inergen, IG-100 N₂, IG-55): reducen la concentración de oxígeno por debajo del umbral de combustión (hasta ~12%) sin sobrepasar el límite tolerable para las personas (no inferior al 10% O₂). Son seguros con personas a las concentraciones de diseño habituales.</li>
+      <li><strong>Agentes halogenados limpios</strong> (HFC-227ea, FK-5-1-12 / Novec 1230): actúan por inhibición química de la reacción en cadena y por enfriamiento. Son más eficaces a menor concentración que los inertes. No dañan la capa de ozono (a diferencia de los halones).</li>
+    </ul>
+
+    <div class="callout callout-norm">
+      <strong>Halones — prohibidos desde 1994</strong>
+      Los halones (Halón 1301, Halón 1211) fueron los agentes gaseosos más eficaces conocidos, pero fueron prohibidos por el <strong>Protocolo de Montreal</strong> (1987, en vigor desde 1994) por su capacidad de destrucción de la capa de ozono. Solo se permite su uso residual en aplicaciones críticas específicas (aviación, usos militares) con regulación estricta. Los agentes gaseosos limpios actuales son sus sustitutos.
+    </div>
+
+    <h3 id="agentef">3.6 Agente K — clase F</h3>
+    <p>El agente K es una <strong>solución acuosa de acetato potásico</strong> específicamente formulada para combatir los fuegos de clase F (aceites y grasas de cocina a alta temperatura). Al entrar en contacto con el aceite ardiendo, reacciona por <strong>saponificación</strong>: se forma una capa de jabón que sella la superficie del aceite, impidiendo la evaporación de vapores inflamables y sofocando el fuego. Simultáneamente, el agua de la solución enfría la superficie del aceite por debajo de su punto de inflamación.</p>
+    <div class="callout callout-warn">
+      <strong>⚠ Trampa frecuente</strong>
+      El agente K <strong>no es un polvo</strong>: es una <em>solución líquida acuosa</em>. Es obligatorio en las instalaciones fijas de extinción de campanas de cocina industrial (freidoras, sartenes basculantes, planchas). No debe confundirse con el polvo potásico (polvo BC de bicarbonato potásico).
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- 4. INSTALACIONES FIJAS -->
+  <section id="instalaciones">
+    <h2>4. Tipos de instalaciones fijas de extinción</h2>
+
+    <h3 id="extintores">4.1 Extintores portátiles</h3>
+    <p>El extintor es el elemento PCI más básico y el primero en actuar ante un conato de incendio. Consiste en un recipiente a presión que contiene el agente extintor y un mecanismo de descarga manual. Su regulación de diseño y mantenimiento se recoge en el RIPCI (RD 513/2017) y las distancias máximas de instalación en el CTE DB-SI.</p>
+    <p>La <strong>eficacia</strong> de un extintor se expresa mediante un código alfanumérico: el número indica la superficie de fuego que puede extinguir (a mayor número, mayor eficacia) y la letra indica la clase de fuego. La eficacia mínima exigida por el CTE DB-SI para uso general es <strong>21A/113B</strong>. La distancia máxima de recorrido desde cualquier punto del edificio hasta el extintor más próximo es de <strong>15 metros</strong>.</p>
+
+    <h3 id="bie">4.2 Bocas de Incendio Equipadas (BIE)</h3>
+    <p>Las BIE son puntos de toma de agua conectados a la red de abastecimiento del edificio, equipados con manguera, lanza y válvula de apertura, destinados a ser utilizados por los ocupantes o por los servicios de emergencia en una primera intervención.</p>
+    <dl>
+      <dt>BIE-25 <span class="badge badge-num">DN 25 mm · manguera semirrígida</span></dt>
+      <dd>La más habitual en edificios de uso general (hoteles, hospitales, oficinas). Puede ser manejada por una sola persona. Presión mínima en punta de lanza: <strong>2 bar</strong>. Caudal mínimo: 100 l/min.</dd>
+      <dt>BIE-45 <span class="badge badge-num">DN 45 mm · manguera plana</span></dt>
+      <dd>Para uso en industria y edificios de gran riesgo. Requiere al menos dos personas para su manejo. Presión mínima en punta de lanza: <strong>3 bar</strong>. Caudal mínimo: 200 l/min.</dd>
+    </dl>
+    <p>La separación máxima entre BIEs no debe exceder los <strong>50 metros</strong>, y cualquier punto del área protegida debe estar cubierto por al menos una BIE con una longitud de manguera más 5 metros. La red debe garantizar una autonomía mínima de <strong>60 minutos</strong>.</p>
+
+    <h3 id="hidrantes">4.3 Hidrantes exteriores</h3>
+    <p>Los hidrantes son tomas de agua en la red pública o privada, ubicadas en el exterior de los edificios, destinadas al abastecimiento de los vehículos de bomberos. Existen dos tipos: de <strong>columna seca</strong> (sobre rasante, más accesible) y de <strong>arqueta</strong> (bajo rasante, tipo "Barcelona", protegidos de las heladas). El CTE DB-SI exige hidrantes en función del uso y la superficie del edificio, con un caudal mínimo de <strong>500 l/min durante 60 minutos</strong> y una distancia máxima de 100 m a la fachada del edificio.</p>
+
+    <h3 id="rociadores">4.4 Rociadores automáticos (sprinklers)</h3>
+    <p>Los rociadores son los dispositivos de extinción automática más extendidos. Consisten en una boquilla cerrada por un elemento termosensible (bulbo de vidrio relleno de líquido o fusible metálico) que se activa individualmente cuando la temperatura del techo en su entorno supera un valor de tarado. Solo el rociador o rociadores situados sobre el foco del incendio se activan; los demás permanecen cerrados.</p>
+    <p>Los <strong>colores de los bulbos de vidrio</strong> indican la temperatura de activación y son dato de examen:</p>
+    <ul>
+      <li>🔴 <strong>Rojo: 57 °C</strong> (el más frecuente en edificios de uso normal)</li>
+      <li>🟠 <strong>Naranja: 68 °C</strong></li>
+      <li>🟡 <strong>Amarillo: 79 °C</strong></li>
+      <li>🟢 <strong>Verde: 93 °C</strong></li>
+      <li>🔵 <strong>Azul: 141 °C</strong></li>
+      <li>🟣 <strong>Lila: 182 °C</strong></li>
+      <li>⚫ <strong>Negro: 204–260 °C</strong></li>
+    </ul>
+    <p>Según el tipo de instalación, los sistemas de rociadores se clasifican en:</p>
+    <dl>
+      <dt>Sistema húmedo</dt>
+      <dd>Las tuberías están permanentemente llenas de agua a presión. Es el más simple y frecuente. Solo puede usarse en locales sin riesgo de helada. El agua sale únicamente por los rociadores que alcanzan su temperatura de activación.</dd>
+      <dt>Sistema seco</dt>
+      <dd>Las tuberías están llenas de aire o nitrógeno a presión. Cuando un rociador se activa, el gas escapa, la presión cae y una válvula de diluvio permite la entrada del agua. Para zonas con riesgo de helada (aparcamientos exteriores, cámaras frigoríficas).</dd>
+      <dt>Sistema de precarga (preaction)</dt>
+      <dd>Combinación de sistema seco y detección automática. El agua no entra en la tubería hasta que el sistema de detección confirma el incendio y abre la válvula de control. Protege contra falsas activaciones accidentales (salas de servidores).</dd>
+      <dt>Sistema diluvio (deluge)</dt>
+      <dd>Todos los rociadores son abiertos (sin bulbo termosensible). La descarga se activa simultáneamente en toda la zona al recibir la señal de un sistema de detección independiente. Se usa en riesgos de fuego de propagación ultrarrápida (almacenamiento de líquidos inflamables, hangares de aviación).</dd>
+    </dl>
+    <p>La norma de diseño de rociadores es la <strong>UNE-EN 12845</strong>, que clasifica el riesgo de la ocupación en: <strong>Ligero</strong> (LH, oficinas, hoteles), <strong>Ordinario</strong> (OH1 a OH4, según la densidad de carga de fuego) y <strong>Alto</strong> (HH, almacenes de gran altura).</p>
+
+    <div class="callout callout-warn">
+      <strong>⚠ Trampa frecuente — Húmedo vs. Diluvio</strong>
+      En el sistema <strong>húmedo</strong>, solo actúa el rociador o rociadores que alcanzan la temperatura de activación: los demás permanecen cerrados. En el sistema <strong>diluvio</strong>, todos los rociadores son abiertos y descargan simultáneamente al activarse el sistema de detección. La confusión entre ambos es un error clásico de examen.
+    </div>
+
+    <h3 id="watermist">4.5 Sistemas de agua nebulizada (water mist)</h3>
+    <p>Los sistemas de agua nebulizada producen gotas de agua de diámetro muy pequeño (inferior a 1.000 micrómetros), lo que aumenta enormemente la superficie de contacto agua-fuego. Su mecanismo de extinción combina <strong>enfriamiento</strong> intensivo, <strong>sofocación</strong> (el vapor de agua generado desplaza el oxígeno) y <strong>bloqueo de la radiación térmica</strong>. Consumen una fracción del caudal de agua que requieren los rociadores convencionales, lo que los hace especialmente adecuados para entornos donde la cantidad de agua disponible o los daños por agua son un problema (museos, buques, salas de turbinas, cocinas industriales, maquinaria).</p>
+
+    <h3 id="gas">4.6 Sistemas de extinción por gases y espuma</h3>
+    <p>Los sistemas de extinción por agentes gaseosos (CO₂ o gases limpios) se diseñan para la <strong>inundación total</strong> de un recinto hermético o cerrado. Requieren un sistema de detección previo que ordena el cierre de puertas, compuertas y sistemas de climatización, activa la alarma acústica y visual, y tras un retardo mínimo de 30 segundos (para la evacuación del personal) ordena la descarga del agente.</p>
+    <p>Los sistemas de extinción por espuma de alta expansión pueden inundar grandes volúmenes (garajes subterráneos, almacenes de materias primas) en pocos minutos, sofocando el incendio mediante la exclusión del oxígeno.</p>
+  </section>
+
+  <hr>
+
+  <!-- 5. DISEÑO -->
+  <section id="diseno">
+    <h2>5. Diseño de las instalaciones PCI</h2>
+    <p>El diseño de una instalación PCI parte del análisis del <strong>riesgo</strong> del edificio o establecimiento: tipo de ocupación, naturaleza del combustible (clase de fuego), carga de fuego por unidad de área (en MJ/m²), número de ocupantes y consecuencias potenciales del incendio. A partir de este análisis, la normativa aplicable (CTE DB-SI para edificios generales o RD 164/2025 para industria) determina qué instalaciones son obligatorias.</p>
+    <p>En los establecimientos industriales, el RD 164/2025 clasifica cada sector de incendio según la <strong>configuración</strong> del edificio (tipos A a E) y el <strong>nivel de riesgo intrínseco</strong> (bajo, medio o alto), calculado a partir de la carga de fuego ponderada y corregida (en MJ/m²). La combinación de estos dos factores determina las exigencias de sectorización, resistencia al fuego de los elementos constructivos y tipo de instalaciones PCI requeridas.</p>
+    <p>El RIPCI exige que el proyecto de instalación sea redactado por un técnico competente cuando la instalación supera determinados umbrales de complejidad, y que la empresa instaladora esté inscrita en el registro correspondiente de la comunidad autónoma antes de iniciar los trabajos.</p>
+  </section>
+
+  <hr>
+
+  <!-- 6. MANTENIMIENTO -->
+  <section id="mantenimiento">
+    <h2>6. Mantenimiento de las instalaciones PCI</h2>
+    <p>El Anexo II del RIPCI (RD 513/2017) establece el programa mínimo de mantenimiento de cada tipo de instalación PCI, con las operaciones a realizar y su periodicidad. El mantenimiento debe ser realizado por una <strong>empresa mantenedora habilitada</strong>, inscrita en el registro de la comunidad autónoma. Todas las operaciones deben quedar registradas en el <strong>Libro de Registro de Instalaciones de PCI</strong> del edificio.</p>
+    <p>Las periodicidades más importantes para el examen son:</p>
+    <dl>
+      <dt>Trimestral</dt>
+      <dd>Comprobación de accesibilidad, señalización y estado general de extintores, BIEs, hidrantes y sistemas de detección. Verificación visual sin desmontaje.</dd>
+      <dt>Semestral</dt>
+      <dd>Revisión de extintores (comprobación de peso, presión y estado del agente), comprobación de funcionamiento de detectores y pulsadores de alarma.</dd>
+      <dt>Anual</dt>
+      <dd>Mantenimiento completo por empresa habilitada de todos los sistemas. Prueba de funcionamiento de cada componente. Comprobación de presiones en las redes hidráulicas.</dd>
+      <dt>Cada 5 años</dt>
+      <dd>Retimbrado de extintores (prueba hidráulica del recipiente a presión). Prueba hidráulica de las mangueras de las BIEs. Revisión completa de las instalaciones de rociadores.</dd>
+    </dl>
+
+    <div class="callout callout-warn">
+      <strong>⚠ Trampa frecuente — Retimbrado de extintores</strong>
+      El retimbrado de los extintores (prueba hidráulica del recipiente) se realiza cada <strong>5 años</strong>, no cada 3 ni cada 10 años. Es un dato que aparece con frecuencia en los exámenes y que suele confundirse con otras periodicidades de mantenimiento de instalaciones de gas o de aparatos a presión.
+    </div>
+
+    <p>Para los <strong>establecimientos industriales</strong>, el RD 164/2025 establece además la obligación de inspección periódica por un <strong>OCA</strong> (Organismo de Control Autorizado), con una periodicidad que depende del nivel de riesgo intrínseco: cada <strong>6 años</strong> para riesgo bajo, cada <strong>4 años</strong> para riesgo medio y cada <strong>2 años</strong> para riesgo alto.</p>
+  </section>
+
+</main>
+</div>
+</body>
+</html>

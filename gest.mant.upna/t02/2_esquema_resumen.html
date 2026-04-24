@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esquema-resumen T02 – Protección contra incendios</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red:    #8b1a1a; --red-lt:    #fde8e8; --red-dk:   #5a0f0f;
+    --gold:   #d19900; --gold-lt:   #f5e9c0;
+    --orange: #964219; --orange-lt: #f5e0d0;
+    --blue:   #005f73; --blue-lt:   #cce3e8;
+    --green:  #2d6a2d; --green-lt:  #d6ecd6;
+    --purple: #5a3e8c; --purple-lt: #e4ddf5;
+    --bg: #f7f6f2; --surface: #ffffff; --border: #d4d1ca;
+    --text: #28251d; --muted: #6b6a65; --faint: #a8a7a2;
+    --font-d: 'Cabinet Grotesk', sans-serif;
+    --font-b: 'Satoshi', sans-serif;
+    --r: 0.75rem; --r-lg: 1rem;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-b); background: var(--bg); color: var(--text); font-size: 0.92rem; line-height: 1.55; -webkit-font-smoothing: antialiased; padding: 2rem 1.5rem 4rem; }
+  .file-nav { display:flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+  .file-nav a { padding: 0.35rem 1rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); font-size: 0.8rem; text-decoration: none; color: var(--muted); transition: all 0.15s; }
+  .file-nav a:hover, .file-nav a.active { background: var(--red); color: white; border-color: var(--red); }
+  h1 { font-family: var(--font-d); font-size: 1.6rem; font-weight: 800; color: var(--red); margin-bottom: 0.25rem; }
+  .subtitle { color: var(--muted); font-size: 0.82rem; margin-bottom: 2rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
+  .grid-wide { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  .card { background: var(--surface); border-radius: var(--r-lg); border: 1px solid var(--border); padding: 1.25rem 1.25rem 1rem; box-shadow: 0 1px 3px rgba(40,37,29,.06); }
+  .card-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.85rem; }
+  .card-icon { width: 32px; height: 32px; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+  .card h2 { font-family: var(--font-d); font-size: 0.95rem; font-weight: 800; }
+  .card-red    { border-top: 3px solid var(--red); }
+  .card-gold   { border-top: 3px solid var(--gold); }
+  .card-orange { border-top: 3px solid var(--orange); }
+  .card-blue   { border-top: 3px solid var(--blue); }
+  .card-green  { border-top: 3px solid var(--green); }
+  .card-purple { border-top: 3px solid var(--purple); }
+  .icon-red    { background: var(--red-lt); }
+  .icon-gold   { background: var(--gold-lt); }
+  .icon-orange { background: var(--orange-lt); }
+  .icon-blue   { background: var(--blue-lt); }
+  .icon-green  { background: var(--green-lt); }
+  .icon-purple { background: var(--purple-lt); }
+  .row { display: flex; gap: 0.4rem; margin-bottom: 0.4rem; align-items: flex-start; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; margin-top: 0.42rem; }
+  .dot-red    { background: var(--red); }
+  .dot-gold   { background: var(--gold); }
+  .dot-orange { background: var(--orange); }
+  .dot-blue   { background: var(--blue); }
+  .dot-green  { background: var(--green); }
+  .dot-purple { background: var(--purple); }
+  .badge { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; padding: 1px 7px; border-radius: 999px; vertical-align: middle; }
+  .b-red    { background: var(--red-lt);    color: var(--red-dk); }
+  .b-gold   { background: var(--gold-lt);   color: #7a5500; }
+  .b-orange { background: var(--orange-lt); color: var(--orange); }
+  .b-blue   { background: var(--blue-lt);   color: var(--blue); }
+  .b-green  { background: var(--green-lt);  color: var(--green); }
+  .pills { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+  .pill { padding: 3px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; border: 1px solid; }
+  .pill-red    { background: var(--red-lt);    color: var(--red-dk);  border-color: #d9a0a0; }
+  .pill-gold   { background: var(--gold-lt);   color: #7a5500;        border-color: #d9c280; }
+  .pill-blue   { background: var(--blue-lt);   color: var(--blue);    border-color: #8fcdd9; }
+  .pill-orange { background: var(--orange-lt); color: var(--orange);  border-color: #d9a080; }
+  .pill-green  { background: var(--green-lt);  color: var(--green);   border-color: #8fc08f; }
+  .alert { background: var(--orange-lt); border-left: 3px solid var(--orange); border-radius: var(--r); padding: 0.65rem 0.85rem; font-size: 0.83rem; margin-top: 0.6rem; }
+  .alert strong { color: var(--orange); }
+  .section-label { font-family: var(--font-d); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); margin: 1.5rem 0 0.5rem; }
+
+  /* TRIÁNGULO */
+  .triangulo { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; margin: 0.5rem 0; }
+  .tri-item { border-radius: 0.5rem; padding: 0.65rem 0.75rem; text-align: center; }
+  .tri-item .ti-label { font-family: var(--font-d); font-size: 0.88rem; font-weight: 800; display: block; margin-bottom: 0.2rem; }
+  .tri-item .ti-sub { font-size: 0.72rem; color: var(--muted); }
+  .ti-combustible { background: var(--orange-lt); }
+  .ti-comburente  { background: var(--blue-lt); }
+  .ti-calor       { background: var(--red-lt); }
+
+  /* CLASES FUEGO */
+  .clases-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; margin-top: 0.5rem; }
+  .clase { border-radius: 0.5rem; padding: 0.55rem 0.4rem; text-align: center; border: 1px solid var(--border); background: var(--bg); }
+  .clase .letra { font-family: var(--font-d); font-size: 1.2rem; font-weight: 800; display: block; }
+  .clase .nombre { font-size: 0.68rem; color: var(--muted); display: block; margin-top: 2px; }
+  .clase .ejemplo { font-size: 0.65rem; color: var(--faint); display: block; margin-top: 1px; }
+  .cl-a { border-color: #d9a080; } .cl-a .letra { color: var(--orange); }
+  .cl-b { border-color: #8fcdd9; } .cl-b .letra { color: var(--blue); }
+  .cl-c { border-color: #9fd09f; } .cl-c .letra { color: var(--green); }
+  .cl-d { border-color: #d9c280; } .cl-d .letra { color: var(--gold); }
+  .cl-f { border-color: #d9a0a0; } .cl-f .letra { color: var(--red); }
+
+  /* ROCIADORES — bulbos */
+  .bulbos { display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.3rem; margin-top: 0.5rem; }
+  .bulbo { border-radius: 0.4rem; padding: 0.4rem 0.2rem; text-align: center; }
+  .bulbo .temp { font-family: var(--font-d); font-size: 0.72rem; font-weight: 800; display: block; }
+  .bulbo-rojo   { background: #fde8e8; } .bulbo-rojo   .temp { color: #8b1a1a; }
+  .bulbo-naranja{ background: #fef0e0; } .bulbo-naranja .temp { color: #964219; }
+  .bulbo-amarillo{ background: #fef9d6; } .bulbo-amarillo .temp { color: #7a5500; }
+  .bulbo-verde  { background: var(--green-lt); } .bulbo-verde  .temp { color: var(--green); }
+  .bulbo-azul   { background: var(--blue-lt);  } .bulbo-azul   .temp { color: var(--blue); }
+  .bulbo-lila   { background: var(--purple-lt);} .bulbo-lila   .temp { color: var(--purple); }
+  .bulbo-negro  { background: #e8e8e8; }         .bulbo-negro  .temp { color: #222; }
+
+  /* PERIODICIDADES */
+  .periodos { display: grid; grid-template-columns: auto 1fr; gap: 0.3rem 0.75rem; align-items: center; margin-top: 0.5rem; }
+  .periodo-freq { font-family: var(--font-d); font-size: 0.8rem; font-weight: 800; padding: 3px 8px; border-radius: 999px; white-space: nowrap; text-align: center; }
+  .pf-trim   { background: var(--blue-lt);   color: var(--blue); }
+  .pf-sem    { background: var(--green-lt);  color: var(--green); }
+  .pf-anual  { background: var(--gold-lt);   color: #7a5500; }
+  .pf-5      { background: var(--orange-lt); color: var(--orange); }
+  .periodo-desc { font-size: 0.82rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+
+  @media (max-width: 640px) {
+    .grid-wide { grid-template-columns: 1fr; }
+    .grid-3    { grid-template-columns: 1fr; }
+    .clases-grid { grid-template-columns: repeat(3, 1fr); }
+    .bulbos { grid-template-columns: repeat(4, 1fr); }
+    .triangulo { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="file-nav">
+  <a href="1_texto_explicativo_t02.html">📄 Texto explicativo</a>
+  <a href="2_esquema_resumen_t02.html" class="active">🗂 Esquema-resumen</a>
+  <a href="3_cuadro_comparativo_t02.html">📊 Cuadros comparativos</a>
+</div>
+
+<h1>Protección contra incendios</h1>
+<div class="subtitle">Tema 2 · Gestor de Mantenimiento (Nivel B) · UPNA · Esquema-resumen para memorización</div>
+
+<!-- NORMATIVA -->
+<div class="section-label">Normativa clave</div>
+<div class="grid">
+  <div class="card card-red">
+    <div class="card-header"><div class="card-icon icon-red">⚖️</div><h2>RIPCI — RD 513/2017</h2></div>
+    <div class="row"><div class="dot dot-red"></div><span>Reglamento de Instalaciones de Protección Contra Incendios</span></div>
+    <div class="row"><div class="dot dot-red"></div><span>Deroga el RD 1942/1993</span></div>
+    <div class="row"><div class="dot dot-red"></div><span>Diseño · Instalación · Puesta en servicio · Mantenimiento · Inspección</span></div>
+    <div class="row"><div class="dot dot-red"></div><span>Empresas instaladoras y mantenedoras: registro en Gobierno de Navarra</span></div>
+    <div class="pills"><span class="pill pill-red">Norma central</span><span class="pill pill-red">Anexo II = mantenimiento</span></div>
+  </div>
+  <div class="card card-blue">
+    <div class="card-header"><div class="card-icon icon-blue">🏗️</div><h2>CTE DB-SI + RD 164/2025</h2></div>
+    <div class="row"><div class="dot dot-blue"></div><span><strong>CTE DB-SI</strong>: exige qué instalaciones PCI según uso, superficie y altura de evacuación</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span><strong>RD 164/2025</strong>: nuevo RSCIEI (en vigor 17/03/2025). Deroga RD 2267/2004</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Clasifica industria por configuración (A-E) y riesgo intrínseco (bajo/medio/alto)</span></div>
+    <div class="alert"><strong>⚠ Novedad examen:</strong> RD 164/2025 es la norma vigente para industria desde marzo 2025.</div>
+  </div>
+</div>
+
+<!-- TRIÁNGULO + CLASES FUEGO -->
+<div class="section-label">El fuego: triángulo y clases</div>
+<div class="grid-wide">
+  <div class="card card-orange">
+    <div class="card-header"><div class="card-icon icon-orange">🔥</div><h2>Triángulo del fuego</h2></div>
+    <div class="triangulo">
+      <div class="tri-item ti-combustible"><span class="ti-label">Combustible</span><span class="ti-sub">Material que arde</span></div>
+      <div class="tri-item ti-comburente"><span class="ti-label">Comburente</span><span class="ti-sub">O₂ del aire</span></div>
+      <div class="tri-item ti-calor"><span class="ti-label">Calor</span><span class="ti-sub">Energía de activación</span></div>
+    </div>
+    <div style="margin-top:0.6rem;">
+      <div class="row"><div class="dot dot-orange"></div><span><strong>Enfriar</strong>: bajar Tª (agua)</span></div>
+      <div class="row"><div class="dot dot-orange"></div><span><strong>Sofocar</strong>: eliminar O₂ (espuma, CO₂, gases inertes)</span></div>
+      <div class="row"><div class="dot dot-orange"></div><span><strong>Inhibir</strong>: romper reacción en cadena (polvos, gases limpios)</span></div>
+      <div class="row"><div class="dot dot-orange"></div><span><strong>Eliminar combustible</strong>: cerrar válvulas, retirar material</span></div>
+    </div>
+  </div>
+  <div class="card card-red">
+    <div class="card-header"><div class="card-icon icon-red">🔤</div><h2>Clases de fuego (UNE-EN 2)</h2></div>
+    <div class="clases-grid">
+      <div class="clase cl-a"><span class="letra">A</span><span class="nombre">Sólidos</span><span class="ejemplo">Madera, papel</span></div>
+      <div class="clase cl-b"><span class="letra">B</span><span class="nombre">Líquidos</span><span class="ejemplo">Gasolina, aceite mineral</span></div>
+      <div class="clase cl-c"><span class="letra">C</span><span class="nombre">Gases</span><span class="ejemplo">Gas natural, propano</span></div>
+      <div class="clase cl-d"><span class="letra">D</span><span class="nombre">Metales</span><span class="ejemplo">Magnesio, sodio</span></div>
+      <div class="clase cl-f"><span class="letra">F</span><span class="nombre">Grasas cocina</span><span class="ejemplo">Freidoras, sartenes</span></div>
+    </div>
+    <div class="alert"><strong>⚠ La clase E no existe:</strong> fue eliminada de la norma UNE-EN 2. Los fuegos eléctricos no son una clase independiente.</div>
+  </div>
+</div>
+
+<!-- AGENTES EXTINTORES -->
+<div class="section-label">Agentes extintores</div>
+<div class="grid">
+  <div class="card card-blue">
+    <div class="card-header"><div class="card-icon icon-blue">💧</div><h2>Agua</h2></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Mecanismo: <strong>enfriamiento</strong></span></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Eficaz en: <span class="badge b-orange">A</span></span></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Chorro: conductor eléctrico ⚡ prohibido con tensión</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Nebulizada / pulverizada: menor riesgo eléctrico</span></div>
+    <div class="alert"><strong>Prohibida en:</strong> clase D (reacción explosiva), clase F (proyecciones), clase C.</div>
+  </div>
+  <div class="card card-orange">
+    <div class="card-header"><div class="card-icon icon-orange">☁️</div><h2>Polvo extintor</h2></div>
+    <div class="row"><div class="dot dot-orange"></div><span><strong>Polvo ABC</strong> (sulfato amónico): <span class="badge b-orange">A</span><span class="badge b-orange">B</span><span class="badge b-orange">C</span> — el más versátil</span></div>
+    <div class="row"><div class="dot dot-orange"></div><span><strong>Polvo BC</strong> (bicarbonato): <span class="badge b-orange">B</span><span class="badge b-orange">C</span></span></div>
+    <div class="row"><div class="dot dot-orange"></div><span><strong>Polvo D</strong>: específico para metales <span class="badge b-orange">D</span></span></div>
+    <div class="alert"><strong>⚠</strong> Daña equipos electrónicos. No usar en CPD ni cuadros sensibles.</div>
+  </div>
+  <div class="card card-blue">
+    <div class="card-header"><div class="card-icon icon-blue">🫧</div><h2>CO₂</h2></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Mecanismo: <strong>sofocación</strong> + leve enfriamiento</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Eficaz en: <span class="badge b-blue">B</span> y fuegos eléctricos</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span>No deja residuo · No daña equipos electrónicos</span></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Ideal: CPD, cuadros eléctricos, laboratorios</span></div>
+    <div class="alert"><strong>⚠ Asfixia</strong> en espacios confinados. Retardo descarga ≥ 30 seg.</div>
+  </div>
+  <div class="card card-green">
+    <div class="card-header"><div class="card-icon icon-green">🧴</div><h2>Espuma física</h2></div>
+    <div class="row"><div class="dot dot-green"></div><span>Mecanismo: <strong>sofocación</strong> (capa sobre combustible) + enfriamiento</span></div>
+    <div class="row"><div class="dot dot-green"></div><span>Eficaz en: <span class="badge b-orange">A</span><span class="badge b-blue">B</span></span></div>
+    <div class="row"><div class="dot dot-green"></div><span>AFFF: forma película acuosa. PFAS en eliminación progresiva (UE)</span></div>
+    <div class="row"><div class="dot dot-green"></div><span>Alta expansión (&gt;200:1): inunda volúmenes (garajes, almacenes)</span></div>
+    <div class="alert"><strong>Prohibida en:</strong> clase C y fuegos eléctricos.</div>
+  </div>
+  <div class="card card-purple">
+    <div class="card-header"><div class="card-icon icon-purple">🧪</div><h2>Gases limpios</h2></div>
+    <div class="row"><div class="dot dot-purple"></div><span><strong>Inertes</strong> (IG-541, N₂): reducen O₂. Seguros con personas (a dosis correcta)</span></div>
+    <div class="row"><div class="dot dot-purple"></div><span><strong>Halogenados limpios</strong> (HFC-227ea, Novec 1230): inhibición química</span></div>
+    <div class="row"><div class="dot dot-purple"></div><span>No residuo · No dañan equipos · CPD, archivos, museos</span></div>
+    <div class="row"><div class="dot dot-purple"></div><span>Halones: <strong>prohibidos desde 1994</strong> (Protocolo de Montreal)</span></div>
+  </div>
+  <div class="card card-red">
+    <div class="card-header"><div class="card-icon icon-red">🍳</div><h2>Agente K — Clase F</h2></div>
+    <div class="row"><div class="dot dot-red"></div><span>Solución acuosa de <strong>acetato potásico</strong></span></div>
+    <div class="row"><div class="dot dot-red"></div><span>Mecanismo: <strong>saponificación</strong> (sella la grasa) + enfriamiento</span></div>
+    <div class="row"><div class="dot dot-red"></div><span>Obligatorio en campanas de cocina industrial</span></div>
+    <div class="alert"><strong>⚠ NO es polvo:</strong> es solución líquida acuosa. No confundir con polvo BC (bicarbonato potásico).</div>
+  </div>
+</div>
+
+<!-- INSTALACIONES FIJAS -->
+<div class="section-label">Instalaciones fijas de extinción — datos clave para examen</div>
+<div class="grid-wide">
+  <div class="card card-red">
+    <div class="card-header"><div class="card-icon icon-red">🧯</div><h2>Extintores portátiles</h2></div>
+    <div class="row"><div class="dot dot-red"></div><span>Eficacia mínima CTE: <strong>21A / 113B</strong></span></div>
+    <div class="row"><div class="dot dot-red"></div><span>Recorrido máximo hasta extintor: <strong>15 m</strong></span></div>
+    <div class="row"><div class="dot dot-red"></div><span>Retimbrado (prueba hidráulica): cada <strong>5 años</strong></span></div>
+    <div class="alert"><strong>⚠ Trampa:</strong> retimbrado cada 5 años, no cada 3 ni cada 10.</div>
+  </div>
+  <div class="card card-blue">
+    <div class="card-header"><div class="card-icon icon-blue">🚒</div><h2>BIE — Bocas de Incendio Equipadas</h2></div>
+    <div class="row"><div class="dot dot-blue"></div><span><strong>BIE-25</strong> (DN 25, semirrígida): edificios generales · presión mínima <strong>2 bar</strong></span></div>
+    <div class="row"><div class="dot dot-blue"></div><span><strong>BIE-45</strong> (DN 45, plana): industria, gran riesgo · presión mínima <strong>3 bar</strong></span></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Separación máxima entre BIEs: <strong>50 m</strong></span></div>
+    <div class="row"><div class="dot dot-blue"></div><span>Autonomía mínima: <strong>60 minutos</strong></span></div>
+  </div>
+</div>
+
+<!-- ROCIADORES -->
+<div class="section-label">Rociadores automáticos — temperaturas de activación de bulbos</div>
+<div class="card card-orange" style="margin-bottom:1rem;">
+  <div class="card-header"><div class="card-icon icon-orange">💦</div><h2>Colores de bulbo y temperatura (dato de examen)</h2></div>
+  <div class="bulbos">
+    <div class="bulbo bulbo-rojo">   <span style="font-size:1.1rem">🔴</span><span class="temp">57 °C</span></div>
+    <div class="bulbo bulbo-naranja"><span style="font-size:1.1rem">🟠</span><span class="temp">68 °C</span></div>
+    <div class="bulbo bulbo-amarillo"><span style="font-size:1.1rem">🟡</span><span class="temp">79 °C</span></div>
+    <div class="bulbo bulbo-verde">  <span style="font-size:1.1rem">🟢</span><span class="temp">93 °C</span></div>
+    <div class="bulbo bulbo-azul">   <span style="font-size:1.1rem">🔵</span><span class="temp">141 °C</span></div>
+    <div class="bulbo bulbo-lila">   <span style="font-size:1.1rem">🟣</span><span class="temp">182 °C</span></div>
+    <div class="bulbo bulbo-negro">  <span style="font-size:1.1rem">⚫</span><span class="temp">204–260 °C</span></div>
+  </div>
+  <div class="alert" style="margin-top:0.75rem;"><strong>El rojo (57 °C) es el más frecuente</strong> en edificios de uso normal y el más preguntado en examen.</div>
+  <div style="margin-top:0.75rem;">
+    <div class="row"><div class="dot dot-orange"></div><span><strong>Húmedo</strong>: agua en tubería. Solo actúa el rociador que se activa. El más frecuente.</span></div>
+    <div class="row"><div class="dot dot-orange"></div><span><strong>Seco</strong>: aire/N₂ en tubería. Para zonas con riesgo de helada.</span></div>
+    <div class="row"><div class="dot dot-orange"></div><span><strong>Precarga</strong>: seco + detección. Evita falsas activaciones. CPD, archivos.</span></div>
+    <div class="row"><div class="dot dot-orange"></div><span><strong>Diluvio</strong>: rociadores ABIERTOS, actúan TODOS a la vez. Riesgos muy altos.</span></div>
+  </div>
+  <div class="alert"><strong>⚠ Trampa:</strong> Húmedo = solo el rociador que se activa. Diluvio = todos a la vez.</div>
+</div>
+
+<!-- MANTENIMIENTO -->
+<div class="section-label">Mantenimiento — periodicidades (Anexo II RIPCI)</div>
+<div class="card card-gold" style="margin-bottom:1rem;">
+  <div class="card-header"><div class="card-icon icon-gold">📋</div><h2>Frecuencias de mantenimiento obligatorias</h2></div>
+  <div class="periodos">
+    <span class="periodo-freq pf-trim">Trimestral</span>
+    <span class="periodo-desc">Comprobación visual: accesibilidad, señalización y estado general de extintores, BIEs, hidrantes y detección.</span>
+    <span class="periodo-freq pf-sem">Semestral</span>
+    <span class="periodo-desc">Revisión extintores (peso, presión, agente). Comprobación de detectores y pulsadores.</span>
+    <span class="periodo-freq pf-anual">Anual</span>
+    <span class="periodo-desc">Mantenimiento completo por empresa habilitada. Prueba de funcionamiento de cada componente.</span>
+    <span class="periodo-freq pf-5">Cada 5 años</span>
+    <span class="periodo-desc">Retimbrado de extintores (prueba hidráulica). Prueba hidráulica de mangueras de BIEs.</span>
+  </div>
+  <div class="alert"><strong>⚠ Trampa:</strong> Retimbrado extintores = cada 5 años. No cada 3. No cada 10.</div>
+</div>
+
+<!-- INSPECCIONES OCA INDUSTRIA -->
+<div class="section-label">Inspecciones OCA — establecimientos industriales (RD 164/2025)</div>
+<div class="card card-red" style="margin-bottom:1rem;">
+  <div class="card-header"><div class="card-icon icon-red">🔍</div><h2>Periodicidad según nivel de riesgo intrínseco</h2></div>
+  <div class="grid-3" style="margin-top:0.5rem;margin-bottom:0;">
+    <div style="background:var(--green-lt);border-radius:0.5rem;padding:0.75rem;text-align:center;">
+      <div style="font-family:var(--font-d);font-size:1.1rem;font-weight:800;color:var(--green);">6 años</div>
+      <div style="font-size:0.75rem;color:var(--muted);margin-top:3px;">Riesgo BAJO</div>
+    </div>
+    <div style="background:var(--gold-lt);border-radius:0.5rem;padding:0.75rem;text-align:center;">
+      <div style="font-family:var(--font-d);font-size:1.1rem;font-weight:800;color:var(--gold);">4 años</div>
+      <div style="font-size:0.75rem;color:var(--muted);margin-top:3px;">Riesgo MEDIO</div>
+    </div>
+    <div style="background:var(--red-lt);border-radius:0.5rem;padding:0.75rem;text-align:center;">
+      <div style="font-family:var(--font-d);font-size:1.1rem;font-weight:800;color:var(--red);">2 años</div>
+      <div style="font-size:0.75rem;color:var(--muted);margin-top:3px;">Riesgo ALTO</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuadros comparativos T02 – Protección contra incendios</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red:    #8b1a1a; --red-lt:    #fde8e8; --red-dk:   #5a0f0f;
+    --gold:   #d19900; --gold-lt:   #f5e9c0;
+    --orange: #964219; --orange-lt: #f5e0d0;
+    --blue:   #005f73; --blue-lt:   #cce3e8;
+    --green:  #2d6a2d; --green-lt:  #d6ecd6;
+    --purple: #5a3e8c; --purple-lt: #e4ddf5;
+    --bg: #f7f6f2; --surface: #ffffff; --border: #d4d1ca;
+    --text: #28251d; --muted: #6b6a65; --faint: #a8a7a2;
+    --font-d: 'Cabinet Grotesk', sans-serif;
+    --font-b: 'Satoshi', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-b); background: var(--bg); color: var(--text); font-size: 0.88rem; line-height: 1.5; -webkit-font-smoothing: antialiased; padding: 2rem 1.5rem 4rem; }
+  .file-nav { display:flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+  .file-nav a { padding: 0.35rem 1rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); font-size: 0.8rem; text-decoration: none; color: var(--muted); transition: all 0.15s; }
+  .file-nav a:hover, .file-nav a.active { background: var(--red); color: white; border-color: var(--red); }
+  h1 { font-family: var(--font-d); font-size: 1.6rem; font-weight: 800; color: var(--red); margin-bottom: 0.25rem; }
+  .subtitle { color: var(--muted); font-size: 0.82rem; margin-bottom: 2rem; }
+  .section-label { font-family: var(--font-d); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); margin: 2rem 0 0.6rem; }
+  .table-wrap { background: var(--surface); border-radius: 0.75rem; border: 1px solid var(--border); overflow: hidden; margin-bottom: 1rem; box-shadow: 0 1px 3px rgba(40,37,29,.06); }
+  table { width: 100%; border-collapse: collapse; }
+  thead tr { background: var(--text); color: white; }
+  thead th { font-family: var(--font-d); font-size: 0.78rem; font-weight: 700; padding: 0.65rem 0.85rem; text-align: left; letter-spacing: 0.03em; }
+  thead th.center { text-align: center; }
+  tbody tr:nth-child(even) { background: #fafaf8; }
+  tbody tr:hover { background: var(--blue-lt); }
+  tbody td { padding: 0.55rem 0.85rem; border-bottom: 1px solid var(--border); font-size: 0.84rem; vertical-align: middle; }
+  tbody td.center { text-align: center; }
+  tbody tr:last-child td { border-bottom: none; }
+  .th-red    { background: var(--red) !important; }
+  .th-blue   { background: var(--blue) !important; }
+  .th-green  { background: var(--green) !important; }
+  .th-orange { background: var(--orange) !important; }
+  .th-gold   { background: #a07800 !important; }
+  .th-purple { background: var(--purple) !important; }
+  .ok  { color: var(--green); font-weight: 700; font-size: 1rem; }
+  .no  { color: var(--red);   font-weight: 700; font-size: 1rem; }
+  .par { color: var(--orange); font-weight: 700; font-size: 0.9rem; }
+  .badge { display: inline-block; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; padding: 1px 7px; border-radius: 999px; }
+  .b-red    { background: var(--red-lt);    color: var(--red-dk); }
+  .b-blue   { background: var(--blue-lt);   color: var(--blue); }
+  .b-green  { background: var(--green-lt);  color: var(--green); }
+  .b-orange { background: var(--orange-lt); color: var(--orange); }
+  .b-gold   { background: var(--gold-lt);   color: #7a5500; }
+  .b-purple { background: var(--purple-lt); color: var(--purple); }
+  .alert { background: var(--orange-lt); border-left: 3px solid var(--orange); border-radius: 0.5rem; padding: 0.6rem 0.85rem; font-size: 0.82rem; margin: 0.6rem 0 1rem; }
+  .alert strong { color: var(--orange); }
+  strong { font-weight: 700; }
+  @media (max-width: 640px) {
+    .table-wrap { overflow-x: auto; }
+    table { min-width: 520px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="file-nav">
+  <a href="1_texto_explicativo_t02.html">📄 Texto explicativo</a>
+  <a href="2_esquema_resumen_t02.html">🗂 Esquema-resumen</a>
+  <a href="3_cuadro_comparativo_t02.html" class="active">📊 Cuadros comparativos</a>
+</div>
+
+<h1>Cuadros comparativos — Tema 2</h1>
+<div class="subtitle">Protección contra incendios · Gestor de Mantenimiento (Nivel B) · UPNA · Tablas operativas para examen</div>
+
+
+<!-- TABLA 1: AGENTES EXTINTORES vs CLASES DE FUEGO -->
+<div class="section-label">Tabla 1 — Agentes extintores vs. clases de fuego</div>
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr class="th-red">
+        <th>Agente extintor</th>
+        <th class="center">A — Sólidos</th>
+        <th class="center">B — Líquidos</th>
+        <th class="center">C — Gases</th>
+        <th class="center">D — Metales</th>
+        <th class="center">F — Grasas cocina</th>
+        <th class="center">Eléctrico (riesgo)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Agua chorro</strong></td>
+        <td class="center"><span class="ok">✔</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘ conductora</span></td>
+      </tr>
+      <tr>
+        <td><strong>Agua pulverizada</strong></td>
+        <td class="center"><span class="ok">✔</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="par">⚠ menor riesgo</span></td>
+      </tr>
+      <tr>
+        <td><strong>Polvo ABC</strong> (sulfato amónico)</td>
+        <td class="center"><span class="ok">✔</span></td>
+        <td class="center"><span class="ok">✔</span></td>
+        <td class="center"><span class="ok">✔</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="par">⚠ daña equipos</span></td>
+      </tr>
+      <tr>
+        <td><strong>Polvo BC</strong> (bicarbonato)</td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="ok">✔</span></td>
+        <td class="center"><span class="ok">✔</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="par">⚠ daña equipos</span></td>
+      </tr>
+      <tr>
+        <td><strong>Polvo D</strong> (específico)</td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="ok">✔</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘</span></td>
+      </tr>
+      <tr>
+        <td><strong>CO₂</strong></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="ok">✔</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="ok">✔ no conductor</span></td>
+      </tr>
+      <tr>
+        <td><strong>Espuma física (AFFF)</strong></td>
+        <td class="center"><span class="ok">✔</span></td>
+        <td class="center"><span class="ok">✔</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘ conductora</span></td>
+      </tr>
+      <tr>
+        <td><strong>Gases limpios</strong> (HFC, IG-541…)</td>
+        <td class="center"><span class="par">⚠ parcial</span></td>
+        <td class="center"><span class="ok">✔</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="ok">✔ no conductor</span></td>
+      </tr>
+      <tr>
+        <td><strong>Agente K</strong> (acetato potásico)</td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="no">✘</span></td>
+        <td class="center"><span class="ok">✔ exclusivo</span></td>
+        <td class="center"><span class="no">✘</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="alert"><strong>⚠ Trampas:</strong> Clase F → <em>solo agente K</em>. Clase D → <em>solo polvo D específico</em>. CO₂ → no eficaz en clase A (no enfría lo suficiente) ni en C (no interrumpe el gas). La clase E fue eliminada de la norma UNE-EN 2.</div>
+
+
+<!-- TABLA 2: TIPOS DE SISTEMAS DE ROCIADORES -->
+<div class="section-label">Tabla 2 — Sistemas de rociadores: húmedo / seco / precarga / diluvio</div>
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr class="th-blue">
+        <th>Característica</th>
+        <th>Húmedo</th>
+        <th>Seco</th>
+        <th>Precarga (preaction)</th>
+        <th>Diluvio (deluge)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Contenido tubería</strong></td>
+        <td>Agua a presión</td>
+        <td>Aire / N₂ a presión</td>
+        <td>Aire / N₂ a presión</td>
+        <td>Vacía (sin presión)</td>
+      </tr>
+      <tr>
+        <td><strong>Tipo de rociador</strong></td>
+        <td>Cerrado (bulbo)</td>
+        <td>Cerrado (bulbo)</td>
+        <td>Cerrado (bulbo)</td>
+        <td><strong>Abierto</strong> (sin bulbo)</td>
+      </tr>
+      <tr>
+        <td><strong>Cuántos actúan</strong></td>
+        <td><strong>Solo los activados</strong> por temperatura</td>
+        <td>Solo los activados por temperatura</td>
+        <td>Solo los activados por temperatura</td>
+        <td><strong>Todos a la vez</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Activación</strong></td>
+        <td>Fusión del bulbo</td>
+        <td>Fusión del bulbo + válvula de diluvio</td>
+        <td>Detección + fusión del bulbo</td>
+        <td>Sistema de detección independiente</td>
+      </tr>
+      <tr>
+        <td><strong>Aplicación típica</strong></td>
+        <td>Edificios generales (hoteles, oficinas, hospitales)</td>
+        <td>Zonas con riesgo de helada (aparcamientos exteriores, cámaras frigoríficas)</td>
+        <td>CPD, archivos, museos (evita falsas activaciones)</td>
+        <td>Hangares aviación, almacenes de líquidos inflamables, escenarios teatrales</td>
+      </tr>
+      <tr>
+        <td><strong>Velocidad de respuesta</strong></td>
+        <td>Más rápida</td>
+        <td>Más lenta (hay que purgar el aire)</td>
+        <td>Media</td>
+        <td>Instantánea (descarga total)</td>
+      </tr>
+      <tr>
+        <td><strong>Daño por agua</strong></td>
+        <td>Mínimo (solo zona afectada)</td>
+        <td>Mínimo</td>
+        <td>Mínimo (doble confirmación)</td>
+        <td>Alto (inundación total)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="alert"><strong>⚠ La trampa clásica:</strong> En el sistema <em>húmedo</em>, actúa solo el rociador que alcanza la temperatura de tarado; los demás permanecen cerrados. En el sistema <em>diluvio</em>, todos los rociadores son abiertos y descargan a la vez cuando el sistema de detección da la señal. Son los dos extremos opuestos.</div>
+
+
+<!-- TABLA 3: BIE-25 vs BIE-45 -->
+<div class="section-label">Tabla 3 — BIE-25 vs. BIE-45</div>
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr class="th-green">
+        <th>Característica</th>
+        <th>BIE-25</th>
+        <th>BIE-45</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Diámetro nominal</strong></td>
+        <td>25 mm</td>
+        <td>45 mm</td>
+      </tr>
+      <tr>
+        <td><strong>Tipo de manguera</strong></td>
+        <td>Semirrígida</td>
+        <td>Plana (flexible)</td>
+      </tr>
+      <tr>
+        <td><strong>Manejo</strong></td>
+        <td>Una persona</td>
+        <td>Mínimo dos personas</td>
+      </tr>
+      <tr>
+        <td><strong>Presión mínima en punta de lanza</strong></td>
+        <td><strong>2 bar</strong></td>
+        <td><strong>3 bar</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Caudal mínimo</strong></td>
+        <td>100 l/min</td>
+        <td>200 l/min</td>
+      </tr>
+      <tr>
+        <td><strong>Longitud de manguera habitual</strong></td>
+        <td>20–30 m</td>
+        <td>20–25 m</td>
+      </tr>
+      <tr>
+        <td><strong>Separación máxima entre BIEs</strong></td>
+        <td colspan="2" class="center"><strong>50 m</strong> (ambas)</td>
+      </tr>
+      <tr>
+        <td><strong>Autonomía mínima de la red</strong></td>
+        <td colspan="2" class="center"><strong>60 minutos</strong> (ambas)</td>
+      </tr>
+      <tr>
+        <td><strong>Aplicación típica</strong></td>
+        <td>Edificios de uso general: hoteles, hospitales, oficinas, centros comerciales</td>
+        <td>Establecimientos industriales, edificios de gran riesgo</td>
+      </tr>
+      <tr>
+        <td><strong>Norma de diseño</strong></td>
+        <td colspan="2" class="center">UNE-EN 671 / UNE 23500</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- TABLA 4: GASES LIMPIOS vs CO₂ -->
+<div class="section-label">Tabla 4 — Gases limpios vs. CO₂ en sistemas de inundación total</div>
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr class="th-purple">
+        <th>Característica</th>
+        <th>CO₂</th>
+        <th>Gases inertes (IG-541, N₂…)</th>
+        <th>Gases halogenados limpios (HFC-227ea, Novec 1230)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Mecanismo extinción</strong></td>
+        <td>Sofocación + leve enfriamiento</td>
+        <td>Reducción de O₂ (&lt;12%)</td>
+        <td>Inhibición química + enfriamiento</td>
+      </tr>
+      <tr>
+        <td><strong>Concentración de diseño</strong></td>
+        <td>34–75% v/v</td>
+        <td>~40–50% v/v (mezcla final O₂ ~12%)</td>
+        <td>6–10% v/v</td>
+      </tr>
+      <tr>
+        <td><strong>Seguridad con personas</strong></td>
+        <td><span class="no">✘ Asfixia a conc. diseño</span></td>
+        <td><span class="par">⚠ Seguro si O₂ ≥ 10%</span></td>
+        <td><span class="ok">✔ Seguro a conc. diseño</span></td>
+      </tr>
+      <tr>
+        <td><strong>Residuo tras descarga</strong></td>
+        <td>No deja residuo</td>
+        <td>No deja residuo</td>
+        <td>No deja residuo</td>
+      </tr>
+      <tr>
+        <td><strong>Daño a equipos</strong></td>
+        <td>No daña (frío al expandirse)</td>
+        <td>No daña</td>
+        <td>No daña</td>
+      </tr>
+      <tr>
+        <td><strong>Impacto ambiental</strong></td>
+        <td>GWP alto (CO₂ = referencia)</td>
+        <td>GWP = 0</td>
+        <td>GWP variable (Novec 1230 muy bajo)</td>
+      </tr>
+      <tr>
+        <td><strong>Ozono (ODP)</strong></td>
+        <td>ODP = 0</td>
+        <td>ODP = 0</td>
+        <td>ODP = 0 (a diferencia de halones)</td>
+      </tr>
+      <tr>
+        <td><strong>Aplicación típica</strong></td>
+        <td>CPD, cuadros eléctricos (sin personas)</td>
+        <td>Archivos, museos, CPD (con personas)</td>
+        <td>CPD, archivos, museos, salas de control</td>
+      </tr>
+      <tr>
+        <td><strong>Retardo mínimo de descarga</strong></td>
+        <td colspan="3" class="center"><strong>30 segundos</strong> (para evacuación del personal)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="alert"><strong>⚠ Los halones (Halón 1301, 1211) están prohibidos desde 1994</strong> por el Protocolo de Montreal. Destruyen la capa de ozono (ODP &gt; 0). Solo uso residual en aviación y militar con autorización específica.</div>
+
+
+<!-- TABLA 5: PERIODICIDADES DE MANTENIMIENTO -->
+<div class="section-label">Tabla 5 — Periodicidades de mantenimiento (Anexo II RIPCI — RD 513/2017)</div>
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr class="th-gold">
+        <th>Periodicidad</th>
+        <th>Operación</th>
+        <th>¿Quién?</th>
+        <th>Instalaciones afectadas</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="badge b-blue">Trimestral</span></td>
+        <td>Comprobación visual de accesibilidad, señalización y estado general</td>
+        <td>Titular o personal propio</td>
+        <td>Extintores, BIEs, hidrantes, sistemas de detección y alarma</td>
+      </tr>
+      <tr>
+        <td><span class="badge b-green">Semestral</span></td>
+        <td>Revisión de extintores (peso, presión, agente). Verificación de detectores y pulsadores</td>
+        <td>Empresa mantenedora habilitada</td>
+        <td>Extintores, detectores, pulsadores de alarma</td>
+      </tr>
+      <tr>
+        <td><span class="badge b-gold">Anual</span></td>
+        <td>Mantenimiento completo. Prueba de funcionamiento de cada componente de la instalación</td>
+        <td>Empresa mantenedora habilitada</td>
+        <td>Todos los sistemas PCI del edificio</td>
+      </tr>
+      <tr>
+        <td><span class="badge b-orange">Cada 5 años</span></td>
+        <td>Retimbrado de extintores (prueba hidráulica del recipiente). Prueba hidráulica de mangueras BIEs</td>
+        <td>Empresa mantenedora habilitada</td>
+        <td>Extintores a presión, mangueras de BIEs, instalaciones de rociadores</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="alert"><strong>⚠ Trampa de examen:</strong> El retimbrado de extintores es cada <strong>5 años</strong>. No cada 3 (error por confusión con instalaciones de gas). No cada 10. Todas las operaciones deben quedar registradas en el <strong>Libro de Registro de Instalaciones PCI</strong>.</div>
+
+
+<!-- TABLA 6: INSPECCIONES OCA INDUSTRIA -->
+<div class="section-label">Tabla 6 — Inspecciones periódicas por OCA en industria (RD 164/2025)</div>
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr class="th-red">
+        <th>Nivel de riesgo intrínseco</th>
+        <th>Periodicidad OCA</th>
+        <th>Referencia normativa</th>
+        <th>Cálculo del nivel de riesgo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="badge b-green">Bajo</span></td>
+        <td><strong>Cada 6 años</strong></td>
+        <td rowspan="3">RD 164/2025 (nuevo RSCIEI). En vigor desde 17/03/2025. Deroga RD 2267/2004.</td>
+        <td rowspan="3">Carga de fuego ponderada y corregida (MJ/m²), según tipo de combustible y actividad. Clasificación: bajo (1-2), medio (3-4) o alto (5-8).</td>
+      </tr>
+      <tr>
+        <td><span class="badge b-gold">Medio</span></td>
+        <td><strong>Cada 4 años</strong></td>
+      </tr>
+      <tr>
+        <td><span class="badge b-red">Alto</span></td>
+        <td><strong>Cada 2 años</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- TABLA 7: NORMATIVA APLICABLE POR TIPO DE EDIFICIO/ACTIVIDAD -->
+<div class="section-label">Tabla 7 — Normativa aplicable según tipo de edificio o actividad</div>
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr class="th-blue">
+        <th>Tipo de edificio / Actividad</th>
+        <th>Normativa de exigencias PCI</th>
+        <th>Normativa de instalación y mantenimiento</th>
+        <th>Notas</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Residencial, hospitalario, hotelero, docente, comercial, administrativo</td>
+        <td><strong>CTE DB-SI</strong></td>
+        <td>RD 513/2017 (RIPCI)</td>
+        <td>El CTE DB-SI define qué se instala; el RIPCI define cómo.</td>
+      </tr>
+      <tr>
+        <td>Establecimientos industriales</td>
+        <td><strong>RD 164/2025</strong> (nuevo RSCIEI)</td>
+        <td>RD 513/2017 (RIPCI)</td>
+        <td>Deroga al RD 2267/2004 desde marzo 2025. Clasifica por configuración (A-E) y riesgo intrínseco.</td>
+      </tr>
+      <tr>
+        <td>Aparcamientos y garajes</td>
+        <td><strong>CTE DB-SI</strong> + criterios específicos</td>
+        <td>RD 513/2017 (RIPCI)</td>
+        <td>Un extintor por cada 15 plazas o fracción. BIE si &gt; 500 m².</td>
+      </tr>
+      <tr>
+        <td>Túneles de carretera</td>
+        <td><strong>RD 635/2006</strong></td>
+        <td>RD 513/2017 (RIPCI)</td>
+        <td>Normativa específica por la longitud y las características del riesgo.</td>
+      </tr>
+      <tr>
+        <td>Instalaciones petroquímicas / almacenamiento de líquidos inflamables</td>
+        <td>Reglamentos sectoriales + <strong>RSCIEI</strong></td>
+        <td>RD 513/2017 (RIPCI)</td>
+        <td>Pueden aplicar normas técnicas adicionales (NFPA, UNE-EN).</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- TABLA 8: RESUMEN AGENTES EXTINTORES — MECANISMO Y APLICACIÓN -->
+<div class="section-label">Tabla 8 — Resumen ejecutivo de agentes extintores para examen</div>
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr class="th-orange">
+        <th>Agente</th>
+        <th>Mecanismo principal</th>
+        <th>Clase(s) eficaz</th>
+        <th>Deja residuo</th>
+        <th>Seguro con electricidad</th>
+        <th>Aplicación ideal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Agua chorro</strong></td>
+        <td>Enfriamiento</td>
+        <td><span class="badge b-orange">A</span></td>
+        <td class="center"><span class="ok">No</span></td>
+        <td class="center"><span class="no">No</span></td>
+        <td>Incendios forestales, sólidos</td>
+      </tr>
+      <tr>
+        <td><strong>Agua pulverizada</strong></td>
+        <td>Enfriamiento + sofocación</td>
+        <td><span class="badge b-orange">A</span></td>
+        <td class="center"><span class="ok">No</span></td>
+        <td class="center"><span class="par">⚠ parcial</span></td>
+        <td>Sólidos, reducción de riesgo eléctrico</td>
+      </tr>
+      <tr>
+        <td><strong>Polvo ABC</strong></td>
+        <td>Inhibición química</td>
+        <td><span class="badge b-orange">A</span> <span class="badge b-orange">B</span> <span class="badge b-orange">C</span></td>
+        <td class="center"><span class="no">Sí</span></td>
+        <td class="center"><span class="par">⚠ daña equipos</span></td>
+        <td>Uso general (extintores)</td>
+      </tr>
+      <tr>
+        <td><strong>Polvo BC</strong></td>
+        <td>Inhibición química</td>
+        <td><span class="badge b-orange">B</span> <span class="badge b-orange">C</span></td>
+        <td class="center"><span class="no">Sí</span></td>
+        <td class="center"><span class="par">⚠ daña equipos</span></td>
+        <td>Líquidos y gases</td>
+      </tr>
+      <tr>
+        <td><strong>Polvo D</strong></td>
+        <td>Sofocación + enfriamiento</td>
+        <td><span class="badge b-gold">D</span></td>
+        <td class="center"><span class="no">Sí</span></td>
+        <td class="center"><span class="no">No</span></td>
+        <td>Metales combustibles (específico)</td>
+      </tr>
+      <tr>
+        <td><strong>CO₂</strong></td>
+        <td>Sofocación</td>
+        <td><span class="badge b-blue">B</span> + eléctrico</td>
+        <td class="center"><span class="ok">No</span></td>
+        <td class="center"><span class="ok">Sí</span></td>
+        <td>CPD, cuadros eléctricos, laboratorios</td>
+      </tr>
+      <tr>
+        <td><strong>Espuma AFFF</strong></td>
+        <td>Sofocación</td>
+        <td><span class="badge b-orange">A</span> <span class="badge b-blue">B</span></td>
+        <td class="center"><span class="no">Sí</span></td>
+        <td class="center"><span class="no">No</span></td>
+        <td>Hidrocarburos, hangares, depósitos</td>
+      </tr>
+      <tr>
+        <td><strong>Gases limpios</strong></td>
+        <td>Inhibición / sofocación</td>
+        <td><span class="badge b-blue">B</span> + eléctrico</td>
+        <td class="center"><span class="ok">No</span></td>
+        <td class="center"><span class="ok">Sí</span></td>
+        <td>CPD, archivos, museos, salas de control</td>
+      </tr>
+      <tr>
+        <td><strong>Agente K</strong></td>
+        <td>Saponificación + enfriamiento</td>
+        <td><span class="badge b-red">F</span></td>
+        <td class="center"><span class="no">Sí (jabón)</span></td>
+        <td class="center"><span class="no">No</span></td>
+        <td>Cocinas industriales, freidoras</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="alert"><strong>⚠ Recuerda para el examen:</strong> Agente K = solución líquida acuosa de acetato potásico. NO es polvo. · CO₂ = no deja residuo, no daña equipos, pero asfixia en espacios cerrados. · Polvo ABC = el más versátil, pero daña equipos. · Espuma AFFF = PFAS en eliminación progresiva en la UE.</div>
+
+</body>
+</html>

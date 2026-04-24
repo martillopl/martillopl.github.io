@@ -1,0 +1,194 @@
+PUNTOS CLAVE – TEMA 2
+INSTALACIONES DE PROTECCIÓN CONTRA INCENDIOS
+Gestor de Mantenimiento (Nivel B) · Universidad Pública de Navarra
+
+=== NORMATIVA DE REFERENCIA ===
+1. RIPCI: Real Decreto 513/2017, de 22 de mayo, por el que se aprueba el Reglamento
+   de Instalaciones de Protección Contra Incendios. Es la norma central del tema.
+   Deroga el RD 1942/1993. Regula el diseño, instalación, puesta en servicio,
+   mantenimiento e inspección de todas las instalaciones PCI.
+2. CTE DB-SI: Documento Básico de Seguridad en caso de Incendio del Código Técnico
+   de la Edificación. Establece qué instalaciones PCI son exigibles en cada tipo de
+   edificio según su uso, superficie y altura de evacuación.
+3. RD 2267/2004: Reglamento de Seguridad Contra Incendios en Establecimientos
+   Industriales (RSCIEI). Derogado y sustituido por el RD 164/2025, de 4 de marzo,
+   que aprueba el nuevo Reglamento de Seguridad contra Incendios en Establecimientos
+   Industriales (en vigor desde el 17 de marzo de 2025).
+4. ATENCIÓN — TRAMPA DE ACTUALIDAD: El RD 164/2025 es muy reciente (marzo 2025)
+   y puede aparecer en examen como novedad normativa. Deroga expresamente el
+   RD 2267/2004. Mantiene la estructura de sectores/áreas de incendio y la
+   clasificación de establecimientos industriales por configuración (tipo A, B, C, D, E)
+   y por nivel de riesgo intrínseco.
+5. En Navarra, la autoridad competente en materia de industria (inspección y
+   autorización de instalaciones PCI en establecimientos industriales) es el
+   Departamento de Desarrollo Económico y Empresarial del Gobierno de Navarra
+   (Servicio de Industria). Las inspecciones periódicas las realizan OCAs acreditadas.
+6. UNE 23500, UNE 23585, UNE-EN 12845: normas técnicas que desarrollan las
+   exigencias de diseño para bocas de incendio, sistemas de presurización de
+   escaleras y rociadores automáticos, respectivamente.
+
+=== TRIÁNGULO DEL FUEGO Y CLASES DE FUEGO ===
+7. El fuego requiere tres elementos: COMBUSTIBLE + COMBURENTE (O₂) + CALOR (energía
+   de activación). Eliminar cualquiera de los tres extingue el fuego.
+8. Clases de fuego (norma UNE-EN 2):
+   - Clase A: sólidos (madera, papel, tela). Extinción: enfriamiento con agua.
+   - Clase B: líquidos o sólidos licuables (gasolina, aceites). Extinción: sofocación.
+   - Clase C: gases inflamables (gas natural, propano, butano).
+   - Clase D: metales combustibles (magnesio, sodio, titanio). Agente específico.
+   - Clase F: aceites y grasas vegetales o animales en cocinas. Agente específico.
+   ATENCIÓN: La clase E (fuegos eléctricos) desapareció de la norma UNE-EN 2.
+   Los fuegos con presencia eléctrica se tratan con agentes no conductores.
+
+=== AGENTES EXTINTORES ===
+9. AGUA: mayor capacidad de enfriamiento. Válida para clase A. Prohibida en
+   presencia de electricidad (agua corriente) y en clase D y F.
+   El agua pulverizada reduce el riesgo eléctrico respecto al chorro.
+10. POLVO POLIVALENTE ABC (sulfato amónico): el más versátil. Eficaz en A, B y C.
+    El polvo BC (bicarbonato sódico) es específico de B y C. El polvo D es específico
+    para metales (clase D). El polvo causa daños en equipos electrónicos.
+11. CO₂ (dióxido de carbono): sofocación + leve enfriamiento. No daña equipos.
+    Eficaz en B y fuegos eléctricos. Peligroso en espacios cerrados (asfixia).
+    No dejar residuo. Indicado en salas de servidores, cuadros eléctricos.
+12. ESPUMA FÍSICA (AFFF y AR-AFFF): sofocación por formación de capa sobre el
+    combustible. Muy eficaz en clase B (hidrocarburos, disolventes). También válida
+    para clase A. Prohibida en clase C y fuegos eléctricos.
+    ATENCIÓN: Los agentes AFFF basados en PFAS están siendo prohibidos
+    progresivamente en la UE por su impacto ambiental.
+13. AGENTES GASEOSOS LIMPIOS (HFC-227ea, FK-5-1-12, Novec 1230, IG-541 Inergen,
+    IG-100 N₂): no dejan residuo, no dañan equipos, seguros con personas (a dosis
+    correctas). Indicados en salas técnicas, CPD, archivos, museos.
+    La eficacia se basa en reducción de O₂ (gases inertes) o inhibición química
+    (halones sustituidos).
+    ATENCIÓN: Los halones (Halón 1301, 1211) están prohibidos desde 1994 (Protocolo
+    de Montreal) salvo usos críticos (aviación, militar).
+14. AGENTE CLASE F (K): solución acuosa de acetato potásico. Reacciona con las grasas
+    por saponificación creando una capa aislante. Obligatorio en campanas de cocina
+    industrial (freidoras, etc.).
+    TRAMPA: el agente K NO es polvo potásico; es una solución acuosa.
+
+=== INSTALACIONES FIJAS DE EXTINCIÓN ===
+15. EXTINTORES PORTÁTILES:
+    - Regulados por el RIPCI (RD 513/2017) y el CTE DB-SI.
+    - Eficacia mínima exigida: 21A/113B para uso general.
+    - Distancia máxima de recorrido hasta un extintor: 15 m (uso general);
+      en garajes y aparcamientos, uno por plaza o fracción de 10 plazas.
+    - Mantenimiento: revisión trimestral (visual), anual (por empresa mantenedora
+      habilitada) y retimbrado cada 5 años (agentes a presión).
+16. BOCAS DE INCENDIO EQUIPADAS (BIE):
+    - BIE-25 (manguera semirrígida DN 25 mm) y BIE-45 (manguera plana DN 45 mm).
+    - La BIE-25 es la más habitual en edificios (oficinas, hoteles, hospitales).
+    - La BIE-45 se usa en industria y edificios de gran riesgo.
+    - Distancia máxima entre BIEs: 50 m. Distancia máxima al punto más lejano
+      protegido por una BIE: 25 m (BIE-25) o 50 m menos la longitud de manguera.
+    - Presión en punta de lanza: mínimo 2 bar (BIE-25) y 3 bar (BIE-45).
+    - Autonomía mínima del sistema: 60 minutos.
+    - Norma de referencia: UNE 23500 (red de agua) y UNE-EN 671.
+17. HIDRANTES EXTERIORES:
+    - Destinados a los servicios de bomberos y a la protección del exterior del edificio.
+    - Tipo columna (sobre rasante) o arqueta (bajo rasante, tipo Barcelona).
+    - Caudal mínimo: 500 l/min durante 60 minutos (CTE DB-SI, tabla 2.1 SI 4).
+    - Distancia máxima al acceso del edificio: 100 m (fachada principal).
+18. ROCIADORES AUTOMÁTICOS (sprinklers):
+    - Actúan individualmente al fundirse el bulbo de vidrio (temperatura de activación:
+      57 °C rojo, 68 °C naranja, 79 °C amarillo, 93 °C verde, 141 °C azul, 182 °C lila,
+      204/260 °C negro).
+    - Sistemas: húmedo (agua en la tubería, el más común), seco (aire a presión en
+      la tubería, para zonas con riesgo de helada), precarga (preaction) y diluvio
+      (deluge, todos los rociadores abiertos, activados por detección independiente).
+    - Norma de diseño: UNE-EN 12845. Clasifica el riesgo en: Ligero (LH),
+      Ordinario (OH, grupos 1-4) y Alto (HH).
+    - TRAMPA: En el sistema húmedo el agua ya está en la tubería y sale solo del
+      rociador que alcanza la temperatura de activación. En el sistema diluvio TODOS
+      los rociadores son abiertos y actúan a la vez.
+19. SISTEMAS DE AGUA NEBULIZADA (Water Mist):
+    - Gotas de agua muy finas (< 1000 µm). Combinan enfriamiento + sofocación
+      (vapor desplaza O₂) + bloqueo de radiación.
+    - Eficaces en clase A, B y fuegos eléctricos. Menor consumo de agua que
+      rociadores convencionales.
+    - Aplicación en maquinaria, cocinas, salas de turbinas, buques.
+20. SISTEMAS DE EXTINCIÓN POR AGENTES GASEOSOS (CO₂, gases limpios):
+    - Inundación total del recinto hermético. Requieren sistema de detección previo,
+      retardo de descarga (mínimo 30 segundos, para evacuación) y señalización
+      de "no entrar durante la descarga".
+    - Requieren comprobación de hermeticidad del recinto (door fan test o equivalente).
+    - CO₂ al 34% v/v extingue la mayoría de incendios de clase B; concentración
+      de diseño habitual: 34-75%.
+21. SISTEMAS DE ESPUMA FÍSICA:
+    - Extinción de grandes superficies de líquidos inflamables (almacenamiento de
+      hidrocarburos, hangares). Proporción de mezcla (% espumógeno): 1%, 3% o 6%
+      según tipo de espuma y riesgo.
+    - Tipos de generación: de baja expansión (ratio < 20:1), media (20-200:1) y
+      alta expansión (> 200:1). La alta expansión es ideal para inundar grandes
+      volúmenes (almacenes, garajes subterráneos).
+22. SISTEMAS DE POLVO:
+    - Aplicación local o inundación total. Habituales en plantas de procesado,
+      almacenes de líquidos inflamables, plataformas offshore.
+    - Limitan la visibilidad y contaminan el área: no indicados en presencia de
+      personas ni en equipos electrónicos de valor.
+
+=== DISEÑO: PRINCIPIOS GENERALES ===
+23. El diseño de cualquier instalación PCI parte del análisis del RIESGO:
+    - Tipo de ocupación y uso del edificio.
+    - Carga de fuego (energía calorífica por unidad de área, en MJ/m²).
+    - Características del combustible (clase de fuego).
+    - Consecuencias de un incendio (vidas, bienes, continuidad de negocio).
+24. Normativa de aplicación según tipo de edificio:
+    - Edificios de uso residencial, hospitalario, docente, hotelero, comercial:
+      CTE DB-SI + RIPCI (RD 513/2017).
+    - Establecimientos industriales: RD 164/2025 (nuevo RSCIEI).
+    - Túneles de carretera: RD 635/2006.
+    - Garajes y aparcamientos: CTE DB-SI + criterios específicos.
+25. El RIPCI distingue entre:
+    - INSTALADOR de instalaciones PCI: empresa habilitada en el RIPCI para ejecutar
+      y poner en servicio las instalaciones.
+    - MANTENEDOR de instalaciones PCI: empresa habilitada en el RIPCI para realizar
+      el mantenimiento. Puede ser la misma empresa.
+    - Ambas deben estar inscritas en el Registro de Empresas Instaladoras-Mantenedoras
+      del organismo competente de la Comunidad Autónoma (en Navarra: Gobierno de Navarra).
+
+=== MANTENIMIENTO (RIPCI — ANEXO II) ===
+26. El Anexo II del RIPCI establece las operaciones de mantenimiento y su periodicidad.
+    Periodicidades más preguntadas:
+    - TRIMESTRAL: comprobación de accesibilidad, señalización y buen estado general
+      de extintores, BIEs, hidrantes, sistemas de detección y alarma.
+    - SEMESTRAL: revisión de extintores (comprobación de peso, presión, estado
+      del agente extintor), comprobación de funcionamiento de detectores y pulsadores.
+    - ANUAL: mantenimiento completo por empresa mantenedora habilitada de TODOS
+      los sistemas. Prueba de funcionamiento de cada componente.
+    - CADA 5 AÑOS: retimbrado de extintores de presión incorporada y acumulada,
+      y de extintores de CO₂. Prueba hidráulica de BIEs y mangueras.
+    - CADA 10 AÑOS: prueba hidráulica de las tuberías de la red de rociadores
+      y de BIEs (en algunas instalaciones según su tipo).
+27. TRAMPA: el retimbrado de extintores es cada 5 años, NO cada 3 años (error
+    frecuente por confusión con la revisión anual de instalaciones de gas).
+28. Las operaciones de mantenimiento deben quedar registradas en el "Libro de
+    Registro de Instalaciones de PCI" del edificio, que debe estar disponible para
+    la inspección de la autoridad competente.
+
+=== INSPECCIONES PERIÓDICAS ===
+29. Las instalaciones PCI en establecimientos industriales (RD 164/2025) deben
+    someterse a inspección periódica por OCA:
+    - Nivel de riesgo BAJO: cada 6 años.
+    - Nivel de riesgo MEDIO: cada 4 años.
+    - Nivel de riesgo ALTO: cada 2 años.
+30. Para edificios no industriales, el CTE DB-SI y el RIPCI no establecen
+    directamente períodos de inspección por OCA, aunque las comunidades autónomas
+    pueden fijar sus propios plazos. En Navarra, el Servicio de Industria es
+    la autoridad competente.
+
+=== LO MÁS PREGUNTADO EN OPOSICIÓN ===
+31. La norma central del tema es el RD 513/2017 (RIPCI). Para establecimientos
+    industriales, el nuevo RD 164/2025 (en vigor desde marzo 2025).
+32. Clases de fuego: A (sólidos), B (líquidos), C (gases), D (metales), F (aceites
+    cocina). La clase E fue eliminada de la norma UNE-EN 2.
+33. Temperatura de activación de rociadores: 57 °C (rojo) es el más frecuente.
+34. Diferencia entre sistema húmedo, seco, precarga y diluvio (rociadores).
+35. BIE-25 vs. BIE-45: cuál se usa dónde y presión mínima en punta de lanza (2 y 3 bar).
+36. Distancias de extintores: 15 m de recorrido máximo; retimbrado cada 5 años.
+37. Agente K (clase F): saponificación con grasas de cocina. NO es polvo, es líquido.
+38. Halones prohibidos desde 1994 (Protocolo de Montreal).
+39. Gases AFFF/PFAS en proceso de prohibición por impacto medioambiental.
+40. Empresa instaladora ≠ empresa mantenedora (pueden coincidir): ambas deben estar
+    inscritas en el registro del Gobierno de Navarra.
+41. Retimbrado extintores: cada 5 años (NO cada 3 años — trampa clásica).
+42. Inspecciones por OCA en industria (RD 164/2025): 6/4/2 años según riesgo bajo/medio/alto.
