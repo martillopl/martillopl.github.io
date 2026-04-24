@@ -1,0 +1,298 @@
+﻿PUNTOS CLAVE – TEMA 7
+REDES DE SUMINISTRO Y EVACUACIÓN DE AGUAS EN LA EDIFICACIÓN
+Gestor de Mantenimiento (Nivel B) · Universidad Pública de Navarra
+
+=== NORMATIVA DE REFERENCIA ===
+1. CTE DB-HS4 (Salubridad — Suministro de agua): es la norma principal
+   para el diseño de las instalaciones de fontanería en edificios.
+   Forma parte del Código Técnico de la Edificación (RD 314/2006).
+   Regula: acometida, instalación general, derivaciones, presiones,
+   caudales mínimos, materiales, protección contra retornos, ahorro.
+
+2. CTE DB-HS5 (Salubridad — Evacuación de aguas): norma principal
+   para el diseño de redes de evacuación (residuales y pluviales).
+   Regula: sistemas de evacuación, colectores, bajantes, botes sifónicos,
+   dimensionado, sifones, ventilación de la red.
+
+3. RD 140/2003: criterios sanitarios del agua de consumo humano.
+   Fija parámetros de calidad del agua potable (físico-químicos y
+   microbiológicos). Relevante porque el CTE DB-HS4 obliga a usar
+   materiales que no alteren la calidad del agua según este RD.
+
+4. RD 849/1986 + RD 606/2003: Reglamento del Dominio Público
+   Hidráulico. Marco general para el uso y vertido de aguas.
+
+5. RD 1620/2007: Régimen jurídico de la reutilización de aguas
+   depuradas (aguas grises recicladas, riego, inodoros...).
+
+6. Legionella: RD 487/2022 (y anterior RD 865/2003). Criterios
+   higiénico-sanitarios para la prevención y control de legionela.
+   Aplica a instalaciones con riesgo de proliferación y dispersión:
+   torres de refrigeración, condensadores evaporativos, ACS,
+   spas, fuentes ornamentales. TRAMPA: NO aplica a la fontanería
+   doméstica fría por debajo de 20°C ni a agua caliente por encima
+   de 60°C (esas temperaturas impiden el crecimiento).
+
+7. UNE-EN 806: Especificaciones para instalaciones de conducción
+   de agua dentro de los edificios (complementa al CTE HS4).
+
+=== RED DE SUMINISTRO DE AGUA (CTE DB-HS4) ===
+8. La instalación de suministro en edificios comprende:
+   ACOMETIDA → INSTALACIÓN GENERAL → INSTALACIONES PARTICULARES
+
+9. ACOMETIDA: parte de la red de distribución de la empresa
+   suministradora que enlaza la red con la instalación interior.
+   Comprende:
+   - Collarín de toma sobre la red pública.
+   - Llave de toma (en la red pública, solo manipulable por la empresa).
+   - Tubo de acometida.
+   - Llave de corte exterior (en la vía pública, accesible para
+     la empresa suministradora).
+
+10. INSTALACIÓN GENERAL del edificio: desde la llave de corte
+    exterior hasta los contadores. Comprende:
+    - LLAVE DE CORTE GENERAL: primera llave del interior del edificio.
+      Corta el suministro a todo el edificio.
+    - FILTRO (contador general): en la entrada del contador general.
+      Retiene sólidos en suspensión que dañarían el contador.
+    - CONTADOR GENERAL: mide el consumo total del edificio.
+      Ubicado en armario o cámara accesible para la empresa
+      suministradora.
+    - LLAVE DE SALIDA del contador general.
+    - TUBO DE ALIMENTACIÓN: distribuye el agua desde el contador
+      general hasta las instalaciones particulares (montantes).
+    - DISTRIBUIDOR PRINCIPAL: recoge el agua del tubo de
+      alimentación y la distribuye a los distintos montantes
+      (o directamente a las derivaciones colectivas).
+
+11. INSTALACIONES PARTICULARES de cada abonado:
+    - Llave de paso del abonado (en la entrada de su vivienda).
+    - Contador individual (en batería de contadores).
+    - Derivaciones interiores.
+    - Llaves de corte interior (una por zona húmeda: cocina, baño...).
+    - Aparatos sanitarios y electrodomésticos.
+
+12. TIPOS DE INSTALACIÓN según el esquema de suministro:
+    a) Con contador general único: solo un contador para todo el
+       edificio. Más simple, sin contador individual.
+    b) Con batería de contadores: contador individual para cada
+       abonado. Los contadores se agrupan en cámaras normalizadas
+       (armarios de contadores) en lugares de uso común. Más habitual.
+    c) Con contador general + contadores divisionarios.
+    d) Con contadores aislados (cada vivienda con su contador propio
+       en la entrada de la vivienda, sin cámara común).
+
+=== PRESIÓN EN LA RED ===
+13. PRESIÓN MÍNIMA EN LOS APARATOS (CTE DB-HS4):
+    - Grifos en general: mínimo 100 kPa (1 bar).
+    - Calentadores de agua (calentadores de gas, termos eléctricos): 100 kPa.
+    - Calentadores de acumulación (calderas): 150 kPa.
+    TRAMPA: La presión mínima exigida varía por tipo de aparato.
+    Los calentadores necesitan más presión que los grifos simples.
+
+14. PRESIÓN MÁXIMA EN CUALQUIER PUNTO de la instalación interior:
+    500 kPa (5 bar). Si la presión de la red supera los 500 kPa,
+    es obligatorio instalar un REDUCTOR DE PRESIÓN (o válvula
+    reductora de presión, VRP) a la entrada de la instalación.
+    TRAMPA: El límite máximo son 500 kPa. El reductor es obligatorio
+    si la presión de red supera ese valor. Es pregunta frecuente.
+
+15. En edificios de varias plantas puede ser necesario un GRUPO DE
+    PRESIÓN (bomba + depósito regulador) para garantizar la presión
+    mínima en las plantas superiores cuando la presión de la red
+    es insuficiente.
+
+=== CAUDALES MÍNIMOS DE DISEÑO (CTE DB-HS4) ===
+16. Caudales mínimos instantáneos (agua fría / ACS):
+    - Lavabo: 0,10 / 0,065 l/s
+    - Ducha: 0,10 / 0,065 l/s
+    - Bañera > 1,40 m: 0,30 / 0,20 l/s
+    - Inodoro con cisterna: 0,10 / — l/s (solo agua fría)
+    - Inodoro con fluxor: 1,25 / — l/s (alta demanda instantánea)
+    - Fregadero doméstico: 0,20 / 0,10 l/s
+    - Lavavajillas doméstico: 0,15 / 0,10 l/s
+    - Lavadora doméstica: 0,20 / 0,15 l/s
+    - Grifo garaje: 0,20 / — l/s
+    TRAMPA: El inodoro con FLUXOR consume 1,25 l/s, doce veces
+    más que el de cisterna. Es el aparato con mayor caudal instantáneo.
+
+=== AGUA CALIENTE SANITARIA (ACS) ===
+17. El CTE DB-HE4 (Contribución solar mínima de ACS) exige que
+    los edificios nuevos cubran un porcentaje de la demanda de ACS
+    mediante energía solar térmica u otras energías renovables.
+    TRAMPA: el ACS está regulado en HE4 (energía) y en HS4
+    (instalación, presiones, caudales). Son secciones distintas.
+
+18. TEMPERATURA DE DISTRIBUCIÓN DEL ACS: para prevenir la
+    legionela, la temperatura de distribución debe ser:
+    - Mínima en cualquier punto de la red: 50°C.
+    - Mínima en el acumulador: 60°C (temperatura de pasteurización
+      que destruye Legionella en 32 minutos).
+    - Máxima en los puntos de consumo: 60°C (para evitar
+      quemaduras, se instalan válvulas mezcladoras termoestáticas
+      en los puntos de uso que bajan la temperatura a 38-43°C).
+    TRAMPA: 50°C es el mínimo en RED. 60°C en el ACUMULADOR.
+    La mezcla en el punto de uso baja a ~38-43°C. Son tres
+    temperaturas distintas con tres funciones distintas.
+
+19. RED DE RETORNO DE ACS: en instalaciones con tuberías de ACS
+    largas, el agua enfría mientras circula. La red de retorno
+    hace circular el ACS continuamente para mantener la temperatura
+    en toda la red. El CTE HS4 exige retorno cuando la longitud
+    de la tubería de ACS es mayor de 15 m.
+
+=== PROTECCIÓN CONTRA RETORNOS ===
+20. El CTE DB-HS4 prohíbe conectar directamente la instalación
+    de agua potable a una instalación de evacuación de aguas
+    residuales. También prohíbe conectar la red de agua potable
+    con otras redes de agua (reciclada, de riego, de piscinas).
+    Para evitar retornos (contaminación de la red por flujo
+    inverso) se instalan:
+    - VÁLVULAS ANTIRRETORNO (o antiretorno): permiten el paso
+      en un solo sentido. Obligatorias en la entrada de cada
+      aparato que pueda generar contaminación (lavavajillas,
+      lavadora, calentador de acumulación).
+    - DISCO ROMPE-VACÍO: impide que una depresión en la red
+      aspire líquido del aparato hacia la red.
+    - SEPARACIÓN FÍSICA (air gap): la salida del grifo queda
+      por encima del borde del aparato. El más fiable.
+
+=== RED DE EVACUACIÓN (CTE DB-HS5) ===
+21. Los sistemas de evacuación pueden ser:
+    a) SISTEMA UNITARIO (o combinado): aguas residuales y pluviales
+       se evacúan por la misma red. Solo permitido cuando la red
+       municipal existente también es unitaria.
+    b) SISTEMA SEPARATIVO: aguas residuales y pluviales por redes
+       separadas. Es el sistema preferente en edificios nuevos.
+    c) SISTEMA SEMISEPARATIVO: separativo en el interior del
+       edificio, pero convergen en el exterior (ramal único hasta
+       la alcantarilla).
+    TRAMPA: el CTE HS5 prefiere el sistema SEPARATIVO en nuevas
+    edificaciones, pero permite el unitario cuando la red municipal
+    ya es unitaria.
+
+22. COMPONENTES DE LA RED DE EVACUACIÓN (de arriba abajo):
+    - APARATOS SANITARIOS: generan las aguas residuales.
+    - SIFONES INDIVIDUALES: retienen un cierre hidráulico que
+      impide que los gases de la red entren en la vivienda.
+      Altura mínima del cierre hidráulico: 50 mm. Máxima: 100 mm.
+    - BOTE SIFÓNICO: centraliza los cierres hidráulicos de varios
+      aparatos del mismo cuarto húmedo (baño, aseo). Se usa en
+      España en vez de sifones individuales por aparato.
+    - RAMALES DE DESAGÜE: unen los aparatos/sifones con el bote
+      sifónico o directamente con la bajante.
+    - BAJANTES: conductos verticales que recogen los desagües de
+      todas las plantas y los llevan a los colectores. Las de
+      residuales y las de pluviales deben estar separadas.
+    - COLECTORES HORIZONTALES: recogen el caudal de varias bajantes
+      y lo conducen hasta la red de alcantarillado. Discurren con
+      pendiente mínima del 2%.
+    - ARQUETAS: cámaras de registro y limpieza en los cambios de
+      dirección y en la unión de colectores.
+
+23. DIMENSIONADO DE LA RED DE EVACUACIÓN:
+    El método del CTE HS5 se basa en las UNIDADES DE DESAGÜE (UD),
+    que es un valor que cuantifica la carga hidráulica de cada
+    aparato. Los valores de UD de los aparatos más frecuentes:
+    - Lavabo: 2 UD (ramal de 32 mm mínimo)
+    - Ducha: 3 UD (40 mm mínimo)
+    - Bañera: 4 UD (40 mm mínimo)
+    - Inodoro con cisterna: 5 UD (100 mm mínimo)
+    - Inodoro con fluxor: 10 UD (100 mm mínimo)
+    - Fregadero doméstico: 6 UD (40 mm mínimo)
+    - Lavavajillas doméstico: 3 UD (40 mm mínimo)
+    - Lavadora doméstica: 6 UD (40 mm mínimo)
+    TRAMPA: el inodoro es el aparato con mayor UD (5 o 10) y el
+    único que requiere 100 mm de ramal (los demás: 32-50 mm).
+    El diámetro del ramal del inodoro NUNCA puede ser inferior a 100 mm.
+
+24. VENTILACIÓN DE LA RED DE EVACUACIÓN:
+    La red de evacuación necesita ventilación para:
+    - Evitar que la depresión creada por el agua en caída destruya
+      los cierres hidráulicos de los sifones.
+    - Expulsar los gases generados en la red al exterior.
+    Tipos de ventilación:
+    a) VENTILACIÓN PRIMARIA: la bajante se prolonga por encima
+       de la cubierta del edificio al menos 1,30 m (cubierta no
+       transitable) o 2 m (cubierta transitable). Es la más simple.
+    b) VENTILACIÓN SECUNDARIA: circuito de ventilación paralelo
+       a la bajante, que conecta con la bajante en puntos de unión.
+    c) VÁLVULA DE AIREACIÓN (o aerator): dispositivo mecánico
+       que permite la entrada de aire cuando hay depresión y
+       permanece cerrado ante presión positiva (para evitar salida
+       de gases). Sustituye a la ventilación secundaria en
+       instalaciones donde no es posible sacar la bajante por cubierta.
+
+25. AGUAS PLUVIALES:
+    Recogida de agua de lluvia desde cubiertas y superficies.
+    El dimensionado se basa en la intensidad pluviométrica de la
+    zona, según el mapa de isoyetas del CTE DB-HS5 (zonas A y B,
+    con intensidades de 90 a 150 l/min por m²).
+    Elementos: sumideros/cazoletas en cubierta → bajantes pluviales
+    → colectores de pluviales → alcantarillado o depósito de
+    aprovechamiento de agua de lluvia.
+
+=== MATERIALES ===
+26. Materiales habituales en instalaciones de fontanería interior:
+    - COBRE: clásico, resistente a la corrosión, compatible con
+      todos los tratamientos de agua. Se suelda o prensa.
+    - ACERO INOXIDABLE: muy resistente, aspecto estético.
+      Más caro. Para instalaciones especiales.
+    - POLIPROPILENO (PP-R): plástico resistente al calor,
+      para agua fría y caliente. Se suelda por termofusión.
+    - PEX (polietileno reticulado): flexible, resistente a
+      temperaturas y presiones. Conexiones por compresión o
+      presión. Muy extendido actualmente.
+    - MULTICAPA (PEX-AL-PEX o PP-AL-PP): tubo de plástico con
+      alma de aluminio. Combina la flexibilidad del plástico
+      con la rigidez del aluminio. Muy extendido en instalaciones
+      de superficie (calefacción, fontanería vista).
+    - PVC (solo para evacuación, NUNCA para agua caliente):
+      para colectores y bajantes de aguas pluviales y residuales.
+    - PVC-U: rígido, para redes de evacuación.
+    - PVC-C (clorado): aguanta más temperatura. Para agua caliente.
+    TRAMPA: El PVC normal NO se usa para agua caliente.
+    Para agua caliente solo PP-R, PEX o multicapa.
+
+=== MANTENIMIENTO DE LAS INSTALACIONES ===
+27. El mantenimiento de las instalaciones de fontanería comprende:
+    a) REVISIONES PERIÓDICAS:
+       - Comprobación de ausencia de fugas (visual y con manómetro).
+       - Verificación de presiones en puntos representativos.
+       - Comprobación del estado de llaves de corte (apertura/cierre).
+       - Inspección de filtros y su limpieza o sustitución.
+       - Revisión de contadores (lectura, estado).
+       - Comprobación del grupo de presión (motor, bomba, depósito).
+    b) MANTENIMIENTO DE ACS Y PREVENCIÓN DE LEGIONELA (RD 487/2022):
+       - Mantenimiento de temperaturas (≥ 50°C en red, ≥ 60°C en acumulador).
+       - Análisis microbiológicos del agua.
+       - Limpieza y desinfección periódica de acumuladores, circuitos y
+         puntos terminales (alcachofas de ducha, aireadores de grifo).
+       - Registro del plan de mantenimiento y resultados de los análisis.
+       - En instalaciones sujetas al RD 487/2022 (riesgo significativo):
+         mantenimiento por empresa especializada (acreditada por el RITE).
+    c) MANTENIMIENTO DE LA RED DE EVACUACIÓN:
+       - Revisión del estado de sifones (cierres hidráulicos).
+       - Limpieza de sumideros, arquetas y pozos de registro.
+       - Comprobación del estado de bajantes y colectores.
+       - Desobstrucción de ramales con hidrojetting o sonda mecánica.
+       - Inspección con cámara de televisión en colectores enterrados.
+
+=== LO MÁS PREGUNTADO EN OPOSICIÓN ===
+28. Normativa: suministro = CTE DB-HS4. Evacuación = CTE DB-HS5.
+    Calidad del agua = RD 140/2003. Legionela = RD 487/2022.
+29. Presión mínima: grifos 100 kPa. Calentadores de acumulación 150 kPa.
+30. Presión máxima interior: 500 kPa → reductor de presión obligatorio.
+31. Red de retorno ACS obligatoria si la tubería de ACS supera 15 m.
+32. ACS: red a ≥ 50°C, acumulador a ≥ 60°C, punto de uso con mezcla ~38-43°C.
+33. Legionela: crece entre 20°C y 45°C. Muere a 60°C (en 32 min),
+    a 70°C muere instantáneamente. No crece por debajo de 20°C.
+34. Sistema preferente en edificios nuevos: SEPARATIVO (residuales ≠ pluviales).
+35. Sifón: altura de cierre hidráulico mínima 50 mm, máxima 100 mm.
+36. Inodoro: 5 UD (cisterna) o 10 UD (fluxor). Ramal mínimo 100 mm.
+    Es el único aparato que necesita 100 mm de diámetro de ramal.
+37. Pendiente mínima de colectores horizontales: 2%.
+38. Ventilación primaria: prolongar bajante ≥ 1,30 m sobre cubierta
+    no transitable; ≥ 2 m sobre cubierta transitable.
+39. PVC solo para evacuación. Para ACS: PP-R, PEX o multicapa.
+40. Caudal inodoro con fluxor: 1,25 l/s (doce veces más que cisterna).

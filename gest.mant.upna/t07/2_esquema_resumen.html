@@ -1,0 +1,548 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 7 – Esquema-resumen · Redes de agua en edificios</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#f4f8fb;--surface:#fff;--surface-2:#f7fbfd;
+    --border:#ccd9e3;--divider:#d8e6ef;
+    --text:#1a2830;--muted:#4e6a7a;--faint:#8aaabb;
+    --teal:#00707a;--teal-lt:#ccedf0;--teal-dk:#004a52;
+    --blue:#0d4f8b;--blue-lt:#dceaf7;--blue-dk:#082f57;
+    --green:#1a6633;--green-lt:#d4eedd;
+    --gold:#c47d00;--gold-lt:#faefd0;
+    --orange:#8b3a0d;--orange-lt:#fce8d8;
+    --purple:#5b3690;--purple-lt:#ece4f8;
+    --red:#8b1a1a;--red-lt:#fde8e8;
+    --font-d:'Cabinet Grotesk',sans-serif;
+    --font-b:'Satoshi',sans-serif;
+    --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.88rem;line-height:1.6;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 4rem;}
+
+  /* FILE NAV */
+  .file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+  .file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s;}
+  .file-nav a:hover,.file-nav a.active{background:var(--teal);color:white;border-color:var(--teal);}
+
+  /* PAGE HEADER */
+  .page-header{background:linear-gradient(135deg,#00707a 0%,#004a52 100%);color:white;border-radius:var(--r-xl);padding:2rem 2.5rem;margin-bottom:2rem;}
+  .page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;}
+  .page-header h1{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800;line-height:1.2;margin-bottom:.4rem;}
+  .page-header .sub{font-size:.85rem;opacity:.8;}
+
+  /* SECTION LABEL */
+  .section-label{font-family:var(--font-d);font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:2.5rem 0 .75rem;}
+
+  /* BLOCK CARDS */
+  .block-card{background:var(--surface);border-radius:var(--r-xl);border:1px solid var(--border);overflow:hidden;margin-bottom:1.25rem;box-shadow:0 1px 4px rgba(0,112,122,.07);}
+  .block-card-header{padding:.85rem 1.25rem;display:flex;align-items:center;gap:.65rem;border-bottom:1px solid var(--border);}
+  .block-card-header .icon{font-size:1.15rem;}
+  .block-card-header h2{font-family:var(--font-d);font-size:.95rem;font-weight:800;}
+  .block-card-body{padding:1rem 1.25rem;}
+
+  /* COLOR TOPS */
+  .top-teal  {border-top:4px solid var(--teal);}
+  .top-blue  {border-top:4px solid var(--blue);}
+  .top-green {border-top:4px solid var(--green);}
+  .top-gold  {border-top:4px solid var(--gold);}
+  .top-orange{border-top:4px solid var(--orange);}
+  .top-purple{border-top:4px solid var(--purple);}
+  .top-red   {border-top:4px solid var(--red);}
+
+  /* CHIPS */
+  .chip{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:1px 7px;border-radius:999px;white-space:nowrap;}
+  .ch-teal  {background:var(--teal-lt);  color:var(--teal);}
+  .ch-blue  {background:var(--blue-lt);  color:var(--blue-dk);}
+  .ch-green {background:var(--green-lt); color:var(--green);}
+  .ch-gold  {background:var(--gold-lt);  color:#7a4e00;}
+  .ch-orange{background:var(--orange-lt);color:var(--orange);}
+  .ch-purple{background:var(--purple-lt);color:var(--purple);}
+  .ch-red   {background:var(--red-lt);   color:var(--red);}
+  .ch-grey  {background:#f0f0ee;         color:var(--muted);}
+
+  /* CALLOUTS */
+  .callout{border-radius:var(--r-md);padding:.7rem 1rem;font-size:.83rem;margin:.75rem 0;line-height:1.55;}
+  .callout strong{font-weight:700;}
+  .al-teal  {background:var(--teal-lt);  border-left:3px solid var(--teal);}
+  .al-blue  {background:var(--blue-lt);  border-left:3px solid var(--blue);}
+  .al-green {background:var(--green-lt); border-left:3px solid var(--green);}
+  .al-gold  {background:var(--gold-lt);  border-left:3px solid var(--gold);}
+  .al-orange{background:var(--orange-lt);border-left:3px solid var(--orange);}
+  .al-purple{background:var(--purple-lt);border-left:3px solid var(--purple);}
+  .al-red   {background:var(--red-lt);   border-left:3px solid var(--red);}
+  .al-warn  {background:#fff7ed;         border-left:3px solid var(--orange);}
+
+  /* CADENA VISUAL */
+  .cadena{display:flex;flex-wrap:wrap;gap:.3rem;margin:.75rem 0;align-items:center;}
+  .cadena-step{background:var(--teal);color:white;font-family:var(--font-d);font-weight:800;font-size:.7rem;padding:.3rem .75rem;border-radius:var(--r-sm);white-space:nowrap;}
+  .cadena-step.resp{background:var(--blue-dk);}
+  .cadena-arrow{color:var(--teal);font-size:.9rem;font-weight:700;}
+
+  /* STEP LIST */
+  .step-list{list-style:none;padding:0;margin:.5rem 0;}
+  .step-list li{display:flex;gap:.75rem;align-items:flex-start;padding:.4rem 0;border-bottom:1px solid #eef3f6;font-size:.84rem;}
+  .step-list li:last-child{border-bottom:none;}
+  .step-num{font-family:var(--font-d);font-weight:800;font-size:.85rem;min-width:26px;text-align:center;}
+  .step-body strong{font-weight:700;display:block;}
+  .step-body span{color:var(--muted);font-size:.8rem;}
+
+  /* KPI GRID */
+  .kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:.75rem 0;}
+  .kpi{background:var(--surface-2,#f7fbfd);border:1px solid var(--border);border-radius:var(--r-lg);padding:.85rem;text-align:center;}
+  .kpi .val{font-family:var(--font-d);font-size:1.4rem;font-weight:800;display:block;line-height:1;}
+  .kpi .lbl{font-size:.68rem;color:var(--muted);margin-top:4px;display:block;}
+
+  /* TEMP ESCALA */
+  .temp-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin:.75rem 0;}
+  .temp-block{border-radius:var(--r-md);padding:.85rem .65rem;text-align:center;border:1px solid var(--border);}
+  .temp-block .tb-val{font-family:var(--font-d);font-weight:800;font-size:1.3rem;display:block;line-height:1;}
+  .temp-block .tb-lbl{font-size:.67rem;font-weight:700;margin:4px 0 2px;display:block;}
+  .temp-block .tb-desc{font-size:.65rem;margin-top:2px;}
+
+  /* GRID 2/3 */
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;}
+
+  /* APARATOS TABLE */
+  .mini-table{width:100%;border-collapse:collapse;font-size:.82rem;}
+  .mini-table th{font-family:var(--font-d);font-weight:800;font-size:.75rem;padding:.4rem .75rem;text-align:left;border-bottom:1px solid var(--border);}
+  .mini-table td{padding:.35rem .75rem;border-bottom:1px solid #eef3f6;vertical-align:top;}
+  .mini-table tr:last-child td{border-bottom:none;}
+  .mini-table tr:hover td{background:#f2f9fb;}
+  .mini-table tr.hi td{background:#e0f5f7!important;font-weight:700;}
+
+  /* MATERIAL PILLS */
+  .mat-pills{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0;}
+  .mat-pill{display:inline-flex;flex-direction:column;padding:.4rem .85rem;border-radius:var(--r-md);border:1px solid transparent;font-size:.78rem;}
+  .mat-pill strong{font-family:var(--font-d);font-weight:800;font-size:.8rem;}
+  .mat-pill span{font-size:.7rem;margin-top:1px;}
+
+  /* SISTEMA EVACUATION CARDS */
+  .sist-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:.75rem 0;}
+  .sist-card{border-radius:var(--r-md);border:1px solid var(--border);padding:.85rem .9rem;background:var(--surface);}
+  .sist-card .sc-name{font-family:var(--font-d);font-weight:800;font-size:.85rem;display:block;margin-bottom:4px;}
+  .sist-card .sc-desc{font-size:.77rem;color:var(--muted);}
+  .sist-card .sc-tag{margin-top:6px;}
+
+  /* NORMA LIST */
+  .norm-list{list-style:none;padding:0;}
+  .norm-list li{display:flex;align-items:flex-start;gap:.75rem;padding:.5rem 0;border-bottom:1px solid #eef3f6;font-size:.84rem;}
+  .norm-list li:last-child{border-bottom:none;}
+  .norm-badge{font-family:var(--font-d);font-weight:800;font-size:.7rem;padding:2px 8px;border-radius:4px;white-space:nowrap;min-width:95px;text-align:center;}
+  .norm-body strong{font-weight:700;display:block;font-size:.84rem;}
+  .norm-body span{color:var(--muted);font-size:.78rem;}
+
+  /* VENTILACION */
+  .vent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:.75rem 0;}
+  .vent-card{border-radius:var(--r-md);border:1px solid var(--border);padding:.85rem;background:var(--surface);}
+  .vent-card .vc-tipo{font-family:var(--font-d);font-weight:800;font-size:.82rem;display:block;margin-bottom:3px;}
+  .vent-card .vc-val{font-family:var(--font-d);font-weight:800;font-size:1rem;}
+  .vent-card .vc-desc{font-size:.75rem;color:var(--muted);margin-top:4px;}
+
+  /* FLASH CARDS */
+  .flash-grid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;}
+  .flash-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:.85rem 1rem;}
+  .flash-card .fc-q{font-weight:700;color:var(--muted);font-size:.74rem;margin-bottom:.3rem;}
+  .flash-card .fc-a{font-family:var(--font-d);font-weight:800;font-size:.92rem;color:var(--text);}
+
+  @media(max-width:700px){
+    .grid-2,.grid-3,.kpi-grid,.sist-grid,.vent-grid{grid-template-columns:1fr 1fr;}
+    .temp-strip{grid-template-columns:1fr 1fr;}
+    .flash-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html" class="active">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </div>
+
+<div class="page-header">
+  <div class="meta">Tema 7 · Gestor de Mantenimiento (Nivel B) · UPNA · Esquema-resumen visual</div>
+  <h1>Redes de agua en edificios — Bloques visuales para memorización</h1>
+  <div class="sub">Normativa · Cadena de suministro · Presiones · ACS · Legionela · Evacuación · UD · Ventilación · Materiales</div>
+</div>
+
+
+<!-- BLOQUE 1: NORMATIVA -->
+<div class="section-label">Bloque 1 — Normativa de referencia</div>
+<div class="block-card top-teal">
+  <div class="block-card-header">
+    <span class="icon">📋</span>
+    <h2>Marco legal: dos documentos CTE + dos reales decretos clave</h2>
+    <span class="chip ch-teal" style="margin-left:auto;">CTE · RD</span>
+  </div>
+  <div class="block-card-body">
+    <ul class="norm-list">
+      <li>
+        <span class="norm-badge" style="background:var(--teal-lt);color:var(--teal);">CTE DB-HS4</span>
+        <div class="norm-body"><strong>Suministro de agua</strong><span>Diseño y dimensionado de fontanería: acometida, instalación general, presiones, caudales, ACS, protección contra retornos, materiales.</span></div>
+      </li>
+      <li>
+        <span class="norm-badge" style="background:var(--blue-lt);color:var(--blue-dk);">CTE DB-HS5</span>
+        <div class="norm-body"><strong>Evacuación de aguas</strong><span>Diseño y dimensionado de la red de evacuación: residuales + pluviales. Sistemas, sifones, bajantes, colectores, UD, ventilación.</span></div>
+      </li>
+      <li>
+        <span class="norm-badge" style="background:var(--green-lt);color:var(--green);">RD 140/2003</span>
+        <div class="norm-body"><strong>Calidad del agua de consumo humano</strong><span>Parámetros físico-químicos y microbiológicos. El CTE HS4 exige materiales que no alteren la calidad del agua según este RD.</span></div>
+      </li>
+      <li>
+        <span class="norm-badge" style="background:var(--orange-lt);color:var(--orange);">RD 487/2022</span>
+        <div class="norm-body"><strong>Prevención y control de Legionela</strong><span>Torres de refrigeración, condensadores evaporativos, ACS colectiva, spas, fuentes ornamentales. Sustituye al RD 865/2003.</span></div>
+      </li>
+      <li>
+        <span class="norm-badge" style="background:var(--purple-lt);color:var(--purple);">RD 1620/2007</span>
+        <div class="norm-body"><strong>Reutilización de aguas depuradas</strong><span>Aguas grises recicladas para inodoros, riego de jardines, limpieza de viales. Completamente separadas de la red de agua potable.</span></div>
+      </li>
+    </ul>
+    <div class="callout al-warn"><strong>⚠ HS4 ≠ HS5:</strong> HS4 = entra agua limpia. HS5 = sale agua sucia. Son documentos y metodologías completamente distintas. Mezclarlos en una pregunta de examen es error automático.</div>
+  </div>
+</div>
+
+
+<!-- BLOQUE 2: CADENA DE SUMINISTRO -->
+<div class="section-label">Bloque 2 — Cadena completa de suministro en un edificio</div>
+<div class="block-card top-teal">
+  <div class="block-card-header">
+    <span class="icon">🔗</span>
+    <h2>De la red pública al grifo: cada eslabón y su responsable</h2>
+    <span class="chip ch-teal" style="margin-left:auto;">CTE DB-HS4</span>
+  </div>
+  <div class="block-card-body">
+    <div class="cadena">
+      <span class="cadena-step resp">Red distribuidora</span><span class="cadena-arrow">→</span>
+      <span class="cadena-step resp">Acometida</span><span class="cadena-arrow">→</span>
+      <span class="cadena-step resp">Llave corte exterior</span><span class="cadena-arrow">→</span>
+      <span class="cadena-step">Llave corte general</span><span class="cadena-arrow">→</span>
+      <span class="cadena-step">Filtro</span><span class="cadena-arrow">→</span>
+      <span class="cadena-step">Contador general</span><span class="cadena-arrow">→</span>
+      <span class="cadena-step">Tubo alimentación</span><span class="cadena-arrow">→</span>
+      <span class="cadena-step">Batería contadores</span><span class="cadena-arrow">→</span>
+      <span class="cadena-step">DI abonado</span><span class="cadena-arrow">→</span>
+      <span class="cadena-step">CGMP particular</span><span class="cadena-arrow">→</span>
+      <span class="cadena-step">Aparatos</span>
+    </div>
+    <div style="display:flex;gap:1rem;margin:.5rem 0;flex-wrap:wrap;">
+      <span style="display:flex;align-items:center;gap:.4rem;font-size:.75rem;"><span style="width:14px;height:14px;background:var(--blue-dk);border-radius:2px;display:inline-block;"></span> Responsabilidad empresa suministradora</span>
+      <span style="display:flex;align-items:center;gap:.4rem;font-size:.75rem;"><span style="width:14px;height:14px;background:var(--teal);border-radius:2px;display:inline-block;"></span> Responsabilidad comunidad / abonado</span>
+    </div>
+    <ul class="step-list">
+      <li><span class="step-num" style="color:var(--blue-dk);">🏢</span><div class="step-body"><strong>Acometida + llave corte exterior</strong><span>Propiedad de la empresa suministradora. Solo ella puede manipularla. En la vía pública.</span></div></li>
+      <li><span class="step-num" style="color:var(--teal);">🔑</span><div class="step-body"><strong>Llave de corte general</strong><span>Primera llave dentro del edificio. Responsabilidad de la comunidad. Corta el suministro a todo el edificio.</span></div></li>
+      <li><span class="step-num" style="color:var(--teal);">🔽</span><div class="step-body"><strong>Filtro</strong><span>Retiene sólidos en suspensión. Instalado antes del contador general. Requiere limpieza/sustitución periódica.</span></div></li>
+      <li><span class="step-num" style="color:var(--teal);">📊</span><div class="step-body"><strong>Batería de contadores individuales</strong><span>En cámara normalizada de zona común. Un contador por abonado. Lectura sin acceder a cada vivienda.</span></div></li>
+      <li><span class="step-num" style="color:var(--teal);">🚪</span><div class="step-body"><strong>Llave de paso del abonado</strong><span>En la entrada de cada vivienda o local. Responsabilidad del abonado. Corta solo esa unidad.</span></div></li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- BLOQUE 3: PRESIONES Y CAUDALES -->
+<div class="section-label">Bloque 3 — Presiones y caudales: los números exactos del examen</div>
+<div class="grid-2">
+
+  <div class="block-card top-blue">
+    <div class="block-card-header">
+      <span class="icon">🔵</span>
+      <h2>Presiones (CTE DB-HS4)</h2>
+      <span class="chip ch-blue" style="margin-left:auto;">kPa = bar × 100</span>
+    </div>
+    <div class="block-card-body">
+      <div class="kpi-grid" style="grid-template-columns:1fr 1fr;">
+        <div class="kpi"><span class="val" style="color:var(--teal);">100 kPa</span><span class="lbl">Presión mínima<br>grifos generales</span></div>
+        <div class="kpi"><span class="val" style="color:var(--blue);">150 kPa</span><span class="lbl">Presión mínima<br>calentadores acumulación</span></div>
+        <div class="kpi" style="grid-column:1/-1;"><span class="val" style="color:var(--red);">500 kPa</span><span class="lbl">Presión MÁXIMA — si se supera: reductor obligatorio</span></div>
+      </div>
+      <div class="callout al-warn"><strong>⚠ 500 kPa = 5 bar = límite máximo absoluto.</strong> Por encima de ese valor la VRP (válvula reductora de presión) es obligatoria en la entrada de la instalación.</div>
+    </div>
+  </div>
+
+  <div class="block-card top-teal">
+    <div class="block-card-header">
+      <span class="icon">💧</span>
+      <h2>Caudales mínimos clave</h2>
+      <span class="chip ch-teal" style="margin-left:auto;">l/s</span>
+    </div>
+    <div class="block-card-body">
+      <table class="mini-table">
+        <thead><tr><th>Aparato</th><th>AF (l/s)</th><th>ACS (l/s)</th></tr></thead>
+        <tbody>
+          <tr><td>Lavabo / Ducha</td><td>0,10</td><td>0,065</td></tr>
+          <tr><td>Inodoro cisterna</td><td>0,10</td><td>—</td></tr>
+          <tr class="hi"><td>⚠ Inodoro FLUXOR</td><td><strong>1,25</strong></td><td>—</td></tr>
+          <tr><td>Bañera &gt;1,40 m</td><td>0,30</td><td>0,20</td></tr>
+          <tr><td>Fregadero / Lavadora</td><td>0,20</td><td>0,10-0,15</td></tr>
+        </tbody>
+      </table>
+      <div class="callout al-warn"><strong>⚠ Fluxor = 1,25 l/s</strong>, 12× más que cisterna. Es el aparato más demandante de la instalación de suministro.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- BLOQUE 4: ACS Y LEGIONELA -->
+<div class="section-label">Bloque 4 — ACS y Legionela: las cuatro temperaturas clave</div>
+<div class="block-card top-orange">
+  <div class="block-card-header">
+    <span class="icon">🌡️</span>
+    <h2>Control de temperatura en ACS: el arma contra la Legionella</h2>
+    <span class="chip ch-orange" style="margin-left:auto;">RD 487/2022 · CTE HS4</span>
+  </div>
+  <div class="block-card-body">
+    <div class="temp-strip">
+      <div class="temp-block" style="background:#fde8e8;border-color:var(--red);">
+        <span class="tb-val" style="color:var(--red);">20–45°C</span>
+        <span class="tb-lbl" style="color:var(--red);">ZONA PELIGRO</span>
+        <div class="tb-desc" style="color:var(--red);">Rango óptimo de crecimiento de Legionella. Nunca mantener el agua estancada en este rango.</div>
+      </div>
+      <div class="temp-block" style="background:var(--gold-lt);border-color:var(--gold);">
+        <span class="tb-val" style="color:var(--gold);">≥ 50°C</span>
+        <span class="tb-lbl" style="color:#7a4e00;">RED DISTRIBUCIÓN</span>
+        <div class="tb-desc" style="color:#7a4e00;">Mínimo en cualquier punto de la red de ACS. Impide la proliferación durante la distribución.</div>
+      </div>
+      <div class="temp-block" style="background:var(--orange-lt);border-color:var(--orange);">
+        <span class="tb-val" style="color:var(--orange);">≥ 60°C</span>
+        <span class="tb-lbl" style="color:var(--orange);">ACUMULADOR</span>
+        <div class="tb-desc" style="color:var(--orange);">Mínimo en acumulador. A 60°C la Legionella muere en 32 minutos.</div>
+      </div>
+      <div class="temp-block" style="background:var(--teal-lt);border-color:var(--teal);">
+        <span class="tb-val" style="color:var(--teal);">38–43°C</span>
+        <span class="tb-lbl" style="color:var(--teal);">PUNTO DE USO</span>
+        <div class="tb-desc" style="color:var(--teal);">Tras válvula mezcladora termoestática. Seguridad anti-quemaduras al usuario.</div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top:.75rem;">
+      <div class="callout al-orange"><strong>⚠ Tres temperaturas, tres funciones:</strong><br>
+        60°C = pasteurización en acumulador<br>
+        50°C = mínimo en red de distribución<br>
+        38-43°C = confort y seguridad en el grifo
+      </div>
+      <div>
+        <ul class="step-list">
+          <li><span class="step-num" style="color:var(--orange);">🔥</span><div class="step-body"><strong>Choque térmico: 70°C</strong><span>A 70°C la Legionella muere instantáneamente. Se realiza como medida correctora o preventiva periódica.</span></div></li>
+          <li><span class="step-num" style="color:var(--blue);">↩</span><div class="step-body"><strong>Red de retorno obligatoria si &gt; 15 m</strong><span>El ACS circula continuamente para mantener ≥ 50°C en toda la red. Exigido por CTE HS4.</span></div></li>
+          <li><span class="step-num" style="color:var(--green);">🏥</span><div class="step-body"><strong>Instalaciones sujetas al RD 487/2022</strong><span>Torres de refrigeración, ACS colectiva (hoteles, hospitales, residencias), spas, fuentes ornamentales.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- BLOQUE 5: EVACUACIÓN -->
+<div class="section-label">Bloque 5 — Red de evacuación: sistemas y componentes (CTE DB-HS5)</div>
+<div class="block-card top-blue">
+  <div class="block-card-header">
+    <span class="icon">🚿</span>
+    <h2>Sistemas de evacuación y componentes clave</h2>
+    <span class="chip ch-blue" style="margin-left:auto;">CTE DB-HS5</span>
+  </div>
+  <div class="block-card-body">
+    <div class="sist-grid">
+      <div class="sist-card" style="border-top:3px solid var(--green);">
+        <span class="sc-name">✅ SEPARATIVO</span>
+        <div class="sc-desc">Residuales y pluviales en redes completamente independientes dentro y fuera del edificio.</div>
+        <div class="sc-tag"><span class="chip ch-green">PREFERENTE en obras nuevas</span></div>
+      </div>
+      <div class="sist-card" style="border-top:3px solid var(--gold);">
+        <span class="sc-name">UNITARIO (combinado)</span>
+        <div class="sc-desc">Residuales y pluviales por la misma red. Solo permitido si la red municipal también es unitaria.</div>
+        <div class="sc-tag"><span class="chip ch-gold">Solo si red municipal unitaria</span></div>
+      </div>
+      <div class="sist-card" style="border-top:3px solid var(--purple);">
+        <span class="sc-name">SEMISEPARATIVO</span>
+        <div class="sc-desc">Separativo dentro del edificio; convergen en un único ramal en el exterior antes de la alcantarilla.</div>
+        <div class="sc-tag"><span class="chip ch-purple">Intermedio</span></div>
+      </div>
+    </div>
+
+    <!-- Componentes de abajo arriba -->
+    <div style="font-family:var(--font-d);font-weight:800;font-size:.72rem;color:var(--muted);margin:.75rem 0 .4rem;text-transform:uppercase;letter-spacing:.06em;">Componentes (de arriba a abajo)</div>
+    <ul class="step-list">
+      <li><span class="step-num" style="color:var(--blue);">1</span><div class="step-body"><strong>Aparatos sanitarios → Ramales de desagüe</strong><span>Pendiente mínima de ramales: 2%. Cada aparato conecta mediante sifón individual o bote sifónico.</span></div></li>
+      <li><span class="step-num" style="color:var(--blue);">2</span><div class="step-body"><strong>Sifón individual / Bote sifónico</strong><span>Cierre hidráulico mínimo 50 mm, máximo 100 mm. Impide la entrada de gases de la red a la vivienda.</span></div></li>
+      <li><span class="step-num" style="color:var(--blue);">3</span><div class="step-body"><strong>Bajantes</strong><span>Conductos verticales. Residuales y pluviales separadas. Las de residuales necesitan ventilación.</span></div></li>
+      <li><span class="step-num" style="color:var(--blue);">4</span><div class="step-body"><strong>Colectores horizontales</strong><span>Pendiente mínima 2%. Recogen bajantes y conducen hasta la red municipal. Arquetas en cambios de dirección.</span></div></li>
+      <li><span class="step-num" style="color:var(--blue);">5</span><div class="step-body"><strong>Arquetas de registro</strong><span>En cambios de dirección y uniones de colectores. Permiten inspección y limpieza de la red.</span></div></li>
+    </ul>
+    <div class="callout al-warn"><strong>⚠ Pendiente mínima 2%</strong> tanto en ramales como en colectores horizontales. Por debajo de ese valor los sólidos sedimentan y se forman obstrucciones.</div>
+  </div>
+</div>
+
+
+<!-- BLOQUE 6: UNIDADES DE DESAGÜE -->
+<div class="section-label">Bloque 6 — Unidades de desagüe (UD): tabla de dimensionado</div>
+<div class="block-card top-blue">
+  <div class="block-card-header">
+    <span class="icon">📐</span>
+    <h2>UD por aparato — Los datos exactos del examen</h2>
+    <span class="chip ch-blue" style="margin-left:auto;">CTE DB-HS5</span>
+  </div>
+  <div class="block-card-body">
+    <table class="mini-table">
+      <thead><tr><th>Aparato</th><th>UD</th><th>Ø mínimo ramal</th><th>Nota</th></tr></thead>
+      <tbody>
+        <tr><td>Lavabo</td><td>2</td><td>32 mm</td><td>—</td></tr>
+        <tr><td>Ducha</td><td>3</td><td>40 mm</td><td>—</td></tr>
+        <tr><td>Bañera</td><td>4</td><td>40 mm</td><td>—</td></tr>
+        <tr class="hi"><td>⚠ Inodoro con cisterna</td><td><strong>5</strong></td><td><strong>100 mm</strong></td><td>Único aparato con 100 mm</td></tr>
+        <tr class="hi"><td>⚠ Inodoro con fluxor</td><td><strong>10</strong></td><td><strong>100 mm</strong></td><td>El mayor de todos</td></tr>
+        <tr><td>Fregadero doméstico</td><td>6</td><td>40 mm</td><td>—</td></tr>
+        <tr><td>Lavadora doméstica</td><td>6</td><td>40 mm</td><td>—</td></tr>
+        <tr><td>Lavavajillas doméstico</td><td>3</td><td>40 mm</td><td>—</td></tr>
+        <tr><td>Sumidero sifónico</td><td>3</td><td>40 mm</td><td>—</td></tr>
+      </tbody>
+    </table>
+    <div class="callout al-warn"><strong>⚠ El inodoro es el único aparato con ramal de 100 mm.</strong> Todos los demás usan 32-50 mm. Nunca puede reducirse el ramal del inodoro por debajo de 100 mm, independientemente del caudal calculado.</div>
+    <div class="callout al-blue"><strong>Mnemotécnica UD:</strong> Lavabo=2 · Ducha=3 · Bañera=4 · Inodoro cisterna=5 · Fregadero=6 · Inodoro fluxor=10. Escala creciente con salto doble en el fluxor.</div>
+  </div>
+</div>
+
+
+<!-- BLOQUE 7: VENTILACIÓN -->
+<div class="section-label">Bloque 7 — Ventilación de la red de evacuación</div>
+<div class="block-card top-purple">
+  <div class="block-card-header">
+    <span class="icon">💨</span>
+    <h2>Tipos de ventilación: por qué y cuánto</h2>
+    <span class="chip ch-purple" style="margin-left:auto;">CTE DB-HS5</span>
+  </div>
+  <div class="block-card-body">
+    <div class="vent-grid">
+      <div class="vent-card" style="border-top:3px solid var(--green);">
+        <span class="vc-tipo">✅ PRIMARIA</span>
+        <div style="margin:.3rem 0;">
+          <span class="vc-val" style="color:var(--green);">≥ 1,30 m</span> <span style="font-size:.72rem;color:var(--muted);">cubierta no transitable</span><br>
+          <span class="vc-val" style="color:var(--green);">≥ 2 m</span> <span style="font-size:.72rem;color:var(--muted);">cubierta transitable</span>
+        </div>
+        <div class="vc-desc">Prolongación de la bajante sobre la cubierta sin reducción de diámetro. Sistema más simple y extendido.</div>
+      </div>
+      <div class="vent-card" style="border-top:3px solid var(--blue);">
+        <span class="vc-tipo">SECUNDARIA</span>
+        <div style="margin:.3rem 0;"><span class="vc-val" style="color:var(--blue);">Circuito paralelo</span></div>
+        <div class="vc-desc">Red de ventilación paralela a la bajante de residuales, conectada a ella en puntos regulares. Para bajantes con muchos ramales conectados.</div>
+      </div>
+      <div class="vent-card" style="border-top:3px solid var(--purple);">
+        <span class="vc-tipo">VÁLVULA DE AIREACIÓN</span>
+        <div style="margin:.3rem 0;"><span class="vc-val" style="color:var(--purple);">Aerator</span></div>
+        <div class="vc-desc">Abre ante depresión (entrada de aire), cierra ante presión positiva (retiene gases). Solución cuando no se puede sacar la bajante por cubierta.</div>
+      </div>
+    </div>
+    <div class="callout al-warn"><strong>⚠ Por qué es necesaria la ventilación:</strong> el agua al caer por la bajante crea una depresión que aspiraría el agua de los sifones, destruyendo su cierre hidráulico y dejando pasar los gases de la red a la vivienda. La ventilación equilibra la presión y evita ese efecto.</div>
+  </div>
+</div>
+
+
+<!-- BLOQUE 8: MATERIALES -->
+<div class="section-label">Bloque 8 — Materiales: qué va dónde</div>
+<div class="block-card top-green">
+  <div class="block-card-header">
+    <span class="icon">🔩</span>
+    <h2>Materiales en fontanería y evacuación</h2>
+    <span class="chip ch-green" style="margin-left:auto;">CTE HS4 · RD 140/2003</span>
+  </div>
+  <div class="block-card-body">
+    <div class="mat-pills">
+      <div class="mat-pill" style="background:#faefd0;border-color:#e0c878;color:#7a4e00;">
+        <strong>🔶 Cobre</strong>
+        <span>AF ✓ · ACS ✓ · Soldar/prensar</span>
+      </div>
+      <div class="mat-pill" style="background:var(--teal-lt);border-color:var(--teal);color:var(--teal-dk);">
+        <strong>⚙ Acero inoxidable</strong>
+        <span>AF ✓ · ACS ✓ · Mayor coste</span>
+      </div>
+      <div class="mat-pill" style="background:var(--green-lt);border-color:var(--green);color:var(--green);">
+        <strong>🟢 PP-R</strong>
+        <span>AF ✓ · ACS ✓ · Termofusión</span>
+      </div>
+      <div class="mat-pill" style="background:var(--blue-lt);border-color:var(--blue);color:var(--blue-dk);">
+        <strong>🔵 PEX</strong>
+        <span>AF ✓ · ACS ✓ · Flexible · Compresión</span>
+      </div>
+      <div class="mat-pill" style="background:var(--purple-lt);border-color:var(--purple);color:var(--purple);">
+        <strong>⚪ Multicapa</strong>
+        <span>AF ✓ · ACS ✓ · PEX-AL-PEX</span>
+      </div>
+      <div class="mat-pill" style="background:var(--red-lt);border-color:var(--red);color:var(--red);">
+        <strong>❌ PVC-U normal</strong>
+        <span>Solo evacuación fría · Nunca ACS</span>
+      </div>
+    </div>
+    <div class="callout al-red"><strong>⚠ PVC-U NUNCA para agua caliente sanitaria.</strong> Se deforma con la temperatura. Para ACS válidos: PP-R, PEX, multicapa, cobre y acero inoxidable. El PVC solo se acepta en redes de evacuación (colectores, bajantes de aguas pluviales y residuales frías).</div>
+  </div>
+</div>
+
+
+<!-- BLOQUE 9: MANTENIMIENTO -->
+<div class="section-label">Bloque 9 — Mantenimiento: acciones clave por sistema</div>
+<div class="block-card top-green">
+  <div class="block-card-header">
+    <span class="icon">🔧</span>
+    <h2>Plan de mantenimiento de instalaciones de agua</h2>
+    <span class="chip ch-green" style="margin-left:auto;">CTE HS4 · HS5 · RD 487/2022</span>
+  </div>
+  <div class="block-card-body">
+    <div class="grid-2">
+      <div>
+        <div style="font-family:var(--font-d);font-weight:800;font-size:.78rem;color:var(--teal);margin-bottom:.5rem;">RED DE SUMINISTRO</div>
+        <ul class="step-list">
+          <li><span class="step-num" style="color:var(--teal);">✓</span><div class="step-body"><strong>Verificación de presiones</strong><span>En planta baja y planta más alta. Detecta fugas y pérdidas de carga.</span></div></li>
+          <li><span class="step-num" style="color:var(--teal);">✓</span><div class="step-body"><strong>Comprobación de llaves de corte</strong><span>Apertura y cierre completo para evitar bloqueo por cal o corrosión.</span></div></li>
+          <li><span class="step-num" style="color:var(--teal);">✓</span><div class="step-body"><strong>Limpieza/sustitución de filtros</strong><span>El filtro de la instalación general y los filtros de los grupos de presión.</span></div></li>
+          <li><span class="step-num" style="color:var(--teal);">✓</span><div class="step-body"><strong>Revisión del grupo de presión</strong><span>Motor, bomba, presostato, membrana. Comprobar presiones de trabajo.</span></div></li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-family:var(--font-d);font-weight:800;font-size:.78rem;color:var(--orange);margin-bottom:.5rem;">ACS + LEGIONELA (RD 487/2022)</div>
+        <ul class="step-list">
+          <li><span class="step-num" style="color:var(--orange);">🌡</span><div class="step-body"><strong>Control de temperaturas</strong><span>≥ 60°C en acumulador, ≥ 50°C en red. Registro diario o continuo.</span></div></li>
+          <li><span class="step-num" style="color:var(--orange);">🧪</span><div class="step-body"><strong>Análisis microbiológicos</strong><span>Periodicidad según RD 487/2022 y tipo de instalación.</span></div></li>
+          <li><span class="step-num" style="color:var(--orange);">🚿</span><div class="step-body"><strong>Limpieza de terminales</strong><span>Alcachofas de ducha y aireadores de grifo (acumulan biofilm y cal).</span></div></li>
+          <li><span class="step-num" style="color:var(--orange);">🔥</span><div class="step-body"><strong>Choque térmico a 70°C</strong><span>Al menos 1 hora, purgando todos los puntos terminales.</span></div></li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top:.75rem;">
+      <div style="font-family:var(--font-d);font-weight:800;font-size:.78rem;color:var(--blue);margin-bottom:.5rem;">RED DE EVACUACIÓN</div>
+      <ul class="step-list">
+        <li><span class="step-num" style="color:var(--blue);">✓</span><div class="step-body"><strong>Revisión de sifones</strong><span>Cierre hidráulico íntegro. Rellenar con agua si llevan tiempo sin uso (botes sifónicos de duchas en desuso).</span></div></li>
+        <li><span class="step-num" style="color:var(--blue);">✓</span><div class="step-body"><strong>Limpieza de sumideros y arquetas</strong><span>Retirada de sedimentos, grasas y residuos acumulados. Periodicidad semestral o anual.</span></div></li>
+        <li><span class="step-num" style="color:var(--blue);">✓</span><div class="step-body"><strong>Desobstrucción de colectores</strong><span>Hidrojetting (agua a alta presión) o sonda mecánica rotatoria. Para obstrucciones parciales o totales.</span></div></li>
+        <li><span class="step-num" style="color:var(--blue);">📷</span><div class="step-body"><strong>Inspección con cámara CCTV</strong><span>En colectores enterrados. Detecta fisuras, deformaciones y raíces sin excavación. Técnica estándar de diagnóstico.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- FLASH CARDS -->
+<div class="section-label">Repaso final — Tarjetas de memoria rápida</div>
+<div class="flash-grid">
+  <div class="flash-card"><div class="fc-q">¿Qué norma regula el suministro de agua en edificios?</div><div class="fc-a">CTE DB-HS4</div></div>
+  <div class="flash-card"><div class="fc-q">¿Qué norma regula la evacuación de aguas?</div><div class="fc-a">CTE DB-HS5</div></div>
+  <div class="flash-card"><div class="fc-q">¿Presión máxima en la instalación interior?</div><div class="fc-a">500 kPa (5 bar) → reductor obligatorio si se supera</div></div>
+  <div class="flash-card"><div class="fc-q">¿Temperatura mínima en el acumulador de ACS?</div><div class="fc-a">60°C (Legionella muere en 32 min)</div></div>
+  <div class="flash-card"><div class="fc-q">¿Temperatura mínima en la red de distribución de ACS?</div><div class="fc-a">50°C en cualquier punto</div></div>
+  <div class="flash-card"><div class="fc-q">¿Cuándo es obligatoria la red de retorno de ACS?</div><div class="fc-a">Cuando la tubería de ACS supera 15 metros</div></div>
+  <div class="flash-card"><div class="fc-q">¿Qué UD tiene el inodoro con fluxor?</div><div class="fc-a">10 UD — ramal mínimo 100 mm</div></div>
+  <div class="flash-card"><div class="fc-q">¿Qué UD tiene el inodoro con cisterna?</div><div class="fc-a">5 UD — ramal mínimo 100 mm</div></div>
+  <div class="flash-card"><div class="fc-q">¿Pendiente mínima de colectores horizontales?</div><div class="fc-a">2%</div></div>
+  <div class="flash-card"><div class="fc-q">¿Sistema de evacuación preferente en obra nueva?</div><div class="fc-a">Sistema SEPARATIVO (residuales ≠ pluviales)</div></div>
+  <div class="flash-card"><div class="fc-q">¿Altura mínima/máxima del cierre hidráulico del sifón?</div><div class="fc-a">Mínimo 50 mm — Máximo 100 mm</div></div>
+  <div class="flash-card"><div class="fc-q">¿PVC-U para agua caliente sanitaria?</div><div class="fc-a">NUNCA. Solo para evacuación. ACS: PP-R, PEX, multicapa, cobre.</div></div>
+</div>
+
+</body>
+</html>
