@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 11 – Esquema resumen · BMS / Control centralizado</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f7fa;--surface:#fff;--surface-2:#f0f4f8;
+  --border:#ccd3de;--text:#1a2233;--muted:#4e5f7a;--faint:#8a9abb;
+  --blue:#0d4f8b;--blue-lt:#dceaf7;--blue-dk:#082f57;
+  --teal:#00707a;--teal-lt:#ccedf0;
+  --green:#1a6633;--green-lt:#d4eedd;
+  --gold:#c47d00;--gold-lt:#faefd0;
+  --orange:#8b3a0d;--orange-lt:#fce8d8;
+  --purple:#5b3690;--purple-lt:#ece4f8;
+  --flame:#c0392b;--red-lt:#fde8e8;
+  --font-d:'Cabinet Grotesk',sans-serif;
+  --font-b:'Satoshi',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.88rem;line-height:1.65;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 5rem;}
+.file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s;}
+.file-nav a:hover,.file-nav a.active{background:var(--blue);color:white;border-color:var(--blue);}
+.page-header{background:linear-gradient(135deg,#0e3d6e 0%,#07213e 100%);color:white;border-radius:1rem;padding:2rem 2.5rem;margin-bottom:2rem;}
+.page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;}
+.page-header h1{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,1.85rem);font-weight:800;line-height:1.2;}
+.section-label{font-family:var(--font-d);font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:2.5rem 0 .7rem;}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:1rem;margin-bottom:1.5rem;}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:.75rem;padding:1.25rem 1.35rem;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+.card.full{grid-column:1/-1;}
+.card-blue{border-top:4px solid var(--blue);}
+.card-teal{border-top:4px solid var(--teal);}
+.card-green{border-top:4px solid var(--green);}
+.card-gold{border-top:4px solid var(--gold);}
+.card-orange{border-top:4px solid var(--orange);}
+.card-purple{border-top:4px solid var(--purple);}
+.card-flame{border-top:4px solid var(--flame);}
+.card h2{font-family:var(--font-d);font-size:.9rem;font-weight:800;margin-bottom:.7rem;display:flex;align-items:center;gap:.4rem;}
+.card ul{padding-left:1.2rem;}
+.card li{margin-bottom:.3rem;font-size:.84rem;}
+.callout{border-radius:.5rem;padding:.7rem 1rem;font-size:.83rem;margin:.7rem 0;line-height:1.55;}
+.al-red{background:var(--red-lt);border-left:3px solid var(--flame);}
+.al-blue{background:var(--blue-lt);border-left:3px solid var(--blue);}
+.al-teal{background:var(--teal-lt);border-left:3px solid var(--teal);}
+.al-green{background:var(--green-lt);border-left:3px solid var(--green);}
+.al-gold{background:var(--gold-lt);border-left:3px solid var(--gold);}
+.al-purple{background:var(--purple-lt);border-left:3px solid var(--purple);}
+.chip{display:inline-block;font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:2px 8px;border-radius:999px;white-space:nowrap;margin-left:auto;}
+.ch-blue{background:var(--blue-lt);color:var(--blue-dk);}
+.ch-teal{background:var(--teal-lt);color:var(--teal);}
+.ch-green{background:var(--green-lt);color:var(--green);}
+.ch-gold{background:var(--gold-lt);color:#7a4e00;}
+.ch-flame{background:var(--red-lt);color:var(--flame);}
+.ch-purple{background:var(--purple-lt);color:var(--purple);}
+/* Pyramid */
+.pyramid{display:flex;flex-direction:column;gap:.4rem;margin:1rem 0;}
+.pyr-lvl{border-radius:.5rem;padding:.7rem 1.2rem;font-size:.85rem;font-weight:700;display:flex;align-items:center;gap:.75rem;}
+.pyr-3{background:var(--blue);color:white;margin:0 0%;}
+.pyr-2{background:var(--teal);color:white;margin:0 6%;}
+.pyr-1{background:var(--green);color:white;margin:0 12%;}
+.pyr-label{font-family:var(--font-d);font-size:.68rem;opacity:.8;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-left:auto;}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(200px,100%),1fr));gap:.75rem;margin:1rem 0;}
+.kpi{background:var(--surface-2);border:1px solid var(--border);border-radius:.65rem;padding:.8rem 1rem;text-align:center;}
+.kpi .val{font-family:var(--font-d);font-size:1.55rem;font-weight:800;line-height:1;}
+.kpi .lbl{font-size:.72rem;color:var(--muted);margin-top:.25rem;}
+.proto-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(185px,100%),1fr));gap:.7rem;margin:.75rem 0;}
+.proto{border-radius:.65rem;padding:.8rem 1rem;border:1px solid var(--border);}
+.proto .name{font-family:var(--font-d);font-size:.85rem;font-weight:800;margin-bottom:.2rem;}
+.proto .desc{font-size:.78rem;color:var(--muted);}
+.pt-blue{background:var(--blue-lt);border-color:var(--blue);}
+.pt-teal{background:var(--teal-lt);border-color:var(--teal);}
+.pt-green{background:var(--green-lt);border-color:var(--green);}
+.pt-gold{background:var(--gold-lt);border-color:var(--gold);}
+.pt-purple{background:var(--purple-lt);border-color:var(--purple);}
+@media(max-width:680px){.card{padding:1rem .9rem;}}
+</style>
+</head>
+<body>
+
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html" class="active">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </div>
+
+<div class="page-header">
+  <div class="meta">Tema 11 · Gestor de Mantenimiento (Nivel B) · UPNA · Esquema-resumen</div>
+  <h1>BMS / GTE — Esquema visual para estudio y repaso</h1>
+</div>
+
+<!-- ARQUITECTURA -->
+<div class="section-label">Los 3 niveles del BMS</div>
+<div class="card full card-blue">
+  <h2>🏗 Arquitectura piramidal: campo → control → gestión <span class="chip ch-blue">Base</span></h2>
+  <div class="pyramid">
+    <div class="pyr-lvl pyr-3">🖥 <span>NIVEL 3 — GESTIÓN: Servidor central + HMI (sinópticos, alarmas, informes, acceso remoto)</span><span class="pyr-label">Supervisión</span></div>
+    <div class="pyr-lvl pyr-2">🧠 <span>NIVEL 2 — CONTROL: Controladores DDC / PLC (ejecutan algoritmos PID, secuencias lógicas)</span><span class="pyr-label">Inteligencia local</span></div>
+    <div class="pyr-lvl pyr-1">📡 <span>NIVEL 1 — CAMPO: Sensores (temperatura, humedad, CO2, presencia) + Actuadores (válvulas, dimmers, variadores)</span><span class="pyr-label">Físico</span></div>
+  </div>
+  <div class="callout al-blue"><strong>DDC = Direct Digital Control.</strong> El tipo de controlador más habitual en BMS modernos. Recibe señales de sensores, ejecuta el algoritmo PID y envía órdenes a los actuadores. Es el "cerebro" de cada subsistema.</div>
+</div>
+
+<!-- PROTOCOLOS -->
+<div class="section-label">Protocolos de comunicación (los 5 más preguntados)</div>
+<div class="card full card-gold">
+  <h2>🌐 Cada protocolo tiene su "territorio" <span class="chip ch-gold">Examinable</span></h2>
+  <div class="proto-grid">
+    <div class="proto pt-blue"><div class="name">BACnet</div><div class="desc">EL protocolo del BMS. ASHRAE 135 / ISO 16484-5. Para HVAC e integración general. BACnet/IP sobre Ethernet. Abierto e interoperable.</div></div>
+    <div class="proto pt-teal"><div class="name">Modbus</div><div class="desc">Equipos industriales, variadores de frecuencia, contadores eléctricos. RTU sobre RS-485 o TCP/IP sobre Ethernet. Sencillo y robusto.</div></div>
+    <div class="proto pt-green"><div class="name">KNX</div><div class="desc">Estándar europeo para edificios (IEC 14543-3). Iluminación, persianas, clima por zona. Muy extendido en residencial y terciario.</div></div>
+    <div class="proto pt-gold"><div class="name">DALI</div><div class="desc">Control digital de iluminación. Cada luminaria tiene dirección individual. Permite regular la intensidad y recibir estado de cada punto de luz.</div></div>
+    <div class="proto pt-purple"><div class="name">M-Bus</div><div class="desc">Contadores de agua, gas, calor y electricidad (EN 13757). Hasta 250 contadores por bus. Clave para la gestión energética.</div></div>
+  </div>
+  <div class="callout al-gold"><strong>Regla mnemotécnica:</strong> B-M-K-D-M = <strong>B</strong>ACnet (HVAC) · <strong>M</strong>odbus (industriales) · <strong>K</strong>NX (edificio, KNX Europa) · <strong>D</strong>ALI (luminarias) · <strong>M</strong>-Bus (contadores/Meters)</div>
+</div>
+
+<!-- SISTEMAS CONTROLADOS -->
+<div class="section-label">Sistemas controlados por el BMS</div>
+<div class="card-grid">
+  <div class="card card-blue">
+    <h2>❄ HVAC (climatización)</h2>
+    <ul>
+      <li>El mayor consumidor: <strong>40–60%</strong> del consumo total</li>
+      <li>Control de temperatura por zonas (setpoint)</li>
+      <li>Free-cooling: enfriamiento gratuito con aire exterior</li>
+      <li>Control VAV (caudal variable de aire)</li>
+      <li>Setpoint reset: temperatura impulsión variable</li>
+    </ul>
+  </div>
+  <div class="card card-teal">
+    <h2>💡 Iluminación</h2>
+    <ul>
+      <li>20–30% del consumo del edificio</li>
+      <li>Sensores de presencia: encendido solo si hay ocupación</li>
+      <li>Regulación por luz natural (luxómetro + dimmer)</li>
+      <li>Programación horaria por zonas</li>
+      <li>Protocolo DALI para control individual</li>
+    </ul>
+  </div>
+  <div class="card card-green">
+    <h2>🪟 Persianas y control solar</h2>
+    <ul>
+      <li>Automatización según radiación solar</li>
+      <li>Reduce la carga de refrigeración en verano</li>
+      <li>Evita el deslumbramiento en puestos de trabajo</li>
+      <li>Protocolo: KNX o BACnet</li>
+    </ul>
+  </div>
+  <div class="card card-gold">
+    <h2>🔐 Seguridad y accesos</h2>
+    <ul>
+      <li>Integración con CCTV y alarmas de intrusión</li>
+      <li>Control de accesos por zonas</li>
+      <li>Supervisión de detectores de incendio</li>
+    </ul>
+  </div>
+  <div class="card card-orange">
+    <h2>💧 Fontanería y contadores</h2>
+    <ul>
+      <li>Lectura automática de contadores de agua (M-Bus)</li>
+      <li>Detección de fugas por caudal anómalo</li>
+      <li>Monitorización de grupos de presión</li>
+    </ul>
+  </div>
+  <div class="card card-purple">
+    <h2>☀ Energías renovables</h2>
+    <ul>
+      <li>Gestión de producción fotovoltaica</li>
+      <li>Control de almacenamiento en baterías</li>
+      <li>Priorización del autoconsumo sobre la red</li>
+      <li>Integración con el EMS/BEMS</li>
+    </ul>
+  </div>
+</div>
+
+<!-- KPIs ENERGÉTICOS -->
+<div class="section-label">Datos de ahorro energético del BMS</div>
+<div class="card full card-green">
+  <h2>📊 Potencial de ahorro por subsistema <span class="chip ch-green">Datos de examen</span></h2>
+  <div class="kpi-grid">
+    <div class="kpi"><div class="val" style="color:var(--blue)">40–60%</div><div class="lbl">Consumo del edificio que representa el HVAC</div></div>
+    <div class="kpi"><div class="val" style="color:var(--teal)">13–30%</div><div class="lbl">Ahorro en HVAC con BMS (control avanzado)</div></div>
+    <div class="kpi"><div class="val" style="color:var(--green)">40–70%</div><div class="lbl">Ahorro en iluminación con control automático</div></div>
+    <div class="kpi"><div class="val" style="color:var(--gold)">10–30%</div><div class="lbl">Ahorro energético global del edificio</div></div>
+    <div class="kpi"><div class="val" style="color:var(--orange)">290 kW</div><div class="lbl">Umbral de potencia para BMS obligatorio (RD 178/2021)</div></div>
+    <div class="kpi"><div class="val" style="color:var(--purple)">1–5 años</div><div class="lbl">Retorno de la inversión (payback) del BMS</div></div>
+  </div>
+</div>
+
+<!-- NORMATIVA -->
+<div class="section-label">Normativa clave — resumen visual</div>
+<div class="card-grid">
+  <div class="card card-flame">
+    <h2>⚖ RD 178/2021 <span class="chip ch-flame">MÁS PREGUNTADO</span></h2>
+    <ul>
+      <li>Modifica el RITE</li>
+      <li>Transpone Directiva 2018/844/UE (EPBD)</li>
+      <li><strong>BMS OBLIGATORIO</strong> en edificios no residenciales con potencia de climatización &gt;290 kW</li>
+      <li>Aplica a obra nueva y reforma importante</li>
+    </ul>
+    <div class="callout al-red">Si el examen pregunta cuándo es obligatorio el BMS → <strong>RD 178/2021, &gt;290 kW, no residencial</strong></div>
+  </div>
+  <div class="card card-teal">
+    <h2>📋 RITE IT 1.2.4.3</h2>
+    <ul>
+      <li>Exige sistemas de control y regulación en instalaciones térmicas</li>
+      <li>Escala los requisitos según la potencia de la instalación</li>
+      <li>Obliga a free-cooling en UTAs que refrigeren &gt;12 kW</li>
+    </ul>
+  </div>
+  <div class="card card-blue">
+    <h2>🌍 ISO 50001</h2>
+    <ul>
+      <li>Norma de Sistemas de Gestión de la Energía (SGE)</li>
+      <li>El BMS es la herramienta operativa para cumplirla</li>
+      <li>Requiere datos de consumo, KPIs e informes: los proporciona el BMS</li>
+    </ul>
+  </div>
+  <div class="card card-green">
+    <h2>🌱 Certificaciones verdes</h2>
+    <ul>
+      <li><strong>LEED</strong>: Leadership in Energy and Environmental Design</li>
+      <li><strong>BREEAM</strong>: Building Research Establishment Environmental Assessment Method</li>
+      <li>Ambas valoran la automatización y la gestión inteligente de la energía</li>
+      <li>El BMS es necesario para obtener créditos en estos sistemas</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TRAMPA DEL EXAMEN -->
+<div class="section-label">Trampas y confusiones frecuentes en el examen</div>
+<div class="card full card-flame">
+  <h2>⚠ Lo que el examinador pone para confundir <span class="chip ch-flame">No confundir</span></h2>
+  <ul>
+    <li><strong>BMS ≠ GMAO:</strong> el BMS controla las instalaciones EN TIEMPO REAL. El GMAO gestiona las OT de mantenimiento. Se integran pero son distintos.</li>
+    <li><strong>BMS ≠ SCADA:</strong> el SCADA es el equivalente industrial. El BMS es el equivalente en edificios. En un edificio industrial pueden coexistir ambos.</li>
+    <li><strong>EMS ≠ BMS:</strong> el EMS (Energy Management System) puede ser un módulo del BMS o un sistema independiente dedicado exclusivamente a la gestión de la energía.</li>
+    <li><strong>Free-cooling ≠ ventilación:</strong> el free-cooling enfría el edificio usando aire exterior cuando T ext es suficientemente fría. La ventilación es el suministro de aire fresco. Son funciones distintas aunque las realice la misma UTA.</li>
+    <li><strong>KNX ≠ BACnet:</strong> KNX es para automatización de edificios (iluminación, persianas, confort). BACnet es para HVAC y control técnico. Pueden coexistir y comunicarse mediante pasarelas (gateways).</li>
+    <li><strong>DALI ≠ KNX:</strong> DALI es específico de iluminación. KNX es un sistema general de automatización. KNX puede integrar el sistema DALI mediante módulos específicos.</li>
+    <li><strong>290 kW ≠ 70 kW:</strong> 290 kW es el umbral de potencia para BMS obligatorio (RD 178/2021). 70 kW es el umbral del RITE para que se exija proyecto técnico + OCA en instalaciones térmicas (distinto tema).</li>
+  </ul>
+</div>
+
+</body>
+</html>

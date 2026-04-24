@@ -1,0 +1,128 @@
+PUNTOS CLAVE Y LO MÁS PREGUNTADO EN OPOSICIÓN — TEMA 12
+Instalaciones de calefacción. Producción de calor, tipologías. Calderas, aerotermia y geotermia.
+Bombas de circulación, tuberías, aislamiento térmico y emisores. Regulación. Diseño y mantenimiento.
+Eficiencia energética. Normativa aplicable.
+==========================================================
+
+1. NORMATIVA — LO MÁS PREGUNTADO
+─────────────────────────────────
+• RITE (RD 1027/2007 y actualizaciones): regula el diseño, instalación, mantenimiento y eficiencia
+  de instalaciones térmicas. Es LA norma principal del tema.
+• Umbral RITE de proyecto: instalaciones > 70 kW requieren proyecto técnico firmado.
+• Umbral RITE de mantenimiento cualificado: instalaciones > 5 kW.
+• RD 178/2021: reconoce la aerotermia como energía renovable a efectos del RITE.
+• RD 487/2022: Legionella. Obligatorio en torres de refrigeración, circuitos de ACS, etc.
+• UNE-EN 303 (calderas), UNE-EN 14511 (bombas de calor), UNE-EN ISO 9606 (soldadura).
+• Directiva de Eficiencia Energética de Edificios (EPBD 2018/844/UE).
+• Real Decreto 235/2013: Certificado de Eficiencia Energética (CEE).
+
+2. TIPOLOGÍAS DE SISTEMAS DE CALEFACCIÓN
+──────────────────────────────────────────
+• Por fluido portador: agua caliente (la más frecuente), aire caliente, vapor (industrial),
+  eléctrica (por efecto Joule).
+• Por distribución: monotubo vs bitubo (el bitubo es el estándar en edificios).
+• Por emisión: radiadores, suelo radiante, fancoils, convectores, radiación infrarroja.
+• Por generación: caldera (gas, gasóleo, biomasa, eléctrica), bomba de calor aerotérmica,
+  bomba de calor geotérmica, solar térmica + apoyo.
+
+3. CALDERAS — LO MÁS PREGUNTADO
+──────────────────────────────────
+• Caldera convencional: rendimiento ~85-90% PCI. Temperatura de humos > punto de rocío.
+• Caldera de condensación: rendimiento >100% PCI porque recupera el calor latente del
+  vapor de agua de los humos. Temperatura de humos ≈ 50-60°C.
+• Temperatura mínima de impulsión recomendada en caldera de condensación: 35-45°C
+  (favorece la condensación). Con suelo radiante: pareja perfecta.
+• El RITE exige calderas de condensación en instalaciones nuevas > 70 kW (IT 1.2).
+• Clasificación NOx: clase 5 es la más eficiente (emisiones más bajas).
+
+4. AEROTERMIA — LO MÁS PREGUNTADO
+────────────────────────────────────
+• Bomba de calor aire-agua: extrae calor del aire exterior y lo cede al agua del circuito.
+• COP (calefacción): 3-4 típico. Por cada 1 kWh eléctrico → 3-4 kWh térmicos.
+• SCOP (COP estacional): el valor que exige el RITE para comparar equipos.
+• Reconocida como energía renovable desde RD 178/2021.
+• Ideal para combinar con suelo radiante (baja temperatura de impulsión: 35-45°C).
+• A temperaturas exteriores muy bajas (<-5°C): el COP cae significativamente.
+  Puede necesitar apoyo eléctrico (resistencia).
+
+5. GEOTERMIA — LO MÁS PREGUNTADO
+────────────────────────────────────
+• Bomba de calor agua-agua o tierra-agua: fuente de calor es el terreno o agua subterránea.
+• El terreno tiene temperatura estable todo el año (10-15°C en España).
+• Tipos de captación:
+  - Captadores horizontales: zanjas a 1-2 m de profundidad. Necesitan mucho terreno.
+  - Captadores verticales (sondas geotérmicas): perforaciones de 50-200 m. Menos terreno.
+  - Captación en agua subterránea (pozo abierto): muy eficiente pero requiere autorización.
+• COP geotérmico: 4-6. Mayor y más estable que el aerotérmico porque la fuente es
+  constante todo el año.
+• Requiere proyecto geotécnico previo y autorización administrativa.
+
+6. BOMBAS DE CIRCULACIÓN
+──────────────────────────
+• Función: vencer las pérdidas de carga del circuito hidráulico para hacer circular el agua.
+• Caudal y presión: los dos parámetros de diseño. Punto de trabajo = intersección curva
+  bomba + curva red.
+• Bombas de caudal variable (con variador de frecuencia): el RITE las exige en
+  instalaciones > 25 kW. Ahorro energético del 30-50% respecto a caudal fijo.
+• Ley de afinidad: si la velocidad baja al 50%, el caudal baja al 50% y la potencia
+  al 12,5% (cae con el cubo de la velocidad).
+
+7. EMISORES DE CALOR
+──────────────────────
+• Radiadores: convección + radiación. Temperatura de impulsión: 70-90°C (alta temperatura).
+• Suelo radiante: solo radiación y convección baja. Temperatura impulsión: 35-45°C
+  (baja temperatura). Pareja perfecta con bomba de calor y caldera de condensación.
+• Fancoil: fuerza la convección mediante ventilador. Puede funcionar en frío y calor.
+  2 tubos (solo frío o solo calor) o 4 tubos (frío y calor simultáneos).
+• Convector: solo convección natural. Bajo coste, menor confort.
+• Radiación infrarroja: para naves industriales y grandes alturas.
+
+8. AISLAMIENTO TÉRMICO DE TUBERÍAS
+─────────────────────────────────────
+• RITE IT 1.2.4.2: espesores mínimos de aislamiento según diámetro y temperatura.
+• Interior de edificio climatizado vs exterior o local no climatizado: espesores diferentes.
+• Material más común: espuma elastomérica (Armaflex) y lana mineral con revestimiento.
+• La condensación en tuberías de frío indica aislamiento insuficiente.
+
+9. REGULACIÓN Y CONTROL
+─────────────────────────
+• Válvula de 3 vías mezcladora: mezcla agua caliente de la caldera con retorno para
+  regular la temperatura de impulsión al circuito.
+• Válvula de 3 vías desviadora: desvía el caudal entre dos circuitos.
+• Regulación por temperatura exterior (curva de calefacción / curva de compensación):
+  el setpoint de temperatura de impulsión varía en función de la temperatura exterior.
+  Es la estrategia de regulación más eficiente en calefacción.
+• Termostatos de zona vs sonda de temperatura exterior: el primero actúa por demanda,
+  el segundo por condición climática.
+• Válvulas termoestáticas en radiadores: regulan el calor emitido por cada emisor.
+  Obligatorias en instalaciones > 70 kW (RITE).
+
+10. EFICIENCIA ENERGÉTICA
+───────────────────────────
+• Caldera de condensación: el mayor salto de rendimiento en calderas convencionales.
+• Bomba de calor aerotérmica: la solución más eficiente para instalaciones nuevas.
+• Suelo radiante: la emisión más eficiente (baja temperatura → mayor COP en bomba de calor).
+• Variadores de frecuencia en bombas: reducción de hasta 50% del consumo eléctrico de bombeo.
+• Regulación por temperatura exterior: evita el sobreconsumo en días templados.
+• Aislamiento correcto de tuberías: evita pérdidas de calor en distribución.
+
+11. MANTENIMIENTO (RITE IT 3)
+───────────────────────────────
+• El mantenimiento de instalaciones > 5 kW debe realizarlo un mantenedor autorizado.
+• Revisión anual obligatoria de calderas de gas < 70 kW (titular o empresa mantenedora).
+• Revisión bienal para instalaciones entre 70-1.000 kW.
+• Inspección OCA: cada 4 años para instalaciones entre 70-1.000 kW, cada 2 años > 1.000 kW.
+• El GMAO es la herramienta para gestionar el mantenimiento preventivo del plan RITE.
+
+12. LO MÁS PREGUNTADO EN TIPO TEST
+─────────────────────────────────────
+• ¿Qué rendimiento tiene una caldera de condensación? → >100% PCI
+• ¿A qué temperatura trabaja el suelo radiante? → 35-45°C
+• ¿Qué exige el RITE en instalaciones > 70 kW? → Proyecto + caldera de condensación + GTC
+• ¿Qué reconoce el RD 178/2021? → Aerotermia como energía renovable
+• ¿Cuándo son obligatorias las válvulas termoestáticas? → Instalaciones > 70 kW
+• ¿Qué norma regula el aislamiento de tuberías? → RITE IT 1.2.4.2
+• ¿Qué es la curva de calefacción? → Relación entre temperatura exterior y temperatura
+  de impulsión. Estrategia de regulación más eficiente.
+• ¿Qué diferencia la bomba aerotérmica de la geotérmica? →
+  Aerotérmica: fuente = aire (COP variable). Geotérmica: fuente = terreno (COP estable y mayor).

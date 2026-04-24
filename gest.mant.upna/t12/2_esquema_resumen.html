@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 12 – Esquema-resumen · Instalaciones de calefacción</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f4f0;--surface:#fff;--surface-2:#faf9f7;
+  --border:#d8d4cc;--text:#1f1a12;--muted:#5a5248;--faint:#a09890;
+  --red:#8b1a1a;--red-lt:#fdeaea;--red-dk:#5a0a0a;
+  --orange:#8b3a0d;--orange-lt:#fce8d8;
+  --gold:#c47d00;--gold-lt:#faefd0;
+  --green:#1a6633;--green-lt:#d4eedd;
+  --blue:#0d4f8b;--blue-lt:#dceaf7;
+  --teal:#00707a;--teal-lt:#ccedf0;
+  --purple:#5b3690;--purple-lt:#ece4f8;
+  --font-d:'Cabinet Grotesk',sans-serif;
+  --font-b:'Satoshi',sans-serif;
+  --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.88rem;line-height:1.65;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 5rem;}
+.file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s;}
+.file-nav a:hover,.file-nav a.active{background:var(--red);color:white;border-color:var(--red);}
+.page-header{background:linear-gradient(135deg,#6b1414 0%,#3a0a0a 100%);color:white;border-radius:var(--r-xl);padding:2rem 2.5rem;margin-bottom:2rem;}
+.page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;}
+.page-header h1{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,1.85rem);font-weight:800;line-height:1.2;margin-bottom:.4rem;}
+.page-header .sub{font-size:.83rem;opacity:.8;}
+.section-label{font-family:var(--font-d);font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:2.5rem 0 .7rem;}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.25rem;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+.card-header{padding:.8rem 1.25rem;display:flex;align-items:center;gap:.65rem;border-bottom:1px solid var(--border);}
+.card-header h2{font-family:var(--font-d);font-size:.95rem;font-weight:800;}
+.card-body{padding:1.1rem 1.25rem;}
+.top-red{border-top:4px solid var(--red);}
+.top-orange{border-top:4px solid var(--orange);}
+.top-gold{border-top:4px solid var(--gold);}
+.top-green{border-top:4px solid var(--green);}
+.top-blue{border-top:4px solid var(--blue);}
+.top-teal{border-top:4px solid var(--teal);}
+.top-purple{border-top:4px solid var(--purple);}
+.chip{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:2px 8px;border-radius:999px;white-space:nowrap;margin-left:auto;}
+.ch-red{background:var(--red-lt);color:var(--red-dk);}
+.ch-orange{background:var(--orange-lt);color:var(--orange);}
+.ch-gold{background:var(--gold-lt);color:#7a4e00;}
+.ch-green{background:var(--green-lt);color:var(--green);}
+.ch-blue{background:var(--blue-lt);color:#082f57;}
+.ch-teal{background:var(--teal-lt);color:var(--teal);}
+.ch-purple{background:var(--purple-lt);color:var(--purple);}
+.callout{border-radius:var(--r-md);padding:.75rem 1rem;font-size:.83rem;margin:.75rem 0;line-height:1.55;}
+.al-red{background:var(--red-lt);border-left:3px solid var(--red);}
+.al-orange{background:var(--orange-lt);border-left:3px solid var(--orange);}
+.al-gold{background:var(--gold-lt);border-left:3px solid var(--gold);}
+.al-green{background:var(--green-lt);border-left:3px solid var(--green);}
+.al-blue{background:var(--blue-lt);border-left:3px solid var(--blue);}
+.al-teal{background:var(--teal-lt);border-left:3px solid var(--teal);}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.85rem;}
+.blk{border-radius:var(--r-lg);padding:.85rem 1rem;border:1px solid var(--border);}
+.blk .bh{font-family:var(--font-d);font-weight:800;font-size:.88rem;margin-bottom:.3rem;}
+.blk ul{padding-left:1.1rem;margin-top:.25rem;}
+.blk li{font-size:.81rem;color:var(--muted);margin-bottom:.18rem;}
+.kpi-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:.75rem;}
+.kpi-box{border-radius:var(--r-lg);padding:1rem;border:1px solid var(--border);border-top:3px solid;text-align:center;}
+.kpi-val{font-family:var(--font-d);font-weight:800;font-size:1.1rem;display:block;margin-bottom:3px;}
+.kpi-label{font-size:.75rem;font-weight:700;color:var(--muted);display:block;}
+.kpi-sub{font-size:.72rem;color:var(--faint);display:block;margin-top:4px;}
+.mem-list{display:flex;flex-direction:column;gap:.5rem;}
+.mem-item{background:linear-gradient(135deg,#fdeaea,#fff5f5);border:1px solid #f0c8c8;border-radius:var(--r-md);padding:.7rem 1rem;font-size:.85rem;}
+.mem-item .mi-label{font-family:var(--font-d);font-weight:800;color:var(--red);font-size:.68rem;text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:2px;}
+.test-list{display:flex;flex-direction:column;gap:.5rem;}
+.test-item{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-md);padding:.65rem 1rem;}
+.test-q{font-size:.84rem;font-weight:700;margin-bottom:.25rem;}
+.test-a{font-size:.82rem;color:var(--teal);font-weight:700;}
+.test-a::before{content:"✓ ";}
+.ok{color:var(--green);font-weight:800;}
+.no{color:var(--red);font-weight:800;}
+@media(max-width:680px){.grid-2,.grid-3,.kpi-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="file-nav">
+  <a href="1_texto_explicativo_t12.html">📄 Texto explicativo</a>
+  <a href="2_esquema_resumen_t12.html" class="active">🗂 Esquema-resumen</a>
+  <a href="3_cuadro_comparativo_t12.html">📊 Cuadros comparativos</a>
+</div>
+
+<div class="page-header">
+  <div class="meta">Tema 12 · Gestor de Mantenimiento (Nivel B) · UPNA · Esquema-resumen</div>
+  <h1>Instalaciones de calefacción — Bloques visuales para memorización</h1>
+  <div class="sub">Tipologías · Generadores · Emisores · KPIs · Normativa · Frases · Test</div>
+</div>
+
+<!-- BLOQUE 1: GENERADORES -->
+<div class="section-label">Bloque 1 — Generadores de calor: características esenciales</div>
+<div class="card top-red">
+  <div class="card-header"><span>🔥</span><h2>Los 4 generadores y sus datos de examen</h2><span class="chip ch-red">Generación</span></div>
+  <div class="card-body">
+    <div class="grid-2">
+      <div class="blk" style="border-top:3px solid var(--red);">
+        <div class="bh" style="color:var(--red);">🔴 Caldera convencional</div>
+        <ul><li>Rendimiento: <strong>85-90% PCI</strong></li><li>Temperatura humos: 180-250°C</li><li>No condensa → no aprovecha calor latente</li><li>En desuso para instalaciones nuevas > 70 kW</li></ul>
+      </div>
+      <div class="blk" style="border-top:3px solid var(--orange);">
+        <div class="bh" style="color:var(--orange);">🟠 Caldera de condensación</div>
+        <ul><li>Rendimiento: <strong>&gt;100% PCI</strong> (105-110%)</li><li>Temperatura humos: 50-60°C</li><li>Aprovecha el calor latente del vapor de agua</li><li>Retorno frío (&lt;57°C) → condensación activa</li><li><strong>Obligatoria en instalaciones nuevas &gt; 70 kW</strong></li></ul>
+      </div>
+      <div class="blk" style="border-top:3px solid var(--teal);">
+        <div class="bh" style="color:var(--teal);">🔵 Aerotermia (aire-agua)</div>
+        <ul><li>COP calefacción: <strong>3-4</strong> típico</li><li>SCOP estacional: 3,5-4,5</li><li>Reconocida renovable: <strong>RD 178/2021</strong></li><li>COP cae a T exterior &lt;-5°C</li><li>Ideal + suelo radiante</li></ul>
+      </div>
+      <div class="blk" style="border-top:3px solid var(--green);">
+        <div class="bh" style="color:var(--green);">🟢 Geotermia (tierra-agua)</div>
+        <ul><li>COP calefacción: <strong>4-6</strong> (mayor y más estable)</li><li>Fuente: terreno a 10-15°C todo el año</li><li>Captadores: horizontales / sondas verticales / pozo abierto</li><li>Mayor inversión inicial, mayor eficiencia</li><li>Requiere autorización administrativa</li></ul>
+      </div>
+    </div>
+    <div class="callout al-orange" style="margin-top:.75rem;"><strong>📌 La pareja más eficiente:</strong> caldera de condensación (o bomba de calor) + suelo radiante. El suelo radiante trabaja a 35-45°C → retorno frío a la caldera → condensación siempre activa → máximo rendimiento.</div>
+  </div>
+</div>
+
+<!-- BLOQUE 2: EMISORES -->
+<div class="section-label">Bloque 2 — Emisores de calor: temperatura de trabajo y eficiencia</div>
+<div class="card top-gold">
+  <div class="card-header"><span>♨</span><h2>Tipos de emisores y su temperatura de impulsión</h2><span class="chip ch-gold">Emisores</span></div>
+  <div class="card-body">
+    <div class="kpi-row">
+      <div class="kpi-box" style="border-top-color:var(--red);">
+        <span class="kpi-val" style="color:var(--red);">70-90°C</span>
+        <span class="kpi-label">Radiadores de panel</span>
+        <span class="kpi-sub">Alta T°. Convección + radiación. El más extendido en viviendas.</span>
+      </div>
+      <div class="kpi-box" style="border-top-color:var(--green);">
+        <span class="kpi-val" style="color:var(--green);">35-45°C</span>
+        <span class="kpi-label">Suelo radiante</span>
+        <span class="kpi-sub">Baja T°. Mayor eficiencia. Pareja ideal de BdC y caldera de condensación.</span>
+      </div>
+      <div class="kpi-box" style="border-top-color:var(--teal);">
+        <span class="kpi-val" style="color:var(--teal);">45-60°C</span>
+        <span class="kpi-label">Fancoils</span>
+        <span class="kpi-sub">Media T°. Ventilador forzado. Frío y calor. 2T o 4T.</span>
+      </div>
+    </div>
+    <div class="callout al-red"><strong>⚠ Regla de oro de los emisores:</strong> cuanto más baja es la temperatura de impulsión, más eficiente es el generador (mayor COP en BdC, mayor condensación en caldera). Suelo radiante (35°C) &gt; Fancoils (50°C) &gt; Radiadores (80°C) en términos de eficiencia del generador.</div>
+  </div>
+</div>
+
+<!-- BLOQUE 3: NORMATIVA -->
+<div class="section-label">Bloque 3 — Umbrales del RITE: los 4 valores más preguntados</div>
+<div class="card top-red">
+  <div class="card-header"><span>⚖</span><h2>Los umbrales que hay que memorizar del RITE</h2><span class="chip ch-red">Normativa</span></div>
+  <div class="card-body">
+    <div class="kpi-row">
+      <div class="kpi-box" style="border-top-color:var(--teal);">
+        <span class="kpi-val" style="color:var(--teal);">&gt; 5 kW</span>
+        <span class="kpi-label">Mantenedor autorizado</span>
+        <span class="kpi-sub">El mantenimiento debe realizarlo una empresa mantenedora habilitada.</span>
+      </div>
+      <div class="kpi-box" style="border-top-color:var(--gold);">
+        <span class="kpi-val" style="color:var(--gold);">&gt; 25 kW</span>
+        <span class="kpi-label">Bombas caudal variable</span>
+        <span class="kpi-sub">Obligatorio variador de frecuencia en bombas de circulación.</span>
+      </div>
+      <div class="kpi-box" style="border-top-color:var(--red);">
+        <span class="kpi-val" style="color:var(--red);">&gt; 70 kW</span>
+        <span class="kpi-label">Proyecto + condensación + GTC + termostáticas</span>
+        <span class="kpi-sub">El umbral más importante. Proyecto técnico obligatorio.</span>
+      </div>
+    </div>
+    <div class="callout al-red"><strong>⚠ El umbral de 70 kW concentra las exigencias más preguntadas en tipo test:</strong><br>
+    ✓ Proyecto técnico firmado por técnico competente<br>
+    ✓ Caldera de condensación (en instalaciones de gas nuevas)<br>
+    ✓ GTC (Gestión Técnica Centralizada = BMS)<br>
+    ✓ Válvulas termoestáticas en todos los emisores<br>
+    ✓ Inspección OCA cada 4 años (hasta 1.000 kW)</div>
+  </div>
+</div>
+
+<!-- BLOQUE 4: KPIs EFICIENCIA -->
+<div class="section-label">Bloque 4 — Indicadores de eficiencia: definiciones y valores de referencia</div>
+<div class="card top-green">
+  <div class="card-header"><span>📊</span><h2>Rendimiento, COP, SCOP, EER, SEER — qué mide cada uno</h2><span class="chip ch-green">Eficiencia</span></div>
+  <div class="card-body">
+    <div class="grid-3">
+      <div class="blk" style="border-top:3px solid var(--red);">
+        <div class="bh" style="color:var(--red);">η (Rendimiento caldera)</div>
+        <ul><li>Calor útil / Calor combustible</li><li>Convencional: 85-90% PCI</li><li>Condensación: &gt;100% PCI</li><li>Expresado sobre PCI (no PCS)</li></ul>
+      </div>
+      <div class="blk" style="border-top:3px solid var(--teal);">
+        <div class="bh" style="color:var(--teal);">COP (Calefacción BdC)</div>
+        <ul><li>= Calor producido / Energía eléctrica</li><li>Aerotermia: 3-4</li><li>Geotermia: 4-6</li><li>Condición puntual (no estacional)</li></ul>
+      </div>
+      <div class="blk" style="border-top:3px solid var(--green);">
+        <div class="bh" style="color:var(--green);">SCOP (estacional)</div>
+        <ul><li>COP promedio de toda la estación</li><li>Norma UNE-EN 14825</li><li>El que exige el RITE para comparar</li><li>Más representativo que el COP puntual</li></ul>
+      </div>
+    </div>
+    <div class="callout al-gold" style="margin-top:.75rem;"><strong>📌 PCI vs PCS:</strong> el rendimiento de las calderas se calcula siempre sobre el <strong>PCI</strong> (Poder Calorífico Inferior), que no incluye el calor latente del vapor de agua. Por eso la caldera de condensación puede superar el 100% sobre PCI: aprovecha el calor latente que el PCI no contabiliza. Sobre el PCS nunca supera el 100%.</div>
+  </div>
+</div>
+
+<!-- BLOQUE 5: FRASES MEMORIZABLES -->
+<div class="section-label">Bloque 5 — Versión de oposición: frases memorizables</div>
+<div class="card top-red">
+  <div class="card-header"><span>⚡</span><h2>Las 14 frases clave del Tema 12</h2><span class="chip ch-red">Memorización</span></div>
+  <div class="card-body">
+    <div class="mem-list">
+      <div class="mem-item"><span class="mi-label">Caldera de condensación</span>"Rendimiento &gt;100% PCI porque recupera el calor latente del vapor de agua de los humos. Temperatura de humos ≈ 50-60°C."</div>
+      <div class="mem-item"><span class="mi-label">Pareja perfecta</span>"Caldera de condensación + suelo radiante: el suelo trabaja a 35-45°C → retorno frío → condensación siempre activa → máximo rendimiento."</div>
+      <div class="mem-item"><span class="mi-label">Aerotermia</span>"Bomba de calor aire-agua. COP 3-4. Reconocida como energía renovable por el RD 178/2021. Ideal con suelo radiante."</div>
+      <div class="mem-item"><span class="mi-label">Geotermia vs aerotermia</span>"Geotermia: COP 4-6, más estable porque el terreno está a 10-15°C todo el año. Aerotermia: COP variable, cae con el frío exterior."</div>
+      <div class="mem-item"><span class="mi-label">Suelo radiante</span>"Trabaja a 35-45°C de impulsión. Mayor eficiencia. Alta inercia térmica. Pareja perfecta de bomba de calor y caldera de condensación."</div>
+      <div class="mem-item"><span class="mi-label">Fancoil 2T vs 4T</span>"2 tubos: o frío o calor, no ambos simultáneamente. 4 tubos: frío y calor simultáneos en distintas zonas."</div>
+      <div class="mem-item"><span class="mi-label">Umbral RITE 5 kW</span>"A partir de 5 kW: mantenedor autorizado obligatorio."</div>
+      <div class="mem-item"><span class="mi-label">Umbral RITE 25 kW</span>"A partir de 25 kW: bombas de circulación de caudal variable (variador de frecuencia) obligatorias."</div>
+      <div class="mem-item"><span class="mi-label">Umbral RITE 70 kW</span>"A partir de 70 kW: proyecto técnico + caldera de condensación + GTC + válvulas termoestáticas + inspección OCA cada 4 años."</div>
+      <div class="mem-item"><span class="mi-label">Ley de afinidad (bombas)</span>"Si la velocidad de la bomba baja al 50%, la potencia cae al 12,5% (1/2³). El variador de frecuencia puede ahorrar hasta el 50% del consumo de bombeo."</div>
+      <div class="mem-item"><span class="mi-label">Curva de calefacción</span>"La estrategia de regulación más eficiente: el setpoint de impulsión varía según la temperatura exterior. Más frío fuera → más caliente el agua."</div>
+      <div class="mem-item"><span class="mi-label">Válvulas termoestáticas</span>"Regulan el caudal en cada radiador según la temperatura del local. Obligatorias en instalaciones &gt; 70 kW (RITE IT 1.2.4.3)."</div>
+      <div class="mem-item"><span class="mi-label">Aislamiento tuberías</span>"RITE IT 1.2.4.2: espesores mínimos según diámetro y temperatura. Condensación en tubería de frío = aislamiento insuficiente."</div>
+      <div class="mem-item"><span class="mi-label">RD 178/2021</span>"Reconoce la aerotermia como energía renovable a efectos del RITE. Fundamental para la certificación energética y el acceso a ayudas."</div>
+    </div>
+  </div>
+</div>
+
+<!-- BLOQUE 6: TEST -->
+<div class="section-label">Bloque 6 — Preguntas tipo test con respuesta</div>
+<div class="card top-teal">
+  <div class="card-header"><span>🎯</span><h2>12 preguntas de examen resueltas</h2><span class="chip ch-teal">Test</span></div>
+  <div class="card-body">
+    <div class="test-list">
+      <div class="test-item"><div class="test-q">¿Qué rendimiento tiene una caldera de condensación?</div><div class="test-a">Mayor del 100% sobre el PCI (típicamente 105-110%)</div></div>
+      <div class="test-item"><div class="test-q">¿Por qué puede superar el 100% de rendimiento?</div><div class="test-a">Porque aprovecha el calor latente del vapor de agua de los humos de combustión</div></div>
+      <div class="test-item"><div class="test-q">¿A qué temperatura trabaja el suelo radiante?</div><div class="test-a">Temperatura de impulsión 35-45°C (baja temperatura)</div></div>
+      <div class="test-item"><div class="test-q">¿Qué norma reconoce la aerotermia como energía renovable?</div><div class="test-a">RD 178/2021</div></div>
+      <div class="test-item"><div class="test-q">¿A partir de qué potencia son obligatorias las bombas de caudal variable?</div><div class="test-a">A partir de 25 kW (RITE)</div></div>
+      <div class="test-item"><div class="test-q">¿A partir de qué potencia son obligatorias las válvulas termoestáticas?</div><div class="test-a">A partir de 70 kW (RITE IT 1.2.4.3)</div></div>
+      <div class="test-item"><div class="test-q">¿Qué diferencia un fancoil de 2 tubos de uno de 4 tubos?</div><div class="test-a">2 tubos: solo frío o solo calor. 4 tubos: frío y calor simultáneos en distintas zonas</div></div>
+      <div class="test-item"><div class="test-q">¿Qué es la curva de calefacción?</div><div class="test-a">Relación entre temperatura exterior y temperatura de impulsión. La estrategia de regulación más eficiente en calefacción.</div></div>
+      <div class="test-item"><div class="test-q">¿Qué sucede con la potencia de la bomba si su velocidad se reduce a la mitad?</div><div class="test-a">Se reduce a 1/8 (12,5%) según la ley de afinidad (P ∝ n³)</div></div>
+      <div class="test-item"><div class="test-q">¿Cuál es el COP típico de la geotermia frente a la aerotermia?</div><div class="test-a">Geotermia: 4-6 (más alto y estable). Aerotermia: 3-4 (variable con la T exterior)</div></div>
+      <div class="test-item"><div class="test-q">¿Qué norma regula el aislamiento de tuberías en instalaciones térmicas?</div><div class="test-a">RITE IT 1.2.4.2</div></div>
+      <div class="test-item"><div class="test-q">¿Qué significa que el sistema de distribución es bitubo?</div><div class="test-a">Cada emisor recibe agua de la tubería de impulsión y devuelve el retorno independientemente. Todos los emisores reciben agua a la misma temperatura.</div></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

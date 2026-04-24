@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 11 – Cuadros comparativos · BMS/BAS</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f7fa;--surface:#fff;--surface-2:#f8f9fb;
+  --border:#ccd3de;--text:#1a2233;--muted:#4e5f7a;--faint:#8a9abb;
+  --blue:#0d4f8b;--blue-lt:#dceaf7;--blue-dk:#082f57;
+  --teal:#00707a;--teal-lt:#ccedf0;
+  --green:#1a6633;--green-lt:#d4eedd;
+  --gold:#c47d00;--gold-lt:#faefd0;
+  --orange:#8b3a0d;--orange-lt:#fce8d8;
+  --purple:#5b3690;--purple-lt:#ece4f8;
+  --flame:#c0392b;--red-lt:#fde8e8;
+  --font-d:'Cabinet Grotesk',sans-serif;
+  --font-b:'Satoshi',sans-serif;
+  --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.88rem;line-height:1.65;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 5rem;}
+.file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s;}
+.file-nav a:hover,.file-nav a.active{background:var(--blue);color:white;border-color:var(--blue);}
+.page-header{background:linear-gradient(135deg,#0a3060 0%,#04192e 100%);color:white;border-radius:var(--r-xl);padding:2rem 2.5rem;margin-bottom:2rem;}
+.page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;}
+.page-header h1{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,1.85rem);font-weight:800;line-height:1.2;margin-bottom:.4rem;}
+.page-header .sub{font-size:.83rem;opacity:.8;}
+.section-label{font-family:var(--font-d);font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:2.5rem 0 .7rem;}
+.table-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.5rem;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+.table-card-header{padding:.85rem 1.25rem;display:flex;align-items:center;gap:.65rem;border-bottom:1px solid var(--border);}
+.table-card-header .icon{font-size:1.1rem;}
+.table-card-header h2{font-family:var(--font-d);font-size:.95rem;font-weight:800;}
+.top-blue{border-top:4px solid var(--blue);}
+.top-teal{border-top:4px solid var(--teal);}
+.top-green{border-top:4px solid var(--green);}
+.top-gold{border-top:4px solid var(--gold);}
+.top-orange{border-top:4px solid var(--orange);}
+.top-purple{border-top:4px solid var(--purple);}
+.top-flame{border-top:4px solid var(--flame);}
+.chip{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:2px 8px;border-radius:999px;white-space:nowrap;margin-left:auto;}
+.ch-blue{background:var(--blue-lt);color:var(--blue-dk);}
+.ch-teal{background:var(--teal-lt);color:var(--teal);}
+.ch-green{background:var(--green-lt);color:var(--green);}
+.ch-gold{background:var(--gold-lt);color:#7a4e00;}
+.ch-orange{background:var(--orange-lt);color:var(--orange);}
+.ch-purple{background:var(--purple-lt);color:var(--purple);}
+.ch-flame{background:var(--red-lt);color:var(--flame);}
+.callout{border-radius:var(--r-md);padding:.75rem 1rem;font-size:.83rem;margin:.75rem 1.25rem;line-height:1.55;}
+.al-red{background:var(--red-lt);border-left:3px solid var(--flame);}
+.al-blue{background:var(--blue-lt);border-left:3px solid var(--blue);}
+.al-teal{background:var(--teal-lt);border-left:3px solid var(--teal);}
+.al-green{background:var(--green-lt);border-left:3px solid var(--green);}
+.al-gold{background:var(--gold-lt);border-left:3px solid var(--gold);}
+.al-purple{background:var(--purple-lt);border-left:3px solid var(--purple);}
+.al-orange{background:var(--orange-lt);border-left:3px solid var(--orange);}
+.cmp-table{width:100%;border-collapse:collapse;font-size:.84rem;}
+.cmp-table th{font-family:var(--font-d);font-weight:800;font-size:.78rem;padding:.55rem .9rem;text-align:left;border-bottom:2px solid var(--border);}
+.cmp-table th.hd-blue{background:var(--blue);color:white;}
+.cmp-table th.hd-flame{background:var(--flame);color:white;}
+.cmp-table th.hd-teal{background:var(--teal);color:white;}
+.cmp-table th.hd-green{background:var(--green);color:white;}
+.cmp-table th.hd-gold{background:var(--gold);color:white;}
+.cmp-table th.hd-orange{background:var(--orange);color:white;}
+.cmp-table th.hd-purple{background:var(--purple);color:white;}
+.cmp-table th.hd-grey{background:#e8edf0;color:var(--text);}
+.cmp-table td{padding:.5rem .9rem;border-bottom:1px solid #eef3f6;vertical-align:top;}
+.cmp-table tr:last-child td{border-bottom:none;}
+.cmp-table tr:hover td{background:#f8f9fb;}
+.cmp-table tr.hi td{background:#dceaf7!important;font-weight:700;}
+.cmp-table tr.hi-red td{background:#fde8e8!important;font-weight:700;}
+.cmp-table tr.hi-green td{background:#d4eedd!important;font-weight:700;}
+.cmp-table tr.hi-gold td{background:var(--gold-lt)!important;font-weight:700;}
+.cmp-table tr.hi-purple td{background:var(--purple-lt)!important;font-weight:700;}
+.cmp-table tr.hi-teal td{background:var(--teal-lt)!important;font-weight:700;}
+.cmp-table tr.hi-orange td{background:var(--orange-lt)!important;font-weight:700;}
+.cmp-table .feat{font-weight:700;color:var(--muted);font-size:.79rem;white-space:nowrap;}
+.ok{color:var(--green);font-weight:800;}
+.no{color:var(--flame);font-weight:800;}
+.warn{color:var(--orange);font-weight:700;}
+/* Frases memorizables */
+.mem-section{background:linear-gradient(135deg,#0a3060,#04192e);border-radius:var(--r-xl);padding:1.75rem 2rem;margin-bottom:1.5rem;}
+.mem-section h2{font-family:var(--font-d);font-weight:800;color:white;font-size:1.05rem;margin-bottom:1.1rem;}
+.mem-grid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;}
+.mem-item{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--r-lg);padding:.75rem 1rem;}
+.mem-label{font-size:.65rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#7eb8e0;display:block;margin-bottom:3px;}
+.mem-text{font-size:.84rem;color:#e8f0f8;line-height:1.5;}
+@media(max-width:680px){
+  .cmp-table{font-size:.78rem;}
+  .cmp-table td,.cmp-table th{padding:.4rem .6rem;}
+  .mem-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html" class="active">📊 Cuadros comparativos</a>
+  </div>
+
+<div class="page-header">
+  <div class="meta">Tema 11 · Gestor de Mantenimiento (Nivel B) · UPNA · Cuadros comparativos</div>
+  <h1>BMS/BAS — Tablas operativas para examen</h1>
+  <div class="sub">8 tablas · Definición · Componentes · Protocolos · Niveles · BMS vs SCADA · Subsistemas · Eficiencia energética · Normativa</div>
+</div>
+
+
+<!-- ══════════ TABLA 1: BMS vs BAS vs BEMS ══════════ -->
+<div class="section-label">Tabla 1 — BMS, BAS y BEMS: diferencias terminológicas</div>
+<div class="table-card top-blue">
+  <div class="table-card-header"><span class="icon">🏢</span><h2>Tres siglas, un mismo concepto — qué significa cada una</h2><span class="chip ch-blue">Terminología</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:120px;">Sigla</th>
+      <th class="hd-blue">Nombre completo</th>
+      <th class="hd-blue">Qué enfatiza</th>
+      <th class="hd-blue">Cuándo se usa en examen</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi">
+        <td><strong>BMS</strong></td>
+        <td>Building Management System</td>
+        <td>Gestión global del edificio: HVAC, iluminación, seguridad, energía, accesos.</td>
+        <td>El más frecuente en España y en el enunciado del tema. Úsalo por defecto.</td>
+      </tr>
+      <tr>
+        <td><strong>BAS</strong></td>
+        <td>Building Automation System</td>
+        <td>Automatización de los sistemas del edificio. Sinónimo de BMS, más usado en EE. UU.</td>
+        <td>Aparece en bibliografía técnica anglosajona. Trátalo como sinónimo de BMS.</td>
+      </tr>
+      <tr class="hi-teal">
+        <td><strong>BEMS</strong></td>
+        <td>Building Energy Management System</td>
+        <td>Gestión centrada específicamente en la eficiencia energética y el seguimiento de consumos.</td>
+        <td>Se usa cuando el foco es la energía. Puede ser un módulo del BMS o un sistema independiente.</td>
+      </tr>
+      <tr>
+        <td><strong>GTC</strong></td>
+        <td>Gestión Técnica Centralizada</td>
+        <td>Denominación española tradicional. Equivalente al BMS.</td>
+        <td>Aparece en normativa española (RITE). Trátalo como sinónimo de BMS en el contexto nacional.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-blue">
+    <strong>📌 Clave de examen:</strong> BMS = BAS = GTC en la práctica. El enunciado del Tema 11 habla de "sistemas de control centralizado aplicados a la gestión de instalaciones de edificios" — eso es exactamente el BMS/GTC. La norma española RITE usa el término GTC y exige su instalación a partir de ciertos umbrales de potencia.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 2: COMPONENTES ══════════ -->
+<div class="section-label">Tabla 2 — Componentes de un BMS: hardware y software</div>
+<div class="table-card top-teal">
+  <div class="table-card-header"><span class="icon">🧩</span><h2>Los componentes de un BMS organizados por nivel</h2><span class="chip ch-teal">Componentes</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:170px;">Componente</th>
+      <th class="hd-teal">Función</th>
+      <th class="hd-teal">Tipo</th>
+      <th class="hd-teal">Dato clave de examen</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi">
+        <td><strong>Estación central (servidor BMS)</strong></td>
+        <td>Cerebro del sistema. Recibe todos los datos, ejecuta la lógica de control, genera alarmas e informes.</td>
+        <td>Software + hardware servidor</td>
+        <td>Nivel de gestión (nivel 3). Punto único de supervisión y control de todo el edificio.</td>
+      </tr>
+      <tr>
+        <td><strong>Interfaz de operador (HMI)</strong></td>
+        <td>Pantalla de visualización y control para el operador. Muestra el estado en tiempo real de todas las instalaciones.</td>
+        <td>Software (PC, tablet, web)</td>
+        <td>HMI = Human-Machine Interface. El operador ve alarmas, tendencias y controla setpoints desde aquí.</td>
+      </tr>
+      <tr class="hi">
+        <td><strong>Controladores (DDC)</strong></td>
+        <td>Ejecutan el control local de cada subsistema (HVAC, iluminación…). Reciben órdenes del servidor y envían datos de campo.</td>
+        <td>Hardware (electrónico)</td>
+        <td>DDC = Direct Digital Control. Son el nivel de automatización (nivel 2). Los más preguntados en componentes.</td>
+      </tr>
+      <tr>
+        <td><strong>Sensores</strong></td>
+        <td>Capturan variables del entorno: temperatura, humedad, CO₂, presencia, iluminación, caudal, presión.</td>
+        <td>Hardware (campo)</td>
+        <td>Son los "ojos" del BMS. Sin sensores fiables, el control no puede ser eficiente.</td>
+      </tr>
+      <tr>
+        <td><strong>Actuadores</strong></td>
+        <td>Ejecutan las órdenes del controlador: abrir/cerrar válvulas, regular compuertas, encender/apagar equipos.</td>
+        <td>Hardware (campo)</td>
+        <td>Son los "brazos" del BMS. Ejemplos: motor de válvula de 3 vías, compuerta motorizada, variador de frecuencia.</td>
+      </tr>
+      <tr class="hi-teal">
+        <td><strong>Red de comunicación</strong></td>
+        <td>Conecta todos los componentes: servidor ↔ controladores ↔ sensores/actuadores.</td>
+        <td>Infraestructura (bus de campo)</td>
+        <td>Protocolos: BACnet, Modbus, KNX, LonWorks. BACnet es el estándar abierto más usado en BMS de edificios.</td>
+      </tr>
+      <tr>
+        <td><strong>Gateway / pasarela</strong></td>
+        <td>Traduce entre protocolos distintos para integrar sistemas de diferentes fabricantes.</td>
+        <td>Hardware + software</td>
+        <td>Permite integrar un sistema KNX de iluminación con un BMS BACnet sin cambiar los equipos.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- ══════════ TABLA 3: NIVELES DE UN BMS ══════════ -->
+<div class="section-label">Tabla 3 — Los 3 niveles jerárquicos de un BMS</div>
+<div class="table-card top-green">
+  <div class="table-card-header"><span class="icon">🏗</span><h2>Nivel de gestión · Nivel de automatización · Nivel de campo</h2><span class="chip ch-green">Arquitectura</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:160px;">Nivel</th>
+      <th class="hd-green">Nombre</th>
+      <th class="hd-green">Componentes que lo forman</th>
+      <th class="hd-green">Función</th>
+      <th class="hd-green">Protocolo típico</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi">
+        <td><strong>Nivel 3 — Superior</strong></td>
+        <td>Nivel de gestión</td>
+        <td>Servidor BMS, HMI, software de supervisión, informes, integración con ERP/GMAO.</td>
+        <td>Supervisión global, generación de alarmas e informes, histórico de datos, gestión energética, comunicación con sistemas corporativos.</td>
+        <td>Ethernet / TCP-IP / BACnet/IP</td>
+      </tr>
+      <tr>
+        <td><strong>Nivel 2 — Medio</strong></td>
+        <td>Nivel de automatización</td>
+        <td>Controladores DDC, unidades de control de zona (UCZ), controladores de subsistema.</td>
+        <td>Ejecutan la lógica de control (PID, secuencias, horarios). Reciben órdenes del nivel 3 y leen/actúan sobre el nivel 1.</td>
+        <td>BACnet MS/TP, Modbus RTU, LonWorks</td>
+      </tr>
+      <tr class="hi-green">
+        <td><strong>Nivel 1 — Inferior</strong></td>
+        <td>Nivel de campo</td>
+        <td>Sensores (temperatura, humedad, CO₂, presencia, luminosidad), actuadores (válvulas, compuertas, variadores).</td>
+        <td>Captura de variables físicas reales del edificio y ejecución de las acciones de control sobre los equipos.</td>
+        <td>KNX, Modbus, IO analógico/digital, DALI (iluminación)</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-green">
+    <strong>📌 Regla mnemotécnica:</strong> de abajo a arriba → <strong>Campo → Automatización → Gestión</strong>. El campo "ve" la realidad, la automatización "decide", la gestión "supervisa". Las órdenes bajan (gestión → campo), los datos suben (campo → gestión).
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 4: PROTOCOLOS ══════════ -->
+<div class="section-label">Tabla 4 — Protocolos de comunicación del BMS: comparativa</div>
+<div class="table-card top-gold">
+  <div class="table-card-header"><span class="icon">📡</span><h2>BACnet · Modbus · KNX · LonWorks · DALI — diferencias operativas</h2><span class="chip ch-gold">Protocolos</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:110px;">Protocolo</th>
+      <th class="hd-gold">Tipo</th>
+      <th class="hd-gold">Uso principal</th>
+      <th class="hd-gold">Ventaja clave</th>
+      <th class="hd-gold">Dato de examen</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi">
+        <td><strong>BACnet</strong></td>
+        <td>Abierto, estándar ASHRAE/ISO</td>
+        <td>BMS de edificios. El más extendido a nivel mundial para HVAC y gestión de edificios.</td>
+        <td>Interoperabilidad entre fabricantes. Protocolo nativo de los BMS modernos.</td>
+        <td><strong>EL MÁS IMPORTANTE.</strong> BACnet = protocolo estándar abierto para BMS de edificios. Norma ISO 16484-5.</td>
+      </tr>
+      <tr>
+        <td><strong>Modbus</strong></td>
+        <td>Abierto, industrial</td>
+        <td>Comunicación entre controladores y equipos de campo (medidores, variadores, PLC).</td>
+        <td>Simple, robusto, muy extendido en equipos industriales y de climatización.</td>
+        <td>El más antiguo (1979). Muy usado para integrar equipos legacy con el BMS.</td>
+      </tr>
+      <tr class="hi-teal">
+        <td><strong>KNX</strong></td>
+        <td>Abierto, estándar europeo (EN 50090)</td>
+        <td>Automatización del hogar y edificios: iluminación, persianas, climatización, accesos.</td>
+        <td>Estándar europeo oficial. Alta fiabilidad. Independiente de fabricante.</td>
+        <td>El protocolo de domótica y edificios por excelencia en Europa. Se integra con BMS vía gateway.</td>
+      </tr>
+      <tr>
+        <td><strong>LonWorks</strong></td>
+        <td>Abierto, estándar ANSI/EIA-709</td>
+        <td>Redes de control distribuido en grandes edificios e infraestructuras.</td>
+        <td>Arquitectura peer-to-peer. No necesita un controlador central.</td>
+        <td>Muy usado en edificios singulares (aeropuertos, hospitales). Menos frecuente en nuevas instalaciones.</td>
+      </tr>
+      <tr>
+        <td><strong>DALI</strong></td>
+        <td>Abierto, estándar IEC 62386</td>
+        <td>Control digital de iluminación (luminarias, balastos, drivers LED).</td>
+        <td>Control individual de cada luminaria, escenas programables, feedback de estado.</td>
+        <td>DALI = Digital Addressable Lighting Interface. El estándar para iluminación inteligente en edificios.</td>
+      </tr>
+      <tr class="hi-orange">
+        <td><strong>OPC-UA</strong></td>
+        <td>Abierto, estándar IEC 62541</td>
+        <td>Integración entre BMS, SCADA, ERP y sistemas IT. El puente entre OT e IT.</td>
+        <td>Seguro, escalable, independiente de plataforma. El estándar de la industria 4.0.</td>
+        <td>Permite que el BMS hable con el ERP corporativo o con plataformas cloud de gestión energética.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-gold">
+    <strong>⚠ Pregunta trampa frecuente:</strong> "¿Cuál es el protocolo estándar abierto para BMS de edificios?" → <strong>BACnet</strong> (no KNX, que es para domótica/edificios pero más orientado al nivel de campo). BACnet es el estándar de gestión de edificios. KNX es el estándar de automatización del nivel de campo en Europa.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 5: SUBSISTEMAS INTEGRADOS ══════════ -->
+<div class="section-label">Tabla 5 — Subsistemas del edificio integrados en el BMS</div>
+<div class="table-card top-blue">
+  <div class="table-card-header"><span class="icon">⚙</span><h2>Qué controla el BMS, qué variables gestiona y qué ahorro aporta</h2><span class="chip ch-blue">Subsistemas</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:150px;">Subsistema</th>
+      <th class="hd-blue">Variables controladas</th>
+      <th class="hd-blue">Funciones del BMS sobre él</th>
+      <th class="hd-blue">Ahorro energético típico</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi">
+        <td><strong>HVAC</strong><br><small>(climatización)</small></td>
+        <td>Temperatura, humedad, calidad del aire (CO₂), caudal, presión.</td>
+        <td>Control de setpoints por zona y horario, free-cooling, economizador, arranque/parada optimizados, control de UTA, fancoils, enfriadoras, calderas.</td>
+        <td class="ok"><strong>20–30%</strong> del consumo de climatización</td>
+      </tr>
+      <tr>
+        <td><strong>Iluminación</strong></td>
+        <td>Nivel de iluminación (lux), presencia, luz natural disponible.</td>
+        <td>Regulación según nivel de luz natural (dimming), apagado automático por ausencia de ocupación, escenas programadas por horario.</td>
+        <td class="ok"><strong>30–50%</strong> del consumo de iluminación</td>
+      </tr>
+      <tr class="hi-teal">
+        <td><strong>Energía eléctrica</strong></td>
+        <td>Consumo por circuito, demanda punta, factor de potencia.</td>
+        <td>Monitorización de consumos, gestión de la demanda punta, deslastre de cargas, alertas de consumo anómalo.</td>
+        <td class="ok"><strong>10–15%</strong> ahorro por gestión de demanda</td>
+      </tr>
+      <tr>
+        <td><strong>Agua y ACS</strong></td>
+        <td>Temperatura, caudal, presión, consumo volumétrico.</td>
+        <td>Control de temperatura de ACS (prevención de Legionella), detección de fugas por consumo anómalo, gestión de bombas.</td>
+        <td class="ok"><strong>10–20%</strong> ahorro en bombeo y ACS</td>
+      </tr>
+      <tr>
+        <td><strong>Seguridad y accesos</strong></td>
+        <td>Estado de sensores de intrusión, apertura/cierre de accesos, CCTV.</td>
+        <td>Integración con control de accesos y CCTV. Alarmas de seguridad. Vinculación con HVAC (si nadie entra, no climatizar).</td>
+        <td>No es el objetivo principal pero aporta valor al reducir climatización en zonas desocupadas.</td>
+      </tr>
+      <tr class="hi-green">
+        <td><strong>Contraincendios</strong></td>
+        <td>Estado de detectores, rociadores, puertas cortafuego, ventilación de emergencia.</td>
+        <td>Monitorización del estado (no control activo — es un sistema independiente de seguridad). Integración para alarmas y actuaciones coordinadas.</td>
+        <td>El BMS <strong>monitoriza pero NO controla</strong> el sistema de contraincendios. Es un punto clave de examen.</td>
+      </tr>
+      <tr>
+        <td><strong>Ascensores</strong></td>
+        <td>Estado, alarmas, consumo energético.</td>
+        <td>Monitorización de estado y alarmas. No control de movimiento. Integración con el módulo de energía.</td>
+        <td>El BMS <strong>monitoriza pero NO controla</strong> el movimiento de los ascensores.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-red">
+    <strong>⚠ Pregunta trampa frecuente:</strong> "¿El BMS controla el sistema de contraincendios?" → <strong>NO.</strong> El BMS lo <em>monitoriza</em> (recibe su estado y alarmas) pero el control activo del sistema de contraincendios es siempre independiente por normativa de seguridad. Lo mismo aplica a los ascensores: monitorización sí, control de movimiento no.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 6: MODO DE FUNCIONAMIENTO ══════════ -->
+<div class="section-label">Tabla 6 — Modos de funcionamiento del BMS</div>
+<div class="table-card top-purple">
+  <div class="table-card-header"><span class="icon">⚡</span><h2>Automático · Manual · Programado · Alarma — cómo actúa el BMS en cada modo</h2><span class="chip ch-purple">Funcionamiento</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:150px;">Modo</th>
+      <th class="hd-purple">Descripción</th>
+      <th class="hd-purple">Cuándo se usa</th>
+      <th class="hd-purple">Quién lo activa</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi">
+        <td><strong>Automático</strong></td>
+        <td>El BMS toma decisiones autónomamente según los algoritmos configurados (PID, lógica booleana, secuencias). Sin intervención humana.</td>
+        <td>Funcionamiento normal del edificio. El modo habitual. El sistema gestiona el confort y la eficiencia 24h.</td>
+        <td>El propio sistema (automático por defecto)</td>
+      </tr>
+      <tr>
+        <td><strong>Manual / override</strong></td>
+        <td>El operador fuerza un estado o valor concreto, anulando temporalmente el control automático.</td>
+        <td>Mantenimiento, pruebas, emergencias o situaciones especiales que requieren anular el automático.</td>
+        <td>Operador desde la HMI</td>
+      </tr>
+      <tr>
+        <td><strong>Programado (scheduling)</strong></td>
+        <td>El BMS ejecuta acciones según calendarios y horarios predefinidos: arranque/parada de equipos, cambios de setpoint, escenas de iluminación.</td>
+        <td>Arranque matinal de la climatización antes de la llegada del personal, apagado nocturno de luces, reducción de setpoint en festivos.</td>
+        <td>Operador / responsable del edificio (programación previa)</td>
+      </tr>
+      <tr class="hi-purple">
+        <td><strong>Modo alarma</strong></td>
+        <td>El BMS detecta una condición anómala (temperatura fuera de rango, consumo excesivo, fallo de equipo) y genera una alarma. Puede ejecutar acciones automáticas de respuesta.</td>
+        <td>Avería de equipo, intrusión, incendio (monitorización), consumo anómalo, temperatura crítica.</td>
+        <td>Automático (detección) + operador (reconocimiento y gestión)</td>
+      </tr>
+      <tr>
+        <td><strong>Modo fuera de servicio / stand-by</strong></td>
+        <td>Reducción al mínimo del funcionamiento de los equipos en periodos de no ocupación (noche, festivos).</td>
+        <td>Edificios de uso no continuo: oficinas, colegios, edificios administrativos.</td>
+        <td>Programado por horario o activado manualmente</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- ══════════ TABLA 7: BMS vs SCADA vs GMAO ══════════ -->
+<div class="section-label">Tabla 7 — BMS vs SCADA vs GMAO: diferencias y relaciones</div>
+<div class="table-card top-flame">
+  <div class="table-card-header"><span class="icon">🔗</span><h2>Tres sistemas distintos que trabajan juntos — qué hace cada uno</h2><span class="chip ch-flame">Integración</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey">Sistema</th>
+      <th class="hd-flame">Qué es</th>
+      <th class="hd-flame">Ámbito</th>
+      <th class="hd-flame">Qué gestiona</th>
+      <th class="hd-flame">Relación con los otros</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi">
+        <td><strong>BMS / GTC</strong></td>
+        <td>Building Management System. Sistema de control centralizado del edificio.</td>
+        <td>Edificio (HVAC, iluminación, energía, seguridad, agua).</td>
+        <td>Confort, eficiencia energética, seguridad y operación de las instalaciones del edificio.</td>
+        <td>Envía alarmas al <strong>GMAO</strong> (OT correctivas). Puede recibir datos de <strong>SCADA</strong> si hay proceso industrial en el edificio.</td>
+      </tr>
+      <tr>
+        <td><strong>SCADA</strong></td>
+        <td>Supervisory Control and Data Acquisition. Control de procesos industriales.</td>
+        <td>Proceso industrial (líneas de producción, plantas de tratamiento, subestaciones eléctricas).</td>
+        <td>Variables de proceso: temperatura, presión, caudal, estado de equipos industriales. Control en tiempo real.</td>
+        <td>Puede integrarse con el <strong>BMS</strong> si el edificio alberga un proceso industrial. Envía alarmas al <strong>GMAO</strong>.</td>
+      </tr>
+      <tr class="hi-green">
+        <td><strong>GMAO</strong></td>
+        <td>Gestión del Mantenimiento Asistido por Ordenador.</td>
+        <td>Departamento de mantenimiento (activos, OT, preventivo, KPIs).</td>
+        <td>Órdenes de trabajo, gamas de preventivo, inventario de repuestos, indicadores de mantenimiento.</td>
+        <td>Recibe alarmas del <strong>BMS</strong> y del <strong>SCADA</strong> que se convierten en OT correctivas. Se integra con el <strong>ERP</strong> para pedidos de compra.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-red">
+    <strong>⚠ La confusión más frecuente en examen:</strong> BMS y SCADA no son lo mismo. El BMS gestiona el <em>edificio</em> (confort y energía). El SCADA gestiona el <em>proceso industrial</em> (producción). Pueden coexistir en el mismo edificio industrial y complementarse, pero son sistemas distintos con objetivos distintos.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 8: EFICIENCIA ENERGÉTICA ══════════ -->
+<div class="section-label">Tabla 8 — BMS y eficiencia energética: estrategias, ahorros y normativa</div>
+<div class="table-card top-green">
+  <div class="table-card-header"><span class="icon">🌿</span><h2>Cómo el BMS mejora la eficiencia energética del edificio</h2><span class="chip ch-green">Eficiencia energética</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:180px;">Estrategia</th>
+      <th class="hd-green">En qué consiste</th>
+      <th class="hd-green">Qué subsistema afecta</th>
+      <th class="hd-green">Ahorro estimado</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi">
+        <td><strong>Arranque/parada optimizados</strong></td>
+        <td>El BMS calcula el momento óptimo de arranque de la climatización para alcanzar el confort justo cuando llegan los usuarios, sin gastar energía antes de lo necesario.</td>
+        <td>HVAC</td>
+        <td class="ok">5–15% ahorro en climatización</td>
+      </tr>
+      <tr>
+        <td><strong>Free-cooling</strong></td>
+        <td>Cuando la temperatura exterior es suficientemente baja, el BMS activa el enfriamiento mediante aire exterior en lugar de la máquina frigorífica.</td>
+        <td>HVAC (climatización)</td>
+        <td class="ok">10–25% ahorro en refrigeración</td>
+      </tr>
+      <tr>
+        <td><strong>Control por demanda real (VAV)</strong></td>
+        <td>El BMS regula el caudal de aire (o de agua) en función de la ocupación y la demanda térmica real de cada zona, no a caudal fijo.</td>
+        <td>HVAC (UTAs, fancoils)</td>
+        <td class="ok">15–30% ahorro en climatización</td>
+      </tr>
+      <tr class="hi-green">
+        <td><strong>Control de iluminación por presencia y luz natural</strong></td>
+        <td>El BMS apaga o reduce la iluminación artificial cuando no hay ocupación o cuando la luz natural es suficiente (regulación por sensor de luminosidad).</td>
+        <td>Iluminación</td>
+        <td class="ok">30–50% ahorro en iluminación</td>
+      </tr>
+      <tr>
+        <td><strong>Gestión de la demanda eléctrica</strong></td>
+        <td>El BMS monitoriza la potencia demandada y deslasta cargas no críticas para evitar superar la potencia contratada y reducir los picos de demanda.</td>
+        <td>Electricidad</td>
+        <td class="ok">10–20% ahorro en factura eléctrica</td>
+      </tr>
+      <tr>
+        <td><strong>Monitorización y subcontaje energético</strong></td>
+        <td>El BMS mide el consumo por zona, planta y subsistema. Identifica consumos anómalos y despilfarros que de otro modo pasarían desapercibidos.</td>
+        <td>Electricidad, agua, gas</td>
+        <td class="ok">5–10% ahorro por detección de ineficiencias</td>
+      </tr>
+      <tr class="hi-teal">
+        <td><strong>Integración con energías renovables</strong></td>
+        <td>El BMS coordina la producción fotovoltaica o de otras renovables con el consumo del edificio, maximizando el autoconsumo y minimizando la compra a red.</td>
+        <td>Electricidad + HVAC</td>
+        <td class="ok">Variable según instalación renovable</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-green">
+    <strong>📌 Normativa clave:</strong> el <strong>RITE (RD 1027/2007 y sus actualizaciones)</strong> exige la instalación de <strong>GTC (equivalente al BMS)</strong> en instalaciones térmicas a partir de <strong>70 kW de potencia nominal</strong>. Esta cifra es la más preguntada en tipo test sobre BMS y normativa.
+  </div>
+  <div class="callout al-blue">
+    <strong>📌 Directiva de Eficiencia Energética de Edificios (EPBD — 2018/844/UE):</strong> obliga a instalar sistemas de automatización y control (BACS) en edificios no residenciales con sistemas de HVAC de más de 290 kW a partir de 2025. El BMS es la implementación práctica de esta obligación. Este es un punto diferencial de nivel B.
+  </div>
+</div>
+
+
+<!-- ══════════ SECCIÓN DE FRASES MEMORIZABLES ══════════ -->
+<div class="section-label">Versión de oposición — Frases memorizables del Tema 11</div>
+<div class="mem-section">
+  <h2>⚡ Las 14 frases que hay que tener grabadas para el examen</h2>
+  <div class="mem-grid">
+    <div class="mem-item">
+      <span class="mem-label">Definición</span>
+      <span class="mem-text">"BMS = Building Management System. Sistema de control centralizado que integra y gestiona todos los subsistemas técnicos de un edificio desde un único punto."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Sinónimos</span>
+      <span class="mem-text">"BMS = BAS = GTC. En normativa española (RITE) se llama GTC (Gestión Técnica Centralizada). Son el mismo concepto."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Los 3 niveles</span>
+      <span class="mem-text">"De abajo a arriba: Campo → Automatización (DDC) → Gestión. Los datos suben, las órdenes bajan."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Componente más preguntado</span>
+      <span class="mem-text">"DDC = Direct Digital Control. Son los controladores del nivel de automatización. El 'cerebro local' que ejecuta la lógica de control de cada subsistema."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Protocolo estrella</span>
+      <span class="mem-text">"BACnet es el protocolo estándar abierto para BMS de edificios (norma ISO 16484-5). KNX es el estándar europeo para el nivel de campo (domótica/edificios)."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Trampa: contraincendios</span>
+      <span class="mem-text">"El BMS monitoriza el sistema de contraincendios, pero NO lo controla. El control activo es siempre independiente por normativa de seguridad."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Trampa: ascensores</span>
+      <span class="mem-text">"El BMS monitoriza el estado de los ascensores, pero NO controla su movimiento."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">RITE y GTC</span>
+      <span class="mem-text">"El RITE exige GTC (BMS) en instalaciones térmicas a partir de 70 kW de potencia nominal."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Ahorro en iluminación</span>
+      <span class="mem-text">"Control de iluminación por presencia + luz natural = 30–50% de ahorro en iluminación. El mayor porcentaje de ahorro de cualquier subsistema del BMS."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Ahorro en HVAC</span>
+      <span class="mem-text">"Free-cooling + arranque optimizado + control VAV = hasta 30% de ahorro en climatización. El HVAC es el mayor consumidor del edificio."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">BMS vs SCADA</span>
+      <span class="mem-text">"BMS = gestiona el edificio (confort y energía). SCADA = gestiona el proceso industrial. Distintos ámbitos. Pueden integrarse pero no son lo mismo."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">BMS + GMAO</span>
+      <span class="mem-text">"Las alarmas del BMS se envían al GMAO como OT correctivas. El BMS detecta la avería; el GMAO la gestiona."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Directiva europea</span>
+      <span class="mem-text">"La EPBD (Directiva de Eficiencia Energética de Edificios) obliga a instalar sistemas de automatización (BACS/BMS) en edificios no residenciales con HVAC >290 kW desde 2025."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Gateway</span>
+      <span class="mem-text">"Un gateway traduce entre protocolos distintos (p. ej. KNX a BACnet). Permite integrar sistemas de diferentes fabricantes sin cambiar los equipos instalados."</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

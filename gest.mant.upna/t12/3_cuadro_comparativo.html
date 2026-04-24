@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 12 – Cuadros comparativos · Calefacción</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f7fa;--surface:#fff;--surface-2:#f8f9fb;
+  --border:#ccd3de;--text:#1a2233;--muted:#4e5f7a;--faint:#8a9abb;
+  --blue:#0d4f8b;--blue-lt:#dceaf7;--blue-dk:#082f57;
+  --teal:#00707a;--teal-lt:#ccedf0;
+  --green:#1a6633;--green-lt:#d4eedd;
+  --gold:#c47d00;--gold-lt:#faefd0;
+  --orange:#8b3a0d;--orange-lt:#fce8d8;
+  --purple:#5b3690;--purple-lt:#ece4f8;
+  --flame:#c0392b;--red-lt:#fde8e8;
+  --font-d:'Cabinet Grotesk',sans-serif;
+  --font-b:'Satoshi',sans-serif;
+  --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.88rem;line-height:1.65;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 5rem;}
+.file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s;}
+.file-nav a:hover,.file-nav a.active{background:var(--blue);color:white;border-color:var(--blue);}
+.page-header{background:linear-gradient(135deg,#7a1a0a 0%,#3d0a05 100%);color:white;border-radius:var(--r-xl);padding:2rem 2.5rem;margin-bottom:2rem;}
+.page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;}
+.page-header h1{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,1.85rem);font-weight:800;line-height:1.2;margin-bottom:.4rem;}
+.page-header .sub{font-size:.83rem;opacity:.8;}
+.section-label{font-family:var(--font-d);font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:2.5rem 0 .7rem;}
+.table-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.5rem;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+.table-card-header{padding:.85rem 1.25rem;display:flex;align-items:center;gap:.65rem;border-bottom:1px solid var(--border);}
+.table-card-header .icon{font-size:1.1rem;}
+.table-card-header h2{font-family:var(--font-d);font-size:.95rem;font-weight:800;}
+.top-blue{border-top:4px solid var(--blue);}
+.top-teal{border-top:4px solid var(--teal);}
+.top-green{border-top:4px solid var(--green);}
+.top-gold{border-top:4px solid var(--gold);}
+.top-orange{border-top:4px solid var(--orange);}
+.top-purple{border-top:4px solid var(--purple);}
+.top-flame{border-top:4px solid var(--flame);}
+.chip{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:2px 8px;border-radius:999px;white-space:nowrap;margin-left:auto;}
+.ch-blue{background:var(--blue-lt);color:var(--blue-dk);}
+.ch-teal{background:var(--teal-lt);color:var(--teal);}
+.ch-green{background:var(--green-lt);color:var(--green);}
+.ch-gold{background:var(--gold-lt);color:#7a4e00;}
+.ch-orange{background:var(--orange-lt);color:var(--orange);}
+.ch-purple{background:var(--purple-lt);color:var(--purple);}
+.ch-flame{background:var(--red-lt);color:var(--flame);}
+.callout{border-radius:var(--r-md);padding:.75rem 1rem;font-size:.83rem;margin:.75rem 1.25rem;line-height:1.55;}
+.al-red{background:var(--red-lt);border-left:3px solid var(--flame);}
+.al-blue{background:var(--blue-lt);border-left:3px solid var(--blue);}
+.al-teal{background:var(--teal-lt);border-left:3px solid var(--teal);}
+.al-green{background:var(--green-lt);border-left:3px solid var(--green);}
+.al-gold{background:var(--gold-lt);border-left:3px solid var(--gold);}
+.al-purple{background:var(--purple-lt);border-left:3px solid var(--purple);}
+.al-orange{background:var(--orange-lt);border-left:3px solid var(--orange);}
+.cmp-table{width:100%;border-collapse:collapse;font-size:.84rem;}
+.cmp-table th{font-family:var(--font-d);font-weight:800;font-size:.78rem;padding:.55rem .9rem;text-align:left;border-bottom:2px solid var(--border);}
+.cmp-table th.hd-blue{background:var(--blue);color:white;}
+.cmp-table th.hd-flame{background:var(--flame);color:white;}
+.cmp-table th.hd-teal{background:var(--teal);color:white;}
+.cmp-table th.hd-green{background:var(--green);color:white;}
+.cmp-table th.hd-gold{background:var(--gold);color:white;}
+.cmp-table th.hd-orange{background:var(--orange);color:white;}
+.cmp-table th.hd-purple{background:var(--purple);color:white;}
+.cmp-table th.hd-grey{background:#e8edf0;color:var(--text);}
+.cmp-table td{padding:.5rem .9rem;border-bottom:1px solid #eef3f6;vertical-align:top;}
+.cmp-table tr:last-child td{border-bottom:none;}
+.cmp-table tr:hover td{background:#f8f9fb;}
+.cmp-table tr.hi td{background:#dceaf7!important;font-weight:700;}
+.cmp-table tr.hi-red td{background:#fde8e8!important;font-weight:700;}
+.cmp-table tr.hi-green td{background:#d4eedd!important;font-weight:700;}
+.cmp-table tr.hi-gold td{background:var(--gold-lt)!important;font-weight:700;}
+.cmp-table tr.hi-purple td{background:var(--purple-lt)!important;font-weight:700;}
+.cmp-table tr.hi-teal td{background:var(--teal-lt)!important;font-weight:700;}
+.cmp-table tr.hi-orange td{background:var(--orange-lt)!important;font-weight:700;}
+.cmp-table .feat{font-weight:700;color:var(--muted);font-size:.79rem;white-space:nowrap;}
+.ok{color:var(--green);font-weight:800;}
+.no{color:var(--flame);font-weight:800;}
+.warn{color:var(--orange);font-weight:700;}
+.mem-section{background:linear-gradient(135deg,#7a1a0a,#3d0a05);border-radius:var(--r-xl);padding:1.75rem 2rem;margin-bottom:1.5rem;}
+.mem-section h2{font-family:var(--font-d);font-weight:800;color:white;font-size:1.05rem;margin-bottom:1.1rem;}
+.mem-grid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;}
+.mem-item{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.15);border-radius:var(--r-lg);padding:.75rem 1rem;}
+.mem-label{font-size:.65rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#f0b08a;display:block;margin-bottom:3px;}
+.mem-text{font-size:.84rem;color:#f5ede8;line-height:1.5;}
+@media(max-width:680px){
+  .cmp-table{font-size:.78rem;}
+  .cmp-table td,.cmp-table th{padding:.4rem .6rem;}
+  .mem-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html" class="active">📊 Cuadros comparativos</a>
+  </div>
+
+<div class="page-header">
+  <div class="meta">Tema 12 · Gestor de Mantenimiento (Nivel B) · UPNA · Cuadros comparativos</div>
+  <h1>Instalaciones de calefacción — Tablas operativas para examen</h1>
+  <div class="sub">8 tablas · Tipologías · Calderas · Aerotermia · Geotermia · Emisores · Distribución · Regulación · Eficiencia · Normativa</div>
+</div>
+
+
+<!-- ══════════ TABLA 1: TIPOLOGÍAS DE PRODUCCIÓN DE CALOR ══════════ -->
+<div class="section-label">Tabla 1 — Sistemas de producción de calor: tipologías y comparativa</div>
+<div class="table-card top-flame">
+  <div class="table-card-header"><span class="icon">🔥</span><h2>Caldera · Aerotermia · Geotermia · Solar térmica · Biomasa · Cogeneración</h2><span class="chip ch-flame">Producción de calor</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:145px;">Sistema</th>
+      <th class="hd-flame">Principio de funcionamiento</th>
+      <th class="hd-flame">Combustible / fuente</th>
+      <th class="hd-flame">Rendimiento / COP</th>
+      <th class="hd-flame">¿Renovable? (RD 178/2021)</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Caldera convencional</strong></td>
+        <td>Combustión de gas/gasóleo. El calor generado calienta el agua del circuito.</td>
+        <td>Gas natural, gasóleo, GLP</td>
+        <td>85–90% (PCI)</td>
+        <td class="no">NO renovable</td>
+      </tr>
+      <tr class="hi-green">
+        <td><strong>Caldera de condensación</strong></td>
+        <td>Igual que la convencional pero recupera el calor latente de los humos (vapor de agua condensado).</td>
+        <td>Gas natural (preferente), gasóleo</td>
+        <td><strong>&gt;100% PCI</strong> (hasta 109%)</td>
+        <td class="no">NO renovable, pero la más eficiente de las calderas de combustión</td>
+      </tr>
+      <tr>
+        <td><strong>Caldera de biomasa</strong></td>
+        <td>Combustión de materia orgánica sólida (pellets, astillas). Ciclo de CO₂ neutro.</td>
+        <td>Pellets, astillas, leña</td>
+        <td>80–92%</td>
+        <td class="ok">SÍ renovable (biomasa)</td>
+      </tr>
+      <tr class="hi">
+        <td><strong>Bomba de calor aerotérmica</strong></td>
+        <td>Extrae calor del aire exterior (incluso a −15 °C) y lo entrega al circuito de calefacción mediante ciclo frigorífico inverso.</td>
+        <td>Electricidad + calor del aire</td>
+        <td><strong>COP 2,5–5</strong> (SCOP estacional)</td>
+        <td class="ok">SÍ renovable (RD 178/2021)</td>
+      </tr>
+      <tr class="hi-teal">
+        <td><strong>Bomba de calor geotérmica</strong></td>
+        <td>Extrae calor del subsuelo (temperatura estable 10–15 °C todo el año) mediante captadores enterrados.</td>
+        <td>Electricidad + calor del suelo</td>
+        <td><strong>COP 3,5–6</strong> (el más alto)</td>
+        <td class="ok">SÍ renovable (RD 178/2021)</td>
+      </tr>
+      <tr>
+        <td><strong>Solar térmica</strong></td>
+        <td>Capta la radiación solar mediante colectores y la transforma en calor para ACS o apoyo a calefacción.</td>
+        <td>Radiación solar</td>
+        <td>Variable (30–70% de cobertura)</td>
+        <td class="ok">SÍ renovable. Obligatoria en edificios nuevos (CTE-HE4)</td>
+      </tr>
+      <tr>
+        <td><strong>Cogeneración</strong></td>
+        <td>Producción simultánea de calor y electricidad a partir de un motor de combustión.</td>
+        <td>Gas natural</td>
+        <td>Rendimiento global &gt;80% (calor + electricidad)</td>
+        <td class="no">NO renovable, pero alta eficiencia global</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-green">
+    <strong>📌 Dato clave:</strong> la caldera de condensación rinde <strong>más del 100% sobre el PCI</strong> porque recupera el calor latente del vapor de agua de los humos. No viola las leyes de la termodinámica: el 100% se mide sobre el PCI (poder calorífico inferior) pero la energía real también incluye el calor de condensación que la caldera convencional desperdicia.
+  </div>
+  <div class="callout al-blue">
+    <strong>📌 RD 178/2021:</strong> declara la aerotermia y la geotermia como <strong>energías renovables</strong> a efectos del cómputo de energía primaria renovable en edificios. Este RD es el más preguntado en normativa de calefacción junto con el RITE.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 2: CALDERAS — TIPOS Y DIFERENCIAS ══════════ -->
+<div class="section-label">Tabla 2 — Calderas: tipos, temperatura de trabajo y características clave</div>
+<div class="table-card top-orange">
+  <div class="table-card-header"><span class="icon">🏭</span><h2>Caldera convencional · Condensación · Baja temperatura · Biomasa — comparativa</h2><span class="chip ch-orange">Calderas</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:170px;">Tipo de caldera</th>
+      <th class="hd-orange">Tª impulsión / retorno</th>
+      <th class="hd-orange">Rendimiento</th>
+      <th class="hd-orange">Ventaja principal</th>
+      <th class="hd-orange">Limitación</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Convencional (estándar)</strong></td>
+        <td>70–90 °C / 60–70 °C</td>
+        <td>85–90% PCI</td>
+        <td>Robusta, ampliamente instalada, fácil mantenimiento.</td>
+        <td class="no">No recupera calor latente. Menos eficiente que la de condensación.</td>
+      </tr>
+      <tr class="hi-green">
+        <td><strong>Condensación</strong></td>
+        <td>50–70 °C / 30–50 °C<br><small>(óptima a baja Tª de retorno)</small></td>
+        <td><strong>&gt;100% PCI</strong> (hasta 109%)</td>
+        <td>La más eficiente de las calderas de combustión. Reduce emisiones de CO₂. Obligatoria en edificios nuevos.</td>
+        <td>Requiere retorno frío (&lt;55 °C) para condensar. No es óptima con radiadores de alta temperatura.</td>
+      </tr>
+      <tr>
+        <td><strong>Baja temperatura</strong></td>
+        <td>40–70 °C / 30–50 °C</td>
+        <td>95–98% PCI</td>
+        <td>Trabajo a temperaturas más bajas. Compatible con suelo radiante.</td>
+        <td>Sin recuperación de condensados. Superada por la de condensación en eficiencia.</td>
+      </tr>
+      <tr class="hi-orange">
+        <td><strong>Biomasa (pellets/astillas)</strong></td>
+        <td>60–85 °C / 50–70 °C</td>
+        <td>80–92% PCI</td>
+        <td>Renovable. CO₂ neutro. Combustible local y económico.</td>
+        <td>Requiere almacén de combustible. Mayor mantenimiento (cenizas, limpieza). No apto para todas las ubicaciones.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-red">
+    <strong>⚠ Pregunta trampa frecuente:</strong> "¿La caldera de condensación es siempre más eficiente que la convencional?" → <strong>Sí en rendimiento nominal, PERO</strong> solo rinde por encima del 100% cuando la temperatura de retorno es suficientemente baja (&lt;55 °C) para que se produzca la condensación. Con retorno caliente (radiadores de alta temperatura sin renovar), la ventaja desaparece.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 3: AEROTERMIA vs GEOTERMIA ══════════ -->
+<div class="section-label">Tabla 3 — Aerotermia vs Geotermia: comparativa completa</div>
+<div class="table-card top-teal">
+  <div class="table-card-header"><span class="icon">🌡</span><h2>Bomba de calor aerotérmica vs geotérmica — diferencias operativas</h2><span class="chip ch-teal">Renovables</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey">Característica</th>
+      <th class="hd-teal">🌬 Aerotermia (aire-agua)</th>
+      <th class="hd-green">🌍 Geotermia (suelo-agua)</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td class="feat">Fuente de calor</td>
+        <td>Aire exterior (temperatura variable según estación)</td>
+        <td>Subsuelo (temperatura constante 10–15 °C todo el año)</td>
+      </tr>
+      <tr>
+        <td class="feat">COP calefacción</td>
+        <td>2,5–4,5 (varía con la Tª exterior)</td>
+        <td class="ok"><strong>3,5–6</strong> (más estable y alto)</td>
+      </tr>
+      <tr>
+        <td class="feat">Rendimiento en invierno</td>
+        <td class="warn">Disminuye al bajar la Tª exterior. A −15 °C sigue funcionando pero con COP reducido.</td>
+        <td class="ok">Estable todo el año. El subsuelo mantiene Tª constante independientemente del clima.</td>
+      </tr>
+      <tr class="hi-teal">
+        <td class="feat">Inversión inicial</td>
+        <td class="ok">Menor. No requiere perforaciones ni captadores enterrados.</td>
+        <td class="no">Mayor. Requiere perforaciones verticales (50–150 m) o colectores horizontales (gran superficie).</td>
+      </tr>
+      <tr>
+        <td class="feat">Instalación</td>
+        <td class="ok">Sencilla. Unidad exterior + unidad interior (similar a split). Apta para cualquier edificio.</td>
+        <td class="no">Compleja. Requiere estudio geológico, permisos y espacio para captadores.</td>
+      </tr>
+      <tr>
+        <td class="feat">Mantenimiento</td>
+        <td>Bajo. Similar al de un equipo de climatización estándar.</td>
+        <td>Muy bajo en el circuito enterrado (vida útil 50+ años). El equipo interior como cualquier bomba de calor.</td>
+      </tr>
+      <tr>
+        <td class="feat">Temperatura de impulsión</td>
+        <td>35–55 °C (óptima). Algunas llegan a 65 °C con compresor de alta temperatura.</td>
+        <td>35–55 °C (óptima). Igual que la aerotérmica.</td>
+      </tr>
+      <tr class="hi-green">
+        <td class="feat">Emisor más compatible</td>
+        <td colspan="2" style="text-align:center;color:var(--green);font-weight:700;">Suelo radiante (35–45 °C) o fan-coils de baja temperatura. Ambas son incompatibles con radiadores de alta temperatura sin renovar.</td>
+      </tr>
+      <tr>
+        <td class="feat">¿Renovable? (RD 178/2021)</td>
+        <td class="ok"><strong>SÍ</strong></td>
+        <td class="ok"><strong>SÍ</strong></td>
+      </tr>
+      <tr>
+        <td class="feat">Mejor para</td>
+        <td>Rehabilitación de edificios. Sustitución de caldera. Cualquier emplazamiento.</td>
+        <td>Edificios nuevos con diseño previo. Edificios con alta demanda y espacio para captadores.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-teal">
+    <strong>📌 La pareja perfecta:</strong> bomba de calor (aerotérmica o geotérmica) + suelo radiante. El suelo radiante trabaja a 35–45 °C, que es exactamente el rango óptimo de la bomba de calor para obtener el mayor COP. A mayor temperatura de impulsión requerida, menor COP.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 4: EMISORES DE CALOR ══════════ -->
+<div class="section-label">Tabla 4 — Emisores de calefacción: tipos, temperatura y compatibilidad</div>
+<div class="table-card top-gold">
+  <div class="table-card-header"><span class="icon">♨</span><h2>Radiadores · Fan-coils · Suelo radiante · Techo radiante · Convectores</h2><span class="chip ch-gold">Emisores</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:155px;">Emisor</th>
+      <th class="hd-gold">Principio de emisión</th>
+      <th class="hd-gold">Tª de trabajo (agua)</th>
+      <th class="hd-gold">Compatible con bomba de calor</th>
+      <th class="hd-gold">Ventaja / Limitación</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Radiador de alta temperatura</strong></td>
+        <td>Radiación (30%) + convección (70%). Fundición o acero.</td>
+        <td>70–90 °C</td>
+        <td class="no">NO óptimo. Requiere Tª alta, reduce COP de la BdC.</td>
+        <td>Muy instalado en edificios existentes. Incompatible con BdC sin renovar o usar con menor setpoint.</td>
+      </tr>
+      <tr class="hi-gold">
+        <td><strong>Radiador de baja temperatura</strong></td>
+        <td>Radiación + convección. Mayor superficie para compensar menor Tª.</td>
+        <td>45–60 °C</td>
+        <td class="warn">ACEPTABLE con BdC. No óptimo pero viable.</td>
+        <td>Transición entre instalación existente y sistema de baja temperatura.</td>
+      </tr>
+      <tr class="hi-green">
+        <td><strong>Suelo radiante</strong></td>
+        <td>Radiación desde el suelo (la más confortable: pies calientes, cabeza fresca).</td>
+        <td><strong>35–45 °C</strong></td>
+        <td class="ok"><strong>SÍ. Óptimo.</strong> Máximo COP de la BdC.</td>
+        <td>Alta inercia térmica (reacción lenta). Muy confortable. Difícil en rehabilitación (levanta el pavimento).</td>
+      </tr>
+      <tr>
+        <td><strong>Techo/muro radiante</strong></td>
+        <td>Radiación desde techo o muro. Menor inercia que el suelo.</td>
+        <td>30–45 °C</td>
+        <td class="ok">SÍ. Excelente con BdC.</td>
+        <td>Menor inercia que suelo radiante. Más fácil de instalar en rehabilitación. Menos frecuente.</td>
+      </tr>
+      <tr class="hi-teal">
+        <td><strong>Fan-coil (ventiloconvector)</strong></td>
+        <td>Convección forzada con ventilador. Respuesta rápida.</td>
+        <td><strong>45–55 °C</strong> (calefacción)</td>
+        <td class="ok">SÍ. Compatible con BdC de alta temperatura.</td>
+        <td>Respuesta rápida (baja inercia). Puede generar ruido. Funciona también para refrigeración.</td>
+      </tr>
+      <tr>
+        <td><strong>Convector</strong></td>
+        <td>Convección natural. Sin ventilador.</td>
+        <td>60–80 °C</td>
+        <td class="no">NO óptimo. Requiere Tª relativamente alta.</td>
+        <td>Silencioso. Bajo coste. Poco eficiente con BdC.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-red">
+    <strong>⚠ Pregunta trampa frecuente:</strong> "¿Se puede instalar una bomba de calor aerotérmica en un edificio con radiadores existentes?" → <strong>Sí, pero no es óptimo.</strong> La BdC trabajará a mayor temperatura de lo ideal, reduciendo el COP. La solución recomendada es sustituir los radiadores por suelo radiante o fan-coils de baja temperatura, o usar una BdC de alta temperatura (hasta 65 °C).
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 5: DISTRIBUCIÓN Y AISLAMIENTO ══════════ -->
+<div class="section-label">Tabla 5 — Distribución de agua: tipologías de circuito y aislamiento térmico</div>
+<div class="table-card top-blue">
+  <div class="table-card-header"><span class="icon">🔩</span><h2>Circuito monotubo · Bitubo · Anillo de retorno · Aislamiento (RITE IT 1.2.4.2)</h2><span class="chip ch-blue">Distribución</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:160px;">Tipología</th>
+      <th class="hd-blue">Descripción</th>
+      <th class="hd-blue">Ventaja</th>
+      <th class="hd-blue">Inconveniente</th>
+      <th class="hd-blue">Uso típico</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Monotubo</strong></td>
+        <td>Un solo tubo recorre todos los emisores en serie. El agua de retorno de un emisor entra en el siguiente.</td>
+        <td>Menor coste de tuberías. Instalación sencilla.</td>
+        <td class="no">El último emisor recibe agua más fría. Desequilibrio térmico entre el primero y el último.</td>
+        <td>Viviendas antiguas. Hoy prácticamente en desuso.</td>
+      </tr>
+      <tr class="hi">
+        <td><strong>Bitubo (impulsión + retorno)</strong></td>
+        <td>Dos tubos independientes: uno de impulsión y otro de retorno. Cada emisor conectado en paralelo.</td>
+        <td class="ok">Todos los emisores reciben agua a la misma temperatura. Fácil equilibrado.</td>
+        <td>Mayor coste de tuberías. Instalación más compleja.</td>
+        <td><strong>El más usado en instalaciones modernas.</strong> Residencial y terciario.</td>
+      </tr>
+      <tr>
+        <td><strong>Retorno invertido (Tichelmann)</strong></td>
+        <td>Bitubo con retorno en sentido inverso. El primer emisor en impulsión es el último en retorno.</td>
+        <td class="ok">Equilibrado hidráulico natural. Todos los emisores tienen el mismo recorrido total.</td>
+        <td>Más tuberías que el bitubo estándar. Mayor coste.</td>
+        <td>Grandes instalaciones con muchos emisores donde el equilibrado hidráulico es crítico.</td>
+      </tr>
+      <tr class="hi-blue">
+        <td colspan="5" style="font-family:var(--font-d);font-weight:800;font-size:.8rem;color:var(--blue);background:#edf4fb;">AISLAMIENTO TÉRMICO DE TUBERÍAS — RITE Instrucción Técnica IT 1.2.4.2</td>
+      </tr>
+      <tr>
+        <td><strong>Tuberías interiores</strong><br><small>(dentro del edificio calefactado)</small></td>
+        <td colspan="4">Espesor mínimo según diámetro y temperatura. Referencia: DN 20 mm a 60 °C → 20 mm de aislamiento mínimo. Aumenta con el diámetro y la temperatura.</td>
+      </tr>
+      <tr class="hi-orange">
+        <td><strong>Tuberías exteriores</strong><br><small>(a la intemperie o en locales no calefactados)</small></td>
+        <td colspan="4"><strong>El espesor se multiplica por 1,5</strong> respecto a las interiores. Ejemplo: si interior requiere 20 mm → exterior requiere 30 mm. Este factor 1,5 es el más preguntado sobre aislamiento en el RITE.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-orange">
+    <strong>📌 Regla del RITE más preguntada sobre aislamiento:</strong> las tuberías exteriores o en locales no calefactados deben tener un espesor de aislamiento <strong>1,5 veces mayor</strong> que las tuberías interiores equivalentes. Memoriza: interior × 1,5 = exterior.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 6: BOMBAS DE CIRCULACIÓN ══════════ -->
+<div class="section-label">Tabla 6 — Bombas de circulación: tipos, regulación y eficiencia</div>
+<div class="table-card top-purple">
+  <div class="table-card-header"><span class="icon">⚙</span><h2>Velocidad fija · Velocidad variable (variador de frecuencia) · Presión diferencial constante/variable</h2><span class="chip ch-purple">Bombas</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey">Característica</th>
+      <th class="hd-purple">Bomba velocidad fija</th>
+      <th class="hd-green">Bomba velocidad variable (VFD)</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td class="feat">Regulación del caudal</td>
+        <td>No regula. Funciona siempre al 100% de velocidad.</td>
+        <td class="ok">Regula la velocidad según la demanda real del sistema.</td>
+      </tr>
+      <tr>
+        <td class="feat">Consumo eléctrico</td>
+        <td class="no">Fijo. Consume lo mismo con poca o mucha demanda.</td>
+        <td class="ok"><strong>La potencia varía con el cubo de la velocidad.</strong> Al 50% de velocidad → consume el 12,5% de la potencia nominal.</td>
+      </tr>
+      <tr class="hi-green">
+        <td class="feat">Ahorro energético</td>
+        <td class="no">Nulo (consume siempre al máximo)</td>
+        <td class="ok"><strong>30–50% de ahorro en bombeo.</strong> El RITE obliga a regulación de velocidad en bombas &gt;2 kW.</td>
+      </tr>
+      <tr>
+        <td class="feat">Coste inicial</td>
+        <td class="ok">Menor</td>
+        <td class="no">Mayor (incorpora variador de frecuencia)</td>
+      </tr>
+      <tr>
+        <td class="feat">Normativa RITE</td>
+        <td class="no">No permitida en instalaciones nuevas con potencia &gt;2 kW</td>
+        <td class="ok"><strong>Obligatoria para potencias &gt;2 kW según el RITE.</strong></td>
+      </tr>
+      <tr class="hi-teal">
+        <td class="feat">Modos de regulación de presión</td>
+        <td>—</td>
+        <td><strong>Presión diferencial constante:</strong> mantiene la presión fija. Simple pero no óptimo.<br><strong>Presión diferencial variable:</strong> adapta la presión a la demanda real. El más eficiente.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-purple">
+    <strong>📌 Ley de afinidad de bombas:</strong> la potencia consumida varía con el <strong>cubo</strong> de la velocidad. Al reducir la velocidad al 80% → potencia = 0,8³ = 51,2% de la potencia nominal. Al 50% de velocidad → 0,5³ = 12,5% de la potencia nominal. Esta ley justifica el enorme ahorro de las bombas de velocidad variable.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 7: REGULACIÓN ══════════ -->
+<div class="section-label">Tabla 7 — Regulación de instalaciones de calefacción</div>
+<div class="table-card top-green">
+  <div class="table-card-header"><span class="icon">🎛</span><h2>Compensación climática · Regulación zona a zona · Válvulas termostáticas · Equilibrado hidráulico</h2><span class="chip ch-green">Regulación</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:185px;">Sistema de regulación</th>
+      <th class="hd-green">Qué hace</th>
+      <th class="hd-green">Cómo funciona</th>
+      <th class="hd-green">Ahorro / Beneficio</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi-green">
+        <td><strong>Compensación climática (curva de calefacción)</strong></td>
+        <td>Ajusta la temperatura de impulsión de la caldera/BdC en función de la temperatura exterior.</td>
+        <td>Sonda exterior → controlador ajusta setpoint de impulsión. A más frío exterior → más Tª de impulsión. A más templado → menos.</td>
+        <td class="ok"><strong>10–20% ahorro.</strong> Evita sobrecalentamiento en días menos fríos.</td>
+      </tr>
+      <tr>
+        <td><strong>Regulación por zonas (zonificación)</strong></td>
+        <td>Divide el edificio en zonas con control independiente de temperatura.</td>
+        <td>Válvulas de zona motorizadas + termostatos de ambiente por zona + controlador central (BMS o programador).</td>
+        <td class="ok">Confort personalizado. No se calienta lo que no se usa.</td>
+      </tr>
+      <tr>
+        <td><strong>Válvula termostática (VT) en radiadores</strong></td>
+        <td>Regula el caudal de agua en cada radiador según la temperatura de la estancia.</td>
+        <td>Cabezal termostático actúa sobre el obturador de la válvula. Sin electricidad (mecánico).</td>
+        <td class="ok"><strong>Obligatorias en cada emisor</strong> según el RITE (IT 1.2.4.3). Ahorro del 10–15%.</td>
+      </tr>
+      <tr class="hi">
+        <td><strong>Equilibrado hidráulico</strong></td>
+        <td>Garantiza que cada emisor recibe exactamente el caudal que necesita, evitando que los más cercanos al generador reciban demasiado y los lejanos insuficiente.</td>
+        <td>Válvulas de equilibrado estáticas (manual) o dinámicas (PICV). Balanceo de la red.</td>
+        <td class="ok">Elimina el ruido de válvulas, mejora el confort y la eficiencia. Evita el desequilibrio hidráulico (la causa más frecuente de quejas en calefacción).</td>
+      </tr>
+      <tr>
+        <td><strong>Control PID de la caldera/BdC</strong></td>
+        <td>Regula la potencia del generador para mantener el setpoint de impulsión de forma precisa y estable.</td>
+        <td>Proporcional + Integral + Derivativo. Evita sobreoscilaciones y mejora la estabilidad del sistema.</td>
+        <td class="ok">Reduce ciclos de encendido/apagado. Mejora la vida útil del equipo y el confort.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-red">
+    <strong>⚠ Dato RITE más preguntado sobre regulación:</strong> las válvulas termostáticas son <strong>obligatorias en cada emisor</strong> de calefacción (salvo excepciones como cuartos de baño o espacios donde el calor es una ganancia interna). Lo establece el RITE en la IT 1.2.4.3. No tenerlas es una no-conformidad en inspección.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 8: NORMATIVA ══════════ -->
+<div class="section-label">Tabla 8 — Normativa aplicable a instalaciones de calefacción</div>
+<div class="table-card top-blue">
+  <div class="table-card-header"><span class="icon">📋</span><h2>RITE · CTE · RD 178/2021 · Reglamento de equipos a presión · Directivas europeas</h2><span class="chip ch-blue">Normativa</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:200px;">Normativa</th>
+      <th class="hd-blue">Qué regula</th>
+      <th class="hd-blue">Dato clave de examen</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi">
+        <td><strong>RITE</strong><br>RD 1027/2007 (mod. RD 238/2013)</td>
+        <td>Reglamento de Instalaciones Térmicas en Edificios. Regula el diseño, instalación, mantenimiento y eficiencia de las instalaciones de calefacción, climatización y ACS.</td>
+        <td><strong>El más importante del tema.</strong> Exige: rendimiento mínimo de calderas, aislamiento de tuberías, válvulas termostáticas, regulación de bombas, GTC a partir de 70 kW, inspecciones periódicas.</td>
+      </tr>
+      <tr>
+        <td><strong>CTE DB-HE</strong><br>Código Técnico de la Edificación — Ahorro de Energía</td>
+        <td>Exigencias de eficiencia energética en edificios nuevos y grandes rehabilitaciones: demanda energética, eficiencia de instalaciones, contribución renovable.</td>
+        <td>HE-2: calderas con rendimiento mínimo exigido. HE-4: contribución solar mínima para ACS. HE-0: consumo de energía primaria no renovable limitado (edificios nuevos casi de energía cero).</td>
+      </tr>
+      <tr class="hi-green">
+        <td><strong>RD 178/2021</strong></td>
+        <td>Declara la aerotermia y la geotermia como energías renovables a efectos de cumplimiento del CTE-HE y del RITE.</td>
+        <td><strong>El más preguntado en oposición junto con el RITE.</strong> "¿Es renovable la aerotermia?" → SÍ, desde el RD 178/2021.</td>
+      </tr>
+      <tr>
+        <td><strong>Reglamento de Equipos a Presión</strong><br>RD 709/2015</td>
+        <td>Regula la seguridad de calderas, recipientes a presión y tuberías sometidas a presión.</td>
+        <td>Las calderas de calefacción son equipos a presión. Requieren marcado CE, pruebas de presión y mantenimiento reglamentario. Inspecciones periódicas por OCA según la categoría.</td>
+      </tr>
+      <tr>
+        <td><strong>Directiva Ecodiseño</strong><br>Reglamento UE 813/2013</td>
+        <td>Requisitos mínimos de eficiencia energética para calderas y calentadores de agua en el mercado europeo.</td>
+        <td>Desde 2015 prohíbe calderas de baja eficiencia en el mercado UE. Impulsa la caldera de condensación como estándar mínimo para gas.</td>
+      </tr>
+      <tr class="hi-teal">
+        <td><strong>Directiva EPBD</strong><br>2018/844/UE (mod. 2024)</td>
+        <td>Directiva de Eficiencia Energética de Edificios. Promueve la renovación del parque edificado hacia edificios de energía casi nula (EECN/nZEB).</td>
+        <td>Exige que los edificios nuevos sean nZEB. Impulsa la sustitución de calderas de combustibles fósiles por bombas de calor y sistemas renovables.</td>
+      </tr>
+      <tr>
+        <td><strong>Reglamento de gases combustibles</strong><br>RD 919/2006</td>
+        <td>Regula las instalaciones de gas para uso doméstico e industrial (conexión de calderas de gas).</td>
+        <td>Las calderas de gas deben ser instaladas y mantenidas por instaladores habilitados en gas (categorías A, B, C según RD 919/2006).</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-blue">
+    <strong>📌 Jerarquía normativa para calefacción (de mayor a menor rango):</strong><br>
+    Directivas UE (EPBD, Ecodiseño) → Legislación estatal (CTE, RITE, RD 178/2021, RD 709/2015) → Ordenanzas municipales → Especificaciones de proyecto.
+  </div>
+</div>
+
+
+<!-- ══════════ FRASES MEMORIZABLES ══════════ -->
+<div class="section-label">Versión de oposición — Frases memorizables del Tema 12</div>
+<div class="mem-section">
+  <h2>🔥 Las 16 frases que hay que tener grabadas para el examen</h2>
+  <div class="mem-grid">
+    <div class="mem-item">
+      <span class="mem-label">Condensación y PCI</span>
+      <span class="mem-text">"La caldera de condensación rinde más del 100% sobre el PCI porque recupera el calor latente del vapor de agua de los humos. No viola la termodinámica."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Condensación: la trampa</span>
+      <span class="mem-text">"La caldera de condensación solo condensa (y rinde &gt;100%) si el retorno es menor de 55 °C. Con retorno caliente, pierde su ventaja."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">RD 178/2021</span>
+      <span class="mem-text">"Aerotermia y geotermia = energías renovables desde el RD 178/2021. Cuentan para el cumplimiento del CTE-HE."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Aerotermia vs Geotermia: inversión</span>
+      <span class="mem-text">"Aerotermia: menor inversión, COP 2,5–4,5, varía con el clima. Geotermia: mayor inversión, COP 3,5–6, estable todo el año."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">La pareja perfecta</span>
+      <span class="mem-text">"Bomba de calor + suelo radiante (35–45 °C) = máximo COP. A menor temperatura de impulsión, mayor COP."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Suelo radiante: el inconveniente</span>
+      <span class="mem-text">"Suelo radiante: alta inercia térmica (reacción lenta). Muy confortable. Difícil en rehabilitación (hay que levantar el pavimento)."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Bitubo vs monotubo</span>
+      <span class="mem-text">"Bitubo: todos los emisores a la misma temperatura, fácil equilibrado. Es el estándar moderno. Monotubo: el último emisor recibe agua más fría."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Aislamiento RITE</span>
+      <span class="mem-text">"Tuberías exteriores o en locales no calefactados: espesor de aislamiento = interior × 1,5. Factor 1,5 es el dato de examen."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Ley de afinidad de bombas</span>
+      <span class="mem-text">"La potencia consumida varía con el cubo de la velocidad. Al 50% de velocidad → consume el 12,5% de la potencia nominal."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Bombas: obligación RITE</span>
+      <span class="mem-text">"El RITE obliga a regulación de velocidad variable (variador de frecuencia) en bombas de circulación con potencia mayor de 2 kW."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Válvulas termostáticas</span>
+      <span class="mem-text">"Obligatorias en cada emisor según el RITE (IT 1.2.4.3). Su ausencia es una no-conformidad en la inspección periódica."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Compensación climática</span>
+      <span class="mem-text">"A más frío exterior → más temperatura de impulsión. A más templado → menos. Ahorro del 10–20% por evitar sobrecalentamiento."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">GTC / BMS en calefacción</span>
+      <span class="mem-text">"El RITE exige GTC (BMS) en instalaciones térmicas a partir de 70 kW de potencia nominal."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">RITE: la norma más importante</span>
+      <span class="mem-text">"El RITE (RD 1027/2007) es la norma de referencia del tema. Regula diseño, instalación, mantenimiento, rendimientos e inspecciones de las instalaciones térmicas."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Biomasa</span>
+      <span class="mem-text">"Caldera de biomasa = renovable, CO₂ neutro. Mayor mantenimiento (cenizas, limpieza). Requiere almacén de combustible."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Ecodiseño</span>
+      <span class="mem-text">"El Reglamento UE 813/2013 (Ecodiseño) prohíbe desde 2015 la comercialización de calderas de baja eficiencia en la UE. La condensación es el estándar mínimo para gas."</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

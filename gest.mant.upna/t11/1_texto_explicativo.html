@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 11 – Texto explicativo · BMS / Control centralizado</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f7fa;--surface:#fff;--surface-2:#f8f9fb;
+  --border:#ccd3de;--text:#1a2233;--muted:#4e5f7a;--faint:#8a9abb;
+  --blue:#0d4f8b;--blue-lt:#dceaf7;--blue-dk:#082f57;
+  --teal:#00707a;--teal-lt:#ccedf0;
+  --green:#1a6633;--green-lt:#d4eedd;
+  --gold:#c47d00;--gold-lt:#faefd0;
+  --orange:#8b3a0d;--orange-lt:#fce8d8;
+  --purple:#5b3690;--purple-lt:#ece4f8;
+  --flame:#c0392b;--red-lt:#fde8e8;
+  --font-d:'Cabinet Grotesk',sans-serif;
+  --font-b:'Satoshi',sans-serif;
+  --r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.9rem;line-height:1.75;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 5rem;}
+.file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s;}
+.file-nav a:hover,.file-nav a.active{background:var(--blue);color:white;border-color:var(--blue);}
+.page-header{background:linear-gradient(135deg,#0e3d6e 0%,#07213e 100%);color:white;border-radius:var(--r-xl);padding:2rem 2.5rem;margin-bottom:2rem;}
+.page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;}
+.page-header h1{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800;line-height:1.2;margin-bottom:.4rem;}
+.page-header .sub{font-size:.83rem;opacity:.8;}
+.section-label{font-family:var(--font-d);font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:2.5rem 0 .7rem;}
+.prose-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:1.75rem 2rem;margin-bottom:1.25rem;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+.prose-card.top-blue{border-top:4px solid var(--blue);}
+.prose-card.top-teal{border-top:4px solid var(--teal);}
+.prose-card.top-green{border-top:4px solid var(--green);}
+.prose-card.top-gold{border-top:4px solid var(--gold);}
+.prose-card.top-orange{border-top:4px solid var(--orange);}
+.prose-card.top-purple{border-top:4px solid var(--purple);}
+.prose-card.top-flame{border-top:4px solid var(--flame);}
+.prose-card h2{font-family:var(--font-d);font-size:1.1rem;font-weight:800;margin-bottom:.9rem;display:flex;align-items:center;gap:.5rem;}
+.prose-card h3{font-family:var(--font-d);font-size:.95rem;font-weight:800;margin:1.25rem 0 .4rem;color:var(--blue);}
+.prose-card p{margin-bottom:.8rem;max-width:72ch;}
+.prose-card ul,.prose-card ol{padding-left:1.4rem;margin-bottom:.8rem;}
+.prose-card li{margin-bottom:.35rem;}
+.callout{border-radius:var(--r-md);padding:.75rem 1rem;font-size:.84rem;margin:.85rem 0;line-height:1.55;}
+.al-red{background:var(--red-lt);border-left:3px solid var(--flame);}
+.al-blue{background:var(--blue-lt);border-left:3px solid var(--blue);}
+.al-teal{background:var(--teal-lt);border-left:3px solid var(--teal);}
+.al-green{background:var(--green-lt);border-left:3px solid var(--green);}
+.al-gold{background:var(--gold-lt);border-left:3px solid var(--gold);}
+.al-purple{background:var(--purple-lt);border-left:3px solid var(--purple);}
+.al-orange{background:var(--orange-lt);border-left:3px solid var(--orange);}
+.chip{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:2px 8px;border-radius:999px;white-space:nowrap;margin-left:auto;}
+.ch-blue{background:var(--blue-lt);color:var(--blue-dk);}
+.ch-teal{background:var(--teal-lt);color:var(--teal);}
+.ch-green{background:var(--green-lt);color:var(--green);}
+.ch-gold{background:var(--gold-lt);color:#7a4e00;}
+.ch-flame{background:var(--red-lt);color:var(--flame);}
+.ch-purple{background:var(--purple-lt);color:var(--purple);}
+@media(max-width:680px){.prose-card{padding:1.25rem 1.1rem;}}
+</style>
+</head>
+<body>
+
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo.html" class="active">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </div>
+
+<div class="page-header">
+  <div class="meta">Tema 11 · Gestor de Mantenimiento (Nivel B) · UPNA · Texto explicativo</div>
+  <h1>Sistemas de control centralizado en edificios — BMS / BAS / GTE</h1>
+  <div class="sub">Componentes · Modo de funcionamiento · Ventajas · Eficiencia energética · Normativa · Protocolos</div>
+</div>
+
+<!-- 1. DEFINICIÓN -->
+<div class="section-label">1 — Definición y terminología</div>
+<div class="prose-card top-blue">
+  <h2>🏢 ¿Qué es un sistema de control centralizado de edificios? <span class="chip ch-blue">Base</span></h2>
+  <p>Un <strong>sistema de control centralizado</strong> aplicado a la gestión de instalaciones de edificios es una plataforma tecnológica que integra, supervisa y controla de forma automática todos los sistemas técnicos de un edificio desde un único punto. La denominación más extendida internacionalmente es <strong>BMS</strong> (Building Management System) o <strong>BAS</strong> (Building Automation System). En el contexto normativo español, el RITE utiliza la expresión <strong>Gestión Técnica del Edificio (GTE)</strong>. Los tres términos designan esencialmente el mismo concepto.</p>
+  <p>La idea central es sencilla: en lugar de que cada subsistema del edificio (climatización, iluminación, seguridad, fontanería, grupos electrógenos…) funcione de forma aislada con su propio controlador local y sin comunicación con los demás, el BMS integra todos esos subsistemas en una red de comunicaciones común y los supervisa y controla desde una plataforma central. El resultado es un edificio que "piensa": responde automáticamente a las condiciones de ocupación, temperatura exterior, tarifas eléctricas y cualquier otro parámetro definido por el operador.</p>
+  <div class="callout al-blue"><strong>📌 BMS ≠ GMAO:</strong> el BMS controla las instalaciones del edificio en tiempo real (clima, luz, seguridad). El GMAO gestiona las órdenes de trabajo de mantenimiento. Se complementan: el BMS puede enviar alarmas al GMAO para generar OT correctivas automáticamente, pero son sistemas con funciones distintas.</div>
+  <div class="callout al-red"><strong>⚠ La trampa terminológica:</strong> BMS, BAS y GTE son sinónimos en el contexto del examen. SCADA es el equivalente en entornos industriales. EMS (Energy Management System) puede ser un módulo del BMS o un sistema independiente centrado exclusivamente en la gestión de la energía. No confundir EMS con BMS.</div>
+</div>
+
+<!-- 2. NORMATIVA -->
+<div class="section-label">2 — Normativa aplicable</div>
+<div class="prose-card top-flame">
+  <h2>📋 Marco normativo del BMS en España <span class="chip ch-flame">Examinable</span></h2>
+  <p>La normativa que obliga y regula el uso de sistemas BMS en España tiene tres niveles: el Reglamento de Instalaciones Térmicas (RITE), la Directiva Europea de eficiencia energética en edificios (EPBD) y las normas de gestión de la energía como la ISO 50001.</p>
+  <h3>RITE — Reglamento de Instalaciones Térmicas en los Edificios (RD 1027/2007)</h3>
+  <p>El RITE establece en su <strong>IT 1.2.4.3</strong> los requisitos de los sistemas de control y regulación de las instalaciones térmicas. Exige que las instalaciones térmicas dispongan de sistemas de regulación y control que garanticen el confort y la eficiencia energética. Cuanto mayor es la potencia de la instalación, mayores son las exigencias de control: desde un simple termostato de zona en instalaciones pequeñas, hasta un sistema de gestión centralizado con comunicación en red en instalaciones grandes.</p>
+  <h3>RD 178/2021 — OBLIGATORIEDAD del BMS</h3>
+  <p>Este Real Decreto modifica el RITE y transpone la Directiva 2018/844/UE (EPBD revisada). <strong>Introduce la obligatoriedad del BMS</strong> en edificios no residenciales de nueva construcción con una potencia nominal de climatización superior a 290 kW, y en edificios no residenciales existentes sometidos a renovación importante si su potencia supera los 290 kW. <strong>Este es el dato numérico más preguntado del tema.</strong></p>
+  <h3>Directiva 2018/844/UE (EPBD revisada)</h3>
+  <p>La Directiva Europea de Eficiencia Energética en Edificios obliga a los Estados miembros a promover la instalación de sistemas de automatización en edificios no residenciales como medida para mejorar su rendimiento energético. España la transpuso mediante el RD 178/2021. En el contexto del examen, lo relevante es que el origen legal del BMS obligatorio en España es esta directiva europea.</p>
+  <h3>ISO 50001 — Sistemas de gestión de la energía</h3>
+  <p>La norma ISO 50001 establece los requisitos de un sistema de gestión de la energía (SGE) en organizaciones. El BMS es la herramienta operativa que proporciona los datos de consumo, las alarmas de desviación y los informes de rendimiento que necesita un SGE certificado en ISO 50001. Las organizaciones que quieren certificarse en ISO 50001 prácticamente están obligadas a contar con un BMS o un sistema EMS equivalente.</p>
+  <div class="callout al-red"><strong>⚠ El dato más preguntado del tema:</strong> el RD 178/2021 establece que el BMS es <strong>OBLIGATORIO</strong> en edificios no residenciales con potencia de climatización &gt;290 kW. Si el examen pregunta "¿a partir de qué potencia es obligatorio el BMS?" → 290 kW, RD 178/2021.</div>
+</div>
+
+<!-- 3. ARQUITECTURA -->
+<div class="section-label">3 — Arquitectura del BMS: los tres niveles</div>
+<div class="prose-card top-teal">
+  <h2>🏗 Los 3 niveles del BMS: campo, control y gestión <span class="chip ch-teal">Arquitectura</span></h2>
+  <p>La arquitectura de un BMS se organiza en tres niveles funcionales, conectados por redes de comunicación. Esta estructura piramidal es la base de todos los sistemas de automatización modernos, tanto en edificios como en entornos industriales.</p>
+  <h3>Nivel 1 — Campo (sensores y actuadores)</h3>
+  <p>Es el nivel físico del sistema. Aquí se encuentran todos los <strong>sensores</strong> (dispositivos de entrada que miden variables físicas) y <strong>actuadores</strong> (dispositivos de salida que ejecutan órdenes de control sobre los equipos). Los sensores más habituales en un BMS son: sondas de temperatura (ambiente y conducto), sondas de humedad relativa, sensores de CO2 (para el control de la ventilación por calidad del aire), detectores de presencia y ocupación, luxómetros (nivel de iluminación natural), contadores de energía eléctrica, gas y agua. Los actuadores más habituales son: válvulas de control (de dos o tres vías, todo-nada o modulantes), compuertas de aire (dampers), variadores de frecuencia en motores de ventiladores y bombas, y dimmers de iluminación.</p>
+  <h3>Nivel 2 — Control (controladores DDC/PLC)</h3>
+  <p>Es el nivel de inteligencia local del sistema. Los <strong>controladores DDC</strong> (Direct Digital Control) o PLC (Programmable Logic Controller) reciben las señales de los sensores, ejecutan los algoritmos de control (típicamente control PID) y envían las órdenes a los actuadores. Cada controlador gestiona un subsistema o una zona del edificio: por ejemplo, una Unidad de Tratamiento de Aire (UTA), un circuito de calefacción, o un grupo de luminarias. Los controladores de zona se interconectan en una red de comunicaciones que usa protocolos estándar como BACnet o Modbus.</p>
+  <h3>Nivel 3 — Gestión (servidor central + HMI)</h3>
+  <p>Es el nivel de supervisión y gestión del edificio. El <strong>servidor central</strong> recoge todos los datos de los controladores del nivel 2 y los almacena en una base de datos histórica (trending). La <strong>interfaz HMI</strong> (Human Machine Interface) proporciona al operador una representación gráfica del edificio (sinópticos) con el estado en tiempo real de todos los sistemas, el registro de alarmas, los informes de consumo energético y las herramientas de configuración. El acceso puede ser local (pantalla en sala de control) o remoto (desde cualquier dispositivo con conexión a internet).</p>
+  <div class="callout al-teal"><strong>📌 DDC = Direct Digital Control.</strong> Es el tipo de controlador más habitual en los BMS modernos. Ejecuta el control de forma digital, en contraposición al control neumático o analógico que se usaba en los edificios más antiguos. Si el examen pregunta "¿qué tipo de controlador usa el BMS?" → DDC.</div>
+</div>
+
+<!-- 4. PROTOCOLOS -->
+<div class="section-label">4 — Protocolos de comunicación</div>
+<div class="prose-card top-gold">
+  <h2>🌐 Protocolos del BMS: BACnet, Modbus, KNX, DALI, M-Bus <span class="chip ch-gold">Los más preguntados</span></h2>
+  <p>En un sistema BMS moderno, los distintos equipos (controladores, contadores, actuadores) se comunican entre sí usando protocolos de comunicación estándar. La estandarización es clave porque permite integrar equipos de distintos fabricantes en el mismo sistema, evitando la dependencia de un único proveedor propietario.</p>
+  <h3>BACnet — el protocolo del BMS</h3>
+  <p>BACnet (Building Automation and Control Networks) es el protocolo estándar más extendido para la comunicación entre equipos de BMS. Fue desarrollado por ASHRAE (American Society of Heating, Refrigerating and Air-Conditioning Engineers) y está recogido en el estándar <strong>ASHRAE 135</strong> e <strong>ISO 16484-5</strong>. Es un protocolo abierto (no propietario) que permite que controladores de distintos fabricantes se comuniquen entre sí. Puede funcionar sobre distintas redes físicas: Ethernet (BACnet/IP es el más usado), MS/TP (par trenzado a 9.600 bps) y otras. En el contexto del examen, BACnet es "EL protocolo del BMS".</p>
+  <h3>Modbus</h3>
+  <p>Modbus es un protocolo de comunicación serie muy sencillo y extendido en equipos industriales y de medida. Es especialmente habitual para la integración de equipos de climatización, variadores de frecuencia y contadores eléctricos en el BMS. Existe en versión serie (Modbus RTU sobre RS-485) y en versión TCP/IP (Modbus TCP sobre Ethernet). Su simplicidad lo hace muy robusto y fácil de implementar, aunque menos potente que BACnet para aplicaciones complejas.</p>
+  <h3>KNX</h3>
+  <p>KNX (formalmente IEC 14543-3, EN 50090) es el protocolo estándar europeo para la domótica y automatización de edificios. Es especialmente extendido para el control de iluminación, persianas, climatización por zona y sistemas de confort en edificios residenciales y de oficinas. Tiene su propio bus de comunicaciones (par trenzado KNX TP) y una gran variedad de dispositivos compatibles de centenares de fabricantes. En edificios de uso terciario, KNX y BACnet pueden coexistir: KNX para los sistemas de planta (iluminación, persianas) y BACnet para HVAC.</p>
+  <h3>DALI — iluminación</h3>
+  <p>DALI (Digital Addressable Lighting Interface) es el protocolo estándar para el control digital de iluminación. A diferencia del control analógico (0-10 V), DALI permite asignar una dirección individual a cada luminaria o grupo de luminarias, regulando la intensidad de forma precisa y recibiendo información de estado (si la lámpara ha fallado, por ejemplo). DALI se integra habitualmente con el BMS mediante pasarelas BACnet-DALI o KNX-DALI.</p>
+  <h3>M-Bus — contadores</h3>
+  <p>M-Bus (Meter-Bus, EN 13757) es el protocolo estándar europeo para la lectura remota de contadores de agua, gas, calor y electricidad. Permite conectar hasta 250 contadores en un único bus y leerlos desde el BMS de forma automática y periódica. Es fundamental para la gestión energética del edificio: sin lecturas automáticas de los contadores, la gestión de la energía sería manual y poco eficiente.</p>
+  <div class="callout al-gold"><strong>⚠ La pregunta más frecuente sobre protocolos:</strong><br>· BMS / HVAC en general → <strong>BACnet</strong><br>· Edificios residenciales / iluminación, persianas → <strong>KNX</strong><br>· Iluminación individual con regulación → <strong>DALI</strong><br>· Contadores (agua, gas, calor, electricidad) → <strong>M-Bus</strong><br>· Equipos industriales, variadores, contadores eléctricos → <strong>Modbus</strong></div>
+</div>
+
+<!-- 5. MODO DE FUNCIONAMIENTO -->
+<div class="section-label">5 — Modo de funcionamiento</div>
+<div class="prose-card top-green">
+  <h2>⚙ Cómo controla el BMS las instalaciones del edificio <span class="chip ch-green">Funcionamiento</span></h2>
+  <h3>Control PID</h3>
+  <p>El algoritmo de control más habitual en los controladores DDC del BMS es el <strong>control PID</strong> (Proporcional-Integral-Derivativo). Un lazo de control PID compara continuamente el valor medido de una variable (temperatura, presión, humedad…) con el valor deseado (setpoint) y calcula una señal de corrección que envía al actuador. La componente <strong>Proporcional</strong> responde a la magnitud del error actual; la <strong>Integral</strong> acumula los errores pasados para eliminar la desviación estacionaria; la <strong>Derivativa</strong> anticipa la tendencia del error para suavizar la respuesta. En la práctica, la mayoría de los lazos de control en BMS de edificios usan PI (sin derivativo), ya que el derivativo amplifica el ruido de las señales.</p>
+  <h3>Programación horaria</h3>
+  <p>La programación horaria es la estrategia de control más sencilla y más eficaz para el ahorro energético: los sistemas solo funcionan cuando el edificio está ocupado. El BMS permite definir calendarios semanales con diferentes perfiles de funcionamiento para días laborables, fines de semana y festivos. Cuando el horario de ocupación termina, el BMS apaga la climatización, reduce la iluminación al mínimo de vigilancia y activa los modos de stand-by en todos los sistemas. En edificios de oficinas, la programación horaria puede suponer el 20-30% del ahorro energético total.</p>
+  <h3>Free-cooling</h3>
+  <p>El <strong>free-cooling</strong> (o enfriamiento gratuito) es una estrategia que el BMS activa automáticamente cuando las condiciones exteriores son favorables: si la temperatura del aire exterior es lo suficientemente baja, el BMS abre las compuertas de aire exterior de las UTAs y ventila el edificio directamente con aire frío del exterior, sin necesidad de activar la máquina de frío. Esto puede suponer un ahorro muy significativo en los periodos de transición (primavera y otoño) y, en climas fríos, incluso en invierno. El RITE exige la incorporación de free-cooling en UTAs que refrigeren más de 12 kW.</p>
+  <h3>Setpoint reset</h3>
+  <p>El <strong>setpoint reset</strong> es una estrategia avanzada de control energético en la que el BMS ajusta dinámicamente la temperatura de impulsión del agua fría o caliente (o la presión en redes de distribución de aire) según la demanda real del edificio en cada momento. En lugar de producir siempre agua a 7 °C (por ejemplo), el BMS eleva la temperatura de impulsión cuando la demanda es baja, lo que mejora el rendimiento de la máquina de frío (mayor COP a mayor temperatura de evaporación). Es una de las estrategias con mayor potencial de ahorro energético.</p>
+  <h3>Optimización del arranque</h3>
+  <p>El BMS calcula la <strong>hora óptima de arranque</strong> de la climatización para que el edificio alcance las condiciones de confort cuando llegan los ocupantes, sin anticipar en exceso el arranque. El cálculo tiene en cuenta la temperatura exterior, la temperatura interior actual y las características térmicas del edificio (inercia térmica). Esto evita que la climatización funcione durante horas antes de la llegada de las personas, con el edificio ya a temperatura pero sin nadie dentro.</p>
+  <h3>Gestión de alarmas</h3>
+  <p>El BMS genera automáticamente <strong>alarmas</strong> cuando cualquier variable supera sus límites predefinidos (temperatura fuera de rango, fallo de un equipo, consumo anómalo, sensor averiado…). Las alarmas se registran en la base de datos histórica y se notifican al operador mediante la interfaz local, correo electrónico, SMS o aplicación móvil. Las alarmas clasificadas como críticas pueden integrarse con el GMAO del edificio para generar automáticamente una Orden de Trabajo correctiva.</p>
+</div>
+
+<!-- 6. EFICIENCIA ENERGÉTICA -->
+<div class="section-label">6 — Eficiencia energética y ventajas del BMS</div>
+<div class="prose-card top-purple">
+  <h2>💡 Ventajas y ahorro energético del BMS <span class="chip ch-purple">Nivel B</span></h2>
+  <h3>Reducción del consumo energético</h3>
+  <p>El BMS puede reducir el consumo energético total de un edificio entre un <strong>10% y un 30%</strong> con estrategias de control básicas (programación horaria, free-cooling, control por zonas). Con estrategias avanzadas (setpoint reset, control VAV, integración fotovoltaica) el ahorro puede superar el 30-40%. La mayor parte del ahorro se obtiene en los sistemas de <strong>HVAC</strong>, que representan entre el 40% y el 60% del consumo energético total del edificio.</p>
+  <h3>Mejora del confort</h3>
+  <p>El BMS mantiene las condiciones ambientales del edificio (temperatura, humedad relativa, nivel de CO2 e iluminación) dentro de rangos de confort de forma constante y adaptativa, sin requerir intervención manual. El control de la calidad del aire interior mediante sensores de CO2 y control de la ventilación es especialmente importante para la productividad y el bienestar de los ocupantes.</p>
+  <h3>Mantenimiento proactivo y predictivo</h3>
+  <p>La monitorización continua de los equipos permite al BMS detectar desviaciones del funcionamiento normal antes de que se produzca una avería: un motor que consume más de lo habitual, una válvula que no regula correctamente, un intercambiador con ensuciamiento progresivo. Esta detección temprana permite intervenir antes de que el problema se agrave, reduciendo el coste de las reparaciones y las paradas no planificadas. Integrado con el GMAO, genera OT de mantenimiento preventivo o correctivo de forma automática.</p>
+  <h3>Gestión energética y cumplimiento normativo</h3>
+  <p>El BMS genera los registros de consumo energético que exige el RITE (IT 1.2.4.3), los informes para la certificación energética del edificio y los datos para la certificación en ISO 50001. También facilita la obtención de certificaciones de sostenibilidad como <strong>LEED</strong> (Leadership in Energy and Environmental Design) y <strong>BREEAM</strong> (Building Research Establishment Environmental Assessment Method), que valoran la automatización y la gestión energética inteligente.</p>
+  <h3>Integración de energías renovables</h3>
+  <p>El BMS gestiona la producción fotovoltaica y el almacenamiento en baterías para maximizar el autoconsumo: prioriza el consumo de energía solar cuando hay producción, carga las baterías con el excedente solar y las descarga en los periodos pico de consumo o cuando la tarifa eléctrica es más alta. Esta gestión inteligente es imposible sin un BMS o EMS dedicado.</p>
+  <div class="callout al-purple"><strong>📌 Resumen de ventajas para el examen:</strong><br>
+  1. Ahorro energético: 10–30% (hasta 40% con estrategias avanzadas).<br>
+  2. Confort constante: temperatura, humedad, CO2 e iluminación controlados.<br>
+  3. Mantenimiento proactivo: detecta anomalías antes de que sean averías.<br>
+  4. Gestión centralizada: un operador controla todo el edificio (o varios edificios).<br>
+  5. Cumplimiento normativo: RITE IT 1.2.4.3, ISO 50001, CTE HE, LEED, BREEAM.<br>
+  6. Integración renovables: gestión de fotovoltaica y baterías.<br>
+  7. Mayor vida útil de equipos: evita funcionamientos fuera de rango.</div>
+</div>
+
+</body>
+</html>

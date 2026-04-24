@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 12 – Texto explicativo · Instalaciones de calefacción</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f4f0;--surface:#faf9f7;--surface-2:#fff;
+  --border:#d8d4cc;--text:#1f1a12;--muted:#5a5248;--faint:#a09890;
+  --red:#8b1a1a;--red-lt:#fdeaea;
+  --orange:#8b3a0d;--orange-lt:#fce8d8;
+  --gold:#c47d00;--gold-lt:#faefd0;
+  --green:#1a6633;--green-lt:#d4eedd;
+  --blue:#0d4f8b;--blue-lt:#dceaf7;
+  --teal:#00707a;--teal-lt:#ccedf0;
+  --purple:#5b3690;--purple-lt:#ece4f8;
+  --font-d:'Cabinet Grotesk',sans-serif;
+  --font-b:'Satoshi',sans-serif;
+  --r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.92rem;line-height:1.75;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 5rem;}
+.file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface-2);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s;}
+.file-nav a:hover,.file-nav a.active{background:var(--red);color:white;border-color:var(--red);}
+.page-header{background:linear-gradient(135deg,#6b1414 0%,#3a0a0a 100%);color:white;border-radius:var(--r-xl);padding:2rem 2.5rem;margin-bottom:2rem;}
+.page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;}
+.page-header h1{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,1.85rem);font-weight:800;line-height:1.2;margin-bottom:.4rem;}
+.page-header .sub{font-size:.83rem;opacity:.8;}
+.toc{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-xl);padding:1.25rem 1.5rem;margin-bottom:2rem;}
+.toc h3{font-family:var(--font-d);font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--faint);margin-bottom:.65rem;}
+.toc ol{padding-left:1.2rem;display:grid;grid-template-columns:1fr 1fr;gap:.15rem .5rem;}
+.toc li{font-size:.82rem;}
+.toc a{color:var(--red);text-decoration:none;font-weight:500;}
+.toc a:hover{text-decoration:underline;}
+h2.section-title{font-family:var(--font-d);font-size:1.15rem;font-weight:800;color:var(--red);border-left:4px solid var(--red);padding-left:.85rem;margin:2.5rem 0 .85rem;}
+h3.subsection{font-family:var(--font-d);font-size:.95rem;font-weight:800;color:var(--text);margin:1.5rem 0 .5rem;}
+p{margin-bottom:.75rem;max-width:72ch;}
+ul,ol{padding-left:1.3rem;margin-bottom:.75rem;}
+li{margin-bottom:.25rem;}
+.callout{border-radius:var(--r-md);padding:.8rem 1.1rem;font-size:.85rem;margin:1rem 0;line-height:1.6;}
+.al-red{background:var(--red-lt);border-left:3px solid var(--red);}
+.al-orange{background:var(--orange-lt);border-left:3px solid var(--orange);}
+.al-gold{background:var(--gold-lt);border-left:3px solid var(--gold);}
+.al-green{background:var(--green-lt);border-left:3px solid var(--green);}
+.al-blue{background:var(--blue-lt);border-left:3px solid var(--blue);}
+.al-teal{background:var(--teal-lt);border-left:3px solid var(--teal);}
+.al-purple{background:var(--purple-lt);border-left:3px solid var(--purple);}
+.definition{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-lg);padding:.85rem 1.1rem;margin:1rem 0;font-size:.87rem;}
+.definition .def-term{font-family:var(--font-d);font-weight:800;color:var(--red);font-size:.9rem;display:block;margin-bottom:.2rem;}
+strong{font-weight:700;}
+@media(max-width:600px){.toc ol{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="file-nav">
+  <a href="1_texto_explicativo_t12.html" class="active">📄 Texto explicativo</a>
+  <a href="2_esquema_resumen_t12.html">🗂 Esquema-resumen</a>
+  <a href="3_cuadro_comparativo_t12.html">📊 Cuadros comparativos</a>
+</div>
+
+<div class="page-header">
+  <div class="meta">Tema 12 · Gestor de Mantenimiento (Nivel B) · UPNA · Texto explicativo</div>
+  <h1>Instalaciones de calefacción — Desarrollo narrativo para comprensión y estudio</h1>
+  <div class="sub">Producción de calor · Calderas · Aerotermia · Geotermia · Distribución · Emisores · Regulación · Eficiencia · Normativa</div>
+</div>
+
+<div class="toc">
+  <h3>Índice de contenidos</h3>
+  <ol>
+    <li><a href="#s1">Concepto y tipologías</a></li>
+    <li><a href="#s2">Calderas</a></li>
+    <li><a href="#s3">Aerotermia</a></li>
+    <li><a href="#s4">Geotermia</a></li>
+    <li><a href="#s5">Bombas de circulación</a></li>
+    <li><a href="#s6">Tuberías y aislamiento</a></li>
+    <li><a href="#s7">Emisores de calor</a></li>
+    <li><a href="#s8">Regulación y control</a></li>
+    <li><a href="#s9">Diseño y mantenimiento</a></li>
+    <li><a href="#s10">Eficiencia energética</a></li>
+    <li><a href="#s11">Normativa aplicable</a></li>
+  </ol>
+</div>
+
+
+<h2 class="section-title" id="s1">1. Concepto y tipologías de las instalaciones de calefacción</h2>
+<p>Una <strong>instalación de calefacción</strong> es el conjunto de equipos, redes y elementos que permiten elevar la temperatura del aire interior de un espacio hasta un nivel de confort, compensando las pérdidas de calor que se producen a través de la envolvente del edificio (muros, ventanas, cubiertas) y por las infiltraciones de aire.</p>
+<p>Las instalaciones de calefacción se pueden clasificar según varios criterios:</p>
+<h3 class="subsection">Por el fluido portador de calor</h3>
+<ul>
+  <li><strong>Agua caliente:</strong> el fluido que transporta la energía térmica desde el generador hasta los emisores es agua caliente. Es la tipología más extendida en edificios por su seguridad, facilidad de control y capacidad de transporte energético.</li>
+  <li><strong>Aire caliente:</strong> el calor se transporta directamente mediante aire calentado en una UTA o recuperador. Frecuente en grandes locales comerciales y naves industriales.</li>
+  <li><strong>Vapor:</strong> reservado para aplicaciones industriales por su alta temperatura y presión.</li>
+  <li><strong>Eléctrica (efecto Joule):</strong> resistencias eléctricas que generan calor directamente. Sencilla de instalar pero muy costosa energéticamente.</li>
+</ul>
+
+<h3 class="subsection">Por el sistema de distribución</h3>
+<ul>
+  <li><strong>Monotubo:</strong> todos los emisores están conectados en serie en un único circuito. El agua se va enfriando a medida que recorre los emisores. Poco eficiente y difícil de equilibrar. En desuso.</li>
+  <li><strong>Bitubo:</strong> cada emisor recibe agua directamente de la tubería de impulsión y devuelve el retorno. Todos los emisores reciben agua a la misma temperatura. Es el estándar en edificios modernos.</li>
+</ul>
+
+<div class="callout al-red"><strong>📌 Punto clave de examen:</strong> la distribución en bitubo es el estándar actual. Permite un control independiente de cada emisor y un equilibrado hidráulico preciso. El sistema monotubo es prácticamente obsoleto en instalaciones nuevas.</div>
+
+<h3 class="subsection">Por el tipo de generador</h3>
+<p>El generador es el equipo que produce el calor. Los principales tipos son: calderas (gas natural, gasóleo, biomasa, eléctricas), bombas de calor aerotérmicas (aire-agua), bombas de calor geotérmicas (tierra-agua o agua-agua) y captadores solares térmicos con equipo de apoyo. Cada uno tiene características de rendimiento, coste y adecuación distintas que se desarrollan en las secciones siguientes.</p>
+
+
+<h2 class="section-title" id="s2">2. Calderas: tipos, rendimiento y tecnología de condensación</h2>
+<p>La <strong>caldera</strong> es el generador de calor más extendido. Su función es transferir al agua del circuito la energía química contenida en el combustible (generalmente gas natural) mediante la combustión. El combustible se quema en el quemador, los gases calientes ceden su energía al agua a través del intercambiador, y los humos resultantes salen al exterior por el sistema de evacuación.</p>
+
+<h3 class="subsection">Caldera convencional</h3>
+<p>En una caldera convencional, los humos salen a una temperatura elevada (180-250°C) para evitar que el vapor de agua contenido en ellos condense dentro de la caldera, lo que podría provocar corrosión. Su rendimiento es del <strong>85-90% sobre el PCI</strong> (Poder Calorífico Inferior). Este rendimiento es siempre menor del 100% porque parte de la energía se pierde con los humos calientes.</p>
+
+<h3 class="subsection">Caldera de condensación</h3>
+<p>La <strong>caldera de condensación</strong> es la gran revolución tecnológica de las últimas décadas. Trabaja con temperaturas de humos muy bajas (50-60°C), permitiendo que el vapor de agua de los gases de combustión condense dentro de la propia caldera. Al condensar, ese vapor libera su <strong>calor latente de condensación</strong>, que es aprovechado por el intercambiador y transferido al agua del circuito. Este calor extra es el que permite superar el 100% de rendimiento sobre el PCI.</p>
+<p>Su rendimiento típico es del <strong>105-110% sobre el PCI</strong>. Esto no viola la termodinámica: simplemente significa que se aprovecha más energía de la que se contabiliza en el PCI del combustible (que no incluye el calor latente del vapor). Para funcionar correctamente y aprovechar la condensación, necesita temperaturas de retorno bajas, idealmente <strong>inferiores a 57°C</strong>.</p>
+
+<div class="callout al-gold"><strong>📌 Pareja perfecta — caldera de condensación + suelo radiante:</strong> el suelo radiante trabaja con temperaturas de impulsión de 35-45°C, lo que garantiza que el retorno llegue frío a la caldera (30-38°C) y la condensación se produzca siempre. Esta combinación es la más eficiente posible en calefacción por agua caliente. El RITE exige calderas de condensación en instalaciones nuevas superiores a 70 kW.</div>
+
+<h3 class="subsection">Calderas de biomasa</h3>
+<p>Las calderas de biomasa queman combustible sólido de origen vegetal: pellets, astillas, cáscaras. Son consideradas energía renovable (emisiones de CO₂ neutras en el ciclo de vida). Requieren almacén de combustible y sistemas de alimentación automática. Su mantenimiento es más exigente que el de las calderas de gas. Son una alternativa competitiva en edificios con demanda térmica elevada y donde el suministro de biomasa está garantizado.</p>
+
+
+<h2 class="section-title" id="s3">3. Aerotermia: bomba de calor aire-agua</h2>
+<p>La <strong>aerotermia</strong> es la tecnología que extrae calor del aire exterior (incluso a temperaturas negativas) y lo transfiere al agua del circuito de calefacción. Se basa en el ciclo termodinámico de compresión de vapor: el fluido refrigerante absorbe calor del aire exterior en el evaporador, se comprime elevando su temperatura, cede ese calor al agua en el condensador, y se expande para comenzar de nuevo el ciclo.</p>
+
+<div class="callout al-teal"><strong>📌 Reconocida como energía renovable:</strong> el RD 178/2021 reconoció explícitamente la energía aerotérmica como fuente de energía renovable a efectos del RITE. Esto tiene implicaciones en la certificación energética de edificios y en el acceso a ayudas (programa MOVES, fondos Next Generation).</div>
+
+<h3 class="subsection">COP y SCOP</h3>
+<p>El <strong>COP</strong> (Coefficient of Performance) es la relación entre la energía térmica producida y la energía eléctrica consumida. Un COP de 3 significa que por cada 1 kWh eléctrico se producen 3 kWh de calor. El COP varía con las condiciones de operación: disminuye cuando la temperatura exterior baja y cuando la temperatura de impulsión requerida es alta.</p>
+<p>El <strong>SCOP</strong> (Seasonal COP) es el COP promedio a lo largo de toda la estación de calefacción, calculado según la norma EN 14825. Es el valor que exige el RITE para comparar equipos. Un equipo aerotérmico de alta eficiencia puede tener SCOP de 3,5-4,5 en condiciones europeas.</p>
+
+<h3 class="subsection">Ventajas e inconvenientes</h3>
+<ul>
+  <li><strong>Ventajas:</strong> energía renovable, muy eficiente (COP > 3), sin combustión, sin emisiones locales, fácil instalación (no requiere perforación), puede hacer frío en verano.</li>
+  <li><strong>Inconvenientes:</strong> el COP cae en días muy fríos (< -5°C), puede necesitar resistencia eléctrica de apoyo, genera condensado y ruido en la unidad exterior.</li>
+</ul>
+
+
+<h2 class="section-title" id="s4">4. Geotermia: bomba de calor con fuente en el terreno</h2>
+<p>La <strong>geotermia de baja entalpía</strong> utiliza el terreno o el agua subterránea como fuente de calor para una bomba de calor. A unos pocos metros de profundidad, el terreno mantiene una temperatura prácticamente constante a lo largo del año (entre 10 y 15°C en la mayor parte de España), lo que permite que la bomba de calor trabaje siempre en condiciones óptimas, independientemente de la temperatura exterior.</p>
+
+<h3 class="subsection">Tipos de captación</h3>
+<ul>
+  <li><strong>Captadores horizontales:</strong> tuberías enterradas en zanjas a 1-2 m de profundidad. Requieren una gran superficie de terreno disponible (10-15 m² por kW). Adecuados para viviendas unifamiliares con jardín.</li>
+  <li><strong>Sondas geotérmicas verticales:</strong> perforaciones de 50-200 m de profundidad. Requieren menos superficie. Adecuadas para edificios en zonas urbanas.</li>
+  <li><strong>Captación en agua subterránea (pozo abierto):</strong> se extrae agua del acuífero, se le extrae calor y se reinyecta. Muy eficiente pero requiere autorización de la Confederación Hidrográfica.</li>
+</ul>
+
+<div class="callout al-green"><strong>📌 Geotermia vs aerotermia en examen:</strong> el COP de la geotermia (4-6) es más alto y más estable que el de la aerotermia (2-4) porque la fuente de calor (terreno) no varía con el clima. La desventaja es el mayor coste de inversión (perforación) y los trámites administrativos. Para edificios nuevos con alta demanda y espacio disponible, la geotermia es la solución más eficiente a largo plazo.</div>
+
+
+<h2 class="section-title" id="s5">5. Bombas de circulación</h2>
+<p>Las <strong>bombas de circulación</strong> son los elementos que proporcionan la energía mecánica necesaria para vencer las pérdidas de carga del circuito hidráulico y mantener el agua en circulación. En una instalación de calefacción por agua, la bomba garantiza que el caudal necesario llegue a cada emisor.</p>
+<p>Los dos parámetros que definen una bomba son el <strong>caudal</strong> (m³/h o l/s) y la <strong>altura manométrica</strong> (m.c.a., metros de columna de agua). El <strong>punto de trabajo</strong> es la intersección entre la curva característica de la bomba y la curva de resistencia de la red. Una bomba sobredimensionada consume más energía de la necesaria y genera ruido.</p>
+
+<h3 class="subsection">Bombas de caudal variable (variador de frecuencia)</h3>
+<p>El RITE exige la instalación de bombas de caudal variable (con variador de frecuencia) en instalaciones de más de <strong>25 kW</strong>. La bomba adapta su velocidad a la demanda real del circuito. La <strong>ley de afinidad</strong> establece que si la velocidad se reduce a la mitad, el caudal se reduce a la mitad, pero la potencia consumida se reduce a un octavo (1/2³ = 1/8). Este ahorro energético puede alcanzar el 30-50% respecto a una bomba de velocidad fija.</p>
+
+<div class="callout al-blue"><strong>📌 Ley de afinidad — fórmula de examen:</strong> P₂/P₁ = (n₂/n₁)³. Si la velocidad baja al 50%, la potencia cae al 12,5%. Es la base del ahorro energético en bombas con variador de frecuencia.</div>
+
+
+<h2 class="section-title" id="s6">6. Tuberías de distribución y aislamiento térmico</h2>
+<p>Las tuberías de distribución llevan el agua caliente desde el generador hasta los emisores y devuelven el retorno. Los materiales más usados son el acero negro (soldado o roscado) para instalaciones de mayor tamaño, el cobre (soldado con estaño o prensado) muy extendido en viviendas y el polipropileno reticulado (PE-X, PE-RT) para suelo radiante y distribución de baja temperatura.</p>
+
+<h3 class="subsection">Aislamiento térmico</h3>
+<p>El <strong>RITE IT 1.2.4.2</strong> establece los espesores mínimos de aislamiento térmico para las tuberías de calefacción, en función del diámetro de la tubería, la temperatura del fluido y si la tubería discurre por el interior o el exterior del edificio. El aislamiento reduce las pérdidas de calor en la distribución, que pueden representar un porcentaje significativo del consumo total si las tuberías son largas o discurren por espacios no calentados.</p>
+<p>Los materiales de aislamiento más habituales son la <strong>espuma elastomérica</strong> (caucho sintético tipo Armaflex) para diámetros menores, y la <strong>lana mineral</strong> con revestimiento de aluminio o plástico para diámetros mayores y exteriores. Las tuberías de agua fría (circuitos de refrigeración) necesitan aislamiento para evitar la condensación superficial; si se detecta condensación, el aislamiento es insuficiente.</p>
+
+
+<h2 class="section-title" id="s7">7. Emisores de calor</h2>
+<p>Los <strong>emisores</strong> son los elementos terminales que transfieren el calor del agua al ambiente del local. La elección del tipo de emisor condiciona la temperatura de trabajo del circuito y, por tanto, la eficiencia del generador.</p>
+
+<h3 class="subsection">Radiadores</h3>
+<p>Los radiadores de panel de acero o aluminio son el emisor más extendido en viviendas. Trabajan con temperaturas de impulsión de 70-90°C y temperatura de retorno de 60-70°C (régimen 80/60). Emiten calor por convección natural (aire que circula por convección alrededor del panel) y por radiación infrarroja. Su inconveniente es que requieren altas temperaturas, lo que reduce el rendimiento de las calderas de condensación y hace inviable el uso eficiente de bombas de calor.</p>
+
+<h3 class="subsection">Suelo radiante</h3>
+<p>El <strong>suelo radiante</strong> es el emisor de máxima eficiencia energética en calefacción. Tuberías de plástico reticulado (PE-X) embebidas en el mortero del suelo transmiten calor de forma uniforme hacia arriba. Al tener una gran superficie de emisión, puede funcionar con temperaturas muy bajas (35-45°C de impulsión), lo que lo hace la pareja ideal de las calderas de condensación y las bombas de calor. Su desventaja es la inercia térmica alta: tarda tiempo en responder a cambios de temperatura.</p>
+
+<h3 class="subsection">Fancoils</h3>
+<p>El <strong>fancoil</strong> (unidad de ventilación con batería de agua) utiliza un ventilador para forzar el paso del aire por una batería de intercambio (agua caliente en invierno, agua fría en verano). Puede trabajar tanto en calefacción como en refrigeración. Los fancoils de <strong>2 tubos</strong> utilizan la misma red para calor y frío (no pueden dar ambos simultáneamente). Los de <strong>4 tubos</strong> tienen redes separadas y pueden dar calor y frío de forma simultánea en distintas zonas.</p>
+
+<h3 class="subsection">Otros emisores</h3>
+<ul>
+  <li><strong>Convectores:</strong> emisión exclusivamente por convección natural. Bajo coste pero menor confort que los radiadores.</li>
+  <li><strong>Radiación infrarroja:</strong> para naves industriales y espacios de gran altura donde la calefacción convectiva sería ineficiente. El calor se transmite directamente por radiación a las personas y superficies.</li>
+  <li><strong>Ventiloconvectores de techo:</strong> para grandes superficies.</li>
+</ul>
+
+
+<h2 class="section-title" id="s8">8. Regulación y control de la instalación de calefacción</h2>
+<p>La <strong>regulación</strong> es el conjunto de estrategias y dispositivos que ajustan el funcionamiento de la instalación para mantener el confort interior con el mínimo consumo energético posible.</p>
+
+<h3 class="subsection">Curva de calefacción (regulación por temperatura exterior)</h3>
+<p>La estrategia de regulación más eficiente en calefacción es la <strong>regulación por temperatura exterior</strong>, también llamada curva de compensación o curva de calefacción. El controlador (o el BMS) mide continuamente la temperatura exterior y ajusta la temperatura de impulsión del circuito de calefacción según una curva predefinida: cuando más frío hace fuera, más caliente es el agua que se envía a los emisores; cuando el exterior está templado, el agua se envía a menor temperatura. Esta estrategia evita el sobrecalentamiento en días suaves y es más eficiente que actuar solo por la temperatura interior.</p>
+
+<h3 class="subsection">Válvulas de regulación</h3>
+<ul>
+  <li><strong>Válvula de 3 vías mezcladora:</strong> mezcla agua caliente procedente de la caldera con agua de retorno fría del circuito para regular la temperatura de impulsión. Es el actuador más habitual del circuito de calefacción.</li>
+  <li><strong>Válvula de 3 vías desviadora:</strong> desvía el caudal entre dos circuitos según la demanda.</li>
+  <li><strong>Válvulas termoestáticas en radiadores:</strong> regulan el caudal de agua a través de cada radiador en función de la temperatura del local. Son obligatorias en instalaciones de más de 70 kW según el RITE.</li>
+  <li><strong>Válvulas de equilibrado:</strong> garantizan que cada ramal del circuito recibe el caudal de diseño, evitando que los emisores más cercanos a la bomba "roben" caudal a los más alejados.</li>
+</ul>
+
+<div class="callout al-orange"><strong>📌 Punto clave normativo:</strong> el RITE (IT 1.2.4.3) exige la instalación de válvulas termoestáticas en todos los emisores de instalaciones nuevas con potencia superior a 70 kW. En instalaciones existentes, su instalación es una mejora de eficiencia muy recomendada.</div>
+
+
+<h2 class="section-title" id="s9">9. Diseño y mantenimiento</h2>
+<h3 class="subsection">Diseño</h3>
+<p>El diseño de una instalación de calefacción parte del <strong>cálculo de la carga térmica</strong> del edificio: la máxima potencia de calefacción necesaria para mantener el confort en condiciones de diseño (temperatura exterior mínima de cálculo). Este cálculo se realiza según la norma UNE-EN 12831 y tiene en cuenta las pérdidas por transmisión a través de la envolvente y las pérdidas por ventilación e infiltraciones. La potencia del generador se selecciona para cubrir esta demanda máxima con un pequeño margen.</p>
+<p>A partir de la potencia total, se dimensionan los emisores de cada local, las tuberías (en función del caudal y la velocidad máxima admisible), las bombas (en función del caudal y las pérdidas de carga) y los elementos de seguridad y expansión (vaso de expansión, válvula de seguridad, purgadores).</p>
+
+<h3 class="subsection">Mantenimiento (RITE IT 3)</h3>
+<p>El <strong>RITE IT 3</strong> establece las operaciones de mantenimiento preventivo que deben realizarse en las instalaciones térmicas, así como su periodicidad. Las más relevantes son:</p>
+<ul>
+  <li>Instalaciones de potencia <strong>> 5 kW</strong>: el mantenimiento debe realizarlo un <strong>mantenedor autorizado</strong>.</li>
+  <li>Calderas de gas entre 5 y 70 kW: <strong>revisión anual</strong> por empresa mantenedora o por el titular si tiene habilitación.</li>
+  <li>Instalaciones entre 70 y 1.000 kW: <strong>revisión bienal</strong> por empresa mantenedora e <strong>inspección OCA cada 4 años</strong>.</li>
+  <li>Instalaciones > 1.000 kW: inspección OCA <strong>cada 2 años</strong>.</li>
+</ul>
+
+<div class="callout al-red"><strong>⚠ Los umbrales del RITE más preguntados:</strong> 5 kW (mantenedor obligatorio), 70 kW (proyecto técnico + caldera de condensación + GTC + válvulas termoestáticas), 25 kW (bombas de caudal variable). Memoriza estos tres valores y lo que obligan.</div>
+
+
+<h2 class="section-title" id="s10">10. Eficiencia energética en calefacción</h2>
+<p>La eficiencia energética en una instalación de calefacción se mejora actuando en los tres eslabones de la cadena: la <strong>generación</strong> (que el generador consuma lo menos posible por unidad de calor producido), la <strong>distribución</strong> (que las pérdidas en las tuberías sean mínimas) y la <strong>emisión</strong> (que el calor se entregue exactamente donde y cuando se necesita).</p>
+<ul>
+  <li><strong>Generación:</strong> caldera de condensación (>100% rendimiento PCI) o bomba de calor aerotérmica/geotérmica (COP 3-6). La bomba de calor es la solución más eficiente en instalaciones nuevas.</li>
+  <li><strong>Distribución:</strong> aislamiento correcto de tuberías según RITE IT 1.2.4.2. Bombas con variador de frecuencia (obligatorio > 25 kW).</li>
+  <li><strong>Emisión:</strong> suelo radiante (baja temperatura → mayor COP) + válvulas termoestáticas por zona.</li>
+  <li><strong>Regulación:</strong> curva de calefacción por temperatura exterior + programación horaria (no calentar zonas vacías).</li>
+</ul>
+
+<div class="callout al-green"><strong>📌 La combinación más eficiente:</strong> bomba de calor aerotérmica + suelo radiante + regulación por temperatura exterior + bombas con variador de frecuencia. Esta combinación puede reducir el consumo de calefacción hasta un 60-70% respecto a una instalación convencional de caldera y radiadores.</div>
+
+
+<h2 class="section-title" id="s11">11. Normativa aplicable</h2>
+<ul>
+  <li><strong>RITE (RD 1027/2007):</strong> Reglamento de Instalaciones Térmicas en los Edificios. Norma principal. Regula diseño, instalación, mantenimiento y eficiencia.</li>
+  <li><strong>RD 178/2021:</strong> reconoce la aerotermia como energía renovable. Modifica el RITE.</li>
+  <li><strong>RD 235/2013:</strong> Certificado de Eficiencia Energética (CEE). Obligatorio en compraventa y arrendamiento de inmuebles.</li>
+  <li><strong>Directiva EPBD (2018/844/UE):</strong> eficiencia energética de edificios. Obligación de BACS en edificios no residenciales con HVAC > 290 kW desde 2025.</li>
+  <li><strong>UNE-EN 12831:</strong> cálculo de la carga térmica de calefacción.</li>
+  <li><strong>UNE-EN 303:</strong> requisitos para calderas de calefacción.</li>
+  <li><strong>UNE-EN 14511:</strong> equipos de climatización, bombas de calor y enfriadoras. Condiciones de ensayo y rendimientos.</li>
+  <li><strong>UNE-EN 14825:</strong> condiciones de carga parcial y cálculo del SCOP/SEER estacional.</li>
+  <li><strong>RD 487/2022:</strong> Legionella. Afecta a circuitos de ACS y torres de refrigeración que puedan estar vinculados a instalaciones de calefacción con circuito de ACS integrado.</li>
+</ul>
+
+<div class="callout al-purple"><strong>📌 Contexto Navarra:</strong> la Comunidad Foral de Navarra incorpora las exigencias del RITE mediante la Ordenanza de Construcción y normativas autonómicas de eficiencia energética. Los edificios de titularidad pública tienen obligaciones adicionales de certificación y mejora energética en el marco del PNIEC (Plan Nacional Integrado de Energía y Clima 2021-2030).</div>
+
+</body>
+</html>

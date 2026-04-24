@@ -1,0 +1,116 @@
+PUNTOS CLAVE — TEMA 11: SISTEMAS DE CONTROL CENTRALIZADO EN EDIFICIOS (BMS/BAS/GTE)
+Gestor de Mantenimiento (Nivel B) · UPNA · Oposición
+
+════════════════════════════════════════════════════════
+1. DEFINICIÓN Y TERMINOLOGÍA
+════════════════════════════════════════════════════════
+01. BMS = Building Management System. Sistema de Gestión de Edificios. Nombre más extendido internacionalmente.
+02. BAS = Building Automation System. Sistema de Automatización del Edificio. Énfasis en el control automático.
+03. GTE = Gestión Técnica del Edificio. Término más habitual en la normativa española (RITE).
+04. SCADA = Supervisory Control and Data Acquisition. Se usa en entornos industriales; el BMS es su equivalente en edificios.
+05. EMS = Energy Management System. Puede ser un módulo del BMS o un sistema independiente de gestión energética.
+06. Los términos BMS, BAS y GTE se usan como sinónimos en la mayoría de los contextos de examen.
+
+════════════════════════════════════════════════════════
+2. NORMATIVA APLICABLE
+════════════════════════════════════════════════════════
+07. RITE (RD 1027/2007 y sus modificaciones): establece los requisitos de eficiencia energética de instalaciones térmicas.
+08. RD 178/2021: modificación del RITE que introduce la OBLIGATORIEDAD del BMS en edificios no residenciales.
+09. IT 1.2.4.3 del RITE: exige sistemas de control y regulación en instalaciones térmicas según la potencia.
+10. Edificios nuevos no residenciales > 290 kW de potencia: BMS OBLIGATORIO (RD 178/2021 + Directiva 2018/844/UE).
+11. CTE HE 0 y HE 2: límites de consumo energético en edificios nuevos, cuyo cumplimiento se justifica con el BMS.
+12. ISO 50001: norma de sistemas de gestión de la energía. El BMS es la herramienta operativa para cumplirla.
+13. Directiva 2018/844/UE (EPBD): obliga a los EEMM a incorporar sistemas de automatización en edificios no residenciales.
+
+════════════════════════════════════════════════════════
+3. ARQUITECTURA Y NIVELES DEL BMS
+════════════════════════════════════════════════════════
+14. El BMS tiene arquitectura de 3 niveles: campo (sensores/actuadores) → control (PLCs/DDC) → gestión (servidor/HMI).
+15. Nivel de campo (nivel 1): sensores (temperatura, humedad, CO2, presencia, luz) y actuadores (válvulas, motores, dimmers).
+16. Nivel de control (nivel 2): controladores DDC (Direct Digital Control) o PLC (Programmable Logic Controller). Ejecutan la lógica de control.
+17. Nivel de gestión (nivel 3): servidor central + interfaz HMI (Human Machine Interface). Visualización, informes, alarmas.
+18. DDC = Direct Digital Control. El tipo de controlador más habitual en BMS modernos. Control digital directo.
+
+════════════════════════════════════════════════════════
+4. PROTOCOLOS DE COMUNICACIÓN
+════════════════════════════════════════════════════════
+19. BACnet: el protocolo abierto más extendido en BMS. Estándar ASHRAE 135 e ISO 16484-5. Permite interoperabilidad entre equipos de distintos fabricantes.
+20. Modbus: protocolo abierto, sencillo, muy extendido en equipos industriales y de medida. Modbus TCP sobre Ethernet.
+21. KNX: protocolo estándar europeo (EN 50090) para automatización de edificios (iluminación, persianas, clima). Muy común en residencial y terciario.
+22. LonWorks (LonTalk): protocolo de comunicación para control distribuido. Menos extendido que BACnet en nuevas instalaciones.
+23. DALI (Digital Addressable Lighting Interface): protocolo específico para control de iluminación. Cada luminaria tiene dirección individual.
+24. M-Bus: protocolo para teleconteo de contadores (agua, gas, electricidad, calor). Muy usado para gestión energética.
+25. OPC UA: protocolo de interoperabilidad entre sistemas industriales y de edificios, basado en arquitectura cliente-servidor.
+26. BACnet es "EL protocolo del BMS". Si el examen pregunta el protocolo estándar del BMS → BACnet.
+
+════════════════════════════════════════════════════════
+5. COMPONENTES DEL BMS
+════════════════════════════════════════════════════════
+27. SENSORES (entradas): temperatura, humedad relativa, CO2, presencia/ocupación, luz natural (luxómetro), caudal, presión, contador de energía.
+28. ACTUADORES (salidas): válvulas de control (todo-nada o modulantes), variadores de frecuencia (VFD) en motores, dimmers de iluminación, dampers (compuertas de aire).
+29. CONTROLADORES: DDC, PLC, unidades de control de zona (UCZ). Ejecutan los algoritmos de control (PID, secuencias lógicas).
+30. INTERFAZ HMI: pantalla o software de supervisión (sinópticos del edificio, históricos de alarmas, informes de consumo).
+31. RED DE COMUNICACIONES: cableado BUS (par trenzado, cable RS-485, CAN bus) o Ethernet/IP. Protocolo BACnet, Modbus o KNX.
+32. SERVIDOR CENTRAL: almacena el histórico de datos, gestiona las alarmas, genera informes y permite el acceso remoto.
+
+════════════════════════════════════════════════════════
+6. SISTEMAS CONTROLADOS POR EL BMS
+════════════════════════════════════════════════════════
+33. HVAC (climatización): el subsistema que más consumen los edificios y el más importante del BMS.
+34. Iluminación: control por zonas, sensores de presencia, regulación según luz natural, programación horaria.
+35. Persianas y control solar: automatización en función de la radiación solar para reducir la carga de refrigeración.
+36. Control de accesos y seguridad: integración con CCTV, control de puertas y alarmas de intrusión.
+37. Instalaciones de fontanería: monitorización de contadores de agua, detección de fugas.
+38. Grupos electrógenos y SAI: supervisión del estado y activación automática.
+39. Energías renovables: gestión de la producción fotovoltaica y almacenamiento en baterías.
+40. Contadores de energía: lectura automática (M-Bus o Modbus) para el seguimiento del consumo por sistemas.
+
+════════════════════════════════════════════════════════
+7. FUNCIONES Y MODO DE FUNCIONAMIENTO
+════════════════════════════════════════════════════════
+41. Control PID: algoritmo de control proporcional-integral-derivativo que regula las variables (temperatura, presión) manteniendo el setpoint.
+42. Programación horaria: encender/apagar sistemas según horarios de ocupación. Evita consumo fuera del horario de uso.
+43. Control por zonas: diferentes temperaturas o iluminaciones en diferentes áreas del edificio según su uso.
+44. Free-cooling: el BMS abre las compuertas de aire exterior cuando la temperatura exterior es favorable, evitando activar la máquina de frío.
+45. Optimización del arranque (BEMS): el BMS calcula la hora de arranque óptima de la climatización para que el edificio esté a temperatura cuando llegan los ocupantes, sin anticipar en exceso.
+46. Gestión de alarmas: el BMS genera alarmas cuando un parámetro supera sus límites y las envía al operador (email, SMS, app).
+47. Trending/históricos: el BMS registra los valores de todas las variables a lo largo del tiempo. Permite análisis energético y diagnóstico de problemas.
+48. Integración con GMAO: las alarmas del BMS pueden generar automáticamente OT correctivas en el GMAO.
+
+════════════════════════════════════════════════════════
+8. VENTAJAS DEL BMS
+════════════════════════════════════════════════════════
+49. Ahorro energético: 10-30% de reducción del consumo energético en HVAC e iluminación (fuente: ASHRAE, Comisión Europea).
+50. Confort de los ocupantes: temperatura, humedad, CO2 y iluminación controlados de forma constante y adaptativa.
+51. Mantenimiento proactivo: la monitorización continua permite detectar desviaciones del funcionamiento antes de que causen averías.
+52. Gestión centralizada: un solo operador puede controlar todo el edificio desde un único puesto de trabajo (o remotamente).
+53. Trazabilidad y cumplimiento normativo: el BMS genera los registros que exige el RITE (IT 1.2.4.3) y justifica el cumplimiento del CTE HE.
+54. Mayor vida útil de los equipos: el BMS evita funcionamientos fuera de rango que aceleran el deterioro.
+55. Integración de renovables: gestiona la generación fotovoltaica y el almacenamiento para maximizar el autoconsumo.
+
+════════════════════════════════════════════════════════
+9. EFICIENCIA ENERGÉTICA
+════════════════════════════════════════════════════════
+56. El HVAC es el mayor consumidor de energía en edificios: 40-60% del consumo total del edificio.
+57. El BMS puede reducir el consumo de HVAC entre un 13% y un 30% con estrategias de control avanzadas.
+58. La iluminación representa el 20-30% del consumo. El control inteligente puede reducirla en un 40-70%.
+59. Free-cooling: estrategia de enfriamiento gratuito usando aire exterior cuando T exterior < T impulsión necesaria.
+60. Setpoint reset: el BMS ajusta dinámicamente la temperatura de impulsión del agua según la demanda real, ahorrando energía en generación.
+61. Control VAV (Variable Air Volume): el BMS regula el caudal de aire según la ocupación real de cada zona.
+62. SCP (Sistema de Control de la Potencia de Iluminación): exigido por el RITE para instalaciones grandes. Puede ser un módulo del BMS.
+
+════════════════════════════════════════════════════════
+10. LO MÁS PREGUNTADO EN OPOSICIÓN — TEMA 11
+════════════════════════════════════════════════════════
+A. ¿Qué es el BMS? → Sistema de Gestión de Edificios (Building Management System). Sinónimo: BAS, GTE.
+B. ¿Cuándo es obligatorio el BMS? → Edificios no residenciales de nueva construcción >290 kW (RD 178/2021).
+C. ¿Cuál es el protocolo estándar del BMS? → BACnet (ASHRAE 135 / ISO 16484-5).
+D. ¿Qué protocol se usa para iluminación? → DALI.
+E. ¿Qué protocol se usa para contadores? → M-Bus.
+F. ¿Qué es un DDC? → Direct Digital Control. El tipo de controlador más habitual en BMS.
+G. ¿Qué es el free-cooling? → Enfriamiento usando aire exterior cuando T ext < T necesaria. Sin máquina de frío.
+H. ¿Qué es el control PID? → Proporcional-Integral-Derivativo. Algoritmo de regulación que mantiene el setpoint.
+I. ¿Cuántos niveles tiene la arquitectura del BMS? → 3: campo, control y gestión.
+J. ¿Qué norma de energía se vincula al BMS? → ISO 50001.
+K. ¿Qué certificaciones verdes pueden requerir BMS? → LEED, BREEAM.
+L. ¿Qué hace el setpoint reset? → Ajusta dinámicamente la temperatura de impulsión según la demanda real.
