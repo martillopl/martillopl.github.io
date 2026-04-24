@@ -1,0 +1,542 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 9 – Texto explicativo · Aparatos elevadores y puertas automáticas</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#f5f7fa;--surface:#fff;--surface-2:#f8f9fb;
+    --border:#ccd3de;--divider:#d8dde8;
+    --text:#1a2233;--muted:#4e5f7a;--faint:#8a9abb;
+    --teal:#00707a;--teal-lt:#ccedf0;
+    --blue:#0d4f8b;--blue-lt:#dceaf7;--blue-dk:#082f57;
+    --green:#1a6633;--green-lt:#d4eedd;
+    --gold:#c47d00;--gold-lt:#faefd0;
+    --orange:#8b3a0d;--orange-lt:#fce8d8;
+    --purple:#5b3690;--purple-lt:#ece4f8;
+    --red:#8b1a1a;--red-lt:#fde8e8;
+    --flame:#c0392b;
+    --font-d:'Cabinet Grotesk',sans-serif;
+    --font-b:'Satoshi',sans-serif;
+    --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;scroll-padding-top:4rem;}
+  body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.92rem;line-height:1.75;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 5rem;}
+
+  /* NAV */
+  .file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+  .file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s;}
+  .file-nav a:hover,.file-nav a.active{background:var(--flame);color:white;border-color:var(--flame);}
+
+  /* HEADER */
+  .page-header{background:linear-gradient(135deg,#1a3a6b 0%,#0d2247 100%);color:white;border-radius:var(--r-xl);padding:2rem 2.5rem;margin-bottom:2rem;}
+  .page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;}
+  .page-header h1{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800;line-height:1.2;margin-bottom:.4rem;}
+  .page-header .sub{font-size:.83rem;opacity:.8;}
+
+  /* ÍNDICE */
+  .toc{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:1.25rem 1.5rem;margin-bottom:2rem;border-left:4px solid var(--blue);}
+  .toc-title{font-family:var(--font-d);font-weight:800;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin-bottom:.75rem;}
+  .toc ol{padding-left:1.3rem;}
+  .toc li{font-size:.83rem;margin-bottom:.2rem;}
+  .toc a{color:var(--blue);text-decoration:none;}
+  .toc a:hover{text-decoration:underline;}
+
+  /* SECTION */
+  .section-block{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:1.75rem 2rem;margin-bottom:1.5rem;box-shadow:0 1px 4px rgba(0,0,0,.04);}
+  .section-block h2{font-family:var(--font-d);font-size:1.15rem;font-weight:800;margin-bottom:1rem;padding-bottom:.6rem;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:.5rem;}
+  .section-block h3{font-family:var(--font-d);font-size:.97rem;font-weight:800;margin:1.25rem 0 .5rem;color:var(--blue);}
+  .section-block h4{font-family:var(--font-d);font-size:.88rem;font-weight:800;margin:.9rem 0 .35rem;color:var(--muted);}
+  .section-block p{margin-bottom:.85rem;max-width:72ch;}
+  .section-block p:last-child{margin-bottom:0;}
+  .section-block ul,.section-block ol{padding-left:1.4rem;margin-bottom:.85rem;}
+  .section-block li{margin-bottom:.3rem;font-size:.9rem;}
+  .section-block strong{font-weight:700;}
+
+  /* NUMBER BADGE */
+  .num-badge{display:inline-flex;align-items:center;justify-content:center;width:1.6rem;height:1.6rem;border-radius:50%;font-family:var(--font-d);font-weight:800;font-size:.78rem;flex-shrink:0;}
+  .nb-blue  {background:var(--blue);   color:white;}
+  .nb-flame {background:var(--flame);  color:white;}
+  .nb-teal  {background:var(--teal);   color:white;}
+  .nb-green {background:var(--green);  color:white;}
+  .nb-gold  {background:var(--gold);   color:white;}
+  .nb-orange{background:var(--orange); color:white;}
+  .nb-purple{background:var(--purple); color:white;}
+
+  /* CALLOUTS */
+  .callout{border-radius:var(--r-md);padding:.85rem 1.1rem;font-size:.85rem;margin:1rem 0;line-height:1.6;}
+  .al-norm  {background:var(--blue-lt); border-left:3px solid var(--blue);}
+  .al-trap  {background:var(--red-lt);  border-left:3px solid var(--flame);}
+  .al-key   {background:var(--teal-lt); border-left:3px solid var(--teal);}
+  .al-warn  {background:#fff7ed;        border-left:3px solid var(--orange);}
+  .al-green {background:var(--green-lt);border-left:3px solid var(--green);}
+  .al-purple{background:var(--purple-lt);border-left:3px solid var(--purple);}
+  .al-gold  {background:var(--gold-lt); border-left:3px solid var(--gold);}
+  .callout strong{font-weight:800;}
+
+  /* CHIPS */
+  .chip{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:2px 8px;border-radius:999px;margin-left:.5rem;vertical-align:middle;}
+  .ch-flame {background:var(--red-lt); color:var(--flame);}
+  .ch-blue  {background:var(--blue-lt);color:var(--blue-dk);}
+  .ch-green {background:var(--green-lt);color:var(--green);}
+  .ch-teal  {background:var(--teal-lt);color:var(--teal);}
+  .ch-gold  {background:var(--gold-lt);color:#7a4e00;}
+  .ch-purple{background:var(--purple-lt);color:var(--purple);}
+  .ch-grey  {background:#eef0f5;color:var(--muted);}
+
+  /* DEFINITION BOX */
+  .def-box{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-lg);padding:1rem 1.25rem;margin:1rem 0;}
+  .def-box .def-term{font-family:var(--font-d);font-weight:800;font-size:.92rem;color:var(--blue);margin-bottom:.3rem;}
+  .def-box .def-body{font-size:.87rem;color:var(--text);}
+
+  /* GRID 2 */
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0;}
+  .grid-col{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-lg);padding:1rem 1.1rem;}
+  .grid-col .gc-head{font-family:var(--font-d);font-weight:800;font-size:.88rem;margin-bottom:.4rem;}
+
+  /* SEPARATOR */
+  .sep{height:1px;background:var(--divider);margin:1.5rem 0;}
+
+  @media(max-width:640px){
+    .grid-2{grid-template-columns:1fr;}
+    .section-block{padding:1.25rem 1.1rem;}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo.html" class="active">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </div>
+
+<!-- HEADER -->
+<div class="page-header">
+  <div class="meta">Tema 9 · Gestor de Mantenimiento (Nivel B) · UPNA · Texto explicativo</div>
+  <h1>Aparatos elevadores y puertas automáticas.<br>Tipologías y mantenimiento. Normativa aplicable.</h1>
+  <div class="sub">Desarrollo narrativo completo para comprensión y estudio · Normativa vigente a abril 2026</div>
+</div>
+
+<!-- ÍNDICE -->
+<div class="toc">
+  <div class="toc-title">Índice de contenidos</div>
+  <ol>
+    <li><a href="#s1">Marco normativo — qué norma regula qué</a></li>
+    <li><a href="#s2">Tipologías de aparatos elevadores</a></li>
+    <li><a href="#s3">Tipos de ascensores: tracción, uso y componentes de seguridad</a></li>
+    <li><a href="#s4">Mantenimiento de ascensores e inspección por OCA</a></li>
+    <li><a href="#s5">Modernización de ascensores: RD 355/2024</a></li>
+    <li><a href="#s6">Tipologías de puertas automáticas</a></li>
+    <li><a href="#s7">Sistemas de detección y seguridad en puertas automáticas</a></li>
+    <li><a href="#s8">Mantenimiento de puertas automáticas</a></li>
+    <li><a href="#s9">Accesibilidad: UNE-EN 81-70</a></li>
+  </ol>
+</div>
+
+
+<!-- ══════════════════════════════════
+     SECCIÓN 1: NORMATIVA
+═══════════════════════════════════ -->
+<div class="section-block" id="s1">
+  <h2><span class="num-badge nb-blue">1</span> Marco normativo — qué norma regula qué</h2>
+
+  <p>La regulación de los aparatos elevadores en España se articula en torno al <strong>Reglamento de Aparatos de Elevación y Manutención (RAEM), aprobado por el RD 2291/1985</strong>. Este reglamento actúa como norma "paraguas" para todos los equipos de elevación y manutención: establece los requisitos generales de seguridad, los procedimientos de puesta en servicio, las obligaciones de mantenimiento y la responsabilidad del propietario. El desarrollo técnico pormenorizado se realiza a través de Instrucciones Técnicas Complementarias (ITC) para cada tipo de aparato.</p>
+
+  <div class="callout al-norm">
+    <strong>📋 Norma principal:</strong> RD 2291/1985 — Reglamento de Aparatos de Elevación y Manutención (RAEM). Es la norma "paraguas". De ella cuelgan las ITC (Instrucciones Técnicas Complementarias) para cada tipo de aparato.
+  </div>
+
+  <h3>La ITC AEM 1 "Ascensores": evolución normativa clave de examen</h3>
+
+  <p>La Instrucción Técnica Complementaria más relevante para los ascensores es la <strong>ITC AEM 1</strong>. Durante años estuvo regulada por el <strong>RD 88/2013</strong>, que establecía los requisitos técnicos de mantenimiento, modificación, puesta en servicio e inspección de ascensores existentes. Sin embargo, el <strong>RD 355/2024, de 2 de abril</strong>, aprobó una nueva ITC AEM 1 que entró en vigor el <strong>1 de julio de 2024</strong>, derogando y sustituyendo al RD 88/2013 en sus aspectos técnicos.</p>
+
+  <div class="callout al-trap">
+    <strong>⚠ Trampa nº 1 — LA MÁS FRECUENTE EN EXAMEN:</strong> muchos temarios y apuntes de oposición citan el <strong>RD 88/2013</strong> como la norma vigente para ascensores. Desde el 1 de julio de 2024, la norma vigente es el <strong>RD 355/2024</strong>. Si el examen propone el RD 88/2013 como norma de referencia actualmente en vigor → respuesta <strong>desactualizada e incorrecta</strong>.
+  </div>
+
+  <p>Junto a la ITC AEM 1, el otro pilar normativo es el <strong>RD 203/2016</strong>, que implementa la Directiva Europea de Ascensores (2014/33/UE) y regula los requisitos esenciales de seguridad para la <em>comercialización</em> de ascensores y sus componentes de seguridad. La diferencia conceptual es importante: el RD 203/2016 aplica a ascensores <strong>nuevos que se ponen en el mercado</strong> (marcado CE, declaración de conformidad), mientras que el RD 355/2024 aplica al <strong>mantenimiento, inspección y modernización</strong> de ascensores en servicio (tanto nuevos como existentes).</p>
+
+  <div class="callout al-norm">
+    <strong>📋 Diferencia clave:</strong><br>
+    · <strong>RD 203/2016</strong> = puesta en mercado de ascensores NUEVOS (marcado CE). Directiva Europea.<br>
+    · <strong>RD 355/2024</strong> (ITC AEM 1) = mantenimiento e inspección de ascensores en servicio.
+  </div>
+
+  <h3>Normativa para otros aparatos elevadores: no todo es la ITC AEM 1</h3>
+
+  <p>Una confusión habitual en examen es aplicar la normativa de ascensores a todos los aparatos elevadores. La ITC AEM 1 aplica <strong>exclusivamente a los ascensores</strong>. Las escaleras mecánicas, los pasillos rodantes, los montacargas sin acceso de personas y las plataformas elevadoras tienen su propia regulación. Las <strong>escaleras mecánicas y pasillos rodantes</strong> se rigen por la norma UNE-EN 115, y al ser máquinas en el sentido de la Directiva 2006/42/CE, les aplica el <strong>RD 1644/2008</strong> sobre comercialización y puesta en servicio de máquinas.</p>
+
+  <div class="callout al-trap">
+    <strong>⚠ Trampa nº 2:</strong> las escaleras mecánicas <strong>NO son ascensores</strong>. No les aplica la ITC AEM 1. Son máquinas reguladas por el RD 1644/2008 y la norma técnica UNE-EN 115. Este error aparece con frecuencia en las opciones de respuesta de tipo test.
+  </div>
+
+  <h3>Normas técnicas UNE de referencia</h3>
+
+  <p>Junto a los Reales Decretos, el diseño y la seguridad de ascensores y puertas automáticas se regulan a través de normas técnicas UNE de obligado cumplimiento cuando son referenciadas por la reglamentación:</p>
+
+  <ul>
+    <li><strong>UNE-EN 81-20:</strong> reglas de seguridad para el diseño y construcción de ascensores de pasajeros y mixtos nuevos. Sustituyó a las antiguas UNE-EN 81-1 (eléctricos) y UNE-EN 81-2 (hidráulicos) desde 2014.</li>
+    <li><strong>UNE-EN 81-50:</strong> métodos de cálculo y ensayo para componentes de seguridad de ascensores.</li>
+    <li><strong>UNE-EN 81-70:</strong> accesibilidad en ascensores para personas, incluyendo personas con discapacidad. Define dimensiones mínimas de cabina, botoneras, señalización y tiempos de apertura de puertas.</li>
+    <li><strong>UNE-EN 81-80:</strong> mejora de la seguridad en ascensores existentes. Proporciona el marco técnico para las modernizaciones exigidas por el RD 355/2024.</li>
+    <li><strong>UNE-EN 115:</strong> seguridad en escaleras mecánicas y pasillos rodantes.</li>
+    <li><strong>UNE-EN 16005:</strong> puertas peatonales con accionamiento eléctrico. Regula velocidades, fuerzas, dispositivos de seguridad y zonas de detección.</li>
+    <li><strong>UNE 85635:</strong> puertas industriales, comerciales, de garaje y portones. Requisitos de instalación y mantenimiento.</li>
+    <li><strong>UNE 23740-1:</strong> puertas cortafuegos. Instalación, uso y mantenimiento.</li>
+  </ul>
+</div>
+
+
+<!-- ══════════════════════════════════
+     SECCIÓN 2: TIPOLOGÍAS APARATOS ELEVADORES
+═══════════════════════════════════ -->
+<div class="section-block" id="s2">
+  <h2><span class="num-badge nb-blue">2</span> Tipologías de aparatos elevadores</h2>
+
+  <p>El término "aparato elevador" engloba una familia amplia de equipos cuya función es desplazar personas o cargas entre distintos niveles. La clasificación más operativa para el examen distingue los siguientes tipos:</p>
+
+  <h3>Ascensores</h3>
+  <p>Son los aparatos de elevación diseñados para transportar <strong>personas</strong> (y eventualmente mercancías junto a personas) entre plantas de un edificio. Están sometidos a la regulación más exigente: ITC AEM 1 (RD 355/2024) y norma UNE-EN 81-20. Su uso está generalizado en edificios residenciales, oficinas, hospitales, hoteles y centros comerciales.</p>
+
+  <h3>Montacargas</h3>
+  <p>Transportan <strong>exclusivamente mercancías</strong>. Las personas no pueden acceder a la cabina durante el funcionamiento normal. Existen montacargas con "acceso restringido" donde el operario puede entrar para cargar o descargar, pero no pueden usarse como transporte de personas de forma habitual. Si un montacargas se usa para transportar personas de forma regular, debe cumplir todos los requisitos de un ascensor.</p>
+
+  <div class="callout al-trap">
+    <strong>⚠ Trampa:</strong> un montacargas <strong>NO puede transportar personas</strong> habitualmente. Si lo hace, debe cumplir la normativa de ascensores (ITC AEM 1). Esta distinción aparece frecuentemente en preguntas de tipo test.
+  </div>
+
+  <h3>Plataformas elevadoras para personas con movilidad reducida (PMR)</h3>
+  <p>Son alternativas al ascensor en edificios donde no es posible instalar uno por falta de espacio o por ser edificios históricos protegidos. Pueden ser <strong>verticales</strong> (desplazan verticalmente entre dos niveles) o <strong>inclinadas</strong> (denominadas salvaescaleras, se desplazan a lo largo de una escalera existente). Al ser máquinas en el sentido de la Directiva Máquinas, se rigen por el RD 1644/2008, no por la ITC AEM 1.</p>
+
+  <h3>Escaleras mecánicas y pasillos rodantes</h3>
+  <p>Las <strong>escaleras mecánicas</strong> son cintas escalonadas motorizadas que desplazan personas de forma continua entre plantas. Los <strong>pasillos rodantes</strong> son superficies planas en movimiento utilizadas en aeropuertos, grandes hospitales y centros comerciales para acortar distancias horizontales. Ambos se rigen por la norma UNE-EN 115 y por el RD 1644/2008 (normativa de máquinas), no por la ITC AEM 1.</p>
+
+  <h3>Grúas-torre y aparatos de manutención industrial</h3>
+  <p>Las grúas-torre se utilizan en obras de construcción para elevar materiales. Se regulan por el RD 1644/2008 y el <strong>RD 836/2003</strong> (Instrucción Técnica Complementaria ITC MIE-AEM-2, específica para grúas-torre). Los aparatos de manutención industrial (puentes grúa, polipastos, carretillas elevadoras) también caen bajo normativa de máquinas.</p>
+</div>
+
+
+<!-- ══════════════════════════════════
+     SECCIÓN 3: TIPOS DE ASCENSORES
+═══════════════════════════════════ -->
+<div class="section-block" id="s3">
+  <h2><span class="num-badge nb-blue">3</span> Tipos de ascensores: tracción, uso y componentes de seguridad</h2>
+
+  <h3>Por sistema de tracción</h3>
+
+  <p>La clasificación más habitual de los ascensores es por su sistema de accionamiento, que determina sus características técnicas, el espacio necesario y sus aplicaciones más adecuadas.</p>
+
+  <div class="def-box">
+    <div class="def-term">🔵 Ascensor eléctrico con máquina de tracción (cables y poleas)</div>
+    <div class="def-body">El motor eléctrico mueve una polea sobre la que pasan los cables de acero. Un lado de los cables soporta la cabina y el otro lado el contrapeso. El contrapeso tiene un peso equivalente al de la cabina vacía más el 40-50% de la carga nominal, lo que reduce considerablemente la potencia que debe aportar el motor. Es el tipo más eficiente y extendido en edificios de media y gran altura.</div>
+  </div>
+
+  <p>Dentro de los ascensores eléctricos de tracción, la distinción más importante para el examen es entre los que tienen <strong>cuarto de máquinas</strong> y los que no lo tienen (<strong>MRL, Machine Room Less</strong>). Los ascensores tradicionales disponían de un cuarto de máquinas generalmente en la parte superior del hueco, donde se alojaban el motor, el reductor, el limitador de velocidad y el cuadro de control. Los ascensores MRL integran toda la maquinaria en la cabeza del hueco o en la propia cabina, eliminando el cuarto de máquinas y ahorrando espacio. <strong>El MRL es el tipo más extendido en instalaciones nuevas.</strong></p>
+
+  <div class="def-box">
+    <div class="def-term">💧 Ascensor hidráulico</div>
+    <div class="def-body">Un cilindro hidráulico empuja la cabina hacia arriba. Puede ser de pistón directo (el cilindro está enterrado bajo la cabina) o indirecto (con poleas intermedias que multiplican el recorrido). La central hidráulica (motor + bomba + depósito de aceite) puede ubicarse en planta baja o semisótano, sin necesitar cuarto de máquinas en altura. <strong>Ventaja principal:</strong> es posible instalarlo en huecos con muy poco espacio por encima o sin foso profundo. <strong>Desventaja principal:</strong> el motor solo trabaja en el recorrido de subida (al bajar, la válvula simplemente deja salir el aceite del cilindro), lo que supone mayor consumo eléctrico global. La velocidad máxima habitual es 0,6-1 m/s, más baja que los eléctricos. Existe riesgo de fuga de aceite hidráulico.</div>
+  </div>
+
+  <div class="callout al-key">
+    <strong>📌 Cuándo elegir hidráulico:</strong> edificios de baja altura (2 a 4 plantas), reformas en edificios sin foso o con foso poco profundo, viviendas unifamiliares donde no se puede perforar el terreno para el cilindro directo (se usa entonces el sistema indirecto con poleas).
+  </div>
+
+  <div class="def-box">
+    <div class="def-term">💨 Ascensor neumático (de vacío)</div>
+    <div class="def-body">La cabina asciende gracias a la diferencia de presión de aire entre la parte inferior (presión atmosférica normal) y la parte superior (presión reducida creada por un compresor). Para bajar, se igualan las presiones. El diseño es muy compacto: no necesita foso, ni cuarto de máquinas, ni cables. Es transparente (cilindro acrílico). Uso principalmente en viviendas unifamiliares y pequeñas reformas donde la carga de pasajeros es muy limitada (1-3 personas). Su mayor desventaja es la baja capacidad de carga y el coste elevado.</div>
+  </div>
+
+  <h3>Por uso</h3>
+
+  <ul>
+    <li><strong>Ascensor de pasajeros estándar:</strong> el más extendido. Edificios residenciales, oficinas, hoteles, centros comerciales.</li>
+    <li><strong>Ascensor panorámico:</strong> cabina o paredes del hueco acristaladas, con fin decorativo. Mismos requisitos de seguridad que el de pasajeros. Uso en hoteles, centros comerciales y edificios corporativos singulares.</li>
+    <li><strong>Ascensor de cama o de camillas:</strong> uso hospitalario y en residencias de mayores. La cabina tiene mayor profundidad (mínimo 2.100 mm) para alojar camillas o camas en posición horizontal. La puerta suele ser de dos hojas que abren a ambos lados para permitir la entrada frontal de la camilla.</li>
+    <li><strong>Ascensor para PMR (UNE-EN 81-70):</strong> con dimensiones de cabina y accesorios específicos para el acceso de personas en silla de ruedas. Se desarrolla en detalle en la Sección 9.</li>
+  </ul>
+
+  <h3>Componentes de seguridad obligatorios (examinables)</h3>
+
+  <p>La ITC AEM 1 y la norma UNE-EN 81-20 exigen una serie de dispositivos de seguridad en todo ascensor. Estos son los que con mayor frecuencia aparecen en preguntas de tipo test:</p>
+
+  <div class="def-box">
+    <div class="def-term">🛑 Paracaídas</div>
+    <div class="def-body">Dispositivo mecánico que en caso de exceso de velocidad de bajada o rotura de los cables, engancha las guías verticales y detiene la cabina de forma controlada. Es obligatorio en todos los ascensores de tracción por cables. Actúa exclusivamente sobre la cabina (nunca en el contrapeso en instalaciones normales). Trabaja de forma conjunta e inseparable con el limitador de velocidad.</div>
+  </div>
+
+  <div class="def-box">
+    <div class="def-term">⚙ Limitador de velocidad</div>
+    <div class="def-body">Dispositivo centrífugo que monitoriza continuamente la velocidad de desplazamiento de la cabina. Si se supera la velocidad nominal en un determinado porcentaje, el limitador acciona mecánicamente el paracaídas. Está ubicado normalmente en el cuarto de máquinas o en la cabeza del hueco (MRL). Se conecta a la cabina mediante un cable independiente del cable de tracción.</div>
+  </div>
+
+  <div class="callout al-key">
+    <strong>📌 La pareja inseparable:</strong> <em>paracaídas + limitador de velocidad</em>. El limitador detecta; el paracaídas actúa. Sin limitador, el paracaídas no se activa. Siempre van juntos en examen.
+  </div>
+
+  <div class="def-box">
+    <div class="def-term">📏 Amortiguadores de foso</div>
+    <div class="def-body">Situados en el fondo del foso, bajo la cabina y bajo el contrapeso. Su función es absorber la energía cinética en caso de que la cabina o el contrapeso lleguen al fondo del foso a velocidad mayor de la prevista (fallo del sistema de parada). Pueden ser de muelle (en ascensores lentos) o de tipo hidráulico (en ascensores rápidos).</div>
+  </div>
+
+  <div class="def-box">
+    <div class="def-term">🚪 Dispositivo de control de puertas</div>
+    <div class="def-body">El sistema de control del ascensor NO permite el movimiento de la cabina a menos que todas las puertas (tanto las de planta como la de cabina) estén completamente cerradas y bloqueadas. Este enclavamiento electromecánico es uno de los dispositivos de seguridad más básicos y más inspeccionados.</div>
+  </div>
+
+  <div class="def-box">
+    <div class="def-term">📡 Dispositivo de petición de socorro (alarma e interfono)</div>
+    <div class="def-body">Es OBLIGATORIO en todos los ascensores. En caso de atrapamiento de personas en la cabina, permite al usuario activar una alarma (buzzer audible en el exterior) y comunicarse bidirreccionalmente mediante un interfono con un servicio de rescate que debe estar disponible las <strong>24 horas del día, 7 días a la semana</strong>. El RD 355/2024 refuerza esta exigencia con requisitos más precisos sobre tiempos de respuesta y disponibilidad del servicio.</div>
+  </div>
+
+  <div class="def-box">
+    <div class="def-term">💡 Alumbrado de emergencia de la cabina</div>
+    <div class="def-body">OBLIGATORIO. Si se produce un corte de la alimentación eléctrica principal, el alumbrado de emergencia garantiza un nivel mínimo de iluminación en la cabina durante un tiempo suficiente para que los ocupantes puedan activar el sistema de socorro sin entrar en pánico. Suele ser mediante baterías de Ni-Cd o Li-ion integradas en el cuadro de control de la cabina.</div>
+  </div>
+
+  <div class="def-box">
+    <div class="def-term">⛔ Freno mecánico</div>
+    <div class="def-body">El freno de un ascensor eléctrico es de tipo "normalmente cerrado" (fail-safe): cuando el motor no está activo (o en caso de corte de corriente), el freno se aplica automáticamente sobre el árbol del motor o sobre la polea. Solo se libera cuando el motor recibe corriente para mover la cabina. Esto garantiza que en caso de fallo eléctrico, la cabina quede frenada en su posición.</div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     SECCIÓN 4: MANTENIMIENTO E INSPECCIÓN
+═══════════════════════════════════ -->
+<div class="section-block" id="s4">
+  <h2><span class="num-badge nb-blue">4</span> Mantenimiento de ascensores e inspección por OCA</h2>
+
+  <h3>Obligación de mantenimiento</h3>
+
+  <p>El <strong>propietario del ascensor</strong> (que en edificios residenciales suele ser la comunidad de propietarios) está <strong>legalmente obligado</strong> a contratar el mantenimiento preventivo con una <strong>empresa mantenedora autorizada</strong> e inscrita en el registro correspondiente de la comunidad autónoma. La empresa mantenedora ejecuta el mantenimiento; el propietario contrata, supervisa y responde legalmente ante cualquier accidente o infracción.</p>
+
+  <div class="callout al-norm">
+    <strong>📋 Responsabilidad del mantenimiento:</strong> el <strong>PROPIETARIO</strong> del ascensor es el responsable legal. La empresa mantenedora es la ejecutora. Esta distinción es habitual en preguntas de tipo test.
+  </div>
+
+  <h3>Frecuencia del mantenimiento preventivo: el dato más preguntado</h3>
+
+  <p>La ITC AEM 1 (RD 355/2024) establece que todo ascensor en servicio debe recibir al menos <strong>una visita de mantenimiento mensual</strong> por parte de la empresa mantenedora autorizada. Esta visita incluye: comprobación visual del estado general, lubricación de guías y partes móviles, ajuste del sistema de puertas, verificación del sistema de socorro y de los dispositivos de seguridad básicos, limpieza del foso y del cuarto de máquinas (si existe).</p>
+
+  <div class="callout al-trap">
+    <strong>⚠ Dato más preguntado en examen:</strong> la frecuencia mínima de visita de mantenimiento de un ascensor es <strong>1 vez al mes</strong>. No trimestral, no semestral: <strong>mensual</strong>. Para ascensores con tráfico muy bajo, la comunidad autónoma puede autorizar visitas cada 2 meses, pero el estándar general y el que se pide en oposición es el mensual.
+  </div>
+
+  <h3>Inspección por Organismo de Control Autorizado (OCA)</h3>
+
+  <p>La OCA (Organismo de Control Autorizado) es una entidad acreditada e independiente que realiza inspecciones periódicas del ascensor con el objetivo de verificar su seguridad de forma objetiva, al margen de la empresa mantenedora. Puede considerarse la "ITV del ascensor": la empresa mantenedora cuida el vehículo, pero la OCA hace la revisión oficial independiente.</p>
+
+  <p>La frecuencia de las inspecciones de la OCA depende del <strong>nivel de riesgo</strong> del ascensor, que se determina principalmente por el número de usuarios potenciales y el tipo de edificio:</p>
+
+  <div class="grid-2">
+    <div class="grid-col" style="border-top:3px solid var(--flame);">
+      <div class="gc-head" style="color:var(--flame);">🔴 Riesgo ALTO → cada 2 años</div>
+      <p style="font-size:.84rem;color:var(--muted);">Ascensores con más de 1.000 usuarios/día. Hospitales, centros de salud, colegios, grandes centros comerciales, estaciones de transporte. Alta intensidad de uso y usuarios potencialmente vulnerables.</p>
+    </div>
+    <div class="grid-col" style="border-top:3px solid var(--gold);">
+      <div class="gc-head" style="color:var(--gold);">🟡 Riesgo MEDIO → cada 4 años</div>
+      <p style="font-size:.84rem;color:var(--muted);">Ascensores en edificios de viviendas, oficinas y usos similares de intensidad normal. Es el caso más habitual en España. La gran mayoría de los ascensores residenciales caen en esta categoría.</p>
+    </div>
+    <div class="grid-col" style="border-top:3px solid var(--green);">
+      <div class="gc-head" style="color:var(--green);">🟢 Riesgo BAJO → cada 6 años</div>
+      <p style="font-size:.84rem;color:var(--muted);">Ascensores en viviendas unifamiliares o edificios de muy baja ocupación y uso muy ocasional.</p>
+    </div>
+    <div class="grid-col" style="background:var(--red-lt);border:1px solid #e8b0b0;">
+      <div class="gc-head" style="color:var(--flame);">⚠ La trampa clásica</div>
+      <p style="font-size:.84rem;color:var(--text);">Mantenimiento mensual = empresa mantenedora. Inspección OCA cada 2, 4 o 6 años = OCA independiente. Son dos cosas distintas y la confusión entre ambas es la trampa más habitual del tema en examen.</p>
+    </div>
+  </div>
+
+  <h3>Qué comprueba la OCA en la inspección</h3>
+  <ul>
+    <li>Estado mecánico de puertas de planta y cabina: cierre, enclavamiento, guías.</li>
+    <li>Medios de suspensión: cables o cadenas de tracción (desgaste, rotura de hilos).</li>
+    <li>Funcionamiento de los frenos mecánicos.</li>
+    <li>Limitador de velocidad (comprobación de funcionamiento).</li>
+    <li>Paracaídas: prueba con cabina vacía a velocidad reducida.</li>
+    <li>Amortiguadores de foso.</li>
+    <li>Dispositivo de petición de socorro (alarma e interfono activo 24h).</li>
+    <li>Alumbrado de emergencia en cabina.</li>
+    <li><strong>Precisión de parada:</strong> ≤ ±10 mm respecto al nivel del piso (exigido por RD 355/2024).</li>
+    <li><strong>Protección en puertas:</strong> barrera de infrarrojos desde ≥25 mm hasta ≥1.600 mm (RD 355/2024).</li>
+  </ul>
+</div>
+
+
+<!-- ══════════════════════════════════
+     SECCIÓN 5: MODERNIZACIÓN RD 355/2024
+═══════════════════════════════════ -->
+<div class="section-block" id="s5">
+  <h2><span class="num-badge nb-blue">5</span> Modernización de ascensores: RD 355/2024</h2>
+
+  <p>Una de las novedades más importantes del RD 355/2024 respecto a la normativa anterior es la obligación de implantar <strong>medidas mínimas de seguridad en ascensores existentes</strong> dentro de plazos establecidos. El objetivo es elevar progresivamente el nivel de seguridad de los ascensores más antiguos, que fueron instalados con normativas menos exigentes.</p>
+
+  <h3>Medidas mínimas de seguridad obligatorias (las más examinables)</h3>
+
+  <div class="def-box">
+    <div class="def-term">📏 Precisión de parada: ≤ ±10 mm</div>
+    <div class="def-body">La cabina debe detenerse a una distancia máxima de ±10 mm respecto al nivel exacto del piso de cada planta. Una parada imprecisa obliga a los usuarios a hacer un escalón al entrar o salir, lo que supone un riesgo de tropiezo especialmente grave para personas mayores, usuarios de silla de ruedas o con cochecitos de bebé. Es el requisito de accesibilidad y seguridad más básico del ascensor en uso.</div>
+  </div>
+
+  <div class="def-box">
+    <div class="def-term">🚪 Protección de puertas: barrera de infrarrojos ≥1.600 mm</div>
+    <div class="def-body">El dispositivo de protección en el umbral de las puertas de cabina debe detectar la presencia de personas u objetos desde una altura de ≥25 mm sobre la pisadera hasta ≥1.600 mm. Este rango de detección garantiza que tanto un objeto a ras del suelo (un pie, una rueda de silla de ruedas, un bastón) como una persona adulta sean detectados y la puerta revierta su movimiento antes de causar lesiones. Los sistemas de barrera óptica de infrarrojos son los más utilizados para este fin.</div>
+  </div>
+
+  <div class="def-box">
+    <div class="def-term">🔋 Dispositivo de rescate automático (ARD - Automatic Rescue Device)</div>
+    <div class="def-body">En caso de corte de la alimentación eléctrica, el ARD activa una batería de emergencia que lleva automáticamente la cabina hasta la planta más próxima, abre las puertas y permite la salida de los usuarios sin necesidad de intervención del servicio de rescate. Es especialmente valioso en edificios sin servicio de guardia permanente y elimina el riesgo de atrapamiento prolongado durante cortes de luz.</div>
+  </div>
+
+  <div class="callout al-gold">
+    <strong>📌 Por qué es importante el RD 355/2024 en examen:</strong> representa la actualización normativa más reciente (en vigor desde julio 2024). Los requisitos de precisión de parada (±10 mm) y protección de puertas (barrera hasta 1.600 mm) son datos numéricos concretos que aparecen frecuentemente en preguntas de tipo test.
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     SECCIÓN 6: PUERTAS AUTOMÁTICAS — TIPOLOGÍAS
+═══════════════════════════════════ -->
+<div class="section-block" id="s6">
+  <h2><span class="num-badge nb-blue">6</span> Tipologías de puertas automáticas</h2>
+
+  <p>Las puertas automáticas son sistemas de acceso que se accionan mediante un motor eléctrico en respuesta a la detección de la presencia de una persona u objeto, eliminando la necesidad de acción manual. Su normativa principal es la <strong>UNE-EN 16005</strong> para puertas peatonales y la <strong>UNE 85635</strong> para puertas industriales, de garaje y portones.</p>
+
+  <h3>Puertas correderas automáticas</h3>
+  <p>Son las más extendidas en accesos a edificios públicos, hospitales, supermercados y grandes superficies comerciales. Las hojas se deslizan lateralmente sobre guías cuando el sensor detecta la proximidad de una persona. La detección se realiza habitualmente mediante <strong>sensores de presencia por microondas</strong> montados sobre el marco o el dintel de la puerta. Son silenciosas, rápidas y de bajo mantenimiento mecánico. El principal riesgo es el <strong>atrapamiento durante el cierre</strong>, que se previene mediante una cortina de seguridad por infrarrojos.</p>
+
+  <h3>Puertas batientes automáticas</h3>
+  <p>Se abren hacia dentro o hacia fuera girando sobre bisagras, al igual que una puerta manual convencional, pero accionadas por un operador hidráulico o electromecánico montado sobre el marco. Su velocidad de apertura es menor que la de las correderas. Se usan donde el espacio no permite instalar una puerta corredera (pasillos estrechos, reformas de accesos existentes). El riesgo de impacto con el ala de la puerta al abrirse es mayor que en las correderas, por lo que la gestión de la velocidad y la zona de seguridad es crítica.</p>
+
+  <h3>Puertas giratorias automáticas</h3>
+  <p>Consisten en una estructura cilíndrica con 3 o 4 hojas que giran alrededor de un eje vertical central. El paso es continuo y se establece un efecto de "esclusa de aire" permanente entre el interior y el exterior del edificio, lo que reduce considerablemente las pérdidas de calefacción o refrigeración. Son habituales en hoteles de alta gama, grandes edificios corporativos y sedes de organismos públicos. <strong>Siempre deben incorporar puertas de emergencia abatibles laterales</strong> para permitir la evacuación rápida en caso de emergencia o corte de corriente, ya que la puerta giratoria no puede usarse como vía de evacuación.</p>
+
+  <div class="callout al-trap">
+    <strong>⚠ Trampa:</strong> una puerta giratoria <strong>NUNCA puede ser la única vía de evacuación</strong>. Siempre debe existir una puerta de emergencia abatible lateral. Este es un requisito del CTE DB-SI.
+  </div>
+
+  <h3>Puertas rápidas de alta velocidad</h3>
+  <p>Son puertas industriales diseñadas para abrirse y cerrarse a velocidades muy superiores a las puertas estándar (generalmente más de 0,5 m/s, llegando hasta 2-3 m/s). Se fabrican en lona flexible enrollable o en secciones rígidas. Su uso principal es en naves industriales, cámaras frigoríficas, salas limpias y áreas de carga y descarga, donde la rapidez del ciclo de apertura/cierre es esencial para mantener las condiciones ambientales interiores (temperatura, humedad, limpieza) y para la fluidez del tráfico de carretillas y vehículos. Se rigen por la <strong>UNE 85635</strong>.</p>
+
+  <h3>Puertas seccionales motorizadas</h3>
+  <p>Compuestas por secciones horizontales articuladas que se pliegan siguiendo una guía hacia el techo al abrirse. Se usan en garajes particulares y comunitarios, naves industriales y almacenes. Pueden ser manuales o motorizadas. La motorización incorpora un operador electromecánico con un sistema de desbloqueo manual de emergencia (cordón rojo) para poder abrir la puerta manualmente en caso de fallo del motor o corte de corriente. Se rigen por la <strong>UNE 85635</strong>.</p>
+
+  <h3>Puertas cortafuegos automáticas</h3>
+  <p>Son puertas homologadas con resistencia al fuego (EI: estanqueidad + aislamiento; EW: estanqueidad + radiación) que, en condiciones normales, están <strong>retenidas en posición abierta</strong> por un electroimán. Cuando el sistema de detección de incendios (detector iónico, óptico o termovelocimétrico) detecta humo o calor, la señal corta la alimentación del electroimán y un mecanismo de cierre (resorte o gravedad) cierra automáticamente la puerta, compartimentando el edificio para limitar la propagación del fuego y los gases. Su normativa específica es la <strong>UNE 23740-1</strong>, complementada por el <strong>CTE DB-SI</strong>.</p>
+
+  <div class="callout al-trap">
+    <strong>⚠ Trampa:</strong> una puerta cortafuegos automática <strong>NO extingue el incendio</strong>. Su función es la <strong>compartimentación</strong>: limitar la propagación del fuego y el humo a través de los huecos de paso. No confundir con sistemas de extinción (rociadores, BIE, etc.). La puerta normalmente está ABIERTA y se CIERRA en caso de incendio.
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     SECCIÓN 7: SISTEMAS DE DETECCIÓN
+═══════════════════════════════════ -->
+<div class="section-block" id="s7">
+  <h2><span class="num-badge nb-blue">7</span> Sistemas de detección y seguridad en puertas automáticas</h2>
+
+  <h3>Sensores de activación (apertura)</h3>
+  <p>Distintos tipos de sensores detectan la aproximación de una persona y ordenan la apertura de la puerta:</p>
+
+  <ul>
+    <li><strong>Sensor de microondas (radar):</strong> emite ondas de radio de alta frecuencia y detecta el movimiento de personas u objetos por el efecto Doppler. Es el más extendido en puertas correderas de entrada a edificios. <strong>Solo detecta movimiento</strong>, no presencia estática.</li>
+    <li><strong>Sensor infrarrojo activo (PIR activo):</strong> emite y recibe rayos infrarrojos. Detecta la interrupción del haz o la reflexión de calor corporal. Más preciso para detectar presencia que los de microondas, pero puede verse afectado por fuentes de calor cercanas.</li>
+    <li><strong>Plataforma de presión (tapete de activación):</strong> detecta el peso de una persona al pisarla. Uso habitual combinado con otros sensores en zonas de alta seguridad.</li>
+    <li><strong>Lector de tarjeta o código (acceso controlado):</strong> para puertas de acceso restringido. La apertura se produce solo con autorización.</li>
+  </ul>
+
+  <h3>Dispositivos de seguridad anti-atrapamiento (los más examinables)</h3>
+
+  <div class="def-box">
+    <div class="def-term">🔴 Cortina de seguridad (barrera de infrarrojos múltiple) — OBLIGATORIA</div>
+    <div class="def-body">Es el dispositivo de seguridad más importante en puertas automáticas peatonales. Consiste en una o varias barreras de infrarrojos que detectan la presencia de personas u objetos en la zona de movimiento de la puerta <strong>durante el proceso de cierre</strong>. Si se detecta presencia, la puerta revierte inmediatamente su movimiento y vuelve a abrirse. La norma UNE-EN 16005 la exige como elemento de seguridad obligatorio. No hay que confundirla con el sensor de activación (que abre la puerta): la cortina de seguridad evita el cierre sobre alguien.</div>
+  </div>
+
+  <div class="def-box">
+    <div class="def-term">⚡ Sensor de seguridad de borde (safety edge)</div>
+    <div class="def-body">En puertas donde la cortina de infrarrojos no es técnicamente viable (puertas batientes de gran tamaño, puertas seccionales industriales), se instala un sensor de presión o de contacto en el canto de cierre del ala de la puerta. Si la puerta entra en contacto con una persona u objeto durante el cierre, el sensor detecta la resistencia y revierte el movimiento.</div>
+  </div>
+
+  <div class="callout al-key">
+    <strong>📌 Velocidades y fuerzas de cierre (UNE-EN 16005):</strong> la norma limita tanto la velocidad máxima de cierre como la fuerza que puede ejercer la puerta sobre una persona en caso de contacto. Estos límites buscan que, incluso si la cortina de seguridad falla, el impacto no cause lesiones graves.
+  </div>
+
+  <h3>Modo de emergencia y evacuación</h3>
+  <p>Todas las puertas automáticas en vías de evacuación deben poder abrirse en la <strong>dirección de evacuación sin necesidad de llave, código o accionamiento eléctrico</strong>, en cumplimiento del CTE DB-SI. En la práctica, esto se consigue mediante:</p>
+  <ul>
+    <li>Dispositivos de apertura de emergencia que en caso de corte de corriente bloquean la puerta en posición <strong>abierta</strong> (fail-open).</li>
+    <li>Mecanismos de apertura manual de emergencia accesibles desde ambos lados.</li>
+    <li>En el caso de puertas cortafuegos, al contrario: se bloquean en posición <strong>cerrada</strong> (fail-closed) para garantizar la compartimentación.</li>
+  </ul>
+</div>
+
+
+<!-- ══════════════════════════════════
+     SECCIÓN 8: MANTENIMIENTO PUERTAS AUTOMÁTICAS
+═══════════════════════════════════ -->
+<div class="section-block" id="s8">
+  <h2><span class="num-badge nb-blue">8</span> Mantenimiento de puertas automáticas</h2>
+
+  <p>El mantenimiento de puertas automáticas está regulado principalmente por la <strong>UNE-EN 16005</strong> (puertas peatonales) y la <strong>UNE 85635</strong> (puertas industriales y de garaje). Debe ser realizado por una empresa instaladora habilitada con personal formado y cualificado.</p>
+
+  <h3>Acciones de mantenimiento preventivo</h3>
+  <ul>
+    <li><strong>Verificación y calibración de sensores de detección:</strong> los sensores de microondas e infrarrojos deben estar correctamente orientados y calibrados. Un sensor sucio o desregulado puede no detectar a las personas o generar aperturas falsas.</li>
+    <li><strong>Comprobación de la cortina de seguridad:</strong> verificar que detecta objetos en todo su rango de altura y que la puerta revierte el cierre correctamente.</li>
+    <li><strong>Medición de fuerzas y velocidades:</strong> comprobar que la fuerza de cierre y la velocidad de apertura/cierre están dentro de los límites de la UNE-EN 16005.</li>
+    <li><strong>Inspección mecánica:</strong> guías, rodamientos, correas de transmisión, operador (motor), estado de las hojas de la puerta.</li>
+    <li><strong>Lubricación:</strong> guías de deslizamiento, rodamientos y partes móviles según las especificaciones del fabricante.</li>
+    <li><strong>Verificación del sistema eléctrico:</strong> cuadro de control, conexiones, alimentación de emergencia.</li>
+    <li><strong>Limpieza de sensores:</strong> la suciedad en los sensores ópticos e infrarrojos es la causa más frecuente de mal funcionamiento.</li>
+  </ul>
+
+  <div class="callout al-warn">
+    <strong>📌 Periodicidad:</strong> según el fabricante y la intensidad de uso, habitualmente cada 6 o 12 meses. En instalaciones de alto tráfico (hospitales, aeropuertos, grandes superficies), se recomienda cada 6 meses o con mayor frecuencia. Tras cualquier modificación o reparación importante, la puerta debe ser verificada y re-validada antes de volver al servicio.
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     SECCIÓN 9: ACCESIBILIDAD UNE-EN 81-70
+═══════════════════════════════════ -->
+<div class="section-block" id="s9">
+  <h2><span class="num-badge nb-blue">9</span> Accesibilidad en ascensores: UNE-EN 81-70</h2>
+
+  <p>La norma <strong>UNE-EN 81-70</strong> define los requisitos adicionales de los ascensores para garantizar la accesibilidad de personas con discapacidad o movilidad reducida. Es una especificación que complementa la UNE-EN 81-20 con dimensiones, señalización y tiempos específicos. Sus requisitos son los más habituales en preguntas de tipo test sobre accesibilidad:</p>
+
+  <ul>
+    <li><strong>Dimensiones mínimas de cabina:</strong> 1.000 mm de ancho × 1.250 mm de fondo. Permite el acceso y giro de una silla de ruedas estándar.</li>
+    <li><strong>Hueco libre de paso en puerta:</strong> mínimo 800 mm de paso libre (no el ancho total de la puerta, sino el hueco útil de paso).</li>
+    <li><strong>Altura de botonera:</strong> entre 900 mm y 1.200 mm desde el suelo, accesible desde una silla de ruedas sin necesidad de estirarse.</li>
+    <li><strong>Braille y relieve:</strong> todos los caracteres de la botonera deben estar también en Braille y en relieve para usuarios con discapacidad visual.</li>
+    <li><strong>Anuncio de planta por voz:</strong> obligatorio. Al llegar a cada planta, el ascensor debe anunciar verbalmente el número de planta para usuarios con discapacidad visual.</li>
+    <li><strong>Espejo en la pared posterior:</strong> permite al usuario en silla de ruedas ver la botonera sin necesidad de girar la silla para salir marcha atrás.</li>
+    <li><strong>Pasamanos:</strong> en las paredes laterales de la cabina, a una altura accesible.</li>
+    <li><strong>Tiempo de apertura de puertas ampliado:</strong> mayor tiempo de permanencia de las puertas abiertas para permitir la entrada y salida de usuarios con movilidad reducida.</li>
+  </ul>
+
+  <div class="callout al-key">
+    <strong>📌 Los datos numéricos más preguntados de la UNE-EN 81-70:</strong><br>
+    · Cabina mínima: <strong>1.000 mm × 1.250 mm</strong><br>
+    · Paso libre de puerta: <strong>800 mm</strong><br>
+    · Botonera: entre <strong>900 mm y 1.200 mm</strong> del suelo<br>
+    · Anuncio de planta por voz: <strong>OBLIGATORIO</strong>
+  </div>
+
+  <div class="callout al-trap">
+    <strong>⚠ Trampa final:</strong> la UNE-EN 81-70 no aplica automáticamente a todos los ascensores. Se exige en nuevas instalaciones en edificios de uso público y en modernizaciones. Los ascensores residenciales existentes no están obligados a cumplirla retroactivamente, aunque sí deben hacerlo los de edificios con uso público o de nueva construcción. El CTE DB-SUA complementa estos requisitos en el contexto del edificio completo.
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,416 @@
+﻿PUNTOS CLAVE – TEMA 9
+APARATOS ELEVADORES Y PUERTAS AUTOMÁTICAS
+TIPOLOGÍAS, MANTENIMIENTO Y NORMATIVA APLICABLE
+Gestor de Mantenimiento (Nivel B) · Universidad Pública de Navarra
+
+=== NORMATIVA DE REFERENCIA (lo más preguntado) ===
+
+1. RD 2291/1985 — Reglamento de Aparatos de Elevación y Manutención (RAEM)
+   Norma "paraguas" de todos los aparatos de elevación en España.
+   Establece los requisitos técnicos y de seguridad para fabricación,
+   instalación, uso, mantenimiento y conservación.
+   Regula la responsabilidad del propietario y la obligación de
+   contratar empresa mantenedora habilitada.
+
+2. RD 88/2013 — ITC AEM 1 "Ascensores" (DEROGADA parcialmente)
+   Instrucción Técnica Complementaria AEM 1. Complementaba el RAEM
+   en materia de ascensores: puesta en servicio, modificación,
+   mantenimiento e inspección.
+   TRAMPA: fue derogada y sustituida por el RD 355/2024.
+
+3. RD 355/2024 (en vigor desde 1 julio 2024) ← NUEVA NORMA CLAVE
+   Aprueba la nueva ITC AEM 1 "Ascensores".
+   Es la normativa técnica VIGENTE para ascensores.
+   Introduce:
+   · Medidas mínimas de seguridad para ascensores EXISTENTES
+     (obligación de modernización en plazos establecidos).
+   · Precisión de parada de cabina: ≤ ±10 mm respecto al nivel del piso.
+   · Protección del usuario en puertas: dispositivo (ej. barrera de
+     infrarrojos) que cubra desde ≥25 mm hasta ≥1.600 mm sobre
+     la pisadera de cabina.
+   · Mayor control sobre nivelación, sistemas de socorro y alumbrado.
+   TRAMPA: muchos temarios hablan del RD 88/2013 como norma vigente.
+   Desde el 1 de julio de 2024, la norma vigente es el RD 355/2024.
+
+4. RD 203/2016 — Requisitos esenciales de seguridad para la
+   comercialización de ascensores y componentes de seguridad.
+   Implementa la Directiva 2014/33/UE (Directiva Ascensores).
+   Aplica a ascensores NUEVOS que se ponen en el mercado.
+   Diferencia clave: RD 203/2016 = puesta en mercado (nuevo).
+   RD 355/2024 = mantenimiento e inspección (existente y nuevo).
+
+5. RD 1644/2008 — Normas para la comercialización y puesta en
+   servicio de máquinas (Directiva Máquinas 2006/42/CE).
+   Aplica a plataformas elevadoras, escaleras mecánicas, andamios
+   motorizados y otros aparatos de elevación que NO son ascensores
+   propiamente dichos.
+   TRAMPA: las escaleras mecánicas y los montacargas no son ascensores.
+   Se rigen por normativa de máquinas (RD 1644/2008), no por la ITC AEM 1.
+
+6. NORMATIVA UNE PARA ASCENSORES:
+   · UNE-EN 81-20: Reglas de seguridad para ascensores. Diseño y
+     construcción de ascensores de pasajeros y mixtos. La norma técnica
+     de referencia para ascensores nuevos. En vigor desde 2014, sustituyó
+     a la UNE-EN 81-1 y UNE-EN 81-2.
+   · UNE-EN 81-50: Reglas de seguridad para ascensores. Exámenes y ensayos.
+   · UNE-EN 81-70: Accesibilidad en ascensores para personas incluyendo
+     personas con discapacidad.
+   · UNE-EN 81-80: Mejora de la seguridad de los ascensores de pasajeros
+     o de pasajeros y carga existentes. (Aplicable a la modernización.)
+
+7. NORMATIVA UNE PARA PUERTAS AUTOMÁTICAS:
+   · UNE-EN 16005: Puertas peatonales con accionamiento eléctrico.
+     Seguridad en el uso. Requisitos y métodos de ensayo.
+     Regula velocidades de apertura/cierre, fuerzas máximas, distancias
+     de seguridad, sistemas de detección.
+   · UNE 85635: Puertas industriales, comerciales, de garaje y portones.
+     Requisitos de instalación, uso, mantenimiento y modificación.
+   · UNE 85121: Puertas peatonales automáticas. Instalación, uso y
+     mantenimiento.
+   · UNE 23740-1: Puertas cortafuegos. Instalación, uso y mantenimiento.
+
+8. CTE DB-SUA (Seguridad de Utilización y Accesibilidad):
+   Aplica a las puertas automáticas en cuanto a sus condiciones de
+   diseño y seguridad en edificios. Exige que no supongan riesgo de
+   impacto o atrapamiento para los usuarios.
+
+=== TIPOLOGÍAS DE APARATOS ELEVADORES ===
+
+9. CLASIFICACIÓN PRINCIPAL:
+   a) Ascensores: transportan personas (y eventualmente mercancías)
+      entre plantas de un edificio. Normativa específica: ITC AEM 1
+      (RD 355/2024) y UNE-EN 81-20.
+   b) Montacargas: transportan exclusivamente mercancías, sin personas
+      (o con acceso restringido a operarios para carga/descarga).
+      No pueden transportar personas habitualmente. Si lo hacen
+      ocasionalmente como acompañamiento de carga, se llaman
+      "elevadores de carga con acceso restringido".
+   c) Plataformas elevadoras para personas con movilidad reducida (PMR):
+      Alternativa al ascensor en edificios donde no cabe uno. Pueden
+      ser verticales o inclinadas (salvaescaleras). Normativa: RD 1644/2008
+      (normativa de máquinas).
+   d) Salvaescaleras: plataformas que circulan a lo largo de una escalera.
+      Para PMR. Normativa de máquinas.
+   e) Escaleras mecánicas: cinta escalonada motorizada. NO son ascensores.
+      Normativa: UNE-EN 115 (escaleras mecánicas y pasillos rodantes).
+   f) Pasillos rodantes: superficie plana en movimiento. Aeropuertos,
+      centros comerciales. Normativa: UNE-EN 115.
+   g) Grúas-torre y aparatos de manutención industrial: elevación de cargas
+      en obras y fábricas. Normativa: RD 1644/2008 + RD 836/2003 (grúas-torre).
+   h) Montacargas de obra: uso en construcción. Normativa de máquinas.
+
+10. CLASIFICACIÓN DE ASCENSORES POR SISTEMA DE TRACCIÓN:
+    a) Ascensor eléctrico con máquina de tracción (cables + poleas):
+       · Máquina con cuarto de máquinas (tradicional): el motor y la
+         transmisión están en un cuarto separado, normalmente en la parte
+         superior del hueco. Cada vez menos frecuente en instalaciones nuevas.
+       · Máquina sin cuarto de máquinas (MRL - Machine Room Less):
+         el motor está integrado en la cabeza del hueco o en la cabina.
+         Ahorro de espacio. El más extendido en instalaciones nuevas.
+       Sistema de tracción: motor eléctrico → reductor (o transmisión
+       directa) → polea → cables de acero → cabina y contrapeso.
+       El contrapeso equilibra el peso de la cabina (vacía + carga parcial)
+       para reducir el consumo del motor.
+    b) Ascensor hidráulico:
+       · Un cilindro hidráulico empuja la cabina hacia arriba.
+       · Puede ser de pistón directo (el cilindro está bajo la cabina,
+         enterrado en el suelo) o indirecto (con poleas intermedias).
+       · Ventaja: no necesita cuarto de máquinas tradicional (la central
+         hidráulica puede estar en planta baja).
+       · Desventaja: menor velocidad (0,6-1 m/s), mayor consumo energético
+         (el motor funciona solo en subida), ruido del motor hidráulico,
+         riesgo de fuga de aceite hidráulico.
+       · Uso típico: edificios de baja altura (2-4 plantas), viviendas
+         unifamiliares, fosos poco profundos o hueco sin foso.
+    c) Ascensor neumático (de vacío):
+       · La cabina asciende empujada por diferencia de presión de aire
+         (presión atmosférica por debajo > presión por encima).
+       · Diseño compacto, sin cuarto de máquinas ni foso.
+       · Uso: viviendas unifamiliares, espacios muy reducidos.
+       · Desventaja: baja capacidad de carga, mayor coste.
+
+11. CLASIFICACIÓN DE ASCENSORES POR USO:
+    a) Ascensor de pasajeros: el más común en edificios residenciales,
+       oficinas, hoteles.
+    b) Ascensor panorámico: cabina o hueco acristalado. Uso decorativo
+       y turístico. Los mismos requisitos de seguridad que el de pasajeros.
+    c) Ascensor de cama (camillas): en hospitales y residencias. Cabina
+       de mayor profundidad para camillas. Dimensiones mínimas específicas.
+    d) Montacargas (sin personas): solo mercancías. Prohibido el acceso
+       de personas salvo para carga/descarga (y solo con acceso restringido).
+    e) Ascensor para PMR: requisitos específicos de accesibilidad
+       (UNE-EN 81-70): dimensiones mínimas de cabina, botoneras en braille,
+       espejo en cabina, anuncio de planta por voz, tiempo de permanencia
+       de puertas abiertas ampliado.
+
+12. COMPONENTES DE SEGURIDAD DE UN ASCENSOR ELÉCTRICO (examinables):
+    · Paracaídas: dispositivo mecánico que engancha las guías y detiene
+      la cabina en caso de rotura de cables o exceso de velocidad en bajada.
+      OBLIGATORIO. Actúa conjuntamente con el limitador de velocidad.
+    · Limitador de velocidad: dispositivo centrífugo que detecta si la
+      cabina supera la velocidad nominal y activa el paracaídas.
+    · Amortiguadores: en el foso, bajo la cabina y el contrapeso.
+      Absorben el impacto en caso de caída hasta el fondo del foso.
+    · Dispositivo de control de puertas: asegura que las puertas estén
+      completamente cerradas antes de que la cabina se mueva.
+    · Dispositivo anti-creep (anti-deriva): evita que la cabina se aleje
+      del nivel de parada cuando las puertas están abiertas.
+    · Dispositivo de petición de socorro (alarma e interfono):
+      OBLIGATORIO. En caso de atrapamiento, permite comunicarse con
+      un servicio de rescate disponible las 24h.
+    · Alumbrado de emergencia en cabina: OBLIGATORIO.
+    · Freno mecánico: frena el motor en caso de corte de corriente.
+      Actúa sobre el árbol del motor o sobre la polea.
+
+=== MANTENIMIENTO DE ASCENSORES ===
+
+13. OBLIGACIONES DE MANTENIMIENTO (ITC AEM 1, RD 355/2024):
+    · El propietario del ascensor está OBLIGADO a contratar el
+      mantenimiento con una empresa mantenedora autorizada.
+    · La empresa mantenedora debe estar inscrita en el registro
+      correspondiente de la comunidad autónoma y contar con técnicos
+      cualificados (técnicos de mantenimiento de ascensores).
+    · El mantenimiento incluye: visitas periódicas de revisión,
+      ajustes, lubricación, limpieza y atención de averías.
+
+14. PERIODICIDADES DE MANTENIMIENTO:
+    · Visita de mantenimiento: al menos 1 vez/mes para ascensores en
+      servicio normal. (Esta es la cifra más preguntada en oposición.)
+    · En ascensores con muy bajo tráfico (uso ocasional), la comunidad
+      autónoma puede autorizar visitas menos frecuentes (cada 2 meses),
+      pero el mínimo habitual es mensual.
+    · Revisión general más completa: anual (incluye comprobación de
+      todos los dispositivos de seguridad).
+
+15. INSPECCIONES POR ORGANISMO DE CONTROL AUTORIZADO (OCA):
+    La OCA (Organismo de Control Autorizado, equivalente a la ITV del
+    ascensor) realiza inspecciones INDEPENDIENTES del mantenimiento.
+    · Ascensores de riesgo ALTO (más de 1.000 usuarios/día, hospitales,
+      escuelas, grandes centros comerciales): cada 2 años.
+    · Ascensores de riesgo MEDIO (edificios de viviendas, oficinas de
+      uso normal): cada 4 años.
+    · Ascensores de riesgo BAJO (viviendas unifamiliares, uso muy
+      ocasional): cada 6 años.
+    TRAMPA: el mantenimiento mensual es la empresa mantenedora.
+    La inspección de la OCA es cada 2, 4 o 6 años según el riesgo.
+    Son dos cosas distintas.
+
+16. QUÉ REVISA LA OCA EN LA INSPECCIÓN (elementos del ascensor):
+    · Estado mecánico de puertas y garantía de cierre.
+    · Medios de suspensión y tracción (cables, cadenas).
+    · Funcionamiento de los frenos mecánicos.
+    · Limitador de velocidad.
+    · Paracaídas (probado con cabina vacía y a velocidad reducida).
+    · Amortiguadores (probados con cabina vacía y velocidad reducida).
+    · Dispositivo de petición de socorro.
+    · Alumbrado de emergencia.
+    · Precisión de parada de cabina (≤ ±10 mm, exigido por RD 355/2024).
+    · Protección en puertas (barrera de infrarrojos ≥1.600 mm).
+
+17. MODERNIZACIÓN DE ASCENSORES (RD 355/2024):
+    El RD 355/2024 obliga a los propietarios de ascensores existentes
+    a implantar medidas mínimas de seguridad en plazos establecidos.
+    Las más relevantes:
+    · Precisión de parada: ≤ ±10 mm respecto al nivel del piso.
+    · Protección de puertas: barrera de infrarrojos desde ≥25 mm
+      hasta ≥1.600 mm sobre la pisadera de cabina (elimina el riesgo
+      de atrapamiento al cruzar el umbral con silla de ruedas, muletas,
+      cochecito de bebé, etc.).
+    · Dispositivo de rescate automático en caso de corte de corriente.
+    · Mejoras en alumbrado e interfono de socorro.
+
+=== PUERTAS AUTOMÁTICAS ===
+
+18. TIPOLOGÍAS DE PUERTAS AUTOMÁTICAS:
+    a) Puertas correderas automáticas: se deslizan lateralmente.
+       Las más comunes en accesos a edificios públicos, hospitales,
+       supermercados. Apertura por sensor de presencia (microondas
+       o infrarrojo activo). Normativa: UNE-EN 16005.
+    b) Puertas batientes automáticas: se abren hacia dentro o hacia
+       fuera girando sobre bisagras. Menor velocidad de apertura.
+       Uso en accesos donde el espacio no permite puerta corredera.
+    c) Puertas giratorias automáticas: estructura circular con hojas
+       que giran alrededor de un eje vertical central. Permiten el
+       paso continuo sin pérdida de climatización interior (efecto
+       de esclusa de aire). Uso en hoteles, edificios corporativos.
+       Siempre deben tener puertas de emergencia abatibles laterales.
+    d) Puertas rápidas (de alta velocidad): puertas industriales o
+       de almacén que se abren y cierran a velocidad muy alta (>0,5 m/s).
+       De lona flexible o seccional. Uso en naves industriales,
+       cámaras frigoríficas, áreas de carga. Normativa: UNE 85635.
+    e) Puertas seccionales: formadas por secciones horizontales que se
+       pliegan hacia el techo al abrir. Uso en garajes y naves.
+       Manual o motorizada. Normativa: UNE 85635.
+    f) Puertas correderas de alta seguridad (tipo persiana o reja):
+       naves industriales, control de acceso, seguridad perimetral.
+    g) Puertas cortafuegos automáticas: se cierran automáticamente
+       al detectar humo o calor mediante detector de incendio.
+       Comparten normativa de puertas automáticas (UNE 23740-1)
+       y normativa de protección contra incendios (CTE DB-SI).
+       TRAMPA: una puerta cortafuegos MOTORIZADA que normalmente
+       está ABIERTA y se cierra en caso de incendio → es una
+       puerta cortafuegos automática, no es un sistema de extinción.
+
+19. SISTEMAS DE DETECCIÓN EN PUERTAS AUTOMÁTICAS:
+    · Sensor de presencia por microondas: detecta el movimiento de
+      personas u objetos mediante la reflexión de ondas de radio.
+      El más común en puertas correderas de entrada a edificios.
+      Detecta movimiento (no personas estáticas).
+    · Sensor de presencia por infrarrojo activo: emite y recibe
+      rayos infrarrojos. Detecta la interrupción del haz.
+    · Sensor de alfombra o presión (plataforma de presión):
+      detecta el peso de una persona al pisarla.
+    · Cortina de seguridad (barrera de infrarrojos): detecta la
+      presencia de personas u objetos en la zona de movimiento
+      de la puerta durante el cierre. Evita el atrapamiento.
+      OBLIGATORIA en puertas automáticas (UNE-EN 16005).
+    · Sensor de seguridad de borde (safety edge): en el canto
+      de cierre de puertas batientes y seccionales. Para cuando
+      la cortina de infrarrojos no es viable.
+
+20. MANTENIMIENTO DE PUERTAS AUTOMÁTICAS:
+    · Normativa de referencia: UNE-EN 16005 (puertas peatonales),
+      UNE 85635 (puertas industriales y garaje).
+    · El mantenimiento debe ser realizado por empresa instaladora
+      habilitada con personal formado.
+    · Acciones de mantenimiento:
+      - Revisión y calibración de sensores de detección y seguridad.
+      - Verificación de fuerzas y velocidades de apertura/cierre.
+      - Comprobación del dispositivo de antiatrapamiento.
+      - Inspección de elementos mecánicos: guías, rodamientos,
+        correas, motores.
+      - Lubricación de partes móviles.
+      - Verificación del sistema eléctrico y cuadro de control.
+      - Limpieza de sensores (los sensores sucios dan fallos).
+    · Periodicidad: según fabricante y uso, habitualmente cada 6-12 meses.
+    · Tras cualquier modificación o reparación importante, la puerta
+      debe ser verificada antes de volver a poner en servicio.
+
+=== ASPECTOS DE SEGURIDAD Y ACCESIBILIDAD ===
+
+21. ACCESIBILIDAD EN ASCENSORES (UNE-EN 81-70):
+    Dimensiones mínimas de cabina para personas con movilidad reducida:
+    · Cabina mínima: 1.000 mm × 1.250 mm (ancho × fondo).
+    · Hueco de puerta mínimo: 800 mm de paso libre.
+    · Altura de botonera: entre 900 mm y 1.200 mm del suelo (accesible
+      desde silla de ruedas).
+    · Botonera con caracteres en relieve y en Braille.
+    · Espejo en la pared posterior de la cabina (para que el usuario en
+      silla de ruedas vea la botonera sin girar).
+    · Anuncio de planta por voz: obligatorio.
+    · Pasamanos en la cabina.
+    · Tiempo de apertura de puertas ampliado.
+
+22. SEGURIDAD EN PUERTAS AUTOMÁTICAS (UNE-EN 16005):
+    · Velocidad de cierre: la norma limita la velocidad de cierre para
+      reducir el riesgo de impacto con personas.
+    · Fuerza de cierre: limitada para evitar lesiones en caso de
+      contacto con personas u objetos.
+    · Zona de seguridad: espacio libre delante de la puerta libre de
+      obstáculos para que el sensor detecte correctamente.
+    · Modo de emergencia: la puerta debe poder abrirse manualmente
+      (o bloquearse en posición abierta) en caso de corte de corriente
+      o emergencia. Las puertas en vías de evacuación deben poder
+      abrirse en la dirección de evacuación SIN necesidad de llave
+      ni código (CTE DB-SI).
+
+=== VERSIÓN DE OPOSICIÓN — FRASES MEMORIZABLES ===
+
+⚡ "La norma vigente de ascensores es el RD 355/2024 (ITC AEM 1),
+    en vigor desde el 1 de julio de 2024. El RD 88/2013 está
+    parcialmente derogado."
+
+⚡ "El mantenimiento del ascensor es MENSUAL (empresa mantenedora).
+    La inspección de la OCA es cada 2, 4 o 6 años según el riesgo.
+    Son dos cosas distintas."
+
+⚡ "El paracaídas detiene la cabina si se rompen los cables.
+    El limitador de velocidad lo activa. Van siempre juntos."
+
+⚡ "Las escaleras mecánicas NO son ascensores. Se rigen por
+    UNE-EN 115 y normativa de máquinas (RD 1644/2008)."
+
+⚡ "Los montacargas NO pueden transportar personas habitualmente.
+    Si lo hacen, deben ser 'elevadores de carga con acceso restringido'."
+
+⚡ "Máquina sin cuarto de máquinas (MRL): el motor está en el hueco.
+    Es el tipo más extendido en instalaciones nuevas."
+
+⚡ "Ascensor hidráulico: motor solo en subida, mayor consumo.
+    Uso en edificios de baja altura (2-4 plantas) o sin foso."
+
+⚡ "El RD 355/2024 exige precisión de parada ≤ ±10 mm y barrera
+    de infrarrojos desde 25 mm hasta 1.600 mm sobre la pisadera."
+
+⚡ "Puerta corredera automática: el sensor es de microondas o IR.
+    La cortina de seguridad (barrera IR) es OBLIGATORIA para evitar
+    el atrapamiento durante el cierre."
+
+⚡ "Puerta giratoria: siempre con puertas de emergencia abatibles
+    laterales para evacuación."
+
+⚡ "Puerta cortafuegos automática: normalmente abierta, se CIERRA
+    al detectar incendio. No extingue. La norma es UNE 23740-1."
+
+⚡ "UNE-EN 81-70: ascensor accesible. Cabina mínima 1.000×1.250 mm.
+    Puerta mínima 800 mm. Botonera entre 900 y 1.200 mm. Braille. Voz."
+
+⚡ "La responsabilidad del mantenimiento recae en el PROPIETARIO
+    del ascensor. La empresa mantenedora ejecuta; el propietario responde."
+
+=== CONCEPTOS QUE SIEMPRE APARECEN EN TIPO TEST ===
+
+A. ¿Cuál es la norma vigente para ascensores en España?
+   → RD 355/2024 (ITC AEM 1), en vigor desde 1 julio 2024.
+
+B. ¿Con qué frecuencia debe visitarse un ascensor para mantenimiento?
+   → Al menos 1 vez al mes (empresa mantenedora autorizada).
+
+C. ¿Con qué frecuencia inspecciona la OCA un ascensor de riesgo medio?
+   → Cada 4 años (riesgo medio: edificios de viviendas y oficinas normales).
+
+D. ¿Qué dispositivo detiene la cabina si se rompen los cables?
+   → El paracaídas, activado por el limitador de velocidad.
+
+E. ¿Qué diferencia hay entre un ascensor y un montacargas?
+   → El ascensor transporta personas. El montacargas, exclusivamente
+     mercancías (personas prohibidas salvo acceso restringido para carga).
+
+F. ¿Qué normativa aplica a las escaleras mecánicas?
+   → UNE-EN 115. NO son ascensores. Son máquinas (RD 1644/2008).
+
+G. ¿Qué es el MRL (Machine Room Less)?
+   → Ascensor eléctrico sin cuarto de máquinas separado. El motor está
+     integrado en la cabeza del hueco. El más extendido en obras nuevas.
+
+H. ¿Cuándo se usa el ascensor hidráulico?
+   → En edificios de baja altura (2-4 plantas), sin foso o con foso
+     poco profundo, o en viviendas unifamiliares.
+
+I. ¿Qué exige el RD 355/2024 sobre la protección de puertas?
+   → Barrera de infrarrojos desde ≥25 mm hasta ≥1.600 mm sobre
+     la pisadera de cabina. Precisión de parada ≤ ±10 mm.
+
+J. ¿Qué normativa aplica a puertas peatonales automáticas?
+   → UNE-EN 16005. La norma principal para puertas peatonales motorizadas.
+
+K. ¿Qué normativa aplica a puertas industriales, de garaje y portones?
+   → UNE 85635.
+
+L. ¿Qué normativa aplica a puertas cortafuegos automáticas?
+   → UNE 23740-1 (puertas cortafuegos) + CTE DB-SI (incendios).
+
+M. ¿Qué sensor usan las puertas correderas automáticas típicas?
+   → Sensor de presencia por microondas (detecta movimiento).
+
+N. ¿Qué es la cortina de seguridad en una puerta automática?
+   → Barrera de infrarrojos que detecta presencia durante el cierre
+     y revierte el movimiento para evitar atrapamiento. Obligatoria.
+
+O. ¿Qué dimensiones mínimas tiene un ascensor accesible (UNE-EN 81-70)?
+   → Cabina 1.000×1.250 mm. Hueco de puerta: 800 mm. Botonera: 900-1.200 mm.
+
+P. ¿Quién es responsable del mantenimiento del ascensor?
+   → El propietario del ascensor (comunidad de propietarios u organismo
+     titular). La empresa mantenedora ejecuta; el propietario contrata
+     y responde.

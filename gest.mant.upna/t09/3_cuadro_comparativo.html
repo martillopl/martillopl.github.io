@@ -1,0 +1,659 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 9 – Cuadros comparativos · Aparatos elevadores y puertas automáticas</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#f5f7fa;--surface:#fff;--surface-2:#f8f9fb;
+    --border:#ccd3de;--divider:#d8dde8;
+    --text:#1a2233;--muted:#4e5f7a;--faint:#8a9abb;
+    --teal:#00707a;--teal-lt:#ccedf0;--teal-dk:#004a52;
+    --blue:#0d4f8b;--blue-lt:#dceaf7;--blue-dk:#082f57;
+    --green:#1a6633;--green-lt:#d4eedd;
+    --gold:#c47d00;--gold-lt:#faefd0;
+    --orange:#8b3a0d;--orange-lt:#fce8d8;
+    --purple:#5b3690;--purple-lt:#ece4f8;
+    --red:#8b1a1a;--red-lt:#fde8e8;
+    --flame:#c0392b;
+    --font-d:'Cabinet Grotesk',sans-serif;
+    --font-b:'Satoshi',sans-serif;
+    --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.88rem;line-height:1.65;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 5rem;}
+
+  .file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+  .file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s;}
+  .file-nav a:hover,.file-nav a.active{background:var(--blue);color:white;border-color:var(--blue);}
+
+  .page-header{background:linear-gradient(135deg,#1a3a6b 0%,#0d2247 100%);color:white;border-radius:var(--r-xl);padding:2rem 2.5rem;margin-bottom:2rem;}
+  .page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;}
+  .page-header h1{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,1.85rem);font-weight:800;line-height:1.2;margin-bottom:.4rem;}
+  .page-header .sub{font-size:.83rem;opacity:.8;}
+
+  .section-label{font-family:var(--font-d);font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:2.5rem 0 .7rem;}
+
+  /* TABLE CARD */
+  .table-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.5rem;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+  .table-card-header{padding:.85rem 1.25rem;display:flex;align-items:center;gap:.65rem;border-bottom:1px solid var(--border);}
+  .table-card-header .icon{font-size:1.1rem;}
+  .table-card-header h2{font-family:var(--font-d);font-size:.95rem;font-weight:800;}
+
+  /* TOPS */
+  .top-blue  {border-top:4px solid var(--blue);}
+  .top-flame {border-top:4px solid var(--flame);}
+  .top-teal  {border-top:4px solid var(--teal);}
+  .top-green {border-top:4px solid var(--green);}
+  .top-gold  {border-top:4px solid var(--gold);}
+  .top-orange{border-top:4px solid var(--orange);}
+  .top-purple{border-top:4px solid var(--purple);}
+
+  /* CHIPS */
+  .chip{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:2px 8px;border-radius:999px;white-space:nowrap;margin-left:auto;}
+  .ch-blue  {background:var(--blue-lt);  color:var(--blue-dk);}
+  .ch-flame {background:var(--red-lt);   color:var(--flame);}
+  .ch-teal  {background:var(--teal-lt);  color:var(--teal);}
+  .ch-green {background:var(--green-lt); color:var(--green);}
+  .ch-gold  {background:var(--gold-lt);  color:#7a4e00;}
+  .ch-orange{background:var(--orange-lt);color:var(--orange);}
+  .ch-purple{background:var(--purple-lt);color:var(--purple);}
+  .ch-grey  {background:#eef0f5;         color:var(--muted);}
+
+  /* CALLOUTS */
+  .callout{border-radius:var(--r-md);padding:.75rem 1rem;font-size:.83rem;margin:.75rem 1.25rem;line-height:1.55;}
+  .al-warn  {background:#fff7ed;         border-left:3px solid var(--orange);}
+  .al-red   {background:var(--red-lt);   border-left:3px solid var(--flame);}
+  .al-teal  {background:var(--teal-lt);  border-left:3px solid var(--teal);}
+  .al-blue  {background:var(--blue-lt);  border-left:3px solid var(--blue);}
+  .al-green {background:var(--green-lt); border-left:3px solid var(--green);}
+  .al-purple{background:var(--purple-lt);border-left:3px solid var(--purple);}
+  .al-gold  {background:var(--gold-lt);  border-left:3px solid var(--gold);}
+
+  /* MAIN TABLE */
+  .cmp-table{width:100%;border-collapse:collapse;font-size:.84rem;}
+  .cmp-table th{font-family:var(--font-d);font-weight:800;font-size:.78rem;padding:.55rem .9rem;text-align:left;border-bottom:2px solid var(--border);}
+  .cmp-table th.hd-blue  {background:var(--blue);  color:white;}
+  .cmp-table th.hd-flame {background:var(--flame); color:white;}
+  .cmp-table th.hd-teal  {background:var(--teal);  color:white;}
+  .cmp-table th.hd-green {background:var(--green); color:white;}
+  .cmp-table th.hd-gold  {background:var(--gold);  color:white;}
+  .cmp-table th.hd-orange{background:var(--orange);color:white;}
+  .cmp-table th.hd-purple{background:var(--purple);color:white;}
+  .cmp-table th.hd-grey  {background:#e8edf0;      color:var(--text);}
+  .cmp-table td{padding:.5rem .9rem;border-bottom:1px solid #eef3f6;vertical-align:top;}
+  .cmp-table tr:last-child td{border-bottom:none;}
+  .cmp-table tr:hover td{background:#f8f9fb;}
+  .cmp-table tr.sep td{background:var(--surface-2);font-family:var(--font-d);font-weight:800;font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--border);}
+  .cmp-table tr.hi td{background:#dceaf7!important;font-weight:700;}
+  .cmp-table tr.hi-red td{background:#fde8e8!important;font-weight:700;}
+  .cmp-table tr.hi-green td{background:#d4eedd!important;font-weight:700;}
+  .cmp-table tr.hi-gold td{background:var(--gold-lt)!important;font-weight:700;}
+  .cmp-table tr.hi-purple td{background:var(--purple-lt)!important;font-weight:700;}
+  .cmp-table .feat{font-weight:700;color:var(--muted);font-size:.79rem;white-space:nowrap;}
+  .ok {color:var(--green);font-weight:800;}
+  .no {color:var(--flame);font-weight:800;}
+  .warn{color:var(--orange);font-weight:700;}
+
+  /* DATO GRANDE */
+  .dato-grande{font-family:var(--font-d);font-weight:800;font-size:1.25rem;}
+
+  @media(max-width:680px){
+    .cmp-table{font-size:.78rem;}
+    .cmp-table td,.cmp-table th{padding:.4rem .6rem;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html" class="active">📊 Cuadros comparativos</a>
+  </div>
+
+<div class="page-header">
+  <div class="meta">Tema 9 · Gestor de Mantenimiento (Nivel B) · UPNA · Cuadros comparativos</div>
+  <h1>Tablas operativas para examen — Aparatos elevadores y puertas automáticas</h1>
+  <div class="sub">9 tablas · Normativa · Tipologías · Tracción · Componentes · Mantenimiento · OCA · Puertas · Sensores · Accesibilidad</div>
+</div>
+
+
+<!-- ══════════════ TABLA 1: NORMATIVA ══════════════ -->
+<div class="section-label">Tabla 1 — Normativa comparada: aparatos elevadores y puertas automáticas</div>
+<div class="table-card top-blue">
+  <div class="table-card-header">
+    <span class="icon">📋</span>
+    <h2>Normas aplicables: objeto, ámbito y dato clave de examen</h2>
+    <span class="chip ch-blue">7 normas</span>
+  </div>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="hd-grey" style="width:165px;">Norma</th>
+        <th class="hd-blue">Objeto / Qué regula</th>
+        <th class="hd-blue">Aplica a</th>
+        <th class="hd-blue">Dato clave de examen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="hi">
+        <td><strong>RD 2291/1985 — RAEM</strong></td>
+        <td>Reglamento de Aparatos de Elevación y Manutención. Norma "paraguas" de todos los aparatos de elevación en España.</td>
+        <td>Todos los aparatos de elevación y manutención.</td>
+        <td>NORMA PARAGUAS. Las ITC (como la AEM 1) la desarrollan. Sin esta, las ITC no tienen soporte legal.</td>
+      </tr>
+      <tr class="hi-red">
+        <td><strong>RD 355/2024 (ITC AEM 1)</strong> ✅ VIGENTE</td>
+        <td>Nueva ITC AEM 1 "Ascensores". Mantenimiento, inspección y modernización de ascensores. Desde 1 julio 2024.</td>
+        <td>Ascensores en servicio (nuevos y existentes).</td>
+        <td>🔴 NORMA VIGENTE. Precisión parada ≤±10 mm. Barrera IR 25–1.600 mm. Derogó RD 88/2013.</td>
+      </tr>
+      <tr class="hi-red">
+        <td><strong>RD 88/2013</strong> ❌ DEROGADO</td>
+        <td>Anterior ITC AEM 1. Derogada por el RD 355/2024 desde el 1 julio 2024.</td>
+        <td>Ya no aplica.</td>
+        <td>🔴 DEROGADO. Si aparece como norma vigente en examen → respuesta incorrecta.</td>
+      </tr>
+      <tr>
+        <td><strong>RD 203/2016</strong></td>
+        <td>Requisitos esenciales de seguridad para comercialización de ascensores nuevos. Directiva 2014/33/UE (Ascensores).</td>
+        <td>Ascensores NUEVOS puestos en el mercado (marcado CE).</td>
+        <td>PUESTA EN MERCADO (nuevos). Diferente al RD 355/2024 que regula mantenimiento.</td>
+      </tr>
+      <tr>
+        <td><strong>RD 1644/2008</strong></td>
+        <td>Comercialización y puesta en servicio de máquinas. Directiva Máquinas 2006/42/CE.</td>
+        <td>Escaleras mecánicas, plataformas PMR, salvaescaleras, montacargas sin personas, grúas.</td>
+        <td>NO ascensores. Todo lo que NO es ascensor y sí eleva personas o cargas: normativa de máquinas.</td>
+      </tr>
+      <tr>
+        <td><strong>UNE-EN 16005</strong></td>
+        <td>Puertas peatonales con accionamiento eléctrico. Velocidades, fuerzas, sistemas de detección y seguridad.</td>
+        <td>Puertas correderas, batientes y giratorias automáticas de uso peatonal.</td>
+        <td>LA norma de puertas automáticas peatonales. Cortina de seguridad OBLIGATORIA.</td>
+      </tr>
+      <tr>
+        <td><strong>UNE 85635</strong></td>
+        <td>Puertas industriales, comerciales, de garaje y portones. Instalación, uso y mantenimiento.</td>
+        <td>Puertas rápidas industriales, puertas seccionales, portones de nave y garaje.</td>
+        <td>PUERTAS INDUSTRIALES Y GARAJE. Diferente a la UNE-EN 16005 (peatonal).</td>
+      </tr>
+      <tr>
+        <td><strong>UNE 23740-1</strong></td>
+        <td>Puertas y cierres cortafuegos. Instalación, uso y mantenimiento.</td>
+        <td>Puertas cortafuegos automáticas en edificios.</td>
+        <td>+ CTE DB-SI. Normalmente ABIERTAS, se CIERRAN en incendio. Compartimentan, no extinguen.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-red">
+    <strong>⚠ La trampa más frecuente del Tema 9:</strong> el RD 88/2013 aparece en muchos temarios como norma vigente de ascensores. Desde el 1 de julio de 2024, la norma vigente es el <strong>RD 355/2024</strong>. Cualquier respuesta que cite el 88/2013 como norma actual está desactualizada.<br>
+    <strong>⚠ Segunda trampa:</strong> el RD 203/2016 regula la <em>puesta en mercado</em> de ascensores nuevos (marcado CE). El RD 355/2024 regula el <em>mantenimiento e inspección</em>. Son normas distintas con objetos distintos.
+  </div>
+</div>
+
+
+<!-- ══════════════ TABLA 2: TIPOLOGÍAS APARATOS ELEVADORES ══════════════ -->
+<div class="section-label">Tabla 2 — Tipologías de aparatos elevadores: características y normativa</div>
+<div class="table-card top-teal">
+  <div class="table-card-header">
+    <span class="icon">🏗</span>
+    <h2>Ascensor · Montacargas · Plataforma PMR · Escalera mecánica — diferencias clave</h2>
+    <span class="chip ch-teal">Tipologías</span>
+  </div>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="hd-grey">Característica</th>
+        <th class="hd-blue">🛗 Ascensor</th>
+        <th class="hd-orange">📦 Montacargas</th>
+        <th class="hd-purple">♿ Plataforma PMR / Salvaescaleras</th>
+        <th class="hd-teal">🚶 Escalera mecánica / Pasillo rodante</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="feat">Qué transporta</td><td>Personas (y mercan. con personas)</td><td>Exclusivamente mercancías</td><td>Personas con movilidad reducida</td><td>Personas (flujo continuo)</td></tr>
+      <tr class="hi-red"><td class="feat">⚠ ¿Pueden ir personas?</td><td class="ok">SÍ — su función principal</td><td class="no">NO habitualmente. Solo acceso restringido para carga/descarga.</td><td class="ok">SÍ — PMR específicamente</td><td class="ok">SÍ — flujo continuo</td></tr>
+      <tr><td class="feat">Normativa aplicable</td><td>ITC AEM 1 (RD 355/2024) + UNE-EN 81-20</td><td>RD 1644/2008 si sin personas. Si hay personas → ITC AEM 1.</td><td>RD 1644/2008 (Directiva Máquinas)</td><td>UNE-EN 115 + RD 1644/2008</td></tr>
+      <tr><td class="feat">¿Aplica ITC AEM 1?</td><td class="ok">SÍ</td><td class="warn">Solo si transporta personas</td><td class="no">NO (máquinas)</td><td class="no">NO (máquinas)</td></tr>
+      <tr><td class="feat">Mantenimiento por OCA</td><td class="ok">SÍ — obligatorio periódico</td><td class="warn">Según normativa de máquinas</td><td class="warn">Según normativa de máquinas</td><td class="warn">Según normativa de máquinas</td></tr>
+      <tr><td class="feat">Uso típico</td><td>Edificios residenciales, hospitales, oficinas, hoteles</td><td>Almacenes, industria, restaurantes (montaplatos)</td><td>Edificios históricos, reformas sin espacio para ascensor</td><td>Centros comerciales, aeropuertos, estaciones</td></tr>
+    </tbody>
+  </table>
+  <div class="callout al-red">
+    <strong>⚠ Si un montacargas transporta personas habitualmente → debe cumplir todos los requisitos de la ITC AEM 1 (ascensor).</strong> La distinción entre ascensor y montacargas no es el diseño sino el uso: si hay personas → ascensor.
+  </div>
+</div>
+
+
+<!-- ══════════════ TABLA 3: TIPOS DE ASCENSORES POR TRACCIÓN ══════════════ -->
+<div class="section-label">Tabla 3 — Tipos de ascensores por sistema de tracción</div>
+<div class="table-card top-blue">
+  <div class="table-card-header">
+    <span class="icon">⚙</span>
+    <h2>Eléctrico de tracción vs Hidráulico vs Neumático — cuándo usar cada uno</h2>
+    <span class="chip ch-blue">Tracción</span>
+  </div>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="hd-grey">Característica</th>
+        <th class="hd-blue">⚡ Eléctrico de tracción (cables)</th>
+        <th class="hd-gold">💧 Hidráulico</th>
+        <th class="hd-purple">💨 Neumático (vacío)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="feat">Principio de funcionamiento</td><td>Motor eléctrico → polea → cables de acero → cabina + contrapeso</td><td>Bomba hidráulica → cilindro → empuja la cabina hacia arriba</td><td>Diferencia de presión de aire (compresor crea vacío sobre la cabina)</td></tr>
+      <tr><td class="feat">Contrapeso</td><td class="ok">SÍ — reduce consumo del motor</td><td class="no">NO</td><td class="no">NO</td></tr>
+      <tr><td class="feat">Cuarto de máquinas</td><td>Tradicional: SÍ (arriba). <strong>MRL: NO</strong> (motor en hueco)</td><td class="ok">NO (central hidráulica en planta baja)</td><td class="ok">NO</td></tr>
+      <tr class="hi"><td class="feat">⭐ Más extendido en instalaciones nuevas</td><td class="ok"><strong>SÍ (MRL)</strong></td><td class="no">No</td><td class="no">No</td></tr>
+      <tr><td class="feat">Velocidad habitual</td><td>0,63 a 10 m/s (baja a alta velocidad)</td><td class="warn">0,6 a 1 m/s (baja velocidad)</td><td class="warn">0,15 a 0,3 m/s (muy baja)</td></tr>
+      <tr><td class="feat">Consumo energético</td><td class="ok">Menor (contrapeso compensa)</td><td class="no">Mayor (motor solo activo en subida; bajada por gravedad)</td><td class="warn">Medio-alto (compresor continuo)</td></tr>
+      <tr><td class="feat">Número de plantas habitual</td><td class="ok">Cualquier altura</td><td class="warn">2 a 4 plantas</td><td class="warn">1 a 3 plantas (vivienda unifamiliar)</td></tr>
+      <tr><td class="feat">Foso necesario</td><td class="warn">Sí (habitual)</td><td class="ok">Mínimo o sin foso (tipo indirecto con poleas)</td><td class="ok">NO</td></tr>
+      <tr><td class="feat">Riesgo específico</td><td>Rotura de cables (previene paracaídas)</td><td class="warn">Fuga de aceite hidráulico. Ruido del motor.</td><td class="warn">Baja capacidad de carga. Alta sensibilidad a variaciones de presión.</td></tr>
+      <tr><td class="feat">Uso típico</td><td>Edificios residenciales, oficinas, hospitales, todo tipo de edificio</td><td>Reformas en edificios de baja altura, viviendas sin foso profundo</td><td>Viviendas unifamiliares, pequeñas reformas, uso ocasional</td></tr>
+    </tbody>
+  </table>
+  <div class="callout al-blue">
+    <strong>📌 MRL (Machine Room Less):</strong> dentro de los eléctricos de tracción, el MRL integra el motor en la cabeza del hueco, eliminando el cuarto de máquinas. Es el más extendido en obras nuevas. Si el examen pregunta "sin cuarto de máquinas" refiriéndose a un eléctrico → MRL.
+  </div>
+</div>
+
+
+<!-- ══════════════ TABLA 4: COMPONENTES DE SEGURIDAD ══════════════ -->
+<div class="section-label">Tabla 4 — Componentes de seguridad del ascensor: función, normativa y avería</div>
+<div class="table-card top-flame">
+  <div class="table-card-header">
+    <span class="icon">🛑</span>
+    <h2>Dispositivos de seguridad obligatorios — función y señal de fallo</h2>
+    <span class="chip ch-flame">Examinable</span>
+  </div>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="hd-grey" style="width:160px;">Componente</th>
+        <th class="hd-flame">Función</th>
+        <th class="hd-flame">Dato clave de examen</th>
+        <th class="hd-flame">Señal de fallo / Avería típica</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="hi-red">
+        <td><strong>Paracaídas</strong></td>
+        <td>Engancha las guías verticales y detiene la cabina en caso de rotura de cables o exceso de velocidad en bajada.</td>
+        <td>OBLIGATORIO. Solo actúa en BAJADA. Activado por el limitador de velocidad. Van siempre juntos.</td>
+        <td>No actúa cuando debería → limitador bloqueado o paracaídas encallado. Inspección OCA obligatoria.</td>
+      </tr>
+      <tr class="hi-red">
+        <td><strong>Limitador de velocidad</strong></td>
+        <td>Dispositivo centrífugo que detecta si la cabina supera la velocidad nominal y activa mecánicamente el paracaídas.</td>
+        <td>DETECTA; el paracaídas ACTÚA. Son inseparables. Ubicado en cuarto de máquinas o cabeza del hueco (MRL).</td>
+        <td>Limitador bloqueado → el paracaídas no se activa aunque haya exceso de velocidad. Riesgo crítico.</td>
+      </tr>
+      <tr>
+        <td><strong>Amortiguadores de foso</strong></td>
+        <td>En el fondo del foso, bajo cabina y contrapeso. Absorben el impacto cinético si llegan al foso a velocidad imprevista.</td>
+        <td>De muelle (ascensores lentos, &lt;1 m/s) o hidráulicos (ascensores rápidos, &gt;1 m/s).</td>
+        <td>Amortiguador deformado o sin aceite (hidráulico) → no absorbe correctamente el impacto.</td>
+      </tr>
+      <tr>
+        <td><strong>Control de enclavamiento de puertas</strong></td>
+        <td>Impide el movimiento de la cabina si cualquier puerta de planta o de cabina está abierta o no bloqueada.</td>
+        <td>El dispositivo de seguridad más básico. El primero que se comprueba en cualquier inspección.</td>
+        <td>Puerta de planta no cierra bien → el ascensor no arranca. Contacto eléctrico desgastado o sucio.</td>
+      </tr>
+      <tr class="hi">
+        <td><strong>Dispositivo de socorro (alarma + interfono)</strong></td>
+        <td>Permite al atrapado activar alarma audible y comunicarse bidireccionalmente con servicio de rescate.</td>
+        <td>OBLIGATORIO. Servicio de rescate disponible 24h/7d. RD 355/2024 refuerza requisitos de disponibilidad.</td>
+        <td>Batería descargada → la alarma no suena en caso de corte de corriente. Revisar batería periódicamente.</td>
+      </tr>
+      <tr>
+        <td><strong>Alumbrado de emergencia</strong></td>
+        <td>Mantiene iluminación mínima en la cabina si hay corte de corriente. Mediante batería integrada.</td>
+        <td>OBLIGATORIO. Baterías Ni-Cd o Li-ion en el cuadro de cabina. Activación automática al cortar la luz.</td>
+        <td>Batería agotada → oscuridad total en cabina en caso de corte. Pánico de los ocupantes.</td>
+      </tr>
+      <tr>
+        <td><strong>Freno mecánico (fail-safe)</strong></td>
+        <td>Frena el motor y la polea automáticamente al cortar la corriente. Tipo "normalmente cerrado": solo se abre cuando hay corriente.</td>
+        <td>FAIL-SAFE: corte de corriente → frena. NUNCA falla abierto. Actúa sobre el árbol del motor o la polea.</td>
+        <td>Freno no libera bien → la cabina se mueve entrecortada o no arranca. Freno no aplica bien → deriva.</td>
+      </tr>
+      <tr class="hi">
+        <td><strong>ARD (Automatic Rescue Device)</strong></td>
+        <td>En corte de corriente, la batería lleva automáticamente la cabina hasta la planta más próxima y abre las puertas.</td>
+        <td>Nueva exigencia del RD 355/2024. Elimina el riesgo de atrapamiento prolongado en cortes de luz.</td>
+        <td>Batería del ARD descargada → en caso de corte, los ocupantes quedan atrapados entre plantas.</td>
+      </tr>
+      <tr>
+        <td><strong>Dispositivo anti-deriva (anti-creep)</strong></td>
+        <td>Evita que la cabina se aleje del nivel de parada mientras las puertas están abiertas. Previene el escalón inesperado.</td>
+        <td>Actúa con puertas abiertas. Muy relevante para PMR. Exigido por RD 355/2024 junto con la precisión de parada.</td>
+        <td>Sin anti-drift → la cabina se aleja del nivel del piso con las puertas abiertas. Riesgo de caída al salir.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-red">
+    <strong>⚠ La pareja inseparable:</strong> <strong>paracaídas + limitador de velocidad</strong>. El limitador detecta; el paracaídas actúa. Sin limitador, el paracaídas no se activa aunque los cables se rompan. En examen, si preguntan "¿qué activa el paracaídas?" → el limitador de velocidad.
+  </div>
+</div>
+
+
+<!-- ══════════════ TABLA 5: MANTENIMIENTO Y OCA ══════════════ -->
+<div class="section-label">Tabla 5 — Mantenimiento preventivo e inspección OCA: frecuencias y responsables</div>
+<div class="table-card top-green">
+  <div class="table-card-header">
+    <span class="icon">🔧</span>
+    <h2>Periodicidades, responsables y acciones de mantenimiento</h2>
+    <span class="chip ch-green">El dato más preguntado</span>
+  </div>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="hd-grey">Frecuencia</th>
+        <th class="hd-green">Acción / Quién la realiza</th>
+        <th class="hd-green">Qué se comprueba</th>
+        <th class="hd-green">Normativa</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="sep"><td colspan="4">Mantenimiento preventivo — empresa mantenedora autorizada</td></tr>
+      <tr class="hi-red">
+        <td><strong>MENSUAL</strong></td>
+        <td><strong>Visita de mantenimiento preventivo</strong><br>Empresa mantenedora autorizada e inscrita en el registro de la CCAA.</td>
+        <td>Estado general visual, lubricación de guías y partes móviles, ajuste de puertas, dispositivo de socorro, limpieza del foso y cuarto de máquinas.</td>
+        <td>ITC AEM 1 — RD 355/2024. El dato más preguntado en examen.</td>
+      </tr>
+      <tr>
+        <td><strong>ANUAL</strong></td>
+        <td><strong>Revisión general completa</strong><br>Empresa mantenedora autorizada.</td>
+        <td>Prueba funcional de paracaídas (vacío, velocidad reducida), limitador de velocidad, amortiguadores, sistema de socorro (llamada real), precisión de parada (≤±10 mm), barrera IR de puerta.</td>
+        <td>ITC AEM 1 — RD 355/2024.</td>
+      </tr>
+      <tr class="sep"><td colspan="4">Inspección por Organismo de Control Autorizado (OCA) — figura independiente</td></tr>
+      <tr class="hi-red">
+        <td><strong>CADA 2 AÑOS</strong></td>
+        <td><strong>Inspección OCA — riesgo ALTO</strong><br>OCA acreditada e independiente.</td>
+        <td>Todos los elementos de seguridad + mediciones: precisión de parada, fuerzas en puertas, protección IR, frenos, paracaídas, limitador, amortiguadores, interfono 24h.</td>
+        <td>Hospitales, colegios, grandes centros comerciales, estaciones. &gt;1.000 usuarios/día.</td>
+      </tr>
+      <tr class="hi">
+        <td><strong>CADA 4 AÑOS</strong></td>
+        <td><strong>Inspección OCA — riesgo MEDIO</strong><br>OCA acreditada e independiente.</td>
+        <td>Los mismos elementos que en riesgo alto.</td>
+        <td>Edificios de viviendas, oficinas, usos normales. El caso más habitual en España.</td>
+      </tr>
+      <tr>
+        <td><strong>CADA 6 AÑOS</strong></td>
+        <td><strong>Inspección OCA — riesgo BAJO</strong><br>OCA acreditada e independiente.</td>
+        <td>Los mismos elementos que en riesgo alto.</td>
+        <td>Viviendas unifamiliares y edificios de muy baja ocupación.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-red">
+    <strong>⚠ La distinción más examinada del Tema 9:</strong><br>
+    · Mantenimiento <strong>MENSUAL</strong> → empresa mantenedora autorizada (cuida el ascensor mes a mes).<br>
+    · Inspección OCA cada <strong>2, 4 o 6 años</strong> según riesgo → organismo independiente que verifica la seguridad.<br>
+    Son dos figuras distintas. La OCA NO hace el mantenimiento mensual. La empresa mantenedora NO es la OCA.
+  </div>
+  <div class="callout al-warn">
+    <strong>📌 Responsabilidad legal:</strong> el <strong>PROPIETARIO del ascensor</strong> (comunidad de propietarios en edificios residenciales) es el responsable legal. Debe contratar empresa mantenedora autorizada y permitir las inspecciones de la OCA. La empresa ejecuta; el propietario responde.
+  </div>
+</div>
+
+
+<!-- ══════════════ TABLA 6: RD 355/2024 MODERNIZACIÓN ══════════════ -->
+<div class="section-label">Tabla 6 — Requisitos de modernización del RD 355/2024</div>
+<div class="table-card top-blue">
+  <div class="table-card-header">
+    <span class="icon">🔄</span>
+    <h2>Exigencias de modernización para ascensores existentes — datos numéricos exactos</h2>
+    <span class="chip ch-blue">RD 355/2024 vigente</span>
+  </div>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="hd-grey" style="width:175px;">Requisito</th>
+        <th class="hd-blue">Valor / Especificación</th>
+        <th class="hd-blue">Por qué ese valor</th>
+        <th class="hd-blue">Consecuencia si no se cumple</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="hi-red">
+        <td><strong>Precisión de parada</strong></td>
+        <td><span class="dato-grande">≤ ±10 mm</span> respecto al nivel exacto del piso.</td>
+        <td>Una diferencia mayor crea un escalón al entrar/salir. Riesgo de tropiezo, especialmente grave para sillas de ruedas, personas mayores y cochecitos de bebé.</td>
+        <td>Riesgo de caída al entrar o salir de la cabina. Incumplimiento de accesibilidad y seguridad.</td>
+      </tr>
+      <tr class="hi-red">
+        <td><strong>Barrera de infrarrojos (protección de puertas)</strong></td>
+        <td>Desde <span class="dato-grande">≥25 mm</span> hasta <span class="dato-grande">≥1.600 mm</span> sobre la pisadera de cabina.</td>
+        <td>25 mm: detecta un pie, bastón o rueda a ras del suelo. 1.600 mm: detecta una persona adulta o el respaldo de una silla de ruedas. El rango completo cubre todos los usuarios.</td>
+        <td>Riesgo de atrapamiento al cruzar el umbral. El cierre de la puerta podría impactar sobre un usuario sin detectarlo.</td>
+      </tr>
+      <tr class="hi">
+        <td><strong>ARD: rescate automático en corte de corriente</strong></td>
+        <td>Batería de emergencia que lleva la cabina automáticamente a la planta más próxima y abre las puertas al cortar la alimentación.</td>
+        <td>Elimina el riesgo de atrapamiento prolongado entre plantas durante cortes de luz. Especialmente importante en edificios sin vigilancia permanente.</td>
+        <td>Sin ARD: atrapamiento entre plantas hasta que llegue el servicio de rescate (que puede tardar horas).</td>
+      </tr>
+      <tr>
+        <td><strong>Mejoras en alumbrado</strong></td>
+        <td>Iluminación mínima de 100 lux en cabina. Alumbrado de emergencia con batería de autonomía suficiente.</td>
+        <td>La oscuridad en la cabina genera pánico en los atrapados y dificulta la activación del sistema de socorro.</td>
+        <td>Riesgo de pánico. Dificultad para activar el interfono o ver el panel de control.</td>
+      </tr>
+      <tr>
+        <td><strong>Mejoras en interfono de socorro</strong></td>
+        <td>Comunicación bidireccional con servicio de rescate disponible 24h/7d. Tiempo de respuesta definido.</td>
+        <td>El atrapado debe poder comunicarse con alguien que pueda organizarle el rescate en cualquier momento del día o la noche.</td>
+        <td>Riesgo de desamparo total del atrapado. Infracción grave y posible responsabilidad penal del propietario.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- ══════════════ TABLA 7: PUERTAS AUTOMÁTICAS ══════════════ -->
+<div class="section-label">Tabla 7 — Tipologías de puertas automáticas: características y normativa comparada</div>
+<div class="table-card top-gold">
+  <div class="table-card-header">
+    <span class="icon">🚪</span>
+    <h2>Corredera · Batiente · Giratoria · Rápida · Seccional · Cortafuegos</h2>
+    <span class="chip ch-gold">6 tipologías</span>
+  </div>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="hd-grey">Característica</th>
+        <th class="hd-blue">↔ Corredera</th>
+        <th class="hd-teal">↺ Batiente</th>
+        <th class="hd-purple">⟳ Giratoria</th>
+        <th class="hd-gold">⚡ Rápida industrial</th>
+        <th class="hd-orange">⬆ Seccional</th>
+        <th class="hd-flame">🔥 Cortafuegos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="feat">Movimiento</td><td>Deslizamiento lateral</td><td>Giro sobre bisagras</td><td>Giro central (3-4 hojas)</td><td>Enrollado o plegado vertical</td><td>Plegado hacia el techo</td><td>Abatible o corredera</td></tr>
+      <tr><td class="feat">Uso habitual</td><td>Edificios públicos, hospitales, supermercados</td><td>Accesos donde no cabe corredera</td><td>Hoteles, edificios corporativos</td><td>Naves, cámaras frigoríficas</td><td>Garajes, naves industriales</td><td>Compartimentación incendios</td></tr>
+      <tr><td class="feat">Sensor de apertura</td><td>Microondas (movimiento)</td><td>IR activo o microondas</td><td>Células fotoeléctricas</td><td>Bucle inductivo o IR</td><td>Mando a distancia o mural</td><td>Detector humo/calor (cierra, no abre)</td></tr>
+      <tr class="hi-red"><td class="feat">⚠ Estado normal</td><td class="ok">CERRADA (se abre con detección)</td><td class="ok">CERRADA (se abre con detección)</td><td>EN GIRO continuo cuando hay tráfico</td><td class="ok">CERRADA (se abre con detección)</td><td class="ok">CERRADA (se abre con mando)</td><td class="no"><strong>ABIERTA</strong> (se CIERRA con incendio)</td></tr>
+      <tr><td class="feat">Cortina de seguridad IR</td><td class="ok">Sí — obligatoria (UNE-EN 16005)</td><td class="ok">Sí — obligatoria</td><td class="warn">Sensores de seguridad laterales</td><td class="warn">Safety edge o barrera IR</td><td class="warn">Safety edge en canto</td><td>No aplica igual</td></tr>
+      <tr class="hi-red"><td class="feat">⚠ Vía de evacuación</td><td class="ok">Sí (modo emergencia abierta)</td><td class="ok">Sí (modo emergencia)</td><td class="no"><strong>NO sin puertas laterales</strong></td><td class="no">No peatonal</td><td class="no">No peatonal</td><td class="no">NO — compartimenta</td></tr>
+      <tr><td class="feat">Efecto esclusa de aire</td><td class="no">No</td><td class="no">No</td><td class="ok">Sí — continuo</td><td class="warn">Parcial (alta velocidad)</td><td class="ok">Sí — estanco cuando cierra</td><td class="ok">Sí — cuando cierra</td></tr>
+      <tr><td class="feat">Normativa principal</td><td>UNE-EN 16005</td><td>UNE-EN 16005</td><td>UNE-EN 16005</td><td>UNE 85635</td><td>UNE 85635</td><td>UNE 23740-1 + CTE DB-SI</td></tr>
+      <tr><td class="feat">Apertura manual emergencia</td><td class="ok">Sí — fail-open en evacuación</td><td class="ok">Sí</td><td class="warn">Puertas laterales abatibles</td><td class="warn">Cordón rojo manual</td><td class="ok">Cordón rojo manual</td><td class="no">Fail-CLOSED — se cierra</td></tr>
+    </tbody>
+  </table>
+  <div class="callout al-red">
+    <strong>⚠ Trampa puerta giratoria:</strong> sin puertas de emergencia abatibles laterales, la giratoria NO puede ser la única vía de evacuación (CTE DB-SI). Siempre deben existir.<br>
+    <strong>⚠ Trampa puerta cortafuegos:</strong> está normalmente ABIERTA y se CIERRA en incendio. Al contrario que las puertas de evacuación, que deben estar normalmente cerradas o abrirse en evacuación. La cortafuegos COMPARTIMENTA; no extingue.
+  </div>
+</div>
+
+
+<!-- ══════════════ TABLA 8: SENSORES Y SEGURIDAD ══════════════ -->
+<div class="section-label">Tabla 8 — Sensores de detección y dispositivos anti-atrapamiento en puertas automáticas</div>
+<div class="table-card top-teal">
+  <div class="table-card-header">
+    <span class="icon">📡</span>
+    <h2>Sensores de activación vs dispositivos anti-atrapamiento — diferencia clave</h2>
+    <span class="chip ch-teal">UNE-EN 16005</span>
+  </div>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="hd-grey" style="width:150px;">Dispositivo</th>
+        <th class="hd-teal">Función</th>
+        <th class="hd-teal">Qué detecta / cómo funciona</th>
+        <th class="hd-teal">Uso típico</th>
+        <th class="hd-teal">¿Obligatorio?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="sep"><td colspan="5">Sensores de activación — ordenan la APERTURA de la puerta</td></tr>
+      <tr>
+        <td><strong>Microondas (radar Doppler)</strong></td>
+        <td>Detecta la aproximación de personas y ordena la apertura de la puerta.</td>
+        <td>Emite ondas de radio y detecta el efecto Doppler del movimiento. <strong>Solo detecta movimiento</strong>, no presencia estática.</td>
+        <td>Puertas correderas automáticas de entrada a edificios públicos. El más extendido en España.</td>
+        <td class="warn">No obligatorio como tipo específico, pero sí es necesario un sensor de activación.</td>
+      </tr>
+      <tr>
+        <td><strong>Infrarrojo activo (PIR activo)</strong></td>
+        <td>Detecta la aproximación o presencia de personas mediante la emisión y recepción de rayos IR.</td>
+        <td>Emite rayos IR y detecta la reflexión o interrupción del haz. Más preciso que microondas. Puede detectar presencia estática.</td>
+        <td>Puertas de acceso controlado, como complemento del sensor de microondas.</td>
+        <td class="warn">No obligatorio como tipo específico.</td>
+      </tr>
+      <tr>
+        <td><strong>Tapete de presión</strong></td>
+        <td>Detecta el peso de una persona al pisarlo y ordena la apertura.</td>
+        <td>Plataforma sensible a la presión. Muy preciso (solo actúa con contacto físico). No falsos positivos por movimiento.</td>
+        <td>Zonas de acceso controlado, combinado con otros sensores, interiores de edificios.</td>
+        <td class="warn">No obligatorio como tipo específico.</td>
+      </tr>
+      <tr class="sep"><td colspan="5">Dispositivos anti-atrapamiento — evitan el CIERRE sobre personas u objetos</td></tr>
+      <tr class="hi-red">
+        <td><strong>Cortina de seguridad (barrera IR múltiple)</strong></td>
+        <td>Detecta presencia de personas u objetos durante el proceso de cierre de la puerta y revierte el movimiento.</td>
+        <td>Barrera de múltiples haces de infrarrojos cruzados en el plano del umbral durante el cierre. Si cualquier haz se interrumpe → la puerta se abre de nuevo.</td>
+        <td>Puertas correderas, batientes y giratorias de uso peatonal. Instalada en el marco de la puerta.</td>
+        <td class="ok"><strong>OBLIGATORIA</strong> (UNE-EN 16005). El dispositivo de seguridad más importante.</td>
+      </tr>
+      <tr>
+        <td><strong>Safety edge (borde de seguridad)</strong></td>
+        <td>Sensor de presión o contacto en el canto de cierre de la hoja. Si la puerta toca a alguien durante el cierre → revierte.</td>
+        <td>Sensor piezoeléctrico o de goma conductora en el canto. Detecta resistencia física al cierre. Actúa por contacto.</td>
+        <td>Puertas batientes de gran tamaño, puertas seccionales y portones industriales donde la cortina IR no es viable.</td>
+        <td class="warn">Obligatorio cuando la cortina IR no es viable. Alternativa a la cortina.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-red">
+    <strong>⚠ La diferencia que siempre sale en examen:</strong><br>
+    · Sensor de microondas o IR activo: función de <strong>APERTURA</strong> (detecta aproximación → abre la puerta).<br>
+    · Cortina de seguridad IR: función de <strong>SEGURIDAD EN CIERRE</strong> (detecta presencia durante el cierre → revierte). Son dispositivos distintos con funciones opuestas. La cortina de seguridad es <strong>obligatoria</strong>; el tipo de sensor de apertura no lo es.
+  </div>
+</div>
+
+
+<!-- ══════════════ TABLA 9: ACCESIBILIDAD UNE-EN 81-70 ══════════════ -->
+<div class="section-label">Tabla 9 — Accesibilidad en ascensores: requisitos UNE-EN 81-70</div>
+<div class="table-card top-purple">
+  <div class="table-card-header">
+    <span class="icon">♿</span>
+    <h2>Dimensiones, señalización y equipamiento exigido por la UNE-EN 81-70</h2>
+    <span class="chip ch-purple">Accesibilidad PMR</span>
+  </div>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="hd-grey" style="width:175px;">Requisito</th>
+        <th class="hd-purple">Valor / Especificación exacta</th>
+        <th class="hd-purple">Por qué ese valor / Para quién</th>
+        <th class="hd-purple">¿Obligatorio en edificios nuevos?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="hi-purple">
+        <td><strong>Dimensión mínima de cabina</strong></td>
+        <td><span class="dato-grande">1.000 mm × 1.250 mm</span> (ancho × fondo)</td>
+        <td>Permite el acceso y la estancia de una silla de ruedas estándar (ancho ~700 mm). El usuario puede entrar de frente y salir de espaldas con el espejo posterior.</td>
+        <td class="ok">SÍ — en edificios de uso público y viviendas colectivas nuevas (con el CTE DB-SUA).</td>
+      </tr>
+      <tr class="hi-purple">
+        <td><strong>Paso libre mínimo de puerta</strong></td>
+        <td><span class="dato-grande">800 mm</span> de paso libre (no el ancho total de la hoja)</td>
+        <td>Una silla de ruedas estándar tiene ~700 mm de ancho. Los 800 mm dejan margen para maniobrar. El paso libre es el hueco útil, no el ancho nominal de la puerta.</td>
+        <td class="ok">SÍ — en edificios de uso público y viviendas colectivas nuevas.</td>
+      </tr>
+      <tr class="hi-purple">
+        <td><strong>Altura de la botonera</strong></td>
+        <td>Entre <span class="dato-grande">900 mm</span> y <span class="dato-grande">1.200 mm</span> desde el suelo</td>
+        <td>Alcance desde una silla de ruedas sin necesitar estirarse. Por encima de 1.200 mm no es accesible desde la silla. Por debajo de 900 mm requiere inclinarse excesivamente.</td>
+        <td class="ok">SÍ — en edificios de uso público y viviendas colectivas nuevas.</td>
+      </tr>
+      <tr>
+        <td><strong>Braille y caracteres en relieve</strong></td>
+        <td>Todos los botones de la botonera con el número de planta en Braille y relieve táctil.</td>
+        <td>Para usuarios con discapacidad visual. El Braille junto al botón permite identificar la planta sin ver. El relieve lo hace también para personas con visión parcial.</td>
+        <td class="ok">SÍ — obligatorio en edificios de uso público.</td>
+      </tr>
+      <tr class="hi-purple">
+        <td><strong>Anuncio de planta por voz</strong></td>
+        <td>Al llegar a cada planta, el ascensor debe anunciar verbalmente el número de planta.</td>
+        <td>Para usuarios con discapacidad visual que no pueden leer el indicador luminoso de planta. Combinado con el Braille en los botones, garantiza independencia total al usuario ciego.</td>
+        <td class="ok">SÍ — obligatorio en edificios de uso público.</td>
+      </tr>
+      <tr>
+        <td><strong>Espejo en la pared posterior</strong></td>
+        <td>Espejo en la pared de fondo de la cabina, desde la altura de los apoyabrazos hasta al menos 1.000 mm.</td>
+        <td>El usuario en silla de ruedas entra de frente y debe salir de espaldas. El espejo le permite ver la botonera y el nivel de planta sin girar la silla dentro de la cabina (sin espacio para girar).</td>
+        <td class="ok">SÍ — en cabinas accesibles.</td>
+      </tr>
+      <tr>
+        <td><strong>Pasamanos en cabina</strong></td>
+        <td>Pasamanos continuo en las paredes laterales de la cabina, a una altura accesible.</td>
+        <td>Apoyo para personas con dificultades de equilibrio, usuarios de muletas o personas mayores durante el desplazamiento vertical.</td>
+        <td class="ok">SÍ — en cabinas accesibles.</td>
+      </tr>
+      <tr>
+        <td><strong>Tiempo de apertura de puertas</strong></td>
+        <td>Tiempo de permanencia de las puertas abiertas ampliado respecto a los ascensores estándar.</td>
+        <td>Una silla de ruedas necesita más tiempo para entrar o salir que una persona que camina. El tiempo estándar de cierre automático es insuficiente para PMR.</td>
+        <td class="ok">SÍ — en cabinas accesibles.</td>
+      </tr>
+      <tr>
+        <td><strong>Iluminación mínima en cabina</strong></td>
+        <td>100 lux como mínimo en el suelo de la cabina.</td>
+        <td>Nivel suficiente para que usuarios con visión reducida puedan leer los botones y orientarse dentro de la cabina.</td>
+        <td class="ok">SÍ — en cabinas accesibles.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-purple">
+    <strong>📌 Los 4 datos numéricos exactos más preguntados de la UNE-EN 81-70:</strong><br>
+    · Cabina mínima: <strong>1.000 mm × 1.250 mm</strong><br>
+    · Paso libre de puerta: <strong>800 mm</strong><br>
+    · Botonera: entre <strong>900 mm y 1.200 mm</strong> del suelo<br>
+    · Anuncio de planta por voz: <strong>OBLIGATORIO</strong><br>
+    Estos cuatro datos, más el espejo en pared posterior, constituyen el 90% de las preguntas de tipo test sobre accesibilidad en ascensores.
+  </div>
+</div>
+
+</body>
+</html>
