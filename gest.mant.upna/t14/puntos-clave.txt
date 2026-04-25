@@ -1,0 +1,106 @@
+TEMA 14 – PREVENCIÓN DE RIESGOS LABORALES
+Principios de la acción preventiva · Coordinación de actividades empresariales
+Disposiciones mínimas en obras de construcción · Normativa aplicable
+══════════════════════════════════════════════════════════════════════════════
+
+1. NORMAS DE CABECERA (las más preguntadas)
+───────────────────────────────────────────
+• Ley 31/1995, de 8 de noviembre, de Prevención de Riesgos Laborales (LPRL)
+  – Artículo 15: 9 principios de la acción preventiva (el más examinado de la ley)
+  – Artículo 16: Plan de prevención + Evaluación de riesgos + Planificación
+  – Artículo 24: Coordinación de actividades empresariales (CAE)
+  – Artículo 30: Modalidades de organización del sistema preventivo
+• RD 39/1997 – Reglamento de los Servicios de Prevención (RSP)
+• RD 171/2004 – Coordinación de actividades empresariales (desarrolla el art. 24 LPRL)
+• RD 1627/1997 – Disposiciones mínimas de seguridad y salud en obras de construcción
+
+2. LOS 9 PRINCIPIOS DEL ARTÍCULO 15 LPRL (orden importa en examen)
+────────────────────────────────────────────────────────────────────
+1) Evitar los riesgos
+2) Evaluar los riesgos que no se pueden evitar
+3) Combatir los riesgos en su origen
+4) Adaptar el trabajo a la persona
+5) Tener en cuenta la evolución técnica
+6) Sustituir lo peligroso por lo que no lo es o lo que entraña menos peligro
+7) Planificar la prevención (técnica, organización, condiciones de trabajo, relaciones sociales, factores ambientales)
+8) Adoptar medidas colectivas con prioridad sobre las individuales
+9) Dar instrucciones adecuadas a los trabajadores
+
+REGLA MNEMOTÉCNICA: "Evitar · Evaluar · Combatir · Adaptar · Evolución · Sustituir · Planificar · Colectivas > Individuales · Instruir"
+
+3. MODALIDADES DE ORGANIZACIÓN DE LA PREVENCIÓN (RD 39/1997)
+─────────────────────────────────────────────────────────────
+• Asunción personal por el empresario (solo ≤10 trabajadores, no actividad peligrosa, empresario en centro habitual)
+• Trabajadores designados (uno o varios trabajadores con formación suficiente)
+• Servicio de Prevención Propio (SPP) → obligatorio ≥500 trabajadores o ≥250 en actividades del Anexo I del RSP
+• Servicio de Prevención Ajeno (SPA) → empresa acreditada. La más habitual en PYMES
+• Servicio de Prevención Mancomunado → empresas del mismo grupo o sector/zona geográfica
+
+4. COORDINACIÓN DE ACTIVIDADES EMPRESARIALES – CAE (RD 171/2004)
+──────────────────────────────────────────────────────────────────
+• Se aplica cuando dos o más empresas coinciden en un mismo centro de trabajo
+• Tres supuestos distintos:
+  1. Concurrencia de trabajadores en centro ajeno → deber de cooperar e informar
+  2. Concurrencia en centro del empresario titular → este debe dar instrucciones
+  3. Empresario principal (contrata obras propias) → debe vigilar el cumplimiento
+• Recursos preventivos: presencia obligatoria en obras cuando el riesgo es especial/agravado
+• Coordinador de seguridad y salud en obras (RD 1627/1997): obligatorio si hay más de una empresa
+• Medios de coordinación: reuniones periódicas, libro de incidencias, intercambio de información
+
+5. RD 1627/1997 – OBRA DE CONSTRUCCIÓN: FIGURAS Y DOCUMENTOS CLAVE
+────────────────────────────────────────────────────────────────────
+FIGURAS:
+• Promotor: quien encarga la obra. Designa al coordinador.
+• Proyectista: redacta el proyecto con el estudio de seguridad.
+• Contratista: empresa constructora. Elabora el PSS.
+• Subcontratista: empresa contratada por el contratista.
+• Trabajador autónomo: equiparado al contratista en obligaciones.
+• Director de obra (DO): dirección técnica de la ejecución.
+• Coordinador de Seguridad y Salud en fase de proyecto (CSS-P).
+• Coordinador de Seguridad y Salud en fase de ejecución (CSS-E): el más importante.
+
+DOCUMENTOS:
+• Estudio de Seguridad y Salud (ESS): obligatorio cuando:
+  – Presupuesto de ejecución ≥450.101,08 €, o
+  – Duración estimada >30 días laborables con >20 trabajadores simultáneamente, o
+  – Volumen de mano de obra >500 jornadas, o
+  – Túneles, galerías, conducciones subterráneas, presas.
+  Si no se cumple ninguna de las anteriores → Estudio Básico de Seguridad y Salud (EBSS).
+• Plan de Seguridad y Salud (PSS): elaborado por el CONTRATISTA antes del inicio de la obra. Aprobado por el CSS-E.
+• Aviso previo: comunicación a la autoridad laboral antes del inicio de obras sujetas a coordinación.
+• Libro de incidencias: en poder del CSS-E. Acceso a todos los agentes.
+
+6. CUÁNDO ES OBLIGATORIO EL COORDINADOR DE SEGURIDAD Y SALUD EN EJECUCIÓN
+────────────────────────────────────────────────────────────────────────────
+• Cuando intervienen más de una empresa (contratista + subcontratistas o autónomos).
+• Lo designa el promotor.
+• Si solo hay una empresa → no es obligatorio el coordinador, pero sí el PSS.
+
+7. RIESGOS ESPECIALES EN CONSTRUCCIÓN (Anexo II del RD 1627/1997)
+──────────────────────────────────────────────────────────────────
+• Riesgo de sepultamiento (excavaciones, zanjas)
+• Caídas de altura
+• Exposición a agentes químicos/biológicos peligrosos
+• Radiaciones ionizantes
+• Proximidad a líneas eléctricas de alta tensión
+• Riesgo de ahogamiento
+• Uso de explosivos
+
+8. SUBCONTRATACIÓN EN CONSTRUCCIÓN – Ley 32/2006
+──────────────────────────────────────────────────
+• Límite de subcontratación: 3 niveles máximo (contratista > sub1 > sub2 > sub3). Excepcionalmente 4.
+• Registro de Empresas Acreditadas (REA): obligatorio para contratar o subcontratar.
+• Libro de subcontratación: en poder del contratista. Registro de todos los subcontratistas.
+
+9. LO MÁS PREGUNTADO EN OPOSICIÓN
+────────────────────────────────────
+• Número y orden exacto de los 9 principios del art. 15 LPRL.
+• Cuándo es obligatorio el ESS vs el EBSS (umbrales numéricos: 450.101,08 €, 30 días, 20 trabajadores, 500 jornadas).
+• Quién elabora el PSS (el CONTRATISTA, no el coordinador).
+• Quién aprueba el PSS (el COORDINADOR de seguridad y salud en ejecución).
+• Cuándo es obligatorio el coordinador de seguridad en ejecución (más de una empresa).
+• Quién designa al coordinador (el PROMOTOR).
+• Niveles máximos de subcontratación (3 niveles, excepcionalmente 4 - Ley 32/2006).
+• Modalidades organizativas de la prevención y umbrales (≥500 trabajadores → SPP).
+• Medidas colectivas tienen PRIORIDAD sobre las individuales (principio 8).
+• El Libro de incidencias lo custodia el CSS-E.

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 14 – Esquema-resumen · PRL</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f7fa;--surface:#fff;
+  --border:#ccd3de;--text:#1a2233;--muted:#4e5f7a;--faint:#8a9abb;
+  --blue:#0d4f8b;--blue-lt:#dceaf7;--blue-dk:#051e40;
+  --teal:#00707a;--teal-lt:#ccedf0;
+  --green:#1a6633;--green-lt:#d4eedd;
+  --gold:#c47d00;--gold-lt:#faefd0;
+  --orange:#8b3a0d;--orange-lt:#fce8d8;
+  --purple:#5b3690;--purple-lt:#ece4f8;
+  --flame:#c0392b;--red-lt:#fde8e8;
+  --font-d:"Cabinet Grotesk",sans-serif;
+  --font-b:"Satoshi",sans-serif;
+  --r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.87rem;line-height:1.65;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 5rem;}
+.file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s;}
+.file-nav a:hover,.file-nav a.active{background:var(--blue);color:white;border-color:var(--blue);}
+.page-header{background:linear-gradient(135deg,#0d4f8b,#051e40);color:white;border-radius:var(--r-xl);padding:2rem 2.5rem;margin-bottom:2rem;}
+.page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;}
+.page-header h1{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,1.85rem);font-weight:800;line-height:1.2;margin-bottom:.4rem;}
+.page-header .sub{font-size:.83rem;opacity:.8;}
+.section-label{font-family:var(--font-d);font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:2.5rem 0 .7rem;}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:1.25rem 1.5rem;margin-bottom:1rem;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+.card.bt-blue{border-top:4px solid var(--blue);}
+.card.bt-teal{border-top:4px solid var(--teal);}
+.card.bt-green{border-top:4px solid var(--green);}
+.card.bt-gold{border-top:4px solid var(--gold);}
+.card.bt-orange{border-top:4px solid var(--orange);}
+.card.bt-purple{border-top:4px solid var(--purple);}
+.card.bt-flame{border-top:4px solid var(--flame);}
+.card h3{font-family:var(--font-d);font-size:.92rem;font-weight:800;margin-bottom:.65rem;}
+.card h3.c-blue{color:var(--blue);}
+.card h3.c-teal{color:var(--teal);}
+.card h3.c-green{color:var(--green);}
+.card h3.c-gold{color:var(--gold);}
+.card h3.c-orange{color:var(--orange);}
+.card h3.c-purple{color:var(--purple);}
+.card h3.c-flame{color:var(--flame);}
+.pill-list{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.6rem;}
+.pill{display:inline-block;padding:3px 10px;border-radius:999px;font-size:.75rem;font-weight:700;}
+.p-blue{background:var(--blue-lt);color:var(--blue);}
+.p-teal{background:var(--teal-lt);color:var(--teal);}
+.p-green{background:var(--green-lt);color:var(--green);}
+.p-gold{background:var(--gold-lt);color:#7a4e00;}
+.p-orange{background:var(--orange-lt);color:var(--orange);}
+.p-purple{background:var(--purple-lt);color:var(--purple);}
+.p-flame{background:var(--red-lt);color:var(--flame);}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:.6rem;margin-bottom:.6rem;}
+.kpi{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);padding:.65rem .9rem;}
+.kpi .val{font-family:var(--font-d);font-size:1.3rem;font-weight:800;}
+.kpi .lbl{font-size:.72rem;color:var(--muted);}
+.ol-styled{padding-left:1.2rem;}
+.ol-styled li{margin-bottom:.3rem;}
+ul.blt{padding-left:1.2rem;}
+ul.blt li{margin-bottom:.28rem;}
+.callout{border-radius:var(--r-md);padding:.65rem .9rem;font-size:.82rem;margin:.65rem 0;}
+.al-red{background:var(--red-lt);border-left:3px solid var(--flame);}
+.al-blue{background:var(--blue-lt);border-left:3px solid var(--blue);}
+.al-gold{background:var(--gold-lt);border-left:3px solid var(--gold);}
+.al-green{background:var(--green-lt);border-left:3px solid var(--green);}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+@media(max-width:680px){.two-col{grid-template-columns:1fr;}.kpi-grid{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html" class="active">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </div>
+<div class="page-header">
+  <div class="meta">Tema 14 · Gestor de Mantenimiento (Nivel B) · UPNA · Esquema-resumen</div>
+  <h1>PRL — Principios, Coordinación y Obras de Construcción</h1>
+  <div class="sub">Esquema visual para repaso rápido · Ley 31/1995 · RD 39/1997 · RD 171/2004 · RD 1627/1997 · Ley 32/2006</div>
+</div>
+
+<!-- CIFRAS CLAVE -->
+<div class="section-label">Cifras de referencia inmediata</div>
+<div class="kpi-grid">
+  <div class="kpi"><div class="val" style="color:var(--blue)">9</div><div class="lbl">Principios de la acción preventiva (art. 15 LPRL)</div></div>
+  <div class="kpi"><div class="val" style="color:var(--flame)">450.101 €</div><div class="lbl">Umbral presupuesto → ESS obligatorio</div></div>
+  <div class="kpi"><div class="val" style="color:var(--orange)">30 días / 20</div><div class="lbl">Días laborables con &gt;20 trabajadores → ESS</div></div>
+  <div class="kpi"><div class="val" style="color:var(--teal)">500</div><div class="lbl">Jornadas de mano de obra → ESS obligatorio</div></div>
+  <div class="kpi"><div class="val" style="color:var(--green)">≥500</div><div class="lbl">Trabajadores → SPP obligatorio</div></div>
+  <div class="kpi"><div class="val" style="color:var(--purple)">3 (+1)</div><div class="lbl">Niveles máximos de subcontratación (Ley 32/2006)</div></div>
+</div>
+
+<!-- 9 PRINCIPIOS -->
+<div class="section-label">Los 9 principios del artículo 15 LPRL (en orden)</div>
+<div class="card bt-blue">
+  <h3 class="c-blue">Art. 15 LPRL — Principios de la acción preventiva</h3>
+  <ol class="ol-styled">
+    <li><strong>Evitar</strong> los riesgos</li>
+    <li><strong>Evaluar</strong> los riesgos que no se puedan evitar</li>
+    <li><strong>Combatir</strong> los riesgos en su origen</li>
+    <li><strong>Adaptar</strong> el trabajo a la persona</li>
+    <li>Tener en cuenta la <strong>evolución técnica</strong></li>
+    <li><strong>Sustituir</strong> lo peligroso por lo que entraña menos peligro</li>
+    <li><strong>Planificar</strong> la prevención de forma integrada</li>
+    <li>Medidas <strong>colectivas</strong> con prioridad sobre las <strong>individuales</strong></li>
+    <li>Dar <strong>instrucciones</strong> adecuadas a los trabajadores</li>
+  </ol>
+  <div class="callout al-gold" style="margin-top:.7rem;">🔑 <strong>Mnemotécnica:</strong> E·E·C·A·E·S·P·C·I — Evitar / Evaluar / Combatir / Adaptar / Evolución / Sustituir / Planificar / Colectivas / Instruir</div>
+</div>
+
+<!-- MODALIDADES ORGANIZACIÓN -->
+<div class="section-label">Modalidades de organización preventiva — RD 39/1997</div>
+<div class="two-col">
+  <div class="card bt-teal">
+    <h3 class="c-teal">Asunción personal por el empresario</h3>
+    <ul class="blt">
+      <li>≤10 trabajadores (o ≤25 con un solo centro)</li>
+      <li>Actividad no en Anexo I del RSP</li>
+      <li>Empresario trabaja habitualmente en el centro</li>
+    </ul>
+  </div>
+  <div class="card bt-teal">
+    <h3 class="c-teal">Trabajadores designados</h3>
+    <ul class="blt">
+      <li>Uno o varios trabajadores con formación adecuada</li>
+      <li>Con tiempo suficiente para la función preventiva</li>
+      <li>Insuficiente solo en actividades del Anexo I</li>
+    </ul>
+  </div>
+  <div class="card bt-blue">
+    <h3 class="c-blue">Servicio de Prevención Propio (SPP)</h3>
+    <ul class="blt">
+      <li><strong>Obligatorio ≥500 trabajadores</strong></li>
+      <li>O ≥250 en actividades del Anexo I</li>
+      <li>Personal exclusivo y dedicación exclusiva</li>
+      <li>Cubre ≥2 de las 4 especialidades preventivas</li>
+    </ul>
+  </div>
+  <div class="card bt-green">
+    <h3 class="c-green">Servicio de Prevención Ajeno (SPA)</h3>
+    <ul class="blt">
+      <li>Empresa externa acreditada por la autoridad laboral</li>
+      <li>La modalidad más habitual en PYMES</li>
+      <li>Puede cubrir todas las especialidades preventivas</li>
+    </ul>
+  </div>
+</div>
+<div class="card bt-purple">
+  <h3 class="c-purple">Servicio de Prevención Mancomunado</h3>
+  <ul class="blt">
+    <li>Compartido por empresas del mismo grupo o mismo sector/zona</li>
+    <li>Se trata como SPP a efectos reglamentarios</li>
+  </ul>
+  <div class="callout al-blue" style="margin-top:.6rem;">Las 4 especialidades preventivas: <strong>Seguridad en el trabajo · Higiene industrial · Ergonomía y psicosociología aplicada · Medicina del trabajo.</strong></div>
+</div>
+
+<!-- CAE -->
+<div class="section-label">Coordinación de actividades empresariales — RD 171/2004</div>
+<div class="card bt-orange">
+  <h3 class="c-orange">Tres supuestos de concurrencia</h3>
+  <div class="two-col" style="margin-top:.5rem;">
+    <div>
+      <strong style="font-size:.8rem;color:var(--orange);">① Trabajadores en centro ajeno</strong>
+      <ul class="blt" style="margin-top:.3rem;">
+        <li>Deber de cooperar e informar mutuamente</li>
+        <li>Intercambio de evaluaciones de riesgo</li>
+      </ul>
+    </div>
+    <div>
+      <strong style="font-size:.8rem;color:var(--orange);">② Centro del empresario titular</strong>
+      <ul class="blt" style="margin-top:.3rem;">
+        <li>Titular informa de riesgos propios del centro</li>
+        <li>Titular da instrucciones de emergencia</li>
+      </ul>
+    </div>
+  </div>
+  <div style="margin-top:.6rem;">
+    <strong style="font-size:.8rem;color:var(--orange);">③ Empresario principal (contrata obras propias de su actividad)</strong>
+    <ul class="blt" style="margin-top:.3rem;">
+      <li>Vigila cumplimiento PRL de contratistas y subcontratistas</li>
+      <li>Exige documentación acreditativa de organización preventiva</li>
+    </ul>
+  </div>
+  <div class="callout al-red" style="margin-top:.7rem;">⚠ <strong>Recursos preventivos:</strong> presencia física obligatoria cuando existe riesgo especial o agravado. Puede ser trabajador designado, miembro del SPP o técnico del SPA.</div>
+</div>
+
+<!-- RD 1627 FIGURAS -->
+<div class="section-label">RD 1627/1997 — Figuras y documentos en obras de construcción</div>
+<div class="two-col">
+  <div class="card bt-flame">
+    <h3 class="c-flame">Figuras intervinientes</h3>
+    <ul class="blt">
+      <li><strong>Promotor</strong> → designa coordinadores, aprueba aviso previo</li>
+      <li><strong>Proyectista</strong> → elabora ESS (o EBSS)</li>
+      <li><strong>CSS-P</strong> → coordina proyectistas (si son varios)</li>
+      <li><strong>CSS-E</strong> → <span style="color:var(--flame);font-weight:700;">la figura más importante</span>. Aprueba PSS, custodia libro de incidencias, puede paralizar trabajos</li>
+      <li><strong>Contratista</strong> → elabora PSS</li>
+      <li><strong>Subcontratista</strong> → ejecuta parte de la obra</li>
+      <li><strong>Autónomo</strong> → obligaciones equiparadas al contratista</li>
+    </ul>
+  </div>
+  <div class="card bt-gold">
+    <h3 class="c-gold">Documentos de seguridad</h3>
+    <ul class="blt">
+      <li><strong>ESS:</strong> elabora el proyectista · parte del proyecto</li>
+      <li><strong>EBSS:</strong> cuando no se alcanzan los umbrales del ESS</li>
+      <li><strong>PSS:</strong> elabora el <em>contratista</em> · aprueba el <em>CSS-E</em></li>
+      <li><strong>Aviso previo:</strong> el promotor lo comunica a la autoridad laboral antes del inicio</li>
+      <li><strong>Libro de incidencias:</strong> custodia CSS-E</li>
+    </ul>
+  </div>
+</div>
+
+<!-- UMBRALES ESS -->
+<div class="card bt-orange">
+  <h3 class="c-orange">Umbrales para ESS obligatorio (basta cumplir UNO)</h3>
+  <div class="kpi-grid">
+    <div class="kpi"><div class="val" style="color:var(--orange);">≥ 450.101 €</div><div class="lbl">Presupuesto de ejecución por contrata</div></div>
+    <div class="kpi"><div class="val" style="color:var(--orange);">&gt;30 días + &gt;20</div><div class="lbl">Días laborables con más de 20 trabajadores simultáneos</div></div>
+    <div class="kpi"><div class="val" style="color:var(--orange);">&gt;500 jornadas</div><div class="lbl">Volumen de mano de obra estimado</div></div>
+    <div class="kpi"><div class="val" style="color:var(--orange);">Túnel / Presa</div><div class="lbl">Túneles, galerías, conducciones subterráneas, presas</div></div>
+  </div>
+  <div class="callout al-red" style="margin-top:.4rem;">Si no se cumple ninguno → <strong>Estudio Básico de Seguridad y Salud (EBSS)</strong></div>
+</div>
+
+<!-- SUBCONTRATACIÓN -->
+<div class="section-label">Subcontratación en construcción — Ley 32/2006</div>
+<div class="card bt-purple">
+  <h3 class="c-purple">Régimen de subcontratación</h3>
+  <div class="pill-list">
+    <span class="pill p-purple">Máx. 3 niveles (excepcionalmente 4)</span>
+    <span class="pill p-blue">REA — Registro de Empresas Acreditadas</span>
+    <span class="pill p-green">Libro de subcontratación (custodia: contratista)</span>
+  </div>
+  <ul class="blt">
+    <li>Nivel 1: Contratista → Nivel 2: Subcontratista 1 → Nivel 3: Sub 2 → Nivel 4 (excepcional): Sub 3</li>
+    <li>El Libro de subcontratación ≠ Libro de incidencias (dos libros distintos)</li>
+    <li>REA: obligatorio para poder subcontratar en construcción</li>
+  </ul>
+</div>
+
+<!-- NORMATIVA -->
+<div class="section-label">Mapa normativo del Tema 14</div>
+<div class="card bt-blue">
+  <div class="pill-list">
+    <span class="pill p-blue">Ley 31/1995 LPRL → norma madre</span>
+    <span class="pill p-teal">RD 39/1997 RSP → servicios de prevención</span>
+    <span class="pill p-orange">RD 171/2004 → CAE</span>
+    <span class="pill p-flame">RD 1627/1997 → obras de construcción</span>
+    <span class="pill p-purple">Ley 32/2006 → subcontratación</span>
+    <span class="pill p-green">RD 485/1997 → señalización</span>
+    <span class="pill p-gold">RD 486/1997 → lugares de trabajo</span>
+    <span class="pill p-blue">RD 773/1997 → EPI</span>
+    <span class="pill p-teal">RD 1215/1997 → equipos de trabajo</span>
+    <span class="pill p-orange">Directiva 89/391/CEE → origen europeo LPRL</span>
+  </div>
+</div>
+
+</body>
+</html>

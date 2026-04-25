@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 14 – Cuadros comparativos · PRL y Coordinación</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f7fa;--surface:#fff;--surface-2:#f8f9fb;
+  --border:#ccd3de;--text:#1a2233;--muted:#4e5f7a;--faint:#8a9abb;
+  --blue:#0d4f8b;--blue-lt:#dceaf7;--blue-dk:#082f57;
+  --teal:#00707a;--teal-lt:#ccedf0;
+  --green:#1a6633;--green-lt:#d4eedd;
+  --gold:#c47d00;--gold-lt:#faefd0;
+  --orange:#8b3a0d;--orange-lt:#fce8d8;
+  --purple:#5b3690;--purple-lt:#ece4f8;
+  --flame:#c0392b;--red-lt:#fde8e8;
+  --navy:#0a1f44;--navy-lt:#d9e4f5;
+  --font-d:'Cabinet Grotesk',sans-serif;
+  --font-b:'Satoshi',sans-serif;
+  --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.88rem;line-height:1.65;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 5rem;}
+.file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s;}
+.file-nav a:hover,.file-nav a.active{background:var(--flame);color:white;border-color:var(--flame);}
+.page-header{background:linear-gradient(135deg,#8b0d0d 0%,#3d0505 100%);color:white;border-radius:var(--r-xl);padding:2rem 2.5rem;margin-bottom:2rem;}
+.page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;}
+.page-header h1{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,1.85rem);font-weight:800;line-height:1.2;margin-bottom:.4rem;}
+.page-header .sub{font-size:.83rem;opacity:.8;}
+.section-label{font-family:var(--font-d);font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:2.5rem 0 .7rem;}
+.table-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.5rem;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+.table-card-header{padding:.85rem 1.25rem;display:flex;align-items:center;gap:.65rem;border-bottom:1px solid var(--border);}
+.table-card-header .icon{font-size:1.1rem;}
+.table-card-header h2{font-family:var(--font-d);font-size:.95rem;font-weight:800;}
+.top-blue{border-top:4px solid var(--blue);}
+.top-teal{border-top:4px solid var(--teal);}
+.top-green{border-top:4px solid var(--green);}
+.top-gold{border-top:4px solid var(--gold);}
+.top-orange{border-top:4px solid var(--orange);}
+.top-purple{border-top:4px solid var(--purple);}
+.top-flame{border-top:4px solid var(--flame);}
+.top-navy{border-top:4px solid var(--navy);}
+.chip{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:2px 8px;border-radius:999px;white-space:nowrap;margin-left:auto;}
+.ch-blue{background:var(--blue-lt);color:var(--blue-dk);}
+.ch-teal{background:var(--teal-lt);color:var(--teal);}
+.ch-green{background:var(--green-lt);color:var(--green);}
+.ch-gold{background:var(--gold-lt);color:#7a4e00;}
+.ch-orange{background:var(--orange-lt);color:var(--orange);}
+.ch-purple{background:var(--purple-lt);color:var(--purple);}
+.ch-flame{background:var(--red-lt);color:var(--flame);}
+.ch-navy{background:var(--navy-lt);color:var(--navy);}
+.callout{border-radius:var(--r-md);padding:.75rem 1rem;font-size:.83rem;margin:.75rem 1.25rem;line-height:1.55;}
+.al-red{background:var(--red-lt);border-left:3px solid var(--flame);}
+.al-blue{background:var(--blue-lt);border-left:3px solid var(--blue);}
+.al-teal{background:var(--teal-lt);border-left:3px solid var(--teal);}
+.al-green{background:var(--green-lt);border-left:3px solid var(--green);}
+.al-gold{background:var(--gold-lt);border-left:3px solid var(--gold);}
+.al-purple{background:var(--purple-lt);border-left:3px solid var(--purple);}
+.al-orange{background:var(--orange-lt);border-left:3px solid var(--orange);}
+.al-navy{background:var(--navy-lt);border-left:3px solid var(--navy);}
+.cmp-table{width:100%;border-collapse:collapse;font-size:.84rem;}
+.cmp-table th{font-family:var(--font-d);font-weight:800;font-size:.78rem;padding:.55rem .9rem;text-align:left;border-bottom:2px solid var(--border);}
+.cmp-table th.hd-blue{background:var(--blue);color:white;}
+.cmp-table th.hd-flame{background:var(--flame);color:white;}
+.cmp-table th.hd-teal{background:var(--teal);color:white;}
+.cmp-table th.hd-green{background:var(--green);color:white;}
+.cmp-table th.hd-gold{background:var(--gold);color:white;}
+.cmp-table th.hd-orange{background:var(--orange);color:white;}
+.cmp-table th.hd-purple{background:var(--purple);color:white;}
+.cmp-table th.hd-navy{background:var(--navy);color:white;}
+.cmp-table th.hd-grey{background:#e8edf0;color:var(--text);}
+.cmp-table td{padding:.5rem .9rem;border-bottom:1px solid #eef3f6;vertical-align:top;}
+.cmp-table tr:last-child td{border-bottom:none;}
+.cmp-table tr:hover td{background:#f8f9fb;}
+.cmp-table tr.hi td{background:#dceaf7!important;font-weight:700;}
+.cmp-table tr.hi-red td{background:#fde8e8!important;font-weight:700;}
+.cmp-table tr.hi-green td{background:#d4eedd!important;font-weight:700;}
+.cmp-table tr.hi-gold td{background:var(--gold-lt)!important;font-weight:700;}
+.cmp-table tr.hi-purple td{background:var(--purple-lt)!important;font-weight:700;}
+.cmp-table tr.hi-teal td{background:var(--teal-lt)!important;font-weight:700;}
+.cmp-table tr.hi-orange td{background:var(--orange-lt)!important;font-weight:700;}
+.cmp-table tr.hi-navy td{background:var(--navy-lt)!important;font-weight:700;}
+.cmp-table .feat{font-weight:700;color:var(--muted);font-size:.79rem;white-space:nowrap;}
+.ok{color:var(--green);font-weight:800;}
+.no{color:var(--flame);font-weight:800;}
+.warn{color:var(--orange);font-weight:700;}
+.num-badge{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--flame);color:white;font-size:.72rem;font-weight:800;margin-right:4px;flex-shrink:0;}
+.principios-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;padding:1rem 1.25rem;}
+.ppio{display:flex;align-items:flex-start;gap:.5rem;padding:.6rem .75rem;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-md);}
+.ppio-text{font-size:.83rem;line-height:1.45;}
+.ppio-text strong{display:block;font-size:.78rem;color:var(--flame);}
+.mem-section{background:linear-gradient(135deg,#8b0d0d,#3d0505);border-radius:var(--r-xl);padding:1.75rem 2rem;margin-bottom:1.5rem;}
+.mem-section h2{font-family:var(--font-d);font-weight:800;color:white;font-size:1.05rem;margin-bottom:1.1rem;}
+.mem-grid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;}
+.mem-item{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:var(--r-lg);padding:.75rem 1rem;}
+.mem-label{font-size:.65rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#ffb3a0;display:block;margin-bottom:3px;}
+.mem-text{font-size:.84rem;color:#fdf0ee;line-height:1.5;}
+@media(max-width:680px){
+  .cmp-table{font-size:.78rem;}
+  .cmp-table td,.cmp-table th{padding:.4rem .6rem;}
+  .mem-grid{grid-template-columns:1fr;}
+  .principios-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html" class="active">📊 Cuadros comparativos</a>
+  </div>
+
+<div class="page-header">
+  <div class="meta">Tema 14 · Gestor de Mantenimiento (Nivel B) · UPNA · Cuadros comparativos</div>
+  <h1>PRL — Tablas operativas para examen</h1>
+  <div class="sub">8 tablas · 9 principios preventivos · CAE · Figuras en obras · PSS y CSS · Documentos · Obligaciones · Normativa</div>
+</div>
+
+
+<!-- ══════════ TABLA 1: LOS 9 PRINCIPIOS DE LA ACCIÓN PREVENTIVA ══════════ -->
+<div class="section-label">Tabla 1 — Los 9 principios de la acción preventiva (Art. 15 LPRL)</div>
+<div class="table-card top-flame">
+  <div class="table-card-header"><span class="icon">🛡</span><h2>Los 9 principios del art. 15 LPRL — orden, contenido y dato de examen</h2><span class="chip ch-flame">Art. 15 LPRL</span></div>
+  <div class="principios-grid">
+    <div class="ppio">
+      <span class="num-badge">1</span>
+      <div class="ppio-text"><strong>Evitar los riesgos</strong>No exponer al trabajador al riesgo. La primera opción siempre es la eliminación. Si no se puede evitar → gestionar.</div>
+    </div>
+    <div class="ppio">
+      <span class="num-badge">2</span>
+      <div class="ppio-text"><strong>Evaluar los riesgos que no se puedan evitar</strong>Identificar, analizar y valorar todos los riesgos que inevitablemente permanecen.</div>
+    </div>
+    <div class="ppio">
+      <span class="num-badge">3</span>
+      <div class="ppio-text"><strong>Combatir los riesgos en el origen</strong>Intervenir en la causa, no en los síntomas. Sustituir una máquina peligrosa antes que proteger al operario de ella.</div>
+    </div>
+    <div class="ppio">
+      <span class="num-badge">4</span>
+      <div class="ppio-text"><strong>Adaptar el trabajo a la persona</strong>Diseño ergonómico: puesto, herramientas, métodos. El trabajo se adapta a las personas, no al revés.</div>
+    </div>
+    <div class="ppio">
+      <span class="num-badge">5</span>
+      <div class="ppio-text"><strong>Tener en cuenta la evolución de la técnica</strong>Actualizar las medidas preventivas conforme avanza la tecnología disponible.</div>
+    </div>
+    <div class="ppio">
+      <span class="num-badge">6</span>
+      <div class="ppio-text"><strong>Sustituir lo peligroso por lo que entrañe poco o ningún peligro</strong>Cambiar sustancias, equipos o procesos peligrosos por alternativas más seguras.</div>
+    </div>
+    <div class="ppio">
+      <span class="num-badge">7</span>
+      <div class="ppio-text"><strong>Planificar la prevención</strong>Integrar la PRL en el sistema de gestión general. No es algo puntual: es continua y planificada.</div>
+    </div>
+    <div class="ppio">
+      <span class="num-badge">8</span>
+      <div class="ppio-text"><strong>Anteponer la protección colectiva a la individual</strong>Primero barandillas, redes, señalización. Los EPI son el último recurso, no la primera medida.</div>
+    </div>
+    <div class="ppio">
+      <span class="num-badge">9</span>
+      <div class="ppio-text"><strong>Dar las debidas instrucciones a los trabajadores</strong>Formación e información claras, comprensibles y previas a la exposición al riesgo.</div>
+    </div>
+  </div>
+  <div class="callout al-red">
+    <strong>⚠ Dato de examen imprescindible:</strong> los 9 principios están recogidos en el <strong>artículo 15 de la LPRL (Ley 31/1995)</strong>. El orden importa: el principio nº 1 es "evitar el riesgo" (la jerarquía preventiva empieza siempre por la eliminación). El principio nº 8 —protección colectiva antes que individual— es el más preguntado en tipo test junto con el nº 1 y el nº 3.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 2: JERARQUÍA DE CONTROLES ══════════ -->
+<div class="section-label">Tabla 2 — Jerarquía de controles preventivos: de mayor a menor eficacia</div>
+<div class="table-card top-orange">
+  <div class="table-card-header"><span class="icon">📊</span><h2>Eliminación → Sustitución → Control técnico → Control administrativo → EPI</h2><span class="chip ch-orange">Jerarquía preventiva</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:50px;">Nivel</th>
+      <th class="hd-orange">Control</th>
+      <th class="hd-orange">Qué hace</th>
+      <th class="hd-orange">Ejemplo en mantenimiento de edificios</th>
+      <th class="hd-orange">Eficacia</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi-green">
+        <td style="text-align:center;font-weight:800;font-size:1.1rem;">1</td>
+        <td><strong>Eliminación del riesgo</strong></td>
+        <td>Suprimir completamente el peligro.</td>
+        <td>Sustituir un proceso con disolventes inflamables por uno con disolventes al agua. El riesgo de incendio desaparece.</td>
+        <td class="ok"><strong>Máxima.</strong> El riesgo ya no existe.</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:800;font-size:1.1rem;">2</td>
+        <td><strong>Sustitución</strong></td>
+        <td>Reemplazar el peligro por algo menos peligroso.</td>
+        <td>Sustituir una escalera de mano por un andamio tubular para trabajos en altura frecuentes.</td>
+        <td class="ok">Muy alta.</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:800;font-size:1.1rem;">3</td>
+        <td><strong>Control técnico (ingeniería)</strong></td>
+        <td>Modificar el entorno o el equipo para reducir la exposición.</td>
+        <td>Instalar barandillas, resguardos en máquinas, ventilación localizada en zonas de soldadura.</td>
+        <td class="warn">Alta. No depende del comportamiento humano.</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:800;font-size:1.1rem;">4</td>
+        <td><strong>Control administrativo</strong></td>
+        <td>Procedimientos, permisos de trabajo, rotación, formación.</td>
+        <td>Permiso de trabajo en altura, permiso de trabajo en espacios confinados, limitación del tiempo de exposición al ruido.</td>
+        <td class="warn">Media. Depende del cumplimiento humano.</td>
+      </tr>
+      <tr class="hi-red">
+        <td style="text-align:center;font-weight:800;font-size:1.1rem;">5</td>
+        <td><strong>EPI (Equipos de Protección Individual)</strong></td>
+        <td>Proteger al trabajador (no elimina el riesgo, solo lo mitiga).</td>
+        <td>Casco, arnés anticaída, guantes, gafas, calzado de seguridad, protección auditiva.</td>
+        <td class="no"><strong>La menos eficaz y siempre el ÚLTIMO recurso.</strong> Solo cuando los controles anteriores son insuficientes.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-red">
+    <strong>⚠ El error más frecuente en tipo test:</strong> pensar que los EPI son la primera medida de protección. <strong>Los EPI son siempre el último recurso</strong>, cuando los controles técnicos y administrativos no son suficientes para eliminar o reducir el riesgo a un nivel aceptable. Esta jerarquía es coherente con el principio nº 8 del art. 15 LPRL.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 3: COORDINACIÓN DE ACTIVIDADES EMPRESARIALES (RD 171/2004) ══════════ -->
+<div class="section-label">Tabla 3 — Coordinación de Actividades Empresariales: figuras, obligaciones y documentos (RD 171/2004)</div>
+<div class="table-card top-blue">
+  <div class="table-card-header"><span class="icon">🤝</span><h2>Empresa titular · Empresa principal · Empresa concurrente · Recurso preventivo · Coordinador</h2><span class="chip ch-blue">RD 171/2004 CAE</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:175px;">Figura</th>
+      <th class="hd-blue">Definición</th>
+      <th class="hd-blue">Obligaciones principales</th>
+      <th class="hd-blue">Ejemplo práctico</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi">
+        <td><strong>Empresa titular del centro de trabajo</strong></td>
+        <td>La que tiene la capacidad de poner a disposición y gestionar el centro de trabajo donde concurren otras empresas. Puede no tener trabajadores propios allí.</td>
+        <td>Informar a las demás empresas sobre los riesgos propios del centro y las medidas de emergencia. Dar instrucciones para la prevención de riesgos.</td>
+        <td>UPNA es titular del edificio. Una empresa de mantenimiento y otra de limpieza trabajan en él simultáneamente.</td>
+      </tr>
+      <tr class="hi-orange">
+        <td><strong>Empresa principal</strong></td>
+        <td>La que contrata o subcontrata a otras empresas para la realización de obras o servicios correspondientes a su propia actividad y que se desarrollan en su propio centro de trabajo.</td>
+        <td>Exigir a las contratadas la acreditación de la evaluación de riesgos, información sobre accidentes, vigilar el cumplimiento de la normativa PRL. <strong>Responsabilidad solidaria en caso de incumplimiento de las contratadas.</strong></td>
+        <td>La UPNA contrata a una empresa de climatización para reparar las instalaciones. La UPNA es empresa principal; la de climatización, concurrente contratada.</td>
+      </tr>
+      <tr>
+        <td><strong>Empresa concurrente</strong></td>
+        <td>Cualquier empresa (incluida la principal) que desarrolla actividades en el centro de trabajo al mismo tiempo que otras.</td>
+        <td>Informar sobre los riesgos de sus actividades a las demás empresas concurrentes. Cooperar en la aplicación de la normativa PRL.</td>
+        <td>La empresa de climatización y la de limpieza trabajando simultáneamente en el mismo edificio son ambas concurrentes.</td>
+      </tr>
+      <tr class="hi-green">
+        <td><strong>Coordinador de Actividades Empresariales (CAE)</strong></td>
+        <td>Persona designada por la empresa titular o principal para coordinar las actividades preventivas cuando existan varias empresas concurrentes con riesgos graves o muy graves.</td>
+        <td>Coordinar la aplicación de los principios preventivos. Establecer los medios de coordinación. Vigilar el cumplimiento. Paralizar los trabajos en caso de riesgo grave e inminente.</td>
+        <td>En una obra de mantenimiento importante con tres empresas concurrentes, se designa un CAE que coordina las actuaciones preventivas de todas ellas.</td>
+      </tr>
+      <tr>
+        <td><strong>Recurso preventivo</strong></td>
+        <td>Persona con formación preventiva suficiente designada para estar presente en el lugar de trabajo cuando se realizan actividades o procesos que reglamentariamente lo exigen.</td>
+        <td>Vigilar el cumplimiento de las medidas incluidas en el plan de seguridad o en la evaluación de riesgos. Ordenar la paralización en caso de riesgo grave. Dar instrucciones.</td>
+        <td>Trabajos en altura, trabajos en espacios confinados, demoliciones. En estos casos la ley exige presencia física del recurso preventivo mientras se ejecutan.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-blue">
+    <strong>📌 Diferencia clave empresa titular vs empresa principal:</strong> la <strong>titular</strong> es la que tiene la capacidad de gestionar el centro (puede no tener actividad allí). La <strong>principal</strong> contrata obras o servicios de su propia actividad en su propio centro. Una misma empresa puede ser titular y principal a la vez. El RD 171/2004 establece los medios de coordinación: reuniones, documentos compartidos, designación de coordinador, uso de medios de comunicación comunes.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 4: MEDIOS DE COORDINACIÓN CAE ══════════ -->
+<div class="section-label">Tabla 4 — Medios de coordinación en la CAE: cuándo se exige cada uno</div>
+<div class="table-card top-teal">
+  <div class="table-card-header"><span class="icon">🔗</span><h2>Intercambio de información · Reuniones · Instrucciones · Coordinador · Recurso preventivo</h2><span class="chip ch-teal">Medios de coordinación</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:200px;">Medio de coordinación</th>
+      <th class="hd-teal">Descripción</th>
+      <th class="hd-teal">Cuándo se aplica</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Intercambio de información y comunicación</strong></td>
+        <td>Las empresas concurrentes se informan mutuamente sobre los riesgos de sus actividades antes de comenzar los trabajos.</td>
+        <td><strong>Siempre. Es el medio básico y mínimo de coordinación.</strong> No requiere ningún requisito adicional.</td>
+      </tr>
+      <tr>
+        <td><strong>Reuniones periódicas</strong></td>
+        <td>Encuentros entre los responsables de las empresas concurrentes para tratar aspectos preventivos de la coordinación.</td>
+        <td>Cuando la complejidad o el riesgo de las actividades concurrentes lo justifique. Especialmente al inicio y cuando cambien las condiciones.</td>
+      </tr>
+      <tr>
+        <td><strong>Reuniones conjuntas de comités de seguridad y salud</strong></td>
+        <td>Reunión de los comités de seguridad y salud (o delegados de prevención) de las distintas empresas concurrentes.</td>
+        <td>Empresas que tienen comité de seguridad y salud (≥50 trabajadores o convenio colectivo que lo exija) y cuyas actividades concurrentes presentan riesgos graves.</td>
+      </tr>
+      <tr>
+        <td><strong>Impartición de instrucciones</strong></td>
+        <td>La empresa titular o principal da instrucciones escritas a las empresas concurrentes sobre los riesgos del centro y las medidas preventivas.</td>
+        <td>Siempre que la empresa titular o principal tenga trabajadores en el centro de trabajo o cuando los riesgos del centro sean relevantes para las concurrentes.</td>
+      </tr>
+      <tr>
+        <td><strong>Establecimiento conjunto de medidas preventivas</strong></td>
+        <td>Las empresas acuerdan conjuntamente las medidas preventivas a aplicar para los riesgos derivados de la concurrencia.</td>
+        <td>Cuando los riesgos de las actividades concurrentes son de especial gravedad o cuando existen riesgos sinérgicos (que se potencian entre sí).</td>
+      </tr>
+      <tr class="hi-green">
+        <td><strong>Designación de coordinador de actividades preventivas</strong></td>
+        <td>Una o varias personas de la empresa titular o principal coordinan las actividades preventivas de todas las empresas concurrentes.</td>
+        <td><strong>Cuando los riesgos sean graves o muy graves, o cuando la complejidad de la coordinación lo requiera.</strong> El coordinador puede ser trabajador de la empresa o un recurso preventivo externo.</td>
+      </tr>
+      <tr class="hi-red">
+        <td><strong>Presencia de recursos preventivos</strong></td>
+        <td>Persona con formación preventiva suficiente presente físicamente en el lugar de trabajo durante la ejecución de actividades de especial riesgo.</td>
+        <td><strong>Obligatorio cuando:</strong> los riesgos puedan agravarse por la concurrencia, cuando se realicen actividades o procesos peligrosos (trabajos en altura, espacios confinados, demoliciones), o cuando así lo exija la inspección de trabajo.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- ══════════ TABLA 5: FIGURAS EN LAS OBRAS DE CONSTRUCCIÓN (RD 1627/1997) ══════════ -->
+<div class="section-label">Tabla 5 — Figuras en obras de construcción: promotor, proyectista, CSS, CSO, contratista (RD 1627/1997)</div>
+<div class="table-card top-purple">
+  <div class="table-card-header"><span class="icon">🏗</span><h2>Promotor · Proyectista · CSS · CSO · Contratista · Subcontratista · Trabajador autónomo</h2><span class="chip ch-purple">RD 1627/1997</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:175px;">Figura</th>
+      <th class="hd-purple">Definición y rol</th>
+      <th class="hd-purple">Obligaciones PRL principales</th>
+      <th class="hd-purple">¿Cuándo es obligatorio?</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Promotor</strong></td>
+        <td>Persona física o jurídica por cuenta de la cual se realiza la obra.</td>
+        <td>Designar al CSS y al CSO cuando proceda. Aprobar el PSS. Comunicar la apertura del centro de trabajo.</td>
+        <td>Siempre que haya obra.</td>
+      </tr>
+      <tr>
+        <td><strong>Proyectista</strong></td>
+        <td>El autor del proyecto de la obra.</td>
+        <td>Tener en cuenta los principios de prevención en el diseño del proyecto. Elaborar el Estudio de Seguridad y Salud (ESS) o el Estudio Básico (EBSS) según corresponda.</td>
+        <td>Siempre. Elabora el ESS o EBSS.</td>
+      </tr>
+      <tr class="hi-purple">
+        <td><strong>Coordinador de Seguridad y Salud en fase de proyecto (CSS-P)</strong></td>
+        <td>Técnico competente designado por el promotor cuando intervienen varios proyectistas en la elaboración del proyecto.</td>
+        <td>Coordinar la aplicación de los principios preventivos entre los proyectistas. Elaborar o hacer elaborar el ESS.</td>
+        <td><strong>Cuando intervienen varios proyectistas.</strong> Si hay un solo proyectista, no es obligatorio el CSS-P.</td>
+      </tr>
+      <tr class="hi-red">
+        <td><strong>Coordinador de Seguridad y Salud en fase de ejecución (CSS-O)</strong></td>
+        <td>Técnico competente designado por el promotor cuando en la ejecución de la obra intervengan más de una empresa, o una empresa y trabajadores autónomos, o varios trabajadores autónomos.</td>
+        <td>Coordinar la aplicación de los principios preventivos. Aprobar el PSS. Organizar la coordinación de actividades. <strong>Puede paralizar los trabajos.</strong> Elaborar el Libro de Incidencias.</td>
+        <td><strong>Obligatorio cuando interviene más de una empresa (o empresa + autónomos) en la ejecución.</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Contratista</strong></td>
+        <td>Persona física o jurídica que asume contractualmente ante el promotor el compromiso de ejecutar las obras.</td>
+        <td>Elaborar el Plan de Seguridad y Salud (PSS). Designar recursos preventivos. Informar y formar a los trabajadores. Aplicar los principios preventivos.</td>
+        <td>Siempre que haya obra.</td>
+      </tr>
+      <tr>
+        <td><strong>Subcontratista</strong></td>
+        <td>Persona física o jurídica que asume contractualmente ante el contratista el compromiso de ejecutar determinadas partes de la obra.</td>
+        <td>Cumplir el PSS. Informar al contratista sobre sus actividades. Límites de subcontratación (Ley 32/2006).</td>
+        <td>Cuando el contratista subcontrata partes de la obra.</td>
+      </tr>
+      <tr>
+        <td><strong>Trabajador autónomo</strong></td>
+        <td>Persona física que realiza de forma personal y directa una actividad profesional en la obra sin sujeción a contrato de trabajo.</td>
+        <td>Cumplir el PSS. Usar EPI adecuados. Coordinarse con el contratista. Si tiene trabajadores a cargo, asume obligaciones de empresario.</td>
+        <td>Cuando trabaja en la obra de forma autónoma.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-purple">
+    <strong>📌 El CSS-O es la figura más preguntada del RD 1627/1997.</strong> Debe ser un técnico competente (arquitecto, aparejador, ingeniero). Tiene la facultad de paralizar los trabajos cuando detecte un riesgo grave e inminente para la seguridad de los trabajadores. Esta potestad —la paralización— es exclusiva del CSS-O en el contexto de la obra y es el dato más diferenciador de esta figura.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 6: ESS vs EBSS vs PSS ══════════ -->
+<div class="section-label">Tabla 6 — Documentos de seguridad en obras: Estudio, Estudio Básico y Plan de Seguridad y Salud</div>
+<div class="table-card top-gold">
+  <div class="table-card-header"><span class="icon">📄</span><h2>ESS · Estudio Básico · Plan de Seguridad y Salud (PSS) — cuándo, quién y qué contiene</h2><span class="chip ch-gold">Documentos clave</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:140px;">Documento</th>
+      <th class="hd-gold">¿Cuándo es obligatorio?</th>
+      <th class="hd-gold">¿Quién lo elabora?</th>
+      <th class="hd-gold">¿Quién lo aprueba?</th>
+      <th class="hd-gold">Contenido mínimo</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi-red">
+        <td><strong>Estudio de Seguridad y Salud (ESS)</strong></td>
+        <td>Obras con presupuesto &gt;450.759 € <strong>O</strong> duración &gt;30 días laborables con &gt;20 trabajadores simultáneos <strong>O</strong> volumen de mano de obra &gt;500 jornadas <strong>O</strong> obras de túneles, galerías, presas u obras subterráneas.</td>
+        <td>El proyectista (o el CSS-P si hay varios proyectistas).</td>
+        <td>El CSS-O antes del inicio de la obra.</td>
+        <td>Memoria descriptiva de riesgos, pliego de condiciones de seguridad, planos, mediciones y presupuesto específico de seguridad.</td>
+      </tr>
+      <tr>
+        <td><strong>Estudio Básico de Seguridad y Salud (EBSS)</strong></td>
+        <td>En el resto de obras (las que no alcanzan ninguno de los umbrales del ESS). La mayoría de obras de mantenimiento y pequeñas reformas.</td>
+        <td>El proyectista.</td>
+        <td>El CSS-O o el contratista cuando no hay CSS-O obligatorio.</td>
+        <td>Identificación de riesgos evitables y no evitables, medidas preventivas, EPI y medidas para trabajos con riesgos especiales.</td>
+      </tr>
+      <tr class="hi-green">
+        <td><strong>Plan de Seguridad y Salud (PSS)</strong></td>
+        <td><strong>Siempre, en toda obra con proyecto.</strong> Es obligatorio para toda obra en la que intervenga el contratista.</td>
+        <td>El contratista, antes del inicio de la obra, tomando como base el ESS o EBSS del proyecto.</td>
+        <td>El CSS-O (si existe) o, en su defecto, la dirección facultativa. <strong>Debe estar aprobado antes del inicio de la obra.</strong></td>
+        <td>Adapta el ESS/EBSS a los medios y métodos de trabajo específicos del contratista. Puede mejorar el ESS pero nunca reducir sus previsiones de seguridad.</td>
+      </tr>
+      <tr>
+        <td><strong>Libro de Incidencias</strong></td>
+        <td>Existe en toda obra con PSS. Custodiado por el CSS-O o, en su defecto, por la dirección facultativa.</td>
+        <td>Facilita el control y seguimiento del PSS.</td>
+        <td>—</td>
+        <td>Registro de las anotaciones sobre incumplimientos del PSS. Cualquier anotación debe comunicarse a la Inspección de Trabajo en 24 horas si el incumplimiento puede suponer riesgo grave.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-red">
+    <strong>⚠ Los umbrales del ESS son los datos más preguntados:</strong><br>
+    • Presupuesto de ejecución material <strong>&gt;450.759 €</strong><br>
+    • Duración superior a <strong>30 días laborables</strong> con <strong>más de 20 trabajadores simultáneos</strong><br>
+    • Volumen de mano de obra superior a <strong>500 jornadas</strong><br>
+    • Túneles, galerías, presas u obras subterráneas (siempre ESS).<br>
+    Si no se cumple ninguno → Estudio Básico. Si se cumple al menos uno → ESS completo.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 7: TRABAJOS CON RIESGOS ESPECIALES (ANEXO II RD 1627/1997) ══════════ -->
+<div class="section-label">Tabla 7 — Trabajos con riesgos especiales: listado del Anexo II del RD 1627/1997</div>
+<div class="table-card top-flame">
+  <div class="table-card-header"><span class="icon">⚠</span><h2>Trabajos que implican riesgos especialmente graves — Anexo II RD 1627/1997</h2><span class="chip ch-flame">Riesgos especiales</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:50px;">#</th>
+      <th class="hd-flame">Tipo de trabajo</th>
+      <th class="hd-flame">Por qué es especialmente peligroso</th>
+      <th class="hd-flame">Medida preventiva específica</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi-red">
+        <td style="text-align:center;">a</td>
+        <td><strong>Trabajos con riesgo de sepultamiento o hundimiento</strong></td>
+        <td>Excavaciones, movimientos de tierra, pozos, zanjas, vaciados, túneles.</td>
+        <td>Entibación, taludes seguros, inspección diaria, vigilancia continua.</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">b</td>
+        <td><strong>Actividades con exposición a agentes químicos, biológicos o radiaciones ionizantes</strong></td>
+        <td>Amianto, plomo, sílice, solventes, microorganismos, radiaciones.</td>
+        <td>Evaluación de exposición, EPI específicos, formación especial, vigilancia médica.</td>
+      </tr>
+      <tr class="hi-red">
+        <td style="text-align:center;">c</td>
+        <td><strong>Trabajos en proximidad de líneas eléctricas de alta tensión</strong></td>
+        <td>Riesgo de electrocución o arco eléctrico.</td>
+        <td>Distancias de seguridad, descargo de la línea, señalización, personal cualificado.</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">d</td>
+        <td><strong>Trabajos con exposición a riesgo de ahogamiento por inmersión</strong></td>
+        <td>Trabajos en ríos, lagos, mar, presas.</td>
+        <td>Equipos de rescate, chaleco salvavidas, vigilancia continua.</td>
+      </tr>
+      <tr class="hi-red">
+        <td style="text-align:center;">e</td>
+        <td><strong>Obras de excavación de pozos, pilotajes, tablestacados</strong></td>
+        <td>Riesgo de derrumbe, caída al interior, emanación de gases.</td>
+        <td>Entibación, ventilación, detector de gases, recurso preventivo.</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">f</td>
+        <td><strong>Trabajos que impliquen el uso de explosivos</strong></td>
+        <td>Riesgo de explosión incontrolada.</td>
+        <td>Autorización especial, personal artificiero, perímetro de seguridad.</td>
+      </tr>
+      <tr class="hi-red">
+        <td style="text-align:center;">g</td>
+        <td><strong>Trabajos que requieran el montaje y desmontaje de elementos prefabricados pesados</strong></td>
+        <td>Riesgo de caída de cargas, vuelco, golpes.</td>
+        <td>Plan de montaje, medios auxiliares adecuados, trabajadores cualificados.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-orange">
+    <strong>📌 Relevancia en mantenimiento de edificios:</strong> los trabajos más frecuentes en mantenimiento que caen en el Anexo II son: <strong>trabajos en altura</strong> (caída, riesgo especialmente grave), <strong>trabajos en espacios confinados</strong> (atmósferas peligrosas, ahogamiento, intoxicación) y <strong>trabajos con amianto</strong> (si el edificio tiene materiales con amianto, como tuberías o paneles de fibrocemento anteriores a 2002). Estos tres son los más frecuentes en el contexto de la oposición de gestor de mantenimiento.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 8: NORMATIVA APLICABLE ══════════ -->
+<div class="section-label">Tabla 8 — Normativa de referencia en PRL: de la directiva marco a las normas específicas</div>
+<div class="table-card top-navy">
+  <div class="table-card-header"><span class="icon">📋</span><h2>Directiva Marco · LPRL · RSP · RD 171/2004 · RD 1627/1997 · Ley 32/2006 · Reglamentos específicos</h2><span class="chip ch-navy">Normativa PRL</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:195px;">Normativa</th>
+      <th class="hd-navy">Qué regula</th>
+      <th class="hd-navy">Dato clave de examen</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi-navy">
+        <td><strong>Directiva Marco 89/391/CEE</strong></td>
+        <td>Marco europeo de seguridad y salud en el trabajo. Establece los principios generales de prevención que los estados miembros deben transponer.</td>
+        <td>Es el origen de la LPRL española. Establece los principios de la acción preventiva que recoge el art. 15 LPRL.</td>
+      </tr>
+      <tr class="hi-red">
+        <td><strong>LPRL — Ley 31/1995</strong></td>
+        <td>Ley de Prevención de Riesgos Laborales. La norma fundamental del sistema PRL español. Transpone la Directiva Marco.</td>
+        <td><strong>LA MÁS IMPORTANTE DEL TEMA.</strong> Art. 14: derecho del trabajador a la protección. Art. 15: 9 principios de la acción preventiva. Art. 16: evaluación de riesgos y planificación. Art. 20: medidas de emergencia. Art. 21: riesgo grave e inminente.</td>
+      </tr>
+      <tr>
+        <td><strong>RSP — RD 39/1997</strong></td>
+        <td>Reglamento de los Servicios de Prevención. Desarrolla la LPRL en materia de organización de la prevención.</td>
+        <td>Define las modalidades de organización preventiva: trabajador designado, servicio de prevención propio, mancomunado, ajeno. Establece las especialidades preventivas: Seguridad, Higiene, Ergonomía y Psicosociología, Vigilancia de la Salud.</td>
+      </tr>
+      <tr class="hi-blue">
+        <td><strong>RD 171/2004 — CAE</strong></td>
+        <td>Coordinación de Actividades Empresariales. Desarrolla el art. 24 LPRL sobre coordinación cuando concurren varias empresas en un mismo centro de trabajo.</td>
+        <td><strong>El más importante para el gestor de mantenimiento en su día a día.</strong> Define: empresa titular, empresa principal, medios de coordinación, designación de coordinador. Responsabilidad solidaria de la empresa principal.</td>
+      </tr>
+      <tr class="hi-purple">
+        <td><strong>RD 1627/1997 — Obras de construcción</strong></td>
+        <td>Disposiciones mínimas de seguridad y salud en las obras de construcción. Transpone la Directiva de Obras 92/57/CEE.</td>
+        <td><strong>El más importante para obras.</strong> Define: promotor, CSS-P, CSS-O, contratista, subcontratista. Establece: ESS (umbral &gt;450.759 €, &gt;30 días con &gt;20 trabajadores, &gt;500 jornadas), EBSS, PSS, Libro de Incidencias, Aviso previo.</td>
+      </tr>
+      <tr>
+        <td><strong>Ley 32/2006 — Subcontratación en construcción</strong></td>
+        <td>Regula la subcontratación en el sector de la construcción. Limita los niveles de subcontratación y exige el Registro de Empresas Acreditadas (REA).</td>
+        <td>Máximo 3 niveles de subcontratación (contratista → 1ª subcontrata → 2ª subcontrata → 3ª subcontrata). Las empresas del sector deben inscribirse en el REA.</td>
+      </tr>
+      <tr>
+        <td><strong>RD 486/1997 — Lugares de trabajo</strong></td>
+        <td>Disposiciones mínimas de seguridad y salud en los lugares de trabajo: condiciones constructivas, orden y limpieza, iluminación, servicios higiénicos.</td>
+        <td>Regula las condiciones mínimas del lugar de trabajo donde el gestor de mantenimiento gestiona las instalaciones del edificio.</td>
+      </tr>
+      <tr>
+        <td><strong>RD 485/1997 — Señalización</strong></td>
+        <td>Disposiciones mínimas en materia de señalización de seguridad y salud en el trabajo.</td>
+        <td>Colores, formas y significados de las señales: rojo (prohibición/extinción), amarillo (advertencia), verde (salvamento), azul (obligación).</td>
+      </tr>
+      <tr>
+        <td><strong>RD 773/1997 — EPI</strong></td>
+        <td>Disposiciones mínimas de seguridad y salud relativas a la utilización por los trabajadores de equipos de protección individual.</td>
+        <td>El empresario debe proporcionar los EPI gratuitamente, informar sobre su uso y garantizar que están en buen estado. Los EPI son el último eslabón de la jerarquía preventiva.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-navy">
+    <strong>📌 Jerarquía normativa PRL:</strong><br>
+    Directiva Marco 89/391/CEE → LPRL 31/1995 → RSP (RD 39/1997) → RD 171/2004 (CAE) → RD 1627/1997 (obras) → Reglamentos específicos (EPI, señalización, lugares de trabajo, equipos de trabajo…).
+  </div>
+</div>
+
+
+<!-- ══════════ FRASES MEMORIZABLES ══════════ -->
+<div class="section-label">Versión de oposición — Frases memorizables del Tema 14</div>
+<div class="mem-section">
+  <h2>🛡 Las 18 frases que hay que tener grabadas para el examen</h2>
+  <div class="mem-grid">
+    <div class="mem-item">
+      <span class="mem-label">Art. 15 LPRL</span>
+      <span class="mem-text">"Los 9 principios de la acción preventiva están en el artículo 15 de la LPRL (Ley 31/1995). Memoriza el número del artículo."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Principio nº 1</span>
+      <span class="mem-text">"El primer principio es EVITAR el riesgo. La jerarquía preventiva empieza siempre por la eliminación. Si no se puede evitar, entonces gestionar."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Principio nº 8 — el más preguntado</span>
+      <span class="mem-text">"Protección COLECTIVA antes que INDIVIDUAL. Primero barandillas, redes, pantallas. Los EPI son siempre el último recurso."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">EPI: el último recurso</span>
+      <span class="mem-text">"Los EPI no eliminan el riesgo, solo lo mitigan. Son el nivel 5 (el peor) de la jerarquía de controles. Nunca son la primera medida."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Titular vs Principal (CAE)</span>
+      <span class="mem-text">"Titular: gestiona el centro (puede no tener trabajadores allí). Principal: contrata obras de su propia actividad en su propio centro. Pueden coincidir."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Responsabilidad solidaria</span>
+      <span class="mem-text">"La empresa PRINCIPAL responde solidariamente de los incumplimientos PRL de las empresas que contrata. Es la consecuencia más grave para el contratante."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">RD 171/2004</span>
+      <span class="mem-text">"El reglamento de la CAE. El más importante para el gestor de mantenimiento en su día a día, ya que siempre concurren varias empresas en el edificio."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">CSS-O: cuándo es obligatorio</span>
+      <span class="mem-text">"CSS-O obligatorio cuando interviene MÁS DE UNA EMPRESA (o empresa + autónomo) en la ejecución de la obra. Con una sola empresa, no es obligatorio."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">CSS-O: su poder más importante</span>
+      <span class="mem-text">"El CSS-O puede PARALIZAR los trabajos cuando detecte riesgo grave e inminente. Esta potestad es exclusiva del CSS-O en la obra."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">ESS: los umbrales</span>
+      <span class="mem-text">"ESS obligatorio si: presupuesto &gt;450.759 € O duración &gt;30 días con &gt;20 trabajadores simultáneos O volumen &gt;500 jornadas O es túnel/presa."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">PSS: quién y cuándo</span>
+      <span class="mem-text">"El PSS lo elabora el CONTRATISTA tomando como base el ESS o EBSS. Debe estar aprobado ANTES del inicio de la obra. Siempre lo aprueba el CSS-O."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">PSS vs ESS</span>
+      <span class="mem-text">"El PSS puede mejorar el ESS pero NUNCA reducirlo. El PSS adapta el ESS a los medios reales del contratista."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Libro de Incidencias</span>
+      <span class="mem-text">"Cualquier anotación en el Libro de Incidencias que suponga riesgo grave debe comunicarse a la Inspección de Trabajo en 24 horas."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Recurso preventivo</span>
+      <span class="mem-text">"Presencia física obligatoria en trabajos en altura, espacios confinados y otros de riesgo especial. Puede ordenar la paralización."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Subcontratación (Ley 32/2006)</span>
+      <span class="mem-text">"Máximo 3 niveles de subcontratación en construcción. Las empresas deben estar inscritas en el Registro de Empresas Acreditadas (REA)."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Señalización (RD 485/1997)</span>
+      <span class="mem-text">"Rojo = prohibición/extinción. Amarillo = advertencia/peligro. Verde = salvamento/evacuación. Azul = obligación (usar EPI)."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Riesgo grave e inminente</span>
+      <span class="mem-text">"Art. 21 LPRL: ante riesgo grave e inminente el trabajador puede ABANDONAR el puesto sin consecuencias. El empresario debe informar de inmediato."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Principio nº 3</span>
+      <span class="mem-text">"Combatir el riesgo en el ORIGEN. Actuar sobre la causa, no sobre el síntoma. Sustituir la máquina peligrosa antes que proteger al operario de ella."</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
