@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>2_esquema_resumen_t03.html</title>
+  <style>
+    *{box-sizing:border-box;}
+    body{font-family:Arial,Helvetica,sans-serif;background:#f0f4f8;color:#1f2937;margin:0;padding:20px;}
+    h1{text-align:center;font-size:22px;color:#0f172a;border-bottom:4px solid #1d4ed8;padding-bottom:10px;margin-bottom:6px;}
+    .subtitulo{text-align:center;font-size:13px;color:#475569;margin-bottom:22px;}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px;}
+    .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:20px;}
+    .bloque{background:#fff;border-radius:10px;padding:16px;box-shadow:0 2px 6px rgba(0,0,0,.08);}
+    .bloque h2{font-size:14px;margin:0 0 10px 0;padding:6px 10px;border-radius:6px;color:#fff;}
+    .azul h2{background:#1d4ed8;}
+    .verde h2{background:#15803d;}
+    .naranja h2{background:#b45309;}
+    .rojo h2{background:#b91c1c;}
+    .violeta h2{background:#7c3aed;}
+    .gris h2{background:#374151;}
+    .cyan h2{background:#0e7490;}
+    .rosa h2{background:#be185d;}
+    ul{margin:0;padding:0 0 0 16px;}
+    li{font-size:13px;margin-bottom:4px;}
+    .tag{display:inline-block;background:#dbeafe;color:#1e40af;font-size:11px;font-weight:700;border-radius:4px;padding:1px 6px;margin-right:4px;}
+    .tag.r{background:#fee2e2;color:#991b1b;}
+    .tag.g{background:#dcfce7;color:#166534;}
+    .tag.y{background:#fef9c3;color:#854d0e;}
+    .tag.v{background:#ede9fe;color:#5b21b6;}
+    .kpi-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;}
+    .kpi{background:#1d4ed8;color:#fff;border-radius:10px;padding:12px 18px;text-align:center;flex:1;min-width:140px;}
+    .kpi .num{font-size:28px;font-weight:900;}
+    .kpi .lbl{font-size:11px;opacity:.85;margin-top:2px;}
+    .kpi.g{background:#15803d;}
+    .kpi.n{background:#b45309;}
+    .kpi.r{background:#b91c1c;}
+    .kpi.v{background:#7c3aed;}
+    .flujo{display:flex;gap:0;align-items:stretch;margin-bottom:20px;flex-wrap:wrap;}
+    .paso{background:#1d4ed8;color:#fff;padding:10px 12px;font-size:12px;font-weight:700;border-radius:8px;flex:1;text-align:center;position:relative;min-width:80px;}
+    .paso+.paso::before{content:"▶";position:absolute;left:-14px;top:50%;transform:translateY(-50%);color:#1d4ed8;font-size:16px;}
+    .flujo2{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+    .fstep{padding:9px 14px;border-radius:8px;font-size:12px;font-weight:700;color:#fff;flex:1;text-align:center;min-width:100px;}
+    .trampa{background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:14px;margin-bottom:14px;}
+    .trampa h3{color:#991b1b;font-size:13px;margin:0 0 8px 0;}
+    .trampa ul{margin:0;padding-left:16px;}
+    .trampa li{font-size:12px;margin-bottom:3px;}
+    .full{grid-column:1/-1;}
+    table.mini{width:100%;border-collapse:collapse;font-size:12px;}
+    table.mini th{background:#e0e7ff;color:#1e40af;padding:5px 8px;text-align:left;font-size:12px;}
+    table.mini td{padding:5px 8px;border-bottom:1px solid #e2e8f0;vertical-align:top;}
+    table.mini tr:nth-child(even) td{background:#f8fafc;}
+    .memo{background:#fef9c3;border-left:4px solid #ca8a04;padding:10px 14px;border-radius:0 8px 8px 0;font-size:12px;margin-bottom:8px;}
+    .memo strong{color:#92400e;}
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>TEMA 3 · DFL 251/1993 · Estatuto del Personal AAPP Navarra</h1>
+<p class="subtitulo">Esquema-resumen con bloques visuales para memorización rápida</p>
+
+<!-- KPIs -->
+<div class="kpi-row">
+  <div class="kpi"><div class="num">5</div><div class="lbl">Niveles (A→E)</div></div>
+  <div class="kpi g"><div class="num">7</div><div class="lbl">Grados por nivel</div></div>
+  <div class="kpi n"><div class="num">4</div><div class="lbl">Situaciones administrativas</div></div>
+  <div class="kpi r"><div class="num">4</div><div class="lbl">Causas pérdida condición</div></div>
+  <div class="kpi v"><div class="num">4</div><div class="lbl">Pasos adquisición condición</div></div>
+  <div class="kpi" style="background:#0e7490"><div class="num">2</div><div class="lbl">Sistemas selectivos</div></div>
+</div>
+
+<!-- FLUJO ADQUISICIÓN -->
+<div class="bloque azul" style="margin-bottom:16px;">
+  <h2>📋 4 Pasos para adquirir la condición de funcionario (art. 9) — orden obligatorio y sucesivo</h2>
+  <div class="flujo">
+    <div class="paso" style="background:#1d4ed8">① Superar pruebas selectivas</div>
+    <div class="paso" style="background:#1e40af;position:relative">② Nombramiento en BON</div>
+    <div class="paso" style="background:#1e3a8a;position:relative">③ Juramento o promesa</div>
+    <div class="paso" style="background:#172554;position:relative">④ Toma de posesión<br><small>(en la fecha fijada en la resolución)</small></div>
+  </div>
+</div>
+
+<!-- GRID PRINCIPAL -->
+<div class="grid">
+
+  <!-- SELECCIÓN -->
+  <div class="bloque azul">
+    <h2>🎯 Selección (arts. 5–8)</h2>
+    <ul>
+      <li><span class="tag">Sistema</span> <strong>Oposición</strong> o <strong>Concurso-Oposición</strong></li>
+      <li><span class="tag r">¡OJO!</span> El concurso puro NO es sistema de ingreso</li>
+      <li><span class="tag">BON</span> Convocatorias: vinculan a todos</li>
+      <li><span class="tag">Requisitos</span> 5: nac. / 16 años / tit. / cap. física-psíq. / no inhabilitado</li>
+      <li><span class="tag y">Fórmula turnos art. 15.3</span></li>
+      <li>1.ª → libre · 2.ª → promoción</li>
+      <li>Desde 3.ª: <strong>impares → promoción; pares → libre</strong></li>
+      <li><span class="tag">Promoción</span> 5 años antigüedad + titulación (u 8 años sin tit. para C, D, E)</li>
+    </ul>
+  </div>
+
+  <!-- NIVELES -->
+  <div class="bloque verde">
+    <h2>🏅 Niveles y Grados (arts. 12–13)</h2>
+    <table class="mini">
+      <tr><th>Nivel</th><th>Titulación</th><th>Función</th></tr>
+      <tr><td><strong>A</strong></td><td>Licenciado / Ing. / Arq.</td><td>Directiva/profesional</td></tr>
+      <tr><td><strong>B</strong></td><td>Diplomado / Ing.Téc. / FP3</td><td>Apoyo al nivel A</td></tr>
+      <tr><td><strong>C</strong></td><td>Bachillerato / FP2</td><td>Ejecución</td></tr>
+      <tr><td><strong>D</strong></td><td>Grad. Escolar / FP1</td><td>Auxiliar</td></tr>
+      <tr><td><strong>E</strong></td><td>Certificado Escolaridad</td><td>Subalterna</td></tr>
+    </table>
+    <ul style="margin-top:8px">
+      <li>Cada nivel: <strong>7 grados</strong></li>
+      <li>Nuevo ingreso → <strong>grado 1</strong></li>
+      <li>Ascenso de nivel → grado = servicios ÷ 8</li>
+    </ul>
+  </div>
+
+  <!-- ASCENSO DE GRADO -->
+  <div class="bloque naranja">
+    <h2>📈 Ascenso de grado (art. 16)</h2>
+    <ul>
+      <li>Mín. <strong>2 años</strong> en grado anterior para ascender</li>
+      <li>Máx. <strong>8 años</strong> en el mismo grado (excep.: grado 7)</li>
+      <li><span class="tag y">Bolsa 1:</span> <strong>10%</strong> asciende por <strong>antigüedad</strong></li>
+      <li><span class="tag y">Bolsa 2:</span> hasta <strong>10%</strong> adicional por <strong>concurso méritos</strong></li>
+      <li>Son dos bolsas INDEPENDIENTES</li>
+      <li><span class="tag r">¡OJO!</span> Solo grados 1 a 6 participan en las bolsas del 10%</li>
+    </ul>
+  </div>
+
+  <!-- PLANTILLAS -->
+  <div class="bloque gris">
+    <h2>📁 Plantillas y Relaciones (arts. 19–21)</h2>
+    <ul>
+      <li>Plantilla orgánica: nivel + requisitos + puestos LD + retrib. complementarias</li>
+      <li>Relación anual: cierre <strong>31/12</strong> → publicada en <strong>BON</strong></li>
+      <li>Expediente personal: abierto a todos los funcionarios</li>
+    </ul>
+  </div>
+
+  <!-- PROVISIÓN -->
+  <div class="bloque cyan">
+    <h2>🔄 Provisión de puestos (arts. 31–35 bis)</h2>
+    <ul>
+      <li><span class="tag g">Regla general:</span> <strong>Concurso de méritos</strong> (art. 33)</li>
+      <li><span class="tag r">Excepción:</span> <strong>Libre designación</strong> (art. 34) — puestos identificados en plantilla</li>
+      <li><strong>Interinidad</strong> (art. 32):<br>
+        · Mismo nivel, igual o superior categoría<br>
+        · Revocable libremente<br>
+        · 3 meses → equiparación retributiva retroactiva<br>
+        · Máx. <strong>1 año</strong> (salvo reserva titular)</li>
+      <li><strong>Art. 35 bis:</strong> violencia de género → traslado preferente a otra localidad</li>
+    </ul>
+  </div>
+
+  <!-- ÓRGANOS REPRESENTACIÓN -->
+  <div class="bloque violeta">
+    <h2>🏛️ Órganos de representación (arts. 80–84)</h2>
+    <ul>
+      <li>Derecho a constituir <strong>Juntas de Personal</strong></li>
+      <li>Negociación colectiva → <strong>Mesas de Negociación</strong></li>
+      <li>ACF: <strong>Mesa General de Negociación</strong></li>
+      <li>Acuerdos: fuerza vinculante</li>
+      <li>Derecho de reunión y asamblea reconocidos</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SITUACIONES ADMINISTRATIVAS — bloque completo -->
+<div class="bloque rojo full" style="margin-bottom:16px;">
+  <h2>⚙️ Situaciones Administrativas (art. 22): 4 situaciones</h2>
+  <div class="grid" style="margin-bottom:0;">
+
+    <div>
+      <strong style="color:#15803d">✅ Servicio Activo (art. 23)</strong>
+      <ul style="margin-top:6px">
+        <li>Ocupa plaza en plantilla, o pendiente de adscripción, o comisión de servicios</li>
+        <li>Todos los derechos, deberes y responsabilidades</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong style="color:#1d4ed8">⭐ Servicios Especiales (art. 24)</strong>
+      <ul style="margin-top:6px">
+        <li>Computa a todos los efectos + reserva plaza + carrera + provisión</li>
+        <li>Se cobra lo del cargo, NO lo de funcionario</li>
+        <li>Reincorporación: <strong>30 días</strong> desde el cese</li>
+        <li>Causas: Diputado/Senador, Gobierno Estado/Navarra, cargos políticos LD, personal eventual, OO.II., Parlamento/Cámara Comptos, entidades con partic. pública &gt;50%</li>
+        <li><span class="tag r">¡OJO!</span> Parlamentario Foral: OPCIONAL acogerse a esta situación</li>
+        <li>Servicio militar: 20% sueldo inicial + 20% grado y antigüedad</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong style="color:#b45309">🟡 Excedencia (arts. 25–28 bis)</strong>
+      <table class="mini" style="margin-top:6px">
+        <tr><th>Tipo</th><th>Plazo mín. previo</th><th>Reserva plaza</th><th>¿Computa?</th><th>Reincorporación</th></tr>
+        <tr><td><strong>Voluntaria interés particular</strong></td><td>2 años en activo</td><td>18 meses</td><td>NO</td><td>No antes de 1 año</td></tr>
+        <tr><td><strong>Voluntaria (otras causas)</strong></td><td>—</td><td>SÍ (varía)</td><td>NO</td><td>No antes de 1 año</td></tr>
+        <tr><td><strong>Especial</strong> (cuidado hijo/familiar)</td><td>—</td><td>SÍ (3 años máx.)</td><td>SÍ (antigüedad)</td><td>1 mes desde acuerdo; si no → pérdida condición</td></tr>
+        <tr><td><strong>Forzosa</strong></td><td>—</td><td>NO</td><td>NO</td><td>Con vacante</td></tr>
+        <tr><td><strong>Violencia de género</strong></td><td>SIN mínimo</td><td>6 meses (prorrog. hasta 18)</td><td>SÍ (antigüedad, carrera, pasivos)</td><td>—</td></tr>
+      </table>
+      <div style="margin-top:6px;font-size:12px;background:#fef9c3;padding:6px;border-radius:4px;">
+        <strong>Violencia de género:</strong> retribuciones íntegras <strong>solo los 2 primeros meses</strong>.
+      </div>
+    </div>
+
+    <div>
+      <strong style="color:#b91c1c">🔴 Suspensión (art. 29)</strong>
+      <ul style="margin-top:6px">
+        <li><strong>Provisional:</strong> expediente discipl. o proceso penal · máx. <strong>6 meses</strong> · solo sueldo inicial + grado + antigüedad + ayuda familiar</li>
+        <li>Si no se eleva a firme → todos los derechos reconocidos retroactivamente</li>
+        <li><strong>Firme:</strong> sentencia o sanción disciplinaria · priva de TODOS los derechos</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- RETRIBUCIONES -->
+<div class="bloque gris" style="margin-bottom:16px;">
+  <h2>💶 Retribuciones (arts. 39–55) — Principio: retribución única y pública</h2>
+  <div class="grid2">
+    <div>
+      <strong>Conceptos básicos:</strong>
+      <ul>
+        <li>Sueldo inicial del nivel (ligado a A/B/C/D/E)</li>
+        <li>Grado (ligado al grado alcanzado en el nivel)</li>
+        <li>Premio de antigüedad / trienios</li>
+        <li>Retribuciones complementarias (dificultad, dedicación, responsabilidad…)</li>
+        <li>Complemento niveles C, D, E: máx. <strong>15%</strong> del sueldo inicial del nivel</li>
+      </ul>
+    </div>
+    <div>
+      <strong>Reglas especiales:</strong>
+      <ul>
+        <li><strong>Servicios especiales:</strong> cobra el cargo efectivo (no el de funcionario)</li>
+        <li><strong>Excedencia voluntaria/forzosa:</strong> no devenga nada, no computa</li>
+        <li><strong>Suspensión provisional:</strong> solo sueldo inicial + grado + antigüedad + ayuda familiar</li>
+        <li><strong>Violencia de género (1.ª fase):</strong> retribuciones íntegras 2 primeros meses</li>
+        <li>Cuantía exacta debe figurar en los <strong>presupuestos</strong> de cada Administración</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- TRAMPAS -->
+<div class="trampa">
+  <h3>⚠️ Trampas frecuentes de examen</h3>
+  <ul>
+    <li>✗ "Cualquier convocatoria puede usar concurso puro" → <strong>NO</strong>, solo oposición o concurso-oposición para ingresar.</li>
+    <li>✗ "Servicios especiales: se cobra el sueldo de funcionario" → <strong>NO</strong>, se cobra lo del cargo efectivo.</li>
+    <li>✗ "Suspensión provisional: máximo 3 meses" → <strong>NO</strong>, el máximo es <strong>6 meses</strong>.</li>
+    <li>✗ "El 10% que asciende por antigüedad puede sumarse al 10% de méritos para llegar al 20% en un funcionario" → <strong>NO</strong>, son bolsas independientes del total de funcionarios en grados 1-6.</li>
+    <li>✗ "La interinidad dura hasta que se cubra la plaza" → <strong>NO</strong>, máximo <strong>1 año</strong> salvo reserva del titular.</li>
+    <li>✗ "La excedencia por violencia de género requiere tiempo mínimo previo" → <strong>NO</strong>, se concede sin ningún tiempo mínimo.</li>
+    <li>✗ "La pérdida de la condición de funcionario impide volver a ingresar" → Depende: la <strong>renuncia NO inhabilita</strong>; la <strong>separación disciplinaria SÍ</strong>.</li>
+    <li>✗ "La libre designación es la regla general de provisión" → <strong>NO</strong>, la regla general es el concurso de méritos.</li>
+    <li>✗ "El Parlamentario Foral pasa obligatoriamente a servicios especiales" → <strong>NO</strong>, es <strong>opcional</strong>.</li>
+  </ul>
+</div>
+
+<!-- MNEMOTECNIA -->
+<div class="bloque azul" style="margin-bottom:0;">
+  <h2>🧠 Mnemotecnia de cifras clave</h2>
+  <div class="grid2">
+    <div>
+      <div class="memo"><strong>2-8-10-10:</strong> ascenso de grado → 2 años mín. · 8 años máx. · 10% antigüedad · 10% méritos</div>
+      <div class="memo"><strong>5 ó 8:</strong> promoción de nivel → 5 años + titulación · ó 8 años sin tit. (C, D, E)</div>
+      <div class="memo"><strong>3-1:</strong> interinidad → 3 meses → retroactividad retributiva · 1 año → declarar vacante</div>
+    </div>
+    <div>
+      <div class="memo"><strong>30 días:</strong> reincorporación desde servicios especiales</div>
+      <div class="memo"><strong>6/18:</strong> excedencia VG → 6 meses reserva, prorrogable hasta 18 (períodos de 3 meses)</div>
+      <div class="memo"><strong>2 meses:</strong> retribuciones íntegras en excedencia por VG</div>
+      <div class="memo"><strong>6 meses:</strong> suspensión provisional máxima · suspensión entre excedencia especial y nueva excedencia: también 6 meses</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

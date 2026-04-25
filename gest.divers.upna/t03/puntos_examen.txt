@@ -1,0 +1,194 @@
+=======================================================
+TEMA 3 · ESTATUTO DEL PERSONAL AL SERVICIO DE LAS AAPP DE NAVARRA
+PUNTOS QUE SUELEN APARECER EN EXAMEN + ARTÍCULOS CLAVE
+DFL 251/1993, de 30 de agosto (Texto Refundido)
+=======================================================
+
+=== NORMA CLAVE ===
+- Decreto Foral Legislativo 251/1993, de 30 de agosto → BON n.º 107, de 1/09/1993.
+- Integra la Ley Foral 13/1983, de 30 de marzo, y sus múltiples reformas.
+- Base competencial: art. 49.1.b) LORAFNA → competencia exclusiva de Navarra sobre régimen estatutario de funcionarios.
+
+=== ÁMBITO DE APLICACIÓN (Arts. 1–2) ===
+INCLUIDOS:
+  a) Administración de la Comunidad Foral.
+  b) Entidades Locales de Navarra.
+  c) Organismos públicos dependientes de las anteriores.
+EXCLUIDOS EXPRESAMENTE:
+  a) Miembros de la Policía Foral.
+  b) Personal del Servicio Navarro de Salud-Osasunbidea.
+  c) Funcionarios sanitarios municipales de Navarra.
+  d) Profesionales que prestan servicios ocasionales.
+★ TRAMPA: El personal de la Administración de Justicia en Navarra queda sujeto a la LOPJ
+  Y al presente Estatuto en lo que le sea de aplicación (art. 2.3, añadido por LF 7/2011).
+
+=== CLASES DE PERSONAL (Art. 3) ===
+  a) Funcionarios públicos → incorporación permanente, nombramiento legal, Derecho Administrativo.
+  b) Personal eventual → carácter temporal, cargos políticos o asistencia a ellos.
+  c) Personal contratado → régimen administrativo o laboral.
+
+=== SELECCIÓN (Arts. 5–8) ===
+  - Sistemas: OPOSICIÓN o CONCURSO-OPOSICIÓN (art. 5.1). No existe el concurso puro como sistema de ingreso.
+  - Bases: principios de mérito y capacidad (art. 5.4).
+  - Pruebas: carácter teórico y práctico; pueden incluir cursos de formación (art. 6).
+  - Publicación convocatorias: BON; vinculan a la Administración, tribunales y participantes (art. 8.2).
+REQUISITOS DE ADMISIÓN (Art. 7):
+  a) Nacionalidad española (o UE en los términos del derecho comunitario).
+  b) Tener cumplidos 16 años y no superar la edad de jubilación forzosa
+     → solo LF puede fijar otra edad máxima.
+  c) Titulación exigida (o en condiciones de obtenerla al finalizar el plazo de solicitudes).
+  d) Capacidad física y psíquica.
+  e) No inhabilitado ni separado de ninguna AAPP.
+FÓRMULA DE TURNO DE PROMOCIÓN (Art. 15.3):
+  1.ª vacante → turno libre; 2.ª → promoción; a partir de la 3.ª: impares → promoción, pares → libre.
+
+=== ADQUISICIÓN Y PÉRDIDA DE LA CONDICIÓN DE FUNCIONARIO (Arts. 9–11) ===
+ADQUISICIÓN (4 requisitos sucesivos, art. 9):
+  1. Superación de pruebas selectivas.
+  2. Nombramiento publicado en el BON.
+  3. Juramento o promesa (respeto al régimen foral, acatamiento Constitución y leyes).
+  4. Toma de posesión en la fecha fijada en la resolución de nombramiento.
+★ ANTES: el art. 9.d) decía "en el plazo de un mes desde la notificación".
+  TEXTO VIGENTE: "en la fecha que a tal efecto se determine en la resolución de nombramiento".
+PÉRDIDA (art. 10):
+  a) Renuncia expresa.
+  b) Pérdida de nacionalidad española o de Estado miembro UE (salvo adquisición simultánea de otra).
+  c) Separación del servicio por expediente disciplinario o sentencia firme.
+  d) Causas de los arts. 26.3 y 27.7 (no reincorporación en plazo tras excedencia).
+★ La renuncia NO inhabilita para nuevo ingreso posterior (art. 11.1).
+
+=== NIVELES Y GRADOS (Arts. 12–13) ===
+NIVELES (5):
+  A → Licenciado / Ingeniero / Arquitecto → actividades directivas o profesionales.
+  B → Diplomado / Ing. Técnico / Arq. Técnico / FP 3.er grado → colaboración y apoyo al nivel A.
+  C → Bachillerato / FP 2.º grado → tareas de ejecución.
+  D → Graduado Escolar / FP 1.er grado → tareas auxiliares.
+  E → Certificado de Escolaridad → asistencia subalterna.
+GRADOS:
+  - Nuevo ingreso: grado 1 (salvo antigüedad reconocida que corresponda grado superior).
+  - Ascenso de nivel: grado = años de servicios reconocidos ÷ 8 (art. 17).
+  - La retribución del grado en el nuevo nivel NO puede ser inferior a la del nivel anterior.
+
+=== ASCENSO DE GRADO (Art. 16) ===
+  - Mínimo 2 años en el grado anterior para poder ascender (art. 16.2a).
+  - Máximo 8 años en el mismo grado, excepto grado 7 (art. 16.2b).
+  - Cada año: 10% de funcionarios en grados 1–6 ascienden POR ANTIGÜEDAD (art. 16.2c).
+  - Hasta otro 10% puede ascender previo CONCURSO DE MÉRITOS (art. 16.2d).
+★ TRAMPA: son dos bolsas del 10% independientes: una por antigüedad y otra por méritos.
+
+=== PLANTILLAS ORGÁNICAS Y RELACIONES DE FUNCIONARIOS (Arts. 19–21) ===
+  - La plantilla orgánica indica: nivel, requisitos específicos, puestos de LD y puestos con retribución complementaria (art. 19).
+  - Relación anual de funcionarios: cierre el 31 de diciembre; publicada en el BON (art. 20).
+  - Expediente personal: abierto a todos los funcionarios (art. 21).
+
+=== SITUACIONES ADMINISTRATIVAS (Arts. 22–30) ===
+4 SITUACIONES: servicio activo / servicios especiales / excedencia / suspensión.
+
+SERVICIOS ESPECIALES (Art. 24):
+  - Computa a todos los efectos; reserva de plaza; se mantiene carrera; derechos de provisión.
+  - Se percibe la retribución del cargo efectivo, NO la del puesto funcionarial.
+  - Reincorporación: 30 días desde el cese.
+  - Causas típicas: Diputado/Senador, Gobierno del Estado/CCAA/Navarra, cargos políticos LD,
+    personal eventual de asistencia política, Organizaciones Internacionales, Parlamento de Navarra,
+    Cámara de Comptos, entidades con participación pública >50%.
+  - Servicio militar: se percibe el 20% del sueldo inicial + 20% de grado y antigüedad.
+  - Parlamentario Foral: OPCIONAL acogerse a servicios especiales o permanecer en activo.
+
+EXCEDENCIA VOLUNTARIA (Art. 26):
+  - Causas: paso a otra AAPP con carácter fijo; desempeño de cargos directivos en partidos/sindicatos
+    incompatibles; interés particular (requiere 2 años en activo previos; reserva 18 meses).
+  - Tiempo: indefinido.
+  - Reincorporación: NO antes de cumplir 1 año de excedencia.
+  - No devenga derechos económicos; NO computa el tiempo.
+
+EXCEDENCIA ESPECIAL (Art. 27):
+  - Cuidado de hijo (naturaleza/adopción/acogimiento) o familiar hasta 2.º grado de consanguinidad/afinidad.
+  - Duración máxima: 3 años por sujeto causante.
+  - Reserva de plaza; computa a efectos de antigüedad; NO devenga derechos económicos.
+  - No reincorporación en plazo → pérdida de condición de funcionario.
+  - Reincorporación anticipada + nueva excedencia por mismo causante: mínimo 6 meses entre ambas.
+
+EXCEDENCIA FORZOSA (Art. 28):
+  - No reincorporación tras servicios especiales, o por ejercer actividad incompatible.
+  - Mismo régimen económico que la voluntaria: no devenga derechos, no computa.
+
+EXCEDENCIA POR VIOLENCIA DE GÉNERO (Art. 28 bis):
+  - Sin tiempo mínimo previo de servicios; sin plazo mínimo de permanencia.
+  - Reserva de plaza: 6 meses (prorrogable hasta 18 por períodos de 3 meses).
+  - Computa: antigüedad, carrera y derechos pasivos.
+  - Retribuciones íntegras: SOLO durante los DOS PRIMEROS MESES.
+
+SUSPENSIÓN (Art. 29):
+  - PROVISIONAL: durante expediente disciplinario o proceso penal; máximo 6 meses;
+    solo se percibe sueldo inicial, grado, antigüedad y ayuda familiar.
+    Si no se eleva a firme → se reconocen retroactivamente todos los derechos.
+  - FIRME: por sentencia o sanción disciplinaria; privación de TODOS los derechos.
+
+ORDEN DE REINTEGRO (art. 30 — sin reserva de plaza):
+  1.º Excedentes voluntarios por cargos en partidos/sindicatos (art. 26.1.b).
+  2.º Excedentes voluntarios por servicio en otras AAPP o por interés particular (art. 26.1.a y c)
+      y excedentes forzosos del art. 28.1.a.
+  3.º Excedentes forzosos por actividad incompatible (art. 28.1.b).
+
+=== PROVISIÓN DE PUESTOS DE TRABAJO (Arts. 31–35 bis) ===
+  - Sistema ordinario: CONCURSO DE MÉRITOS (art. 33) → para todos los puestos que no sean LD.
+  - Sistema excepcional: LIBRE DESIGNACIÓN (art. 34) → solo para puestos específicos por naturaleza
+    de sus funciones, identificados previamente en la plantilla orgánica.
+  - INTERINIDAD (art. 32):
+      · Mismo nivel; igual o superior categoría.
+      · Revocable libremente por la Administración.
+      · A los 3 meses: equiparación retributiva retroactiva.
+      · Duración máxima: 1 año (salvo reserva de plaza del titular).
+  - MOVILIDAD POR VIOLENCIA DE GÉNERO (art. 35 bis):
+      · Traslado preferente a puesto de igual nivel y categoría en otra localidad.
+
+=== RETRIBUCIONES (Arts. 39–55) ===
+PRINCIPIO BÁSICO (Art. 39):
+  - Retribución única y pública; solo por conceptos del Estatuto; cuantía en los presupuestos.
+CONCEPTOS RETRIBUTIVOS:
+  · Sueldo inicial del nivel (básico, ligado al nivel A/B/C/D/E).
+  · Grado (ligado al grado alcanzado dentro del nivel).
+  · Premio de antigüedad / trienios.
+  · Retribuciones complementarias (puestos de especial dificultad, dedicación, responsabilidad, etc.).
+  · Complemento para niveles C, D y E: máximo 15% del sueldo inicial del nivel (art. 40.2).
+★ En servicios especiales: se percibe la retribución del cargo efectivo.
+   Excepción: el grado y el premio de antigüedad pueden ser abonados por la Administración de origen
+   si no pueden ser percibidos con cargo al presupuesto del cargo.
+★ Suspensión provisional: solo sueldo inicial + grado + antigüedad + ayuda familiar.
+
+=== ÓRGANOS DE REPRESENTACIÓN (Arts. 80–84) ===
+  - Los funcionarios tienen derecho a constituir JUNTAS DE PERSONAL.
+  - Negociación colectiva canalizada por las MESAS DE NEGOCIACIÓN.
+  - En la ACF: MESA GENERAL DE NEGOCIACIÓN.
+  - Los acuerdos tienen fuerza vinculante en los términos de la legislación.
+  - Derecho de reunión y asamblea reconocidos.
+
+=== ARTÍCULOS MÁS PREGUNTADOS EN EXAMEN ===
+Art. 1   → Ámbito de aplicación (3 administraciones).
+Art. 2   → Exclusiones expresas (4 colectivos).
+Art. 3   → Clases de personal (funcionario / eventual / contratado).
+Art. 5   → Sistemas de selección (oposición / concurso-oposición).
+Art. 7   → Requisitos de admisión.
+Art. 9   → Adquisición de la condición (4 pasos sucesivos).
+Art. 10  → Causas de pérdida.
+Art. 12  → Niveles A, B, C, D, E y titulaciones.
+Art. 13  → Grados: asignación inicial; cómputo de la antigüedad.
+Art. 15  → Promoción de nivel; fórmula de turnos; requisitos.
+Art. 16  → Ascenso de grado: 2 años mínimo, 8 años máximo; 10%+10%.
+Art. 17  → Grado al ascender de nivel = servicios reconocidos ÷ 8.
+Art. 19  → Contenido de la plantilla orgánica.
+Art. 20  → Relación anual: cierre 31/12; publicación BON.
+Art. 22  → Las cuatro situaciones administrativas.
+Art. 24  → Servicios especiales: causas, efectos, reincorporación 30 días.
+Art. 26  → Excedencia voluntaria: causas, plazo mínimo 1 año.
+Art. 27  → Excedencia especial: causas, 3 años máx., reserva de plaza.
+Art. 28 bis → Excedencia violencia de género: 6 meses reserva; 2 meses retribuciones íntegras.
+Art. 29  → Suspensión: provisional (6 meses máx.) vs. firme.
+Art. 32  → Interinidad: 3 meses retroactividad; 1 año máx.
+Art. 33  → Concurso de méritos: regla general de provisión.
+Art. 34  → Libre designación: excepcional, solo puestos identificados en plantilla.
+Art. 35 bis → Movilidad por violencia de género.
+Arts. 39–40 → Retribuciones: principio de retribución única y pública; conceptos.
+Arts. 80–84 → Juntas de Personal; Mesas de Negociación.
+
+=======================================================
