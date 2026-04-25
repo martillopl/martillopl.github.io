@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 15 – Cuadros comparativos · Refrigeración en edificios</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f7fa;--surface:#fff;--surface-2:#f8f9fb;
+  --border:#ccd3de;--text:#1a2233;--muted:#4e5f7a;--faint:#8a9abb;
+  --blue:#0d4f8b;--blue-lt:#dceaf7;--blue-dk:#082f57;
+  --teal:#00707a;--teal-lt:#ccedf0;
+  --green:#1a6633;--green-lt:#d4eedd;
+  --gold:#c47d00;--gold-lt:#faefd0;
+  --orange:#8b3a0d;--orange-lt:#fce8d8;
+  --purple:#5b3690;--purple-lt:#ece4f8;
+  --flame:#c0392b;--red-lt:#fde8e8;
+  --ice:#004f7a;--ice-lt:#d0eaf8;
+  --font-d:'Cabinet Grotesk',sans-serif;
+  --font-b:'Satoshi',sans-serif;
+  --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.88rem;line-height:1.65;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 5rem;}
+.file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s;}
+.file-nav a:hover,.file-nav a.active{background:var(--ice);color:white;border-color:var(--ice);}
+.page-header{background:linear-gradient(135deg,#004f7a 0%,#001f35 100%);color:white;border-radius:var(--r-xl);padding:2rem 2.5rem;margin-bottom:2rem;}
+.page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;}
+.page-header h1{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,1.85rem);font-weight:800;line-height:1.2;margin-bottom:.4rem;}
+.page-header .sub{font-size:.83rem;opacity:.8;}
+.section-label{font-family:var(--font-d);font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:2.5rem 0 .7rem;}
+.table-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.5rem;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+.table-card-header{padding:.85rem 1.25rem;display:flex;align-items:center;gap:.65rem;border-bottom:1px solid var(--border);}
+.table-card-header .icon{font-size:1.1rem;}
+.table-card-header h2{font-family:var(--font-d);font-size:.95rem;font-weight:800;}
+.top-blue{border-top:4px solid var(--blue);}
+.top-teal{border-top:4px solid var(--teal);}
+.top-green{border-top:4px solid var(--green);}
+.top-gold{border-top:4px solid var(--gold);}
+.top-orange{border-top:4px solid var(--orange);}
+.top-purple{border-top:4px solid var(--purple);}
+.top-flame{border-top:4px solid var(--flame);}
+.top-ice{border-top:4px solid var(--ice);}
+.chip{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:2px 8px;border-radius:999px;white-space:nowrap;margin-left:auto;}
+.ch-blue{background:var(--blue-lt);color:var(--blue-dk);}
+.ch-teal{background:var(--teal-lt);color:var(--teal);}
+.ch-green{background:var(--green-lt);color:var(--green);}
+.ch-gold{background:var(--gold-lt);color:#7a4e00;}
+.ch-orange{background:var(--orange-lt);color:var(--orange);}
+.ch-purple{background:var(--purple-lt);color:var(--purple);}
+.ch-flame{background:var(--red-lt);color:var(--flame);}
+.ch-ice{background:var(--ice-lt);color:var(--ice);}
+.callout{border-radius:var(--r-md);padding:.75rem 1rem;font-size:.83rem;margin:.75rem 1.25rem;line-height:1.55;}
+.al-red{background:var(--red-lt);border-left:3px solid var(--flame);}
+.al-blue{background:var(--blue-lt);border-left:3px solid var(--blue);}
+.al-teal{background:var(--teal-lt);border-left:3px solid var(--teal);}
+.al-green{background:var(--green-lt);border-left:3px solid var(--green);}
+.al-gold{background:var(--gold-lt);border-left:3px solid var(--gold);}
+.al-purple{background:var(--purple-lt);border-left:3px solid var(--purple);}
+.al-orange{background:var(--orange-lt);border-left:3px solid var(--orange);}
+.al-ice{background:var(--ice-lt);border-left:3px solid var(--ice);}
+.cmp-table{width:100%;border-collapse:collapse;font-size:.84rem;}
+.cmp-table th{font-family:var(--font-d);font-weight:800;font-size:.78rem;padding:.55rem .9rem;text-align:left;border-bottom:2px solid var(--border);}
+.cmp-table th.hd-blue{background:var(--blue);color:white;}
+.cmp-table th.hd-flame{background:var(--flame);color:white;}
+.cmp-table th.hd-teal{background:var(--teal);color:white;}
+.cmp-table th.hd-green{background:var(--green);color:white;}
+.cmp-table th.hd-gold{background:var(--gold);color:white;}
+.cmp-table th.hd-orange{background:var(--orange);color:white;}
+.cmp-table th.hd-purple{background:var(--purple);color:white;}
+.cmp-table th.hd-ice{background:var(--ice);color:white;}
+.cmp-table th.hd-grey{background:#e8edf0;color:var(--text);}
+.cmp-table td{padding:.5rem .9rem;border-bottom:1px solid #eef3f6;vertical-align:top;}
+.cmp-table tr:last-child td{border-bottom:none;}
+.cmp-table tr:hover td{background:#f8f9fb;}
+.cmp-table tr.hi td{background:#dceaf7!important;font-weight:700;}
+.cmp-table tr.hi-red td{background:#fde8e8!important;font-weight:700;}
+.cmp-table tr.hi-green td{background:#d4eedd!important;font-weight:700;}
+.cmp-table tr.hi-gold td{background:var(--gold-lt)!important;font-weight:700;}
+.cmp-table tr.hi-purple td{background:var(--purple-lt)!important;font-weight:700;}
+.cmp-table tr.hi-teal td{background:var(--teal-lt)!important;font-weight:700;}
+.cmp-table tr.hi-orange td{background:var(--orange-lt)!important;font-weight:700;}
+.cmp-table tr.hi-ice td{background:var(--ice-lt)!important;font-weight:700;}
+.cmp-table .feat{font-weight:700;color:var(--muted);font-size:.79rem;white-space:nowrap;}
+.ok{color:var(--green);font-weight:800;}
+.no{color:var(--flame);font-weight:800;}
+.warn{color:var(--orange);font-weight:700;}
+.mem-section{background:linear-gradient(135deg,#004f7a,#001f35);border-radius:var(--r-xl);padding:1.75rem 2rem;margin-bottom:1.5rem;}
+.mem-section h2{font-family:var(--font-d);font-weight:800;color:white;font-size:1.05rem;margin-bottom:1.1rem;}
+.mem-grid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;}
+.mem-item{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:var(--r-lg);padding:.75rem 1rem;}
+.mem-label{font-size:.65rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#90d0f5;display:block;margin-bottom:3px;}
+.mem-text{font-size:.84rem;color:#e8f4fd;line-height:1.5;}
+@media(max-width:680px){
+  .cmp-table{font-size:.78rem;}
+  .cmp-table td,.cmp-table th{padding:.4rem .6rem;}
+  .mem-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html" class="active">📊 Cuadros comparativos</a>
+  </div>
+
+<div class="page-header">
+  <div class="meta">Tema 15 · Gestor de Mantenimiento (Nivel B) · UPNA · Cuadros comparativos</div>
+  <h1>Instalaciones de refrigeración — Tablas operativas para examen</h1>
+  <div class="sub">8 tablas · Ciclo frigorífico · Tipologías · Enfriadoras · Refrigerantes · EER/ESEER/SCOP · Eurovent · Mantenimiento · Normativa</div>
+</div>
+
+
+<!-- ══════════ TABLA 1: EL CICLO FRIGORÍFICO POR COMPRESIÓN ══════════ -->
+<div class="section-label">Tabla 1 — El ciclo frigorífico por compresión: componentes, función y estado del refrigerante</div>
+<div class="table-card top-ice">
+  <div class="table-card-header"><span class="icon">❄</span><h2>Compresor → Condensador → Válvula de expansión → Evaporador — el ciclo completo</h2><span class="chip ch-ice">Ciclo frigorífico</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:55px;">Orden</th>
+      <th class="hd-ice">Componente</th>
+      <th class="hd-ice">Función</th>
+      <th class="hd-ice">Estado del refrigerante al entrar / salir</th>
+      <th class="hd-ice">Presión / Temperatura</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi-green">
+        <td style="text-align:center;font-weight:800;font-size:1.1rem;">1</td>
+        <td><strong>Evaporador</strong></td>
+        <td>El refrigerante líquido a baja presión absorbe calor del medio a enfriar y se evapora. <strong>Aquí se produce el frío.</strong></td>
+        <td>Entra como líquido a baja presión → Sale como vapor saturado (o ligeramente recalentado)</td>
+        <td class="ok">Baja presión / Baja temperatura (2–10 °C en enfriadoras)</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:800;font-size:1.1rem;">2</td>
+        <td><strong>Compresor</strong></td>
+        <td>Aspira el vapor del evaporador y lo comprime, elevando su presión y temperatura. <strong>El elemento motor del ciclo. Consume la energía eléctrica.</strong></td>
+        <td>Entra como vapor a baja presión → Sale como vapor recalentado a alta presión</td>
+        <td class="no">Alta presión / Alta temperatura (50–80 °C)</td>
+      </tr>
+      <tr class="hi-red">
+        <td style="text-align:center;font-weight:800;font-size:1.1rem;">3</td>
+        <td><strong>Condensador</strong></td>
+        <td>El vapor a alta presión cede calor al medio de disipación (aire o agua) y se condensa. <strong>Aquí se rechaza el calor al exterior.</strong></td>
+        <td>Entra como vapor a alta presión → Sale como líquido a alta presión</td>
+        <td class="no">Alta presión / Alta temperatura (35–55 °C)</td>
+      </tr>
+      <tr class="hi-ice">
+        <td style="text-align:center;font-weight:800;font-size:1.1rem;">4</td>
+        <td><strong>Válvula de expansión (VEX / TEV)</strong></td>
+        <td>Reduce bruscamente la presión del líquido refrigerante. Parte del líquido se evapora (flash), produciendo un descenso brusco de temperatura.</td>
+        <td>Entra como líquido a alta presión → Sale como mezcla bifásica (líquido + vapor) a baja presión</td>
+        <td class="ok">Baja presión / Baja temperatura</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-ice">
+    <strong>📌 Regla mnemotécnica para el ciclo:</strong> <strong>E–C–C–V</strong> = <strong>E</strong>vaporador → <strong>C</strong>ompresor → <strong>C</strong>ondensador → <strong>V</strong>álvula de expansión → (vuelta al evaporador).<br>
+    <strong>El frío se produce en el evaporador</strong> (absorción de calor). <strong>El calor se rechaza en el condensador.</strong> El compresor consume la energía eléctrica y es el elemento motor de todo el ciclo.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 2: TIPOLOGÍAS DE PRODUCCIÓN DE FRÍO ══════════ -->
+<div class="section-label">Tabla 2 — Sistemas de producción de frío en edificios: tipologías y comparativa</div>
+<div class="table-card top-blue">
+  <div class="table-card-header"><span class="icon">🏢</span><h2>Enfriadora aire-agua · Agua-agua · Split/VRF · Absorción · Free-cooling · Districooling</h2><span class="chip ch-blue">Tipologías</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:155px;">Sistema</th>
+      <th class="hd-blue">Principio de funcionamiento</th>
+      <th class="hd-blue">Condensación</th>
+      <th class="hd-blue">EER / ESEER típico</th>
+      <th class="hd-blue">Aplicación</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi-ice">
+        <td><strong>Enfriadora aire-agua (chiller)</strong></td>
+        <td>Ciclo frigorífico por compresión. Enfría agua (habitualmente 7/12 °C) que se distribuye a los fan-coils o UTA del edificio.</td>
+        <td>Condensación por aire (ventiladores en la unidad exterior)</td>
+        <td>EER 2,5–3,5 / ESEER 3,5–5</td>
+        <td><strong>El más habitual en edificios terciarios y hospitales.</strong> Centralizada, fácil mantenimiento, alta potencia.</td>
+      </tr>
+      <tr>
+        <td><strong>Enfriadora agua-agua (con torre)</strong></td>
+        <td>Igual que la anterior, pero el calor de condensación se rechaza mediante una torre de refrigeración con agua.</td>
+        <td>Condensación por agua (torre de refrigeración)</td>
+        <td>EER 4–6 / ESEER 5–7 <span class="ok">(más eficiente)</span></td>
+        <td>Grandes edificios, hospitales, centros de datos. Mayor inversión y mantenimiento (torre + legionela).</td>
+      </tr>
+      <tr>
+        <td><strong>Sistema split / multi-split</strong></td>
+        <td>Unidad interior (fan-coil o cassette) + unidad exterior con compresor. Refrigerante circula directamente entre ambas unidades.</td>
+        <td>Por aire (unidad exterior)</td>
+        <td>EER 2,8–4,5</td>
+        <td>Viviendas y pequeños locales comerciales. Bajo coste, instalación sencilla.</td>
+      </tr>
+      <tr class="hi-teal">
+        <td><strong>Sistema VRF/VRV (Volumen de Refrigerante Variable)</strong></td>
+        <td>Una unidad exterior conecta múltiples unidades interiores. El compresor de velocidad variable regula el caudal de refrigerante a cada zona.</td>
+        <td>Por aire (unidad exterior)</td>
+        <td>EER 3,5–5 (muy variable)</td>
+        <td><strong>Muy popular en edificios medianos y grandes rehabilitaciones.</strong> Zonificación flexible, sin red de agua.</td>
+      </tr>
+      <tr>
+        <td><strong>Máquina de absorción</strong></td>
+        <td>No usa compresor eléctrico: el ciclo se impulsa con calor (gas natural, vapor, calor residual). Usa como par refrigerante/absorbente: agua/bromuro de litio o amoniaco/agua.</td>
+        <td>Por agua (torre) o por aire</td>
+        <td>COP 0,6–1,4 (menor que compresión)</td>
+        <td>Donde hay calor residual disponible o cogeneración. Bajo consumo eléctrico.</td>
+      </tr>
+      <tr class="hi-green">
+        <td><strong>Free-cooling</strong></td>
+        <td>Aprovecha la temperatura baja del aire o del agua exterior cuando es suficientemente fría para enfriar sin compresor.</td>
+        <td>—</td>
+        <td>COP teóricamente infinito (sin compresor). En la práctica, ahorro del 30–60% de las horas de funcionamiento.</td>
+        <td><strong>Complemento de la enfriadora.</strong> El RITE obliga al free-cooling en UTA con potencia de refrigeración &gt;12 kW.</td>
+      </tr>
+      <tr>
+        <td><strong>Districooling (red de frío urbana)</strong></td>
+        <td>Una central de producción de frío distribuye agua fría a varios edificios mediante una red de tuberías. Los edificios no tienen maquinaria propia.</td>
+        <td>Centralizada en la planta de districooling</td>
+        <td>Variable según la central (generalmente muy eficiente por escala)</td>
+        <td>Grandes áreas urbanas o campus universitarios. Sin maquinaria en el edificio: mantenimiento mínimo para el gestor.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-blue">
+    <strong>📌 La enfriadora aire-agua (chiller) es el sistema de referencia del tema.</strong> Es el sistema de producción de frío centralizado más frecuente en edificios de uso terciario, hospitalario y universitario. Trabaja con agua fría a 7 °C (impulsión) / 12 °C (retorno) como temperatura estándar. Estos valores son los más preguntados en tipo test.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 3: ENFRIADORAS — TIPOS Y COMPRESORES ══════════ -->
+<div class="section-label">Tabla 3 — Enfriadoras de agua: tipos de compresor y características técnicas</div>
+<div class="table-card top-teal">
+  <div class="table-card-header"><span class="icon">🌡</span><h2>Compresor scroll · Tornillo · Centrífugo · Pistón — comparativa técnica</h2><span class="chip ch-teal">Tipos de compresor</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:160px;">Tipo de compresor</th>
+      <th class="hd-teal">Principio</th>
+      <th class="hd-teal">Rango de potencia</th>
+      <th class="hd-teal">Ventaja principal</th>
+      <th class="hd-teal">Uso típico</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Pistón (alternativo)</strong></td>
+        <td>Movimiento alternativo de pistones en cilindros. El más antiguo.</td>
+        <td>Pequeño y mediano (&lt;100 kW)</td>
+        <td>Robusto, bien conocido, fácil de reparar.</td>
+        <td>Instalaciones pequeñas. Cada vez más sustituido por el scroll.</td>
+      </tr>
+      <tr class="hi-teal">
+        <td><strong>Scroll (espiral)</strong></td>
+        <td>Dos espirales entrelazadas comprimen el gas por reducción progresiva del volumen. Sin válvulas.</td>
+        <td>Pequeño y mediano (10–200 kW)</td>
+        <td class="ok">Silencioso, eficiente, pocas piezas móviles, muy fiable. <strong>El más usado en enfriadoras pequeñas y medianas.</strong></td>
+        <td><strong>Enfriadoras residenciales y terciario pequeño-mediano. VRF. Splits.</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Tornillo (helicoidal)</strong></td>
+        <td>Dos rotores helicoidales (macho y hembra) comprimen el gas de forma continua.</td>
+        <td>Mediano y grande (100–2.000 kW)</td>
+        <td class="ok">Continuo (sin pulsaciones), muy eficiente en cargas parciales, regulación suave (0–100%).</td>
+        <td><strong>Enfriadoras de mediana-gran capacidad en edificios terciarios y hospitalarios.</strong></td>
+      </tr>
+      <tr class="hi-ice">
+        <td><strong>Centrífugo (turbomáquina)</strong></td>
+        <td>Un rodete de alta velocidad impulsa el gas por fuerza centrífuga. Sin contacto entre piezas móviles del compresor.</td>
+        <td>Grande y muy grande (&gt;500 kW, hasta MW)</td>
+        <td class="ok"><strong>El más eficiente en grandes instalaciones.</strong> Muy alta fiabilidad. Bajo mantenimiento (sin fricción interna).</td>
+        <td>Grandes hospitales, aeropuertos, centros comerciales, centros de datos. Potencias &gt;500 kW.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-teal">
+    <strong>📌 Resumen para recordar el compresor según potencia:</strong><br>
+    &lt;200 kW → <strong>Scroll</strong> | 100–2.000 kW → <strong>Tornillo</strong> | &gt;500 kW → <strong>Centrífugo</strong><br>
+    Los rangos se solapan: el dato clave es que el centrífugo es el más eficiente en grandes instalaciones y el scroll el más silencioso y fiable en pequeñas y medianas.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 4: REFRIGERANTES — COMPARATIVA ══════════ -->
+<div class="section-label">Tabla 4 — Refrigerantes: generaciones, GWP, normativa F-Gas y transición</div>
+<div class="table-card top-orange">
+  <div class="table-card-header"><span class="icon">🧪</span><h2>CFC · HCFC · HFC · HFO · Naturales — GWP, ODP y regulación F-Gas</h2><span class="chip ch-orange">Refrigerantes</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:80px;">Familia</th>
+      <th class="hd-orange">Ejemplos</th>
+      <th class="hd-orange">ODP (capa ozono)</th>
+      <th class="hd-orange">GWP (efecto invernadero)</th>
+      <th class="hd-orange">Estado regulatorio</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi-red">
+        <td><strong>CFC</strong></td>
+        <td>R-11, R-12</td>
+        <td class="no"><strong>Alto. Destruyen la capa de ozono.</strong></td>
+        <td class="no">Alto (GWP 4.750–10.900)</td>
+        <td class="no"><strong>PROHIBIDOS desde el Protocolo de Montreal (1987). Fuera del mercado desde los 90.</strong></td>
+      </tr>
+      <tr class="hi-orange">
+        <td><strong>HCFC</strong></td>
+        <td>R-22</td>
+        <td class="warn">ODP &gt;0 (menor que CFC)</td>
+        <td class="no">GWP 1.810</td>
+        <td class="no"><strong>PROHIBIDA su recarga en equipos existentes desde el 1/1/2015 en la UE.</strong> Reglamento F-Gas 517/2014. R-22 fue el más usado en aires acondicionados hasta 2015.</td>
+      </tr>
+      <tr class="hi-gold">
+        <td><strong>HFC</strong></td>
+        <td><strong>R-410A</strong>, R-407C, R-134a, R-404A</td>
+        <td class="ok">ODP = 0 (no destruyen el ozono)</td>
+        <td class="no">GWP 675–3.922 (Alto)</td>
+        <td class="warn"><strong>En reducción progresiva.</strong> El Reglamento F-Gas 2024 (UE 2024/573) establece un calendario de reducción (phase-down) de HFC hasta 2050. R-410A prohibido en nuevos equipos desde 2025 (GWP &gt;750).</td>
+      </tr>
+      <tr class="hi-green">
+        <td><strong>HFO</strong></td>
+        <td>R-1234yf, R-1234ze, <strong>R-32</strong> (técnicamente HFC de bajo GWP)</td>
+        <td class="ok">ODP = 0</td>
+        <td class="ok"><strong>GWP &lt;1 (HFO puros) o bajo (R-32: GWP 675)</strong></td>
+        <td class="ok"><strong>Los refrigerantes del futuro inmediato.</strong> Reemplazarán al R-410A en nuevos equipos. R-32 ya mayoritario en nuevas unidades split y VRF desde 2025.</td>
+      </tr>
+      <tr>
+        <td><strong>Naturales</strong></td>
+        <td>R-744 (CO₂), R-717 (amoniaco/NH₃), R-290 (propano)</td>
+        <td class="ok">ODP = 0</td>
+        <td class="ok">GWP muy bajo (CO₂: GWP=1; NH₃: GWP=0)</td>
+        <td class="ok">Sin restricciones F-Gas. Excelentes propiedades termodinámicas. Limitaciones: toxicidad (NH₃), inflamabilidad (R-290), alta presión (CO₂).</td>
+      </tr>
+      <tr class="hi-teal">
+        <td><strong>Mezclas</strong></td>
+        <td>R-407C, R-448A, R-449A (retrofits del R-22 y R-410A)</td>
+        <td class="ok">ODP ≈ 0</td>
+        <td class="warn">GWP variable (1.300–2.000)</td>
+        <td class="warn">Soluciones de transición. Permiten adaptar equipos existentes a refrigerantes de menor GWP sin sustitución completa del equipo.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-red">
+    <strong>⚠ Los datos más preguntados sobre refrigerantes:</strong><br>
+    • <strong>R-22</strong>: HCFC. Prohibida su recarga desde el 1/1/2015 en la UE.<br>
+    • <strong>R-410A</strong>: HFC. GWP 2.088. Prohibido en nuevos equipos de &lt;12 kW desde 2025 (GWP &gt;750, Reglamento F-Gas 2024).<br>
+    • <strong>R-32</strong>: HFC de bajo GWP (675). El sustituto de referencia del R-410A en splits y VRF.<br>
+    • <strong>ODP</strong> = Ozone Depletion Potential. <strong>GWP</strong> = Global Warming Potential (referencia: CO₂ = 1).
+  </div>
+  <div class="callout al-orange">
+    <strong>📌 F-Gas: Reglamento (UE) 2024/573 (nuevo F-Gas)</strong><br>
+    Sustituye al anterior Reglamento 517/2014. Establece un calendario de phase-down (reducción progresiva) de HFC en Europa. Objetivo: reducir las emisiones equivalentes de CO₂ de los gases fluorados en un 95% antes de 2050. Las prohibiciones más relevantes para edificios: desde 2025, nuevos equipos de refrigeración y climatización pequeños (&lt;12 kW) no pueden usar refrigerantes con GWP &gt;750. El R-410A (GWP 2.088) queda excluido de nuevos equipos.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 5: INDICADORES DE EFICIENCIA ENERGÉTICA ══════════ -->
+<div class="section-label">Tabla 5 — Indicadores de eficiencia energética en refrigeración: EER, ESEER, SEER, COP, SCOP</div>
+<div class="table-card top-green">
+  <div class="table-card-header"><span class="icon">📊</span><h2>EER · ESEER · SEER · COP · SCOP · Clasificación energética A+++ — definiciones y datos de examen</h2><span class="chip ch-green">Eficiencia energética</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:115px;">Indicador</th>
+      <th class="hd-green">Definición</th>
+      <th class="hd-green">Fórmula</th>
+      <th class="hd-green">Cuándo se usa</th>
+      <th class="hd-green">Valor típico en enfriadoras</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>EER</strong><br><small>(Energy Efficiency Ratio)</small></td>
+        <td>Rendimiento frigorífico en condiciones nominales plenas (100% de carga). Mide la eficiencia puntual.</td>
+        <td>EER = Potencia frigorífica (kW) / Potencia eléctrica consumida (kW)</td>
+        <td>Comparación de equipos en condiciones estándar. Punto de diseño nominal.</td>
+        <td>Enfriadoras aire-agua: EER 2,5–3,5<br>Enfriadoras agua-agua: EER 4–6</td>
+      </tr>
+      <tr class="hi-green">
+        <td><strong>ESEER</strong><br><small>(European Seasonal EER)</small></td>
+        <td>EER estacional europeo. Pondera el rendimiento a 4 condiciones de carga (100%, 75%, 50%, 25%) con los pesos estadísticos del clima europeo.</td>
+        <td>ESEER = 0,03×EER₁₀₀ + 0,33×EER₇₅ + 0,41×EER₅₀ + 0,23×EER₂₅</td>
+        <td><strong>El indicador más representativo del funcionamiento real anual de una enfriadora.</strong> Más relevante que el EER nominal. Exigido por el RITE.</td>
+        <td>Enfriadoras buenas: ESEER 4–6<br>Enfriadoras premium: ESEER &gt;6</td>
+      </tr>
+      <tr>
+        <td><strong>SEER</strong><br><small>(Seasonal Energy Efficiency Ratio)</small></td>
+        <td>Indicador estacional de la Directiva Ecodiseño (ErP). Aplicable a equipos de climatización (split, VRF) para la certificación CE.</td>
+        <td>Calculado según EN 14825 considerando el clima de referencia europeo.</td>
+        <td>Etiquetado energético de equipos domésticos y comerciales (A+++ a D). Diferente del ESEER aunque ambos son estacionales.</td>
+        <td>Splits eficientes: SEER 6–9<br>A+++ requiere SEER &gt;8,5</td>
+      </tr>
+      <tr>
+        <td><strong>COP</strong><br><small>(Coefficient of Performance)</small></td>
+        <td>Rendimiento en modo calefacción (bomba de calor). Energía térmica entregada / energía eléctrica consumida.</td>
+        <td>COP = Potencia calorífica (kW) / Potencia eléctrica (kW)</td>
+        <td>Equipos reversibles (bomba de calor). En refrigeración se usa EER, en calefacción COP.</td>
+        <td>Bombas de calor: COP 2,5–5</td>
+      </tr>
+      <tr class="hi-teal">
+        <td><strong>SCOP</strong><br><small>(Seasonal COP)</small></td>
+        <td>COP estacional. Equivalente al SEER pero en modo calefacción.</td>
+        <td>Calculado según EN 14825.</td>
+        <td>Etiquetado energético de bombas de calor en modo calefacción.</td>
+        <td>Aerotermia eficiente: SCOP 3,5–5</td>
+      </tr>
+      <tr class="hi-gold">
+        <td><strong>IPLV / NPLV</strong><br><small>(Integrated Part Load Value)</small></td>
+        <td>Indicador de rendimiento a cargas parciales. IPLV es el estándar AHRI (americano). NPLV es su variante para condiciones no estándar.</td>
+        <td>Ponderación similar al ESEER pero con pesos distintos (AHRI 550/590).</td>
+        <td>Enfriadoras de gran potencia (centrífugas, tornillo). Habitual en especificaciones de grandes proyectos. El ESEER es el equivalente europeo.</td>
+        <td>Similar al ESEER.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-green">
+    <strong>📌 ESEER vs EER — la diferencia clave:</strong> el EER mide el rendimiento a plena carga (100%), que es el peor caso de eficiencia para la mayoría de equipos modernos con compresor de velocidad variable. El ESEER es más representativo porque las enfriadoras funcionan la mayor parte del año a cargas parciales (50–75%). Un buen ESEER es más valioso que un buen EER nominal. <strong>El RITE exige que las enfriadoras con potencia &gt;400 kW dispongan de regulación de capacidad continua y que se declaren los valores de ESEER.</strong>
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 6: CERTIFICADOS EUROVENT ══════════ -->
+<div class="section-label">Tabla 6 — Certificación Eurovent: qué es, cómo funciona y qué garantiza</div>
+<div class="table-card top-purple">
+  <div class="table-card-header"><span class="icon">🏅</span><h2>Qué es Eurovent · Clases de eficiencia · Qué certifica · Cómo verificar · Diferencia con el marcado CE</h2><span class="chip ch-purple">Eurovent</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:180px;">Aspecto</th>
+      <th class="hd-purple">Descripción</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>¿Qué es Eurovent?</strong></td>
+        <td>Eurovent Certita Certification es la principal asociación europea de certificación de rendimiento para equipos de climatización, ventilación y refrigeración. No es un organismo gubernamental: es una certificación voluntaria de tercera parte independiente.</td>
+      </tr>
+      <tr class="hi-purple">
+        <td><strong>¿Qué garantiza?</strong></td>
+        <td>Que los datos de rendimiento declarados por el fabricante (EER, ESEER, caudal de agua, potencia sonora, etc.) han sido <strong>verificados de forma independiente mediante ensayos en laboratorio acreditado.</strong> Sin Eurovent, el fabricante puede declarar cualquier valor de rendimiento sin verificación externa.</td>
+      </tr>
+      <tr>
+        <td><strong>Clasificación de eficiencia</strong></td>
+        <td>Para enfriadoras de agua, Eurovent establece clases de eficiencia de la <strong>A a la G</strong> (de más a menos eficiente) basadas en el ESEER. La clase <strong>A</strong> corresponde a los equipos más eficientes del mercado. Muchos pliegos técnicos de contratación pública exigen clase Eurovent A o B como mínimo.</td>
+      </tr>
+      <tr class="hi-green">
+        <td><strong>Equipos certificados (los más importantes)</strong></td>
+        <td>
+          • Enfriadoras de agua (chillers) con condensación por aire o por agua<br>
+          • Fan-coils<br>
+          • Unidades de tratamiento de aire (UTA/UTAS)<br>
+          • Torres de refrigeración<br>
+          • Bombas de calor aire-agua
+        </td>
+      </tr>
+      <tr>
+        <td><strong>¿Cómo verificar un equipo?</strong></td>
+        <td>En el <strong>directorio público de Eurovent</strong> (www.eurovent-certification.com) se puede buscar cualquier equipo certificado por fabricante y modelo. Es la forma de comprobar que los datos declarados están verificados.</td>
+      </tr>
+      <tr>
+        <td><strong>Eurovent vs Marcado CE</strong></td>
+        <td>El <strong>marcado CE</strong> es obligatorio: acredita que el equipo cumple los requisitos legales de seguridad (Directivas europeas). La <strong>certificación Eurovent es voluntaria</strong>: acredita que los datos de rendimiento son verídicos. Son complementarios: un equipo puede tener CE sin Eurovent, pero no Eurovent sin CE.</td>
+      </tr>
+      <tr class="hi-ice">
+        <td><strong>Relevancia en contratación pública</strong></td>
+        <td><strong>En pliegos técnicos de la Administración Pública</strong> (hospitales, universidades, edificios públicos) es habitual exigir certificación Eurovent clase A o B para enfriadoras. Si el pliego lo exige y el equipo no lo tiene, no puede ser adjudicado. Es el dato de mayor impacto práctico para el gestor de mantenimiento.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-purple">
+    <strong>📌 La certificación Eurovent es el sello de verificación independiente del rendimiento.</strong> Sin ella, los datos del catálogo del fabricante son solo datos "declarados" no contrastados. Con ella, han sido verificados en laboratorio acreditado. Para la UPNA y para cualquier Administración Pública, exigir Eurovent en los pliegos es la garantía de que el equipo rendirá lo que dice rendir.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 7: MANTENIMIENTO DE INSTALACIONES DE REFRIGERACIÓN ══════════ -->
+<div class="section-label">Tabla 7 — Mantenimiento de enfriadoras y sistemas de refrigeración: operaciones y frecuencias</div>
+<div class="table-card top-gold">
+  <div class="table-card-header"><span class="icon">🔧</span><h2>Mantenimiento preventivo · Operaciones obligatorias RITE · Legionela en torres · Control de fugas F-Gas</h2><span class="chip ch-gold">Mantenimiento</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:200px;">Operación</th>
+      <th class="hd-gold">Descripción</th>
+      <th class="hd-gold">Frecuencia</th>
+      <th class="hd-gold">Normativa que la exige</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi-gold">
+        <td colspan="4" style="font-family:var(--font-d);font-weight:800;font-size:.78rem;color:var(--gold);background:var(--gold-lt);">ENFRIADORA (CHILLER)</td>
+      </tr>
+      <tr>
+        <td><strong>Verificación del circuito frigorífico</strong></td>
+        <td>Presiones, temperaturas, recalentamiento, subenfriamiento, nivel de aceite, detección de fugas de refrigerante.</td>
+        <td>Mensual / Trimestral</td>
+        <td>RITE IT 3.3 + Reglamento F-Gas</td>
+      </tr>
+      <tr>
+        <td><strong>Control de fugas de refrigerante</strong></td>
+        <td>Detección de fugas con detector electrónico o agua jabonosa. Obligatorio según la carga de refrigerante del equipo.</td>
+        <td>Ver Tabla de F-Gas: cada 3 meses si &gt;500 t CO₂eq, cada 6 meses si 50–500 t CO₂eq, cada año si 5–50 t CO₂eq.</td>
+        <td><strong>Reglamento F-Gas (UE) 2024/573</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Limpieza del intercambiador de placas / carcasa y tubos</strong></td>
+        <td>Eliminación de incrustaciones calcáreas en el evaporador y condensador (circuito de agua). Las incrustaciones reducen drásticamente el rendimiento.</td>
+        <td>Anual o según análisis de agua</td>
+        <td>RITE IT 3.3</td>
+      </tr>
+      <tr>
+        <td><strong>Revisión del compresor</strong></td>
+        <td>Verificación de vibraciones, consumo eléctrico, temperatura de descarga, aceite lubricante.</td>
+        <td>Anual</td>
+        <td>RITE IT 3.3 + manual del fabricante</td>
+      </tr>
+      <tr class="hi-ice">
+        <td colspan="4" style="font-family:var(--font-d);font-weight:800;font-size:.78rem;color:var(--ice);background:var(--ice-lt);">TORRE DE REFRIGERACIÓN (cuando existe)</td>
+      </tr>
+      <tr class="hi-red">
+        <td><strong>Control de Legionela</strong></td>
+        <td>La torre crea condiciones ideales para la proliferación de Legionella pneumophila: agua templada (25–45 °C), aerosoles, materia orgánica. Tratamiento biocida obligatorio.</td>
+        <td><strong>Tratamiento biocida: semanal. Análisis microbiológico: mensual. Revisión general: semestral. Limpieza y desinfección: anual.</strong></td>
+        <td><strong>RD 487/2022 (Legionela). Es la normativa más crítica para torres de refrigeración.</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Control de calidad del agua</strong></td>
+        <td>pH, conductividad, dureza, cloruros, inhibidores de corrosión e incrustación.</td>
+        <td>Semanal (parámetros físico-químicos) / Mensual (microbiológico)</td>
+        <td>RD 487/2022</td>
+      </tr>
+      <tr class="hi-green">
+        <td colspan="4" style="font-family:var(--font-d);font-weight:800;font-size:.78rem;color:var(--green);background:var(--green-lt);">FREE-COOLING</td>
+      </tr>
+      <tr>
+        <td><strong>Verificación del sistema de free-cooling</strong></td>
+        <td>Comprobación de la sonda de temperatura exterior, la válvula de by-pass y el correcto funcionamiento del modo gratuito.</td>
+        <td>Anual (antes del inicio de la temporada de refrigeración)</td>
+        <td>RITE (free-cooling obligatorio en UTA &gt;12 kW)</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-red">
+    <strong>⚠ Control de fugas F-Gas — umbrales de inspección obligatoria (datos de examen):</strong><br>
+    • Carga equivalente <strong>5–50 t CO₂eq</strong> → inspección de fugas cada <strong>12 meses</strong> (o 24 si hay detector automático)<br>
+    • Carga equivalente <strong>50–500 t CO₂eq</strong> → cada <strong>6 meses</strong> (o 12 si hay detector automático)<br>
+    • Carga equivalente <strong>&gt;500 t CO₂eq</strong> → cada <strong>3 meses</strong> (o 6 si hay detector automático)<br>
+    Las intervenciones en el circuito frigorífico solo pueden realizarlas técnicos con <strong>certificado F-Gas</strong>.
+  </div>
+</div>
+
+
+<!-- ══════════ TABLA 8: NORMATIVA ══════════ -->
+<div class="section-label">Tabla 8 — Normativa aplicable a instalaciones de refrigeración en edificios</div>
+<div class="table-card top-ice">
+  <div class="table-card-header"><span class="icon">📋</span><h2>RITE · RSIF · F-Gas · RD 487/2022 · Ecodiseño · Directiva ERF · Reglamento PED</h2><span class="chip ch-ice">Normativa</span></div>
+  <table class="cmp-table">
+    <thead><tr>
+      <th class="hd-grey" style="width:210px;">Normativa</th>
+      <th class="hd-ice">Qué regula</th>
+      <th class="hd-ice">Dato clave de examen</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi-ice">
+        <td><strong>RITE</strong><br>RD 1027/2007 (mod. RD 238/2013)</td>
+        <td>Reglamento de Instalaciones Térmicas en Edificios. Regula el diseño, instalación y mantenimiento de los sistemas de refrigeración en edificios junto con los de calefacción y ACS.</td>
+        <td><strong>La norma más importante del tema.</strong> Establece rendimientos mínimos (EER/ESEER), free-cooling obligatorio en UTA &gt;12 kW, GTC obligatoria desde 70 kW, inspecciones periódicas, aislamiento de tuberías y ESEER mínimos para enfriadoras.</td>
+      </tr>
+      <tr>
+        <td><strong>RSIF</strong><br>RD 552/2019</td>
+        <td>Reglamento de Seguridad para Instalaciones Frigoríficas. Regula específicamente la seguridad de los sistemas de refrigeración: diseño, instalación, puesta en servicio, mantenimiento y operadores.</td>
+        <td><strong>El reglamento de seguridad específico de la instalación frigorífica.</strong> Establece las categorías de sistemas frigoríficos (A1, A2L, B1, B2L, B3) según el tipo de refrigerante y la carga. Exige el carnet de operador frigorista para las intervenciones en el circuito.</td>
+      </tr>
+      <tr class="hi-orange">
+        <td><strong>Reglamento F-Gas</strong><br>(UE) 2024/573</td>
+        <td>Regula los gases fluorados de efecto invernadero (HFC y otros F-Gas). Establece el calendario de phase-down, prohibiciones de uso de refrigerantes con alto GWP y obligaciones de control de fugas.</td>
+        <td><strong>El más importante sobre refrigerantes.</strong> Prohibición de R-410A en nuevos equipos &lt;12 kW desde 2025. Umbrales de inspección de fugas (3/6/12 meses). Certificación F-Gas obligatoria para técnicos. Libro de registro del equipo.</td>
+      </tr>
+      <tr class="hi-red">
+        <td><strong>RD 487/2022 — Legionela</strong></td>
+        <td>Criterios técnico-sanitarios de instalaciones de riesgo de Legionella. Torres de refrigeración, condensadores evaporativos, humidificadores, spas y otros sistemas con agua templada y aerosoles.</td>
+        <td><strong>El más crítico para torres de refrigeración.</strong> Obligaciones: tratamiento biocida semanal, análisis microbiológico mensual, registro de operaciones, plan de mantenimiento específico anti-legionela, notificación obligatoria de brotes.</td>
+      </tr>
+      <tr>
+        <td><strong>Directiva Ecodiseño</strong><br>Reglamento (UE) 813/2013 y 206/2012</td>
+        <td>Requisitos mínimos de eficiencia energética y etiquetado para equipos de climatización (splits, VRF, bombas de calor, unidades de tratamiento de aire).</td>
+        <td>Establece los requisitos de SEER/SCOP mínimos para la comercialización de equipos en la UE. El etiquetado energético (A+++ a G) es consecuencia de esta directiva.</td>
+      </tr>
+      <tr>
+        <td><strong>Directiva ERF</strong><br>2006/40/CE y revisiones</td>
+        <td>Directiva sobre emisiones procedentes de los sistemas de aire acondicionado de vehículos de motor. Prohíbe refrigerantes con GWP &gt;150 en automóviles nuevos desde 2017.</td>
+        <td>Aunque es de automoción, aparece en temarios de PRL y medio ambiente como referencia a la regulación de refrigerantes en equipos móviles.</td>
+      </tr>
+      <tr>
+        <td><strong>Directiva de Equipos a Presión (PED)</strong><br>2014/68/UE</td>
+        <td>Requisitos de seguridad para equipos sometidos a presión, incluidos los circuitos frigoríficos con presión de diseño superior a 0,5 bar.</td>
+        <td>Las enfriadoras y sistemas frigoríficos de cierta capacidad deben cumplir la PED y llevar marcado CE. Las pruebas de presión y resistencia son parte del expediente técnico del equipo.</td>
+      </tr>
+      <tr class="hi-green">
+        <td><strong>Protocolo de Montreal (1987)</strong></td>
+        <td>Tratado internacional que eliminó progresivamente los refrigerantes CFC (destruían la capa de ozono) y estableció el calendario de eliminación de los HCFC.</td>
+        <td>La causa de la eliminación del R-12 (CFC) y el R-22 (HCFC). Hito histórico fundamental en la evolución de los refrigerantes. Saber que el R-22 quedó fuera de la recarga en la UE en 2015 es el dato de mayor relevancia práctica derivado de este protocolo.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout al-ice">
+    <strong>📌 Jerarquía normativa para refrigeración en edificios:</strong><br>
+    Protocolo de Montreal → Reglamento F-Gas UE → Directiva Ecodiseño → RITE (diseño y mantenimiento) → RSIF (seguridad frigorífica) → RD 487/2022 (Legionela en torres) → Ordenanzas locales.
+  </div>
+</div>
+
+
+<!-- ══════════ FRASES MEMORIZABLES ══════════ -->
+<div class="section-label">Versión de oposición — Frases memorizables del Tema 15</div>
+<div class="mem-section">
+  <h2>❄ Las 18 frases que hay que tener grabadas para el examen</h2>
+  <div class="mem-grid">
+    <div class="mem-item">
+      <span class="mem-label">El ciclo frigorífico</span>
+      <span class="mem-text">"E–C–C–V: Evaporador → Compresor → Condensador → Válvula de expansión. El frío se produce en el EVAPORADOR. El calor se rechaza en el CONDENSADOR."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Enfriadora: temperaturas de trabajo</span>
+      <span class="mem-text">"Agua fría estándar: 7 °C impulsión / 12 °C retorno. Son los valores de referencia para enfriadoras en edificios terciarios."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Compresor más eficiente</span>
+      <span class="mem-text">"En grandes instalaciones (&gt;500 kW), el compresor CENTRÍFUGO es el más eficiente. Sin contacto entre piezas: muy baja fricción y alto rendimiento."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Compresor más habitual</span>
+      <span class="mem-text">"En pequeñas y medianas instalaciones, el compresor SCROLL es el estándar: silencioso, fiable, pocas piezas móviles."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">R-22: prohibido</span>
+      <span class="mem-text">"R-22 (HCFC): prohibida su recarga en equipos existentes desde el 1/1/2015 en la UE. Si lo preguntan: la fecha es 2015."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">R-410A: en retirada</span>
+      <span class="mem-text">"R-410A (HFC, GWP 2.088): prohibido en nuevos equipos &lt;12 kW desde 2025 por el nuevo Reglamento F-Gas (GWP &gt;750)."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">R-32: el sustituto</span>
+      <span class="mem-text">"R-32: HFC de bajo GWP (675). Sustituto del R-410A en splits y VRF. Inflamable (A2L) pero seguro con las precauciones adecuadas."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">ODP vs GWP</span>
+      <span class="mem-text">"ODP = daño a la capa de ozono. GWP = efecto invernadero. CFC: alto ODP y GWP. HFO: ODP=0, GWP&lt;1. CO₂: GWP=1 (referencia)."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">EER vs ESEER</span>
+      <span class="mem-text">"EER = rendimiento a plena carga (punto de diseño). ESEER = rendimiento estacional ponderado (más representativo del uso real). El RITE exige declarar el ESEER."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">ESEER: los pesos</span>
+      <span class="mem-text">"ESEER = 3%×EER₁₀₀ + 33%×EER₇₅ + 41%×EER₅₀ + 23%×EER₂₅. El mayor peso está al 50% de carga: es donde más horas trabaja la enfriadora."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Eurovent: qué garantiza</span>
+      <span class="mem-text">"Eurovent verifica de forma independiente que los datos de rendimiento del fabricante (EER, ESEER) son reales. Sin Eurovent son datos 'declarados' no contrastados."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Eurovent: clases</span>
+      <span class="mem-text">"Clases de A (más eficiente) a G. Los pliegos públicos de hospitales y universidades habitualmente exigen clase A o B como mínimo."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Torre + Legionela</span>
+      <span class="mem-text">"Torre de refrigeración = riesgo de Legionela. Agua a 25–45 °C + aerosoles = condición ideal para Legionella pneumophila. RD 487/2022."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Control de fugas F-Gas</span>
+      <span class="mem-text">"&gt;500 t CO₂eq → inspección cada 3 meses. 50–500 t → 6 meses. 5–50 t → 12 meses. Con detector automático, el plazo se duplica."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">RSIF: categorías</span>
+      <span class="mem-text">"El RSIF (RD 552/2019) clasifica los sistemas frigoríficos según el refrigerante y la carga. Las intervenciones en el circuito exigen CARNET DE OPERADOR FRIGORISTA."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Free-cooling: RITE</span>
+      <span class="mem-text">"El RITE obliga al free-cooling en UTA con potencia de refrigeración &gt;12 kW. Cuando el aire exterior está suficientemente frío, enfría sin compresor."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Absorción vs compresión</span>
+      <span class="mem-text">"Absorción: no usa compresor eléctrico, usa calor. COP 0,6–1,4 (menor). Ideal cuando hay calor residual disponible o cogeneración."</span>
+    </div>
+    <div class="mem-item">
+      <span class="mem-label">Enfriadora agua-agua: la más eficiente</span>
+      <span class="mem-text">"Enfriadora agua-agua (con torre de refrigeración): EER 4–6, ESEER 5–7. La más eficiente de las enfriadoras, pero requiere torre y control de Legionela."</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

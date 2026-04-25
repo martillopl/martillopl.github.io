@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 15 – Esquema resumen · Refrigeración en edificios</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f7fa;--surface:#fff;--border:#ccd3de;--text:#1a2233;--muted:#4e5f7a;--faint:#8a9abb;
+  --teal:#00707a;--teal-lt:#ccedf0;--teal-dk:#004d5c;
+  --blue:#0d4f8b;--blue-lt:#dceaf7;
+  --green:#1a6633;--green-lt:#d4eedd;
+  --gold:#c47d00;--gold-lt:#faefd0;
+  --orange:#8b3a0d;--orange-lt:#fce8d8;
+  --purple:#5b3690;--purple-lt:#ece4f8;
+  --flame:#c0392b;--red-lt:#fde8e8;
+  --navy:#0a1f44;--navy-lt:#d9e4f5;
+  --font-d:'Cabinet Grotesk',sans-serif;
+  --font-b:'Satoshi',sans-serif;
+  --r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:.87rem;line-height:1.6;-webkit-font-smoothing:antialiased;padding:2rem 1.5rem 5rem;}
+.file-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.file-nav a{padding:.3rem 1rem;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;text-decoration:none;color:var(--muted);transition:all .15s;}
+.file-nav a:hover,.file-nav a.active{background:var(--teal);color:white;border-color:var(--teal);}
+.page-header{background:linear-gradient(135deg,#004d5c 0%,#001f26 100%);color:white;border-radius:var(--r-xl);padding:2rem 2.5rem;margin-bottom:2rem;}
+.page-header .meta{font-size:.72rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;}
+.page-header h1{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,1.85rem);font-weight:800;line-height:1.2;margin-bottom:.4rem;}
+.page-header .sub{font-size:.83rem;opacity:.8;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1rem;}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:1.25rem 1.4rem;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+.card h3{font-family:var(--font-d);font-size:.88rem;font-weight:800;margin-bottom:.65rem;display:flex;align-items:center;gap:.4rem;}
+.card ul{margin-left:1rem;}
+.card li{font-size:.83rem;margin-bottom:.25rem;}
+.card .tag{display:inline-block;font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:1px 7px;border-radius:999px;margin-left:auto;}
+.bt{border-top:4px solid;}
+.bt-teal{border-top-color:var(--teal);}
+.bt-blue{border-top-color:var(--blue);}
+.bt-green{border-top-color:var(--green);}
+.bt-gold{border-top-color:var(--gold);}
+.bt-orange{border-top-color:var(--orange);}
+.bt-purple{border-top-color:var(--purple);}
+.bt-flame{border-top-color:var(--flame);}
+.bt-navy{border-top-color:var(--navy);}
+.c-teal{color:var(--teal);}
+.c-blue{color:var(--blue);}
+.c-green{color:var(--green);}
+.c-gold{color:var(--gold);}
+.c-orange{color:var(--orange);}
+.c-purple{color:var(--purple);}
+.c-flame{color:var(--flame);}
+.c-navy{color:var(--navy);}
+.kpi-row{display:flex;gap:.75rem;margin-bottom:1rem;flex-wrap:wrap;}
+.kpi{flex:1;min-width:150px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:1rem 1.2rem;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+.kpi .val{font-family:var(--font-d);font-size:1.5rem;font-weight:800;line-height:1;}
+.kpi .lbl{font-size:.72rem;color:var(--muted);margin-top:.3rem;}
+.alert-band{border-radius:var(--r-lg);padding:.7rem 1rem;font-size:.83rem;margin-bottom:1rem;line-height:1.55;}
+.ab-red{background:var(--red-lt);border-left:4px solid var(--flame);}
+.ab-teal{background:var(--teal-lt);border-left:4px solid var(--teal);}
+.ab-gold{background:var(--gold-lt);border-left:4px solid var(--gold);}
+.ab-blue{background:var(--blue-lt);border-left:4px solid var(--blue);}
+.ab-green{background:var(--green-lt);border-left:4px solid var(--green);}
+.ab-orange{background:var(--orange-lt);border-left:4px solid var(--orange);}
+.section-label{font-family:var(--font-d);font-size:.63rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:2rem 0 .65rem;}
+.ciclo-flow{display:flex;align-items:center;gap:0;margin-bottom:1rem;flex-wrap:wrap;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;}
+.ciclo-step{flex:1;min-width:120px;padding:.85rem .6rem;text-align:center;border-right:1px solid var(--border);}
+.ciclo-step:last-child{border-right:none;}
+.ciclo-step .icon{font-size:1.4rem;margin-bottom:.3rem;}
+.ciclo-step .name{font-family:var(--font-d);font-size:.78rem;font-weight:800;}
+.ciclo-step .desc{font-size:.72rem;color:var(--muted);}
+.ciclo-step.ev{background:var(--teal-lt);}
+.ciclo-step.comp{background:var(--blue-lt);}
+.ciclo-step.cond{background:var(--orange-lt);}
+.ciclo-step.exp{background:var(--green-lt);}
+@media(max-width:700px){
+  .grid-2,.grid-3{grid-template-columns:1fr;}
+  .ciclo-step{min-width:calc(50% - 1px);}
+}
+</style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <div class="file-nav">
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html" class="active">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </div>
+<div class="page-header">
+  <div class="meta">Tema 15 · Gestor de Mantenimiento (Nivel B) · UPNA · Esquema-resumen</div>
+  <h1>Instalaciones de refrigeración en edificios</h1>
+  <div class="sub">Ciclo frigorífico · Tipologías · Enfriadoras · Refrigerantes · EER/ESEER · Eurovent · Mantenimiento · Normativa</div>
+</div>
+
+<!-- CICLO FRIGORÍFICO -->
+<div class="section-label">El ciclo de compresión de vapor — orden y función de cada componente</div>
+<div class="ciclo-flow">
+  <div class="ciclo-step ev">
+    <div class="icon">❄</div>
+    <div class="name">1. EVAPORADOR</div>
+    <div class="desc">Absorbe calor del local. Refrigerante líquido → gas. Aquí se "produce" el frío.</div>
+  </div>
+  <div class="ciclo-step comp">
+    <div class="icon">⚙</div>
+    <div class="name">2. COMPRESOR</div>
+    <div class="desc">Eleva presión y temperatura del gas. Mayor consumidor eléctrico del ciclo.</div>
+  </div>
+  <div class="ciclo-step cond">
+    <div class="icon">🌡</div>
+    <div class="name">3. CONDENSADOR</div>
+    <div class="desc">Cede calor al exterior. Gas → líquido. Aquí se expulsa el calor del edificio.</div>
+  </div>
+  <div class="ciclo-step exp">
+    <div class="icon">🔽</div>
+    <div class="name">4. VÁLVULA DE EXPANSIÓN</div>
+    <div class="desc">Reduce presión. Enfría el refrigerante. Líquido → mezcla líquido-gas.</div>
+  </div>
+</div>
+
+<!-- KPIs -->
+<div class="section-label">Indicadores de eficiencia energética</div>
+<div class="kpi-row">
+  <div class="kpi"><div class="val c-teal">EER</div><div class="lbl">Rendimiento frigorífico nominal<br>Frío útil / Electricidad consumida</div></div>
+  <div class="kpi"><div class="val c-blue">ESEER</div><div class="lbl">EER estacional europeo<br>Pondera cargas parciales y Tª ext.</div></div>
+  <div class="kpi"><div class="val c-green">SEER</div><div class="lbl">EER estacional (EN 14825)<br>Para splits y equipos individuales</div></div>
+  <div class="kpi"><div class="val c-gold">COP</div><div class="lbl">Rendimiento en calor<br>COP ≈ EER + 1 (misma máquina)</div></div>
+  <div class="kpi"><div class="val c-orange">6/12°C</div><div class="lbl">Temperatura estándar del agua fría<br>Impulsión / Retorno (delta T = 6°C)</div></div>
+</div>
+
+<!-- TIPOLOGÍAS Y ENFRIADORAS -->
+<div class="section-label">Tipologías y enfriadoras de agua</div>
+<div class="grid-2">
+  <div class="card bt bt-teal">
+    <h3 class="c-teal">🌡 Tipologías de sistemas</h3>
+    <ul>
+      <li><strong>Split / Multi-split:</strong> expansión directa. Residencial y pequeño terciario.</li>
+      <li><strong>VRV/VRF:</strong> caudal de refrigerante variable. Múltiples interiores, alta eficiencia, zonificación.</li>
+      <li><strong>Agua fría (chiller):</strong> agua 6/12°C a fan-coils y UTAs. Grandes edificios.</li>
+      <li><strong>Ciclo de absorción:</strong> usa calor (no electricidad). Par LiBr-H₂O. Con cogeneración.</li>
+      <li><strong>Free-cooling:</strong> frío exterior sin compresor. RITE obliga si UTA refrigera &gt;12 kW.</li>
+    </ul>
+  </div>
+  <div class="card bt bt-blue">
+    <h3 class="c-blue">🏭 Enfriadoras: tipos de compresor</h3>
+    <ul>
+      <li><strong>Alternativo:</strong> &lt;50 kW. En desuso.</li>
+      <li><strong>Scroll:</strong> hasta ~200 kW. Silencioso, fiable. El más habitual en gama media.</li>
+      <li><strong>Tornillo (screw):</strong> 200–2.000 kW. Alta eficiencia y fiabilidad. Terciario grande.</li>
+      <li><strong>Centrífugo:</strong> &gt;500 kW. Máxima eficiencia. Grandes edificios e industria.</li>
+    </ul>
+    <div style="margin-top:.75rem;font-size:.8rem;background:var(--blue-lt);border-radius:var(--r-md);padding:.5rem .75rem;">
+      <strong>Condensación por agua &gt; aire</strong> en eficiencia. Agua de condensación 25–30°C vs aire exterior &gt;35°C en verano.
+    </div>
+  </div>
+</div>
+
+<!-- REFRIGERANTES -->
+<div class="section-label">Refrigerantes: clasificación, ODP, GWP y estado normativo</div>
+<div class="grid-3">
+  <div class="card bt bt-flame">
+    <h3 class="c-flame">🚫 Prohibidos</h3>
+    <ul>
+      <li><strong>CFC (R11, R12):</strong> ODP alto + GWP alto. Prohibidos por Protocolo de Montreal.</li>
+      <li><strong>HCFC (R22):</strong> ODP bajo + GWP medio. Prohibido en nuevas instalaciones desde 2010, uso total desde 2015 en UE.</li>
+    </ul>
+  </div>
+  <div class="card bt bt-orange">
+    <h3 class="c-orange">⚠ En reducción (F-Gas)</h3>
+    <ul>
+      <li><strong>R410A:</strong> GWP = 2.088. Prohibido en nuevos equipos desde enero 2025 (GWP &gt;750).</li>
+      <li><strong>R404A:</strong> GWP = 3.922. En eliminación.</li>
+      <li><strong>R32:</strong> GWP = 675. Transición actual en splits. Ligeramente inflamable (A2L).</li>
+    </ul>
+  </div>
+  <div class="card bt bt-green">
+    <h3 class="c-green">✅ El futuro</h3>
+    <ul>
+      <li><strong>HFO (R1234yf, R1234ze):</strong> GWP &lt; 1. Baja toxicidad. A2L.</li>
+      <li><strong>NH₃ (R717):</strong> natural. GWP = 0. Tóxico pero muy eficiente.</li>
+      <li><strong>CO₂ (R744):</strong> natural. GWP = 1. Alta presión. Especial en refrigeración comercial.</li>
+      <li><strong>Propano (R290):</strong> natural. GWP = 3. Inflamable. Splits pequeños.</li>
+    </ul>
+  </div>
+</div>
+<div class="alert-band ab-red">
+  <strong>⚠ Reglamento F-Gas UE 2024/573 (desde enero 2025):</strong> prohibida la instalación de nuevos equipos de AC con refrigerantes de GWP &gt;750. Afecta al R410A (GWP = 2.088). La transición obligatoria es hacia R32, HFOs y naturales.
+</div>
+
+<!-- CONTROL DE FUGAS -->
+<div class="section-label">Control de fugas de refrigerante (RD 552/2019)</div>
+<div class="kpi-row">
+  <div class="kpi"><div class="val c-teal">≥5 t</div><div class="lbl">CO₂ eq. → revisión <strong>ANUAL</strong></div></div>
+  <div class="kpi"><div class="val c-gold">≥50 t</div><div class="lbl">CO₂ eq. → revisión <strong>SEMESTRAL</strong></div></div>
+  <div class="kpi"><div class="val c-flame">≥500 t</div><div class="lbl">CO₂ eq. → revisión <strong>TRIMESTRAL</strong></div></div>
+  <div class="kpi"><div class="val c-blue">×2</div><div class="lbl">Con detector automático la frecuencia se <strong>DOBLA</strong> (el período aumenta al doble)</div></div>
+</div>
+
+<!-- EUROVENT Y NORMATIVA -->
+<div class="section-label">Certificación Eurovent y normativa aplicable</div>
+<div class="grid-2">
+  <div class="card bt bt-purple">
+    <h3 class="c-purple">🏅 Certificación Eurovent</h3>
+    <ul>
+      <li>Organismo europeo independiente de certificación de equipos HVAC&R.</li>
+      <li>Programa <strong>LCP</strong>: certifica enfriadoras (capacidad frigorífica, EER, ESEER, ruido).</li>
+      <li>También certifica: fan-coils (FCU), UTAs, recuperadores, torres.</li>
+      <li>Garantiza que los datos del fabricante son reales y verificados.</li>
+      <li><strong>Exigida en licitaciones públicas</strong> para garantizar comparabilidad de equipos.</li>
+    </ul>
+  </div>
+  <div class="card bt bt-navy">
+    <h3 class="c-navy">📋 Normativa clave</h3>
+    <ul>
+      <li><strong>RD 552/2019 (RSIF):</strong> seguridad en instalaciones frigoríficas. La más importante.</li>
+      <li><strong>F-Gas UE 2024/573:</strong> reducción de HFC. GWP &gt;750 prohibido desde 2025.</li>
+      <li><strong>EN 378:</strong> seguridad en sistemas de refrigeración.</li>
+      <li><strong>RITE (RD 1027/2007):</strong> eficiencia energética. Free-cooling, bombas, GTC.</li>
+      <li><strong>RD 487/2022:</strong> Legionella (torres de refrigeración).</li>
+      <li><strong>Ecodiseño UE 2016/2281:</strong> eficiencia mínima de equipos en el mercado.</li>
+    </ul>
+  </div>
+</div>
+<div class="alert-band ab-teal">
+  <strong>📌 La norma más importante del tema es el RSIF (RD 552/2019).</strong> Regula seguridad, instalación, mantenimiento, libro de registro y obligación del carnet de manipulador de gases fluorados. Sin carnet no se puede intervenir en el circuito frigorífico.
+</div>
+
+</body>
+</html>

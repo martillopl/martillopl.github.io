@@ -1,0 +1,108 @@
+TEMA 15 – INSTALACIONES DE REFRIGERACIÓN EN EDIFICIOS
+Puntos clave para oposición · Gestor de Mantenimiento (Nivel B) · UPNA
+
+════════════════════════════════════════════════════════════
+1. CICLO FRIGORÍFICO DE COMPRESIÓN (el más importante)
+════════════════════════════════════════════════════════════
+• 4 componentes: Compresor → Condensador → Válvula de expansión → Evaporador
+• El refrigerante absorbe calor en el evaporador (cambia de líquido a gas)
+• El compresor eleva presión y temperatura del gas
+• El condensador cede calor al exterior (gas → líquido)
+• La válvula de expansión reduce presión y temperatura (líquido → mezcla líquido-gas)
+• Ciclo de absorción: usa calor (no electricidad) para comprimir. Más eficiente con calor residual.
+
+════════════════════════════════════════════════════════════
+2. TIPOLOGÍAS DE SISTEMAS DE REFRIGERACIÓN EN EDIFICIOS
+════════════════════════════════════════════════════════════
+• Expansión directa: el refrigerante llega a los terminales (splits, VRV/VRF)
+• Agua fría (enfriadora/chiller): el agua a 6-12°C distribuye el frío a los fan-coils
+• Sistema partido (split): unidad interior + exterior. El más común en residencial.
+• VRV/VRF: caudal de refrigerante variable. Múltiples unidades interiores, una exterior.
+• Free-cooling: aprovecha el frío exterior para enfriar sin compresor. Oblig. >12 kW en UTA (RITE).
+
+════════════════════════════════════════════════════════════
+3. ENFRIADORAS DE AGUA (CHILLERS) – TIPOS Y DIFERENCIAS
+════════════════════════════════════════════════════════════
+• Condensadas por AIRE (aire-agua): más sencilla, no necesita torre. Mayor consumo en verano.
+• Condensadas por AGUA (agua-agua): más eficiente pero requiere torre de refrigeración o pozo térmico.
+• Compresores: alternativo (pequeña potencia), scroll (hasta ~200 kW, silencioso),
+  tornillo (screw, 200-2000 kW, eficiente y fiable), centrífugo (>500 kW, máxima eficiencia).
+• Solo frío vs bomba de calor (reversible): produce agua fría EN VERANO y agua caliente EN INVIERNO.
+• Temperatura de agua fría típica: 6°C impulsión / 12°C retorno (delta T = 6°C).
+• EER = Potencia frigorífica / Potencia eléctrica consumida (en condiciones nominales).
+• ESEER = EER estacional (pondera distintas condiciones de carga y temperatura exterior).
+
+════════════════════════════════════════════════════════════
+4. REFRIGERANTES – LOS MÁS PREGUNTADOS
+════════════════════════════════════════════════════════════
+• CFC (R11, R12): prohibidos. ODP alto + GWP alto.
+• HCFC (R22): prohibido desde 2015 en nuevas instalaciones (Reglamento F-Gas).
+• HFC (R410A, R404A): GWP muy alto. Fase de reducción progresiva (F-Gas 2014).
+• HFO (R1234yf, R1234ze): GWP < 1. El futuro. Baja toxicidad, baja inflamabilidad (A2L).
+• Natural (NH3/R717, CO2/R744, propano/R290): GWP = 0 o muy bajo. Soluciones de futuro.
+• R32: GWP=675 (menor que R410A=2088). Transición actual en splits residenciales.
+• Desde enero 2025: prohibición de instalar equipos con GWP >750 en nuevas instalaciones
+  (Reglamento F-Gas revisado, Reglamento UE 2024/573).
+• ODP (Ozone Depletion Potential): potencial de destrucción de la capa de ozono.
+• GWP (Global Warming Potential): potencial de calentamiento global (referencia CO2 = 1).
+• RD 552/2019: transpone el Reglamento F-Gas en España. Obligaciones de control de fugas,
+  registros, carnet de manipulador (FRÍO INDUSTRIAL o FRÍO COMERCIAL).
+
+════════════════════════════════════════════════════════════
+5. EFICIENCIA ENERGÉTICA
+════════════════════════════════════════════════════════════
+• EER: rendimiento en frío en condiciones nominales.
+• ESEER: EER estacional europeo. Más representativo del funcionamiento real.
+• SEER (EN 14825): EER estacional para split y equipos individuales.
+• COP: rendimiento en calor (bomba de calor). EER siempre < COP (misma máquina).
+• Free-cooling: obliga el RITE cuando la UTA refrigera > 12 kW (IT 1.2.4.5.2).
+• Regulación de compresor: inverter (variador de frecuencia) → ahorro 20-40%.
+• Regulación de bombas: velocidad variable obligatoria >2 kW (RITE).
+
+════════════════════════════════════════════════════════════
+6. CERTIFICADOS EUROVENT
+════════════════════════════════════════════════════════════
+• Eurovent: organismo europeo de certificación independiente para equipos HVAC&R.
+• Certifica que los datos técnicos del fabricante son reales y verificados por terceros.
+• Programas de certificación de enfriadoras: LCP (Liquid Chilling Packages).
+• También certifica: fan-coils, recuperadores de calor, UTAs, torres de refrigeración, VRV.
+• El sello Eurovent garantiza fiabilidad en la comparación de equipos de distintos fabricantes.
+• Importante en licitaciones públicas: las pliegos de condiciones suelen exigir certificación Eurovent.
+
+════════════════════════════════════════════════════════════
+7. MANTENIMIENTO
+════════════════════════════════════════════════════════════
+• Control de fugas de refrigerante: obligatorio según carga y GWP del refrigerante.
+  - Carga equivalente CO2 ≥ 5 t: revisión anual.
+  - Carga equivalente CO2 ≥ 50 t: revisión semestral.
+  - Carga equivalente CO2 ≥ 500 t: revisión trimestral.
+  - Con detección automática de fugas: frecuencia se dobla (revisión cada 2x el período anterior).
+• Limpieza de condensadores: clave para mantener EER. Suciedad → temperatura condensación sube → EER baja.
+• Limpieza de evaporadores: obstrucción → temperatura evaporación baja → riesgo de helada.
+• Torres de refrigeración: mantenimiento según RD 487/2022 (Legionella).
+• Libro de registro de instalación frigorífica: obligatorio (RD 552/2019).
+
+════════════════════════════════════════════════════════════
+8. NORMATIVA APLICABLE
+════════════════════════════════════════════════════════════
+• RSIF (RD 552/2019): Reglamento de Seguridad para Instalaciones Frigoríficas. LA MÁS IMPORTANTE.
+• Reglamento F-Gas UE 2024/573 (derogó al 517/2014): reducción escalonada de HFC hasta 2050.
+• EN 378: norma europea de seguridad en sistemas de refrigeración (requisitos de diseño, instalación, mantenimiento).
+• RITE (RD 1027/2007): eficiencia energética de instalaciones térmicas (incluye climatización).
+• RD 487/2022: Legionella (torres de refrigeración).
+• Reglamento Ecodiseño (UE 2016/2281): eficiencia mínima de enfriadoras en el mercado europeo.
+• CTE DB-HE: límites de consumo de energía primaria en edificios.
+
+════════════════════════════════════════════════════════════
+LO MÁS PREGUNTADO EN OPOSICIONES (por frecuencia)
+════════════════════════════════════════════════════════════
+1. Componentes del ciclo frigorífico de compresión y su función.
+2. ODP vs GWP: definición y qué refrigerante tiene cada valor.
+3. R22 prohibido desde 2015. R410A en reducción. GWP >750 prohibidos en nuevas inst. desde 2025.
+4. EER vs ESEER: qué mide cada uno y cuál es más representativo.
+5. Enfriadora condensada por aire vs agua: diferencias, ventajas e inconvenientes.
+6. Free-cooling: obligatorio según RITE cuando UTA refrigera >12 kW.
+7. Control de fugas: 5, 50, 500 t CO2 equivalente → anual, semestral, trimestral.
+8. Certificación Eurovent LCP: qué certifica y por qué importa en licitaciones.
+9. RSIF (RD 552/2019): la norma principal de seguridad frigorífica.
+10. Torre de refrigeración + agua → riesgo Legionella → RD 487/2022.
