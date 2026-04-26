@@ -1,0 +1,218 @@
+════════════════════════════════════════════════════════════════════════
+TEMA 8 · LEY 39/2015 · LOS ACTOS ADMINISTRATIVOS
+Puntos que suelen aparecer en examen y artículos clave
+Arts. 34–46 LPAC
+════════════════════════════════════════════════════════════════════════
+
+─────────────────────────────────────────────────────────────────────────
+BLOQUE 1 · CONCEPTO Y CLASES
+─────────────────────────────────────────────────────────────────────────
+
+ARTÍCULO CLAVE: Art. 34.1 LPAC
+  → Los actos se producen por el ÓRGANO COMPETENTE ajustándose a los
+    requisitos y al procedimiento establecido.
+  → Se dictan DE OFICIO o A INSTANCIA del interesado.
+
+CLASES MÁS PREGUNTADAS EN EXAMEN:
+  ★ Actos definitivos vs. actos de trámite
+      - Solo son directamente impugnables:
+          (a) los actos definitivos
+          (b) los actos de trámite CUALIFICADOS: los que deciden
+              directa o indirectamente el fondo, producen
+              indefensión o causan perjuicio irreparable.
+  ★ Actos favorables vs. actos de gravamen
+      - Los favorables no pueden revocarse libremente (garantía
+        para el ciudadano).
+      - Los desfavorables pueden revocarse o modificarse a favor
+        del interesado en cualquier momento.
+  ★ Actos singulares vs. actos generales
+      - Singulares → NOTIFICACIÓN.
+      - Generales (pluralidad indeterminada) → PUBLICACIÓN.
+
+─────────────────────────────────────────────────────────────────────────
+BLOQUE 2 · REQUISITOS (Arts. 34–37)
+─────────────────────────────────────────────────────────────────────────
+
+Art. 34 — Producción y contenido
+  → Contenido: lícito, determinado o determinable, posible.
+  → Se pueden añadir cláusulas accesorias (condición, término,
+    modo, reserva de revocación) SOLO si están autorizadas o son
+    compatibles con la naturaleza del acto.
+  ★ TRAMPA: añadir cláusulas accesorias no autorizadas es
+    ilegal aunque el interesado no proteste.
+
+Art. 35 — Motivación
+  → Obligatoria con "sucinta referencia de hechos y fundamentos
+    de derecho" en los siguientes casos TASADOS:
+      a) Actos que limiten derechos subjetivos o intereses legítimos.
+      b) Actos que resuelvan revisiones de oficio, recursos
+         administrativos, procedimientos de arbitraje
+         e inadmisiones.
+      c) Actos que se separen del criterio de actuaciones previas
+         o del dictamen de órganos consultivos.
+      d) Acuerdos de suspensión, reducción de plazos y otros
+         actos de trámite cualificados.
+      e) Actos que resuelvan procedimientos de oposición o
+         concurrencia (selección de personal, concesiones…).
+      f) Actos discrecionales.
+      g) Actos que deban serlo por disposición legal o reglamentaria.
+  → La motivación puede hacerse POR REFERENCIA a informes o
+    propuestas anteriores incorporados al expediente.
+  ★ TRAMPA: la ausencia de motivación cuando es obligatoria es
+    causa de anulabilidad (art. 48), no de nulidad de pleno
+    derecho (art. 47), salvo que suponga indefensión total.
+
+Art. 36 — Forma
+  → Regla: forma ESCRITA por medios ELECTRÓNICOS.
+  → Excepción: actuación VERBAL cuando la naturaleza o
+    circunstancias lo requieran, pero debe dejarse constancia
+    escrita.
+  ★ Los actos verbales son excepcionales.
+
+Art. 37 — Motivación por referencia
+  → Se admite la motivación incorporando por referencia el
+    contenido de informes o propuestas que consten en el expediente.
+
+─────────────────────────────────────────────────────────────────────────
+BLOQUE 3 · EFICACIA (Arts. 38–39)
+─────────────────────────────────────────────────────────────────────────
+
+Art. 38 — Ejecutividad
+  → Los actos son EJECUTIVOS salvo que:
+      (a) una disposición establezca lo contrario, o
+      (b) necesiten aprobación o autorización superior.
+  ★ CONCEPTO CLAVE: ejecutividad = la Administración puede
+    ejecutar sus propios actos sin acudir a los tribunales
+    (autotutela ejecutiva).
+
+Art. 39.1 — Presunción de validez y efectos
+  → Los actos se presumen VÁLIDOS y producen efectos desde
+    la fecha en que se dicten, salvo que en ellos se disponga
+    otra cosa.
+
+Art. 39.2 — Demora de la eficacia
+  → La eficacia queda DEMORADA cuando:
+      (a) así lo exija el contenido del acto, o
+      (b) esté supeditada a su notificación, publicación
+          o aprobación superior.
+  ★ CLAVE: la notificación NO es requisito de validez sino
+    de EFICACIA. El acto es válido aunque no se haya notificado.
+
+Art. 39.3 — Eficacia retroactiva (EXCEPCIONAL)
+  → Solo cabe en DOS supuestos:
+      1. Actos dictados en SUSTITUCIÓN DE ACTOS ANULADOS.
+      2. Actos que produzcan EFECTOS FAVORABLES al interesado,
+         siempre que los hechos necesarios ya existieran y
+         no se lesionen derechos de terceros.
+  ★ TRAMPA: NO cabe eficacia retroactiva de actos desfavorables,
+    ni de actos favorables si los hechos necesarios no existían.
+
+─────────────────────────────────────────────────────────────────────────
+BLOQUE 4 · NOTIFICACIÓN (Arts. 40–43)
+─────────────────────────────────────────────────────────────────────────
+
+Art. 40 — Obligación y contenido
+  → Plazo para notificar: 10 DÍAS desde que se dicta el acto.
+  → Contenido obligatorio:
+      - Texto íntegro de la resolución.
+      - Si pone fin o no a la vía administrativa.
+      - Recursos procedentes (órgano, plazo).
+  ★ Si falta alguno de estos datos:
+      - Plazo recurso reposición: 3 MESES (en vez de 1 mes).
+      - Plazo recurso contencioso: 6 MESES (en vez de 2 meses).
+
+Art. 41 — Condiciones generales
+  → Preferentemente por medios ELECTRÓNICOS.
+  → Obligatoriamente electrónica si el interesado está obligado
+    a relacionarse electrónicamente (art. 14: personas jurídicas,
+    entidades sin personalidad, etc.).
+  → En otros casos, el interesado elige el medio en su solicitud.
+  ★ La Administración practica la notificación por el medio
+    señalado por el interesado.
+
+Art. 42 — Notificación en papel
+  → En domicilio o lugar designado.
+  → Si no hay nadie: aviso + segunda entrega en 3 DÍAS.
+  → Si se rechaza: produce los mismos efectos que si se acepta.
+  ★ RECHAZO DE LA NOTIFICACIÓN = NOTIFICACIÓN PRACTICADA.
+
+Art. 43 — Notificación electrónica
+  → DOS vías:
+      (a) Comparecencia en sede electrónica.
+      (b) Dirección Electrónica Habilitada única (DEH).
+  → Se considera RECHAZADA (= practicada) cuando transcurran
+    10 DÍAS NATURALES desde la puesta a disposición sin acceso.
+  ★ 10 días naturales sin acceso a la DEH o sede = notificación
+    practicada. Empieza el plazo para recurrir.
+
+─────────────────────────────────────────────────────────────────────────
+BLOQUE 5 · NOTIFICACIÓN INFRUCTUOSA Y PUBLICACIÓN (Arts. 44–46)
+─────────────────────────────────────────────────────────────────────────
+
+Art. 44 — Notificación infructuosa
+  → Cuando no es posible notificar: publicación en el BOE
+    (puede hacerse también en el boletín de la CA o EL y en la
+    sede electrónica del organismo antes que en el BOE).
+  → En el BOE no se publica el texto íntegro, sino el aviso de
+    que existe el acto.
+
+Art. 45 — Publicación
+  → Reemplaza/complementa a la notificación en los casos:
+      (a) Norma del procedimiento así lo establezca.
+      (b) Razones de interés público.
+      (c) Pluralidad indeterminada de destinatarios o
+          lugar de notificación desconocido.
+      (d) Procedimientos de selección de personal o
+          concurrencia competitiva.
+  → La publicación debe contener los mismos elementos que
+    la notificación (texto íntegro, recursos, plazos…).
+
+Art. 46 — Indicación de notificaciones y publicaciones
+  → Si la publicación del acto lesionaría derechos o intereses
+    legítimos: solo se publica una SOMERA INDICACIÓN del contenido
+    y el lugar donde los interesados pueden comparecer para
+    conocer el texto íntegro.
+  ★ GARANTÍA DE PRIVACIDAD: no se obliga a publicar datos
+    sensibles; basta con indicar dónde consultar.
+
+─────────────────────────────────────────────────────────────────────────
+ARTÍCULOS CLAVE ORDENADOS POR RELEVANCIA EN EXAMEN
+─────────────────────────────────────────────────────────────────────────
+
+  ART. 34 → Producción y contenido del acto (competencia, objeto, cláusulas accesorias)
+  ART. 35 → Motivación: cuándo es obligatoria y cómo
+  ART. 36 → Forma escrita electrónica como regla; verbal como excepción
+  ART. 38 → Ejecutividad
+  ART. 39 → Efectos: validez desde el dictado · demora · retroactividad excepcional
+  ART. 40 → Notificación: plazo 10 días · contenido · consecuencias de la omisión
+  ART. 41 → Condiciones generales de notificación: electrónica como preferente
+  ART. 42 → Notificación en papel: domicilio, intentos, rechazo
+  ART. 43 → Notificación electrónica: sede/DEH · 10 días naturales = rechazo
+  ART. 44 → Notificación infructuosa: BOE
+  ART. 45 → Publicación: cuándo suple o complementa a la notificación
+  ART. 46 → Indicación de notificaciones y publicaciones: protección de la privacidad
+
+─────────────────────────────────────────────────────────────────────────
+TRAMPAS CLÁSICAS DE EXAMEN
+─────────────────────────────────────────────────────────────────────────
+
+  ★ La notificación es requisito de EFICACIA, no de VALIDEZ.
+  ★ El plazo para notificar es 10 días desde el DICTADO del acto.
+  ★ Si la notificación omite los recursos, el plazo para recurrir
+    es de 3 meses (reposición) o 6 meses (contencioso), NO de 1 o 2 meses.
+  ★ La notificación electrónica se considera rechazada a los
+    10 DÍAS NATURALES (no hábiles) sin acceso.
+  ★ El rechazo de la notificación en papel tiene los mismos
+    efectos que la aceptación.
+  ★ La retroactividad del acto es EXCEPCIONAL y solo cabe en
+    2 supuestos (sustitución de anulado + efectos favorables).
+  ★ La falta de motivación cuando es obligatoria es ANULABILIDAD
+    (art. 48), no nulidad de pleno derecho (art. 47).
+  ★ Las cláusulas accesorias del acto solo pueden incluirse si
+    están autorizadas o son compatibles con la naturaleza del acto.
+  ★ En los actos de trámite: solo los CUALIFICADOS son directamente
+    impugnables (los que deciden el fondo, causan indefensión o
+    perjuicio irreparable).
+  ★ La motivación puede hacerse por referencia a informes del
+    expediente: válida aunque no repita el razonamiento.
+════════════════════════════════════════════════════════════════════════
