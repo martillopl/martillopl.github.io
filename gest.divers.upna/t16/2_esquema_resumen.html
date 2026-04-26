@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>2_esquema_resumen_t16.html</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Arial,Helvetica,sans-serif;background:#0f172a;color:#f1f5f9;padding:22px;line-height:1.5}
+  .container{max-width:1180px;margin:0 auto}
+
+  /* HERO */
+  .hero{background:linear-gradient(135deg,#1e3a5f,#0f3460,#1a1a2e);border-radius:18px;padding:26px 30px;margin-bottom:24px;border:1px solid #334155}
+  .hero h1{font-size:22px;color:#93c5fd;margin-bottom:4px}
+  .hero .sub{font-size:12.5px;color:#94a3b8;line-height:1.6}
+  .hero .pills{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px}
+  .pill{background:#1e3a5f;border:1px solid #3b82f6;border-radius:20px;padding:4px 12px;font-size:11.5px;color:#93c5fd}
+
+  /* GRID SECTION TITLES */
+  .section-title{font-size:15px;font-weight:700;color:#7dd3fc;text-transform:uppercase;letter-spacing:.07em;margin:22px 0 10px;border-left:4px solid #3b82f6;padding-left:10px}
+
+  /* CARD GRID */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:18px}
+  .grid4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin-bottom:18px}
+  @media(max-width:900px){.grid3,.grid4{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}}
+
+  /* CARDS */
+  .card{border-radius:14px;padding:16px;border:1px solid}
+  .blue{background:#172554;border-color:#1d4ed8}
+  .green{background:#052e16;border-color:#16a34a}
+  .amber{background:#1c1200;border-color:#ca8a04}
+  .red{background:#2d0000;border-color:#dc2626}
+  .violet{background:#1e0036;border-color:#9333ea}
+  .teal{background:#002020;border-color:#0d9488}
+  .slate{background:#1e293b;border-color:#475569}
+  .pink{background:#2d0020;border-color:#db2777}
+  .orange{background:#1f0d00;border-color:#ea580c}
+
+  .card h3{font-size:13px;font-weight:700;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em}
+  .blue h3{color:#93c5fd}.green h3{color:#86efac}.amber h3{color:#fde68a}
+  .red h3{color:#fca5a5}.violet h3{color:#d8b4fe}.teal h3{color:#5eead4}
+  .slate h3{color:#cbd5e1}.pink h3{color:#fbcfe8}.orange h3{color:#fdba74}
+
+  .num{font-size:36px;font-weight:900;line-height:1;margin:6px 0 2px}
+  .blue .num{color:#60a5fa}.green .num{color:#4ade80}.amber .num{color:#fbbf24}
+  .red .num{color:#f87171}.violet .num{color:#c084fc}.teal .num{color:#2dd4bf}
+  .slate .num{color:#94a3b8}.pink .num{color:#f472b6}.orange .num{color:#fb923c}
+
+  .num-label{font-size:11px;color:#94a3b8;margin-bottom:8px}
+  .badge{display:inline-block;border-radius:6px;padding:2px 8px;font-size:11.5px;font-weight:700;margin:2px 3px 2px 0}
+  .b-blue{background:#1d4ed8;color:#bfdbfe}.b-green{background:#166534;color:#bbf7d0}
+  .b-amber{background:#92400e;color:#fde68a}.b-red{background:#991b1b;color:#fecaca}
+  .b-violet{background:#6b21a8;color:#e9d5ff}.b-teal{background:#115e59;color:#99f6e4}
+  .b-slate{background:#334155;color:#e2e8f0}.b-pink{background:#9d174d;color:#fce7f3}
+  .b-orange{background:#9a3412;color:#fed7aa}
+
+  ul{list-style:none;padding:0}
+  li{font-size:13px;padding:3px 0;color:#e2e8f0;border-bottom:1px solid rgba(255,255,255,.05)}
+  li:last-child{border-bottom:none}
+  li::before{content:"› ";color:#64748b}
+  .hi{color:#fbbf24;font-weight:700}
+  .tag{font-size:11px;background:rgba(255,255,255,.08);border-radius:4px;padding:1px 5px;margin-left:4px;color:#94a3b8}
+
+  /* TIMELINE */
+  .timeline{display:flex;gap:0;margin-bottom:18px}
+  .tstep{flex:1;background:#1e293b;border:1px solid #334155;border-right:none;padding:12px 10px;text-align:center;font-size:12px}
+  .tstep:first-child{border-radius:10px 0 0 10px}
+  .tstep:last-child{border-right:1px solid #334155;border-radius:0 10px 10px 0}
+  .tstep .t-num{font-size:22px;font-weight:900;color:#60a5fa}
+  .tstep .t-pct{font-size:18px;font-weight:900;color:#fbbf24}
+  .tstep .t-label{color:#94a3b8;font-size:11px;margin-top:2px}
+  .tstep .t-date{color:#4ade80;font-size:12px;font-weight:700;margin-top:4px}
+  .tstep .t-mes{font-size:11px;color:#6ee7b7}
+
+  /* COMPARATIVA TABLE */
+  .cmp{width:100%;border-collapse:collapse;margin-bottom:18px;font-size:13px}
+  .cmp th{background:#1e3a5f;color:#93c5fd;padding:9px 10px;text-align:left;border:1px solid #334155}
+  .cmp td{padding:8px 10px;border:1px solid #1e293b;vertical-align:top}
+  .cmp tr:nth-child(odd) td{background:#0f172a}
+  .cmp tr:nth-child(even) td{background:#131f35}
+
+  /* MEMORIZACIÓN ULTRA-RÁPIDA */
+  .flash{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}
+  .fcard{background:#1e293b;border-radius:10px;padding:12px;border-left:4px solid}
+  .fcard p{font-size:12px;color:#e2e8f0;line-height:1.5}
+  .fcard .fc-title{font-size:10px;text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px}
+
+  /* TRAMPA BOX */
+  .trampas{background:#2d0000;border:1px solid #dc2626;border-radius:14px;padding:16px;margin-bottom:18px}
+  .trampas h3{color:#fca5a5;font-size:14px;margin-bottom:10px}
+  .trap-item{display:flex;gap:8px;margin-bottom:8px;font-size:12.5px}
+  .trap-x{color:#f87171;font-weight:900;min-width:16px}
+  .trap-ok{color:#4ade80;font-weight:900;min-width:16px}
+  .trap-text{color:#e2e8f0}
+
+  @media(max-width:700px){.flash{grid-template-columns:1fr 1fr}.timeline{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<!-- HERO -->
+<div class="hero">
+  <h1>🎓 Tema 16 · Normas reguladoras Grado y Máster – UPNA</h1>
+  <div class="sub">
+    <strong>Grado:</strong> Res. 1073/2009 del Rector · CG 1 jul 2009 · BON 101 – 17/08/2009 &nbsp;|&nbsp;
+    <strong>Máster:</strong> Res. 1323/2009 del Rector · CG 28 jul 2009 · BON 118 – 25/09/2011
+  </div>
+  <div class="pills">
+    <span class="pill">RD 1393/2007</span>
+    <span class="pill">RD 1892/2008</span>
+    <span class="pill">EEES</span>
+    <span class="pill">1 ECTS = 25 h</span>
+    <span class="pill">Grado 240 ECTS · 8 semestres</span>
+    <span class="pill">Máster 60–120 ECTS</span>
+    <span class="pill">Estatutos UPNA DF 110/2003</span>
+  </div>
+</div>
+
+<!-- SECCIÓN 1: FICHA NORMATIVA -->
+<div class="section-title">📋 Ficha normativa</div>
+<div class="grid2">
+  <div class="card blue">
+    <h3>📘 Norma de Grado</h3>
+    <ul>
+      <li>Órgano aprobador: <span class="hi">Consejo de Gobierno</span> 1 jul 2009</li>
+      <li>Publicación: <span class="hi">Res. 1073/2009</span> del Rector</li>
+      <li>BON: <span class="hi">n.º 101 – 17/08/2009</span></li>
+      <li>Estructura: 12 cap. · 69 arts. + disp. adicionales, transitorias, finales</li>
+      <li>Marco: <span class="hi">RD 1393/2007</span> · EEES</li>
+      <li>Entrada en vigor: día siguiente a publicación en BON</li>
+    </ul>
+  </div>
+  <div class="card teal">
+    <h3>📗 Norma de Máster</h3>
+    <ul>
+      <li>Órgano aprobador: <span class="hi">Consejo de Gobierno</span> 28 jul 2009</li>
+      <li>Publicación: <span class="hi">Res. 1323/2009</span> del Rector</li>
+      <li>BON: <span class="hi">n.º 118 – 25/09/2011</span></li>
+      <li>Estructura: 3 Títulos + 3 Anexos</li>
+      <li>Regula también: enseñanzas propias de la UPNA</li>
+      <li>Órgano clave: <span class="hi">Comisión de Estudios de Posgrado</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- SECCIÓN 2: CALENDARIO -->
+<div class="section-title">📅 Calendario y ordenación académica</div>
+<div class="grid2">
+  <div class="card amber">
+    <h3>⚖️ Quién aprueba cada calendario (art. 31 Grado)</h3>
+    <ul>
+      <li><span class="hi">Calendario ACADÉMICO</span> → <span class="badge b-amber">Consejo de Gobierno</span></li>
+      <li><span class="hi">Calendario ADMINISTRATIVO</span> → <span class="badge b-amber">Rector / Vicerrector</span></li>
+      <li>CG actúa a propuesta del Rector o Vicerrector competente</li>
+      <li class="hi">⚡ Trampa: "El Rector aprueba el académico" → FALSO</li>
+    </ul>
+  </div>
+  <div class="card blue">
+    <h3>🗓️ Estructura del calendario (art. 32 Grado)</h3>
+    <ul>
+      <li>Semestre Otoño: <span class="hi">20 semanas</span> desde 1.ª sem. de septiembre</li>
+      <li>Semestre Primavera: <span class="hi">20 semanas</span> de febrero a julio</li>
+      <li>2 últimas semanas/semestre: <span class="hi">pruebas finales</span> (o extensión lectiva si ev. continua)</li>
+      <li>Fin ene / med feb: <span class="hi">≥ 2 sem no lectivas</span> → matrícula 2.º sem.</li>
+      <li>2.ª quincena de julio (y agosto): <span class="hi">matrícula de Otoño</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- SECCIÓN 3: CATEGORÍAS DE ESTUDIANTES -->
+<div class="section-title">👤 Categorías de estudiantes y dedicación</div>
+
+<!-- Comparativa Grado vs Máster -->
+<table class="cmp">
+  <tr>
+    <th>Categoría</th>
+    <th>Grado (art. 30) – por semestre</th>
+    <th>Máster (art. 31) – por curso anual</th>
+    <th>Nota clave</th>
+  </tr>
+  <tr>
+    <td><strong style="color:#60a5fa">Tiempo completo</strong></td>
+    <td>30 – 42 ECTS/semestre<br><small>(o lo que reste si &lt; 30)</small></td>
+    <td>Mín. <strong>60 ECTS</strong>/año<br><small>(o lo que reste)</small></td>
+    <td>En el Máster se decide en el momento de la matrícula</td>
+  </tr>
+  <tr>
+    <td><strong style="color:#4ade80">Tiempo parcial</strong></td>
+    <td>15 – 29 ECTS/semestre</td>
+    <td>Mín. <strong>20 ECTS</strong>/año</td>
+    <td>En Grado es el régimen ordinario; en Máster es opción voluntaria</td>
+  </tr>
+  <tr>
+    <td><strong style="color:#fbbf24">Tiempo reducido</strong></td>
+    <td>6 – 14 ECTS/semestre</td>
+    <td>No contemplado como tal</td>
+    <td>Excepcional; autoriza <strong>Rector/Vicerrector</strong>; Consejo Social puede regular permanencia</td>
+  </tr>
+  <tr>
+    <td><strong style="color:#c084fc">NEE</strong></td>
+    <td>Sin umbrales fijos; análisis individualizado</td>
+    <td>Regulación individualizada</td>
+    <td>Se prevé su existencia pero no se define con límites numéricos</td>
+  </tr>
+</table>
+
+<div class="grid2">
+  <div class="card green">
+    <h3>✅ Mínimo matrícula – Grado (art. 35)</h3>
+    <div class="num">15</div>
+    <div class="num-label">ECTS mínimos por semestre (salvo tiempo reducido)</div>
+    <ul>
+      <li>Si quedan menos de 15 ECTS → se matriculan todos los que resten</li>
+      <li>El tiempo reducido queda exento del mínimo de 15 ECTS</li>
+    </ul>
+  </div>
+  <div class="card violet">
+    <h3>✅ Mínimo matrícula – Máster (art. 31)</h3>
+    <div class="num">20 / 60</div>
+    <div class="num-label">ECTS mínimos: 20 (parcial) · 60 (completo) por curso anual</div>
+    <ul>
+      <li>La dedicación se elige en el momento de realizar la matrícula</li>
+      <li>Solo se puede cursar 1 Máster; excepción si quedan ≤ 20 créditos en el anterior</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SECCIÓN 4: ACCESO A GRADO -->
+<div class="section-title">🚪 Acceso a estudios de Grado</div>
+<div class="grid2">
+  <div class="card blue">
+    <h3>🔑 Vías de acceso (art. 4) – 12 supuestos</h3>
+    <ul>
+      <li><span class="badge b-blue">a</span> Bachillerato + PAU/EBAU</li>
+      <li><span class="badge b-blue">b</span> Sistemas educativos UE / acuerdo España</li>
+      <li><span class="badge b-blue">c</span> Homologación título extranjero a Bachiller</li>
+      <li><span class="badge b-blue">d</span> Sistemas educativos anteriores a la LOE</li>
+      <li><span class="badge b-blue">e</span> Técnico Superior FP / Artes / Deportivo Superior</li>
+      <li><span class="badge b-blue">f</span> Titulado universitario de Grado o equivalente</li>
+      <li><span class="badge b-blue">g</span> Diplomado / Licenciado / Arquitecto / Ingeniero</li>
+      <li><span class="badge b-blue">h</span> Estudios parciales españoles (traslado)</li>
+      <li><span class="badge b-blue">i</span> Estudios parciales extranjeros sin homologación</li>
+      <li><span class="badge b-blue">j</span> Prueba mayores de <span class="hi">25</span> años</li>
+      <li><span class="badge b-blue">k</span> Mayores de <span class="hi">40</span> años con experiencia laboral</li>
+      <li><span class="badge b-blue">l</span> Prueba mayores de <span class="hi">45</span> años</li>
+    </ul>
+  </div>
+  <div class="card slate">
+    <h3>📝 Con preinscripción vs sin preinscripción</h3>
+    <ul>
+      <li><span class="badge b-slate">CON</span> art. 5: primera vez; finalizó otra; quiere simultanear; sin reconocimiento de ≥30 ECTS; mayores de 25/40/45</li>
+      <li><span class="badge b-slate">SIN</span> art. 11–12: se les reconocen ≥30 ECTS → resuelve <span class="hi">Rector</span> con criterios del CG</li>
+      <li><span class="badge b-slate">SIN</span> art. 13: estudios extranjeros parciales/totales sin homologación + convalidación ≥30 ECTS</li>
+    </ul>
+    <br>
+    <h3>🤝 Simultaneidad (art. 6)</h3>
+    <ul>
+      <li>Requisito: haber superado <span class="hi">60 ECTS completos</span></li>
+      <li>Autoriza: <span class="hi">Rector</span> (dentro de la UPNA)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- CUPOS DE RESERVA -->
+<div class="section-title">🏷️ Cupos de reserva – Grado (art. 15)</div>
+<div class="grid4">
+  <div class="card violet">
+    <h3>♿ Discapacidad ≥33 %</h3>
+    <div class="num">5 %</div>
+    <div class="num-label">El más alto de todos ← dato clave</div>
+  </div>
+  <div class="card green">
+    <h3>🏅 Deportistas alto nivel/rendimiento</h3>
+    <div class="num">≥ 3 %</div>
+    <div class="num-label">No inferior al 3 %</div>
+  </div>
+  <div class="card blue">
+    <h3>🧓 Mayores de 25 años (PAU)</h3>
+    <div class="num">≥ 2 %</div>
+    <div class="num-label">No inferior al 2 %</div>
+  </div>
+  <div class="card amber">
+    <h3>📚 Titulados univ. / Mayores 45 / >40 exp.</h3>
+    <div class="num">1–3 %</div>
+    <div class="num-label">Entre 1 % y 3 %</div>
+  </div>
+</div>
+
+<!-- SOLICITUD Y ADMISIÓN -->
+<div class="section-title">📬 Solicitud de admisión y proceso (arts. 17–18 Grado)</div>
+<div class="grid3">
+  <div class="card blue">
+    <h3>📄 Solicitud (art. 17)</h3>
+    <ul>
+      <li>Una única solicitud por estudiante</li>
+      <li>Hasta <span class="hi">6 titulaciones</span> ordenadas por prioridad</li>
+      <li>Si más de una solicitud → solo cuenta <span class="hi">la última</span></li>
+      <li>El orden puede modificarse antes del cierre del plazo</li>
+    </ul>
+  </div>
+  <div class="card green">
+    <h3>✅ Admisión (art. 18)</h3>
+    <ul>
+      <li>No matricularse en fecha → <span class="hi">pérdida del derecho a plaza</span></li>
+      <li>Pueden admitirse más del 100 % para cubrir vacantes</li>
+      <li>El proceso y plazos los fija el Rector/Vicerrector</li>
+    </ul>
+  </div>
+  <div class="card teal">
+    <h3>📅 Plazas reservadas</h3>
+    <ul>
+      <li>Las fija anualmente el <span class="hi">Gobierno de Navarra</span> a propuesta de la universidad</li>
+      <li>Plazas no cubiertas → se acumulan al cupo general</li>
+      <li>Si reúnes requisitos para varios cupos → puedes solicitar por varios</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SECCIÓN 5: ACCESO A MÁSTER -->
+<div class="section-title">🎓 Acceso y admisión a estudios de Máster</div>
+<div class="grid2">
+  <div class="card teal">
+    <h3>📖 Requisitos generales (art. 28 Norma Máster)</h3>
+    <ul>
+      <li>Título universitario oficial español o del <span class="hi">EEES</span> que faculte para acceder a Máster en el país emisor</li>
+      <li>Titulados de sistemas <span class="hi">no EEES</span>: sin homologar; la UPNA verifica equivalencia</li>
+      <li>Ese acceso <span class="hi">NO implica homologación</span> del título previo para ningún otro efecto</li>
+    </ul>
+  </div>
+  <div class="card violet">
+    <h3>⚙️ Proceso de admisión (art. 30 Norma Máster)</h3>
+    <ul>
+      <li>Preinscripción: <span class="hi">mes de febrero</span> anterior al curso</li>
+      <li>Una única solicitud al <span class="hi">Negociado de Estudios de Posgrado</span></li>
+      <li>Admite: <span class="hi">Comisión Académica del Máster</span></li>
+      <li>Admisión: <span class="hi">provisional</span> → definitiva al acreditar requisitos en matrícula</li>
+      <li>Reclamación: <span class="hi">5 días hábiles</span> desde publicación de listas</li>
+      <li>Resuelve: <span class="hi">Comisión de Estudios de Posgrado</span> en máx. <span class="hi">1 mes</span></li>
+      <li>Reserva de plazas movilidad extranjera: hasta <span class="hi">25 %</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="grid2">
+  <div class="card slate">
+    <h3>🔄 Un solo Máster simultáneo (art. 30.3)</h3>
+    <ul>
+      <li>Solo puede estar matriculado en <span class="hi">1 Máster</span></li>
+      <li>Excepción: le quedan <span class="hi">≤ 20 ECTS</span> en el anterior → solicitar al <span class="hi">Rector</span></li>
+    </ul>
+  </div>
+  <div class="card orange">
+    <h3>📐 Complementos formativos previos (art. 11)</h3>
+    <ul>
+      <li><span class="hi">No forman parte</span> del Máster</li>
+      <li>El estudiante con complementos ya es estudiante del Máster a todos los efectos</li>
+      <li>Tope total: <span class="hi">120 ECTS</span> (Máster + complementos)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SECCIÓN 6: MATRÍCULA GRADO -->
+<div class="section-title">📝 Matrícula de Grado</div>
+<div class="grid2">
+  <div class="card blue">
+    <h3>📚 Matrícula semestral (art. 33)</h3>
+    <ul>
+      <li>Matrícula <span class="hi">semestral</span>; siempre <span class="hi">previa</span> al inicio del semestre</li>
+      <li>Semestre <span class="hi">Otoño</span>: sem. del plan <span class="hi">1, 2, 3, 4, 5 y 7</span></li>
+      <li>Semestre <span class="hi">Primavera</span>: sem. del plan <span class="hi">1, 2, 3, 4, 6 y 8</span></li>
+      <li>Modificación: en plazos que fije el Rector/Vicerrector</li>
+      <li>Semestres 1–3: orden <span class="hi">secuencial obligatorio</span> (del más bajo al más alto)</li>
+      <li>Optativa no superada: puede abandonarse sin computar convocatoria; matricular otra diferente</li>
+    </ul>
+  </div>
+  <div class="card red">
+    <h3>🔒 Bloqueo del expediente (art. 38)</h3>
+    <ul>
+      <li>Por <span class="hi">impago</span> de precios públicos en plazo</li>
+      <li>Por <span class="hi">falta de documentación</span> obligatoria en la matrícula</li>
+      <li>Consecuencias: no se expide título, certificado, traslado ni ninguna gestión</li>
+      <li>Comunicación al estudiante: <span class="hi">solo con carácter informativo</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ANULACIÓN MATRÍCULA TIMELINE -->
+<div class="section-title">❌ Anulación de matrícula – Grado (arts. 39–41)</div>
+<div class="timeline">
+  <div class="tstep">
+    <div style="color:#7dd3fc;font-weight:700;font-size:12px">TIPO 1 (art. 39.1)</div>
+    <div class="t-num">1 mes</div>
+    <div class="t-label">desde inicio del semestre</div>
+    <div class="t-date">Sin causa</div>
+    <div class="t-mes">Se acepta de OFICIO</div>
+    <div style="color:#fbbf24;font-weight:700;font-size:16px;margin-top:6px">80 %</div>
+    <div style="color:#94a3b8;font-size:11px">de devolución</div>
+  </div>
+  <div class="tstep">
+    <div style="color:#86efac;font-weight:700;font-size:12px">TIPO 2 (art. 39.2)</div>
+    <div class="t-num">Cualquier momento</div>
+    <div class="t-label">del semestre</div>
+    <div class="t-date">Circunstancias excepcionales sobrevenidas</div>
+    <div class="t-mes">Justificación obligatoria</div>
+    <div style="color:#4ade80;font-weight:700;font-size:16px;margin-top:6px">100 %</div>
+    <div style="color:#94a3b8;font-size:11px">de devolución</div>
+  </div>
+  <div class="tstep">
+    <div style="color:#d8b4fe;font-weight:700;font-size:12px">TIPO 3 (art. 40.3)</div>
+    <div class="t-num">1.er sem / 1.er vez</div>
+    <div class="t-label">y admitido en otra universidad simultáneamente</div>
+    <div class="t-date">Caso especial</div>
+    <div class="t-mes">Mantiene plaza sin reinscripción</div>
+    <div style="color:#4ade80;font-weight:700;font-size:16px;margin-top:6px">100 %</div>
+    <div style="color:#94a3b8;font-size:11px">de devolución</div>
+  </div>
+  <div class="tstep">
+    <div style="color:#fca5a5;font-weight:700;font-size:12px">RESUELVE</div>
+    <div style="color:#f87171;font-size:20px;font-weight:900;margin:8px 0">Rector / Vicerrector</div>
+    <div style="color:#94a3b8;font-size:11px">en todos los casos</div>
+  </div>
+</div>
+
+<!-- SECCIÓN 7: ESTRUCTURA ENSEÑANZAS -->
+<div class="section-title">🏗️ Estructura de las enseñanzas</div>
+<table class="cmp">
+  <tr>
+    <th>Componente</th>
+    <th>Grado (art. 22–29)</th>
+    <th>Máster (arts. 6–12)</th>
+  </tr>
+  <tr>
+    <td><strong>Carga total</strong></td>
+    <td><strong style="color:#60a5fa">240 ECTS</strong> / 8 semestres / 30 ECTS/semestre</td>
+    <td><strong style="color:#2dd4bf">60–120 ECTS</strong> pref. 90–120 · máx. 60 ECTS/curso</td>
+  </tr>
+  <tr>
+    <td><strong>1 ECTS</strong></td>
+    <td>= 25 horas trabajo del estudiante</td>
+    <td>= 25 horas trabajo del estudiante</td>
+  </tr>
+  <tr>
+    <td><strong>Form. básica</strong></td>
+    <td>Mín. 60 ECTS (≥36 vinculados a rama) · en sem. 1–4 pref. 1–2</td>
+    <td>— (no aplica)</td>
+  </tr>
+  <tr>
+    <td><strong>Form. obligatoria</strong></td>
+    <td>60–150 ECTS · asign. 6 ECTS (exc. 3) · desde sem. 3</td>
+    <td>Mín. <strong>50 %</strong> total (incluye TFM) · asign. 3, 4.5 o 6 ECTS</td>
+  </tr>
+  <tr>
+    <td><strong>Optativas</strong></td>
+    <td>18–30 ECTS (hasta 60 con pract. opt.) · asign. 3 o 6 ECTS · sem. 5–8</td>
+    <td>Máx. <strong>50 %</strong> total</td>
+  </tr>
+  <tr>
+    <td><strong>Prácticas ext.</strong></td>
+    <td>Oblig.: 18–30 ECTS (pref. sem. 6) · Opt.: 3–30 ECTS</td>
+    <td>Oblig. si orient. profesional; opt. si académica/invest.</td>
+  </tr>
+  <tr>
+    <td><strong>TFG / TFM</strong></td>
+    <td>6/12/18/24/30 ECTS · siempre en <strong>8.º semestre</strong></td>
+    <td>6/12/18/24/30 ECTS</td>
+  </tr>
+  <tr>
+    <td><strong>Estancias extranjero</strong></td>
+    <td>Mín. 30 ECTS · máx. 60 ECTS · sem. 6–8</td>
+    <td>9–18 ECTS · módulos de 3 ECTS</td>
+  </tr>
+  <tr>
+    <td><strong>Presencialidad</strong></td>
+    <td>— (no se establece % fijo)</td>
+    <td>Al menos <strong>65 %</strong> de créditos presenciales</td>
+  </tr>
+  <tr>
+    <td><strong>Reconoc. actividades</strong></td>
+    <td>Hasta <strong>6 ECTS</strong> (cultural, deportiva, rep. estudiantil, solidaria) · CG regula criterios</td>
+    <td>— (no previsto del mismo modo)</td>
+  </tr>
+  <tr>
+    <td><strong>Idioma</strong></td>
+    <td>Nivel <strong>B1</strong> en inglés/francés/alemán/italiano (o superior si lo exige la memoria)</td>
+    <td>Fomento de capacitación lingüística; no se exige B1 como requisito expreso</td>
+  </tr>
+</table>
+
+<!-- MEMORIZACIÓN ULTRA-RÁPIDA -->
+<div class="section-title">⚡ Memorización ultra-rápida – 12 pilares del tema</div>
+<div class="flash">
+  <div class="fcard" style="border-color:#3b82f6">
+    <div class="fc-title" style="color:#60a5fa">📅 Calendario</div>
+    <p><strong>ACADÉMICO</strong> = Consejo de Gobierno<br><strong>ADMINISTRATIVO</strong> = Rector/Vicerrector</p>
+  </div>
+  <div class="fcard" style="border-color:#16a34a">
+    <div class="fc-title" style="color:#4ade80">⏱️ Semestres</div>
+    <p>Cada semestre = <strong>20 semanas</strong><br>2 últimas sem. = evaluación</p>
+  </div>
+  <div class="fcard" style="border-color:#ca8a04">
+    <div class="fc-title" style="color:#fbbf24">👤 Dedicación Grado</div>
+    <p>Completo: 30–42<br>Parcial: 15–29<br>Reducido: 6–14 (excepcional)</p>
+  </div>
+  <div class="fcard" style="border-color:#0d9488">
+    <div class="fc-title" style="color:#2dd4bf">👤 Dedicación Máster</div>
+    <p>Completo: mín. 60/año<br>Parcial: mín. 20/año<br>Se decide al matricularse</p>
+  </div>
+  <div class="fcard" style="border-color:#dc2626">
+    <div class="fc-title" style="color:#f87171">🔒 Bloqueo</div>
+    <p>Impago o sin docs<br>Comunicación: <strong>solo informativa</strong></p>
+  </div>
+  <div class="fcard" style="border-color:#9333ea">
+    <div class="fc-title" style="color:#c084fc">❌ Anulación Grado</div>
+    <p>1 mes sin causa → <strong>80 %</strong><br>Causa excepcional → <strong>100 %</strong></p>
+  </div>
+  <div class="fcard" style="border-color:#1d4ed8">
+    <div class="fc-title" style="color:#93c5fd">📬 Solicitud preinscripción</div>
+    <p>1 sola solicitud<br>Hasta <strong>6 titulaciones</strong><br>Solo cuenta la <strong>última</strong></p>
+  </div>
+  <div class="fcard" style="border-color:#0d9488">
+    <div class="fc-title" style="color:#5eead4">🎓 Admisión Máster</div>
+    <p>Admite: <strong>Comisión Académica</strong><br>Reclamación: <strong>5 días hábiles</strong><br>Resuelve CEP: <strong>1 mes</strong></p>
+  </div>
+  <div class="fcard" style="border-color:#db2777">
+    <div class="fc-title" style="color:#f472b6">♿ Cupos reserva</div>
+    <p>Discapacidad: <strong>5 %</strong> ← más alto<br>Deportistas: ≥3 %<br>Mayores 25: ≥2 %</p>
+  </div>
+  <div class="fcard" style="border-color:#ca8a04">
+    <div class="fc-title" style="color:#fde68a">🔄 Simultaneidad Grado</div>
+    <p>Requisito: <strong>60 ECTS superados</strong><br>Autoriza: <strong>Rector</strong></p>
+  </div>
+  <div class="fcard" style="border-color:#ea580c">
+    <div class="fc-title" style="color:#fb923c">📐 Complementos Máster</div>
+    <p>No forman parte del Máster<br>Tope: <strong>120 ECTS</strong> (Máster + complementos)</p>
+  </div>
+  <div class="fcard" style="border-color:#16a34a">
+    <div class="fc-title" style="color:#86efac">🌍 Idioma Grado</div>
+    <p>Nivel <strong>B1</strong> obligatorio<br>4 lenguas posibles<br>5 vías de acreditación</p>
+  </div>
+</div>
+
+<!-- TRAMPAS -->
+<div class="trampas">
+  <h3>⚡ Trampas frecuentes de examen</h3>
+  <div class="trap-item"><span class="trap-x">✗</span><div class="trap-text"><span style="color:#fca5a5">"El Rector aprueba el calendario académico"</span> → <span class="trap-ok">✓</span> <span style="color:#4ade80">Lo aprueba el CONSEJO DE GOBIERNO a propuesta del Rector/Vicerrector.</span></div></div>
+  <div class="trap-item"><span class="trap-x">✗</span><div class="trap-text"><span style="color:#fca5a5">"14 créditos por semestre es dedicación a tiempo parcial"</span> → <span class="trap-ok">✓</span> <span style="color:#4ade80">14 ECTS es tiempo REDUCIDO (6–14); tiempo parcial es 15–29 ECTS.</span></div></div>
+  <div class="trap-item"><span class="trap-x">✗</span><div class="trap-text"><span style="color:#fca5a5">"Para simultanear basta con estar matriculado en 30 ECTS"</span> → <span class="trap-ok">✓</span> <span style="color:#4ade80">Hay que tener 60 ECTS COMPLETAMENTE SUPERADOS.</span></div></div>
+  <div class="trap-item"><span class="trap-x">✗</span><div class="trap-text"><span style="color:#fca5a5">"La admisión sin preinscripción la resuelve el Consejo de Gobierno"</span> → <span class="trap-ok">✓</span> <span style="color:#4ade80">La resuelve el RECTOR con criterios que fija el CG.</span></div></div>
+  <div class="trap-item"><span class="trap-x">✗</span><div class="trap-text"><span style="color:#fca5a5">"La admisión al Máster la concede el Rector"</span> → <span class="trap-ok">✓</span> <span style="color:#4ade80">La concede la COMISIÓN ACADÉMICA DEL MÁSTER.</span></div></div>
+  <div class="trap-item"><span class="trap-x">✗</span><div class="trap-text"><span style="color:#fca5a5">"Para reclamar la lista de admitidos al Máster hay 10 días hábiles"</span> → <span class="trap-ok">✓</span> <span style="color:#4ade80">Son 5 DÍAS HÁBILES.</span></div></div>
+  <div class="trap-item"><span class="trap-x">✗</span><div class="trap-text"><span style="color:#fca5a5">"La anulación en el primer mes devuelve el 100 %"</span> → <span class="trap-ok">✓</span> <span style="color:#4ade80">Devuelve el 80 %; el 100 % es para circunstancias excepcionales.</span></div></div>
+  <div class="trap-item"><span class="trap-x">✗</span><div class="trap-text"><span style="color:#fca5a5">"Los complementos formativos forman parte del Máster"</span> → <span class="trap-ok">✓</span> <span style="color:#4ade80">No; son previos y adicionales, pero el estudiante ya es estudiante del Máster a todos los efectos.</span></div></div>
+  <div class="trap-item"><span class="trap-x">✗</span><div class="trap-text"><span style="color:#fca5a5">"El TFG puede realizarse en cualquier semestre"</span> → <span class="trap-ok">✓</span> <span style="color:#4ade80">Siempre en el 8.º semestre.</span></div></div>
+  <div class="trap-item"><span class="trap-x">✗</span><div class="trap-text"><span style="color:#fca5a5">"El cupo de discapacidad en Grado es el 3 %"</span> → <span class="trap-ok">✓</span> <span style="color:#4ade80">Es el 5 %, el más alto de todos los cupos de reserva.</span></div></div>
+</div>
+
+</div>
+</body>
+</html>
