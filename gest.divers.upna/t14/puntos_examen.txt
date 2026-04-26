@@ -1,0 +1,208 @@
+TEMA 14 · REAL DECRETO 822/2021 · PUNTOS DE EXAMEN Y ARTÍCULOS CLAVE
+=======================================================================
+Organización de las enseñanzas universitarias: grado, máster universitario
+y doctorado. Las enseñanzas propias de las universidades.
+=======================================================================
+
+==============================
+A) ARTÍCULOS IMPRESCINDIBLES
+==============================
+
+ART. 1    → Objeto del RD: organización, estructura y aseguramiento de la calidad.
+ART. 2    → Ámbito de aplicación: Grado, Máster Universitario, Doctorado y enseñanzas propias.
+ART. 3    → Definiciones (ECTS, RUCT, MECES…).
+ART. 4    → Planificación de las enseñanzas universitarias oficiales.
+ART. 5    → Estructura básica del plan de estudios (cursos de 60 ECTS).
+ART. 6    → Trabajo fin de estudios (TFG / TFM): reglas comunes.
+ART. 7    → Prácticas académicas externas.
+ART. 13   → Objetivos y organización del Grado.
+ART. 14   → Directrices generales del plan de estudios de Grado.
+ART. 15   → Acceso y admisión al Grado.
+ART. 16   → Objetivos y organización del Máster Universitario.
+ART. 17   → Directrices generales del plan de estudios de Máster.
+ART. 18   → Acceso y admisión al Máster Universitario (incluye matrícula condicionada).
+ART. 19   → Organización del Doctorado.
+ART. 20   → Acceso al Doctorado.
+ART. 21   → Estructuras curriculares específicas y de innovación docente.
+ART. 22   → Mención Dual.
+ART. 23   → Grado con itinerario académico abierto.
+ART. 24   → Programas de simultaneidad de dobles titulaciones.
+ART. 25   → Aseguramiento de la calidad (principio general del Capítulo VII).
+ART. 26   → Verificación del plan de estudios.
+ART. 27   → Carácter oficial e inscripción en el RUCT.
+ART. 28   → Seguimiento del título.
+ART. 29   → Modificación del plan de estudios.
+ART. 30   → Renovación de la acreditación.
+ARTS. 31–37 → Enseñanzas propias de las universidades.
+
+==============================================
+B) PUNTOS QUE CAEN EN EXAMEN TEST
+==============================================
+
+1. ESTRUCTURA GENERAL (ARTS. 1–2)
+────────────────────────────────────
+• El RD 822/2021 sustituye al RD 1393/2007.
+• Su ámbito: enseñanzas oficiales de Grado, Máster y Doctorado + enseñanzas propias.
+• Se dicta en el marco del EEES (Espacio Europeo de Educación Superior).
+• Procedimiento de aseguramiento de calidad: verificación → seguimiento → modificación → renovación.
+
+2. EL CRÉDITO ECTS (ART. 5)
+─────────────────────────────
+• 1 crédito ECTS = 25–30 horas de trabajo del estudiante.
+• 1 curso = 60 ECTS.
+• El plan de Grado y Máster se estructura en cursos de 60 ECTS.
+• Excepción: los Másteres de 90 ECTS pueden tener 1 curso de 30 ECTS.
+
+3. GRADO (ARTS. 13–15)
+────────────────────────
+• Duración ordinaria: 240 ECTS (4 años).
+• Excepción: 300 o 360 ECTS en titulaciones con directrices europeas específicas
+  (Medicina 360, Arquitectura 300, Farmacia 300, Veterinaria 300, Odontología 300).
+• TFG: entre 6 y 30 ECTS; defensa pública obligatoria.
+• Formación básica: mínimo 60 ECTS, en la primera mitad del plan.
+• Prácticas externas: no pueden superar el 25 % del total de créditos del plan.
+• Nivel MECES: MECES 2 (regla general).
+• MECES 3: solo si el Grado tiene ≥300 ECTS con 60 ECTS concordantes con Máster,
+  previa solicitud al Consejo de Universidades.
+
+4. MÁSTER UNIVERSITARIO (ARTS. 16–18)
+────────────────────────────────────────
+• Duración: 60, 90 o 120 ECTS (tres valores exactos tasados; novedad respecto al RD anterior).
+• TFM: entre 6 y 30 ECTS; defensa pública obligatoria.
+• Especialidades posibles; cada especialidad ≤ 50 % de los créditos totales.
+• Nivel MECES: MECES 3.
+• Acceso ordinario: título de Grado o equivalente.
+• MATRÍCULA CONDICIONADA (novedad RD 822/2021):
+    - Se puede acceder al Máster si solo resta el TFG + hasta 9 ECTS del Grado.
+    - No puede obtenerse el Máster sin haber obtenido previamente el Grado.
+
+5. DOCTORADO (ARTS. 19–20)
+────────────────────────────
+• Nivel MECES: MECES 4 (máximo nivel académico).
+• Estructura: período de formación + período de investigación (tesis doctoral).
+• Tesis doctoral: trabajo original de investigación; defensa pública ante tribunal.
+• Acceso ordinario: título de Máster Universitario o equivalente con ≥300 ECTS totales.
+• Acceso alternativo sin Máster: Grados de 300 ECTS, otro doctorado previo,
+  o los supuestos del art. 6 RD 576/2023.
+• Mención Internacional: posible si se cumplen requisitos de estancia y evaluación externa.
+
+6. ESTRUCTURAS CURRICULARES ESPECÍFICAS (ARTS. 21–24)
+────────────────────────────────────────────────────────
+• Mención Dual (art. 22): integra periodos en empresa en el título oficial.
+• Grado con itinerario académico abierto (art. 23): alta optatividad; personalización.
+• Dobles titulaciones con itinerario específico (art. 24): plan integrado de dos títulos.
+• Grado+Máster vinculado: programa piloto que vincula ambas enseñanzas de forma continua.
+
+7. ASEGURAMIENTO DE LA CALIDAD (ARTS. 25–30)
+──────────────────────────────────────────────
+• Ciclo de calidad: verificación → seguimiento → modificación → renovación de la acreditación.
+• Verificación (art. 26): antes de impartir el título; inscripción en el RUCT.
+• RUCT: Registro de Universidades, Centros y Títulos; carácter oficial en todo el territorio.
+• Seguimiento (art. 28): supervisión periódica del título ya en marcha.
+• Renovación de la acreditación (art. 30): evaluación periódica para mantener la acreditación.
+• Entidad evaluadora: ANECA u órgano equivalente de la Comunidad Autónoma.
+
+8. ENSEÑANZAS PROPIAS (ARTS. 31–37)
+──────────────────────────────────────
+• No tienen carácter oficial; no dan validez en todo el territorio por sí solas.
+• Tipos y cargas mínimas:
+    - Título de Especialista Universitario: ≥ 20 ECTS
+    - Título de Experto Universitario: ≥ 15 ECTS
+    - Diploma de Extensión Universitaria: ≥ 6 ECTS
+• Su denominación NO puede coincidir con la de los títulos universitarios oficiales.
+• Primera regulación básica sistemática en un real decreto de organización de enseñanzas.
+• Se introduce la evaluación de la calidad también para las enseñanzas propias.
+• La formación permanente queda integrada en este capítulo.
+
+==============================================
+C) TABLA COMPARATIVA RÁPIDA (PARA MEMORIZAR)
+==============================================
+
+                GRADO           MÁSTER            DOCTORADO
+ECTS            240 (ord.)      60 / 90 / 120     Sin créditos ECTS propios
+EXCEPCIÓN       300 ó 360       90 ECTS: un       —
+ECTS            (directrices    curso puede
+                europeas)       ser 30 ECTS
+NIVEL MECES     MECES 2         MECES 3           MECES 4
+TFG/TFM/TESIS   6–30 ECTS       6–30 ECTS         Tesis original
+ACCESO          Bachillerato    Título de Grado   Título de Máster
+                + PAU/equiv.    (matrícula        (o equiv.)
+                                condicionada:
+                                TFG + ≤9 ECTS
+                                pendientes)
+
+==============================================
+D) TRAMPAS FRECUENTES EN TEST
+==============================================
+
+1. "El Grado puede tener entre 180 y 240 ECTS."
+   → FALSO. El Grado ordinario tiene exactamente 240 ECTS. Las excepciones son
+   300 o 360 ECTS (titulaciones con directrices europeas), nunca 180 ECTS.
+
+2. "El Máster puede tener entre 60 y 120 ECTS con cualquier valor."
+   → FALSO. Solo son posibles 60, 90 o 120 ECTS (tres valores tasados).
+
+3. "El TFG puede ser hasta el 40 % del plan de estudios."
+   → FALSO. Las prácticas externas no pueden superar el 25 % del total de créditos.
+   El TFG tiene entre 6 y 30 ECTS.
+
+4. "Se puede obtener el título de Máster estando el Grado pendiente."
+   → FALSO. La matrícula condicionada permite cursar el Máster con ≤9 ECTS + TFG
+   pendientes del Grado, pero el título de Máster no puede obtenerse sin el Grado previo.
+
+5. "Las enseñanzas propias tienen validez oficial en todo el territorio."
+   → FALSO. Solo los títulos oficiales de Grado, Máster y Doctorado tienen esa validez.
+
+6. "El nivel MECES del Grado es siempre MECES 2."
+   → Generalmente sí, pero los Grados con ≥300 ECTS y 60 concordantes con Máster
+   pueden solicitar el MECES 3 al Consejo de Universidades.
+
+7. "El RD 822/2021 regula el Doctorado en su totalidad."
+   → FALSO. El Doctorado se regula complementariamente por el RD 576/2023.
+
+8. "La verificación es la evaluación periódica del título ya impartido."
+   → FALSO. La verificación es la evaluación previa antes de impartir el título.
+   La evaluación periódica posterior es el seguimiento y la renovación de la acreditación.
+
+9. "El Título de Experto Universitario necesita 20 ECTS mínimo."
+   → FALSO. El Experto necesita 15 ECTS; el Especialista necesita 20 ECTS.
+
+10. "El Diploma de Extensión Universitaria necesita 15 ECTS."
+    → FALSO. El Diploma de Extensión Universitaria exige 6 ECTS.
+
+==============================================
+E) ESQUEMA NEMOTÉCNICO RÁPIDO
+==============================================
+
+GRADO: 240 ECTS · MECES 2 · TFG 6–30 ECTS · Básica ≥60 ECTS en 1.ª mitad
+MÁSTER: 60/90/120 ECTS · MECES 3 · TFM 6–30 ECTS · Matrícula condicionada ≤9+TFG
+DOCTORADO: MECES 4 · Tesis original · Acceso: Máster o equivalente
+ENSEÑANZAS PROPIAS: Especialista ≥20 · Experto ≥15 · Diploma ≥6
+
+CICLO CALIDAD: Verificación → Seguimiento → Modificación → Renovación
+RUCT = Registro de Universidades, Centros y Títulos
+ANECA = evaluadora principal
+
+==============================================
+F) ARTÍCULOS CLAVE PARA ORDENAR
+==============================================
+
+Objeto y ámbito → arts. 1–2
+ECTS y estructura del plan → art. 5
+TFG / TFM → art. 6
+Prácticas externas → art. 7
+Grado (organización) → art. 13
+Grado (plan de estudios) → art. 14
+Grado (acceso) → art. 15
+Máster (organización) → art. 16
+Máster (plan de estudios) → art. 17
+Máster (acceso + matrícula condicionada) → art. 18
+Doctorado (organización) → art. 19
+Doctorado (acceso) → art. 20
+Mención Dual → art. 22
+Grado con itinerario abierto → art. 23
+Verificación → art. 26
+RUCT → art. 27
+Seguimiento → art. 28
+Renovación acreditación → art. 30
+Enseñanzas propias → arts. 31–37

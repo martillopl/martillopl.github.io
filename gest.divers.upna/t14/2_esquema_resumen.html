@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>2_esquema_resumen_t14.html</title>
+  <style>
+    :root{
+      --bg:#f8fafc;--card:#fff;--ink:#0f172a;--muted:#475569;--line:#cbd5e1;
+      --red:#fee2e2;--red-b:#dc2626;
+      --blue:#dbeafe;--blue-b:#2563eb;
+      --amber:#fef3c7;--amber-b:#d97706;
+      --green:#dcfce7;--green-b:#16a34a;
+      --violet:#ede9fe;--violet-b:#7c3aed;
+      --teal:#ccfbf1;--teal-b:#0f766e;
+      --slate:#e2e8f0;--slate-b:#475569;
+      --rose:#ffe4e6;--rose-b:#e11d48;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;padding:24px;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45}
+    .page{max-width:1100px;margin:0 auto}
+
+    /* HERO */
+    .hero{background:linear-gradient(135deg,#0f172a,#1e3a5f);color:#fff;padding:26px 30px;border-radius:18px;margin-bottom:20px}
+    .hero h1{margin:0 0 6px;font-size:26px;line-height:1.2}
+    .hero .sub{font-size:13px;opacity:.9}
+
+    /* LEYENDA */
+    .legend{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+    .leg{padding:6px 13px;border-radius:999px;font-size:12px;font-weight:700;border:2px solid}
+
+    /* GRID */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:16px}
+    .card.full{grid-column:1/-1}
+    .card.half{grid-column:span 2}
+    .ctag{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;margin-bottom:8px;border:2px solid}
+    .card h2{margin:0 0 10px;font-size:18px;line-height:1.2}
+    .bignum{font-size:42px;font-weight:900;line-height:1;margin:4px 0}
+    .label{font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+
+    /* SUB-GRIDS */
+    .cols2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+    .cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+    .cols4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+
+    /* CAJAS INTERNAS */
+    .box{border-radius:10px;padding:11px 13px;border:2px solid;font-size:13.5px}
+    .note{border-radius:10px;padding:10px 13px;font-size:13px;font-weight:700;margin-top:10px;border:2px solid}
+
+    /* TABLA */
+    table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px}
+    th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+    th{background:#f1f5f9;font-weight:700}
+    tr:nth-child(even) td{background:#fafafa}
+
+    ul{margin:6px 0 0 16px;padding:0}li{margin:4px 0;font-size:13.5px}
+
+    /* BLOQUE MEMORIA */
+    .mem{background:#0f172a;color:#f8fafc;border-radius:18px;padding:22px;margin-top:20px}
+    .mem h2{margin:0 0 14px;font-size:20px}
+    .memgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .mbox{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:12px;font-size:12.5px}
+    .mbox strong{color:#93c5fd;display:block;margin-bottom:4px}
+
+    /* TRAMPAS */
+    .trapgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+    .trap{border-radius:10px;padding:11px 13px;border:2px solid;font-size:13px}
+
+    .footer{text-align:center;font-size:12px;color:var(--muted);margin-top:18px}
+
+    /* colores */
+    .blue{background:var(--blue);border-color:var(--blue-b)}
+    .green{background:var(--green);border-color:var(--green-b)}
+    .amber{background:var(--amber);border-color:var(--amber-b)}
+    .violet{background:var(--violet);border-color:var(--violet-b)}
+    .teal{background:var(--teal);border-color:var(--teal-b)}
+    .red{background:var(--red);border-color:var(--red-b)}
+    .slate{background:var(--slate);border-color:var(--slate-b)}
+    .rose{background:var(--rose);border-color:var(--rose-b)}
+
+    @media(max-width:900px){
+      .grid,.cols2,.cols3,.cols4,.trapgrid,.memgrid{grid-template-columns:1fr}
+      .card.full,.card.half{grid-column:auto}
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Tema 14 · Organización de las enseñanzas universitarias</h1>
+    <div class="sub">Real Decreto 822/2021, de 28 de septiembre · Grado · Máster Universitario · Doctorado · Enseñanzas Propias · Esquema-resumen visual para memorización rápida</div>
+  </div>
+
+  <!-- LEYENDA -->
+  <div class="legend">
+    <div class="leg blue">Azul · Marco general</div>
+    <div class="leg green">Verde · Grado</div>
+    <div class="leg amber">Ámbar · Máster</div>
+    <div class="leg violet">Violeta · Doctorado</div>
+    <div class="leg teal">Teal · Enseñanzas propias</div>
+    <div class="leg rose">Rosa · Aseguramiento de la calidad</div>
+    <div class="leg slate">Gris · Trampas de examen</div>
+  </div>
+
+  <div class="grid">
+
+    <!-- BLOQUE 1: marco y estructura -->
+    <div class="card full blue">
+      <div class="ctag blue">ARTS. 1–5</div>
+      <h2>1. Marco general del RD 822/2021</h2>
+      <div class="cols3">
+        <div class="box blue">
+          <strong>Objeto</strong>
+          <ul>
+            <li>Organización de las enseñanzas universitarias oficiales</li>
+            <li>Procedimiento de aseguramiento de la calidad</li>
+            <li>Enseñanzas propias de las universidades</li>
+          </ul>
+        </div>
+        <div class="box blue">
+          <strong>Marco normativo</strong>
+          <ul>
+            <li>Sustituye al RD 1393/2007</li>
+            <li>Se enmarca en el EEES</li>
+            <li>Conexión con la LOSU 2/2023</li>
+            <li>Doctorado: complementado por RD 576/2023</li>
+          </ul>
+        </div>
+        <div class="box blue">
+          <strong>El crédito ECTS (art. 5)</strong>
+          <ul>
+            <li>1 ECTS = 25–30 h de trabajo del estudiante</li>
+            <li>1 curso = <strong>60 ECTS</strong></li>
+            <li>Incluye: clases + estudio + prácticas + pruebas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOQUE 2: GRADO cifras -->
+    <div class="card green">
+      <div class="ctag green">ARTS. 13–15</div>
+      <h2>2. Grado · Cifras clave</h2>
+      <div class="bignum green" style="color:#16a34a">240</div>
+      <div class="label">ECTS ordinarios (4 años)</div>
+      <div class="cols2" style="margin-top:12px">
+        <div class="box green">
+          <strong>Excepciones europeas</strong>
+          <ul>
+            <li>300 ECTS (5 años): Farmacia, Veterinaria, Arquitectura, Odontología</li>
+            <li>360 ECTS (6 años): Medicina</li>
+          </ul>
+        </div>
+        <div class="box green">
+          <strong>Estructura interna</strong>
+          <ul>
+            <li>Formación básica: ≥60 ECTS en 1.ª mitad</li>
+            <li>TFG: 6–30 ECTS; defensa pública</li>
+            <li>Prácticas externas: ≤25% del total</li>
+            <li>Nivel MECES: <strong>2</strong></li>
+          </ul>
+        </div>
+      </div>
+      <div class="note green">⚡ MECES 3 posible solo si Grado ≥300 ECTS con 60 concordantes con Máster → solicitud al Consejo de Universidades.</div>
+    </div>
+
+    <!-- BLOQUE 3: MÁSTER cifras -->
+    <div class="card amber">
+      <div class="ctag amber">ARTS. 16–18</div>
+      <h2>3. Máster · Cifras clave</h2>
+      <div class="cols3" style="margin-top:6px">
+        <div class="box amber" style="text-align:center">
+          <div class="bignum" style="color:#d97706">60</div>
+          <div class="label">ECTS</div>
+        </div>
+        <div class="box amber" style="text-align:center">
+          <div class="bignum" style="color:#d97706">90</div>
+          <div class="label">ECTS</div>
+        </div>
+        <div class="box amber" style="text-align:center">
+          <div class="bignum" style="color:#d97706">120</div>
+          <div class="label">ECTS</div>
+        </div>
+      </div>
+      <div class="box amber" style="margin-top:10px">
+        <strong>Reglas clave</strong>
+        <ul>
+          <li>Solo 3 valores posibles (novedad RD 822/2021)</li>
+          <li>TFM: 6–30 ECTS; defensa pública</li>
+          <li>Especialidades: cada una ≤50 % créditos</li>
+          <li>Nivel MECES: <strong>3</strong></li>
+          <li>Acceso ordinario: título de Grado</li>
+        </ul>
+      </div>
+      <div class="note amber">⚡ Matrícula condicionada: acceso al Máster si solo restan TFG + ≤9 ECTS del Grado. El Máster no puede obtenerse sin el Grado previo.</div>
+    </div>
+
+    <!-- BLOQUE 4: DOCTORADO -->
+    <div class="card violet">
+      <div class="ctag violet">ARTS. 19–20</div>
+      <h2>4. Doctorado</h2>
+      <div class="bignum" style="color:#7c3aed">MECES 4</div>
+      <div class="label">Máximo nivel académico</div>
+      <div class="box violet" style="margin-top:10px">
+        <strong>Estructura y acceso</strong>
+        <ul>
+          <li>Período de formación + período de investigación</li>
+          <li>Tesis doctoral: trabajo original de investigación; defensa pública ante tribunal</li>
+          <li>Acceso ordinario: título de Máster (o equiv.) con ≥300 ECTS totales</li>
+          <li>Acceso alternativo sin Máster: Grado ≥300 ECTS, otro doctorado previo, supuestos RD 576/2023</li>
+          <li>Mención Internacional: posible si se cumplen requisitos de estancia y evaluación exterior</li>
+          <li>Complementado por RD 576/2023</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- BLOQUE 5: MECES comparado -->
+    <div class="card full blue">
+      <div class="ctag blue">MECES</div>
+      <h2>5. Marco Español de Cualificaciones (MECES)</h2>
+      <div class="cols4">
+        <div class="box slate">
+          <div class="bignum" style="font-size:28px">MECES 1</div>
+          <div class="label">Técnico Superior (FP)</div>
+          <div style="font-size:12px;margin-top:6px">Ciclo corto europeo</div>
+        </div>
+        <div class="box green">
+          <div class="bignum" style="font-size:28px;color:#16a34a">MECES 2</div>
+          <div class="label">Grado universitario</div>
+          <div style="font-size:12px;margin-top:6px">1.er ciclo europeo</div>
+        </div>
+        <div class="box amber">
+          <div class="bignum" style="font-size:28px;color:#d97706">MECES 3</div>
+          <div class="label">Máster Universitario</div>
+          <div style="font-size:12px;margin-top:6px">2.º ciclo europeo</div>
+        </div>
+        <div class="box violet">
+          <div class="bignum" style="font-size:28px;color:#7c3aed">MECES 4</div>
+          <div class="label">Doctor/a</div>
+          <div style="font-size:12px;margin-top:6px">3.er ciclo europeo</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOQUE 6: tabla comparativa G-M-D -->
+    <div class="card full teal">
+      <div class="ctag teal">COMPARATIVA</div>
+      <h2>6. Grado · Máster · Doctorado de un vistazo</h2>
+      <table>
+        <tr><th>Criterio</th><th>Grado</th><th>Máster</th><th>Doctorado</th></tr>
+        <tr><td>ECTS</td><td>240 (ord.) / 300 o 360 (europeos)</td><td>60 / 90 / 120</td><td>Sin créditos ECTS propios</td></tr>
+        <tr><td>Nivel MECES</td><td>MECES 2 (MECES 3 excepcional)</td><td>MECES 3</td><td>MECES 4</td></tr>
+        <tr><td>Trabajo final</td><td>TFG: 6–30 ECTS; defensa pública</td><td>TFM: 6–30 ECTS; defensa pública</td><td>Tesis doctoral; defensa pública ante tribunal</td></tr>
+        <tr><td>Acceso</td><td>Bachillerato + PAU o equiv.</td><td>Título de Grado (o matrícula condicionada TFG + ≤9 ECTS)</td><td>Título de Máster (o equiv. con ≥300 ECTS totales)</td></tr>
+        <tr><td>Formación básica</td><td>≥60 ECTS en 1.ª mitad del plan</td><td>No exigencia mínima análoga</td><td>Período de formación + investigación</td></tr>
+        <tr><td>Prácticas externas</td><td>≤25 % del total de créditos</td><td>Según diseño del plan</td><td>No aplica en el mismo sentido</td></tr>
+        <tr><td>Artículos clave</td><td>13–15</td><td>16–18</td><td>19–20</td></tr>
+      </table>
+    </div>
+
+    <!-- BLOQUE 7: estructuras curriculares específicas -->
+    <div class="card half blue">
+      <div class="ctag blue">ARTS. 21–24</div>
+      <h2>7. Estructuras curriculares específicas</h2>
+      <div class="cols2">
+        <div class="box blue">
+          <strong>Mención Dual (art. 22)</strong>
+          <ul>
+            <li>Integra periodos reales en empresa dentro del título oficial</li>
+            <li>Combina formación académica y actividad laboral</li>
+          </ul>
+        </div>
+        <div class="box blue">
+          <strong>Grado con itinerario abierto (art. 23)</strong>
+          <ul>
+            <li>Alta optatividad en el plan</li>
+            <li>El estudiante personaliza su formación</li>
+          </ul>
+        </div>
+        <div class="box blue">
+          <strong>Dobles titulaciones (art. 24)</strong>
+          <ul>
+            <li>Plan integrado de dos títulos oficiales</li>
+            <li>Cursado simultáneo</li>
+          </ul>
+        </div>
+        <div class="box blue">
+          <strong>Grado + Máster vinculado</strong>
+          <ul>
+            <li>Programa piloto de continuidad directa</li>
+            <li>Facilita la matrícula condicionada</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOQUE 8: enseñanzas propias -->
+    <div class="card teal">
+      <div class="ctag teal">ARTS. 31–37</div>
+      <h2>8. Enseñanzas propias</h2>
+      <div class="box teal" style="margin-bottom:10px">
+        <strong>No son enseñanzas oficiales</strong>
+        <ul>
+          <li>No tienen validez en todo el territorio por sí solas</li>
+          <li>Su denominación NO puede coincidir con la de títulos oficiales</li>
+          <li>Primera regulación sistemática en un RD de organización de enseñanzas</li>
+        </ul>
+      </div>
+      <table>
+        <tr><th>Tipo</th><th>Mín. ECTS</th></tr>
+        <tr><td>Título de Especialista Universitario</td><td><strong>20 ECTS</strong></td></tr>
+        <tr><td>Título de Experto Universitario</td><td><strong>15 ECTS</strong></td></tr>
+        <tr><td>Diploma de Extensión Universitaria</td><td><strong>6 ECTS</strong></td></tr>
+      </table>
+      <div class="note teal">⚡ Nemotecnia: ESP-20 · EXP-15 · DIP-6 (descendente por 5 cada vez, luego 9).</div>
+    </div>
+
+    <!-- BLOQUE 9: calidad -->
+    <div class="card full rose">
+      <div class="ctag rose">ARTS. 25–30</div>
+      <h2>9. Ciclo de aseguramiento de la calidad</h2>
+      <div class="cols4">
+        <div class="box rose" style="text-align:center">
+          <div style="font-size:22px;font-weight:900;color:#e11d48">1.º</div>
+          <strong>Verificación</strong>
+          <div style="font-size:12px;margin-top:5px">Antes de impartir el título · Inscripción en el RUCT · Art. 26</div>
+        </div>
+        <div class="box rose" style="text-align:center">
+          <div style="font-size:22px;font-weight:900;color:#e11d48">2.º</div>
+          <strong>Seguimiento</strong>
+          <div style="font-size:12px;margin-top:5px">Supervisión periódica del título ya en marcha · Art. 28</div>
+        </div>
+        <div class="box rose" style="text-align:center">
+          <div style="font-size:22px;font-weight:900;color:#e11d48">3.º</div>
+          <strong>Modificación</strong>
+          <div style="font-size:12px;margin-top:5px">Cambios en el plan de estudios · Art. 29</div>
+        </div>
+        <div class="box rose" style="text-align:center">
+          <div style="font-size:22px;font-weight:900;color:#e11d48">4.º</div>
+          <strong>Renovación acreditación</strong>
+          <div style="font-size:12px;margin-top:5px">Evaluación periódica para mantener la acreditación · Art. 30</div>
+        </div>
+      </div>
+      <div class="cols2" style="margin-top:10px">
+        <div class="box rose">
+          <strong>RUCT (art. 27)</strong>
+          <ul>
+            <li>Registro de Universidades, Centros y Títulos</li>
+            <li>La inscripción da carácter oficial y validez en todo el territorio nacional</li>
+            <li>Requisito previo: superar la verificación</li>
+          </ul>
+        </div>
+        <div class="box rose">
+          <strong>ANECA</strong>
+          <ul>
+            <li>Agencia Nacional de Evaluación de la Calidad y Acreditación</li>
+            <li>Evalúa en el ámbito estatal</li>
+            <li>Las CCAA pueden tener su propia agencia evaluadora equivalente</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOQUE 10: trampas -->
+    <div class="card full slate">
+      <div class="ctag slate">EXAMEN</div>
+      <h2>10. Trampas frecuentes de test</h2>
+      <div class="trapgrid">
+        <div class="trap red">❌ <strong>Trampa:</strong> el Grado puede tener entre 180 y 240 ECTS.<br>✅ <strong>Correcto:</strong> el Grado ordinario tiene exactamente 240 ECTS. Las excepciones son 300 o 360.</div>
+        <div class="trap red">❌ <strong>Trampa:</strong> el Máster puede tener cualquier número de ECTS entre 60 y 120.<br>✅ <strong>Correcto:</strong> solo son posibles 60, 90 o 120 ECTS (tres valores tasados).</div>
+        <div class="trap red">❌ <strong>Trampa:</strong> las prácticas externas del Grado pueden suponer hasta el 40 % del plan.<br>✅ <strong>Correcto:</strong> las prácticas externas no pueden superar el 25 % del total de créditos.</div>
+        <div class="trap red">❌ <strong>Trampa:</strong> se puede obtener el Máster con el Grado pendiente.<br>✅ <strong>Correcto:</strong> con matrícula condicionada se cursa el Máster, pero no se obtiene el título hasta tener el Grado.</div>
+        <div class="trap red">❌ <strong>Trampa:</strong> el Experto Universitario exige 20 ECTS mínimos.<br>✅ <strong>Correcto:</strong> el Especialista exige 20 ECTS; el Experto, 15 ECTS.</div>
+        <div class="trap red">❌ <strong>Trampa:</strong> el Diploma de Extensión Universitaria necesita 15 ECTS.<br>✅ <strong>Correcto:</strong> el Diploma exige solo 6 ECTS.</div>
+        <div class="trap red">❌ <strong>Trampa:</strong> la verificación es la evaluación periódica del título ya impartido.<br>✅ <strong>Correcto:</strong> la verificación es previa a la implantación. La evaluación periódica es el seguimiento y la renovación.</div>
+        <div class="trap red">❌ <strong>Trampa:</strong> el Grado es siempre MECES 2.<br>✅ <strong>Correcto:</strong> excepcionalmente puede alcanzar MECES 3 si tiene ≥300 ECTS con 60 concordantes con Máster, previa solicitud al Consejo de Universidades.</div>
+      </div>
+    </div>
+
+  </div><!-- /grid -->
+
+  <!-- MEMORIA ULTRA-RÁPIDA -->
+  <div class="mem">
+    <h2>Versión ultra-rápida para memorizar</h2>
+    <div class="memgrid">
+      <div class="mbox"><strong>GRADO</strong>240 ECTS · MECES 2 · TFG 6–30 · básica ≥60 en 1.ª mitad · prácticas ≤25%</div>
+      <div class="mbox"><strong>MÁSTER</strong>60 / 90 / 120 ECTS · MECES 3 · TFM 6–30 · matrícula condicionada TFG+≤9 ECTS</div>
+      <div class="mbox"><strong>DOCTORADO</strong>MECES 4 · tesis original · defensa pública · acceso: Máster o equiv.</div>
+      <div class="mbox"><strong>PROPIAS</strong>Especialista ≥20 · Experto ≥15 · Diploma ≥6 · no son oficiales</div>
+      <div class="mbox"><strong>CALIDAD</strong>Verificación → Seguimiento → Modificación → Renovación · RUCT = inscripción oficial</div>
+      <div class="mbox"><strong>ECTS</strong>1 crédito = 25–30 h · 1 curso = 60 ECTS · unidad común del EEES</div>
+      <div class="mbox"><strong>MECES</strong>1 = FP · 2 = Grado · 3 = Máster · 4 = Doctor · escala europea equivalente</div>
+      <div class="mbox"><strong>RD 822/2021</strong>Sustituye RD 1393/2007 · introduce ECTS tasados en Máster y enseñanzas propias sistemáticas</div>
+    </div>
+  </div>
+
+  <div class="footer">Tema 14 · Real Decreto 822/2021 · Esquema-resumen visual para memorización rápida</div>
+</div>
+</body>
+</html>
