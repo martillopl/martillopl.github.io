@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>2_esquema_resumen_t15.html</title>
+  <style>
+    :root{
+      --bg:#f8fafc;--card:#fff;--ink:#0f172a;--muted:#475569;--line:#cbd5e1;
+      --blue:#dbeafe;--blue-b:#2563eb;
+      --green:#dcfce7;--green-b:#16a34a;
+      --amber:#fef3c7;--amber-b:#d97706;
+      --red:#fee2e2;--red-b:#dc2626;
+      --violet:#ede9fe;--violet-b:#7c3aed;
+      --teal:#ccfbf1;--teal-b:#0f766e;
+      --rose:#ffe4e6;--rose-b:#e11d48;
+      --slate:#e2e8f0;--slate-b:#475569;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;padding:24px;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45}
+    .page{max-width:1100px;margin:0 auto}
+    .hero{background:linear-gradient(135deg,#0f172a,#1e3a5f);color:#fff;padding:26px 30px;border-radius:18px;margin-bottom:20px}
+    .hero h1{margin:0 0 6px;font-size:24px;line-height:1.2}
+    .hero .sub{font-size:13px;opacity:.9}
+    .legend{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+    .leg{padding:6px 13px;border-radius:999px;font-size:12px;font-weight:700;border:2px solid}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:16px}
+    .card.full{grid-column:1/-1}
+    .card.half{grid-column:span 2}
+    .ctag{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;margin-bottom:8px;border:2px solid}
+    .card h2{margin:0 0 10px;font-size:18px;line-height:1.2}
+    .bignum{font-weight:900;line-height:1;margin:4px 0}
+    .label{font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+    .cols2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+    .cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+    .cols4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+    .cols5{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}
+    .box{border-radius:10px;padding:11px 13px;border:2px solid;font-size:13.5px}
+    .note{border-radius:10px;padding:10px 13px;font-size:13px;font-weight:700;margin-top:10px;border:2px solid}
+    table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px}
+    th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+    th{background:#f1f5f9;font-weight:700}
+    tr:nth-child(even) td{background:#fafafa}
+    ul{margin:6px 0 0 16px;padding:0}li{margin:4px 0;font-size:13.5px}
+    .pricetag{border-radius:12px;padding:14px;text-align:center;border:2px solid}
+    .pricetag .price{font-size:26px;font-weight:900;line-height:1.1}
+    .pricetag .unit{font-size:11px;color:var(--muted);font-weight:600}
+    .pricetag .desc{font-size:12px;margin-top:6px;font-weight:600}
+    .trapgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+    .trap{border-radius:10px;padding:11px 13px;border:2px solid;font-size:13px}
+    .mem{background:#0f172a;color:#f8fafc;border-radius:18px;padding:22px;margin-top:20px}
+    .mem h2{margin:0 0 14px;font-size:20px}
+    .memgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .mbox{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:12px;font-size:12.5px}
+    .mbox strong{color:#93c5fd;display:block;margin-bottom:4px}
+    .footer{text-align:center;font-size:12px;color:var(--muted);margin-top:18px}
+    /* colores */
+    .blue{background:var(--blue);border-color:var(--blue-b)}
+    .green{background:var(--green);border-color:var(--green-b)}
+    .amber{background:var(--amber);border-color:var(--amber-b)}
+    .red{background:var(--red);border-color:var(--red-b)}
+    .violet{background:var(--violet);border-color:var(--violet-b)}
+    .teal{background:var(--teal);border-color:var(--teal-b)}
+    .rose{background:var(--rose);border-color:var(--rose-b)}
+    .slate{background:var(--slate);border-color:var(--slate-b)}
+    @media(max-width:900px){
+      .grid,.cols2,.cols3,.cols4,.cols5,.trapgrid,.memgrid{grid-template-columns:1fr}
+      .card.full,.card.half{grid-column:auto}
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+  <div class="hero">
+    <h1>Tema 15 · Precios públicos UPNA 2025-2026</h1>
+    <div class="sub">Orden Foral 29E/2025, de 14 de mayo · BON n.º 120 de 17/06/2025 · Esquema-resumen visual para memorización rápida</div>
+  </div>
+
+  <div class="legend">
+    <div class="leg blue">Azul · Marco normativo</div>
+    <div class="leg green">Verde · Importes de matrícula</div>
+    <div class="leg amber">Ámbar · Pago fraccionado</div>
+    <div class="leg violet">Violeta · Exenciones y bonificaciones</div>
+    <div class="leg teal">Teal · Reconocimiento y planes extinción</div>
+    <div class="leg red">Rojo · Impago y régimen</div>
+    <div class="leg slate">Gris · Trampas de examen</div>
+  </div>
+
+  <div class="grid">
+
+    <!-- BLOQUE 1: ficha normativa -->
+    <div class="card full blue">
+      <div class="ctag blue">FICHA NORMATIVA</div>
+      <h2>1. Identidad de la norma</h2>
+      <div class="cols4">
+        <div class="box blue">
+          <strong>Denominación</strong><br>Orden Foral 29E/2025, de 14 de mayo
+        </div>
+        <div class="box blue">
+          <strong>Órgano emisor</strong><br>Consejero de Universidad, Innovación y Transformación Digital
+        </div>
+        <div class="box blue">
+          <strong>Publicación</strong><br>BON n.º 120 · 17 de junio de 2025<br>Efectos: desde el día siguiente
+        </div>
+        <div class="box blue">
+          <strong>Fundamento</strong><br>Art. 57.4.b) LOSU 2/2023<br>Art. 41 LF 14/2004
+        </div>
+      </div>
+      <div class="note blue">⚡ Contexto: los precios se mantienen sin variación desde 2022 (equiparados al curso 2011-12). Primera OF enmarcada en el convenio UPNA–Gobierno de Navarra 2025-2028 (≈ 400 M€).</div>
+    </div>
+
+    <!-- BLOQUE 2: IMPORTES -->
+    <div class="card full green">
+      <div class="ctag green">SECCIÓN IV</div>
+      <h2>2. Importes de primera matrícula (€/crédito)</h2>
+      <div class="cols5">
+        <div class="pricetag green">
+          <div class="price" style="color:#16a34a">15,10</div>
+          <div class="unit">€ / crédito</div>
+          <div class="desc">Grado<br>baja experimentalidad</div>
+        </div>
+        <div class="pricetag green">
+          <div class="price" style="color:#16a34a">21,38</div>
+          <div class="unit">€ / crédito</div>
+          <div class="desc">Grado<br>alta experimentalidad</div>
+        </div>
+        <div class="pricetag amber">
+          <div class="price" style="color:#d97706">17,95</div>
+          <div class="unit">€ / crédito</div>
+          <div class="desc">Máster habilitante<br>baja experimentalidad</div>
+        </div>
+        <div class="pricetag amber">
+          <div class="price" style="color:#d97706">21,38</div>
+          <div class="unit">€ / crédito</div>
+          <div class="desc">Máster habilitante<br>alta experimentalidad</div>
+        </div>
+        <div class="pricetag rose">
+          <div class="price" style="color:#e11d48">28,35</div>
+          <div class="unit">€ / crédito</div>
+          <div class="desc">Máster<br>NO habilitante (posgrado)</div>
+        </div>
+      </div>
+      <div class="note green">⚡ Doctorado: NO se calcula por crédito. Se abona como <strong>tutela académica + tasas administrativas</strong> (Anexo III). · El Consejo Social puede incrementar hasta el 100 % del coste para alumnado extranjero no residente no UE, visitante y agregado.</div>
+    </div>
+
+    <!-- BLOQUE 3: pago fraccionado -->
+    <div class="card half amber">
+      <div class="ctag amber">SECCIÓN III</div>
+      <h2>3. Formas de pago</h2>
+      <div class="cols2">
+        <div class="box amber">
+          <strong>Pago único</strong>
+          <ul>
+            <li>En el plazo de la carta de pago</li>
+            <li>Siempre en periodos extraordinarios</li>
+            <li>Siempre si importe &lt; 350 €</li>
+          </ul>
+        </div>
+        <div class="box amber">
+          <strong>Pago fraccionado (4 plazos)</strong>
+          <ul>
+            <li><strong>40 %</strong> al formalizar matrícula</li>
+            <li><strong>20 %</strong> del 13 al 31 oct. 2025</li>
+            <li><strong>20 %</strong> del 12 al 30 ene. 2026</li>
+            <li><strong>20 %</strong> del 13 al 30 abr. 2026</li>
+          </ul>
+        </div>
+      </div>
+      <div class="note amber">⚡ Tasas admin. + seguro escolar → íntegros en el <strong>PRIMER PAGO</strong> del fraccionado. · Mínimo para fraccionar: <strong>350 €</strong>.</div>
+    </div>
+
+    <!-- BLOQUE 4: impago -->
+    <div class="card red">
+      <div class="ctag red">SECCIÓN II</div>
+      <h2>4. Impago y régimen de cobro</h2>
+      <div class="box red">
+        <strong>Consecuencias del impago</strong>
+        <ul>
+          <li>Requisito previo a la matrícula: no tener deudas de cursos anteriores</li>
+          <li>Impago → suspensión temporal de derechos</li>
+          <li>Impago → posible anulación de la matrícula</li>
+          <li><strong>Sin derecho a reintegro</strong> en caso de anulación</li>
+          <li>La UPNA adopta las medidas que estime oportunas</li>
+        </ul>
+      </div>
+      <div class="note red">⚡ La anulación por impago NO genera derecho a reintegro.</div>
+    </div>
+
+    <!-- BLOQUE 5: exenciones totales -->
+    <div class="card full violet">
+      <div class="ctag violet">SECCIÓN V — EXENCIONES Y BONIFICACIONES</div>
+      <h2>5. Quién paga qué</h2>
+      <div class="cols3">
+        <div class="box violet">
+          <strong>EXENCIÓN TOTAL — precios académicos y tasas</strong>
+          <ul>
+            <li>Familia numerosa <strong>especial</strong></li>
+            <li>Familia monoparental <strong>especial</strong> (LF 5/2019)</li>
+            <li>Discapacidad ≥ 33 % (art. 32.6 LOSU)</li>
+            <li>Matrícula de honor global Bachillerato / FP / Ens. Profesionales → exención 1.er año</li>
+            <li>Premio Extraordinario de Bachillerato / FP / Ens. Prof. en Navarra 2024-25 → exención 1.er año</li>
+            <li>Solicitantes/beneficiarios protección internacional, temporal o apatridia (sin título del mismo nivel)</li>
+            <li>Dobles títulos interuniversitarios por reciprocidad</li>
+          </ul>
+        </div>
+        <div class="box rose">
+          <strong>EXENCIÓN precios académicos · PAGAN tasas admin.</strong>
+          <ul>
+            <li>Víctimas del terrorismo (y cónyuge e hijos/as)</li>
+            <li>Víctimas de violencia de género (y hijos/as)</li>
+          </ul>
+          <div style="margin-top:8px;font-size:12.5px;font-weight:700">⚡ No pagan el precio del crédito, pero sí las tasas administrativas.</div>
+        </div>
+        <div class="box amber">
+          <strong>BONIFICACIÓN DEL 50 %</strong>
+          <ul>
+            <li>Familia numerosa <strong>general</strong></li>
+            <li>Familia monoparental <strong>general</strong> (LF 5/2019)</li>
+          </ul>
+          <div style="margin-top:8px">
+          <strong>BONIFICACIÓN = precio 1.ª mat.</strong>
+          <ul>
+            <li>Matrícula de honor en asignatura/s de la UPNA: bonificación igual al precio de 1.ª matrícula de los créditos con MdH</li>
+          </ul>
+          </div>
+        </div>
+      </div>
+      <div class="note violet">⚡ Las condiciones se verifican a la fecha de la <strong>SOLICITUD DE MATRÍCULA</strong> · No caben exenciones no previstas en la OF · El Departamento UITD abona a la UPNA el importe de: fam. num., fam. monoparental, discapacidad y protección internacional.</div>
+    </div>
+
+    <!-- BLOQUE 6: reconocimiento -->
+    <div class="card teal">
+      <div class="ctag teal">SECCIÓN VI</div>
+      <h2>6. Reconocimiento de estudios</h2>
+      <div class="cols2">
+        <div class="pricetag teal">
+          <div class="price" style="font-size:36px;color:#0f766e">25 %</div>
+          <div class="desc">Créditos reconocidos<br>de <strong>otra universidad</strong> o centro externo</div>
+        </div>
+        <div class="pricetag teal">
+          <div class="price" style="font-size:36px;color:#0f766e">10 %</div>
+          <div class="desc">Créditos reconocidos<br>de la <strong>propia UPNA</strong></div>
+        </div>
+      </div>
+      <div class="note teal">⚡ Más un precio administrativo del proceso de reconocimiento (Anexo III).</div>
+    </div>
+
+    <!-- BLOQUE 7: planes en extinción -->
+    <div class="card teal">
+      <div class="ctag teal">SECCIÓN VII</div>
+      <h2>7. Materias sin docencia</h2>
+      <div class="cols2">
+        <div class="pricetag green">
+          <div class="price" style="font-size:30px;color:#16a34a">100 %</div>
+          <div class="desc">Con docencia<br>alternativa ofrecida<br>por la UPNA</div>
+        </div>
+        <div class="pricetag amber">
+          <div class="price" style="font-size:30px;color:#d97706">25 %</div>
+          <div class="desc">Sin docencia<br>alternativa por la UPNA<br>(plan en extinción)</div>
+        </div>
+      </div>
+      <div class="note teal">⚡ Mismo porcentaje que el reconocimiento externo (25 %), pero con causa distinta.</div>
+    </div>
+
+    <!-- BLOQUE 8: comparativa exenciones -->
+    <div class="card full teal">
+      <div class="ctag teal">COMPARATIVA COLECTIVOS</div>
+      <h2>8. Colectivos protegidos: tipo de beneficio y norma</h2>
+      <table>
+        <tr><th>Colectivo</th><th>Beneficio</th><th>Norma de referencia</th><th>Pagan tasas admin.</th></tr>
+        <tr><td>Familia numerosa <strong>especial</strong></td><td>Exención total</td><td>Ley 40/2003</td><td>No</td></tr>
+        <tr><td>Familia numerosa <strong>general</strong></td><td>50 % de descuento</td><td>Ley 40/2003</td><td>Sí (pagan el 50 %)</td></tr>
+        <tr><td>Familia monoparental <strong>especial</strong></td><td>Exención total</td><td>LF 5/2019</td><td>No</td></tr>
+        <tr><td>Familia monoparental <strong>general</strong></td><td>50 % de descuento</td><td>LF 5/2019</td><td>Sí (pagan el 50 %)</td></tr>
+        <tr><td>Discapacidad ≥ 33 %</td><td>Exención total</td><td>Art. 32.6 LOSU + RDL 1/2013</td><td>No</td></tr>
+        <tr><td>Víctimas del terrorismo (y familia)</td><td>Exención precios académicos</td><td>Ley 32/1999</td><td>Sí (solo tasas)</td></tr>
+        <tr><td>Víctimas violencia de género (y hijos/as)</td><td>Exención precios académicos</td><td>Art. 32.6 LOSU + LO 1/2004</td><td>Sí (solo tasas)</td></tr>
+        <tr><td>Protección internacional / temporal / apatridia</td><td>Exención total (sin título del mismo nivel)</td><td>OF 29E/2025</td><td>No</td></tr>
+        <tr><td>MdH global Bachillerato / FP / Ens. Prof.</td><td>Exención total 1.er año</td><td>OF 29E/2025</td><td>No</td></tr>
+        <tr><td>Premio Extraordinario Bachillerato / FP Nav. 2024-25</td><td>Exención total 1.er año; reintegro si llega después del pago</td><td>OF 29E/2025</td><td>No</td></tr>
+        <tr><td>Matrícula de honor en asignatura/s UPNA</td><td>Bonificación = precio 1.ª matr. de créditos con MdH</td><td>OF 29E/2025</td><td>Sí (pagan el resto)</td></tr>
+      </table>
+      <div class="note teal">⚡ Quién reembolsa a la UPNA: el <strong>Departamento de Universidad, Innovación y Transformación Digital</strong> abona el importe de fam. num., monoparental, discapacidad y protección internacional. Las víctimas de terrorismo y violencia de género no generan precio académico que reembolsar.</div>
+    </div>
+
+    <!-- BLOQUE 9: trampas -->
+    <div class="card full slate">
+      <div class="ctag slate">EXAMEN</div>
+      <h2>9. Trampas frecuentes de test</h2>
+      <div class="trapgrid">
+        <div class="trap red">❌ El Rector puede incrementar los precios para extranjeros no residentes.<br>✅ Es el <strong>Consejo Social</strong>, no el Rector ni el Consejo de Gobierno.</div>
+        <div class="trap red">❌ La anulación de matrícula por impago da derecho a reintegro.<br>✅ La anulación por impago <strong>no genera derecho a reintegro</strong>.</div>
+        <div class="trap red">❌ El fraccionamiento puede usarse con cualquier importe de matrícula.<br>✅ No se aplica si el importe total es <strong>inferior a 350 euros</strong>.</div>
+        <div class="trap red">❌ El segundo pago del fraccionado es el 40 %.<br>✅ El <strong>primer pago es el 40 %</strong>; el segundo, tercero y cuarto son del 20 % cada uno.</div>
+        <div class="trap red">❌ Las víctimas de terrorismo están exentas de todo pago.<br>✅ Están exentas de los precios académicos, pero <strong>pagan las tasas administrativas</strong>.</div>
+        <div class="trap red">❌ La familia numerosa general tiene exención total.<br>✅ La general tiene <strong>bonificación del 50 %</strong>; solo la especial tiene exención total.</div>
+        <div class="trap red">❌ La familia monoparental se regula por la Ley 40/2003.<br>✅ La familia monoparental en Navarra se regula por la <strong>Ley Foral 5/2019</strong>; la Ley 40/2003 es de familias numerosas.</div>
+        <div class="trap red">❌ El reconocimiento de créditos de la UPNA cuesta el 25 %.<br>✅ Créditos de la UPNA = <strong>10 %</strong>; créditos externos = 25 %.</div>
+        <div class="trap red">❌ Las exenciones se comprueban a la fecha del pago de la matrícula.<br>✅ Se comprueban a la <strong>fecha de la solicitud de matrícula</strong>.</div>
+        <div class="trap red">❌ En periodos extraordinarios se puede fraccionar el pago.<br>✅ En periodos extraordinarios (y recálculo por beca) <strong>siempre es pago único</strong>.</div>
+      </div>
+    </div>
+
+  </div><!-- /grid -->
+
+  <div class="mem">
+    <h2>Versión ultra-rápida para memorizar</h2>
+    <div class="memgrid">
+      <div class="mbox"><strong>PRECIOS €/crédito 1.ª mat.</strong>G-baja 15,10 · G-alta 21,38 · M-hab-baja 17,95 · M-hab-alta 21,38 · M-no-hab 28,35 · Doctorado = tutela académica</div>
+      <div class="mbox"><strong>FRACCIONADO</strong>40+20+20+20 (oct/ene/abr) · mínimo 350 € · tasas + seguro = primer pago íntegro · extra. = pago único</div>
+      <div class="mbox"><strong>EXENCIONES TOTALES</strong>Fam.num.ESPECIAL · Monopar.ESPECIAL · Discap.≥33% · Protec.intern. · MdH Bachillerato · Premio Extraordinario Navarra</div>
+      <div class="mbox"><strong>BONIFIC. 50%</strong>Fam.num.GENERAL · Monopar.GENERAL (LF 5/2019) · Víct.terrorismo y viol.género = exención acad. + pagan tasas</div>
+      <div class="mbox"><strong>RECONOCIMIENTO</strong>Externo = 25 % · Propia UPNA = 10 % · Sin docencia alternativa = 25 %</div>
+      <div class="mbox"><strong>QUIÉN REEMBOLSA</strong>Departamento UITD → abona a UPNA las exenciones de fam.num., monopar., discapacidad y protec.internacional</div>
+      <div class="mbox"><strong>CONSEJO SOCIAL</strong>Puede subir precios hasta 100% coste real para extranjeros no residentes no UE, visitantes y agregados</div>
+      <div class="mbox"><strong>IMPAGO</strong>Suspensión de derechos + posible anulación SIN REINTEGRO · UPNA decide las medidas · condiciones exención = fecha solicitud</div>
+    </div>
+  </div>
+
+  <div class="footer">Tema 15 · Orden Foral 29E/2025 · Esquema-resumen visual para memorización rápida · UPNA 2025-2026</div>
+</div>
+</body>
+</html>
