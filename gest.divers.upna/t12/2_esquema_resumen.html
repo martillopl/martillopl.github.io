@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>2_esquema_resumen_t12.html</title>
+  <style>
+    :root{
+      --bg:#f8fafc;--card:#fff;--ink:#0f172a;--muted:#475569;--line:#cbd5e1;
+      --red:#fee2e2;--red-b:#dc2626;
+      --blue:#dbeafe;--blue-b:#2563eb;
+      --amber:#fef3c7;--amber-b:#d97706;
+      --green:#dcfce7;--green-b:#16a34a;
+      --violet:#ede9fe;--violet-b:#7c3aed;
+      --slate:#e2e8f0;--slate-b:#475569;
+      --teal:#ccfbf1;--teal-b:#0f766e;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;padding:24px;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45}
+    .page{max-width:1100px;margin:0 auto}
+    .hero{background:linear-gradient(135deg,#0f172a,#1e3a5f);color:#fff;padding:26px;border-radius:18px;margin-bottom:20px}
+    .hero h1{margin:0 0 6px;font-size:28px}
+    .hero .sub{font-size:14px;opacity:.9}
+    .legend{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:20px}
+    .leg{padding:7px 14px;border-radius:999px;font-size:13px;font-weight:700;border:2px solid}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .card{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:16px}
+    .card.full{grid-column:1/-1}
+    .ctag{display:inline-block;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;margin-bottom:8px}
+    .card h2{margin:0 0 10px;font-size:19px}
+    .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .pill{padding:7px 12px;border-radius:999px;font-size:13px;font-weight:700;border:2px solid}
+    table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px}
+    th,td{border:1px solid var(--line);padding:9px 10px;vertical-align:top;text-align:left}
+    th{background:#f1f5f9;font-weight:700}
+    tr:nth-child(even) td{background:#fafafa}
+    .box{border-radius:10px;padding:11px 13px;margin-top:10px;border:2px solid;font-size:13.5px}
+    .cols{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+    .bigline{font-size:21px;font-weight:800;margin:8px 0 4px}
+    .note{border-radius:10px;padding:10px 13px;font-size:13px;font-weight:700;margin-top:10px}
+    ul{margin:6px 0 0 18px;padding:0}li{margin:4px 0}
+    .mem{background:#0f172a;color:#f8fafc;border-radius:18px;padding:20px;margin-top:20px}
+    .mem h2{margin:0 0 14px;font-size:20px}
+    .memgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .mbox{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:12px;font-size:13px}
+    .mbox strong{color:#93c5fd}
+    .footer{text-align:center;font-size:12px;color:var(--muted);margin-top:18px}
+    .red{background:var(--red);border-color:var(--red-b)}
+    .blue{background:var(--blue);border-color:var(--blue-b)}
+    .amber{background:var(--amber);border-color:var(--amber-b)}
+    .green{background:var(--green);border-color:var(--green-b)}
+    .violet{background:var(--violet);border-color:var(--violet-b)}
+    .slate{background:var(--slate);border-color:var(--slate-b)}
+    .teal{background:var(--teal);border-color:var(--teal-b)}
+    @media(max-width:820px){.grid,.cols,.memgrid{grid-template-columns:1fr}.card.full{grid-column:auto}}
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+  <div class="hero">
+    <h1>Tema 12 · Invalidez, nulidad, anulabilidad y revisión de oficio</h1>
+    <div class="sub">Ley 39/2015 · Arts. 47–52 y 106–110 · Esquema-resumen visual para memorización rápida</div>
+  </div>
+
+  <div class="legend">
+    <div class="leg red">Rojo · Nulidad de pleno derecho</div>
+    <div class="leg amber">Ámbar · Anulabilidad</div>
+    <div class="leg blue">Azul · Revisión de oficio</div>
+    <div class="leg violet">Violeta · Lesividad</div>
+    <div class="leg green">Verde · Revocación y rectificación</div>
+    <div class="leg slate">Gris · Trampas de examen</div>
+  </div>
+
+  <div class="grid">
+
+    <!-- BLOQUE 1: niveles de invalidez -->
+    <div class="card full blue">
+      <div class="ctag blue">ARTS. 47–48</div>
+      <h2>1. Los tres niveles de invalidez</h2>
+      <table>
+        <tr><th>Nivel</th><th>Artículo</th><th>Causas</th><th>¿Prescribe?</th><th>¿Convalidable?</th><th>Clave de examen</th></tr>
+        <tr><td><strong>Nulidad de pleno derecho</strong></td><td>47</td><td>Tasadas: 7 letras (a–g)</td><td>No</td><td>No</td><td>Acto inexistente desde el origen</td></tr>
+        <tr><td><strong>Anulabilidad</strong></td><td>48</td><td>Cualquier infracción del ordenamiento, incl. desviación de poder</td><td>Sí</td><td>Sí</td><td>Regla general; el acto existe hasta que se anula</td></tr>
+        <tr><td><strong>Irregularidad no invalidante</strong></td><td>48.2 y 48.3</td><td>Defecto de forma sin indefensión; actuación fuera de plazo sin consecuencias</td><td>—</td><td>—</td><td>El acto es válido a pesar del vicio</td></tr>
+      </table>
+    </div>
+
+    <!-- BLOQUE 2: causas de nulidad -->
+    <div class="card red">
+      <div class="ctag red">ART. 47</div>
+      <h2>2. Las 7 causas de nulidad</h2>
+      <div class="bigline">TASADAS Y RESTRICTIVAS</div>
+      <table>
+        <tr><th>Letra</th><th>Causa</th></tr>
+        <tr><td>a)</td><td>Lesión de derechos fundamentales susceptibles de amparo</td></tr>
+        <tr><td>b)</td><td>Incompetencia <strong>manifiesta</strong> por razón de materia o territorio</td></tr>
+        <tr><td>c)</td><td>Contenido imposible</td></tr>
+        <tr><td>d)</td><td>Constitutivo de infracción penal o dictado como consecuencia de ella</td></tr>
+        <tr><td>e)</td><td>Prescindir <strong>total y absolutamente</strong> del procedimiento establecido</td></tr>
+        <tr><td>f)</td><td>Adquisición de facultades o derechos <strong>sin reunir los requisitos esenciales</strong></td></tr>
+        <tr><td>g)</td><td>Cualquier otro establecido por norma con rango de ley</td></tr>
+      </table>
+      <div class="note red">⚡ Solo materia y territorio en la letra b). La incompetencia jerárquica → anulabilidad.</div>
+    </div>
+
+    <!-- BLOQUE 3: anulabilidad -->
+    <div class="card amber">
+      <div class="ctag amber">ART. 48</div>
+      <h2>3. Anulabilidad</h2>
+      <div class="bigline">REGLA GENERAL DE INVALIDEZ</div>
+      <div class="pills">
+        <div class="pill amber">Cualquier infracción del ordenamiento</div>
+        <div class="pill amber">Incluye desviación de poder</div>
+        <div class="pill amber">El acto existe y produce efectos</div>
+        <div class="pill amber">Prescribe con los plazos de impugnación</div>
+        <div class="pill amber">Solo pueden alegarla los legitimados</div>
+        <div class="pill amber">Convalidable (art. 52)</div>
+      </div>
+      <div class="note amber">Si el vicio no encaja en el art. 47 → es anulabilidad o irregularidad.</div>
+    </div>
+
+    <!-- BLOQUE 4: conservación, conversión, convalidación -->
+    <div class="card teal">
+      <div class="ctag teal">ARTS. 49–52</div>
+      <h2>4. Efectos de la invalidez</h2>
+      <table>
+        <tr><th>Figura</th><th>Qué hace</th><th>Art.</th></tr>
+        <tr><td>Invalidez parcial</td><td>La nulidad de una parte no arrastra el resto si es independiente</td><td>49</td></tr>
+        <tr><td>Conservación</td><td>Se conservan trámites cuyo contenido hubiera sido el mismo sin el vicio</td><td>50</td></tr>
+        <tr><td>Conversión</td><td>El acto nulo puede producir efectos de otro acto distinto si es lícito y no perjudica al interesado</td><td>51</td></tr>
+        <tr><td>Convalidación</td><td>Subsanación de actos anulables; efectos desde el acto original; solo si no ha prescrito la acción</td><td>52</td></tr>
+      </table>
+      <div class="note teal">Convalidación solo para anulables. Nulos no se convalidan.</div>
+    </div>
+
+    <!-- BLOQUE 5: mecanismos revisión -->
+    <div class="card full blue">
+      <div class="ctag blue">ARTS. 106–110</div>
+      <h2>5. Mecanismos de revisión en vía administrativa</h2>
+      <table>
+        <tr><th>Mecanismo</th><th>Acto que revisa</th><th>Motivo</th><th>Plazo</th><th>¿Consejo de Estado?</th><th>Art.</th></tr>
+        <tr><td><strong>Revisión de oficio</strong></td><td>Nulos de pleno derecho (favorables o desfavorables)</td><td>Nulidad art. 47</td><td><strong>Sin plazo</strong></td><td><strong>Sí, preceptivo</strong></td><td>106</td></tr>
+        <tr><td><strong>Declaración de lesividad</strong></td><td>Anulables <strong>favorables</strong> para el interesado</td><td>Anulabilidad + lesión interés público</td><td><strong>4 años</strong></td><td>No preceptivo</td><td>107</td></tr>
+        <tr><td><strong>Revocación</strong></td><td>Actos de <strong>gravamen</strong> o desfavorables</td><td>Oportunidad o legalidad (no nulidad)</td><td>En cualquier momento</td><td>No</td><td>109.1</td></tr>
+        <tr><td><strong>Rectificación de errores</strong></td><td>Cualquier acto con error material, de hecho o aritmético</td><td>Error expresivo</td><td>En cualquier momento</td><td>No</td><td>109.2</td></tr>
+      </table>
+    </div>
+
+    <!-- BLOQUE 6: revisión de oficio -->
+    <div class="card blue">
+      <div class="ctag blue">ART. 106</div>
+      <h2>6. Revisión de oficio</h2>
+      <div class="bigline">SIN PLAZO · DICTAMEN PRECEPTIVO</div>
+      <ul>
+        <li>Objeto: actos nulos de pleno derecho (art. 47)</li>
+        <li>Iniciativa: de oficio o a instancia del interesado</li>
+        <li>Dictamen: Consejo de Estado u órgano consultivo autonómico equivalente → preceptivo</li>
+        <li>Plazo para resolver: 3 meses → silencio NEGATIVO si lo pidió el interesado</li>
+        <li>Suspensión: puede acordarse durante la tramitación (art. 108)</li>
+        <li>Límite: art. 110 (equidad, buena fe, derechos de particulares, leyes)</li>
+      </ul>
+      <div class="note blue">⚡ Sin plazo para iniciar + dictamen preceptivo = señas de identidad de la revisión de oficio.</div>
+    </div>
+
+    <!-- BLOQUE 7: declaración de lesividad -->
+    <div class="card violet">
+      <div class="ctag violet">ART. 107</div>
+      <h2>7. Declaración de lesividad</h2>
+      <div class="bigline">4 AÑOS · SIN CONSEJO DE ESTADO</div>
+      <div class="cols">
+        <div class="box violet">
+          <strong>Cuándo procede</strong>
+          <ul>
+            <li>Actos anulables</li>
+            <li>Favorables para el interesado</li>
+            <li>Lesivos para el interés público</li>
+          </ul>
+        </div>
+        <div class="box violet">
+          <strong>Qué ocurre después</strong>
+          <ul>
+            <li>La AAPP interpone recurso contencioso-administrativo</li>
+            <li>Silencio al resolver: negativo</li>
+            <li>Suspensión: puede acordarse (art. 108)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="note violet">4 años = plazo para declarar la lesividad. La revisión de oficio no tiene plazo.</div>
+    </div>
+
+    <!-- BLOQUE 8: revocación y rectificación -->
+    <div class="card green">
+      <div class="ctag green">ART. 109</div>
+      <h2>8. Revocación y rectificación</h2>
+      <table>
+        <tr><th></th><th>Revocación (109.1)</th><th>Rectificación (109.2)</th></tr>
+        <tr><td>Objeto</td><td>Actos de gravamen o desfavorables</td><td>Errores materiales, de hecho o aritméticos</td></tr>
+        <tr><td>Quién puede</td><td>La AAPP que lo dictó</td><td>La AAPP que lo dictó, de oficio o a instancia</td></tr>
+        <tr><td>Plazo</td><td>En cualquier momento</td><td>En cualquier momento</td></tr>
+        <tr><td>Límites</td><td>No dispensa ilegal; no contra igualdad ni interés público</td><td>No altera el fondo del acto</td></tr>
+        <tr><td>Dictamen Consejo de Estado</td><td>No</td><td>No</td></tr>
+      </table>
+    </div>
+
+    <!-- BLOQUE 9: límites art. 110 -->
+    <div class="card amber">
+      <div class="ctag amber">ART. 110</div>
+      <h2>9. Límites generales de la revisión</h2>
+      <div class="bigline">FRENO FINAL A LA POTESTAD REVISORA</div>
+      <div class="pills">
+        <div class="pill amber">Equidad</div>
+        <div class="pill amber">Buena fe</div>
+        <div class="pill amber">Derechos de particulares</div>
+        <div class="pill amber">Las leyes</div>
+      </div>
+      <div class="note amber">Aunque exista causa de nulidad, el art. 110 puede impedir la revisión si resulta manifiestamente injusta.</div>
+    </div>
+
+    <!-- BLOQUE 10: trampas -->
+    <div class="card full slate">
+      <div class="ctag slate">EXAMEN</div>
+      <h2>10. Trampas frecuentes de test</h2>
+      <table>
+        <tr><th>Error típico</th><th>Respuesta correcta</th></tr>
+        <tr><td>La incompetencia jerárquica es causa de nulidad</td><td>No: solo la incompetencia manifiesta por razón de materia o territorio (art. 47.b)</td></tr>
+        <tr><td>Tramitar mal el procedimiento es nulidad</td><td>Solo si se prescinde TOTAL y ABSOLUTAMENTE del mismo (art. 47.e); si se hace mal → anulabilidad</td></tr>
+        <tr><td>Los actos nulos pueden convalidarse</td><td>No: solo los anulables (art. 52)</td></tr>
+        <tr><td>La revisión de oficio tiene un plazo de 4 años</td><td>No tiene plazo; los 4 años son de la lesividad (art. 107)</td></tr>
+        <tr><td>Para la lesividad se necesita dictamen del Consejo de Estado</td><td>No: el dictamen preceptivo es solo para la revisión de oficio (art. 106)</td></tr>
+        <tr><td>La lesividad sirve para revisar actos nulos</td><td>No: es para actos anulables favorables; los nulos se revisan por art. 106</td></tr>
+        <tr><td>El silencio en la revisión de oficio pedida por el interesado es positivo</td><td>Es negativo (desestimación) transcurridos 3 meses</td></tr>
+        <tr><td>La revocación puede aplicarse a actos favorables</td><td>No: la revocación es para actos de gravamen; los favorables se revisan por lesividad</td></tr>
+        <tr><td>El defecto de forma siempre causa anulabilidad</td><td>Solo cuando impide el fin del acto o causa indefensión (art. 48.2)</td></tr>
+        <tr><td>La rectificación de errores requiere dictamen del Consejo de Estado</td><td>No lo requiere en ningún caso</td></tr>
+      </table>
+    </div>
+
+  </div><!-- /grid -->
+
+  <div class="mem">
+    <h2>Versión ultra-rápida para memorizar</h2>
+    <div class="memgrid">
+      <div class="mbox"><strong>Nulidad (art. 47):</strong> 7 causas tasadas · no prescribe · no convalida · acto inexistente</div>
+      <div class="mbox"><strong>Anulabilidad (art. 48):</strong> cualquier infracción · regla general · sí prescribe · sí convalida</div>
+      <div class="mbox"><strong>Irregularidad:</strong> no invalida si no hay indefensión ni impide el fin del acto</div>
+      <div class="mbox"><strong>Revisión de oficio (106):</strong> nulo → sin plazo → Consejo de Estado preceptivo → silencio negativo</div>
+      <div class="mbox"><strong>Lesividad (107):</strong> anulable favorable → 4 años → sin Consejo de Estado → luego contencioso</div>
+      <div class="mbox"><strong>Revocación (109.1):</strong> gravamen → en cualquier momento · Rectificación (109.2): error material → en cualquier momento</div>
+    </div>
+  </div>
+
+  <div class="footer">Tema 12 · Ley 39/2015 · Esquema-resumen visual para memorización rápida</div>
+</div>
+</body>
+</html>

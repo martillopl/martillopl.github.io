@@ -1,0 +1,170 @@
+TEMA 12 · LEY 39/2015 · PUNTOS DE EXAMEN Y ARTÍCULOS CLAVE
+=============================================================
+La teoría de la invalidez del acto administrativo.
+Nulidad y anulabilidad. La revisión de los actos en vía
+administrativa. La revisión de oficio.
+=============================================================
+
+==============================
+A) ARTÍCULOS IMPRESCINDIBLES
+==============================
+
+ART. 47   → Nulidad de pleno derecho: 7 causas tasadas (letras a–g).
+ART. 48   → Anulabilidad: regla general de invalidez.
+ART. 48.2 → Defecto de forma: solo anula si impide el fin o causa indefensión.
+ART. 48.3 → Actuación fuera de plazo: solo anula si así lo impone la naturaleza.
+ART. 49   → Límites a la extensión de la nulidad: invalidez parcial.
+ART. 50   → Conservación de actuaciones y trámites.
+ART. 51   → Conversión de actos viciados.
+ART. 52   → Convalidación de actos anulables.
+ART. 106  → Revisión de oficio de actos nulos (de oficio o a instancia).
+ART. 107  → Declaración de lesividad (actos anulables favorables).
+ART. 108  → Suspensión durante la tramitación del art. 106 y 107.
+ART. 109  → Revocación de actos de gravamen + rectificación de errores.
+ART. 110  → Límites de la revisión (equidad, buena fe, derechos, leyes).
+
+======================================
+B) PUNTOS QUE CAEN EN EXAMEN TEST
+======================================
+
+1. NULIDAD DE PLENO DERECHO (ART. 47)
+──────────────────────────────────────
+• Causas TASADAS: solo las 7 del art. 47.
+• La letra b) exige incompetencia MANIFIESTA por razón de MATERIA o TERRITORIO.
+  → La incompetencia jerárquica NO es nulidad; es anulabilidad.
+• La letra e) cubre PRESCINDIR TOTAL y ABSOLUTAMENTE del procedimiento.
+  → Seguirlo mal → anulabilidad; no seguirlo en absoluto → nulidad.
+• La letra f) cubre adquisición de derechos SIN REQUISITOS ESENCIALES.
+• El acto nulo NO prescribe, NO se puede convalidar, es insubsanable.
+
+2. ANULABILIDAD (ART. 48)
+──────────────────────────
+• Regla general: CUALQUIER infracción del ordenamiento, incluso desviación de poder.
+• El acto EXISTE y produce efectos hasta que se anule.
+• El acto anulable PUEDE CONVALIDARSE (art. 52).
+• PRESCRIBE: la acción caduca en los plazos de impugnación.
+• Solo pueden alegarla los interesados con legitimación.
+
+3. IRREGULARIDADES NO INVALIDANTES (ART. 48.2 y 48.3)
+────────────────────────────────────────────────────────
+• Defecto de forma: no anula si el acto cumplió su fin y no causó indefensión.
+• Actuación fuera de plazo: solo anula si la naturaleza del término lo exige.
+
+4. CONVALIDACIÓN (ART. 52)
+────────────────────────────
+• Solo para actos ANULABLES; jamás para actos NULOS de pleno derecho.
+• Tiene efectos desde la fecha del acto convalidado, salvo perjuicio a terceros de buena fe.
+• Solo es posible si no ha transcurrido el plazo de impugnación.
+
+5. REVISIÓN DE OFICIO (ART. 106)
+──────────────────────────────────
+• Objeto: actos nulos de pleno derecho (art. 47).
+• Iniciativa: de oficio o a instancia del interesado.
+• SIN PLAZO para iniciarla (la nulidad no prescribe).
+• Dictamen preceptivo: Consejo de Estado u órgano consultivo autonómico equivalente.
+• Plazo para resolver: 3 meses. Si no se resuelve y lo pidió el interesado → silencio NEGATIVO.
+• Límite: art. 110 (equidad, buena fe, derechos de particulares, leyes).
+
+6. DECLARACIÓN DE LESIVIDAD (ART. 107)
+─────────────────────────────────────────
+• Objeto: actos FAVORABLES para los interesados que sean ANULABLES (art. 48).
+• Plazo: 4 AÑOS desde que se dictó el acto.
+• Dictamen del Consejo de Estado: NO es preceptivo (a diferencia del art. 106).
+• Plazo para resolver: 3 meses; silencio = desestimación.
+• Tras la declaración: la AAPP interpone recurso contencioso-administrativo.
+
+7. REVOCACIÓN (ART. 109.1)
+────────────────────────────
+• Objeto: actos de GRAVAMEN o DESFAVORABLES (no los favorables).
+• En cualquier momento.
+• Límites: no puede ser dispensa ilegal; no puede ir contra la igualdad ni el interés público.
+
+8. RECTIFICACIÓN DE ERRORES (ART. 109.2)
+──────────────────────────────────────────
+• Errores materiales, de hecho o aritméticos.
+• De oficio o a instancia del interesado.
+• En cualquier momento.
+• No requiere dictamen del Consejo de Estado.
+• No modifica el fondo del acto.
+
+9. LÍMITES DE LA REVISIÓN (ART. 110)
+──────────────────────────────────────
+• No puede ejercerse si resulta contraria a la equidad, buena fe, derechos de particulares o leyes.
+• Aplica a todos los mecanismos del Capítulo I del Título V.
+
+======================================
+C) TRAMPAS FRECUENTES EN TEST
+======================================
+
+1. "La incompetencia jerárquica es causa de nulidad de pleno derecho."
+   → FALSO. Solo la incompetencia MANIFIESTA por razón de MATERIA o TERRITORIO (art. 47.b).
+
+2. "Omitir un trámite del procedimiento es nulidad de pleno derecho."
+   → FALSO. Solo si se prescinde TOTAL y ABSOLUTAMENTE del procedimiento (art. 47.e).
+   Si se omite un trámite → anulabilidad (art. 48).
+
+3. "Los actos nulos pueden convalidarse."
+   → FALSO. Solo los anulables pueden convalidarse (art. 52).
+
+4. "La revisión de oficio tiene un plazo de 4 años."
+   → FALSO. La revisión de oficio del art. 106 NO TIENE PLAZO.
+   Los 4 años son de la declaración de lesividad (art. 107).
+
+5. "Para la declaración de lesividad se requiere dictamen del Consejo de Estado."
+   → FALSO. El dictamen preceptivo del Consejo de Estado es para la revisión de oficio (art. 106),
+   no para la lesividad (art. 107).
+
+6. "La lesividad puede usarse para revisar actos nulos."
+   → FALSO. La lesividad es para actos ANULABLES favorables. Los nulos se revisan por art. 106.
+
+7. "El silencio en la revisión de oficio pedida por el interesado es positivo."
+   → FALSO. Es NEGATIVO (desestimatorio) transcurridos 3 meses sin resolución.
+
+8. "La revocación puede aplicarse a actos favorables para el interesado."
+   → FALSO. La revocación es para actos de GRAVAMEN. Los favorables se impugnan por lesividad.
+
+9. "El defecto de forma siempre causa anulabilidad."
+   → FALSO. Solo cuando impide alcanzar el fin del acto o causa indefensión (art. 48.2).
+
+10. "La rectificación de errores requiere dictamen del Consejo de Estado."
+    → FALSO. No lo requiere; es una corrección técnica sin valor de revisión jurídica.
+
+======================================
+D) ESQUEMA NEMOTÉCNICO RÁPIDO
+======================================
+
+NIVELES DE INVALIDEZ: "NULA - ANULABLE - IRREGULAR"
+  Nula → tasada, no prescribe, no convalida
+  Anulable → cualquier infracción, prescribe, se puede convalidar
+  Irregular → no invalida
+
+CAUSAS DE NULIDAD → "A-B-C-D-E-F-G" del art. 47
+  a) Derechos fundamentales
+  b) Incompetencia manifiesta (materia o territorio)
+  c) Contenido imposible
+  d) Constitutiva de delito
+  e) Sin procedimiento alguno
+  f) Adquisición de derechos sin requisitos
+  g) Otras causas legales
+
+MECANISMOS DE REVISIÓN:
+  Nulo + cualquier → Art. 106 (sin plazo, Consejo de Estado, silencio negativo)
+  Anulable + favorable → Art. 107 (4 años, sin Consejo de Estado, luego contencioso)
+  Gravamen + revisar → Art. 109.1 (revocación, en cualquier momento)
+  Error material → Art. 109.2 (rectificación, en cualquier momento)
+
+======================================
+E) ARTÍCULOS CLAVE PARA ORDENAR
+======================================
+
+Nulidad de pleno derecho → art. 47
+Anulabilidad → art. 48
+Invalidez parcial → art. 49
+Conservación de actuaciones → art. 50
+Conversión → art. 51
+Convalidación → art. 52
+Revisión de oficio (nulidad) → art. 106
+Declaración de lesividad (anulabilidad favorable) → art. 107
+Suspensión en revisión → art. 108
+Revocación + rectificación → art. 109
+Límites de la revisión → art. 110
