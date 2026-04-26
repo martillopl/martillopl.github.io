@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>2_esquema_resumen_t07.html</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f1f5f9; --surface:#fff; --border:#e2e8f0;
+      --text:#1f2937; --muted:#64748b; --faint:#94a3b8;
+      --azul:#1d4ed8; --verde:#15803d; --naranja:#b45309; --rojo:#b91c1c;
+      --violeta:#6d28d9; --teal:#0f766e; --gris:#374151; --indigo:#3730a3;
+      --azul-l:#dbeafe; --verde-l:#dcfce7; --naranja-l:#fef3c7;
+      --rojo-l:#fee2e2; --violeta-l:#ede9fe; --teal-l:#ccfbf1;
+      --radius:8px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Inter',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;padding:24px;}
+    h1{font-size:22px;color:#0f172a;border-bottom:3px solid var(--azul);padding-bottom:8px;margin-bottom:20px;}
+    h2{font-size:14px;color:#fff;margin:0;padding:8px 13px;border-radius:var(--radius) var(--radius) 0 0;font-weight:700;letter-spacing:.3px;}
+    .bloque{background:var(--surface);border-radius:var(--radius);box-shadow:0 2px 6px rgba(0,0,0,.09);margin-bottom:20px;overflow:hidden;}
+    .body{padding:14px 16px;}
+    .h-azul{background:var(--azul);}
+    .h-verde{background:var(--verde);}
+    .h-naranja{background:var(--naranja);}
+    .h-rojo{background:var(--rojo);}
+    .h-violeta{background:var(--violeta);}
+    .h-teal{background:var(--teal);}
+    .h-indigo{background:var(--indigo);}
+    .h-gris{background:var(--gris);}
+    ul{margin:4px 0 8px 18px;padding:0;}
+    li{margin-bottom:4px;font-size:14px;}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+    .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;}
+    .grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;}
+    .grid6{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;}
+    .card{background:#f8fafc;border:1px solid var(--border);border-radius:var(--radius);padding:10px 12px;font-size:13px;}
+    .card-c{text-align:center;}
+    .card-title{font-weight:700;font-size:13px;margin-bottom:4px;}
+    .pill{display:inline-block;border-radius:20px;padding:2px 10px;font-size:12px;font-weight:700;margin:2px 3px 2px 0;}
+    .pill-a{background:var(--azul-l);color:var(--azul);}
+    .pill-v{background:var(--verde-l);color:var(--verde);}
+    .pill-n{background:var(--naranja-l);color:#92400e;}
+    .pill-r{background:var(--rojo-l);color:var(--rojo);}
+    .pill-p{background:var(--violeta-l);color:var(--violeta);}
+    .pill-t{background:var(--teal-l);color:var(--teal);}
+    .trampa{background:#fef2f2;border:1px solid #fca5a5;border-radius:var(--radius);padding:8px 12px;font-size:13px;margin-top:8px;}
+    .nota{background:#eff6ff;border:1px solid #bfdbfe;border-radius:var(--radius);padding:8px 12px;font-size:13px;margin-top:8px;}
+    .verde-box{background:#f0fdf4;border:1px solid #86efac;border-radius:var(--radius);padding:8px 12px;font-size:13px;margin-top:8px;}
+    .amarillo{background:#fefce8;border:1px solid #fde047;border-radius:var(--radius);padding:8px 12px;font-size:13px;margin-top:8px;}
+    .num{display:inline-flex;align-items:center;justify-content:center;background:var(--azul);color:#fff;border-radius:50%;width:22px;height:22px;font-size:12px;font-weight:700;flex-shrink:0;margin-right:6px;}
+    .num-v{background:var(--verde);}
+    .num-n{background:var(--naranja);}
+    .num-r{background:var(--rojo);}
+    .ok{color:var(--verde);font-weight:700;}
+    .no{color:var(--rojo);font-weight:700;}
+    .exam{color:var(--rojo);font-weight:700;}
+    table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+    th,td{border:1px solid var(--border);padding:7px 9px;vertical-align:top;}
+    th{background:#f8fafc;font-weight:700;}
+    tr:nth-child(even){background:#f8fafc;}
+    .big{font-size:28px;font-weight:800;display:block;text-align:center;}
+    .centrado{text-align:center;}
+    .divider{border:none;border-top:1px solid var(--border);margin:10px 0;}
+    strong{font-weight:700;}
+    @media(max-width:700px){.grid2,.grid3,.grid5,.grid6{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 7 · Ley 39/2015 · Normas Generales: Cómputo del tiempo · Plazos · Prescripción · Caducidad · Silencio Administrativo<br>
+<span style="font-size:13px;font-weight:400;color:#475569;">Esquema-resumen para memorización rápida · Arts. 21–25 · 29–33 LPAC</span></h1>
+
+<!-- ===== BLOQUE 1: ART. 29-30 COMPUTO ===== -->
+<div class="bloque">
+  <h2 class="h-azul">⏱️ Arts. 29–30 · Cómputo de plazos — reglas esenciales</h2>
+  <div class="body">
+    <div class="grid2">
+      <div>
+        <strong>Art. 29 — Obligatoriedad</strong>
+        <ul>
+          <li>Los plazos obligan a las <strong>autoridades y personal</strong> de las AAPP <strong>y a los interesados</strong>.</li>
+          <li>Son imperativos para <strong>ambas partes</strong> de la relación.</li>
+        </ul>
+        <div class="trampa">⚠️ No solo obligan al ciudadano; también a la Administración.</div>
+      </div>
+      <div>
+        <strong>Art. 30 — Tipos de plazo</strong>
+        <table>
+          <tr><th>Tipo</th><th>Regla de cómputo</th><th>Clave</th></tr>
+          <tr><td><strong>Horas</strong></td><td>De hora en hora y de minuto en minuto.</td><td>Máx. 24 h; si más → expresar en días.</td></tr>
+          <tr><td><strong>Días</strong></td><td>Hábiles por defecto (excluidos sáb., dom. y festivos).</td><td>Solo naturales si lo dice la ley o el Derecho UE.</td></tr>
+          <tr><td><strong>Meses / años</strong></td><td>De fecha a fecha. Vence el mismo número del mes/año.</td><td>Si el mes no tiene ese día → último día del mes.</td></tr>
+        </table>
+        <div class="trampa">⚠️ El cómputo empieza el <strong>DÍA SIGUIENTE</strong> a la notificación, nunca el mismo día.<br>
+        ⚠️ Si el último día es inhábil → prorroga automáticamente al siguiente hábil.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== BLOQUE 2: ART. 31 REGISTROS ===== -->
+<div class="bloque">
+  <h2 class="h-verde">📅 Art. 31 · Cómputo en registros electrónicos</h2>
+  <div class="body">
+    <div class="grid2">
+      <div>
+        <ul>
+          <li>El registro electrónico está operativo <strong>24 horas al día, los 365 días del año</strong>.</li>
+          <li>Se rige por la <strong>fecha y hora oficial de la sede electrónica de acceso</strong>.</li>
+          <li>Documentos presentados en día <strong>inhábil</strong>: se entienden presentados a las <strong>00:00:00 del primer día hábil siguiente</strong>.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="verde-box">
+          ✅ <strong>Favorable al interesado:</strong> presentar en festivo es válido.
+          El cómputo del plazo para la Administración empieza el siguiente día hábil.
+          No hay penalización por presentar en día inhábil.
+        </div>
+        <div class="trampa">⚠️ Aunque la presentación es posible en festivos, el plazo para la AAPP empieza el primer día hábil, no en el inhábil.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== BLOQUE 3: ARTS. 32-33 AMPLIACION Y URGENCIA ===== -->
+<div class="bloque">
+  <h2 class="h-naranja">🔧 Arts. 32–33 · Ampliación de plazos del interesado y tramitación de urgencia</h2>
+  <div class="body">
+    <div class="grid2">
+      <div>
+        <strong>Art. 32 — Ampliación de plazos del interesado</strong>
+        <ul>
+          <li>Solo puede pedirse <strong>antes del vencimiento</strong>.</li>
+          <li>Requiere: circunstancias que lo aconsejen + <strong>sin perjuicio de derechos de terceros</strong>.</li>
+          <li>Ampliación máxima: <strong>la mitad del plazo original</strong>.</li>
+          <li>También puede acordarse <strong>de oficio</strong> antes del vencimiento.</li>
+        </ul>
+      </div>
+      <div>
+        <strong>Art. 33 — Tramitación de urgencia</strong>
+        <ul>
+          <li>Acuerdo de oficio o a petición del interesado.</li>
+          <li>Efecto: reduce los plazos del procedimiento a la <strong>mitad</strong>.</li>
+          <li>No se pueden reducir los plazos de <strong>presentación de solicitudes y recursos</strong>.</li>
+        </ul>
+        <div class="trampa">⚠️ Confundir art. 32 (plazos del interesado para actuar) con art. 23 (plazo máximo de resolución). Son distintos.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== BLOQUE 4: ART. 21 OBLIGACION DE RESOLVER ===== -->
+<div class="bloque">
+  <h2 class="h-violeta">⚖️ Art. 21 · Obligación de resolver</h2>
+  <div class="body">
+    <div class="grid2">
+      <div>
+        <strong>Regla general</strong>
+        <ul>
+          <li>La Administración está <strong>obligada</strong> a dictar resolución expresa y notificarla en <strong>todos</strong> los procedimientos.</li>
+        </ul>
+        <strong style="display:block;margin-top:8px;">Excepciones (no hay obligación de resolver):</strong>
+        <ul>
+          <li>Terminación por <strong>pacto o convenio</strong>.</li>
+          <li>Derechos sometidos únicamente a <strong>declaración responsable o comunicación</strong>.</li>
+        </ul>
+      </div>
+      <div>
+        <strong>Plazo máximo para resolver</strong>
+        <div class="grid2" style="gap:8px;margin-top:6px;">
+          <div class="card card-c">
+            <span class="big" style="color:var(--violeta);">3</span>
+            <span style="font-size:12px;">meses<br><strong>plazo supletorio</strong><br>(si la norma no fija plazo)</span>
+          </div>
+          <div class="card card-c">
+            <span class="big" style="color:var(--rojo);">6</span>
+            <span style="font-size:12px;">meses<br><strong>límite de ampliación</strong><br>(por ley o Derecho UE)</span>
+          </div>
+        </div>
+        <div class="trampa">⚠️ El supletorio es <strong>3 meses</strong>, no 6. Los 6 son el techo de la ampliación.</div>
+      </div>
+    </div>
+    <hr class="divider">
+    <strong>Inicio del cómputo del plazo máximo (art. 21.3)</strong>
+    <div class="grid2" style="gap:10px;margin-top:8px;">
+      <div class="card"><strong>Procedimiento a solicitud del interesado</strong><br><span style="font-size:13px;">Desde la <strong>entrada de la solicitud</strong> en el <strong>registro electrónico</strong> del órgano competente para tramitar.</span></div>
+      <div class="card"><strong>Procedimiento iniciado de oficio</strong><br><span style="font-size:13px;">Desde el <strong>acuerdo de iniciación</strong>.</span></div>
+    </div>
+    <div class="trampa" style="margin-top:8px;">⚠️ En procedimientos de oficio no es desde ninguna solicitud: es desde el acuerdo de iniciación.</div>
+  </div>
+</div>
+
+<!-- ===== BLOQUE 5: ART. 22 SUSPENSION ===== -->
+<div class="bloque">
+  <h2 class="h-teal">⏸️ Art. 22 · Suspensión del plazo máximo para resolver</h2>
+  <div class="body">
+    <strong>Las 6 causas de suspensión automática (art. 22.1) + la facultativa (art. 22.2)</strong>
+    <div class="grid3" style="margin-top:10px;">
+      <div class="card">
+        <span class="num">a</span>
+        <strong>Subsanación / aportación de documentos</strong>
+        <p style="font-size:12px;margin-top:4px;">Desde la notificación del requerimiento hasta su cumplimiento o fin del plazo concedido.</p>
+      </div>
+      <div class="card">
+        <span class="num">b</span>
+        <strong>Pronunciamiento de órgano de la UE</strong>
+        <p style="font-size:12px;margin-top:4px;">Hasta que se notifica el pronunciamiento a la Administración instructora.</p>
+      </div>
+      <div class="card">
+        <span class="num">c</span>
+        <strong>Informes preceptivos</strong>
+        <p style="font-size:12px;margin-top:4px;">Hasta su recepción. <span class="exam">Máximo: 3 meses.</span> Pasados 3 meses sin informe → se reanuda el plazo.</p>
+      </div>
+      <div class="card">
+        <span class="num">d</span>
+        <strong>Pruebas técnicas o análisis contradictorios / dirimentes</strong>
+        <p style="font-size:12px;margin-top:4px;">Propuestos por los interesados. Hasta su incorporación al expediente.</p>
+      </div>
+      <div class="card">
+        <span class="num">e</span>
+        <strong>Negociaciones para pacto o convenio</strong>
+        <p style="font-size:12px;margin-top:4px;">Por el tiempo que duren las negociaciones.</p>
+      </div>
+      <div class="card">
+        <span class="num">f</span>
+        <strong>Pronunciamiento judicial previo e indispensable</strong>
+        <p style="font-size:12px;margin-top:4px;">Por el tiempo que dure el procedimiento judicial.</p>
+      </div>
+    </div>
+    <div class="nota" style="margin-top:10px;">
+      📌 <strong>Suspensión facultativa (art. 22.2):</strong> El órgano competente <em>puede</em> suspender motivadamente si existen razones fundadas y objetivas. Debe notificarse a los interesados.
+    </div>
+    <div class="trampa" style="margin-top:8px;">
+      ⚠️ Los informes preceptivos suspenden solo hasta <strong>3 meses</strong>. Si el informe no llega, el plazo se reanuda igualmente.<br>
+      ⚠️ En examen: pueden presentar lista incompleta o con un intruso. Saber las 6 causas de memoria.
+    </div>
+  </div>
+</div>
+
+<!-- ===== BLOQUE 6: ART. 23 AMPLIACION PLAZO MAXIMO ===== -->
+<div class="bloque">
+  <h2 class="h-gris">📈 Art. 23 · Ampliación del plazo máximo para resolver y notificar</h2>
+  <div class="body">
+    <div class="grid2">
+      <div>
+        <ul>
+          <li>Puede acordarse cuando el <strong>volumen de solicitudes</strong> o la <strong>complejidad</strong> lo justifiquen.</li>
+          <li>Debe adoptarse <strong>antes de que venza</strong> el plazo máximo.</li>
+          <li><strong>STS 21/01/2025 (RC 3163/2022):</strong> también debe <strong>notificarse</strong> al interesado para surtir efectos; si no se notifica no puede impedir la caducidad.</li>
+          <li>No puede exceder del plazo máximo establecido para el procedimiento.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="amarillo">🔑 <strong>Distinción clave para examen:</strong><br>
+          — <strong>Art. 23</strong>: ampliación del plazo máximo de <em>resolución</em> (la AAPP tarda más).<br>
+          — <strong>Art. 32</strong>: ampliación de plazo para que el <em>interesado</em> realice un trámite.<br>
+          Son figuras completamente distintas.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== BLOQUE 7: ART. 24 SILENCIO ADMINISTRATIVO ===== -->
+<div class="bloque">
+  <h2 class="h-indigo">🔕 Art. 24 · Silencio administrativo — procedimientos a solicitud del interesado</h2>
+  <div class="body">
+
+    <div class="grid2">
+      <div>
+        <div class="verde-box" style="margin-top:0;">
+          ✅ <strong>REGLA GENERAL = SILENCIO POSITIVO (estimatorio)</strong><br>
+          Vencido el plazo máximo sin resolución expresa → la solicitud se entiende <strong>ESTIMADA</strong>.
+        </div>
+        <div style="margin-top:10px;">
+          <strong>EXCEPCIONES = SILENCIO NEGATIVO (desestimatorio):</strong>
+          <div class="card" style="margin-top:6px;">
+            <span class="pill pill-r">a</span> Norma con rango de <strong>ley</strong> o <strong>Derecho UE</strong> que lo establezca.
+          </div>
+          <div class="card" style="margin-top:6px;">
+            <span class="pill pill-r">b</span> Procedimientos de <strong>acceso a actividades</strong> o su ejercicio.
+          </div>
+          <div class="card" style="margin-top:6px;">
+            <span class="pill pill-r">c</span> Procedimientos de <strong>impugnación de actos y disposiciones</strong> (recursos).
+            <br><small>⚠️ <em>Excepción dentro de la excepción:</em> recurso de alzada contra desestimación por silencio → silencio en alzada también es <strong>POSITIVO</strong>.</small>
+          </div>
+        </div>
+      </div>
+      <div>
+        <strong>Efectos del acto presunto</strong>
+        <ul style="margin-top:6px;">
+          <li>Produce efectos desde el <strong>vencimiento del plazo máximo</strong>.</li>
+          <li>Puede acreditarse por <strong>cualquier medio de prueba</strong>, incluido el <strong>certificado de acto presunto</strong>.</li>
+          <li>Vale ante la Administración y ante cualquier persona física o jurídica.</li>
+        </ul>
+        <hr class="divider">
+        <strong>Resolución expresa posterior al silencio</strong>
+        <table style="margin-top:6px;">
+          <tr>
+            <th>Tipo de silencio</th>
+            <th>¿Qué puede hacer la resolución posterior?</th>
+          </tr>
+          <tr>
+            <td><span class="ok">POSITIVO</span></td>
+            <td>Solo puede ser <strong>confirmatoria</strong> del acto presunto. No puede resolver en sentido desfavorable.</td>
+          </tr>
+          <tr>
+            <td><span class="no">NEGATIVO</span></td>
+            <td>Puede adoptar <strong>cualquier sentido</strong> (favorable o desfavorable). Sin vinculación al silencio.</td>
+          </tr>
+        </table>
+        <div class="trampa">⚠️ <strong>Trampa muy frecuente:</strong> Tras silencio positivo la AAPP <em>no puede</em> resolver en contra. Solo confirma.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== BLOQUE 8: ART. 25 PROCEDIMIENTOS DE OFICIO ===== -->
+<div class="bloque">
+  <h2 class="h-rojo">🔔 Art. 25 · Falta de resolución en procedimientos iniciados de oficio</h2>
+  <div class="body">
+    <div class="trampa" style="margin-top:0;margin-bottom:10px;">
+      ⚠️ <strong>Regla de oro:</strong> En ningún caso existe <strong>silencio positivo</strong> en los procedimientos iniciados de oficio.
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <div class="card-title">Art. 25.1.a) — Procedimientos susceptibles de producir <span style="color:var(--verde)">actos favorables</span></div>
+        <ul style="margin-top:6px;">
+          <li>Efecto: <strong>CADUCIDAD</strong>.</li>
+          <li>El interesado puede reclamar el <strong>archivo de las actuaciones</strong>.</li>
+          <li>La caducidad no extingue la acción de la AAPP (puede reiniciar si no ha prescrito).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title">Art. 25.1.b) — Procedimientos con potestades <span style="color:var(--rojo)">sancionadoras o de intervención</span> (efectos desfavorables o de gravamen)</div>
+        <ul style="margin-top:6px;">
+          <li>Efecto: <strong>CADUCIDAD</strong>.</li>
+          <li>La resolución de caducidad ordena el <strong>archivo</strong> de las actuaciones (efectos del art. 95 LPAC).</li>
+          <li>No extingue la infracción si no ha prescrito. Se puede reiniciar el procedimiento.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== BLOQUE 9: PRESCRIPCION VS CADUCIDAD ===== -->
+<div class="bloque">
+  <h2 class="h-naranja">⚡ Prescripción vs. Caducidad · Distinción esencial</h2>
+  <div class="body">
+    <table>
+      <tr>
+        <th style="width:20%">Dimensión</th>
+        <th>Prescripción</th>
+        <th>Caducidad</th>
+      </tr>
+      <tr>
+        <td><strong>¿Qué extingue?</strong></td>
+        <td>El derecho o la acción por el transcurso del tiempo sin ejercitarse.</td>
+        <td>El procedimiento administrativo concreto, no la acción subyacente.</td>
+      </tr>
+      <tr>
+        <td><strong>¿Se interrumpe?</strong></td>
+        <td>Sí, por actuación válida de cualquiera de las partes.</td>
+        <td>No se interrumpe; el procedimiento caducado puede dar lugar a uno nuevo si no ha prescrito.</td>
+      </tr>
+      <tr>
+        <td><strong>Efecto sobre la acción</strong></td>
+        <td>Extingue <strong>definitivamente</strong> el derecho a ejercitar la acción.</td>
+        <td>Solo extingue el procedimiento concreto. La acción subsiste hasta la prescripción.</td>
+      </tr>
+      <tr>
+        <td><strong>Regulación LPAC</strong></td>
+        <td>Normativa sectorial (sanciones, responsabilidad patrimonial…)</td>
+        <td>Arts. 25 y 95 LPAC.</td>
+      </tr>
+      <tr>
+        <td><strong>Regla clave</strong></td>
+        <td colspan="2">Art. 95.3 LPAC: <strong>La caducidad NO produce por sí sola la prescripción.</strong> Caducado el procedimiento, la AAPP puede iniciar uno nuevo si la acción no ha prescrito.</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- ===== BLOQUE 10: TABLA RESUMEN FINAL ===== -->
+<div class="bloque">
+  <h2 class="h-gris">🧠 Tabla-resumen: artículo · figura · regla clave · trampa</h2>
+  <div class="body">
+    <table>
+      <tr>
+        <th>Art.</th>
+        <th>Figura</th>
+        <th>Regla clave</th>
+        <th>Trampa típica de examen</th>
+      </tr>
+      <tr>
+        <td><strong>29</strong></td>
+        <td>Obligatoriedad de plazos</td>
+        <td>Obligan a AAPP y a interesados.</td>
+        <td>Creer que solo obligan al ciudadano.</td>
+      </tr>
+      <tr>
+        <td><strong>30</strong></td>
+        <td>Cómputo</td>
+        <td>Días = hábiles (por defecto). Solo naturales si la ley/UE lo dice. Cómputo: día siguiente. Final inhábil → prorroga.</td>
+        <td>Creer que todos los plazos son naturales, o que el cómputo empieza el mismo día de la notificación.</td>
+      </tr>
+      <tr>
+        <td><strong>31</strong></td>
+        <td>Registro electrónico</td>
+        <td>24 h/365 días. Inhábil → 00:00:00 del primer hábil siguiente.</td>
+        <td>Creer que no se puede presentar en festivos o que hay penalización.</td>
+      </tr>
+      <tr>
+        <td><strong>32</strong></td>
+        <td>Ampliación de plazos del interesado</td>
+        <td>Antes del vencimiento. Máximo: mitad del plazo original.</td>
+        <td>Confundirlo con la ampliación del plazo máximo de resolución (art. 23).</td>
+      </tr>
+      <tr>
+        <td><strong>33</strong></td>
+        <td>Tramitación de urgencia</td>
+        <td>Reduce plazos a la mitad. No aplica a presentación de solicitudes y recursos.</td>
+        <td>Aplicar la reducción también a los plazos de solicitudes y recursos.</td>
+      </tr>
+      <tr>
+        <td><strong>21</strong></td>
+        <td>Obligación de resolver</td>
+        <td>Siempre. Excepciones: pacto/convenio y declaración responsable. Supletorio: 3 meses. Inicio: registro (solicitud) / acuerdo (oficio).</td>
+        <td>El plazo supletorio es 3 meses, no 6. Los 6 son el techo de ampliación por ley.</td>
+      </tr>
+      <tr>
+        <td><strong>22</strong></td>
+        <td>Suspensión del plazo máximo</td>
+        <td>6 causas automáticas + facultativa. Informes preceptivos: máx. 3 meses.</td>
+        <td>Mezclar causas de suspensión con otras figuras. Olvidar el tope de 3 meses para informes.</td>
+      </tr>
+      <tr>
+        <td><strong>23</strong></td>
+        <td>Ampliación del plazo máximo</td>
+        <td>Antes del vencimiento + notificación al interesado (STS 2025). No excede del plazo máximo del procedimiento.</td>
+        <td>Confundirlo con el art. 32 (plazos del interesado). No notificar la ampliación (ya no es válido per STS).</td>
+      </tr>
+      <tr>
+        <td><strong>24</strong></td>
+        <td>Silencio administrativo (solicitud)</td>
+        <td>Regla = POSITIVO. Excepciones = negativo (ley/UE, acceso a actividad, impugnación). Tras silencio positivo: solo resolución confirmatoria.</td>
+        <td>Invertir la regla y las excepciones. Creer que tras silencio positivo la AAPP puede resolver en contra.</td>
+      </tr>
+      <tr>
+        <td><strong>25</strong></td>
+        <td>Falta de resolución (oficio)</td>
+        <td>Nunca silencio positivo de oficio. Siempre: caducidad. Caducidad ≠ prescripción (art. 95.3).</td>
+        <td>Creer que existe silencio positivo de oficio. Confundir caducidad con prescripción.</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>
