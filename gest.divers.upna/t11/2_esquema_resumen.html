@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>2_esquema_resumen_t11.html</title>
+  <style>
+    :root{
+      --bg:#f8fafc;--card:#fff;--ink:#0f172a;--muted:#475569;--line:#cbd5e1;
+      --red:#fee2e2;--red-b:#dc2626;
+      --blue:#dbeafe;--blue-b:#2563eb;
+      --amber:#fef3c7;--amber-b:#d97706;
+      --green:#dcfce7;--green-b:#16a34a;
+      --violet:#ede9fe;--violet-b:#7c3aed;
+      --slate:#e2e8f0;--slate-b:#475569;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;padding:24px;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.4}
+    .page{max-width:1100px;margin:0 auto}
+    .hero{background:linear-gradient(135deg,#1e293b,#7c2d12);color:#fff;padding:26px;border-radius:18px;margin-bottom:20px}
+    .hero h1{margin:0 0 6px;font-size:28px}
+    .hero .sub{font-size:14px;opacity:.9}
+    /* ────── leyenda ────── */
+    .legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+    .leg{padding:8px 14px;border-radius:999px;font-size:13px;font-weight:700;border:2px solid}
+    /* ────── grid ────── */
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .card{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:16px}
+    .card.full{grid-column:1/-1}
+    .ctag{display:inline-block;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;margin-bottom:8px}
+    .card h2{margin:0 0 10px;font-size:19px}
+    /* ────── pills ────── */
+    .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .pill{padding:8px 12px;border-radius:999px;font-size:13px;font-weight:700;border:2px solid}
+    /* ────── table ────── */
+    table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px}
+    th,td{border:1px solid var(--line);padding:9px;vertical-align:top;text-align:left}
+    th{background:#f1f5f9;font-weight:700}
+    tr:nth-child(even) td{background:#fafafa}
+    /* ────── boxes ────── */
+    .box{border-radius:10px;padding:12px 14px;margin-top:12px;font-size:13.5px;border:2px solid}
+    .cols{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+    .bignum{font-size:38px;font-weight:900;line-height:1}
+    .bigline{font-size:22px;font-weight:800;margin:8px 0}
+    .note{border-radius:10px;padding:10px 14px;font-size:13px;font-weight:700;margin-top:12px}
+    ul{margin:8px 0 0 18px;padding:0}
+    li{margin:4px 0}
+    /* ────── memoria ultra ────── */
+    .mem{background:#0f172a;color:#f8fafc;border-radius:18px;padding:20px;margin-top:20px}
+    .mem h2{margin:0 0 14px;font-size:20px}
+    .memgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .mbox{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:12px;font-size:13px}
+    .mbox strong{color:#fca5a5}
+    .footer{text-align:center;font-size:12px;color:var(--muted);margin-top:18px}
+    /* colores */
+    .red{background:var(--red);border-color:var(--red-b)}
+    .blue{background:var(--blue);border-color:var(--blue-b)}
+    .amber{background:var(--amber);border-color:var(--amber-b)}
+    .green{background:var(--green);border-color:var(--green-b)}
+    .violet{background:var(--violet);border-color:var(--violet-b)}
+    .slate{background:var(--slate);border-color:var(--slate-b)}
+    @media(max-width:820px){.grid,.cols,.memgrid{grid-template-columns:1fr}.card.full{grid-column:auto}}
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+  <div class="hero">
+    <h1>Tema 11 · Ejecución de los actos administrativos</h1>
+    <div class="sub">Ley 39/2015 · Arts. 38–39 y 96–105 · Esquema-resumen visual para memorización rápida</div>
+  </div>
+
+  <div class="legend">
+    <div class="leg red">Rojo · Ejecutividad</div>
+    <div class="leg blue">Azul · Ejecución forzosa</div>
+    <div class="leg amber">Ámbar · Medios: apremio y subsidiaria</div>
+    <div class="leg green">Verde · Multa coercitiva</div>
+    <div class="leg violet">Violeta · Compulsión</div>
+    <div class="leg slate">Gris · Trampas de examen</div>
+  </div>
+
+  <div class="grid">
+
+    <!-- 1. EFICACIA Y PRESUNCIÓN -->
+    <div class="card blue">
+      <div class="ctag blue">ARTS. 38–39</div>
+      <h2>1. Presunción de validez y eficacia</h2>
+      <div class="bigline">TODO ACTO SE PRESUME VÁLIDO</div>
+      <table>
+        <tr><th>Artículo</th><th>Regla</th><th>Excepción</th></tr>
+        <tr><td>Art. 38</td><td>Presunción de validez</td><td>Declaración de nulidad o anulabilidad</td></tr>
+        <tr><td>Art. 39.1</td><td>Eficacia desde que se dicta</td><td>El acto puede fijar otra fecha</td></tr>
+        <tr><td>Art. 39.3</td><td>Retroactividad solo si favorece</td><td>No puede perjudicar derechos consolidados</td></tr>
+      </table>
+      <div class="note blue">Base del tema: sin presunción de validez, no existe ejecutividad.</div>
+    </div>
+
+    <!-- 2. EJECUTIVIDAD INMEDIATA Y EXCEPCIONES -->
+    <div class="card red">
+      <div class="ctag red">ART. 98</div>
+      <h2>2. Ejecutividad inmediata</h2>
+      <div class="bigline">REGLA: EJECUTIVO DESDE QUE SE DICTA</div>
+      <p style="font-size:14px;margin:8px 0">Las 4 excepciones:</p>
+      <div class="pills">
+        <div class="pill red">1 · Suspensión acordada</div>
+        <div class="pill red">2 · Sanción recurrible en vía admin.</div>
+        <div class="pill red">3 · Aprobación superior</div>
+        <div class="pill red">4 · Condición o término pendiente</div>
+      </div>
+      <div class="note red">⚡ La resolución sancionadora NO es ejecutiva mientras quepa recurso admin.</div>
+    </div>
+
+    <!-- 3. EJECUCIÓN FORZOSA: REQUISITOS -->
+    <div class="card blue">
+      <div class="ctag blue">ART. 99</div>
+      <h2>3. Ejecución forzosa: requisitos</h2>
+      <table>
+        <tr><th>Requisito</th><th>Contenido</th></tr>
+        <tr><td>Apercibimiento previo</td><td>Obligatorio antes de iniciar la ejecución</td></tr>
+        <tr><td>Proporcionalidad</td><td>Elegir el medio menos restrictivo</td></tr>
+        <tr><td>Límite legal</td><td>No procede si hay suspensión válida</td></tr>
+        <tr><td>Límite constitucional</td><td>Si se requiere juez (ej. domicilio, art. 18.2 CE)</td></tr>
+      </table>
+      <div class="note blue">Antes de forzar, avisar. Siempre mínima restricción posible.</div>
+    </div>
+
+    <!-- 4. LOS 4 MEDIOS: TABLA COMPARATIVA -->
+    <div class="card full amber">
+      <div class="ctag amber">ARTS. 100–104</div>
+      <h2>4. Los cuatro medios de ejecución forzosa</h2>
+      <table>
+        <tr><th>Medio</th><th>Objeto</th><th>Cómo funciona</th><th>Límite / particularidad</th><th>Art.</th></tr>
+        <tr><td><strong>Apremio sobre el patrimonio</strong></td><td>Obligación de dar dinero</td><td>Embargo y subasta de bienes del deudor</td><td>Rige su normativa específica (recaudación); no puede imponerse deuda sin ley</td><td>101</td></tr>
+        <tr><td><strong>Ejecución subsidiaria</strong></td><td>Hacer fungible (lo puede hacer otro)</td><td>La AAPP lo realiza a costa del obligado; puede exigir coste provisional</td><td>Solo para actos fungibles; si no paga → apremio</td><td>102</td></tr>
+        <tr><td><strong>Multa coercitiva</strong></td><td>Obligaciones personalísimas de hacer/no hacer</td><td>Multas reiteradas y sucesivas con plazo de cumplimiento</td><td>NO es sanción; es compatible con sanciones; necesita habilitación legal y límite de cuantía</td><td>103</td></tr>
+        <tr><td><strong>Compulsión sobre las personas</strong></td><td>Obligación personalísima impuesta por ley</td><td>Fuerza directa sobre la persona del obligado</td><td>Solo con habilitación legal expresa; proporcionalidad; no vulnerar CE</td><td>104</td></tr>
+      </table>
+    </div>
+
+    <!-- 5. APREMIO vs EJECUCIÓN SUBSIDIARIA -->
+    <div class="card amber">
+      <div class="ctag amber">ARTS. 101–102</div>
+      <h2>5. Apremio vs ejecución subsidiaria</h2>
+      <div class="cols">
+        <div class="box amber">
+          <strong>Apremio</strong>
+          <ul>
+            <li>Obligación dineraria</li>
+            <li>Embargo de bienes</li>
+            <li>Reglas de recaudación</li>
+            <li>No requiere hacer nada</li>
+          </ul>
+        </div>
+        <div class="box amber">
+          <strong>Ejecución subsidiaria</strong>
+          <ul>
+            <li>Hacer fungible</li>
+            <li>La AAPP actúa en lugar del obligado</li>
+            <li>Coste repercutido al obligado</li>
+            <li>Si no paga → apremio</li>
+          </ul>
+        </div>
+      </div>
+      <div class="note amber">Ejemplo subsidiaria: derribar muro ilegal a costa del dueño.</div>
+    </div>
+
+    <!-- 6. MULTA COERCITIVA -->
+    <div class="card green">
+      <div class="ctag green">ART. 103</div>
+      <h2>6. Multa coercitiva</h2>
+      <div class="bigline">PRESIÓN, NO SANCIÓN</div>
+      <div class="pills">
+        <div class="pill green">Reiterada y sucesiva</div>
+        <div class="pill green">Con plazo para cumplir</div>
+        <div class="pill green">No es sanción</div>
+        <div class="pill green">Compatible con sanciones</div>
+        <div class="pill green">Necesita ley habilitante</div>
+        <div class="pill green">Cuantía limitada por norma</div>
+      </div>
+      <div class="note green">⚡ La multa coercitiva no es sanción pero SÍ es compatible con ellas.</div>
+    </div>
+
+    <!-- 7. COMPULSIÓN SOBRE PERSONAS -->
+    <div class="card violet">
+      <div class="ctag violet">ART. 104</div>
+      <h2>7. Compulsión sobre las personas</h2>
+      <div class="bigline">ÚLTIMO RECURSO</div>
+      <ul>
+        <li>Solo obligaciones personalísimas de hacer / no hacer / soportar impuestas por ley</li>
+        <li>Solo con habilitación legal expresa</li>
+        <li>Siempre respeto a la dignidad y derechos constitucionales</li>
+        <li>No puede vulnerar inviolabilidad del domicilio sin autorización judicial</li>
+        <li>Principio de proporcionalidad en todo momento</li>
+      </ul>
+      <div class="note violet">Cuando se mencionan "obligaciones personalísimas" en test → compulsión.</div>
+    </div>
+
+    <!-- 8. TRAMITACIÓN SIMPLIFICADA -->
+    <div class="card blue">
+      <div class="ctag blue">ART. 96</div>
+      <h2>8. Tramitación simplificada</h2>
+      <table>
+        <tr><th>Dato</th><th>Regla</th></tr>
+        <tr><td>Plazo de resolución</td><td>30 días</td></tr>
+        <tr><td>Solicitud por interesado</td><td>AAPP decide en 5 días; silencio = desestimación</td></tr>
+        <tr><td>Oposición de interesado</td><td>Vuelta al procedimiento ordinario</td></tr>
+        <tr><td>Recurso contra el acuerdo</td><td>No cabe</td></tr>
+      </table>
+      <div class="note blue">30 días para resolver; 5 para decidir si se acepta; silencio negativo.</div>
+    </div>
+
+    <!-- 9. SUSPENSIÓN EJECUCIÓN POR RECURSO -->
+    <div class="card red">
+      <div class="ctag red">ART. 117</div>
+      <h2>9. Suspensión en recursos</h2>
+      <div class="bigline">LA INTERPOSICIÓN NO SUSPENDE</div>
+      <div class="cols">
+        <div class="box red">
+          <strong>Regla general</strong>
+          <ul>
+            <li>Recurso no suspende automáticamente la ejecución</li>
+            <li>El interesado debe pedirla y justificarla</li>
+          </ul>
+        </div>
+        <div class="box red">
+          <strong>Suspensión automática</strong>
+          <ul>
+            <li>Si transcurre 1 mes desde solicitud sin resolución expresa → suspensión automática</li>
+          </ul>
+        </div>
+      </div>
+      <div class="note red">Pedir suspensión + esperar 1 mes sin respuesta = suspensión automática.</div>
+    </div>
+
+    <!-- 10. TRAMPAS DE EXAMEN -->
+    <div class="card full slate">
+      <div class="ctag slate">EXAMEN</div>
+      <h2>10. Trampas frecuentes de test</h2>
+      <table>
+        <tr><th>Error típico</th><th>Respuesta correcta</th></tr>
+        <tr><td>La multa coercitiva es una sanción administrativa</td><td>No: es un medio de presión; no tiene naturaleza sancionadora</td></tr>
+        <tr><td>La multa coercitiva es incompatible con la sanción</td><td>Son compatibles</td></tr>
+        <tr><td>Cualquier recurso suspende automáticamente la ejecución</td><td>No: la interposición no suspende; hay que pedirlo expresamente</td></tr>
+        <tr><td>La resolución sancionadora es ejecutiva desde que se dicta</td><td>No: solo cuando no quepa recurso en vía admin.</td></tr>
+        <tr><td>La ejecución subsidiaria cabe para cualquier obligación de hacer</td><td>Solo para las fungibles (que otro puede realizar en su lugar)</td></tr>
+        <tr><td>La compulsión puede usarse sin ley que la autorice</td><td>No: necesita habilitación legal expresa</td></tr>
+        <tr><td>El apercibimiento previo es optativo</td><td>No: es requisito obligatorio</td></tr>
+        <tr><td>La tramitación simplificada resuelve en 15 días</td><td>El plazo es de 30 días</td></tr>
+        <tr><td>Para entrar en un domicilio no se necesita juez</td><td>Sí se necesita autorización judicial (art. 18.2 CE)</td></tr>
+      </table>
+    </div>
+
+  </div><!-- /grid -->
+
+  <div class="mem">
+    <h2>Versión ultra-rápida para memorizar</h2>
+    <div class="memgrid">
+      <div class="mbox"><strong>Ejecutividad:</strong> Todo acto es ejecutivo SALVO 4 excepciones: S-S-A-C (Suspensión · Sanción recurrible · Aprobación superior · Condición/término)</div>
+      <div class="mbox"><strong>Ejecución forzosa:</strong> Apercibimiento previo obligatorio + proporcionalidad + límite judicial</div>
+      <div class="mbox"><strong>4 medios:</strong> APRE (dinero) · SUB (fungible a costa del obligado) · MUL (presión, no sanción, compatible) · COM (último recurso, ley expresa)</div>
+      <div class="mbox"><strong>Multa coercitiva:</strong> Reiterada · No sanción · Sí compatible con sanciones · Necesita ley</div>
+      <div class="mbox"><strong>Compulsión:</strong> Solo personalísimas · Solo con ley · Proporcionalidad · No domicilio sin juez</div>
+      <div class="mbox"><strong>Simplificada:</strong> 30 días resolver · 5 días para aceptar si lo pide interesado · Silencio = desestimación</div>
+    </div>
+  </div>
+
+  <div class="footer">Tema 11 · Ley 39/2015 · Esquema-resumen visual para memorización rápida</div>
+</div>
+</body>
+</html>

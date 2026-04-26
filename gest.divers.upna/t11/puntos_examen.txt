@@ -1,0 +1,157 @@
+TEMA 11 · LEY 39/2015 · PUNTOS DE EXAMEN Y ARTÍCULOS CLAVE
+=============================================================
+El Procedimiento Administrativo Común III:
+La ejecución de los actos administrativos
+=============================================================
+
+==============================
+A) ARTÍCULOS IMPRESCINDIBLES
+==============================
+
+ART. 38   → Presunción de validez de los actos administrativos.
+ART. 39   → Eficacia del acto: produce efectos desde que se dicta o notifica.
+ART. 96   → Tramitación simplificada: 30 días; silencio desestimatorio en 5 días si pide interesado.
+ART. 97   → Ejecutoriedad: los actos son ejecutivos (base del Título IV Capítulo VI).
+ART. 98   → Ejecutividad inmediata y sus 4 excepciones.
+ART. 99   → Ejecución forzosa: apercibimiento previo, proporcionalidad, límites.
+ART. 100  → Medios de ejecución forzosa (listado de los 4).
+ART. 101  → Apremio sobre el patrimonio.
+ART. 102  → Ejecución subsidiaria.
+ART. 103  → Multa coercitiva.
+ART. 104  → Compulsión sobre las personas.
+ART. 105  → Desahucio administrativo.
+
+ARTS. CONEXOS:
+ART. 47.1 → Nulidad de pleno derecho (conectado con suspensión del art. 117).
+ART. 117  → Suspensión de la ejecución en recursos administrativos.
+ART. 18.2 CE → Inviolabilidad del domicilio: límite constitucional a la ejecución forzosa.
+ART. 106 CE  → Sometimiento de la actuación administrativa al control judicial.
+
+======================================
+B) PUNTOS QUE CAEN EN EXAMEN TEST
+======================================
+
+1. EJECUTIVIDAD (ART. 98)
+──────────────────────────
+• La regla general: los actos administrativos son INMEDIATAMENTE EJECUTIVOS.
+• Las 4 excepciones del art. 98:
+  1) Suspensión de la ejecución.
+  2) Resolución sancionadora contra la que quepa recurso en vía admin.
+  3) Acto que necesita aprobación o autorización superior.
+  4) Acto sujeto a condición o término.
+• La resolución sancionadora NO es ejecutiva mientras quepa recurso en vía admin.
+
+2. EJECUCIÓN FORZOSA (ART. 99)
+──────────────────────────────
+• Requisito previo: APERCIBIMIENTO al interesado.
+• Principio rector: PROPORCIONALIDAD.
+• Límite: no procede si se ha suspendido conforme a la ley.
+• Límite constitucional: no cabe sin intervención judicial cuando lo exige la CE o la ley
+  (ej. entrada en domicilio, art. 18.2 CE).
+
+3. LOS 4 MEDIOS DE EJECUCIÓN FORZOSA (ARTS. 100–104)
+──────────────────────────────────────────────────────
+• Apremio sobre el patrimonio (art. 101): obligaciones de dar dinero; embargo y subasta.
+• Ejecución subsidiaria (art. 102): hacer fungible; la AAPP lo realiza a costa del obligado.
+• Multa coercitiva (art. 103): presión para obligaciones personalísimas; reiterada; no es sanción.
+• Compulsión sobre las personas (art. 104): fuerza directa; solo con habilitación legal; último recurso.
+
+4. MULTA COERCITIVA (ART. 103)
+────────────────────────────────
+• NO tiene naturaleza sancionadora.
+• ES COMPATIBLE con las sanciones administrativas.
+• Se impone de forma reiterada hasta que se cumpla.
+• Solo si hay norma legal que la autorice y fije sus límites.
+
+5. EJECUCIÓN SUBSIDIARIA (ART. 102)
+─────────────────────────────────────
+• Solo para actos de hacer FUNGIBLE.
+• La AAPP puede exigir el coste de forma provisional antes de ejecutar.
+• Si el obligado no paga → vía de apremio.
+
+6. COMPULSIÓN SOBRE LAS PERSONAS (ART. 104)
+─────────────────────────────────────────────
+• Solo para obligaciones personales de hacer/no hacer IMPUESTAS POR LEY.
+• Solo con habilitación legal expresa.
+• Principio de proporcionalidad en todo caso.
+• No puede vulnerar la inviolabilidad del domicilio (art. 18.2 CE) sin autorización judicial.
+
+7. TRAMITACIÓN SIMPLIFICADA (ART. 96)
+──────────────────────────────────────
+• Plazo de resolución: 30 días.
+• Si lo pide el interesado: la AAPP decide en 5 días; silencio = desestimación.
+• No cabe recurso contra el acuerdo de tramitación simplificada.
+• Si hay oposición de algún interesado → vuelta al procedimiento ordinario.
+
+======================================
+C) TRAMPAS FRECUENTES EN TEST
+======================================
+
+1. "Los actos administrativos son ejecutivos salvo que haya recurso."
+   → FALSO. La mera interposición de recurso no suspende la ejecución (art. 117.1).
+   Solo la resolución sancionadora no es ejecutiva mientras quepa recurso en vía admin.
+
+2. "La multa coercitiva tiene naturaleza sancionadora."
+   → FALSO. No es sanción: es medio de presión para forzar el cumplimiento.
+
+3. "La multa coercitiva y la sanción administrativa son incompatibles."
+   → FALSO. Son compatibles.
+
+4. "La ejecución subsidiaria cabe para cualquier acto de hacer."
+   → FALSO. Solo para los de hacer FUNGIBLE (los que otro puede hacer en su lugar).
+
+5. "La compulsión puede usarse sin habilitación legal expresa."
+   → FALSO. Necesita habilitación legal.
+
+6. "Para entrar en un domicilio, la Administración puede usar la compulsión directamente."
+   → FALSO. Se requiere autorización judicial (art. 18.2 CE).
+
+7. "El apercibimiento es opcional en la ejecución forzosa."
+   → FALSO. Es un requisito previo obligatorio (art. 99.1).
+
+8. "La resolución sancionadora es ejecutiva desde que se dicta."
+   → FALSO. Solo es ejecutiva cuando no cabe recurso en vía admin. (art. 98.b).
+
+9. "La tramitación simplificada resuelve en 15 días."
+   → FALSO. El plazo es de 30 días.
+
+10. "Contra el acuerdo de tramitación simplificada cabe recurso autónomo."
+    → FALSO. No cabe recurso.
+
+======================================
+D) ESQUEMA NEMOTÉCNICO RÁPIDO
+======================================
+
+EJECUTIVIDAD: "Todo ejecutivo SALVO 4 S-S-A-C":
+  S = Suspensión
+  S = Sancionadora (con recurso pendiente)
+  A = Aprobación superior
+  C = Condición o término
+
+4 MEDIOS DE EJECUCIÓN FORZOSA: "APRE-SUB-MUL-COM"
+  APREmio → dinero
+  SUBsidiaria → fungible
+  MULta coercitiva → personalísimo; no es sanción
+  COMpulsión → personas; último recurso; solo con ley
+
+EJECUCIÓN FORZOSA: "ANTES de forzar → APERCIBIR"
+
+MULTA COERCITIVA: "Repite, no sanciona, pero es compatible con la sanción"
+
+======================================
+E) ARTÍCULOS CLAVE PARA ORDENAR
+======================================
+
+Presunción de validez → art. 38
+Eficacia → art. 39
+Tramitación simplificada → art. 96
+Ejecutividad inmediata y excepciones → art. 98
+Ejecución forzosa y requisitos → art. 99
+Medios de ejecución forzosa (lista) → art. 100
+Apremio sobre el patrimonio → art. 101
+Ejecución subsidiaria → art. 102
+Multa coercitiva → art. 103
+Compulsión sobre personas → art. 104
+Desahucio administrativo → art. 105
+Suspensión en recursos → art. 117
+Límite: inviolabilidad domicilio → art. 18.2 CE
