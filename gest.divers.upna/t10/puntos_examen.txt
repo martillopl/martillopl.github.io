@@ -1,0 +1,136 @@
+TEMA 10 · LEY 39/2015 · PUNTOS DE EXAMEN Y ARTÍCULOS CLAVE
+=============================================================
+El Procedimiento Administrativo Común II:
+Iniciación · Ordenación · Instrucción · Terminación
+=============================================================
+
+==============================
+A) ARTÍCULOS IMPRESCINDIBLES
+==============================
+
+ART. 54  → Formas de iniciación: de oficio o a solicitud del interesado.
+ART. 55  → Información y actuaciones previas.
+ART. 56  → Medidas provisionales (antes y después de iniciado el procedimiento).
+ART. 57  → Acumulación de procedimientos.
+ART. 58–60 → Iniciación de oficio: clases según quién la promueve.
+ART. 63–65 → Especialidades de los procedimientos iniciados de oficio.
+ART. 66  → Contenido de las solicitudes de iniciación (6 letras: a–f).
+ART. 67  → Solicitudes de iniciación de procedimientos de apoyo.
+ART. 68  → Subsanación y mejora de solicitudes (plazo: 10 días).
+ART. 70  → Expediente administrativo (concepto, índice, formato electrónico).
+ART. 71  → Impulso de oficio del procedimiento.
+ART. 72  → Concentración y simultaneidad de trámites.
+ART. 74  → Cuestiones incidentales (no suspenden el procedimiento).
+ART. 75  → Actos de instrucción.
+ART. 76  → Alegaciones del interesado en cualquier momento antes de la audiencia.
+ART. 77  → Prueba: período de 10 a 30 días.
+ART. 78  → Prueba en comisión.
+ART. 79  → Informes: preceptivos y facultativos; plazo de 10 días.
+ART. 80  → Petición de informes. Silencio del órgano informante.
+ART. 81  → Información pública (plazo mínimo: 20 días).
+ART. 82  → Trámite de audiencia (entre 10 y 15 días, antes de la propuesta).
+ART. 83  → Información pública (doble regulación junto al 81).
+ART. 84  → Formas de terminación del procedimiento (5 formas + silencio y conv.).
+ART. 85  → Terminación en procedimientos sancionadores (reducción de multa).
+ART. 86  → Terminación convencional (acuerdos, pactos, convenios, contratos).
+ART. 87  → Resolución: obligación de resolver expresamente.
+ART. 88  → Contenido y límites de la resolución (congruencia y motivación).
+ART. 89  → Resoluciones en masa.
+ART. 90  → Resolución en procedimientos de impugnación.
+ART. 94  → Desistimiento y renuncia.
+ART. 95  → Caducidad (plazo de advertencia: 3 meses).
+
+====================================
+B) PUNTOS QUE CAEN EN EXAMEN TEST
+====================================
+
+1. INICIACIÓN
+─────────────
+• Formas de iniciación: de OFICIO o a SOLICITUD del interesado (art. 54).
+• Las 6 letras del art. 66 (a=nombre; b=notificación; c=hechos/razones/petición;
+  d=lugar y fecha; e=firma; f=órgano).
+• Plazo de SUBSANACIÓN: 10 días (art. 68.1). Si no subsana → desistido.
+• Acumulación de procedimientos: no cabe recurso contra el acuerdo (art. 57.2).
+• Medidas provisionales: pueden adoptarse ANTES de la iniciación formal (art. 56.2).
+
+2. INSTRUCCIÓN
+──────────────
+• Período de PRUEBA: mínimo 10 días, máximo 30 días (art. 77.1).
+• INFORMES: plazo para emitirlos = 10 días salvo norma especial (art. 80.1).
+• Informe NO emitido → puede prescindirse de él, salvo que sea determinante.
+• AUDIENCIA: entre 10 y 15 días. ANTES de la propuesta de resolución (art. 82).
+• Audiencia puede OMITIRSE si en el expediente solo figuran las propias alegaciones.
+• INFORMACIÓN PÚBLICA: mínimo 20 días. Comparecencia ≠ condición de interesado.
+• El interesado puede hacer ALEGACIONES en cualquier momento antes de audiencia (art. 76).
+
+3. TERMINACIÓN
+──────────────
+• Las 5 formas del art. 84: resolución, desistimiento, renuncia, caducidad,
+  imposibilidad material sobrevenida.
+• Terminación convencional (art. 86): no puede ser contraria al ordenamiento
+  ni a derechos de terceros.
+• Desistimiento ≠ Renuncia: desistir = abandona el procedimiento (puede reiniciar);
+  renunciar = abandona el derecho (no puede reiniciar).
+• Si hay varios interesados: el desistimiento de uno NO afecta a los demás (art. 94.4).
+• CADUCIDAD: advertencia + 3 meses sin actuar → archivo (art. 95.1).
+• Caducidad ≠ Prescripción: la caducidad del procedimiento no extingue el derecho.
+• Resolución: debe ser CONGRUENTE y MOTIVADA; indicar si agota la vía admin. (art. 88).
+• Resolución en procedimientos sancionadores: reconocimiento de responsabilidad
+  puede reducir la sanción en el procedimiento simplificado (art. 85).
+
+====================================
+C) TRAMPAS FRECUENTES EN TEST
+====================================
+
+1. "El plazo de subsanación es de 15 días."
+   → FALSO. Son 10 días (art. 68.1).
+
+2. "La audiencia puede practicarse después de la propuesta de resolución."
+   → FALSO. Debe practicarse ANTES (art. 82.1).
+
+3. "Toda comparecencia en información pública da condición de interesado."
+   → FALSO. La comparecencia no otorga por sí sola la condición de interesado (art. 83.3).
+
+4. "El desistimiento extingue el derecho del interesado."
+   → FALSO. Solo extingue el procedimiento. La renuncia extingue el derecho.
+
+5. "La caducidad implica prescripción del derecho."
+   → FALSO. Solo termina ese procedimiento concreto; el derecho puede aún no haber prescrito.
+
+6. "Contra el acuerdo de acumulación cabe recurso autónomo."
+   → FALSO. No cabe recurso autónomo (art. 57.2).
+
+7. "Los informes facultativos deben emitirse siempre en 20 días."
+   → FALSO. El plazo es de 10 días, salvo que la norma fije otro (art. 80.1).
+
+8. "La terminación convencional puede ser contraria al ordenamiento si hay acuerdo de las partes."
+   → FALSO. Está absolutamente prohibida si contradice el ordenamiento (art. 86.1).
+
+9. "Si el procedimiento caduca, la infracción queda prescrita."
+   → DEPENDE. Son figuras distintas; hay que calcular el plazo de prescripción separadamente.
+
+10. "El período de prueba puede ser de 5 días si así lo decide el instructor."
+    → FALSO. El mínimo es 10 días (art. 77.1).
+
+====================================
+D) ESQUEMA NEMOTÉCNICO RÁPIDO
+====================================
+
+INICIACIÓN  → "OFICI-SOLICITUD" · 6 letras art.66 = "No Nh-CR Lf-Firm-Órgano"
+ORDENACIÓN  → "IMPULSO + CONCENTRACIÓN" · art. 71-72
+INSTRUCCIÓN → "PIA" (Prueba 10-30d · Informes 10d · Audiencia 10-15d ANTES propuesta)
+TERMINACIÓN → "DRICA" + Conv + Silencio
+                D=Desistimiento · R=Renuncia · I=Imposibilidad · C=Caducidad · A=Resolución
+CADUCIDAD   → "3 meses de advertencia" → archivo · no prescripción
+
+====================================
+E) ARTÍCULOS CONEXOS CLAVE
+====================================
+
+• Art. 21 LPAC  → Obligación de resolver (3 meses si no hay norma especial)
+• Art. 22 LPAC  → Suspensión del plazo máximo para resolver
+• Art. 23 LPAC  → Ampliación del plazo máximo
+• Art. 24 LPAC  → Silencio administrativo en procedimientos a solicitud
+• Art. 25 LPAC  → Falta de resolución en procedimientos de oficio
+• Arts. 103-106 CE → Base constitucional del procedimiento
+• Art. 149.1.18ª CE → Competencia estatal para regular el proc. común

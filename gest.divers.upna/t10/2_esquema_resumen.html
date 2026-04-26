@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2_esquema_resumen_t10.html</title>
+  <style>
+    :root{
+      --bg:#f8fafc;
+      --card:#ffffff;
+      --ink:#0f172a;
+      --muted:#475569;
+      --line:#cbd5e1;
+      --blue:#dbeafe;
+      --blue-b:#2563eb;
+      --green:#dcfce7;
+      --green-b:#16a34a;
+      --amber:#fef3c7;
+      --amber-b:#d97706;
+      --violet:#ede9fe;
+      --violet-b:#7c3aed;
+      --rose:#ffe4e6;
+      --rose-b:#e11d48;
+      --slate:#e2e8f0;
+      --slate-b:#334155;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;padding:24px;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.35}
+    .page{max-width:1100px;margin:0 auto}
+    .hero{background:linear-gradient(135deg,#0f172a,#1e3a8a);color:#fff;padding:24px;border-radius:18px;margin-bottom:20px}
+    h1{margin:0 0 8px 0;font-size:30px}
+    .sub{font-size:15px;opacity:.92}
+    .legend{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:18px 0 22px}
+    .leg{padding:10px 12px;border-radius:12px;font-weight:700;font-size:13px;text-align:center;border:2px solid transparent}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 1px 2px rgba(15,23,42,.06)}
+    .card h2{margin:0 0 10px 0;font-size:20px}
+    .tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 8px;border-radius:999px;margin-bottom:8px}
+    .mini{font-size:13px;color:var(--muted)}
+    .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .box{border-radius:12px;padding:10px 12px;border:2px solid transparent;background:#fff}
+    .box h3{margin:0 0 6px 0;font-size:15px}
+    ul{margin:8px 0 0 18px;padding:0}
+    li{margin:4px 0}
+    .flow{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .pill{padding:8px 10px;border-radius:999px;font-size:13px;font-weight:700;border:2px solid}
+    .bigline{font-size:22px;font-weight:800;letter-spacing:.3px;margin:8px 0}
+    table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px}
+    th,td{border:1px solid var(--line);padding:8px;vertical-align:top;text-align:left}
+    th{background:#f1f5f9}
+    .note{margin-top:10px;padding:10px 12px;border-radius:10px;font-size:13px;font-weight:700}
+    .mem{background:#111827;color:#fff;border-radius:18px;padding:18px;margin-top:18px}
+    .mem h2{margin-top:0}
+    .memgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .membox{background:#1f2937;border:1px solid #374151;border-radius:12px;padding:12px}
+    .footer{margin-top:16px;font-size:12px;color:var(--muted);text-align:center}
+    .blue{background:var(--blue);border-color:var(--blue-b)} .green{background:var(--green);border-color:var(--green-b)}
+    .amber{background:var(--amber);border-color:var(--amber-b)} .violet{background:var(--violet);border-color:var(--violet-b)}
+    .rose{background:var(--rose);border-color:var(--rose-b)} .slate{background:var(--slate);border-color:var(--slate-b)}
+    @media (max-width:900px){.grid,.legend,.memgrid,.cols{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>  <div class="hero">
+    <h1>Tema 10 · Procedimiento Administrativo Común II</h1>
+    <div class="sub">Esquema-resumen con bloques visuales para memorización rápida · Ley 39/2015 · arts. 54–95</div>
+  </div>
+
+  <div class="legend">
+    <div class="leg blue">Azul · Iniciación</div>
+    <div class="leg green">Verde · Ordenación</div>
+    <div class="leg amber">Ámbar · Instrucción</div>
+    <div class="leg violet">Violeta · Terminación</div>
+    <div class="leg rose">Rosa · Errores típicos</div>
+  </div>
+
+  <div class="grid">
+    <section class="card blue">
+      <div class="tag blue">ARTS. 54–68</div>
+      <h2>1. Iniciación</h2>
+      <div class="bigline">DE OFICIO o A SOLICITUD</div>
+      <div class="cols">
+        <div class="box blue">
+          <h3>De oficio</h3>
+          <ul>
+            <li>La Administración abre el procedimiento</li>
+            <li>Puede haber actuaciones previas</li>
+            <li>Puede acordar medidas provisionales</li>
+            <li>Puede acumular expedientes conectados</li>
+          </ul>
+        </div>
+        <div class="box blue">
+          <h3>A solicitud</h3>
+          <ul>
+            <li>Parte de una petición del interesado</li>
+            <li>Rige el art. 66 para el contenido mínimo</li>
+            <li>Si falta algo → subsanación art. 68</li>
+            <li>Si no subsana → desistido</li>
+          </ul>
+        </div>
+      </div>
+      <div class="note blue">Idea flash: el tema arranca con la gran bifurcación del procedimiento.</div>
+    </section>
+
+    <section class="card blue">
+      <div class="tag blue">ART. 66</div>
+      <h2>2. Solicitud del interesado</h2>
+      <div class="bigline">6 DATOS MÍNIMOS</div>
+      <div class="flow">
+        <div class="pill blue">a) Nombre</div>
+        <div class="pill blue">b) Notificación</div>
+        <div class="pill blue">c) Hechos y petición</div>
+        <div class="pill blue">d) Lugar y fecha</div>
+        <div class="pill blue">e) Firma</div>
+        <div class="pill blue">f) Órgano destinatario</div>
+      </div>
+      <div class="note blue">Nemotecnia: Nombre · Notificación · Causa/Petición · Lugar/Fecha · Firma · Órgano.</div>
+    </section>
+
+    <section class="card blue">
+      <div class="tag blue">ARTS. 56–68</div>
+      <h2>3. Actuaciones clave al inicio</h2>
+      <table>
+        <tr><th>Figura</th><th>Regla rápida</th></tr>
+        <tr><td>Actuaciones previas</td><td>Sirven para conocer hechos y conveniencia de iniciar</td></tr>
+        <tr><td>Medidas provisionales</td><td>Pueden adoptarse antes o después del inicio</td></tr>
+        <tr><td>Acumulación</td><td>Si hay identidad o conexión; sin recurso autónomo</td></tr>
+        <tr><td>Subsanación</td><td>10 días para corregir la solicitud</td></tr>
+      </table>
+      <div class="note blue">Pregunta típica: qué puede hacerse antes del acuerdo formal de iniciación.</div>
+    </section>
+
+    <section class="card green">
+      <div class="tag green">ARTS. 70–74</div>
+      <h2>4. Ordenación</h2>
+      <div class="bigline">IMPULSO DE OFICIO</div>
+      <div class="flow">
+        <div class="pill green">Expediente electrónico</div>
+        <div class="pill green">Índice de documentos</div>
+        <div class="pill green">Impulso</div>
+        <div class="pill green">Concentración</div>
+        <div class="pill green">Cumplimiento de trámites</div>
+        <div class="pill green">Cuestiones incidentales</div>
+      </div>
+      <div class="note green">La Administración mueve el procedimiento; el interesado no tiene que empujarlo trámite a trámite.</div>
+    </section>
+
+    <section class="card amber">
+      <div class="tag amber">ARTS. 75–83</div>
+      <h2>5. Instrucción</h2>
+      <div class="bigline">ALEGAR · PROBAR · INFORMAR · OÍR</div>
+      <table>
+        <tr><th>Trámite</th><th>Dato clave</th></tr>
+        <tr><td>Alegaciones</td><td>Pueden formularse antes del trámite de audiencia</td></tr>
+        <tr><td>Prueba</td><td>Período de 10 a 30 días</td></tr>
+        <tr><td>Informes</td><td>Plazo general de emisión: 10 días</td></tr>
+        <tr><td>Audiencia</td><td>Entre 10 y 15 días, antes de la propuesta</td></tr>
+        <tr><td>Información pública</td><td>Plazo mínimo: 20 días</td></tr>
+      </table>
+      <div class="note amber">Secuencia mental: primero se reúne material, luego se escucha al interesado.</div>
+    </section>
+
+    <section class="card amber">
+      <div class="tag amber">ARTS. 77–83</div>
+      <h2>6. Bloque de plazos de examen</h2>
+      <div class="flow">
+        <div class="pill amber">Subsanación 10 días</div>
+        <div class="pill amber">Prueba 10–30 días</div>
+        <div class="pill amber">Informes 10 días</div>
+        <div class="pill amber">Audiencia 10–15 días</div>
+        <div class="pill amber">Información pública 20 días</div>
+        <div class="pill amber">Caducidad 3 meses tras aviso</div>
+      </div>
+      <div class="note amber">Este bloque suele caer en test literal: emparejar trámite y plazo.</div>
+    </section>
+
+    <section class="card violet">
+      <div class="tag violet">ART. 84</div>
+      <h2>7. Finalización del procedimiento</h2>
+      <div class="bigline">5 FORMAS BÁSICAS</div>
+      <div class="flow">
+        <div class="pill violet">Resolución</div>
+        <div class="pill violet">Desistimiento</div>
+        <div class="pill violet">Renuncia</div>
+        <div class="pill violet">Caducidad</div>
+        <div class="pill violet">Imposibilidad material</div>
+      </div>
+      <div class="note violet">Además, en el tema también debes recordar la terminación convencional del art. 86.</div>
+    </section>
+
+    <section class="card violet">
+      <div class="tag violet">ART. 86</div>
+      <h2>8. Terminación convencional</h2>
+      <div class="cols">
+        <div class="box violet">
+          <h3>Qué puede haber</h3>
+          <ul>
+            <li>Acuerdos</li>
+            <li>Pactos</li>
+            <li>Convenios</li>
+            <li>Contratos</li>
+          </ul>
+        </div>
+        <div class="box violet">
+          <h3>Límites</h3>
+          <ul>
+            <li>No contra el ordenamiento jurídico</li>
+            <li>No sobre materias no transigibles</li>
+            <li>No perjuicio a terceros</li>
+          </ul>
+        </div>
+      </div>
+      <div class="note violet">Idea test: puede terminar o sustituir/completar la resolución.</div>
+    </section>
+
+    <section class="card violet">
+      <div class="tag violet">ARTS. 87–88</div>
+      <h2>9. Resolución</h2>
+      <div class="bigline">EXPRESA · CONGRUENTE · MOTIVADA</div>
+      <ul>
+        <li>La Administración debe resolver y notificar</li>
+        <li>Debe decidir todas las cuestiones planteadas y derivadas</li>
+        <li>Debe ser congruente con las peticiones del interesado</li>
+        <li>Debe indicar si pone fin a la vía administrativa</li>
+      </ul>
+      <div class="note violet">La resolución es la forma normal de terminación.</div>
+    </section>
+
+    <section class="card rose">
+      <div class="tag rose">ARTS. 94–95</div>
+      <h2>10. Desistimiento · Renuncia · Caducidad</h2>
+      <table>
+        <tr><th>Figura</th><th>Qué abandona</th><th>Efecto clave</th></tr>
+        <tr><td>Desistimiento</td><td>El procedimiento</td><td>Puede volver a iniciar, salvo límites</td></tr>
+        <tr><td>Renuncia</td><td>El derecho</td><td>No cabe si la renuncia está prohibida</td></tr>
+        <tr><td>Caducidad</td><td>No hay abandono voluntario</td><td>Archivo por paralización imputable al interesado</td></tr>
+      </table>
+      <div class="note rose">Caducidad: requiere advertencia y 3 meses de inactividad; no equivale por sí sola a prescripción.</div>
+    </section>
+  </div>
+
+  <section class="mem">
+    <h2>Versión ultra-rápida para memorizar</h2>
+    <div class="memgrid">
+      <div class="membox"><strong>Inicio:</strong> oficio o solicitud</div>
+      <div class="membox"><strong>Solicitud:</strong> 6 datos del art. 66</div>
+      <div class="membox"><strong>Ordenación:</strong> impulso de oficio</div>
+      <div class="membox"><strong>Instrucción:</strong> alegaciones + prueba + informes + audiencia</div>
+      <div class="membox"><strong>Finalización:</strong> resolución, desistimiento, renuncia, caducidad, imposibilidad</div>
+      <div class="membox"><strong>Caducidad:</strong> aviso + 3 meses + archivo</div>
+    </div>
+  </section>
+
+  <div class="footer">Tema 10 · Ley 39/2015 · Esquema-resumen visual para memorización rápida</div>
+</div>
+</body>
+</html>
