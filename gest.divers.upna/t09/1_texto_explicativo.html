@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>1_texto_explicativo_t09.html</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300..700;1,300..700&family=Work+Sans:wght@300..700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7f6f2;--surface:#ffffff;--text:#1c1917;--muted:#57534e;
+      --primary:#01696f;--accent:#dbeafe;--border:#e2e8f0;
+      --font-body:'Work Sans',sans-serif;--font-display:'Source Serif 4',Georgia,serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-size:16px;line-height:1.7;}
+    .wrap{max-width:860px;margin:0 auto;padding:40px 28px 80px;}
+    /* HEADER */
+    .page-header{background:var(--primary);color:#fff;padding:36px 36px 28px;border-radius:10px;margin-bottom:40px;}
+    .page-header .ley{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.85;margin-bottom:6px;}
+    .page-header h1{font-family:var(--font-display);font-size:clamp(1.4rem,3vw,2.1rem);font-weight:600;line-height:1.25;margin-bottom:8px;}
+    .page-header .sub{font-size:14px;opacity:.88;}
+    /* ÍNDICE */
+    .toc{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:20px 24px;margin-bottom:40px;}
+    .toc h2{font-size:14px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
+    .toc ol{padding-left:18px;}
+    .toc li{font-size:14px;margin-bottom:4px;}
+    .toc a{color:var(--primary);text-decoration:none;}
+    .toc a:hover{text-decoration:underline;}
+    /* SECCIONES */
+    .section{margin-bottom:52px;}
+    .section-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--primary);}
+    .section-num{background:var(--primary);color:#fff;font-size:13px;font-weight:700;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .section-header h2{font-family:var(--font-display);font-size:1.25rem;font-weight:600;color:var(--primary);}
+    .section p{margin-bottom:14px;color:var(--text);}
+    .section p:last-child{margin-bottom:0;}
+    /* CAJAS */
+    .box{border-radius:8px;padding:16px 18px;margin:18px 0;}
+    .box-blue{background:#eff6ff;border-left:4px solid #3b82f6;}
+    .box-green{background:#f0fdf4;border-left:4px solid var(--primary);}
+    .box-yellow{background:#fefce8;border-left:4px solid #ca8a04;}
+    .box-red{background:#fef2f2;border-left:4px solid #dc2626;}
+    .box-title{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:6px;color:var(--muted);}
+    /* TABLA DE CAUSAS */
+    table{width:100%;border-collapse:collapse;margin:14px 0;}
+    th,td{border:1px solid var(--border);padding:9px 12px;font-size:14px;vertical-align:top;text-align:left;}
+    th{background:var(--accent);font-weight:700;color:#1e3a5f;}
+    tr:nth-child(even){background:#f8fafc;}
+    /* LISTAS */
+    ul,ol{padding-left:20px;margin:10px 0 14px;}
+    li{margin-bottom:5px;font-size:15px;}
+    /* KEY HIGHLIGHT */
+    .key{font-weight:700;color:var(--primary);}
+    .art{font-size:12px;font-weight:700;background:#e0f2fe;color:#075985;padding:1px 6px;border-radius:4px;margin-left:4px;}
+    /* ALERT */
+    .alert{background:#fff7ed;border:1px solid #fdba74;border-radius:8px;padding:14px 16px;margin:18px 0;font-size:14px;}
+    .alert strong{color:#9a3412;}
+    /* FOOTER */
+    .page-footer{text-align:center;font-size:12px;color:var(--muted);margin-top:60px;padding-top:20px;border-top:1px solid var(--border);}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<!-- CABECERA -->
+<div class="page-header">
+  <div class="ley">Ley 39/2015 · LPAC · Tema 9</div>
+  <h1>El Procedimiento Administrativo Común I<br>Concepto y Naturaleza · Garantías · Abstención y Recusación</h1>
+  <div class="sub">Texto explicativo y desarrollo narrativo para comprensión y estudio</div>
+</div>
+
+<!-- ÍNDICE -->
+<div class="toc">
+  <h2>Índice de contenidos</h2>
+  <ol>
+    <li><a href="#s1">Antecedentes y contexto normativo</a></li>
+    <li><a href="#s2">Concepto y naturaleza del procedimiento administrativo</a></li>
+    <li><a href="#s3">El procedimiento como garantía constitucional (arts. 103 y 105 CE)</a></li>
+    <li><a href="#s4">Principios informadores del procedimiento administrativo</a></li>
+    <li><a href="#s5">Garantías del procedimiento: los derechos de los interesados (art. 53 LPAC)</a></li>
+    <li><a href="#s6">Abstención: concepto, causas y efectos (art. 23 LRJSP)</a></li>
+    <li><a href="#s7">Recusación: concepto, causas y procedimiento (art. 24 LRJSP)</a></li>
+    <li><a href="#s8">Diferencias entre abstención y recusación</a></li>
+    <li><a href="#s9">Efectos del incumplimiento</a></li>
+  </ol>
+</div>
+
+<!-- SECCIÓN 1 -->
+<div class="section" id="s1">
+  <div class="section-header">
+    <div class="section-num">1</div>
+    <h2>Antecedentes y contexto normativo</h2>
+  </div>
+  <p>El procedimiento administrativo español ha transitado desde la Ley de Azcárate de 1889 hasta la vigente <span class="key">Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas (LPAC)</span>. Esta ley deroga la Ley 30/1992 y se articula junto con la <span class="key">Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público (LRJSP)</span>, constituyendo los dos pilares del Derecho administrativo español contemporáneo.</p>
+  <p>La reforma de 2015 responde a tres necesidades principales: (1) la digitalización integral de las Administraciones y la eliminación del papel como soporte ordinario; (2) la simplificación y la reducción de cargas administrativas; y (3) la sistematización y coherencia de un ordenamiento disperso formado por la Ley 30/1992, la Ley 11/2007 y numerosas leyes sectoriales modificadoras.</p>
+  <div class="box box-blue">
+    <div class="box-title">División sistemática clave para oposiciones</div>
+    La Ley 39/2015 regula las relaciones <em>ad extra</em> de la Administración con los ciudadanos (procedimiento). La Ley 40/2015 regula las relaciones <em>ad intra</em> (organización). La abstención y recusación, pese a afectar al procedimiento, se ubican en la <strong>Ley 40/2015 (arts. 23 y 24 LRJSP)</strong> por ser una cuestión de organización interna y régimen del personal.
+  </div>
+</div>
+
+<!-- SECCIÓN 2 -->
+<div class="section" id="s2">
+  <div class="section-header">
+    <div class="section-num">2</div>
+    <h2>Concepto y naturaleza del procedimiento administrativo</h2>
+  </div>
+  <p>El propio preámbulo de la Ley 39/2015 define el procedimiento administrativo como <em>"el conjunto ordenado de trámites y actuaciones formalmente realizadas, según el cauce legalmente previsto, para dictar un acto administrativo o expresar la voluntad de la Administración"</em>. Esta definición pone el acento en cuatro notas esenciales:</p>
+  <ul>
+    <li><span class="key">Conjunto ordenado:</span> los trámites siguen una secuencia lógica y legalmente predeterminada.</li>
+    <li><span class="key">Trámites y actuaciones formales:</span> no basta la voluntad interna; el Derecho exige cauces formales para garantizar la seguridad jurídica.</li>
+    <li><span class="key">Cauce legalmente previsto:</span> la legalidad procedimental es parte del principio de legalidad del art. 9.3 CE.</li>
+    <li><span class="key">Finalidad:</span> dictar un acto administrativo o expresar la voluntad de la Administración (también se comprenden los reglamentos).</li>
+  </ul>
+  <p>La <span class="key">naturaleza</span> del procedimiento es doble: es, a la vez, un instrumento de <em>eficacia administrativa</em> (permite a la Administración cumplir su misión de servicio al interés general) y una <em>garantía jurídica</em> para los ciudadanos (limita la arbitrariedad y asegura la participación del interesado antes de que se adopte una decisión que afecte a su esfera jurídica).</p>
+  <div class="box box-green">
+    <div class="box-title">Objeto de la Ley 39/2015 (art. 1)</div>
+    Regular: (a) los requisitos de validez y eficacia de los actos administrativos; (b) el procedimiento administrativo común a todas las Administraciones Públicas, incluyendo el sancionador y el de reclamación de responsabilidad; y (c) los principios del ejercicio de la iniciativa legislativa y la potestad reglamentaria.
+  </div>
+  <p>El carácter de <span class="key">"común"</span> del procedimiento no significa que sea el único existente: el Estado establece el procedimiento administrativo básico aplicable a todas las Administraciones. Las Comunidades Autónomas pueden dictar normas de procedimiento para la aplicación de su Derecho sustantivo, pero siempre respetando las reglas del procedimiento común.</p>
+</div>
+
+<!-- SECCIÓN 3 -->
+<div class="section" id="s3">
+  <div class="section-header">
+    <div class="section-num">3</div>
+    <h2>El procedimiento como garantía constitucional</h2>
+  </div>
+  <p>El procedimiento administrativo tiene un anclaje constitucional sólido en varios preceptos:</p>
+  <ul>
+    <li><span class="key">Art. 103 CE:</span> la Administración sirve con objetividad a los intereses generales y actúa con sometimiento pleno a la Ley y al Derecho (principios de eficacia, jerarquía, descentralización, desconcentración, coordinación y legalidad).</li>
+    <li><span class="key">Art. 105 CE:</span> la ley regulará la audiencia de los ciudadanos en el procedimiento de elaboración de disposiciones administrativas y el procedimiento de producción de actos administrativos, garantizando la audiencia al interesado cuando proceda.</li>
+    <li><span class="key">Art. 106 CE:</span> los tribunales controlan la actuación administrativa y garantizan los derechos e intereses legítimos.</li>
+    <li><span class="key">Art. 149.1.18ª CE:</span> el Estado tiene competencia exclusiva para regular el procedimiento administrativo común, sin perjuicio de las especialidades organizativas autonómicas.</li>
+  </ul>
+  <p>El Tribunal Constitucional ha precisado que el "procedimiento administrativo común" del art. 149.1.18ª CE es el conjunto de reglas y principios que garantizan a todos los ciudadanos un tratamiento igual ante la Administración, con independencia de cuál sea la Administración con la que se relacionen.</p>
+</div>
+
+<!-- SECCIÓN 4 -->
+<div class="section" id="s4">
+  <div class="section-header">
+    <div class="section-num">4</div>
+    <h2>Principios informadores del procedimiento administrativo</h2>
+  </div>
+  <p>El procedimiento administrativo se rige por un conjunto de principios que pueden extraerse del articulado de la Ley 39/2015 y de la doctrina:</p>
+  <table>
+    <tr>
+      <th>Principio</th>
+      <th>Contenido esencial</th>
+      <th>Referencia</th>
+    </tr>
+    <tr>
+      <td><strong>Legalidad</strong></td>
+      <td>La Administración solo puede actuar dentro de los márgenes establecidos por la Ley y el Derecho.</td>
+      <td>Art. 103.1 CE; Art. 1 LPAC</td>
+    </tr>
+    <tr>
+      <td><strong>Imparcialidad y objetividad</strong></td>
+      <td>La Administración actúa con objetividad. Las figuras de abstención y recusación aseguran su plasmación práctica.</td>
+      <td>Arts. 103 CE; 23-24 LRJSP</td>
+    </tr>
+    <tr>
+      <td><strong>Eficacia</strong></td>
+      <td>El procedimiento debe permitir a la Administración cumplir su misión de forma ágil y efectiva. El impulso de oficio es su expresión (art. 71 LPAC).</td>
+      <td>Arts. 103 CE; 71 LPAC</td>
+    </tr>
+    <tr>
+      <td><strong>Celeridad</strong></td>
+      <td>Los procedimientos se impulsan de oficio y se resuelven en los plazos establecidos. El silencio administrativo y la caducidad son mecanismos de garantía frente a la dilación.</td>
+      <td>Arts. 21-25 LPAC</td>
+    </tr>
+    <tr>
+      <td><strong>Contradicción</strong></td>
+      <td>El interesado puede aportar alegaciones, documentos y pruebas en cualquier momento antes del trámite de audiencia.</td>
+      <td>Art. 53.1.e LPAC</td>
+    </tr>
+    <tr>
+      <td><strong>Gratuidad</strong></td>
+      <td>El procedimiento no genera costas para los interesados salvo imposición legal expresa.</td>
+      <td>Doctrina y principio general</td>
+    </tr>
+    <tr>
+      <td><strong>Forma escrita y electrónica</strong></td>
+      <td>La tramitación electrónica es la forma ordinaria. El papel es residual.</td>
+      <td>Arts. 36, 70 LPAC</td>
+    </tr>
+    <tr>
+      <td><strong>Transparencia y publicidad</strong></td>
+      <td>El interesado tiene derecho a conocer el estado de tramitación del procedimiento en cualquier momento.</td>
+      <td>Art. 53.1.a LPAC</td>
+    </tr>
+    <tr>
+      <td><strong>Buena fe</strong></td>
+      <td>Tanto la Administración como los interesados deben actuar conforme a la buena fe y la confianza legítima.</td>
+      <td>Art. 3.1.e LRJSP</td>
+    </tr>
+  </table>
+</div>
+
+<!-- SECCIÓN 5 -->
+<div class="section" id="s5">
+  <div class="section-header">
+    <div class="section-num">5</div>
+    <h2>Garantías del procedimiento: derechos de los interesados (Art. 53 LPAC)</h2>
+  </div>
+  <p>El art. 53 LPAC recoge los derechos específicos de los interesados <em>en el procedimiento</em>, que se suman a los derechos generales de los ciudadanos frente a la Administración. Son la expresión positiva de las garantías procedimentales:</p>
+  <div class="box box-green">
+    <div class="box-title">Derechos del interesado — Art. 53.1 LPAC (letras a–i)</div>
+    <ol type="a">
+      <li><strong>a)</strong> A conocer, en cualquier momento, el <em>estado de la tramitación</em>, el sentido del silencio, el órgano competente y los actos de trámite dictados; y a obtener copia de los documentos del procedimiento.</li>
+      <li><strong>b)</strong> A <em>identificar</em> a las autoridades y personal bajo cuya responsabilidad se tramita el procedimiento.</li>
+      <li><strong>c)</strong> A no presentar documentos <em>originales</em> salvo que, de manera excepcional, la normativa reguladora aplicable establezca lo contrario.</li>
+      <li><strong>d)</strong> A no presentar datos y documentos <em>ya en poder de la Administración</em> o elaborados por ella.</li>
+      <li><strong>e)</strong> A formular <em>alegaciones</em>, usar los medios de defensa admitidos por el ordenamiento y aportar documentos en cualquier fase anterior al trámite de audiencia.</li>
+      <li><strong>f)</strong> A obtener <em>información y orientación</em> sobre requisitos jurídicos o técnicos.</li>
+      <li><strong>g)</strong> A actuar asistidos de <em>asesor</em> cuando lo consideren conveniente en defensa de sus intereses.</li>
+      <li><strong>h)</strong> A cumplir las obligaciones de <em>pago</em> a través de los medios electrónicos del art. 98.2.</li>
+      <li><strong>i)</strong> Cualesquiera otros que les reconozcan <em>la Constitución y las leyes</em>.</li>
+    </ol>
+  </div>
+  <p>En los <span class="key">procedimientos sancionadores</span>, el art. 53.2 añade derechos específicos de los presuntos responsables: a ser notificados de los hechos imputados, las infracciones posibles, las sanciones que pudieran imponerse y la identidad del instructor; a no declarar contra sí mismos; y a la presunción de inocencia.</p>
+  <div class="alert">
+    <strong>⚡ Punto caliente de examen:</strong> El art. 53.1.d) reconoce el derecho a no presentar documentos ya en poder de las Administraciones. Este derecho conecta directamente con el principio de eficiencia y fue una de las novedades más destacadas de la LPAC frente a la Ley 30/1992.
+  </div>
+</div>
+
+<!-- SECCIÓN 6 -->
+<div class="section" id="s6">
+  <div class="section-header">
+    <div class="section-num">6</div>
+    <h2>Abstención: concepto, causas y efectos (Art. 23 LRJSP)</h2>
+  </div>
+  <p>La <span class="key">abstención</span> es la obligación que recae sobre las autoridades y el personal al servicio de las Administraciones de <strong>apartarse voluntaria y proactivamente</strong> de cualquier asunto en el que concurra alguna de las causas de parcialidad previstas en el art. 23.2 LRJSP. Su fundamento es el principio constitucional de objetividad e imparcialidad (art. 103 CE).</p>
+  <p>La persona que aprecia en sí misma una causa de abstención debe <strong>comunicarlo a su superior inmediato</strong>, quien resolverá lo procedente. No espera a que nadie se lo pida; actúa por iniciativa propia.</p>
+
+  <div class="box box-blue">
+    <div class="box-title">Causas de abstención — Art. 23.2 LRJSP (letras a–e)</div>
+    <table>
+      <tr><th>Letra</th><th>Causa</th></tr>
+      <tr>
+        <td><strong>a)</strong></td>
+        <td>Tener <strong>interés personal</strong> en el asunto o en otro cuya resolución pudiera influir en él; ser administrador de sociedad o entidad interesada; o tener cuestión litigiosa pendiente con algún interesado.</td>
+      </tr>
+      <tr>
+        <td><strong>b)</strong></td>
+        <td>Tener <strong>vínculo matrimonial o situación de hecho asimilable</strong> y parentesco de consanguinidad dentro del <strong>cuarto grado</strong> o de afinidad dentro del <strong>segundo grado</strong> con cualquiera de los interesados, administradores, asesores, representantes o mandatarios del procedimiento; o compartir despacho profesional o estar asociado con ellos.</td>
+      </tr>
+      <tr>
+        <td><strong>c)</strong></td>
+        <td>Tener <strong>amistad íntima o enemistad manifiesta</strong> con alguna de las personas del apartado anterior.</td>
+      </tr>
+      <tr>
+        <td><strong>d)</strong></td>
+        <td>Haber intervenido como <strong>perito o testigo</strong> en el procedimiento de que se trate.</td>
+      </tr>
+      <tr>
+        <td><strong>e)</strong></td>
+        <td>Tener <strong>relación de servicio</strong> con persona natural o jurídica interesada directamente en el asunto, o haberle prestado en los <strong>dos últimos años</strong> servicios profesionales de cualquier tipo y en cualquier circunstancia o lugar.</td>
+      </tr>
+    </table>
+  </div>
+
+  <p>Los órganos jerárquicamente superiores al afectado podrán ordenarle que se abstenga (art. 23.3 LRJSP). Es importante subrayar que <span class="key">la actuación de quien debía abstenerse no implica, necesariamente, la invalidez del acto</span> (art. 23.4 LRJSP); la invalidez dependerá del tipo de vicio que se produzca conforme a los arts. 47-48 LPAC. Lo que sí genera siempre es la <span class="key">responsabilidad</span> procedente (art. 23.5 LRJSP).</p>
+</div>
+
+<!-- SECCIÓN 7 -->
+<div class="section" id="s7">
+  <div class="section-header">
+    <div class="section-num">7</div>
+    <h2>Recusación: concepto, causas y procedimiento (Art. 24 LRJSP)</h2>
+  </div>
+  <p>La <span class="key">recusación</span> es el derecho que asiste a los interesados en el procedimiento para <strong>instar que se aparte</strong> del mismo la autoridad o el empleado público en quien concurra alguna de las causas del art. 23.2 LRJSP. A diferencia de la abstención, la iniciativa es externa: parte del interesado, no del propio funcionario.</p>
+  <p>La recusación puede plantearse <span class="key">en cualquier momento de la tramitación</span> del procedimiento, sin restricción temporal.</p>
+
+  <div class="box box-yellow">
+    <div class="box-title">Procedimiento de recusación — Art. 24 LRJSP paso a paso</div>
+    <ol>
+      <li><strong>Escrito de recusación:</strong> el interesado lo presenta ante el superior jerárquico del recusado, expresando la causa o causas en que se funda (art. 24.2).</li>
+      <li><strong>Manifestación del recusado:</strong> en el <strong>día siguiente</strong>, el recusado manifiesta a su superior si se da o no en él la causa alegada (art. 24.3).</li>
+      <li><strong>Caso A — acepta la causa:</strong> si el superior aprecia la concurrencia, acuerda la sustitución <strong>acto seguido</strong> (art. 24.3).</li>
+      <li><strong>Caso B — niega la causa:</strong> el superior resuelve en el <strong>plazo de tres días</strong>, previos los informes y comprobaciones que considere oportunos (art. 24.4).</li>
+      <li><strong>Irrecurribilidad:</strong> las resoluciones adoptadas en materia de recusación <strong>no son recurribles directamente</strong>, sin perjuicio de alegar la recusación al interponer el recurso contra el acto que ponga fin al procedimiento (art. 24.5).</li>
+    </ol>
+  </div>
+
+  <p>Las <span class="key">causas de recusación son las mismas</span> que las de abstención: el art. 24.1 se remite al art. 23.2. No hay causas distintas; la diferencia está en quién toma la iniciativa.</p>
+  <div class="alert">
+    <strong>⚡ Punto caliente de examen:</strong> el plazo para que el recusado se manifieste es de <strong>1 día</strong> (al día siguiente), y el plazo para que el superior resuelve si el recusado niega la causa es de <strong>3 días</strong>. Son datos numéricos que aparecen habitualmente en exámenes tipo test.
+  </div>
+</div>
+
+<!-- SECCIÓN 8 -->
+<div class="section" id="s8">
+  <div class="section-header">
+    <div class="section-num">8</div>
+    <h2>Diferencias entre abstención y recusación</h2>
+  </div>
+  <table>
+    <tr>
+      <th>Dimensión</th>
+      <th>Abstención (art. 23 LRJSP)</th>
+      <th>Recusación (art. 24 LRJSP)</th>
+    </tr>
+    <tr>
+      <td><strong>Iniciativa</strong></td>
+      <td>Propia del funcionario o autoridad afectado</td>
+      <td>Del interesado en el procedimiento</td>
+    </tr>
+    <tr>
+      <td><strong>Forma</strong></td>
+      <td>Comunicación al superior inmediato</td>
+      <td>Escrito ante el superior del recusado</td>
+    </tr>
+    <tr>
+      <td><strong>Momento</strong></td>
+      <td>En cuanto el funcionario aprecia la causa</td>
+      <td>En cualquier momento de la tramitación</td>
+    </tr>
+    <tr>
+      <td><strong>Causas</strong></td>
+      <td>Las del art. 23.2 LRJSP (letras a–e)</td>
+      <td>Las mismas (art. 24 remite a art. 23.2)</td>
+    </tr>
+    <tr>
+      <td><strong>Procedimiento</strong></td>
+      <td>No hay procedimiento formal; basta comunicar al superior</td>
+      <td>Escrito → manifestación (1 día) → resolución (3 días si niega)</td>
+    </tr>
+    <tr>
+      <td><strong>Recurso</strong></td>
+      <td>No hay acto recurrible específico</td>
+      <td>No cabe recurso directo; se alega con el recurso contra el acto final</td>
+    </tr>
+  </table>
+</div>
+
+<!-- SECCIÓN 9 -->
+<div class="section" id="s9">
+  <div class="section-header">
+    <div class="section-num">9</div>
+    <h2>Efectos del incumplimiento</h2>
+  </div>
+  <p>El incumplimiento de la obligación de abstenerse o la intervención indebida de quien ha sido recusado producen dos consecuencias diferenciadas:</p>
+  <ul>
+    <li><span class="key">Responsabilidad del funcionario:</span> la no abstención en casos en que concurra causa da lugar a la responsabilidad que proceda (disciplinaria, patrimonial o penal) (art. 23.5 LRJSP).</li>
+    <li><span class="key">Validez del acto:</span> la actuación de quien debía abstenerse <em>no implica, necesariamente, la invalidez del acto</em> en que haya intervenido (art. 23.4 LRJSP). La invalidez dependerá de si se ha producido un vicio determinante de nulidad (art. 47 LPAC) o anulabilidad (art. 48 LPAC).</li>
+  </ul>
+  <div class="box box-red">
+    <div class="box-title">Trampa de examen clásica</div>
+    Muchos opositores confunden el art. 23.4 LRJSP. La ley dice: la actuación de quien debía abstenerse <strong>no implica necesariamente la invalidez del acto</strong>. Sería incorrecto afirmar que "la falta de abstención produce siempre la nulidad del acto". La invalidez depende del tipo de vicio concreto que se produzca.
+  </div>
+  <p>En cuanto a la recusación no resuelta o resuelta incorrectamente, el interesado podrá alegarla como motivo de impugnación del acto final mediante el recurso administrativo o contencioso-administrativo que corresponda (art. 24.5 LRJSP).</p>
+</div>
+
+<div class="page-footer">Tema 9 · LPAC · Ley 39/2015 y Ley 40/2015 · Texto explicativo para oposiciones</div>
+</div><!-- /.wrap -->
+</body>
+</html>

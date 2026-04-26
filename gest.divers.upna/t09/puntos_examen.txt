@@ -1,0 +1,120 @@
+══════════════════════════════════════════════════════════════════════
+ TEMA 9 · LEY 39/2015 · PROCEDIMIENTO ADMINISTRATIVO COMÚN I
+ Puntos de examen + Artículos clave
+══════════════════════════════════════════════════════════════════════
+
+IMPORTANTE: Abstención y recusación NO están en la Ley 39/2015.
+Están en los arts. 23 y 24 de la Ley 40/2015 (LRJSP).
+══════════════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────
+I. ARTÍCULOS CLAVE
+────────────────────────────────────────────────
+
+CONCEPTO Y NATURALEZA (Ley 39/2015)
+  Art. 1 LPAC   → Objeto: validez y eficacia de actos + PAC + iniciativa legislativa
+  Art. 2 LPAC   → Ámbito subjetivo: AGE, CCAA, EE.LL., sector público institucional
+  Art. 3 LPAC   → Capacidad de obrar ante las AAPP
+  Art. 4 LPAC   → Concepto de interesado
+
+GARANTÍAS / DERECHOS DEL INTERESADO
+  Art. 53.1 LPAC → Derechos generales del interesado en el procedimiento (letras a–i)
+  Art. 53.2 LPAC → Derechos adicionales en procedimientos sancionadores
+  Art. 71 LPAC   → Impulso de oficio / principio de celeridad
+
+ABSTENCIÓN Y RECUSACIÓN (Ley 40/2015)
+  Art. 23 LRJSP → Abstención: causas (letras a–e) y efectos
+  Art. 24 LRJSP → Recusación: procedimiento y plazos
+
+────────────────────────────────────────────────
+II. PUNTOS MÁS FRECUENTES EN EXAMEN
+────────────────────────────────────────────────
+
+1. La LPAC (Ley 39/2015) regula las relaciones AD EXTRA; la LRJSP (Ley 40/2015)
+   regula las relaciones AD INTRA.
+
+2. La abstención y recusación están en los arts. 23-24 LRJSP, NO en la LPAC.
+
+3. El procedimiento administrativo "común" es el aplicable a TODAS las AAPP;
+   las CCAA pueden regular especialidades procedimentales para su Derecho
+   sustantivo, pero respetando las reglas básicas estatales.
+
+4. Competencia exclusiva del Estado para el PAC: Art. 149.1.18ª CE.
+
+5. Referencias constitucionales del procedimiento:
+   - Art. 103 CE: eficacia, legalidad, imparcialidad
+   - Art. 105 CE: audiencia de los ciudadanos
+   - Art. 106 CE: control judicial de la actuación administrativa
+   - Art. 149.1.18ª CE: competencia estatal sobre el PAC
+
+6. ART. 53.1.a): derecho a conocer el estado de tramitación en cualquier momento
+                  y el sentido del silencio en caso de no resolución en plazo.
+
+7. ART. 53.1.d): derecho a NO aportar documentos ya en poder de la Administración.
+   (Esto cae mucho en test tipo "¿el interesado puede...?")
+
+8. ART. 53.1.e): derecho a formular alegaciones y aportar documentos en cualquier
+   fase ANTERIOR al trámite de audiencia.
+
+9. ART. 53.2: en procedimientos sancionadores → presunción de inocencia
+   + derecho a no declarar contra sí mismo.
+
+10. CAUSAS DE ABSTENCIÓN (art. 23.2 LRJSP) — las 5 letras:
+    a) Interés personal / litigio / administrador de entidad interesada
+    b) Parentesco: consanguinidad hasta 4º grado; afinidad hasta 2º grado
+       (ojo: 4º consanguinidad y 2º afinidad, no al revés)
+    c) Amistad íntima o enemistad manifiesta
+    d) Haber intervenido como PERITO o TESTIGO
+    e) Relación de servicio o servicios profesionales en los 2 ÚLTIMOS AÑOS
+
+11. GRADOS DE PARENTESCO (dato numérico habitual en examen):
+    - Consanguinidad: 4.º grado (incluye primos hermanos)
+    - Afinidad: 2.º grado (cuñados/as)
+
+12. EFECTOS DE LA ABSTENCIÓN:
+    - La no abstención → RESPONSABILIDAD del funcionario (art. 23.5 LRJSP)
+    - La actuación sin abstenerse NO implica NECESARIAMENTE la invalidez del acto
+      (art. 23.4 LRJSP)
+
+13. PROCEDIMIENTO DE RECUSACIÓN (art. 24 LRJSP):
+    - Escrito del interesado al superior del recusado
+    - El recusado manifiesta si se da la causa: plazo = DÍA SIGUIENTE
+    - Si acepta: sustitución ACTO SEGUIDO
+    - Si niega: el superior resuelve en plazo de 3 DÍAS
+    - Las resoluciones NO son directamente recurribles → se alegan con el
+      recurso contra el acto final
+
+14. CAUSAS DE RECUSACIÓN = las mismas que las de abstención (art. 24 remite a art. 23.2)
+
+15. DIFERENCIA CLAVE:
+    - Abstención: iniciativa del propio funcionario → comunica al superior
+    - Recusación: iniciativa del interesado → escrito al superior del recusado
+
+────────────────────────────────────────────────
+III. TRAMPAS HABITUALES
+────────────────────────────────────────────────
+
+✗  "La abstención y recusación están en la Ley 39/2015"
+   → FALSO. Están en los arts. 23-24 de la Ley 40/2015 (LRJSP)
+
+✗  "La falta de abstención produce siempre la nulidad del acto"
+   → FALSO. No implica necesariamente la invalidez (art. 23.4 LRJSP)
+
+✗  "El plazo para que el recusado se manifieste es de 3 días"
+   → FALSO. El recusado se manifiesta al DÍA SIGUIENTE.
+     Los 3 días son para que el superior resuelva cuando el recusado NIEGA la causa.
+
+✗  "El parentesco de afinidad exigido para abstenerse es de 4.º grado"
+   → FALSO. Consanguinidad: 4.º grado. Afinidad: 2.º grado.
+
+✗  "Las resoluciones sobre recusación pueden recurrirse directamente"
+   → FALSO. No cabe recurso directo (art. 24.5 LRJSP).
+
+✗  "En procedimientos sancionadores el interesado solo tiene los derechos del art. 53.1"
+   → FALSO. El art. 53.2 añade derechos específicos (presunción de inocencia, etc.)
+
+✗  "Las CCAA no pueden regular ningún aspecto procedimental"
+   → FALSO. Pueden dictar normas de procedimiento para aplicar su Derecho sustantivo,
+     respetando las reglas básicas estatales.
+
+════════════════════════════════════════════════════════════════════
