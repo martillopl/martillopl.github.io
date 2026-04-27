@@ -1,0 +1,515 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>2_esquema_resumen.html · Tema 20 UPNA</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:Arial,Helvetica,sans-serif;background:#f0fdff;color:#1e293b;padding:26px;}
+
+    /* ─── CABECERA ─── */
+    .cab{background:linear-gradient(135deg,#0e7490,#0891b2,#22d3ee);color:#fff;padding:22px 28px;border-radius:12px;margin-bottom:24px;}
+    .cab h1{font-size:19px;font-weight:900;line-height:1.35;}
+    .cab p{font-size:13px;opacity:.88;margin-top:6px;}
+    .tag{display:inline-block;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.4);border-radius:20px;padding:3px 12px;font-size:11.5px;font-weight:700;margin-top:9px;margin-right:5px;}
+
+    /* ─── SECCIÓN ─── */
+    .sec{font-size:13.5px;font-weight:900;text-transform:uppercase;letter-spacing:.07em;color:#0e7490;border-bottom:3px solid #0891b2;padding-bottom:5px;margin:26px 0 13px 0;}
+
+    /* ─── GRIDS ─── */
+    .g2{display:grid;grid-template-columns:1fr 1fr;gap:13px;}
+    .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:13px;}
+    .g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:13px;}
+    .g5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;}
+
+    /* ─── TARJETA ─── */
+    .c{background:#fff;border-radius:10px;padding:14px 16px;box-shadow:0 1px 4px rgba(0,0,0,.08);}
+    .c h3{font-size:13px;font-weight:800;margin-bottom:7px;}
+    .c p,.c li{font-size:12.5px;line-height:1.55;}
+    .c ul,.c ol{padding-left:16px;}
+    .c li{margin-bottom:4px;}
+
+    /* ─── BORDES DE COLOR ─── */
+    .cy{border-top:5px solid #0891b2;} .cy h3{color:#0e7490;}
+    .az{border-top:5px solid #2563eb;} .az h3{color:#1d4ed8;}
+    .ve{border-top:5px solid #16a34a;} .ve h3{color:#15803d;}
+    .mo{border-top:5px solid #7c3aed;} .mo h3{color:#6d28d9;}
+    .ro{border-top:5px solid #dc2626;} .ro h3{color:#b91c1c;}
+    .am{border-top:5px solid #d97706;} .am h3{color:#b45309;}
+    .na{border-top:5px solid #ea580c;} .na h3{color:#c2410c;}
+    .gs{border-top:5px solid #475569;} .gs h3{color:#334155;}
+    .rs{border-top:5px solid #db2777;} .rs h3{color:#9d174d;}
+    .li{border-top:5px solid #0d9488;} .li h3{color:#0f766e;}
+
+    /* ─── TABLA ─── */
+    table{width:100%;border-collapse:collapse;font-size:12.5px;margin:10px 0 18px 0;}
+    th{background:#0e7490;color:#fff;padding:8px 10px;text-align:left;}
+    th.alt{background:#0891b2;}
+    td{border:1px solid #e2e8f0;padding:8px 10px;vertical-align:top;}
+    tr:nth-child(even) td{background:#ecfeff;}
+    .exam{font-weight:700;color:#b91c1c;}
+    .ok{color:#16a34a;font-weight:700;}
+
+    /* ─── PILLS / NÚMEROS ─── */
+    .pills{display:flex;flex-wrap:wrap;gap:10px;}
+    .pill{background:#fff;border-radius:10px;padding:11px 13px;box-shadow:0 1px 4px rgba(0,0,0,.09);text-align:center;flex:1 1 105px;}
+    .pill .num{font-size:24px;font-weight:900;line-height:1.1;}
+    .pill .lab{font-size:11px;color:#475569;margin-top:3px;line-height:1.35;}
+    .p-cy .num{color:#0891b2;} .p-az .num{color:#2563eb;} .p-ve .num{color:#16a34a;}
+    .p-ro .num{color:#dc2626;} .p-am .num{color:#d97706;} .p-mo .num{color:#7c3aed;}
+    .p-na .num{color:#ea580c;} .p-gs .num{color:#475569;} .p-li .num{color:#0d9488;}
+
+    /* ─── FINES EN TARJETAS ─── */
+    .fin{background:#fff;border-radius:10px;padding:13px 15px;box-shadow:0 1px 4px rgba(0,0,0,.08);border-left:5px solid #0891b2;}
+    .fin .num{background:#0891b2;color:#fff;width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;margin-bottom:5px;}
+    .fin p{font-size:12.5px;line-height:1.5;}
+
+    /* ─── FLUJO ─── */
+    .flujo{display:flex;gap:7px;flex-wrap:wrap;align-items:stretch;}
+    .fp{background:#fff;border-radius:8px;padding:11px 13px;box-shadow:0 1px 4px rgba(0,0,0,.08);flex:1 1 0;position:relative;}
+    .fp:not(:last-child)::after{content:"▶";position:absolute;right:-12px;top:50%;transform:translateY(-50%);font-size:13px;color:#94a3b8;z-index:2;}
+    .fp .np{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;margin-bottom:5px;}
+    .fp p,.fp strong{font-size:12px;}
+
+    /* ─── TRAMPA ─── */
+    .trampa{background:#fff5f5;border-left:5px solid #dc2626;border-radius:0 7px 7px 0;padding:8px 13px;margin-bottom:7px;font-size:12.5px;}
+    .trampa strong{color:#b91c1c;}
+
+    /* ─── MODALIDADES COMPARATIVA ─── */
+    .mod-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0 18px;}
+    .mod{background:#fff;border-radius:10px;padding:15px 17px;box-shadow:0 1px 4px rgba(0,0,0,.08);}
+    .mod-cur{border-top:6px solid #0891b2;}
+    .mod-ext{border-top:6px solid #16a34a;}
+    .mod h3{font-size:14px;font-weight:900;margin-bottom:8px;}
+    .mod-cur h3{color:#0e7490;}
+    .mod-ext h3{color:#15803d;}
+    .mod li{font-size:12.5px;margin-bottom:5px;}
+
+    /* ─── TUTORES ─── */
+    .tut-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0 18px;}
+    .tut{background:#fff;border-radius:10px;padding:15px 17px;box-shadow:0 1px 4px rgba(0,0,0,.08);}
+    .tut-ent{border-top:6px solid #7c3aed;}
+    .tut-aca{border-top:6px solid #0891b2;}
+    .tut h3{font-size:14px;font-weight:900;margin-bottom:8px;}
+    .tut-ent h3{color:#6d28d9;}
+    .tut-aca h3{color:#0e7490;}
+    .tut li{font-size:12.5px;margin-bottom:5px;}
+
+    /* ─── CONVENIO VISUAL ─── */
+    .conv-box{background:#fff;border-radius:10px;padding:15px 17px;box-shadow:0 1px 4px rgba(0,0,0,.08);border:2px solid #a5f3fc;}
+    .conv-dato{display:inline-block;background:#ecfeff;border:1px solid #67e8f9;border-radius:6px;padding:5px 12px;font-size:13px;font-weight:700;color:#0e7490;margin:4px 4px 4px 0;}
+
+    /* ─── ÓRGANOS ─── */
+    .org{background:#fff;border-radius:10px;padding:14px 16px;box-shadow:0 1px 4px rgba(0,0,0,.08);border-left:5px solid #0891b2;}
+    .org h3{font-size:13px;font-weight:800;color:#0e7490;margin-bottom:6px;}
+    .org li{font-size:12.5px;margin-bottom:4px;}
+
+    /* ─── DERECHOS/DEBERES ─── */
+    .dd-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+    .dd{background:#fff;border-radius:10px;padding:13px 15px;box-shadow:0 1px 4px rgba(0,0,0,.08);}
+    .dd-d{border-left:4px solid #16a34a;} .dd-d h4{color:#15803d;}
+    .dd-b{border-left:4px solid #dc2626;} .dd-b h4{color:#b91c1c;}
+    .dd h4{font-size:12.5px;font-weight:800;margin-bottom:5px;}
+    .dd li{font-size:12px;margin-bottom:3px;}
+
+    /* ─── ANEXOS ─── */
+    .anx-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:9px;}
+    .anx{background:#fff;border-radius:9px;padding:11px 10px;box-shadow:0 1px 4px rgba(0,0,0,.08);text-align:center;border-top:4px solid #0891b2;}
+    .anx .num{font-size:22px;font-weight:900;color:#0891b2;}
+    .anx .lab{font-size:11px;color:#334155;margin-top:4px;line-height:1.35;}
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<!-- ═══ CABECERA ═══ -->
+<div class="cab">
+  <h1>TEMA 20 · Las Prácticas Externas en la UPNA<br>
+  Resolución 2019/2012, de 20 de diciembre, del Rector · Reglamento Regulador de las Prácticas Externas</h1>
+  <p>Esquema-resumen con bloques visuales para memorización rápida</p>
+  <span class="tag">CG 20/12/2012</span>
+  <span class="tag">BON N.º 7 · 11/01/2013</span>
+  <span class="tag">RD 1707/2011 · RD 592/2014</span>
+  <span class="tag">Art. 40 Estatutos UPNA · DF 110/2003</span>
+</div>
+
+
+<!-- ═══ BLOQUE 0 · FICHA NORMATIVA ═══ -->
+<div class="sec">0 · Ficha normativa — datos de examen puros</div>
+<div class="g3">
+  <div class="c cy">
+    <h3>📋 La norma</h3>
+    <ul>
+      <li>Resolución <strong>2019/2012, de 20 de diciembre</strong>, del Rector</li>
+      <li>Reglamento aprobado por el <strong>Consejo de Gobierno</strong> el 20 de diciembre de 2012</li>
+      <li>Publicado en el <strong>BON N.º 7, de 11 de enero de 2013</strong></li>
+      <li>Habilitación: <strong>art. 40 Estatutos UPNA</strong> (Decreto Foral 110/2003, 12 de mayo)</li>
+    </ul>
+  </div>
+  <div class="c az">
+    <h3>⚖ Marco legal estatal</h3>
+    <ul>
+      <li><strong>RD 1707/2011</strong> → marco general prácticas externas universitarias</li>
+      <li>Sustituye al RD 1497/1981 y al RD 1845/1994</li>
+      <li><strong>RD 592/2014, de 11 de julio</strong> → especialmente prácticas extracurriculares</li>
+      <li><strong>Estatuto del Estudiante Universitario</strong> (RD 1791/2010) → derechos del estudiante</li>
+    </ul>
+  </div>
+  <div class="c ve">
+    <h3>🏛 Quién aprueba qué</h3>
+    <ul>
+      <li><span class="exam">Consejo de Gobierno</span> → aprueba el REGLAMENTO</li>
+      <li><span class="exam">Rector</span> → ordena su publicación mediante la Resolución 2019/2012</li>
+      <li>Centros → pueden establecer <strong>normativa complementaria</strong> (nunca contradictoria)</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══ BLOQUE 1 · DEFINICIÓN Y 5 FINES ═══ -->
+<div class="sec">1 · Definición y 5 fines de las prácticas externas (art. 1)</div>
+<div class="c gs" style="margin-bottom:13px;">
+  <h3>📖 Definición</h3>
+  <p style="font-size:13px;">Actividad de naturaleza <strong>FORMATIVA</strong>, realizada por los estudiantes universitarios, supervisada y en su caso evaluada por la Universidad. Objetivo: <strong>aplicar y complementar los conocimientos adquiridos</strong> en la formación académica, favoreciendo competencias profesionales, empleabilidad y emprendimiento.</p>
+</div>
+<div class="g5">
+  <div class="fin"><div class="num">1</div><p><strong>Formación integral</strong><br>Complementar aprendizaje teórico y práctico de aula</p></div>
+  <div class="fin"><div class="num">2</div><p><strong>Conocimiento</strong><br>Metodología de trabajo adecuada a la realidad profesional</p></div>
+  <div class="fin"><div class="num">3</div><p><strong>Competencias</strong><br>Desarrollo de competencias profesionales genéricas y específicas</p></div>
+  <div class="fin"><div class="num">4</div><p><strong>Experiencia</strong><br>Inserción laboral y empleabilidad futura</p></div>
+  <div class="fin"><div class="num">5</div><p><strong>Emprendimiento</strong><br>Valores de innovación, creatividad y emprendimiento</p></div>
+</div>
+<p style="font-size:12px;margin:10px 0;color:#475569;">🔑 Regla mnemotécnica: <strong>F-C-C-E-E</strong> → Formación · Conocimiento · Competencias · Experiencia · Emprendimiento</p>
+
+
+<!-- ═══ BLOQUE 2 · MODALIDADES ═══ -->
+<div class="sec">2 · Modalidades de prácticas (art. 3)</div>
+<div class="mod-grid">
+  <div class="mod mod-cur">
+    <h3>📚 Prácticas CURRICULARES</h3>
+    <ul>
+      <li>Integrantes del <strong>Plan de Estudios</strong></li>
+      <li>Duración: la que establezca el Plan de Estudios</li>
+      <li>Pueden extenderse excepcionalmente (autoriza el <strong>Vicerrector</strong>) para incluir el TFG o formación complementaria de <strong>6 ECTS</strong></li>
+      <li>Criterios: los que establezca el Plan de Estudios y la normativa de la UPNA</li>
+      <li class="exam">PRIORIDAD de adjudicación sobre las extracurriculares (art. 18.2)</li>
+    </ul>
+  </div>
+  <div class="mod mod-ext">
+    <h3>🟢 Prácticas EXTRACURRICULARES</h3>
+    <ul>
+      <li><strong>Voluntarias</strong>; mismos fines que las curriculares</li>
+      <li><strong>NO forman parte</strong> del Plan de Estudios</li>
+      <li>Reguladas especialmente por <strong>RD 592/2014</strong></li>
+      <li>Duración preferente: no superior al <strong>50% del curso académico</strong></li>
+      <li>Requisito preferente: haber superado al menos el <strong>50% de los créditos</strong> del plan</li>
+      <li>Están sujetas a los mismos principios de no laboralidad</li>
+    </ul>
+  </div>
+</div>
+<div class="c am" style="margin-bottom:13px;">
+  <h3>⏰ Horarios y compatibilidad (art. 4)</h3>
+  <p>El horario de las prácticas debe ser <strong>compatible en todo caso con la actividad académica, formativa y de representación</strong> del estudiante. El tutor académico vela específicamente por esta compatibilidad.</p>
+</div>
+
+
+<!-- ═══ BLOQUE 3 · CONVENIOS ═══ -->
+<div class="sec">3 · Convenios de Cooperación Educativa (arts. 6 y 6 bis)</div>
+<div class="conv-box">
+  <p style="font-size:13px;font-weight:700;color:#0e7490;margin-bottom:10px;">📑 Datos clave del convenio — los más preguntados en examen</p>
+  <div>
+    <span class="conv-dato">Vigencia inicial: 4 años</span>
+    <span class="conv-dato">Prórroga: tácita · 4 años</span>
+    <span class="conv-dato">Denuncia unilateral: 1 mes antelación</span>
+    <span class="conv-dato">Resolución por mutuo acuerdo</span>
+    <span class="conv-dato">Práctica en la propia UPNA → solo "documento de estipulaciones"</span>
+    <span class="conv-dato">Suscribe: Vicerrectorado competente</span>
+    <span class="conv-dato">Convenios específicos: puede firmar el Director del Centro</span>
+  </div>
+</div>
+<div class="c cy" style="margin-top:13px;">
+  <h3>📋 Contenido obligatorio del convenio o convenio específico (art. 6.2)</h3>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 20px;">
+    <div><ul>
+      <li>Proyecto formativo</li>
+      <li>Régimen de permisos del estudiante</li>
+      <li>Condiciones de rescisión anticipada</li>
+      <li>Régimen de seguros (accidentes + resp. civil)</li>
+    </ul></div>
+    <div><ul>
+      <li>Protección de datos del estudiante</li>
+      <li>Regulación de eventuales conflictos</li>
+      <li>Reconocimiento a los tutores de la entidad</li>
+    </ul></div>
+  </div>
+</div>
+
+
+<!-- ═══ BLOQUE 4 · ÓRGANOS ═══ -->
+<div class="sec">4 · Órganos con competencias en prácticas externas (arts. 7-8)</div>
+<div class="g3">
+  <div class="org">
+    <h3>🏛 Vicerrectorado (art. 7)</h3>
+    <ul>
+      <li>Asegura el cumplimiento de la normativa de prácticas</li>
+      <li>Vela por los criterios de reconocimiento de créditos</li>
+      <li><strong>Suscribe los Convenios de Cooperación Educativa</strong></li>
+      <li>Colabora con el Servicio de Estudiantes y Apoyo Académico, los Centros y la <strong>Fundación Universidad-Sociedad</strong></li>
+    </ul>
+  </div>
+  <div class="org">
+    <h3>🏫 Comisión de prácticas del Centro (art. 8)</h3>
+    <ul>
+      <li><strong>Presidente:</strong> Decano o Director del Centro (o delegado)</li>
+      <li><strong>Vocales:</strong> Subdirectores/Vicedecanos + Directores de Máster con responsabilidad en prácticas</li>
+      <li>Función: procedimientos de oferta, difusión, solicitud y adjudicación</li>
+      <li>Principios: <strong>transparencia · publicidad · accesibilidad universal · igualdad de oportunidades</strong></li>
+      <li>Puede colaborar con la <strong>Fundación Universidad-Sociedad</strong></li>
+    </ul>
+  </div>
+  <div class="org">
+    <h3>🏗 Proyecto formativo (art. 10)</h3>
+    <ul>
+      <li>Fija las competencias a desarrollar (generales y específicas)</li>
+      <li>Las vincula a los contenidos curriculares cursados</li>
+      <li>Elaborado conforme a: <strong>inclusión · igualdad de oportunidades · no discriminación · accesibilidad universal</strong></li>
+      <li>El <strong>compromiso de estudios</strong> (Anexo 2) lo concreta para cada práctica individual</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══ BLOQUE 5 · TUTORES ═══ -->
+<div class="sec">5 · Tutores (art. 9) — dos tutores por práctica</div>
+<div class="tut-grid">
+  <div class="tut tut-ent">
+    <h3>🏢 Tutor de la ENTIDAD COLABORADORA</h3>
+    <ul>
+      <li>Designado por la <strong>entidad colaboradora</strong></li>
+      <li>Debe estar <strong>vinculado</strong> a la entidad y tener experiencia profesional adecuada</li>
+      <li class="exam">NO puede coincidir con el tutor académico de la UPNA</li>
+      <li>Puede ser reconocido como <strong>"Amigo de la Universidad"</strong> (eximido de cuotas)</li>
+    </ul>
+    <p style="font-size:12px;margin-top:8px;"><strong>Obligaciones clave:</strong> acoger al estudiante · informarle de normativa y riesgos laborales · emitir el informe final (Anexo 3) · guardar confidencialidad sobre el estudiante.</p>
+  </div>
+  <div class="tut tut-aca">
+    <h3>🎓 Tutor ACADÉMICO de la UPNA</h3>
+    <ul>
+      <li>Designado por el <strong>Centro</strong></li>
+      <li class="exam">ÚNICO para cada estudiante y práctica (art. 9.3)</li>
+      <li>Curriculares: profesor de la titulación del estudiante, afín a la enseñanza vinculada</li>
+      <li>Extracurriculares: preferentemente de la misma rama de conocimiento</li>
+    </ul>
+    <p style="font-size:12px;margin-top:8px;"><strong>Obligaciones clave:</strong> elaborar el Plan Formativo · <strong>velar por la compatibilidad horaria</strong> · hacer seguimiento · autorizar modificaciones del Plan Formativo · <strong>evaluar las prácticas</strong> (art. 16) · guardar confidencialidad.</p>
+  </div>
+</div>
+
+
+<!-- ═══ BLOQUE 6 · DERECHOS Y DEBERES ═══ -->
+<div class="sec">6 · Derechos y deberes del estudiante (art. 11)</div>
+<div class="dd-grid">
+  <div class="dd dd-d">
+    <h4>✅ 11 DERECHOS del estudiante (art. 11.1)</h4>
+    <ul>
+      <li>Tutela por tutor UPNA y tutor entidad</li>
+      <li>Evaluación según criterios de la UPNA</li>
+      <li>Informe de la entidad (Anexo 3)</li>
+      <li>Bolsa o ayuda al estudio (si se estipula)</li>
+      <li><strong>Propiedad intelectual e industrial</strong> sobre sus aportaciones</li>
+      <li>Información sobre seguridad y prevención de riesgos laborales</li>
+      <li>Cumplir actividad académica y de representación (previa comunicación)</li>
+      <li>Recursos de apoyo para discapacidad en igualdad de condiciones</li>
+      <li>Conciliación para situaciones de discapacidad</li>
+      <li>Reconocimiento como curriculares de la experiencia laboral aportada</li>
+      <li>Otros derechos previstos en normativa / convenios</li>
+    </ul>
+  </div>
+  <div class="dd dd-b">
+    <h4>❌ 7 DEBERES del estudiante (art. 11.2)</h4>
+    <ul>
+      <li>Cumplir la normativa de prácticas de la UPNA</li>
+      <li>Conocer y cumplir el Proyecto Formativo</li>
+      <li>Mantener contacto con tutor académico; entregar <strong>memoria final</strong></li>
+      <li>Incorporarse en la fecha acordada; cumplir horario y normas de la entidad</li>
+      <li><strong>Confidencialidad y secreto profesional</strong> respecto a la información de la entidad</li>
+      <li>Actitud respetuosa; salvaguardar el buen nombre de la UPNA</li>
+      <li>Otros deberes previstos en normativa o convenios</li>
+    </ul>
+  </div>
+</div>
+<div class="c mo" style="margin-top:13px;">
+  <h3>🌟 Derecho especial del tutor de la entidad: ser "Amigo de la Universidad"</h3>
+  <p>El tutor de la entidad colaboradora tiene derecho a ser considerado <strong>"Amigo de la Universidad"</strong>, siendo <strong>eximido de las cuotas</strong> para optar a esa denominación (art. 12.1 a). También tiene derecho a certificación de participación como tutor.</p>
+</div>
+
+
+<!-- ═══ BLOQUE 7 · INFORMES Y EVALUACIÓN ═══ -->
+<div class="sec">7 · Informes, evaluación y reconocimiento (arts. 14-17)</div>
+<div class="g4">
+  <div class="c cy">
+    <h3>📋 Informe de la entidad (art. 14 · Anexo 3)</h3>
+    <ul>
+      <li>Informe <strong>FINAL</strong>: obligatorio siempre. Recoge horas + valoración de competencias</li>
+      <li>Informe <strong>INTERMEDIO</strong>: posible solo cuando la práctica dure <span class="exam">más de 3 meses</span></li>
+      <li>Lo emite el <strong>tutor de la entidad</strong></li>
+    </ul>
+  </div>
+  <div class="c az">
+    <h3>📝 Memoria del estudiante (art. 15 · Anexo 4)</h3>
+    <ul>
+      <li>Elaborada por el <strong>estudiante</strong></li>
+      <li>Entregada al <strong>tutor académico</strong></li>
+      <li>Contenido: descripción de tareas · valoración con competencias universitarias · problemas y soluciones · sugerencias de mejora</li>
+    </ul>
+  </div>
+  <div class="c ve">
+    <h3>⭐ Evaluación (art. 16)</h3>
+    <ul>
+      <li>La realiza el <strong>tutor académico de la UPNA</strong></li>
+      <li>Fuentes: Plan Formativo + memoria + informe entidad</li>
+      <li><strong>Anexo 5</strong> → evaluación del estudiante → al Centro para el acta</li>
+      <li><strong>Anexo 6</strong> → evaluación de la práctica → al responsable de calidad de la titulación</li>
+    </ul>
+  </div>
+  <div class="c mo">
+    <h3>🎓 Reconocimiento (art. 17)</h3>
+    <ul>
+      <li>Documento acreditativo emitido por la Universidad a través del Centro</li>
+      <li>Contenido: titular · entidad · descripción + duración + fechas · actividades realizadas</li>
+      <li>El <strong>Suplemento Europeo al Título (SET)</strong> recoge las prácticas externas realizadas</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══ BLOQUE 8 · ADJUDICACIÓN ═══ -->
+<div class="sec">8 · Oferta, difusión y adjudicación — prioridades (art. 18)</div>
+<div class="g2">
+  <div class="c li">
+    <h3>🏅 Prioridades de adjudicación</h3>
+    <ul>
+      <li class="exam"><strong>PRIORIDAD 1:</strong> prácticas CURRICULARES sobre extracurriculares</li>
+      <li class="exam"><strong>PRIORIDAD 2:</strong> estudiantes con DISCAPACIDAD en elección y adjudicación (garantiza accesibilidad universal, incluido transporte)</li>
+      <li>Se procura el <strong>menor sobresfuerzo económico</strong> para el estudiante</li>
+    </ul>
+  </div>
+  <div class="c cy">
+    <h3>📢 Principios de oferta y adjudicación</h3>
+    <ul>
+      <li><strong>Transparencia</strong></li>
+      <li><strong>Publicidad</strong></li>
+      <li><strong>Accesibilidad universal</strong></li>
+      <li><strong>Igualdad de oportunidades</strong></li>
+    </ul>
+    <p style="font-size:12px;margin-top:6px;">Los mismos 4 principios que rigen la actuación de la Comisión de prácticas del Centro.</p>
+  </div>
+</div>
+
+
+<!-- ═══ BLOQUE 9 · GARANTÍA DE CALIDAD ═══ -->
+<div class="sec">9 · Garantía de calidad (art. 19)</div>
+<div class="c gs">
+  <h3>🔍 Sistema de Garantía Interna de la Calidad (SGIC)</h3>
+  <p style="font-size:12.5px;margin-bottom:8px;">El SGIC de los Títulos de la UPNA articula el procedimiento de garantía de calidad de las prácticas. Los instrumentos del SGIC son:</p>
+  <ul>
+    <li>Memoria final del estudiante (Anexo 4)</li>
+    <li>Informe de seguimiento intermedio y/o final del tutor de la entidad (Anexo 3)</li>
+    <li>Informe de valoración y aprovechamiento del tutor académico (Anexo 6)</li>
+    <li>Informe de valoración general de los convenios de prácticas externas de la UPNA</li>
+  </ul>
+</div>
+
+
+<!-- ═══ BLOQUE 10 · DISPOSICIONES ADICIONALES ═══ -->
+<div class="sec">10 · Disposiciones adicionales</div>
+<div class="g2">
+  <div class="c am">
+    <h3>📌 D.A. 1.ª · Lenguaje no marcado</h3>
+    <p>La cita en género no marcado (masculino gramatical) tiene validez para todos los géneros. También es válida la cita en femenino.</p>
+  </div>
+  <div class="c ro">
+    <h3>📌 D.A. 2.ª · Situaciones no contempladas</h3>
+    <p>Las situaciones no previstas en el Reglamento serán resueltas por el <span class="exam">RECTOR o Vicerrector en quien delegue</span>.</p>
+    <p style="font-size:12px;margin-top:5px;">Trampa de examen: NO las resuelve el Director del Centro ni la Comisión de prácticas.</p>
+  </div>
+</div>
+
+
+<!-- ═══ BLOQUE 11 · ANEXOS ═══ -->
+<div class="sec">11 · Estructura de los 6 Anexos del Reglamento</div>
+<div class="anx-grid">
+  <div class="anx"><div class="num">1</div><div class="lab">Proyecto<br>formativo</div></div>
+  <div class="anx"><div class="num">2</div><div class="lab">Compromiso<br>de estudios</div></div>
+  <div class="anx"><div class="num">3</div><div class="lab">Informe del tutor<br>de la entidad</div></div>
+  <div class="anx"><div class="num">4</div><div class="lab">Memoria final<br>del estudiante</div></div>
+  <div class="anx"><div class="num">5</div><div class="lab">Evaluación<br>del estudiante</div></div>
+  <div class="anx"><div class="num">6</div><div class="lab">Evaluación<br>de la práctica</div></div>
+</div>
+<table style="margin-top:12px;">
+  <tr><th style="width:12%">Anexo</th><th>Nombre</th><th>Quién lo elabora</th><th>A quién va</th></tr>
+  <tr><td><strong>1</strong></td><td>Proyecto formativo</td><td>Tutor académico + tutor entidad</td><td>Forma parte del convenio específico</td></tr>
+  <tr><td><strong>2</strong></td><td>Compromiso de estudios</td><td>Tutor académico + estudiante</td><td>Concreta cada práctica individual</td></tr>
+  <tr><td><strong>3</strong></td><td>Informe del tutor de la entidad (final e intermedio)</td><td>Tutor de la entidad</td><td>Al tutor académico</td></tr>
+  <tr><td><strong>4</strong></td><td>Memoria final del estudiante</td><td>Estudiante</td><td>Al tutor académico</td></tr>
+  <tr><td><strong>5</strong></td><td>Evaluación del estudiante</td><td>Tutor académico de la UPNA</td><td>Al Centro (para el acta oficial)</td></tr>
+  <tr><td><strong>6</strong></td><td>Evaluación de la práctica (calidad)</td><td>Tutor académico de la UPNA</td><td>Al responsable de calidad de la titulación</td></tr>
+</table>
+
+
+<!-- ═══ BLOQUE 12 · FLUJO COMPLETO ═══ -->
+<div class="sec">12 · Flujo completo de una práctica externa</div>
+<div class="flujo" style="gap:8px;margin-bottom:16px;">
+  <div class="fp"><div class="np" style="background:#0891b2;">1</div><strong>Convenio</strong><p>La UPNA (Vicerrectorado) suscribe el Convenio de Cooperación Educativa con la entidad (vigencia 4 años)</p></div>
+  <div class="fp"><div class="np" style="background:#2563eb;">2</div><strong>Oferta y adjudicación</strong><p>Comisión del Centro publica la oferta. Prioridad: curriculares &gt; extracurriculares · discapacidad</p></div>
+  <div class="fp"><div class="np" style="background:#7c3aed;">3</div><strong>Proyecto formativo</strong><p>Tutor académico + tutor entidad elaboran el proyecto. Compromiso de estudios (Anexo 2)</p></div>
+  <div class="fp"><div class="np" style="background:#0d9488;">4</div><strong>Realización</strong><p>El estudiante realiza la práctica. Horario compatible con obligaciones académicas</p></div>
+  <div class="fp"><div class="np" style="background:#16a34a;">5</div><strong>Informes</strong><p>Informe final entidad (Anexo 3). Si &gt; 3 meses: puede haber intermedio. Memoria del estudiante (Anexo 4)</p></div>
+  <div class="fp"><div class="np" style="background:#d97706;">6</div><strong>Evaluación</strong><p>El tutor académico evalúa: Anexo 5 → Centro (acta) · Anexo 6 → responsable calidad titulación</p></div>
+  <div class="fp"><div class="np" style="background:#dc2626;">7</div><strong>Acreditación</strong><p>Documento acreditativo. El SET recoge las prácticas realizadas</p></div>
+</div>
+
+
+<!-- ═══ BLOQUE 13 · GRANDES NÚMEROS ═══ -->
+<div class="sec">13 · Los grandes números del Tema 20</div>
+<div class="pills">
+  <div class="pill p-cy"><div class="num">2019/12</div><div class="lab">Número y año de la Resolución del Rector</div></div>
+  <div class="pill p-az"><div class="num">20/12/12</div><div class="lab">Fecha de aprobación por el Consejo de Gobierno</div></div>
+  <div class="pill p-ve"><div class="num">BON n.º 7</div><div class="lab">BON de 11 de enero de 2013 · publicación</div></div>
+  <div class="pill p-na"><div class="num">Art. 40</div><div class="lab">Artículo de los Estatutos UPNA que habilita el Reglamento</div></div>
+  <div class="pill p-cy"><div class="num">5</div><div class="lab">Fines de las prácticas externas (art. 1): F-C-C-E-E</div></div>
+  <div class="pill p-az"><div class="num">2</div><div class="lab">Modalidades: curriculares y extracurriculares</div></div>
+  <div class="pill p-ve"><div class="num">50%</div><div class="lab">Umbral de créditos preferente para extracurriculares Y duración máxima preferente en el curso</div></div>
+  <div class="pill p-mo"><div class="num">4 años</div><div class="lab">Vigencia inicial de los convenios de cooperación educativa</div></div>
+  <div class="pill p-cy"><div class="num">4 años</div><div class="lab">Duración de las prórrogas tácitas de los convenios</div></div>
+  <div class="pill p-ro"><div class="num">1 mes</div><div class="lab">Antelación mínima para denuncia unilateral del convenio</div></div>
+  <div class="pill p-am"><div class="num">2</div><div class="lab">Tutores por práctica: tutor entidad + tutor académico UPNA</div></div>
+  <div class="pill p-na"><div class="num">3 meses</div><div class="lab">Umbral de duración que habilita el informe intermedio de la entidad</div></div>
+  <div class="pill p-gs"><div class="num">11</div><div class="lab">Derechos del estudiante en prácticas externas (art. 11.1)</div></div>
+  <div class="pill p-cy"><div class="num">6</div><div class="lab">Número de anexos del Reglamento (Anexos 1 a 6)</div></div>
+  <div class="pill p-ve"><div class="num">6 ECTS</div><div class="lab">Formación complementaria por la que pueden extenderse las prácticas curriculares</div></div>
+</div>
+
+
+<!-- ═══ BLOQUE 14 · TRAMPAS ═══ -->
+<div class="sec">14 · Trampas frecuentes de examen</div>
+<div class="trampa"><strong>✗ "El Reglamento de prácticas externas lo aprueba el Rector"</strong> → FALSO. Lo aprueba el <strong>Consejo de Gobierno</strong> (20/12/2012). El Rector solo ordena su publicación.</div>
+<div class="trampa"><strong>✗ "Los convenios tienen vigencia de 2 años"</strong> → FALSO. Vigencia inicial de <strong>4 años</strong>, prorrogable por otros <strong>4 años</strong> de forma tácita y sucesiva.</div>
+<div class="trampa"><strong>✗ "El convenio puede denunciarse unilateralmente sin preaviso"</strong> → FALSO. Se requiere comunicación con al menos <strong>1 MES de antelación</strong>.</div>
+<div class="trampa"><strong>✗ "Las prácticas extracurriculares forman parte del Plan de Estudios"</strong> → FALSO. Las extracurriculares <strong>NO</strong> forman parte del Plan de Estudios; son voluntarias.</div>
+<div class="trampa"><strong>✗ "El tutor académico y el tutor de la entidad pueden ser la misma persona"</strong> → FALSO. No pueden coincidir (art. 9).</div>
+<div class="trampa"><strong>✗ "Puede haber más de un tutor académico por práctica"</strong> → FALSO. El tutor académico de la UPNA es <strong>ÚNICO</strong> para cada estudiante y práctica.</div>
+<div class="trampa"><strong>✗ "El informe intermedio de la entidad es obligatorio siempre"</strong> → FALSO. Solo procede cuando la práctica supera los <strong>3 meses</strong>.</div>
+<div class="trampa"><strong>✗ "La evaluación de las prácticas la realiza el tutor de la entidad"</strong> → FALSO. La evaluación la realiza el <strong>tutor académico de la UPNA</strong>; el tutor de la entidad solo emite el informe (Anexo 3).</div>
+<div class="trampa"><strong>✗ "Las situaciones no contempladas las resuelve el Director del Centro"</strong> → FALSO. Las resuelve el <strong>Rector o Vicerrector delegado</strong> (D.A. 2.ª).</div>
+<div class="trampa"><strong>✗ "Los convenios los suscribe el Director del Centro"</strong> → FALSO. Los suscribe el <strong>Vicerrectorado competente</strong>; los convenios específicos sí pueden firmarlos los directores de centro.</div>
+<div class="trampa"><strong>✗ "Las prácticas extracurriculares tienen prioridad en la adjudicación"</strong> → FALSO. Las <strong>curriculares</strong> tienen prioridad sobre las extracurriculares (art. 18.2).</div>
+<div class="trampa"><strong>✗ "El Anexo 5 se remite al responsable de calidad de la titulación"</strong> → FALSO. El Anexo 5 (evaluación del estudiante) va al <strong>Centro</strong> para el acta. El Anexo 6 (calidad de la práctica) va al responsable de calidad.</div>
+
+</body>
+</html>
