@@ -1,0 +1,185 @@
+TEMA 18 · UPNA · TITULACIONES, OFERTA, VÍAS DE ACCESO, ABANDONO, REANUDACIÓN Y PERMANENCIA
+Normas de Permanencia: Acuerdo 9/2015 del Consejo Social (01/06/2015)
+Res. 1306/2015, de 4 de agosto (BON n.º 162, 20/08/2015)
+===============================================================
+
+═══════════════════════════════════════════════════════════════
+BLOQUE 1 · DATOS NORMATIVOS
+═══════════════════════════════════════════════════════════════
+
+▸ Norma de permanencia: Acuerdo 9/2015 del Consejo Social de la UPNA, de 1 de junio de 2015.
+▸ Publicación: Resolución 1306/2015, de 4 de agosto del Rector. BON n.º 162, 20/08/2015.
+▸ Entrada en vigor: curso 2015-2016.
+▸ Habilitación legal: art. 46 LOU (hoy art. 53 LOSU) + art. 7 d) Ley Foral Consejo Social UPNA.
+▸ Órgano que aprueba las normas de permanencia: CONSEJO SOCIAL (previo informe del Consejo de Universidades).
+▸ Objeto: regular las condiciones de permanencia en enseñanzas oficiales de Grado y Máster.
+▸ Comisión de Permanencia: creada por Acuerdo 6/2011 del Consejo Social, de 20 de mayo de 2011.
+
+ARTÍCULOS CLAVE:
+  Art. 1 → objeto
+  Art. 2 → ámbito de aplicación
+  Art. 3 → Comisión de Permanencia
+  Art. 4 → convocatorias en Grado (6 convocatorias)
+  Art. 5 → rendimiento mínimo en Grado (fórmula + redondeo a múltiplo de 6)
+  Art. 6 → incumplimiento en Grado (alternativas + abandono definitivo)
+  Art. 7 → convocatorias en Máster (4 convocatorias, 2 por matrícula)
+  Art. 8 → rendimiento mínimo y permanencia máxima en Máster (tabla + 6 ECTS/año)
+  Art. 9 → incumplimiento en Máster (alternativas + abandono definitivo)
+  Art. 10 → estudiante a tiempo reducido (exento de rendimiento mínimo)
+  Art. 11 → estudiante con NEE o discapacidad (medidas específicas)
+  Art. 12 → créditos reconocidos y convalidados no cuentan para rendimiento
+  Art. 13 → informe anual al Consejo Social (Presidente de la Comisión)
+  Disp. Transitoria → alumnos de 2014-2015 y anteriores pueden acogerse a norma anterior
+
+═══════════════════════════════════════════════════════════════
+BLOQUE 2 · OFERTA DE TITULACIONES DE LA UPNA
+═══════════════════════════════════════════════════════════════
+
+▸ Grado: 27 grados + 8 dobles grados (curso 2025-26).
+▸ Plazas en Grado: 2.290 plazas para 2025-26 (12% más que hace 5 años).
+▸ Aprobación: el Consejo de Gobierno aprueba la oferta de plazas de nuevo acceso.
+▸ Fijación de la oferta total: Conferencia General de Política Universitaria + Comunidad Foral de Navarra.
+▸ Máster Universitario: oferta amplia de másteres oficiales (requiere Grado o equivalente).
+▸ Doctorado: RD 576/2023 + normativa propia UPNA (300 ECTS Grado+Máster o vías equivalentes).
+
+═══════════════════════════════════════════════════════════════
+BLOQUE 3 · NORMAS DE PERMANENCIA EN GRADO
+═══════════════════════════════════════════════════════════════
+
+CONVOCATORIAS (art. 4):
+▸ 6 convocatorias por asignatura.
+▸ Cada matrícula = 1 convocatoria (semestral o anual según el plan).
+▸ 1.ª y 2.ª matrícula: "No Presentado" NO consume convocatoria.
+▸ 3.ª y siguientes matrículas: "No Presentado" SÍ consume convocatoria.
+
+RENDIMIENTO MÍNIMO (art. 5):
+▸ Se exige un mínimo de créditos superados, calculado por fórmula (función de n y ECTS).
+▸ Planes semestrales: rendimiento exigido cada 2 matriculaciones; n = matriculaciones/2.
+▸ Planes anuales: rendimiento exigido cada matriculación; n = número de matriculaciones.
+▸ Si el resultado no es múltiplo de 6 o tiene decimales → redondear al INFERIOR múltiplo de 6.
+▸ Exención: cuando quede ≤ 15% de créditos para el título, no aplica la regla.
+
+INCUMPLIMIENTO Y ABANDONO (art. 6):
+  Supuesto 1: agotamiento de 6 convocatorias de una asignatura:
+    → Puede iniciar POR UNA SOLA VEZ otros estudios oficiales en la UPNA (procedimiento general).
+  Supuesto 2: incumplimiento de rendimiento mínimo:
+    → Alternativa a): iniciar otros estudios oficiales en la UPNA (procedimiento general).
+    → Alternativa b): transcurridos 2 CURSOS ACADÉMICOS, retomar los mismos estudios (si siguen en oferta).
+  Nuevo incumplimiento tras elegir alternativa: ABANDONO DEFINITIVO de la UPNA.
+
+═══════════════════════════════════════════════════════════════
+BLOQUE 4 · NORMAS DE PERMANENCIA EN MÁSTER UNIVERSITARIO
+═══════════════════════════════════════════════════════════════
+
+CONVOCATORIAS (art. 7):
+▸ 4 convocatorias por asignatura (≠ Grado: 6).
+▸ Cada matrícula = 2 convocatorias dentro del curso (≠ Grado: 1).
+▸ Se cuentan TODAS las convocatorias aunque el estudiante no se presente.
+   → No hay excepción de "No Presentado" en Máster (≠ Grado en 1.ª y 2.ª matrícula).
+
+RENDIMIENTO MÍNIMO Y LÍMITE MÁXIMO (art. 8):
+▸ Superar mínimo de 6 ECTS al finalizar cada periodo académico.
+▸ Tabla de permanencia máxima:
+   - 60 ECTS → tiempo completo: 3 años; tiempo parcial (20-29 ECTS/curso): 4 años
+   - 61-90 ECTS → tiempo completo: [tabla]; tiempo parcial: 6 años
+   - Más de 90 ECTS → tiempo completo: [tabla]; tiempo parcial: 7 años
+▸ Tiempo parcial: 1 año adicional si se matriculan entre 20 y 29 ECTS por curso.
+▸ Exención ≤ 15% de créditos pendientes: tampoco aplica el rendimiento mínimo.
+
+INCUMPLIMIENTO (art. 9):
+▸ Mismas dos alternativas que en Grado:
+  a) Otros estudios de Máster en la UPNA.
+  b) 2 cursos académicos de separación y retomar el mismo Máster (si sigue en oferta).
+▸ Nuevo incumplimiento → ABANDONO DEFINITIVO de la UPNA.
+
+═══════════════════════════════════════════════════════════════
+BLOQUE 5 · NORMAS COMUNES A GRADO Y MÁSTER
+═══════════════════════════════════════════════════════════════
+
+Art. 10 — Tiempo reducido:
+▸ Exento del rendimiento mínimo de los arts. 5 y 8.
+▸ La condición la reconoce la normativa de estudio de la UPNA.
+
+Art. 11 — NEE / discapacidad:
+▸ La UPNA adapta la normativa valorando cada caso individualmente.
+▸ Puede adoptar medidas específicas.
+
+Art. 12 — Créditos reconocidos / convalidados / adaptados:
+▸ NO cuentan para el cumplimiento del rendimiento mínimo.
+
+Art. 13 — Informe al Consejo Social:
+▸ El PRESIDENTE de la Comisión de Permanencia lo remite al Consejo Social.
+▸ Periodicidad: finalizado cada curso académico.
+▸ Contenido: datos de aplicación de las Normas y actividad de la Comisión.
+
+═══════════════════════════════════════════════════════════════
+BLOQUE 6 · ABANDONO TEMPORAL Y REANUDACIÓN
+═══════════════════════════════════════════════════════════════
+
+▸ Abandono temporal: el estudiante puede no matricularse sin notificarlo.
+▸ Reanudación: debe solicitar el REENGANCHE mediante Instancia General en el Registro.
+▸ No se impone obligación de comunicar el abandono temporal.
+▸ Tramitación de la reanudación: Sede Electrónica de la UPNA.
+
+═══════════════════════════════════════════════════════════════
+BLOQUE 7 · LA COMISIÓN DE PERMANENCIA
+═══════════════════════════════════════════════════════════════
+
+▸ Creada por: Acuerdo del Consejo Social 6/2011, de 20 de mayo de 2011.
+▸ Función: resolver las solicitudes de los estudiantes sobre aplicación de las Normas de Permanencia.
+▸ Informe anual: el Presidente la remite al Consejo Social al finalizar cada curso.
+▸ Régimen transitorio: competente para aplicar la norma anterior a alumnos de hasta 2014-2015.
+
+═══════════════════════════════════════════════════════════════
+BLOQUE 8 · NÚMEROS CLAVE DEL TEMA
+═══════════════════════════════════════════════════════════════
+
+  6           → convocatorias por asignatura en Grado
+  4           → convocatorias por asignatura en Máster
+  1           → convocatoria por matrícula en Grado
+  2           → convocatorias por matrícula en Máster
+  6 ECTS      → mínimo a superar por periodo en Máster
+  15%         → umbral de créditos pendientes bajo el cual no aplica rendimiento mínimo
+  6 (múltiplo)→ la fórmula se redondea al inferior múltiplo de 6
+  2 cursos    → tiempo de separación antes de retomar los mismos estudios
+  3 años      → permanencia máxima en Máster de 60 ECTS a tiempo completo
+  2015/2016   → curso de entrada en vigor de las Normas de Permanencia vigentes
+  2.290       → plazas de Grado ofertadas en 2025-26
+  27 + 8      → Grados + Dobles Grados en la UPNA (2025-26)
+
+═══════════════════════════════════════════════════════════════
+BLOQUE 9 · TRAMPAS FRECUENTES DE EXAMEN
+═══════════════════════════════════════════════════════════════
+
+✗ "Las normas de permanencia las aprueba el Consejo de Gobierno" → FALSO.
+  Las aprueba el CONSEJO SOCIAL, previo informe del Consejo de Universidades.
+
+✗ "En Máster hay 6 convocatorias como en Grado" → FALSO.
+  En Máster hay solo 4 convocatorias.
+
+✗ "En Máster cada matrícula da 1 convocatoria" → FALSO.
+  En Máster cada matrícula comprende 2 convocatorias.
+
+✗ "El No Presentado en Máster no consume convocatoria si es la 1.ª o 2.ª matrícula" → FALSO.
+  En Máster se computan TODAS las convocatorias, sin excepción.
+
+✗ "Los créditos reconocidos cuentan para el rendimiento mínimo" → FALSO.
+  No se tienen en cuenta (art. 12).
+
+✗ "El estudiante a tiempo reducido sí está sujeto al rendimiento mínimo" → FALSO.
+  Está EXENTO (art. 10).
+
+✗ "El informe anual lo remite la Comisión de Permanencia al Rector" → FALSO.
+  Lo remite el Presidente de la Comisión al CONSEJO SOCIAL.
+
+✗ "Tras agotar las 6 convocatorias se puede empezar 2 veces otros estudios" → FALSO.
+  Solo se puede iniciar otros estudios POR UNA SOLA VEZ.
+
+✗ "El estudiante puede retomar sus estudios abandonados al curso siguiente" → FALSO.
+  Debe esperar 2 CURSOS ACADÉMICOS de separación.
+
+✗ "La regla de rendimiento mínimo del art. 5 siempre aplica" → FALSO.
+  No aplica cuando queda ≤ 15% de créditos para el título (art. 5.5).
+
+✗ "La permanencia máxima en Máster de 60 ECTS es 4 años a tiempo completo" → FALSO.
+  Es 3 años a tiempo completo; 4 años si es tiempo parcial con 20-29 ECTS/curso.
