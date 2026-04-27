@@ -1,0 +1,187 @@
+TEMA 17 · UPNA · NORMATIVA DE ADMISIÓN A ESTUDIOS DE GRADO
+Resolución 1205/2025, de 17 de junio (BON n.º 129, 30/06/2025)
+===============================================================
+
+═══════════════════════════════════════════════════════════════
+BLOQUE 1 · DATOS NORMATIVOS Y SISTEMÁTICA
+═══════════════════════════════════════════════════════════════
+
+▸ Normativa vigente: Resolución 1205/2025, de 17 de junio del Rector de la UPNA.
+▸ Publicación: BON n.º 129, de 30 de junio de 2025.
+▸ Marco superior: LOSU 2/2023 (art. 31.2) + Real Decreto 534/2024, de 11 de junio.
+▸ Órgano que aprueba: Consejo de Gobierno de la UPNA (sesión de 17 de junio de 2025).
+▸ Propuesta: Vicerrectora de Estudiantes, Vida Universitaria y Compromiso Social.
+▸ Estructura: 8 Capítulos (arts. 1-29+).
+▸ Objeto (art. 1): establecer criterios de valoración, orden de prelación y procedimientos
+  de admisión a estudios universitarios oficiales de Grado de la UPNA.
+
+ARTÍCULOS MÁS CITADOS EN EXAMEN:
+  Art. 1 → definiciones clave (acceso/admisión/nota de acceso/nota de admisión)
+  Art. 3 → fórmula nota de admisión
+  Art. 4 → criterios de valoración por tipo de acceso
+  Art. 5 → orden de prelación
+  Art. 6 → los 4 procedimientos y oferta de plazas
+  Art. 9 → trámite de solicitudes / número máximo de titulaciones
+  Art. 12 → reclamaciones (3 días hábiles)
+  Art. 13 → quiénes solicitan cambio de estudios españoles parciales
+  Art. 16 → reconocimiento de créditos (mínimo 30 ECTS)
+  Art. 18 → quiénes solicitan convalidación parcial extranjera
+  Cap. VIII → situaciones excepcionales
+
+═══════════════════════════════════════════════════════════════
+BLOQUE 2 · CONCEPTOS DISTINGUIBLES (acceso vs admisión)
+═══════════════════════════════════════════════════════════════
+
+▸ ACCESO = requisito previo (cumplirlo no da plaza; solo habilita para solicitarla).
+▸ ADMISIÓN = adjudicación de plaza entre quienes ya cumplen el acceso.
+▸ NOTA DE ACCESO: mínimo 5 puntos; máximo 10 puntos.
+▸ NOTA DE ADMISIÓN: puede llegar a 14 puntos (nota de acceso + ponderaciones).
+▸ Fórmula: Nota admisión = Nota acceso + a·M1 + b·M2
+    M1, M2 = materias de PAU/fase voluntaria (≥ 5 pts.)
+    a, b = 0,1 ó 0,2 (ponderaciones aprobadas por la UPNA)
+▸ Validez de M1/M2: curso en que se superan + 2 cursos académicos siguientes.
+▸ Decimales: 3 cifras decimales (milésima más próxima; equidistancia → superior).
+▸ Bachiller LOMLOE: nota acceso = 60% Bachillerato + 40% PAU.
+▸ Titulados, mayores 25/40/45: nota admisión = nota acceso (máx. 10 pts.).
+
+═══════════════════════════════════════════════════════════════
+BLOQUE 3 · LOS 4 PROCEDIMIENTOS DE ADMISIÓN (art. 6)
+═══════════════════════════════════════════════════════════════
+
+1. PROCEDIMIENTO GENERAL (preinscripción) — Cap. IV
+   Quién: quienes cumplan cualquier requisito de acceso.
+   Solicitud: por orden de preferencia; número máximo de titulaciones → lo fija
+              el Consejo de Gobierno cada año.
+   Cerrado el plazo: NO se admiten cambios en titulaciones ni en su orden.
+   Una plaza máxima por solicitante (art. 10.3).
+   Listas: tablón electrónico = notificación oficial.
+   RECLAMACIÓN: 3 días hábiles ante el Vicerrectorado de Estudiantes (art. 12).
+   Requisito español: alumnado extranjero no hispanohablante → B1 español (MCER)
+   o nivel superior si lo exige la memoria del título.
+   No formalizar matrícula en horario señalado → pierde la plaza; no puede ser
+   readmitido por otros cupos en listas posteriores (salvo excepciones justificadas).
+
+2. CAMBIO ESTUDIOS ESPAÑOLES PARCIALES — Cap. V
+   Quién: con estudios universitarios españoles parciales (UPNA u otra española)
+          a los que se les puedan reconocer ≥ 30 ECTS en el Grado de destino.
+   Requisito simultáneo: haber obtenido ≥ 30 ECTS en la titulación de origen.
+   Requisito de nota: nota de admisión ≥ 85% de la nota de corte del curso anterior
+          en el cupo general del Grado de destino (si corte = convocatoria
+          extraordinaria → basta con 5 puntos).
+   Una sola titulación en la solicitud.
+   No es necesario aportar documentación si se procede de la propia UPNA.
+   Fórmula especial para vías g-k: 5 + (NotAdm – 5) × 1,8
+   Proceso previo de reconocimiento: si reconocidos < 30 ECTS → no se admite.
+   Quienes no cumplen requisitos → pueden ir al proceso general (preinscripción).
+
+3. CONVALIDACIÓN PARCIAL ESTUDIOS EXTRANJEROS — Cap. VI
+   Quién: con estudios universitarios extranjeros parciales o totales NO homologados
+          en España, a los que se puedan reconocer ≥ 30 ECTS.
+   No pueden solicitar quienes ya iniciaron ese mismo Grado en España.
+   Calificaciones transcritas al sistema español para calcular nota.
+   Si ≥ 20 plazas por esta vía → reserva del 5% para discapacidad ≥ 33%.
+   Reconocimiento de créditos previo obligatorio: mínimo 30 ECTS.
+
+4. NUEVA MENCIÓN (titulados UPNA) — Cap. VII
+   Quién: con título oficial de Grado obtenido en la UPNA.
+   Adjudicación: por nota de expediente.
+   Plazas: Consejo de Gobierno las determina para cada titulación y curso.
+
+═══════════════════════════════════════════════════════════════
+BLOQUE 4 · CUPOS Y ORDEN DE PRELACIÓN (arts. 5, 6.2 y 9.4)
+═══════════════════════════════════════════════════════════════
+
+CUPOS DEL PROCEDIMIENTO GENERAL:
+  ① Cupo general
+  ② Mayores de 25 años (prueba de acceso)
+  ③ Mayores de 45 años (prueba de acceso UPNA → solo ese Grado)
+  ④ Mayores de 40 años con experiencia laboral (solo en UPNA y Grado de la prueba)
+  ⑤ Discapacidad ≥ 33% o NEE permanentes
+  ⑥ Deportistas de alto nivel y alto rendimiento
+  ⑦ Titulados universitarios
+
+ORDEN DE PRELACIÓN si alguien puede acceder por varios cupos (art. 9.4):
+  1.º Cupo general → 2.º Mayores 25 → 3.º Mayores 45 → 4.º Mayores 40 →
+  5.º Titulados → 6.º Deportistas alto nivel → 7.º Discapacidad
+  (Objetivo: no dejar plazas sin adjudicar en cada cupo)
+
+MAYORES DE 45 Y 40: solo pueden solicitar el Grado para el que superaron la prueba
+en la UPNA. Si superaron la prueba en otra universidad → NO pueden solicitar en UPNA.
+
+PRELACIÓN PAU ordinaria vs extraordinaria (art. 5.3):
+  1.º Se adjudican plazas a quienes superaron la PAU en conv. ordinaria del año
+      en curso o en convocatorias anteriores, y a quienes cumplen otros requisitos.
+  2.º Se adjudican plazas a quienes superaron la PAU en conv. extraordinaria del año.
+
+═══════════════════════════════════════════════════════════════
+BLOQUE 5 · SITUACIONES EXCEPCIONALES (Capítulo VIII)
+═══════════════════════════════════════════════════════════════
+
+▸ La UPNA puede resolver excepcionalmente la admisión de estudiantes que cumplan
+  los requisitos académicos pero no hayan obtenido plaza por el procedimiento ordinario.
+▸ El solicitante debe acreditar que no abandonó sus estudios de origen por causas
+  académicas (suspensos, etc.), sino por circunstancias sobrevenidas excepcionales.
+▸ Supuestos habituales: violencia de género, enfermedad grave, circunstancias
+  familiares graves, amenaza u otras circunstancias análogas.
+▸ La UPNA puede dotar PLAZAS ADICIONALES para este procedimiento.
+▸ Documentación acreditativa: obligatoria y debe presentarse con la solicitud.
+▸ Resolución: órgano designado por la UPNA (Vicerrectorado de Estudiantes).
+
+═══════════════════════════════════════════════════════════════
+BLOQUE 6 · NÚMEROS CLAVE DEL TEMA
+═══════════════════════════════════════════════════════════════
+
+  5 pts.     → nota de acceso mínima; nota mínima de M1 y M2; nota mínima en
+               cambio de estudios si la nota de corte viene de conv. extraordinaria
+  10 pts.    → máximo nota de acceso
+  14 pts.    → máximo nota de admisión
+  0,1 / 0,2  → valores posibles de los parámetros de ponderación a y b
+  3 decimales → expresión de la nota de admisión
+  2 cursos   → validez de M1/M2 tras el curso en que se obtienen
+  85%        → porcentaje mínimo de nota de corte para cambio de estudios españoles
+  30 ECTS    → mínimo reconocible para cambio de estudios españoles/extranjeros
+  5%         → reserva para discapacidad en convalidación parcial extranjera (si ≥ 20 plazas)
+  3 días hábiles → plazo de reclamación (preinscripción)
+  4          → número de procedimientos de admisión
+  8          → capítulos de la normativa
+  B1         → nivel mínimo de español para alumnado extranjero no hispanohablante
+
+═══════════════════════════════════════════════════════════════
+BLOQUE 7 · QUIÉN DECIDE QUÉ (competencias)
+═══════════════════════════════════════════════════════════════
+
+  Consejo de Gobierno  → número máximo de titulaciones en la solicitud (anual)
+                       → plazas para cambio de estudios y convalidación (por titulación y curso)
+                       → plazas para nueva mención (por titulación y curso)
+                       → antes de comenzar el plazo de solicitudes
+  Conferencia Gral. de Política Universitaria
+                       → oferta total de plazas del procedimiento general, a propuesta
+                         de la UPNA y con aprobación de la Comunidad Foral de Navarra
+  Vicerrectorado de Estudiantes
+                       → publica anualmente el procedimiento y plazos
+                       → fija el porcentaje de lista de espera
+                       → publica ponderaciones al inicio de cada curso PAU
+                       → resuelve reclamaciones (3 días hábiles)
+                       → resuelve situaciones excepcionales (Cap. VIII)
+
+═══════════════════════════════════════════════════════════════
+BLOQUE 8 · TRAMPAS FRECUENTES DE EXAMEN
+═══════════════════════════════════════════════════════════════
+
+✗ "La nota de admisión máxima es 10" → FALSO. Es 14.
+✗ "La nota de acceso máxima es 14" → FALSO. Es 10.
+✗ "Los parámetros a y b pueden ser 0,3 o 0,4" → FALSO. Solo 0,1 ó 0,2.
+✗ "M1 y M2 son válidas indefinidamente" → FALSO. Solo el curso inmediato + 2 siguientes.
+✗ "El número de titulaciones lo fija el Rector" → FALSO. Lo fija el Consejo de Gobierno.
+✗ "En cambio de estudios españoles basta con cualquier nota" → FALSO. ≥ 85% de nota de
+  corte del curso anterior (o ≥ 5 si el corte viene de conv. extraordinaria).
+✗ "En convalidación extranjera basta con matricularse en algún Grado español" → FALSO.
+  No pueden solicitar quienes ya iniciaron ese mismo Grado en España.
+✗ "Las reclamaciones se presentan en 5 días hábiles" → FALSO. Son 3 días hábiles.
+✗ "El cupo de discapacidad tiene prelación sobre el cupo general" → FALSO. Es el último.
+✗ "Los mayores de 45 pueden solicitar cualquier Grado en la UPNA" → FALSO. Solo el Grado
+  para el que superaron la prueba, y únicamente en la universidad donde la hicieron.
+✗ "La oferta de plazas la fija solo la UPNA" → FALSO. La fija la Conferencia General de
+  Política Universitaria a propuesta de la UPNA, con aprobación de la Comunidad Foral.
+✗ "El alumnado extranjero hispanohablante necesita acreditar B1" → FALSO. Solo aplica
+  a no hispanohablantes.
