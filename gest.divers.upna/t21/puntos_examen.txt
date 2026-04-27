@@ -1,0 +1,151 @@
+============================================================
+TEMA 21 – BECAS DE CARÁCTER GENERAL DEL MFP PARA ESTUDIOS UNIVERSITARIOS
+PUNTOS CLAVE DE EXAMEN Y ARTÍCULOS FUNDAMENTALES
+============================================================
+
+NORMATIVA FUNDAMENTAL (saber de memoria)
+─────────────────────────────────────────
+1. Art. 27.1 y 27.5 CE → Derecho a la educación + obligación de los poderes públicos de garantizarla.
+2. Art. 83 LOE (LO 2/2006) y art. 32 LOSU (LO 2/2023) → Becas para estudiantes con condiciones
+   socioeconómicas desfavorables. El ESTADO establece el sistema general, con cargo a sus PGE.
+3. D.A. 9.ª Ley 24/2005, de 18 de noviembre → Habilita la concesión directa sin número
+   predeterminado de beneficiarios (no son competitivas).
+4. RD 1721/2007, de 21 de diciembre → NORMA MARCO PERMANENTE. Fija: modalidades, condiciones
+   académicas y económicas, incompatibilidades, revocación y reintegro.
+5. RD anual de umbrales y cuantías → Para 2025-2026: RD 163/2025, de 4 de marzo.
+   Para 2024-2025: RD 201/2024, de 27 de febrero.
+
+ESTRUCTURA DEL SISTEMA (posible pregunta de examen)
+────────────────────────────────────────────────────
+• Dos niveles: RD 1721/2007 (permanente) + RD anual (coyuntural).
+• El RD anual fija cada curso: enseñanzas incluidas, cuantías, umbrales de renta y patrimonio,
+  deducciones aplicables.
+• Concesión DIRECTA (no por concurso). Todo el que cumple → obtiene beca.
+
+ENSEÑANZAS UNIVERSITARIAS INCLUIDAS
+────────────────────────────────────
+• Grado y Máster Oficial (títulos oficiales) → Letras i) y j) art. 2.1 RD 163/2025.
+• Incluye: centros universitarios de Defensa, Guardia Civil y Policía Nacional.
+• Incluye: mayores de 25 años en universidad pública (k), complementos de formación (l).
+• EXCLUYEN: doctorados, especialización, títulos propios.
+• NOVEDAD 2025-26: Enseñanzas Artísticas superiores equiparadas plenamente al régimen universitario.
+
+COMPONENTES DE LA BECA UNIVERSITARIA (cuantías 2025-2026) — ¡LAS MÁS PREGUNTADAS!
+───────────────────────────────────────────────────────────────────────────────────
+Componente                      | Cuantía 2025-26  | Umbral
+a) Renta                        | 1.700 €          | Solo umbral 1 · presencial
+b) Residencia                   | 2.700 €          | Umbrales 1 y 2 · presencial · ≤ coste real
+c) Excelencia académica         | 50–125 €         | Hasta umbral 3
+   - Nota 8,00–8,49 → 50 €
+   - Nota 8,50–8,99 → 75 €
+   - Nota 9,00–9,49 → 100 €
+   - Nota ≥ 9,50   → 125 €
+d) Variable                     | Mín. 60 €        | No superar umbral 2 · fórmula renta+nota
+e) Matrícula                    | Precio público 1.ª matrícula | Umbrales 2 y 3 (también)
+
+UMBRALES DE RENTA (estudios universitarios, 2025-2026) — DIFERENCIA ENTRE UMBRALES
+────────────────────────────────────────────────────────────────────────────────────
+Umbral 1 (renta más baja) → Todos los componentes: renta + residencia + excelencia + variable + matrícula
+Umbral 2 (renta media)    → Residencia + excelencia + variable + matrícula (SIN cuantía fija por renta)
+Umbral 3 (renta alta)     → Solo excelencia + matrícula
+Sin beca                  → Si se supera el umbral 3
+
+Ejemplo tabla (familia 4 miembros, 2025-2026):
+  Umbral 1 extremo inferior: 22.107 €
+  Umbral 1 extremo superior (intervalo): 23.286 €
+
+MATRÍCULA COMPLETA VS PARCIAL (universitaria)
+─────────────────────────────────────────────
+• Completa: ≥ 60 créditos → acceso a TODOS los componentes.
+• Parcial: 30–59 créditos → solo beca de matrícula + cuantía variable mínima (60 €).
+• Menos de 30 créditos → SIN beca.
+• Los créditos convalidados, reconocidos o adaptados NO computan para el requisito académico.
+
+REQUISITOS ACADÉMICOS UNIVERSITARIOS — RENDIMIENTO POR RAMAS (¡TRAMPAS FRECUENTES!)
+──────────────────────────────────────────────────────────────────────────────────────
+• 1.er curso de Grado: nota de acceso a la universidad ≥ 5 puntos.
+• Cursos siguientes: superar % de créditos del año anterior según rama:
+  - Artes y Humanidades:        90%
+  - CC Sociales y Jurídicas:    90%
+  - CC de la Salud:             80%
+  - Ciencias:                   65%
+  - Ingeniería/Enseñanzas Técnicas: 65%
+• Máster: 1.er curso → nota media ≥ 5 en titulación de acceso.
+          2.º curso → 100% créditos del 1.er curso aprobados + nota media ≥ 5.
+
+DURACIÓN MÁXIMA DE LA CONDICIÓN DE BECARIO
+───────────────────────────────────────────
+• Arquitectura e Ingeniería: plan de estudios + 2 años.
+• Resto de ramas: plan de estudios + 1 año.
+• Matrícula parcial: + 1 año adicional.
+• Discapacidad ≥ 65% con reducción de carga lectiva: hasta el DOBLE de los años del plan.
+• En el último año adicional: solo matrícula + variable mínima + 50% de las demás cuantías.
+
+REINTEGRO DE BECAS UNIVERSITARIAS
+──────────────────────────────────
+Causas de reintegro:
+1. Anulación de matrícula.
+2. No superar el 50% de créditos matriculados (40% para CC y Enseñanzas Técnicas),
+   ni en ord. ni en extraordinaria. → Se reintegra todo EXCEPTO la beca de matrícula.
+3. No presentar el proyecto fin de carrera en el plazo de 2 años (si se becó para ello).
+
+DEDUCCIONES APLICABLES A LA RENTA FAMILIAR (datos numéricos posibles en examen)
+──────────────────────────────────────────────────────────────────────────────────
+• 50% de ingresos de miembros distintos de los sustentadores principales.
+• 525 € por hermano/a conviviente en familia numerosa general; 800 € en especial.
+• 1.811 € por discapacidad ≥ 33%; 2.881 € por discapacidad ≥ 65%.
+• 1.176 € cuando ≥ 2 hermanos residan fuera por estudios universitarios.
+• 20% de la renta en orfandad absoluta del solicitante < 25 años.
+• 500 € en familia monoparental.
+
+CUANTÍAS ADICIONALES POR INSULARIDAD
+─────────────────────────────────────
+• 442 € → Canarias, Baleares, Ceuta o Melilla (transporte marítimo/aéreo).
+• 623 € → Islas menores (Lanzarote, Fuerteventura, La Gomera, El Hierro, La Palma,
+          Menorca, Ibiza, Formentera).
+• 888 € → Canarias/Baleares con desplazamiento a Península.
+• 937 € → Islas menores con desplazamiento a Península.
+• Umbral aplicable: umbral 2 de renta familiar.
+
+INCOMPATIBILIDADES
+──────────────────
+• Solo 1 beca aunque se cursen varios estudios (excepción: idiomas, máx. 2, tope 360 €).
+• Incompatible con tener un título del mismo o superior nivel al que se solicita.
+
+CAMBIO DE ESTUDIOS CON CONDICIÓN DE BECARIO
+────────────────────────────────────────────
+• Requisito: matricularse de al menos 30 créditos MÁS de los cursados con beca en
+  los estudios abandonados.
+• Si esos créditos adicionales están entre 30 y 59 → matrícula parcial.
+• Si son ≥ 60 → matrícula completa.
+• A estos solos efectos SÍ cuentan los créditos convalidados, reconocidos y adaptados.
+
+NOVEDADES RD 163/2025 (2025-2026)
+──────────────────────────────────
+1. Enseñanzas Artísticas superiores: acceso por 1.ª vez a la beca de matrícula.
+2. Cuantía por residencia: sube 200 € (de 2.500 € a 2.700 €).
+3. Discapacidad 25%–65%: incremento del 25% en cuantías fijas (antes solo ≥ 65%).
+4. Exclusión de subvenciones DANA del cómputo de rendimientos patrimoniales.
+5. Flexibilización de requisitos académicos extendida a víctimas de violencia sexual
+   mayores de edad.
+
+ARTÍCULOS CLAVE DEL RD 1721/2007 (posibles en examen)
+───────────────────────────────────────────────────────
+• Art. 9.2 → Fórmula de cálculo de la cuantía variable (renta + rendimiento académico).
+• D.A. 1.ª → El RD anual debe aprobarse antes del inicio del curso.
+• Art. 11 → Ayudas para alumnado con altas capacidades.
+
+ARTÍCULOS CLAVE DEL RD 163/2025
+─────────────────────────────────
+• Art. 1 → Objeto del RD.
+• Art. 2 → Convocatorias a realizar ese curso.
+• Art. 3 → Cuantías para enseñanzas no universitarias (a-h).
+• Art. 4 → Cuantías para enseñanzas universitarias y artísticas superiores (i-l).
+• Art. 5 → Distribución del presupuesto (fijas primero, luego variable).
+• Art. 6 → Cuantías adicionales por insularidad.
+• Art. 8 → Umbrales de renta y patrimonio 2025-2026.
+• Arts. 9 y 10 → Cálculo de la renta familiar y deducciones.
+
+============================================================
+FIN DEL DOCUMENTO DE PUNTOS CLAVE PARA EXAMEN — TEMA 21
+============================================================

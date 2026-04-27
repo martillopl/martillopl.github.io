@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>2_esquema_visual_t21.html · Tema 21 – Becas de Carácter General MFP</title>
+  <style>
+    *{box-sizing:border-box;}
+    body{font-family:Arial,Helvetica,sans-serif;line-height:1.5;color:#1e293b;margin:26px;background:#f8fafc;}
+    h1{font-size:20px;border-bottom:4px solid #7c3aed;padding-bottom:8px;color:#1e1b4b;margin-top:0;background:#fff;padding:14px 18px;border-radius:8px 8px 0 0;}
+    h2{font-size:14px;color:#fff;background:#5b21b6;padding:8px 14px;border-radius:6px;margin:28px 0 10px 0;letter-spacing:.5px;}
+
+    /* GRID genérico */
+    .grid{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:14px;}
+    .card{background:#fff;border-radius:8px;padding:14px 16px;flex:1 1 200px;border-top:4px solid #7c3aed;box-shadow:0 2px 6px rgba(0,0,0,.07);}
+    .card .ctitle{font-size:11px;font-weight:700;text-transform:uppercase;color:#7c3aed;margin-bottom:5px;}
+    .card .cbig{font-size:22px;font-weight:900;color:#1e1b4b;}
+    .card p{font-size:12.5px;margin:4px 0;}
+
+    /* Fichas numeradas */
+    .fichas{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;}
+    .ficha{border-radius:8px;padding:12px 15px;flex:1 1 180px;color:#fff;min-width:160px;}
+    .ficha .fn{font-size:26px;font-weight:900;opacity:.35;}
+    .ficha .ft{font-size:12.5px;font-weight:700;margin-top:4px;}
+    .ficha .fd{font-size:11.5px;margin-top:3px;opacity:.9;}
+    .f1{background:#7c3aed;} .f2{background:#6d28d9;} .f3{background:#5b21b6;}
+    .f4{background:#4c1d95;} .f5{background:#3b0764;}
+
+    /* Comparativa lado a lado */
+    .compare{display:flex;gap:14px;margin-bottom:14px;}
+    .cbox{flex:1;border-radius:8px;padding:14px 16px;}
+    .cbox h3{font-size:13px;font-weight:700;margin:0 0 10px 0;padding-bottom:6px;border-bottom:2px solid rgba(255,255,255,.3);}
+    .cbox ul{padding-left:16px;margin:0;font-size:12.5px;}
+    .cbox li{margin-bottom:5px;}
+    .cbox-a{background:#5b21b6;color:#fff;}
+    .cbox-b{background:#0e7490;color:#fff;}
+
+    /* Tabla limpia */
+    table{width:100%;border-collapse:collapse;margin:8px 0 18px 0;font-size:12.5px;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.07);}
+    th{background:#5b21b6;color:#fff;padding:8px 11px;text-align:left;}
+    td{border:1px solid #ede9fe;padding:7px 11px;vertical-align:top;}
+    tr:nth-child(even) td{background:#f5f3ff;}
+
+    /* Píldoras */
+    .pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+    .pill{background:#5b21b6;color:#fff;border-radius:20px;padding:6px 15px;font-size:12px;font-weight:700;}
+    .pill span{font-size:16px;display:block;text-align:center;}
+
+    /* Escalera de umbrales */
+    .escalera{margin-bottom:14px;}
+    .esc-row{display:flex;align-items:center;gap:10px;margin-bottom:7px;}
+    .esc-badge{min-width:90px;text-align:center;border-radius:6px;padding:8px 10px;color:#fff;font-weight:700;font-size:12px;}
+    .u1{background:#16a34a;} .u2{background:#d97706;} .u3{background:#dc2626;} .u0{background:#64748b;}
+    .esc-desc{background:#fff;border-radius:6px;padding:8px 13px;flex:1;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.08);}
+    .esc-desc strong{color:#5b21b6;}
+
+    /* Cadena de pasos */
+    .cadena{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-bottom:14px;}
+    .paso{background:#7c3aed;color:#fff;border-radius:8px;padding:9px 13px;font-size:12px;text-align:center;font-weight:700;min-width:110px;}
+    .arrow{font-size:18px;color:#7c3aed;font-weight:700;}
+
+    /* Trampa */
+    .trampa{background:#fff5f5;border-left:5px solid #dc2626;padding:9px 13px;margin-bottom:7px;font-size:12.5px;border-radius:0 6px 6px 0;}
+    .trampa strong{color:#b91c1c;}
+
+    /* Nota */
+    .nota{background:#fef3c7;border-left:5px solid #d97706;padding:9px 13px;margin-bottom:12px;font-size:12.5px;border-radius:0 6px 6px 0;}
+    .mnemo{background:#1e1b4b;color:#fff;border-radius:8px;padding:12px 16px;margin-bottom:14px;font-size:13px;}
+    .mnemo span{color:#c4b5fd;font-weight:700;}
+
+    /* Bloques de número grande */
+    .numgrid{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;}
+    .numcard{background:#fff;border-radius:8px;padding:12px 14px;flex:1 1 130px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.08);border-bottom:4px solid #7c3aed;}
+    .numcard .big{font-size:28px;font-weight:900;color:#5b21b6;}
+    .numcard .desc{font-size:11px;color:#475569;margin-top:3px;}
+
+    /* Tabla de ramas */
+    .rama-grid{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;}
+    .rama{border-radius:8px;padding:13px 15px;flex:1 1 150px;text-align:center;}
+    .r65{background:#4c1d95;color:#fff;} .r80{background:#7c3aed;color:#fff;} .r90{background:#a78bfa;color:#1e1b4b;}
+    .rama .rpct{font-size:34px;font-weight:900;}
+    .rama .rname{font-size:11.5px;margin-top:5px;font-weight:700;}
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 21 · Becas de Carácter General del MFP para Estudios Universitarios<br>
+<span style="font-size:12px;font-weight:400;color:#475569;">Esquema visual para memorización rápida — RD 1721/2007 + RD 163/2025</span></h1>
+
+
+<!-- ══ BLOQUE 0: FICHA NORMATIVA ══ -->
+<h2>0 · FICHA NORMATIVA</h2>
+<div class="grid">
+  <div class="card" style="border-color:#7c3aed;">
+    <div class="ctitle">Norma marco permanente</div>
+    <div class="cbig">RD 1721/2007</div>
+    <p>21 de diciembre de 2007<br>Modalidades · condiciones económicas y académicas · incompatibilidades · reintegro</p>
+  </div>
+  <div class="card" style="border-color:#5b21b6;">
+    <div class="ctitle">Norma anual 2025-2026</div>
+    <div class="cbig">RD 163/2025</div>
+    <p>4 de marzo de 2025 (BOE 5/03/2025)<br>Cuantías · umbrales de renta y patrimonio · deducciones</p>
+  </div>
+  <div class="card" style="border-color:#4c1d95;">
+    <div class="ctitle">Fundamento constitucional</div>
+    <div class="cbig">Art. 27 CE</div>
+    <p>Apartados 1 y 5 · Art. 83 LOE · Art. 32 LOSU<br>D.A. 9.ª Ley 24/2005 → concesión DIRECTA sin cupo</p>
+  </div>
+  <div class="card" style="border-color:#3b0764;">
+    <div class="ctitle">Carácter de la concesión</div>
+    <div class="cbig">DIRECTA</div>
+    <p>Sin número predeterminado de beneficiarios<br>Todo el que cumple requisitos → obtiene la beca</p>
+  </div>
+</div>
+
+
+<!-- ══ BLOQUE 1: LOS 5 FINES ══ -->
+<h2>1 · LOS 5 FINES DE LAS BECAS</h2>
+<div class="fichas">
+  <div class="ficha f1"><div class="fn">1</div><div class="ft">Formación integral</div><div class="fd">Complementar aprendizaje teórico y práctico del aula</div></div>
+  <div class="ficha f2"><div class="fn">2</div><div class="ft">Conocimiento metodológico</div><div class="fd">Facilitar el conocimiento de la metodología de trabajo adecuada a la realidad profesional</div></div>
+  <div class="ficha f3"><div class="fn">3</div><div class="ft">Competencias profesionales</div><div class="fd">Favorecer el desarrollo de competencias que faciliten la incorporación al mundo laboral</div></div>
+  <div class="ficha f4"><div class="fn">4</div><div class="ft">Experiencia práctica</div><div class="fd">Facilitar la inserción en el mercado de trabajo y mejorar la empleabilidad</div></div>
+  <div class="ficha f5"><div class="fn">5</div><div class="ft">Equidad educativa</div><div class="fd">Garantizar que las condiciones socioeconómicas no excluyan del acceso a estudios superiores</div></div>
+</div>
+
+
+<!-- ══ BLOQUE 2: ENSEÑANZAS INCLUIDAS Y EXCLUIDAS ══ -->
+<h2>2 · ENSEÑANZAS UNIVERSITARIAS INCLUIDAS / EXCLUIDAS</h2>
+<div class="compare">
+  <div class="cbox cbox-a">
+    <h3>✅ INCLUIDAS</h3>
+    <ul>
+      <li>Grado oficial (presencial / a distancia)</li>
+      <li>Máster Oficial</li>
+      <li>Enseñanzas Artísticas Superiores (NOVEDAD 2025-26)</li>
+      <li>Centros universitarios de Defensa, Guardia Civil y Policía Nacional</li>
+      <li>Curso preparatorio mayores de 25 años (universidades públicas)</li>
+      <li>Complementos / créditos adicionales para el título</li>
+    </ul>
+  </div>
+  <div class="cbox cbox-b">
+    <h3>❌ EXCLUIDAS</h3>
+    <ul>
+      <li>Doctorado</li>
+      <li>Estudios de especialización</li>
+      <li>Títulos propios de las universidades</li>
+      <li>Estudios de los que ya se posea un título del mismo o superior nivel</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ══ BLOQUE 3: LOS 5 COMPONENTES ══ -->
+<h2>3 · LOS 5 COMPONENTES DE LA BECA UNIVERSITARIA (R-R-E-V-M)</h2>
+<div class="mnemo"><span>MNEMOTÉCNICO:</span> <strong>R</strong>enta · <strong>R</strong>esidencia · <strong>E</strong>xcelencia · <strong>V</strong>ariable · <strong>M</strong>atrícula → <strong>R-R-E-V-M</strong></div>
+<table>
+  <tr><th>Componente</th><th>Cuantía 2025-2026</th><th>Condición principal</th><th>Umbral máximo</th></tr>
+  <tr><td><strong>a) Renta</strong></td><td style="font-weight:900;color:#5b21b6;">1.700 €</td><td>Solo enseñanza presencial</td><td>Solo umbral 1</td></tr>
+  <tr><td><strong>b) Residencia</strong></td><td style="font-weight:900;color:#5b21b6;">2.700 €</td><td>Residir fuera del domicilio por razón de estudios · ≤ coste real</td><td>Umbrales 1 y 2</td></tr>
+  <tr><td><strong>c) Excelencia</strong></td><td style="font-weight:900;color:#5b21b6;">50–125 €</td><td>Nota 8,00–8,49→50€ · 8,50–8,99→75€ · 9,00–9,49→100€ · ≥9,50→125€</td><td>Hasta umbral 3</td></tr>
+  <tr><td><strong>d) Variable</strong></td><td style="font-weight:900;color:#5b21b6;">Mín. 60 €</td><td>Fórmula renta + nota media (art. 9.2 RD 1721/2007)</td><td>No superar umbral 2</td></tr>
+  <tr><td><strong>e) Matrícula</strong></td><td style="font-weight:900;color:#5b21b6;">Precio público 1.ª matrícula</td><td>Solo créditos matriculados por primera vez · privada = mínimo CCAA</td><td>Umbrales 2 y 3 también</td></tr>
+</table>
+
+
+<!-- ══ BLOQUE 4: UMBRALES DE RENTA ══ -->
+<h2>4 · LOS 3 UMBRALES DE RENTA — ESCALERA DESCENDENTE</h2>
+<div class="nota">La renta computable es la del ejercicio fiscal <strong>anterior</strong> al inicio del curso (para 2025-2026 → ejercicio 2024 · IRPF 2024).</div>
+<div class="escalera">
+  <div class="esc-row">
+    <div class="esc-badge u1">UMBRAL 1<br>(renta baja)</div>
+    <div class="esc-desc"><strong>TODOS los componentes:</strong> Renta (1.700€) + Residencia (2.700€) + Excelencia + Variable + Matrícula · Familia 4 miembros: hasta ~22.107 €</div>
+  </div>
+  <div class="esc-row">
+    <div class="esc-badge u2">UMBRAL 2<br>(renta media)</div>
+    <div class="esc-desc">Pierde la <strong>cuantía fija por renta</strong>: Residencia + Excelencia + Variable + Matrícula · Familia 4 miembros: hasta ~23.286 €</div>
+  </div>
+  <div class="esc-row">
+    <div class="esc-badge u3">UMBRAL 3<br>(renta alta)</div>
+    <div class="esc-desc">Solo <strong>Excelencia + Matrícula</strong>. Sin renta, sin residencia, sin variable mínima · El más permisivo en matrícula</div>
+  </div>
+  <div class="esc-row">
+    <div class="esc-badge u0">SIN BECA</div>
+    <div class="esc-desc">Supera umbral 3 → ningún componente</div>
+  </div>
+</div>
+<div class="mnemo"><span>FRASE-ANCLA:</span> "Umbral 1 = menú completo · Umbral 2 = sin primer plato (renta) · Umbral 3 = solo cubiertos (excelencia) y paga matrícula."</div>
+
+
+<!-- ══ BLOQUE 5: DEDUCCIONES DE RENTA ══ -->
+<h2>5 · DEDUCCIONES APLICABLES A LA RENTA FAMILIAR (mnemotécnico DONDOF)</h2>
+<div class="mnemo"><span>DONDOF:</span> <strong>D</strong>istintos sustentadores · <strong>O</strong>rganización familiar (numerosa) · <strong>N</strong>ecesidades especiales (discapacidad) · <strong>D</strong>os o más hermanos fuera · <strong>O</strong>rfandad absoluta · <strong>F</strong>amilia monoparental</div>
+<table>
+  <tr><th>Supuesto</th><th>Deducción 2025-2026</th></tr>
+  <tr><td>Ingresos de miembros distintos de los sustentadores principales</td><td><strong>50%</strong> de esos ingresos</td></tr>
+  <tr><td>Hermano/a conviviente · familia numerosa general / especial</td><td><strong>525 € / 800 €</strong></td></tr>
+  <tr><td>Discapacidad ≥ 33% / ≥ 65% (miembro de la unidad familiar)</td><td><strong>1.811 € / 2.881 €</strong></td></tr>
+  <tr><td>≥ 2 hermanos residiendo fuera del domicilio por estudios universitarios</td><td><strong>1.176 €</strong></td></tr>
+  <tr><td>Orfandad absoluta del solicitante menor de 25 años</td><td><strong>20%</strong> de la renta familiar</td></tr>
+  <tr><td>Familia monoparental</td><td><strong>500 €</strong></td></tr>
+</table>
+
+
+<!-- ══ BLOQUE 6: RENDIMIENTO ACADÉMICO POR RAMAS ══ -->
+<h2>6 · REQUISITOS DE RENDIMIENTO ACADÉMICO (% CRÉDITOS A SUPERAR POR RAMA)</h2>
+<div class="mnemo"><span>REGLA:</span> <strong>Más difícil técnicamente → menos % exigido · Más humanística → más % exigido</strong></div>
+<div class="rama-grid">
+  <div class="rama r65"><div class="rpct">65%</div><div class="rname">Ciencias</div></div>
+  <div class="rama r65"><div class="rpct">65%</div><div class="rname">Ingeniería y Enseñanzas Técnicas</div></div>
+  <div class="rama r80"><div class="rpct">80%</div><div class="rname">Ciencias de la Salud</div></div>
+  <div class="rama r90"><div class="rpct">90%</div><div class="rname">Artes y Humanidades</div></div>
+  <div class="rama r90"><div class="rpct">90%</div><div class="rname">CC Sociales y Jurídicas</div></div>
+</div>
+<table>
+  <tr><th>Situación</th><th>Requisito académico</th></tr>
+  <tr><td>1.er curso de Grado</td><td>Nota de acceso a la universidad ≥ <strong>5 puntos</strong></td></tr>
+  <tr><td>Resto de cursos de Grado</td><td>Superar el % indicado arriba según rama</td></tr>
+  <tr><td>1.er curso de Máster</td><td>Nota media ≥ <strong>5 puntos</strong> en la titulación de acceso</td></tr>
+  <tr><td>2.º curso de Máster</td><td><strong>100%</strong> de créditos del 1.er curso aprobados + nota media ≥ 5</td></tr>
+</table>
+
+
+<!-- ══ BLOQUE 7: MATRÍCULA COMPLETA / PARCIAL ══ -->
+<h2>7 · REGLA 30-60: MATRÍCULA COMPLETA VS PARCIAL</h2>
+<div class="grid">
+  <div class="card" style="border-color:#dc2626;">
+    <div class="ctitle">Sin beca</div>
+    <div class="cbig" style="color:#dc2626;">&lt; 30 créditos</div>
+    <p>Ningún componente · ni ese año ni el siguiente</p>
+  </div>
+  <div class="card" style="border-color:#d97706;">
+    <div class="ctitle">Matrícula PARCIAL</div>
+    <div class="cbig" style="color:#d97706;">30–59 créditos</div>
+    <p>Solo: <strong>beca de matrícula + cuantía variable mínima (60 €)</strong><br>Excepción si la normativa de la universidad limita los créditos o son los que restan para el título</p>
+  </div>
+  <div class="card" style="border-color:#16a34a;">
+    <div class="ctitle">Matrícula COMPLETA</div>
+    <div class="cbig" style="color:#16a34a;">≥ 60 créditos</div>
+    <p>Acceso a TODOS los componentes (según umbral de renta)</p>
+  </div>
+</div>
+<div class="nota"><strong>Importante:</strong> Los créditos convalidados, reconocidos o adaptados NO computan para el requisito académico. Solo computan para el total de créditos a efectos de la beca de matrícula.</div>
+
+
+<!-- ══ BLOQUE 8: DURACIÓN MÁXIMA ══ -->
+<h2>8 · DURACIÓN MÁXIMA DE LA CONDICIÓN DE BECARIO</h2>
+<div class="numgrid">
+  <div class="numcard"><div class="big">+2</div><div class="desc">años adicionales<br><strong>Arquitectura e Ingeniería</strong></div></div>
+  <div class="numcard"><div class="big">+1</div><div class="desc">año adicional<br><strong>Resto de ramas</strong></div></div>
+  <div class="numcard"><div class="big">×2</div><div class="desc">del plan de estudios máximo<br><strong>Discapacidad ≥ 65%</strong> con reducción de carga</div></div>
+  <div class="numcard"><div class="big">50%</div><div class="desc">de las cuantías en el<br>último año adicional</div></div>
+</div>
+<div class="nota">En el último año adicional: solo matrícula + variable mínima (60 €) + <strong>50% de las demás cuantías</strong> que hubieran correspondido.</div>
+
+
+<!-- ══ BLOQUE 9: REINTEGRO ══ -->
+<h2>9 · CAUSAS DE REINTEGRO DE LA BECA UNIVERSITARIA</h2>
+<div class="fichas">
+  <div class="ficha f1"><div class="fn">1</div><div class="ft">Anulación de matrícula</div><div class="fd">Se reintegran todos los componentes percibidos</div></div>
+  <div class="ficha f3"><div class="fn">2</div><div class="ft">Insuficiente rendimiento</div><div class="fd">No superar el <strong>50%</strong> de créditos (40% en CC y Técnicas) ni en ord. ni en extraord. → se reintegra todo EXCEPTO la beca de matrícula</div></div>
+  <div class="ficha f5"><div class="fn">3</div><div class="ft">Proyecto fin de carrera</div><div class="fd">No presentarlo en el plazo de <strong>2 años</strong> desde la resolución de concesión</div></div>
+</div>
+<div class="nota"><strong>Excepción clave:</strong> La <strong>beca de matrícula NO se reintegra</strong> en el supuesto de insuficiencia de rendimiento académico.</div>
+
+
+<!-- ══ BLOQUE 10: INSULARIDAD ══ -->
+<h2>10 · CUANTÍAS ADICIONALES POR INSULARIDAD (umbral 2)</h2>
+<div class="pills">
+  <div class="pill"><span>442 €</span>Canarias · Baleares · Ceuta · Melilla</div>
+  <div class="pill"><span>623 €</span>Islas menores (Lanzarote, Fuerteventura, Gomera, Hierro, Palma, Menorca, Ibiza, Formentera)</div>
+  <div class="pill"><span>888 €</span>Canarias/Baleares + desplazamiento a Península</div>
+  <div class="pill"><span>937 €</span>Islas menores + desplazamiento a Península</div>
+</div>
+<div class="mnemo"><span>SECUENCIA:</span> 442 → 623 → 888 → 937 · Cuanto más lejos del continente, mayor importe</div>
+
+
+<!-- ══ BLOQUE 11: INCOMPATIBILIDADES ══ -->
+<h2>11 · INCOMPATIBILIDADES Y CAMBIO DE ESTUDIOS</h2>
+<div class="compare">
+  <div class="cbox cbox-a">
+    <h3>Incompatibilidades</h3>
+    <ul>
+      <li>Solo 1 beca aunque se cursen varios estudios simultáneamente</li>
+      <li>Excepción: idiomas → máx. 2 idiomas, tope 360 €</li>
+      <li>Incompatible con tener título del MISMO o SUPERIOR nivel al solicitado</li>
+      <li>Incompatible con percibir beca de otra Administración para los mismos estudios</li>
+    </ul>
+  </div>
+  <div class="cbox cbox-b">
+    <h3>Cambio de estudios con beca</h3>
+    <ul>
+      <li>Requisito: matricularse de al menos <strong>30 créditos MÁS</strong> de los cursados con beca en los estudios abandonados</li>
+      <li>30–59 créditos adicionales → matrícula parcial</li>
+      <li>≥ 60 créditos adicionales → matrícula completa</li>
+      <li>A estos solos efectos: los créditos convalidados SÍ computan</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ══ BLOQUE 12: NOVEDADES 2025-2026 ══ -->
+<h2>12 · NOVEDADES DEL RD 163/2025 PARA 2025-2026</h2>
+<div class="fichas">
+  <div class="ficha f1"><div class="fn">1</div><div class="ft">Artísticas Superiores</div><div class="fd">Equiparación plena: acceso por 1.ª vez a la beca de matrícula (art. 49 Ley 1/2024)</div></div>
+  <div class="ficha f2"><div class="fn">2</div><div class="ft">Residencia +200 €</div><div class="fd">Sube de 2.500 € a <strong>2.700 €</strong> para atender el aumento del coste de alojamiento</div></div>
+  <div class="ficha f3"><div class="fn">3</div><div class="ft">Discapacidad 25%–65%</div><div class="fd">Incremento del <strong>25%</strong> en cuantías fijas (antes solo para discapacidad ≥ 65%)</div></div>
+  <div class="ficha f4"><div class="fn">4</div><div class="ft">DANA 2024</div><div class="fd">Las subvenciones por la DANA de noviembre 2024 quedan excluidas del cómputo de rendimientos patrimoniales</div></div>
+  <div class="ficha f5"><div class="fn">5</div><div class="ft">Violencia sexual</div><div class="fd">Flexibilización de requisitos académicos extendida a víctimas de violencia sexual <strong>mayores de edad</strong></div></div>
+</div>
+
+
+<!-- ══ BLOQUE 13: FLUJO COMPLETO ══ -->
+<h2>13 · FLUJO COMPLETO DEL PROCESO DE BECA</h2>
+<div class="cadena">
+  <div class="paso">RD anual<br>aprobado antes<br>del curso</div>
+  <div class="arrow">→</div>
+  <div class="paso">Convocatoria<br>publicada<br>(BOE)</div>
+  <div class="arrow">→</div>
+  <div class="paso">Solicitud<br>online (plazo:<br>mar.–may.)</div>
+  <div class="arrow">→</div>
+  <div class="paso">Cruce datos<br>con AEAT<br>(IRPF año ant.)</div>
+  <div class="arrow">→</div>
+  <div class="paso">Verificación<br>requisitos<br>académicos</div>
+  <div class="arrow">→</div>
+  <div class="paso">Resolución<br>de concesión<br>/ denegación</div>
+  <div class="arrow">→</div>
+  <div class="paso">Pago al<br>estudiante<br>y/o al centro</div>
+</div>
+<div class="nota">La beca de matrícula se paga directamente al centro educativo (el estudiante queda exento). El resto de componentes se pagan al estudiante.</div>
+
+
+<!-- ══ BLOQUE 14: GRANDES NÚMEROS ══ -->
+<h2>14 · LOS GRANDES NÚMEROS DEL TEMA 21</h2>
+<div class="numgrid">
+  <div class="numcard"><div class="big">1.700</div><div class="desc">€ · Cuantía fija por RENTA</div></div>
+  <div class="numcard"><div class="big">2.700</div><div class="desc">€ · Cuantía fija por RESIDENCIA (2025-26)</div></div>
+  <div class="numcard"><div class="big">125</div><div class="desc">€ · Máximo por EXCELENCIA (nota ≥ 9,50)</div></div>
+  <div class="numcard"><div class="big">60</div><div class="desc">€ · Mínimo cuantía VARIABLE</div></div>
+  <div class="numcard"><div class="big">30</div><div class="desc">créditos → mín. matrícula parcial</div></div>
+  <div class="numcard"><div class="big">60</div><div class="desc">créditos → matrícula completa</div></div>
+  <div class="numcard"><div class="big">50%</div><div class="desc">créditos mín. a superar (reintegro) o 40% Ciencias/Técnicas</div></div>
+  <div class="numcard"><div class="big">65%</div><div class="desc">créditos Ciencias e Ingeniería</div></div>
+  <div class="numcard"><div class="big">80%</div><div class="desc">créditos CC de la Salud</div></div>
+  <div class="numcard"><div class="big">90%</div><div class="desc">créditos Humanidades y CCSS</div></div>
+  <div class="numcard"><div class="big">4 años</div><div class="desc">vigencia convenio cooperación educativa (referencia UPNA)</div></div>
+  <div class="numcard"><div class="big">937</div><div class="desc">€ · Máxima insularidad (islas menores → Península)</div></div>
+  <div class="numcard"><div class="big">2 años</div><div class="desc">plazo para proyecto fin de carrera (reintegro si no)</div></div>
+  <div class="numcard"><div class="big">100%</div><div class="desc">créditos Máster 2.º curso</div></div>
+  <div class="numcard"><div class="big">500</div><div class="desc">€ · Deducción familia monoparental</div></div>
+</div>
+
+
+<!-- ══ BLOQUE 15: TRAMPAS ══ -->
+<h2>15 · TRAMPAS FRECUENTES DE EXAMEN</h2>
+<div class="trampa"><strong>"Las becas son competitivas: solo las obtienen los mejores."</strong> FALSO. Son de concesión directa sin cupo. Todo el que cumple requisitos académicos y económicos la obtiene (D.A. 9.ª Ley 24/2005).</div>
+<div class="trampa"><strong>"Con 25 créditos hay beca de matrícula."</strong> FALSO. El mínimo es 30 créditos. Con menos de 30 no hay ningún componente ni ese año ni el siguiente.</div>
+<div class="trampa"><strong>"El umbral 3 da acceso a todos los componentes."</strong> FALSO. Solo da excelencia + matrícula. Sin renta, residencia ni variable mínima.</div>
+<div class="trampa"><strong>"Si no llegas al rendimiento mínimo, debes devolver también la beca de matrícula."</strong> FALSO. La beca de matrícula queda excluida del reintegro por insuficiencia de rendimiento.</div>
+<div class="trampa"><strong>"En Ingeniería se exige el 90% de créditos como en Humanidades."</strong> FALSO. Ingeniería y Ciencias: 65%. Humanidades y CCSS: 90%. Salud: 80%.</div>
+<div class="trampa"><strong>"La cuantía por residencia en 2025-2026 es 2.500 €."</strong> FALSO. Era 2.500 € en 2024-2025. Para 2025-2026 el RD 163/2025 la eleva a 2.700 €.</div>
+<div class="trampa"><strong>"El 2.º curso de Máster exige el 80% de los créditos del 1.º."</strong> FALSO. Exige el 100% de los créditos del 1.er curso aprobados más nota media ≥ 5.</div>
+<div class="trampa"><strong>"Los créditos reconocidos cuentan para el requisito académico de rendimiento."</strong> FALSO. Los créditos convalidados, reconocidos o adaptados NO computan para el cumplimiento del requisito de rendimiento.</div>
+<div class="trampa"><strong>"Cualquier rama tiene 2 años adicionales de beca más allá del plan."</strong> FALSO. Los 2 años adicionales son exclusivos de Arquitectura e Ingeniería. El resto: solo 1 año.</div>
+<div class="trampa"><strong>"La renta computable es la del año en curso."</strong> FALSO. Se usa el ejercicio fiscal ANTERIOR al inicio del curso (para 2025-2026 → ejercicio fiscal 2024).</div>
+
+</body>
+</html>
