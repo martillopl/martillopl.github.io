@@ -1,0 +1,418 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>2_esquema_resumen.html · Tema 19 UPNA</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:Arial,Helvetica,sans-serif;background:#f3f0ff;color:#1e293b;padding:26px;}
+
+    /* ─── CABECERA ─── */
+    .cab{background:linear-gradient(135deg,#5b21b6,#7c3aed,#a855f7);color:#fff;padding:22px 28px;border-radius:12px;margin-bottom:24px;}
+    .cab h1{font-size:20px;font-weight:900;line-height:1.35;}
+    .cab p{font-size:13px;opacity:.88;margin-top:6px;}
+    .tag{display:inline-block;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.4);border-radius:20px;padding:3px 12px;font-size:11.5px;font-weight:700;margin-top:9px;margin-right:5px;}
+
+    /* ─── SECCIÓN ─── */
+    .sec{font-size:13.5px;font-weight:900;text-transform:uppercase;letter-spacing:.07em;color:#5b21b6;border-bottom:3px solid #7c3aed;padding-bottom:5px;margin:26px 0 13px 0;}
+
+    /* ─── GRIDS ─── */
+    .g2{display:grid;grid-template-columns:1fr 1fr;gap:13px;}
+    .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:13px;}
+    .g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:13px;}
+
+    /* ─── TARJETA ─── */
+    .c{background:#fff;border-radius:10px;padding:14px 16px;box-shadow:0 1px 4px rgba(0,0,0,.08);}
+    .c h3{font-size:13px;font-weight:800;margin-bottom:7px;}
+    .c p,.c li{font-size:12.5px;line-height:1.55;}
+    .c ul,.c ol{padding-left:16px;}
+    .c li{margin-bottom:4px;}
+
+    /* ─── COLORES BORDE ─── */
+    .mo{border-top:5px solid #7c3aed;} .mo h3{color:#6d28d9;}
+    .vi{border-top:5px solid #8b5cf6;} .vi h3{color:#7c3aed;}
+    .az{border-top:5px solid #2563eb;} .az h3{color:#1d4ed8;}
+    .cy{border-top:5px solid #0891b2;} .cy h3{color:#0369a1;}
+    .ve{border-top:5px solid #16a34a;} .ve h3{color:#15803d;}
+    .na{border-top:5px solid #ea580c;} .na h3{color:#c2410c;}
+    .ro{border-top:5px solid #dc2626;} .ro h3{color:#b91c1c;}
+    .am{border-top:5px solid #d97706;} .am h3{color:#b45309;}
+    .gs{border-top:5px solid #475569;} .gs h3{color:#334155;}
+    .rs{border-top:5px solid #db2777;} .rs h3{color:#9d174d;}
+
+    /* ─── TABLA ─── */
+    table{width:100%;border-collapse:collapse;font-size:12.5px;margin:10px 0 18px 0;}
+    th{background:#4c1d95;color:#fff;padding:8px 10px;text-align:left;}
+    td{border:1px solid #e2e8f0;padding:8px 10px;vertical-align:top;}
+    tr:nth-child(even) td{background:#faf5ff;}
+    .exam{font-weight:700;color:#b91c1c;}
+    .ok{color:#16a34a;font-weight:700;}
+    .no{color:#dc2626;font-weight:700;}
+
+    /* ─── PÍLDORAS ─── */
+    .pills{display:flex;flex-wrap:wrap;gap:10px;}
+    .pill{background:#fff;border-radius:10px;padding:11px 13px;box-shadow:0 1px 4px rgba(0,0,0,.09);text-align:center;flex:1 1 100px;}
+    .pill .num{font-size:24px;font-weight:900;line-height:1.1;}
+    .pill .lab{font-size:11px;color:#475569;margin-top:3px;line-height:1.35;}
+    .p-mo .num{color:#7c3aed;} .p-az .num{color:#2563eb;} .p-ve .num{color:#16a34a;}
+    .p-na .num{color:#ea580c;} .p-ro .num{color:#dc2626;} .p-cy .num{color:#0891b2;}
+    .p-am .num{color:#d97706;} .p-rs .num{color:#db2777;}
+
+    /* ─── CALIFICACIONES ─── */
+    .cal-wrap{display:flex;gap:10px;margin:10px 0 18px;}
+    .cal{flex:1;border-radius:10px;padding:13px 14px;text-align:center;}
+    .cal .rng{font-size:22px;font-weight:900;line-height:1;}
+    .cal .nom{font-size:13px;font-weight:700;margin-top:4px;}
+    .cal .sig{font-size:11px;margin-top:2px;opacity:.8;}
+    .ss{background:#fee2e2;color:#dc2626;}
+    .ap{background:#d1fae5;color:#059669;}
+    .nt{background:#dbeafe;color:#1d4ed8;}
+    .sb{background:#ede9fe;color:#7c3aed;}
+    .mh{background:#fef3c7;color:#b45309;}
+
+    /* ─── FLUJO CADENA ─── */
+    .flujo{display:flex;gap:6px;flex-wrap:wrap;align-items:stretch;}
+    .fp{background:#fff;border-radius:8px;padding:11px 13px;box-shadow:0 1px 4px rgba(0,0,0,.08);flex:1 1 0;position:relative;}
+    .fp:not(:last-child)::after{content:"▶";position:absolute;right:-12px;top:50%;transform:translateY(-50%);font-size:13px;color:#94a3b8;z-index:2;}
+    .fp .np{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;margin-bottom:5px;}
+    .fp p,.fp strong{font-size:12px;}
+
+    /* ─── ÁRBOL ─── */
+    .arbol{background:#fff;border-radius:10px;padding:15px 17px;box-shadow:0 1px 4px rgba(0,0,0,.08);}
+    .raiz{background:#4c1d95;color:#fff;border-radius:8px;padding:9px 14px;font-size:13px;font-weight:700;text-align:center;margin-bottom:13px;}
+    .rama{display:flex;gap:11px;margin-bottom:9px;}
+    .hoja{flex:1;border-radius:8px;padding:10px 12px;font-size:12.5px;line-height:1.5;}
+    .h-az{background:#dbeafe;border-left:4px solid #2563eb;}
+    .h-ve{background:#dcfce7;border-left:4px solid #16a34a;}
+    .h-ro{background:#fee2e2;border-left:4px solid #dc2626;}
+    .h-mo{background:#ede9fe;border-left:4px solid #7c3aed;}
+    .hoja strong{display:block;margin-bottom:3px;font-size:13px;}
+
+    /* ─── TRAMPA ─── */
+    .trampa{background:#fff5f5;border-left:5px solid #dc2626;border-radius:0 7px 7px 0;padding:8px 13px;margin-bottom:7px;font-size:12.5px;}
+    .trampa strong{color:#b91c1c;}
+
+    /* ─── RESOLUCIÓN 719 ─── */
+    .res719{background:linear-gradient(135deg,#fdf4ff,#ede9fe);border:2px solid #c4b5fd;border-radius:12px;padding:16px 20px;margin:14px 0 20px 0;}
+    .res719 h3{font-size:15px;color:#5b21b6;font-weight:900;margin-bottom:10px;}
+
+    /* ─── ADAPTACIONES ─── */
+    .adapt-wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+    .adapt{background:#fff;border-radius:10px;padding:12px 13px;border-top:5px solid #8b5cf6;box-shadow:0 1px 4px rgba(0,0,0,.08);text-align:center;}
+    .adapt .ico{font-size:24px;margin-bottom:5px;}
+    .adapt .nom{font-size:12px;font-weight:700;color:#5b21b6;line-height:1.35;}
+    .adapt .det{font-size:11px;color:#475569;margin-top:3px;}
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<!-- ═══ CABECERA ═══ -->
+<div class="cab">
+  <h1>TEMA 19 · Normativa reguladora de los procesos de evaluación en la UPNA<br>
+  + Resolución N.º 719/2016 sobre adaptaciones para estudiantes con NEE, TDA y TDAH</h1>
+  <p>Esquema-resumen con bloques visuales para memorización rápida</p>
+  <span class="tag">CG 15/12/2011 · modificada 07/05/2014 y ss.</span>
+  <span class="tag">Res. 719/2016 · 11 de mayo</span>
+  <span class="tag">RD 1125/2003 · RD 1791/2010</span>
+</div>
+
+
+<!-- ═══ BLOQUE 0 · NORMATIVA ═══ -->
+<div class="sec">0 · Datos normativos y órganos</div>
+<div class="g3">
+  <div class="c mo">
+    <h3>📋 Normativa de evaluación</h3>
+    <ul>
+      <li>Aprobada por el <strong>Consejo de Gobierno</strong>, 15 de diciembre de 2011</li>
+      <li>Modificaciones sucesivas: Acuerdos de CG de 07/05/2014 y posteriores</li>
+      <li>Habilitación: <strong>RD 1791/2010</strong>, Estatuto del Estudiante (arts. 7 e), 12 y 13)</li>
+      <li>También: art. 53 LOSU 2/2023 (antes art. 46 LOU)</li>
+      <li>Ámbito: <strong>Grado y Máster</strong> oficial en centros de la UPNA</li>
+    </ul>
+  </div>
+  <div class="c vi">
+    <h3>📜 Resolución 719/2016</h3>
+    <ul>
+      <li>Aprobada por el <strong>Rector</strong>, 11 de mayo de 2016</li>
+      <li>Objeto: medidas de adaptación en evaluación para estudiantes con <strong>NEE, TDA y TDAH</strong></li>
+      <li>No modifica el nivel académico ni los criterios de evaluación</li>
+      <li>Adapta las <strong>condiciones de realización</strong> de las pruebas</li>
+    </ul>
+  </div>
+  <div class="c az">
+    <h3>🏛 Habilitación legal (cadena normativa)</h3>
+    <ul>
+      <li><strong>Art. 53 LOSU 2/2023</strong> → autonomía universitaria</li>
+      <li><strong>RD 1791/2010</strong> → Estatuto del Estudiante Universitario</li>
+      <li><strong>Arts. 7 e), 12, 13</strong> del Estatuto → evaluación objetiva, calificaciones, revisión</li>
+      <li><strong>RD 1125/2003</strong> → sistema europeo de calificaciones</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══ BLOQUE 1 · PRINCIPIOS GENERALES ═══ -->
+<div class="sec">1 · Principios generales (Cap. I)</div>
+<div class="g4">
+  <div class="c mo"><h3>📢 Publicidad</h3><p>Las normas de evaluación de cada asignatura deben publicarse en la <strong>Guía Docente</strong> antes del inicio del curso. El estudiante tiene derecho a conocerlas.</p></div>
+  <div class="c vi"><h3>⚖ Objetividad</h3><p>La evaluación se ajustará estrictamente a los criterios publicados. Derecho a evaluación <strong>objetiva y continua</strong> basada en metodología activa.</p></div>
+  <div class="c az"><h3>🔁 Evaluación continua</h3><p>Metodología preferente. Cada actividad de evaluación tiene su <strong>criterio, instrumento y peso</strong> en la Guía Docente. Siempre se garantiza la evaluación final.</p></div>
+  <div class="c cy"><h3>🛡 Adaptación</h3><p>Se prevén sistemas de evaluación adaptados a necesidades especiales <strong>sin disminución del nivel académico exigido</strong>.</p></div>
+</div>
+<div class="g2" style="margin-top:13px;">
+  <div class="c ve"><h3>📅 Los 3 días hábiles</h3><p>La calificación provisional de la asignatura debe comunicarse con al menos <strong>3 días hábiles</strong> (no naturales) de antelación a la fecha de la evaluación de recuperación. <span class="exam">Son HÁBILES, no naturales.</span></p></div>
+  <div class="c na"><h3>💻 Detección automática de plagio</h3><p>La Universidad puede utilizar herramientas informáticas de <strong>detección automática de plagio</strong> en trabajos escritos. Esto está expresamente recogido en la normativa.</p></div>
+</div>
+
+
+<!-- ═══ BLOQUE 2 · SISTEMA DE CALIFICACIONES ═══ -->
+<div class="sec">2 · Sistema de calificaciones (Cap. II · RD 1125/2003)</div>
+<div class="cal-wrap">
+  <div class="cal ss"><div class="rng">0,0 – 4,9</div><div class="nom">Suspenso</div><div class="sig">SS</div></div>
+  <div class="cal ap"><div class="rng">5,0 – 6,9</div><div class="nom">Aprobado</div><div class="sig">AP</div></div>
+  <div class="cal nt"><div class="rng">7,0 – 8,9</div><div class="nom">Notable</div><div class="sig">NT</div></div>
+  <div class="cal sb"><div class="rng">9,0 – 10,0</div><div class="nom">Sobresaliente</div><div class="sig">SB</div></div>
+  <div class="cal mh"><div class="rng">MH</div><div class="nom">Matrícula de Honor</div><div class="sig">Requiere SB · máx. 5%</div></div>
+</div>
+<div class="g3">
+  <div class="c am">
+    <h3>⭐ Matrícula de Honor: reglas</h3>
+    <ul>
+      <li>Solo se concede a quien obtiene <strong>Sobresaliente</strong></li>
+      <li>Máximo: <strong>5%</strong> de los estudiantes <strong>matriculados</strong> (no de los aprobados)</li>
+      <li>Si hay menos de <strong>20 matriculados</strong> → puede concederse <strong>al menos 1 MH</strong></li>
+      <li>Su concesión es <strong>optativa</strong> para el profesorado, no obligatoria</li>
+    </ul>
+  </div>
+  <div class="c gs">
+    <h3>🚫 No Presentado (NP)</h3>
+    <ul>
+      <li>No es una calificación numérica</li>
+      <li><strong>No computa</strong> a efectos de rendimiento académico</li>
+      <li>En Grado: NP en 1.ª y 2.ª matrícula <strong>no consume convocatoria</strong></li>
+      <li>En Máster: NP <strong>siempre consume</strong> convocatoria</li>
+    </ul>
+  </div>
+  <div class="c cy">
+    <h3>📊 Expediente académico</h3>
+    <ul>
+      <li>Se aplica también la escala del <strong>Suplemento Europeo al Título (DS)</strong></li>
+      <li>Fórmula de ponderación: V = P × Nca / NCs</li>
+      <li>V = valor ponderado · P = puntuación por tabla · Nca = créditos de la asignatura · NCs = créditos superados totales</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══ BLOQUE 3 · TIPOS DE EVALUACIÓN ═══ -->
+<div class="sec">3 · Tipos de evaluación (Cap. III)</div>
+<div class="g3">
+  <div class="c mo">
+    <h3>🔄 Evaluación continua (art. 5)</h3>
+    <ul>
+      <li>Valoración progresiva a lo largo del período lectivo</li>
+      <li>La Guía Docente especifica: <strong>tipos, instrumentos y peso</strong> de cada actividad</li>
+      <li>Puede incluir pruebas parciales, trabajos, prácticas, participación</li>
+      <li>Si hay examen final escrito en varios grupos: <strong>simultáneo</strong> y con criterios comunes</li>
+    </ul>
+  </div>
+  <div class="c vi">
+    <h3>📝 Evaluación final (art. 6)</h3>
+    <ul>
+      <li>Prueba única al término del período lectivo</li>
+      <li>Las asignaturas con evaluación continua reservan las <strong>2 últimas semanas del semestre</strong> para pruebas finales</li>
+      <li>Siempre garantizada como alternativa a la continua</li>
+    </ul>
+  </div>
+  <div class="c az">
+    <h3>🔃 Evaluación de recuperación</h3>
+    <ul>
+      <li>Para estudiantes que no superaron la convocatoria ordinaria</li>
+      <li>La calificación provisional se comunica <strong>≥ 3 días hábiles antes</strong></li>
+      <li>Permite al estudiante conocer su nota antes de decidir si presentarse</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══ BLOQUE 4 · CONVOCATORIAS Y MODIFICACIONES ═══ -->
+<div class="sec">4 · Convocatorias — quién autoriza qué</div>
+<table>
+  <tr><th style="width:30%">Actuación</th><th>Quién autoriza</th><th>Condiciones / requisitos</th><th>Dato de examen</th></tr>
+  <tr><td><strong>Convocatoria ordinaria</strong></td><td>Se produce automáticamente con la matrícula</td><td>6 convocatorias en Grado · 4 en Máster</td><td>—</td></tr>
+  <tr><td><strong>Convocatoria extraordinaria de gracia</strong></td><td><span class="exam">EL RECTOR</span></td><td>Solo para Grado · solo 1 convocatoria adicional · solo POR UNA SOLA VEZ · circunstancias excepcionales debidamente justificadas</td><td class="exam">Rector · 1 sola vez</td></tr>
+  <tr><td><strong>Modificación individual de la fecha de examen</strong></td><td><span class="exam">EL DIRECTOR DEL CENTRO</span></td><td>Por causas justificadas del estudiante</td><td class="exam">Director del Centro · no el Rector</td></tr>
+  <tr><td><strong>Examen simultáneo en varios grupos</strong></td><td>Organizado por el Departamento / Centro</td><td>Obligatorio cuando la normativa lo exige para asignaturas impartidas en varios grupos</td><td>Criterios comunes de corrección</td></tr>
+</table>
+
+
+<!-- ═══ BLOQUE 5 · PLANIFICACIÓN Y GUÍA DOCENTE ═══ -->
+<div class="sec">5 · Planificación, Guía Docente y actas</div>
+<div class="g4">
+  <div class="c mo"><h3>📖 Guía Docente</h3><p>Documento de publicidad obligatoria antes del inicio del curso. Incluye: criterios, instrumentos, peso de cada actividad y sistema de calificación de la asignatura.</p></div>
+  <div class="c vi"><h3>📅 Calendario de exámenes</h3><p>Aprobado por los Centros (Facultades/Escuelas) dentro del calendario académico fijado por el <strong>Consejo de Gobierno</strong>.</p></div>
+  <div class="c az"><h3>📑 Actas (art. X)</h3><p>Documentos oficiales firmados por el profesorado responsable. Deben cerrarse en los plazos establecidos por la normativa académica.</p></div>
+  <div class="c cy"><h3>📦 Conservación de exámenes</h3><p>Los materiales de evaluación deben conservarse el tiempo suficiente para garantizar el derecho de revisión, como mínimo <strong>hasta que la calificación sea firme</strong>.</p></div>
+</div>
+
+
+<!-- ═══ BLOQUE 6 · REVISIÓN Y RECLAMACIONES ═══ -->
+<div class="sec">6 · Revisión de calificaciones y reclamaciones — flujo completo</div>
+<div class="flujo" style="gap:8px;margin-bottom:16px;">
+  <div class="fp"><div class="np" style="background:#7c3aed;">1</div><strong>Calificación provisional</strong><p>Comunicada con ≥ 3 días hábiles de antelación a la recuperación</p></div>
+  <div class="fp"><div class="np" style="background:#5b21b6;">2</div><strong>Revisión personal</strong><p>El estudiante revisa personalmente las pruebas antes de que se incorporen a las actas</p></div>
+  <div class="fp"><div class="np" style="background:#2563eb;">3</div><strong>Disconformidad</strong><p>Si mantiene la disconformidad tras la revisión</p></div>
+  <div class="fp"><div class="np" style="background:#0891b2;">4</div><strong>Reclamación</strong><p>Reclamación formal ante el <strong>Director del Centro</strong></p></div>
+  <div class="fp"><div class="np" style="background:#059669;">5</div><strong>Comisión de Revisión</strong><p>El Director del Centro constituye la Comisión. Su resolución <strong>agota la vía académica</strong></p></div>
+  <div class="fp"><div class="np" style="background:#d97706;">6</div><strong>Recurso al Rector</strong><p>Contra la resolución de la Comisión, <strong>recurso ante el Rector</strong></p></div>
+</div>
+<div class="g2">
+  <div class="c ve"><h3>✅ Derechos del estudiante en evaluación</h3>
+    <ul>
+      <li>Ser informado de las normas de evaluación (Guía Docente)</li>
+      <li>Evaluación objetiva y continua</li>
+      <li>Conocer la calificación provisional ≥ 3 días hábiles antes de la recuperación</li>
+      <li>Revisar personalmente todas las pruebas antes de que se incorporen a las actas</li>
+      <li>Reclamar y recurrir con garantías procedimentales</li>
+    </ul>
+  </div>
+  <div class="c ro"><h3>❌ Medios fraudulentos</h3>
+    <ul>
+      <li>Copia, plagio, suplantación de identidad → <strong>calificación de 0</strong> en prueba o asignatura</li>
+      <li>Puede dar lugar a <strong>expediente disciplinario</strong></li>
+      <li>Fraude en TFG/TFM → posible <strong>nulidad del acto académico</strong></li>
+      <li>La UPNA puede usar herramientas de detección automática de plagio</li>
+      <li>Suplantación de identidad = supuesto más grave → siempre expediente</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══ BLOQUE 7 · RESULTADOS EXCEPCIONALES ═══ -->
+<div class="sec">7 · Resultados académicos excepcionales — los 3 umbrales</div>
+<div class="g3">
+  <div class="c ro">
+    <h3>📉 Suspensos ≥ 75%</h3>
+    <p>Si el porcentaje de suspensos sobre presentados es igual o superior al <strong>75%</strong> durante <strong>2 semestres académicos consecutivos</strong>, la asignatura es revisada por la <strong>Comisión de Garantía de Calidad del Centro</strong>.</p>
+    <p class="exam">Clave: 2 SEMESTRES CONSECUTIVOS (no uno solo)</p>
+  </div>
+  <div class="c ve">
+    <h3>📈 Aprobados &gt; 95%</h3>
+    <p>Si el porcentaje de aprobados sobre presentados es <strong>superior al 95%</strong>, se activa <strong>revisión de oficio</strong> por la Comisión de Garantía de Calidad del Centro.</p>
+    <p>No se requieren 2 semestres consecutivos.</p>
+  </div>
+  <div class="c am">
+    <h3>📊 Rango ≤ 1 punto</h3>
+    <p>Si el rango de las calificaciones de los aprobados <strong>no excede de 1 punto</strong> (excesiva concentración de notas), también activa revisión de oficio.</p>
+    <p class="exam">Clave: el rango ES MENOR O IGUAL A 1 (concentración excesiva)</p>
+  </div>
+</div>
+<div class="c gs" style="margin-top:13px;">
+  <h3>📄 Comisión de Garantía de Calidad del Centro</h3>
+  <p style="font-size:12.5px;">Emite un <strong>informe global anual</strong> por titulación sobre los resultados de evaluación. Actúa cuando se activan cualquiera de los tres umbrales anteriores. El informe puede incluir recomendaciones sobre la metodología docente y evaluadora.</p>
+</div>
+
+
+<!-- ═══ BLOQUE 8 · RESOLUCIÓN 719/2016 ═══ -->
+<div class="sec">8 · Resolución 719/2016 — Adaptaciones en evaluación para NEE, TDA y TDAH</div>
+<div class="res719">
+  <h3>🧩 Resolución N.º 719/2016, de 11 de mayo, del Rector de la UPNA</h3>
+  <div class="g3">
+    <div class="c mo" style="border-top:none;border-left:5px solid #7c3aed;">
+      <h3>👥 Ámbito de aplicación</h3>
+      <ul>
+        <li>Estudiantes con <strong>discapacidad reconocida</strong> (≥ 33%)</li>
+        <li>Estudiantes con <strong>Trastornos de Aprendizaje (TDA):</strong> dislexia, disgrafía, discalculia</li>
+        <li>Estudiantes con <strong>TDAH</strong> (Trastorno por Déficit de Atención e Hiperactividad)</li>
+      </ul>
+    </div>
+    <div class="c az" style="border-top:none;border-left:5px solid #2563eb;">
+      <h3>🎯 Principio fundamental</h3>
+      <ul>
+        <li>Las adaptaciones <strong>NO reducen</strong> el nivel académico exigido</li>
+        <li><strong>No se modifican</strong> los contenidos ni los criterios de evaluación</li>
+        <li>Se adaptan las <strong>condiciones de realización</strong> de las pruebas</li>
+        <li>Fin: garantizar la <strong>igualdad de oportunidades</strong></li>
+      </ul>
+    </div>
+    <div class="c ve" style="border-top:none;border-left:5px solid #16a34a;">
+      <h3>⚙ Procedimiento de solicitud</h3>
+      <ol>
+        <li>Solicitud ante el <strong>Servicio de Atención a la Diversidad</strong></li>
+        <li>El servicio emite un <strong>informe-propuesta</strong> de adaptaciones</li>
+        <li>Se traslada al <strong>profesorado y Director del Centro</strong></li>
+        <li>El profesorado aplica las adaptaciones en cada prueba</li>
+        <li>Se revisan y actualizan <strong>cada curso académico</strong></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="adapt-wrap" style="margin-top:13px;">
+  <div class="adapt"><div class="ico">⏱</div><div class="nom">Tiempo adicional</div><div class="det">25%-33% sobre el tiempo estándar</div></div>
+  <div class="adapt"><div class="ico">🚪</div><div class="nom">Aula separada</div><div class="det">Sin distracciones visuales o acústicas</div></div>
+  <div class="adapt"><div class="ico">🔠</div><div class="nom">Formato adaptado</div><div class="det">Letra ampliada, braille, formato digital</div></div>
+  <div class="adapt"><div class="ico">💻</div><div class="nom">Medios técnicos</div><div class="det">Ordenador, lector de pantalla, magnificador</div></div>
+  <div class="adapt"><div class="ico">🤟</div><div class="nom">Intérprete LSE</div><div class="det">Para discapacidad auditiva</div></div>
+  <div class="adapt"><div class="ico">🗣</div><div class="nom">Evaluación oral</div><div class="det">Sustitución de prueba escrita por oral</div></div>
+  <div class="adapt"><div class="ico">✂</div><div class="nom">Fraccionamiento</div><div class="det">División de la prueba en partes separadas en el tiempo</div></div>
+  <div class="adapt"><div class="ico">📋</div><div class="nom">Otras medidas</div><div class="det">Según el caso, a propuesta del Servicio de Atención a la Diversidad</div></div>
+</div>
+
+
+<!-- ═══ BLOQUE 9 · TABLA COMPARATIVA NORMA CG vs RES. 719 ═══ -->
+<div class="sec">9 · Normativa de evaluación (CG) vs Resolución 719/2016 — comparativa</div>
+<table>
+  <tr><th style="width:25%">Dimensión</th><th>Normativa CG (2011-2014)</th><th>Resolución 719/2016</th></tr>
+  <tr><td><strong>Órgano aprobador</strong></td><td><span class="exam">Consejo de Gobierno</span></td><td><span class="exam">Rector</span></td></tr>
+  <tr><td><strong>Fecha</strong></td><td>15 de diciembre de 2011 (y modificaciones)</td><td>11 de mayo de 2016</td></tr>
+  <tr><td><strong>Objeto</strong></td><td>Regular todos los procesos de evaluación en Grado y Máster</td><td>Adaptar condiciones de evaluación para NEE, TDA y TDAH</td></tr>
+  <tr><td><strong>Destinatarios</strong></td><td>Todos los estudiantes de la UPNA</td><td>Estudiantes con discapacidad, TDA y TDAH</td></tr>
+  <tr><td><strong>Modifica el nivel académico</strong></td><td>Define el nivel exigido (arts. 1-3)</td><td><span class="ok">NO modifica el nivel exigido</span></td></tr>
+  <tr><td><strong>Modifica criterios de evaluación</strong></td><td>Los establece para cada asignatura (Guía Docente)</td><td><span class="ok">NO los modifica</span></td></tr>
+  <tr><td><strong>Instrumento de desarrollo</strong></td><td>Guía Docente de cada asignatura</td><td>Informe-propuesta del Servicio de Atención a la Diversidad</td></tr>
+  <tr><td><strong>Sistema de calificación</strong></td><td>0-10 + MH (5 menciones)</td><td>Sin modificación del sistema</td></tr>
+</table>
+
+
+<!-- ═══ BLOQUE 10 · GRANDES NÚMEROS ═══ -->
+<div class="sec">10 · Los grandes números del tema — 1 vistazo</div>
+<div class="pills">
+  <div class="pill p-mo"><div class="num">3</div><div class="lab">Días hábiles de antelación mínima para comunicar calificación provisional antes de la recuperación</div></div>
+  <div class="pill p-az"><div class="num">5%</div><div class="lab">Máximo de Matrículas de Honor sobre los estudiantes MATRICULADOS</div></div>
+  <div class="pill p-ve"><div class="num">20</div><div class="lab">Umbral: grupos con menos de 20 alumnos pueden tener al menos 1 MH aunque el 5% no alcance</div></div>
+  <div class="pill p-na"><div class="num">0-10</div><div class="lab">Escala numérica de calificación, con un decimal</div></div>
+  <div class="pill p-mo"><div class="num">75%</div><div class="lab">Umbral de suspensos que activa revisión de la Comisión de Garantía de Calidad (2 sem. consecutivos)</div></div>
+  <div class="pill p-ve"><div class="num">95%</div><div class="lab">Umbral de aprobados que activa revisión de oficio (no requiere 2 semestres)</div></div>
+  <div class="pill p-am"><div class="num">1 pto</div><div class="lab">Rango máximo de calificaciones de aprobados que activa revisión de oficio (concentración excesiva)</div></div>
+  <div class="pill p-cy"><div class="num">2 sem</div><div class="lab">Semestres consecutivos de suspensos ≥ 75% necesarios para activar revisión</div></div>
+  <div class="pill p-ro"><div class="num">719/16</div><div class="lab">Número y año de la Resolución del Rector sobre adaptaciones para NEE, TDA y TDAH</div></div>
+  <div class="pill p-az"><div class="num">7</div><div class="lab">Tipos de adaptaciones reconocidas en la Resolución 719/2016</div></div>
+  <div class="pill p-mo"><div class="num">11/5/16</div><div class="lab">Fecha exacta de la Resolución 719/2016</div></div>
+  <div class="pill p-gs"><div class="num">15/12/11</div><div class="lab">Fecha del Acuerdo del Consejo de Gobierno que aprueba la normativa de evaluación</div></div>
+</div>
+
+
+<!-- ═══ BLOQUE 11 · TRAMPAS ═══ -->
+<div class="sec">11 · Trampas frecuentes de examen</div>
+<div class="trampa"><strong>✗ "La normativa de evaluación la aprueba el Rector"</strong> → FALSO. La aprueba el <strong>Consejo de Gobierno</strong> (15/12/2011). La Resolución 719/2016 sí la aprueba el Rector, pero son normas distintas.</div>
+<div class="trampa"><strong>✗ "La MH puede otorgarse al 5% de los APROBADOS"</strong> → FALSO. El 5% es sobre los <strong>MATRICULADOS</strong> en la asignatura.</div>
+<div class="trampa"><strong>✗ "Con menos de 20 alumnos no puede haber MH"</strong> → FALSO. En grupos con menos de 20 matriculados puede concederse <strong>al menos 1 MH</strong>.</div>
+<div class="trampa"><strong>✗ "La calificación provisional se comunica 3 días NATURALES antes"</strong> → FALSO. Son <strong>3 días HÁBILES</strong>.</div>
+<div class="trampa"><strong>✗ "La convocatoria extraordinaria de gracia la autoriza el Director del Centro"</strong> → FALSO. La autoriza el <strong>RECTOR</strong>.</div>
+<div class="trampa"><strong>✗ "La modificación individual de fecha de examen la autoriza el Rector"</strong> → FALSO. La autoriza el <strong>DIRECTOR DEL CENTRO</strong>.</div>
+<div class="trampa"><strong>✗ "La Resolución 719/2016 rebaja el nivel académico para estudiantes con discapacidad"</strong> → FALSO. Las adaptaciones son de <strong>condiciones de realización</strong>, no de contenido ni criterios; no reducen el nivel.</div>
+<div class="trampa"><strong>✗ "La revisión de calificaciones agota la vía académica"</strong> → FALSO. Quien agota la vía académica es la resolución de la <strong>Comisión de Revisión</strong> constituida por el Director del Centro.</div>
+<div class="trampa"><strong>✗ "Suspensos ≥ 75% en un solo semestre activa la revisión"</strong> → FALSO. Debe mantenerse durante <strong>dos semestres académicos consecutivos</strong>.</div>
+<div class="trampa"><strong>✗ "El rango superior a 1 punto activa la revisión de calidad"</strong> → FALSO. Activa la revisión cuando el rango <strong>no excede de 1 punto</strong> (concentración excesiva de notas).</div>
+<div class="trampa"><strong>✗ "Las adaptaciones de la Res. 719/2016 las aprueba el Centro"</strong> → FALSO. Las propone el <strong>Servicio de Atención a la Diversidad</strong> mediante informe-propuesta.</div>
+<div class="trampa"><strong>✗ "El plagio en un trabajo siempre abre expediente disciplinario"</strong> → MATIZABLE. Puede conllevar calificación de 0 en la prueba o asignatura, y PUEDE dar lugar a expediente; no es automático en todos los casos, aunque en supuestos graves sí.</div>
+
+</body>
+</html>
