@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>2_esquema_resumen_t23.html · Tema 23 – Becas y Ayudas Específicas UPNA</title>
+  <style>
+    *{box-sizing:border-box;}
+    body{font-family:Arial,Helvetica,sans-serif;line-height:1.5;color:#1e293b;margin:26px;background:#f0f9ff;}
+    h1{font-size:20px;border-bottom:4px solid #0284c7;padding-bottom:8px;color:#0c4a6e;margin-top:0;background:#fff;padding:14px 18px;border-radius:8px 8px 0 0;}
+    h2{font-size:14px;color:#fff;padding:8px 14px;border-radius:6px;margin:28px 0 10px 0;letter-spacing:.5px;}
+    .h2-a{background:#0284c7;} .h2-b{background:#0369a1;} .h2-c{background:#075985;} .h2-d{background:#0c4a6e;} .h2-e{background:#164e63;}
+
+    /* Cards */
+    .grid{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:14px;}
+    .card{background:#fff;border-radius:8px;padding:14px 16px;flex:1 1 180px;border-top:4px solid #0284c7;box-shadow:0 2px 6px rgba(0,0,0,.07);}
+    .card .ctitle{font-size:11px;font-weight:700;text-transform:uppercase;color:#0284c7;margin-bottom:5px;}
+    .card .cbig{font-size:22px;font-weight:900;color:#0c4a6e;}
+    .card p{font-size:12.5px;margin:4px 0;}
+
+    /* Fichas numeradas */
+    .fichas{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;}
+    .ficha{border-radius:8px;padding:12px 15px;flex:1 1 160px;color:#fff;min-width:145px;}
+    .ficha .fn{font-size:26px;font-weight:900;opacity:.25;}
+    .ficha .ft{font-size:12.5px;font-weight:700;margin-top:2px;}
+    .ficha .fd{font-size:11.5px;margin-top:3px;opacity:.9;}
+    .f1{background:#0284c7;} .f2{background:#0369a1;} .f3{background:#075985;}
+    .f4{background:#0c4a6e;} .f5{background:#164e63;} .f6{background:#1e3a5f;} .f7{background:#172554;}
+
+    /* Fichas verdes (para movilidad) */
+    .fg1{background:#059669;} .fg2{background:#047857;} .fg3{background:#065f46;}
+    .fg4{background:#064e3b;} .fg5{background:#0f766e;}
+
+    /* Fichas rojas/naranjas (para emergencia) */
+    .fr1{background:#dc2626;} .fr2{background:#b91c1c;} .fr3{background:#991b1b;}
+    .fr4{background:#7f1d1d;} .fr5{background:#9a3412;}
+
+    /* Comparativa */
+    .compare{display:flex;gap:14px;margin-bottom:14px;}
+    .cbox{flex:1;border-radius:8px;padding:14px 16px;}
+    .cbox h3{font-size:13px;font-weight:700;margin:0 0 10px 0;padding-bottom:6px;border-bottom:2px solid rgba(255,255,255,.3);}
+    .cbox ul{padding-left:16px;margin:0;font-size:12.5px;}
+    .cbox li{margin-bottom:5px;}
+    .cbox-a{background:#0284c7;color:#fff;} .cbox-b{background:#0369a1;color:#fff;}
+    .cbox-c{background:#059669;color:#fff;} .cbox-d{background:#047857;color:#fff;}
+    .cbox-e{background:#dc2626;color:#fff;} .cbox-f{background:#9a3412;color:#fff;}
+
+    /* Tabla */
+    table{width:100%;border-collapse:collapse;margin:8px 0 18px 0;font-size:12.5px;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.08);}
+    th{background:#0284c7;color:#fff;padding:8px 11px;text-align:left;}
+    th.t2{background:#0369a1;} th.t3{background:#059669;color:#fff;} th.t4{background:#075985;}
+    td{border:1px solid #e0f2fe;padding:7px 11px;vertical-align:top;}
+    tr:nth-child(even) td{background:#f0f9ff;}
+
+    /* Escalera */
+    .escalera{margin-bottom:14px;}
+    .esc-row{display:flex;align-items:center;gap:10px;margin-bottom:7px;}
+    .esc-badge{min-width:95px;text-align:center;border-radius:6px;padding:8px 10px;color:#fff;font-weight:700;font-size:12px;}
+    .u1{background:#0284c7;} .u2{background:#0369a1;} .u3{background:#075985;} .u4{background:#0c4a6e;}
+    .esc-desc{background:#fff;border-radius:6px;padding:8px 13px;flex:1;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.08);}
+
+    /* Cadena */
+    .cadena{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-bottom:14px;}
+    .paso{background:#0284c7;color:#fff;border-radius:8px;padding:9px 13px;font-size:12px;text-align:center;font-weight:700;min-width:105px;}
+    .paso-v{background:#059669;color:#fff;border-radius:8px;padding:9px 13px;font-size:12px;text-align:center;font-weight:700;min-width:105px;}
+    .arrow{font-size:18px;color:#0284c7;font-weight:700;}
+
+    /* Números grandes */
+    .numgrid{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;}
+    .numcard{background:#fff;border-radius:8px;padding:12px 14px;flex:1 1 120px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.08);border-bottom:4px solid #0284c7;}
+    .numcard .big{font-size:26px;font-weight:900;color:#0284c7;}
+    .numcard .desc{font-size:11px;color:#475569;margin-top:3px;}
+
+    /* Notas */
+    .nota{background:#e0f2fe;border:1px solid #7dd3fc;padding:10px 14px;margin:10px 0 16px 0;font-size:12.5px;border-radius:4px;}
+    .alerta{background:#fef3c7;border-left:5px solid #d97706;padding:9px 13px;margin-bottom:12px;font-size:12.5px;border-radius:0 6px 6px 0;}
+    .exito{background:#dcfce7;border-left:5px solid #16a34a;padding:9px 13px;margin-bottom:12px;font-size:12.5px;border-radius:0 6px 6px 0;}
+    .mnemo{background:#0c4a6e;color:#fff;border-radius:8px;padding:12px 16px;margin-bottom:14px;font-size:13px;}
+    .mnemo span{color:#7dd3fc;font-weight:700;}
+
+    /* Trampa */
+    .trampa{background:#fff5f5;border-left:5px solid #dc2626;padding:9px 13px;margin-bottom:7px;font-size:12.5px;border-radius:0 6px 6px 0;}
+    .trampa strong{color:#b91c1c;}
+
+    /* Pago split */
+    .split{display:flex;gap:12px;margin-bottom:14px;}
+    .splitbox{flex:1;border-radius:8px;padding:14px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.09);}
+    .splitbox .amount{font-size:32px;font-weight:900;}
+    .splitbox .when{font-size:12px;margin-top:4px;opacity:.85;}
+    .sb1{background:#0284c7;color:#fff;} .sb2{background:#0c4a6e;color:#fff;}
+    .sb3{background:#059669;color:#fff;} .sb4{background:#dc2626;color:#fff;}
+
+    /* Criterios del dpto */
+    .criterios{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;}
+    .crit{background:#fff;border-radius:8px;padding:12px 14px;flex:1 1 150px;border-left:5px solid #0284c7;box-shadow:0 1px 4px rgba(0,0,0,.07);}
+    .crit .cn{font-size:22px;font-weight:900;color:#0284c7;}
+    .crit .ct{font-size:12.5px;font-weight:700;color:#0c4a6e;margin-top:2px;}
+    .crit .cd{font-size:12px;color:#475569;margin-top:3px;}
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 23 · Becas y Ayudas Específicas de la UPNA<br>
+<span style="font-size:12px;font-weight:400;color:#475569;">Esquema visual para memorización rápida · Convocatoria 2025-2026</span></h1>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECCIÓN A: BECAS DE COLABORACIÓN           -->
+<!-- ═══════════════════════════════════════════ -->
+
+<h2 class="h2-a">🔬 A · BECAS DE COLABORACIÓN UPNA — Iniciación a la Investigación</h2>
+
+<div class="grid">
+  <div class="card">
+    <div class="ctitle">Total de becas</div>
+    <div class="cbig">75</div>
+    <p><strong>50</strong> para Grado<br><strong>25</strong> para Máster<br>Si sobran plazas → se reasignan</p>
+  </div>
+  <div class="card">
+    <div class="ctitle">Cuantía total convocatoria</div>
+    <div class="cbig">84.375€</div>
+    <p>1.125 € por beca · 2 tramos de pago</p>
+  </div>
+  <div class="card">
+    <div class="ctitle">Dedicación</div>
+    <div class="cbig">9 h/sem</div>
+    <p>Presencial · no a distancia · no durante movilidad</p>
+  </div>
+  <div class="card">
+    <div class="ctitle">Duración</div>
+    <div class="cbig">6 meses</div>
+    <p>3/11/2025 → 30/04/2026</p>
+  </div>
+  <div class="card">
+    <div class="ctitle">Tipo de concesión</div>
+    <div class="cbig" style="font-size:14px;">Concurrencia<br>Competitiva</div>
+    <p>Nota + proyecto · No hay criterio económico</p>
+  </div>
+</div>
+
+<!-- Pago en 2 tramos -->
+<div class="split">
+  <div class="splitbox sb1">
+    <div class="amount">500 €</div>
+    <div class="when">1.er tramo<br>Diciembre 2025<br>Al inicio de la colaboración</div>
+  </div>
+  <div class="splitbox" style="background:#e0f2fe;color:#0c4a6e;align-self:center;font-size:20px;font-weight:900;text-align:center;padding:20px;box-shadow:0 2px 6px rgba(0,0,0,.09);border-radius:8px;">
+    + 625 €<br><span style="font-size:11px;font-weight:400;color:#475569;">Tras la memoria<br>(4-8 mayo 2026)</span>
+  </div>
+  <div class="splitbox sb2">
+    <div class="amount">1.125 €</div>
+    <div class="when">TOTAL por becario<br>No sujeto a retención IRPF<br>No reduce matrícula</div>
+  </div>
+</div>
+
+<!-- Requisito clave Grado -->
+<div class="alerta">
+  <strong>⚠ REQUISITO CLAVE DE GRADO:</strong> Solo puede pedir la beca quien le reste <strong>LA MITAD O MENOS de los créditos</strong> (incluido el TFG).
+  <br>→ <em>"A partir de la mitad del camino, puedes colaborar con un Departamento."</em>
+</div>
+
+<!-- Fichas requisitos -->
+<div class="fichas">
+  <div class="ficha f1">
+    <div class="fn">G</div>
+    <div class="ft">Requisito GRADO</div>
+    <div class="fd">Matriculado en UPNA · Rest. ½ o menos créditos (incl. TFG) · Sin título Grado/Máster/Doctor/Lic./Ing./Arq.</div>
+  </div>
+  <div class="ficha f2">
+    <div class="fn">M</div>
+    <div class="ft">Requisito MÁSTER</div>
+    <div class="fd">Matriculado en 1.er curso de Máster oficial (o créditos restantes + TFM) · Sin título Máster ni Doctorado</div>
+  </div>
+  <div class="ficha f3">
+    <div class="fn">⚠</div>
+    <div class="ft">Máster condicionado</div>
+    <div class="fd">Si la admisión al Máster está condicionada a finalizar el Grado → concurre en las 50 plazas de <strong>Grado</strong></div>
+  </div>
+  <div class="ficha f4">
+    <div class="fn">📋</div>
+    <div class="ft">Requisito general</div>
+    <div class="fd">Estar al corriente del pago de precios públicos de matrícula</div>
+  </div>
+</div>
+
+<!-- El proyecto de colaboración -->
+<h2 class="h2-b">📄 El Proyecto de Colaboración (0–4 puntos del Departamento)</h2>
+
+<div class="mnemo"><span>MNEMOTÉCNICO I-A-C-T:</span> <strong>I</strong>nnovación · <strong>A</strong>plicación al Departamento · <strong>C</strong>ontinuidad futura · <strong>T</strong>ecnología nueva</div>
+
+<div class="criterios">
+  <div class="crit">
+    <div class="cn">a · 1 pt</div>
+    <div class="ct">Contenido innovador</div>
+    <div class="cd">El proyecto aporta novedad respecto a trabajos habituales del Departamento</div>
+  </div>
+  <div class="crit">
+    <div class="cn">b · 1 pt</div>
+    <div class="ct">Aplicación al Departamento</div>
+    <div class="cd">Las tareas tienen utilidad directa para las líneas de trabajo del Departamento</div>
+  </div>
+  <div class="crit">
+    <div class="cn">c · 1 pt</div>
+    <div class="ct">Continuidad futura</div>
+    <div class="cd">Posible continuación en proyectos de colaboración o investigación posteriores</div>
+  </div>
+  <div class="crit">
+    <div class="cn">d · 1 pt</div>
+    <div class="ct">Nuevas tecnologías</div>
+    <div class="cd">Introduce nuevas tecnologías en los métodos de trabajo del Departamento</div>
+  </div>
+</div>
+
+<div class="alerta">
+  <strong>Sin aval del Departamento → EXCLUIDO · Puntuado con 0 → EXCLUIDO</strong>
+</div>
+
+<!-- Selección y orden de asignación -->
+<h2 class="h2-b">🏆 Selección y Orden de Asignación</h2>
+
+<div class="compare">
+  <div class="cbox cbox-a">
+    <h3>📊 Puntuación total</h3>
+    <ul>
+      <li>Nota media expediente (RD 1125/2003)</li>
+      <li>+ Puntuación del Departamento al proyecto (0–4 pts)</li>
+      <li>= Puntuación total de selección</li>
+    </ul>
+  </div>
+  <div class="cbox cbox-b">
+    <h3>📋 Orden de adjudicación</h3>
+    <ul>
+      <li>1.º Se garantiza <strong>1 beca por Departamento</strong> que tenga solicitudes</li>
+      <li>2.º Las restantes se asignan por orden de mayor puntuación total</li>
+      <li>Empate → Mayor nº de MH → SB → NT → AP</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Memoria y reintegro -->
+<h2 class="h2-b">📝 Memoria Final y Reintegro</h2>
+
+<div class="compare">
+  <div class="cbox cbox-a">
+    <h3>📝 Memoria obligatoria</h3>
+    <ul>
+      <li>Plazo: <strong>del 4 al 8 de mayo de 2026</strong> (solo 5 días)</li>
+      <li>Presentación por instancia electrónica</li>
+      <li>Formato: libre (elegido por el becario)</li>
+      <li>El Departamento también certifica la colaboración</li>
+      <li>Sin memoria → <strong>sin 2.º pago (625 €)</strong></li>
+    </ul>
+  </div>
+  <div class="cbox cbox-b">
+    <h3>🔄 Reintegro</h3>
+    <ul>
+      <li>Abandono sin causa justificada → devolver 500 € cobrados</li>
+      <li>Modificaciones del proyecto: solo en noviembre (1.er mes)</li>
+      <li>La naturaleza de la beca: rendimiento de trabajo · sin retención · sin reducción de matrícula</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Flujo de la beca de colaboración -->
+<h2 class="h2-b">⛓ Flujo completo de la Beca de Colaboración</h2>
+<div class="cadena">
+  <div class="paso">Publicación<br>convocatoria<br>(sept. 2025)</div>
+  <div class="arrow">→</div>
+  <div class="paso">Estudiante elabora<br>proyecto +<br>aval Depto.</div>
+  <div class="arrow">→</div>
+  <div class="paso">Depto. puntúa<br>proyecto<br>(0–4 pts)</div>
+  <div class="arrow">→</div>
+  <div class="paso">Selección:<br>nota + Depto.<br>1 por Depto.</div>
+  <div class="arrow">→</div>
+  <div class="paso">Inicio beca<br>3/11/2025<br>9 h/sem</div>
+  <div class="arrow">→</div>
+  <div class="paso">500 € en<br>diciembre<br>2025</div>
+  <div class="arrow">→</div>
+  <div class="paso">Fin beca<br>30/04/2026</div>
+  <div class="arrow">→</div>
+  <div class="paso">Memoria<br>4–8 mayo<br>+ 625 €</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SECCIÓN B: AYUDAS ESPECIALES MOVILIDAD INTERNACIONAL       -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<h2 class="h2-c">✈ B · AYUDAS ESPECIALES PARA LA MOVILIDAD INTERNACIONAL CON DIFICULTADES ECONÓMICAS</h2>
+
+<div class="alerta">
+  <strong>⚠ REGLA FUNDAMENTAL:</strong> Estas ayudas NO son una beca de movilidad autónoma. Primero hay que ser seleccionado en la convocatoria GENERAL de movilidad de la UPNA. Son un <strong>segundo nivel</strong> de financiación.<br>
+  <em>"Primero ganas la plaza por méritos; luego el dinero por necesidad."</em>
+</div>
+
+<!-- Requisitos en fichas -->
+<div class="fichas">
+  <div class="ficha fg1">
+    <div class="fn">1</div>
+    <div class="ft">Req. previo esencial</div>
+    <div class="fd">Haber sido seleccionado en la conv. general de movilidad internacional Grado/Máster de la UPNA</div>
+  </div>
+  <div class="ficha fg2">
+    <div class="fn">2</div>
+    <div class="ft">Matriculado UPNA</div>
+    <div class="fd">En Grado o Máster oficial en el curso 2025-2026 · al corriente del pago de precios públicos</div>
+  </div>
+  <div class="ficha fg3">
+    <div class="fn">3</div>
+    <div class="ft">Renta familiar</div>
+    <div class="fd">≤ umbrales del MFP 2025-2026 · Familia 4 miembros: <strong>40.773 €</strong></div>
+  </div>
+  <div class="ficha fg4">
+    <div class="fn">4</div>
+    <div class="ft">Solicitud previa MFP/GN</div>
+    <div class="fd">Haber solicitado beca MFP, Gobierno Navarra o Gobierno Vasco si se reúnen condiciones · o justificar la no solicitud</div>
+  </div>
+  <div class="ficha fg5">
+    <div class="fn">5</div>
+    <div class="ft">No repetir</div>
+    <div class="fd">No haber disfrutado ya de estas ayudas en la MISMA titulación · Grado y Máster = titulaciones distintas</div>
+  </div>
+</div>
+
+<!-- Criterios de selección (máx. 6 pts) -->
+<h2 class="h2-c">🎯 Criterios de Selección (máx. 6 puntos)</h2>
+<div class="split">
+  <div class="splitbox sb3">
+    <div class="amount">4 pts</div>
+    <div class="when">Situación económica<br>(según umbrales de renta · Anexo II)</div>
+  </div>
+  <div class="splitbox" style="background:#e0f2fe;color:#0c4a6e;align-self:center;font-size:20px;font-weight:900;text-align:center;padding:20px;box-shadow:0 2px 6px rgba(0,0,0,.09);border-radius:8px;">
+    +<br>EMPATE<br><span style="font-size:11px;font-weight:400;color:#475569;">decide nota media<br>del expediente</span>
+  </div>
+  <div class="splitbox" style="background:#047857;color:#fff;">
+    <div class="amount">2 pts</div>
+    <div class="when">Circunstancias sociales agravantes:<br>desempleo larga duración · orfandad<br>hogar monoparental · desahucio<br>Renta Garantizada · enfermedad grave</div>
+  </div>
+</div>
+
+<!-- Dotación y compatibilidad -->
+<div class="compare">
+  <div class="cbox cbox-c">
+    <h3>💶 Dotación — qué cubre</h3>
+    <ul>
+      <li>Función de: <strong>distancia al destino</strong> (dentro/fuera Europa) + <strong>nivel de vida del país</strong> (grupos 1, 2, 3)</li>
+      <li>Cubre lo que NO financian otras becas:</li>
+      <li>Seguros · Viaje ida y vuelta · Alojamiento · Manutención</li>
+      <li>Pago único: tras presentar carta de aceptación de la institución de destino</li>
+    </ul>
+  </div>
+  <div class="cbox cbox-d">
+    <h3>✅ Compatibilidades</h3>
+    <ul>
+      <li>Compatible con beca general de movilidad UPNA</li>
+      <li>Compatible con otras ayudas SIEMPRE que el conjunto <strong>no supere el 100% del gasto</strong></li>
+      <li>Resolución: 4/02/2026 (y 25/02/2026 2.ª ronda)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Órganos -->
+<h2 class="h2-c">🏛 Órganos Intervinientes — Movilidad</h2>
+<div class="fichas">
+  <div class="ficha fg1">
+    <div class="fn">1</div>
+    <div class="ft">Sección Internacionalización</div>
+    <div class="fd">Gestiona la movilidad · envía listados de seleccionados · publica la resolución</div>
+  </div>
+  <div class="ficha fg2">
+    <div class="fn">2</div>
+    <div class="ft">Unidad Diversidad e Inclusión</div>
+    <div class="fd">Evalúa situación económica y social · emite informe de puntuaciones (antes 27/01/2026)</div>
+  </div>
+  <div class="ficha fg3">
+    <div class="fn">3</div>
+    <div class="ft">Comisión de Selección</div>
+    <div class="fd">Director Servicio Enseñanzas + Jefa Sección Internacionalización + Directora Área Relaciones Internacionales</div>
+  </div>
+  <div class="ficha fg4">
+    <div class="fn">4</div>
+    <div class="ft">Vicerrector Internacionalización</div>
+    <div class="fd">Firma la resolución de adjudicación (4/02/2026 y 25/02/2026)</div>
+  </div>
+</div>
+
+<!-- Reintegro movilidad -->
+<div class="compare">
+  <div class="cbox cbox-e">
+    <h3>🔄 Reintegro — 3 reglas</h3>
+    <ul>
+      <li>No realización de la estancia → <strong>REINTEGRO TOTAL</strong></li>
+      <li>Estancia inferior a lo acordado → <strong>REINTEGRO PROPORCIONAL</strong></li>
+      <li>No regularización → <strong>BLOQUEO del expediente académico</strong></li>
+    </ul>
+  </div>
+  <div class="cbox cbox-f">
+    <h3>⛓ Flujo resumido movilidad</h3>
+    <ul>
+      <li>1. Selección conv. general movilidad</li>
+      <li>2. Solicitud ayuda especial + docs. económicos</li>
+      <li>3. Informe Unidad Diversidad e Inclusión (27/01)</li>
+      <li>4. Comisión de Selección puntúa</li>
+      <li>5. Resolución Vicerrector (4/02 y 25/02/2026)</li>
+      <li>6. Pago único → carta de aceptación del destino</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!-- SECCIÓN C: AYUDAS MATRÍCULA Y EMERGENCIA SOCIAL              -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+
+<h2 class="h2-d">🆘 C · AYUDAS PARA LA MATRÍCULA Y DE EMERGENCIA SOCIAL</h2>
+
+<!-- Doble dimensión -->
+<div class="compare">
+  <div class="cbox cbox-a">
+    <h3>🎓 Ayuda para el Pago de Matrícula</h3>
+    <ul>
+      <li>Cubre parcial o totalmente las <strong>tasas académicas</strong></li>
+      <li>Solo cuando el no pago suponga <strong>riesgo de abandono</strong></li>
+      <li>Importe: máximo el precio público de la matrícula</li>
+      <li>La UPNA aplica directamente al recibo de matrícula</li>
+      <li>Compatible con otras becas solo hasta el <strong>100% del coste</strong> de la matrícula</li>
+      <li>Plazo: hasta ~<strong>22 de noviembre</strong> del curso en vigor</li>
+    </ul>
+  </div>
+  <div class="cbox cbox-b">
+    <h3>🆘 Ayudas de Emergencia Social</h3>
+    <ul>
+      <li>Va más allá de la matrícula: <strong>bonos de comedor, transporte</strong> y otras según el caso</li>
+      <li>Evaluación <strong>INDIVIDUALIZADA</strong> (no hay baremo fijo)</li>
+      <li>Compatible con otras becas y ayudas de <strong>CUALQUIER Administración o entidad privada · SIN límite del 100%</strong></li>
+      <li>Objetivo: <strong>evitar el abandono universitario</strong></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Estudios incluidos -->
+<h2 class="h2-d">📚 Estudios Incluidos y Excluidos — Matrícula/Emergencia</h2>
+<div class="compare">
+  <div class="cbox cbox-a">
+    <h3>✅ Incluidos (regla general)</h3>
+    <ul>
+      <li>Enseñanzas oficiales de <strong>Grado</strong></li>
+      <li>Másteres universitarios <strong>habilitantes</strong> para el ejercicio de profesiones reguladas</li>
+    </ul>
+  </div>
+  <div class="cbox cbox-b">
+    <h3>⚠ Incluidos excepcionalmente</h3>
+    <ul>
+      <li>Otros Másteres oficiales no habilitantes</li>
+      <li>Títulos propios de la UPNA</li>
+      <li>Cursos de homologación</li>
+      <li>Requisito excepción: informe favorable Unidad de Acción Social + VB Vicerrectorado competente</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Órgano gestor -->
+<div class="mnemo"><span>ÓRGANO GESTOR:</span> <strong>Unidad de Acción Social e Igualdad</strong> (= Unidad de Diversidad e Inclusión) · Sede Electrónica UPNA · sedeelectronica.unavarra.es</div>
+
+<!-- Tabla diferencial clave -->
+<h2 class="h2-d">📊 Diferencia clave Matrícula vs Emergencia Social</h2>
+<table>
+  <tr><th style="width:25%">Dimensión</th><th class="t2">Ayuda Matrícula</th><th class="t3">Ayuda Emergencia Social</th></tr>
+  <tr><td><strong>Qué cubre</strong></td><td>Solo el precio de la matrícula (parcial o total)</td><td>Comedor, transporte, otras necesidades urgentes</td></tr>
+  <tr><td><strong>Compatibilidad</strong></td><td>Solo hasta el <strong>100% del coste de matrícula</strong></td><td>Compatible con TODO · <strong>sin límite del 100%</strong></td></tr>
+  <tr><td><strong>Evaluación</strong></td><td>Individualizada</td><td>Individualizada</td></tr>
+  <tr><td><strong>Pago</strong></td><td>La UPNA lo aplica directamente al recibo</td><td>Entrega de bonos o ayuda directa</td></tr>
+</table>
+
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!-- SECCIÓN D: GRANDES NÚMEROS y TRAMPAS                         -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+
+<h2 class="h2-e">🔢 D · GRANDES NÚMEROS DEL TEMA 23</h2>
+<div class="numgrid">
+  <div class="numcard"><div class="big">75</div><div class="desc">Becas Colaboración totales<br>(50 Grado + 25 Máster)</div></div>
+  <div class="numcard"><div class="big">84.375€</div><div class="desc">Importe total convocatoria de Colaboración</div></div>
+  <div class="numcard"><div class="big">1.125€</div><div class="desc">Cuantía por beca de Colaboración (500+625)</div></div>
+  <div class="numcard"><div class="big">9 h/sem</div><div class="desc">Dedicación Beca Colaboración · presencial</div></div>
+  <div class="numcard"><div class="big">6 meses</div><div class="desc">Duración Beca Colaboración<br>(3/11 – 30/04)</div></div>
+  <div class="numcard"><div class="big">0–4 pts</div><div class="desc">Puntuación del Departamento al proyecto</div></div>
+  <div class="numcard"><div class="big">4–8 mayo</div><div class="desc">Plazo memoria Beca Colaboración<br>(solo 5 días)</div></div>
+  <div class="numcard"><div class="big">6 pts</div><div class="desc">Puntuación máxima selección movilidad (4+2)</div></div>
+  <div class="numcard"><div class="big">40.773€</div><div class="desc">Umbral renta fam. 4 miembros · movilidad</div></div>
+  <div class="numcard"><div class="big">4/02/2026</div><div class="desc">Resolución Vicerrector movilidad<br>(1.ª ronda)</div></div>
+  <div class="numcard"><div class="big">27/01</div><div class="desc">Informe Unidad Diversidad e Inclusión<br>(movilidad)</div></div>
+  <div class="numcard"><div class="big">22 nov</div><div class="desc">Plazo habitual ayudas de matrícula</div></div>
+  <div class="numcard"><div class="big">100%</div><div class="desc">Límite compatibilidad ayuda matrícula (no emergencia)</div></div>
+  <div class="numcard"><div class="big">½</div><div class="desc">Mitad o menos de créditos: req. Grado para Colaboración</div></div>
+</div>
+
+
+<!-- TRAMPAS -->
+<h2 class="h2-e">⚠ TRAMPAS FRECUENTES DE EXAMEN — TEMA 23</h2>
+
+<div class="trampa"><strong>"Las Becas de Colaboración de la UPNA son las mismas que las del Ministerio de Educación."</strong><br>
+FALSO. Son distintas: las del MFP son nacionales para todos los estudiantes universitarios; las de la UPNA son propias de esta universidad, con sus propios criterios, cuantía (1.125 €) y régimen.</div>
+
+<div class="trampa"><strong>"Cualquier estudiante de 1.er curso de Grado puede pedir la Beca de Colaboración UPNA."</strong><br>
+FALSO. Solo puede optar quien le reste <strong>la mitad o MENOS de los créditos</strong> (incluido el TFG). Un alumno de 1.er curso está en el extremo opuesto.</div>
+
+<div class="trampa"><strong>"La Beca de Colaboración exime del pago de matrícula."</strong><br>
+FALSO. La concesión <strong>no implica reducción ni exención</strong> de precios públicos de matrícula.</div>
+
+<div class="trampa"><strong>"La Beca de Colaboración está sujeta a retención del IRPF."</strong><br>
+FALSO. Son rendimientos de trabajo pero <strong>NO están sujetas a retención</strong>.</div>
+
+<div class="trampa"><strong>"La memoria de la Beca de Colaboración puede presentarse hasta el 31 de mayo."</strong><br>
+FALSO. El plazo es <strong>del 4 al 8 de mayo</strong> (solo 5 días). Fuera de plazo = sin segundo pago (625 €).</div>
+
+<div class="trampa"><strong>"Las ayudas de movilidad con dificultades económicas se solicitan junto con la primera solicitud de movilidad."</strong><br>
+FALSO. Primero hay que ser <strong>seleccionado en la convocatoria general</strong> de movilidad; solo entonces se solicita la ayuda especial por dificultades económicas.</div>
+
+<div class="trampa"><strong>"Las ayudas de movilidad por dificultades económicas son incompatibles con la beca general de movilidad."</strong><br>
+FALSO. Son <strong>COMPATIBLES</strong>, siempre que el conjunto no supere el 100% del gasto total.</div>
+
+<div class="trampa"><strong>"Quien disfrutó de la ayuda de movilidad en el Grado no puede pedirla para el Máster."</strong><br>
+FALSO. El requisito es no haberla disfrutado en <strong>la misma titulación</strong>. Grado y Máster son titulaciones diferentes, por lo que sí es posible.</div>
+
+<div class="trampa"><strong>"La emergencia social tiene el mismo límite del 100% que la ayuda de matrícula."</strong><br>
+FALSO. La ayuda de matrícula sí tiene ese límite. Las ayudas de emergencia social son compatibles con todas las demás <strong>sin límite del 100%</strong>.</div>
+
+<div class="trampa"><strong>"Todos los Másteres de la UPNA dan acceso a las ayudas de matrícula."</strong><br>
+FALSO. Solo los Másteres habilitantes son incluidos con carácter general. Los demás Másteres solo pueden acceder <strong>excepcionalmente</strong>, con informe de la Unidad de Acción Social y VB del Vicerrectorado.</div>
+
+</body>
+</html>
