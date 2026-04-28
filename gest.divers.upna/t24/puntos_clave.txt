@@ -1,0 +1,304 @@
+TEMA 24 – LO 3/2018 LOPDGDD · PROTECCIÓN DE DATOS Y DERECHOS DIGITALES · POLÍTICA UPNA
+Puntos que suelen aparecer en examen y artículos clave
+════════════════════════════════════════════════════════════════
+
+FUENTES NORMATIVAS ESENCIALES
+──────────────────────────────
+1. LO 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales
+   (LOPDGDD) · BOE 6/12/2018 · 97 artículos · 10 Títulos · Vigente desde 7/12/2018
+   → Deroga la LO 15/1999 (LOPD) y la LORTAD de 1992
+   → Adapta el Reglamento UE 2016/679 (RGPD)
+
+2. Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016
+   (RGPD / GDPR) · Aplicable desde el 25 de mayo de 2018
+   → Derogó la Directiva 95/46/CE
+   → Aplicación directa en todos los Estados miembros (no necesita transposición)
+
+3. Artículo 18.4 CE: "La ley limitará el uso de la informática para garantizar el honor
+   y la intimidad personal y familiar de los ciudadanos y el pleno ejercicio de sus derechos."
+   → Fundamento constitucional del derecho a la protección de datos
+
+4. STC 292/2000, de 30 de noviembre: el derecho a la protección de datos es un derecho
+   fundamental autónomo e independiente del derecho a la intimidad.
+
+════════════════════════════════════════════════════════════════
+I. DISPOSICIONES GENERALES — PUNTOS DE EXAMEN
+════════════════════════════════════════════════════════════════
+
+★ ART. 1 — OBJETO DOBLE:
+   a) Adaptar el ordenamiento español al RGPD (UE 2016/679)
+   b) Garantizar los derechos digitales de la ciudadanía (art. 18.4 CE)
+   → TRAMPA: "la LOPDGDD solo adapta el RGPD" — FALSO, también garantiza derechos digitales
+
+★ ART. 2 — ÁMBITO DE APLICACIÓN:
+   Se aplica a: tratamientos automatizados + no automatizados en ficheros
+   NO se aplica a:
+   → Tratamientos excluidos por el art. 2.2 RGPD (seguridad nacional, actividad doméstica/personal)
+   → Datos de personas FALLECIDAS (con matiz del art. 3)
+   → Tratamientos sobre materias CLASIFICADAS
+
+★ ART. 3 — DATOS DE PERSONAS FALLECIDAS (novedad relevante):
+   → Familiares/herederos/personas vinculadas: SÍ pueden pedir acceso, rectificación o supresión
+   → EXCEPCIÓN: si el fallecido lo prohibió expresamente → NO pueden acceder
+   → Esa prohibición NO afecta a datos de carácter patrimonial del causante
+   → Fallecimiento de menores: actúan representantes legales o Ministerio Fiscal (de oficio o a instancia)
+
+★ ESTRUCTURA DE LA LEY: 97 artículos · 10 Títulos · 22 DD.AA. · 6 DD.TT · 1 D.Derog. · 16 DD.FF.
+
+════════════════════════════════════════════════════════════════
+II. PRINCIPIOS DE PROTECCIÓN DE DATOS (Título II, Arts. 4-10) — PUNTOS DE EXAMEN
+════════════════════════════════════════════════════════════════
+
+★ Los 7 PRINCIPIOS del Art. 5 RGPD (aplicables también vía LOPDGDD):
+   Mnemotécnico L-E-M-L-I-C-R
+   1. Licitud, lealtad y transparencia
+   2. Limitación de la finalidad (solo para fines determinados, explícitos y legítimos)
+   3. Minimización de datos (adecuados, pertinentes y limitados)
+   4. Exactitud (actualizados; deber de suprimir o rectificar sin dilación)
+   5. Limitación del plazo de conservación (no más del necesario)
+   6. Integridad y Confidencialidad (seguridad adecuada)
+   7. Responsabilidad proactiva (accountability) → el responsable debe poder demostrar el cumplimiento
+
+★ ART. 4 LOPDGDD — EXACTITUD:
+   No es imputable al responsable la inexactitud cuando los datos proceden de:
+   a) El propio afectado
+   b) Un mediador/intermediario del sector
+   c) Ejercicio del derecho a la portabilidad por el afectado
+   d) Un registro público
+   (Siempre que el responsable haya adoptado medidas razonables para rectificar/suprimir sin dilación)
+
+★ ART. 5 LOPDGDD — DEBER DE CONFIDENCIALIDAD:
+   → Afecta a TODOS los que intervengan en cualquier fase del tratamiento
+   → Se mantiene AUN CUANDO HAYA FINALIZADO la relación con el responsable/encargado
+   → Es complementario del secreto profesional (no lo sustituye)
+
+★ ART. 6 LOPDGDD — CONSENTIMIENTO:
+   Definición (= RGPD art. 4.11): LIBRE · ESPECÍFICO · INFORMADO · INEQUÍVOCO
+   → Mediante DECLARACIÓN o CLARA ACCIÓN AFIRMATIVA
+   → ELIMINADO el consentimiento tácito
+   → Para pluralidad de finalidades: consentimiento específico e inequívoco para CADA UNA
+   → No puede condicionarse la ejecución de un contrato al consentimiento innecesario
+
+★ ART. 7 LOPDGDD — CONSENTIMIENTO DE MENORES:
+   → Menores de 14 años: necesitan consentimiento de padres/tutores
+   → A partir de 14 años: el menor puede consentir por sí mismo
+   → El RGPD fija referencia en 16 años pero permite bajar hasta 13
+   → España eligió 14 (mismo umbral que la anterior LOPD 1999)
+
+★ ART. 8 LOPDGDD — TRATAMIENTO POR OBLIGACIÓN LEGAL O MISIÓN DE INTERÉS PÚBLICO:
+   El tratamiento está legitimado cuando lo prevea una norma de la UE o una ley nacional.
+
+★ ART. 9 LOPDGDD — CATEGORÍAS ESPECIALES DE DATOS:
+   Las 9 categorías: origen étnico/racial · opiniones políticas · convicciones religiosas/filosóficas
+   · afiliación sindical · datos genéticos · datos biométricos (para identificar) · datos de salud
+   · vida sexual · orientación sexual
+   → Principio de RESERVA DE LEY: solo una ley puede habilitar su tratamiento
+   → Prohibida su creación para almacenamiento identificativo (ej: "listas negras" de sindicalistas)
+
+★ ART. 10 LOPDGDD — DATOS DE NATURALEZA PENAL:
+   Solo bajo supervisión de autoridad pública o con norma que prevea garantías adecuadas.
+   Registros completos de condenas: SOLO autoridades públicas competentes.
+
+★ BASES JURÍDICAS DEL RGPD (art. 6 RGPD) — las 6 bases:
+   Mnemotécnico: CO·OB·VI·IN·MI·LE
+   1. CONsentimiento del interesado
+   2. EJEcución de contrato / medidas precontractuales
+   3. OBligación legal
+   4. INtereses VItales (proteger vida del interesado u otra persona)
+   5. MIsión de interés público o ejercicio de poderes públicos
+   6. Interés LEGítimo del responsable (salvo que prevalezcan los del interesado)
+
+════════════════════════════════════════════════════════════════
+III. DERECHOS DE LAS PERSONAS (Título III, Arts. 11-18) — PUNTOS DE EXAMEN
+════════════════════════════════════════════════════════════════
+
+★ MNEMOTÉCNICO ARSULIPO:
+   A → Acceso (art. 15 RGPD / art. 12 LOPDGDD)
+   R → Rectificación (art. 16 RGPD / art. 14 LOPDGDD)
+   S → Supresión/derecho al olvido (art. 17 RGPD / art. 15 LOPDGDD)
+   U → limitación del tratamiento (art. 18 RGPD / art. 16 LOPDGDD)
+   L → (misma "U": Limitación)
+   I → portabIlidad (art. 20 RGPD / art. 17 LOPDGDD)
+   P → OPosición (art. 21 RGPD / art. 18 LOPDGDD)
+
+★ SISTEMA DE "INFORMACIÓN POR CAPAS" (art. 11 LOPDGDD):
+   1.ª capa: información básica (identidad responsable, finalidad, derechos, DPD)
+   2.ª capa: información completa accesible mediante enlace o referencia
+   → Ya aplicada en videovigilancia y cookies
+
+★ PLAZO DE RESPUESTA: 1 MES (prorrogable por 2 meses más en casos complejos)
+   → Aplica a TODOS los derechos ARSULIPO
+   → La prórroga debe comunicarse al interesado dentro del primer mes, con la razón del retraso
+
+★ DERECHO AL OLVIDO (art. 93 y 94 LOPDGDD · art. 17 RGPD):
+   → Buscadores de internet: obligados a desindexar resultados a petición del afectado
+   → Redes sociales: derecho a suprimir datos publicados siendo menor de edad
+   → Causas: datos innecesarios, retirada de consentimiento, tratamiento ilícito, etc.
+
+★ PORTABILIDAD: recibir datos en formato ESTRUCTURADO, DE USO COMÚN y DE LECTURA MECÁNICA
+   → Permite transmitirlos a otro responsable
+   → Solo aplica cuando el tratamiento se basa en consentimiento o contrato, y es automatizado
+
+★ LIMITACIÓN DEL TRATAMIENTO: los datos se "bloquean" (solo conservar, no tratar)
+   Supuestos: impugnación de exactitud · tratamiento ilícito pero el interesado no quiere supresión
+   · datos ya innecesarios pero necesarios para reclamaciones del interesado
+   · mientras se verifica si el interés legítimo del responsable prevalece sobre el del interesado
+
+════════════════════════════════════════════════════════════════
+IV. TÍTULO X: DERECHOS DIGITALES (Arts. 79-97) — PUNTOS DE EXAMEN
+════════════════════════════════════════════════════════════════
+
+★ ART. 80 — NEUTRALIDAD DE LA RED
+★ ART. 81 — ACCESO UNIVERSAL A INTERNET (derecho esencial de los ciudadanos)
+★ ART. 82 — SEGURIDAD DIGITAL
+★ ART. 83 — EDUCACIÓN DIGITAL
+
+★ ART. 84 — PROTECCIÓN DE MENORES EN INTERNET:
+   Las Administraciones deben promover la formación de padres, tutores y educadores
+
+★ ART. 87 — DERECHO A LA INTIMIDAD EN EL USO DE DISPOSITIVOS DIGITALES EN EL TRABAJO:
+   → El empleador debe establecer una política de uso (criterios de utilización de dispositivos)
+   → Puesta en conocimiento de trabajadores y representantes legales
+   → Posibilidad de establecer prohibición de usos no relacionados con la actividad laboral
+
+★ ART. 88 — DERECHO A LA DESCONEXIÓN DIGITAL EN EL ÁMBITO LABORAL:
+   → Los empleados tienen derecho a no atender comunicaciones fuera del horario laboral
+   → Respeta el tiempo de descanso, permisos y vacaciones
+   → El empleador elabora política interna: PREVIA AUDIENCIA a representantes de los trabajadores
+   → Esta política incluirá acciones de formación y sensibilización
+
+★ ART. 89 — VIDEOVIGILANCIA EN EL TRABAJO:
+   → El empleador puede usar imágenes de cámaras para control laboral
+   → Requisito: INFORMAR PREVIAMENTE a los trabajadores (y a sus representantes)
+   → Si captura incidentalmente infracción laboral → puede usarse (zona de trabajo)
+
+★ ART. 90 — GEOLOCALIZACIÓN EN EL TRABAJO:
+   → El empleador puede usar sistemas de geolocalización para el control laboral
+   → Requisito: informar previamente de forma EXPRESA, CLARA E INEQUÍVOCA
+
+★ ART. 91 — CONTROL DE LA ACTIVIDAD EN DISPOSITIVOS DIGITALES:
+   → Se permite el control de dispositivos informáticos de empresa usados por trabajadores
+   → Requisito: que los trabajadores hayan sido informados de los criterios de uso
+
+★ ART. 93 — DERECHO AL OLVIDO EN BÚSQUEDAS DE INTERNET
+★ ART. 94 — DERECHO AL OLVIDO EN REDES SOCIALES (publicaciones en la minoría de edad)
+★ ART. 95 — DERECHO A LA PORTABILIDAD (en redes sociales)
+
+★ ART. 96 — TESTAMENTO DIGITAL:
+   → Derecho a dejar instrucciones sobre el destino de contenidos digitales tras la muerte
+   → Incluye: eliminación/mantenimiento de perfiles en redes sociales
+   → Puede dejarse en testamento notarial o directamente al prestador del servicio
+
+★ ART. 97 — POLÍTICAS DE IMPULSO DEL CONOCIMIENTO DIGITAL
+
+════════════════════════════════════════════════════════════════
+V. DELEGADO DE PROTECCIÓN DE DATOS (DPD/DPO) — PUNTOS DE EXAMEN
+════════════════════════════════════════════════════════════════
+
+★ OBLIGATORIO para (art. 34 LOPDGDD · art. 37 RGPD):
+   → Todas las Administraciones Públicas (incluidas las universidades públicas como la UPNA)
+   → Responsables/encargados que traten a gran escala categorías especiales o datos penales
+   → Responsables/encargados que realicen observación habitual y sistemática a gran escala
+
+★ FUNCIONES (art. 39 RGPD):
+   → Informar y asesorar al responsable/encargados sobre obligaciones del RGPD
+   → Supervisar el cumplimiento del RGPD y la política de protección de datos
+   → Cooperar con la AEPD y ser punto de contacto con ella
+   → Asesorar sobre la Evaluación de Impacto en Protección de Datos (EIPD)
+
+★ GARANTÍAS (art. 38 RGPD):
+   → NO puede ser removido ni sancionado por desempeño de funciones (salvo dolo/negligencia grave)
+   → Total independencia funcional
+   → La designación debe comunicarse a la AEPD
+   → La AEPD mantiene una lista pública y actualizada de DPDs
+
+★ EN LA UPNA:
+   → Delegado de Protección de Datos: delegado.protecciondatos@unavarra.es
+   → El interesado puede ejercer derechos ante la UPNA como responsable
+   → Si no hay respuesta satisfactoria: reclamación ante la AEPD
+
+════════════════════════════════════════════════════════════════
+VI. RÉGIMEN SANCIONADOR (Título IX) — PUNTOS DE EXAMEN
+════════════════════════════════════════════════════════════════
+
+★ LAS CUANTÍAS LAS FIJA EL RGPD (art. 83):
+   → Infracciones más graves (art. 83.5 RGPD): hasta 20.000.000 € o 4% volumen negocio global anual
+   → Infracciones graves (art. 83.4 RGPD): hasta 10.000.000 € o 2% volumen negocio global anual
+
+★ LA LOPDGDD solo clasifica a efectos de PRESCRIPCIÓN:
+   → Muy graves: prescripción en 3 años
+   → Graves: prescripción en 2 años
+   → Leves: prescripción en 1 año
+
+★ TRAMPA FRECUENTE: "La LOPDGDD fija la cuantía de las sanciones según la gravedad"
+  FALSO: La cuantía la fija el RGPD · La LOPDGDD clasifica solo a efectos de prescripción
+
+════════════════════════════════════════════════════════════════
+VII. POLÍTICA DE PROTECCIÓN DE DATOS DE LA UPNA — PUNTOS DE EXAMEN
+════════════════════════════════════════════════════════════════
+
+★ RESPONSABLE DEL TRATAMIENTO: UNIVERSIDAD PÚBLICA DE NAVARRA · CIF Q3150012G
+   Campus Arrosadía s/n · 31006 Pamplona · www.unavarra.es
+
+★ BASES JURÍDICAS PRINCIPALES EN LA UPNA:
+   → Misión de interés público (art. 6.1.e RGPD) derivada de LO 6/2001 de Universidades y Estatutos
+   → Obligación legal (art. 6.1.c RGPD)
+   → En su caso, consentimiento del interesado
+
+★ SISTEMA DE INFORMACIÓN POR CAPAS: cláusulas en formularios + enlace a política completa
+
+★ EJERCICIO DE DERECHOS ARSULIPO: ante la UPNA como responsable
+★ SI NO SE ATIENDE ADECUADAMENTE: reclamación ante la AEPD (sedeagpd.gob.es)
+
+★ DELEGADO DE PROTECCIÓN DE DATOS UPNA: delegado.protecciondatos@unavarra.es
+★ WEB SEGURIDAD INFORMÁTICA UPNA: https://www.unavarra.es/seguridad-informacion/
+
+════════════════════════════════════════════════════════════════
+VIII. LOS 12 NÚMEROS Y REFERENCIAS CLAVE DEL TEMA 24
+════════════════════════════════════════════════════════════════
+
+LO 3/2018           → LOPDGDD · 5 de diciembre · BOE 6/12/2018
+97 artículos        → Estructura total de la LOPDGDD
+10 Títulos          → Estructura en Títulos de la LOPDGDD
+Art. 18.4 CE        → Fundamento constitucional del derecho a la protección de datos
+STC 292/2000        → El Tribunal Constitucional consagra la autonomía del derecho
+RGPD 2016/679       → 27 de abril de 2016 · aplicable desde 25/05/2018
+LO 15/1999          → Ley derogada por la LOPDGDD
+14 años             → Edad mínima para que el menor pueda consentir por sí mismo
+1 mes               → Plazo de respuesta a los derechos ARSULIPO
+20 M € / 4%         → Cuantía máxima sanciones muy graves (RGPD art. 83.5)
+3-2-1 años          → Prescripción muy graves-graves-leves (LOPDGDD)
+delegado.protecciondatos@unavarra.es → DPD de la UPNA
+
+════════════════════════════════════════════════════════════════
+IX. TRAMPAS FRECUENTES
+════════════════════════════════════════════════════════════════
+
+"La LOPDGDD solo sirve para adaptar el RGPD."
+→ FALSO: tiene DOBLE OBJETO: adaptación al RGPD + garantía de derechos digitales (art. 1)
+
+"Los datos de personas fallecidas quedan completamente excluidos."
+→ MATIZ: excluidos del ámbito de aplicación PERO familiares/herederos pueden pedir acceso,
+  rectificación y supresión (art. 3), salvo prohibición expresa del fallecido.
+
+"Cualquier menor de 18 años necesita autorización de sus padres para dar su consentimiento."
+→ FALSO: a partir de 14 años el menor puede consentir por sí mismo (art. 7 LOPDGDD).
+
+"El consentimiento puede ser táctico si hay una relación de confianza previas."
+→ FALSO: la LOPDGDD elimina definitivamente el consentimiento tácito. Solo vale
+  declaración o clara acción afirmativa.
+
+"La LOPDGDD fija las cuantías de las sanciones por infracciones."
+→ FALSO: las cuantías las fija el RGPD. La LOPDGDD clasifica solo a efectos de prescripción.
+
+"El DPD puede ser destituido si el responsable lo decide."
+→ FALSO: el DPD NO puede ser removido por el desempeño de sus funciones, salvo dolo/negligencia grave.
+
+"La UPNA no necesita DPD porque no es una empresa de gran tamaño."
+→ FALSO: la designación de DPD es OBLIGATORIA para todas las Administraciones Públicas.
+
+"El derecho a la desconexión digital solo se aplica en el sector privado."
+→ FALSO: se aplica también al sector público, como demuestra el art. 88 LOPDGDD y su
+  extensión al TREBEP (empleados públicos).
+
+════════════════════════════════════════════════════════════════

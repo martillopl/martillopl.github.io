@@ -1,0 +1,495 @@
+
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3_cuadro_comparativo_t24</title>
+  <style>
+    :root,[data-theme="light"]{
+      --text-xs:clamp(.75rem,.7rem + .25vw,.875rem);
+      --text-sm:clamp(.875rem,.8rem + .35vw,1rem);
+      --text-base:clamp(1rem,.95rem + .25vw,1.125rem);
+      --text-lg:clamp(1.125rem,1rem + .75vw,1.45rem);
+      --text-xl:clamp(1.35rem,1.1rem + 1vw,2rem);
+      --space-1:.25rem;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;
+      --color-bg:#f7f5fb;
+      --color-surface:#ffffff;
+      --color-surface-2:#f3efff;
+      --color-surface-offset:#ece7fb;
+      --color-border:#d8cffa;
+      --color-divider:#e9e3fb;
+      --color-text:#231942;
+      --color-text-muted:#5f5a77;
+      --color-text-faint:#8a85a3;
+      --color-primary:#6d28d9;
+      --color-primary-hover:#5b21b6;
+      --color-success:#0f766e;
+      --color-blue:#0369a1;
+      --color-warning:#b45309;
+      --color-error:#b91c1c;
+      --color-inverse:#ffffff;
+      --radius-sm:.375rem;--radius-md:.75rem;--radius-lg:1rem;--radius-xl:1.25rem;
+      --shadow-sm:0 1px 2px rgba(35,25,66,.06);
+      --shadow-md:0 8px 24px rgba(35,25,66,.08);
+      --shadow-lg:0 18px 40px rgba(35,25,66,.10);
+      --content:1200px;
+      --font-body: Inter, ui-sans-serif, system-ui, sans-serif;
+      --font-display: Inter, ui-sans-serif, system-ui, sans-serif;
+    }
+    [data-theme="dark"]{
+      --color-bg:#14111f;
+      --color-surface:#1c1830;
+      --color-surface-2:#231d3c;
+      --color-surface-offset:#2a2249;
+      --color-border:#3d3466;
+      --color-divider:#312952;
+      --color-text:#f5f2ff;
+      --color-text-muted:#c6c0dd;
+      --color-text-faint:#9b94b8;
+      --color-primary:#a78bfa;
+      --color-primary-hover:#c4b5fd;
+      --color-success:#34d399;
+      --color-blue:#38bdf8;
+      --color-warning:#f59e0b;
+      --color-error:#f87171;
+      --color-inverse:#140f25;
+      --shadow-sm:0 1px 2px rgba(0,0,0,.18);
+      --shadow-md:0 8px 24px rgba(0,0,0,.28);
+      --shadow-lg:0 18px 40px rgba(0,0,0,.32);
+    }
+    *,:before,:after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{min-height:100vh;font-family:var(--font-body);font-size:var(--text-base);line-height:1.55;background:linear-gradient(180deg,var(--color-bg),var(--color-surface-2));color:var(--color-text)}
+    img,svg{display:block;max-width:100%}
+    button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+    table{width:100%;border-collapse:collapse}
+    .wrap{max-width:var(--content);margin:0 auto;padding:var(--space-6)}
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:var(--space-4);margin-bottom:var(--space-6)}
+    .brand{display:flex;align-items:center;gap:var(--space-3)}
+    .logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--color-primary),var(--color-blue));display:grid;place-items:center;box-shadow:var(--shadow-md)}
+    .logo svg{width:24px;height:24px;color:white}
+    .brand h1{font-family:var(--font-display);font-size:var(--text-xl);line-height:1.1}
+    .brand p{font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-1)}
+    .theme-btn{display:inline-flex;align-items:center;gap:var(--space-2);padding:.75rem 1rem;border:1px solid var(--color-border);border-radius:999px;background:var(--color-surface);box-shadow:var(--shadow-sm)}
+    .hero{background:radial-gradient(circle at top left, rgba(109,40,217,.13), transparent 35%),radial-gradient(circle at top right, rgba(3,105,161,.12), transparent 30%),var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-8);box-shadow:var(--shadow-md);margin-bottom:var(--space-8)}
+    .hero-grid{display:grid;grid-template-columns:1.6fr .9fr;gap:var(--space-6)}
+    .eyebrow{display:inline-flex;align-items:center;gap:var(--space-2);padding:.45rem .8rem;background:var(--color-surface-2);border:1px solid var(--color-border);border-radius:999px;font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--color-primary);margin-bottom:var(--space-4)}
+    .hero h2{font-size:clamp(2rem,1.4rem + 2vw,3.25rem);line-height:1.05;margin-bottom:var(--space-4)}
+    .hero p{max-width:62ch;color:var(--color-text-muted)}
+    .quick{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-3)}
+    .pill{padding:var(--space-4);border-radius:var(--radius-lg);background:var(--color-surface-2);border:1px solid var(--color-border)}
+    .pill strong{display:block;font-size:1.35rem;color:var(--color-primary)}
+    .pill span{font-size:var(--text-sm);color:var(--color-text-muted)}
+    .section{margin-bottom:var(--space-8)}
+    .section-title{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);margin-bottom:var(--space-4)}
+    .section-title h3{font-size:var(--text-lg)}
+    .section-title p{font-size:var(--text-sm);color:var(--color-text-muted)}
+    .card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-5);box-shadow:var(--shadow-sm);overflow:auto}
+    .dual{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-4)}
+    .mini-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-4)}
+    .mini{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-4);box-shadow:var(--shadow-sm)}
+    .mini .k{font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--color-text-faint);margin-bottom:var(--space-2)}
+    .mini .v{font-size:1.5rem;font-weight:800;color:var(--color-primary)}
+    .mini .d{font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-1)}
+    th,td{padding:.85rem .9rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--color-divider)}
+    th{font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--color-text-faint);background:var(--color-surface-2);position:sticky;top:0}
+    td{font-size:var(--text-sm)}
+    tr:last-child td{border-bottom:none}
+    .badge{display:inline-flex;align-items:center;gap:.35rem;padding:.3rem .65rem;border-radius:999px;font-size:var(--text-xs);font-weight:700;border:1px solid transparent;white-space:nowrap}
+    .b-purple{background:rgba(109,40,217,.12);color:var(--color-primary);border-color:rgba(109,40,217,.18)}
+    .b-green{background:rgba(15,118,110,.12);color:var(--color-success);border-color:rgba(15,118,110,.18)}
+    .b-blue{background:rgba(3,105,161,.12);color:var(--color-blue);border-color:rgba(3,105,161,.18)}
+    .b-orange{background:rgba(180,83,9,.12);color:var(--color-warning);border-color:rgba(180,83,9,.18)}
+    .b-red{background:rgba(185,28,28,.12);color:var(--color-error);border-color:rgba(185,28,28,.18)}
+    .note{margin-top:var(--space-3);padding:var(--space-4);border-left:4px solid var(--color-primary);background:var(--color-surface-2);border-radius:0 var(--radius-md) var(--radius-md) 0;font-size:var(--text-sm);color:var(--color-text-muted)}
+    .note strong{color:var(--color-text)}
+    .footer{padding:var(--space-6);font-size:var(--text-sm);color:var(--color-text-muted);text-align:center}
+    .list{display:grid;gap:var(--space-2)}
+    .list li{margin-left:1.1rem;color:var(--color-text-muted)}
+    .list li strong{color:var(--color-text)}
+    @media (max-width: 980px){
+      .hero-grid,.dual,.mini-grid{grid-template-columns:1fr}
+      .wrap{padding:var(--space-4)}
+      .hero{padding:var(--space-5)}
+      .topbar{align-items:flex-start;flex-direction:column}
+    }
+  </style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-label="Protección de datos">
+            <path d="M12 3l7 3v5c0 4.5-2.7 7.6-7 10-4.3-2.4-7-5.5-7-10V6l7-3z"></path>
+            <path d="M9.5 12.5l1.7 1.7 3.6-4"></path>
+          </svg>
+        </div>
+        <div>
+          <h1>Tema 24 · HTML 3</h1>
+          <p>Cuadro comparativo con tablas operativas para examen</p>
+        </div>
+      </div>
+      <button class="theme-btn" data-theme-toggle aria-label="Cambiar tema">
+        <span>Modo</span>
+        <span id="themeLabel">claro</span>
+      </button>
+    </header>
+
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">LOPDGDD · RGPD · UPNA</div>
+          <h2>Comparativas rápidas para fijar artículos, principios, derechos y política institucional</h2>
+          <p>Diseñado para estudio de oposición: tablas limpias, relaciones directas entre conceptos y foco en las trampas habituales del examen. El contenido se organiza de lo general a lo operativo, con prioridad a lo que suele preguntarse.</p>
+        </div>
+        <div class="quick">
+          <div class="pill"><strong>97</strong><span>artículos de la LO 3/2018</span></div>
+          <div class="pill"><strong>10</strong><span>títulos de la LOPDGDD</span></div>
+          <div class="pill"><strong>7</strong><span>principios del tratamiento</span></div>
+          <div class="pill"><strong>1 mes</strong><span>plazo general de respuesta</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h3>Panorama esencial</h3>
+        <p>Los números que más se repiten</p>
+      </div>
+      <div class="mini-grid">
+        <article class="mini"><div class="k">Fundamento</div><div class="v">18.4 CE</div><div class="d">Base constitucional del derecho a la protección de datos</div></article>
+        <article class="mini"><div class="k">Sentencia clave</div><div class="v">STC 292/2000</div><div class="d">Reconoce su carácter de derecho fundamental autónomo</div></article>
+        <article class="mini"><div class="k">Edad</div><div class="v">14 años</div><div class="d">Umbral español para consentir por sí mismo</div></article>
+        <article class="mini"><div class="k">Sanción máxima</div><div class="v">20 M€ / 4%</div><div class="d">Cuantía fijada por el RGPD para las más graves</div></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h3>Normas y función de cada una</h3>
+        <p>Qué aporta cada fuente</p>
+      </div>
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th>Norma / referencia</th>
+              <th>Fecha</th>
+              <th>Función</th>
+              <th>Idea de examen</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge b-purple">Constitución</span> Art. 18.4 CE</td>
+              <td>1978</td>
+              <td>Mandato constitucional para limitar el uso de la informática y proteger derechos</td>
+              <td>Es la base constitucional del sistema</td>
+            </tr>
+            <tr>
+              <td><span class="badge b-blue">UE</span> Reglamento (UE) 2016/679</td>
+              <td>2016 · aplicable desde 25/05/2018</td>
+              <td>Marco europeo directamente aplicable; contiene principios, bases jurídicas, derechos y sanciones</td>
+              <td>Las cuantías sancionadoras las fija el RGPD, no la LOPDGDD</td>
+            </tr>
+            <tr>
+              <td><span class="badge b-green">España</span> LO 3/2018</td>
+              <td>05/12/2018</td>
+              <td>Adapta el ordenamiento español al RGPD y garantiza derechos digitales</td>
+              <td>Tiene doble objeto: adaptación + derechos digitales</td>
+            </tr>
+            <tr>
+              <td><span class="badge b-orange">TC</span> STC 292/2000</td>
+              <td>30/11/2000</td>
+              <td>Afirma la autonomía del derecho fundamental a la protección de datos</td>
+              <td>No se confunde con la simple intimidad</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h3>Disposiciones generales comparadas</h3>
+        <p>Arts. 1 a 3</p>
+      </div>
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th>Precepto</th>
+              <th>Qué regula</th>
+              <th>Regla básica</th>
+              <th>Trampa frecuente</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Art. 1</td>
+              <td>Objeto</td>
+              <td>Doble objeto: adaptar al RGPD + garantizar derechos digitales</td>
+              <td>Decir que solo adapta el RGPD</td>
+            </tr>
+            <tr>
+              <td>Art. 2</td>
+              <td>Ámbito de aplicación</td>
+              <td>Se aplica a tratamientos automatizados y no automatizados incorporados a fichero</td>
+              <td>Olvidar exclusiones del art. 2.2 RGPD y materias clasificadas</td>
+            </tr>
+            <tr>
+              <td>Art. 3</td>
+              <td>Personas fallecidas</td>
+              <td>Familiares, herederos o vinculados pueden pedir acceso, rectificación o supresión, salvo prohibición expresa</td>
+              <td>Creer que sobre fallecidos nunca puede ejercerse nada</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="note"><strong>Frase memorizable:</strong> el artículo 1 abre la puerta, el 2 delimita el campo y el 3 introduce la excepción más preguntada: los datos de fallecidos.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h3>Principios del tratamiento</h3>
+        <p>Lo nuclear del sistema</p>
+      </div>
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th>Principio</th>
+              <th>Significado operativo</th>
+              <th>Idea útil para examen</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Licitud, lealtad y transparencia</td><td>El tratamiento debe tener base jurídica y ser comprensible para el interesado</td><td>Todo empieza por una base del art. 6 RGPD</td></tr>
+            <tr><td>Limitación de la finalidad</td><td>Solo puede tratarse para fines determinados, explícitos y legítimos</td><td>No cabe reutilizar libremente los datos para cualquier fin</td></tr>
+            <tr><td>Minimización</td><td>Solo los datos adecuados, pertinentes y limitados a lo necesario</td><td>Pedir más datos de los precisos vulnera el principio</td></tr>
+            <tr><td>Exactitud</td><td>Deben estar correctos y actualizados; si son inexactos, se rectifican o suprimen</td><td>Art. 4 LOPDGDD introduce supuestos en que la inexactitud no se imputa al responsable</td></tr>
+            <tr><td>Limitación del plazo</td><td>Los datos no se conservan más tiempo del necesario</td><td>La conservación ilimitada es contraria al principio</td></tr>
+            <tr><td>Integridad y confidencialidad</td><td>Seguridad adecuada frente a acceso no autorizado, pérdida o destrucción</td><td>Conecta con medidas técnicas y organizativas</td></tr>
+            <tr><td>Responsabilidad proactiva</td><td>El responsable debe poder demostrar el cumplimiento</td><td>No basta con cumplir: hay que probarlo</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h3>Consentimiento, menores y deber de confidencialidad</h3>
+        <p>Muy preguntables</p>
+      </div>
+      <div class="dual">
+        <div class="card">
+          <table>
+            <thead>
+              <tr><th>Materia</th><th>Regla</th><th>Clave operativa</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Consentimiento</td><td>Libre, específico, informado e inequívoco</td><td>Solo vale declaración o clara acción afirmativa</td></tr>
+              <tr><td>Consentimiento tácito</td><td>No</td><td>Desaparece con el nuevo modelo</td></tr>
+              <tr><td>Pluralidad de fines</td><td>Consentimiento para cada finalidad</td><td>No sirve una fórmula genérica indiferenciada</td></tr>
+              <tr><td>Contrato</td><td>No puede condicionarse a consentimientos innecesarios</td><td>Si no es necesario para ejecutar el contrato, no puede imponerse</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card">
+          <table>
+            <thead>
+              <tr><th>Supuesto</th><th>Regla</th><th>Recuerda</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Menor de 14 años</td><td>Consienten padres o tutores</td><td>España fija el umbral en 14</td></tr>
+              <tr><td>Desde 14 años</td><td>Consiente el menor</td><td>No hace falta autorización parental</td></tr>
+              <tr><td>Deber de confidencialidad</td><td>Afecta a todos los que intervienen</td><td>Se mantiene incluso cuando termina la relación</td></tr>
+              <tr><td>Dato penal</td><td>Solo con supervisión pública o habilitación legal</td><td>Los registros completos corresponden a autoridades competentes</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h3>Bases jurídicas del tratamiento</h3>
+        <p>Las seis del art. 6 RGPD</p>
+      </div>
+      <div class="card">
+        <table>
+          <thead>
+            <tr><th>Base</th><th>Cuándo se usa</th><th>Ejemplo rápido</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="badge b-purple">1</span> Consentimiento</td><td>Cuando el interesado autoriza el tratamiento</td><td>Suscripción voluntaria a comunicaciones</td></tr>
+            <tr><td><span class="badge b-blue">2</span> Contrato</td><td>Necesario para ejecutar un contrato o medidas precontractuales</td><td>Matrícula o prestación de servicios</td></tr>
+            <tr><td><span class="badge b-green">3</span> Obligación legal</td><td>Una norma obliga al responsable</td><td>Conservación de documentación exigida por ley</td></tr>
+            <tr><td><span class="badge b-red">4</span> Intereses vitales</td><td>Para proteger vida o integridad física</td><td>Urgencia médica</td></tr>
+            <tr><td><span class="badge b-orange">5</span> Interés público / poderes públicos</td><td>Función pública atribuida por norma</td><td>Actividad universitaria pública</td></tr>
+            <tr><td><span class="badge b-purple">6</span> Interés legítimo</td><td>Interés del responsable ponderado con derechos del interesado</td><td>Prevención del fraude en ciertos supuestos</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h3>Derechos de las personas: ARSULIPO</h3>
+        <p>Qué pide el interesado y qué efecto produce</p>
+      </div>
+      <div class="card">
+        <table>
+          <thead>
+            <tr><th>Derecho</th><th>Qué permite</th><th>Cuándo destaca</th><th>Dato clave</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Acceso</td><td>Saber si se tratan datos y obtener copia</td><td>Para conocer el contenido del tratamiento</td><td>Art. 15 RGPD</td></tr>
+            <tr><td>Rectificación</td><td>Corregir datos inexactos o incompletos</td><td>Errores de identificación o actualización</td><td>Art. 16 RGPD</td></tr>
+            <tr><td>Supresión</td><td>Eliminar datos cuando ya no son necesarios o el tratamiento es ilícito</td><td>Conecta con el derecho al olvido</td><td>Art. 17 RGPD</td></tr>
+            <tr><td>Limitación</td><td>Bloquear el tratamiento y mantener solo conservación</td><td>Si se discute la exactitud o licitud</td><td>Art. 18 RGPD</td></tr>
+            <tr><td>Portabilidad</td><td>Recibir datos en formato estructurado, de uso común y lectura mecánica</td><td>Solo si base es consentimiento o contrato y tratamiento automatizado</td><td>Art. 20 RGPD</td></tr>
+            <tr><td>Oposición</td><td>Impedir el tratamiento por motivos relacionados con la situación personal</td><td>Especialmente en interés público o interés legítimo</td><td>Art. 21 RGPD</td></tr>
+          </tbody>
+        </table>
+        <div class="note"><strong>Plazo común:</strong> un mes para responder, prorrogable dos más cuando la complejidad lo justifique y se comunique dentro del primer mes.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h3>Comparativa de derechos digitales más preguntados</h3>
+        <p>Título X</p>
+      </div>
+      <div class="card">
+        <table>
+          <thead>
+            <tr><th>Artículo</th><th>Derecho digital</th><th>Idea breve</th><th>Clave de examen</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>80</td><td>Neutralidad de la red</td><td>Acceso no discriminatorio</td><td>Internet abierta</td></tr>
+            <tr><td>81</td><td>Acceso universal a internet</td><td>Derecho esencial de la ciudadanía</td><td>Conexión como presupuesto de igualdad</td></tr>
+            <tr><td>84</td><td>Protección de menores en internet</td><td>Formación de padres, tutores y educadores</td><td>Responsabilidad de las administraciones</td></tr>
+            <tr><td>87</td><td>Intimidad en dispositivos digitales</td><td>El empleador debe fijar criterios de uso</td><td>Hay política interna conocida por trabajadores</td></tr>
+            <tr><td>88</td><td>Desconexión digital</td><td>Derecho a no atender comunicaciones fuera del horario</td><td>Política interna previa audiencia a representantes</td></tr>
+            <tr><td>89</td><td>Videovigilancia laboral</td><td>Posible con información previa</td><td>La información previa es la clave</td></tr>
+            <tr><td>90</td><td>Geolocalización laboral</td><td>Posible con información expresa, clara e inequívoca</td><td>Más exigencia informativa</td></tr>
+            <tr><td>93</td><td>Olvido en buscadores</td><td>Desindexación a petición</td><td>No borra la fuente, pero sí el resultado del buscador</td></tr>
+            <tr><td>94</td><td>Olvido en redes sociales</td><td>Supresión de datos publicados en minoría de edad</td><td>Muy típico en test</td></tr>
+            <tr><td>96</td><td>Testamento digital</td><td>Instrucciones sobre contenidos tras la muerte</td><td>Puede articularse en testamento o ante el prestador</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h3>DPD y régimen sancionador</h3>
+        <p>Lo institucional y lo represivo</p>
+      </div>
+      <div class="dual">
+        <div class="card">
+          <table>
+            <thead>
+              <tr><th>DPD</th><th>Contenido esencial</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Cuándo es obligatorio</td><td>En todas las Administraciones Públicas, incluidas las universidades públicas</td></tr>
+              <tr><td>Funciones</td><td>Informar, asesorar, supervisar, cooperar con la AEPD y asesorar sobre EIPD</td></tr>
+              <tr><td>Garantías</td><td>Independencia funcional; no puede ser removido por ejercer sus funciones salvo supuestos graves</td></tr>
+              <tr><td>Idea clave</td><td>Es el puente entre organización, interesados y autoridad de control</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card">
+          <table>
+            <thead>
+              <tr><th>Régimen sancionador</th><th>Contenido esencial</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Cuantías</td><td>Las fija el RGPD: hasta 20 M€ o 4% en las más graves; hasta 10 M€ o 2% en otras</td></tr>
+              <tr><td>Clasificación LOPDGDD</td><td>Muy graves, graves y leves</td></tr>
+              <tr><td>Prescripción</td><td>3 años, 2 años y 1 año respectivamente</td></tr>
+              <tr><td>Trampa clásica</td><td>La LOPDGDD no fija las cuantías; solo clasifica a efectos de prescripción</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h3>Política de protección de datos de la UPNA</h3>
+        <p>Lo que debes ubicar con rapidez en examen</p>
+      </div>
+      <div class="card">
+        <table>
+          <thead>
+            <tr><th>Aspecto</th><th>UPNA</th><th>Clave de estudio</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Responsable del tratamiento</td><td>Universidad Pública de Navarra · CIF Q3150012G</td><td>Entidad responsable de los tratamientos universitarios</td></tr>
+            <tr><td>Domicilio</td><td>Campus Arrosadía s/n · 31006 Pamplona</td><td>Dato institucional identificativo</td></tr>
+            <tr><td>Base jurídica principal</td><td>Misión de interés público y obligación legal; en su caso consentimiento</td><td>La actividad universitaria pública no depende solo del consentimiento</td></tr>
+            <tr><td>Sistema informativo</td><td>Información por capas en formularios</td><td>Básica + acceso a información ampliada</td></tr>
+            <tr><td>Ejercicio de derechos</td><td>Ante la propia UPNA como responsable</td><td>Si no hay respuesta adecuada, reclamación ante la AEPD</td></tr>
+            <tr><td>DPD</td><td>delegado.protecciondatos@unavarra.es</td><td>Dato muy memorizable</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h3>Tabla final de trampas rápidas</h3>
+        <p>Para repasar antes del examen</p>
+      </div>
+      <div class="card">
+        <table>
+          <thead>
+            <tr><th>Afirmación</th><th>¿Correcta?</th><th>Rectificación exacta</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>La LOPDGDD solo adapta el RGPD</td><td><span class="badge b-red">No</span></td><td>También garantiza derechos digitales</td></tr>
+            <tr><td>El consentimiento tácito sigue valiendo</td><td><span class="badge b-red">No</span></td><td>Solo declaración o acción afirmativa clara</td></tr>
+            <tr><td>Todo menor necesita consentimiento parental</td><td><span class="badge b-red">No</span></td><td>Desde 14 años puede consentir por sí mismo</td></tr>
+            <tr><td>La LOPDGDD fija el importe de las multas</td><td><span class="badge b-red">No</span></td><td>Las cuantías las fija el RGPD</td></tr>
+            <tr><td>La confidencialidad termina al cesar la relación laboral</td><td><span class="badge b-red">No</span></td><td>Se mantiene incluso después</td></tr>
+            <tr><td>La UPNA no necesita DPD</td><td><span class="badge b-red">No</span></td><td>Lo necesita por ser Administración Pública</td></tr>
+            <tr><td>Sobre fallecidos no puede ejercerse nada</td><td><span class="badge b-red">No</span></td><td>Familiares o herederos pueden actuar salvo prohibición expresa</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Archivo HTML 3 preparado para estudio visual y repaso operativo del Tema 24.
+    </footer>
+  </div>
+
+  <script>
+    (function(){
+      const btn=document.querySelector('[data-theme-toggle]');
+      const root=document.documentElement;
+      const label=document.getElementById('themeLabel');
+      let theme=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+      root.setAttribute('data-theme',theme);
+      label.textContent=theme==='dark'?'oscuro':'claro';
+      btn.addEventListener('click',()=>{
+        theme=theme==='dark'?'light':'dark';
+        root.setAttribute('data-theme',theme);
+        label.textContent=theme==='dark'?'oscuro':'claro';
+      });
+    })();
+  </script>
+</body>
+</html>

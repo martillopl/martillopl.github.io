@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>2_esquema_resumen_t24.html · Tema 24 – LOPDGDD y Política UPNA</title>
+  <style>
+    *{box-sizing:border-box;}
+    body{font-family:Arial,Helvetica,sans-serif;line-height:1.5;color:#1e293b;margin:26px;background:#f5f3ff;}
+    h1{font-size:20px;color:#3b0764;background:#fff;padding:16px 20px;border-radius:8px 8px 0 0;border-bottom:4px solid #7c3aed;margin:0 0 0 0;}
+    h2{font-size:14px;color:#fff;padding:9px 14px;border-radius:6px;margin:30px 0 12px 0;letter-spacing:.4px;}
+    .h2-a{background:#7c3aed;} .h2-b{background:#6d28d9;} .h2-c{background:#5b21b6;}
+    .h2-d{background:#4c1d95;} .h2-e{background:#3b0764;} .h2-f{background:#1e3a5f;}
+
+    /* Cards genéricas */
+    .grid{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px;}
+    .card{background:#fff;border-radius:8px;padding:14px 16px;flex:1 1 175px;border-top:4px solid #7c3aed;box-shadow:0 2px 6px rgba(0,0,0,.07);}
+    .card .ctitle{font-size:11px;font-weight:700;text-transform:uppercase;color:#7c3aed;margin-bottom:5px;}
+    .card .cbig{font-size:22px;font-weight:900;color:#3b0764;}
+    .card p{font-size:12.5px;margin:4px 0;}
+
+    /* Fichas */
+    .fichas{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px;}
+    .ficha{border-radius:8px;padding:12px 15px;flex:1 1 155px;color:#fff;min-width:140px;}
+    .ficha .fn{font-size:24px;font-weight:900;opacity:.22;}
+    .ficha .ft{font-size:12.5px;font-weight:700;margin-top:2px;}
+    .ficha .fd{font-size:11.5px;margin-top:3px;opacity:.92;}
+    /* púrpuras */
+    .p1{background:#7c3aed;} .p2{background:#6d28d9;} .p3{background:#5b21b6;}
+    .p4{background:#4c1d95;} .p5{background:#3b0764;} .p6{background:#2e1065;}
+    /* verdes */
+    .v1{background:#059669;} .v2{background:#047857;} .v3{background:#065f46;}
+    .v4{background:#064e3b;} .v5{background:#0f766e;}
+    /* azules */
+    .a1{background:#0284c7;} .a2{background:#0369a1;} .a3{background:#075985;}
+    .a4{background:#0c4a6e;} .a5{background:#164e63;}
+    /* rojos */
+    .r1{background:#dc2626;} .r2{background:#b91c1c;} .r3{background:#991b1b;}
+    /* naranjas */
+    .n1{background:#d97706;} .n2{background:#b45309;} .n3{background:#92400e;}
+
+    /* Bloques comparativos */
+    .compare{display:flex;gap:14px;margin-bottom:16px;}
+    .cbox{flex:1;border-radius:8px;padding:14px 16px;color:#fff;}
+    .cbox h3{font-size:13px;font-weight:700;margin:0 0 10px 0;padding-bottom:6px;border-bottom:2px solid rgba(255,255,255,.3);}
+    .cbox ul{padding-left:16px;margin:0;font-size:12.5px;}
+    .cbox li{margin-bottom:5px;}
+    .cp1{background:#7c3aed;} .cp2{background:#5b21b6;}
+    .cv1{background:#059669;} .cv2{background:#047857;}
+    .ca1{background:#0284c7;} .ca2{background:#0369a1;}
+    .cr1{background:#dc2626;} .cn1{background:#d97706;}
+
+    /* Tablas */
+    table{width:100%;border-collapse:collapse;margin:10px 0 20px 0;font-size:12.5px;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.08);}
+    th{background:#7c3aed;color:#fff;padding:8px 11px;text-align:left;}
+    th.tg{background:#059669;} th.ta{background:#0284c7;} th.tr{background:#dc2626;} th.tn{background:#d97706;}
+    td{border:1px solid #ede9fe;padding:7px 11px;vertical-align:top;}
+    tr:nth-child(even) td{background:#f5f3ff;}
+
+    /* Escalera / flujo */
+    .cadena{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-bottom:16px;}
+    .paso{background:#7c3aed;color:#fff;border-radius:8px;padding:9px 13px;font-size:12px;text-align:center;font-weight:700;min-width:100px;}
+    .paso-v{background:#059669;color:#fff;border-radius:8px;padding:9px 13px;font-size:12px;text-align:center;font-weight:700;min-width:100px;}
+    .paso-r{background:#dc2626;color:#fff;border-radius:8px;padding:9px 13px;font-size:12px;text-align:center;font-weight:700;min-width:100px;}
+    .arrow{font-size:18px;color:#7c3aed;font-weight:700;}
+
+    /* Notas y alertas */
+    .nota{background:#ede9fe;border:1px solid #c4b5fd;padding:10px 14px;margin:10px 0 18px 0;font-size:12.5px;border-radius:4px;}
+    .alerta{background:#fef3c7;border-left:5px solid #d97706;padding:9px 13px;margin-bottom:14px;font-size:12.5px;border-radius:0 6px 6px 0;}
+    .exito{background:#dcfce7;border-left:5px solid #16a34a;padding:9px 13px;margin-bottom:12px;font-size:12.5px;border-radius:0 6px 6px 0;}
+    .mnemo{background:#3b0764;color:#fff;border-radius:8px;padding:13px 17px;margin-bottom:16px;font-size:13px;}
+    .mnemo span{color:#c4b5fd;font-weight:700;}
+
+    /* Trampa */
+    .trampa{background:#fff5f5;border-left:5px solid #dc2626;padding:8px 12px;margin-bottom:7px;font-size:12.5px;border-radius:0 5px 5px 0;}
+    .trampa strong{color:#b91c1c;}
+
+    /* Split */
+    .split{display:flex;gap:12px;margin-bottom:16px;}
+    .splitbox{flex:1;border-radius:8px;padding:14px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.09);}
+    .splitbox .amount{font-size:28px;font-weight:900;}
+    .splitbox .when{font-size:12px;margin-top:4px;opacity:.88;}
+    .sp1{background:#7c3aed;color:#fff;} .sp2{background:#5b21b6;color:#fff;}
+    .sp3{background:#059669;color:#fff;} .sp4{background:#dc2626;color:#fff;}
+    .sp5{background:#0284c7;color:#fff;} .sp6{background:#d97706;color:#fff;}
+
+    /* Pirámide de principios */
+    .principios{margin-bottom:16px;}
+    .princ-row{display:flex;align-items:center;gap:10px;margin-bottom:7px;}
+    .princ-badge{min-width:90px;text-align:center;border-radius:6px;padding:8px 10px;color:#fff;font-weight:700;font-size:12px;}
+    .princ-desc{background:#fff;border-radius:6px;padding:8px 13px;flex:1;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.08);}
+    .pb1{background:#7c3aed;} .pb2{background:#6d28d9;} .pb3{background:#5b21b6;}
+    .pb4{background:#4c1d95;} .pb5{background:#3b0764;} .pb6{background:#1e3a5f;} .pb7{background:#0c4a6e;}
+
+    /* Número grande */
+    .numgrid{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px;}
+    .numcard{background:#fff;border-radius:8px;padding:12px 14px;flex:1 1 120px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.08);border-bottom:4px solid #7c3aed;}
+    .numcard .big{font-size:26px;font-weight:900;color:#7c3aed;}
+    .numcard .desc{font-size:11px;color:#475569;margin-top:3px;}
+
+    /* ARSULIPO visual */
+    .arsulipo{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+    .arsbox{flex:1 1 130px;border-radius:8px;padding:13px 14px;color:#fff;min-width:120px;}
+    .arsbox .letter{font-size:36px;font-weight:900;opacity:.25;}
+    .arsbox .name{font-size:13px;font-weight:700;margin-top:2px;}
+    .arsbox .arts{font-size:11px;opacity:.88;margin-top:3px;}
+    .ars-a{background:#0284c7;} .ars-r{background:#059669;} .ars-s{background:#dc2626;}
+    .ars-u{background:#d97706;} .ars-i{background:#7c3aed;} .ars-p{background:#0c4a6e;}
+    .ars-o{background:#1e3a5f;}
+
+    ul{padding-left:18px;margin:4px 0;}
+    li{margin-bottom:3px;}
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 24 · LO 3/2018 – LOPDGDD · Protección de Datos y Derechos Digitales · Política UPNA<br>
+<span style="font-size:12px;font-weight:400;color:#475569;">Esquema visual para memorización rápida · LO 3/2018 + RGPD 2016/679</span></h1>
+
+<!-- ═══════════════════════════════════ -->
+<!-- A: MARCO GENERAL Y EVOLUCIÓN       -->
+<!-- ═══════════════════════════════════ -->
+<h2 class="h2-a">📜 A · MARCO NORMATIVO Y DOBLE OBJETO</h2>
+
+<div class="grid">
+  <div class="card">
+    <div class="ctitle">Ley</div>
+    <div class="cbig">LO 3/2018</div>
+    <p>5 de diciembre · BOE 6/12/2018<br>LOPDGDD · Vigente desde 7/12/2018</p>
+  </div>
+  <div class="card">
+    <div class="ctitle">Estructura</div>
+    <div class="cbig">97 arts.</div>
+    <p>10 Títulos · 22 DD.AA.<br>6 DD.TT. · 1 D.Derog. · 16 DD.FF.</p>
+  </div>
+  <div class="card">
+    <div class="ctitle">Reglamento UE</div>
+    <div class="cbig">RGPD</div>
+    <p>2016/679 · 27 abril 2016<br>Aplicable desde <strong>25/05/2018</strong></p>
+  </div>
+  <div class="card">
+    <div class="ctitle">Anclaje constitucional</div>
+    <div class="cbig">Art. 18.4 CE</div>
+    <p>"La ley limitará el uso de la informática para garantizar el honor e intimidad…"</p>
+  </div>
+  <div class="card">
+    <div class="ctitle">STC de referencia</div>
+    <div class="cbig">292/2000</div>
+    <p>30 nov. 2000 · El TC consagra la <strong>autonomía</strong> del derecho fundamental a la protección de datos</p>
+  </div>
+</div>
+
+<!-- Evolución normativa -->
+<h2 class="h2-a">⏱ Evolución normativa española</h2>
+<div class="cadena">
+  <div class="paso">Art. 18.4 CE<br>1978</div>
+  <div class="arrow">→</div>
+  <div class="paso">LORTAD<br>LO 5/1992</div>
+  <div class="arrow">→</div>
+  <div class="paso">LOPD<br>LO 15/1999</div>
+  <div class="arrow">→</div>
+  <div class="paso">RGPD<br>2016/679<br>Desde 25/05/18</div>
+  <div class="arrow">→</div>
+  <div class="paso" style="background:#3b0764;">LOPDGDD<br>LO 3/2018<br>6/12/2018</div>
+</div>
+
+<!-- Doble objeto -->
+<div class="compare">
+  <div class="cbox cp1">
+    <h3>🎯 Objeto 1 (Art. 1 LOPDGDD)</h3>
+    <ul>
+      <li>Adaptar el ordenamiento jurídico español al <strong>RGPD (UE 2016/679)</strong></li>
+      <li>Completar y desarrollar sus disposiciones</li>
+      <li>Aplicación directa del RGPD en todo el territorio nacional</li>
+    </ul>
+  </div>
+  <div class="cbox cp2">
+    <h3>🎯 Objeto 2 (Art. 1 LOPDGDD)</h3>
+    <ul>
+      <li>Garantizar los <strong>derechos digitales</strong> de la ciudadanía</li>
+      <li>Al amparo del artículo <strong>18.4 de la Constitución Española</strong></li>
+      <li>Novedad respecto a la LOPD 1999 → Título X completo</li>
+    </ul>
+  </div>
+</div>
+<div class="alerta">⚠ <strong>TRAMPA CLÁSICA:</strong> "El objeto de la LOPDGDD es solo adaptar el RGPD." FALSO: tiene DOBLE objeto → también garantiza los derechos digitales (art. 1 b)</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- B: DISPOSICIONES GENERALES                 -->
+<!-- ═══════════════════════════════════════════ -->
+<h2 class="h2-b">📋 B · DISPOSICIONES GENERALES (Arts. 1–3)</h2>
+
+<div class="compare">
+  <div class="cbox ca1">
+    <h3>✅ Art. 2 — Se APLICA a:</h3>
+    <ul>
+      <li>Tratamientos <strong>automatizados</strong> de datos personales</li>
+      <li>Tratamientos <strong>no automatizados</strong> en ficheros</li>
+      <li>Tratamientos de responsables/encargados establecidos en la UE</li>
+    </ul>
+  </div>
+  <div class="cbox cr1">
+    <h3>❌ Art. 2 — NO se aplica a:</h3>
+    <ul>
+      <li>Tratamientos del <strong>art. 2.2 RGPD</strong>: seguridad nacional, actividad exclusivamente personal o doméstica</li>
+      <li>Datos de <strong>personas fallecidas</strong> (con el matiz del art. 3)</li>
+      <li>Tratamientos sobre materias <strong>clasificadas</strong></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Art. 3 personas fallecidas -->
+<h2 class="h2-b">💀 Art. 3 — Datos de Personas Fallecidas (novedad LOPDGDD)</h2>
+<div class="compare">
+  <div class="cbox cv1">
+    <h3>✅ SÍ pueden solicitar acceso, rectificación o supresión:</h3>
+    <ul>
+      <li>Personas <strong>vinculadas por razones familiares o de hecho</strong></li>
+      <li>Herederos del fallecido</li>
+      <li>En caso de fallecimiento de un <strong>menor</strong>: sus representantes legales o el Ministerio Fiscal (de oficio o a instancia de parte)</li>
+    </ul>
+  </div>
+  <div class="cbox cr1">
+    <h3>❌ NO puede solicitarse cuando:</h3>
+    <ul>
+      <li>El fallecido lo <strong>hubiera prohibido expresamente</strong></li>
+      <li>Esa prohibición <strong>no</strong> puede afectar a datos de carácter patrimonial del causante</li>
+    </ul>
+  </div>
+</div>
+<div class="mnemo"><span>FRASE ANCLA ART. 3:</span> "La muerte no borra los datos, pero sí puede bloquear el acceso a ellos si el difunto así lo quiso."</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- C: PRINCIPIOS                              -->
+<!-- ═══════════════════════════════════════════ -->
+<h2 class="h2-c">⚖ C · PRINCIPIOS DE PROTECCIÓN DE DATOS (RGPD Art. 5 + LOPDGDD Arts. 4–10)</h2>
+
+<div class="mnemo"><span>MNEMOTÉCNICO L-L-M-E-L-I-R:</span> Licitud · Limitación finalidad · Minimización · Exactitud · Limitación plazo · Integridad/Confidencialidad · Responsabilidad proactiva (accountability)</div>
+
+<div class="principios">
+  <div class="princ-row">
+    <div class="princ-badge pb1">1 · Licitud</div>
+    <div class="princ-desc"><strong>Licitud, lealtad y transparencia.</strong> El tratamiento debe tener una base jurídica válida del art. 6 RGPD y ser transparente para el interesado.</div>
+  </div>
+  <div class="princ-row">
+    <div class="princ-badge pb2">2 · Finalidad</div>
+    <div class="princ-desc"><strong>Limitación de la finalidad.</strong> Los datos se recogen para fines determinados, explícitos y legítimos; no se tratarán de modo incompatible con dichos fines.</div>
+  </div>
+  <div class="princ-row">
+    <div class="princ-badge pb3">3 · Minimización</div>
+    <div class="princ-desc"><strong>Minimización de datos.</strong> Solo se pueden tratar los datos adecuados, pertinentes y estrictamente <em>limitados a lo necesario</em> para los fines del tratamiento.</div>
+  </div>
+  <div class="princ-row">
+    <div class="princ-badge pb4">4 · Exactitud</div>
+    <div class="princ-desc"><strong>Exactitud.</strong> Los datos deben ser exactos y actualizados. El responsable debe suprimir/rectificar sin dilación. <strong>Art. 4 LOPDGDD:</strong> no es imputable al responsable la inexactitud si los datos vienen del propio afectado, de mediador, de portabilidad o de registro público.</div>
+  </div>
+  <div class="princ-row">
+    <div class="princ-badge pb5">5 · Conservación</div>
+    <div class="princ-desc"><strong>Limitación del plazo de conservación.</strong> No se conservarán más tiempo del necesario para los fines del tratamiento.</div>
+  </div>
+  <div class="princ-row">
+    <div class="princ-badge pb6">6 · Integridad</div>
+    <div class="princ-desc"><strong>Integridad y confidencialidad.</strong> Seguridad adecuada: protección contra tratamientos no autorizados, pérdida accidental, destrucción o daño.</div>
+  </div>
+  <div class="princ-row">
+    <div class="princ-badge pb7">7 · Accountability</div>
+    <div class="princ-desc"><strong>Responsabilidad proactiva.</strong> El responsable debe poder <em>demostrar</em> que cumple los principios (accountability). Obligación de documentar y probar.</div>
+  </div>
+</div>
+
+<!-- Consentimiento -->
+<h2 class="h2-c">✍ Art. 6 — Consentimiento</h2>
+<div class="fichas">
+  <div class="ficha p1">
+    <div class="fn">L</div>
+    <div class="ft">LIBRE</div>
+    <div class="fd">Sin coacción · No condicionado a la ejecución del contrato si los datos no son necesarios para él</div>
+  </div>
+  <div class="ficha p2">
+    <div class="fn">E</div>
+    <div class="ft">ESPECÍFICO</div>
+    <div class="fd">Para cada finalidad concreta · Si hay pluralidad de fines → consentimiento específico para CADA UNO</div>
+  </div>
+  <div class="ficha p3">
+    <div class="fn">I</div>
+    <div class="ft">INFORMADO</div>
+    <div class="fd">El interesado sabe para qué se usan sus datos, quién los trata y cuáles son sus derechos</div>
+  </div>
+  <div class="ficha p4">
+    <div class="fn">IN</div>
+    <div class="ft">INEQUÍVOCO</div>
+    <div class="fd">Mediante declaración o clara acción afirmativa · El consentimiento TÁCITO queda eliminado</div>
+  </div>
+</div>
+<div class="alerta">⚠ <strong>ELIMINADO:</strong> el consentimiento tácito o por omisión. Solo vale declaración o clara acción afirmativa.</div>
+
+<!-- Consentimiento menores -->
+<div class="split">
+  <div class="splitbox sp4">
+    <div class="amount">&lt; 14 años</div>
+    <div class="when">Consentimiento de <strong>padres o tutores</strong><br>El menor NO puede consentir solo</div>
+  </div>
+  <div class="splitbox" style="background:#ede9fe;color:#3b0764;align-self:center;text-align:center;padding:18px;border-radius:8px;font-size:18px;font-weight:900;box-shadow:0 2px 6px rgba(0,0,0,.08);">
+    14 años<br><span style="font-size:11px;font-weight:400;color:#475569;">Art. 7 LOPDGDD<br>RGPD dice 16 años<br>España eligió 14</span>
+  </div>
+  <div class="splitbox sp3">
+    <div class="amount">≥ 14 años</div>
+    <div class="when">El MENOR puede<br>consentir POR SÍ MISMO<br>sin autorización parental</div>
+  </div>
+</div>
+
+<!-- 6 bases jurídicas -->
+<h2 class="h2-c">🔑 Las 6 Bases Jurídicas del Tratamiento (Art. 6 RGPD)</h2>
+<div class="mnemo"><span>MNEMOTÉCNICO CO·EJ·OB·VI·MI·LE:</span> CONsentimiento · EJecución de contrato · OBligación legal · VItal (interés vital) · MIsión de interés público · LEgítimo interés</div>
+<div class="fichas">
+  <div class="ficha a1"><div class="fn">1</div><div class="ft">CONsentimiento</div><div class="fd">Libre, específico, informado e inequívoco del interesado</div></div>
+  <div class="ficha a2"><div class="fn">2</div><div class="ft">EJecución de contrato</div><div class="fd">O medidas precontractuales a petición del interesado</div></div>
+  <div class="ficha a3"><div class="fn">3</div><div class="ft">OBligación legal</div><div class="fd">El responsable está obligado por una norma</div></div>
+  <div class="ficha a4"><div class="fn">4</div><div class="ft">Interés VItal</div><div class="fd">Para proteger la vida del interesado u otra persona física</div></div>
+  <div class="ficha a5"><div class="fn">5</div><div class="ft">MIsión de interés público</div><div class="fd">O ejercicio de poderes públicos conferidos al responsable</div></div>
+  <div class="ficha p5"><div class="fn">6</div><div class="ft">LEgítimo interés</div><div class="fd">Del responsable, salvo que prevalezcan derechos del interesado</div></div>
+</div>
+
+<!-- Categorías especiales -->
+<h2 class="h2-c">🔴 Art. 9 — Categorías Especiales de Datos</h2>
+<div class="fichas">
+  <div class="ficha r1"><div class="fn">1</div><div class="ft">Origen étnico o racial</div><div class="fd">—</div></div>
+  <div class="ficha r1"><div class="fn">2</div><div class="ft">Opiniones políticas</div><div class="fd">—</div></div>
+  <div class="ficha r1"><div class="fn">3</div><div class="ft">Convicc. religiosas/filosóficas</div><div class="fd">—</div></div>
+  <div class="ficha r2"><div class="fn">4</div><div class="ft">Afiliación sindical</div><div class="fd">—</div></div>
+  <div class="ficha r2"><div class="fn">5</div><div class="ft">Datos genéticos</div><div class="fd">—</div></div>
+  <div class="ficha r2"><div class="fn">6</div><div class="ft">Datos biométricos</div><div class="fd">Para identificar a una persona física</div></div>
+  <div class="ficha r3"><div class="fn">7</div><div class="ft">Datos de SALUD</div><div class="fd">Más protegidos aún · sujetos a reserva de ley</div></div>
+  <div class="ficha r3"><div class="fn">8</div><div class="ft">Vida sexual</div><div class="fd">—</div></div>
+  <div class="ficha r3"><div class="fn">9</div><div class="ft">Orientación sexual</div><div class="fd">—</div></div>
+</div>
+<div class="alerta">⚠ <strong>PRINCIPIO DE RESERVA DE LEY:</strong> solo una ley puede habilitar el tratamiento de categorías especiales en los supuestos del RGPD. Prohibidas las "listas negras" de sindicalistas o afiliados políticos aunque haya consentimiento.</div>
+
+<!-- Confidencialidad -->
+<div class="compare">
+  <div class="cbox cp1">
+    <h3>🔒 Art. 5 — Deber de Confidencialidad</h3>
+    <ul>
+      <li>Afecta a <strong>TODOS</strong> los que intervengan en cualquier fase del tratamiento</li>
+      <li>Responsables · Encargados · Empleados · Proveedores · Colaboradores externos</li>
+      <li>Se mantiene <strong>incluso después de que haya finalizado</strong> la relación laboral o contractual</li>
+      <li>Complementario al secreto profesional (no lo sustituye)</li>
+    </ul>
+  </div>
+  <div class="cbox cp2">
+    <h3>⚖ Art. 10 — Datos de Naturaleza Penal</h3>
+    <ul>
+      <li>Solo bajo supervisión de <strong>autoridad pública</strong></li>
+      <li>O cuando lo autorice una norma de la UE o nacional con garantías adecuadas</li>
+      <li>Registros completos de condenas penales: <strong>solo autoridades públicas competentes</strong></li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- D: DERECHOS ARSULIPO                       -->
+<!-- ═══════════════════════════════════════════ -->
+<h2 class="h2-d">👤 D · DERECHOS DE LAS PERSONAS — ARSULIPO</h2>
+
+<div class="mnemo"><span>MNEMOTÉCNICO ARSULIPO:</span> Acceso · Rectificación · Supresión · (lU)imitación · portabiLIdad · OPosición</div>
+
+<div class="arsulipo">
+  <div class="arsbox ars-a">
+    <div class="letter">A</div>
+    <div class="name">ACCESO</div>
+    <div class="arts">Art. 15 RGPD · Art. 12 LOPDGDD<br>Confirmación + copia de los datos tratados</div>
+  </div>
+  <div class="arsbox ars-r">
+    <div class="letter">R</div>
+    <div class="name">RECTIFICACIÓN</div>
+    <div class="arts">Art. 16 RGPD · Art. 14 LOPDGDD<br>Corrección de datos inexactos o incompletos</div>
+  </div>
+  <div class="arsbox ars-s">
+    <div class="letter">S</div>
+    <div class="name">SUPRESIÓN</div>
+    <div class="arts">Art. 17 RGPD · Art. 15 LOPDGDD<br>"Derecho al olvido" · datos innecesarios, ilícitos o sin consentimiento</div>
+  </div>
+  <div class="arsbox ars-u">
+    <div class="letter">U</div>
+    <div class="name">LIMITACIÓN</div>
+    <div class="arts">Art. 18 RGPD · Art. 16 LOPDGDD<br>Bloquear el tratamiento sin suprimir los datos</div>
+  </div>
+  <div class="arsbox ars-i">
+    <div class="letter">I</div>
+    <div class="name">PORTABILIDAD</div>
+    <div class="arts">Art. 20 RGPD · Art. 17 LOPDGDD<br>Formato estructurado · uso común · lectura mecánica</div>
+  </div>
+  <div class="arsbox ars-p">
+    <div class="letter">P</div>
+    <div class="name">OPOSICIÓN</div>
+    <div class="arts">Art. 21 RGPD · Art. 18 LOPDGDD<br>Oponerse al tratamiento por motivos propios</div>
+  </div>
+</div>
+
+<!-- Plazo de respuesta -->
+<div class="split">
+  <div class="splitbox sp1">
+    <div class="amount">1 mes</div>
+    <div class="when">Plazo de respuesta<br>para CUALQUIER<br>derecho ARSULIPO</div>
+  </div>
+  <div class="splitbox" style="background:#ede9fe;color:#3b0764;align-self:center;text-align:center;padding:18px;border-radius:8px;font-size:16px;font-weight:900;box-shadow:0 2px 6px rgba(0,0,0,.08);">
+    PRÓRROGA<br><span style="font-size:11px;font-weight:400;color:#475569;">+2 meses por complejidad<br>Comunicada dentro del 1.er mes<br>con la razón del retraso</span>
+  </div>
+  <div class="splitbox sp2">
+    <div class="amount">Gratis</div>
+    <div class="when">El ejercicio de derechos<br>es gratuito · Salvo solicitudes<br>manifiestamente infundadas</div>
+  </div>
+</div>
+
+<!-- Sistema de información por capas -->
+<div class="compare">
+  <div class="cbox cv1">
+    <h3>📊 Sistema de Información por Capas (Art. 11 LOPDGDD)</h3>
+    <ul>
+      <li><strong>1.ª capa (información básica):</strong> Identidad del responsable · Finalidad del tratamiento · Derechos del interesado · Datos de contacto del DPD</li>
+      <li><strong>2.ª capa (información completa):</strong> Accesible mediante enlace o referencia · Todos los datos del art. 13 RGPD</li>
+      <li>Ya aplicado en: videovigilancia, cookies, formularios web</li>
+    </ul>
+  </div>
+  <div class="cbox cv2">
+    <h3>🌐 Derecho al olvido digital (Arts. 93–94 LOPDGDD)</h3>
+    <ul>
+      <li>Art. 93: Buscadores de internet → obligados a desindexar resultados a petición del afectado</li>
+      <li>Art. 94: Redes sociales → suprimir datos publicados durante la <strong>minoría de edad</strong></li>
+      <li>Art. 95: Portabilidad en redes sociales</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- E: DERECHOS DIGITALES TÍTULO X             -->
+<!-- ═══════════════════════════════════════════ -->
+<h2 class="h2-e">📱 E · DERECHOS DIGITALES — TÍTULO X (Arts. 79–97) [Gran novedad LOPDGDD]</h2>
+
+<table>
+  <tr><th style="width:10%">Art.</th><th>Derecho digital</th><th style="width:35%">Clave para el examen</th></tr>
+  <tr><td><strong>80</strong></td><td>Neutralidad de la red</td><td>Acceso sin discriminación por contenido o servicio</td></tr>
+  <tr><td><strong>81</strong></td><td>Acceso universal a internet</td><td><strong>Derecho esencial</strong> de los ciudadanos</td></tr>
+  <tr><td><strong>82</strong></td><td>Seguridad digital</td><td>Derecho a la seguridad en el uso de internet</td></tr>
+  <tr><td><strong>83</strong></td><td>Educación digital</td><td>Derecho a recibir educación digital</td></tr>
+  <tr><td><strong>84</strong></td><td>Protección de menores en internet</td><td>Las AA.PP. promoverán formación de <strong>padres, tutores y educadores</strong></td></tr>
+  <tr><td><strong>87</strong></td><td>Intimidad en el uso de dispositivos digitales en el trabajo</td><td>El empleador debe establecer <strong>política de uso</strong> y comunicarla a trabajadores y representantes</td></tr>
+  <tr><td><strong>88</strong></td><td><strong>Derecho a la desconexión digital</strong> en el trabajo</td><td>Fuera del horario laboral · previa audiencia a representantes · política interna obligatoria</td></tr>
+  <tr><td><strong>89</strong></td><td>Videovigilancia en el lugar de trabajo</td><td>Permitida con <strong>información previa</strong> a trabajadores · máx. 1 mes conservación</td></tr>
+  <tr><td><strong>90</strong></td><td>Geolocalización en el trabajo</td><td>Información previa <strong>expresa, clara e inequívoca</strong> a trabajadores</td></tr>
+  <tr><td><strong>91</strong></td><td>Control de actividad en dispositivos digitales</td><td>Permitida si trabajadores fueron <strong>informados</strong> de los criterios de uso</td></tr>
+  <tr><td><strong>93</strong></td><td>Derecho al olvido en búsquedas de internet</td><td>Buscadores obligados a desindexar a petición</td></tr>
+  <tr><td><strong>94</strong></td><td>Derecho al olvido en redes sociales</td><td>Datos publicados en la <strong>minoría de edad</strong></td></tr>
+  <tr><td><strong>95</strong></td><td>Portabilidad en redes sociales</td><td>Obtener en formato estructurado los contenidos propios</td></tr>
+  <tr><td><strong>96</strong></td><td><strong>Testamento digital</strong></td><td>Instrucciones sobre destino de contenidos digitales tras la muerte · en testamento o ante el prestador del servicio</td></tr>
+  <tr><td><strong>97</strong></td><td>Políticas de impulso del conocimiento digital</td><td>Las AA.PP. impulsarán la formación digital</td></tr>
+</table>
+
+<!-- Desconexión digital zoom -->
+<div class="compare">
+  <div class="cbox cp1">
+    <h3>📵 Art. 88 — Desconexión digital (ZOOM)</h3>
+    <ul>
+      <li>Derecho a no atender dispositivos <strong>fuera del horario laboral</strong></li>
+      <li>Respeta tiempo de descanso, permisos y vacaciones</li>
+      <li>El empleador debe elaborar una <strong>política interna</strong> de desconexión</li>
+      <li>Política interna: <strong>previa audiencia a los representantes de los trabajadores</strong></li>
+      <li>Debe incluir acciones de formación y sensibilización del personal</li>
+    </ul>
+  </div>
+  <div class="cbox cp2">
+    <h3>📹 Arts. 89–91 — Control laboral digital (ZOOM)</h3>
+    <ul>
+      <li><strong>Videovigilancia (89):</strong> informar previamente a trabajadores (y representantes)</li>
+      <li>Infracción capturada incidentalmente en zona de trabajo → puede usarse</li>
+      <li><strong>Geolocalización (90):</strong> información expresa, clara e inequívoca</li>
+      <li><strong>Actividad en dispositivos (91):</strong> trabajadores informados de los criterios de uso</li>
+      <li>Sin información previa → tratamiento ILÍCITO</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- F: DPD / DPO                              -->
+<!-- ═══════════════════════════════════════════ -->
+<h2 class="h2-f">👔 F · DELEGADO DE PROTECCIÓN DE DATOS (DPD / DPO) — Arts. 34–37 LOPDGDD · Arts. 37–39 RGPD</h2>
+
+<div class="compare">
+  <div class="cbox ca1">
+    <h3>⚠ Designación OBLIGATORIA para:</h3>
+    <ul>
+      <li>Todas las <strong>Administraciones Públicas</strong> (incluidas universidades públicas → <strong>UPNA obligatoriamente</strong>)</li>
+      <li>Responsables/encargados que traten a <strong>gran escala categorías especiales</strong> de datos o datos penales</li>
+      <li>Responsables que realicen observación habitual y sistemática a gran escala</li>
+      <li>Comunicar designación/cese a la AEPD en <strong>10 días hábiles</strong> (art. 34.3 LOPDGDD)</li>
+    </ul>
+  </div>
+  <div class="cbox ca2">
+    <h3>📋 Funciones del DPD (Art. 39 RGPD)</h3>
+    <ul>
+      <li>Informar y asesorar al responsable y encargados</li>
+      <li>Supervisar el cumplimiento del RGPD y la política interna</li>
+      <li>Cooperar con la <strong>AEPD</strong> y ser punto de contacto</li>
+      <li>Asesorar sobre la <strong>Evaluación de Impacto (EIPD)</strong></li>
+      <li>No puede ser removido/sancionado por sus funciones (salvo dolo o negligencia grave)</li>
+    </ul>
+  </div>
+</div>
+
+<div class="mnemo"><span>DPD EN LA UPNA:</span> <strong>delegado.protecciondatos@unavarra.es</strong> · Designación obligatoria por ser Administración Pública · Total independencia funcional</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- G: RÉGIMEN SANCIONADOR                     -->
+<!-- ═══════════════════════════════════════════ -->
+<h2 class="h2-f">⚖ G · RÉGIMEN SANCIONADOR (Título IX + Art. 83 RGPD)</h2>
+
+<div class="split">
+  <div class="splitbox sp4">
+    <div class="amount">20 M€ / 4%</div>
+    <div class="when">Infracciones más graves (art. 83.5 RGPD)<br>Lo que sea mayor · cuantía fijada por el RGPD</div>
+  </div>
+  <div class="splitbox sp6">
+    <div class="amount">10 M€ / 2%</div>
+    <div class="when">Infracciones graves (art. 83.4 RGPD)<br>Lo que sea mayor · cuantía fijada por el RGPD</div>
+  </div>
+  <div class="splitbox" style="background:#f5f3ff;color:#3b0764;padding:14px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.09);">
+    <div style="font-size:22px;font-weight:900;">3 · 2 · 1</div>
+    <div style="font-size:11.5px;margin-top:4px;"><strong>Prescripción (LOPDGDD)</strong><br>Muy graves: 3 años<br>Graves: 2 años · Leves: 1 año<br>Solo a efectos de prescripción</div>
+  </div>
+</div>
+<div class="alerta">⚠ <strong>TRAMPA CLÁSICA:</strong> "La LOPDGDD fija las cuantías de las sanciones según la gravedad." FALSO: las cuantías las fija el RGPD. La LOPDGDD clasifica infracciones en muy graves/graves/leves SOLO a efectos de prescripción (3/2/1 años).</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- H: POLÍTICA UPNA                           -->
+<!-- ═══════════════════════════════════════════ -->
+<h2 class="h2-f">🏛 H · POLÍTICA DE PROTECCIÓN DE DATOS DE LA UPNA</h2>
+
+<div class="fichas">
+  <div class="ficha a1">
+    <div class="fn">R</div>
+    <div class="ft">Responsable del tratamiento</div>
+    <div class="fd"><strong>UNIVERSIDAD PÚBLICA DE NAVARRA</strong> · CIF Q3150012G · Campus Arrosadía s/n · 31006 Pamplona · www.unavarra.es</div>
+  </div>
+  <div class="ficha a2">
+    <div class="fn">B</div>
+    <div class="ft">Base jurídica principal</div>
+    <div class="fd">Misión de interés público (art. 6.1.e RGPD) derivada de la LO 6/2001 de Universidades y los Estatutos de la UPNA · También: obligación legal (art. 6.1.c) y consentimiento</div>
+  </div>
+  <div class="ficha a3">
+    <div class="fn">I</div>
+    <div class="ft">Sistema de información</div>
+    <div class="fd">Información por capas en todos los formularios: básica + enlace a política completa</div>
+  </div>
+  <div class="ficha a4">
+    <div class="fn">D</div>
+    <div class="ft">Ejercicio de derechos</div>
+    <div class="fd">Ante la UPNA como responsable · Si no se atiende: reclamación ante la AEPD (sedeagpd.gob.es)</div>
+  </div>
+  <div class="ficha a5">
+    <div class="fn">DPD</div>
+    <div class="ft">DPD de la UPNA</div>
+    <div class="fd">delegado.protecciondatos@unavarra.es · Obligatorio por ser Administración Pública</div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- I: GRANDES NÚMEROS + TRAMPAS               -->
+<!-- ═══════════════════════════════════════════ -->
+<h2 class="h2-f">🔢 I · GRANDES NÚMEROS DEL TEMA 24</h2>
+<div class="numgrid">
+  <div class="numcard"><div class="big">Art. 18.4</div><div class="desc">Fundamento constitucional del derecho a la protección de datos</div></div>
+  <div class="numcard"><div class="big">STC 292/2000</div><div class="desc">TC consagra la autonomía del derecho a la protección de datos</div></div>
+  <div class="numcard"><div class="big">LO 3/2018</div><div class="desc">LOPDGDD · 5 de diciembre · BOE 6/12/2018</div></div>
+  <div class="numcard"><div class="big">97 arts.</div><div class="desc">10 Títulos · 22 DD.AA. · 6 DD.TT. · 16 DD.FF.</div></div>
+  <div class="numcard"><div class="big">RGPD 2016/679</div><div class="desc">Aplicable desde el 25/05/2018</div></div>
+  <div class="numcard"><div class="big">14 años</div><div class="desc">Edad mínima para consentir sin autorización parental (art. 7 LOPDGDD)</div></div>
+  <div class="numcard"><div class="big">1 mes</div><div class="desc">Plazo de respuesta a todos los derechos ARSULIPO (+2 meses de prórroga)</div></div>
+  <div class="numcard"><div class="big">6</div><div class="desc">Bases jurídicas del tratamiento (art. 6 RGPD)</div></div>
+  <div class="numcard"><div class="big">7</div><div class="desc">Principios del tratamiento (art. 5 RGPD)</div></div>
+  <div class="numcard"><div class="big">9</div><div class="desc">Categorías especiales de datos (art. 9 RGPD)</div></div>
+  <div class="numcard"><div class="big">20 M€/4%</div><div class="desc">Multa máxima infracciones muy graves (art. 83.5 RGPD)</div></div>
+  <div class="numcard"><div class="big">3·2·1 años</div><div class="desc">Prescripción muy graves · graves · leves (LOPDGDD)</div></div>
+  <div class="numcard"><div class="big">Arts. 79–97</div><div class="desc">Derechos digitales (Título X LOPDGDD)</div></div>
+  <div class="numcard"><div class="big">10 días</div><div class="desc">Para comunicar designación/cese del DPD a la AEPD (art. 34.3)</div></div>
+</div>
+
+<h2 class="h2-f">⚠ TRAMPAS FRECUENTES DEL EXAMEN — Tema 24</h2>
+
+<div class="trampa"><strong>"El objeto de la LOPDGDD es solo adaptar el RGPD."</strong><br>
+FALSO. Doble objeto: (a) adaptar el RGPD + (b) garantizar los derechos digitales (art. 18.4 CE · art. 1 LOPDGDD)</div>
+
+<div class="trampa"><strong>"Los datos de personas fallecidas quedan totalmente excluidos sin excepción."</strong><br>
+FALSO. Quedan excluidos, PERO los familiares/herederos pueden solicitar acceso, rectificación y supresión, salvo que el fallecido lo hubiera prohibido expresamente (art. 3). Esa prohibición no afecta a datos patrimoniales.</div>
+
+<div class="trampa"><strong>"Cualquier menor de 18 años necesita autorización de sus padres para dar su consentimiento."</strong><br>
+FALSO. A partir de los 14 años el menor puede consentir por sí mismo (art. 7 LOPDGDD). Menores de 14 años sí necesitan autorización parental.</div>
+
+<div class="trampa"><strong>"El consentimiento puede ser tácito si hay una relación de confianza previa."</strong><br>
+FALSO. La LOPDGDD elimina definitivamente el consentimiento tácito. Solo vale declaración o clara acción afirmativa.</div>
+
+<div class="trampa"><strong>"El deber de confidencialidad termina cuando finaliza la relación laboral."</strong><br>
+FALSO. El deber de confidencialidad se mantiene INCLUSO DESPUÉS de que haya finalizado la relación con el responsable o encargado (art. 5 LOPDGDD).</div>
+
+<div class="trampa"><strong>"La LOPDGDD fija las cuantías de las sanciones por gravedad."</strong><br>
+FALSO. Las cuantías las fija el RGPD (art. 83). La LOPDGDD clasifica en muy graves/graves/leves SOLO a efectos de prescripción (3/2/1 años).</div>
+
+<div class="trampa"><strong>"El DPD puede ser destituido si el responsable lo decide."</strong><br>
+FALSO. El DPD NO puede ser removido ni sancionado por el desempeño de sus funciones, salvo dolo o negligencia grave (art. 38 RGPD).</div>
+
+<div class="trampa"><strong>"La UPNA no necesita DPD porque no es una empresa."</strong><br>
+FALSO. La designación de DPD es OBLIGATORIA para TODAS las Administraciones Públicas, incluidas las universidades públicas como la UPNA (art. 34 LOPDGDD).</div>
+
+<div class="trampa"><strong>"El derecho a la desconexión digital es solo para el sector privado."</strong><br>
+FALSO. Se aplica también al sector público, como recoge la propia LOPDGDD y su extensión al TREBEP (empleados públicos).</div>
+
+<div class="trampa"><strong>"La portabilidad permite transmitir datos tratados en papel."</strong><br>
+FALSO. La portabilidad solo aplica cuando el tratamiento es automatizado y la base jurídica es el consentimiento o la ejecución de un contrato (art. 20 RGPD).</div>
+
+</body>
+</html>
