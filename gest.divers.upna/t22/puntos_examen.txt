@@ -1,0 +1,224 @@
+╔══════════════════════════════════════════════════════════════════════════════════╗
+║   TEMA 22 – BECAS GN PARA ESTUDIOS UNIVERSITARIOS · ARCHIVO 2                 ║
+║   Puntos clave para examen + Artículos/bases normativas esenciales             ║
+╚══════════════════════════════════════════════════════════════════════════════════╝
+
+NORMATIVA DE REFERENCIA
+───────────────────────
+• Resolución 216E/2024 del Director General de Universidad (convocatoria 2024-2025, BON)
+• Resolución 990E/2023 de la Directora General de Universidad (convocatoria 2023-2024, BON)
+• Ley Foral 11/2019, de 11 de marzo, de la Administración de la Comunidad Foral de Navarra
+  → Art. 32.1.d): faculta al órgano directivo para resolver convocatorias de ayudas
+• Ley Foral 11/2005, de 9 de noviembre, de Subvenciones de Navarra
+  → Art. 13.2.e): requisito de no deudas — EXCEPCIONADO expresamente en estas becas
+• Ley Foral 14/2015, de 10 de abril, para actuar contra la violencia hacia las mujeres
+  → Base de la exención de requisitos académicos para víctimas de violencia de género
+• Ley Foral 9/2010, de 28 de abril, de ayuda a las víctimas del terrorismo
+  → Base de la exención de requisitos académicos para víctimas de terrorismo
+• Ley Orgánica 2/2023, de 22 de marzo, del Sistema Universitario (LOSU)
+  → Art. 32.6: exención de precios públicos para personas con discapacidad ≥ 33%
+• Real Decreto 201/2024, de 27 de febrero (umbrales renta Ministerio 2024-2025)
+  → Disp. adicional 4.ª: financiación compartida Estado-Navarra del componente matrícula
+
+═══════════════════════════════════════════════════════════════════════════════════
+BLOQUE 1: NATURALEZA Y CARÁCTER (pregunta muy frecuente)
+═══════════════════════════════════════════════════════════════════════════════════
+
+★ Las becas navarras son COMPLEMENTARIAS respecto de las del Ministerio.
+★ Procedimiento: concurrencia competitiva (orden de menor a mayor renta per cápita si hay insuficiencia presupuestaria).
+★ Presupuesto 2024-2025: 3.350.000 € (ampliable hasta 100.000 € adicionales).
+★ Órgano convocante: Director/a General de Universidad (Dpto. de Universidad, Innovación y Transformación Digital).
+★ Publicación: BON (Boletín Oficial de Navarra).
+★ Solicitud: EXCLUSIVAMENTE telemática vía navarra.es (Cl@ve o certificado digital).
+★ Plazo solicitud: 1 MES desde publicación en BON.
+
+═══════════════════════════════════════════════════════════════════════════════════
+BLOQUE 2: ESTUDIOS INCLUIDOS (pregunta frecuente de selección de supuestos)
+═══════════════════════════════════════════════════════════════════════════════════
+
+✔ INCLUIDOS:
+  - Grado y Máster universitarios oficiales
+  - Acceso a universidad para mayores de 25 y 45 años (UNED) → SOLO 1 AÑO
+
+✘ EXCLUIDOS:
+  - Cambio de estudios sin promoción de nivel o curso
+  - Matrícula simultánea en otra titulación del mismo nivel
+  - Ya posee un título del mismo o superior nivel (o reúne requisitos para obtenerlo)
+
+UNIVERSIDADES ADMITIDAS:
+  → UPNA: siempre
+  → Universidad de Navarra: en titulaciones oficiales
+  → Fuera de Navarra: 4 supuestos (titulación no en UPNA / domicilio más cerca de otro campus /
+    impartida en euskera no ofertada en Navarra / no obtención de plaza en UPNA por nota de corte
+    de la 2.ª lista de admisión)
+  → UNED: todas sus titulaciones oficiales
+
+★ Para comprobar si se obtuvo plaza en la UPNA: se usa la nota de corte de la SEGUNDA lista de admisión.
+
+═══════════════════════════════════════════════════════════════════════════════════
+BLOQUE 3: LOS 7 COMPONENTES (pregunta directa sobre tipos de ayuda)
+═══════════════════════════════════════════════════════════════════════════════════
+
+  1. MATRÍCULA – créditos de 1.ª matrícula (precio referencia UPNA)
+  2. RESIDENCIA – fuera del domicilio familiar por distancia/horarios
+  3. TRANSPORTE – sin transporte urbano, mín. 4 viajes/semana
+  4. COMEDOR – 2+ comidas/semana fuera, sin transporte urbano
+  5. EXPEDIENTE ACADÉMICO – nota ≥ 8,5 (solo Grado)
+  6. AYUDA EXTRAORDINARIA – renta per cápita < 4.260 € + requisitos adicionales
+  7. AYUDA A LA DIGITALIZACIÓN – 1.er curso Grado + umbral 1 → 200 €
+
+INCOMPATIBILIDADES CLAVE:
+  • Residencia ↔ Transporte (incompatibles)
+  • Residencia ↔ Comedor (incompatibles)
+  • Transporte + Comedor no pueden superar importe de Residencia (salvo zona pirenaica: +10%)
+  • Matrícula parcial → NO residencia, NO comedor, NO expediente académico
+
+═══════════════════════════════════════════════════════════════════════════════════
+BLOQUE 4: REQUISITOS (los más preguntados en examen tipo test)
+═══════════════════════════════════════════════════════════════════════════════════
+
+GENERALES:
+  ★ Empadronamiento y residencia en Navarra al menos desde el 1 de enero del año de referencia (2 años antes del curso académico).
+  ★ IRPF en Navarra en el año de referencia (si hay obligación).
+  ★ Sin deudas pendientes de devolución de becas anteriores (a 31 de octubre del año de referencia).
+  ★ Al corriente de obligaciones tributarias con la Hacienda Foral (solo el/la estudiante).
+  ★ Haber solicitado la beca del Ministerio si se reúnen los requisitos. EXCEPCIONES a la obligación:
+      - Denegada por exclusión → SÍ puede optar a la navarra
+      - Denegada por no plazos o falta docs básicos → NO puede optar a la navarra
+      - No cumple requisitos académicos ministeriales → SÍ puede optar si lo acredita documentalmente
+
+ACADÉMICOS:
+  Mínimo matrícula completa: ≥ 60 créditos (o todos los que resten para finalizar / discapacidad ≥65%: hasta 50% reducción)
+  Matrícula parcial: ≥ 30 y < 60 créditos → solo matrícula + transporte
+
+  Rendimiento para renovar (2.º curso en adelante, matrícula completa año anterior):
+    • Ciencias / Ing. y Arq.: ≥ 65% de los créditos matriculados
+    • Resto de ramas: ≥ 80% de los créditos matriculados
+    • Máster (1.er curso completo): 100% de los créditos
+    • Matrícula parcial año anterior: 100% de los créditos matriculados
+    • Discapacidad ≥ 65%: ≥ 50% de los créditos matriculados
+    • Renuncia a convocatoria de examen = asignatura NO superada
+
+  NOTA: Para dobles titulaciones de ramas distintas, se aplica el rendimiento del tramo NO de Ciencias/Ing./Arq.
+
+ECONÓMICOS:
+  ★ 4 umbrales de renta familiar disponible.
+  ★ Familia de 4 miembros (referencia habitual en examen): U1: 29.702 € / U2: 38.909 € / U3: 46.345 € / U4: 57.863 €
+  ★ Unidad familiar: padrón a 31 de diciembre del año de referencia. Hermanos solteros < 30 años convivientes.
+  ★ Independencia económica: ingresos > 3.538 €/año + titularidad/arrendamiento de vivienda habitual.
+  ★ Exclusión automática si ingresos objetivamente insuficientes para coste de vida y estudios.
+
+═══════════════════════════════════════════════════════════════════════════════════
+BLOQUE 5: CUANTÍAS CLAVE (números más examinados)
+═══════════════════════════════════════════════════════════════════════════════════
+
+MATRÍCULA (UPNA / fuera Navarra en supuestos admitidos):
+  U1: 100% | U2: 80% | U3: 60% | U4: 50%  del precio académico de la UPNA
+
+MATRÍCULA Universidad de Navarra (sin equiv. en UPNA o sin plaza):
+  U1: 4× | U2: 2,7× | U3: 1,5× | U4: 1,3×  del precio académico UPNA con misma experimentalidad
+  → Régimen transitorio (inicio antes del 31/10/2016): U1: 4,8× | U2: 3,5× | U3: 2,5× | U4: 1,5×
+
+RESIDENCIA: U1: 3.000 € | U2: 2.400 € | U3: 1.800 € | U4: 1.500 €
+  → Año adicional de Grado o 2.º año de Máster < 120 créditos: 50% de la cuantía
+  → Discapacidad ≥ 65% sin reducción de carga: +50% en la cuantía
+
+TRANSPORTE: km × trayectos semanales × coef. (2,8 general / 3,1 zona pirenaica)
+  → Sobre ese coste: U1: 100% | U2: 80% | U3: 60% | U4: 50%
+
+COMEDOR (por comida/semana): U1: 180 € | U2: 144 € | U3: 108 € | U4: 90 €
+
+EXPEDIENTE ACADÉMICO (nota ≥ 8,5; solo Grado):
+  U1: 400 € | U2: 300 € | U3: 200 € | U4: 200 €
+
+AYUDA EXTRAORDINARIA: 1.800 € fijos (renta per cápita < 4.260 € + requisito adicional)
+AYUDA A LA DIGITALIZACIÓN: 200 € (1.er curso Grado, solo U1)
+
+IMPORTE MÁXIMO GLOBAL: SMI vigente en la fecha de publicación de la convocatoria.
+REGLA DEL 70%: si no se superaron todos los créditos el año anterior → 70% de todos los conceptos
+               EXCEPTO matrícula, que siempre se concede al 100%.
+
+═══════════════════════════════════════════════════════════════════════════════════
+BLOQUE 6: CÁLCULO DEL IMPORTE (mecánica examinada en preguntas de caso)
+═══════════════════════════════════════════════════════════════════════════════════
+
+CON BECA MINISTERIAL (IMIN = importe Ministerio; IGN = importe Navarra):
+  ICOMPL = IGN − IMIN
+  - Si ICOMPL ≤ 0 → Navarra paga solo: Ayuda Extraordinaria + Expediente Académico (si proceden)
+  - Si ICOMPL > 0 → Navarra paga el MAYOR entre ICOMPL y (AE + EA)
+
+SIN BECA MINISTERIAL: Navarra paga el importe íntegro calculado según sus propios criterios.
+
+NOTA ESPECIAL MATRÍCULA UN: para calcular ICOMPL, la cuantía de matrícula GN = cuantía matrícula
+Ministerio (EXCEPTO para estudiantes de la Universidad de Navarra, donde se aplican sus multiplicadores).
+
+═══════════════════════════════════════════════════════════════════════════════════
+BLOQUE 7: DURACIÓN Y COLECTIVOS ESPECIALES
+═══════════════════════════════════════════════════════════════════════════════════
+
+DURACIÓN (años del plan + años adicionales):
+  • Grado Ciencias / Ing. y Arq.: +2 años adicionales
+  • Grado resto de ramas: +1 año adicional
+  • Máster: = n.º de cursos del plan (sin años adicionales)
+  • Doble titulación: n.º de años del plan; si alguna es Ing./Arq. o Ciencias: +1 año
+  • Discapacidad ≥ 65% con reducción: +2 años (Ing./Arq.: +4 años)
+  • UNED acceso mayores 25/45 años: SOLO 1 AÑO
+
+  ★ Límite absoluto: suma de créditos becados ≤ créditos del plan de estudios.
+
+VÍCTIMAS VIOLENCIA DE GÉNERO / TERRORISMO:
+  → Sin requisitos de: carga lectiva superada | nota media | mínimo créditos matriculados |
+    cambio de estudios | límite de años | porcentaje de superación.
+  → Ley Foral 14/2015 (violencia género) y Ley Foral 9/2010 (terrorismo).
+
+DISCAPACIDAD ≥ 65%:
+  → Matrícula reducida al 50% (con las mismas ventajas en rendimiento y cuantías).
+  → Cuantías de residencia, transporte y comedor: +50% si NO usa reducción de carga.
+  → Porcentaje de superación requerido: solo el 50% de los créditos matriculados.
+
+═══════════════════════════════════════════════════════════════════════════════════
+BLOQUE 8: ZONA PIRENAICA (detalle diferencial navarro)
+═══════════════════════════════════════════════════════════════════════════════════
+
+Municipios: Valles del Roncal, Salazar, Aezkoa y Erro; municipios de Luzaide/Valcarlos,
+Auritz/Burguete y Orreaga/Roncesvalles.
+→ Coeficiente de transporte: 3,1 (vs 2,8 general).
+→ Suma transporte + comedor puede exceder el importe de residencia hasta un 10% adicional.
+
+═══════════════════════════════════════════════════════════════════════════════════
+PUNTOS TRAMPA HABITUALES EN TEST
+═══════════════════════════════════════════════════════════════════════════════════
+
+1. ¿Las becas navarras sustituyen a las del Ministerio? → NO, son complementarias.
+2. ¿Quién no solicitó la beca ministerial puede pedir la navarra? → Depende: si tenía requisitos
+   y no la solicitó por no plazos/falta docs = NO. Si no cumplía requisitos académicos y lo acredita = SÍ.
+3. ¿La beca de matrícula se paga con la regla del 70%? → NO, la matrícula se concede siempre al 100%.
+4. ¿Un estudiante con matrícula parcial puede pedir la beca de residencia? → NO.
+5. ¿Un estudiante en Máster puede obtener beca de expediente académico? → NO, solo Grado.
+6. ¿La digitalización (200 €) es para todos los umbrales? → NO, solo umbral 1.
+7. ¿La nota de corte para probar que no obtuvo plaza en UPNA es de la primera lista? → NO, de la SEGUNDA.
+8. ¿La beca de comedor se puede obtener estudiando en una universidad fuera de Navarra? → NO.
+9. ¿Los créditos convalidados cuentan para el mínimo a matricular? → NO.
+10. ¿Una renuncia a una convocatoria de examen cuenta como aprobada? → NO, computa como no superada.
+11. ¿Los dobles grados de distintas ramas aplican el porcentaje más favorable (65%)? → NO, aplica el 80%.
+12. ¿La ayuda extraordinaria se paga también cuando la beca navarra es inferior a la ministerial? → SÍ,
+    siempre se suma al importe, aunque el ICOMPL sea ≤ 0.
+
+═══════════════════════════════════════════════════════════════════════════════════
+ARTÍCULOS Y BASES CLAVE (para citar en examen oral o escrito)
+═══════════════════════════════════════════════════════════════════════════════════
+
+BASE 1  → Objeto y carácter complementario + concurrencia competitiva
+BASE 2  → Estudios y centros incluidos (UPNA, UN, fuera de Navarra, UNED)
+BASE 3  → Los 7 tipos de becas y ayudas
+BASE 4  → Requisitos generales y académicos
+BASE 5  → Renta y umbrales (4 umbrales, unidad familiar, patrimonio)
+BASE 6  → Cálculo del importe (Caso A con Ministerio / Caso B sin Ministerio) + Regla 70%
+BASE 7  → Cuantías detalladas (7.1 a 7.9)
+BASE 8  → Presentación de solicitudes, plazo, documentación
+BASE 9  → Protección de datos y cesión
+
+Art. 32.1.d) LF 11/2019 → Habilitación del Director General de Universidad para convocar
+Art. 13.2.e) LF 11/2005 → Requisito de no deudas excepcionado en esta convocatoria
+Ley Foral 14/2015 → Exención requisitos para víctimas violencia género
+Ley Foral 9/2010  → Exención requisitos para víctimas de terrorismo

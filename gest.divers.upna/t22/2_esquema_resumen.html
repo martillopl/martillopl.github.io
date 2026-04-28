@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>2_esquema_resumen.html · Tema 22 – Becas Carácter General Gobierno de Navarra</title>
+  <style>
+    *{box-sizing:border-box;}
+    body{font-family:Arial,Helvetica,sans-serif;line-height:1.5;color:#1e293b;margin:26px;background:#f1fdf4;}
+    h1{font-size:20px;border-bottom:4px solid #16a34a;padding-bottom:8px;color:#14532d;margin-top:0;background:#fff;padding:14px 18px;border-radius:8px 8px 0 0;}
+    h2{font-size:14px;color:#fff;background:#15803d;padding:8px 14px;border-radius:6px;margin:28px 0 10px 0;letter-spacing:.5px;}
+
+    /* Cards genéricas */
+    .grid{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:14px;}
+    .card{background:#fff;border-radius:8px;padding:14px 16px;flex:1 1 190px;border-top:4px solid #16a34a;box-shadow:0 2px 6px rgba(0,0,0,.07);}
+    .card .ctitle{font-size:11px;font-weight:700;text-transform:uppercase;color:#15803d;margin-bottom:5px;}
+    .card .cbig{font-size:22px;font-weight:900;color:#14532d;}
+    .card p{font-size:12.5px;margin:4px 0;}
+
+    /* Fichas numeradas */
+    .fichas{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;}
+    .ficha{border-radius:8px;padding:12px 15px;flex:1 1 170px;color:#fff;min-width:155px;}
+    .ficha .fn{font-size:26px;font-weight:900;opacity:.3;}
+    .ficha .ft{font-size:12.5px;font-weight:700;margin-top:4px;}
+    .ficha .fd{font-size:11.5px;margin-top:3px;opacity:.9;}
+    .f1{background:#16a34a;} .f2{background:#15803d;} .f3{background:#166534;}
+    .f4{background:#14532d;} .f5{background:#052e16;} .f6{background:#065f46;} .f7{background:#047857;}
+
+    /* Comparativa */
+    .compare{display:flex;gap:14px;margin-bottom:14px;}
+    .cbox{flex:1;border-radius:8px;padding:14px 16px;}
+    .cbox h3{font-size:13px;font-weight:700;margin:0 0 10px 0;padding-bottom:6px;border-bottom:2px solid rgba(255,255,255,.3);}
+    .cbox ul{padding-left:16px;margin:0;font-size:12.5px;}
+    .cbox li{margin-bottom:5px;}
+    .cbox-a{background:#15803d;color:#fff;}
+    .cbox-b{background:#0e7490;color:#fff;}
+    .cbox-c{background:#7c3aed;color:#fff;}
+
+    /* Tabla */
+    table{width:100%;border-collapse:collapse;margin:8px 0 18px 0;font-size:12.5px;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.07);}
+    th{background:#15803d;color:#fff;padding:8px 11px;text-align:left;}
+    th.a2{background:#16a34a;}
+    th.a3{background:#4ade80;color:#14532d;}
+    td{border:1px solid #dcfce7;padding:7px 11px;vertical-align:top;}
+    tr:nth-child(even) td{background:#f0fdf4;}
+
+    /* Píldoras */
+    .pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+    .pill{background:#15803d;color:#fff;border-radius:20px;padding:6px 15px;font-size:12px;font-weight:700;}
+    .pill span{font-size:16px;display:block;text-align:center;}
+
+    /* Escalera */
+    .escalera{margin-bottom:14px;}
+    .esc-row{display:flex;align-items:center;gap:10px;margin-bottom:7px;}
+    .esc-badge{min-width:90px;text-align:center;border-radius:6px;padding:8px 10px;color:#fff;font-weight:700;font-size:12px;}
+    .u1{background:#16a34a;} .u2{background:#65a30d;} .u3{background:#ca8a04;} .u4{background:#b45309;} .u0{background:#64748b;}
+    .esc-desc{background:#fff;border-radius:6px;padding:8px 13px;flex:1;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.08);}
+    .esc-desc strong{color:#15803d;}
+
+    /* Cadena */
+    .cadena{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-bottom:14px;}
+    .paso{background:#16a34a;color:#fff;border-radius:8px;padding:9px 13px;font-size:12px;text-align:center;font-weight:700;min-width:110px;}
+    .arrow{font-size:18px;color:#16a34a;font-weight:700;}
+
+    /* Número grande */
+    .numgrid{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;}
+    .numcard{background:#fff;border-radius:8px;padding:12px 14px;flex:1 1 130px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.08);border-bottom:4px solid #16a34a;}
+    .numcard .big{font-size:28px;font-weight:900;color:#15803d;}
+    .numcard .desc{font-size:11px;color:#475569;margin-top:3px;}
+
+    /* Nota / aviso */
+    .nota{background:#dcfce7;border:1px solid #86efac;padding:10px 14px;margin:10px 0 16px 0;font-size:12.5px;border-radius:4px;}
+    .alerta{background:#fef3c7;border-left:5px solid #d97706;padding:9px 13px;margin-bottom:12px;font-size:12.5px;border-radius:0 6px 6px 0;}
+    .mnemo{background:#14532d;color:#fff;border-radius:8px;padding:12px 16px;margin-bottom:14px;font-size:13px;}
+    .mnemo span{color:#86efac;font-weight:700;}
+
+    /* Trampa */
+    .trampa{background:#fff5f5;border-left:5px solid #dc2626;padding:9px 13px;margin-bottom:7px;font-size:12.5px;border-radius:0 6px 6px 0;}
+    .trampa strong{color:#b91c1c;}
+
+    /* Concepto destacado */
+    .concepto{background:#fff;border-radius:8px;padding:12px 16px;margin-bottom:10px;border-left:6px solid #16a34a;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.07);}
+    .concepto .cn{font-weight:700;color:#15803d;font-size:13px;}
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 22 · Becas de Carácter General del Gobierno de Navarra para Estudios Universitarios<br>
+<span style="font-size:12px;font-weight:400;color:#475569;">Esquema visual para memorización rápida — Convocatoria 2025-2026</span></h1>
+
+
+<!-- ══ BLOQUE 0: FICHA NORMATIVA ══ -->
+<h2>0 · FICHA NORMATIVA Y CARÁCTER DE LAS BECAS</h2>
+<div class="grid">
+  <div class="card">
+    <div class="ctitle">Órgano convocante</div>
+    <div class="cbig" style="font-size:14px;">Dpto. Universidad,<br>Innovación y T.D.</div>
+    <p>Gobierno de Navarra<br>Sección de Universidad</p>
+  </div>
+  <div class="card">
+    <div class="ctitle">Norma 2025-2026</div>
+    <div class="cbig" style="font-size:15px;">Resolución<br>236E/2025</div>
+    <p>BON: 15/09/2025<br>Plazo: 16/09 – 15/10/2025</p>
+  </div>
+  <div class="card">
+    <div class="ctitle">Carácter esencial</div>
+    <div class="cbig" style="font-size:16px;">COMPLEMENTARIAS</div>
+    <p>A las becas del MFP · No las sustituyen · las amplían y completan</p>
+  </div>
+  <div class="card">
+    <div class="ctitle">Presupuesto 2025-2026</div>
+    <div class="cbig">3,3 M€</div>
+    <p>Ampliable hasta +100.000 € adicionales si el nº de solicitudes lo requiere</p>
+  </div>
+  <div class="card">
+    <div class="ctitle">Concesión</div>
+    <div class="cbig" style="font-size:15px;">DIRECTA</div>
+    <p>No competitiva · Todo el que cumple requisitos académicos y económicos la obtiene</p>
+  </div>
+</div>
+
+<div class="alerta">
+  <strong>⚠ Requisito previo e indispensable:</strong> Haber solicitado la beca al <strong>Ministerio de Educación y Formación Profesional</strong> para el mismo curso, cuando se reúnan las condiciones requeridas para ello.<br>
+  <strong>Sin solicitud previa al MFP → sin beca navarra.</strong>
+</div>
+
+
+<!-- ══ BLOQUE 1: BENEFICIARIOS Y ENSEÑANZAS ══ -->
+<h2>1 · BENEFICIARIOS Y ENSEÑANZAS INCLUIDAS</h2>
+<div class="compare">
+  <div class="cbox cbox-a">
+    <h3>👤 ¿Quién puede solicitar?</h3>
+    <ul>
+      <li>Estudiantes <strong>navarros</strong> o <strong>empadronados en Navarra</strong></li>
+      <li>Matriculados en estudios universitarios oficiales impartidos en <strong>universidades españolas</strong></li>
+      <li>Que hayan solicitado, si procede, la beca al MFP</li>
+      <li>Sin restricción de universidad: pueden estudiar fuera de Navarra</li>
+    </ul>
+  </div>
+  <div class="cbox cbox-b">
+    <h3>📚 Enseñanzas incluidas (G-M-A)</h3>
+    <ul>
+      <li><strong>G</strong>rado universitario oficial</li>
+      <li><strong>M</strong>áster universitario oficial</li>
+      <li><strong>A</strong>cceso mayores de 25 o 45 años (solo UNED)</li>
+      <li>Incluye: universidades públicas y privadas españolas</li>
+      <li>Excluye: doctorados, títulos propios</li>
+    </ul>
+  </div>
+</div>
+<div class="mnemo"><span>MNEMOTÉCNICO G-M-A:</span> <strong>G</strong>rado · <strong>M</strong>áster · <strong>A</strong>cceso (mayores 25/45 años, UNED)</div>
+
+
+<!-- ══ BLOQUE 2: LOS 7 CONCEPTOS ══ -->
+<h2>2 · LOS 7 CONCEPTOS (COMPONENTES) DE LA BECA NAVARRA</h2>
+<div class="mnemo"><span>MNEMOTÉCNICO M-R-T-E-X-D-C:</span> <strong>M</strong>atrícula · <strong>R</strong>esidencia · <strong>T</strong>ransporte · <strong>E</strong>xpediente · e<strong>X</strong>traordinaria · <strong>D</strong>igitalización · <strong>C</strong>omedor</div>
+<div class="fichas">
+  <div class="ficha f1">
+    <div class="fn">1</div>
+    <div class="ft">🎓 Matrícula</div>
+    <div class="fd">Cubre el precio público de los créditos matriculados · complementa la beca de matrícula del MFP</div>
+  </div>
+  <div class="ficha f2">
+    <div class="fn">2</div>
+    <div class="ft">🏠 Residencia</div>
+    <div class="fd">Para estudiantes que residan fuera del domicilio familiar por razón de estudios</div>
+  </div>
+  <div class="ficha f3">
+    <div class="fn">3</div>
+    <div class="ft">🚌 Transporte</div>
+    <div class="fd">Para estudiantes que deban desplazarse al centro universitario</div>
+  </div>
+  <div class="ficha f4">
+    <div class="fn">4</div>
+    <div class="ft">⭐ Expediente académico</div>
+    <div class="fd">Nota media ≥ <strong>8,5 puntos</strong> · premio al rendimiento académico excelente</div>
+  </div>
+  <div class="ficha f5">
+    <div class="fn">5</div>
+    <div class="ft">🆘 Ayuda Extraordinaria</div>
+    <div class="fd">Solo en casos excepcionales de necesidades económicas graves · Base 7.5 de la convocatoria</div>
+  </div>
+  <div class="ficha f6">
+    <div class="fn">6</div>
+    <div class="ft">💻 Digitalización</div>
+    <div class="fd"><strong>200 €</strong> · Exclusivo 1.er curso de Grado + umbral 1 de renta · Para equipamiento tecnológico</div>
+  </div>
+  <div class="ficha f7">
+    <div class="fn">7</div>
+    <div class="ft">🍽 Comedor</div>
+    <div class="fd">Para estudiantes con necesidades de desplazamiento o en situación económica desfavorable</div>
+  </div>
+</div>
+<div class="nota">
+  <strong>Conceptos exclusivos de Navarra (no los da el Ministerio):</strong>
+  Ayuda a la <strong>Digitalización</strong> (200 €) · Ayuda <strong>Extraordinaria</strong> · <strong>Comedor</strong> · <strong>Transporte</strong> propio
+</div>
+
+
+<!-- ══ BLOQUE 3: COMPARATIVA MFP vs NAVARRA ══ -->
+<h2>3 · BECAS MFP vs BECAS GOBIERNO DE NAVARRA — COMPARATIVA CLAVE</h2>
+<table>
+  <tr><th style="width:25%">Dimensión</th><th class="a2">Becas MFP (Ministerio)</th><th class="a3">Becas Gobierno de Navarra</th></tr>
+  <tr><td><strong>Ámbito</strong></td><td>Nacional (todo el Estado)</td><td>Autonómico (solo navarros/empadronados)</td></tr>
+  <tr><td><strong>Carácter</strong></td><td>Sistema general</td><td><strong>Complementario</strong> al Ministerio</td></tr>
+  <tr><td><strong>Requisito previo</strong></td><td>—</td><td>Haber solicitado la beca MFP (si se cumplen condiciones)</td></tr>
+  <tr><td><strong>Conceptos exclusivos</strong></td><td>Renta fija · Residencia · Excelencia · Variable · Matrícula</td><td>+Digitalización (200€) · +Extraordinaria · +Comedor · +Transporte propio</td></tr>
+  <tr><td><strong>Presupuesto 2025-26</strong></td><td>~2.535 M€ (estatal)</td><td><strong>3,3 M€</strong></td></tr>
+  <tr><td><strong>Beneficiarios aprox.</strong></td><td>Sin cupo</td><td>~1.921 (2024-2025)</td></tr>
+  <tr><td><strong>Plazo solicitud</strong></td><td>Marzo–mayo (año anterior)</td><td><strong>Septiembre–octubre</strong> del mismo curso</td></tr>
+  <tr><td><strong>Publicación norma</strong></td><td>BOE</td><td><strong>BON</strong> (Boletín Oficial de Navarra)</td></tr>
+  <tr><td><strong>Tramitación</strong></td><td>Sede electrónica MFP</td><td><strong>navarra.es</strong> (app becas universitarias)</td></tr>
+  <tr><td><strong>Determinación cuantía</strong></td><td>Fórmula fija anual RD</td><td>Considerando la concesión o denegación de la beca MFP</td></tr>
+</table>
+
+
+<!-- ══ BLOQUE 4: UMBRALES DE RENTA ══ -->
+<h2>4 · UMBRALES DE RENTA FAMILIAR — ESCALERA NAVARRA</h2>
+<div class="nota">Los umbrales navarros se incrementaron un <strong>5%</strong> en 2024-2025, alineándose con los cambios del Ministerio. Esta actualización progresiva es política del Gobierno de Navarra.</div>
+<div class="escalera">
+  <div class="esc-row">
+    <div class="esc-badge u1">UMBRAL 1<br>(renta más baja)</div>
+    <div class="esc-desc"><strong>Todos los conceptos:</strong> Matrícula + Residencia + Transporte + Expediente + Extraordinaria + <strong>Digitalización (200 €)</strong> + Comedor</div>
+  </div>
+  <div class="esc-row">
+    <div class="esc-badge u2">UMBRAL 2</div>
+    <div class="esc-desc">Matrícula + Residencia + Transporte + Expediente + Extraordinaria + Comedor · <strong>SIN ayuda a la digitalización</strong></div>
+  </div>
+  <div class="esc-row">
+    <div class="esc-badge u3">UMBRAL 3</div>
+    <div class="esc-desc">Matrícula + Residencia + Transporte + Expediente · <strong>SIN extraordinaria, SIN digitalización</strong></div>
+  </div>
+  <div class="esc-row">
+    <div class="esc-badge u4">UMBRAL 4</div>
+    <div class="esc-desc">Solo <strong>Matrícula + Transporte</strong> en algunos casos · Residencia reducida</div>
+  </div>
+  <div class="esc-row">
+    <div class="esc-badge u0">Sin beca</div>
+    <div class="esc-desc">Supera el umbral 4 → ningún componente navarro</div>
+  </div>
+</div>
+<div class="mnemo"><span>CLAVE:</span> La ayuda a la digitalización (200 €) es <strong>exclusiva del umbral 1</strong> y del <strong>1.er curso de Grado</strong>. Es el concepto más restrictivo de todos.</div>
+
+
+<!-- ══ BLOQUE 5: REQUISITOS GENERALES, ECONÓMICOS Y ACADÉMICOS ══ -->
+<h2>5 · TRES EJES DE REQUISITOS PARA LA CONCESIÓN</h2>
+<div class="compare">
+  <div class="cbox cbox-a">
+    <h3>🔵 Req. Generales</h3>
+    <ul>
+      <li>Ser navarro o empadronado en Navarra</li>
+      <li>Matriculado en universidad española (pública o privada)</li>
+      <li>Haber solicitado beca MFP si se reúnen las condiciones</li>
+      <li>Cumplir obligaciones fiscales (declaración IRPF presentada)</li>
+      <li>No tener título del mismo o superior nivel</li>
+    </ul>
+  </div>
+  <div class="cbox cbox-b">
+    <h3>💶 Req. Económicos</h3>
+    <ul>
+      <li>Renta familiar dentro del umbral correspondiente</li>
+      <li>Umbrales actualizados +5% (desde 2024-2025)</li>
+      <li>Límites de patrimonio (en línea con convocatoria MFP)</li>
+      <li>Renta disponible per cápita para ayuda extraordinaria: ≤ 4.800 €</li>
+      <li>Posibilidad de consulta telemática con AEAT (si se autoriza)</li>
+    </ul>
+  </div>
+  <div class="cbox cbox-c">
+    <h3>📖 Req. Académicos</h3>
+    <ul>
+      <li>Créditos matriculados: mín. <strong>60 créditos</strong> (completa) o 30 (parcial)</li>
+      <li>Créditos superados del año anterior (porcentajes similares al MFP)</li>
+      <li>Para beca por <strong>expediente</strong>: nota ≥ <strong>8,5 puntos</strong></li>
+      <li>Máster: requisitos propios de la convocatoria</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ══ BLOQUE 6: TRAMITACIÓN ══ -->
+<h2>6 · TRAMITACIÓN Y GESTIÓN</h2>
+<div class="grid">
+  <div class="card">
+    <div class="ctitle">Canal de solicitud</div>
+    <div class="cbig" style="font-size:14px;">Telemático</div>
+    <p>Exclusivamente en <strong>navarra.es</strong> · App becas universitarias · Cl@ve, certificado digital o DNI electrónico</p>
+  </div>
+  <div class="card">
+    <div class="ctitle">Órgano gestor</div>
+    <div class="cbig" style="font-size:14px;">Sección de Universidad</div>
+    <p>C/ Cabárceno, 6, 3.ª planta · 31621 Sarriguren · becas.universitarias@navarra.es</p>
+  </div>
+  <div class="card">
+    <div class="ctitle">Plazo 2025-2026</div>
+    <div class="cbig" style="font-size:15px;">16/09 – 15/10/2025</div>
+    <p>Publicación en BON: 15/09/2025 · La app se activa al día siguiente de la publicación</p>
+  </div>
+  <div class="card">
+    <div class="ctitle">Representación</div>
+    <div class="cbig" style="font-size:13px;">Admitida</div>
+    <p>La solicitud puede presentarla un representante adjuntando <strong>Declaración responsable de representación</strong></p>
+  </div>
+</div>
+<div class="cadena">
+  <div class="paso">Solicitud<br>beca MFP<br>(mar.–may.)</div>
+  <div class="arrow">→</div>
+  <div class="paso">Publicación<br>BON<br>(15/09)</div>
+  <div class="arrow">→</div>
+  <div class="paso">Solicitud<br>beca navarra<br>(16/09–15/10)</div>
+  <div class="arrow">→</div>
+  <div class="paso">Cruce datos<br>AEAT · MFP<br>(si autorizado)</div>
+  <div class="arrow">→</div>
+  <div class="paso">Verificación<br>req. acad.<br>y económicos</div>
+  <div class="arrow">→</div>
+  <div class="paso">Resolución<br>concesión<br>/ denegación</div>
+  <div class="arrow">→</div>
+  <div class="paso">Pago al<br>estudiante<br>y/o centro</div>
+</div>
+<div class="nota">La beca navarra se determina <strong>considerando la concesión o denegación de la beca MFP</strong>. Por ello se solicita después del MFP y se resuelve con información cruzada.</div>
+
+
+<!-- ══ BLOQUE 7: BECAS EQUIDAD UPNA ══ -->
+<h2>7 · BECAS EQUIDAD UPNA — MODALIDAD ESPECIAL DE ALTO RENDIMIENTO</h2>
+<div class="compare">
+  <div class="cbox cbox-a">
+    <h3>📋 Características</h3>
+    <ul>
+      <li>Dirigidas a jóvenes con <strong>bajos ingresos y alto rendimiento</strong></li>
+      <li>Requieren ser beneficiarios de una beca MFP</li>
+      <li>Empadronamiento en Navarra</li>
+      <li>Nota EvAU (fase obligatoria) ≥ <strong>8,5 puntos</strong></li>
+      <li>Solo para estudiantes de la UPNA</li>
+    </ul>
+  </div>
+  <div class="cbox cbox-b">
+    <h3>💶 Dotación y normativa</h3>
+    <ul>
+      <li>2.ª convocatoria: dotadas con <strong>570.000 €</strong></li>
+      <li>Resolución 320E/2025 (diciembre 2025)</li>
+      <li>Convocadas por la Dirección General de Universidad</li>
+      <li>Objetivo: fomentar el talento con independencia de la realidad socioeconómica</li>
+    </ul>
+  </div>
+</div>
+<div class="mnemo"><span>EQUIDAD UPNA =</span> Beca MFP + Navarra + Nota EvAU ≥ 8,5 + Solo UPNA · No confundir con las becas generales navarras</div>
+
+
+<!-- ══ BLOQUE 8: GRANDES NÚMEROS ══ -->
+<h2>8 · LOS GRANDES NÚMEROS DEL TEMA 22</h2>
+<div class="numgrid">
+  <div class="numcard"><div class="big">3,3 M€</div><div class="desc">Presupuesto becas universitarias Navarra 2025-2026</div></div>
+  <div class="numcard"><div class="big">3,35 M€</div><div class="desc">Presupuesto 2024-2025 (+50.000 € sobre el año anterior)</div></div>
+  <div class="numcard"><div class="big">+100 K€</div><div class="desc">Ampliación posible si el nº de solicitudes lo requiere</div></div>
+  <div class="numcard"><div class="big">1.921</div><div class="desc">Estudiantes beneficiarios en 2024-2025</div></div>
+  <div class="numcard"><div class="big">2,5 M€</div><div class="desc">Importe total concedido en 2024-2025</div></div>
+  <div class="numcard"><div class="big">7</div><div class="desc">Conceptos (componentes) de la beca navarra</div></div>
+  <div class="numcard"><div class="big">200 €</div><div class="desc">Ayuda a la digitalización (1.er Grado · umbral 1)</div></div>
+  <div class="numcard"><div class="big">8,5</div><div class="desc">Nota mínima para beca por expediente académico</div></div>
+  <div class="numcard"><div class="big">5%</div><div class="desc">Incremento de umbrales de renta desde 2024-2025</div></div>
+  <div class="numcard"><div class="big">570 K€</div><div class="desc">Dotación de la 2.ª convocatoria Becas Equidad UPNA</div></div>
+  <div class="numcard"><div class="big">4.800 €</div><div class="desc">Límite renta per cápita para ayuda extraordinaria</div></div>
+  <div class="numcard"><div class="big">60</div><div class="desc">Créditos mínimos para matrícula completa</div></div>
+  <div class="numcard"><div class="big">236E/2025</div><div class="desc">Resolución de la convocatoria 2025-2026</div></div>
+  <div class="numcard"><div class="big">BON<br>15/09</div><div class="desc">Publicación en el Boletín Oficial de Navarra 2025-2026</div></div>
+</div>
+
+
+<!-- ══ BLOQUE 9: TRAMPAS DE EXAMEN ══ -->
+<h2>9 · TRAMPAS FRECUENTES DE EXAMEN</h2>
+<div class="trampa"><strong>"Las becas navarras son independientes de las del Ministerio."</strong> FALSO. Son <strong>complementarias</strong> a las estatales. Además, es requisito indispensable haber solicitado la beca MFP cuando se reúnan las condiciones.</div>
+<div class="trampa"><strong>"Cualquier estudiante universitario español puede pedir la beca navarra."</strong> FALSO. Solo los <strong>navarros o empadronados en Navarra</strong>, aunque estudien en cualquier universidad española.</div>
+<div class="trampa"><strong>"La beca navarra se solicita en los mismos plazos que la del Ministerio (marzo-mayo)."</strong> FALSO. La beca navarra se solicita en <strong>septiembre-octubre</strong> del mismo curso. Es posterior a la del MFP.</div>
+<div class="trampa"><strong>"La ayuda a la digitalización (200 €) la reciben todos los becados navarros."</strong> FALSO. Solo para estudiantes de <strong>primer curso de Grado</strong> en el <strong>umbral 1</strong> de renta.</div>
+<div class="trampa"><strong>"Los conceptos de la beca navarra son los mismos que los del MFP."</strong> FALSO. Navarra añade conceptos exclusivos: digitalización, extraordinaria y comedor, no contemplados por el Ministerio.</div>
+<div class="trampa"><strong>"La beca por expediente académico requiere nota ≥ 9."</strong> FALSO. El umbral navarro es <strong>nota ≥ 8,5 puntos</strong>, no 9.</div>
+<div class="trampa"><strong>"La solicitud puede presentarse en papel en las oficinas del Departamento."</strong> FALSO. La tramitación es <strong>exclusivamente telemática</strong> en navarra.es.</div>
+<div class="trampa"><strong>"El presupuesto de becas navarras universitarias es de 1 millón de euros."</strong> FALSO. El presupuesto universitario es de <strong>3,3 M€</strong>. El de 1 M€ corresponde a las becas de enseñanzas postobligatorias NO universitarias.</div>
+<div class="trampa"><strong>"Las Becas Equidad UPNA se dirigen a todos los estudiantes navarros."</strong> FALSO. Son exclusivamente para estudiantes de la <strong>UPNA</strong> con nota EvAU ≥ 8,5 y beneficiarios de la beca MFP.</div>
+<div class="trampa"><strong>"Si te deniegan la beca del Ministerio, puedes obtener igualmente la beca navarra."</strong> MATIZABLE. La beca navarra se determina <strong>considerando la concesión o denegación</strong> de la MFP. La denegación MFP no impide automáticamente la navarra, pero sí afecta al cálculo de su importe.</div>
+
+</body>
+</html>
