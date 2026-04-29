@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 39 · HTML 2 · Esquema-resumen visual · LF 8/2017 LGTBI+ Navarra</title>
+<style>
+:root{--bg:#f0f9ff;--card:#fff;--s2:#f0f9ff;--line:#7dd3fc;--text:#0c4a6e;--muted:#0284c7;--p:#075985;--warn:#d97706;--red:#dc2626;--grn:#059669;--vio:#7c3aed;--sh:0 2px 10px rgba(7,89,133,.09)}
+[data-theme="dark"]{--bg:#020c1a;--card:#0a1e35;--s2:#0e2a45;--line:#075985;--text:#bae6fd;--muted:#38bdf8;--p:#38bdf8;--warn:#fbbf24;--red:#fca5a5;--grn:#6ee7b7;--vio:#c4b5fd;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.6;background:var(--bg);color:var(--text);padding:22px}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.97rem;color:var(--p)}.hdr p{font-size:.74rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.72rem}
+h2{font-size:.87rem;font-weight:800;color:#fff;background:var(--p);padding:8px 15px;border-radius:7px;margin:22px 0 10px;display:inline-block}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(138px,1fr));gap:10px;margin-bottom:12px}
+.kbox{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:11px 13px;box-shadow:var(--sh);text-align:center}
+.big{font-size:1.05rem;font-weight:800;color:var(--p);margin-bottom:3px}.ksmall{font-size:.72rem;color:var(--muted)}.kmini{font-size:.71rem;margin-top:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(252px,1fr));gap:11px;margin-bottom:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:13px 15px;box-shadow:var(--sh)}
+.tag{display:block;font-size:.63rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:5px}
+.card p{font-size:.79rem;margin:.28rem 0}
+.card ul{padding-left:15px;margin:.25rem 0}.card li{margin:.22rem 0;font-size:.78rem}
+.card strong{color:var(--p)}
+.l1{border-left:4px solid var(--p)}
+.l2{border-left:4px solid #d97706}
+.l3{border-left:4px solid #7c3aed}
+.l4{border-left:4px solid #059669}
+.l5{border-left:4px solid #dc2626}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.75rem;border-left:4px solid;margin:7px 0}
+.n-ok{background:rgba(5,150,105,.07);border-color:#059669;color:#065f46}
+.n-warn{background:#fef3c7;border-color:#d97706;color:#78350f}
+.n-err{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .n-warn{background:#451a03;color:#fde68a}
+[data-theme="dark"] .n-err{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .n-ok{background:rgba(110,231,183,.07);color:#6ee7b7}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.64rem;font-weight:700;border:1px solid transparent}
+.b-ok{background:rgba(5,150,105,.12);color:#059669;border-color:rgba(5,150,105,.3)}
+.b-err{background:rgba(220,38,38,.12);color:#dc2626;border-color:rgba(220,38,38,.3)}
+.b-warn{background:rgba(217,119,6,.12);color:var(--warn);border-color:rgba(217,119,6,.3)}
+.b-sky{background:rgba(2,132,199,.12);color:var(--muted);border-color:rgba(2,132,199,.3)}
+.b-vio{background:rgba(124,58,237,.12);color:var(--vio);border-color:rgba(124,58,237,.3)}
+.pill{display:inline-block;background:var(--s2);border:1px solid var(--line);color:var(--p);padding:3px 10px;border-radius:999px;font-size:.72rem;font-weight:600;margin:2px}
+.six{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:8px 0}
+.sixbox{background:var(--s2);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:.76rem}
+.sixbox strong{color:var(--p)}
+.flow3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
+.step{background:var(--card);border:2px solid var(--line);border-radius:11px;padding:12px 13px;box-shadow:var(--sh);text-align:center}
+.step .num{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;background:var(--p);color:#fff;border-radius:50%;font-size:.85rem;font-weight:800;margin-bottom:6px}
+.step h4{font-size:.81rem;font-weight:700;color:var(--p);margin:0 0 4px}
+.step p{font-size:.75rem;margin:0}
+.master{background:var(--card);border:2px solid var(--line);border-radius:11px;padding:14px 18px;box-shadow:var(--sh);margin-bottom:12px}
+.master p{font-size:.81rem;margin-bottom:6px}
+.sanc{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
+.sbox{background:var(--card);border:2px solid var(--line);border-radius:11px;padding:13px 15px;box-shadow:var(--sh);text-align:center}
+.sbox .stit{font-size:.72rem;font-weight:800;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.sbox .snum{font-size:1.1rem;font-weight:800;color:var(--p);margin-bottom:4px}
+.sbox p{font-size:.73rem;margin:.2rem 0}
+.tw{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:12px;box-shadow:var(--sh);overflow-x:auto;margin-bottom:12px}
+table{width:100%;border-collapse:collapse}
+th{background:var(--s2);color:var(--muted);font-size:.66rem;text-transform:uppercase;padding:7px 9px;text-align:left}
+td{padding:7px 9px;border-bottom:1px solid var(--s2);font-size:.78rem;vertical-align:top}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+@media(max-width:900px){.flow3,.six{grid-template-columns:repeat(2,1fr)}.sanc{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid,.kpi,.flow3,.six,.sanc{grid-template-columns:1fr}}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 39 · HTML 2 · Esquema-resumen con bloques visuales para memorización rápida</h1>
+    <p>Ley Foral 8/2017, de 19 de junio, para la Igualdad Social de las personas LGTBI+ · Título Preliminar · Títulos II, III y IV (Cap. IV)</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- FICHAS FLASH -->
+<h2>Fichas flash</h2>
+<div class="kpi">
+  <div class="kbox"><div class="big">LF 8/2017</div><div class="ksmall">Norma</div><div class="kmini">Ley <strong>Foral</strong> de Navarra · No LO</div></div>
+  <div class="kbox"><div class="big">19/06/2017</div><div class="ksmall">Fecha</div><div class="kmini">BON 124 · 28/06/2017<br>BOE 173 · 21/07/2017</div></div>
+  <div class="kbox"><div class="big">LORAFNA</div><div class="ksmall">Habilitación</div><div class="kmini">Art. 44.18: competencia exclusiva Navarra en igualdad</div></div>
+  <div class="kbox"><div class="big">4 Títulos</div><div class="ksmall">Estructura</div><div class="kmini">T.Prelim.+4T+7DA+2DT+1DD+2DF</div></div>
+  <div class="kbox"><div class="big">LF 12/2009</div><div class="ksmall">Norma derogada</div><div class="kmini">LF de no discriminación por identidad de género</div></div>
+  <div class="kbox"><div class="big">Yogyakarta</div><div class="ksmall">Marco internacional</div><div class="kmini">Principios de Yogyakarta + Art. 21 Carta DDFUE</div></div>
+</div>
+
+<!-- IDEA FUERZA -->
+<h2>Idea fuerza</h2>
+<div class="master">
+  <p><strong>Objeto (art. 1):</strong> Garantizar plenamente la igualdad real y efectiva y los derechos de las personas LGTBI+ mediante la <strong>PREVENCIÓN</strong>, la <strong>CORRECCIÓN</strong> y la <strong>ELIMINACIÓN</strong> de toda discriminación por razón de:</p>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin:8px 0">
+    <span class="pill">Orientación sexual</span>
+    <span class="pill">Expresión de género</span>
+    <span class="pill">Identidad sexual o de género</span>
+  </div>
+  <hr style="border-color:var(--line);margin:8px 0"/>
+  <p><strong>Finalidad (art. 2):</strong> Conseguir una sociedad basada en la igualdad de trato y en la <strong>aceptación de la diversidad como un VALOR AÑADIDO</strong>.</p>
+  <hr style="border-color:var(--line);margin:8px 0"/>
+  <p><strong>Ámbito (art. 3):</strong> Cualquier persona, física o jurídica, pública o privada, <strong>independientemente de la situación administrativa o personal</strong> en la que se encuentre. En toda la Comunidad Foral de Navarra, en cualquier ámbito y en cualquier etapa de la vida.</p>
+</div>
+
+<!-- TÍTULO PRELIMINAR ART. 4 PRINCIPIOS -->
+<h2>Art. 4 — Los 11 principios (los 4 clave para examen)</h2>
+<div class="grid">
+  <div class="card l1">
+    <span class="tag">1.b) Reconocimiento de la personalidad ★★★</span>
+    <p>Derecho a construir la autodefinición con respecto al propio cuerpo, sexo, género y orientación sexual <strong>SIN NECESIDAD DE SOMETERSE A PRUEBA PSICOLÓGICA O MÉDICA ALGUNA</strong>.</p>
+    <p>Nadie podrá ser presionado a ocultar, suprimir o negar su identidad.</p>
+    <div class="note n-err">⚠ Es el principio más preguntado: la autodefinición no requiere ninguna validación médica o psicológica.</div>
+  </div>
+  <div class="card l1">
+    <span class="tag">1.g) Salud = Prohibición de terapias de conversión ★★★</span>
+    <p>"Ninguna persona podrá ser incitada y mucho menos <strong>OBLIGADA</strong> a someterse a tratamiento, procedimiento médico o examen psicológico que <strong>COARTE SU LIBERTAD DE AUTODETERMINACIÓN SEXUAL O DE GÉNERO</strong>."</p>
+    <div class="note n-warn">⚠ Equivalente foral a la prohibición de terapias de conversión del art. 22 de la Ley 4/2023, pero con formulación diferente: aquí se usa "autodeterminación".</div>
+  </div>
+  <div class="card l1">
+    <span class="tag">2. Menores transexuales ★★</span>
+    <p>Derecho a recibir protección y atención de la CF de Navarra para promover su <strong>desarrollo integral</strong> mediante actuaciones coordinadas en:</p>
+    <ul>
+      <li>Ámbito sanitario</li>
+      <li>Laboral</li>
+      <li>Servicios sociales</li>
+      <li>Educativo</li>
+    </ul>
+    <p>Y atención a sus familias.</p>
+  </div>
+  <div class="card l1">
+    <span class="tag">11. Recursos y resarcimientos ★</span>
+    <p>Se garantizará la <strong>reparación</strong> de los derechos violados por motivo de orientación sexual, expresión de género o identidad sexual o de género.</p>
+    <p>Este principio conecta directamente con el Título IV Cap. IV (derecho a la atención y a la reparación).</p>
+  </div>
+</div>
+
+<!-- ART. 5 DEFINICIONES EXCLUSIVAS -->
+<h2>Art. 5 — Los 6 tipos de discriminación exclusivos de la LF 8/2017</h2>
+<div class="note n-err" style="margin-bottom:10px">⚠ La Ley 4/2023 estatal solo recoge discriminación directa, indirecta, múltiple e interseccional. La LF 8/2017 añade 6 tipos propios. Son los más preguntados de la ley foral.</div>
+<div class="six">
+  <div class="sixbox"><strong>ñ) Por ASOCIACIÓN</strong><br>Por relación con una persona, grupo o familia LGTBI+</div>
+  <div class="sixbox"><strong>o) Por ERROR</strong><br>Basada en una apreciación errónea de la orientación/identidad</div>
+  <div class="sixbox"><strong>p) ORDEN de discriminar</strong><br>Instrucción que implica discriminación directa o indirecta</div>
+  <div class="sixbox"><strong>r) REPRESALIA discriminatoria</strong><br>Trato adverso contra quien presenta queja, denuncia o recurso</div>
+  <div class="sixbox"><strong>s) VICTIMIZACIÓN SECUNDARIA</strong><br>Perjuicio por mala atención de administración, policía o sanidad</div>
+  <div class="sixbox"><strong>t) VIOLENCIA entre PAREJAS del mismo sexo</strong><br>Violencia como ejercicio de poder en relaciones homo</div>
+</div>
+<div class="grid" style="margin-top:8px">
+  <div class="card l3">
+    <span class="tag">Definiciones diferenciales trans ★★★</span>
+    <p><strong>Transexual (f):</strong> sexo sentido ≠ asignado al nacer "en atención a los genitales"</p>
+    <p><strong>Transgénero (g):</strong> identidad de género ≠ asignada al nacer, no alineándose necesariamente con los conceptos binarios</p>
+    <p><strong>Identidad de género (d):</strong> sentimiento de pertenencia a hombre/mujer (binario), ambas (no binario) o ninguna (agénero)</p>
+    <div class="note n-warn">⚠ Transexual ≠ Transgénero: el transexual hace referencia al sexo biológico (genitales); el transgénero a la identidad de género (que puede ser no binaria o agénero).</div>
+  </div>
+  <div class="card l3">
+    <span class="tag">Acoso discriminatorio (q) ★★</span>
+    <p>Comportamiento que atenta contra la dignidad creando entorno:</p>
+    <ul>
+      <li>Intimidatorio</li>
+      <li>Hostil</li>
+      <li>Degradante</li>
+      <li>Ofensivo</li>
+      <li><strong>SEGREGADO</strong> ← exclusivo LF 8/2017</li>
+    </ul>
+    <div class="note n-err">⚠ La LF 8/2017 añade el adjetivo "segregado" al entorno hostil. La Ley 4/2023 no lo incluye. Dato de trampa.</div>
+  </div>
+</div>
+
+<!-- ART. 6 Y ART. 7 -->
+<h2>Arts. 6 y 7 — Cláusula antidiscriminatoria y fechas conmemorativas</h2>
+<div class="grid">
+  <div class="card l2">
+    <span class="tag">Art. 6 · Terceros espacios y sexo sentido ★★★</span>
+    <ul>
+      <li>Pueden actuar <strong>DE OFICIO</strong> (sin denuncia): Administración foral y <strong>Defensor del Pueblo de Navarra</strong></li>
+      <li>Lugares abiertos al público: promoverán <strong>TERCEROS ESPACIOS DE USO MIXTO</strong></li>
+      <li>Si no es posible el tercer espacio: uso de aseos/vestuarios según el <strong>SEXO SENTIDO</strong></li>
+    </ul>
+    <div class="note n-err">⚠ "Tercer espacio de uso mixto" y "sexo sentido" para aseos/vestuarios son conceptos EXCLUSIVOS del art. 6 LF 8/2017. El examen los pregunta frecuentemente.</div>
+  </div>
+  <div class="card l2">
+    <span class="tag">Art. 7 · Fechas conmemorativas ★★★</span>
+    <p><strong>17 DE MAYO</strong> · Día Internacional contra la Homofobia, Lesbofobia, Bifobia y Transfobia</p>
+    <ul>
+      <li>El Parlamento de Navarra acogerá los actos institucionales</li>
+      <li>Parlamento y Gobierno instalarán el <strong>símbolo conmemorativo LGTBI+</strong></li>
+    </ul>
+    <p style="margin-top:8px"><strong>28 DE JUNIO</strong> · Día Internacional del Orgullo LGTBI</p>
+    <div class="note n-err">⚠ 17 mayo = Día contra la DISCRIMINACIÓN. 28 junio = Día del ORGULLO. El examen los confunde.</div>
+  </div>
+</div>
+
+<!-- ORGANIZACIÓN ADMINISTRATIVA -->
+<h2>Título I — Organización administrativa</h2>
+<div class="flow3" style="margin-bottom:12px">
+  <div class="step">
+    <div class="num">8</div>
+    <h4>ÓRGANO COORDINADOR LGTBI+</h4>
+    <p>Coordinación de las políticas de la CF de Navarra en LGTBI+. Adscrito al dpto. de <strong>igualdad</strong></p>
+  </div>
+  <div class="step">
+    <div class="num">9</div>
+    <h4>CONSEJO NAVARRO LGTBI+</h4>
+    <p>Órgano <strong>consultivo y de participación</strong> del movimiento asociativo LGTBI+ con las instituciones. D.A. 4.ª · D.F. 34/2019</p>
+  </div>
+  <div class="step">
+    <div class="num">10</div>
+    <h4>ATENCIÓN A VÍCTIMAS DEL DELITO</h4>
+    <p>La Sección de Atención a Víctimas del Delito tendrá <strong>profesionales especializados</strong> en delitos de odio por LGTBIfobia</p>
+  </div>
+</div>
+
+<!-- TÍTULO II CAPS I II III V -->
+<h2>Título II — Medidas sectoriales</h2>
+<div class="grid">
+  <div class="card l4">
+    <span class="tag">Cap. I · Profesionales en ámbitos sensibles ★★</span>
+    <p>Formación específica garantizada por las administraciones a los profesionales de: salud · servicios sociales · educación · seguridad · justicia · atención directa</p>
+    <p>Contenidos formativos: diversidad afectivo-sexual + derechos LGTBI+ + detección de discriminaciones + atención a víctimas de delitos de odio</p>
+  </div>
+  <div class="card l4">
+    <span class="tag">Cap. II · Medidas en el ámbito social ★★</span>
+    <ul>
+      <li>Detección y atención de discriminaciones LGTBI+ por los servicios sociales</li>
+      <li>Protocolos para jóvenes LGTBI+ en exclusión social o sin hogar</li>
+      <li>Apoyo a familias LGTBI+ en el acceso a servicios sociales</li>
+      <li>Visibilidad de personas LGTBI+ mayores en servicios de dependencia</li>
+    </ul>
+  </div>
+  <div class="card l4">
+    <span class="tag">Cap. III · Salud LGTBI · Arts. 14-22 ★★★</span>
+    <ul>
+      <li><strong>Art. 14:</strong> Salud integral sin discriminación; no tratar la realidad LGTBI+ como patología</li>
+      <li><strong>Art. 15 ★★★:</strong> Protocolo atención integral a personas <strong>transexuales y transgénero</strong>; tratamientos psicológicos + hormonales + quirúrgicos; financiados por el SNS-O (Osasunbidea)</li>
+      <li><strong>Art. 17 ★★:</strong> Protocolo para personas intersexuales; prohibición de intervenciones no consentidas en menores</li>
+      <li><strong>Art. 18:</strong> Reproducción asistida sin discriminación</li>
+      <li><strong>Art. 22 ★★:</strong> Uso del nombre e identidad manifestada en documentación clínica (aunque no figure en documentos oficiales)</li>
+    </ul>
+  </div>
+  <div class="card l4">
+    <span class="tag">Cap. V · Educación universitaria · Art. 30 ★★</span>
+    <ul>
+      <li>Los planes de estudios universitarios incluirán perspectiva de diversidad sexual y de género</li>
+      <li>Se promoverá la investigación universitaria sobre derechos LGTBI+</li>
+      <li>Protocolos universitarios específicos frente al acoso por LGTBIfobia</li>
+      <li>Educación no universitaria: art. 27 (currículo), art. 29 (protocolo de actuación ante homofobia/transfobia)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TÍTULO III -->
+<h2>Título III — Transgénero, transexualidad e intersexualidad (art. 41)</h2>
+<div class="grid">
+  <div class="card l3">
+    <span class="tag">Personas transexuales y transgénero ★★★</span>
+    <ul>
+      <li>Atención sanitaria integral: psicológica + hormonal + quirúrgica, financiada por el SNS-O</li>
+      <li>Uso del nombre sentido en la administración navarra, independientemente de la documentación oficial</li>
+      <li>Menores trans: respeto de la identidad en el sistema educativo + consentimiento informado del menor y representantes legales</li>
+    </ul>
+  </div>
+  <div class="card l3">
+    <span class="tag">Personas intersexuales ★★</span>
+    <ul>
+      <li>Protocolo de atención integral a personas intersexuales (art. 17)</li>
+      <li><strong>Prohibición</strong> de intervenciones médicas no consentidas sobre caracteres sexuales</li>
+      <li>Protección especial de menores intersexuales</li>
+      <li>Salvo: riesgo para la vida o la salud que no pueda esperar al consentimiento</li>
+    </ul>
+    <div class="note n-err">⚠ La protección de menores intersexuales frente a intervenciones no consentidas es un dato muy preguntado del Título III.</div>
+  </div>
+</div>
+
+<!-- TÍTULO IV CAP IV REPARACIÓN -->
+<h2>Título IV · Cap. IV — Derecho a la atención y a la reparación (arts. 52–54)</h2>
+<div class="grid">
+  <div class="card l5">
+    <span class="tag">Art. 52 · Derecho a la ATENCIÓN ★★★</span>
+    <p>Toda víctima LGTBI+ tiene derecho a:</p>
+    <ul>
+      <li>Información completa y accesible sobre derechos y recursos</li>
+      <li>Atención <strong>psicológica especializada</strong></li>
+      <li>Asistencia <strong>jurídica</strong></li>
+      <li>Atención <strong>social integral</strong></li>
+    </ul>
+  </div>
+  <div class="card l5">
+    <span class="tag">Art. 53 · Remoción, cese e indemnización ★★★</span>
+    <p>Las administraciones competentes podrán acordar:</p>
+    <ul>
+      <li><strong>REMOCIÓN:</strong> eliminar la situación y restablecer a la persona en sus derechos</li>
+      <li><strong>CESE</strong> de la conducta discriminatoria</li>
+      <li><strong>INDEMNIZACIÓN</strong> por daños materiales <em>y</em> morales</li>
+    </ul>
+    <div class="note n-warn">⚠ Los tres elementos: R + C + I (Remoción + Cese + Indemnización). La indemnización cubre tanto daños MATERIALES como MORALES.</div>
+  </div>
+  <div class="card l5">
+    <span class="tag">Art. 54 · Inversión carga de la prueba ★★★</span>
+    <p>Opera en el ámbito <strong>ADMINISTRATIVO</strong> (diferencia clave con la Ley 4/2023 que es solo en vía judicial).</p>
+    <p>Ante indicios fundados de discriminación → la parte <strong>denunciada</strong> aporta justificación objetiva y razonable.</p>
+    <div class="note n-err">⚠ La LF 8/2017 extiende la inversión de la carga al ámbito ADMINISTRATIVO. La Ley 4/2023 estatal solo la recoge en el ámbito procesal judicial (art. 67).</div>
+  </div>
+</div>
+
+<!-- SANCIONES -->
+<h2>Régimen sancionador</h2>
+<div class="sanc">
+  <div class="sbox">
+    <div class="stit">Infracciones leves</div>
+    <div class="snum">≤ 3.000 €</div>
+    <p>Prescripción: <strong>6 meses</strong></p>
+    <p>Sin sanciones accesorias</p>
+  </div>
+  <div class="sbox">
+    <div class="stit">Infracciones graves</div>
+    <div class="snum">3.001 – 20.000 €</div>
+    <p>Prescripción: <strong>2 años</strong></p>
+    <p>Prohibición ayudas + contratos hasta <strong>1 año</strong></p>
+  </div>
+  <div class="sbox">
+    <div class="stit">Infracciones muy graves</div>
+    <div class="snum">20.001 – 45.000 €</div>
+    <p>Prescripción: <strong>3 años</strong></p>
+    <p>Prohibición ayudas hasta <strong>2 años</strong> (5 en reincidencia)</p>
+    <p>Inhabilitación titular centros hasta <strong>2 años</strong></p>
+  </div>
+</div>
+
+<!-- EXCLUSIVIDADES LF 8/2017 -->
+<h2>Exclusividades de la LF 8/2017 vs. Ley 4/2023</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Elemento exclusivo de LF 8/2017</th><th>Artículo</th><th>Ley 4/2023 estatal</th></tr></thead>
+  <tbody>
+    <tr><td>Discriminación por ASOCIACIÓN</td><td>Art. 5.ñ)</td><td>No existe</td></tr>
+    <tr><td>Discriminación por ERROR</td><td>Art. 5.o)</td><td>No existe</td></tr>
+    <tr><td>ORDEN de discriminar</td><td>Art. 5.p)</td><td>No existe</td></tr>
+    <tr><td>REPRESALIA discriminatoria</td><td>Art. 5.r)</td><td>No existe</td></tr>
+    <tr><td>VICTIMIZACIÓN SECUNDARIA</td><td>Art. 5.s)</td><td>No existe</td></tr>
+    <tr><td>Violencia entre parejas del mismo sexo</td><td>Art. 5.t)</td><td>No existe</td></tr>
+    <tr><td>Acoso discriminatorio: entorno "<strong>SEGREGADO</strong>"</td><td>Art. 5.q)</td><td>Solo: intimidatorio, hostil, degradante, humillante, ofensivo</td></tr>
+    <tr><td>Tercer espacio de uso <strong>MIXTO</strong></td><td>Art. 6</td><td>No existe</td></tr>
+    <tr><td>Uso de aseos/vestuarios según <strong>SEXO SENTIDO</strong></td><td>Art. 6</td><td>No existe</td></tr>
+    <tr><td>Inversión carga de la prueba en ámbito <strong>ADMINISTRATIVO</strong></td><td>Art. 54</td><td>Solo en ámbito judicial (art. 67)</td></tr>
+    <tr><td>Multas: hasta <strong>45.000 €</strong> con prescripción 6m/2a/3a</td><td>Arts. 57–60</td><td>Régimen sancionador diferente</td></tr>
+    <tr><td>Fechas: <strong>17 mayo</strong> y <strong>28 junio</strong></td><td>Art. 7</td><td>No regulado</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- TRAMPAS -->
+<h2>Trampas del examen</h2>
+<div class="grid">
+  <div class="card l1"><span class="tag">Trampa 1</span><p><strong>Falso:</strong> La LF 8/2017 es una Ley Orgánica.<br><strong>Correcto:</strong> Es Ley <strong>Foral</strong> de Navarra.</p></div>
+  <div class="card l1"><span class="tag">Trampa 2</span><p><strong>Falso:</strong> Solo se aplica a residentes legales en Navarra.<br><strong>Correcto:</strong> A cualquier persona, <strong>independientemente de su situación administrativa</strong>.</p></div>
+  <div class="card l1"><span class="tag">Trampa 3</span><p><strong>Falso:</strong> Para construir la identidad se necesita informe médico o psicológico.<br><strong>Correcto:</strong> Art. 4.1.b): <strong>sin necesidad de prueba alguna</strong>.</p></div>
+  <div class="card l1"><span class="tag">Trampa 4</span><p><strong>Falso:</strong> La inversión de la carga de la prueba solo opera en vía judicial.<br><strong>Correcto:</strong> En la LF 8/2017 opera también en el ámbito <strong>administrativo</strong> (art. 54).</p></div>
+  <div class="card l1"><span class="tag">Trampa 5</span><p><strong>Falso:</strong> El 17 de mayo es el Día del Orgullo LGTBI.<br><strong>Correcto:</strong> El 17 mayo es contra la <strong>homofobia</strong>; el Orgullo es el <strong>28 de junio</strong>.</p></div>
+  <div class="card l1"><span class="tag">Trampa 6</span><p><strong>Falso:</strong> La atención trans solo incluye tratamientos hormonales.<br><strong>Correcto:</strong> Psicológicos + hormonales + <strong>quirúrgicos</strong> (art. 15).</p></div>
+  <div class="card l1"><span class="tag">Trampa 7</span><p><strong>Falso:</strong> La reparación del art. 53 solo cubre daños materiales.<br><strong>Correcto:</strong> Daños <strong>materiales Y morales</strong>.</p></div>
+  <div class="card l1"><span class="tag">Trampa 8</span><p><strong>Falso:</strong> La multa máxima de la LF 8/2017 es 30.000 €.<br><strong>Correcto:</strong> La máxima son <strong>45.000 €</strong> (infracciones muy graves).</p></div>
+  <div class="card l1"><span class="tag">Trampa 9</span><p><strong>Falso:</strong> Las infracciones graves prescriben a los 3 años.<br><strong>Correcto:</strong> Las graves prescriben a los <strong>2 años</strong>; las muy graves, a los 3 años.</p></div>
+</div>
+
+</body>
+</html>

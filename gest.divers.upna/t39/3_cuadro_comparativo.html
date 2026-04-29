@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 39 · HTML 3 · Cuadro comparativo y tablas operativas · LF 8/2017 LGTBI+ Navarra</title>
+<style>
+:root{--bg:#f0f9ff;--card:#fff;--s2:#f0f9ff;--line:#7dd3fc;--text:#0c4a6e;--muted:#0284c7;--p:#075985;--warn:#d97706;--red:#dc2626;--grn:#059669;--vio:#7c3aed;--sh:0 2px 10px rgba(7,89,133,.09)}
+[data-theme="dark"]{--bg:#020c1a;--card:#0a1e35;--s2:#0e2a45;--line:#075985;--text:#bae6fd;--muted:#38bdf8;--p:#38bdf8;--warn:#fbbf24;--red:#fca5a5;--grn:#6ee7b7;--vio:#c4b5fd;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.5;background:var(--bg);color:var(--text);padding:22px}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.97rem;color:var(--p)}.hdr p{font-size:.74rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.72rem}
+h2{font-size:.87rem;font-weight:800;color:#fff;background:var(--p);padding:8px 15px;border-radius:7px;margin:22px 0 10px;display:inline-block}
+.tw{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:var(--sh);overflow-x:auto;margin-bottom:12px}
+table{width:100%;border-collapse:collapse}
+th{background:var(--s2);color:var(--muted);font-size:.67rem;text-transform:uppercase;letter-spacing:.05em;padding:8px 10px;text-align:left}
+td{padding:8px 10px;border-bottom:1px solid var(--s2);font-size:.78rem;vertical-align:top}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+.badge{display:inline-block;padding:3px 9px;border-radius:999px;font-size:.65rem;font-weight:700;border:1px solid transparent;white-space:nowrap}
+.b-ok{background:rgba(5,150,105,.12);color:#059669;border-color:rgba(5,150,105,.3)}
+.b-err{background:rgba(220,38,38,.12);color:#dc2626;border-color:rgba(220,38,38,.3)}
+.b-warn{background:rgba(217,119,6,.12);color:var(--warn);border-color:rgba(217,119,6,.3)}
+.b-vio{background:rgba(124,58,237,.12);color:var(--vio);border-color:rgba(124,58,237,.3)}
+.b-sky{background:rgba(2,132,199,.12);color:var(--muted);border-color:rgba(2,132,199,.3)}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.75rem;border-left:4px solid;margin:8px 0}
+.n-ok{background:rgba(5,150,105,.07);border-color:#059669;color:#065f46}
+.n-warn{background:#fef3c7;border-color:#d97706;color:#78350f}
+.n-err{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .n-warn{background:#451a03;color:#fde68a}
+[data-theme="dark"] .n-err{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .n-ok{background:rgba(110,231,183,.07);color:#6ee7b7}
+strong{color:var(--p)}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 39 · HTML 3 · Cuadro comparativo y tablas operativas para examen</h1>
+    <p>Ley Foral 8/2017, de 19 de junio, para la Igualdad Social de las personas LGTBI+ · Navarra · Título Preliminar · Títulos II, III y IV (Cap. IV)</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- T1 IDENTIFICACIÓN -->
+<h2>T1 · Identificación de la norma</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Campo</th><th>Dato</th></tr></thead>
+  <tbody>
+    <tr><td>Nombre completo</td><td>Ley Foral 8/2017, de 19 de junio, para la Igualdad Social de las personas LGTBI+</td></tr>
+    <tr><td>Publicación oficial</td><td>BON núm. 124, de 28 de junio de 2017 · BOE núm. 172, de 20 de julio de 2017 <span class="badge b-warn">Publicada primero en el BON</span></td></tr>
+    <tr><td>Rango</td><td><strong>Ley Foral</strong> de Navarra — no Ley Orgánica, no ley estatal <span class="badge b-err">No es LO</span></td></tr>
+    <tr><td>Habilitación competencial</td><td>LORAFNA, art. 44.18: competencia <strong>exclusiva</strong> de Navarra en políticas de igualdad</td></tr>
+    <tr><td>Estructura</td><td>Título Preliminar + 4 Títulos + 7 D.A. + 2 D.T. + 1 D.D. + 2 D.F.</td></tr>
+    <tr><td>Norma foral previa derogada</td><td>Ley Foral 12/2009, de 19 de noviembre, de no discriminación por identidad de género</td></tr>
+    <tr><td>Colectivo protegido</td><td>Personas <strong>LGTBI+</strong>: lesbianas, gais, trans, bisexuales, intersexuales y otras minorías afectivo-sexuales</td></tr>
+    <tr><td>Marco constitucional y europeo</td><td>Arts. 9.2 y 14 CE · Art. 21 Carta DDFUE · <strong>Principios de Yogyakarta</strong></td></tr>
+  </tbody>
+</table>
+<div class="note n-err">⚠ La LF 8/2017 es una Ley <strong>Foral</strong> (no LO, no estatal). Es de Navarra. Publicada primero en el BON. La norma estatal equivalente es la Ley 4/2023 (Ley ordinaria). Son dos normas distintas.</div>
+</div>
+
+<!-- T2 ESTRUCTURA -->
+<h2>T2 · Estructura y bloques en temario</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Título/Cap.</th><th>Denominación</th><th>En temario</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Preliminar</strong></td><td>Objeto (art. 1), finalidad (art. 2), ámbito (art. 3), principios y derechos reconocidos (art. 4), definiciones (art. 5), cláusula antidiscriminatoria (art. 6), reconocimiento institucional (art. 7)</td><td><span class="badge b-err">EN TEMARIO</span></td></tr>
+    <tr><td>I</td><td>Organización administrativa: Órgano Coordinador (art. 8), Consejo Navarro LGTBI+ (art. 9), atención a víctimas (art. 10)</td><td>—</td></tr>
+    <tr><td><strong>II · Cap. I</strong></td><td>Profesionales que actúan en ámbitos sensibles: formación y sensibilización</td><td><span class="badge b-err">EN TEMARIO</span></td></tr>
+    <tr><td><strong>II · Cap. II</strong></td><td>Medidas en el ámbito social: servicios sociales, jóvenes LGTBI+, mayores, familias</td><td><span class="badge b-err">EN TEMARIO</span></td></tr>
+    <tr><td><strong>II · Cap. III</strong></td><td>Medidas en el ámbito de la salud (arts. 13–22): atención integral, financiación SNS-O, menores trans, intersexuales, reproducción asistida, documentación clínica</td><td><span class="badge b-err">EN TEMARIO</span></td></tr>
+    <tr><td>II · Cap. IV</td><td>Medidas en el ámbito laboral</td><td>—</td></tr>
+    <tr><td><strong>II · Cap. V</strong></td><td>Educación universitaria y no universitaria: currículo, protocolos, investigación universitaria (arts. 27–30)</td><td><span class="badge b-err">EN TEMARIO</span></td></tr>
+    <tr><td>II · Caps. VI–X</td><td>Resto de medidas sectoriales: deporte, ocio, cultura, publicidad, medios de comunicación</td><td>—</td></tr>
+    <tr><td><strong>III</strong></td><td>Transgénero, transexualidad e intersexualidad: atención integral, nombre sentido, menores, intersexuales (art. 41)</td><td><span class="badge b-err">EN TEMARIO</span></td></tr>
+    <tr><td>IV · Caps. I–III</td><td>Disposiciones generales, medidas en la Administración, derecho de admisión</td><td>—</td></tr>
+    <tr><td><strong>IV · Cap. IV</strong></td><td>Derecho a la atención y a la reparación: arts. 52–54 (atención, remoción-cese-indemnización, inversión de la carga de la prueba)</td><td><span class="badge b-err">EN TEMARIO</span></td></tr>
+    <tr><td>IV · Caps. V–VI</td><td>Régimen sancionador: infracciones, sanciones y procedimiento</td><td>—</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T3 OBJETO, FINALIDAD Y ÁMBITO -->
+<h2>T3 · Arts. 1–3 · Objeto, finalidad y ámbito</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Artículo</th><th>Contenido</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Art. 1 ★★★</strong></td><td>"Establecer y regular los principios, medios y medidas para garantizar plenamente la igualdad real y efectiva y los derechos de las personas LGTBI+, mediante la <strong>PREVENCIÓN, la CORRECCIÓN y la ELIMINACIÓN</strong> de toda discriminación por razón de <strong>orientación sexual, expresión de género e identidad sexual o de género</strong>, en los ámbitos, tanto públicos como privados, sobre los que el Gobierno de Navarra y las entidades locales tienen competencia."</td><td>Tres verbos: prevención + corrección + eliminación. Tres ejes de discriminación prohibidos. El examen puede citar solo uno de los tres verbos o ejes → incompleto</td></tr>
+    <tr><td><strong>Art. 2 ★★</strong></td><td>Conseguir una sociedad basada en la igualdad de trato y en la <strong>"aceptación de la diversidad como un VALOR AÑADIDO"</strong></td><td>La literalidad "valor añadido" es la clave de la finalidad. El examen puede sustituirla por "valor positivo" o similar → FALSO</td></tr>
+    <tr><td><strong>Art. 3 ★★★</strong></td><td>"Cualquier persona, física o jurídica, de derecho público o privado, <strong>independientemente de la situación administrativa o personal</strong> en la que se encuentre." En cualquier ámbito y en cualquier etapa de la vida. Territorio: toda la Comunidad Foral de Navarra</td><td>No exige nacionalidad española ni residencia legal. El ámbito es universal en Navarra. El examen puede restringirlo a ciudadanos o residentes → FALSO</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T4 PRINCIPIOS ART. 4 -->
+<h2>T4 · Art. 4 — Principios y derechos: los 4 clave de examen (de 11)</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Principio</th><th>Contenido</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>1.a) Igualdad y no discriminación</strong></td><td>Se prohíbe cualquier acto de discriminación, directa o indirecta, por razón de orientación sexual, expresión de género, identidad sexual o de género o pertenencia a grupo familiar</td><td>Incluye discriminación por pertenencia a grupo familiar LGTBI+</td></tr>
+    <tr><td><strong>1.b) Reconocimiento de la personalidad ★★★</strong></td><td>Derecho a construir la autodefinición "SIN NECESIDAD DE SOMETERSE A PRUEBA PSICOLÓGICA O MÉDICA ALGUNA". Nadie podrá ser presionado a ocultar, suprimir o negar su identidad</td><td>Es el principio más preguntado de la ley. La autodefinición no requiere ninguna validación externa</td></tr>
+    <tr><td><strong>1.g) Garantía de tratamiento adecuado en salud ★★★</strong></td><td>"Ninguna persona podrá ser incitada y mucho menos OBLIGADA a someterse a tratamiento, procedimiento médico o examen psicológico que COARTE SU LIBERTAD DE AUTODETERMINACIÓN SEXUAL O DE GÉNERO"</td><td>Equivalente foral a la prohibición de terapias de conversión. El examen puede preguntar en qué norma aparece este concepto para Navarra → art. 4.1.g) LF 8/2017</td></tr>
+    <tr><td><strong>2. Menores transexuales ★★</strong></td><td>Derecho a recibir protección y atención para promover su desarrollo integral mediante actuaciones coordinadas en los ámbitos <strong>sanitario + laboral + servicios sociales + educativo</strong>, y atención a sus familias</td><td>Cuatro ámbitos de actuación coordinada para menores trans. El examen puede omitir el ámbito laboral → incompleto</td></tr>
+    <tr><td><strong>11. Recursos y resarcimientos ★</strong></td><td>Se garantizará la reparación de los derechos violados por motivo de orientación sexual, expresión de género o identidad sexual o de género</td><td>Principio 11 conecta con el Título IV Cap. IV (arts. 52-54)</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T5 DEFINICIONES ART. 5 -->
+<h2>T5 · Art. 5 — Definiciones: los tipos de discriminación exclusivos de la LF 8/2017</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Tipo</th><th>Letra</th><th>Definición</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Discriminación por ASOCIACIÓN ★★★</strong></td><td>ñ)</td><td>Discriminación que tiene su causa en la vinculación de la persona con otra persona, grupo o familia LGTBI+</td><td>Exclusivo de la LF 8/2017: no existe en la Ley 4/2023</td></tr>
+    <tr><td><strong>Discriminación por ERROR ★★</strong></td><td>o)</td><td>Discriminación basada en una apreciación errónea de la orientación sexual, expresión de género o identidad sexual o de género</td><td>Protege también a quien es discriminado por ser confundido con LGTBI+ sin serlo</td></tr>
+    <tr><td><strong>ORDEN de discriminar ★★</strong></td><td>p)</td><td>Instrucción que implica discriminación directa o indirecta por razones LGTBI+</td><td>Quien ordena discriminar es responsable igual que quien discrimina directamente</td></tr>
+    <tr><td><strong>REPRESALIA discriminatoria ★★</strong></td><td>r)</td><td>Trato adverso contra quien presenta queja, reclamación, denuncia o recurso contra la discriminación LGTBI+</td><td>Protege a quienes denuncian, no solo a quienes son discriminados</td></tr>
+    <tr><td><strong>VICTIMIZACIÓN SECUNDARIA ★★★</strong></td><td>s)</td><td>Perjuicio causado a víctimas LGTBI+ por la mala atención de administraciones, instituciones de salud, policía u otros agentes</td><td>El concepto apunta a que la propia institución puede generar un daño añadido al de la discriminación original. Exclusivo de la LF 8/2017</td></tr>
+    <tr><td><strong>Violencia entre PAREJAS del mismo sexo ★★</strong></td><td>t)</td><td>Violencia en relaciones afectivo-sexuales entre personas del mismo sexo como ejercicio de poder y control para dominar a la víctima</td><td>La Ley 4/2023 no tiene esta definición. La LF 8/2017 la incorpora específicamente al reconocer que la violencia en parejas LGTBI+ también existe</td></tr>
+  </tbody>
+</table>
+</div>
+<div class="tw">
+<table>
+  <thead><tr><th>Definición</th><th>Letra</th><th>Dato diferencial</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Persona transexual</strong></td><td>f)</td><td>Sexo sentido ≠ asignado al nacer "en atención a los genitales" <span class="badge b-warn">Referencia expresa a los genitales</span></td></tr>
+    <tr><td><strong>Persona transgénero</strong></td><td>g)</td><td>Identidad de género ≠ asignada al nacer, no alineándose necesariamente con los conceptos binarios de hombre y mujer <span class="badge b-sky">Puede ser no binario o agénero</span></td></tr>
+    <tr><td><strong>Identidad de género</strong></td><td>d)</td><td>Sentimiento de pertenencia a hombre/mujer (binario), ambas (no binario) o ninguna (agénero). Diferente de identidad sexual (c): conciencia de pertenecer a un sexo</td></tr>
+    <tr><td><strong>Acoso discriminatorio</strong></td><td>q)</td><td>Entorno intimidatorio, hostil, degradante, ofensivo o <strong>"SEGREGADO"</strong> ← La LF 8/2017 añade "segregado" al listado. La Ley 4/2023 no lo incluye</td></tr>
+  </tbody>
+</table>
+<div class="note n-err">⚠ Los 6 tipos de discriminación exclusivos (ñ, o, p, r, s, t) son los datos más preguntados del art. 5 de la LF 8/2017. El examen puede preguntar cuál de ellos no existe en la Ley 4/2023 → todos ellos.</div>
+</div>
+
+<!-- T6 ART. 6 Y ART. 7 -->
+<h2>T6 · Arts. 6–7 · Cláusula antidiscriminatoria y fechas conmemorativas</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Art.</th><th>Contenido</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Art. 6 ★★★</strong></td><td>Pueden actuar <strong>DE OFICIO</strong> (sin denuncia): Administración foral y <strong>Defensor del Pueblo de Navarra</strong>. En lugares abiertos al público se promoverán <strong>TERCEROS ESPACIOS DE USO MIXTO</strong>. Cuando no sea posible, los aseos y vestuarios podrán usarse según el <strong>SEXO SENTIDO</strong></td><td>Tres datos exclusivos del art. 6: (1) Defensor del Pueblo puede actuar de oficio; (2) tercer espacio de uso mixto; (3) sexo sentido para aseos. El examen puede preguntar en qué norma aparecen → art. 6 LF 8/2017</td></tr>
+    <tr><td><strong>Art. 7 ★★★</strong></td><td><strong>17 DE MAYO</strong>: Día Internacional contra la Homofobia, Lesbofobia, Bifobia y Transfobia. El Parlamento de Navarra acogerá los actos y se instalará el símbolo LGTBI+. <strong>28 DE JUNIO</strong>: Día Internacional del Orgullo LGTBI</td><td>17 mayo ≠ 28 junio. El 17 mayo es contra la DISCRIMINACIÓN; el 28 junio es el ORGULLO. El examen los confunde. El Parlamento de Navarra acogerá los actos del 17 mayo (no el Gobierno)</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T7 ORGANIZACIÓN ADMINISTRATIVA -->
+<h2>T7 · Título I · Arts. 8–10 · Organización administrativa</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Art.</th><th>Órgano</th><th>Naturaleza</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Art. 8 ★★</strong></td><td>Órgano Coordinador para la Igualdad LGTBI+</td><td>Órgano de coordinación de las políticas de la CF de Navarra en materia LGTBI+. Adscrito al dpto. de <strong>igualdad</strong></td><td>La adscripción al departamento de igualdad (no al de salud ni al de bienestar social) es un dato de trampa</td></tr>
+    <tr><td><strong>Art. 9 ★★</strong></td><td>Consejo Navarro LGTBI+</td><td>Órgano <strong>consultivo y de participación</strong> del movimiento asociativo LGTBI+ con las instituciones. Creado por D.A. 4.ª. Desarrollado por D.F. 34/2019</td><td>El Consejo es CONSULTIVO (no ejecutivo). El examen puede atribuirle funciones ejecutivas → FALSO</td></tr>
+    <tr><td><strong>Art. 10 ★</strong></td><td>Sección de Atención a Víctimas del Delito</td><td>Deberá contar con <strong>profesionales especializados</strong> en delitos de odio o discriminación por LGTBIfobia</td><td>—</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T8 SALUD -->
+<h2>T8 · Título II · Cap. III · Medidas en el ámbito de la salud (arts. 13–22)</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Art.</th><th>Contenido</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>14 ★★</strong></td><td>Atención sanitaria sin discriminación; no tratamiento de la realidad LGTBI+ como patología</td><td>La no patologización es principio expreso en la LF 8/2017</td></tr>
+    <tr><td><strong>15 ★★★</strong></td><td>Protocolo de atención integral a personas transexuales y transgénero. Los tratamientos de adecuación de los caracteres sexuales incluyen: <strong>psicológicos + hormonales + quirúrgicos</strong>. Son <strong>financiados por el SNS-O</strong> (Osasunbidea)</td><td>Los tres tipos de tratamiento (psicológico + hormonal + quirúrgico) financiados por el sistema sanitario navarro. El examen puede omitir el psicológico o el quirúrgico → incompleto. La financiación corresponde al SNS-O (Osasunbidea), no al SNS estatal</td></tr>
+    <tr><td><strong>16 ★★</strong></td><td>Menores transexuales: acceso a tratamientos necesarios para su desarrollo conforme a la identidad de género con <strong>consentimiento informado</strong> del menor + representantes legales</td><td>La intervención judicial se activa solo si hay conflicto entre el menor y sus representantes</td></tr>
+    <tr><td><strong>17 ★★</strong></td><td>Protocolo de atención integral a personas <strong>intersexuales</strong>, con especial atención a los menores. Garantía de que no se practican <strong>intervenciones médicas no consentidas</strong> sobre sus caracteres sexuales</td><td>La prohibición de intervenciones no consentidas en menores intersexuales es el dato más preguntado del Cap. III en relación con la intersexualidad</td></tr>
+    <tr><td><strong>18 ★</strong></td><td>Las personas LGTBI+ tienen acceso a las técnicas de <strong>reproducción asistida</strong> sin discriminación, en las mismas condiciones que el resto</td><td>—</td></tr>
+    <tr><td><strong>20</strong></td><td>Campañas de prevención de VIH e ITS adaptadas al colectivo LGTBI+ sin estigmatización</td><td>—</td></tr>
+    <tr><td><strong>22 ★★</strong></td><td>El personal sanitario respetará la <strong>identidad sexual o de género manifestada</strong> por la persona trans en toda la documentación clínica, independientemente de lo que figure en sus documentos oficiales</td><td>La identidad manifestada prevalece sobre la documental en el entorno sanitario. El examen puede decir que depende de los documentos oficiales → FALSO</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T9 EDUCACIÓN -->
+<h2>T9 · Título II · Cap. V · Educación universitaria y no universitaria (arts. 27–30)</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Art.</th><th>Contenido</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>27 ★★</strong></td><td>Integración en el <strong>currículo escolar en todos los niveles</strong> de la diversidad de orientación sexual, expresión de género e identidad sexual o de género</td><td>Todos los niveles (desde infantil). El examen puede limitar a secundaria → FALSO</td></tr>
+    <tr><td><strong>29 ★★</strong></td><td>Los centros docentes dispondrán de <strong>protocolo de actuación ante situaciones de homofobia, bifobia o transfobia</strong> en el ámbito educativo</td><td>El protocolo es específico para acoso por LGTBIfobia. Los centros deben tenerlo (obligación, no potestad)</td></tr>
+    <tr><td><strong>30 ★★</strong></td><td>Los planes de estudios universitarios incluirán perspectiva de <strong>diversidad sexual y de género</strong>. Se promoverá la investigación universitaria sobre derechos LGTBI+. Protocolos universitarios específicos frente al acoso por LGTBIfobia</td><td>Tres elementos del art. 30: planes de estudios + investigación + protocolos universitarios</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T10 TÍTULO III -->
+<h2>T10 · Título III · Transgénero, transexualidad e intersexualidad</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Colectivo</th><th>Medidas principales</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Personas transexuales y transgénero ★★★</strong></td><td>Atención sanitaria integral (psicológica + hormonal + quirúrgica) financiada por SNS-O. Uso del nombre sentido en la administración navarra. Menores: respeto de la identidad en el sistema educativo + consentimiento informado del menor y representantes</td><td>La financiación de los tres tipos de tratamiento por el SNS-O (Osasunbidea) y el uso del nombre sentido en la administración navarra son los datos más preguntados del Título III</td></tr>
+    <tr><td><strong>Personas intersexuales ★★</strong></td><td>Protocolo de atención integral (art. 17). Prohibición de intervenciones médicas no consentidas sobre caracteres sexuales, especialmente en menores. Excepción: riesgo para la vida o la salud que no pueda esperar al consentimiento</td><td>La excepción (riesgo vital) es el único supuesto en que puede intervenirse sin consentimiento en menores intersexuales. El examen puede suprimir la excepción → incompleto</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T11 TÍTULO IV CAP IV REPARACIÓN -->
+<h2>T11 · Título IV · Cap. IV · Derecho a la atención y a la reparación (arts. 52–54)</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Art.</th><th>Contenido</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Art. 52 ★★★</strong></td><td>Toda víctima LGTBI+ tiene derecho a: (1) <strong>información</strong> completa y accesible sobre derechos y recursos; (2) <strong>atención psicológica especializada</strong>; (3) <strong>asistencia jurídica</strong>; (4) <strong>atención social integral</strong></td><td>Los cuatro elementos del art. 52: información + psicológica + jurídica + social. El examen puede omitir alguno</td></tr>
+    <tr><td><strong>Art. 53 ★★★</strong></td><td>Medidas que pueden acordar las administraciones competentes: (1) <strong>REMOCIÓN</strong>: eliminar la situación discriminatoria y restablecer a la persona en sus derechos; (2) <strong>CESE</strong> de la conducta discriminatoria; (3) <strong>INDEMNIZACIÓN</strong> por daños materiales <em>y</em> morales</td><td>Los tres elementos: R + C + I (Remoción + Cese + Indemnización). La indemnización incluye daños <strong>MATERIALES Y MORALES</strong>. El examen puede decir que solo cubre materiales → FALSO</td></tr>
+    <tr><td><strong>Art. 54 ★★★</strong></td><td><strong>INVERSIÓN DE LA CARGA DE LA PRUEBA</strong> en el ámbito <strong>ADMINISTRATIVO</strong>: cuando la parte alegue indicios fundados de discriminación en un procedimiento administrativo, corresponde a la parte denunciada aportar justificación objetiva y razonable</td><td>DIFERENCIA CLAVE respecto a la Ley 4/2023 (art. 67): la inversión en la LF 8/2017 opera en el ámbito <strong>ADMINISTRATIVO</strong>; en la Ley 4/2023 solo en el ámbito <strong>procesal judicial</strong></td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T12 SANCIONES -->
+<h2>T12 · Régimen sancionador · Cuantías, accesorias y prescripción</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Tipo</th><th>Multa</th><th>Prescripción</th><th>Sanciones accesorias</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Leves ★★</strong></td><td>Hasta <strong>3.000 €</strong></td><td><strong>6 meses</strong></td><td>Ninguna</td></tr>
+    <tr><td><strong>Graves ★★★</strong></td><td><strong>3.001 € – 20.000 €</strong></td><td><strong>2 años</strong></td><td>Prohibición de ayudas y subvenciones públicas del GN hasta <strong>1 año</strong>. Prohibición de contratar con la Adm. hasta <strong>1 año</strong></td></tr>
+    <tr><td><strong>Muy graves ★★★</strong></td><td><strong>20.001 € – 45.000 €</strong></td><td><strong>3 años</strong></td><td>Prohibición de ayudas y subvenciones hasta <strong>2 años</strong> (hasta <strong>5 años en reincidencia</strong>). Inhabilitación para ser titular de centros o servicios públicos hasta <strong>2 años</strong></td></tr>
+  </tbody>
+</table>
+<div class="note n-err">⚠ La multa MÁXIMA son 45.000 € (infracciones muy graves). Las graves prescriben a los 2 años (no 3). Las muy graves a los 3 años. Son los datos más confundidos del régimen sancionador.</div>
+</div>
+
+<!-- T13 CUADRO COMPARATIVO NORMAS -->
+<h2>T13 · Cuadro comparativo · LF 8/2017 · Ley 4/2023 · LO 10/2022 · LO 1/2004</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Aspecto</th><th>LF 8/2017 (Navarra)</th><th>Ley 4/2023 (estatal)</th><th>LO 10/2022 (VS)</th><th>LO 1/2004 (VG)</th></tr></thead>
+  <tbody>
+    <tr><td>Tipo de norma</td><td>Ley Foral</td><td>Ley ordinaria</td><td>Ley Orgánica</td><td>Ley Orgánica</td></tr>
+    <tr><td>Colectivo</td><td>LGTBI+ (Navarra)</td><td>LGTBI+ (Estado)</td><td>Víctimas de VS</td><td>Víctimas de VG (pareja)</td></tr>
+    <tr><td>Entrada en vigor</td><td>No explicitada (general: 20 días)</td><td>Día siguiente</td><td>30 días</td><td>Día siguiente</td></tr>
+    <tr><td>Tipos de discriminación</td><td>Directa, indirecta, múltiple + <strong>por asociación, error, orden, represalia, victimización secundaria, violencia parejas mismo sexo</strong></td><td>Directa, indirecta, múltiple, interseccional</td><td>No define</td><td>No define</td></tr>
+    <tr><td>Acoso discriminatorio</td><td>Entorno intimidatorio, hostil, degradante, ofensivo o <strong>segregado</strong></td><td>Intimidatorio, hostil, degradante, humillante, ofensivo</td><td>No define</td><td>No define</td></tr>
+    <tr><td>Inversión carga de la prueba</td><td>Sí, en ámbito <strong>ADMINISTRATIVO</strong> (art. 54)</td><td>Sí, solo en ámbito <strong>judicial</strong> (art. 67)</td><td>Sí</td><td>Sí</td></tr>
+    <tr><td>Terapias de conversión</td><td>Prohibición por principio (art. 4.1.g)</td><td>Prohibición expresa (art. 22)</td><td>No reguladas</td><td>No reguladas</td></tr>
+    <tr><td>Rectificación registral</td><td>No regula (es competencia estatal)</td><td>Sí (Título II Cap. I)</td><td>No</td><td>No</td></tr>
+    <tr><td>Salud trans</td><td>Tratamiento integral + financiación SNS-O (arts. 15-16)</td><td>Cartera de servicios del SNS (art. 56)</td><td>No</td><td>No</td></tr>
+    <tr><td>Tercer espacio de uso mixto</td><td><strong>Sí</strong> (art. 6)</td><td>No</td><td>No</td><td>No</td></tr>
+    <tr><td>Sexo sentido para aseos</td><td><strong>Sí</strong> (art. 6)</td><td>No</td><td>No</td><td>No</td></tr>
+    <tr><td>Multa máxima</td><td>45.000 €</td><td>Régimen diferente</td><td>150.000 €</td><td>N/A (penal)</td></tr>
+    <tr><td>Fechas conmemorativas</td><td><strong>17 mayo</strong> + <strong>28 junio</strong> (art. 7)</td><td>No</td><td>No</td><td>No</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T14 TRAMPAS -->
+<h2>T14 · Las 12 trampas de examen</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Afirmación trampa</th><th>¿Correcta?</th><th>Corrección exacta</th></tr></thead>
+  <tbody>
+    <tr><td>La LF 8/2017 es una Ley Orgánica</td><td><span class="badge b-err">FALSO</span></td><td>Es Ley <strong>Foral</strong> de Navarra</td></tr>
+    <tr><td>La LF 8/2017 solo se aplica a residentes legales en Navarra</td><td><span class="badge b-err">FALSO</span></td><td>A cualquier persona, <strong>independientemente de su situación administrativa</strong> (art. 3)</td></tr>
+    <tr><td>Para construir la identidad de género se necesita informe médico</td><td><span class="badge b-err">FALSO</span></td><td>Art. 4.1.b): <strong>sin necesidad de prueba psicológica o médica alguna</strong></td></tr>
+    <tr><td>La finalidad de la ley es "la aceptación de la diversidad como valor positivo"</td><td><span class="badge b-err">FALSO</span></td><td>La literalidad es "como un <strong>valor añadido</strong>" (art. 2)</td></tr>
+    <tr><td>La inversión de la carga de la prueba en la LF 8/2017 solo opera en vía judicial</td><td><span class="badge b-err">FALSO</span></td><td>Opera en el ámbito <strong>administrativo</strong> (art. 54); la Ley 4/2023 es la que limita la inversión a la vía judicial</td></tr>
+    <tr><td>El 17 de mayo es el Día del Orgullo LGTBI</td><td><span class="badge b-err">FALSO</span></td><td>El 17 mayo es el Día contra la <strong>Homofobia</strong>; el Orgullo es el <strong>28 de junio</strong></td></tr>
+    <tr><td>Los actos del 17 de mayo los organiza el Gobierno de Navarra</td><td><span class="badge b-err">FALSO</span></td><td>El <strong>Parlamento de Navarra</strong> acogerá los actos institucionales (art. 7)</td></tr>
+    <tr><td>La atención integral trans solo incluye tratamientos hormonales</td><td><span class="badge b-err">FALSO</span></td><td>Psicológicos + hormonales + <strong>quirúrgicos</strong> (art. 15)</td></tr>
+    <tr><td>La reparación del art. 53 solo cubre daños materiales</td><td><span class="badge b-err">FALSO</span></td><td>Cubre daños <strong>materiales Y morales</strong></td></tr>
+    <tr><td>La multa máxima de la LF 8/2017 es 30.000 €</td><td><span class="badge b-err">FALSO</span></td><td>La máxima son <strong>45.000 €</strong> (infracciones muy graves)</td></tr>
+    <tr><td>Las infracciones graves prescriben a los 3 años</td><td><span class="badge b-err">FALSO</span></td><td>Las graves prescriben a los <strong>2 años</strong>; las muy graves a los 3 años</td></tr>
+    <tr><td>El Consejo Navarro LGTBI+ tiene funciones ejecutivas</td><td><span class="badge b-err">FALSO</span></td><td>El Consejo Navarro LGTBI+ es un órgano <strong>consultivo y de participación</strong> (art. 9)</td></tr>
+  </tbody>
+</table>
+</div>
+
+</body>
+</html>
