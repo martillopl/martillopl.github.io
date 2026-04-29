@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 33 · HTML 3 – Cuadro comparativo · Tablas operativas · LO 3/2007 Igualdad</title>
+<style>
+:root{--bg:#f0f7ff;--surface:#fff;--s2:#e8f2ff;--s3:#d1e8ff;--border:#93c5fd;--div:#dbeafe;--text:#1e3a5f;--muted:#3b6ea5;--p:#1d4ed8;--pl:#2563eb;--warn:#b45309;--danger:#b91c1c;--ok:#065f46;--vio:#6d28d9;--sh:0 2px 10px rgba(29,78,216,.09)}
+[data-theme="dark"]{--bg:#050d1a;--surface:#0a1628;--s2:#0f1f36;--s3:#172847;--border:#1e40af;--div:#0f1f36;--text:#dbeafe;--muted:#93c5fd;--p:#60a5fa;--pl:#bfdbfe;--warn:#fbbf24;--danger:#f87171;--ok:#34d399;--vio:#c4b5fd;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.6;background:var(--bg);color:var(--text);padding:20px}
+.hdr{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.96rem;color:var(--p);line-height:1.3}.hdr p{font-size:.72rem;color:var(--muted);margin-top:2px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--border);background:var(--s2);color:var(--text);padding:5px 12px;border-radius:999px;font-size:.72rem}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:10px 12px;text-align:center;flex:1 1 90px;box-shadow:var(--sh)}.sv{font-size:1.05rem;font-weight:900;color:var(--p)}.sk{font-size:.63rem;color:var(--muted);margin-top:2px}
+h2{font-size:.84rem;font-weight:800;color:#fff;background:var(--p);padding:7px 14px;border-radius:7px;margin:22px 0 9px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:14px 16px;box-shadow:var(--sh);overflow:auto;margin-bottom:10px}
+table{width:100%;border-collapse:collapse}
+th{background:var(--s2);color:var(--muted);font-weight:700;font-size:.67rem;text-transform:uppercase;letter-spacing:.05em;padding:7px 9px;text-align:left;position:sticky;top:0;z-index:1}
+th.tc{background:rgba(29,78,216,.15);color:var(--pl)}
+th.ta{background:rgba(109,40,217,.12);color:var(--vio)}
+th.tb{background:rgba(6,95,70,.12);color:var(--ok)}
+th.tw{background:rgba(180,83,9,.13);color:var(--warn)}
+th.tr{background:rgba(185,28,28,.12);color:var(--danger)}
+td{border-bottom:1px solid var(--div);padding:7px 9px;vertical-align:top;font-size:.78rem}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+.badge{display:inline-flex;padding:2px 8px;border-radius:999px;font-size:.64rem;font-weight:700;border:1px solid transparent;white-space:nowrap;margin:1px}
+.bb{background:rgba(29,78,216,.1);color:var(--pl);border-color:rgba(29,78,216,.3)}
+.bg{background:rgba(6,95,70,.12);color:var(--ok);border-color:rgba(6,95,70,.22)}
+.br{background:rgba(185,28,28,.12);color:var(--danger);border-color:rgba(185,28,28,.22)}
+.by{background:rgba(180,83,9,.12);color:var(--warn);border-color:rgba(180,83,9,.22)}
+.bv{background:rgba(109,40,217,.12);color:var(--vio);border-color:rgba(109,40,217,.22)}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.75rem;margin:8px 0;border-left:4px solid}
+.nb{background:var(--s2);border-color:var(--pl);color:var(--muted)}
+.nw{background:#fef3c7;border-color:#d97706;color:#78350f}
+.nr{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .nw{background:#451a03;color:#fde68a}
+[data-theme="dark"] .nr{background:#450a0a;color:#fca5a5}
+ul{padding-left:15px;margin:4px 0}li{margin-bottom:2px;font-size:.77rem}
+strong{color:var(--p)}
+@media(max-width:700px){table{font-size:.72rem}td,th{padding:5px 6px}}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 33 · HTML 3 · Cuadro comparativo con tablas operativas para examen</h1>
+    <p>LO 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres · Tít. Preliminar · Tít. I · Tít. II</p>
+  </div>
+  <button class="btn" onclick="var d=document.documentElement,t=d.getAttribute('data-theme');d.setAttribute('data-theme',t==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="sv">LO 3/2007</div><div class="sk">22 de marzo</div></div>
+  <div class="stat"><div class="sv">BOE 23/3/07</div><div class="sk">EV 24/03/2007</div></div>
+  <div class="stat"><div class="sv">Art. 14 CE</div><div class="sk">+ Art. 9.2 CE</div></div>
+  <div class="stat"><div class="sv">Dir. 2002/73</div><div class="sk">+ Dir. 2004/113</div></div>
+  <div class="stat"><div class="sv">78 arts.</div><div class="sk">Tít. Prelim. + 8 títulos</div></div>
+  <div class="stat"><div class="sv">40–60%</div><div class="sk">composición equilibrada</div></div>
+  <div class="stat"><div class="sv">12 criterios</div><div class="sk">art. 14 PP</div></div>
+  <div class="stat"><div class="sv">Transversal</div><div class="sk">art. 15 mainstreaming</div></div>
+</div>
+
+<!-- T1 IDENTIFICACIÓN -->
+<h2>T1 · Identificación de la norma</h2>
+<div class="card"><table>
+<thead><tr><th>Elemento</th><th class="tc">Dato</th></tr></thead>
+<tbody>
+<tr><td>Norma</td><td><strong>Ley Orgánica 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres</strong></td></tr>
+<tr><td>BOE</td><td>Núm. 71 · <strong>23 de marzo de 2007</strong></td></tr>
+<tr><td>Entrada en vigor</td><td><strong>24 de marzo de 2007</strong> (día siguiente a su publicación — sin vacatio legis especial)</td></tr>
+<tr><td>Rango normativo</td><td><strong>Ley Orgánica</strong> (afecta a derechos fundamentales — art. 14 CE y art. 9.2 CE)</td></tr>
+<tr><td>Base constitucional</td><td><strong>Art. 14 CE</strong> (igualdad formal y no discriminación por razón de sexo) + <strong>Art. 9.2 CE</strong> (mandato a PP de promover la igualdad real y efectiva)</td></tr>
+<tr><td>Directivas transpuestas</td><td><strong>Directiva 2002/73/CE</strong> (igualdad en empleo: acceso, formación, promoción, condiciones de trabajo) + <strong>Directiva 2004/113/CE</strong> (igualdad en el acceso a bienes y servicios)</td></tr>
+<tr><td>Marco internacional</td><td><strong>CEDAW</strong> (ONU, diciembre 1979 · ratificada por España 1983) · Conf. de <strong>Nairobi 1985</strong> · Conf. de <strong>Beijing 1995</strong></td></tr>
+<tr><td>Propósito</td><td>Primera <strong>ley-código de la igualdad</strong>: catálogo general de derechos y obligaciones para alcanzar la igualdad <strong>real y efectiva</strong> (no solo formal) en todos los ámbitos</td></tr>
+<tr><td>Estructura</td><td>Tít. Preliminar (1-2) · Tít. I (3-13) · Tít. II (14-35) · Tít. III-VIII (36-78) + 31 D.A. + 11 D.T. + 1 D. Derogtoria + 8 D.F.</td></tr>
+<tr><td>Modificaciones introducidas</td><td>Más de 20 leyes: ET · LGSS · EBEP · LOREG · LEC · Código Civil · Código Penal · LContratación SP, entre otras</td></tr>
+<tr><td>Modificada por</td><td><strong>LO 2/2024, de 1 de agosto</strong> de representación paritaria y presencia equilibrada (añadió D.A. 32.ª)</td></tr>
+</tbody>
+</table></div>
+
+<!-- T2 ARTÍCULOS TÍTULO PRELIMINAR Y TÍTULO I -->
+<h2>T2 · Artículo por artículo — Título Preliminar y Título I (arts. 1–13)</h2>
+<div class="card"><table>
+<thead><tr><th>Art.</th><th>Denominación</th><th>Contenido operativo</th><th>Dato clave de examen</th></tr></thead>
+<tbody>
+<tr><td><span class="badge bb">1</span></td><td>Objeto</td><td><em>"Las mujeres y los hombres son iguales en dignidad humana, e iguales en derechos y deberes."</em> La Ley hace efectivo el derecho de igualdad de trato y de oportunidades. Ámbito: político, civil, laboral, económico, social y cultural. Contenido: (a) principios de actuación PP; (b) derechos y deberes de personas físicas y jurídicas, públicas y privadas; (c) medidas contra la discriminación en sectores público y privado</td><td><strong>★★★ Frase de apertura + las 6 esferas + los 3 contenidos</strong></td></tr>
+<tr><td><span class="badge bb">2</span></td><td>Ámbito</td><td>Toda persona física o jurídica que se encuentre o <strong>actúe en territorio español</strong>, cualquiera que fuere su nacionalidad, domicilio o residencia</td><td>★★ Universal: personas físicas Y jurídicas · sin importar la nacionalidad</td></tr>
+<tr><td><span class="badge bb">3</span></td><td>Principio de igualdad de trato</td><td>Ausencia de toda discriminación, directa o indirecta, por razón de sexo, y especialmente las derivadas de la <strong>maternidad, la asunción de obligaciones familiares y el estado civil</strong></td><td>★★★ Las 3 causas específicas: maternidad + obligaciones familiares + estado civil</td></tr>
+<tr><td><span class="badge bb">4</span></td><td>Integración del principio</td><td>La igualdad de trato y oportunidades es un <strong>principio informador del ordenamiento jurídico</strong> que se integra y observa en la interpretación y aplicación de TODAS las normas jurídicas</td><td>Principio INFORMADOR del ordenamiento: no es una norma sectorial, impregna todo el sistema</td></tr>
+<tr><td><span class="badge bb">5</span></td><td>Igualdad en el empleo</td><td>Acceso al empleo (cuenta propia y ajena) · formación · promoción · condiciones de trabajo (incluidas retributivas y de despido) · afiliación y participación en organizaciones sindicales y empresariales. Excepción: característica relacionada con el sexo como <strong>requisito profesional esencial y determinante</strong> (objetivo legítimo + requisito proporcionado)</td><td>★★ La excepción: esencial + determinante + objetivo legítimo + proporcionado</td></tr>
+<tr><td><span class="badge bb">6</span></td><td>Discriminación directa e indirecta</td><td><strong>DIRECTA:</strong> ser, haber sido o <em>pudiera ser</em> tratada de manera menos favorable por razón de sexo en situación comparable. NO admite justificación objetiva.<br/><strong>INDIRECTA:</strong> disposición, criterio o práctica aparentemente neutros que ponen a personas de un sexo en desventaja, SALVO justificación objetiva con finalidad legítima y medios necesarios y adecuados.<br/><strong>Orden de discriminar:</strong> siempre discriminatoria (directa e indirecta)</td><td><strong>★★★ Directa = hipotética posible + no admite justificación. Indirecta = aparentemente neutra + sí admite justificación</strong></td></tr>
+<tr><td><span class="badge bb">7</span></td><td>Acoso sexual y acoso por razón de sexo</td><td><strong>ACOSO SEXUAL:</strong> comportamiento verbal o físico de <em>naturaleza sexual</em> que atenta contra la dignidad creando entorno intimidatorio, degradante u ofensivo.<br/><strong>ACOSO POR RAZÓN DE SEXO:</strong> comportamiento en función del sexo (sin requerir naturaleza sexual) con propósito/efecto de atentar contra la dignidad creando entorno intimidatorio.<br/>Ambos: en todo caso discriminatorios. Quid pro quo: también discriminatorio.</td><td><strong>★★★ Sexual = naturaleza sexual. Por razón de sexo = en función del sexo (sin contenido sexual obligatorio). Ambos siempre discriminatorios</strong></td></tr>
+<tr><td><span class="badge bb">8</span></td><td>Discriminación por embarazo o maternidad</td><td>Todo trato desfavorable a las mujeres relacionado con el <strong>embarazo o la maternidad</strong> = discriminación <strong>directa por razón de sexo</strong>. Sin necesidad de término de comparación</td><td>★★ Discriminación directa sin término de comparación necesario</td></tr>
+<tr><td><span class="badge bb">9</span></td><td>Indemnidad frente a represalias</td><td>Trato adverso por presentar <strong>queja, reclamación, denuncia, demanda o recurso</strong> destinado a impedir discriminación o exigir el cumplimiento de la igualdad = también discriminación por razón de sexo</td><td>★★ Los 5 tipos de acciones protegidas: queja + reclamación + denuncia + demanda + recurso</td></tr>
+<tr><td><span class="badge bb">10</span></td><td>Consecuencias jurídicas de las conductas discriminatorias</td><td>Actos y cláusulas discriminatorias: <strong>nulos y sin efecto</strong>. Dan lugar a: (a) reparaciones o indemnizaciones <strong>reales, efectivas y proporcionadas</strong> al perjuicio sufrido; (b) sistema <strong>eficaz y disuasorio de sanciones</strong> que prevenga conductas discriminatorias</td><td><strong>★★★ Nulidad + indemnizaciones (real + efectiva + proporcionada) + sanciones (eficaz + disuasorio)</strong></td></tr>
+<tr><td><span class="badge bb">11</span></td><td>Acciones positivas</td><td>Los Poderes Públicos adoptarán medidas específicas en favor de las mujeres para corregir situaciones <strong>patentes de desigualdad de hecho</strong>. Requisitos: solo mientras <strong>subsistan</strong> + <strong>razonables y proporcionadas</strong>. También las personas físicas y jurídicas <strong>privadas</strong> podrán adoptarlas</td><td><strong>★★ Patentes + razonables + temporales + también privados</strong></td></tr>
+<tr><td><span class="badge bb">12</span></td><td>Tutela judicial efectiva</td><td>Tutela posible <strong>incluso tras la terminación de la relación</strong> en que se produjo la discriminación (art. 53.2 CE). En litigios sobre acoso sexual y acoso por razón de sexo: la <strong>persona acosada será la única legitimada</strong></td><td>★★ Dos datos: (1) tutela tras terminación relación; (2) acosada = única legitimada</td></tr>
+<tr><td><span class="badge bb">13</span></td><td>Inversión de la carga de la prueba</td><td>En procedimientos por discriminación: corresponde a la <strong>demandada</strong> probar la <strong>ausencia de discriminación</strong> y la proporcionalidad de sus medidas. <strong>NO se aplica en los procesos penales</strong></td><td><strong>★★★ La demandada prueba la ausencia · EXCLUIDA en procesos penales</strong></td></tr>
+</tbody>
+</table></div>
+
+<!-- T3 TÍTULO II CAP. I ARTS. 14–22 -->
+<h2>T3 · Título II · Cap. I · Principios generales y transversalidad (arts. 14–22)</h2>
+<div class="card"><table>
+<thead><tr><th>Art.</th><th>Denominación</th><th>Contenido operativo</th><th>Dato clave</th></tr></thead>
+<tbody>
+<tr><td><span class="badge bb">14</span></td><td>Criterios generales de actuación (12 criterios)</td><td>1. Compromiso con la efectividad constitucional de la igualdad · 2. Integración transversal en todas las políticas · 3. Colaboración entre AAPP · 4. Participación equilibrada en candidaturas y toma de decisiones · 5. Erradicación de VG y acoso · 6. Atención a mujeres vulnerables (minorías, migrantes, niñas, PcD, mayores, viudas, víctimas VG) · 7. Protección de la maternidad · 8. Conciliación y <strong>corresponsabilidad</strong> · 9. Colaboración con agentes sociales · 10. Efectividad entre particulares · 11. <strong>Lenguaje no sexista</strong> en la Administración · 12. Integración en la cooperación internacional</td><td><strong>★★ El criterio 6 (mujeres vulnerables: 7 tipos) y el criterio 11 (lenguaje no sexista) son los más preguntados</strong></td></tr>
+<tr><td><span class="badge bb">15</span></td><td>Transversalidad del principio de igualdad</td><td>El principio de igualdad informa con <strong>carácter transversal</strong> la actuación de <strong>todos</strong> los poderes públicos. Las AAPP lo integrarán de forma <strong>activa</strong> en: adopción y ejecución de disposiciones normativas · definición y presupuestación de políticas públicas · desarrollo de todas sus actividades</td><td><strong>★★★ "Con carácter transversal" + "de forma activa" + "todos los PP" + los 3 ámbitos de integración</strong></td></tr>
+<tr><td><span class="badge bb">16</span></td><td>Presencia equilibrada en nombramientos y designaciones</td><td>Los poderes públicos procurarán atender al principio de <strong>presencia equilibrada</strong> de mujeres y hombres en los nombramientos y designaciones de los cargos de responsabilidad que les correspondan</td><td>★ "Procurarán" = no es obligación absoluta en este art.; la regla del 40-60% está en la D.A. 1.ª</td></tr>
+<tr><td><span class="badge bb">17</span></td><td>Plan Estratégico de Igualdad de Oportunidades</td><td>El <strong>Gobierno</strong> aprobará <strong>periódicamente</strong> un Plan Estratégico de Igualdad de Oportunidades que incluirá medidas para alcanzar el objetivo de igualdad entre mujeres y hombres y eliminar la discriminación por razón de sexo</td><td><strong>★★★ Sujeto: el GOBIERNO (no el Instituto de la Mujer) · Periodicidad: periódicamente</strong></td></tr>
+<tr><td><span class="badge bb">18</span></td><td>Informe periódico</td><td>El Gobierno elaborará un <strong>informe periódico</strong> sobre el conjunto de sus actuaciones en relación con la efectividad del principio de igualdad entre mujeres y hombres. Se dará cuenta a las <strong>Cortes Generales</strong></td><td>★★ Control parlamentario: Cortes Generales</td></tr>
+<tr><td><span class="badge bb">19</span></td><td>Informes de impacto de género</td><td>Los proyectos de disposiciones de carácter general y los planes de especial relevancia económica, social, cultural y artística que se sometan a aprobación del <strong>Consejo de Ministros</strong> deberán incorporar un <strong>informe sobre su impacto por razón de género</strong></td><td><strong>★★★ Obligatorio para TODA disposición general y plan relevante → Consejo de Ministros</strong></td></tr>
+<tr><td><span class="badge bb">20</span></td><td>Estadísticas e indicadores con perspectiva de género</td><td>Los PP incluirán sistemáticamente la <strong>variable de sexo</strong> en estadísticas, encuestas y recogida de datos. Excepción: solo mediante informe motivado aprobado por el órgano competente</td><td>★★ Variable de sexo = sistemática · excepción solo con informe motivado</td></tr>
+<tr><td><span class="badge bb">21</span></td><td>Cooperación entre Administraciones</td><td>AGE y CCAA cooperarán para integrar la igualdad en sus actuaciones. En la <strong>Conferencia Sectorial de la Mujer</strong> podrán adoptarse planes y programas conjuntos de fomento de la igualdad</td><td>★ El foro de cooperación: Conferencia Sectorial de la Mujer</td></tr>
+<tr><td><span class="badge bb">22</span></td><td>Planes municipales de organización del tiempo de la ciudad</td><td>Las corporaciones locales <strong>podrán</strong> establecer planes municipales de organización del tiempo de la ciudad para avanzar hacia un reparto equitativo de los tiempos entre mujeres y hombres</td><td>★ "Podrán" = facultativo para corporaciones locales, no obligatorio</td></tr>
+</tbody>
+</table></div>
+
+<!-- T4 POLÍTICAS SECTORIALES TÍTULO II CAP. II -->
+<h2>T4 · Título II · Cap. II · Políticas sectoriales (arts. 23–35)</h2>
+<div class="card"><table>
+<thead><tr><th>Sector</th><th>Art(s).</th><th>Contenido operativo destacado</th></tr></thead>
+<tbody>
+<tr><td><strong>Educación</strong></td><td>23-25</td><td>Educación en el respeto a la igualdad · eliminación de contenidos sexistas en libros de texto · perspectiva de igualdad en la formación del profesorado · igualdad en el acceso a la educación</td></tr>
+<tr><td><strong>Cultura y Arte</strong></td><td>26</td><td>Políticas activas de ayuda a la creación femenina · presencia equilibrada en oferta cultural pública · igualdad en la difusión de obras artísticas e intelectuales</td></tr>
+<tr><td><strong>Sanidad</strong></td><td>27</td><td>Políticas de salud con perspectiva de género · investigación científica con variable de sexo · presencia equilibrada en puestos directivos del SNS</td></tr>
+<tr><td><strong>Sociedad de la información</strong></td><td>28</td><td>Programas específicos para evitar la <strong>brecha tecnológica de género</strong> · plena incorporación de las mujeres a las TIC</td></tr>
+<tr><td><strong>Deporte</strong></td><td>29</td><td>Igualdad en el ámbito deportivo · fomento de la práctica deportiva de las mujeres · presencia equilibrada en organismos deportivos</td></tr>
+<tr><td><strong>Desarrollo rural</strong></td><td>30</td><td>Plena integración de las mujeres del medio rural · ejercicio de sus derechos · reconocimiento del trabajo de las mujeres rurales</td></tr>
+<tr><td><strong>Urbanismo y vivienda</strong></td><td>31</td><td>Necesidades de los distintos grupos sociales · especial atención a mujeres víctimas de VG en el acceso a la vivienda</td></tr>
+<tr><td><strong>Cooperación internacional para el desarrollo</strong></td><td>32</td><td>Integración del principio de igualdad en la política española de cooperación para el desarrollo · perspectiva de género en los programas de ayuda</td></tr>
+<tr><td><strong>Fuerzas Armadas y FCSE</strong></td><td>33-34</td><td>Eliminación de conductas discriminatorias · formación en igualdad · medidas para la conciliación en las Fuerzas Armadas y en las Fuerzas y Cuerpos de Seguridad del Estado</td></tr>
+</tbody>
+</table></div>
+
+<!-- T5 DISCRIMINACIÓN DIRECTA VS INDIRECTA -->
+<h2>T5 · Discriminación directa vs. indirecta (art. 6) — comparativa operativa</h2>
+<div class="card"><table>
+<thead><tr><th>Aspecto</th><th class="tc">Discriminación DIRECTA</th><th class="tw">Discriminación INDIRECTA</th></tr></thead>
+<tbody>
+<tr><td>Definición</td><td>Situación en que una persona <strong>sea, haya sido o PUDIERA SER</strong> tratada de manera menos favorable por razón de sexo en situación comparable</td><td>Disposición, criterio o práctica <strong>aparentemente neutros</strong> que ponen a personas de un sexo en desventaja particular respecto al otro</td></tr>
+<tr><td>Carácter hipotético</td><td><span class="badge bb">SÍ admite discriminación hipotética</span> ("pudiera ser")</td><td>Requiere un resultado discriminatorio real o estadísticamente verificable</td></tr>
+<tr><td>¿Admite justificación objetiva?</td><td><span class="badge br">NO admite justificación objetiva</span> (nunca)</td><td><span class="badge bg">SÍ admite justificación objetiva</span>: finalidad legítima + medios necesarios y adecuados</td></tr>
+<tr><td>Ejemplo típico</td><td>Despido de una mujer por estar embarazada (art. 8)</td><td>Exigir "disponibilidad total" que penaliza desproporcionadamente a las mujeres con cargas familiares</td></tr>
+<tr><td>Orden de discriminar</td><td colspan="2">En todo caso discriminatoria (tanto directa como indirecta)</td></tr>
+<tr><td>Inversión de la carga de la prueba</td><td colspan="2">Aplica a ambas (art. 13), excepto en procesos penales</td></tr>
+</tbody>
+</table></div>
+
+<!-- T6 ACOSO SEXUAL VS ACOSO POR RAZÓN DE SEXO -->
+<h2>T6 · Acoso sexual vs. acoso por razón de sexo (art. 7) — comparativa operativa</h2>
+<div class="card"><table>
+<thead><tr><th>Aspecto</th><th class="tr">Acoso SEXUAL</th><th class="tw">Acoso por RAZÓN DE SEXO</th></tr></thead>
+<tbody>
+<tr><td>Definición</td><td>Comportamiento, verbal o físico, de <strong>naturaleza sexual</strong> con propósito o efecto de atentar contra la dignidad creando entorno intimidatorio, degradante u ofensivo</td><td>Comportamiento en función del <strong>sexo</strong> de una persona (sin necesitar contenido sexual) con propósito o efecto de atentar contra su dignidad creando entorno intimidatorio</td></tr>
+<tr><td>¿Requiere contenido sexual?</td><td><span class="badge br">SÍ: naturaleza sexual en el comportamiento</span></td><td><span class="badge by">NO es necesario contenido sexual</span>: basta que sea en función del sexo</td></tr>
+<tr><td>¿Son discriminatorios?</td><td colspan="2"><span class="badge br">Ambos son EN TODO CASO discriminatorios</span></td></tr>
+<tr><td>Quid pro quo</td><td colspan="2">Condicionar un derecho a la aceptación del acoso también es acto de discriminación</td></tr>
+<tr><td>Legitimación procesal</td><td colspan="2">La <strong>persona acosada es la única legitimada</strong> en litigios sobre acoso (art. 12.3)</td></tr>
+<tr><td>Ejemplo típico</td><td>Tocamientos no consentidos, insinuaciones sexuales repetidas, mensajes de contenido sexual</td><td>Insultos, menosprecios sistemáticos o trato vejatorio por el hecho de ser mujer</td></tr>
+</tbody>
+</table></div>
+
+<!-- T7 ACCIONES POSITIVAS + TUTELA + PRUEBA -->
+<h2>T7 · Acciones positivas (art. 11), tutela judicial (art. 12) e inversión de la prueba (art. 13)</h2>
+<div class="card"><table>
+<thead><tr><th>Aspecto</th><th class="tc">Art. 11 · Acciones positivas</th><th class="tb">Art. 12 · Tutela judicial</th><th class="ta">Art. 13 · Inversión de la prueba</th></tr></thead>
+<tbody>
+<tr><td>Quién puede adoptarlas/ejercerlas</td><td>Poderes Públicos + personas físicas y jurídicas <strong>privadas</strong></td><td>Cualquier persona (art. 53.2 CE)</td><td>Parte actora que alega discriminación</td></tr>
+<tr><td>Requisito / condición</td><td>Situaciones <strong>patentes</strong> de desigualdad + medidas <strong>razonables y proporcionadas</strong></td><td>Incluso <strong>tras la terminación de la relación</strong></td><td>La demandada prueba la <strong>ausencia de discriminación</strong></td></tr>
+<tr><td>Duración</td><td>Solo mientras <strong>subsistan</strong> las situaciones de desigualdad</td><td>No hay plazo especial (rige la prescripción general)</td><td>En todo el procedimiento (no en penal)</td></tr>
+<tr><td>Exclusión o excepción</td><td>No pueden ser desproporcionadas ni indefinidas</td><td>En litigios de acoso: <strong>solo la persona acosada</strong> está legitimada</td><td><strong>NO aplica en los procesos penales</strong></td></tr>
+</tbody>
+</table></div>
+
+<!-- T8 COMPOSICIÓN EQUILIBRADA -->
+<h2>T8 · Composición equilibrada (D.A. 1.ª) — la regla del 60/40</h2>
+<div class="card"><table>
+<thead><tr><th>Aspecto</th><th class="tc">Contenido</th></tr></thead>
+<tbody>
+<tr><td>Regla</td><td>Ningún sexo puede <strong>superar el 60%</strong> ni ser <strong>inferior al 40%</strong> → horquilla del 40-60% para cada sexo</td></tr>
+<tr><td>Ámbitos de aplicación</td><td>Órganos colegiados · Candidaturas electorales (listas cerradas) · Órganos directivos · Tribunales de oposición · Comités de selección · Designaciones de la Administración General del Estado · Consejos de administración de empresas con capital público</td></tr>
+<tr><td>¿Exactamente el 50%?</td><td>No. Es una horquilla: entre el 40% y el 60%</td></tr>
+<tr><td>Norma que lo incorpora en LOREG</td><td>La LO 3/2007 modificó la LOREG para que las listas electorales respeten la composición equilibrada</td></tr>
+<tr><td>Trampa de examen habitual</td><td>El examen suele preguntarlo alterando los porcentajes (ej.: "ningún sexo supera el 50%") → FALSO</td></tr>
+</tbody>
+</table>
+<div class="note nr">⚠ La regla del 60/40 es la más preguntada de toda la LO 3/2007 en los exámenes de oposición. Memorizar: mínimo 40%, máximo 60%.</div>
+</div>
+
+<!-- T9 MAPA NORMATIVO -->
+<h2>T9 · Mapa de conexiones normativas del Tema 33</h2>
+<div class="card"><table>
+<thead><tr><th>Norma</th><th>Relación con la LO 3/2007</th></tr></thead>
+<tbody>
+<tr><td><strong>Art. 14 CE</strong></td><td>Igualdad ante la ley y no discriminación por razón de sexo: base directa de la Ley</td></tr>
+<tr><td><strong>Art. 9.2 CE</strong></td><td>Mandato a los PP de promover la igualdad real y efectiva: fundamento de la transversalidad</td></tr>
+<tr><td><strong>Art. 53.2 CE</strong></td><td>Tutela judicial de los derechos fundamentales: base del art. 12 LO 3/2007</td></tr>
+<tr><td><strong>Directiva 2002/73/CE</strong></td><td>Igualdad de trato en el empleo: transpuesta principalmente en los Títulos I, IV y V LO 3/2007</td></tr>
+<tr><td><strong>Directiva 2004/113/CE</strong></td><td>Igualdad en bienes y servicios: transpuesta en el Título VI LO 3/2007</td></tr>
+<tr><td><strong>CEDAW (ONU, 1979)</strong></td><td>Convención sobre la eliminación de discriminación contra la mujer. Ratificada por España en 1983</td></tr>
+<tr><td><strong>LO 1/2004</strong></td><td>Medidas de protección integral contra la VG. Norma especial que la LO 3/2007 complementa</td></tr>
+<tr><td><strong>EBEP (Ley 7/2007)</strong></td><td>Modificado por LO 3/2007 para igualdad en el empleo público (Título V)</td></tr>
+<tr><td><strong>LOREG (LO 5/1985)</strong></td><td>Modificada por LO 3/2007: composición equilibrada en listas electorales</td></tr>
+<tr><td><strong>Estatuto de los Trabajadores</strong></td><td>Modificado por LO 3/2007: planes de igualdad en empresas, conciliación, acoso sexual</td></tr>
+<tr><td><strong>LO 2/2024, de 1 de agosto</strong></td><td>Representación paritaria y presencia equilibrada: modificó la LO 3/2007 añadiendo la D.A. 32.ª</td></tr>
+</tbody>
+</table></div>
+
+<!-- T10 ÓRGANOS INSTITUCIONALES -->
+<h2>T10 · Órganos institucionales (Título VIII, arts. 76–78)</h2>
+<div class="card"><table>
+<thead><tr><th>Art.</th><th>Órgano</th><th>Naturaleza</th><th>Función</th></tr></thead>
+<tbody>
+<tr><td><span class="badge bb">76</span></td><td><strong>Comisión Interministerial de Igualdad entre mujeres y hombres</strong></td><td>Órgano colegiado de coordinación</td><td>Coordina las políticas y medidas adoptadas por los departamentos ministeriales para garantizar la igualdad</td></tr>
+<tr><td><span class="badge bb">77</span></td><td><strong>Unidades de Igualdad</strong></td><td>Unidades específicas en cada Ministerio</td><td>Promover, asesorar e impulsar medidas de igualdad en el respectivo Ministerio</td></tr>
+<tr><td><span class="badge bb">78</span></td><td><strong>Consejo de Participación de la Mujer</strong></td><td>Órgano colegiado de participación</td><td>Cauce para la participación institucional de las mujeres y de las asociaciones que las representan en las políticas de igualdad</td></tr>
+<tr><td><span class="badge bb">D.A. 25.ª</span></td><td><strong>Instituto de la Mujer</strong></td><td>Organismo de igualdad (no está en el Título VIII)</td><td>Actúa como organismo de igualdad a los efectos de las Directivas comunitarias. No es un órgano del Título VIII</td></tr>
+</tbody>
+</table>
+<div class="note nb">📌 Distinción: La Comisión Interministerial coordina entre Ministerios. Las Unidades de Igualdad actúan dentro de cada Ministerio. El Consejo de Participación conecta con la sociedad civil. El Instituto de la Mujer opera a efectos de las Directivas comunitarias (D.A. 25.ª, fuera del Título VIII).</div>
+</div>
+
+<!-- T11 TRAMPAS -->
+<h2>T11 · Las 12 trampas más frecuentes del examen</h2>
+<div class="card"><table>
+<thead><tr><th>Afirmación trampa</th><th>¿Correcta?</th><th>Corrección exacta</th></tr></thead>
+<tbody>
+<tr><td>La LO 3/2007 solo se aplica a personas físicas españolas</td><td><span class="badge br">FALSO</span></td><td>Personas físicas Y jurídicas · cualquier nacionalidad · que actúen en territorio español</td></tr>
+<tr><td>La discriminación directa solo puede ser real o pasada</td><td><span class="badge br">FALSO</span></td><td>Incluye la hipotética: quien "pudiera ser" tratada de manera menos favorable</td></tr>
+<tr><td>La discriminación indirecta no admite justificación objetiva</td><td><span class="badge br">FALSO</span></td><td>SÍ admite justificación con finalidad legítima y medios necesarios y adecuados. La directa, no admite</td></tr>
+<tr><td>El acoso por razón de sexo exige que el comportamiento tenga naturaleza sexual</td><td><span class="badge br">FALSO</span></td><td>La naturaleza sexual solo se exige en el ACOSO SEXUAL; el acoso por razón de sexo no la requiere</td></tr>
+<tr><td>La inversión de la carga de la prueba aplica también en los procesos penales</td><td><span class="badge br">FALSO</span></td><td>Expresamente EXCLUIDA en los procesos penales</td></tr>
+<tr><td>Solo los poderes públicos pueden adoptar acciones positivas</td><td><span class="badge br">FALSO</span></td><td>También las personas físicas y jurídicas PRIVADAS pueden adoptarlas</td></tr>
+<tr><td>La composición equilibrada exige exactamente el 50% para cada sexo</td><td><span class="badge br">FALSO</span></td><td>Horquilla 40-60%: ningún sexo supera el 60% ni baja del 40%</td></tr>
+<tr><td>El Plan Estratégico de Igualdad lo aprueba el Instituto de la Mujer</td><td><span class="badge br">FALSO</span></td><td>Lo aprueba el GOBIERNO periódicamente (art. 17)</td></tr>
+<tr><td>El informe de impacto de género solo es necesario para leyes orgánicas</td><td><span class="badge br">FALSO</span></td><td>Para toda disposición de carácter general y plan relevante → Consejo de Ministros (art. 19)</td></tr>
+<tr><td>La tutela judicial solo puede ejercerse mientras dura la relación</td><td><span class="badge br">FALSO</span></td><td>Es posible INCLUSO TRAS LA TERMINACIÓN de la relación (art. 12)</td></tr>
+<tr><td>Cualquier persona puede interponer demanda por acoso sexual</td><td><span class="badge br">FALSO</span></td><td>La persona ACOSADA es la ÚNICA LEGITIMADA en litigios de acoso (art. 12.3)</td></tr>
+<tr><td>Las acciones positivas son permanentes una vez adoptadas</td><td><span class="badge br">FALSO</span></td><td>Solo pueden mantenerse MIENTRAS SUBSISTAN las situaciones de desigualdad que las justifican</td></tr>
+</tbody>
+</table></div>
+</body>
+</html>
