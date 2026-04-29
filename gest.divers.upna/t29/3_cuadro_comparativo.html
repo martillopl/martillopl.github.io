@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 29 · HTML 3 – Cuadro comparativo · Tablas operativas · RDL 1/2013</title>
+<style>
+:root{--bg:#f0f5ff;--surface:#fff;--s2:#e8eefe;--s3:#d5d9ff;--border:#a5b4fc;--div:#e0e7ff;--text:#1e1b4b;--muted:#4338ca;--p:#3730a3;--pl:#4f46e5;--warn:#b45309;--danger:#b91c1c;--ok:#065f46;--vio:#6d28d9;--sh:0 2px 10px rgba(55,48,163,.08)}
+[data-theme="dark"]{--bg:#09091f;--surface:#0f0f2d;--s2:#161640;--s3:#1e1e55;--border:#312e81;--div:#1a1a45;--text:#e0e7ff;--muted:#a5b4fc;--p:#818cf8;--pl:#a5b4fc;--warn:#fbbf24;--danger:#f87171;--ok:#34d399;--vio:#c4b5fd;--sh:0 2px 10px rgba(0,0,0,.3)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.6;background:var(--bg);color:var(--text);padding:20px}
+.hdr{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.96rem;color:var(--p);line-height:1.3}.hdr p{font-size:.72rem;color:var(--muted);margin-top:2px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--border);background:var(--s2);color:var(--text);padding:5px 12px;border-radius:999px;font-size:.72rem}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:10px 12px;text-align:center;flex:1 1 100px;box-shadow:var(--sh)}
+.sv{font-size:1.15rem;font-weight:900;color:var(--p)}.sk{font-size:.64rem;color:var(--muted);margin-top:2px}
+h2{font-size:.84rem;font-weight:800;color:#fff;background:var(--p);padding:7px 14px;border-radius:7px;margin:22px 0 9px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:14px 16px;box-shadow:var(--sh);overflow:auto;margin-bottom:10px}
+.dual{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.triple{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:10px}
+table{width:100%;border-collapse:collapse}
+th{background:var(--s2);color:var(--muted);font-weight:700;font-size:.67rem;text-transform:uppercase;letter-spacing:.06em;padding:7px 9px;text-align:left;position:sticky;top:0;z-index:1}
+th.td{background:rgba(185,28,28,.13);color:var(--danger)}
+th.tg{background:rgba(6,95,70,.13);color:var(--ok)}
+th.tw{background:rgba(180,83,9,.13);color:var(--warn)}
+th.tv{background:rgba(109,40,217,.13);color:var(--vio)}
+th.tb{background:rgba(79,70,229,.13);color:var(--pl)}
+td{border-bottom:1px solid var(--div);padding:7px 9px;vertical-align:top;font-size:.78rem}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--s2)}
+.badge{display:inline-flex;padding:2px 8px;border-radius:999px;font-size:.64rem;font-weight:700;border:1px solid transparent;white-space:nowrap;margin:1px}
+.bb{background:rgba(79,70,229,.12);color:var(--pl);border-color:rgba(79,70,229,.22)}
+.bg{background:rgba(6,95,70,.12);color:var(--ok);border-color:rgba(6,95,70,.22)}
+.br{background:rgba(185,28,28,.12);color:var(--danger);border-color:rgba(185,28,28,.22)}
+.by{background:rgba(180,83,9,.12);color:var(--warn);border-color:rgba(180,83,9,.22)}
+.bv{background:rgba(109,40,217,.12);color:var(--vio);border-color:rgba(109,40,217,.22)}
+.bk{background:var(--s2);color:var(--text);border-color:var(--border)}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.75rem;margin:8px 0;border-left:4px solid}
+.nb{background:var(--s2);border-color:var(--pl);color:var(--muted)}
+.nw{background:#fef3c7;border-color:#d97706;color:#78350f}
+.nr{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .nw{background:#451a03;color:#fde68a}
+[data-theme="dark"] .nr{background:#450a0a;color:#fca5a5}
+ul{padding-left:15px;margin:4px 0}li{margin-bottom:3px;font-size:.77rem}
+@media(max-width:700px){.dual,.triple{grid-template-columns:1fr}}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 29 · HTML 3 · Cuadro comparativo con tablas operativas para examen</h1>
+    <p>RDL 1/2013, de 29 de noviembre · Texto Refundido Ley General de derechos de las personas con discapacidad y de su inclusión social</p>
+  </div>
+  <button class="btn" onclick="var d=document.documentElement,t=d.getAttribute('data-theme');d.setAttribute('data-theme',t==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="sv">RDL 1/2013</div><div class="sk">29 noviembre · BOE 3/12/2013 · EV 4/12/2013</div></div>
+  <div class="stat"><div class="sv">3 leyes</div><div class="sk">refundidas: LISMI + LIONDAU + L.49/2007</div></div>
+  <div class="stat"><div class="sv">33%</div><div class="sk">grado mínimo de discapacidad</div></div>
+  <div class="stat"><div class="sv">13</div><div class="sk">principios del art. 3</div></div>
+  <div class="stat"><div class="sv">15</div><div class="sk">definiciones del art. 2</div></div>
+  <div class="stat"><div class="sv">9</div><div class="sk">ámbitos del art. 5</div></div>
+  <div class="stat"><div class="sv">2% / 50+</div><div class="sk">cuota reserva / umbral empresas</div></div>
+  <div class="stat"><div class="sv">70%</div><div class="sk">plantilla mínima con discapacidad en CEE</div></div>
+</div>
+
+<!-- T1 · Identificación y origen -->
+<h2>T1 · Identificación, origen y marco normativo</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Elemento</th><th>Contenido</th><th>Dato de examen</th></tr></thead>
+    <tbody>
+      <tr><td>Norma</td><td><strong>Real Decreto Legislativo 1/2013, de 29 de noviembre</strong></td><td>Tipo normativo: Real Decreto Legislativo (no Ley Orgánica)</td></tr>
+      <tr><td>BOE</td><td>Núm. 289 · 3 de diciembre de 2013</td><td>Publicación: 3/12/2013 · Entrada en vigor: <strong>4/12/2013</strong></td></tr>
+      <tr><td>Denominación</td><td>Texto Refundido de la Ley General de derechos de las personas con discapacidad y de su inclusión social</td><td>No confundir con la LISMI ni la LIONDAU: las refunde</td></tr>
+      <tr><td>Mandato de refundición</td><td>Disp. final 2.ª de la <strong>Ley 26/2011, de 1 de agosto</strong></td><td>La Ley 26/2011 adapta a la Convención ONU</td></tr>
+      <tr><td>Leyes refundidas y derogadas</td><td>Ley 13/1982 (LISMI) · Ley 51/2003 (LIONDAU) · Ley 49/2007 (infracciones)</td><td><strong>3 leyes</strong> derogadas; no solo la LISMI</td></tr>
+      <tr><td>Modificación relevante posterior</td><td><strong>Ley 6/2022, de 31 de marzo</strong> (accesibilidad cognitiva)</td><td>Incorpora la accesibilidad cognitiva al art. 2.k)</td></tr>
+      <tr><td>Fundamento constitucional</td><td>Arts. 9.2, 10, 14 y 49 CE</td><td>Art. 49 CE reformado en 2023: "personas con discapacidad" en lugar de "disminuidos"</td></tr>
+      <tr><td>Referente internacional</td><td>Convención ONU sobre derechos de las PcD (AGONU 13/12/2006 · ratificada por España 3/12/2007 · en vigor en España 3/05/2008)</td><td>Modelo social y de DDHH: la persona es SUJETO, no objeto</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- T2 · Las 3 leyes refundidas comparadas -->
+<h2>T2 · Las 3 leyes refundidas en paralelo</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Aspecto</th><th class="tb">Ley 13/1982 · LISMI</th><th class="tg">Ley 51/2003 · LIONDAU</th><th class="tw">Ley 49/2007</th></tr></thead>
+    <tbody>
+      <tr><td>Nombre</td><td>Ley de Integración Social de los Minusválidos</td><td>Ley de Igualdad de Oportunidades, No Discriminación y Accesibilidad Universal</td><td>Régimen de Infracciones y Sanciones en materia de igualdad de oportunidades, no discriminación y accesibilidad de PcD</td></tr>
+      <tr><td>Año y fecha</td><td>7 de abril de <strong>1982</strong></td><td>2 de diciembre de <strong>2003</strong></td><td>Diciembre de <strong>2007</strong></td></tr>
+      <tr><td>Enfoque</td><td>Modelo médico-rehabilitador · integración</td><td>Modelo social · igualdad y accesibilidad</td><td>Régimen sancionador de las obligaciones de las leyes anteriores</td></tr>
+      <tr><td>Aportaciones al TR 2013</td><td>Base del sistema especial de prestaciones sociales · empleo protegido</td><td>Definiciones de discriminación · accesibilidad · ajustes razonables</td><td>Tipos de infracciones y cuantías de sanciones</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- T3 · Estructura del texto -->
+<h2>T3 · Estructura del texto refundido — articulado completo</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Bloque</th><th>Arts.</th><th>Contenido</th><th>Precepto más preguntado</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Título Preliminar</strong></td><td>1–6</td><td>Objeto · Definiciones · Principios · Concepto PcD · Ámbitos · Autonomía</td><td>Arts. 2, 3 y 4</td></tr>
+      <tr><td><strong>Título I · Cap. I</strong></td><td>7–13</td><td>Derecho a la igualdad; obligaciones de AAPP</td><td>Art. 7</td></tr>
+      <tr><td><strong>Título I · Cap. II</strong></td><td>14–20</td><td>Sistema especial de prestaciones sociales y económicas (subsidio movilidad, recuperación profesional…)</td><td>Art. 14–15</td></tr>
+      <tr><td><strong>Título I · Cap. III</strong></td><td>21–24</td><td>Derecho a la salud y atención integral; libre elección de médico; exención farmacéutica art. 9</td><td>Art. 9 (prestación farmacéutica)</td></tr>
+      <tr><td><strong>Título I · Cap. IV</strong></td><td>25–28</td><td>Derecho a la educación · educación inclusiva</td><td>Art. 18</td></tr>
+      <tr><td><strong>Título I · Cap. V</strong></td><td>29–33</td><td>Vida independiente · asistencia personal · apoyo a la comunicación</td><td>Art. 29</td></tr>
+      <tr><td><strong>Título I · Cap. VI</strong></td><td>34</td><td>Participación en asuntos públicos · accesibilidad electoral</td><td>Art. 34</td></tr>
+      <tr><td><strong>Título I · Cap. VII-VIII</strong></td><td>35–47</td><td>Trabajo y empleo · empleo ordinario/protegido/autónomo · cuota 2% · CEE · enclaves</td><td>Arts. 40, 42, 43, 45, 46</td></tr>
+      <tr><td><strong>Título I · Cap. IX</strong></td><td>48–55</td><td>Protección social · Seguridad Social · prestaciones no contributivas</td><td>Art. 48</td></tr>
+      <tr><td><strong>Título II</strong></td><td>56–79</td><td>Igualdad de oportunidades · no discriminación · accesibilidad universal · acción positiva · ajustes razonables</td><td>Arts. 63–64 (ajustes razonables)</td></tr>
+      <tr><td><strong>Título III</strong></td><td>80–98</td><td>Régimen de infracciones y sanciones</td><td>Arts. 86–88 (cuantías)</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- T4 · Art. 2 definiciones operativas -->
+<h2>T4 · Art. 2 · Las 15 definiciones — tabla operativa</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Letra</th><th>Término</th><th>Elementos esenciales</th><th>Diferencia clave</th></tr></thead>
+    <tbody>
+      <tr><td><span class="badge bb">a)</span></td><td><strong>Discapacidad</strong></td><td>Situación = deficiencias previsiblemente permanentes + barreras que impidan participación plena</td><td>La causa está en las BARRERAS, no en la persona (modelo social)</td></tr>
+      <tr><td><span class="badge br">b)</span></td><td><strong>Discriminación directa</strong></td><td>Trato menos favorable por razón de discapacidad en situación análoga</td><td>El motivo es explícito y directo</td></tr>
+      <tr><td><span class="badge by">c)</span></td><td><strong>Discriminación indirecta</strong></td><td>Disposición/criterio aparentemente neutral que genera desventaja particular a PcD sin justificación objetiva y proporcional</td><td>La norma parece neutra pero produce efecto discriminatorio</td></tr>
+      <tr><td><span class="badge bv">d)</span></td><td><strong>Discriminación por asociación</strong></td><td>Trato desfavorable a quien se relaciona con una PcD, por esa relación</td><td>No es necesario tener discapacidad uno mismo</td></tr>
+      <tr><td><span class="badge br">e)</span></td><td><strong>Acoso</strong></td><td>Conducta no deseada por razón de discapacidad que atente contra la dignidad o cree entorno intimidatorio, hostil, degradante, humillante u ofensivo</td><td>No requiere perjuicio material; basta con el entorno hostil</td></tr>
+      <tr><td><span class="badge bg">f)</span></td><td><strong>Accesibilidad universal</strong></td><td>Condición de entornos, bienes y servicios para ser comprensibles, utilizables y practicables por todas las personas, con seguridad y comodidad, de forma autónoma. Incluye accesibilidad cognitiva (Ley 6/2022)</td><td>No es solo física; incluye cognitiva desde 2022</td></tr>
+      <tr><td><span class="badge bg">g)</span></td><td><strong>Diseño universal</strong></td><td>Actividad por la que se conciben desde el origen entornos/productos utilizables por todas las personas sin adaptaciones especializadas</td><td>Se diseña DESDE EL ORIGEN; no es adaptación posterior</td></tr>
+      <tr><td><span class="badge bv">h)</span></td><td><strong>Ajustes razonables</strong></td><td>Modificaciones/adaptaciones del ambiente que no impongan carga desproporcionada, para garantizar goce de derechos en igualdad de condiciones</td><td>El límite es la "carga desproporcionada"</td></tr>
+      <tr><td><span class="badge bb">i)</span></td><td><strong>Vida independiente</strong></td><td>La persona ejerce el poder de decisión sobre su existencia y participa activamente en la comunidad</td><td>No significa vivir solo; significa decidir autónomamente</td></tr>
+      <tr><td><span class="badge bk">j)</span></td><td><strong>Normalización</strong></td><td>Las PcD pueden llevar una vida normal, accediendo a los mismos lugares, ámbitos y servicios que el resto de ciudadanos</td><td>Principio que guía la integración social ordinaria</td></tr>
+      <tr><td><span class="badge bk">k)</span></td><td><strong>Inclusión social</strong></td><td>Proceso que garantiza la igualdad de oportunidades para la plena participación en todas las áreas de la sociedad</td><td>Complementa la normalización con un enfoque activo</td></tr>
+      <tr><td><span class="badge bb">l)</span></td><td><strong>Accesibilidad cognitiva</strong></td><td>Propiedad que permite a las personas comprender, usar y acceder a entornos, productos y servicios (añadida por Ley 6/2022 como art. 2.k)</td><td>Específica para discapacidad intelectual/del desarrollo</td></tr>
+      <tr><td><span class="badge bk">m)</span></td><td><strong>Transversalidad</strong></td><td>Las políticas de discapacidad deben contemplarse en todas las líneas de acción de carácter general</td><td>No solo en planes específicos de discapacidad</td></tr>
+      <tr><td><span class="badge bk">n)</span></td><td><strong>Diálogo civil</strong></td><td>Participación de las organizaciones representativas de PcD en elaboración, seguimiento y evaluación de políticas</td><td>Distinguir del "diálogo social" (sindicatos/patronal)</td></tr>
+      <tr><td><span class="badge bk">o)</span></td><td><strong>Enfoque de género</strong></td><td>Las necesidades específicas de las mujeres con discapacidad serán tenidas en cuenta en las políticas y programas</td><td>Intersección discapacidad-género</td></tr>
+    </tbody>
+  </table>
+  <div class="note nr">⚠ TRAMPA: "La discriminación por asociación no está recogida en la ley" → FALSO: art. 2.d) la define expresamente.</div>
+</div>
+
+<!-- T5 · Los 13 principios art. 3 -->
+<h2>T5 · Art. 3 · Los 13 principios — tabla operativa para examen</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Letra</th><th>Principio</th><th>Significado operativo</th></tr></thead>
+    <tbody>
+      <tr><td><span class="badge bb">a</span></td><td>Respeto a la dignidad y autonomía individual</td><td>Incluye expresamente la libertad de tomar las propias decisiones; base del modelo social</td></tr>
+      <tr><td><span class="badge bb">b</span></td><td>Vida independiente</td><td>El poder de decisión sobre la propia existencia; la PcD no es objeto de tutela paternalista</td></tr>
+      <tr><td><span class="badge br">c</span></td><td>No discriminación</td><td>Núcleo del modelo antidiscriminatorio; abarca discriminación directa, indirecta, por asociación y acoso</td></tr>
+      <tr><td><span class="badge bk">d</span></td><td>Respeto por la diferencia y aceptación de la discapacidad como parte de la diversidad humana</td><td>Reconoce el valor de la diversidad; rechaza la estigmatización</td></tr>
+      <tr><td><span class="badge bg">e</span></td><td>Igualdad de oportunidades</td><td>No basta con la igualdad formal; se requiere igualdad real y efectiva (art. 9.2 CE)</td></tr>
+      <tr><td><span class="badge bv">f</span></td><td>Igualdad entre mujeres y hombres</td><td>Perspectiva de género transversal en todas las políticas de discapacidad</td></tr>
+      <tr><td><span class="badge bk">g</span></td><td>Normalización</td><td>Acceso a los servicios y espacios ordinarios, no solo a los específicos para PcD</td></tr>
+      <tr><td><span class="badge bg">h</span></td><td>Accesibilidad universal</td><td>Condición transversal para el ejercicio de cualquier derecho</td></tr>
+      <tr><td><span class="badge bg">i</span></td><td>Diseño universal o diseño para todas las personas</td><td>Concebir entornos útiles para todos desde el origen, sin adaptaciones posteriores</td></tr>
+      <tr><td><span class="badge bb">j</span></td><td>Participación e inclusión plenas y efectivas en la sociedad</td><td>No solo participación formal; ha de ser real y libre de barreras</td></tr>
+      <tr><td><span class="badge bk">k</span></td><td>Diálogo civil</td><td>Protagonismo de las organizaciones representativas en el diseño de las políticas</td></tr>
+      <tr><td><span class="badge by">l</span></td><td>Respeto al desarrollo de la personalidad de las personas con discapacidad, y en especial de las niñas y niños</td><td>Mención expresa a la infancia como colectivo de especial protección</td></tr>
+      <tr><td><span class="badge bb">m</span></td><td>Transversalidad de las políticas en materia de discapacidad</td><td>La discapacidad es un eje de todas las políticas públicas, no solo de los planes específicos</td></tr>
+    </tbody>
+  </table>
+  <div class="note nb">📌 Son 13 principios: letras de la (a) a la (m). Trampa habitual: decir que son 10 o 12.</div>
+</div>
+
+<!-- T6 · Art. 4 personas con discapacidad -->
+<h2>T6 · Art. 4 · Concepto de persona con discapacidad — tabla operativa</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Supuesto</th><th>Requisito</th><th>Quién reconoce</th><th>Alcance territorial</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Regla general</strong></td><td>Deficiencias físicas, mentales, intelectuales o sensoriales, <strong>previsiblemente permanentes</strong>, que al interactuar con barreras impidan participación plena. Grado reconocido <strong>≥ 33%</strong></td><td>Órgano competente de la <strong>CCAA</strong></td><td>Validez en <strong>todo el territorio nacional</strong></td></tr>
+      <tr><td><strong>Equiparados (sin necesidad de 33%)</strong></td><td>Pensionistas SS con pensión de <strong>incapacidad permanente total, absoluta o gran invalidez</strong></td><td>INSS / Mutuas</td><td>Todo el territorio</td></tr>
+      <tr><td><strong>Equiparados (clases pasivas)</strong></td><td>Pensionistas de clases pasivas con pensión de <strong>jubilación o retiro por inutilidad o incapacidad permanente para el servicio</strong></td><td>Ministerio de Hacienda</td><td>Todo el territorio</td></tr>
+    </tbody>
+  </table>
+  <div class="note nw">⚠ TRAMPA: "El grado mínimo es el 25%" → FALSO: es el 33%. Y "igual o superior al 33%", no "superior".</div>
+</div>
+
+<!-- T7 · Empleo comparado -->
+<h2>T7 · Empleo de PcD — comparativa de modalidades (arts. 35-47)</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Modalidad</th><th>Definición</th><th>Norma / Art.</th><th>Requisito o dato clave</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Empleo ordinario</strong></td><td>Trabajo en empresa privada o AAPP en el mercado laboral ordinario</td><td>Art. 37-39</td><td>Cuota de reserva del <strong>2%</strong> en empresas de <strong>50 o más trabajadores</strong> (art. 40)</td></tr>
+      <tr><td><strong>Centros Especiales de Empleo (CEE)</strong></td><td>Empresas cuyo objetivo principal es proporcionar empleo remunerado a PcD</td><td>Art. 43-44</td><td>Mínimo <strong>70%</strong> de la plantilla ha de ser personal con discapacidad</td></tr>
+      <tr><td><strong>Enclaves laborales</strong></td><td>Contrato entre empresa ordinaria y CEE: trabajadores PcD del CEE trabajan en las instalaciones de la empresa ordinaria</td><td>Art. 46 · RD 290/2004</td><td>Vía de tránsito al empleo ordinario; la empresa puede "ficherlos" con bonificaciones</td></tr>
+      <tr><td><strong>Empleo autónomo</strong></td><td>Trabajo por cuenta propia de PcD</td><td>Art. 47</td><td>Medidas de apoyo al autoempleo; bonificaciones en cotizaciones SS</td></tr>
+      <tr><td><strong>Medidas alternativas a la cuota</strong></td><td>Cuando se acredita imposibilidad de cobertura directa</td><td>Art. 42 · RD 364/2005</td><td>Contratos con CEE · contratos con autónomos con discapacidad · donaciones a fundaciones/asociaciones para empleo de PcD</td></tr>
+    </tbody>
+  </table>
+  <div class="note nr">⚠ TRAMPA: "La cuota aplica a empresas de más de 50 trabajadores" → FALSO: aplica desde 50 inclusive ("50 o más").</div>
+  <div class="note nw">⚠ TRAMPA: "Los CEE requieren el 60% de plantilla con discapacidad" → FALSO: el mínimo es el 70%.</div>
+</div>
+
+<!-- T8 · Sanciones -->
+<h2>T8 · Régimen sancionador — Título III (arts. 80-98)</h2>
+<div class="dual">
+  <div class="card">
+    <table>
+      <thead><tr><th>Tipo de infracción</th><th>Cuantía de la sanción</th></tr></thead>
+      <tbody>
+        <tr><td><span class="badge bg">Leve</span></td><td>Hasta <strong>30.000 €</strong></td></tr>
+        <tr><td><span class="badge by">Grave</span></td><td><strong>30.001 – 90.000 €</strong></td></tr>
+        <tr><td><span class="badge br">Muy grave</span></td><td><strong>90.001 – 1.000.000 €</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card">
+    <table>
+      <thead><tr><th>Aspecto</th><th>Regla</th></tr></thead>
+      <tbody>
+        <tr><td>Reincidencia</td><td>Las sanciones pueden incrementarse hasta el <strong>doble o el triple</strong></td></tr>
+        <tr><td>Competencia</td><td>Administraciones con competencias en materia de igualdad y discapacidad (Estado/CCAA según el ámbito)</td></tr>
+        <tr><td>Prescripción infracciones leves</td><td>1 año</td></tr>
+        <tr><td>Prescripción infracciones graves</td><td>2 años</td></tr>
+        <tr><td>Prescripción infracciones muy graves</td><td>4 años</td></tr>
+        <tr><td>Prescripción sanciones leves</td><td>1 año</td></tr>
+        <tr><td>Prescripción sanciones graves</td><td>2 años</td></tr>
+        <tr><td>Prescripción sanciones muy graves</td><td>4 años</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- T9 · Modelo médico vs social -->
+<h2>T9 · Modelo médico vs. modelo social — la distinción conceptual del tema</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Aspecto</th><th class="td">Modelo médico-rehabilitador (LISMI 1982)</th><th class="tg">Modelo social y de DDHH (Convención ONU 2006 · RDL 1/2013)</th></tr></thead>
+    <tbody>
+      <tr><td>Causa de la discapacidad</td><td>Está en la persona (deficiencia)</td><td>Está en la <strong>interacción</strong> entre la persona y las barreras del entorno</td></tr>
+      <tr><td>La persona con discapacidad es…</td><td>Objeto de tratamiento, rehabilitación o asistencia</td><td><strong>Sujeto de derechos</strong>, con plena capacidad jurídica</td></tr>
+      <tr><td>Respuesta del Estado</td><td>Curar, rehabilitar, integrar</td><td>Eliminar barreras, garantizar derechos, promover inclusión</td></tr>
+      <tr><td>Concepto clave</td><td>Integración social</td><td><strong>Inclusión social</strong> y vida independiente</td></tr>
+      <tr><td>Enfoque del diseño</td><td>Adaptación a posteriori</td><td><strong>Diseño universal</strong> desde el origen</td></tr>
+      <tr><td>Paradigma de referencia</td><td>Paradigma médico/asistencial</td><td>Paradigma de los derechos humanos</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- T10 · Convención ONU -->
+<h2>T10 · Convención Internacional de la ONU — datos operativos</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Elemento</th><th>Dato exacto</th><th>Trampa asociada</th></tr></thead>
+    <tbody>
+      <tr><td>Órgano que la aprueba</td><td>Asamblea General de la ONU</td><td>No la aprueba el Consejo de Seguridad</td></tr>
+      <tr><td>Fecha de aprobación</td><td><strong>13 de diciembre de 2006</strong></td><td>TRAMPA: "fue aprobada en 2007" → FALSO: 2006</td></tr>
+      <tr><td>Ratificación por España</td><td><strong>3 de diciembre de 2007</strong></td><td>Ratificación = instrumento de ratificación depositado en ONU</td></tr>
+      <tr><td>Entrada en vigor en España</td><td><strong>3 de mayo de 2008</strong></td><td>La más preguntada: ¿en vigor en 2007 o 2008? → 2008</td></tr>
+      <tr><td>Rango en el ordenamiento español</td><td>Tratado internacional ratificado = parte del ordenamiento interno (art. 96 CE); rango supralegal</td><td>No es rango constitucional pero sí supralegal</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- T11 · Trampas frecuentes -->
+<h2>T11 · Las 12 trampas más frecuentes del examen</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Afirmación trampa</th><th>¿Correcta?</th><th>Corrección exacta</th></tr></thead>
+    <tbody>
+      <tr><td>El RDL 1/2013 deroga solo la LISMI</td><td><span class="badge br">FALSO</span></td><td>Deroga <strong>3 leyes</strong>: Ley 13/1982 (LISMI) + Ley 51/2003 (LIONDAU) + Ley 49/2007</td></tr>
+      <tr><td>El grado mínimo de discapacidad a efectos de la ley es el 25%</td><td><span class="badge br">FALSO</span></td><td>El grado mínimo es el <strong>33%</strong> ("igual o superior al 33%")</td></tr>
+      <tr><td>La cuota del 2% aplica a empresas de MÁS de 50 trabajadores</td><td><span class="badge br">FALSO</span></td><td>Aplica a empresas de <strong>50 O MÁS</strong> trabajadores (desde 50 inclusive)</td></tr>
+      <tr><td>Los CEE requieren que el 60% de la plantilla tenga discapacidad</td><td><span class="badge br">FALSO</span></td><td>El mínimo es el <strong>70%</strong> de la plantilla</td></tr>
+      <tr><td>La Convención ONU fue aprobada en 2007</td><td><span class="badge br">FALSO</span></td><td>Aprobada el <strong>13 de diciembre de 2006</strong>; ratificada por España en 2007</td></tr>
+      <tr><td>La Convención ONU entró en vigor en España en 2007</td><td><span class="badge br">FALSO</span></td><td>Entró en vigor en España el <strong>3 de mayo de 2008</strong></td></tr>
+      <tr><td>El art. 3 tiene 10 principios</td><td><span class="badge br">FALSO</span></td><td>Son <strong>13 principios</strong> (letras a a m)</td></tr>
+      <tr><td>La accesibilidad cognitiva estaba en el texto original de 2013</td><td><span class="badge br">FALSO</span></td><td>La incorporó la <strong>Ley 6/2022, de 31 de marzo</strong> (art. 2.k)</td></tr>
+      <tr><td>La discriminación por asociación no está recogida en el RDL 1/2013</td><td><span class="badge br">FALSO</span></td><td>Sí, está en el <strong>art. 2.d)</strong></td></tr>
+      <tr><td>Las sanciones muy graves pueden llegar a 500.000 €</td><td><span class="badge br">FALSO</span></td><td>El techo de las sanciones muy graves es <strong>1.000.000 €</strong></td></tr>
+      <tr><td>El diseño universal es una adaptación especial para PcD</td><td><span class="badge br">FALSO</span></td><td>Es la concepción <strong>desde el origen</strong> para todas las personas, sin adaptaciones especializadas</td></tr>
+      <tr><td>Tener una IP total automáticamente requiere el reconocimiento del 33%</td><td><span class="badge by">MATIZ</span></td><td>Los pensionistas con IP total, absoluta o gran invalidez están <strong>equiparados</strong> a PcD sin necesidad de tramitar el reconocimiento del 33%</td></tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
