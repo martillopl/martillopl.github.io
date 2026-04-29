@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 49 · HTML 2 · Esquema-resumen visual · Menor y VG · Cartera SS.SS. Navarra</title>
+<style>
+:root{--bg:#f0fbff;--card:#fff;--s2:#e0f2fe;--line:#7dd3fc;--text:#0c4a6e;--muted:#0284c7;--p:#075985;--warn:#d97706;--red:#dc2626;--grn:#059669;--vio:#7c3aed;--teal:#0d9488;--rose:#e11d48;--sh:0 2px 10px rgba(7,89,133,.09)}
+[data-theme="dark"]{--bg:#020c1a;--card:#0a1e35;--s2:#0e2a45;--line:#075985;--text:#bae6fd;--muted:#38bdf8;--p:#38bdf8;--warn:#fbbf24;--red:#fca5a5;--grn:#6ee7b7;--vio:#c4b5fd;--teal:#5eead4;--rose:#fda4af;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:22px}
+.wrap{max-width:1220px;margin:0 auto}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 20px;margin-bottom:14px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.97rem;color:var(--p)}.hdr p{font-size:.72rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.71rem}
+h2{font-size:.88rem;font-weight:800;color:#fff;background:var(--p);padding:7px 15px;border-radius:8px;margin:20px 0 10px;display:inline-block}
+strong{color:var(--p)}
+/* KPI */
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(115px,1fr));gap:8px;margin-bottom:14px}
+.kb{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:10px;box-shadow:var(--sh);text-align:center}
+.big{font-size:.98rem;font-weight:800;color:var(--p);margin-bottom:2px}.ksm{font-size:.68rem;color:var(--muted)}.kmi{font-size:.65rem;margin-top:3px}
+/* badges */
+.bq{display:inline-block;padding:2px 7px;border-radius:999px;font-size:.63rem;font-weight:700;border:1px solid;white-space:nowrap;margin:1px}
+.gok{background:rgba(5,150,105,.12);color:#059669;border-color:rgba(5,150,105,.3)}
+.gng{background:rgba(220,38,38,.12);color:#dc2626;border-color:rgba(220,38,38,.3)}
+.gnew{background:rgba(124,58,237,.12);color:var(--vio);border-color:rgba(124,58,237,.3)}
+/* notes */
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.73rem;border-left:4px solid;margin:7px 0}
+.nok{background:rgba(5,150,105,.07);border-color:#059669}
+.nerr{background:rgba(220,38,38,.07);border-color:#dc2626}
+.nw{background:rgba(180,83,9,.07);border-color:#b45309}
+.nvio{background:rgba(124,58,237,.07);border-color:#7c3aed}
+.nsky{background:var(--s2);border-color:var(--muted)}
+.nteal{background:rgba(13,148,136,.07);border-color:#0d9488}
+.nrose{background:rgba(225,29,72,.07);border-color:#e11d48}
+[data-theme="dark"] .nw{background:#451a03;color:#fde68a}
+[data-theme="dark"] .nerr{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .nok{background:rgba(110,231,183,.07);color:#6ee7b7}
+[data-theme="dark"] .nvio{background:#1e1b4b;color:#c4b5fd}
+[data-theme="dark"] .nrose{background:#200020;color:#fda4af}
+/* grids */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px}
+.g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:9px;margin-bottom:14px}
+/* blk */
+.blk{background:var(--card);border-radius:12px;padding:12px 14px;box-shadow:var(--sh)}
+.b1{border-top:5px solid var(--p)}.b2{border-top:5px solid var(--vio)}.b3{border-top:5px solid var(--grn)}.b4{border-top:5px solid var(--teal)}.b5{border-top:5px solid var(--warn)}.b6{border-top:5px solid var(--red)}.b7{border-top:5px solid var(--rose)}
+.blk h3{font-size:.8rem;font-weight:800;margin-bottom:7px}
+.b1 h3{color:var(--p)}.b2 h3{color:var(--vio)}.b3 h3{color:var(--grn)}.b4 h3{color:var(--teal)}.b5 h3{color:var(--warn)}.b6 h3{color:var(--red)}.b7 h3{color:var(--rose)}
+.blk ul{padding-left:14px}.blk li{font-size:.72rem;margin:.2rem 0}
+/* prestacion row */
+.pr{display:flex;align-items:flex-start;gap:8px;padding:7px 10px;border-radius:8px;margin:5px 0;background:var(--card);border:1px solid var(--line);box-shadow:0 1px 4px rgba(7,89,133,.05)}
+.pr-cod{font-weight:800;font-size:.68rem;color:var(--muted);min-width:26px;padding-top:2px}
+.pr-body{flex:1;font-size:.73rem}
+.pr-name{font-weight:700;color:var(--p)}
+.pr-tip{font-size:.62rem;font-weight:700;padding:1px 6px;border-radius:999px;margin-left:5px;border:1px solid}
+.pr-g{background:rgba(5,150,105,.1);color:#059669;border-color:rgba(5,150,105,.3)}
+.pr-ng{background:rgba(220,38,38,.1);color:#dc2626;border-color:rgba(220,38,38,.3)}
+/* tables */
+table{width:100%;border-collapse:collapse;margin:8px 0}
+th{background:var(--s2);color:var(--muted);font-size:.66rem;text-transform:uppercase;padding:6px 9px;text-align:left}
+td{padding:6px 9px;border-bottom:1px solid var(--s2);font-size:.74rem;vertical-align:top}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+/* trap */
+.trap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px;margin-bottom:14px}
+.trap{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:9px 11px;box-shadow:var(--sh)}
+.trap .q{font-size:.7rem;color:var(--red);font-weight:600;margin-bottom:3px}
+.trap .a{font-size:.7rem}
+/* cadena */
+.chain{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin:8px 0}
+.cstep{background:var(--s2);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:.7rem;font-weight:700;color:var(--p);text-align:center;flex:1;min-width:80px}
+.carrow{font-size:1rem;color:var(--muted)}
+/* normas */
+.norma{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:9px 12px;box-shadow:var(--sh);font-size:.73rem;margin-bottom:7px}
+.norma .cod{font-weight:800;color:var(--p);margin-right:6px}
+.norma .desc{color:var(--muted);font-size:.67rem;margin-top:2px}
+@media(max-width:700px){.g2,.g3,.g4{grid-template-columns:1fr}.trap-grid{grid-template-columns:1fr}.chain{flex-direction:column}.carrow{transform:rotate(90deg)}}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+<div class="hdr">
+  <div>
+    <h1>Tema 49 · HTML 2 · Esquema-resumen visual para memorización rápida</h1>
+    <p>Cartera SS.SS. Ámbito General (7) · Área G (Menor) + Área H (VG) · DF 69/2008 mod. DF 30/2019 · LF 15/2005 · LF 22/2002 · LF 14/2015</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- FICHAS FLASH -->
+<h2>Fichas flash de identificación ★★★</h2>
+<div class="kpi">
+  <div class="kb"><div class="big">Área G</div><div class="ksm">Atención al menor</div><div class="kmi">LF 15/2005 · DF 7/2009</div></div>
+  <div class="kb"><div class="big">Área H</div><div class="ksm">Violencia de género</div><div class="kmi">LF 22/2002 · DF 16/2007 · LF 14/2015</div></div>
+  <div class="kb"><div class="big">G3 ≠ G6</div><div class="ksm">Urgente: FAMILIAR vs. RESIDENCIAL</div><div class="kmi">Distinción crítica</div></div>
+  <div class="kb"><div class="big">G11 ≠ G13</div><div class="ksm">Servicio vs. Ayuda económica</div><div class="kmi">Ambos para extutelados</div></div>
+  <div class="kb"><div class="big">G3-G4-G5</div><div class="ksm">Tipos de acogimiento familiar</div><div class="kmi">Urgente / Simple / Permanente</div></div>
+  <div class="kb"><div class="big">H3 ≠ H4</div><div class="ksm">Servicio emergencia vs. Acogida urgente</div><div class="kmi">Atención ≠ Alojamiento</div></div>
+  <div class="kb"><div class="big">H4-H5-H6</div><div class="ksm">Cadena de alojamiento VG</div><div class="kmi">Urgente / Media / Larga estancia</div></div>
+  <div class="kb"><div class="big">H10 = G</div><div class="ksm">Ayudas emergencia VG GARANTIZADAS</div><div class="kmi">LF 22/2002 art. 19 + DF 16/2007</div></div>
+  <div class="kb"><div class="big">Agresor NG</div><div class="ksm">Atención psicol. a agresores NO G</div><div class="kmi">Anexo II · art. 12 bis LF 22/2002</div></div>
+  <div class="kb"><div class="big">H9 = nexo</div><div class="ksm">Menores víctimas VG</div><div class="kmi">Conecta Área G ↔ Área H</div></div>
+  <div class="kb"><div class="big">H3 = 24h</div><div class="ksm">Servicio emergencia 24h / 365d</div><div class="kmi">Sin requisitos previos</div></div>
+  <div class="kb"><div class="big">3 vías H10</div><div class="ksm">SS.SS. Base + Acogida + Equipo Integral</div><div class="kmi">★ pregunta textual habitual</div></div>
+</div>
+
+<!-- MARCO NORMATIVO -->
+<h2>Marco normativo · Mapa de normas ★★★</h2>
+<div class="g2">
+  <div class="blk b1">
+    <h3>Área G · Normas del menor</h3>
+    <div class="norma"><span class="cod">DF 69/2008 (mod. DF 30/2019)</span> Cartera SS.SS. Ámbito General · Área G (Anexo I + Anexo II)</div>
+    <div class="norma"><span class="cod">LF 15/2005</span> Promoción, atención y protección a la infancia y a la adolescencia<div class="desc">Principio rector: interés superior del menor · Sistema de protección y reforma</div></div>
+    <div class="norma"><span class="cod">DF 7/2009</span> Desarrollo parcial de la LF 15/2005<div class="desc">Organización técnica del sistema de protección</div></div>
+    <div class="norma"><span class="cod">LF 15/2006</span> Ley Foral de Servicios Sociales de Navarra<div class="desc">Marco general de la Cartera · Art. 4.4 acceso urgente</div></div>
+  </div>
+  <div class="blk b7">
+    <h3>Área H · Normas de violencia de género</h3>
+    <div class="norma"><span class="cod">DF 69/2008 (mod. DF 30/2019)</span> Cartera SS.SS. Ámbito General · Área H (Anexo I + Anexo II)</div>
+    <div class="norma"><span class="cod">LF 22/2002</span> Medidas integrales contra la violencia sexista<div class="desc">Art. 12 bis: atención a agresores (NG) · Art. 19: ayudas emergencia garantizadas</div></div>
+    <div class="norma"><span class="cod">DF 16/2007</span> Reglamento de desarrollo de la LF 22/2002<div class="desc">Art. 28: procedimiento ayudas de emergencia VG garantizadas</div></div>
+    <div class="norma"><span class="cod">LF 14/2015</span> Actuar contra la violencia hacia las mujeres<div class="desc">Amplía y actualiza LF 22/2002 · Derecho a atención hasta recuperación completa</div></div>
+  </div>
+</div>
+
+<!-- ÁREA G: PRESTACIONES -->
+<h2>Área G · Las 13 prestaciones garantizadas del menor ★★★</h2>
+<div class="g4">
+  <div class="blk b1">
+    <h3>🔍 Valoración y apoyo familiar</h3>
+    <div class="pr"><span class="pr-cod">G1</span><div class="pr-body"><span class="pr-name">Información, valoración, diagnóstico y orientación</span><span class="pr-tip pr-g">G</span> · Puerta de entrada ante desprotección o conflicto social</div></div>
+    <div class="pr"><span class="pr-cod">G2</span><div class="pr-body"><span class="pr-name">Intervención familiar</span><span class="pr-tip pr-g">G</span> · Prevenir o tratar la desprotección · <strong>Evitar la separación</strong></div></div>
+  </div>
+  <div class="blk b3">
+    <h3>🏠 Acogimiento familiar (3 tipos)</h3>
+    <div class="pr"><span class="pr-cod">G3</span><div class="pr-body"><span class="pr-name">Acogimiento familiar <em>urgente</em></span><span class="pr-tip pr-g">G</span> · Separación inmediata en familia acogedora</div></div>
+    <div class="pr"><span class="pr-cod">G4</span><div class="pr-body"><span class="pr-name">Acogimiento familiar <em>simple</em></span><span class="pr-tip pr-g">G</span> · Temporal no urgente · Previsión de retorno</div></div>
+    <div class="pr"><span class="pr-cod">G5</span><div class="pr-body"><span class="pr-name">Acogimiento familiar <em>permanente</em></span><span class="pr-tip pr-g">G</span> · Sin retorno razonable · Mayor estabilidad</div></div>
+    <div class="note nerr" style="margin-top:8px">⚠ G3, G4, G5 = FAMILIAR. G6, G7, G8 = RESIDENCIAL. No mezclar.</div>
+  </div>
+  <div class="blk b2">
+    <h3>🏢 Acogimiento residencial (3 tipos)</h3>
+    <div class="pr"><span class="pr-cod">G6</span><div class="pr-body"><span class="pr-name">Acogimiento residencial <em>urgente</em> (Casa de Observación)</span><span class="pr-tip pr-g">G</span> · Residencia urgente · No familiar</div></div>
+    <div class="pr"><span class="pr-cod">G7</span><div class="pr-body"><span class="pr-name">Acogimiento residencial <em>básico</em></span><span class="pr-tip pr-g">G</span> · Casa de Infancia / Hogar</div></div>
+    <div class="pr"><span class="pr-cod">G8</span><div class="pr-body"><span class="pr-name">Acogimiento residencial <em>especializado</em></span><span class="pr-tip pr-g">G</span> · Menores con necesidades especiales o conductas disruptivas</div></div>
+  </div>
+  <div class="blk b5">
+    <h3>⚖️ Reforma, adopción y extutelados</h3>
+    <div class="pr"><span class="pr-cod">G9</span><div class="pr-body"><span class="pr-name">Atención a menores con medidas de reforma</span><span class="pr-tip pr-g">G</span> · Ejecuta medidas judiciales de menores infractores</div></div>
+    <div class="pr"><span class="pr-cod">G10</span><div class="pr-body"><span class="pr-name">Adopción nacional e internacional</span><span class="pr-tip pr-g">G</span> · Valoración + formación + seguimiento</div></div>
+    <div class="pr"><span class="pr-cod">G11</span><div class="pr-body"><span class="pr-name">Apoyo inserción sociolaboral extutelados</span><span class="pr-tip pr-g">G</span> · <strong>Servicio técnico</strong></div></div>
+    <div class="pr"><span class="pr-cod">G12</span><div class="pr-body"><span class="pr-name">Ayuda económica acogimiento familiar</span><span class="pr-tip pr-g">G</span> · Para familias acogedoras</div></div>
+    <div class="pr"><span class="pr-cod">G13</span><div class="pr-body"><span class="pr-name">Ayuda económica inserción extutelados</span><span class="pr-tip pr-g">G</span> · <strong>Prestación económica</strong> ≠ G11</div></div>
+  </div>
+</div>
+
+<!-- TIPOS DE ACOGIMIENTO COMPARADO -->
+<h2>Tipos de acogimiento · Mapa visual completo ★★★</h2>
+<div class="g2">
+  <div class="blk b3">
+    <h3>FAMILIAR (en familia acogedora)</h3>
+    <table>
+      <thead><tr><th>Código</th><th>Tipo</th><th>Rasgo clave</th></tr></thead>
+      <tbody>
+        <tr><td><strong>G3</strong></td><td>Urgente</td><td>Separación <strong>inmediata</strong> · Temporal corto</td></tr>
+        <tr><td><strong>G4</strong></td><td>Simple (no urgente)</td><td>Temporal · Con previsión de retorno</td></tr>
+        <tr><td><strong>G5</strong></td><td>Permanente</td><td>Sin retorno razonable a corto plazo</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="blk b2">
+    <h3>RESIDENCIAL (en recurso institucional)</h3>
+    <table>
+      <thead><tr><th>Código</th><th>Tipo</th><th>Rasgo clave</th></tr></thead>
+      <tbody>
+        <tr><td><strong>G6</strong></td><td>Urgente (Casa de Observación)</td><td>Inmediata · Corta estancia</td></tr>
+        <tr><td><strong>G7</strong></td><td>Básico</td><td>Más largo · Casa de Infancia</td></tr>
+        <tr><td><strong>G8</strong></td><td>Especializado</td><td>Necesidades especiales / disruptivo</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="note nerr"><strong>Trampa crítica:</strong> G3 = urgente <em>familiar</em> · G6 = urgente <em>residencial</em>. Son prestaciones <strong>distintas</strong>. El examinador suele mezclarlas presentándolas como equivalentes.</div>
+
+<!-- G11 vs G13 -->
+<h2>G11 vs G13 · Extutelados · Distinción crítica ★★★</h2>
+<div class="g2">
+  <div class="blk b1">
+    <h3>G11 · Servicio de apoyo a la inserción sociolaboral</h3>
+    <ul>
+      <li>Tipo: <strong>servicio técnico</strong> de apoyo y orientación</li>
+      <li>Destinatarios: jóvenes que han cumplido la mayoría de edad y salen del sistema de protección</li>
+      <li>Contenido: acompañamiento para la transición a la vida adulta</li>
+      <li>No es dinero: es intervención profesional</li>
+    </ul>
+  </div>
+  <div class="blk b5">
+    <h3>G13 · Ayuda económica para la inserción de jóvenes extutelados</h3>
+    <ul>
+      <li>Tipo: <strong>prestación económica</strong></li>
+      <li>Destinatarios: los mismos jóvenes extutelados</li>
+      <li>Contenido: apoyo económico directo</li>
+      <li>Diferente de G11: uno es servicio, otro es ayuda económica</li>
+    </ul>
+  </div>
+</div>
+<div class="note nvio">Un mismo joven extutelado puede recibir simultáneamente G11 (acompañamiento técnico) y G13 (apoyo económico). Son complementarios, no excluyentes.</div>
+
+<!-- ÁREA H: PRESTACIONES -->
+<h2>Área H · Las 11 prestaciones garantizadas de VG ★★★</h2>
+<div class="g4">
+  <div class="blk b1">
+    <h3>ℹ️ Información, valoración y emergencia</h3>
+    <div class="pr"><span class="pr-cod">H1</span><div class="pr-body"><span class="pr-name">Atención, orientación e información</span><span class="pr-tip pr-g">G</span> · Primer contacto · Centros de Atención a la Mujer</div></div>
+    <div class="pr"><span class="pr-cod">H2</span><div class="pr-body"><span class="pr-name">Valoración del riesgo e intervención social</span><span class="pr-tip pr-g">G</span> · Diagnóstico + plan de intervención</div></div>
+    <div class="pr"><span class="pr-cod">H3</span><div class="pr-body"><span class="pr-name">Servicio de emergencia VG</span><span class="pr-tip pr-g">G</span> · <strong>24h / 365 días</strong> · Sin requisitos previos · Coord. Policía y sanidad</div></div>
+  </div>
+  <div class="blk b7">
+    <h3>🏠 Cadena de alojamiento (3 eslabones)</h3>
+    <div class="pr"><span class="pr-cod">H4</span><div class="pr-body"><span class="pr-name">Acogida <em>inmediata y de urgencia</em></span><span class="pr-tip pr-g">G</span> · Alojamiento urgente + primeras medidas</div></div>
+    <div class="pr"><span class="pr-cod">H5</span><div class="pr-body"><span class="pr-name">Acogida de <em>media estancia</em></span><span class="pr-tip pr-g">G</span> · Casa de Acogida · Proceso de recuperación</div></div>
+    <div class="pr"><span class="pr-cod">H6</span><div class="pr-body"><span class="pr-name">Alojamiento de <em>larga estancia</em></span><span class="pr-tip pr-g">G</span> · Piso tutelado · Mayor duración</div></div>
+    <div class="note nerr" style="margin-top:8px">⚠ H3 (emergencia) es <strong>atención</strong>, no alojamiento. H4 es el primer alojamiento.</div>
+  </div>
+  <div class="blk b4">
+    <h3>💚 Rehabilitación e inserción</h3>
+    <div class="pr"><span class="pr-cod">H7</span><div class="pr-body"><span class="pr-name">Rehabilitación psicosocial</span><span class="pr-tip pr-g">G</span> · Tratamiento psicológico · Incluye hijos/as</div></div>
+    <div class="pr"><span class="pr-cod">H8</span><div class="pr-body"><span class="pr-name">Inserción sociolaboral</span><span class="pr-tip pr-g">G</span> · Autonomía económica · Acompañamiento al empleo</div></div>
+    <div class="pr"><span class="pr-cod">H9</span><div class="pr-body"><span class="pr-name">Atención a menores víctimas de VG</span><span class="pr-tip pr-g">G</span> · Hijos/as · <strong>Nexo Área G ↔ Área H</strong></div></div>
+  </div>
+  <div class="blk b5">
+    <h3>💰 Prestaciones económicas</h3>
+    <div class="pr"><span class="pr-cod">H10</span><div class="pr-body"><span class="pr-name">Ayudas de emergencia VG</span><span class="pr-tip pr-g">G</span> · Art. 19 LF 22/2002 · Inmediatas · <strong>3 vías de concesión ★</strong></div></div>
+    <div class="pr"><span class="pr-cod">H11</span><div class="pr-body"><span class="pr-name">Ayudas inserción social VG</span><span class="pr-tip pr-g">G</span> · Proceso de autonomía e inserción</div></div>
+    <div class="note nw" style="margin-top:8px">H10 ≠ H11: emergencia inmediata vs. inserción a medio plazo.</div>
+  </div>
+</div>
+
+<!-- CADENA H -->
+<h2>Cadena de atención VG · Secuencia temporal ★★★</h2>
+<div class="chain" style="margin-bottom:14px">
+  <div class="cstep">H1-H2<br><small>Información y valoración</small></div>
+  <div class="carrow">→</div>
+  <div class="cstep" style="background:rgba(225,29,72,.1);border-color:#e11d48;color:#e11d48">H3<br><small>Emergencia 24h</small></div>
+  <div class="carrow">→</div>
+  <div class="cstep" style="background:rgba(220,38,38,.08);border-color:#dc2626;color:#dc2626">H4<br><small>Acogida urgente</small></div>
+  <div class="carrow">→</div>
+  <div class="cstep" style="background:rgba(217,119,6,.08);border-color:#d97706;color:#d97706">H5<br><small>Media estancia</small></div>
+  <div class="carrow">→</div>
+  <div class="cstep" style="background:rgba(7,89,133,.08);border-color:#075985">H6<br><small>Larga estancia</small></div>
+  <div class="carrow">→</div>
+  <div class="cstep" style="background:rgba(5,150,105,.08);border-color:#059669;color:#059669">H7-H8<br><small>Rehabilitación e inserción</small></div>
+</div>
+<div class="note nteal">La secuencia puede acortarse o saltarse eslabones según la situación concreta, pero la lógica es siempre progresiva: <strong>proteger → acoger → recuperar → autonomía</strong>.</div>
+
+<!-- H10 AYUDAS EMERGENCIA VG -->
+<h2>H10 · Ayudas de emergencia VG · Detalles clave ★★★</h2>
+<div class="blk b7" style="margin-bottom:14px">
+  <h3>Los 5 datos críticos de H10</h3>
+  <ul>
+    <li><strong>Son GARANTIZADAS</strong> (Anexo I de la Cartera) · Art. 19 LF 22/2002</li>
+    <li><strong>Se otorgan de forma INMEDIATA</strong> · No se tramitan en plazo largo</li>
+    <li><strong>Tres órganos pueden concederlas ★★★:</strong> SS.SS. de Base + Recursos de Acogida VG + Equipos de Atención Integral para Víctimas de VG</li>
+    <li>Procedimiento fijado por el <strong>DF 16/2007, art. 28</strong></li>
+    <li>Objeto: necesidades económicas urgentes de víctimas sin recursos suficientes</li>
+  </ul>
+  <div class="note nrose">⚠ Trampa frecuente: "las ayudas de emergencia VG las conceden solo los SS.SS. de Base" → FALSO. Las pueden conceder <strong>tres tipos de órganos distintos</strong>.</div>
+</div>
+
+<!-- NO GARANTIZADOS -->
+<h2>Prestaciones no garantizadas Áreas G y H (Anexo II) ★★★</h2>
+<div class="g3">
+  <div class="blk b6">
+    <h3>Área G · NO garantizadas</h3>
+    <ul>
+      <li>F1 Anexo II · Atención diurna menores con necesidades especiales <span class="bq gng">NG</span></li>
+      <li>F2 Anexo II · Apoyo y orientación postadoptiva <span class="bq gng">NG</span></li>
+      <li>F3 Anexo II · Subvenciones a entidades del sector menor <span class="bq gng">NG</span></li>
+    </ul>
+  </div>
+  <div class="blk b6">
+    <h3>Área H · NO garantizadas ★★★</h3>
+    <div class="pr"><span class="pr-cod">G1</span><div class="pr-body"><span class="pr-name">Atención psicológica a agresores</span><span class="pr-tip pr-ng">NG</span> · Art. 12 bis LF 22/2002 · Reeducación y readaptación social</div></div>
+    <div class="pr"><span class="pr-cod">G2</span><div class="pr-body"><span class="pr-name">Subvenciones a entidades en área VG</span><span class="pr-tip pr-ng">NG</span></div></div>
+  </div>
+  <div class="blk b3">
+    <h3>La clave de la trampa</h3>
+    <ul>
+      <li>Todas las prestaciones H1–H11 = <span class="bq gok">GARANTIZADAS</span></li>
+      <li>La atención a <strong>agresores</strong> = <span class="bq gng">NO garantizada</span></li>
+      <li>La atención a <strong>víctimas</strong> = SIEMPRE <span class="bq gok">GARANTIZADA</span></li>
+    </ul>
+    <div class="note nerr">⚠ El examinador suele preguntar si la atención a agresores es garantizada. Respuesta siempre: NO.</div>
+  </div>
+</div>
+
+<!-- TRAMPAS -->
+<h2>Las 10 trampas del examen ★★★</h2>
+<div class="trap-grid">
+  <div class="trap"><div class="q">❌ "El acogimiento familiar urgente (G3) y el residencial urgente (G6) son la misma prestación"</div><div class="a">✓ G3 = familia acogedora; G6 = Casa de Observación (residencial). Son <strong>distintas</strong></div></div>
+  <div class="trap"><div class="q">❌ "Para los jóvenes extutelados hay una sola prestación de apoyo"</div><div class="a">✓ Hay dos: G11 = <strong>servicio técnico</strong>; G13 = <strong>ayuda económica</strong></div></div>
+  <div class="trap"><div class="q">❌ "H3 (emergencia VG) es el servicio de alojamiento de urgencia"</div><div class="a">✓ H3 = servicio de <strong>atención</strong> (24h); H4 = servicio de <strong>acogida y alojamiento</strong> urgente</div></div>
+  <div class="trap"><div class="q">❌ "La atención psicológica a agresores (art. 12 bis LF 22/2002) es garantizada"</div><div class="a">✓ Es <strong>NO garantizada</strong> (Anexo II del DF 69/2008)</div></div>
+  <div class="trap"><div class="q">❌ "Las ayudas de emergencia para VG las conceden solo los SS.SS. de Base"</div><div class="a">✓ Las pueden conceder: SS.SS. de Base + Recursos de Acogida + Equipos de Atención Integral</div></div>
+  <div class="trap"><div class="q">❌ "H10 (ayudas emergencia VG) son no garantizadas porque son excepcionales"</div><div class="a">✓ Son <strong>GARANTIZADAS</strong> (art. 19 LF 22/2002 + Anexo I Cartera)</div></div>
+  <div class="trap"><div class="q">❌ "G5 (acogimiento permanente) equivale a la adopción"</div><div class="a">✓ G5 no extingue la filiación biológica; G10 es adopción (extinción de filiación)</div></div>
+  <div class="trap"><div class="q">❌ "La norma base del Área H es solo la LF 22/2002"</div><div class="a">✓ Existen también el DF 16/2007 y la <strong>LF 14/2015</strong> que amplía la protección</div></div>
+  <div class="trap"><div class="q">❌ "El menor hijo de víctima de VG no tiene prestación específica"</div><div class="a">✓ H9 = atención específica a menores víctimas de VG (hijos/as). Nexo Área G ↔ Área H</div></div>
+  <div class="trap"><div class="q">❌ "G9 (reforma de menores) es una prestación que ejecuta la CF directamente sin intervención judicial"</div><div class="a">✓ G9 ejecuta medidas impuestas por <strong>órganos jurisdiccionales</strong></div></div>
+</div>
+
+</div>
+</body>
+</html>
