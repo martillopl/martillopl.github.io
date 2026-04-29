@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 31 · HTML 3 – Cuadro comparativo · Tablas operativas · OF 224/2019 y OF 515/2014</title>
+<style>
+:root{--bg:#f0fdf4;--surface:#fff;--s2:#dcfce7;--s3:#bbf7d0;--border:#86efac;--div:#d1fae5;--text:#052e16;--muted:#166534;--p:#15803d;--pl:#16a34a;--warn:#b45309;--danger:#b91c1c;--ok:#065f46;--vio:#6d28d9;--sh:0 2px 10px rgba(21,128,61,.08)}
+[data-theme="dark"]{--bg:#071a0e;--surface:#0a1f10;--s2:#0d2b14;--s3:#12361b;--border:#166534;--div:#1a3b24;--text:#dcfce7;--muted:#86efac;--p:#4ade80;--pl:#86efac;--warn:#fbbf24;--danger:#f87171;--ok:#34d399;--vio:#c4b5fd;--sh:0 2px 10px rgba(0,0,0,.3)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.6;background:var(--bg);color:var(--text);padding:20px}
+.hdr{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.96rem;color:var(--p);line-height:1.3}.hdr p{font-size:.72rem;color:var(--muted);margin-top:2px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--border);background:var(--s2);color:var(--text);padding:5px 12px;border-radius:999px;font-size:.72rem}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:10px 12px;text-align:center;flex:1 1 90px;box-shadow:var(--sh)}.sv{font-size:1.1rem;font-weight:900;color:var(--p)}.sk{font-size:.63rem;color:var(--muted);margin-top:2px}
+h2{font-size:.84rem;font-weight:800;color:#fff;background:var(--p);padding:7px 14px;border-radius:7px;margin:22px 0 9px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:14px 16px;box-shadow:var(--sh);overflow:auto;margin-bottom:10px}
+table{width:100%;border-collapse:collapse}
+th{background:var(--s2);color:var(--muted);font-weight:700;font-size:.67rem;text-transform:uppercase;letter-spacing:.05em;padding:7px 9px;text-align:left;position:sticky;top:0;z-index:1}
+th.tc{background:rgba(21,128,61,.18);color:var(--ok)}
+th.ta{background:rgba(109,40,217,.13);color:var(--vio)}
+th.tb{background:rgba(21,128,61,.10);color:var(--pl)}
+th.tw{background:rgba(180,83,9,.13);color:var(--warn)}
+th.tr{background:rgba(185,28,28,.13);color:var(--danger)}
+td{border-bottom:1px solid var(--div);padding:7px 9px;vertical-align:top;font-size:.78rem}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+.badge{display:inline-flex;padding:2px 8px;border-radius:999px;font-size:.64rem;font-weight:700;border:1px solid transparent;white-space:nowrap;margin:1px}
+.bb{background:rgba(21,128,61,.12);color:var(--pl);border-color:rgba(21,128,61,.3)}
+.bg{background:rgba(6,95,70,.12);color:var(--ok);border-color:rgba(6,95,70,.22)}
+.br{background:rgba(185,28,28,.12);color:var(--danger);border-color:rgba(185,28,28,.22)}
+.by{background:rgba(180,83,9,.12);color:var(--warn);border-color:rgba(180,83,9,.22)}
+.bv{background:rgba(109,40,217,.12);color:var(--vio);border-color:rgba(109,40,217,.22)}
+.bk{background:var(--s2);color:var(--text);border-color:var(--border)}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.75rem;margin:8px 0;border-left:4px solid}
+.nb{background:var(--s2);border-color:var(--pl);color:var(--muted)}
+.nw{background:#fef3c7;border-color:#d97706;color:#78350f}
+.nr{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .nw{background:#451a03;color:#fde68a}
+[data-theme="dark"] .nr{background:#450a0a;color:#fca5a5}
+ul{padding-left:15px;margin:4px 0}li{margin-bottom:2px;font-size:.77rem}
+strong{color:var(--p)}
+@media(max-width:700px){table{font-size:.72rem}td,th{padding:5px 6px}}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 31 · HTML 3 · Cuadro comparativo con tablas operativas para examen</h1>
+    <p>OF 224/2019 · Prestación económica asistencia personal &nbsp;|&nbsp; OF 515/2014 · Tarjeta acreditativa grado de discapacidad</p>
+  </div>
+  <button class="btn" onclick="var d=document.documentElement,t=d.getAttribute('data-theme');d.setAttribute('data-theme',t==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="sv">224/2019</div><div class="sk">Derechos Sociales</div></div>
+  <div class="stat"><div class="sv">BON 5/7/2019</div><div class="sk">EV 6/7/2019</div></div>
+  <div class="stat"><div class="sv">515/2014</div><div class="sk">Políticas Sociales</div></div>
+  <div class="stat"><div class="sv">BON 17/9/2014</div><div class="sk">tarjeta acreditativa</div></div>
+  <div class="stat"><div class="sv">≥65%</div><div class="sk">umbral AP discapacidad</div></div>
+  <div class="stat"><div class="sv">≥33%</div><div class="sk">umbral tarjeta</div></div>
+  <div class="stat"><div class="sv">1.600€</div><div class="sk">máx. gran/severa</div></div>
+  <div class="stat"><div class="sv">700€</div><div class="sk">máx. moderada</div></div>
+</div>
+
+<!-- T1 IDENTIFICACIÓN COMPARADA -->
+<h2>T1 · Identificación comparada de ambas normas</h2>
+<div class="card"><table>
+<thead><tr><th>Elemento</th><th class="tb">OF 224/2019 · Asistencia Personal</th><th class="tc">OF 515/2014 · Tarjeta Acreditativa</th></tr></thead>
+<tbody>
+<tr><td>Tipo de norma</td><td>Orden Foral del Consejero de <strong>Derechos Sociales</strong></td><td>Orden Foral del Consejero de <strong>Políticas Sociales</strong></td></tr>
+<tr><td>Fecha</td><td>31 de mayo de 2019</td><td>18 de agosto de 2014</td></tr>
+<tr><td>BON</td><td>Núm. 130 · <strong>5 de julio de 2019</strong></td><td>Núm. 182 · <strong>17 de septiembre de 2014</strong></td></tr>
+<tr><td>Entrada en vigor</td><td><strong>6 de julio de 2019</strong> (día siguiente al BON)</td><td>No prevé fecha específica (aplicación inmediata a partir del BON)</td></tr>
+<tr><td>Norma que deroga</td><td>Orden Foral <strong>196/2013, de 27 de febrero</strong></td><td>No deroga norma anterior (es norma de creación)</td></tr>
+<tr><td>Base competencial estatal</td><td>Art. 19 <strong>Ley 39/2006</strong> de dependencia (SAAD)</td><td><strong>RD 1971/1999</strong> reconocimiento, declaración y calificación del grado de discapacidad</td></tr>
+<tr><td>Base foral</td><td><strong>DF 69/2008</strong> (Cartera de SS), modificado por <strong>DF 30/2019</strong></td><td>Plan Integral de Atención a PcD <strong>2010-2013</strong> + LF 14/2004 Gobierno Navarra</td></tr>
+<tr><td>Marco de servicios sociales</td><td><strong>LF 15/2006</strong> de Servicios Sociales</td><td><strong>LF 15/2006</strong> (régimen sancionador Título IX)</td></tr>
+<tr><td>Órgano gestor</td><td>ANADP (Agencia Navarra de Autonomía y Desarrollo de las Personas)</td><td>ANAP (Agencia Navarra para la Autonomía de las Personas)</td></tr>
+<tr><td>Contenido</td><td>Regula la prestación económica de AP: requisitos, cuantías, cálculo, obligaciones, extinción</td><td>Crea la tarjeta acreditativa: carácter, titulares, emisión, validez, modificación, fraude</td></tr>
+</tbody>
+</table></div>
+
+<!-- T2 ART. X ART. OF 224/2019 -->
+<h2>T2 · Artículo por artículo — OF 224/2019</h2>
+<div class="card"><table>
+<thead><tr><th>Art.</th><th>Denominación</th><th>Contenido operativo</th><th>Dato clave de examen</th></tr></thead>
+<tbody>
+<tr><td><span class="badge bb">1</span></td><td>Objeto</td><td>Regular la prestación económica para asistencia personal de PcD reconocida y personas con dependencia</td><td>Finalidad: promover la autonomía personal y la vida independiente</td></tr>
+<tr><td><span class="badge bb">2</span></td><td>Naturaleza</td><td>Garantizada para dependencia (Anexo I B.18 DF 69/2008) · No garantizada para discapacidad ≥65% (Anexo II C.12)</td><td><strong>★★★ LA distinción más preguntada del tema</strong></td></tr>
+<tr><td><span class="badge bb">3</span></td><td>Requisitos acceso</td><td>A) Dependencia: grado reconocido + &gt;3 años + capacidad decisión + PIVI (OVI) + necesitar AP / B) Discapacidad ≥65%: umbral + req. b,c,d,e</td><td>Para discapacidad solo se exige ≥65% y no el req. a) (grado dependencia)</td></tr>
+<tr><td><span class="badge bb">4</span></td><td>Compatibilidades</td><td>Compatible con: atención residencial · atención diurna · prevención y promoción autonomía · SAD municipal</td><td>Se puede compatibilizar con servicios residenciales (no excluye)</td></tr>
+<tr><td><span class="badge bb">5</span></td><td>Asistente personal</td><td>Requisitos: mayor 18 años · sin parentesco hasta 3.er grado · sin ser tutor/a ni acogedor/a · formación<br/>Funciones: 10 ámbitos (higiene, doméstico, desplazamientos, comunicación, laboral, formación, ocio, empleabilidad, participación, actividades acordadas)</td><td>Límite de parentesco: 3.er grado (4.º grado sí puede ser AP)</td></tr>
+<tr><td><span class="badge bb">6-9</span></td><td>Capacidad económica</td><td>Renta (rendimientos trabajo, capital, actividades) + Patrimonio. Excluye: vivienda habitual + patrimonio especialmente protegido (Ley 41/2003). Modificador por edad: 5% ≥65a · 3% 35-65a · 1% &lt;35a. Disposiciones patrimoniales: 4 años atrás</td><td>La vivienda habitual y el patrimonio protegido NO se computan</td></tr>
+<tr><td><span class="badge bb">10</span></td><td>Cuantías</td><td>Gran dependencia: 1.600/1.280 €/mes · Severa: 1.600/1.280 €/mes · Moderada: 700/560 €/mes · Discapacidad ≥65%: 1.600/1.280 €/mes. Actualización anual: IPC</td><td><strong>★★★ Cuantías de memorización obligatoria</strong>. Moderada ≠ gran/severa</td></tr>
+<tr><td><span class="badge bb">11</span></td><td>Cálculo prestación</td><td>Tramos IPREM: &lt;2 = 0% · &gt;2-3 = 5% · &gt;3-4 = 10% · &gt;4-5 = 15% · &gt;5 = 20% reducción. Se deducen las PAN. Límite: nunca supera coste real</td><td>5 tramos, reducción de 5 en 5%, máximo 20%</td></tr>
+<tr><td><span class="badge bb">12</span></td><td>Excepción al cálculo</td><td>Gran dependencia / dependencia severa / discapacidad ≥65% con PIVI ≥150h/mes cuyo coste supere 1.600 €/mes → máximo independientemente de la renta</td><td><strong>★★ Excepción PIVI ≥150h</strong>: único supuesto en que la renta no importa</td></tr>
+<tr><td><span class="badge bb">13</span></td><td>Procedimiento</td><td>Ley Foral 1/2011 (procedimiento). Efectos desde resolución. Abono mensual en cuenta bancaria</td><td>Procedimiento foral: LF 1/2011 (no Ley 39/2015 estatal)</td></tr>
+<tr><td><span class="badge bb">14</span></td><td>Obligaciones</td><td>1 mes desde resolución: contrato laboral + alta SS del AP (o contrato con entidad). 1 año desde concesión: justificar gasto real</td><td><strong>Plazos: 1 mes</strong> (contrato) y <strong>1 año</strong> (justificación)</td></tr>
+<tr><td><span class="badge bb">15</span></td><td>Extinción</td><td>Pérdida requisitos · ausencia Navarra &gt;3 meses ininterrumpidos · fraude · uso inadecuado · incumplimiento. Efecto: primer día mes siguiente. NO extingue: hospitalización</td><td><strong>★★★ Hospitalización NO extingue</strong>. Ausencia &gt;3 meses SÍ extingue</td></tr>
+<tr><td><span class="badge bk">D.A. única</span></td><td>Formación AP en discapacidad</td><td>Para personas con discapacidad: formación adecuada a sus necesidades específicas, propuesta mediante informe técnico previo</td><td>Formación específica: distinta a la exigida para asistencia en dependencia</td></tr>
+</tbody>
+</table></div>
+
+<!-- T3 REQUISITOS DETALLADOS -->
+<h2>T3 · Requisitos de acceso comparados — dependencia vs. discapacidad</h2>
+<div class="card"><table>
+<thead><tr><th>Requisito</th><th class="tb">A) Dependencia (garantizada)</th><th class="tw">B) Discapacidad ≥65% (no garantizada)</th></tr></thead>
+<tbody>
+<tr><td><span class="badge bb">a)</span> Reconocimiento</td><td>Tener reconocida una <strong>situación de dependencia</strong> en cualquiera de sus grados (moderada, severa, gran dependencia)</td><td>Tener reconocido porcentaje de discapacidad <strong>≥65%</strong> <em>(NO necesita grado de dependencia)</em></td></tr>
+<tr><td><span class="badge bb">b)</span> Edad mínima</td><td><strong>Mayor de 3 años</strong></td><td><strong>Mayor de 3 años</strong> (igual)</td></tr>
+<tr><td><span class="badge bb">c)</span> Capacidad</td><td>Tener <strong>capacidad de decisión y/o autodeterminación</strong>, por sí o a través de representante legal o apoyos</td><td>Igual</td></tr>
+<tr><td><span class="badge bb">d)</span> PIVI</td><td>Presentar <strong>Plan Individual de Vida Independiente (PIVI)</strong>, elaborado a través de la <strong>Oficina de Vida Independiente (OVI)</strong></td><td>Igual</td></tr>
+<tr><td><span class="badge bb">e)</span> Necesidad</td><td>Requerir la contratación de un/a <strong>asistente personal</strong> para actividades en los ámbitos personal, educativo, laboral, social, comunitario y de participación</td><td>Igual</td></tr>
+<tr><td>Prestación</td><td><span class="badge bg">GARANTIZADA</span> (DF 69/2008, Anexo I, B.18)</td><td><span class="badge by">NO GARANTIZADA</span> (DF 69/2008, Anexo II, C.12)</td></tr>
+</tbody>
+</table>
+<div class="note nb">📌 La única diferencia entre A) y B) está en el requisito a): dependencia (cualquier grado) vs. discapacidad ≥65%. Los 4 requisitos restantes son idénticos.</div>
+</div>
+
+<!-- T4 CUANTÍAS TABLA COMPLETA -->
+<h2>T4 · Cuantías de la prestación (art. 10) — tabla completa</h2>
+<div class="card"><table>
+<thead><tr><th>Colectivo</th><th>Grado / Situación</th><th>Máximo (€/mes)</th><th>Mínimo (€/mes)</th><th>Base de cálculo</th></tr></thead>
+<tbody>
+<tr><td rowspan="3"><strong>Dependencia</strong></td><td>Gran dependencia</td><td><strong>1.600,00</strong></td><td>1.280,00</td><td>Art. 10 + tramos IPREM art. 11</td></tr>
+<tr><td>Dependencia severa</td><td><strong>1.600,00</strong></td><td>1.280,00</td><td>Art. 10 + tramos IPREM art. 11</td></tr>
+<tr><td>Dependencia moderada</td><td><strong>700,00</strong></td><td>560,00</td><td>Art. 10 + tramos IPREM art. 11</td></tr>
+<tr><td><strong>Discapacidad</strong></td><td>Discapacidad ≥ 65%</td><td><strong>1.600,00</strong></td><td>1.280,00</td><td>Art. 10 + tramos IPREM art. 11</td></tr>
+<tr><td colspan="2"><strong>Excepción art. 12 (PIVI ≥150h/mes y coste &gt;1.600€)</strong></td><td><strong>1.600,00</strong></td><td>—</td><td><strong>Sin reducción por renta</strong> (máximo directo)</td></tr>
+</tbody>
+</table>
+<div class="note nw">⚠ TRAMPA: gran dependencia y dependencia severa tienen la <strong>misma cuantía</strong>. Dependencia moderada es sensiblemente inferior (700 vs. 1.600 €/mes).</div>
+</div>
+
+<!-- T5 TRAMOS IPREM -->
+<h2>T5 · Tabla de tramos IPREM para cálculo de cuantía (art. 11)</h2>
+<div class="card"><table>
+<thead><tr><th>Tramo de renta per cápita mensual (RPC)</th><th>Reducción sobre cuantía máxima</th><th>Ejemplo: sobre 1.600 €/mes</th><th>Cuantía resultante</th></tr></thead>
+<tbody>
+<tr><td>Menos de 2 IPREM</td><td><span class="badge bg">0% (sin reducción)</span></td><td>0 €</td><td>1.600,00 €</td></tr>
+<tr><td>Más de 2 hasta 3 IPREM</td><td><span class="badge bb">–5%</span></td><td>80 €</td><td>1.520,00 €</td></tr>
+<tr><td>Más de 3 hasta 4 IPREM</td><td><span class="badge bb">–10%</span></td><td>160 €</td><td>1.440,00 €</td></tr>
+<tr><td>Más de 4 hasta 5 IPREM</td><td><span class="badge by">–15%</span></td><td>240 €</td><td>1.360,00 €</td></tr>
+<tr><td>Más de 5 IPREM</td><td><span class="badge br">–20%</span></td><td>320 €</td><td>1.280,00 €</td></tr>
+</tbody>
+</table>
+<p style="font-size:.77rem;margin-top:8px">Además se deducen las <strong>prestaciones de análoga naturaleza y finalidad (PAN)</strong> recibidas de cualquier régimen público. La cuantía <strong>nunca puede superar el coste real</strong> de la contratación del AP.</p>
+</div>
+
+<!-- T6 CAPACIDAD ECONÓMICA -->
+<h2>T6 · Capacidad económica (arts. 6-9) — qué se computa y qué no</h2>
+<div class="card"><table>
+<thead><tr><th>Elemento</th><th class="tc">SE COMPUTA</th><th class="tr">NO SE COMPUTA (excluido)</th></tr></thead>
+<tbody>
+<tr><td>Renta</td><td>Rendimientos del trabajo (incluidas pensiones), capital mobiliario e inmobiliario, actividades empresariales y profesionales</td><td>Prestaciones de análoga naturaleza y finalidad (PAN) según art. 31 Ley 39/2006</td></tr>
+<tr><td>Patrimonio inmobiliario</td><td>Bienes inmuebles (salvo excepción)</td><td><strong>Vivienda habitual</strong></td></tr>
+<tr><td>Patrimonio especial</td><td>Capital mobiliario en general</td><td>Bienes aportados a <strong>patrimonio especialmente protegido</strong> (Ley 41/2003)</td></tr>
+<tr><td>Modificador por edad</td><td colspan="2">5% (≥65 años) · 3% (35-65 años) · 1% (&lt;35 años) — reduce el cómputo patrimonial</td></tr>
+<tr><td>Período de cómputo</td><td colspan="2">Último ejercicio fiscal con plazo de presentación vencido. Disposiciones patrimoniales de los <strong>4 años anteriores</strong> a la solicitud</td></tr>
+</tbody>
+</table></div>
+
+<!-- T7 EXTINCIÓN Y SUSPENSIÓN -->
+<h2>T7 · Causas de extinción y efectos (art. 15)</h2>
+<div class="card"><table>
+<thead><tr><th>Causa</th><th>¿Extingue?</th><th>Efecto temporal</th></tr></thead>
+<tbody>
+<tr><td>Pérdida de cualquier requisito de acceso</td><td><span class="badge br">Sí extingue</span></td><td>Primer día del mes siguiente</td></tr>
+<tr><td>Ausencia de Navarra por <strong>más de 3 meses ininterrumpidos</strong></td><td><span class="badge br">Sí extingue</span></td><td>Primer día del mes siguiente</td></tr>
+<tr><td>Actuación fraudulenta</td><td><span class="badge br">Sí extingue</span></td><td>Primer día del mes siguiente + reintegro</td></tr>
+<tr><td>Uso inadecuado de la prestación</td><td><span class="badge br">Sí extingue</span></td><td>Primer día del mes siguiente</td></tr>
+<tr><td>Incumplimiento de obligaciones</td><td><span class="badge br">Sí extingue</span></td><td>Primer día del mes siguiente</td></tr>
+<tr><td><strong>Hospitalización</strong></td><td><span class="badge bg">NO extingue</span></td><td>La prestación continúa durante la hospitalización</td></tr>
+</tbody>
+</table>
+<div class="note nr">⚠ TRAMPA CLÁSICA: la hospitalización no es causa de extinción. Es la pregunta más repetida sobre esta norma en examen.</div>
+</div>
+
+<!-- T8 PUNTOS OF 515/2014 -->
+<h2>T8 · Puntos del Anexo I — OF 515/2014 · Tabla operativa completa</h2>
+<div class="card"><table>
+<thead><tr><th>Punto</th><th>Denominación</th><th>Contenido operativo</th><th>Dato clave</th></tr></thead>
+<tbody>
+<tr><td><span class="badge bb">1</span></td><td>Carácter legal</td><td>Documento <strong>público, personal e intransferible</strong>. Acredita fehacientemente el grado de discapacidad. Se usa junto con documento de identificación. Efectos plenos en Administración foral navarra</td><td>En el Estado y CC.AA.: condicionada a su propia normativa</td></tr>
+<tr><td><span class="badge bb">2</span></td><td>Titulares</td><td>Personas <strong>residentes en Navarra</strong> con discapacidad reconocida <strong>igual o superior al 33%</strong></td><td><strong>★★★ Doble requisito: residencia + ≥33%</strong></td></tr>
+<tr><td><span class="badge bb">3</span></td><td>Órgano emisor</td><td><strong>Agencia Navarra para la Autonomía de las Personas (ANAP)</strong>, que comprueba de oficio la concurrencia de los requisitos</td><td>La ANAP comprueba requisitos de oficio: no hace falta que el interesado los acredite documentalmente en todos los casos</td></tr>
+<tr><td><span class="badge bb">4</span></td><td>Procedimiento de expedición</td><td>Previa <strong>solicitud expresa</strong> del interesado. Primera emisión: <strong>gratuita</strong>. Pérdida o deterioro: sujeta a tasas de la <strong>LF 7/2007 de Tasas y Precios Públicos</strong></td><td>No se emite de oficio: requiere solicitud. TRAMPA: no siempre es gratuita</td></tr>
+<tr><td><span class="badge bb">5</span></td><td>Validez</td><td>La que determine el <strong>certificado de discapacidad</strong> emitido por la ANAP. Una vez expirado el certificado, la tarjeta no produce ningún efecto</td><td>No es de validez indefinida; se sincroniza con el certificado</td></tr>
+<tr><td><span class="badge bb">6</span></td><td>Modificación del grado</td><td>Nuevo grado ≥33%: anulación de tarjeta vigente + emisión de nueva. Nuevo grado &lt;33%: solo anulación, sin nueva tarjeta. Titular debe <strong>devolver la tarjeta anulada</strong></td><td><strong>★★★ Si baja del 33%: anulación sin nueva tarjeta y devolución obligatoria</strong></td></tr>
+<tr><td><span class="badge bb">7</span></td><td>Uso fraudulento</td><td><strong>Cancelación inmediata</strong> de la tarjeta. Régimen sancionador: <strong>Título IX de la Ley Foral 15/2006</strong> de Servicios Sociales</td><td>Cancelación inmediata: no hay aviso previo ni procedimiento sancionador previo a la cancelación</td></tr>
+<tr><td><span class="badge bb">8</span></td><td>Expedición por pérdida/deterioro</td><td>Sujeta a tasas previstas en la <strong>Ley Foral 7/2007, de 27 de marzo, de Tasas y Precios Públicos</strong></td><td>Solo esta situación genera coste para el titular</td></tr>
+</tbody>
+</table></div>
+
+<!-- T9 COMPARATIVA NORMAS DEL TEMA -->
+<h2>T9 · Las dos normas del tema frente a frente</h2>
+<div class="card"><table>
+<thead><tr><th>Aspecto</th><th class="tb">OF 224/2019 · Asistencia Personal</th><th class="tc">OF 515/2014 · Tarjeta Acreditativa</th></tr></thead>
+<tbody>
+<tr><td>Objeto</td><td>Regular una <strong>prestación económica</strong></td><td>Crear un <strong>documento acreditativo</strong></td></tr>
+<tr><td>Consejero emisor</td><td><strong>Derechos Sociales</strong></td><td><strong>Políticas Sociales</strong></td></tr>
+<tr><td>Umbral de discapacidad</td><td><strong>≥ 65%</strong> (para acceder a la prestación AP sin dependencia)</td><td><strong>≥ 33%</strong> (para poder ser titular de la tarjeta)</td></tr>
+<tr><td>Órgano gestor</td><td>ANADP</td><td>ANAP</td></tr>
+<tr><td>Coste para el beneficiario</td><td>Coparticipación según renta (tramos IPREM)</td><td>Gratuita (salvo pérdida/deterioro)</td></tr>
+<tr><td>Vigencia</td><td>Se extingue por causas del art. 15</td><td>La del certificado de discapacidad</td></tr>
+<tr><td>Fraude</td><td>Reintegro + intereses de demora</td><td>Cancelación inmediata + Título IX LF 15/2006</td></tr>
+<tr><td>Norma que deroga</td><td>OF 196/2013</td><td>No deroga (es norma de creación)</td></tr>
+<tr><td>Norma base foral</td><td>DF 69/2008 (Cartera SS) + DF 30/2019</td><td>Plan Integral PcD 2010-2013 + DF 73/2012 estructura orgánica</td></tr>
+<tr><td>Procedimiento</td><td>LF 1/2011</td><td>Verificación de oficio por la ANAP</td></tr>
+</tbody>
+</table></div>
+
+<!-- T10 CONEXIONES NORMATIVAS -->
+<h2>T10 · Mapa de conexiones normativas del Tema 31</h2>
+<div class="card"><table>
+<thead><tr><th>Norma</th><th>Relación con el Tema 31</th></tr></thead>
+<tbody>
+<tr><td><strong>Art. 19 Ley 39/2006</strong></td><td>Base estatal de la prestación AP en el SAAD; OF 224/2019 la desarrolla en Navarra</td></tr>
+<tr><td><strong>DF 69/2008</strong> (Cartera SS Navarra)</td><td>Incluye la AP como prestación garantizada (Anexo I, B.18) y no garantizada (Anexo II, C.12)</td></tr>
+<tr><td><strong>DF 30/2019</strong></td><td>Modificó el DF 69/2008 para añadir la prestación AP para discapacidad ≥65% (Anexo II, C.12)</td></tr>
+<tr><td><strong>LF 15/2006</strong> de Servicios Sociales</td><td>Marco habilitador de la prestación AP y régimen sancionador para uso fraudulento de la tarjeta</td></tr>
+<tr><td><strong>LF 31/2022</strong> (Tema 30)</td><td>Art. 17: Oficina de Vida Independiente (OVI) y asistencia personal; arts. 15-19: autonomía personal</td></tr>
+<tr><td><strong>RDL 1/2013</strong> (Tema 29)</td><td>Define asistente personal; régimen sancionador de referencia</td></tr>
+<tr><td><strong>Ley 41/2003</strong></td><td>Patrimonio especialmente protegido: excluido del cómputo de capacidad económica (art. 9 OF 224/2019)</td></tr>
+<tr><td><strong>LF 1/2011</strong></td><td>Procedimiento administrativo foral aplicable al trámite de la prestación AP (art. 13)</td></tr>
+<tr><td><strong>RD 1971/1999</strong></td><td>Baremos para el reconocimiento y calificación del grado de discapacidad que acredita la tarjeta</td></tr>
+<tr><td><strong>LF 7/2007</strong> de Tasas y Precios Públicos</td><td>Tarifa para la reexpedición de la tarjeta por pérdida o deterioro</td></tr>
+</tbody>
+</table></div>
+
+<!-- T11 TRAMPAS -->
+<h2>T11 · Las 12 trampas más frecuentes del examen</h2>
+<div class="card"><table>
+<thead><tr><th>Afirmación trampa</th><th>¿Correcta?</th><th>Corrección exacta</th></tr></thead>
+<tbody>
+<tr><td>La prestación AP es garantizada para personas con discapacidad</td><td><span class="badge br">FALSO</span></td><td>Para discapacidad ≥65% es <strong>no garantizada</strong></td></tr>
+<tr><td>Para acceder a la prestación AP con discapacidad basta cualquier porcentaje</td><td><span class="badge br">FALSO</span></td><td>Se requiere discapacidad <strong>igual o superior al 65%</strong></td></tr>
+<tr><td>La cuantía máxima de dependencia moderada es igual que la de gran dependencia</td><td><span class="badge br">FALSO</span></td><td>Moderada: máx. <strong>700 €/mes</strong> · Gran/severa: máx. <strong>1.600 €/mes</strong></td></tr>
+<tr><td>La prestación se extingue si la persona es hospitalizada</td><td><span class="badge br">FALSO</span></td><td>La hospitalización <strong>no es causa de extinción</strong> (art. 15)</td></tr>
+<tr><td>Un sobrino no puede ser asistente personal</td><td><span class="badge br">FALSO</span></td><td>El sobrino es pariente de <strong>3.er grado</strong>, por lo que está <strong>excluido</strong> (solo se excluyen hasta el 3.er grado, pero el sobrino está incluido en ese límite)</td></tr>
+<tr><td>La OF 224/2019 fue dictada por el Consejero de Políticas Sociales</td><td><span class="badge br">FALSO</span></td><td>La dictó el Consejero de <strong>Derechos Sociales</strong></td></tr>
+<tr><td>La vivienda habitual se incluye en el cómputo de capacidad económica</td><td><span class="badge br">FALSO</span></td><td>La vivienda habitual está <strong>excluida</strong> del cómputo patrimonial</td></tr>
+<tr><td>La tarjeta acreditativa se puede solicitar con cualquier % de discapacidad</td><td><span class="badge br">FALSO</span></td><td>Solo para discapacidad <strong>igual o superior al 33%</strong></td></tr>
+<tr><td>La tarjeta produce efectos en toda España sin ninguna condición</td><td><span class="badge br">FALSO</span></td><td>Efectos plenos solo en la <strong>Administración foral navarra</strong>; en el Estado y CC.AA. depende de su normativa</td></tr>
+<tr><td>Cuando el grado de discapacidad baja del 33%, se emite una tarjeta nueva</td><td><span class="badge br">FALSO</span></td><td>Solo se <strong>anula</strong> la tarjeta; no se emite nueva y el titular debe <strong>devolver</strong> la tarjeta anulada</td></tr>
+<tr><td>La tarjeta acreditativa siempre es gratuita</td><td><span class="badge br">FALSO</span></td><td>Gratuita en emisión ordinaria; pérdida o deterioro conlleva <strong>tasa (LF 7/2007)</strong></td></tr>
+<tr><td>La ANAP comprueba los requisitos solo si el interesado los aporta</td><td><span class="badge br">FALSO</span></td><td>La ANAP comprueba los requisitos <strong>de oficio</strong></td></tr>
+</tbody>
+</table></div>
+</body>
+</html>

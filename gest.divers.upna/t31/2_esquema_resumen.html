@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 31 · HTML 2 – Esquema-resumen visual · OF 224/2019 y OF 515/2014</title>
+<style>
+:root{--bg:#f0fdf4;--surface:#fff;--s2:#dcfce7;--s3:#bbf7d0;--border:#86efac;--div:#d1fae5;--text:#052e16;--muted:#166534;--p:#15803d;--pl:#16a34a;--warn:#b45309;--danger:#b91c1c;--ok:#065f46;--vio:#6d28d9;--sh:0 2px 10px rgba(21,128,61,.08)}
+[data-theme="dark"]{--bg:#071a0e;--surface:#0a1f10;--s2:#0d2b14;--s3:#12361b;--border:#166534;--div:#1a3b24;--text:#dcfce7;--muted:#86efac;--p:#4ade80;--pl:#86efac;--warn:#fbbf24;--danger:#f87171;--ok:#34d399;--vio:#c4b5fd;--sh:0 2px 10px rgba(0,0,0,.3)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.6;background:var(--bg);color:var(--text);padding:20px}
+.hdr{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.95rem;color:var(--p);line-height:1.3}.hdr p{font-size:.72rem;color:var(--muted);margin-top:2px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--border);background:var(--s2);color:var(--text);padding:5px 12px;border-radius:999px;font-size:.72rem}
+
+/* stats row */
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:10px 12px;text-align:center;flex:1 1 90px;box-shadow:var(--sh)}
+.sv{font-size:1.1rem;font-weight:900;color:var(--p)}.sk{font-size:.63rem;color:var(--muted);margin-top:2px}
+
+/* headings */
+h2{font-size:.84rem;font-weight:800;color:#fff;background:var(--p);padding:7px 14px;border-radius:7px;margin:22px 0 9px}
+h2.h2b{background:#166534}
+h3{font-size:.79rem;font-weight:700;color:var(--p);margin-bottom:6px}
+
+/* cards & grids */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:13px 16px;box-shadow:var(--sh)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:10px;margin-bottom:10px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+p{font-size:.77rem;margin-bottom:6px}
+ul{padding-left:15px;margin:4px 0}li{margin-bottom:3px;font-size:.77rem}
+strong{color:var(--p)}
+
+/* flow */
+.flow{display:grid;gap:6px;margin-bottom:10px}
+.flow4{grid-template-columns:repeat(4,1fr)}.flow5{grid-template-columns:repeat(5,1fr)}
+.step{background:var(--surface);border:1px solid var(--border);border-radius:9px;padding:9px 8px;text-align:center;box-shadow:var(--sh);position:relative}
+.num{width:23px;height:23px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--p);color:#fff;font-weight:900;font-size:.72rem;margin-bottom:4px}
+.step p{font-size:.71rem;margin:0}
+.step:not(:last-child)::after{content:"→";position:absolute;right:-9px;top:50%;transform:translateY(-50%);color:var(--pl);font-size:.95rem;font-weight:900;z-index:2}
+
+/* badges */
+.badge{display:inline-flex;padding:2px 8px;border-radius:999px;font-size:.64rem;font-weight:700;border:1px solid transparent;margin:2px}
+.bb{background:rgba(21,128,61,.12);color:var(--pl);border-color:rgba(21,128,61,.3)}
+.bg{background:rgba(6,95,70,.12);color:var(--ok);border-color:rgba(6,95,70,.22)}
+.br{background:rgba(185,28,28,.12);color:var(--danger);border-color:rgba(185,28,28,.22)}
+.by{background:rgba(180,83,9,.12);color:var(--warn);border-color:rgba(180,83,9,.22)}
+.bv{background:rgba(109,40,217,.12);color:var(--vio);border-color:rgba(109,40,217,.22)}
+.bk{background:var(--s2);color:var(--text);border-color:var(--border)}
+
+/* notes */
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.75rem;margin:8px 0;border-left:4px solid}
+.nb{background:var(--s2);border-color:var(--pl);color:var(--muted)}
+.nw{background:#fef3c7;border-color:#d97706;color:#78350f}
+.nr{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .nw{background:#451a03;color:#fde68a}
+[data-theme="dark"] .nr{background:#450a0a;color:#fca5a5}
+
+/* cuantías visual */
+.cuantia-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:8px}
+.cuantia-card{border-radius:10px;padding:12px 14px;text-align:center;border:1px solid}
+.cg{background:rgba(6,95,70,.08);border-color:rgba(6,95,70,.25)}.cy{background:rgba(180,83,9,.08);border-color:rgba(180,83,9,.25)}.cb{background:rgba(21,128,61,.08);border-color:rgba(21,128,61,.25)}
+.cv{font-size:1.3rem;font-weight:900;color:var(--p)}.cm{font-size:.7rem;color:var(--muted);margin-top:2px}.cl{font-size:.65rem;color:var(--text);opacity:.8;margin-top:4px}
+
+/* tramos */
+.tramos{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;align-items:center;padding:8px 0}
+.tl{font-size:.76rem;color:var(--muted);white-space:nowrap}
+.tb-bar{height:16px;border-radius:4px;background:var(--p);display:flex;align-items:center;padding-left:6px;font-size:.7rem;font-weight:700;color:#fff;min-width:20px}
+
+/* tarjeta visual */
+.tarjeta-mockup{background:linear-gradient(135deg,var(--p) 0%,var(--ok) 100%);border-radius:12px;padding:18px 20px;color:#fff;box-shadow:0 4px 16px rgba(21,128,61,.3);margin-bottom:10px;display:flex;flex-direction:column;gap:8px;max-width:320px}
+.tm-title{font-size:.68rem;opacity:.8;text-transform:uppercase;letter-spacing:.07em}
+.tm-name{font-size:1rem;font-weight:800}
+.tm-data{font-size:.75rem;opacity:.9}
+.tm-badge{display:inline-block;background:rgba(255,255,255,.2);border-radius:5px;padding:2px 8px;font-size:.68rem;font-weight:700}
+
+/* tabla */
+table{width:100%;border-collapse:collapse}
+th{background:var(--s2);color:var(--muted);font-size:.67rem;text-transform:uppercase;padding:7px 9px;text-align:left}
+td{padding:7px 9px;border-bottom:1px solid var(--div);font-size:.77rem;vertical-align:top}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+
+@media(max-width:680px){.flow4,.flow5{grid-template-columns:1fr 1fr}.step:not(:last-child)::after{display:none}.grid2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<!-- HEADER -->
+<div class="hdr">
+  <div>
+    <h1>Tema 31 · HTML 2 · Esquema-resumen con bloques visuales para memorización rápida</h1>
+    <p>OF 224/2019 · Prestación económica asistencia personal &nbsp;|&nbsp; OF 515/2014 · Tarjeta acreditativa grado de discapacidad</p>
+  </div>
+  <button class="btn" onclick="var d=document.documentElement,t=d.getAttribute('data-theme');d.setAttribute('data-theme',t==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><div class="sv">224/2019</div><div class="sk">Derechos Sociales</div></div>
+  <div class="stat"><div class="sv">5/7/2019</div><div class="sk">BON · EV 6/7/2019</div></div>
+  <div class="stat"><div class="sv">65%</div><div class="sk">umbral discapacidad AP</div></div>
+  <div class="stat"><div class="sv">1.600€</div><div class="sk">máximo mensual AP</div></div>
+  <div class="stat"><div class="sv">150h</div><div class="sk">PIVI excepción</div></div>
+  <div class="stat"><div class="sv">515/2014</div><div class="sk">Políticas Sociales</div></div>
+  <div class="stat"><div class="sv">17/9/2014</div><div class="sk">BON · tarjeta</div></div>
+  <div class="stat"><div class="sv">33%</div><div class="sk">umbral tarjeta</div></div>
+</div>
+
+<!-- ════════════ PARTE I ════════════ -->
+<h2>PARTE I · OF 224/2019 · Prestación económica de asistencia personal</h2>
+
+<!-- Bloque 1: idea fuerza -->
+<div class="grid">
+  <div class="card"><h3>📜 Qué es</h3><p>Prestación <strong>económica</strong> que financia la contratación de un/a asistente personal para promover la <strong>autonomía personal</strong> y la vida independiente de la persona beneficiaria.</p></div>
+  <div class="card"><h3>🔑 Origen normativo</h3><p><strong>Art. 19 Ley 39/2006</strong> (estatal) + <strong>DF 69/2008</strong> (Cartera SS Navarra, modificado por DF 30/2019) + <strong>LF 15/2006</strong> de Servicios Sociales.</p></div>
+  <div class="card"><h3>♻️ Qué deroga</h3><p>Deroga expresamente la <strong>Orden Foral 196/2013, de 27 de febrero</strong>, que era la regulación anterior de la prestación AP en Navarra.</p></div>
+  <div class="card"><h3>🏛️ Consejero emisor</h3><p><strong>Consejero de DERECHOS SOCIALES</strong> (no de Políticas Sociales, que es el de la OF 515/2014). Distinción esencial en examen.</p></div>
+</div>
+
+<!-- Bloque 2: garantizada vs no -->
+<h2 class="h2b">La distinción más preguntada: garantizada vs. no garantizada</h2>
+<div class="grid2">
+  <div class="card" style="border-left:4px solid var(--pl)">
+    <h3>✅ Prestación GARANTIZADA</h3>
+    <p>Para personas con <strong>situación de dependencia reconocida</strong> (cualquier grado: moderada, severa o gran dependencia).</p>
+    <p>Base en Cartera: <strong>DF 69/2008, Anexo I, B.18</strong></p>
+    <div class="badge bb">Moderada</div>
+    <div class="badge bb">Severa</div>
+    <div class="badge bb">Gran dependencia</div>
+  </div>
+  <div class="card" style="border-left:4px solid var(--warn)">
+    <h3>⚠️ Prestación NO GARANTIZADA</h3>
+    <p>Para personas con <strong>discapacidad reconocida igual o superior al 65%</strong>.</p>
+    <p>Base en Cartera: <strong>DF 69/2008, Anexo II, C.12</strong> (añadido por DF 30/2019)</p>
+    <div class="badge by">Discapacidad ≥ 65%</div>
+  </div>
+</div>
+<div class="note nr">⚠ TRAMPA CLÁSICA: la prestación AP para personas con discapacidad NO es garantizada. Solo lo es para quienes tienen reconocida dependencia.</div>
+
+<!-- Bloque 3: requisitos -->
+<h2 class="h2b">Requisitos de acceso (art. 3)</h2>
+<div class="grid2">
+  <div class="card">
+    <h3>A) Para dependencia</h3>
+    <ol style="padding-left:16px;margin:0"><li style="margin-bottom:4px;font-size:.77rem">Grado de dependencia reconocido (cualquiera)</li><li style="margin-bottom:4px;font-size:.77rem"><strong>Mayor de 3 años</strong></li><li style="margin-bottom:4px;font-size:.77rem">Capacidad de decisión y/o autodeterminación</li><li style="margin-bottom:4px;font-size:.77rem">PIVI elaborado a través de la <strong>OVI</strong></li><li style="margin-bottom:4px;font-size:.77rem">Necesitar la contratación de asistente personal</li></ol>
+  </div>
+  <div class="card">
+    <h3>B) Para discapacidad ≥65%</h3>
+    <p>Cumplir el umbral del <strong>65%</strong> más los requisitos <strong>b), c), d) y e)</strong> del apartado A).</p>
+    <div class="note nb" style="margin-top:8px">📌 El único requisito que NO se exige es el a) (tener grado de dependencia). Todos los demás son iguales.</div>
+  </div>
+</div>
+
+<!-- Bloque 4: asistente personal -->
+<h2 class="h2b">El/la asistente personal (art. 5)</h2>
+<div class="grid2">
+  <div class="card">
+    <h3>Requisitos del AP</h3>
+    <ul>
+      <li><strong>Mayor de 18 años</strong></li>
+      <li>Sin vínculo matrimonial o pareja de hecho con el/la beneficiario/a</li>
+      <li>Sin parentesco por consanguinidad, afinidad o adopción hasta el <strong>3.er grado</strong></li>
+      <li>No ser tutor/a legal ni acogedor/a familiar</li>
+      <li>Acreditar <strong>formación adecuada</strong> (D.A. única)</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Funciones del AP (10 ámbitos)</h3>
+    <div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:4px">
+      <span class="badge bb">Higiene y autocuidados</span>
+      <span class="badge bb">Tareas domésticas</span>
+      <span class="badge bb">Desplazamientos</span>
+      <span class="badge bb">Comunicación</span>
+      <span class="badge bb">Contexto laboral</span>
+      <span class="badge bb">Formación superior</span>
+      <span class="badge bb">Cultura, ocio y deporte</span>
+      <span class="badge bb">Empleabilidad</span>
+      <span class="badge bb">Participación comunitaria</span>
+      <span class="badge bb">Actividades acordadas</span>
+    </div>
+  </div>
+</div>
+<div class="note nb">📌 El AP actúa siempre <strong>bajo las instrucciones de la persona beneficiaria</strong>. Es la persona la que dirige y decide, no el asistente.</div>
+
+<!-- Bloque 5: cuantías visual -->
+<h2 class="h2b">Cuantías de la prestación (art. 10)</h2>
+<div class="cuantia-grid">
+  <div class="cuantia-card cg">
+    <div class="cv">1.600 €</div>
+    <div class="cm">máximo / mes</div>
+    <div class="cl">Gran dependencia</div>
+  </div>
+  <div class="cuantia-card cg">
+    <div class="cv">1.600 €</div>
+    <div class="cm">máximo / mes</div>
+    <div class="cl">Dependencia severa</div>
+  </div>
+  <div class="cuantia-card cy">
+    <div class="cv">700 €</div>
+    <div class="cm">máximo / mes</div>
+    <div class="cl">Dependencia moderada</div>
+  </div>
+  <div class="cuantia-card cb">
+    <div class="cv">1.600 €</div>
+    <div class="cm">máximo / mes</div>
+    <div class="cl">Discapacidad ≥65%</div>
+  </div>
+</div>
+<div class="note nb">📌 El mínimo es siempre el <strong>80% del máximo</strong>: gran/severa mínimo 1.280 €/mes · moderada mínimo 560 €/mes. Actualización anual según <strong>IPC</strong>.</div>
+
+<!-- Bloque 6: tramos IPREM -->
+<h2 class="h2b">Cálculo por tramos de renta/IPREM (art. 11)</h2>
+<div class="card">
+  <div class="tramos">
+    <div class="tl">&lt; 2 IPREM</div><div class="tb-bar" style="width:20%">0%</div>
+    <div class="tl">&gt;2 hasta 3 IPREM</div><div class="tb-bar" style="width:35%">–5%</div>
+    <div class="tl">&gt;3 hasta 4 IPREM</div><div class="tb-bar" style="width:50%">–10%</div>
+    <div class="tl">&gt;4 hasta 5 IPREM</div><div class="tb-bar" style="width:65%">–15%</div>
+    <div class="tl">&gt;5 IPREM</div><div class="tb-bar" style="width:80%">–20%</div>
+  </div>
+  <p style="margin-top:8px">Además se deducen las <strong>prestaciones de análoga naturaleza y finalidad (PAN)</strong> de cualquier régimen público. La cuantía nunca puede superar el <strong>coste real</strong> de la contratación.</p>
+</div>
+<div class="note nw">⚠ EXCEPCIÓN art. 12: personas con gran dependencia, dependencia severa o discapacidad ≥65% con PIVI de <strong>150 o más horas/mes</strong> cuyo coste supere los 1.600€ → reciben el máximo <strong>independientemente de su renta</strong>.</div>
+
+<!-- Bloque 7: compatibilidades y plazos -->
+<h2 class="h2b">Compatibilidades, obligaciones y extinción</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Compatible con (art. 4)</h3>
+    <ul>
+      <li>Atención residencial</li>
+      <li>Atención diurna</li>
+      <li>Prevención y promoción de la autonomía</li>
+      <li>Servicio de Atención a Domicilio (SAD) municipal</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Obligaciones clave (art. 14)</h3>
+    <ul>
+      <li><strong>1 mes</strong> desde la resolución: presentar contrato laboral + alta SS del AP</li>
+      <li><strong>1 año</strong> desde la concesión: justificar el gasto realizado</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Extinción (art. 15)</h3>
+    <ul>
+      <li>Pérdida de requisitos</li>
+      <li>Ausencia de Navarra <strong>&gt;3 meses ininterrumpidos</strong></li>
+      <li>Actuación fraudulenta</li>
+      <li>Uso inadecuado · incumplimiento de obligaciones</li>
+      <li>⛔ <strong>NO se extingue por hospitalización</strong></li>
+    </ul>
+    <p>Efecto: primer día del <strong>mes siguiente</strong> a la causa.</p>
+  </div>
+</div>
+
+<!-- ════════════ PARTE II ════════════ -->
+<h2>PARTE II · OF 515/2014 · Tarjeta acreditativa del grado de discapacidad</h2>
+
+<!-- mockup + definición -->
+<div class="grid2">
+  <div>
+    <div class="tarjeta-mockup">
+      <div class="tm-title">Comunidad Foral de Navarra</div>
+      <div class="tm-name">Titular: [Nombre completo]</div>
+      <div class="tm-data">Grado de discapacidad: XX%</div>
+      <div class="tm-data">Válida hasta: [fecha del certificado]</div>
+      <div style="margin-top:6px"><span class="tm-badge">≥33%</span> <span class="tm-badge">Personal e intransferible</span></div>
+    </div>
+    <div class="note nb">📌 Solo produce efectos plenos en la <strong>Administración foral navarra</strong>. Siempre acompañada de DNI o NIE.</div>
+  </div>
+  <div class="card">
+    <h3>Datos de identificación</h3>
+    <ul>
+      <li>Consejero: <strong>Políticas Sociales</strong></li>
+      <li>BON núm. 182 · <strong>17 de septiembre de 2014</strong></li>
+      <li>Habilitación: Plan Integral PcD 2010-2013</li>
+      <li>Marco: <strong>RD 1971/1999</strong> (reconocimiento y calificación de la discapacidad)</li>
+      <li>Emisor: <strong>Agencia Navarra para la Autonomía de las Personas (ANAP)</strong></li>
+      <li>Gasto autorizado: <strong>10.000 euros</strong></li>
+    </ul>
+  </div>
+</div>
+
+<!-- flujo de la tarjeta -->
+<h2 class="h2b">Ciclo de vida de la tarjeta</h2>
+<div class="flow flow5">
+  <div class="step"><div class="num">1</div><p>Solicitud expresa del <strong>interesado</strong> a la ANAP</p></div>
+  <div class="step"><div class="num">2</div><p>ANAP verifica requisitos <strong>de oficio</strong></p></div>
+  <div class="step"><div class="num">3</div><p>Emisión gratuita si discapacidad <strong>≥33%</strong> y residente en Navarra</p></div>
+  <div class="step"><div class="num">4</div><p>Validez: la del <strong>certificado</strong> de discapacidad</p></div>
+  <div class="step"><div class="num">5</div><p>Renovación o <strong>anulación</strong> según modificación del grado</p></div>
+</div>
+
+<!-- Modificación del grado visual -->
+<h2 class="h2b">Qué pasa si se modifica el grado</h2>
+<div class="grid2">
+  <div class="card" style="border-left:4px solid var(--pl)">
+    <h3>✅ Nuevo grado sigue siendo ≥33%</h3>
+    <p>La tarjeta vigente se <strong>anula</strong> y se emite una <strong>nueva tarjeta</strong> con el grado actualizado.</p>
+  </div>
+  <div class="card" style="border-left:4px solid var(--danger)">
+    <h3>🚫 Nuevo grado cae por debajo del 33%</h3>
+    <p>La tarjeta se <strong>anula sin emisión de nueva</strong>. El titular está obligado a <strong>devolver</strong> la tarjeta anulada.</p>
+  </div>
+</div>
+<div class="note nr">⚠ TRAMPA: si el grado baja del 33%, el titular no recibe nueva tarjeta y DEBE devolver la que tiene.</div>
+
+<!-- Gratuidad y fraude -->
+<div class="grid2" style="margin-top:10px">
+  <div class="card">
+    <h3>Gratuidad (punto 8)</h3>
+    <ul>
+      <li>Primera emisión: <strong>gratuita</strong></li>
+      <li>Por pérdida o deterioro: sujeta a <strong>tasa de la LF 7/2007</strong> de Tasas y Precios Públicos</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Uso fraudulento (punto 7)</h3>
+    <ul>
+      <li><strong>Cancelación inmediata</strong> de la tarjeta</li>
+      <li>Régimen sancionador: <strong>Título IX de la Ley Foral 15/2006</strong> de Servicios Sociales</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Trampas -->
+<h2>Trampas frecuentes · Ambas normas</h2>
+<div class="card"><table>
+<thead><tr><th>Afirmación trampa</th><th>¿Correcta?</th><th>Corrección exacta</th></tr></thead>
+<tbody>
+<tr><td>La prestación AP es garantizada para discapacidad</td><td><span class="badge br">FALSO</span></td><td>Para discapacidad ≥65% es <strong>no garantizada</strong></td></tr>
+<tr><td>Para discapacidad basta con cualquier % para acceder a la AP</td><td><span class="badge br">FALSO</span></td><td>Se requiere discapacidad <strong>≥65%</strong></td></tr>
+<tr><td>La cuantía máxima para dependencia moderada es 1.600 €/mes</td><td><span class="badge br">FALSO</span></td><td>Moderada: máximo <strong>700 €/mes</strong></td></tr>
+<tr><td>La prestación se extingue si la persona es hospitalizada</td><td><span class="badge br">FALSO</span></td><td>La hospitalización <strong>no es causa de extinción</strong></td></tr>
+<tr><td>El pariente en 4.º grado no puede ser AP</td><td><span class="badge br">FALSO</span></td><td>Solo se excluyen hasta el <strong>3.er grado</strong></td></tr>
+<tr><td>La OF 224/2019 la dicta el Consejero de Políticas Sociales</td><td><span class="badge br">FALSO</span></td><td>La dicta el Consejero de <strong>Derechos Sociales</strong></td></tr>
+<tr><td>La tarjeta tiene efectos en toda España sin condición</td><td><span class="badge br">FALSO</span></td><td>Efectos plenos solo en la <strong>Administración foral navarra</strong></td></tr>
+<tr><td>La tarjeta se puede solicitar con discapacidad reconocida del 30%</td><td><span class="badge br">FALSO</span></td><td>Se requiere discapacidad <strong>≥33%</strong></td></tr>
+<tr><td>Si el grado baja del 33%, se emite una tarjeta con el nuevo grado</td><td><span class="badge br">FALSO</span></td><td>Se anula sin nueva tarjeta y el titular debe <strong>devolver</strong> la tarjeta</td></tr>
+<tr><td>La tarjeta es siempre gratuita en cualquier caso</td><td><span class="badge br">FALSO</span></td><td>Gratuita en emisión ordinaria; pérdida o deterioro conlleva <strong>tasa LF 7/2007</strong></td></tr>
+</tbody>
+</table></div>
+
+<!-- Reglas exprés -->
+<h2>Reglas exprés de memoria</h2>
+<div class="grid">
+  <div class="card"><h3>Regla 1</h3><p><strong>224/2019 = Derechos Sociales · 515/2014 = Políticas Sociales.</strong></p></div>
+  <div class="card"><h3>Regla 2</h3><p><strong>AP: dependencia (cualquier grado) → garantizada. Discapacidad ≥65% → no garantizada.</strong></p></div>
+  <div class="card"><h3>Regla 3</h3><p><strong>Cuantías: gran/severa = 1.600/1.280 · moderada = 700/560 · discapacidad ≥65% = 1.600/1.280.</strong></p></div>
+  <div class="card"><h3>Regla 4</h3><p><strong>Tramos IPREM: &lt;2 = 0% · cada IPREM más = +5% reducción · máx. 20%.</strong></p></div>
+  <div class="card"><h3>Regla 5</h3><p><strong>PIVI ≥150h/mes + coste &gt;1.600€ → máximo sin importar renta (excepción art. 12).</strong></p></div>
+  <div class="card"><h3>Regla 6</h3><p><strong>Tarjeta: residente Navarra + ≥33% + solicitud expresa + emisor ANAP + gratuita (salvo pérdida).</strong></p></div>
+</div>
+
+</body>
+</html>
