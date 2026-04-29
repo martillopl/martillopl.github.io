@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 54 · HTML 2 · Esquema-resumen visual · Técnicas e Instrumentos intervención social</title>
+<style>
+:root{
+  --bg:#fff7ed;--card:#fff;--s2:#ffedd5;--s3:#fed7aa;--line:#fb923c;
+  --text:#431407;--muted:#c2410c;--p:#ea580c;--p2:#9a3412;
+  --grn:#059669;--grn2:#d1fae5;--red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;--sky:#0284c7;--sky2:#e0f2fe;
+  --teal:#0d9488;--teal2:#ccfbf1;--vio:#7c3aed;--vio2:#ede9fe;
+  --rose:#be185d;--rose2:#fce7f3;
+  --sh:0 2px 12px rgba(234,88,12,.10)
+}
+[data-theme="dark"]{
+  --bg:#0f0700;--card:#1c0d00;--s2:#2a1300;--s3:#3d1e00;--line:#c2410c;
+  --text:#fed7aa;--muted:#fb923c;--p:#fb923c;--p2:#fdba74;
+  --grn:#86efac;--grn2:#052e16;--red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;--sky:#7dd3fc;--sky2:#082038;
+  --teal:#5eead4;--teal2:#031a16;--vio:#c4b5fd;--vio2:#1a0e33;
+  --rose:#fda4af;--rose2:#1a0010;
+  --sh:0 2px 14px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:20px}
+.wrap{max-width:1180px;margin:0 auto}
+header{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:14px 22px;box-shadow:var(--sh);margin-bottom:16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+h1{font-size:.93rem;font-weight:800;color:var(--p)}
+.sub{font-size:.7rem;color:var(--muted);margin-top:4px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 14px;border-radius:999px;font-size:.7rem}
+.stitle{font-size:.82rem;font-weight:800;color:#fff;background:var(--p);padding:7px 16px;border-radius:8px;margin:18px 0 10px;display:inline-block;letter-spacing:.01em}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:12px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}
+.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-bottom:12px}
+@media(max-width:960px){.g5{grid-template-columns:1fr 1fr}.g4{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr 1fr}}
+@media(max-width:580px){.g2,.g3,.g4,.g5{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:13px 15px;box-shadow:var(--sh)}
+.card h3{font-size:.75rem;font-weight:800;color:var(--p2);margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--s2);padding-bottom:5px}
+.card p,.card li{font-size:.76rem;line-height:1.55}
+.card ul{padding-left:15px}
+.card li{margin-bottom:.3em}
+.c-grn{border-color:#6ee7b7;background:var(--grn2)}.c-grn h3{color:var(--grn)}
+.c-red{border-color:#fca5a5;background:var(--red2)}.c-red h3{color:var(--red)}
+.c-warn{border-color:#fcd34d;background:var(--warn2)}.c-warn h3{color:var(--warn)}
+.c-sky{border-color:#7dd3fc;background:var(--sky2)}.c-sky h3{color:var(--sky)}
+.c-teal{border-color:#5eead4;background:var(--teal2)}.c-teal h3{color:var(--teal)}
+.c-rose{border-color:#f9a8d4;background:var(--rose2)}.c-rose h3{color:var(--rose)}
+.c-vio{border-color:#a78bfa;background:var(--vio2)}.c-vio h3{color:var(--vio)}
+.c-ora{border-color:var(--line);background:var(--s2)}.c-ora h3{color:var(--p2)}
+.flash-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.flash{background:var(--s2);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:.73rem;min-width:140px;flex:1}
+.flash .fq{font-weight:700;color:var(--p2);font-size:.67rem;text-transform:uppercase;letter-spacing:.03em;margin-bottom:3px}
+.flash .fa{font-weight:800;color:var(--p);font-size:.84rem}
+.nota{padding:8px 13px;border-radius:0 9px 9px 0;font-size:.74rem;border-left:4px solid;margin:10px 0;line-height:1.5}
+.n-ok{background:var(--grn2);border-color:var(--grn)}
+.n-err{background:var(--red2);border-color:var(--red)}
+.n-w{background:var(--warn2);border-color:var(--warn)}
+.n-vio{background:var(--vio2);border-color:var(--vio)}
+.n-sky{background:var(--sky2);border-color:var(--sky)}
+.n-teal{background:var(--teal2);border-color:var(--teal)}
+[data-theme="dark"] .n-w strong{color:#fde68a}
+[data-theme="dark"] .n-err strong{color:#fca5a5}
+[data-theme="dark"] .n-ok strong{color:#86efac}
+.pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+.pill{background:var(--s2);border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:.69rem;color:var(--p2);font-weight:600}
+.pill.g{background:var(--grn2);border-color:#6ee7b7;color:var(--grn)}
+.pill.r{background:var(--red2);border-color:#fca5a5;color:var(--red)}
+.pill.t{background:var(--teal2);border-color:#5eead4;color:var(--teal)}
+.pill.v{background:var(--vio2);border-color:#a78bfa;color:var(--vio)}
+.pill.sk{background:var(--sky2);border-color:#7dd3fc;color:var(--sky)}
+.tbl{width:100%;border-collapse:collapse;font-size:.74rem;background:var(--card);border-radius:9px;overflow:hidden;box-shadow:var(--sh);margin-bottom:12px}
+.tbl th{background:var(--p);color:#fff;text-align:left;padding:7px 11px;font-size:.65rem;text-transform:uppercase;letter-spacing:.03em}
+.tbl td{padding:7px 11px;border-bottom:1px solid var(--s2);vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:nth-child(even) td{background:rgba(251,146,60,.04)}
+.tbl tr:hover td{background:var(--s2)}
+.trap{background:var(--red2);border:1px solid #fca5a5;border-radius:10px;padding:10px 14px;margin-bottom:8px}
+.trap .tq{font-size:.71rem;font-weight:700;color:var(--red);margin-bottom:4px}
+.trap .ta{font-size:.75rem;color:var(--text)}
+.trap .ta strong{color:var(--grn)}
+.fase-box{display:flex;flex-direction:column;gap:0;margin:10px 0}
+.fase-item{display:flex;align-items:stretch;gap:0}
+.fase-num{width:36px;min-width:36px;background:var(--p);color:#fff;font-size:1.1rem;font-weight:900;display:flex;align-items:center;justify-content:center;border-radius:0}
+.fase-item:first-child .fase-num{border-radius:9px 0 0 0}
+.fase-item:last-child .fase-num{border-radius:0 0 0 9px}
+.fase-body{background:var(--s2);border-bottom:1px solid var(--line);flex:1;padding:8px 12px;font-size:.76rem}
+.fase-item:first-child .fase-body{border-radius:0 9px 0 0}
+.fase-item:last-child .fase-body{border-radius:0 0 9px 0;border-bottom:none}
+.fase-title{font-weight:800;color:var(--p2);font-size:.73rem;text-transform:uppercase;letter-spacing:.03em}
+.fase-desc{color:var(--text);margin-top:2px}
+.geo-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:10px;overflow:hidden;box-shadow:var(--sh);margin-bottom:12px}
+.geo-head{background:var(--p);color:#fff;font-weight:800;font-size:.73rem;padding:8px 14px;text-transform:uppercase;letter-spacing:.03em}
+.geo-cell{background:var(--card);border:1px solid var(--s2);padding:9px 13px;font-size:.75rem}
+.geo-cell:nth-child(even){background:rgba(251,146,60,.04)}
+.geo-label{font-weight:800;color:var(--p2);font-size:.7rem;text-transform:uppercase;letter-spacing:.02em;margin-bottom:4px}
+strong{color:var(--p)}
+.g{color:#059669;font-weight:700}.r{color:#dc2626;font-weight:700}.w{color:#b45309;font-weight:700}
+.s3{color:#f59e0b;font-weight:800}
+.big-letter{font-size:2rem;font-weight:900;line-height:1;display:block;margin-bottom:3px}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<header>
+  <div>
+    <h1>Tema 54 · HTML 2 · Esquema-resumen visual · Bloques para memorización rápida</h1>
+    <div class="sub">Técnicas e Instrumentos para la intervención social · Entrevista · Visita domiciliaria · Ficha y Historia social · Informe · Contrato · Genograma · Ecomapa · Sociograma</div>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</header>
+
+<!-- ══ FICHAS FLASH ══ -->
+<div class="stitle">⚡ Fichas flash · Datos inmediatos de examen <span class="s3">★★★</span></div>
+<div class="flash-row">
+  <div class="flash"><div class="fq">Técnica por excelencia del TS</div><div class="fa">La entrevista</div></div>
+  <div class="flash"><div class="fq">Técnica PROPIA del TS</div><div class="fa">Visita domiciliaria</div></div>
+  <div class="flash"><div class="fq">Fases de la entrevista (nº)</div><div class="fa">4 fases</div></div>
+  <div class="flash"><div class="fq">1ª entrevista → tipo</div><div class="fa">Libre / no estructurada</div></div>
+  <div class="flash"><div class="fq">Tipo más habitual TSS</div><div class="fa">Planificada / semiestructurada</div></div>
+  <div class="flash"><div class="fq">Ficha social: nº partes</div><div class="fa">4 partes</div></div>
+  <div class="flash"><div class="fq">Historia social: nº elementos</div><div class="fa">5 elementos</div></div>
+  <div class="flash"><div class="fq">Informe social: 4 cualidades</div><div class="fa">Fiabilidad · Precisión · Claridad · Argumentación</div></div>
+  <div class="flash"><div class="fq">Informe social: obligatorio</div><div class="fa">Firma + Nº colegiado</div></div>
+  <div class="flash"><div class="fq">Contrato: finalidad</div><div class="fa">Autonomía del usuario</div></div>
+  <div class="flash"><div class="fq">Genograma: creadores</div><div class="fa">McGoldrick y Gerson (años 70)</div></div>
+  <div class="flash"><div class="fq">Sociograma: creador</div><div class="fa">Jacob Moreno (años 30)</div></div>
+  <div class="flash"><div class="fq">Ecomapa: quién lo elabora</div><div class="fa">El TS (no la familia)</div></div>
+  <div class="flash"><div class="fq">Contrato: modelos de origen</div><div class="fa">Tarea (Reid-Epstein) + Sistémico</div></div>
+</div>
+
+<!-- ══ BLOQUE 1: TRÍADA ══ -->
+<div class="stitle">1 · Método → Técnica → Instrumento <span class="s3">★★★</span></div>
+<div class="g3">
+  <div class="card c-vio">
+    <h3>Método</h3>
+    <p>Procedimiento racional, planificado y ordenado para alcanzar un fin. <strong>Nivel más general.</strong></p>
+    <p style="margin-top:6px">Grandes métodos en TS: individual · grupal · comunitario.</p>
+    <p style="margin-top:5px">Orienta la lógica de la intervención.</p>
+  </div>
+  <div class="card c-ora">
+    <h3>Técnica ★★★</h3>
+    <p>Procedimiento operativo, <strong>flexible y adaptable</strong> que permite la puesta en práctica del método.</p>
+    <p style="margin-top:6px">Ej.: entrevista · visita domiciliaria · observación · sociograma.</p>
+    <p style="margin-top:5px">Es un <em>procedimiento</em> (algo que se hace).</p>
+  </div>
+  <div class="card c-teal">
+    <h3>Instrumento ★★★</h3>
+    <p>Soporte o recurso <strong>material</strong> que concreta la técnica.</p>
+    <p style="margin-top:6px">Ej.: ficha social · historia social · informe · genograma · ecomapa.</p>
+    <p style="margin-top:5px">Es una <em>herramienta</em> (algo que se tiene o produce).</p>
+  </div>
+</div>
+<div class="nota n-vio"><strong>Cita de examen:</strong> "Los instrumentos y las técnicas son cuestiones indisolubles en el Trabajo Social." — Ávila Acosta (Margen nº 86) ★</div>
+
+<!-- ══ BLOQUE 2: CLASIFICACIÓN TÉCNICAS ══ -->
+<div class="stitle">2 · Clasificación de técnicas por nivel y finalidad</div>
+<div class="g2">
+  <div class="card c-sky">
+    <h3>Según nivel de intervención</h3>
+    <p><strong>Individual / familiar:</strong></p>
+    <div class="pills"><span class="pill sk">Entrevista</span><span class="pill sk">Visita domiciliaria</span><span class="pill sk">Observación</span><span class="pill sk">Contrato</span></div>
+    <p style="margin-top:9px"><strong>Grupal:</strong></p>
+    <div class="pills"><span class="pill t">Sociodrama</span><span class="pill t">Sociograma</span><span class="pill t">Role-playing</span><span class="pill t">Phillips 6/6</span></div>
+    <p style="margin-top:9px"><strong>Comunitario:</strong></p>
+    <div class="pills"><span class="pill v">Diag. participativo</span><span class="pill v">DAFO</span><span class="pill v">Foro comunitario</span><span class="pill v">Mapeo</span></div>
+  </div>
+  <div class="card c-grn">
+    <h3>Según finalidad en el proceso</h3>
+    <p><strong>Conocimiento / diagnóstico:</strong></p>
+    <div class="pills"><span class="pill g">Ficha social</span><span class="pill g">Historia social</span><span class="pill g">Genograma</span><span class="pill g">Ecomapa</span><span class="pill g">Escalas</span></div>
+    <p style="margin-top:9px"><strong>Planificación:</strong></p>
+    <div class="pills"><span class="pill g">Árbol problemas</span><span class="pill g">Marco lógico</span></div>
+    <p style="margin-top:9px"><strong>Intervención directa:</strong></p>
+    <div class="pills"><span class="pill g">Entrevista terapéutica</span><span class="pill g">Contrato</span><span class="pill g">Mediación</span><span class="pill g">Counseling</span></div>
+    <p style="margin-top:9px"><strong>Evaluación:</strong></p>
+    <div class="pills"><span class="pill g">Escalas estandarizadas</span><span class="pill g">Indicadores</span></div>
+  </div>
+</div>
+
+<!-- ══ BLOQUE 3: ENTREVISTA CARACTERÍSTICAS ══ -->
+<div class="stitle">3 · La entrevista · Definiciones y características esenciales <span class="s3">★★★</span></div>
+<div class="g2">
+  <div class="card c-ora">
+    <h3>2 Definiciones de referencia ★★★</h3>
+    <p><strong>Kistermann:</strong> <em>"Técnica que supone un vínculo intersubjetivo, profesional, entre dos o más personas, siendo lo que diferencia su uso el modo y la intencionalidad con que se aplica."</em></p>
+    <p style="margin-top:8px"><strong>Teresa Rosell:</strong> <em>"Técnica con múltiples aplicaciones en el campo de las ciencias sociales, con diferentes fundamentos teóricos y que puede ser utilizada con diversos propósitos."</em></p>
+  </div>
+  <div class="card c-warn">
+    <h3>5 características clave ★★★</h3>
+    <ul>
+      <li>Relación interpersonal <strong>profesional</strong> entre TS y usuario</li>
+      <li>Acontecimiento integral: palabras + gestos + silencios + emociones</li>
+      <li>Relación <strong>ASIMÉTRICA</strong>: el profesional tiene el control ★★★</li>
+      <li>Es un <strong>MEDIO</strong> para el cambio, nunca un fin en sí misma ★★★</li>
+      <li>Crea un clima de <strong>empatía y confianza</strong></li>
+    </ul>
+    <div class="nota n-err" style="margin-top:8px"><strong>Trampas:</strong> "conversación entre iguales" → FALSO · "fin en sí misma" → FALSO ★★★</div>
+  </div>
+</div>
+
+<!-- ══ BLOQUE 4: FASES ENTREVISTA ══ -->
+<div class="stitle">4 · Las 4 fases de la entrevista <span class="s3">★★★</span></div>
+<div class="fase-box">
+  <div class="fase-item">
+    <div class="fase-num">1</div>
+    <div class="fase-body"><div class="fase-title">Acogida</div><div class="fase-desc">Primer contacto · define el tono de toda la relación · el TS cuida el espacio, se presenta y crea clima de confianza · una acogida deficiente bloquea todo lo que viene después.</div></div>
+  </div>
+  <div class="fase-item">
+    <div class="fase-num">2</div>
+    <div class="fase-body"><div class="fase-title">Exploración</div><div class="fase-desc">El usuario expresa el motivo de consulta en sus propios términos · el TS escucha activamente · presta atención a los contenidos expresos (lo que se dice) y latentes (lo que no se dice) · el TS habla poco y escucha mucho.</div></div>
+  </div>
+  <div class="fase-item">
+    <div class="fase-num">3</div>
+    <div class="fase-body"><div class="fase-title">Intercambio y clarificación</div><div class="fase-desc">El TS ya tiene información suficiente · elabora hipótesis · devuelve al usuario una elaboración del problema que pueda reconocer como propia · se inician compromisos · es la fase más activa del profesional.</div></div>
+  </div>
+  <div class="fase-item">
+    <div class="fase-num">4</div>
+    <div class="fase-body"><div class="fase-title">Cierre / Despedida</div><div class="fase-desc">El TS revela la conclusión más importante de la sesión · acuerda próximos pasos · confirma la siguiente cita · se mantiene receptivo hasta el final · un mal cierre puede reabrir ansiedades justo al salir.</div></div>
+  </div>
+</div>
+
+<!-- ══ BLOQUE 5: TIPOS ENTREVISTA ══ -->
+<div class="stitle">5 · Tipos de entrevista · Los 3 criterios clave <span class="s3">★★★</span></div>
+<div class="g3">
+  <div class="card c-teal">
+    <h3>Por organización ★★★</h3>
+    <p style="margin-bottom:7px"><strong>Libre / No estructurada:</strong><br>Sin guía preelaborada · máxima apertura · el usuario expone libremente.</p>
+    <div class="nota n-ok" style="margin:5px 0 10px"><strong>→ 1ª entrevista ★★★</strong></div>
+    <p style="margin-bottom:7px"><strong>Estandarizada:</strong><br>Preguntas fijas, siempre las mismas · para datos de identificación rutinarios.</p>
+    <p style="margin-bottom:0"><strong>Planificada / Semiestructurada:</strong><br>Guía e hipótesis previas · flexible en el desarrollo.</p>
+    <div class="nota n-ok" style="margin:5px 0 0"><strong>→ La más habitual en el TSS ★★★</strong></div>
+  </div>
+  <div class="card c-sky">
+    <h3>Por participantes</h3>
+    <p><strong>Individual:</strong> un TS y un usuario. La más frecuente.</p>
+    <p style="margin-top:8px"><strong>Grupal:</strong> un TS y varios usuarios o familia. Para conocer vivencia grupal o familiar.</p>
+    <p style="margin-top:8px"><strong>Colateral:</strong> con persona del entorno del usuario (familiar, vecino), no con el propio usuario. Para verificar información o gestionar crisis.</p>
+  </div>
+  <div class="card c-rose">
+    <h3>Por finalidad</h3>
+    <div class="pills">
+      <span class="pill">Orientación</span>
+      <span class="pill">Motivación</span>
+      <span class="pill">Información</span>
+      <span class="pill">Asesoramiento</span>
+      <span class="pill">Terapéutica</span>
+      <span class="pill">Seguimiento</span>
+      <span class="pill">Domiciliaria</span>
+    </div>
+    <p style="margin-top:10px"><strong>Psicológicos a conocer:</strong></p>
+    <ul style="margin-top:5px">
+      <li><strong>Transferencia:</strong> el usuario proyecta emociones del pasado en el TS.</li>
+      <li><strong>Contratransferencia:</strong> reacción del TS ante esa proyección.</li>
+      <li><strong>Contención:</strong> el TS recibe la angustia del otro y la devuelve elaborada.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ══ BLOQUE 6: VISITA DOMICILIARIA ══ -->
+<div class="stitle">6 · La visita domiciliaria · técnica PROPIA del TS <span class="s3">★★★</span></div>
+<div class="g2">
+  <div class="card c-warn">
+    <h3>Definición y naturaleza ★★★</h3>
+    <p>Técnica <strong>propia y característica</strong> del Trabajo Social. Ninguna otra disciplina la usa sistemáticamente como herramienta metodológica habitual.</p>
+    <p style="margin-top:7px">Combina simultáneamente: <strong>entrevista + observación</strong> en el espacio natural del usuario.</p>
+    <p style="margin-top:7px">Proporciona información que ninguna otra técnica puede dar.</p>
+  </div>
+  <div class="card c-grn">
+    <h3>7 objetivos ★★★</h3>
+    <ul>
+      <li>Obtener, verificar y ampliar información sociofamiliar</li>
+      <li>Estudiar y observar el ambiente en su contexto natural</li>
+      <li>Proporcionar información a la familia sobre avances</li>
+      <li>Seguimiento de situaciones sociofamiliares</li>
+      <li>Reforzar directivas y estrategias previas</li>
+      <li>Ampliar técnicas de intervención individual/familiar</li>
+      <li>Técnica de investigación clínica o poblacional</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ══ BLOQUE 7: FICHA SOCIAL ══ -->
+<div class="stitle">7 · La ficha social · 4 partes <span class="s3">★★★</span></div>
+<div class="g4">
+  <div class="card c-sky" style="text-align:center">
+    <div class="big-letter" style="color:var(--sky)">P1</div>
+    <h3 style="text-transform:none;border:none;font-size:.79rem">Datos del usuario</h3>
+    <p>Identificación individual: nombre · DNI · fecha nacimiento · teléfono.</p>
+    <p style="margin-top:5px;font-size:.7rem"><em>Archivo individual alfabético</em></p>
+  </div>
+  <div class="card c-teal" style="text-align:center">
+    <div class="big-letter" style="color:var(--teal)">P2</div>
+    <h3 style="text-transform:none;border:none;font-size:.79rem">Datos sociofamiliares</h3>
+    <p>Unidad convivencial: composición familiar · tipo de hogar · relaciones.</p>
+    <p style="margin-top:5px;font-size:.7rem"><em>Archivo familiar por nº expediente</em></p>
+  </div>
+  <div class="card c-grn" style="text-align:center">
+    <div class="big-letter" style="color:var(--grn)">P3</div>
+    <h3 style="text-transform:none;border:none;font-size:.79rem">Datos de hábitat</h3>
+    <p>Condiciones de la vivienda: tenencia · estado · superficie · accesibilidad · habitabilidad.</p>
+  </div>
+  <div class="card c-rose" style="text-align:center">
+    <div class="big-letter" style="color:var(--rose)">P4</div>
+    <h3 style="text-transform:none;border:none;font-size:.79rem">Datos de intervención</h3>
+    <p>Fecha inicio/cierre · Valoración social · Demanda · Recurso idóneo · Recurso aplicado.</p>
+  </div>
+</div>
+<div class="nota n-err"><strong>Trampa:</strong> "La ficha social y la historia social son lo mismo" → FALSO. La ficha social es la parte sistematizable y cuantificable de la historia social. ★★★</div>
+
+<!-- ══ BLOQUE 8: HISTORIA SOCIAL ══ -->
+<div class="stitle">8 · La historia social · 5 elementos <span class="s3">★★★</span></div>
+<div class="g5">
+  <div class="card c-ora" style="text-align:center">
+    <div class="big-letter" style="color:var(--p)">E1</div>
+    <h3 style="text-transform:none;border:none;font-size:.78rem">Identificación</h3>
+    <p>Datos personales y de contacto del usuario y unidad familiar.</p>
+  </div>
+  <div class="card c-sky" style="text-align:center">
+    <div class="big-letter" style="color:var(--sky)">E2</div>
+    <h3 style="text-transform:none;border:none;font-size:.78rem">Registro de estudio</h3>
+    <p>Situación familiar · económica · sanitaria · vivienda · educativa.</p>
+  </div>
+  <div class="card c-warn" style="text-align:center">
+    <div class="big-letter" style="color:var(--warn)">E3</div>
+    <h3 style="text-transform:none;border:none;font-size:.78rem">Diagnóstico social</h3>
+    <p>Problemas + potencialidades + características de la situación-problema.</p>
+  </div>
+  <div class="card c-grn" style="text-align:center">
+    <div class="big-letter" style="color:var(--grn)">E4</div>
+    <h3 style="text-transform:none;border:none;font-size:.78rem">PIC</h3>
+    <p>Proyecto de Intervención de Casos: objetivos · intervención · actividades · calendario · recursos.</p>
+  </div>
+  <div class="card c-teal" style="text-align:center">
+    <div class="big-letter" style="color:var(--teal)">E5</div>
+    <h3 style="text-transform:none;border:none;font-size:.78rem">Hoja de seguimiento</h3>
+    <p>Registro temporalizado y cronológico de todas las actuaciones realizadas.</p>
+  </div>
+</div>
+
+<!-- ══ BLOQUE 9: INFORME + CONTRATO ══ -->
+<div class="stitle">9 · Informe social y Contrato <span class="s3">★★★</span></div>
+<div class="g2">
+  <div class="card c-vio">
+    <h3>Informe social ★★★</h3>
+    <p><strong>Definición:</strong> síntesis explicativa de una situación social que emite el TS como resultado del estudio, valoración y dictamen, para alcanzar un objetivo determinado.</p>
+    <p style="margin-top:8px"><strong>4 cualidades obligatorias:</strong></p>
+    <div class="pills" style="margin-top:5px">
+      <span class="pill v">Fiabilidad</span>
+      <span class="pill v">Precisión</span>
+      <span class="pill v">Claridad expositiva</span>
+      <span class="pill v">Argumentación didáctica</span>
+    </div>
+    <div class="nota n-err" style="margin-top:10px"><strong>Obligatorios:</strong> Firma + Nº de colegiado ★★★</div>
+    <p style="margin-top:8px"><strong>5 objetivos:</strong> dar a conocer una situación · aportar datos para dictamen · obtener recursos · promover nuevos recursos · informar a otros TS.</p>
+  </div>
+  <div class="card c-rose">
+    <h3>Contrato ★★★</h3>
+    <p><strong>Origen:</strong> modelo centrado en la tarea (Reid-Epstein) + modelo sistémico.</p>
+    <p style="margin-top:8px"><strong>4 condiciones para que exista contrato:</strong></p>
+    <ol style="margin-top:5px;padding-left:16px;font-size:.76rem">
+      <li><strong>Consentimiento mutuo:</strong> disposición activa al cambio ★★★</li>
+      <li><strong>Capacidad contractual</strong> de ambas partes</li>
+      <li><strong>Objeto:</strong> determinado, posible, preciso, limitado, verificable y legal ★★★</li>
+      <li><strong>Contenido:</strong> quién · qué · cuándo · dónde</li>
+    </ol>
+    <div class="nota n-ok" style="margin-top:10px"><strong>Finalidad:</strong> lograr la <strong>AUTONOMÍA</strong> del usuario y la familia. Evita la cronicidad. ★★★</div>
+    <div class="nota n-err"><strong>Trampa:</strong> "el contrato controla al usuario" → FALSO. Es un instrumento de empoderamiento. ★★★</div>
+  </div>
+</div>
+
+<!-- ══ BLOQUE 10: GENOGRAMA VS ECOMAPA ══ -->
+<div class="stitle">10 · Genograma vs. Ecomapa · Diferencia clave <span class="s3">★★★</span></div>
+<div class="geo-grid">
+  <div class="geo-head">Genograma ★★★</div>
+  <div class="geo-head">Ecomapa ★★★</div>
+  <div class="geo-cell"><div class="geo-label">¿Qué representa?</div>Estructura INTERNA de la familia a lo largo del tiempo (genealogía + relaciones intrafamiliares)</div>
+  <div class="geo-cell"><div class="geo-label">¿Qué representa?</div>Relaciones de la familia con su entorno EXTERNO (redes, instituciones, recursos)</div>
+  <div class="geo-cell"><div class="geo-label">Perspectiva temporal</div>Histórica · varias generaciones · eventos vitales del pasado</div>
+  <div class="geo-cell"><div class="geo-label">Perspectiva temporal</div>Situacional · momento presente · ecología social actual</div>
+  <div class="geo-cell"><div class="geo-label">¿Quién lo elabora?</div>TS <strong>con la familia</strong> (proceso conjunto; puede movilizar contenido emocional)</div>
+  <div class="geo-cell"><div class="geo-label">¿Quién lo elabora? ★★★</div><strong>EL TS</strong>, a partir de su observación e información recogida. <span class="r">La familia NO interviene directamente.</span></div>
+  <div class="geo-cell"><div class="geo-label">Cuándo se hace</div>Primeras sesiones · cita específica ~30 min · advertir del contenido emocional</div>
+  <div class="geo-cell"><div class="geo-label">Cuándo se hace</div>En cualquier momento del proceso; también tras crisis o cambios importantes</div>
+  <div class="geo-cell"><div class="geo-label">Creadores</div>Monica McGoldrick y Randy Gerson · <strong>años 70</strong></div>
+  <div class="geo-cell"><div class="geo-label">Creador</div>Ann Hartman · <strong>1978</strong></div>
+  <div class="geo-cell"><div class="geo-label">Simbología clave</div>Cuadros (♂) · círculos (♀) · líneas de unión · cortes · cruces (†)</div>
+  <div class="geo-cell"><div class="geo-label">Simbología clave</div>Líneas gruesas (vínculo fuerte) · delgadas (débil) · onduladas (conflicto) · flechas (flujo)</div>
+</div>
+<div class="nota n-err"><strong>Trampa doble:</strong> "el ecomapa lo elabora la familia con el TS" → FALSO · "genograma y ecomapa son lo mismo" → FALSO. Interno vs. externo ★★★</div>
+
+<!-- ══ BLOQUE 11: SOCIOGRAMA ══ -->
+<div class="stitle">11 · El sociograma de Jacob Moreno <span class="s3">★★★</span></div>
+<div class="g3">
+  <div class="card c-teal">
+    <h3>Qué es</h3>
+    <p>Técnica de <strong>diagnóstico grupal</strong> creada por <strong>Jacob Moreno</strong> (años 30) en el marco de la sociometría.</p>
+    <p style="margin-top:6px">Representación gráfica de las relaciones de atracción, rechazo e indiferencia dentro de un grupo.</p>
+    <p style="margin-top:6px">Permite detectar: <strong>líderes · personas aisladas · coaliciones · subgrupos.</strong></p>
+  </div>
+  <div class="card c-sky">
+    <h3>Cómo se elabora ★★★</h3>
+    <ol style="font-size:.76rem;padding-left:16px">
+      <li>Se aplica un <strong>test sociométrico</strong> a los miembros del grupo (preguntas de elección y rechazo).</li>
+      <li>El TS recoge y procesa los datos.</li>
+      <li>El TS elabora la representación gráfica.</li>
+    </ol>
+    <div class="nota n-err" style="margin-top:8px"><strong>Trampa:</strong> "lo elaboran los miembros del grupo" → FALSO. Lo elabora el <strong>TS</strong>. ★★★</div>
+  </div>
+  <div class="card c-grn">
+    <h3>Otras técnicas grupales</h3>
+    <ul>
+      <li><strong>Sociodrama / role-playing:</strong> dramatización de situaciones</li>
+      <li><strong>Phillips 6/6:</strong> 6 personas · 6 minutos · puesta en común</li>
+      <li><strong>Focus group:</strong> generación de discurso grupal sobre un tema</li>
+      <li><strong>Brainstorming:</strong> ideas libres sin juicio previo</li>
+      <li><strong>Técnica Delphi:</strong> consulta a expertos por rondas hasta consenso</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ══ BLOQUE 12: TRAMPAS ══ -->
+<div class="stitle">12 · Las 10 trampas del examen <span class="s3">★★★</span></div>
+<div class="g2">
+  <div>
+    <div class="trap"><div class="tq">✗ "La entrevista es una conversación entre iguales"</div><div class="ta">→ FALSO. La relación es <strong>ASIMÉTRICA</strong>: el profesional tiene el control. ★★★</div></div>
+    <div class="trap"><div class="tq">✗ "La entrevista es un fin en sí misma"</div><div class="ta">→ FALSO. Es un <strong>MEDIO para el cambio</strong>. ★★★</div></div>
+    <div class="trap"><div class="tq">✗ "La primera entrevista debe ser estandarizada"</div><div class="ta">→ FALSO. La primera entrevista debe ser <strong>LIBRE / no estructurada</strong>. ★★★</div></div>
+    <div class="trap"><div class="tq">✗ "La ficha social y la historia social son lo mismo"</div><div class="ta">→ FALSO. La ficha social es la parte sistematizable de la historia social (un subconjunto). ★★★</div></div>
+    <div class="trap"><div class="tq">✗ "El informe social no requiere firma ni número de colegiado"</div><div class="ta">→ FALSO. Son <strong>OBLIGATORIOS</strong>. El informe tiene valor legal. ★★★</div></div>
+  </div>
+  <div>
+    <div class="trap"><div class="tq">✗ "El ecomapa lo elabora la familia conjuntamente con el TS"</div><div class="ta">→ FALSO. Lo elabora el <strong>TS</strong> a partir de su observación; la familia no interviene directamente. ★★★</div></div>
+    <div class="trap"><div class="tq">✗ "Genograma y ecomapa aportan la misma información"</div><div class="ta">→ FALSO. Genograma = estructura <strong>interna</strong> familiar; ecomapa = relaciones con el entorno <strong>externo</strong>. ★★★</div></div>
+    <div class="trap"><div class="tq">✗ "El sociograma lo elaboran los propios miembros del grupo"</div><div class="ta">→ FALSO. Lo elabora el <strong>TS</strong> a partir de un test sociométrico. ★★★</div></div>
+    <div class="trap"><div class="tq">✗ "El contrato en TS sirve para controlar al usuario"</div><div class="ta">→ FALSO. Su finalidad es lograr la <strong>AUTONOMÍA</strong> del usuario. Evita la cronicidad. ★★★</div></div>
+    <div class="trap"><div class="tq">✗ "La visita domiciliaria es una visita de cortesía"</div><div class="ta">→ FALSO. Es una técnica <strong>PROPIA del TS</strong> que combina entrevista + observación con objetivos profesionales planificados. ★★★</div></div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,323 @@
+PUNTOS CLAVE PARA EXAMEN – TEMA 54
+Técnicas e Instrumentos para la intervención social
+=========================================================================
+
+=== BLOQUE A: CONCEPTOS BÁSICOS ===
+
+A1. TÉCNICA vs. INSTRUMENTO (pregunta segura)
+- Técnica: procedimiento operativo, flexible y adaptable que facilita el uso de un método.
+  Es la forma de aplicar el método en la práctica concreta. Ej.: entrevista, observación,
+  visita domiciliaria, trabajo en red.
+- Instrumento: soporte o recurso material que concreta la técnica. Ej.: ficha social,
+  historia social, informe social, genograma, ecomapa.
+  ▶ Frase clave: "Los instrumentos y las técnicas son cuestiones indisolubles en el
+    Trabajo Social" (Ávila Acosta, Margen 86).
+
+A2. CLASIFICACIÓN GENERAL DE LAS TÉCNICAS (pregunta segura)
+Según el nivel de intervención:
+  → Individual/familiar: entrevista · visita domiciliaria · observación · contrato
+  → Grupal: socio-drama · sociograma · role-playing · grupos de discusión · Phillips 6/6
+  → Comunitaria: diagnóstico participativo · DAFO · foro comunitario · mapeo
+
+Según su finalidad:
+  → Técnicas de conocimiento/diagnóstico: ficha social · historia social · genograma ·
+    ecomapa · escalas · observación
+  → Técnicas de planificación: árbol de problemas · marco lógico
+  → Técnicas de intervención directa: entrevista terapéutica · orientación · mediación ·
+    negociación · contrato · counseling
+  → Técnicas de evaluación: escalas · indicadores · cuestionarios
+
+
+=== BLOQUE B: LA ENTREVISTA ★★★ ===
+
+B1. DEFINICIÓN (pregunta segura)
+- Kistermann: "Técnica que supone un vínculo intersubjetivo, profesional, entre dos o más
+  personas, siendo lo que diferencia su uso el modo y la intencionalidad con que se aplica."
+- Teresa Rosell: "Técnica con múltiples aplicaciones en el campo de las ciencias sociales,
+  con diferentes fundamentos teóricos y que puede ser utilizada con diversos propósitos."
+- La entrevista es la TÉCNICA POR EXCELENCIA del Trabajo Social. ★★★
+- No es una simple conversación: tiene un propósito profesional determinado.
+- Es el punto de interacción entre el conocimiento científico y las necesidades prácticas.
+
+B2. CARACTERÍSTICAS GENERALES ★★★
+- Relación interpersonal profesional entre TS y usuario (o varios).
+- Acontecimiento integral de comunicación: palabras + gestos + sentimientos + contexto.
+- Relación ASIMÉTRICA: el profesional tiene el control (≠ relación de igualdad). ★★★
+- No es un fin, sino un MEDIO para el cambio. ★★★
+- Posibilita un clima de empatía.
+- Durará desde el primer contacto hasta que se cumplan los objetivos.
+
+B3. FUNCIONES/OBJETIVOS DE LA ENTREVISTA ★★★
+1. Facilitar información sobre recursos y servicios sociales.
+2. Orientar sobre situaciones que presenta el usuario.
+3. Estudiar la pertinencia de utilizar un recurso determinado.
+4. Movilizar las actitudes y relaciones del usuario y estimular sus capacidades.
+5. Derivar a otros servicios y profesionales.
+
+B4. FASES DE LA ENTREVISTA ★★★ (4 fases)
+1. ACOGIDA: recepción del usuario; el primer contacto marca la futura relación;
+   acogida cálida; cuidad las condiciones previas.
+2. EXPLORACIÓN: el entrevistado expresa el motivo de consulta en sus propios términos;
+   el profesional pregunta sobre aspectos latentes y expresos.
+3. INTERCAMBIO/CLARIFICACIÓN: el profesional tiene información suficiente; elabora
+   hipótesis; devuelve la elaboración del problema al usuario; se inician compromisos.
+4. FINAL/CIERRE: despedida; el profesional revela el hecho más importante; es receptivo
+   hasta el final.
+
+B5. TIPOS DE ENTREVISTA ★★★
+SEGÚN FINALIDAD:
+  → Orientación · Motivación · Información · Asesoramiento · Terapéutica · Seguimiento
+  → Colateral: no directamente con el usuario sino con alguien cercano (familiar, vecino).
+  → Domiciliaria: conocer el hábitat del individuo; posibilita la entrevista familiar in situ.
+
+SEGÚN ORGANIZACIÓN/MODALIDAD:
+  → Libre/informal/no estructurada: el usuario expone libremente; sin guía preelaborada;
+    adecuada para la primera entrevista.
+  → Estandarizada: preguntas estructuradas de antemano, siempre las mismas;
+    para datos rutinarios (identificación).
+  → Planificada/semiestructurada: guía e hipótesis sobre qué se necesita conocer;
+    la más habitual en la práctica del TSS.
+
+SEGÚN PROFUNDIDAD:
+  → Clínica: contenido manifiesto + forma de expresarlo; objetivo terapéutico.
+  → Profunda: campo concreto; más de una sesión; el TS actúa como técnico.
+
+SEGÚN PARTICIPANTES:
+  → Individual (TS – usuario). ★★★
+  → Grupal: colectivo (panel, focus group); conocer vivencia y experiencia grupal.
+
+B6. ASPECTOS PSICOLÓGICOS DE LA ENTREVISTA ★
+Defensas del entrevistado que el TS debe conocer:
+  · Huida (negación total)   · Racionalización   · Introyección   · Identificación
+  · Complejo reprimido   · Olvido   · Retorno
+Fenómenos relacionales:
+  · Transferencia: el entrevistado revive emociones del pasado proyectándolas al TS.
+  · Contratransferencia: reacción del TS ante los sentimientos que le transfiere el usuario.
+  · Contención: capacidad del TS de recibir las ansiedades del otro y devolverlas elaboradas.
+
+B7. CONDICIONES FÍSICAS PARA LA ENTREVISTA ★
+  - Que el usuario no espere (o espere lo mínimo).
+  - Que haya un solo entrevistador, a ser posible.
+  - Que el mobiliario favorezca una posición de igual a igual.
+  - Sin interrupciones ni llamadas.
+  - Lugar no compartido con otras personas.
+  - Evitar tomar notas durante el diálogo (o hacerlo lo menos posible).
+  - Luz indirecta y tenue.
+  - Duración apropiada: ni demasiado larga ni demasiado corta.
+
+B8. HABILIDADES DEL ENTREVISTADOR ★
+  · Empatía · Escucha activa · Preguntas cortas, abiertas o cerradas según el caso ·
+    Invitar a hablar sin bombardear · No juzgar
+
+
+=== BLOQUE C: LA VISITA DOMICILIARIA ★★★ ===
+
+C1. DEFINICIÓN
+- Técnica PROPIA del Trabajo Social. ★★★
+- Se realiza en el domicilio del usuario, utilizando la entrevista y la observación.
+- Permite conocer la realidad del usuario desde su propio entorno: espacio íntimo y natural
+  de convivencia.
+
+C2. OBJETIVOS ★★★
+1. Obtener, verificar y ampliar información sobre la situación sociofamiliar.
+2. Estudiar y observar el ambiente social y familiar en su contexto natural.
+3. Proporcionar información a la familia sobre el estado de avances de la intervención.
+4. Seguimiento de situaciones sociofamiliares.
+5. Reforzamiento de directivas y estrategias ya facilitadas.
+6. Ampliación de técnicas de intervención individual/familiar.
+7. Técnica de investigación clínica o poblacional.
+
+C3. INFORMACIÓN QUE APORTA
+  · Estructura familiar · Tipo de relaciones entre sus miembros ·
+    Organización del espacio doméstico · Prioridades del hogar ·
+    Condiciones de habitabilidad · Actividades de ocio compartido.
+
+
+=== BLOQUE D: TÉCNICAS DOCUMENTALES ★★★ ===
+
+D1. LA FICHA SOCIAL ★★★
+- Soporte documental donde la UTS (Unidad de Trabajo Social) recaba los datos básicos
+  de los usuarios.
+- Es la parte común, sistematizable y cuantificable de la Historia Social.
+- Confidencialidad: la identificación directa solo es posible para la UTS a través del nº
+  de expediente.
+- Composición (4 partes): ★★★
+  1. Datos de usuario (identificación; archivo individual alfabético).
+  2. Datos sociofamiliares (unidad convivencial; archivo familiar por nº de expediente).
+  3. Datos de hábitat (condiciones de la vivienda).
+  4. Datos de intervención social (fecha inicio/cierre · valoración social · demanda ·
+     recurso idóneo · recurso aplicado).
+- No es un cuestionario mecánico: se rellena progresivamente en distintas entrevistas.
+
+D2. LA HISTORIA SOCIAL ★★★
+- Principal soporte documental para el trabajo directo con casos. ★★★
+- Instrumento documental que contiene datos identificativos, diagnóstico social,
+  proyecto de intervención y registro temporalizado de incidencias.
+- Análoga a la historia clínica en el ámbito sanitario.
+- Elementos (5):
+  1. Datos de identificación.
+  2. Registro de los actos de estudio (situación familiar, económica, sanitaria, vivienda,
+     educativa).
+  3. Diagnóstico social: problemas + potencialidades + características de la situación-problema.
+  4. Proyecto de Intervención de Casos (PIC): objetivos · tipo de intervención ·
+     actividades · calendario · profesionales · recursos.
+  5. Hoja de seguimiento: registro temporalizado de todas las actuaciones.
+
+D3. EL INFORME SOCIAL ★★★
+- Definición: síntesis explicativa respecto de una situación dada, que emite el/la TS
+  como resultado del estudio, valoración y dictamen para el logro de un objetivo determinado.
+- Cualidades: fiabilidad · precisión · claridad expositiva · argumentación didáctica. ★★★
+- Objetivos del informe social:
+  1. Dar a conocer la existencia y características de una situación social para modificarla/paliarla.
+  2. Aportar información para el dictamen profesional.
+  3. Obtener recursos sociales ya establecidos.
+  4. Promover nuevos recursos sociales.
+  5. Facilitar información a otros trabajadores sociales.
+- Estructura/apartados clave: institución/emisor/destinatario · datos identificación ·
+  composición familiar · motivo del informe · antecedentes · situación sociofamiliar,
+  vivienda, económica, sanitaria · diagnóstico · pronóstico · firma + nº colegiado.
+- FIRMA + Nº DE COLEGIADO: obligatorios. ★★★
+
+D4. EL CONTRATO ★★★
+- Instrumento para el cambio que surge de dos modelos: centrado en la tarea + sistémico.
+- Definición jurídica (Dcho. civil): convención por la que una o varias personas se
+  comprometen con otra u otras a dar, hacer o no hacer alguna cosa.
+- Condiciones para que haya contrato:
+  1. Consentimiento mutuo (el usuario muestra disposición al cambio). ★★★
+  2. Capacidad contractual (del usuario y del profesional).
+  3. Objeto: determinado, posible, preciso, limitado, verificable y legal. ★★★
+  4. Contenido: quién · qué · cuándo · dónde.
+- Finalidad: lograr la AUTONOMÍA del usuario y la familia. ★★★
+- Puede evitar la cronicidad y facilita una definición más clara de la relación.
+
+
+=== BLOQUE E: TÉCNICAS GRÁFICAS Y DE DIAGNÓSTICO FAMILIAR ★★★ ===
+
+E1. EL GENOGRAMA (Árbol familiar) ★★★
+- Definición: representación gráfica de la familia a lo largo del tiempo. Árbol genealógico
+  con información sobre la estructura familiar y sus interacciones.
+- Creado en los años 70 por Monica McGoldrick y Randy Gerson (dentro de la terapia familiar).
+- Simbología: cuadros (hombres) · círculos (mujeres) · líneas de unión · cortes · fallecimientos.
+- Proporciona una "fotografía" de la estructura familiar y las relaciones.
+- Usos en TS: investigación de recursos familiares · generación de hipótesis ·
+  estrategias de apoyo al paciente.
+- Se realiza preferentemente en las primeras sesiones. ★★★
+- Requiere cita específica de unos 30 minutos; se advierte del contenido emocional;
+  se garantiza la confidencialidad.
+
+E2. EL ECOMAPA ★★★
+- Definición: representación visual de las relaciones sociales y los recursos que utiliza
+  una familia/persona, mostrando su contexto ambiental (sistemas externos).
+- Lo elabora el TS a partir de la información de los miembros de la familia y la observación.
+  La familia no interviene directamente en su elaboración. ★★★ (diferencia con la PCP)
+- Diferencia clave con el genograma: ★★★
+  · Genograma: estructura interna de la familia a lo largo del tiempo (genealogía + relaciones).
+  · Ecomapa: relaciones de la familia con su entorno y red de apoyo EXTERNO.
+- Utilidades: identificar recursos · redes de apoyo · fortalezas · puntos de conflicto ·
+  monitorizar el progreso de las intervenciones.
+
+E3. EL MAPA DE RELACIONES FAMILIARES
+- Similar al ecomapa; elaborado por el TS desde la observación directa.
+- Se recomienda hacerlo también tras situaciones de crisis o cambio en la familia.
+
+E4. APGAR FAMILIAR
+- Escala breve (5 preguntas) para evaluar la funcionalidad familiar.
+- Acrónimo: Adaptation · Partnership · Growth · Affection · Resolve.
+- Utilizada en Atención Primaria y en la historia de TSS en SM.
+
+
+=== BLOQUE F: TÉCNICAS DE TRABAJO SOCIAL DE GRUPO ★★★ ===
+
+F1. GRUPOS SEGÚN OBJETIVO
+  · Grupos socioterapéuticos: apoyo emocional; salud mental; TMG + familias.
+  · Grupos socioeducativos: aprendizaje; habilidades sociales; psicoeducación.
+  · Grupos de autoayuda: los propios miembros coordinan; igualdad entre participantes.
+  · Grupos de tarea: objetivo concreto y externo al propio grupo.
+
+F2. TÉCNICAS GRUPALES OPERATIVAS
+  · Sociograma (Jacob Moreno): representación gráfica de las relaciones de atracción,
+    rechazo e indiferencia dentro de un grupo. Permite detectar líderes, aislamientos y
+    subgrupos. ★★★
+  · Sociodrama/Role-playing: dramatización de situaciones para comprenderlas y trabajar
+    actitudes o habilidades.
+  · Phillips 6/6: grupos de 6 personas discuten 6 minutos; técnica de participación rápida.
+  · Grupos de discusión (focus group): generación de discurso grupal en torno a un tema.
+  · Brainstorming (tormenta de ideas): generación libre de ideas sin juicio previo.
+  · Técnica Delphi: consulta sistemática a expertos por rondas hasta lograr consenso.
+
+F3. SOCIOGRAMA ★★★
+- Técnica de diagnóstico grupal de Jacob Moreno.
+- Permite visualizar la estructura informal del grupo: liderazgo · aislamiento · coaliciones.
+- Instrumento: test sociométrico (preguntas de elección y rechazo entre miembros).
+- El TS NO interviene en él: lo elabora a partir de los datos del test; ≠ mapa de relaciones.
+
+
+=== BLOQUE G: TÉCNICAS DE INTERVENCIÓN COMUNITARIA ===
+
+G1. DIAGNÓSTICO COMUNITARIO PARTICIPATIVO
+- Proceso en el que la propia comunidad identifica sus problemas y recursos.
+- Técnicas: entrevistas a informantes clave · asambleas · DAFO · mapa de recursos.
+- El DAFO analiza: Debilidades · Amenazas · Fortalezas · Oportunidades.
+
+G2. RECORRIDO EXPLORATORIO / TRANSECTO
+- Primera inmersión en la comunidad: observación directa del territorio.
+- El TS recorre el área geográfica para identificar recursos, problemas y dinámicas.
+
+G3. OBSERVACIÓN PARTICIPANTE
+- Técnica de investigación social: el TS participa en la vida comunitaria para comprender
+  la realidad desde su interior.
+- Propia de la investigación cualitativa; genera información contextualizada.
+
+G4. PLANIFICACIÓN PARTICIPATIVA: MARCO LÓGICO
+- Herramienta para planificar proyectos sociales: objetivos · actividades · indicadores ·
+  medios de verificación · supuestos o hipótesis externas.
+
+=== BLOQUE H: OBSERVACIÓN COMO TÉCNICA TRANSVERSAL ★ ===
+
+H1. TIPOS
+  → Observación sistemática: planificada; con pauta de observación previa; registra
+    conductas o situaciones de forma estructurada.
+  → Observación asistemática/libre: sin estructura previa; exploratoria.
+  → Observación participante: el TS se integra en el contexto (técnica comunitaria).
+  → Observación no participante: el TS observa sin intervenir.
+
+H2. USO EN LA VISITA DOMICILIARIA
+- Observación de la vivienda, el espacio doméstico, las relaciones entre los miembros,
+  las condiciones de habitabilidad. Imprescindible para completar la evaluación social.
+
+
+=== ARTÍCULOS / REFERENCIAS CLAVE PARA EXAMEN ===
+- Kistermann: definición de entrevista como vínculo intersubjetivo profesional ★★★
+- Teresa Rosell: "La entrevista en el Trabajo Social" (1998) ★★★
+- Ávila Acosta: "Los instrumentos y las técnicas son cuestiones indisolubles" (Margen 86) ★
+- Jacob Moreno: creador del sociograma (años 30) ★★★
+- McGoldrick y Gerson: creadores del genograma (años 70) ★★
+- APGAR Familiar: Smilkstein, 1978 ★
+- Ficha Social: estructura de 4 partes; aprobada por el Plan Concertado de SS.SS. ★★★
+- Historia Social: 5 elementos; principal soporte documental para el trabajo con casos ★★★
+- Informe social: cualidades (fiabilidad, precisión, claridad, argumentación didáctica) ★★★
+- Contrato: surge del modelo centrado en la tarea (Reid-Epstein) y del modelo sistémico ★★★
+
+=== TRAMPAS FRECUENTES ===
+T1: "La entrevista es una conversación entre iguales" → FALSO. La relación es ASIMÉTRICA:
+    el profesional tiene el control. ★★★
+T2: "La entrevista es un fin en sí misma" → FALSO. Es un MEDIO para el cambio. ★★★
+T3: "La ficha social y la historia social son lo mismo" → FALSO. La ficha social es la parte
+    sistematizable y cuantificable de la historia social (un subconjunto). ★★★
+T4: "El ecomapa lo elabora la familia conjuntamente con el TS" → FALSO. Lo elabora el
+    TRABAJADOR SOCIAL a partir de la observación; la familia no interviene directamente. ★★★
+T5: "El genograma y el ecomapa aportan la misma información" → FALSO. Genograma =
+    estructura INTERNA familiar; ecomapa = relaciones con el entorno EXTERNO. ★★★
+T6: "El informe social no requiere firma ni número de colegiado" → FALSO. Son OBLIGATORIOS.★★★
+T7: "El sociograma lo elaboran los propios miembros del grupo" → FALSO. Lo elabora el TS
+    a partir de un test sociométrico. ★★★
+T8: "El contrato en TS tiene como finalidad controlar al usuario" → FALSO. Su finalidad es
+    lograr la AUTONOMÍA del usuario y la familia; evitar la cronicidad. ★★★
+T9: "La visita domiciliaria es una visita de cortesía del TS" → FALSO. Es una técnica
+    PROPIA del TS que combina entrevista y observación con objetivo profesional. ★★★
+T10: "La primera entrevista debe ser estandarizada" → FALSO. La entrevista LIBRE
+     (informal/no estructurada) es la más adecuada para la primera entrevista. ★★★
+
+=========================================================================
+Archivo: puntos-clave_T54.txt | Tema 54 | Oposiciones Gestor Mantenimiento Navarra
+=========================================================================

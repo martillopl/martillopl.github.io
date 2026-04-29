@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 54 · HTML 3 · Cuadro comparativo y tablas operativas · Técnicas e Instrumentos intervención social</title>
+<style>
+:root{
+  --bg:#fff7ed;--card:#fff;--s2:#ffedd5;--s3:#fed7aa;--line:#fb923c;
+  --text:#431407;--muted:#c2410c;--p:#ea580c;--p2:#9a3412;
+  --grn:#059669;--grn2:#d1fae5;--red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;--sky:#0284c7;--sky2:#e0f2fe;
+  --teal:#0d9488;--teal2:#ccfbf1;--vio:#7c3aed;--vio2:#ede9fe;
+  --rose:#be185d;--rose2:#fce7f3;
+  --sh:0 2px 12px rgba(234,88,12,.09)
+}
+[data-theme="dark"]{
+  --bg:#0f0700;--card:#1c0d00;--s2:#2a1300;--s3:#3d1e00;--line:#c2410c;
+  --text:#fed7aa;--muted:#fb923c;--p:#fb923c;--p2:#fdba74;
+  --grn:#86efac;--grn2:#052e16;--red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;--sky:#7dd3fc;--sky2:#082038;
+  --teal:#5eead4;--teal2:#031a16;--vio:#c4b5fd;--vio2:#1a0e33;
+  --rose:#fda4af;--rose2:#1a0010;
+  --sh:0 2px 14px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:22px}
+.wrap{max-width:1220px;margin:0 auto}
+header{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:14px 22px;box-shadow:var(--sh);margin-bottom:16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+h1{font-size:.93rem;font-weight:800;color:var(--p)}
+.sub{font-size:.7rem;color:var(--muted);margin-top:4px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 14px;border-radius:999px;font-size:.7rem}
+h2{font-size:.83rem;font-weight:800;color:#fff;background:var(--p);padding:7px 16px;border-radius:8px;margin:18px 0 10px;display:inline-block}
+.tbl{width:100%;border-collapse:collapse;box-shadow:var(--sh);border-radius:10px;overflow:hidden;background:var(--card);margin-bottom:14px}
+.tbl th{background:var(--p);color:#fff;text-align:left;padding:8px 11px;font-size:.67rem;text-transform:uppercase;letter-spacing:.03em}
+.tbl td{padding:8px 11px;border-bottom:1px solid var(--s2);font-size:.74rem;vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:nth-child(even) td{background:rgba(251,146,60,.04)}
+.tbl tr:hover td{background:var(--s2)}
+.nota{padding:9px 13px;border-radius:0 9px 9px 0;font-size:.73rem;border-left:4px solid;margin:8px 0;line-height:1.5}
+.n-ok{background:var(--grn2);border-color:var(--grn)}
+.n-err{background:var(--red2);border-color:var(--red)}
+.n-w{background:var(--warn2);border-color:var(--warn)}
+.n-vio{background:var(--vio2);border-color:var(--vio)}
+.n-sky{background:var(--sky2);border-color:var(--sky)}
+.n-teal{background:var(--teal2);border-color:var(--teal)}
+[data-theme="dark"] .n-w strong{color:#fde68a}
+[data-theme="dark"] .n-err strong{color:#fca5a5}
+[data-theme="dark"] .n-ok strong{color:#86efac}
+strong{color:var(--p)}
+.g{color:#059669;font-weight:700}.r{color:#dc2626;font-weight:700}.w{color:#b45309;font-weight:700}
+.sk{color:#0284c7;font-weight:700}.te{color:#0d9488;font-weight:700}.ro{color:#be185d;font-weight:700}
+.s3{color:#f59e0b;font-weight:800}
+td.hl{background:var(--s2)!important;font-weight:700;color:var(--p2)}
+td.ok{background:var(--grn2)!important}
+td.er{background:var(--red2)!important}
+td.wa{background:var(--warn2)!important}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<header>
+  <div>
+    <h1>Tema 54 · HTML 3 · Cuadro comparativo y tablas operativas para examen</h1>
+    <div class="sub">Técnicas e Instrumentos para la intervención social · Entrevista · Visita domiciliaria · Ficha/Historia social · Informe · Contrato · Genograma · Ecomapa · Sociograma · Oposiciones Navarra</div>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</header>
+
+<!-- T1 -->
+<h2>T1 · Método – Técnica – Instrumento: distinción operativa <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Concepto</th><th>Definición operativa</th><th>Nivel de abstracción</th><th>Naturaleza</th><th>Ejemplos en TS</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Método</strong></td><td>Procedimiento racional, planificado y ordenado para alcanzar un fin</td><td class="g">MAYOR</td><td>Lógica general de intervención</td><td>Método individual · grupal · comunitario</td><td>Orienta la intervención; nivel más general</td></tr>
+<tr><td><strong>Técnica ★★★</strong></td><td>Procedimiento operativo, flexible y adaptable que permite la puesta en práctica del método</td><td>Intermedio</td><td>Procedimiento — algo que se HACE</td><td>Entrevista · visita domiciliaria · observación · sociograma</td><td class="g">Más concreta que el método; sirve al método ★★★</td></tr>
+<tr><td><strong>Instrumento ★★★</strong></td><td>Soporte o recurso material que concreta la técnica</td><td class="r">MENOR</td><td>Herramienta — algo que se TIENE o PRODUCE</td><td>Ficha social · historia social · informe · genograma · ecomapa</td><td class="r">Es siempre un soporte material (doc., gráfico, formulario) ★★★</td></tr>
+</tbody>
+</table>
+<div class="nota n-vio"><strong>Cita de examen (Ávila Acosta, Margen 86):</strong> "Los instrumentos y las técnicas son cuestiones indisolubles en el Trabajo Social."</div>
+
+<!-- T2 -->
+<h2>T2 · Clasificación completa de técnicas e instrumentos <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Criterio</th><th>Tipo / Grupo</th><th>Técnicas e instrumentos incluidos</th><th>Nivel predominante</th></tr></thead>
+<tbody>
+<tr><td rowspan="3"><strong>Por nivel de intervención</strong></td><td><strong>Individual / familiar</strong></td><td>Entrevista · visita domiciliaria · observación · contrato · ficha social · historia social · informe social · genograma · ecomapa · APGAR familiar</td><td>Micro</td></tr>
+<tr><td><strong>Grupal</strong></td><td>Sociograma · sociodrama · role-playing · Phillips 6/6 · grupos de discusión · brainstorming · técnica Delphi</td><td>Meso</td></tr>
+<tr><td><strong>Comunitario</strong></td><td>Diagnóstico participativo · observación participante · DAFO · foro comunitario · mapeo de recursos · marco lógico · árbol de problemas</td><td>Macro</td></tr>
+<tr><td rowspan="4"><strong>Por finalidad en el proceso</strong></td><td><strong>Conocimiento / diagnóstico</strong></td><td>Ficha social · historia social · genograma · ecomapa · APGAR familiar · observación · entrevista diagnóstica · escalas estandarizadas (Schalock-Verdugo, GENCAT)</td><td>Fases 1-2</td></tr>
+<tr><td><strong>Planificación</strong></td><td>Árbol de problemas · marco lógico · proyecto de intervención (PIC) · PAP/PAI</td><td>Fase 3</td></tr>
+<tr><td><strong>Intervención directa</strong></td><td>Entrevista terapéutica/orientadora · contrato · mediación · negociación · counseling · visita domiciliaria de intervención</td><td>Fase 4-5</td></tr>
+<tr><td><strong>Evaluación</strong></td><td>Escalas estandarizadas · indicadores · cuestionarios · hoja de seguimiento (historia social)</td><td>Fase 6</td></tr>
+</tbody>
+</table>
+
+<!-- T3 -->
+<h2>T3 · La entrevista: características, funciones y tipos <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Atributo</th><th>Contenido</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Definición Kistermann ★★★</strong></td><td>"Técnica que supone un vínculo intersubjetivo, profesional, entre dos o más personas, siendo lo que diferencia su uso el modo y la intencionalidad con que se aplica."</td><td class="g">La intencionalidad es lo que la diferencia de una conversación ★★★</td></tr>
+<tr><td><strong>Definición Teresa Rosell ★★★</strong></td><td>"Técnica con múltiples aplicaciones en el campo de las ciencias sociales, con diferentes fundamentos teóricos y que puede ser utilizada con diversos propósitos."</td><td>—</td></tr>
+<tr><td><strong>Naturaleza de la relación ★★★</strong></td><td>Relación <strong>ASIMÉTRICA</strong>: el profesional tiene el control de la situación</td><td class="r">≠ conversación entre iguales ★★★</td></tr>
+<tr><td><strong>Carácter instrumental ★★★</strong></td><td>Es un <strong>MEDIO para el cambio</strong>, nunca un fin en sí misma</td><td class="r">★★★</td></tr>
+<tr><td><strong>Función 1</strong></td><td>Facilitar información sobre recursos y servicios sociales</td><td>—</td></tr>
+<tr><td><strong>Función 2</strong></td><td>Orientar sobre la situación del usuario</td><td>—</td></tr>
+<tr><td><strong>Función 3</strong></td><td>Estudiar la pertinencia de aplicar un recurso determinado</td><td>—</td></tr>
+<tr><td><strong>Función 4</strong></td><td>Movilizar actitudes y estimular las capacidades del usuario</td><td>—</td></tr>
+<tr><td><strong>Función 5</strong></td><td>Derivar a otros servicios y profesionales</td><td>—</td></tr>
+</tbody>
+</table>
+
+<!-- T4 -->
+<h2>T4 · Tipos de entrevista según 3 criterios <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Criterio</th><th>Tipo</th><th>Descripción operativa</th><th>Cuándo se usa ★★★</th></tr></thead>
+<tbody>
+<tr><td rowspan="3" class="hl"><strong>Según organización ★★★</strong></td><td class="g"><strong>Libre / no estructurada</strong></td><td>Sin guía preelaborada; el usuario expone en sus propios términos y ritmo; máxima apertura</td><td class="ok"><strong>1ª entrevista ★★★</strong></td></tr>
+<tr><td><strong>Estandarizada</strong></td><td>Preguntas fijas, siempre las mismas; respuestas codificadas; mínima flexibilidad</td><td>Recogida de datos de identificación rutinarios</td></tr>
+<tr><td class="g"><strong>Planificada / semiestructurada</strong></td><td>Guía de contenidos e hipótesis previas; flexible en el desarrollo; combina apertura y dirección</td><td class="ok"><strong>La más habitual en el TSS ★★★</strong></td></tr>
+<tr><td rowspan="3"><strong>Según participantes</strong></td><td><strong>Individual</strong></td><td>Un TS y un usuario; la modalidad más frecuente</td><td>Cualquier momento del proceso</td></tr>
+<tr><td><strong>Grupal / familiar</strong></td><td>Un TS y varios usuarios o familia; permite observar interacciones</td><td>Entrevista familiar; diagnóstico grupal</td></tr>
+<tr><td><strong>Colateral</strong></td><td>Con persona del entorno del usuario (familiar, vecino, profesional de referencia); no con el propio usuario</td><td>Verificación de información; situaciones de crisis; usuario sin capacidad de comunicación</td></tr>
+<tr><td rowspan="3"><strong>Según profundidad / finalidad</strong></td><td><strong>De orientación / información</strong></td><td>Proporcionar datos sobre recursos, derechos y alternativas disponibles</td><td>Inicio del proceso; acogida</td></tr>
+<tr><td><strong>Terapéutica</strong></td><td>Intervención en procesos de cambio psicológico o conductual; objetivos clínicos</td><td>TMG, PEP, crisis; Salud Mental</td></tr>
+<tr><td><strong>De seguimiento</strong></td><td>Monitorización del proceso de intervención ya en marcha</td><td>Revisión del PIC/PAI; continuidad de cuidados</td></tr>
+</tbody>
+</table>
+
+<!-- T5 -->
+<h2>T5 · Las 4 fases de la entrevista: contenido operativo <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Fase</th><th>Contenido y acciones del TS</th><th>Error frecuente</th></tr></thead>
+<tbody>
+<tr><td class="g">1</td><td><strong>Acogida</strong></td><td>Primer contacto con el usuario · el TS se presenta · explica el marco institucional · cuida las condiciones físicas (privacidad, sin interrupciones, mobiliario en igualdad) · crea clima de confianza · define la duración aproximada</td><td>Descuidar el espacio físico; no explicar la confidencialidad</td></tr>
+<tr><td class="g">2</td><td><strong>Exploración</strong></td><td>El usuario expresa el motivo de consulta en sus propios términos · el TS escucha activamente · formula preguntas abiertas · atiende contenidos latentes (no dichos) y expresos (declarados) · evita interrogar; invita a elaborar</td><td>Hablar más que escuchar; cerrar el relato del usuario con preguntas directivas</td></tr>
+<tr><td class="g">3</td><td><strong>Intercambio y clarificación</strong></td><td>El TS ya tiene información suficiente · elabora hipótesis · las contrasta con el usuario · devuelve una reformulación del problema que el usuario pueda reconocer · inicia compromisos mutuos · propone alternativas; moviliza recursos</td><td>Imponer la hipótesis sin contrastarla; no devolver la elaboración al usuario</td></tr>
+<tr><td class="g">4</td><td><strong>Cierre / Despedida</strong></td><td>El TS revela la conclusión más importante de la sesión · sintetiza los acuerdos · establece próximos pasos · confirma próxima cita · se mantiene receptivo hasta el final · anticipa posibles ansiedades al salir</td><td>Apresurar el cierre; dejar compromisos indefinidos; reabrir temas al despedirse</td></tr>
+</tbody>
+</table>
+<div class="nota n-w"><strong>Fenómenos psicológicos clave:</strong> transferencia (el usuario proyecta sobre el TS emociones de relaciones pasadas) · contratransferencia (reacción del TS ante esa proyección) · contención (el TS recibe la angustia del usuario y la devuelve elaborada).</div>
+
+<!-- T6 -->
+<h2>T6 · Visita domiciliaria: objetivos e información que aporta <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Objetivo de la visita domiciliaria</th><th>Información que permite obtener</th></tr></thead>
+<tbody>
+<tr><td class="g">1</td><td>Obtener, verificar y ampliar información sobre la situación sociofamiliar</td><td>Composición real de la unidad familiar; diferencias entre lo declarado y lo observado</td></tr>
+<tr><td class="g">2</td><td>Estudiar y observar el ambiente familiar en su contexto natural</td><td>Dinámica real de convivencia; relaciones de poder y afecto; roles de cada miembro</td></tr>
+<tr><td class="g">3</td><td>Proporcionar información a la familia sobre avances del proceso</td><td>Nivel de comprensión e implicación de la familia</td></tr>
+<tr><td class="g">4</td><td>Seguimiento de situaciones sociofamiliares</td><td>Evolución real de la situación; cumplimiento de compromisos acordados</td></tr>
+<tr><td class="g">5</td><td>Reforzar directivas y estrategias previas</td><td>Resistencias o avances ante los cambios propuestos</td></tr>
+<tr><td class="g">6</td><td>Ampliar técnicas de intervención individual y familiar</td><td>Permite usar observación + entrevista simultáneamente</td></tr>
+<tr><td class="g">7</td><td>Investigación clínica o poblacional</td><td>Habitabilidad · hacinamiento · accesibilidad · condiciones de seguridad · menores no declarados</td></tr>
+</tbody>
+</table>
+<div class="nota n-ok"><strong>Dato clave:</strong> la visita domiciliaria es la técnica PROPIA y CARACTERÍSTICA del Trabajo Social. Combina entrevista + observación en el entorno natural del usuario. ★★★</div>
+
+<!-- T7 -->
+<h2>T7 · Ficha social vs. Historia social <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Dimensión</th><th>Ficha social</th><th>Historia social</th></tr></thead>
+<tbody>
+<tr><td><strong>Definición</strong></td><td>Soporte documental con los datos básicos, sistematizables y cuantificables del usuario y su intervención</td><td>Instrumento documental completo que recoge datos, diagnóstico, proyecto de intervención y registro cronológico de actuaciones</td></tr>
+<tr><td><strong>Relación entre ambas ★★★</strong></td><td class="er"><strong>Es la parte sistematizable de la historia social</strong></td><td class="ok"><strong>Es el instrumento global; incluye y supera la ficha social</strong></td></tr>
+<tr><td><strong>Nº de partes / elementos ★★★</strong></td><td class="g"><strong>4 partes</strong></td><td class="g"><strong>5 elementos</strong></td></tr>
+<tr><td><strong>Contenido (partes/elementos)</strong></td><td>P1: datos del usuario · P2: datos sociofamiliares · P3: datos de hábitat · P4: datos de intervención</td><td>E1: identificación · E2: registro de estudio · E3: diagnóstico social · E4: PIC (Proyecto Intervención de Casos) · E5: hoja de seguimiento</td></tr>
+<tr><td><strong>Finalidad principal</strong></td><td>Sistematización, cuantificación estadística, gestión de la UTS</td><td>Trabajo directo con casos; reflexión profesional; continuidad de la intervención</td></tr>
+<tr><td><strong>Confidencialidad</strong></td><td>Identificación directa solo a través del nº de expediente de la UTS</td><td>Mismo nivel de confidencialidad + deber profesional de reserva</td></tr>
+<tr><td><strong>Cumplimentación</strong></td><td>No es un cuestionario mecánico; se rellena progresivamente en distintas entrevistas</td><td>Documento vivo; se actualiza a lo largo de todo el proceso de intervención</td></tr>
+<tr><td><strong>Equivalente en sanidad</strong></td><td>—</td><td class="g">Historia clínica ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T8 -->
+<h2>T8 · El informe social: estructura y cualidades <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Atributo</th><th>Contenido</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Definición ★★★</strong></td><td>Síntesis explicativa respecto de una situación dada, que emite el/la TS como resultado del estudio, valoración y dictamen, para el logro de un objetivo determinado</td><td>Resultado del estudio + valoración + dictamen ★★★</td></tr>
+<tr><td><strong>Cualidad 1 ★★★</strong></td><td><strong>Fiabilidad:</strong> datos verídicos y contrastados</td><td rowspan="4" class="r"><strong>Las 4 cualidades son exactas y se pueden preguntar directamente</strong> ★★★</td></tr>
+<tr><td><strong>Cualidad 2 ★★★</strong></td><td><strong>Precisión:</strong> datos exactos, fechas concretas, afirmaciones verificables; sin ambigüedades</td></tr>
+<tr><td><strong>Cualidad 3 ★★★</strong></td><td><strong>Claridad expositiva:</strong> lenguaje comprensible para el destinatario</td></tr>
+<tr><td><strong>Cualidad 4 ★★★</strong></td><td><strong>Argumentación didáctica:</strong> el diagnóstico y el pronóstico deben estar razonados, no solo declarados</td></tr>
+<tr><td><strong>Objetivo 1</strong></td><td>Dar a conocer la existencia y características de una situación social para modificarla o paliarla</td><td>—</td></tr>
+<tr><td><strong>Objetivo 2</strong></td><td>Aportar información para el dictamen profesional</td><td>—</td></tr>
+<tr><td><strong>Objetivo 3</strong></td><td>Obtener recursos sociales ya establecidos</td><td>—</td></tr>
+<tr><td><strong>Objetivo 4</strong></td><td>Promover la creación de nuevos recursos sociales</td><td>—</td></tr>
+<tr><td><strong>Objetivo 5</strong></td><td>Facilitar información a otros trabajadores sociales que intervendrán en el caso</td><td>—</td></tr>
+<tr><td class="hl"><strong>Elementos obligatorios ★★★</strong></td><td><strong>Firma del/la TS + Número de colegiado</strong></td><td class="er"><strong>Son obligatorios. El informe tiene valor legal. ★★★</strong></td></tr>
+</tbody>
+</table>
+
+<!-- T9 -->
+<h2>T9 · El contrato: condiciones, finalidad y modelos de origen <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Atributo</th><th>Contenido</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Modelos de origen ★★★</strong></td><td>Modelo <strong>centrado en la tarea</strong> (Reid y Epstein) + modelo <strong>sistémico</strong></td><td class="g">Los dos modelos son exactos ★★★</td></tr>
+<tr><td><strong>Definición jurídica</strong></td><td>"Convención por la que una o varias personas se comprometen con otra u otras a dar, hacer o no hacer alguna cosa." (Dcho. Civil)</td><td>—</td></tr>
+<tr><td><strong>Condición 1 ★★★</strong></td><td><strong>Consentimiento mutuo:</strong> el usuario muestra disposición activa al cambio</td><td class="r">Sin voluntad de cambio no hay contrato genuino ★★★</td></tr>
+<tr><td><strong>Condición 2</strong></td><td><strong>Capacidad contractual</strong> de ambas partes (usuario y profesional)</td><td>—</td></tr>
+<tr><td><strong>Condición 3 ★★★</strong></td><td><strong>Objeto:</strong> determinado · posible · preciso · limitado en el tiempo · verificable · legal</td><td class="g">6 características del objeto ★★★</td></tr>
+<tr><td><strong>Condición 4</strong></td><td><strong>Contenido:</strong> quién hace qué · cuándo · dónde</td><td>—</td></tr>
+<tr><td class="hl"><strong>Finalidad ★★★</strong></td><td>Lograr la <strong>AUTONOMÍA</strong> del usuario y la familia; evitar la cronicidad de la intervención</td><td class="ok"><strong>Finalidad = autonomía (no control) ★★★</strong></td></tr>
+<tr><td><strong>Ventajas adicionales</strong></td><td>Define con precisión los límites de la relación profesional · permite evaluación objetiva de resultados · convierte al usuario en agente activo del cambio</td><td>—</td></tr>
+</tbody>
+</table>
+<div class="nota n-err"><strong>Trampa:</strong> "el contrato sirve para controlar al usuario" → FALSO. Es un instrumento de <strong>empoderamiento</strong> y autonomía, no de control. ★★★</div>
+
+<!-- T10 -->
+<h2>T10 · Genograma vs. Ecomapa · Cuadro comparativo central <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Dimensión</th><th>Genograma ★★★</th><th>Ecomapa ★★★</th></tr></thead>
+<tbody>
+<tr><td><strong>¿Qué representa?</strong></td><td>Estructura <strong>INTERNA</strong> de la familia a lo largo del tiempo: genealogía, relaciones y eventos vitales intrafamiliares</td><td>Relaciones de la familia con su entorno <strong>EXTERNO</strong>: servicios, instituciones, redes informales, trabajo, ocio</td></tr>
+<tr><td><strong>Perspectiva temporal</strong></td><td>Histórica: incluye varias generaciones; pasado y presente</td><td>Situacional: momento presente; ecología social actual de la familia</td></tr>
+<tr><td class="hl"><strong>¿Quién lo elabora? ★★★</strong></td><td>TS <strong>con la familia</strong> (proceso conjunto; puede movilizar contenido emocional)</td><td class="er"><strong>El TS SOLO</strong>, a partir de su observación e información recogida. La familia NO interviene directamente. ★★★</td></tr>
+<tr><td><strong>Cuándo se realiza</strong></td><td>Primeras sesiones · cita específica de ~30 min · advertir del contenido emocional · garantizar confidencialidad</td><td>Cualquier momento del proceso · también tras situaciones de crisis o cambio en la familia</td></tr>
+<tr><td><strong>Creadores / año</strong></td><td><strong>Monica McGoldrick y Randy Gerson</strong> · años 70</td><td><strong>Ann Hartman</strong> · 1978</td></tr>
+<tr><td><strong>Simbología principal</strong></td><td>Cuadros (♂) · círculos (♀) · líneas de unión · cortes (separación/divorcio) · cruces sobre símbolo (fallecimiento)</td><td>Líneas gruesas (vínculo fuerte) · líneas delgadas (débil) · onduladas (conflicto) · flechas (flujo de recursos o demandas)</td></tr>
+<tr><td><strong>Usos en TS</strong></td><td>Identificar recursos familiares · patrones transgeneracionales · apoyos en el plan de intervención · hipótesis sobre dinámicas</td><td>Identificar redes de apoyo · recursos externos disponibles · puntos de conflicto · monitorizar el progreso de la inclusión social</td></tr>
+<tr><td><strong>Conexión con RSMNa</strong></td><td>Identifica red familiar disponible para el PAI del TMG; patrones relacionales relevantes</td><td>Mapea la conexión de la persona con dispositivos RSMNa + SS.SS. + ANASAPS + empleo</td></tr>
+</tbody>
+</table>
+<div class="nota n-err"><strong>Trampa doble:</strong> "genograma y ecomapa son lo mismo" → FALSO (interno vs. externo) · "el ecomapa lo elabora la familia" → FALSO (solo el TS) ★★★</div>
+
+<!-- T11 -->
+<h2>T11 · El sociograma y las técnicas grupales <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Técnica</th><th>Creador / Año</th><th>Descripción operativa</th><th>Lo elabora</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td class="hl"><strong>Sociograma ★★★</strong></td><td><strong>Jacob Moreno</strong> · años 30</td><td>Representación gráfica de las relaciones de atracción, rechazo e indiferencia dentro de un grupo. Permite detectar líderes, personas aisladas, coaliciones y subgrupos. Instrumento: test sociométrico.</td><td class="er"><strong>El TS</strong>, a partir de un test sociométrico ★★★</td><td class="r">No lo elaboran los miembros del grupo ★★★</td></tr>
+<tr><td><strong>Sociodrama / role-playing</strong></td><td>Moreno (sociodrama)</td><td>Dramatización de situaciones reales o hipotéticas. Permite trabajar actitudes, emociones y habilidades sociales mediante la representación corporal.</td><td>TS + miembros del grupo</td><td>—</td></tr>
+<tr><td><strong>Phillips 6/6</strong></td><td>J. Donald Phillips</td><td>El grupo grande se divide en subgrupos de 6 personas que debaten 6 minutos; después se ponen en común las conclusiones. Técnica de participación rápida y democrática.</td><td>TS facilita</td><td>6 personas · 6 minutos ★</td></tr>
+<tr><td><strong>Grupos de discusión / focus group</strong></td><td>—</td><td>Generación de discurso grupal en torno a un tema. Técnica cualitativa para diagnóstico de necesidades. El TS actúa como moderador.</td><td>TS modera</td><td>—</td></tr>
+<tr><td><strong>Brainstorming</strong></td><td>A. Osborn · 1939</td><td>Generación libre de ideas sin juicio ni evaluación inmediata. Activa la creatividad y la participación de todos los miembros.</td><td>TS facilita</td><td>—</td></tr>
+<tr><td><strong>Técnica Delphi</strong></td><td>RAND Corporation · años 50</td><td>Consulta sistemática a expertos por rondas sucesivas hasta lograr consenso informado. Útil para planificación estratégica y prospectiva.</td><td>Investigador / planificador</td><td>Rondas hasta consenso ★</td></tr>
+</tbody>
+</table>
+
+<!-- T12 -->
+<h2>T12 · Técnicas de intervención comunitaria <span class="s3">★</span></h2>
+<table class="tbl">
+<thead><tr><th>Técnica</th><th>Descripción</th><th>Rol del TS</th><th>Producto</th></tr></thead>
+<tbody>
+<tr><td><strong>Diagnóstico participativo</strong></td><td>La propia comunidad identifica sus problemas, necesidades y recursos. Proceso bottom-up.</td><td>Facilitador; no experto externo que diagnostica desde fuera</td><td>Mapa de necesidades; priorización colectiva</td></tr>
+<tr><td><strong>Análisis DAFO</strong></td><td>Analiza: Debilidades · Amenazas · Fortalezas · Oportunidades. Combina factores internos y externos.</td><td>Facilitador del análisis</td><td>Matriz DAFO; orientación de la planificación</td></tr>
+<tr><td><strong>Recorrido exploratorio / transecto</strong></td><td>Primera inmersión en el territorio. El TS recorre el área para identificar recursos, problemas y dinámicas in situ.</td><td>Observador / explorador</td><td>Mapa preliminar del territorio</td></tr>
+<tr><td><strong>Observación participante</strong></td><td>El TS se integra en la vida comunitaria para comprenderla desde dentro. Técnica de investigación cualitativa.</td><td>Participante activo en la comunidad</td><td>Notas de campo; informe etnográfico</td></tr>
+<tr><td><strong>Marco lógico</strong></td><td>Herramienta de planificación de proyectos: objetivo general · objetivos específicos · actividades · indicadores · medios de verificación · supuestos.</td><td>Planificador / técnico de proyectos</td><td>Matriz del marco lógico</td></tr>
+<tr><td><strong>Entrevista a informantes clave</strong></td><td>Entrevistas a personas con conocimiento privilegiado de la comunidad: líderes vecinales, técnicos, voluntarios.</td><td>Entrevistador</td><td>Información cualitativa de diagnóstico</td></tr>
+</tbody>
+</table>
+
+<!-- T13 -->
+<h2>T13 · Tipos de observación como técnica transversal <span class="s3">★</span></h2>
+<table class="tbl">
+<thead><tr><th>Tipo</th><th>Descripción</th><th>Nivel de intervención</th><th>Uso principal en TS</th></tr></thead>
+<tbody>
+<tr><td><strong>Sistemática / estructurada</strong></td><td>Planificada con pautas previas; registra conductas o situaciones de forma estructurada y replicable</td><td>Individual / grupal</td><td>Evaluación de conductas; instrumentos estandarizados</td></tr>
+<tr><td><strong>Asistemática / libre</strong></td><td>Sin estructura previa; exploratoria; permite captar lo inesperado</td><td>Individual / comunitario</td><td>Primera visita domiciliaria; reconocimiento del territorio</td></tr>
+<tr><td><strong>Participante</strong></td><td>El TS se integra en el contexto para comprenderlo desde dentro; propia de la investigación cualitativa</td><td>Comunitario</td><td>Diagnóstico comunitario participativo</td></tr>
+<tr><td><strong>No participante</strong></td><td>El TS observa sin intervenir ni relacionarse con los observados</td><td>Individual / grupal / comunitario</td><td>Evaluación de grupos; seguimiento a distancia</td></tr>
+</tbody>
+</table>
+
+<!-- T14 -->
+<h2>T14 · Conexión del Tema 54 con la Carta TSS y la RSMNa <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Instrumento / Técnica</th><th>Bloque Carta TSS 2021</th><th>Aplicación concreta en la RSMNa</th><th>Conexión con ACP/MAI</th></tr></thead>
+<tbody>
+<tr><td><strong>Historia de TSS en SM</strong></td><td>Bloque 1: Acogida e inicio de la Historia de TSS</td><td>Recoge los 6 apartados: motivo de consulta · situación familiar · económica-laboral · red apoyo · antecedentes · diagnóstico e intervención social</td><td>Instrumento central de la ACP: recoge la historia de vida</td></tr>
+<tr><td><strong>Entrevista (planificada)</strong></td><td>Todos los bloques</td><td>Entrevista diagnóstica (B1) · motivacional (B2) · terapéutica/orientadora (B3 y B4) · de seguimiento (B5)</td><td>Herramienta relacional del modelo ACP: el TS como facilitador</td></tr>
+<tr><td><strong>Genograma</strong></td><td>Bloque 1 (evaluación inicial) y Bloque 2 (apoyo a familias)</td><td>Identifica la red familiar del usuario con TMG; recurso para el PAI; apoyos disponibles para la PEP</td><td>ACP: historia de vida + red de apoyo personal</td></tr>
+<tr><td><strong>Ecomapa</strong></td><td>Bloque 4 (coordinación sociosanitaria) y Bloque 5 (inclusión social)</td><td>Visualiza la conexión de la persona con RSMNa + AP + SS.SS. de Base + ANASAPS + empleo + vivienda</td><td>MAI: coordinación entre niveles; continuidad de cuidados</td></tr>
+<tr><td><strong>Visita domiciliaria</strong></td><td>Bloque 1 (evaluación) y Bloque 3 (seguimiento)</td><td>Evaluación de habitabilidad; supervisión de menores/dependientes; seguimiento de situaciones de crisis; acogida residencial</td><td>ACP: conocer la persona en su entorno natural</td></tr>
+<tr><td><strong>Informe social</strong></td><td>Todos los bloques</td><td>Para coordinación con SS.SS. · solicitud de prestaciones (RGN, IMV, dependencia, discapacidad) · derivaciones · coordinación judicial (Ley 8/2021)</td><td>MAI: herramienta de coordinación intersistémica</td></tr>
+<tr><td><strong>Contrato / PAP</strong></td><td>Bloque 2 (planificación del proceso) y Bloque 3 (intervención)</td><td>Plan de Atención Individual (PAI) del TMG; acuerdos con la persona para el proceso de recuperación personal</td><td>ACP: co-elaboración con la persona; autonomía y autodeterminación</td></tr>
+</tbody>
+</table>
+
+<!-- T15 -->
+<h2>T15 · Guía de referencias clave del tema <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Referencia</th><th>Contenido esencial</th><th>★</th></tr></thead>
+<tbody>
+<tr><td class="g"><strong>Kistermann</strong></td><td>Definición de entrevista como vínculo intersubjetivo profesional · la intencionalidad es lo que la diferencia de una conversación</td><td>★★★</td></tr>
+<tr><td class="g"><strong>Teresa Rosell</strong></td><td>"La entrevista en el Trabajo Social" (1998) · técnica con múltiples aplicaciones y fundamentos teóricos</td><td>★★★</td></tr>
+<tr><td class="g"><strong>Ávila Acosta · Margen 86</strong></td><td>"Los instrumentos y las técnicas son cuestiones indisolubles en el Trabajo Social"</td><td>★</td></tr>
+<tr><td class="g"><strong>Reid y Epstein</strong></td><td>Modelo centrado en la tarea · origen teórico del contrato en TS · años 70</td><td>★★★</td></tr>
+<tr><td class="g"><strong>Jacob Moreno · años 30</strong></td><td>Sociometría · creador del sociograma · test sociométrico como herramienta diagnóstica grupal</td><td>★★★</td></tr>
+<tr><td class="g"><strong>McGoldrick y Gerson · años 70</strong></td><td>Creadores del genograma en el contexto de la terapia familiar sistémica</td><td>★★</td></tr>
+<tr><td class="g"><strong>Ann Hartman · 1978</strong></td><td>Creadora del ecomapa como representación de las relaciones de la familia con su entorno externo</td><td>★★</td></tr>
+<tr><td class="g"><strong>Smilkstein · 1978</strong></td><td>Creador del APGAR familiar (5 ítems: Adaptation, Partnership, Growth, Affection, Resolve)</td><td>★</td></tr>
+<tr><td class="g"><strong>Plan Concertado SS.SS. (España)</strong></td><td>Estandariza la ficha social con sus 4 partes en el sistema de SS.SS. de Atención Primaria</td><td>★★★</td></tr>
+<tr><td class="g"><strong>Carta TSS RSMNa (2021)</strong></td><td>6 bloques · Historia TSS · entrevista · informe social · contrato/PAP · genograma/ecomapa en la práctica del TSS en SM</td><td>★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T16 -->
+<h2>T16 · Las 12 trampas del examen <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Afirmación incorrecta</th><th>Corrección exacta</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Técnica e instrumento son sinónimos</td><td>La técnica es un procedimiento (algo que se hace); el instrumento es un soporte material (algo que se tiene o produce). ★★★</td></tr>
+<tr><td>2</td><td>La entrevista es una conversación entre iguales</td><td>La relación es <strong>ASIMÉTRICA</strong>: el profesional tiene el control de la situación. ★★★</td></tr>
+<tr><td>3</td><td>La entrevista es un fin en sí misma</td><td>Es un <strong>MEDIO para el cambio</strong>. Su valor reside en lo que posibilita. ★★★</td></tr>
+<tr><td>4</td><td>La primera entrevista debe ser planificada/estandarizada</td><td>La más adecuada para la primera entrevista es la <strong>LIBRE / no estructurada</strong>. ★★★</td></tr>
+<tr><td>5</td><td>La ficha social y la historia social son el mismo instrumento</td><td>La ficha social es la parte sistematizable de la historia social (4 partes vs. 5 elementos). ★★★</td></tr>
+<tr><td>6</td><td>El informe social no requiere firma ni número de colegiado</td><td>Son <strong>OBLIGATORIOS</strong>. El informe tiene valor legal. ★★★</td></tr>
+<tr><td>7</td><td>El contrato en TS sirve para controlar al usuario</td><td>Su finalidad es lograr la <strong>AUTONOMÍA</strong> del usuario y la familia; evitar la cronicidad. ★★★</td></tr>
+<tr><td>8</td><td>El genograma y el ecomapa aportan la misma información</td><td>Genograma = estructura <strong>interna</strong> familiar; ecomapa = relaciones con el entorno <strong>externo</strong>. ★★★</td></tr>
+<tr><td>9</td><td>El ecomapa lo elabora la familia conjuntamente con el TS</td><td>Lo elabora <strong>el TS solo</strong> a partir de su observación; la familia no interviene directamente. ★★★</td></tr>
+<tr><td>10</td><td>El sociograma lo elaboran los propios miembros del grupo</td><td>Lo elabora el <strong>TS</strong> a partir del test sociométrico. Jacob Moreno, años 30. ★★★</td></tr>
+<tr><td>11</td><td>La visita domiciliaria es una visita de cortesía del TS al usuario</td><td>Es la técnica <strong>PROPIA del TS</strong>: combina entrevista + observación con objetivos profesionales planificados. ★★★</td></tr>
+<tr><td>12</td><td>La contratransferencia la experimenta el usuario hacia el TS</td><td>La <strong>transferencia</strong> es del usuario hacia el TS. La <strong>contratransferencia</strong> es la reacción del TS ante esa proyección. ★</td></tr>
+</tbody>
+</table>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 54 · HTML 1 · Texto explicativo · Técnicas e Instrumentos para la intervención social</title>
+<style>
+:root{
+  --bg:#fff7ed;--card:#fff;--s2:#ffedd5;--s3:#fed7aa;--line:#fb923c;
+  --text:#431407;--muted:#c2410c;--p:#ea580c;--p2:#9a3412;
+  --grn:#059669;--grn2:#d1fae5;--red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;--sky:#0284c7;--sky2:#e0f2fe;
+  --teal:#0d9488;--teal2:#ccfbf1;--vio:#7c3aed;--vio2:#ede9fe;
+  --sh:0 2px 14px rgba(234,88,12,.09)
+}
+[data-theme="dark"]{
+  --bg:#0f0700;--card:#1c0d00;--s2:#2a1300;--s3:#3d1e00;--line:#c2410c;
+  --text:#fed7aa;--muted:#fb923c;--p:#fb923c;--p2:#fdba74;
+  --grn:#86efac;--grn2:#052e16;--red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;--sky:#7dd3fc;--sky2:#082038;
+  --teal:#5eead4;--teal2:#031a16;--vio:#c4b5fd;--vio2:#1a0e33;
+  --sh:0 2px 14px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,'Times New Roman',serif;font-size:14.5px;line-height:1.82;background:var(--bg);color:var(--text);padding:26px}
+.wrap{max-width:880px;margin:0 auto}
+header{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:22px 28px;box-shadow:var(--sh);margin-bottom:22px}
+.hdr-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+h1{font-family:Inter,Arial,sans-serif;font-size:1.05rem;font-weight:800;color:var(--p);line-height:1.35}
+.sub{font-size:.72rem;color:var(--muted);margin-top:5px;font-family:Inter,sans-serif}
+.badge{font:600 .65rem/1 Inter,sans-serif;background:var(--s2);color:var(--p2);padding:4px 10px;border-radius:999px;border:1px solid var(--line)}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:6px 15px;border-radius:999px;font-size:.71rem;font-family:Inter,sans-serif}
+.indice{background:var(--s2);border-left:4px solid var(--p);border-radius:0 10px 10px 0;padding:14px 20px;margin-bottom:22px;font-family:Inter,sans-serif;font-size:.8rem}
+.indice h2{font-size:.78rem;font-weight:800;color:var(--p);margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em}
+.indice ol{padding-left:18px;line-height:1.9}
+.indice a{color:var(--p);text-decoration:none}.indice a:hover{text-decoration:underline}
+section{background:var(--card);border-radius:13px;box-shadow:var(--sh);border:1px solid var(--line);padding:24px 28px;margin-bottom:18px}
+h2.sec{font-family:Inter,Arial,sans-serif;font-size:.95rem;font-weight:800;color:#fff;background:var(--p);padding:8px 18px;border-radius:8px;margin:-24px -28px 18px -28px;letter-spacing:.01em}
+h3{font-family:Inter,Arial,sans-serif;font-size:.85rem;font-weight:700;color:var(--p);margin:18px 0 8px;border-bottom:1px solid var(--s2);padding-bottom:4px}
+p{margin-bottom:1em}
+.lema{background:var(--s2);border-left:4px solid var(--p);border-radius:0 9px 9px 0;padding:10px 16px;font-style:italic;margin:14px 0;font-size:.89rem}
+.nota{padding:9px 14px;border-radius:0 9px 9px 0;font-size:.8rem;border-left:4px solid;margin:12px 0;font-family:Inter,sans-serif;line-height:1.5}
+.n-ok{background:var(--grn2);border-color:var(--grn)}
+.n-err{background:var(--red2);border-color:var(--red)}
+.n-w{background:var(--warn2);border-color:var(--warn)}
+.n-vio{background:var(--vio2);border-color:var(--vio)}
+.n-sky{background:var(--sky2);border-color:var(--sky)}
+.n-teal{background:var(--teal2);border-color:var(--teal)}
+[data-theme="dark"] .n-w{background:#2a1300;color:#fde68a}
+[data-theme="dark"] .n-err{background:#1a0000;color:#fca5a5}
+[data-theme="dark"] .n-ok{background:#001a0e;color:#86efac}
+[data-theme="dark"] .n-vio{background:#12003a;color:#c4b5fd}
+.tbl{width:100%;border-collapse:collapse;margin:14px 0;box-shadow:var(--sh);border-radius:9px;overflow:hidden;font-family:Inter,sans-serif;font-size:.79rem}
+.tbl th{background:var(--p);color:#fff;text-align:left;padding:8px 11px;text-transform:uppercase;letter-spacing:.03em;font-size:.68rem}
+.tbl td{padding:8px 11px;border-bottom:1px solid var(--s2);vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:nth-child(even) td{background:rgba(251,146,60,.04)}
+.tbl tr:hover td{background:var(--s2)}
+strong{color:var(--p)}
+.def{background:var(--s2);border-radius:9px;padding:11px 15px;margin:12px 0;font-size:.84rem;font-family:Inter,sans-serif;border:1px dashed var(--line)}
+.def .dt{font-weight:800;color:var(--p2);display:block;margin-bottom:4px;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}
+ul,ol{padding-left:20px;margin-bottom:1em}
+li{margin-bottom:.4em}
+.chip{display:inline-block;background:var(--s2);border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:.7rem;font-family:Inter,sans-serif;color:var(--p2);margin:2px}
+.g{color:#059669;font-weight:700}.r{color:#dc2626;font-weight:700}.w{color:#b45309;font-weight:700}
+.s3{color:#f59e0b;font-weight:800}
+.fases{counter-reset:fase}
+.fase{counter-increment:fase;background:var(--s2);border-radius:10px;padding:11px 15px;margin:10px 0;border-left:4px solid var(--p);font-family:Inter,sans-serif;font-size:.83rem}
+.fase::before{content:counter(fase) ". ";font-weight:900;color:var(--p);font-size:1rem}
+.fase strong{color:var(--p2)}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<header>
+  <div class="hdr-top">
+    <div>
+      <h1>TEMA 54 · Técnicas e Instrumentos para la intervención social</h1>
+      <div class="sub">Oposiciones Gestor de Mantenimiento · Navarra · HTML 1 · Texto explicativo y desarrollo narrativo</div>
+    </div>
+    <div style="display:flex;gap:8px;align-items:flex-start;flex-wrap:wrap">
+      <span class="badge">HTML 1 / texto</span>
+      <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+    </div>
+  </div>
+</header>
+
+<nav class="indice">
+  <h2>Índice del tema</h2>
+  <ol>
+    <li><a href="#s1">Conceptos básicos: técnica, instrumento y método</a></li>
+    <li><a href="#s2">La entrevista: técnica por excelencia del Trabajo Social</a></li>
+    <li><a href="#s3">La visita domiciliaria: técnica propia del Trabajo Social</a></li>
+    <li><a href="#s4">La ficha social y la historia social</a></li>
+    <li><a href="#s5">El informe social</a></li>
+    <li><a href="#s6">El contrato como instrumento para el cambio</a></li>
+    <li><a href="#s7">Técnicas gráficas: genograma y ecomapa</a></li>
+    <li><a href="#s8">Técnicas de Trabajo Social de grupo</a></li>
+    <li><a href="#s9">Técnicas de intervención comunitaria y observación</a></li>
+    <li><a href="#s10">Técnicas e instrumentos en Salud Mental: conexión RSMNa</a></li>
+  </ol>
+</nav>
+
+<!-- S1 -->
+<section id="s1">
+  <h2 class="sec">1. Conceptos básicos: técnica, instrumento y método</h2>
+
+  <p>Para estudiar correctamente este tema es imprescindible distinguir tres conceptos que en la práctica cotidiana se utilizan con frecuencia de forma indistinta, pero que en el examen tienen definiciones precisas y diferenciadas: método, técnica e instrumento.</p>
+
+  <div class="def">
+    <span class="dt">Método</span>
+    Procedimiento racional, planificado y ordenado para alcanzar un fin. El método es el nivel más general: indica la lógica de la intervención. En Trabajo Social los grandes métodos son el individual, el grupal y el comunitario. El método no prescribe los pasos concretos de cada actuación, sino la orientación global de la intervención.
+  </div>
+
+  <div class="def">
+    <span class="dt">Técnica ★★★</span>
+    Procedimiento operativo, flexible y adaptable que permite la puesta en práctica de un método. La técnica se sitúa en un nivel intermedio: concreta el método en formas de hacer específicas. Es más flexible que el método —puede adaptarse al contexto y a cada situación—, pero está al servicio del método y no puede entenderse al margen de él. Ejemplos: entrevista, visita domiciliaria, observación, sociograma.
+  </div>
+
+  <div class="def">
+    <span class="dt">Instrumento ★★★</span>
+    Soporte o recurso material que concreta y hace posible la técnica. Si la técnica es la "forma de hacer", el instrumento es la "herramienta con la que se hace". Ejemplos: ficha social, historia social, informe social, genograma, ecomapa, cuestionarios estandarizados.
+  </div>
+
+  <div class="lema">"Los instrumentos y las técnicas son cuestiones indisolubles en el Trabajo Social: no existe el uno sin el otro." — Ávila Acosta (Margen, nº 86)</div>
+
+  <p>Esta tríada —método → técnica → instrumento— estructura toda la práctica profesional. Un error frecuente en los exámenes consiste en confundir técnica con instrumento o con método. La clave es recordar que el instrumento es siempre un <em>soporte material</em> (un documento, un gráfico, un formulario), mientras que la técnica es un <em>procedimiento</em> (algo que se hace, no algo que se tiene).</p>
+
+  <h3>Clasificación general de las técnicas</h3>
+  <p>Las técnicas del Trabajo Social pueden clasificarse atendiendo a dos criterios principales:</p>
+
+  <p><strong>Según el nivel de intervención:</strong></p>
+  <ul>
+    <li><strong>Individual y familiar</strong>: entrevista, visita domiciliaria, observación, contrato.</li>
+    <li><strong>Grupal</strong>: sociodrama, sociograma, role-playing, Phillips 6/6, grupos de discusión.</li>
+    <li><strong>Comunitario</strong>: diagnóstico participativo, DAFO, foro comunitario, mapeo de recursos, observación participante.</li>
+  </ul>
+
+  <p><strong>Según su finalidad en el proceso metodológico:</strong></p>
+  <ul>
+    <li><strong>Técnicas de conocimiento y diagnóstico</strong>: recogen y sistematizan información (ficha social, historia social, genograma, ecomapa, escalas).</li>
+    <li><strong>Técnicas de planificación</strong>: estructuran la intervención (árbol de problemas, marco lógico).</li>
+    <li><strong>Técnicas de intervención directa</strong>: producen el cambio (entrevista terapéutica, mediación, negociación, counseling, contrato).</li>
+    <li><strong>Técnicas de evaluación</strong>: miden los resultados (escalas estandarizadas, indicadores, cuestionarios).</li>
+  </ul>
+</section>
+
+<!-- S2 -->
+<section id="s2">
+  <h2 class="sec">2. La entrevista: técnica por excelencia del Trabajo Social</h2>
+
+  <p>La entrevista es, sin ninguna duda, la <strong>técnica por excelencia del Trabajo Social</strong>. Está presente en los tres niveles de intervención —individual, grupal y comunitario—, articula las distintas fases del proceso metodológico y es el principal canal de comunicación entre el profesional y el usuario. Comprender su estructura, sus tipos y su dinámica psicológica es uno de los bloques más frecuentemente evaluados en las oposiciones de Trabajo Social.</p>
+
+  <h3>Definiciones de referencia</h3>
+
+  <div class="def">
+    <span class="dt">Kistermann ★★★</span>
+    "Técnica que supone un vínculo intersubjetivo, profesional, entre dos o más personas, siendo lo que diferencia su uso el modo y la intencionalidad con que se aplica."
+  </div>
+
+  <div class="def">
+    <span class="dt">Teresa Rosell ★★★</span>
+    "Técnica con múltiples aplicaciones en el campo de las ciencias sociales, con diferentes fundamentos teóricos y que puede ser utilizada con diversos propósitos."
+  </div>
+
+  <p>Ambas definiciones subrayan el carácter <em>profesional</em> e <em>intencional</em> de la entrevista: no es una conversación espontánea, sino un intercambio comunicativo guiado por un propósito terapéutico, diagnóstico o de orientación.</p>
+
+  <h3>Características fundamentales ★★★</h3>
+  <ul>
+    <li>Relación interpersonal <strong>profesional</strong> entre el TS y el usuario o grupo familiar.</li>
+    <li><strong>Acontecimiento integral de comunicación</strong>: no solo palabras, sino también gestos, silencios, lenguaje corporal, emociones y contexto.</li>
+    <li>Relación <strong>asimétrica</strong>: el profesional tiene el control de la situación. Esto no implica imposición, sino responsabilidad técnica sobre el desarrollo de la entrevista.</li>
+    <li>La entrevista es un <strong>medio para el cambio</strong>, nunca un fin en sí misma. Su valor reside en lo que posibilita, no en su mera existencia.</li>
+    <li>Posibilita la creación de un <strong>clima de empatía y confianza</strong> imprescindible para que el usuario se exprese libremente.</li>
+  </ul>
+
+  <div class="nota n-err">
+    <strong>Trampas clásicas:</strong> "La entrevista es una conversación entre iguales" → FALSO (relación asimétrica). "La entrevista es un fin en sí misma" → FALSO (es un medio para el cambio). ★★★
+  </div>
+
+  <h3>Funciones u objetivos de la entrevista ★★★</h3>
+  <ol>
+    <li>Facilitar información sobre recursos y servicios sociales disponibles.</li>
+    <li>Orientar al usuario sobre su situación y las alternativas existentes.</li>
+    <li>Estudiar la pertinencia de utilizar un recurso social determinado.</li>
+    <li>Movilizar las actitudes, las relaciones del usuario y estimular sus capacidades.</li>
+    <li>Derivar a otros servicios y profesionales cuando sea necesario.</li>
+  </ol>
+
+  <h3>Las 4 fases de la entrevista ★★★</h3>
+
+  <div class="fase"><strong>Acogida:</strong> Es el primer contacto con el usuario. Define el tono de toda la futura relación profesional. El TS cuida las condiciones físicas del espacio (privacidad, comodidad, ausencia de interrupciones), se presenta, explica el marco institucional y abre un clima de confianza y seguridad. Una acogida deficiente puede bloquear irremediablemente la comunicación en las fases siguientes.</div>
+
+  <div class="fase"><strong>Exploración:</strong> El usuario expresa el motivo de consulta en sus propios términos y a su ritmo. El TS escucha activamente, formula preguntas abiertas, invita a la elaboración y presta atención a los contenidos latentes (lo que no se dice directamente) y a los contenidos expresos (lo que se declara). Esta fase es fundamentalmente receptiva: el TS habla poco y escucha mucho.</div>
+
+  <div class="fase"><strong>Intercambio y clarificación:</strong> El profesional ya dispone de información suficiente para trabajar. Elabora hipótesis sobre la situación del usuario, las contrasta, devuelve una elaboración del problema que el usuario pueda reconocer como propia y se inician los compromisos mutuos. Es la fase más activa del trabajo profesional: el TS reformula, señala contradicciones, moviliza recursos, propone alternativas.</div>
+
+  <div class="fase"><strong>Cierre:</strong> La fase de despedida. El TS revela de forma sintética el hecho o la conclusión más importante de la sesión, acuerda los próximos pasos, confirma la próxima cita si la hay y se muestra receptivo hasta el último momento. Un mal cierre puede reabrir ansiedades en el usuario justo antes de que abandone el espacio de seguridad de la entrevista.</div>
+
+  <h3>Tipología de la entrevista</h3>
+  <p>La clasificación de los tipos de entrevista es otro foco frecuente de preguntas de examen. Los tres criterios más utilizados son:</p>
+
+  <table class="tbl">
+    <thead><tr><th>Criterio</th><th>Tipo</th><th>Descripción</th><th>Cuando se usa</th></tr></thead>
+    <tbody>
+      <tr><td rowspan="3"><strong>Según organización ★★★</strong></td><td><strong>Libre / no estructurada</strong></td><td>Sin guía preelaborada; el usuario expone libremente; máxima apertura</td><td class="g">Primera entrevista ★★★</td></tr>
+      <tr><td><strong>Estandarizada</strong></td><td>Preguntas estructuradas, siempre las mismas; respuestas codificadas</td><td>Recogida de datos de identificación rutinarios</td></tr>
+      <tr><td><strong>Planificada / semiestructurada</strong></td><td>Guía de contenidos e hipótesis previas; flexibilidad en el desarrollo</td><td class="g">La más habitual en la práctica del TSS ★★★</td></tr>
+      <tr><td rowspan="2"><strong>Según participantes</strong></td><td><strong>Individual</strong></td><td>Un TS y un usuario</td><td>La más frecuente</td></tr>
+      <tr><td><strong>Grupal</strong></td><td>Un TS y varios usuarios o familia</td><td>Entrevista familiar; grupos diagnósticos</td></tr>
+      <tr><td rowspan="3"><strong>Según finalidad</strong></td><td><strong>Orientación · Información</strong></td><td>Proporcionar datos sobre recursos o situación</td><td>Inicio del proceso</td></tr>
+      <tr><td><strong>Terapéutica</strong></td><td>Intervención en procesos de cambio emocional o conductual</td><td>En Salud Mental, TMG, PEP</td></tr>
+      <tr><td><strong>Colateral</strong></td><td>Con persona del entorno del usuario (familiar, vecino), no con el propio usuario</td><td>Verificación de información; crisis</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Aspectos psicológicos: transferencia y contratransferencia</h3>
+  <p>La relación de entrevista activa mecanismos psicológicos que el TS debe conocer y manejar. Los más importantes para el examen son:</p>
+  <ul>
+    <li><strong>Transferencia</strong>: el usuario proyecta sobre el TS sentimientos y actitudes procedentes de relaciones anteriores (familiares, figuras de autoridad). El usuario puede mostrar afecto, ideación o rechazo desproporcionados respecto a la realidad de la relación.</li>
+    <li><strong>Contratransferencia</strong>: reacción del TS ante los sentimientos que le transfiere el usuario. Si no se gestiona adecuadamente, puede distorsionar la objetividad de la intervención.</li>
+    <li><strong>Contención</strong>: capacidad del TS de recibir las ansiedades, el sufrimiento y la angustia del usuario, y de devolverlos de forma elaborada y menos amenazante.</li>
+  </ul>
+
+  <h3>Condiciones físicas para la entrevista</h3>
+  <p>Las condiciones del espacio físico influyen decisivamente en la calidad de la comunicación. El estándar profesional incluye: que el usuario espere lo mínimo posible, que haya un solo entrevistador, que el mobiliario favorezca la igualdad visual (frente a frente, sin barrera de mesa), sin interrupciones ni llamadas, en un espacio privado, evitando tomar notas durante el diálogo, con iluminación adecuada y duración apropiada a la situación.</p>
+</section>
+
+<!-- S3 -->
+<section id="s3">
+  <h2 class="sec">3. La visita domiciliaria: técnica propia del Trabajo Social</h2>
+
+  <p>Si la entrevista es la técnica por excelencia del Trabajo Social, la visita domiciliaria es la técnica <strong>propia y característica</strong> de la profesión. Ninguna otra disciplina del equipo multidisciplinar realiza sistemáticamente visitas al domicilio de los usuarios como parte de su metodología habitual de trabajo. Esta especificidad hace que la visita domiciliaria sea un marcador identitario de la profesión.</p>
+
+  <div class="def">
+    <span class="dt">Definición</span>
+    Técnica propia del Trabajo Social que se realiza en el domicilio del usuario, combinando simultáneamente la entrevista y la observación. Permite conocer la realidad del usuario desde su entorno natural —el espacio más íntimo y cotidiano de su vida—, con una riqueza informativa que ninguna otra técnica puede proporcionar.
+  </div>
+
+  <h3>Objetivos de la visita domiciliaria ★★★</h3>
+  <ol>
+    <li>Obtener, verificar y ampliar información sobre la situación sociofamiliar real de la persona.</li>
+    <li>Estudiar y observar el ambiente social y familiar en su contexto natural.</li>
+    <li>Proporcionar información a la familia sobre el estado de avances de la intervención.</li>
+    <li>Realizar el seguimiento de situaciones sociofamiliares ya conocidas.</li>
+    <li>Reforzar directivas y estrategias de intervención previamente facilitadas.</li>
+    <li>Ampliar y diversificar las técnicas de intervención individual y familiar.</li>
+    <li>Servir como técnica de investigación clínica o poblacional.</li>
+  </ol>
+
+  <h3>Información que aporta la visita domiciliaria</h3>
+  <p>El hogar es una fuente de información privilegiada que el TS sabe leer desde la formación profesional. La visita aporta datos que difícilmente se obtienen en el despacho:</p>
+  <ul>
+    <li>Estructura real de la unidad familiar y tipo de relaciones entre sus miembros.</li>
+    <li>Organización del espacio doméstico y uso funcional de las habitaciones.</li>
+    <li>Condiciones de habitabilidad: higiene, ventilación, hacinamiento, seguridad, accesibilidad.</li>
+    <li>Prioridades del hogar: qué espacios o elementos cuidan y cuáles descuidan.</li>
+    <li>Actividades de ocio y vida cotidiana compartida.</li>
+    <li>Presencia de personas no declaradas; grado real de supervisión de menores o dependientes.</li>
+  </ul>
+
+  <div class="nota n-ok">
+    <strong>Diferencia clave:</strong> la visita domiciliaria no es una visita de cortesía. Es una técnica profesional planificada, con objetivos definidos, que combina entrevista + observación. El TS debe justificar su realización, documentarla en la historia social y obtener consentimiento del usuario cuando sea posible.
+  </div>
+</section>
+
+<!-- S4 -->
+<section id="s4">
+  <h2 class="sec">4. La ficha social y la historia social</h2>
+
+  <p>La ficha social y la historia social son los dos instrumentos documentales más importantes del Trabajo Social individual, y su distinción precisa es una fuente habitual de preguntas de examen. No son la misma cosa: la ficha social es la parte sistematizable y cuantificable de la historia social.</p>
+
+  <h3>La ficha social ★★★</h3>
+
+  <div class="def">
+    <span class="dt">Definición</span>
+    Soporte documental donde la Unidad de Trabajo Social (UTS) recaba y registra los datos básicos de los usuarios. Es la parte común, sistematizable y cuantificable de la historia social. Permite la generación de estadísticas y la gestión de la información a nivel de UTS.
+  </div>
+
+  <p>La ficha social garantiza la <strong>confidencialidad</strong>: la identificación directa del usuario solo es posible para la UTS a través de su número de expediente. Tiene cuatro partes:</p>
+
+  <table class="tbl">
+    <thead><tr><th>#</th><th>Parte</th><th>Contenido</th><th>Tipo de archivo</th></tr></thead>
+    <tbody>
+      <tr><td class="g">1</td><td><strong>Datos del usuario</strong></td><td>Identificación individual: nombre, DNI, teléfono, fecha de nacimiento</td><td>Archivo individual alfabético</td></tr>
+      <tr><td class="g">2</td><td><strong>Datos sociofamiliares</strong></td><td>Unidad convivencial: composición familiar, tipo de hogar, relaciones</td><td>Archivo familiar por nº de expediente</td></tr>
+      <tr><td class="g">3</td><td><strong>Datos de hábitat</strong></td><td>Condiciones de la vivienda: tenencia, estado, superficie, accesibilidad</td><td>—</td></tr>
+      <tr><td class="g">4</td><td><strong>Datos de intervención social</strong></td><td>Fecha de inicio/cierre · Valoración social · Demanda · Recurso idóneo · Recurso aplicado</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <p>Importante: la ficha social <strong>no es un cuestionario mecánico</strong> que se rellena de una sola vez. Se completa progresivamente a lo largo de distintas entrevistas conforme el profesional va obteniendo información.</p>
+
+  <h3>La historia social ★★★</h3>
+
+  <div class="def">
+    <span class="dt">Definición</span>
+    Instrumento documental que recoge, de forma ordenada y continua, los datos identificativos, el diagnóstico social, el proyecto de intervención y el registro temporalizado de todas las actuaciones realizadas con la persona o familia. Es el principal soporte documental para el trabajo directo con casos. Su equivalente en el ámbito sanitario es la historia clínica.
+  </div>
+
+  <p>La historia social tiene cinco elementos fundamentales:</p>
+  <ol>
+    <li><strong>Datos de identificación</strong>: los mismos que la ficha social más datos de contacto y referencia.</li>
+    <li><strong>Registro de los actos de estudio</strong>: situación familiar, económica, sanitaria, de vivienda y educativa.</li>
+    <li><strong>Diagnóstico social</strong>: problemas identificados + potencialidades del usuario y su entorno + características de la situación-problema.</li>
+    <li><strong>Proyecto de Intervención de Casos (PIC)</strong>: objetivos · tipo de intervención · actividades · calendario · profesionales implicados · recursos.</li>
+    <li><strong>Hoja de seguimiento</strong>: registro temporalizado y cronológico de todas las actuaciones realizadas a lo largo del proceso.</li>
+  </ol>
+
+  <div class="nota n-err">
+    <strong>Trampa:</strong> "La ficha social y la historia social son lo mismo" → FALSO. La ficha social es la parte sistematizable de la historia social, que es un instrumento mucho más complejo e integral. ★★★
+  </div>
+</section>
+
+<!-- S5 -->
+<section id="s5">
+  <h2 class="sec">5. El informe social</h2>
+
+  <p>El informe social es el instrumento documental con mayor proyección hacia el exterior de la UTS: es el producto escrito que el TS emite para comunicar su valoración profesional a otros servicios, instituciones o profesionales. Su rigor, claridad y corrección técnica son esenciales porque representa el criterio profesional del Trabajo Social ante otros actores del sistema.</p>
+
+  <div class="def">
+    <span class="dt">Definición ★★★</span>
+    Síntesis explicativa respecto de una situación dada, que emite el/la trabajador/a social como resultado del estudio, la valoración y el dictamen de esa situación, con el fin de alcanzar un objetivo determinado.
+  </div>
+
+  <h3>Cualidades del informe social ★★★</h3>
+  <ul>
+    <li><strong>Fiabilidad</strong>: los datos contenidos deben ser verídicos y contrastados.</li>
+    <li><strong>Precisión</strong>: evitar ambigüedades; datos exactos, fechas concretas, afirmaciones verificables.</li>
+    <li><strong>Claridad expositiva</strong>: lenguaje comprensible para el destinatario (que puede no ser un técnico social).</li>
+    <li><strong>Argumentación didáctica</strong>: el diagnóstico y el pronóstico deben estar razonados, no simplemente declarados.</li>
+  </ul>
+
+  <h3>Objetivos del informe social</h3>
+  <ol>
+    <li>Dar a conocer la existencia y características de una situación social para modificarla o paliarla.</li>
+    <li>Aportar información para el dictamen profesional.</li>
+    <li>Facilitar el acceso a recursos sociales ya establecidos.</li>
+    <li>Promover la creación de nuevos recursos sociales.</li>
+    <li>Facilitar información a otros trabajadores sociales que intervendrán en el caso.</li>
+  </ol>
+
+  <h3>Estructura del informe social</h3>
+  <p>Aunque puede variar según el contexto institucional, la estructura habitual incluye: datos de identificación del emisor y del destinatario, datos del usuario, motivo del informe, situación sociofamiliar, situación de vivienda, situación económica y laboral, situación sanitaria, diagnóstico social, pronóstico y recomendaciones. Siempre debe cerrarse con la <strong>firma del trabajador/a social y su número de colegiado</strong>, que son elementos obligatorios.</p>
+
+  <div class="nota n-err">
+    <strong>Trampa:</strong> "El informe social no requiere firma ni número de colegiado" → FALSO. Son <strong>obligatorios</strong>. El informe social es un documento profesional con valor legal. ★★★
+  </div>
+</section>
+
+<!-- S6 -->
+<section id="s6">
+  <h2 class="sec">6. El contrato como instrumento para el cambio</h2>
+
+  <p>El contrato en Trabajo Social es uno de los instrumentos más potentes para promover el cambio activo en el usuario. Su fundamento teórico parte de dos modelos: el <strong>modelo centrado en la tarea</strong> (Reid y Epstein) y el <strong>modelo sistémico</strong>. En ambos casos, el contrato es la formalización de un acuerdo de colaboración entre el TS y el usuario para trabajar juntos hacia objetivos concretos.</p>
+
+  <div class="def">
+    <span class="dt">Definición jurídica de referencia</span>
+    En Derecho Civil: "Convención por la que una o varias personas se comprometen con otra u otras a dar, hacer o no hacer alguna cosa."
+  </div>
+
+  <h3>Condiciones para que haya contrato ★★★</h3>
+  <ol>
+    <li><strong>Consentimiento mutuo</strong>: el usuario muestra disposición activa al cambio. Sin voluntad de cambio no es posible un contrato genuino.</li>
+    <li><strong>Capacidad contractual</strong>: tanto el usuario como el profesional deben tener capacidad para obligarse.</li>
+    <li><strong>Objeto del contrato</strong>: debe ser determinado, posible, preciso, limitado en el tiempo, verificable y legal.</li>
+    <li><strong>Contenido</strong>: especifica quién hace qué, cuándo y dónde.</li>
+  </ol>
+
+  <h3>Finalidad y valor del contrato ★★★</h3>
+  <p>La finalidad principal del contrato en Trabajo Social es lograr la <strong>autonomía del usuario y la familia</strong>. Al comprometerse con objetivos definidos, el usuario deja de ser receptor pasivo de prestaciones para convertirse en agente activo de su propio cambio. El contrato puede evitar la cronicidad de la intervención —una relación indefinida sin objetivos claros—, define con precisión los límites de la relación profesional y permite la evaluación objetiva de los resultados.</p>
+
+  <div class="nota n-w">
+    <strong>Trampa:</strong> "El contrato en TS tiene como finalidad controlar al usuario" → FALSO. Su finalidad es lograr la <strong>autonomía</strong> del usuario y la familia. Es una herramienta de empoderamiento, no de control. ★★★
+  </div>
+</section>
+
+<!-- S7 -->
+<section id="s7">
+  <h2 class="sec">7. Técnicas gráficas: genograma y ecomapa</h2>
+
+  <p>Las técnicas gráficas son representaciones visuales que permiten al TS y al usuario comprender de un vistazo la complejidad de las relaciones familiares y sociales. Son especialmente útiles en el diagnóstico social y en la planificación de la intervención. Las dos más importantes para el examen son el genograma y el ecomapa, cuya diferencia es uno de los focos más frecuentes de preguntas.</p>
+
+  <h3>El genograma ★★★</h3>
+
+  <div class="def">
+    <span class="dt">Definición</span>
+    Representación gráfica de la familia a lo largo del tiempo. Funciona como un árbol genealógico enriquecido con información sobre la estructura familiar, las relaciones entre sus miembros y los eventos significativos de la historia familiar.
+  </div>
+
+  <p>Fue creado en los años 70 por <strong>Monica McGoldrick y Randy Gerson</strong> en el contexto de la terapia familiar sistémica. Su simbología convencional incluye: cuadrados (hombres), círculos (mujeres), líneas horizontales de unión (pareja), líneas verticales descendentes (hijos), líneas dobles (matrimonio), líneas cortadas (separación/divorcio), cruces sobre el símbolo (fallecimiento).</p>
+
+  <p>El genograma tiene un triple valor en el TS: como <strong>instrumento de diagnóstico</strong> (revela patrones familiares repetidos, recursos disponibles, conflictos), como <strong>herramienta de intervención</strong> (el proceso de elaborarlo con la familia genera reflexión y autoconocimiento) y como <strong>herramienta de seguimiento</strong> (documenta los cambios en la estructura familiar a lo largo del tiempo). Se recomienda elaborarlo en las <strong>primeras sesiones</strong> de intervención, en una cita específica de unos 30 minutos, advirtiendo previamente del contenido emocional que puede movilizar y garantizando la confidencialidad.</p>
+
+  <h3>El ecomapa ★★★</h3>
+
+  <div class="def">
+    <span class="dt">Definición</span>
+    Representación visual de las relaciones que establece una familia o persona con su entorno social externo: servicios, instituciones, redes informales de apoyo, trabajo, ocio, comunidad.
+  </div>
+
+  <p>Mientras el genograma mira hacia adentro —hacia la historia y la estructura interna de la familia—, el ecomapa mira hacia afuera: representa la <em>ecología</em> social de la familia, su inserción en los sistemas del entorno. Un dato fundamental para el examen: <strong>el ecomapa lo elabora el trabajador social a partir de su observación e información recogida</strong>, no la familia por sí misma. Las líneas del ecomapa pueden ser gruesas (vínculo fuerte), delgadas (vínculo débil) o con flechas (dirección del flujo de recursos o demandas) y onduladas (relación conflictiva).</p>
+
+  <table class="tbl">
+    <thead><tr><th>Dimensión</th><th>Genograma</th><th>Ecomapa</th></tr></thead>
+    <tbody>
+      <tr><td><strong>¿Qué representa?</strong></td><td>Estructura interna de la familia a lo largo del tiempo</td><td>Relaciones de la familia con su entorno externo</td></tr>
+      <tr><td><strong>¿Quién lo elabora?</strong></td><td>TS con la familia (proceso conjunto)</td><td class="g">TS, a partir de observación e información recogida ★★★</td></tr>
+      <tr><td><strong>Perspectiva temporal</strong></td><td>Histórica: incluye varias generaciones</td><td>Situacional: momento presente</td></tr>
+      <tr><td><strong>Foco</strong></td><td>Genealogía, relaciones intrafamiliares, eventos vitales</td><td>Redes de apoyo, instituciones, recursos externos, conflictos</td></tr>
+      <tr><td><strong>Creadores</strong></td><td>McGoldrick y Gerson (años 70)</td><td>Hartman (1978)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="nota n-err">
+    <strong>Trampa:</strong> "El ecomapa lo elabora la familia conjuntamente con el TS" → FALSO. Lo elabora el <strong>TS</strong> a partir de su observación. ★★★
+  </div>
+</section>
+
+<!-- S8 -->
+<section id="s8">
+  <h2 class="sec">8. Técnicas de Trabajo Social de grupo</h2>
+
+  <p>El trabajo social con grupos es uno de los tres métodos clásicos de la profesión. Las técnicas de grupo tienen la particularidad de que el propio grupo —sus dinámicas, sus relaciones, sus conflictos— se convierte en el principal instrumento terapéutico o educativo.</p>
+
+  <h3>Tipos de grupos en Trabajo Social</h3>
+  <table class="tbl">
+    <thead><tr><th>Tipo</th><th>Objetivo principal</th><th>Ejemplo en SM o SS.SS.</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Socioterapéutico</strong></td><td>Apoyo emocional, elaboración de vivencias, cambio de conducta</td><td>Grupos de familiares de personas con TMG en la RSMNa</td></tr>
+      <tr><td><strong>Socioeducativo</strong></td><td>Aprendizaje de habilidades, psicoeducación</td><td>Grupos psicoeducativos en el CSM; habilidades parentales</td></tr>
+      <tr><td><strong>Autoayuda</strong></td><td>Apoyo mutuo entre iguales; los miembros coordinan</td><td>ANASAPS; grupos de pacientes con experiencia vivida</td></tr>
+      <tr><td><strong>Tarea</strong></td><td>Objetivo concreto externo al grupo</td><td>Comisiones de participación comunitaria; comités</td></tr>
+    </tbody>
+  </table>
+
+  <h3>El sociograma ★★★</h3>
+  <p>El <strong>sociograma</strong> es la técnica de diagnóstico grupal más importante del Trabajo Social de grupo. Fue creado por el psicosociólogo <strong>Jacob Moreno</strong> en los años 30 en el marco de la sociometría. Permite visualizar la <strong>estructura informal del grupo</strong>: quién elige a quién, quién rechaza a quién, quién es ignorado, quiénes forman subgrupos o coaliciones, quién ejerce liderazgo informal.</p>
+  <p>El proceso consiste en: aplicar un <strong>test sociométrico</strong> (preguntas de elección y rechazo entre los miembros del grupo) → recoger los datos → elaborar la representación gráfica. El TS elabora el sociograma a partir de los datos del test; los propios miembros del grupo no ven el resultado durante el proceso diagnóstico.</p>
+
+  <h3>Otras técnicas grupales operativas</h3>
+  <ul>
+    <li><strong>Sociodrama / role-playing</strong>: dramatización de situaciones reales o hipotéticas para comprenderlas emocionalmente y practicar respuestas alternativas.</li>
+    <li><strong>Phillips 6/6</strong>: el gran grupo se divide en subgrupos de 6 personas que discuten durante 6 minutos y luego presentan sus conclusiones al pleno. Técnica de participación rápida y eficiente.</li>
+    <li><strong>Grupos de discusión / focus group</strong>: generación de discurso grupal en torno a un tema; utilizado para diagnóstico cualitativo de necesidades.</li>
+    <li><strong>Brainstorming (tormenta de ideas)</strong>: generación libre de ideas sin juicio ni evaluación inmediata; activa la creatividad y la participación.</li>
+    <li><strong>Técnica Delphi</strong>: consulta sistemática a expertos por rondas sucesivas hasta lograr un consenso informado; útil para planificación y prospectiva.</li>
+  </ul>
+</section>
+
+<!-- S9 -->
+<section id="s9">
+  <h2 class="sec">9. Técnicas de intervención comunitaria y observación</h2>
+
+  <h3>Diagnóstico comunitario participativo</h3>
+  <p>La piedra angular de la intervención comunitaria es el diagnóstico participativo: un proceso en el que la <em>propia comunidad</em> identifica sus problemas, sus necesidades y sus recursos. El TS actúa como facilitador, no como experto externo que diagnostica desde fuera. Las técnicas más utilizadas en este proceso son: entrevistas a informantes clave, asambleas vecinales, grupos de discusión, mapeo de recursos y análisis DAFO.</p>
+
+  <div class="def">
+    <span class="dt">Análisis DAFO</span>
+    Herramienta de diagnóstico estratégico que analiza cuatro dimensiones: <strong>D</strong>ebilidades (factores internos negativos), <strong>A</strong>menazas (factores externos negativos), <strong>F</strong>ortalezas (factores internos positivos) y <strong>O</strong>portunidades (factores externos positivos). Permite sintetizar la situación de una comunidad, organización o proyecto para orientar la planificación.
+  </div>
+
+  <h3>La observación como técnica transversal</h3>
+  <p>La observación no es exclusiva del nivel comunitario: es una técnica transversal que aparece en los tres niveles de intervención. Sus tipos más relevantes son:</p>
+  <ul>
+    <li><strong>Observación sistemática</strong>: planificada con pautas previas; registra conductas o situaciones de forma estructurada.</li>
+    <li><strong>Observación asistemática o libre</strong>: exploratoria, sin estructura previa; permite captar lo inesperado.</li>
+    <li><strong>Observación participante</strong>: el TS se integra en la comunidad para comprenderla desde su interior. Propia de la investigación cualitativa.</li>
+    <li><strong>Observación no participante</strong>: el TS observa sin intervenir ni relacionarse con los observados.</li>
+  </ul>
+  <p>En la <strong>visita domiciliaria</strong> la observación tiene un valor diagnóstico especialmente alto: las condiciones de habitabilidad, la organización del espacio, las interacciones que el TS presencia in situ son fuentes de información irremplazables.</p>
+</section>
+
+<!-- S10 -->
+<section id="s10">
+  <h2 class="sec">10. Técnicas e instrumentos en Salud Mental: conexión con la RSMNa</h2>
+
+  <p>Las técnicas e instrumentos del Tema 54 se aplican directamente en el trabajo del TSS en la RSMNa y son el sustrato práctico de los bloques de servicio de la Carta TSS 2021. Comprender esta conexión es fundamental para integrar el temario.</p>
+
+  <h3>Historia de TSS en la RSMNa</h3>
+  <p>La Historia de Trabajo Social Sanitario en Salud Mental es la adaptación de la historia social al contexto específico de la RSMNa. Recoge los 6 apartados definidos en la Carta TSS: motivo de consulta y demanda, situación familiar y de convivencia, situación económica y laboral, red de apoyo social, antecedentes de interés social, y diagnóstico y plan de intervención social. Combina la ficha social sistematizable con el registro narrativo propio de la historia social.</p>
+
+  <h3>El genograma y el ecomapa en el trabajo con TMG y PEP</h3>
+  <p>En el trabajo con personas con Trastorno Mental Grave (TMG), el genograma permite identificar los recursos familiares disponibles, los patrones de relación transgeneracional y las personas del entorno que pueden formar parte del Plan de Atención Individual (PAI). El ecomapa, por su parte, visualiza las conexiones de la persona con los dispositivos de la RSMNa, los SS.SS. de Base, las organizaciones del tercer sector (ANASAPS) y su red informal de apoyo. Ambos instrumentos están al servicio de la Atención Centrada en la Persona (ACP) y del principio de recuperación personal.</p>
+
+  <h3>La entrevista en el contexto de la Salud Mental</h3>
+  <p>En los dispositivos de la RSMNa, la entrevista del TSS tiene características específicas: el motivo de consulta frecuentemente no es una demanda explícita sino una derivación del equipo clínico; el contenido emocional es alto; las dinámicas de transferencia son especialmente intensas. El TS debe combinar habilidades de entrevista clínica (manejo de la transferencia, contención emocional) con conocimiento de los recursos sociales (prestaciones, coordinación con SS.SS.). La entrevista del TSS en SM es siempre <em>planificada y semiestructurada</em>, aunque flexible.</p>
+
+  <div class="nota n-ok">
+    <strong>Síntesis integradora:</strong> Tema 54 (técnicas e instrumentos) es el "cómo se hace" de todo lo descrito en el Tema 53 (modelos y métodos). La entrevista, la visita domiciliaria, la historia social, el genograma y el ecomapa son las herramientas concretas con las que el TSS aplica la ACP y el MAI en la práctica cotidiana de la RSMNa.
+  </div>
+</section>
+
+</div>
+</body>
+</html>
