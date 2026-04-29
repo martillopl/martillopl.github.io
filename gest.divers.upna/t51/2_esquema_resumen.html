@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 51 · HTML 2 · Esquema-resumen visual · LF 2/1998 · Voluntariado Navarra</title>
+<style>
+:root{--bg:#f0fbff;--card:#fff;--s2:#e0f2fe;--line:#7dd3fc;--text:#0c4a6e;--muted:#0284c7;--p:#075985;--warn:#d97706;--red:#dc2626;--grn:#059669;--vio:#7c3aed;--teal:#0d9488;--rose:#e11d48;--sh:0 2px 10px rgba(7,89,133,.09)}
+[data-theme="dark"]{--bg:#020c1a;--card:#0a1e35;--s2:#0e2a45;--line:#075985;--text:#bae6fd;--muted:#38bdf8;--p:#38bdf8;--warn:#fbbf24;--red:#fca5a5;--grn:#6ee7b7;--vio:#c4b5fd;--teal:#5eead4;--rose:#fda4af;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:22px}
+.wrap{max-width:1220px;margin:0 auto}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 20px;margin-bottom:14px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.97rem;color:var(--p)}.hdr p{font-size:.72rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.71rem}
+h2{font-size:.88rem;font-weight:800;color:#fff;background:var(--p);padding:7px 15px;border-radius:8px;margin:20px 0 10px;display:inline-block}
+strong{color:var(--p)}
+/* KPI */
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:8px;margin-bottom:14px}
+.kb{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:10px;box-shadow:var(--sh);text-align:center}
+.big{font-size:.95rem;font-weight:800;color:var(--p);margin-bottom:2px}.ksm{font-size:.68rem;color:var(--muted)}.kmi{font-size:.64rem;margin-top:3px}
+/* notes */
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.73rem;border-left:4px solid;margin:7px 0}
+.nok{background:rgba(5,150,105,.07);border-color:#059669}
+.nerr{background:rgba(220,38,38,.07);border-color:#dc2626}
+.nw{background:rgba(180,83,9,.07);border-color:#b45309}
+.nvio{background:rgba(124,58,237,.07);border-color:#7c3aed}
+.nsky{background:var(--s2);border-color:var(--muted)}
+.nteal{background:rgba(13,148,136,.07);border-color:#0d9488}
+.nrose{background:rgba(225,29,72,.07);border-color:#e11d48}
+[data-theme="dark"] .nw{background:#2a1300;color:#fde68a}
+[data-theme="dark"] .nerr{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .nok{background:rgba(110,231,183,.07);color:#6ee7b7}
+[data-theme="dark"] .nvio{background:#1e1b4b;color:#c4b5fd}
+/* grids */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px}
+.g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:9px;margin-bottom:14px}
+/* blk */
+.blk{background:var(--card);border-radius:12px;padding:12px 14px;box-shadow:var(--sh)}
+.b1{border-top:5px solid var(--p)}.b2{border-top:5px solid var(--vio)}.b3{border-top:5px solid var(--grn)}.b4{border-top:5px solid var(--teal)}.b5{border-top:5px solid var(--warn)}.b6{border-top:5px solid var(--red)}.b7{border-top:5px solid var(--rose)}
+.blk h3{font-size:.8rem;font-weight:800;margin-bottom:7px}
+.b1 h3{color:var(--p)}.b2 h3{color:var(--vio)}.b3 h3{color:var(--grn)}.b4 h3{color:var(--teal)}.b5 h3{color:var(--warn)}.b6 h3{color:var(--red)}.b7 h3{color:var(--rose)}
+.blk ul{padding-left:14px}.blk li{font-size:.72rem;margin:.28rem 0}
+/* princ pill */
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.pill{padding:5px 11px;border-radius:999px;font-size:.72rem;font-weight:700;border:1px solid}
+.pl{background:rgba(7,89,133,.1);border-color:var(--p);color:var(--p)}
+.pg{background:rgba(5,150,105,.1);border-color:#059669;color:#059669}
+.pv{background:rgba(124,58,237,.1);border-color:#7c3aed;color:#7c3aed}
+.pw{background:rgba(217,119,6,.1);border-color:#d97706;color:#d97706}
+.pt{background:rgba(13,148,136,.1);border-color:#0d9488;color:#0d9488}
+/* tables */
+table{width:100%;border-collapse:collapse;margin:8px 0}
+th{background:var(--s2);color:var(--muted);font-size:.66rem;text-transform:uppercase;padding:6px 9px;text-align:left}
+td{padding:6px 9px;border-bottom:1px solid var(--s2);font-size:.74rem;vertical-align:top}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+/* trap */
+.trap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:8px;margin-bottom:14px}
+.trap{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:9px 11px;box-shadow:var(--sh)}
+.trap .q{font-size:.7rem;color:var(--red);font-weight:600;margin-bottom:3px}
+.trap .a{font-size:.7rem}
+/* exclusion box */
+.excbox{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:8px 0}
+.exc{background:rgba(220,38,38,.06);border:1px solid rgba(220,38,38,.25);border-radius:8px;padding:8px 10px;font-size:.7rem}
+.exc .cod{font-weight:800;color:var(--red);margin-right:4px}
+/* derechos tabs */
+.dtabs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:8px 0}
+.dtab{background:var(--card);border-radius:10px;padding:10px 12px;box-shadow:var(--sh)}
+.dtab h4{font-size:.74rem;font-weight:800;margin-bottom:6px}
+.dtab.d1{border-top:4px solid var(--p)}.dtab.d1 h4{color:var(--p)}
+.dtab.d2{border-top:4px solid var(--vio)}.dtab.d2 h4{color:var(--vio)}
+.dtab.d3{border-top:4px solid var(--teal)}.dtab.d3 h4{color:var(--teal)}
+.dtab ul{padding-left:13px}.dtab li{font-size:.69rem;margin:.22rem 0}
+/* CNV row */
+.cnvrow{display:flex;gap:8px;align-items:stretch;flex-wrap:wrap;margin:8px 0}
+.cnvcell{flex:1;min-width:80px;background:var(--s2);border:1px solid var(--line);border-radius:8px;padding:8px 10px;text-align:center}
+.cnvn{font-size:1rem;font-weight:800;color:var(--p)}.cnvl{font-size:.64rem;color:var(--muted);margin-top:2px}
+@media(max-width:720px){.g2,.g3,.g4{grid-template-columns:1fr}.trap-grid{grid-template-columns:1fr}.dtabs{grid-template-columns:1fr}.excbox{grid-template-columns:1fr}.cnvrow{flex-direction:column}}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+<div class="hdr">
+  <div>
+    <h1>Tema 51 · HTML 2 · Esquema-resumen visual para memorización rápida</h1>
+    <p>LF 2/1998, de 27 de marzo, del Voluntariado de Navarra · BON núm. 43 · Mod. LF 4/2006 + LF 9/2006 · 6 caps · 21 arts. · CNV</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- FICHAS FLASH -->
+<h2>Fichas flash de identificación ★★★</h2>
+<div class="kpi">
+  <div class="kb"><div class="big">LF 2/1998</div><div class="ksm">27 de marzo</div><div class="kmi">BON núm. 43 · 10-abr-1998</div></div>
+  <div class="kb"><div class="big">Vigencia</div><div class="ksm">Día siguiente publicación BON</div><div class="kmi">D.F. Única</div></div>
+  <div class="kb"><div class="big">6 caps.</div><div class="ksm">21 artículos</div><div class="kmi">+ 1 D.A. + 1 D.T. + 1 D.F.</div></div>
+  <div class="kb"><div class="big">LF 9/2006</div><div class="ksm">Reforma del seguro</div><div class="kmi">Accidente + daños 3ºs · sin enfermedad</div></div>
+  <div class="kb"><div class="big">8</div><div class="ksm">Principios básicos (art. 3)</div><div class="kmi">L-S-P-G-A-R-C-D</div></div>
+  <div class="kb"><div class="big">5</div><div class="ksm">Exclusiones del voluntariado</div><div class="kmi">Art. 2.2 · esporádico es exclusión ★</div></div>
+  <div class="kb"><div class="big">Art. 9</div><div class="ksm">Convivientes sin parentesco</div><div class="kmi">Art. 2.2 · esporádico excluido ★</div></div>
+  <div class="kb"><div class="big">POR ESCRITO</div><div class="ksm">Documento de incorporación</div><div class="kmi">Art. 8 + duplicado al voluntario/a ★</div></div>
+  <div class="kb"><div class="big">OBLIGATORIA</div><div class="ksm">Inscripción en Registro</div><div class="kmi">Art. 10 · toda entidad DEBERÁ ★</div></div>
+  <div class="kb"><div class="big">CONSULTIVO</div><div class="ksm">Naturaleza del CNV</div><div class="kmi">Art. 19 · órgano de participación ★</div></div>
+  <div class="kb"><div class="big">15 días</div><div class="ksm">Plazo informe CNV</div><div class="kmi">Art. 20.a · anteproyectos normativos ★</div></div>
+  <div class="kb"><div class="big">4 años</div><div class="ksm">Mandato vocalías CNV</div><div class="kmi">Entidades + voluntarios + sindicatos ★</div></div>
+</div>
+
+<!-- OBJETO Y NORMA -->
+<h2>Marco normativo y objeto · art. 1 ★★★</h2>
+<div class="g2">
+  <div class="blk b1">
+    <h3>Norma y modificaciones</h3>
+    <ul>
+      <li><strong>LF 2/1998, de 27 de marzo</strong> · norma principal</li>
+      <li>BON núm. 43, de 10 de abril de 1998</li>
+      <li>BOE de 2 de junio de 1998</li>
+      <li><strong>LF 4/2006, de 4 de abril</strong> → primera modificación del seguro</li>
+      <li><strong>LF 9/2006, de 5 de julio</strong> → redacción definitiva del seguro ★★★</li>
+      <li>En vigor: día siguiente a publicación BON</li>
+    </ul>
+  </div>
+  <div class="blk b3">
+    <h3>Objeto DOBLE · art. 1</h3>
+    <ul>
+      <li><strong>FOMENTAR</strong> la participación activa, libre, solidaria, altruista y responsable de los ciudadanos en actuaciones de voluntariado, a través de organizaciones sin ánimo de lucro</li>
+      <li><strong>ESTABLECER LAS RELACIONES</strong> entre personas voluntarias, entidades de voluntariado y AAPP de Navarra</li>
+    </ul>
+    <div class="note nsky">Los 5 adjetivos del fomento: <strong>activa · libre · solidaria · altruista · responsable</strong></div>
+  </div>
+</div>
+
+<!-- CONCEPTO Y EXCLUSIONES -->
+<h2>Concepto de voluntariado y exclusiones · art. 2 ★★★</h2>
+<div class="g2">
+  <div class="blk b4">
+    <h3>Definición · art. 2.1</h3>
+    <ul>
+      <li>Comportamiento social de personas físicas</li>
+      <li>Que actúan <strong>LIBRE Y ALTRUISTAMENTE</strong></li>
+      <li>Organizadas en entidades <strong>SIN ÁNIMO DE LUCRO</strong></li>
+      <li>Para prestar servicios a personas o a la comunidad</li>
+      <li>Con objetivo de la <strong>SOLIDARIDAD</strong> entre los seres humanos</li>
+    </ul>
+    <div class="note nok"><strong>4 elementos inseparables:</strong> libertad + altruismo + entidad sin ánimo de lucro + solidaridad</div>
+  </div>
+  <div class="blk b6">
+    <h3>Exclusiones expresas · art. 2.2 ★★★</h3>
+    <div class="excbox">
+      <div class="exc"><span class="cod">a)</span>Actividades con relación laboral</div>
+      <div class="exc"><span class="cod">b)</span>Obligación personal o deber jurídico</div>
+      <div class="exc"><span class="cod">c)</span>Motivación familiar o de amistad</div>
+      <div class="exc"><span class="cod">d)</span>Sustitución de trabajo remunerado</div>
+      <div class="exc" style="grid-column:1/-1;background:rgba(220,38,38,.12)"><span class="cod">e) ★★★</span>Actos <strong>ESPORÁDICOS sin continuidad y programación</strong></div>
+    </div>
+    <div class="note nerr">La exclusión más preguntada: un acto puntual solidario NO es voluntariado según esta Ley</div>
+  </div>
+</div>
+
+<!-- PRINCIPIOS -->
+<h2>Los 8 principios básicos · art. 3 ★★★</h2>
+<div class="blk b2" style="margin-bottom:14px">
+  <h3>Cadena mnemotécnica: L – S – P – G – A – R – C – D</h3>
+  <div class="pills" style="margin-top:8px">
+    <span class="pill pl">L · Libertad</span>
+    <span class="pill pt">S · Solidaridad</span>
+    <span class="pill pg">P · Participación</span>
+    <span class="pill pw">G · Gratuidad ★★★</span>
+    <span class="pill pv">A · Autonomía ★★★</span>
+    <span class="pill pl">R · Responsabilidad</span>
+    <span class="pill pg">C · Compromiso entidades</span>
+    <span class="pill pt">D · Principios Democráticos</span>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px">
+    <div class="note nw"><strong>GRATUIDAD:</strong> sin búsqueda de beneficio material alguno. El reembolso de gastos NO es retribución. ★★★</div>
+    <div class="note nvio"><strong>AUTONOMÍA:</strong> respecto a los poderes públicos. Las entidades actúan con independencia. ★★★</div>
+  </div>
+</div>
+
+<!-- PERSONA VOLUNTARIA Y ENTIDADES -->
+<h2>Persona voluntaria y entidades · arts. 4 y 5 ★★★</h2>
+<div class="g2">
+  <div class="blk b1">
+    <h3>Persona voluntaria · art. 4</h3>
+    <ul>
+      <li>Siempre <strong>PERSONA FÍSICA</strong> (no jurídica)</li>
+      <li>Se integra en organización <strong>SIN ÁNIMO DE LUCRO</strong></li>
+      <li>Realiza actividades de tipo <strong>CÍVICO O SOCIAL</strong></li>
+      <li>Encuadradas en el concepto del art. 2</li>
+      <li>No puede actuar en solitario: siempre en entidad</li>
+    </ul>
+    <div class="note nsky">Las personas jurídicas son <strong>entidades</strong> (art. 5), no voluntarias (art. 4)</div>
+  </div>
+  <div class="blk b3">
+    <h3>Entidades de voluntariado · art. 5</h3>
+    <ul>
+      <li>Personas jurídicas <strong>legalmente constituidas</strong></li>
+      <li>Realizan programas/actividades sociales <strong>sin ánimo de lucro</strong></li>
+      <li>En beneficio de personas o grupos sociales</li>
+      <li>Utilizan <strong>MAYORITARIAMENTE</strong> personal voluntario ★★★</li>
+    </ul>
+    <div class="note nok"><strong>MAYORITARIAMENTE:</strong> pueden tener personal asalariado, pero el voluntario debe ser la figura predominante</div>
+  </div>
+</div>
+
+<!-- DERECHOS -->
+<h2>Derechos de las personas voluntarias · art. 6 · 3 grupos ★★★</h2>
+<div class="dtabs">
+  <div class="dtab d1">
+    <h4>Índole PERSONAL</h4>
+    <ul>
+      <li>No discriminación; respeto a libertad, dignidad, intimidad y creencias ★</li>
+      <li>Participar en elaboración, diseño, ejecución y evaluación de programas</li>
+      <li>No ser asignada a tareas ajenas a los fines de la entidad</li>
+      <li>Cambio de programa por causas justificadas</li>
+      <li>Reconocimiento + <strong>certificación de participación</strong></li>
+      <li><strong>CESAR LIBREMENTE</strong> en su condición de voluntaria ★★★</li>
+    </ul>
+  </div>
+  <div class="dtab d2">
+    <h4>Índole INFORMATIVA / FORMATIVA</h4>
+    <ul>
+      <li>Ser <strong>INFORMADA</strong> de fines, organización, funcionamiento y situación económica de la entidad</li>
+      <li>Ser <strong>FORMADA, ORIENTADA Y APOYADA</strong> para el ejercicio de sus funciones</li>
+    </ul>
+    <div class="note nvio" style="margin-top:6px">El voluntariado de calidad requiere capacitación, no solo buena voluntad</div>
+  </div>
+  <div class="dtab d3">
+    <h4>Índole MATERIAL</h4>
+    <ul>
+      <li>Condiciones de seguridad e higiene</li>
+      <li><strong>SEGURO</strong>: accidente + daños a 3ºs ★★★<br><small>(sin enfermedad desde LF 9/2006)</small></li>
+      <li>Medios materiales necesarios</li>
+      <li><strong>Credencial identificativa</strong> ★</li>
+      <li>Libre acceso a los actos de la entidad</li>
+      <li><strong>REEMBOLSO de gastos</strong> ★★★ (≠ retribución)</li>
+    </ul>
+  </div>
+</div>
+<div class="note nerr"><strong>Trampa recurrente:</strong> el reembolso de gastos es un <strong>DERECHO</strong> del voluntario (art. 6). Rechazar contraprestaciones es una <strong>OBLIGACIÓN</strong> del voluntario (art. 7). Son conceptos distintos y opuestos.</div>
+
+<!-- OBLIGACIONES VOLUNTARIO -->
+<h2>Obligaciones de las personas voluntarias · art. 7 ★★★</h2>
+<div class="g2">
+  <div class="blk b5">
+    <h3>Las 5 obligaciones</h3>
+    <ul>
+      <li><strong>a)</strong> Prestar servicios sin discriminación; respetar dignidad, libertad, intimidad y creencias de los destinatarios</li>
+      <li><strong>b)</strong> Máxima DILIGENCIA; acatar objetivos y normativa de la entidad; respetar medios materiales</li>
+      <li><strong>c)</strong> CONFIDENCIALIDAD sobre la información personal conocida en el desempeño ★★★</li>
+      <li><strong>d)</strong> RECHAZAR cualquier contraprestación material ★★★</li>
+      <li><strong>e)</strong> Participar activamente en la FORMACIÓN propuesta por la entidad</li>
+    </ul>
+  </div>
+  <div class="blk b1">
+    <h3>Documento de incorporación · art. 8 ★★★</h3>
+    <ul>
+      <li>Forma: <strong>POR ESCRITO</strong></li>
+      <li>Contenido mínimo (4 bloques):<br>
+        <strong>1.</strong> Descripción, objetivos y fines del programa<br>
+        <strong>2.</strong> Derechos y deberes de ambas partes<br>
+        <strong>3.</strong> Funciones, duración, dedicación y <strong>causas/formas de desvinculación</strong> ★★★<br>
+        <strong>4.</strong> Proceso de formación necesario
+      </li>
+      <li>El documento se archiva en la entidad</li>
+      <li>Se extiende <strong>DUPLICADO</strong> para la persona voluntaria ★★★</li>
+    </ul>
+  </div>
+</div>
+
+<!-- REGISTRO Y OBLIGACIONES ENTIDADES -->
+<h2>Registro de entidades y obligaciones · arts. 10 y 11 ★★★</h2>
+<div class="g2">
+  <div class="blk b4">
+    <h3>Registro de entidades · art. 10</h3>
+    <ul>
+      <li>Toda entidad <strong>DEBERÁ</strong> inscribirse (obligatoria, no voluntaria) ★★★</li>
+      <li>Puede tramitarse de oficio si ya está en registro departamental GN</li>
+      <li>Condición previa para acceder a subvenciones y convenios (art. 14)</li>
+    </ul>
+    <div class="note nerr"><strong>Causas de BAJA:</strong><br>
+      · A petición de la entidad<br>
+      · De oficio por extinción de personalidad jurídica<br>
+      · Por <strong>incumplimiento GRAVE</strong> de la LF ★★★
+    </div>
+  </div>
+  <div class="blk b6">
+    <h3>Obligaciones de las entidades · art. 11</h3>
+    <ul>
+      <li>Estar legalmente constituidas con personalidad jurídica</li>
+      <li>Respetar derechos de las personas voluntarias</li>
+      <li>Actuar sin discriminación</li>
+      <li>Suscribir <strong>PÓLIZA DE SEGURO</strong>: accidente + daños a terceros ★★★<br><small>(sin enfermedad desde LF 9/2006)</small></li>
+      <li>Llevar <strong>LIBRO DE ALTAS Y BAJAS</strong> de voluntarios ★★★<br><small>(programa + dedicación acordada)</small></li>
+      <li>Reconocer apoyos públicos y privados en la memoria anual</li>
+      <li>Elaborar anualmente <strong>MEMORIA GENERAL</strong> ★★★<br><small>(actividades + presupuesto + personal + adscripción → enviar al Departamento)</small></li>
+    </ul>
+  </div>
+</div>
+
+<!-- FOMENTO Y DISTINCIÓN -->
+<h2>Fomento del voluntariado · arts. 12–15 ★★★</h2>
+<div class="g3">
+  <div class="blk b1">
+    <h3>Art. 12 · Medidas de fomento de las AAPP</h3>
+    <ul>
+      <li>Información y campañas de divulgación</li>
+      <li>Reconocimiento de actividades voluntarias</li>
+      <li>Formación y asistencia técnica</li>
+      <li><strong>Cesión temporal de personal</strong> de las AAPP a entidades ★</li>
+    </ul>
+  </div>
+  <div class="blk b3">
+    <h3>Art. 14 · Apoyo económico</h3>
+    <ul>
+      <li>Mediante <strong>SUBVENCIONES</strong></li>
+      <li>Mediante <strong>CONVENIOS O CONCIERTOS</strong> ★★★</li>
+      <li>Requisito previo: estar <strong>inscritas en el Registro</strong></li>
+    </ul>
+  </div>
+  <div class="blk b5">
+    <h3>Art. 15 · Distinción anual ★★★</h3>
+    <ul>
+      <li>Denominación: <strong>Distinción de Persona Voluntaria de Navarra</strong></li>
+      <li>Concede: Gobierno de Navarra · <strong>ANUALMENTE</strong></li>
+      <li>Basándose en: <strong>opinión del CNV</strong></li>
+      <li>A: persona física o jurídica por dedicación, ejemplo social o relevancia de sus actuaciones</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ADMINISTRACIONES -->
+<h2>Papel de las Administraciones Públicas · arts. 16–18 ★★★</h2>
+<div class="g3">
+  <div class="blk b2">
+    <h3>Art. 16 · Comisión Interdepartamental</h3>
+    <ul>
+      <li>Composición: Directores Generales de Departamentos relacionados con voluntariado</li>
+      <li>Presidencia y Secretaría: Departamento que gestione el Registro</li>
+      <li>Funciones: política global + coordinación + publicar anualmente la <strong>GUÍA DEL VOLUNTARIADO</strong> ★★★</li>
+      <li>Coordina ANUALMENTE subvenciones para evitar duplicidades</li>
+    </ul>
+    <div class="note nerr">⚠ La Guía la publica la COMISIÓN INTERDEPARTAMENTAL, NO el CNV ★★★</div>
+  </div>
+  <div class="blk b4">
+    <h3>Art. 17 · Departamentos</h3>
+    <ul>
+      <li>Ejercen funciones propias de su competencia</li>
+      <li>Especialmente: <strong>PLANIFICACIÓN E INSPECCIÓN</strong></li>
+    </ul>
+    <h3 style="margin-top:10px">Art. 18 · Entidades Locales ★★★</h3>
+    <ul>
+      <li>Competencia <strong>EN EXCLUSIVA</strong> en su ámbito territorial</li>
+      <li>Planificación, ordenación e inspección del voluntariado</li>
+      <li>Deben exigir cumplimiento de la LF</li>
+      <li>Remiten <strong>ANUALMENTE</strong> al CNV acciones y programas subvencionados</li>
+    </ul>
+  </div>
+  <div class="blk b3">
+    <h3>D.A. Única · Plazo reglamentos</h3>
+    <ul>
+      <li>El Gobierno de Navarra tenía plazo <strong>MÁXIMO DE 1 AÑO</strong> desde la entrada en vigor para aprobar los reglamentos de:<br>
+        Registro · Apoyos económicos · Distinción anual · Comisión Interdepartamental · CNV
+      </li>
+    </ul>
+    <div class="note nsky">D.T. Única: hasta que se regule el Registro, inscripción en registros departamentales</div>
+  </div>
+</div>
+
+<!-- CNV COMPOSICIÓN -->
+<h2>Consejo Navarro del Voluntariado (CNV) · arts. 19–21 ★★★</h2>
+<div class="blk b1" style="margin-bottom:14px">
+  <h3>Naturaleza: órgano de PARTICIPACIÓN con carácter CONSULTIVO · art. 19</h3>
+  <div class="note nsky">Adscrito al Departamento que gestione el Registro de entidades y la secretaría de la Comisión Interdepartamental</div>
+</div>
+
+<h2>Composición del CNV · art. 21 · LOS NÚMEROS ★★★</h2>
+<div class="cnvrow">
+  <div class="cnvcell"><div class="cnvn">1</div><div class="cnvl">Presidencia<br>Titular del Dpto. adscrito ★★★</div></div>
+  <div class="cnvcell"><div class="cnvn">1</div><div class="cnvl">Vicepresidencia<br>Elegida entre entidades + voluntarios + sindicatos ★★★</div></div>
+  <div class="cnvcell" style="background:rgba(7,89,133,.12)"><div class="cnvn" style="font-size:1.4rem">7</div><div class="cnvl">Directores/as Generales GN<br>Dtos. relacionados con voluntariado ★★★</div></div>
+  <div class="cnvcell"><div class="cnvn">3</div><div class="cnvl">Técnicos Adm. Foral<br>Expertos en voluntariado</div></div>
+  <div class="cnvcell"><div class="cnvn">3</div><div class="cnvl">Rep. Entidades Locales<br>Designados por FNMC ★★★</div></div>
+  <div class="cnvcell" style="background:rgba(7,89,133,.12)"><div class="cnvn" style="font-size:1.4rem">7</div><div class="cnvl">Rep. entidades voluntariado inscritas ★★★</div></div>
+  <div class="cnvcell"><div class="cnvn">3</div><div class="cnvl">Personas voluntarias representativas</div></div>
+  <div class="cnvcell"><div class="cnvn">3</div><div class="cnvl">Rep. centrales sindicales más representativas ★★★</div></div>
+  <div class="cnvcell"><div class="cnvn">1</div><div class="cnvl">Secretaría<br>Secretario/a Técnico del Dpto. (nombrado por Presidencia)</div></div>
+</div>
+<div class="note nvio" style="margin-bottom:14px"><strong>Mnemotecnia:</strong> <strong>7</strong> (directores GN) · <strong>3</strong> (técnicos) · <strong>3</strong> (locales) · <strong>7</strong> (entidades voluntariado) · <strong>3</strong> (voluntarios) · <strong>3</strong> (sindicatos) · Mandato vocalías entidades/voluntarios/sindicatos: <strong>4 AÑOS</strong> ★★★</div>
+
+<!-- FUNCIONES CNV -->
+<h2>Funciones del CNV · art. 20 ★★★</h2>
+<div class="g3">
+  <div class="blk b1">
+    <h3>Las más preguntadas</h3>
+    <ul>
+      <li><strong>a)</strong> Informar PRECEPTIVAMENTE anteproyectos normativos → plazo <strong>15 DÍAS</strong> ★★★</li>
+      <li><strong>f)</strong> Emitir INFORME ANUAL sobre el estado del voluntariado en Navarra ★★★</li>
+      <li><strong>h)</strong> PROPONER AL GOBIERNO el Reglamento de Funcionamiento del CNV ★★★</li>
+    </ul>
+  </div>
+  <div class="blk b3">
+    <h3>Demás funciones</h3>
+    <ul>
+      <li><strong>b)</strong> Detectar y analizar necesidades básicas del voluntariado</li>
+      <li><strong>c)</strong> Asesorar a las AAPP; proponer criterios de subvención preferentes</li>
+      <li><strong>d)</strong> Proponer medidas de fomento del voluntariado</li>
+    </ul>
+  </div>
+  <div class="blk b5">
+    <h3>Otras funciones</h3>
+    <ul>
+      <li><strong>e)</strong> Ser INFORMADO del seguimiento y evaluación de programas y subvenciones</li>
+      <li><strong>g)</strong> Promover presencia de agentes sociales en órganos de participación</li>
+      <li><strong>i)</strong> Aprobar la memoria anual de sus propias actividades</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TRAMPAS -->
+<h2>Las 10 trampas del examen ★★★</h2>
+<div class="trap-grid">
+  <div class="trap"><div class="q">❌ "Un acto puntual solidario es voluntariado según la LF 2/1998"</div><div class="a">✓ NO: art. 2.2.e excluye expresamente los actos <strong>esporádicos sin continuidad y programación</strong></div></div>
+  <div class="trap"><div class="q">❌ "El voluntariado puede realizarse de forma individual sin entidad"</div><div class="a">✓ NO: siempre debe integrarse en una <strong>entidad sin ánimo de lucro</strong> (art. 2.1)</div></div>
+  <div class="trap"><div class="q">❌ "La entidad de voluntariado debe estar formada solo por voluntarios"</div><div class="a">✓ Deben utilizarse <strong>MAYORITARIAMENTE</strong>, pero puede haber personal asalariado (art. 5.1)</div></div>
+  <div class="trap"><div class="q">❌ "El reembolso de gastos convierte el voluntariado en remunerado"</div><div class="a">✓ El reembolso es un DERECHO del voluntario (art. 6.3.f). No es retribución ni rompe la gratuidad</div></div>
+  <div class="trap"><div class="q">❌ "El seguro del voluntario cubre accidente y enfermedad"</div><div class="a">✓ Desde LF 9/2006: cubre <strong>accidente y daños a terceros</strong>; ya no enfermedad</div></div>
+  <div class="trap"><div class="q">❌ "La inscripción de las entidades en el Registro es voluntaria"</div><div class="a">✓ Art. 10: toda entidad <strong>DEBERÁ</strong> inscribirse; es obligatoria</div></div>
+  <div class="trap"><div class="q">❌ "El CNV es un órgano de gestión del voluntariado"</div><div class="a">✓ Art. 19: es un órgano de <strong>PARTICIPACIÓN con carácter CONSULTIVO</strong></div></div>
+  <div class="trap"><div class="q">❌ "La Presidencia del CNV es elegida por los miembros del Consejo"</div><div class="a">✓ Art. 21.a: la ocupa por razón de cargo el <strong>titular del Departamento adscrito</strong></div></div>
+  <div class="trap"><div class="q">❌ "La Guía del Voluntariado en Navarra la publica el CNV"</div><div class="a">✓ Art. 16: la publica anualmente la <strong>Comisión Interdepartamental</strong></div></div>
+  <div class="trap"><div class="q">❌ "El CNV tiene 5 representantes de entidades de voluntariado"</div><div class="a">✓ Art. 21.f: son <strong>7 representantes</strong> de entidades de voluntariado inscritas</div></div>
+</div>
+
+</div>
+</body>
+</html>

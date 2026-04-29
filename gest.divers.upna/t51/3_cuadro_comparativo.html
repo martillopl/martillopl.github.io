@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 51 · HTML 3 · Cuadro comparativo y tablas operativas · LF 2/1998 · Voluntariado Navarra</title>
+<style>
+:root{--bg:#f0fbff;--card:#fff;--s2:#e0f2fe;--line:#7dd3fc;--text:#0c4a6e;--muted:#0284c7;--p:#075985;--warn:#d97706;--red:#dc2626;--grn:#059669;--vio:#7c3aed;--teal:#0d9488;--rose:#e11d48;--sh:0 2px 10px rgba(7,89,133,.08)}
+[data-theme="dark"]{--bg:#020c1a;--card:#0a1e35;--s2:#0e2a45;--line:#075985;--text:#bae6fd;--muted:#38bdf8;--p:#38bdf8;--warn:#fbbf24;--red:#fca5a5;--grn:#6ee7b7;--vio:#c4b5fd;--teal:#5eead4;--rose:#fda4af;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:22px}
+.wrap{max-width:1220px;margin:0 auto}
+header{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:16px 22px;box-shadow:var(--sh);margin-bottom:16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+h1{font-size:.97rem;color:var(--p)}.sub{font-size:.72rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:6px 13px;border-radius:999px;font-size:.71rem}
+h2{font-size:.87rem;font-weight:800;color:#fff;background:var(--p);padding:7px 15px;border-radius:8px;margin:20px 0 10px;display:inline-block}
+.tbl{width:100%;border-collapse:collapse;box-shadow:var(--sh);border-radius:10px;overflow:hidden;background:var(--card);margin-bottom:14px}
+.tbl th{background:var(--p);color:#fff;text-align:left;padding:8px 11px;font-size:.68rem;text-transform:uppercase;letter-spacing:.03em}
+.tbl td{padding:8px 11px;border-bottom:1px solid var(--s2);font-size:.74rem;vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:nth-child(even) td{background:rgba(125,211,252,.04)}
+.tbl tr:hover td{background:var(--s2)}
+.g{color:#059669;font-weight:700}.ng{color:#dc2626;font-weight:700}.nu{color:var(--vio);font-weight:700}.ex{color:var(--warn);font-weight:700}.rs{color:var(--rose);font-weight:700}
+.note{padding:9px 12px;border-radius:0 9px 9px 0;font-size:.72rem;border-left:4px solid;margin:8px 0}
+.n-ok{background:rgba(5,150,105,.07);border-color:#059669}
+.n-err{background:rgba(220,38,38,.07);border-color:#dc2626}
+.n-w{background:rgba(180,83,9,.07);border-color:#b45309}
+.n-vio{background:rgba(124,58,237,.07);border-color:#7c3aed}
+.n-sky{background:var(--s2);border-color:var(--muted)}
+.n-teal{background:rgba(13,148,136,.07);border-color:#0d9488}
+.n-rose{background:rgba(225,29,72,.07);border-color:#e11d48}
+[data-theme="dark"] .n-w{background:#2a1300;color:#fde68a}
+[data-theme="dark"] .n-err{background:#1a0000;color:#fca5a5}
+[data-theme="dark"] .n-ok{background:#001a0e;color:#6ee7b7}
+[data-theme="dark"] .n-vio{background:#12003a;color:#c4b5fd}
+strong{color:var(--p)}
+.s3{color:#fbbf24;font-weight:800}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+<header>
+  <div>
+    <h1>Tema 51 · HTML 3 · Cuadro comparativo y tablas operativas para examen</h1>
+    <div class="sub">LF 2/1998, de 27 de marzo, del Voluntariado de Navarra · Mod. LF 4/2006 + LF 9/2006 · 6 caps. · 21 arts. · CNV</div>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</header>
+
+<!-- T1 -->
+<h2>T1 · Identificación de la norma y estructura <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Atributo</th><th>Contenido</th><th>Clave de examen</th></tr></thead>
+<tbody>
+<tr><td>Nombre</td><td>Ley Foral 2/1998, de 27 de marzo, del Voluntariado de Navarra</td><td>Siempre citar año 1998</td></tr>
+<tr><td>Publicación</td><td>BON núm. 43, de 10 de abril de 1998 · BOE de 2 de junio de 1998</td><td>—</td></tr>
+<tr><td>Entrada en vigor</td><td>Día siguiente a su publicación en el BON (D.F. Única)</td><td>—</td></tr>
+<tr><td>Modificaciones</td><td>LF 4/2006, de 4 de abril + LF 9/2006, de 5 de julio</td><td class="ex">LF 9/2006 = seguro: accidente + daños a 3ºs (sin enfermedad) ★★★</td></tr>
+<tr><td>Estructura</td><td>6 capítulos · 21 artículos · 1 D.A. · 1 D.T. · 1 D.F.</td><td>—</td></tr>
+<tr><td>Objeto doble (art. 1)</td><td>FOMENTAR la participación + ESTABLECER LAS RELACIONES entre voluntarios, entidades y AAPP</td><td>El objeto es doble ★★★</td></tr>
+<tr><td>Contexto 2026</td><td>En marzo de 2026 se aprobó una nueva LF del voluntariado navarro</td><td>El temario de oposición sigue referenciando la LF 2/1998</td></tr>
+</tbody>
+</table>
+
+<!-- T2 -->
+<h2>T2 · Concepto de voluntariado · art. 2 · Definición vs. Exclusiones <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Aspecto</th><th>Contenido</th><th>Clave de examen</th></tr></thead>
+<tbody>
+<tr><td>Definición (art. 2.1)</td><td>Comportamiento social de personas que <strong>libre y altruistamente</strong> se organizan en entidades sin ánimo de lucro para prestar servicios a personas o a la comunidad, con objetivo de la solidaridad</td><td>4 elementos: libertad + altruismo + entidad SAL + solidaridad</td></tr>
+<tr><td>Exclusión a) laboral</td><td>Actividades derivadas de relación laboral (cualquier tipo)</td><td>—</td></tr>
+<tr><td>Exclusión b) deber jurídico</td><td>Obligación personal o deber jurídico</td><td>—</td></tr>
+<tr><td>Exclusión c) familiar/amistad</td><td>Motivación de tipo familiar o de amistad</td><td>—</td></tr>
+<tr><td>Exclusión d) trabajo remunerado</td><td>Sustitución de un trabajador remunerado</td><td>—</td></tr>
+<tr><td>Exclusión e) esporádico</td><td>Actos <strong>esporádicos sin continuidad y programación</strong></td><td class="ng">Más preguntada: un acto puntual solidario NO es voluntariado ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T3 -->
+<h2>T3 · Los 8 principios básicos · art. 3 <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Letra</th><th>Principio</th><th>Contenido clave</th><th>Por qué se pregunta</th></tr></thead>
+<tbody>
+<tr><td class="g">L</td><td><strong>Libertad</strong></td><td>Opción personal de compromiso social; no puede ser impuesto</td><td>—</td></tr>
+<tr><td class="g">S</td><td><strong>Solidaridad</strong></td><td>Acciones en favor de los demás o de intereses colectivos</td><td>—</td></tr>
+<tr><td class="g">P</td><td><strong>Participación</strong></td><td>Principio democrático de intervención activa y directa de la ciudadanía</td><td>—</td></tr>
+<tr><td class="ex">G</td><td><strong>Gratuidad</strong></td><td>Sin búsqueda de beneficio material alguno. El reembolso de gastos NO es retribución</td><td class="ex">El más trampeado: gratuidad ≠ prohibición de reembolsar gastos ★★★</td></tr>
+<tr><td class="nu">A</td><td><strong>Autonomía</strong></td><td>Independencia respecto a los poderes públicos</td><td class="nu">Las entidades actúan con autonomía frente a las AAPP ★★★</td></tr>
+<tr><td class="g">R</td><td><strong>Responsabilidad</strong></td><td>Ayuda mantenida en el tiempo; evaluación de resultados</td><td>—</td></tr>
+<tr><td class="g">C</td><td><strong>Compromiso</strong> de las entidades</td><td>Atender necesidades sociales con calidad</td><td>—</td></tr>
+<tr><td class="g">D</td><td><strong>Principios democráticos</strong></td><td>Generales de convivencia</td><td>—</td></tr>
+</tbody>
+</table>
+<div class="note n-vio"><strong>Mnemotecnia:</strong> L – S – P – G – A – R – C – D. Son 8 principios. El examinador usa "7 principios" o "6 principios" como distractor.</div>
+
+<!-- T4 -->
+<h2>T4 · Persona voluntaria vs. Entidad de voluntariado · arts. 4 y 5 <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Aspecto</th><th>Persona voluntaria · art. 4</th><th>Entidad de voluntariado · art. 5</th></tr></thead>
+<tbody>
+<tr><td>Naturaleza jurídica</td><td><strong>Persona FÍSICA</strong></td><td><strong>Persona JURÍDICA</strong> legalmente constituida</td></tr>
+<tr><td>Fin</td><td>Realizar actividades cívicas o sociales del art. 2</td><td>Realizar programas o actividades sociales sin ánimo de lucro</td></tr>
+<tr><td>Requisito de integración</td><td>Debe integrarse en organización sin ánimo de lucro; no puede actuar en solitario</td><td>Debe utilizar <strong>MAYORITARIAMENTE</strong> personal voluntario ★★★</td></tr>
+<tr><td>Beneficiarios de su actuación</td><td>Personas o la comunidad</td><td>Personas o grupos sociales</td></tr>
+<tr><td>Trampa de examen</td><td>Las personas jurídicas no son voluntarias; son entidades</td><td>"Solo voluntarios" = FALSO. Mayoría de voluntarios, no exclusividad</td></tr>
+</tbody>
+</table>
+
+<!-- T5 -->
+<h2>T5 · Derechos de las personas voluntarias · art. 6 · Tabla completa <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Grupo</th><th>Derecho</th><th>Clave de examen</th></tr></thead>
+<tbody>
+<tr><td rowspan="6"><strong>PERSONAL</strong></td><td>No discriminación; respeto a libertad, dignidad, intimidad y creencias</td><td>—</td></tr>
+<tr><td>Participar en elaboración, diseño, ejecución y evaluación de programas</td><td>Las 4 fases del ciclo ★</td></tr>
+<tr><td>No ser asignada a tareas ajenas a los fines de la entidad</td><td>—</td></tr>
+<tr><td>Cambio de programa cuando haya causas justificadas</td><td>—</td></tr>
+<tr><td>Reconocimiento y <strong>certificación de su participación</strong></td><td>La certificación es un derecho ★</td></tr>
+<tr><td><strong>CESAR LIBREMENTE</strong> en su condición de voluntaria</td><td class="g">Más preguntado de los personales ★★★</td></tr>
+<tr><td rowspan="2"><strong>INFORMATIVO / FORMATIVO</strong></td><td>Ser informada de fines, organización, funcionamiento y situación económica de la entidad</td><td>—</td></tr>
+<tr><td>Ser <strong>formada, orientada y apoyada</strong> para el ejercicio de sus funciones</td><td>Formación = derecho, no solo obligación ★</td></tr>
+<tr><td rowspan="6"><strong>MATERIAL</strong></td><td>Actividad en condiciones adecuadas de seguridad e higiene</td><td>—</td></tr>
+<tr><td><strong>SEGURO</strong> contra riesgos de accidente y daños derivados del voluntariado</td><td class="ex">Desde LF 9/2006: accidente + daños a 3ºs · sin enfermedad ★★★</td></tr>
+<tr><td>Medios materiales necesarios para cumplir la actividad</td><td>—</td></tr>
+<tr><td><strong>Credencial identificativa</strong></td><td>Dato concreto preguntado ★</td></tr>
+<tr><td>Libre acceso a los actos donde presten colaboración</td><td>—</td></tr>
+<tr><td><strong>REEMBOLSO</strong> de los gastos realizados en el desempeño</td><td class="g">DERECHO, no retribución · no rompe la gratuidad ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T6 -->
+<h2>T6 · Obligaciones voluntarios (art. 7) vs. Obligaciones entidades (art. 11) <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Obligaciones personas voluntarias · art. 7</th><th>Obligaciones entidades · art. 11</th></tr></thead>
+<tbody>
+<tr><td>a)</td><td>Prestar servicios sin discriminación; respetar dignidad, libertad, intimidad y creencias de los destinatarios</td><td>Estar legalmente constituidas con personalidad jurídica</td></tr>
+<tr><td>b)</td><td>Máxima DILIGENCIA; acatar objetivos y normativa de la entidad; respetar recursos materiales</td><td>Respetar y dar respuesta positiva a los derechos de los voluntarios</td></tr>
+<tr><td>c)</td><td><strong>CONFIDENCIALIDAD</strong> de la información personal conocida ★★★</td><td>Actuar sin discriminación</td></tr>
+<tr><td>d)</td><td><strong>RECHAZAR</strong> cualquier contraprestación material recibida ★★★</td><td>Suscribir <strong>PÓLIZA DE SEGURO</strong> (accidente + daños 3ºs) ★★★</td></tr>
+<tr><td>e)</td><td>Participar activamente en la <strong>FORMACIÓN</strong> propuesta por la entidad</td><td>Llevar <strong>LIBRO DE ALTAS Y BAJAS</strong> de voluntarios ★★★</td></tr>
+<tr><td>f)</td><td>—</td><td>Reconocer apoyos públicos y privados en la memoria anual</td></tr>
+<tr><td>g)</td><td>—</td><td>Elaborar anualmente <strong>MEMORIA GENERAL</strong> (actividades + presupuesto + personal) → enviar al Dpto. ★★★</td></tr>
+</tbody>
+</table>
+<div class="note n-err"><strong>Distinción clave:</strong> el <strong>reembolso de gastos</strong> es un DERECHO del voluntario (art. 6). <strong>Rechazar contraprestaciones</strong> es una OBLIGACIÓN del voluntario (art. 7). Son opuestos y complementarios.</div>
+
+<!-- T7 -->
+<h2>T7 · Documento de incorporación · art. 8 <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Atributo</th><th>Contenido</th><th>Clave de examen</th></tr></thead>
+<tbody>
+<tr><td>Forma</td><td><strong>POR ESCRITO</strong></td><td>No es válida la incorporación verbal ★★★</td></tr>
+<tr><td>Contenido mínimo 1</td><td>Descripción, objetivos y fines de la organización y del programa concreto</td><td>—</td></tr>
+<tr><td>Contenido mínimo 2</td><td>Conjunto de derechos y deberes de ambas partes</td><td>—</td></tr>
+<tr><td>Contenido mínimo 3</td><td>Funciones, actividades, duración, tiempo de dedicación y <strong>causas y formas de desvinculación</strong></td><td class="ex">Las causas de desvinculación son contenido mínimo ★★★</td></tr>
+<tr><td>Contenido mínimo 4</td><td>Proceso de <strong>FORMACIÓN</strong> necesario para desarrollar la actividad</td><td>—</td></tr>
+<tr><td>Archivo</td><td>Se conserva en la entidad</td><td>—</td></tr>
+<tr><td>Duplicado</td><td>Se extiende <strong>DUPLICADO</strong> para la persona voluntaria</td><td class="g">Dato muy preguntado: la persona voluntaria recibe copia ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T8 -->
+<h2>T8 · Registro de entidades de voluntariado · art. 10 <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Aspecto</th><th>Contenido</th><th>Clave de examen</th></tr></thead>
+<tbody>
+<tr><td>Carácter de la inscripción</td><td>Toda entidad <strong>DEBERÁ</strong> inscribirse (obligatoria)</td><td class="ng">No es voluntaria ★★★</td></tr>
+<tr><td>Tramitación de oficio</td><td>Si ya está inscrita en un registro departamental del GN y manifiesta su deseo de registrarse</td><td>—</td></tr>
+<tr><td>Condición para apoyos</td><td>Estar inscrita es requisito para acceder a subvenciones y convenios (art. 14)</td><td>—</td></tr>
+<tr><td>Baja a petición</td><td>A petición de la propia entidad</td><td>—</td></tr>
+<tr><td>Baja de oficio 1</td><td>Por extinción de la personalidad jurídica</td><td>—</td></tr>
+<tr><td>Baja de oficio 2</td><td>Por <strong>incumplimiento GRAVE</strong> de la LF o su normativa de desarrollo</td><td class="ex">Solo el incumplimiento GRAVE causa baja de oficio ★★★</td></tr>
+<tr><td>Desarrollo</td><td>El Registro se desarrollará reglamentariamente</td><td>D.A. Única: plazo máximo 1 año desde entrada en vigor</td></tr>
+</tbody>
+</table>
+
+<!-- T9 -->
+<h2>T9 · Fomento del voluntariado y Distinción anual · arts. 12–15 <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Artículo</th><th>Medida</th><th>Clave de examen</th></tr></thead>
+<tbody>
+<tr><td>Art. 12</td><td>Las AAPP de Navarra fomentarán el voluntariado mediante: información, campañas de divulgación, reconocimiento, promoción, formación, asistencia técnica y <strong>cesión temporal de personal</strong> de las AAPP</td><td class="ex">Cesión temporal de personal es un dato sorprendente ★</td></tr>
+<tr><td>Art. 13</td><td>Las personas voluntarias tendrán libre acceso a los actos donde la entidad tenga programada oficialmente una actividad; bonificaciones o reducciones reglamentarias</td><td>—</td></tr>
+<tr><td>Art. 14</td><td>La Comunidad Foral apoyará económicamente mediante <strong>SUBVENCIONES</strong> y <strong>CONVENIOS O CONCIERTOS</strong>; requisito: estar inscritas en el Registro</td><td class="g">Dos vías económicas: subvenciones + convenios/conciertos ★★★</td></tr>
+<tr><td>Art. 15</td><td><strong>DISTINCIÓN DE PERSONA VOLUNTARIA DE NAVARRA</strong>: concede el Gobierno de Navarra, <strong>ANUALMENTE</strong>, basándose en opinión del CNV; para persona física o jurídica</td><td class="nu">La concede el GN; se basa en opinión del CNV ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T10 -->
+<h2>T10 · Comisión Interdepartamental vs. CNV · arts. 16 y 19–21 <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Aspecto</th><th>Comisión Interdepartamental · art. 16</th><th>Consejo Navarro del Voluntariado · arts. 19–21</th></tr></thead>
+<tbody>
+<tr><td>Naturaleza</td><td>Órgano de coordinación interdepartamental</td><td>Órgano de <strong>PARTICIPACIÓN</strong> con carácter <strong>CONSULTIVO</strong> ★★★</td></tr>
+<tr><td>Composición</td><td>Directores Generales de los Departamentos relacionados con el voluntariado</td><td>7 DDGG + 3 técnicos + 3 locales + 7 entidades + 3 voluntarios + 3 sindicatos + presidencia + vicepresidencia</td></tr>
+<tr><td>Presidencia y Secretaría</td><td>El Departamento que gestione el Registro</td><td>Presidencia: titular del Departamento adscrito. Vicepresidencia: elegida entre entidades/voluntarios/sindicatos ★★★</td></tr>
+<tr><td>Función más preguntada</td><td>Publicar <strong>ANUALMENTE la GUÍA DEL VOLUNTARIADO EN NAVARRA</strong> ★★★</td><td>Informar preceptivamente anteproyectos normativos en <strong>15 DÍAS</strong> ★★★</td></tr>
+<tr><td>Otras funciones</td><td>Política global de fomento + coordinar subvenciones y conciertos (evitar duplicidades)</td><td>Informe anual + proponer reglamento propio al GN + asesorar a las AAPP</td></tr>
+<tr><td>Mandato</td><td>Sin mandato definido</td><td>Vocalías de entidades, voluntarios y sindicatos: <strong>4 AÑOS</strong> ★★★</td></tr>
+</tbody>
+</table>
+<div class="note n-err"><strong>Trampa más frecuente:</strong> "la Guía del Voluntariado en Navarra la publica el CNV" → FALSO. La publica la <strong>Comisión Interdepartamental</strong> (art. 16).</div>
+
+<!-- T11 -->
+<h2>T11 · Composición del CNV · art. 21 · Tabla de números ★★★</h2>
+<table class="tbl">
+<thead><tr><th>Cargo / Vocalía</th><th>Nº</th><th>Designación / Origen</th><th>Mandato</th></tr></thead>
+<tbody>
+<tr><td><strong>Presidencia</strong></td><td class="g">1</td><td>Titular del Departamento al que esté adscrito el CNV (razón de cargo)</td><td>Cargo</td></tr>
+<tr><td><strong>Vicepresidencia</strong></td><td class="g">1</td><td>Elegida por y entre los representantes de entidades, voluntarios y sindicales</td><td>—</td></tr>
+<tr><td>Directores/as Generales GN</td><td class="nu"><strong>7</strong></td><td>Departamentos relacionados con programas de voluntariado</td><td>Cargo</td></tr>
+<tr><td>Técnicos de la Administración Foral</td><td class="ex"><strong>3</strong></td><td>Expertos en voluntariado del Departamento adscrito</td><td>—</td></tr>
+<tr><td>Representantes Entidades Locales</td><td class="ex"><strong>3</strong></td><td>Designados por la Federación Navarra de Municipios y Concejos (FNMC)</td><td><strong>4 años</strong></td></tr>
+<tr><td>Representantes entidades voluntariado inscritas</td><td class="nu"><strong>7</strong></td><td>Del Registro de entidades de voluntariado</td><td><strong>4 años</strong></td></tr>
+<tr><td>Personas voluntarias</td><td class="ex"><strong>3</strong></td><td>Representativas del colectivo voluntario</td><td><strong>4 años</strong></td></tr>
+<tr><td>Representantes centrales sindicales</td><td class="ex"><strong>3</strong></td><td>Las más representativas en Navarra</td><td><strong>4 años</strong></td></tr>
+<tr><td><strong>Secretaría</strong></td><td class="g">1</td><td>Secretario/a Técnico del Departamento adscrito · nombrado/a por la Presidencia</td><td>—</td></tr>
+</tbody>
+</table>
+<div class="note n-vio"><strong>Los dos sietes:</strong> 7 Directores Generales + 7 representantes de entidades de voluntariado. Los dos treses sociedad civil: 3 locales (FNMC) + 3 voluntarios + 3 sindicatos.</div>
+
+<!-- T12 -->
+<h2>T12 · Funciones del CNV · art. 20 · Tabla completa <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Letra</th><th>Función</th><th>Dato examinable</th></tr></thead>
+<tbody>
+<tr><td class="g"><strong>a)</strong></td><td>Informar <strong>PRECEPTIVAMENTE</strong> anteproyectos y proyectos de disposiciones normativas que afecten al voluntariado</td><td class="g">Plazo: <strong>15 DÍAS</strong> desde que sea requerido ★★★</td></tr>
+<tr><td>b)</td><td>Detectar y analizar necesidades básicas del voluntariado en Navarra</td><td>—</td></tr>
+<tr><td>c)</td><td>Asesorar y elevar propuestas a las AAPP; proponer criterios preferentes en la actividad subvencionadora</td><td>—</td></tr>
+<tr><td>d)</td><td>Proponer medidas de fomento del voluntariado</td><td>—</td></tr>
+<tr><td>e)</td><td>Ser <strong>INFORMADO</strong> del seguimiento y evaluación de programas y subvenciones</td><td>El CNV tiene derecho de información, no de decisión</td></tr>
+<tr><td class="g"><strong>f)</strong></td><td>Emitir <strong>INFORME ANUAL</strong> sobre el estado del voluntariado en Navarra</td><td class="g">Anualidad del informe ★★★</td></tr>
+<tr><td>g)</td><td>Promover la presencia de agentes sociales en órganos de participación</td><td>—</td></tr>
+<tr><td class="g"><strong>h)</strong></td><td><strong>PROPONER AL GOBIERNO</strong> el Reglamento de Funcionamiento del propio CNV</td><td class="g">El CNV propone su propio reglamento al GN ★★★</td></tr>
+<tr><td>i)</td><td>Aprobar la memoria anual de sus propias actividades</td><td>—</td></tr>
+</tbody>
+</table>
+
+<!-- T13 -->
+<h2>T13 · Artículos clave · guía de referencia rápida <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Art.</th><th>Contenido</th><th>Importancia</th></tr></thead>
+<tbody>
+<tr><td class="g">Art. 1</td><td>Objeto doble: fomentar + establecer relaciones entre voluntarios, entidades y AAPP</td><td>★★</td></tr>
+<tr><td class="g">Art. 2</td><td>Concepto de voluntariado (4 elementos) + 5 exclusiones (esporádico)</td><td>★★★</td></tr>
+<tr><td class="g">Art. 3</td><td>8 principios básicos (L-S-P-G-A-R-C-D)</td><td>★★★</td></tr>
+<tr><td>Art. 4</td><td>Persona voluntaria: persona física + entidad SAL + actividad cívica o social</td><td>★★</td></tr>
+<tr><td class="g">Art. 5</td><td>Entidades de voluntariado: persona jurídica + mayoritariamente voluntarios</td><td>★★★</td></tr>
+<tr><td class="g">Art. 6</td><td>Derechos de las personas voluntarias: 3 grupos (personal / informativo / material)</td><td>★★★</td></tr>
+<tr><td class="g">Art. 7</td><td>Obligaciones: diligencia, confidencialidad, rechazar contraprestaciones, formación</td><td>★★★</td></tr>
+<tr><td class="g">Art. 8</td><td>Documento de incorporación: escrito + 4 contenidos mínimos + duplicado</td><td>★★★</td></tr>
+<tr><td class="g">Art. 10</td><td>Registro de entidades: obligatorio + causas de baja (incumplimiento grave)</td><td>★★★</td></tr>
+<tr><td class="g">Art. 11</td><td>Obligaciones entidades: seguro + libro de altas/bajas + memoria anual</td><td>★★★</td></tr>
+<tr><td>Art. 14</td><td>Apoyo económico: subvenciones + convenios o conciertos</td><td>★★</td></tr>
+<tr><td class="g">Art. 15</td><td>Distinción anual de Voluntario/a de Navarra: GN + basándose en opinión del CNV</td><td>★★★</td></tr>
+<tr><td class="g">Art. 16</td><td>Comisión Interdepartamental: composición + Guía anual del Voluntariado</td><td>★★★</td></tr>
+<tr><td class="g">Art. 18</td><td>Entidades Locales: competencia en exclusiva en su ámbito territorial</td><td>★★★</td></tr>
+<tr><td class="g">Art. 19</td><td>CNV: órgano de participación con carácter consultivo</td><td>★★★</td></tr>
+<tr><td class="g">Art. 20</td><td>Funciones del CNV: 9 funciones, plazo 15 días, informe anual, proponer reglamento al GN</td><td>★★★</td></tr>
+<tr><td class="g">Art. 21</td><td>Composición del CNV: 7-3-3-7-3-3 + presidencia cargo + 4 años de mandato</td><td>★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T14 -->
+<h2>T14 · Las 12 trampas del examen <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Afirmación incorrecta</th><th>Corrección exacta</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Un acto puntual solidario es voluntariado según la LF 2/1998</td><td>Art. 2.2.e: los actos <strong>esporádicos sin continuidad y programación</strong> quedan excluidos</td></tr>
+<tr><td>2</td><td>El voluntariado puede realizarse de forma individual sin integrarse en entidad</td><td>Siempre debe integrarse en una <strong>organización sin ánimo de lucro</strong></td></tr>
+<tr><td>3</td><td>La entidad de voluntariado debe estar formada exclusivamente por voluntarios</td><td>Deben utilizarse <strong>MAYORITARIAMENTE</strong>; puede haber personal asalariado</td></tr>
+<tr><td>4</td><td>El reembolso de gastos convierte el voluntariado en remunerado</td><td>El reembolso es un <strong>DERECHO</strong> del voluntario; no es retribución ni rompe la gratuidad</td></tr>
+<tr><td>5</td><td>El seguro obligatorio del voluntariado cubre accidente y enfermedad</td><td>Desde LF 9/2006: cubre <strong>accidente y daños a terceros</strong>; la enfermedad quedó excluida</td></tr>
+<tr><td>6</td><td>La inscripción de las entidades en el Registro de voluntariado es voluntaria</td><td>Art. 10: toda entidad <strong>DEBERÁ</strong> inscribirse; es una obligación legal</td></tr>
+<tr><td>7</td><td>La baja en el Registro se produce por cualquier incumplimiento de la LF</td><td>Solo por incumplimiento <strong>GRAVE</strong>; no cualquier infracción provoca la baja</td></tr>
+<tr><td>8</td><td>El CNV es un órgano de gestión del voluntariado navarro</td><td>Art. 19: es un órgano de <strong>PARTICIPACIÓN con carácter CONSULTIVO</strong></td></tr>
+<tr><td>9</td><td>La Presidencia del CNV es elegida por los miembros del Consejo</td><td>Art. 21.a: la ocupa por razón de cargo el <strong>titular del Departamento adscrito</strong></td></tr>
+<tr><td>10</td><td>La Guía del Voluntariado en Navarra la publica anualmente el CNV</td><td>Art. 16: la publica la <strong>Comisión Interdepartamental</strong></td></tr>
+<tr><td>11</td><td>El CNV tiene 5 representantes de entidades de voluntariado inscritas</td><td>Art. 21.f: son <strong>7 representantes</strong> de entidades de voluntariado inscritas</td></tr>
+<tr><td>12</td><td>El plazo para que el CNV informe anteproyectos normativos es 30 días</td><td>Art. 20.a: el plazo es de <strong>15 DÍAS</strong> desde que sea requerido</td></tr>
+</tbody>
+</table>
+
+</div>
+</body>
+</html>
