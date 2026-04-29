@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 37 · HTML 3 · Cuadro comparativo y tablas operativas · LO 10/2022</title>
+<style>
+:root{--bg:#fff5f5;--card:#fff;--s2:#fff5f5;--line:#fca5a5;--text:#7f1d1d;--muted:#dc2626;--p:#b91c1c;--warn:#d97706;--sky:#0284c7;--grn:#059669;--vio:#7c3aed;--sh:0 2px 10px rgba(185,28,28,.09)}
+[data-theme="dark"]{--bg:#1a0404;--card:#2d0a0a;--s2:#3d0f0f;--line:#7f1d1d;--text:#fecaca;--muted:#fca5a5;--p:#fca5a5;--warn:#fbbf24;--sky:#38bdf8;--grn:#6ee7b7;--vio:#c4b5fd;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.5;background:var(--bg);color:var(--text);padding:22px}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.97rem;color:var(--p)}.hdr p{font-size:.74rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.72rem}
+h2{font-size:.87rem;font-weight:800;color:#fff;background:var(--p);padding:8px 15px;border-radius:7px;margin:22px 0 10px;display:inline-block}
+.tw{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:var(--sh);overflow-x:auto;margin-bottom:12px}
+table{width:100%;border-collapse:collapse}
+th{background:var(--s2);color:var(--muted);font-size:.67rem;text-transform:uppercase;letter-spacing:.05em;padding:8px 10px;text-align:left}
+td{padding:8px 10px;border-bottom:1px solid var(--s2);font-size:.78rem;vertical-align:top}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+.badge{display:inline-block;padding:3px 9px;border-radius:999px;font-size:.65rem;font-weight:700;border:1px solid transparent;white-space:nowrap}
+.b-ok{background:rgba(5,150,105,.12);color:#059669;border-color:rgba(5,150,105,.3)}
+.b-err{background:rgba(220,38,38,.12);color:#dc2626;border-color:rgba(220,38,38,.3)}
+.b-warn{background:rgba(217,119,6,.12);color:var(--warn);border-color:rgba(217,119,6,.3)}
+.b-vio{background:rgba(124,58,237,.12);color:var(--vio);border-color:rgba(124,58,237,.3)}
+.b-sky{background:rgba(2,132,199,.12);color:var(--sky);border-color:rgba(2,132,199,.3)}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.75rem;border-left:4px solid;margin:8px 0}
+.n-ok{background:rgba(5,150,105,.07);border-color:#059669;color:#065f46}
+.n-warn{background:#fef3c7;border-color:#d97706;color:#78350f}
+.n-err{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .n-warn{background:#451a03;color:#fde68a}
+[data-theme="dark"] .n-err{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .n-ok{background:rgba(110,231,183,.07);color:#6ee7b7}
+strong{color:var(--p)}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 37 · HTML 3 · Cuadro comparativo y tablas operativas para examen</h1>
+    <p>LO 10/2022, de 6 de septiembre, de garantía integral de la libertad sexual · "Solo Sí es Sí" · Título Preliminar · Títulos II, IV, VI y VII</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- T1 IDENTIFICACIÓN -->
+<h2>T1 · Identificación de la norma</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Campo</th><th>Dato</th></tr></thead>
+  <tbody>
+    <tr><td>Nombre completo</td><td>Ley Orgánica 10/2022, de 6 de septiembre, de garantía integral de la libertad sexual</td></tr>
+    <tr><td>Denominación coloquial</td><td>"Ley del Solo Sí es Sí"</td></tr>
+    <tr><td>Publicación</td><td>BOE núm. 215, de 7 de septiembre de 2022</td></tr>
+    <tr><td>Entrada en vigor</td><td><strong>7 de octubre de 2022</strong> (30 días tras su publicación) <span class="badge b-warn">≠ LO 1/2004 → día siguiente</span></td></tr>
+    <tr><td>Rango</td><td>Ley Orgánica (art. 81 CE) — requiere mayoría absoluta del Congreso</td></tr>
+    <tr><td>Estructura</td><td>Título Preliminar + 8 Títulos + 5 D.A. + 1 D.T. + 25 D.F.</td></tr>
+    <tr><td>Marco internacional</td><td>Convenio de Estambul (vigente en España desde 01/08/2014) + recomendaciones del GREVIO</td></tr>
+    <tr><td>Modificación CP</td><td>D.F. 4ª: elimina la distinción agresión sexual/abuso sexual → solo existe la <strong>agresión sexual</strong></td></tr>
+    <tr><td>Norma modificada posterior</td><td>LO 4/2023, de 27 de abril, modifica parcialmente las penas de la LO 10/2022</td></tr>
+  </tbody>
+</table>
+<div class="note n-warn">⚠ La entrada en vigor es a los 30 días, no al día siguiente como la LO 1/2004. Este es el dato de identificación más preguntado.</div>
+</div>
+
+<!-- T2 ESTRUCTURA -->
+<h2>T2 · Estructura de la LO 10/2022</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Título</th><th>Denominación</th><th>Arts. (aprox.)</th><th>Relación con el temario</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Preliminar</strong></td><td>Objeto, finalidad, principios y ámbito</td><td>1–5</td><td><span class="badge b-err">EN TEMARIO</span></td></tr>
+    <tr><td>I</td><td>Violencias sexuales: definición y formas</td><td>6</td><td>—</td></tr>
+    <tr><td><strong>II</strong></td><td>Prevención, sensibilización y detección</td><td>7–22</td><td><span class="badge b-err">EN TEMARIO</span> Caps. I y II</td></tr>
+    <tr><td>III</td><td>Formación de profesionales</td><td>23–25</td><td>—</td></tr>
+    <tr><td><strong>IV</strong></td><td>Derecho a la asistencia integral especializada y accesible</td><td>26–42</td><td><span class="badge b-err">EN TEMARIO</span> Cap. I</td></tr>
+    <tr><td>V</td><td>Autonomía económica, derechos laborales y vivienda</td><td>43–55</td><td>—</td></tr>
+    <tr><td><strong>VI</strong></td><td>Acceso y obtención de justicia</td><td>56–72</td><td><span class="badge b-err">EN TEMARIO</span></td></tr>
+    <tr><td><strong>VII</strong></td><td>Derecho a la reparación</td><td>73–81</td><td><span class="badge b-err">EN TEMARIO</span></td></tr>
+    <tr><td>VIII</td><td>Tutela institucional</td><td>82–84</td><td>—</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T3 ART. 1 OBJETO FINALIDAD -->
+<h2>T3 · Art. 1 — Objeto, finalidad y los 10 fines específicos</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Precepto</th><th>Contenido</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td>Art. 1.1 <strong>OBJETO</strong></td><td>"Garantía y protección integral del derecho a la libertad sexual y la <strong>ERRADICACIÓN</strong> de todas las violencias sexuales"</td><td>La clave es ERRADICACIÓN (no solo prevención). El examen puede decir "prevención" o "protección" → incompleto</td></tr>
+    <tr><td>Art. 1.2 <strong>FINALIDAD</strong></td><td>Políticas <strong>efectivas, globales y coordinadas</strong> entre AAPP que garanticen la sensibilización, prevención, detección y sanción de las VS, e incluyan medidas de protección integral + atención integral inmediata + recuperación</td><td>Las 4 palabras clave de la finalidad: sensibilización · prevención · detección · sanción</td></tr>
+  </tbody>
+</table>
+</div>
+<div class="tw">
+<table>
+  <thead><tr><th>Letra</th><th>Fin específico (art. 1.3) ★★</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td>a)</td><td>Mejorar la investigación, recolección y producción de datos sobre VS</td><td>—</td></tr>
+    <tr><td>b)</td><td>Fortalecer las medidas de sensibilización y prevención</td><td>—</td></tr>
+    <tr><td>c)</td><td>Garantizar los derechos de las víctimas y atención integral inmediata</td><td>La atención es INMEDIATA: el examen puede omitir el adjetivo</td></tr>
+    <tr><td>d)</td><td>Garantizar la <strong>autonomía económica</strong> de las víctimas</td><td>Corresponde al Título V (derechos laborales y vivienda)</td></tr>
+    <tr><td>e)</td><td>Garantizar la <strong>reparación integral</strong> de las víctimas</td><td>Corresponde al Título VII</td></tr>
+    <tr><td>f)</td><td>Establecer un sistema integral de <strong>tutela institucional</strong> (Delegación del Gobierno contra la VG)</td><td>Corresponde al Título VIII</td></tr>
+    <tr><td>g)</td><td>Fortalecer el marco legal (articulado con la Ley 4/2015 del Estatuto de la víctima)</td><td>—</td></tr>
+    <tr><td>h)</td><td>Promover la colaboración con entidades y <strong>movimiento feminista</strong></td><td>El examen puede omitir la mención al movimiento feminista</td></tr>
+    <tr><td>i)</td><td>Garantizar la formación de <strong>profesionales intervinientes</strong></td><td>Corresponde al Título III</td></tr>
+    <tr><td>j)</td><td>Asegurar la <strong>transversalidad</strong> de las medidas</td><td>Son 10 fines (a-j). El examen puede decir 8</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T4 ART. 2 PRINCIPIOS -->
+<h2>T4 · Art. 2 — Los 10 principios rectores</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Letra</th><th>Principio rector</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td>a)</td><td>Respeto, protección y garantía de los derechos humanos y fundamentales</td><td>Base de todos los principios</td></tr>
+    <tr><td>b)</td><td><strong>Diligencia debida</strong></td><td>Obliga al Estado a prevenir, proteger, asistir, reparar y promover la justicia. Las 5 esferas de la diligencia debida</td></tr>
+    <tr><td>c)</td><td>Enfoque de género</td><td>Las VS son manifestación de la discriminación estructural contra las mujeres</td></tr>
+    <tr><td>d)</td><td>Prohibición de la discriminación</td><td>Sin discriminación por ninguna causa</td></tr>
+    <tr><td>e) ★★</td><td><strong>Atención a la discriminación interseccional</strong></td><td>Las mujeres con factores añadidos (discapacidad, etnia, edad, situación administrativa…) sufren vulnerabilidad múltiple. Es el concepto más novedoso respecto a la LO 1/2004</td></tr>
+    <tr><td>f)</td><td><strong>Especialización</strong> de las intervenciones</td><td>Los profesionales que atienden VS deben estar especializados en VS</td></tr>
+    <tr><td>g)</td><td>Coordinación y cooperación interinstitucional</td><td>Entre AAPP, SS, sanidad, justicia, policía y organizaciones</td></tr>
+    <tr><td>h)</td><td>Participación de las víctimas y sus organizaciones</td><td>En el diseño y evaluación de políticas y servicios</td></tr>
+    <tr><td>i) ★★★</td><td><strong>No revictimización</strong> — prohibición de prácticas revictimizantes</td><td>El más preguntado: toda la respuesta institucional debe evitar la victimización secundaria</td></tr>
+    <tr><td>j) ★</td><td><strong>Perspectiva de infancia y adolescencia</strong></td><td>Exclusivo de la LO 10/2022: las menores víctimas requieren atención especializada adaptada (arts. 37-38: Barnahus)</td></tr>
+  </tbody>
+</table>
+<div class="note n-warn">⚠ Son 10 principios (a-j). El examen puede decir 8 (confusión con los 9 de la LF 14/2015) o añadir un undécimo falso. Los más preguntados: i) [no revictimización] y e) [interseccionalidad].</div>
+</div>
+
+<!-- T5 ART. 3 ÁMBITO -->
+<h2>T5 · Art. 3 — Ámbito de aplicación</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Dimensión</th><th>LO 1/2004 (comparación)</th><th>LO 10/2022</th></tr></thead>
+  <tbody>
+    <tr><td>Tipo de violencia</td><td>Solo violencia en pareja o expareja</td><td><strong>CUALQUIER</strong> tipo de violencia sexual</td></tr>
+    <tr><td>Ámbito</td><td>Fundamentalmente privado/doméstico</td><td>Público <strong>Y</strong> privado</td></tr>
+    <tr><td>Digital</td><td>No regulado específicamente</td><td>Incluye expresamente las VS cometidas en el <strong>ámbito digital</strong></td></tr>
+    <tr><td>Relación víctima-agresor</td><td>Restringida a la relación sentimental</td><td>Sin restricción: cualquier persona puede ser autora</td></tr>
+    <tr><td>Sujetos pasivos</td><td>Mujeres mayores de edad (fundamentalmente)</td><td>Incluye a <strong>niñas, niños y adolescentes</strong> expresamente (principio j)</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T6 TÍTULO II CAP I PREVENCIÓN -->
+<h2>T6 · Título II · Cap. I — Prevención y sensibilización (arts. 7–18)</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Ámbito</th><th>Arts.</th><th>Contenido principal</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Educativo</strong></td><td>7–8</td><td>Integración de la perspectiva de género y educación <strong>afectivo-sexual</strong> en todas las etapas educativas. Protocolos en centros educativos. Formación del profesorado y orientadores</td><td>La educación afectivo-sexual es obligatoria en <strong>TODAS</strong> las etapas educativas</td></tr>
+    <tr><td><strong>Sanitario y sociosanitario</strong></td><td>9–10</td><td>Formación de todo el personal sanitario. Protocolos de detección, atención y derivación de víctimas de VS. Atención a formas ocultas (MGF, aborto forzoso)</td><td>Los centros sanitarios tienen protocolos de <strong>detección Y derivación</strong> (las dos funciones)</td></tr>
+    <tr><td>Digital y comunicación</td><td>11</td><td>Medidas frente a la VS digital, pornografía no consentida y acoso online</td><td>La LO 10/2022 es la primera ley orgánica española que regula expresamente la VS digital</td></tr>
+    <tr><td>Publicitario</td><td>12</td><td>Prohibición de publicidad que fomente las VS o las banalice</td><td>—</td></tr>
+    <tr><td>Laboral</td><td>13</td><td>Protocolos de actuación en empresas frente al acoso sexual. Obligaciones de negociación colectiva</td><td>Empresas de +50 trabajadores: obligación de protocolo frente al acoso sexual</td></tr>
+    <tr><td>Adm. Pública y Fuerzas Armadas</td><td>14</td><td>Planes de igualdad y protocolos específicos en el sector público y castrense</td><td>—</td></tr>
+    <tr><td>Residencial y privación de libertad</td><td>15–17</td><td>Protocolos en centros residenciales y penitenciarios para víctimas de VS</td><td>—</td></tr>
+    <tr><td><strong>Espacios públicos seguros</strong></td><td><strong>18</strong></td><td>Las AAPP garantizarán que los espacios públicos, especialmente los de <strong>concurrencia nocturna</strong>, sean libres de VS. Protocolos en locales de ocio, festivales y eventos. Puntos de atención a víctimas en eventos. Formación al personal de seguridad. Señalización</td><td><span class="badge b-warn">Concepto EXCLUSIVO LO 10/2022</span> El examen pregunta qué norma introduce "espacios públicos seguros" → LO 10/2022, art. 18</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T7 TÍTULO II CAP II DETECCIÓN -->
+<h2>T7 · Título II · Cap. II — Detección e intervención (arts. 19–22)</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Aspecto</th><th>Cap. I (Prevención)</th><th>Cap. II (Detección e intervención)</th></tr></thead>
+  <tbody>
+    <tr><td>Finalidad</td><td>EVITAR que ocurra la VS</td><td>IDENTIFICAR y dar respuesta cuando ya existe sospecha o situación de VS</td></tr>
+    <tr><td>Momento</td><td>ANTES de la violencia</td><td>DURANTE o DESPUÉS de la violencia</td></tr>
+    <tr><td>Instrumentos</td><td>Sensibilización, educación, formación, protocolos preventivos</td><td>Indicadores de riesgo, protocolos de detección, derivación y coordinación</td></tr>
+  </tbody>
+</table>
+<div class="note n-err">⚠ El examen confunde el Cap. I con el Cap. II. La distinción prevención ≠ detección es el dato de examen clave del Título II.</div>
+</div>
+<div class="tw">
+<table>
+  <thead><tr><th>Ámbito de detección</th><th>Contenido</th><th>Formas ocultas detectadas</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Educativo</strong></td><td>Protocolos de detección en centros educativos. Formación específica del personal docente y orientadores en indicadores de VS</td><td>VS en el entorno familiar y de pareja de menores</td></tr>
+    <tr><td><strong>Sanitario</strong></td><td>Protocolos de detección en consultas de atención primaria y especializada. Obligación de notificar indicios de VS</td><td>Mutilación genital femenina, aborto forzoso, esterilización forzosa ★</td></tr>
+    <tr><td><strong>Sociosanitario y SS</strong></td><td>Indicadores de riesgo en la atención a usuarios. Mecanismos de derivación a servicios especializados. Coordinación entre SS, sanidad y sistema judicial</td><td>VS en entornos de cuidado, dependencia y atención social</td></tr>
+  </tbody>
+</table>
+<div class="note n-warn">⚠ Las 3 formas ocultas más preguntadas: <strong>mutilación genital femenina + aborto forzoso + esterilización forzosa</strong>. El examen suele omitir la esterilización forzosa.</div>
+</div>
+
+<!-- T8 TÍTULO IV CAP I -->
+<h2>T8 · Título IV · Cap. I — Alcance y garantía del derecho a la asistencia integral (art. 34)</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>#</th><th>Contenido mínimo del derecho (art. 34)</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td><strong>Información y orientación</strong> a las víctimas sobre sus derechos y recursos</td><td>Primera dimensión: siempre presente en cualquier intervención</td></tr>
+    <tr><td>2 ★★</td><td><strong>Atención médica y psicológica</strong>, tanto <strong>inmediata y de crisis</strong> como de <strong>recuperación a largo plazo</strong></td><td>Tiene DOS fases: inmediata + largo plazo. El examen suele omitir el largo plazo</td></tr>
+    <tr><td>3</td><td>Atención a las necesidades <strong>económicas, laborales, de vivienda y sociales</strong></td><td>4 tipos de necesidades juntas; el examen las separa o las reduce</td></tr>
+    <tr><td>4</td><td><strong>Asesoramiento jurídico previo</strong> y asistencia jurídica gratuita en los procesos derivados de la violencia</td><td>El asesoramiento jurídico es PREVIO al proceso y también durante el proceso</td></tr>
+    <tr><td>5</td><td><strong>Seguimiento</strong> de sus reclamaciones de derechos</td><td>No solo atención puntual: hay un seguimiento activo de las reclamaciones</td></tr>
+    <tr><td>6</td><td>Servicios de <strong>traducción e interpretación</strong></td><td>Para víctimas que no hablen la lengua del país</td></tr>
+    <tr><td>7</td><td>Asistencia <strong>especializada</strong> para mujeres con discapacidad, niñas y niños</td><td>La especialización para menores conecta con el principio j) del art. 2 (perspectiva de infancia)</td></tr>
+  </tbody>
+</table>
+<div class="note n-ok">💡 El listado del art. 34 dice <strong>"al menos"</strong>: es un mínimo, no un máximo. Las CCAA pueden ampliarlo. El examen puede decir que la lista es exhaustiva → FALSO.</div>
+</div>
+
+<!-- T9 CENTROS DE CRISIS Y BARNAHUS -->
+<h2>T9 · Centros de crisis (art. 35) y Barnahus (arts. 37–38)</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Recurso</th><th>Definición</th><th>Características clave</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Centros de crisis</strong> (art. 35)</td><td>Servicios públicos interdisciplinares de atención PERMANENTE que ofrecen asistencia de crisis a víctimas de VS, sus familiares y personas del entorno</td><td>1. Atención permanente: <strong>24h/365d</strong><br>2. Atención <strong>interdisciplinar</strong>: sanitaria + psicológica + jurídica + social<br>3. Para víctimas + <strong>familiares</strong> + <strong>personas del entorno</strong></td><td><span class="badge b-warn">NOVEDAD ABSOLUTA LO 10/2022</span> No existen en LO 1/2004 ni en LF 14/2015. El examen pregunta qué norma los regula</td></tr>
+    <tr><td><strong>Barnahus / Casa de Niños y Niñas</strong> (arts. 37-38)</td><td>Modelo <strong>anglosajón/escandinavo</strong> (Children's House): espacio único donde todos los profesionales acuden al menor, no al revés</td><td>1. <strong>Un único espacio</strong> para todos los profesionales: sanitarios, psicólogos, SS, policía, forenses, personal judicial<br>2. Reduce la <strong>victimización secundaria</strong> del menor<br>3. Mejora la <strong>calidad del testimonio</strong> para la investigación penal</td><td>NO es una innovación española original: es un modelo europeo preexistente. El examen puede decir que es una creación de la LO 10/2022 → PARCIALMENTE FALSO</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T10 TÍTULO VI JUSTICIA -->
+<h2>T10 · Título VI — Acceso y obtención de justicia</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Capítulo</th><th>Contenido</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Cap. I · Acreditación del delito</strong></td><td>Especialización en VS de las <strong>unidades de valoración forense integral</strong> de los Juzgados de Violencia sobre la Mujer. Obligación de especialización del personal médico forense en VS</td><td>Los juzgados competentes son los <strong>Juzgados de Violencia sobre la Mujer</strong> (no los Juzgados de Guardia genéricos)</td></tr>
+    <tr><td><strong>Cap. II · Medidas judiciales de protección</strong></td><td>Protección reforzada articulada con la <strong>Ley 4/2015 del Estatuto de la víctima</strong>. Acompañamiento especializado durante todo el proceso judicial. Protección de datos y limitación a la publicidad de los procesos. Protección de mujeres españolas en el exterior frente a VS</td><td>La norma articulada es la <strong>Ley 4/2015 del Estatuto de la víctima del delito</strong>. El examen puede confundirla con la LO 1/2004</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T11 TÍTULO VII REPARACIÓN -->
+<h2>T11 · Título VII — Derecho a la reparación (arts. 45–50)</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Aspecto</th><th>Contenido</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Naturaleza del derecho</strong> ★★★</td><td>La LO 10/2022 es la <strong>primera norma española</strong> que consagra la reparación de las víctimas de VS como un <strong>DERECHO FUNDAMENTAL</strong> en el marco de obligaciones de DDHH del Estado</td><td>Ninguna norma anterior (LO 1/2004, LF 14/2015) reconoce la reparación con este rango. El examen pregunta qué norma la consagra como DF → LO 10/2022</td></tr>
+    <tr><td><strong>Dimensión 1: INDEMNIZACIÓN</strong> ★★★</td><td>Por daños materiales y morales conforme a las normas penales sobre responsabilidad civil derivada de delito (arts. 109 y ss. CP)</td><td>La indemnización está ligada a la responsabilidad civil derivada del delito (proceso penal)</td></tr>
+    <tr><td><strong>Dimensión 2: RECUPERACIÓN</strong> ★★★</td><td>Medidas de completa recuperación <strong>física, psíquica y social</strong> de la víctima</td><td>Las tres dimensiones de la recuperación juntas: física + psíquica + social. El examen puede omitir la "social"</td></tr>
+    <tr><td><strong>Dimensión 3: GARANTÍAS DE NO REPETICIÓN</strong> ★★★</td><td>Medidas estructurales para evitar que se repita la violencia hacia la víctima y en la sociedad</td><td>Son exactamente 3 dimensiones. El examen añade una 4ª falsa o suprime una</td></tr>
+  </tbody>
+</table>
+</div>
+<div class="tw">
+<table>
+  <thead><tr><th>Concepto</th><th>Definición operativa</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Reparación simbólica ★★★</strong></td><td>Acciones de <strong>reconocimiento público</strong> del daño causado a las víctimas. Comprende: (1) actos de reconocimiento institucional; (2) memoria y visibilización de las víctimas; (3) medidas educativas y culturales de transformación social para evitar la repetición</td><td>Reparación simbólica ≠ indemnización. No es dinero. Es reconocimiento, memoria y transformación cultural. Novedad exclusiva de la LO 10/2022. Es el concepto más preguntado del Título VII</td></tr>
+    <tr><td><strong>Enfoque reparador ★★</strong></td><td>Toda la respuesta institucional —sanitaria, judicial, policial y social— debe orientarse a la <strong>reparación de la víctima</strong>, no solo a la sanción del agresor. Es el principio teleológico central de la LO 10/2022</td><td>El enfoque reparador reorienta todo el sistema: la víctima y su recuperación son el eje, no el castigo del agresor. El examen puede proponer que el único fin es la sanción penal → FALSO</td></tr>
+    <tr><td><strong>Fondo de bienes decomisados ★</strong></td><td>Las AAPP podrán garantizar ayudas complementarias para víctimas con secuelas graves, financiadas con los bienes, efectos y ganancias <strong>decomisados</strong> a los condenados por delitos contra la libertad sexual (art. 127 bis CP)</td><td>La fuente es los bienes decomisados, NO los PGE directamente. El examen confunde la fuente de financiación</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T12 COMPARATIVA LO 10/2022 vs LO 1/2004 -->
+<h2>T12 · Comparativa LO 10/2022 vs. LO 1/2004</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Aspecto</th><th>LO 1/2004</th><th>LO 10/2022</th></tr></thead>
+  <tbody>
+    <tr><td>Tipo de violencia cubierta</td><td>Solo violencia en pareja o expareja sentimental</td><td>Todas las VS en cualquier ámbito, incluido digital</td></tr>
+    <tr><td>Definición de agresión sexual</td><td>Distingue agresión (con violencia/intimidación) y abuso (sin ella)</td><td>Solo existe la <strong>agresión sexual</strong>: cualquier acto sexual sin consentimiento</td></tr>
+    <tr><td>Espacios públicos seguros</td><td>No previsto</td><td>Art. 18: concepto de espacios públicos seguros</td></tr>
+    <tr><td>Centros de crisis</td><td>No previstos</td><td>Art. 35: servicios permanentes interdisciplinares (también para el entorno)</td></tr>
+    <tr><td>Barnahus/Casa de Niños</td><td>No previsto</td><td>Arts. 37-38: modelo para menores víctimas de VS</td></tr>
+    <tr><td>Reparación como derecho fundamental</td><td>No reconocida como DF</td><td>Primera norma española que la consagra como DF</td></tr>
+    <tr><td>Reparación simbólica</td><td>No regulada</td><td>Reconocimiento público + memoria + transformación cultural</td></tr>
+    <tr><td>Principios rectores</td><td>Sin catálogo expreso</td><td>10 principios (art. 2, letras a-j)</td></tr>
+    <tr><td>Entrada en vigor</td><td>Al día siguiente de su publicación</td><td>30 días después de su publicación (7 oct. 2022)</td></tr>
+    <tr><td>VS digital</td><td>No regulada</td><td>Incluida expresamente en el ámbito de aplicación (art. 3)</td></tr>
+    <tr><td>Perspectiva de infancia</td><td>No como principio expreso</td><td>Principio j): perspectiva de infancia y adolescencia</td></tr>
+    <tr><td>Interseccionalidad</td><td>No como principio expreso</td><td>Principio e): atención a la discriminación interseccional</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T13 TRAMPAS -->
+<h2>T13 · Las 12 trampas de examen</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Afirmación trampa</th><th>¿Correcta?</th><th>Corrección exacta</th></tr></thead>
+  <tbody>
+    <tr><td>La LO 10/2022 solo se aplica a VS en el ámbito de la pareja o expareja</td><td><span class="badge b-err">FALSO</span></td><td>Cubre TODAS las VS sin restricción de relación, incluidas las cometidas en el ámbito digital</td></tr>
+    <tr><td>La LO 10/2022 entró en vigor al día siguiente de su publicación en el BOE</td><td><span class="badge b-err">FALSO</span></td><td>Entró en vigor <strong>30 DÍAS después</strong> (7 de octubre de 2022). La LO 1/2004 sí entró al día siguiente</td></tr>
+    <tr><td>La LO 10/2022 tiene 8 principios rectores en el art. 2</td><td><span class="badge b-err">FALSO</span></td><td>Tiene <strong>10 principios rectores</strong> (letras a-j). El examen confunde con los 9 de la LF 14/2015</td></tr>
+    <tr><td>El Cap. I del Título II regula la detección e intervención sociosanitaria</td><td><span class="badge b-err">FALSO</span></td><td>El Cap. I es PREVENCIÓN Y SENSIBILIZACIÓN. La detección e intervención está en el <strong>Cap. II</strong></td></tr>
+    <tr><td>Los centros de crisis del art. 35 solo atienden a las víctimas directas</td><td><span class="badge b-err">FALSO</span></td><td>También atienden a sus <strong>familiares</strong> y a las <strong>personas del entorno</strong> de la víctima</td></tr>
+    <tr><td>La atención psicológica del art. 34 es solo inmediata y de crisis</td><td><span class="badge b-err">FALSO</span></td><td>Incluye también la atención de <strong>recuperación a LARGO PLAZO</strong> (las dos fases)</td></tr>
+    <tr><td>El listado de mínimos del art. 34 es exhaustivo y cerrado</td><td><span class="badge b-err">FALSO</span></td><td>Dice "<strong>al menos</strong>": es un mínimo, no un máximo. Las CCAA pueden ampliarlo</td></tr>
+    <tr><td>La reparación simbólica equivale a la indemnización económica</td><td><span class="badge b-err">FALSO</span></td><td>Son dimensiones distintas. La reparación simbólica es reconocimiento público, memoria e iniciativas educativas, <strong>no dinero</strong></td></tr>
+    <tr><td>Las garantías de no repetición no forman parte del derecho a la reparación del Título VII</td><td><span class="badge b-err">FALSO</span></td><td>Son la <strong>tercera dimensión</strong> del derecho a la reparación, junto con la indemnización y la recuperación</td></tr>
+    <tr><td>El Barnahus es una innovación española original de la LO 10/2022</td><td><span class="badge b-err">FALSO</span></td><td>Es un modelo <strong>anglosajón/escandinavo</strong> preexistente (Children's House) que la LO 10/2022 adapta para España</td></tr>
+    <tr><td>El fondo para ayudas complementarias del Título VII se financia de los PGE</td><td><span class="badge b-err">FALSO</span></td><td>Se nutre de los <strong>bienes decomisados</strong> a condenados por delitos contra la libertad sexual (art. 127 bis CP)</td></tr>
+    <tr><td>El objetivo central de la LO 10/2022 es la sanción penal del agresor</td><td><span class="badge b-err">FALSO</span></td><td>El <strong>enfoque reparador</strong> orienta toda la respuesta hacia la recuperación de la víctima. La sanción es necesaria pero no es el único ni el principal fin</td></tr>
+  </tbody>
+</table>
+</div>
+
+</body>
+</html>
