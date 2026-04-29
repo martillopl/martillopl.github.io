@@ -1,0 +1,348 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 35 · HTML 2 · Esquema-resumen visual · LO 1/2004</title>
+<style>
+:root{--bg:#fff5f5;--card:#fff;--s2:#fff0f0;--line:#fca5a5;--text:#7f1d1d;--muted:#b91c1c;--p:#dc2626;--p2:#ef4444;--warn:#d97706;--sky:#0284c7;--ok:#166534;--vio:#7c3aed;--sh:0 2px 10px rgba(220,38,38,.09)}
+[data-theme="dark"]{--bg:#100505;--card:#1a0808;--s2:#2a0c0c;--line:#7f1d1d;--text:#fecaca;--muted:#f87171;--p:#f87171;--p2:#fca5a5;--warn:#fbbf24;--sky:#38bdf8;--ok:#6ee7b7;--vio:#c4b5fd;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.6;background:var(--bg);color:var(--text);padding:22px}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.97rem;color:var(--p)}.hdr p{font-size:.74rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.72rem}
+h2{font-size:.87rem;font-weight:800;color:#fff;background:var(--p);padding:8px 15px;border-radius:7px;margin:22px 0 10px;display:inline-block}
+h3{font-size:.83rem;font-weight:700;color:var(--p);margin:12px 0 5px;border-bottom:1px solid var(--line);padding-bottom:3px}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:10px;margin-bottom:12px}
+.kbox{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:12px 14px;box-shadow:var(--sh);text-align:center}
+.big{font-size:1.1rem;font-weight:800;color:var(--p);margin-bottom:3px}.small{font-size:.73rem;color:var(--muted)}.mini{font-size:.72rem;margin-top:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:11px;margin-bottom:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:13px 15px;box-shadow:var(--sh)}
+.tag{display:block;font-size:.64rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:5px}
+.card p{font-size:.79rem;margin:.28rem 0}
+.card ul{padding-left:16px;margin:.28rem 0}.card li{margin:.22rem 0;font-size:.78rem}
+.card strong{color:var(--p)}
+.l1{border-left:4px solid var(--p)}
+.l2{border-left:4px solid var(--warn)}
+.l3{border-left:4px solid var(--vio)}
+.l4{border-left:4px solid var(--sky)}
+.l5{border-left:4px solid var(--ok)}
+.tw{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:12px;box-shadow:var(--sh);overflow-x:auto;margin-bottom:12px}
+table{width:100%;border-collapse:collapse}
+th{background:var(--s2);color:var(--muted);font-size:.66rem;text-transform:uppercase;padding:7px 9px;text-align:left}
+td{padding:7px 9px;border-bottom:1px solid var(--s2);font-size:.78rem;vertical-align:top}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.65rem;font-weight:700;border:1px solid transparent}
+.b-err{background:rgba(220,38,38,.12);color:var(--p);border-color:rgba(220,38,38,.3)}
+.b-ok{background:rgba(22,101,52,.12);color:var(--ok);border-color:rgba(22,101,52,.3)}
+.b-warn{background:rgba(217,119,6,.12);color:var(--warn);border-color:rgba(217,119,6,.3)}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.75rem;border-left:4px solid;margin:8px 0}
+.n-warn{background:#fef3c7;border-color:#d97706;color:#78350f}
+.n-ok{background:rgba(22,101,52,.07);border-color:var(--ok);color:var(--ok)}
+.n-err{background:#fff0f0;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .n-warn{background:#451a03;color:#fde68a}
+[data-theme="dark"] .n-err{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .n-ok{background:rgba(110,231,183,.07);color:#6ee7b7}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}
+.step{background:var(--card);border:2px solid var(--line);border-radius:11px;padding:11px 13px;box-shadow:var(--sh)}
+.step .num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:var(--p);color:#fff;border-radius:50%;font-size:.75rem;font-weight:800;margin-bottom:6px}
+.step h4{font-size:.8rem;color:var(--p);margin:0 0 4px}.step p{font-size:.74rem;margin:0}
+@media(max-width:900px){.flow{grid-template-columns:1fr 1fr}} @media(max-width:600px){.flow,.grid,.kpi{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 35 · HTML 2 · Esquema-resumen con bloques visuales para memorización rápida</h1>
+    <p>LO 1/2004, de 28 de diciembre, de Medidas de Protección Integral contra la Violencia de Género · Título Preliminar y Título II</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- FICHA FLASH -->
+<h2>Ficha flash</h2>
+<div class="kpi">
+  <div class="kbox"><div class="big">LO 1/2004</div><div class="small">Norma</div><div class="mini">Protección Integral contra la VG</div></div>
+  <div class="kbox"><div class="big">28/12/2004</div><div class="small">Fecha</div><div class="mini">Aprobación · BOE 313</div></div>
+  <div class="kbox"><div class="big">28/01/2005</div><div class="small">Entrada en vigor</div><div class="mini">1 mes tras publicación</div></div>
+  <div class="kbox"><div class="big">LO</div><div class="small">Rango</div><div class="mini">Art. 81 CE · mayoría absoluta</div></div>
+  <div class="kbox"><div class="big">5 Tít.</div><div class="small">+ Preliminar</div><div class="mini">6 Títulos en total</div></div>
+  <div class="kbox"><div class="big">Art. 81</div><div class="small">Fundamento CE</div><div class="mini">Protege arts. 14, 15 y 17 CE</div></div>
+</div>
+
+<!-- IDEA FUERZA -->
+<h2>Idea fuerza</h2>
+<div class="card l1" style="margin-bottom:12px">
+  <p><strong>Objeto:</strong> actuar contra la violencia que el cónyuge o expareja ejerce sobre la mujer, como manifestación de discriminación, desigualdad y relaciones de poder, <strong>aun sin convivencia</strong>.</p>
+  <p><strong>Finalidad:</strong> <strong>prevenir, sancionar y erradicar</strong> la violencia y prestar asistencia a las mujeres, sus hijos menores y los menores bajo tutela o guarda y custodia.</p>
+  <p><strong>Pilar:</strong> respuesta <strong>integral y multidisciplinar</strong>, con derechos exigibles ante las AAPP y acceso <strong>rápido, transparente y eficaz</strong>.</p>
+</div>
+
+<!-- TÍTULO PRELIMINAR -->
+<h2>Título Preliminar · Arts. 1–2</h2>
+<div class="grid">
+  <div class="card l1">
+    <span class="tag">Art. 1.1 — Definición de VG ★★★</span>
+    <p>Violencia que, como manifestación de la <strong>discriminación, desigualdad y relaciones de poder</strong>, ejerce el cónyuge o expareja sobre la mujer.</p>
+    <p><strong>Clave:</strong> "AUN SIN CONVIVENCIA" → no se requiere convivencia.</p>
+  </div>
+  <div class="card l1">
+    <span class="tag">Art. 1.2 — Finalidad y sujetos ★★★</span>
+    <p>3 verbos: <strong>PREVENIR + SANCIONAR + ERRADICAR</strong>.</p>
+    <p>3 sujetos de la asistencia: <strong>mujeres + hijos menores + menores bajo tutela/guarda y custodia</strong>.</p>
+  </div>
+  <div class="card l1">
+    <span class="tag">Art. 1.3 — Tipos de violencia ★★★</span>
+    <ul>
+      <li>Violencia física</li>
+      <li>Violencia psicológica</li>
+      <li>Agresiones a la <strong>libertad sexual</strong></li>
+      <li>Amenazas</li>
+      <li>Coacciones</li>
+      <li>Privación arbitraria de libertad</li>
+    </ul>
+  </div>
+  <div class="card l1">
+    <span class="tag">Art. 1.4 — LO 8/2021</span>
+    <p>También comprende la violencia ejercida sobre <strong>familiares o allegados menores de edad</strong> para causar perjuicio a la mujer.</p>
+    <p>→ "Violencia instrumental" a través de los hijos.</p>
+  </div>
+  <div class="card l1">
+    <span class="tag">Art. 2 — 11 principios rectores ★★★</span>
+    <p>Mnemotecnia: <strong>Se-De-Re-La-Eco-Ins-Pe-Co-Pro-Fo-Trans</strong></p>
+    <ul>
+      <li><strong>b)</strong> Acceso <strong>rápido, transparente y eficaz</strong></li>
+      <li><strong>k)</strong> Principio de <strong>transversalidad</strong></li>
+    </ul>
+    <div class="note n-warn" style="margin-top:6px">⚠ El examen cambia "transparente" por "fiable"</div>
+  </div>
+</div>
+
+<!-- TÍTULO II -->
+<h2>Título II — Estructura y derechos</h2>
+<div class="tw">
+  <table>
+    <thead><tr><th>Cap.</th><th>Denominación</th><th>Arts.</th><th>Clave rápida</th></tr></thead>
+    <tbody>
+      <tr><td>I</td><td>Información y asistencia social integral</td><td>17–19</td><td>Servicios esenciales · 4 principios · 7 componentes</td></tr>
+      <tr><td>II</td><td>Asistencia jurídica gratuita</td><td>20</td><td>Gratuita + especializada · una misma letrada · causahabientes</td></tr>
+      <tr><td>III</td><td>Derechos laborales y SS</td><td>21–23</td><td>Suspensión 6→18 meses · extinción → paro · acreditación</td></tr>
+      <tr><td>III bis</td><td>Derechos funcionariales</td><td>24–26</td><td>Excedencia 6→18 meses · ausencias justificadas</td></tr>
+      <tr><td>IV</td><td>Derechos económicos</td><td>27–28</td><td>Ayuda 6→18→24 meses · vivienda prioritaria</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- CAP. I BLOQUES -->
+<h2>Cap. I · Arts. 17–19 · Información y asistencia social</h2>
+<div class="grid">
+  <div class="card l2">
+    <span class="tag">Art. 17 · Servicios esenciales ★★</span>
+    <p>Los servicios de información, atención psicosocial, asesoramiento jurídico 24h, acogida y asistencia social integral son <strong>servicios esenciales</strong>.</p>
+    <p>→ Añadido por <strong>LO 10/2022</strong>.</p>
+    <p>Hacen reales y efectivos los derechos de los <strong>arts. 14, 15 y 17 CE</strong>.</p>
+  </div>
+  <div class="card l2">
+    <span class="tag">Art. 18 · Información garantizada</span>
+    <ul>
+      <li>Medidas de protección y seguridad</li>
+      <li>Derechos y ayudas previstos</li>
+      <li>Lugar de prestación de servicios de atención, emergencia, apoyo y recuperación</li>
+    </ul>
+    <p>Accesible para mujeres con <strong>discapacidad</strong> y para quienes <strong>no hablen castellano</strong>.</p>
+  </div>
+  <div class="card l2">
+    <span class="tag">Art. 19 · Los 4 principios ★★★</span>
+    <p><strong>4P:</strong></p>
+    <ul>
+      <li>Atención <strong>Permanente</strong></li>
+      <li>Actuación <strong>Pronta/Urgente</strong></li>
+      <li><strong>Prestaciones</strong> especializadas</li>
+      <li><strong>Profesionalidad</strong> multidisciplinar</li>
+    </ul>
+  </div>
+  <div class="card l2">
+    <span class="tag">Art. 19.2 · Los 7 componentes ★★★</span>
+    <p>Mnemotecnia: <strong>IPADETI</strong></p>
+    <ul>
+      <li><strong>I</strong>nformación a las víctimas</li>
+      <li><strong>P</strong>sicológica (atención)</li>
+      <li><strong>A</strong>poyo social</li>
+      <li><strong>D</strong>erechos (seguimiento reclamaciones)</li>
+      <li><strong>E</strong>ducativo a la unidad familiar</li>
+      <li>Formación en valores de <strong>I</strong>gualdad</li>
+      <li><strong>I</strong>nserción laboral</li>
+    </ul>
+  </div>
+  <div class="card l2">
+    <span class="tag">Art. 19 · Menores — LO 8/2021</span>
+    <p>Los menores bajo patria potestad o guarda y custodia de la víctima también tienen derecho a asistencia social integral.</p>
+    <p>Los servicios deben contar con <strong>profesionales de psicología infantil</strong>.</p>
+  </div>
+</div>
+
+<!-- CAP. II -->
+<h2>Cap. II · Art. 20 · Asistencia jurídica</h2>
+<div class="grid">
+  <div class="card l3">
+    <span class="tag">Requisito</span>
+    <p>Carecer de <strong>recursos económicos suficientes</strong>. No requiere medida cautelar previa.</p>
+  </div>
+  <div class="card l3">
+    <span class="tag">Contenido ★★</span>
+    <p>Defensa <strong>GRATUITA Y ESPECIALIZADA</strong> en todos los procesos relacionados con VG.</p>
+    <p><strong>UNA MISMA</strong> dirección letrada en todos los procesos.</p>
+  </div>
+  <div class="card l3">
+    <span class="tag">Causahabientes</span>
+    <p>Se extiende a los perjudicados causahabientes en caso de <strong>fallecimiento</strong> de la víctima.</p>
+  </div>
+</div>
+
+<!-- CAP. III -->
+<h2>Cap. III · Arts. 21–23 · Derechos laborales</h2>
+<div class="grid">
+  <div class="card l1">
+    <span class="tag">Medidas (art. 21)</span>
+    <ul>
+      <li>Reducción/reordenación de jornada</li>
+      <li>Movilidad geográfica</li>
+      <li>Cambio de centro de trabajo</li>
+      <li><strong>Suspensión</strong> con reserva del puesto: <strong>6 meses → 18 meses</strong></li>
+      <li>Extinción del contrato → situación legal de <strong>desempleo</strong></li>
+    </ul>
+    <div class="note n-warn">⚠ Ausencias por VG: JUSTIFICADAS. No pueden causar despido.</div>
+  </div>
+  <div class="card l1">
+    <span class="tag">Acreditación (art. 23)</span>
+    <ul>
+      <li><strong>Orden de protección</strong> → medio ordinario</li>
+      <li><strong>Informe del Ministerio Fiscal</strong> → medio excepcional</li>
+      <li>Otros títulos habilitantes</li>
+    </ul>
+    <p>No se requiere sentencia firme.</p>
+  </div>
+</div>
+
+<!-- CAP. III BIS vs III -->
+<h2>Comparativa Cap. III (laborales) vs. Cap. III bis (funcionariales)</h2>
+<div class="tw">
+  <table>
+    <thead><tr><th>Medida</th><th>Laborales (art. 21)</th><th>Funcionariales (arts. 24-26)</th></tr></thead>
+    <tbody>
+      <tr><td>Jornada</td><td>Reducción/reordenación</td><td>Reducción/reordenación</td></tr>
+      <tr><td>Movilidad</td><td>Movilidad geográfica (empresa del grupo)</td><td>Cambio de adscripción del puesto</td></tr>
+      <tr><td>Suspensión/Excedencia</td><td><strong>SUSPENSIÓN</strong> con reserva del puesto</td><td><strong>EXCEDENCIA</strong> con reserva del puesto</td></tr>
+      <tr><td>Plazos</td><td><strong>6 meses → prórroga hasta 18 meses</strong></td><td><strong>6 meses → prórroga hasta 18 meses</strong></td></tr>
+      <tr><td>Extinción</td><td>✅ → Situación legal de desempleo</td><td>❌ No existe equivalente</td></tr>
+      <tr><td>Ausencias</td><td>No causa de <strong>despido</strong></td><td>No causa de <strong>separación del servicio</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="note n-ok">💡 La única diferencia terminológica es SUSPENSIÓN (laborales) vs. EXCEDENCIA (funcionariales). Los plazos son idénticos: 6 → 18 meses.</div>
+</div>
+
+<!-- CAP. IV DERECHOS ECONÓMICOS -->
+<h2>Cap. IV · Arts. 27–28 · Derechos económicos</h2>
+<div class="grid">
+  <div class="card l4">
+    <span class="tag">Art. 27 · Escala de plazos ★★★</span>
+    <table style="margin:0">
+      <thead><tr><th>Supuesto</th><th>Meses</th></tr></thead>
+      <tbody>
+        <tr><td>Caso general</td><td><strong>6 meses</strong></td></tr>
+        <tr><td>Con responsabilidades familiares</td><td><strong>18 meses</strong></td></tr>
+        <tr><td>Discapacidad ≥ 33%</td><td><strong>24 meses</strong></td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:8px">Gestión: <strong>SEPE</strong> · Compatible con Ley 35/1995.</p>
+  </div>
+  <div class="card l4">
+    <span class="tag">Art. 28 · Vivienda</span>
+    <p>Acceso <strong>prioritario</strong> (no exclusivo) a:</p>
+    <ul>
+      <li>Viviendas protegidas</li>
+      <li>Residencias públicas para mayores</li>
+    </ul>
+  </div>
+</div>
+
+<!-- FLUJO ACREDITACIÓN -->
+<h2>Flujo de acceso a los derechos del Título II</h2>
+<div class="flow">
+  <div class="step">
+    <div class="num">1</div>
+    <h4>Situación de VG</h4>
+    <p>La mujer se encuentra en situación de violencia de género en el marco de la pareja o expareja.</p>
+  </div>
+  <div class="step">
+    <div class="num">2</div>
+    <h4>Acreditación (art. 23)</h4>
+    <p>Orden de protección (ordinario) o Informe del Ministerio Fiscal (excepcional).</p>
+  </div>
+  <div class="step">
+    <div class="num">3</div>
+    <h4>Activación de derechos</h4>
+    <p>Asistencia social + jurídica gratuita + laborales/funcionariales + económicos.</p>
+  </div>
+  <div class="step">
+    <div class="num">4</div>
+    <h4>Integración y recuperación</h4>
+    <p>Inserción laboral · vivienda protegida · ayuda económica SEPE.</p>
+  </div>
+</div>
+
+<!-- 5 DATOS MÁS PREGUNTADOS -->
+<h2>Los 5 datos más preguntados</h2>
+<div class="tw">
+  <table>
+    <thead><tr><th>Dato</th><th>Memoria rápida</th></tr></thead>
+    <tbody>
+      <tr><td>Objeto de la Ley</td><td>Violencia del cónyuge/expareja sobre la mujer, manifestación de discriminación, <strong>aun sin convivencia</strong>.</td></tr>
+      <tr><td>Acceso a los servicios (art. 2.b)</td><td>Rápido + <strong>transparente</strong> + eficaz (no "fiable").</td></tr>
+      <tr><td>Suspensión laboral (art. 21)</td><td><strong>6 meses → 18 meses</strong> (no 3 ni 12).</td></tr>
+      <tr><td>Laborales vs. funcionariales</td><td>SUSPENSIÓN (laborales) / EXCEDENCIA (funcionariales). Plazos iguales.</td></tr>
+      <tr><td>Ayuda económica (art. 27)</td><td>6 → 18 → <strong>24 meses</strong> (solo con discapacidad ≥ 33%).</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- TRAMPAS -->
+<h2>Trampas del examen</h2>
+<div class="grid">
+  <div class="card l1">
+    <h3>Trampa 1</h3>
+    <p><strong>Falso:</strong> la LO 1/2004 requiere convivencia.<br><strong>Correcto:</strong> aplica expresamente <strong>aun sin convivencia</strong>.</p>
+  </div>
+  <div class="card l1">
+    <h3>Trampa 2</h3>
+    <p><strong>Falso:</strong> el acceso es "rápido, fiable y eficaz".<br><strong>Correcto:</strong> es "<strong>rápido, transparente y eficaz</strong>" (art. 2.b).</p>
+  </div>
+  <div class="card l1">
+    <h3>Trampa 3</h3>
+    <p><strong>Falso:</strong> suspensión laboral de 3 meses.<br><strong>Correcto:</strong> <strong>6 meses</strong>, prorrogables a <strong>18 meses</strong>.</p>
+  </div>
+  <div class="card l1">
+    <h3>Trampa 4</h3>
+    <p><strong>Falso:</strong> funcionariales = suspensión.<br><strong>Correcto:</strong> funcionariales = <strong>excedencia</strong>. Laborales = suspensión.</p>
+  </div>
+  <div class="card l1">
+    <h3>Trampa 5</h3>
+    <p><strong>Falso:</strong> la ayuda del art. 27 es de 6 meses en todos los casos.<br><strong>Correcto:</strong> con discapacidad ≥ 33% llega a <strong>24 meses</strong>.</p>
+  </div>
+  <div class="card l1">
+    <h3>Trampa 6</h3>
+    <p><strong>Falso:</strong> el Observatorio propone la política del Gobierno.<br><strong>Correcto:</strong> lo hace la <strong>Delegación Especial</strong>. El Observatorio analiza y asesora.</p>
+  </div>
+</div>
+
+</body>
+</html>

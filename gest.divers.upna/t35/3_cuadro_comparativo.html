@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 35 · HTML 3 · Cuadro comparativo y tablas operativas · LO 1/2004</title>
+<style>
+:root{--bg:#fff5f5;--card:#fff;--s2:#fff0f0;--line:#fca5a5;--text:#7f1d1d;--muted:#b91c1c;--p:#dc2626;--p2:#ef4444;--warn:#d97706;--vio:#7c3aed;--sky:#0284c7;--ok:#166534;--sh:0 2px 10px rgba(220,38,38,.09)}
+[data-theme="dark"]{--bg:#100505;--card:#1a0808;--s2:#2a0c0c;--line:#7f1d1d;--text:#fecaca;--muted:#f87171;--p:#f87171;--p2:#fca5a5;--warn:#fbbf24;--vio:#c4b5fd;--sky:#38bdf8;--ok:#6ee7b7;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.5;background:var(--bg);color:var(--text);padding:22px}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.97rem;color:var(--p)}.hdr p{font-size:.74rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.72rem}
+h2{font-size:.87rem;font-weight:800;color:#fff;background:var(--p);padding:8px 15px;border-radius:7px;margin:22px 0 10px;display:inline-block}
+.tw{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:var(--sh);overflow-x:auto;margin-bottom:12px}
+table{width:100%;border-collapse:collapse}
+th{background:var(--s2);color:var(--muted);font-size:.67rem;text-transform:uppercase;letter-spacing:.05em;padding:8px 10px;text-align:left}
+td{padding:8px 10px;border-bottom:1px solid var(--s2);font-size:.78rem;vertical-align:top}
+tr:last-child td{border-bottom:none} tr:hover td{background:var(--s2)}
+.badge{display:inline-block;padding:3px 9px;border-radius:999px;font-size:.65rem;font-weight:700;border:1px solid transparent;white-space:nowrap}
+.b-ok{background:rgba(22,101,52,.12);color:var(--ok);border-color:rgba(22,101,52,.3)}
+.b-err{background:rgba(220,38,38,.12);color:var(--p);border-color:rgba(220,38,38,.3)}
+.b-warn{background:rgba(217,119,6,.12);color:var(--warn);border-color:rgba(217,119,6,.3)}
+.b-sky{background:rgba(2,132,199,.12);color:var(--sky);border-color:rgba(2,132,199,.3)}
+.b-vio{background:rgba(124,58,237,.12);color:var(--vio);border-color:rgba(124,58,237,.3)}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.75rem;border-left:4px solid;margin:8px 0}
+.n-ok{background:rgba(22,101,52,.07);border-color:var(--ok);color:var(--ok)}
+.n-warn{background:#fef3c7;border-color:#d97706;color:#78350f}
+.n-err{background:#fff0f0;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .n-warn{background:#451a03;color:#fde68a}
+[data-theme="dark"] .n-err{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .n-ok{background:rgba(110,231,183,.07);color:#6ee7b7}
+strong{color:var(--p)}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 35 · HTML 3 · Cuadro comparativo y tablas operativas para examen</h1>
+    <p>LO 1/2004, de 28 de diciembre, de Medidas de Protección Integral contra la Violencia de Género · Título Preliminar y Título II</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- T1: IDENTIFICACIÓN -->
+<h2>T1 · Identificación de la norma</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Campo</th><th>Dato exacto</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td>Norma</td><td>Ley Orgánica 1/2004, de 28 de diciembre</td><td>Medidas de Protección Integral contra la Violencia de Género</td></tr>
+    <tr><td>Publicación</td><td>BOE núm. 313, de 29 de diciembre de 2004</td><td>BOE, no BON</td></tr>
+    <tr><td>Entrada en vigor</td><td>28 de enero de 2005</td><td>1 mes tras su publicación (no día siguiente)</td></tr>
+    <tr><td>Rango</td><td>Ley Orgánica (art. 81 CE)</td><td>Requiere mayoría absoluta del Congreso de los Diputados</td></tr>
+    <tr><td>Motivo del rango LO</td><td>Protege derechos fundamentales: arts. 14, 15 y 17 CE</td><td>Sin rango LO no podría crear tipos penales ni limitar derechos del agresor</td></tr>
+    <tr><td>Estructura</td><td>Tít. Preliminar + 5 Títulos + 20 D.A. + 2 D.T. + 1 D. Derogtoria + 7 D.F.</td><td>Los 5 Títulos: I Prev. · II Derechos · III Institucional · IV Penal · V Judicial</td></tr>
+    <tr><td>Modificaciones clave</td><td>LO 8/2015, LO 8/2021 (menores), LO 10/2022 (libertad sexual)</td><td>LO 8/2021 → añade art. 1.4 y extiende asistencia a menores; LO 10/2022 → modifica arts. 17 y 18</td></tr>
+    <tr><td>Marco internacional</td><td>CEDAW 1979 · Declaración ONU 1993 · Beijing 1995 · OMS 1996 · Daphne II 2004</td><td>El examen pregunta qué declaraciones internacionales respaldan la Ley</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T2: ART. 1 – OBJETO ARTICULADO -->
+<h2>T2 · Art. 1 — Objeto, apartado a apartado</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Aptdo.</th><th>Contenido literal exacto</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td>1.1</td><td>Actuar contra la violencia que, como <strong>manifestación de la discriminación, la situación de desigualdad y las relaciones de poder de los hombres sobre las mujeres</strong>, se ejerce sobre éstas por parte de quienes <strong>sean o hayan sido sus cónyuges</strong> o de quienes <strong>estén o hayan estado ligados a ellas por relaciones similares de afectividad, aun sin convivencia</strong>.</td><td><span class="badge b-err">Trampa frecuente:</span> el examen omite "aun sin convivencia" o dice que se requiere convivencia → FALSO</td></tr>
+    <tr><td>1.2</td><td>Las medidas de protección integral tienen por finalidad <strong>prevenir, sancionar y erradicar</strong> esta violencia y prestar asistencia a <strong>las mujeres, a sus hijos menores y a los menores sujetos a su tutela o guarda y custodia</strong>, víctimas de esta violencia.</td><td>3 verbos en orden exacto: PREVENIR + SANCIONAR + ERRADICAR. 3 sujetos de la asistencia. El examen desordena los verbos o elimina a los menores bajo guarda y custodia</td></tr>
+    <tr><td>1.3</td><td>Comprende <strong>todo acto de violencia física y psicológica, incluidas las agresiones a la libertad sexual, las amenazas, las coacciones o la privación arbitraria de libertad</strong>.</td><td>El examen omite "libertad sexual" o "privación arbitraria de libertad". Son 6 modalidades en total</td></tr>
+    <tr><td>1.4 (LO 8/2021)</td><td>También comprende la violencia que con el objetivo de causar perjuicio o daño a las mujeres se ejerza sobre sus <strong>familiares o allegados menores de edad</strong> por parte de las personas indicadas en el apartado 1.</td><td>Este apartado fue añadido por la <strong>LO 8/2021</strong>. Es la "violencia instrumental" a través de menores. El examen pregunta qué añadió la LO 8/2021</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T3: ART. 2 – 11 FINES -->
+<h2>T3 · Art. 2 — Los 11 principios rectores (fines de la Ley)</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Letra</th><th>Fin</th><th>Clave de examen</th></tr></thead>
+  <tbody>
+    <tr><td>a)</td><td>Fortalecer medidas de sensibilización ciudadana y prevención en ámbito educativo, servicios sociales, sanitario, publicitario y mediático</td><td>5 ámbitos del fin a): educativo + SS + sanitario + publicidad + medios</td></tr>
+    <tr><td>b)</td><td>Consagrar derechos exigibles ante las AAPP y asegurar acceso <strong>rápido, transparente y eficaz</strong> a los servicios</td><td><span class="badge b-err">Trampa:</span> el examen cambia "transparente" por "fiable" o "electrónico"</td></tr>
+    <tr><td>c)</td><td>Reforzar servicios sociales de información, atención, emergencia, apoyo y recuperación integral y coordinación a nivel municipal y autonómico</td><td>5 tipos de servicios: información + atención + emergencia + apoyo + recuperación</td></tr>
+    <tr><td>d)</td><td>Garantizar derechos en el ámbito <strong>laboral y funcionarial</strong> que concilien la relación de trabajo con las circunstancias de las víctimas</td><td>Anticipa el Cap. III y III bis del Título II</td></tr>
+    <tr><td>e)</td><td>Garantizar <strong>derechos económicos</strong> para facilitar la integración social de las víctimas</td><td>Anticipa el Cap. IV del Título II (arts. 27–28)</td></tr>
+    <tr><td>f)</td><td>Establecer tutela institucional mediante la <strong>Delegación Especial del Gobierno</strong> y el <strong>Observatorio Estatal de la Violencia sobre la Mujer</strong></td><td>Son los dos órganos del Título III (arts. 29 y 30)</td></tr>
+    <tr><td>g)</td><td>Fortalecer el marco <strong>penal y procesal</strong> para asegurar una protección integral desde las instancias jurisdiccionales</td><td>Anticipa los Títulos IV (penal) y V (judicial)</td></tr>
+    <tr><td>h)</td><td>Coordinar los recursos e instrumentos de los distintos poderes públicos</td><td>Coordinación interinstitucional como principio horizontal</td></tr>
+    <tr><td>i)</td><td>Promover la colaboración de entidades, asociaciones y organizaciones de la sociedad civil</td><td>El tejido asociativo como aliado en la lucha contra la VG</td></tr>
+    <tr><td>j)</td><td>Fomentar la especialización de colectivos profesionales que intervienen en la atención y protección de las víctimas</td><td>Formación especializada: clave en sanidad, SS, FCSE y operadores jurídicos</td></tr>
+    <tr><td>k)</td><td>Garantizar el principio de <strong>transversalidad</strong> de las medidas, teniendo en cuenta las necesidades específicas de todas las mujeres víctimas</td><td>La transversalidad es el último y cierra el círculo; el examen pregunta cuál es el principio k)</td></tr>
+  </tbody>
+</table>
+<div class="note n-ok">💡 Mnemotecnia del art. 2: <strong>Se-De-Re-La-Eco-Ins-Pe-Co-Pro-Fo-Trans</strong> (Sensibilización · Derechos · Refuerzo SS · Laboral · Económicos · Institucional · Penal · Coordinación · Promoción sociedad civil · Formación profesional · Transversalidad).</div>
+</div>
+
+<!-- T4: ESTRUCTURA TÍTULO II -->
+<h2>T4 · Estructura del Título II</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Capítulo</th><th>Título del capítulo</th><th>Artículos</th><th>Núcleo</th></tr></thead>
+  <tbody>
+    <tr><td>I</td><td>Derecho a la información y asistencia social integral</td><td>17–19</td><td>Servicios esenciales · 4 principios · 7 componentes multidisciplinares</td></tr>
+    <tr><td>II</td><td>Derecho a la asistencia jurídica gratuita</td><td>20</td><td>Gratuita y especializada · una misma dirección letrada · causahabientes</td></tr>
+    <tr><td>III</td><td>Derechos laborales y prestaciones de la SS</td><td>21–23</td><td>Reducción jornada · movilidad · suspensión 6→18m · extinción · acreditación</td></tr>
+    <tr><td>III bis</td><td>Derechos de las funcionarias públicas</td><td>24–26</td><td>Excedencia 6→18m · ausencias justificadas · no separación del servicio</td></tr>
+    <tr><td>IV</td><td>Derechos económicos</td><td>27–28</td><td>Ayuda 6→18→24m · SEPE · vivienda protegida prioritaria</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T5: ART. 17 -->
+<h2>T5 · Art. 17 — Garantía de los derechos</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Contenido</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td>Todas las víctimas tienen garantizados los derechos <strong>sin que pueda existir discriminación en el acceso</strong></td><td>Principio de igualdad de acceso sin condicionantes previos</td></tr>
+    <tr><td>La información, asistencia social integral y asistencia jurídica hacen <strong>reales y efectivos</strong> los derechos constitucionales a: integridad física y moral (art. 15 CE) + libertad y seguridad (art. 17 CE) + igualdad y no discriminación (art. 14 CE)</td><td>Tres derechos constitucionales protegidos: arts. 14, 15 y 17 CE</td></tr>
+    <tr><td>Los servicios de información, atención psicosocial inmediata, asesoramiento jurídico 24 horas, acogida y asistencia social integral tienen carácter de <strong>servicios esenciales</strong></td><td>Añadido por <strong>LO 10/2022</strong>. El examen pregunta qué norma introdujo el carácter esencial de estos servicios</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T6: ART. 18 -->
+<h2>T6 · Art. 18 — Derecho a la información</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Contenido</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td>Información sobre: (1) medidas de protección y seguridad; (2) derechos y ayudas previstos en la ley; (3) lugar de prestación de los servicios de atención, emergencia, apoyo y recuperación integral</td><td>Los 3 bloques de información garantizada · el examen omite uno para comprobar</td></tr>
+    <tr><td>Garantías de accesibilidad a mujeres con <strong>discapacidad</strong>: lengua de signos y sistemas alternativos de comunicación</td><td>La accesibilidad a mujeres con discapacidad fue reforzada por la <strong>LO 10/2022</strong></td></tr>
+    <tr><td>Garantías para mujeres que <strong>desconozcan el castellano o la lengua oficial de su territorio de residencia</strong></td><td>Ampara a mujeres extranjeras y de comunidades con lengua cooficial</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T7: ART. 19 - 4 PRINCIPIOS Y 7 COMPONENTES -->
+<h2>T7 · Art. 19 — Asistencia social integral: 4 principios y 7 componentes</h2>
+<div class="tw">
+<table>
+  <thead><tr><th colspan="2">Los 4 principios organizativos (art. 19.1)</th></tr></thead>
+  <thead><tr><th>Principio</th><th>Significado operativo</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Atención permanente</strong></td><td>Los servicios están disponibles sin restricción de horario ni días</td></tr>
+    <tr><td><strong>Actuación urgente</strong></td><td>Los casos deben atenderse sin demoras; hay protocolos de respuesta inmediata</td></tr>
+    <tr><td><strong>Especialización de prestaciones</strong></td><td>Cada prestación la da personal cualificado en VG, no genérico de SS</td></tr>
+    <tr><td><strong>Multidisciplinariedad profesional</strong></td><td>Intervención coordinada de trabajadores sociales, psicólogos, juristas, educadores</td></tr>
+  </tbody>
+</table>
+</div>
+<div class="tw">
+<table>
+  <thead><tr><th colspan="2">Los 7 componentes de la atención multidisciplinar (art. 19.2)</th></tr></thead>
+  <thead><tr><th>#</th><th>Componente</th></tr></thead>
+  <tbody>
+    <tr><td>a)</td><td>Información a las víctimas</td></tr>
+    <tr><td>b)</td><td>Atención psicológica</td></tr>
+    <tr><td>c)</td><td>Apoyo social</td></tr>
+    <tr><td>d)</td><td>Seguimiento de las reclamaciones de los derechos de la mujer</td></tr>
+    <tr><td>e)</td><td>Apoyo educativo a la unidad familiar</td></tr>
+    <tr><td>f)</td><td>Formación preventiva en los valores de igualdad</td></tr>
+    <tr><td>g)</td><td>Apoyo a la formación e inserción laboral</td></tr>
+  </tbody>
+</table>
+<div class="note n-warn">⚠ Mnemotecnia: <strong>IPADETI</strong> (Información · Psicológica · Apoyo social · Derechos · Educativa · Transversal igualdad · Inserción laboral). El examen añade un componente falso como "acompañamiento judicial".</div>
+</div>
+<div class="tw">
+<table>
+  <thead><tr><th>Menores — art. 19 (LO 8/2021)</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td>Los menores bajo patria potestad o guarda y custodia de la víctima, o que convivan en entornos de VG, también tienen derecho a la asistencia social integral</td><td>Fue modificado por la <strong>LO 8/2021</strong>. El examen pregunta qué modificó esta norma en la LO 1/2004</td></tr>
+    <tr><td>Los servicios deben contar con <strong>profesionales de psicología infantil</strong></td><td>El requisito de psicólogos infantiles es el dato diferenciador más preguntado de este apartado</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T8: ART. 20 -->
+<h2>T8 · Art. 20 — Asistencia jurídica gratuita</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Requisito/contenido</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td>Requisito: carecer de <strong>recursos económicos suficientes</strong></td><td>No requiere medida cautelar previa ni sentencia firme · solo la acreditación económica</td></tr>
+    <tr><td>Defensa jurídica <strong>gratuita y especializada</strong> en todos los procesos y procedimientos relacionados con VG</td><td>Los dos adjetivos son inseparables: GRATUITA + ESPECIALIZADA. El examen suprime uno</td></tr>
+    <tr><td><strong>Una misma dirección letrada</strong> actúa en todos los procesos (penal, civil, familia)</td><td>La unicidad de defensa es garantía de coherencia y economía procesal · el examen la niega</td></tr>
+    <tr><td>Se extiende a los <strong>perjudicados causahabientes en caso de fallecimiento</strong> de la víctima</td><td>Es el dato más específico del art. 20 y el más preguntado</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T9: ART. 21-23 LABORALES -->
+<h2>T9 · Arts. 21–23 — Derechos laborales</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Derecho</th><th>Contenido</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td>Reducción/reordenación de jornada</td><td>A determinar entre la trabajadora y la empresa</td><td>No es unilateral de la trabajadora; se acuerda con la empresa</td></tr>
+    <tr><td>Movilidad geográfica</td><td>Derecho preferente a ocupar puesto del mismo grupo profesional o categoría equivalente en otra empresa del mismo grupo</td><td>Es un derecho PREFERENTE, no absoluto. La empresa puede denegar si no hay vacante</td></tr>
+    <tr><td>Cambio de centro de trabajo</td><td>Cambio de centro dentro de la misma empresa, manteniendo grupo profesional</td><td>Diferente a la movilidad geográfica (que puede implicar cambio de empresa del grupo)</td></tr>
+    <tr><td><strong>Suspensión con reserva del puesto</strong></td><td><strong>6 meses</strong> · Prorrogable por decisión judicial hasta <strong>18 meses</strong></td><td><span class="badge b-err">Dato trampa:</span> el examen pone 3 o 12 meses · La prórroga la decide el juez, no la empresa</td></tr>
+    <tr><td>Extinción del contrato</td><td>Causa reconocida de extinción → <strong>situación legal de desempleo</strong></td><td>Accede a prestación contributiva de desempleo sin que sea despido ni baja voluntaria</td></tr>
+    <tr><td>Ausencias y faltas de puntualidad</td><td>Las motivadas por VG se consideran <strong>justificadas</strong></td><td>No pueden ser causa de despido · El examen dice que pueden acumularse y justificar el despido → FALSO</td></tr>
+  </tbody>
+</table>
+</div>
+<div class="tw">
+<table>
+  <thead><tr><th>Art. 23 · Acreditación de la situación de VG</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Orden de protección</strong> a favor de la víctima → medio ordinario</td><td>No requiere sentencia condenatoria firme</td></tr>
+    <tr><td><strong>Informe del Ministerio Fiscal</strong> con indicios de ser víctima de VG → medio excepcional</td><td>El informe del Fiscal es EXCEPCIONAL, no la regla general</td></tr>
+    <tr><td>Cualquier otro título que habilite el reconocimiento (sentencia, medida cautelar…)</td><td>La lista no es tasada; se admiten otros títulos habilitantes</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T10: ART. 24-26 FUNCIONARIALES -->
+<h2>T10 · Arts. 24–26 — Derechos de las funcionarias públicas</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Derecho</th><th>Laborales (art. 21)</th><th>Funcionariales (arts. 24-26)</th></tr></thead>
+  <tbody>
+    <tr><td>Reducción/reordenación de jornada</td><td>✅</td><td>✅</td></tr>
+    <tr><td>Movilidad/cambio de adscripción</td><td>Movilidad geográfica a empresa del grupo</td><td>Cambio de adscripción del puesto de trabajo</td></tr>
+    <tr><td>Suspensión / Excedencia</td><td><strong>SUSPENSIÓN</strong> con reserva del puesto · 6 → 18 meses</td><td><strong>EXCEDENCIA</strong> con reserva del puesto · 6 → 18 meses</td></tr>
+    <tr><td>Extinción del vínculo</td><td>✅ Extinción del contrato → paro</td><td>❌ No existe equivalente en la Función Pública</td></tr>
+    <tr><td>Ausencias justificadas</td><td>No causa de <strong>despido</strong></td><td>No causa de <strong>separación del servicio</strong></td></tr>
+    <tr><td>Acreditación</td><td>Orden de protección / informe Fiscal</td><td>Orden de protección / informe Fiscal (igual)</td></tr>
+  </tbody>
+</table>
+<div class="note n-warn">⚠ La diferencia terminológica es el dato de examen: SUSPENSIÓN (laborales) vs. EXCEDENCIA (funcionariales). Los plazos son idénticos en ambos casos: 6 meses, prorrogables hasta 18 meses.</div>
+</div>
+
+<!-- T11: ART. 27 - AYUDAS ECONÓMICAS -->
+<h2>T11 · Art. 27 — Ayudas sociales</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Supuesto</th><th>Plazo de la ayuda</th><th>Requisito adicional</th></tr></thead>
+  <tbody>
+    <tr><td>Caso general</td><td><strong>6 meses</strong> del subsidio de desempleo</td><td>Carecer de recursos + dificultad de empleabilidad (edad, falta de preparación o circunstancias sociales)</td></tr>
+    <tr><td>Con responsabilidades familiares</td><td><strong>18 meses</strong></td><td>Tener hijos u otras personas dependientes a cargo</td></tr>
+    <tr><td>Con discapacidad reconocida ≥ 33%</td><td><strong>24 meses</strong></td><td>Grado de discapacidad igual o superior al 33% reconocido oficialmente</td></tr>
+    <tr><td>Compatibilidad</td><td>Compatible con las ayudas de la Ley 35/1995</td><td>No existe incompatibilidad · el examen la afirma falsamente</td></tr>
+    <tr><td>Gestión</td><td>SEPE (Servicio Público de Empleo Estatal)</td><td>Antes INEM · el examen puede poner INSS o IMSERSO como trampas</td></tr>
+  </tbody>
+</table>
+<div class="note n-warn">⚠ Mnemotecnia de los plazos del art. 27: <strong>6-18-24</strong> (sin nada · con familia · con discapacidad). Los mismos plazos aparecen también en arts. 21 y 24-26 pero solo llegan a 18 meses.</div>
+</div>
+
+<!-- T12: ART. 28 - VIVIENDA -->
+<h2>T12 · Art. 28 — Acceso prioritario a vivienda y residencias públicas</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Derecho</th><th>Contenido</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td>Viviendas protegidas</td><td>Acceso <strong>prioritario</strong> en las convocatorias de adjudicación de viviendas protegidas</td><td>El acceso es PRIORITARIO, no exclusivo ni reservado</td></tr>
+    <tr><td>Residencias públicas para mayores</td><td>Acceso <strong>prioritario</strong> a las residencias públicas para mayores dependientes</td><td>También aplica a las residencias de mayores, no solo viviendas protegidas</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T13: ÓRGANOS INSTITUCIONALES (TÍTULO III) -->
+<h2>T13 · Órganos institucionales (Título III)</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Órgano</th><th>Art.</th><th>Naturaleza</th><th>Funciones principales</th></tr></thead>
+  <tbody>
+    <tr><td>Delegación Especial del Gobierno contra la VG</td><td>29</td><td>Órgano de la Administración del Estado. Adscrita al Ministerio de Igualdad</td><td>PROPONE la política del Gobierno · Coordina e impulsa actuaciones · Elabora el informe anual del Plan Nacional y lo remite a las Cortes</td></tr>
+    <tr><td>Observatorio Estatal de la Violencia sobre la Mujer</td><td>30</td><td>Órgano <strong>colegiado</strong>. Adscrito al Ministerio de Igualdad</td><td>ANALIZA y SEGUIMIENTO de la evolución de la VG · ASESORA y COLABORA con la Delegación · No propone la política del Gobierno</td></tr>
+  </tbody>
+</table>
+<div class="note n-err">❌ El examen mezcla las funciones: quien <strong>PROPONE</strong> la política es la <strong>DELEGACIÓN</strong>, no el Observatorio. El Observatorio ANALIZA, ASESORA y COLABORA.</div>
+</div>
+
+<!-- T14: TRAMPAS DE EXAMEN -->
+<h2>T14 · Las 12 trampas de examen</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Afirmación trampa</th><th>¿Correcta?</th><th>Corrección exacta</th></tr></thead>
+  <tbody>
+    <tr><td>La LO 1/2004 protege a cualquier mujer víctima de violencia por razón de género</td><td><span class="badge b-err">FALSO</span></td><td>Solo la ejercida por quien sea o haya sido su cónyuge o pareja sentimental (art. 1.1)</td></tr>
+    <tr><td>La LO 1/2004 requiere que haya o haya habido convivencia entre víctima y agresor</td><td><span class="badge b-err">FALSO</span></td><td>Se aplica expresamente "AUN SIN CONVIVENCIA" (art. 1.1)</td></tr>
+    <tr><td>Los 3 verbos del art. 1.2 son: prevenir, proteger y erradicar</td><td><span class="badge b-err">FALSO</span></td><td>Son <strong>PREVENIR, SANCIONAR y ERRADICAR</strong></td></tr>
+    <tr><td>El acceso a los servicios del art. 2.b es "rápido, fiable y eficaz"</td><td><span class="badge b-err">FALSO</span></td><td>Es "<strong>RÁPIDO, TRANSPARENTE Y EFICAZ</strong>" (art. 2.b)</td></tr>
+    <tr><td>La suspensión laboral del art. 21 es de 3 meses prorrogables a 6</td><td><span class="badge b-err">FALSO</span></td><td>Es de <strong>6 meses</strong>, prorrogables hasta <strong>18 meses</strong> por decisión judicial</td></tr>
+    <tr><td>Las funcionarias víctimas de VG tienen suspensión con reserva del puesto</td><td><span class="badge b-err">FALSO</span></td><td>Las funcionarias tienen <strong>EXCEDENCIA</strong> (no suspensión). Las laborales sí tienen suspensión. Los plazos son iguales: 6→18 meses</td></tr>
+    <tr><td>La ayuda del art. 27 es incompatible con la Ley 35/1995</td><td><span class="badge b-err">FALSO</span></td><td>Son expresamente <strong>COMPATIBLES</strong></td></tr>
+    <tr><td>Los menores no son sujetos del derecho a asistencia social integral del art. 19</td><td><span class="badge b-err">FALSO</span></td><td>Los menores bajo patria potestad o guarda y custodia de la víctima SÍ tienen este derecho (mod. LO 8/2021)</td></tr>
+    <tr><td>El Observatorio Estatal propone la política del Gobierno en materia de VG</td><td><span class="badge b-err">FALSO</span></td><td>La DELEGACIÓN ESPECIAL propone la política. El Observatorio ANALIZA, ASESORA y COLABORA</td></tr>
+    <tr><td>La asistencia jurídica gratuita del art. 20 requiere resolución judicial previa</td><td><span class="badge b-err">FALSO</span></td><td>Solo requiere carecer de recursos económicos suficientes. No se exige resolución ni medida cautelar</td></tr>
+    <tr><td>La ayuda del art. 27 es de 6 meses en todos los casos</td><td><span class="badge b-err">FALSO</span></td><td>6 meses en general · 18 meses con responsabilidades familiares · <strong>24 meses</strong> con discapacidad ≥ 33%</td></tr>
+    <tr><td>El carácter de servicios esenciales del art. 17 existe desde la aprobación de la LO 1/2004</td><td><span class="badge b-err">FALSO</span></td><td>Fue añadido por la <strong>LO 10/2022</strong> de 6 de septiembre</td></tr>
+  </tbody>
+</table>
+</div>
+
+</body>
+</html>
