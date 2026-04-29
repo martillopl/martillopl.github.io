@@ -1,0 +1,383 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 42 · HTML 2 · Esquema-resumen visual · Protocolo acoso UPNA</title>
+<style>
+:root{--bg:#f0f9ff;--card:#fff;--s2:#f0f9ff;--line:#7dd3fc;--text:#0c4a6e;--muted:#0284c7;--p:#075985;--warn:#d97706;--red:#dc2626;--grn:#059669;--vio:#7c3aed;--sh:0 2px 10px rgba(7,89,133,.09)}
+[data-theme="dark"]{--bg:#020c1a;--card:#0a1e35;--s2:#0e2a45;--line:#075985;--text:#bae6fd;--muted:#38bdf8;--p:#38bdf8;--warn:#fbbf24;--red:#fca5a5;--grn:#6ee7b7;--vio:#c4b5fd;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.6;background:var(--bg);color:var(--text);padding:22px}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.97rem;color:var(--p)}.hdr p{font-size:.74rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.72rem}
+h2{font-size:.87rem;font-weight:800;color:#fff;background:var(--p);padding:8px 15px;border-radius:7px;margin:22px 0 10px;display:inline-block}
+/* KPI strip */
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:14px}
+.kbox{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:11px 13px;box-shadow:var(--sh);text-align:center}
+.big{font-size:1.05rem;font-weight:800;color:var(--p);margin-bottom:2px}
+.ksmall{font-size:.7rem;color:var(--muted)}.kmini{font-size:.69rem;margin-top:3px}
+/* conductas */
+.cond-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+.cond{background:var(--card);border-radius:12px;padding:14px 15px;box-shadow:var(--sh)}
+.cond-P{border-top:5px solid var(--vio)}
+.cond-S{border-top:5px solid var(--red)}
+.cond-R{border-top:5px solid var(--warn)}
+.cond h3{font-size:.82rem;font-weight:800;margin:4px 0 5px}
+.cond-P h3{color:var(--vio)}.cond-S h3{color:var(--red)}.cond-R h3{color:var(--warn)}
+.cond p,.cond li{font-size:.75rem;margin:.2rem 0}
+.cond ul{padding-left:15px}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.63rem;font-weight:700;border:1px solid transparent;white-space:nowrap;margin:1px}
+.b-ok{background:rgba(5,150,105,.12);color:#059669;border-color:rgba(5,150,105,.3)}
+.b-err{background:rgba(220,38,38,.12);color:#dc2626;border-color:rgba(220,38,38,.3)}
+.b-warn{background:rgba(217,119,6,.12);color:var(--warn);border-color:rgba(217,119,6,.3)}
+.b-vio{background:rgba(124,58,237,.12);color:var(--vio);border-color:rgba(124,58,237,.3)}
+.b-sky{background:rgba(2,132,199,.12);color:var(--muted);border-color:rgba(2,132,199,.3)}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:11px;margin-bottom:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:13px 15px;box-shadow:var(--sh)}
+.tag{display:block;font-size:.63rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:5px}
+.card p,.card li{font-size:.79rem;margin:.25rem 0}
+.card ul{padding-left:15px}
+strong{color:var(--p)}
+.l1{border-left:4px solid var(--p)}.l2{border-left:4px solid var(--warn)}.l3{border-left:4px solid var(--vio)}.l4{border-left:4px solid var(--grn)}.l5{border-left:4px solid var(--red)}
+/* notes */
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.74rem;border-left:4px solid;margin:7px 0}
+.n-ok{background:rgba(5,150,105,.07);border-color:#059669;color:#065f46}
+.n-warn{background:#fef3c7;border-color:#d97706;color:#78350f}
+.n-err{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .n-warn{background:#451a03;color:#fde68a}
+[data-theme="dark"] .n-err{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .n-ok{background:rgba(110,231,183,.07);color:#6ee7b7}
+/* ámbito dos columnas */
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.vcol{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 15px;box-shadow:var(--sh)}
+.vcol-title{font-size:.77rem;font-weight:800;padding:5px 10px;border-radius:6px;text-align:center;color:#fff;margin-bottom:8px}
+.vcol.dir .vcol-title{background:var(--p)}.vcol.ind .vcol-title{background:var(--warn)}
+.vcol ul{padding-left:15px}.vcol li{font-size:.76rem;margin:.22rem 0}
+/* fases */
+.fases{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.fase{background:var(--card);border:2px solid var(--line);border-radius:12px;padding:14px 15px;box-shadow:var(--sh)}
+.fase-1{border-color:var(--grn)}.fase-2{border-color:var(--p)}
+.fase h3{font-size:.82rem;font-weight:800;margin:0 0 7px}
+.fase-1 h3{color:var(--grn)}.fase-2 h3{color:var(--p)}
+.fase ul{padding-left:15px}.fase li{font-size:.76rem;margin:.22rem 0}
+/* principios grid */
+.pris{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:10px;margin-bottom:14px}
+.pri{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 13px;box-shadow:var(--sh)}
+.pri .ico{font-size:1.1rem;display:block;margin-bottom:5px}
+.pri h4{font-size:.77rem;font-weight:800;color:var(--p);margin-bottom:4px}
+.pri p{font-size:.72rem;margin:0}
+/* herramientas gestión */
+.htools{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+.htool{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 15px;box-shadow:var(--sh);text-align:center}
+.htool .ico{font-size:1.4rem;display:block;margin-bottom:6px}
+.htool h4{font-size:.8rem;font-weight:800;color:var(--p);margin-bottom:4px}
+.htool p{font-size:.73rem}
+/* trampas */
+.trap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(245px,1fr));gap:10px;margin-bottom:14px}
+.trap{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 13px;box-shadow:var(--sh)}
+.trap .q{font-size:.73rem;color:var(--red);font-weight:600;margin-bottom:4px}
+.trap .a{font-size:.73rem}
+/* pill */
+.pill{display:inline-block;background:var(--s2);border:1px solid var(--line);color:var(--p);padding:3px 10px;border-radius:999px;font-size:.71rem;font-weight:600;margin:2px}
+@media(max-width:680px){.cond-grid,.fases,.dos,.htools{grid-template-columns:1fr}}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 42 · HTML 2 · Esquema-resumen con bloques visuales para memorización rápida</h1>
+    <p>Protocolo para la prevención, detección y actuación en los supuestos de acoso psicológico, acoso sexual y acoso por razón de sexo en la UPNA</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- KPI -->
+<h2>Fichas flash</h2>
+<div class="kpi">
+  <div class="kbox"><div class="big">Protocolo</div><div class="ksmall">Tipo de instrumento</div><div class="kmini">No reglamento, no ley</div></div>
+  <div class="kbox"><div class="big">UPNA</div><div class="ksmall">Institución</div><div class="kmini">Universidad Pública de Navarra</div></div>
+  <div class="kbox"><div class="big">Oct. 2016</div><div class="ksmall">Aprobado por Consejo de Gobierno</div><div class="kmini">⚠ No en 2022</div></div>
+  <div class="kbox"><div class="big">3 conductas</div><div class="ksmall">Psicológico · Sexual · Razón de sexo</div><div class="kmini">⚠ No solo 2</div></div>
+  <div class="kbox"><div class="big">PDI+PAS+<br>Alumnado</div><div class="ksmall">+ empresas contratadas</div><div class="kmini">+ empresas de prácticas</div></div>
+  <div class="kbox"><div class="big">2 ámbitos<br>preventivos</div><div class="ksmall">Sensibilización + Gestión</div><div class="kmini">Código · Buzón · Informe anual</div></div>
+  <div class="kbox"><div class="big">2 fases</div><div class="ksmall">Acogida + Queja</div><div class="kmini">⚠ No 3 fases</div></div>
+  <div class="kbox"><div class="big">Asesoría<br>Confidencial</div><div class="ksmall">Órgano clave del procedimiento</div><div class="kmini">Igualdad + Salud Laboral</div></div>
+</div>
+
+<!-- DECLARACIÓN DE PRINCIPIOS -->
+<h2>Idea fuerza</h2>
+<div class="card l1" style="margin-bottom:14px">
+  <span class="tag">Declaración de principios textual · para el examen</span>
+  <p>La UPNA considera las conductas de acoso <strong>"un atentado contra el derecho a la igualdad, la integridad física y psíquica y la dignidad de las personas"</strong> y se compromete a <strong>"no permitir ni tolerar"</strong> situaciones de esta índole.</p>
+  <p>El compromiso institucional se resume en tres verbos: <strong>"se facilitará ayuda a quien lo sufra, se evitará que la situación se repita y se sancionará en función de las circunstancias"</strong>.</p>
+  <div class="note n-err">⚠ El objetivo del protocolo: <strong>prevenir, evitar y erradicar</strong> el acoso (3 verbos clave) + determinar las actuaciones para la <strong>investigación, persecución y sanción</strong>.</div>
+</div>
+
+<!-- LAS TRES CONDUCTAS -->
+<h2>Las 3 conductas reguladas</h2>
+<div class="cond-grid">
+  <div class="cond cond-P">
+    <div style="font-size:1.4rem">🟣</div>
+    <h3>Acoso psicológico (mobbing)</h3>
+    <p>Conducta abusiva, <strong>reiterada, sistemática y/o prolongada</strong> en el ámbito laboral/estudiantil que atenta contra la dignidad</p>
+    <div style="margin:5px 0"><span class="badge b-err">SÍ requiere reiteración</span></div>
+    <p style="font-size:.71rem;margin-top:4px"><strong>Conductas:</strong></p>
+    <ul>
+      <li>Ataques a la tarea (críticas injustificadas)</li>
+      <li>Ataques a las relaciones (aislamiento)</li>
+      <li>Ataques a la comunicación (ignorar)</li>
+      <li>Restricción de medios (teléfono, correo)</li>
+      <li>Amenazas, gritos, insultos reiterados</li>
+    </ul>
+    <p style="font-size:.71rem;margin-top:5px"><strong>Norma:</strong> Derecho Laboral (no LO 3/2007)</p>
+  </div>
+  <div class="cond cond-S">
+    <div style="font-size:1.4rem">🔴</div>
+    <h3>Acoso sexual</h3>
+    <p>Comportamiento verbal, no verbal o físico <strong>de índole sexual</strong> no deseado que atenta contra la dignidad o crea entorno intimidatorio</p>
+    <div style="margin:5px 0"><span class="badge b-ok">NO requiere reiteración</span></div>
+    <p style="font-size:.71rem;margin-top:4px"><strong>Conductas:</strong></p>
+    <ul>
+      <li>Verbal: insinuaciones, chistes sexuales</li>
+      <li>No verbal: gestos obscenos, imágenes porn.</li>
+      <li>Físico: contacto no deseado, agresión sexual</li>
+    </ul>
+    <p style="font-size:.71rem;margin-top:5px"><strong>Norma:</strong> LO 3/2007, art. 7.1</p>
+  </div>
+  <div class="cond cond-R">
+    <div style="font-size:1.4rem">🟠</div>
+    <h3>Acoso por razón de sexo</h3>
+    <p>Comportamiento realizado <strong>en función del sexo</strong> de la persona, sin necesidad de contenido sexual, que atenta contra la dignidad</p>
+    <div style="margin:5px 0"><span class="badge b-ok">NO requiere reiteración</span></div>
+    <p style="font-size:.71rem;margin-top:4px"><strong>Diferencia con sexual:</strong></p>
+    <ul>
+      <li>Sexual: contenido <strong>de naturaleza sexual</strong></li>
+      <li>Razón de sexo: motivado por el <strong>sexo</strong>, sin contenido sexual obligatorio</li>
+    </ul>
+    <p style="font-size:.71rem;margin-top:5px"><strong>Norma:</strong> LO 3/2007, art. 7.2</p>
+  </div>
+</div>
+<div class="note n-err" style="margin-bottom:14px">⚠ La distinción más preguntada: solo el <strong>psicológico</strong> requiere reiteración. El examen puede afirmar "el acoso sexual requiere reiteración" → FALSO. Y "sexual = razón de sexo" → FALSO: el sexual tiene contenido de <strong>naturaleza sexual</strong>; el de razón de sexo está motivado por el <strong>sexo</strong> de la persona.</div>
+
+<!-- ÁMBITO DE APLICACIÓN -->
+<h2>Ámbito de aplicación</h2>
+<div class="dos">
+  <div class="vcol dir">
+    <div class="vcol-title">📋 Aplicación DIRECTA</div>
+    <ul>
+      <li><strong>PDI</strong> — Personal Docente e Investigador</li>
+      <li><strong>PAS</strong> — Personal de Administración y Servicios</li>
+      <li><strong>Alumnado</strong> — grado, máster, doctorado</li>
+    </ul>
+  </div>
+  <div class="vcol ind">
+    <div class="vcol-title">⚠ Aplicación INDIRECTA ★★★</div>
+    <ul>
+      <li><strong>Empresas contratadas</strong> por la UPNA (limpieza, seguridad, cafetería…) — deben conocerlo y respetarlo</li>
+      <li><strong>Empresas que acogen alumnado en prácticas</strong> — deben conocerlo y respetarlo</li>
+    </ul>
+    <p style="font-size:.72rem;margin-top:7px">También: personas usuarias de las instalaciones de la UPNA</p>
+  </div>
+</div>
+<div class="note n-err" style="margin-bottom:14px">⚠ El examen afirmará "solo aplica a la comunidad universitaria" → <strong>FALSO</strong>. También se exige el conocimiento y respeto del protocolo a las <strong>empresas contratadas</strong> y a las <strong>empresas de prácticas</strong>.</div>
+
+<!-- MEDIDAS PREVENTIVAS -->
+<h2>2 ámbitos preventivos</h2>
+<div class="dos" style="margin-bottom:10px">
+  <div class="vcol" style="border-left:4px solid var(--vio)">
+    <div class="vcol-title" style="background:var(--vio)">1. Sensibilización, información y formación</div>
+    <ul>
+      <li>Formación de <strong>mandos intermedios y directivos</strong> académicos y de servicios</li>
+      <li>Cursos para construir una universidad libre de desigualdades</li>
+      <li><strong>Código de Buenas Conductas</strong> ★★★</li>
+      <li>Potenciación de la comunicación interna</li>
+      <li>Acciones de sensibilización y prevención</li>
+    </ul>
+  </div>
+  <div class="vcol" style="border-left:4px solid var(--grn)">
+    <div class="vcol-title" style="background:var(--grn)">2. Modelos de gestión</div>
+    <ul>
+      <li>Evaluación de riesgos psicosociales en puestos de trabajo</li>
+      <li><strong>Buzón de observaciones y propuestas de mejora</strong> ★★★</li>
+      <li><strong>Informe anual</strong> sobre el protocolo ★★★</li>
+      <li>Otras medidas de gestión organizacional</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TRES HERRAMIENTAS CLAVE -->
+<h2>Las 3 herramientas de gestión ★★★</h2>
+<div class="htools">
+  <div class="htool">
+    <span class="ico">📖</span>
+    <h4>Código de Buenas Conductas</h4>
+    <p>Documento con las pautas de comportamiento ético esperado en la UPNA. Instrumento del ámbito de sensibilización.</p>
+  </div>
+  <div class="htool">
+    <span class="ico">📬</span>
+    <h4>Buzón de Observaciones y Propuestas de Mejora</h4>
+    <p>Canal para que la comunidad universitaria reporte observaciones sobre el funcionamiento del protocolo.</p>
+  </div>
+  <div class="htool">
+    <span class="ico">📊</span>
+    <h4>Informe Anual</h4>
+    <p>Informe sobre la aplicación y seguimiento del protocolo. Periodicidad: anual.</p>
+  </div>
+</div>
+<div class="note n-warn" style="margin-bottom:14px">⚠ Las tres herramientas son de los datos más preguntados del tema. Memorizar: <strong>Código de Buenas Conductas + Buzón de Observaciones + Informe Anual</strong>.</div>
+
+<!-- PROCEDIMIENTO: 2 FASES -->
+<h2>Procedimiento: las 2 fases</h2>
+<div class="fases">
+  <div class="fase fase-1">
+    <h3>FASE 1 · Acogida 🤝</h3>
+    <p style="font-size:.76rem;margin-bottom:7px">Atención a la persona afectada, información de sus derechos, valoración de la situación, apoyo y asistencia. <strong>Sin plazo forzado. Sin denuncia obligatoria.</strong></p>
+    <p style="font-size:.73rem;font-weight:700;margin-bottom:4px">Servicios implicados:</p>
+    <ul>
+      <li>Asesoría Confidencial</li>
+      <li>Salud Laboral y Gestión Medioambiental</li>
+      <li>Unidad de Asistencia Psicológica y Sanitaria</li>
+      <li>Acción Social</li>
+      <li>Unidad de Igualdad</li>
+      <li>Defensor/a de la Comunidad Universitaria</li>
+    </ul>
+  </div>
+  <div class="fase fase-2">
+    <h3>FASE 2 · Queja / Denuncia 📝</h3>
+    <p style="font-size:.76rem;margin-bottom:7px">La persona presenta queja o denuncia formal ante la <strong>Asesoría Confidencial</strong>. Se abre investigación con garantías y se emite informe de valoración al Rectorado.</p>
+    <p style="font-size:.73rem;font-weight:700;margin-bottom:4px">3 posibles resoluciones del informe:</p>
+    <ul>
+      <li><span class="badge b-ok">Archivo</span> — sin indicios de acoso</li>
+      <li><span class="badge b-warn">Otra falta</span> — conducta diferente al acoso pero sancionable</li>
+      <li><span class="badge b-err">Falta muy grave de acoso</span> — indicios claros → expediente disciplinario</li>
+    </ul>
+  </div>
+</div>
+<div class="note n-err" style="margin-bottom:14px">⚠ El procedimiento tiene <strong>DOS</strong> fases, no tres. Las 3 posibles resoluciones NO son las fases del procedimiento: no confundir.</div>
+
+<!-- ASESORÍA CONFIDENCIAL -->
+<h2>La Asesoría Confidencial ★★★</h2>
+<div class="card l5" style="margin-bottom:14px">
+  <span class="tag">Órgano central del procedimiento — creado por este protocolo</span>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div>
+      <p style="font-size:.76rem;font-weight:700;margin-bottom:4px">Composición:</p>
+      <ul style="padding-left:15px">
+        <li style="font-size:.74rem">Gestionada conjuntamente por la <strong>Unidad de Igualdad</strong> y <strong>Salud Laboral</strong> de la UPNA</li>
+        <li style="font-size:.74rem">Sus integrantes reciben <strong>formación específica</strong> en acoso</li>
+      </ul>
+    </div>
+    <div>
+      <p style="font-size:.76rem;font-weight:700;margin-bottom:4px">Puede apoyarse en:</p>
+      <ul style="padding-left:15px">
+        <li style="font-size:.74rem">Unidad de Asistencia Psicológica y Sanitaria de la UPNA</li>
+        <li style="font-size:.74rem">Otras instancias expertas externas</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note n-err">⚠ La Asesoría Confidencial no actúa en solitario: puede apoyarse en la Unidad de Asistencia Psicológica y en expertas externas. El examen puede afirmar que actúa de forma <strong>completamente independiente</strong> → FALSO.</div>
+</div>
+
+<!-- PRINCIPIOS RECTORES -->
+<h2>Los 7 principios rectores</h2>
+<div class="pris">
+  <div class="pri l5">
+    <span class="ico">🛡</span>
+    <h4>Prevención ★★★</h4>
+    <p>Prioridad absoluta de la acción preventiva antes de que se produzcan los hechos. Es la primera responsabilidad de la UPNA.</p>
+  </div>
+  <div class="pri l5">
+    <span class="ico">🚫</span>
+    <h4>No represalias ★★★</h4>
+    <p>Prohibición expresa de represalias contra quien presente una queja o denuncia, con independencia del resultado de la investigación.</p>
+  </div>
+  <div class="pri l1">
+    <span class="ico">🔒</span>
+    <h4>Confidencialidad ★★★</h4>
+    <p>Secreto absoluto de todas las personas implicadas en cualquier fase del procedimiento.</p>
+  </div>
+  <div class="pri l2">
+    <span class="ico">⚡</span>
+    <h4>Celeridad ★★</h4>
+    <p>Tramitación urgente sin demoras: el tiempo prolonga el daño a la víctima.</p>
+  </div>
+  <div class="pri l3">
+    <span class="ico">⚖</span>
+    <h4>Imparcialidad y objetividad ★★</h4>
+    <p>Procedimiento justo para todas las partes: denunciante y denunciado/a tienen derecho a ser oídos.</p>
+  </div>
+  <div class="pri l4">
+    <span class="ico">👤</span>
+    <h4>Presunción de inocencia ★★</h4>
+    <p>Hasta que no se acredite la conducta, se presume la inocencia de la persona denunciada.</p>
+  </div>
+  <div class="pri l4">
+    <span class="ico">🛡</span>
+    <h4>Protección de la víctima ★★</h4>
+    <p>Medidas cautelares de separación entre presunta víctima y presunto acosador durante la investigación.</p>
+  </div>
+</div>
+
+<!-- COMPROMISOS DE LA UPNA -->
+<h2>7 compromisos de la UPNA</h2>
+<div class="card l4" style="margin-bottom:14px">
+  <span class="tag">Lo que la UPNA se compromete expresamente a hacer</span>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px">
+    <ul style="padding-left:15px">
+      <li style="font-size:.76rem">Prestar <strong>apoyo y asistencia específica</strong> a quien sufre acoso</li>
+      <li style="font-size:.76rem"><strong>Participar activamente</strong> en el seguimiento de casos y del protocolo</li>
+      <li style="font-size:.76rem"><strong>Articular vías de resolución</strong> (formal e informal)</li>
+      <li style="font-size:.76rem"><strong>Garantizar que no existan represalias</strong> ★★★</li>
+    </ul>
+    <ul style="padding-left:15px">
+      <li style="font-size:.76rem">Facilitar <strong>asesoramiento, orientación y reclamaciones</strong></li>
+      <li style="font-size:.76rem">Facilitar la <strong>investigación</strong> si procede</li>
+      <li style="font-size:.76rem">"Facilitar ayuda · evitar que se repita · <strong>sancionar</strong>"</li>
+    </ul>
+  </div>
+</div>
+
+<!-- MARCO NORMATIVO -->
+<h2>Marco normativo</h2>
+<div class="card l3" style="margin-bottom:14px">
+  <span class="tag">Normas que sustentan el protocolo</span>
+  <div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:5px">
+    <span class="pill">LO 3/2007 · arts. 7.1, 7.2 y 48 ★★★</span>
+    <span class="pill">LO 4/2007 LOU ★★</span>
+    <span class="pill">LF 17/2019 ★★</span>
+    <span class="pill">LF 8/2017 ★★</span>
+    <span class="pill">Directiva 2006/54/CE ★</span>
+    <span class="pill">Convenio 190 OIT 2019 ★</span>
+    <span class="pill">II Plan Igualdad UPNA · Ámbito IV ★★</span>
+    <span class="pill">DF 110/2003 Estatutos UPNA ★</span>
+  </div>
+  <div class="note n-warn" style="margin-top:8px">⚠ La norma estatal de referencia es la <strong>LO 3/2007</strong>: art. 7.1 (acoso sexual) · art. 7.2 (acoso por razón de sexo) · art. 48 (obligación de establecer medidas preventivas).</div>
+</div>
+
+<!-- TRAMPAS -->
+<h2>Las 10 trampas de examen</h2>
+<div class="trap-grid">
+  <div class="trap"><div class="q">❌ "Solo aplica a PDI + PAS + alumnado"</div><div class="a">✓ También: <strong>empresas contratadas</strong> y <strong>empresas de prácticas</strong></div></div>
+  <div class="trap"><div class="q">❌ "El acoso sexual requiere reiteración"</div><div class="a">✓ Solo el <strong>psicológico</strong> requiere reiteración. El sexual puede ser <strong>un único acto</strong> grave.</div></div>
+  <div class="trap"><div class="q">❌ "Acoso sexual = acoso por razón de sexo"</div><div class="a">✓ Sexual: contenido <strong>sexual</strong>. Razón de sexo: motivado por el <strong>sexo</strong>, sin contenido sexual obligatorio.</div></div>
+  <div class="trap"><div class="q">❌ "El procedimiento tiene tres fases"</div><div class="a">✓ Solo <strong>dos fases</strong>: acogida + queja ante Asesoría Confidencial.</div></div>
+  <div class="trap"><div class="q">❌ "Quien denuncia puede sufrir represalias si no se acredita"</div><div class="a">✓ Prohibición <strong>expresa</strong> de represalias, con independencia del resultado.</div></div>
+  <div class="trap"><div class="q">❌ "Aprobado en 2022 con el II Plan de Igualdad"</div><div class="a">✓ Aprobado por Consejo de Gobierno en <strong>octubre de 2016</strong>.</div></div>
+  <div class="trap"><div class="q">❌ "La Asesoría Confidencial actúa en solitario"</div><div class="a">✓ Puede apoyarse en la <strong>Unidad de Asistencia Psicológica</strong> y en instancias expertas externas.</div></div>
+  <div class="trap"><div class="q">❌ "Solo regula acoso sexual y por razón de sexo"</div><div class="a">✓ Regula <strong>tres</strong> conductas: también el acoso <strong>psicológico</strong>.</div></div>
+  <div class="trap"><div class="q">❌ "El informe siempre da lugar a expediente disciplinario"</div><div class="a">✓ Tres resoluciones posibles: archivo · otra falta · <strong>falta muy grave</strong> de acoso.</div></div>
+  <div class="trap"><div class="q">❌ "En la acogida hay que presentar denuncia formal"</div><div class="a">✓ En la fase de acogida <strong>no hay denuncia obligatoria</strong> ni plazos forzados: es de escucha y apoyo.</div></div>
+</div>
+
+</body>
+</html>

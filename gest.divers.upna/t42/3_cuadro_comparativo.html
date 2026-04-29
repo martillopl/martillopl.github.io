@@ -1,0 +1,339 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 42 · HTML 3 · Cuadro comparativo y tablas operativas · Protocolo acoso UPNA</title>
+<style>
+:root{--bg:#f0f9ff;--card:#fff;--s2:#f0f9ff;--line:#7dd3fc;--text:#0c4a6e;--muted:#0284c7;--p:#075985;--warn:#d97706;--red:#dc2626;--grn:#059669;--vio:#7c3aed;--sh:0 2px 10px rgba(7,89,133,.09)}
+[data-theme="dark"]{--bg:#020c1a;--card:#0a1e35;--s2:#0e2a45;--line:#075985;--text:#bae6fd;--muted:#38bdf8;--p:#38bdf8;--warn:#fbbf24;--red:#fca5a5;--grn:#6ee7b7;--vio:#c4b5fd;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.5;background:var(--bg);color:var(--text);padding:22px}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.97rem;color:var(--p)}.hdr p{font-size:.74rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.72rem}
+h2{font-size:.87rem;font-weight:800;color:#fff;background:var(--p);padding:8px 15px;border-radius:7px;margin:22px 0 10px;display:inline-block}
+.tw{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:var(--sh);overflow-x:auto;margin-bottom:12px}
+table{width:100%;border-collapse:collapse}
+th{background:var(--s2);color:var(--muted);font-size:.67rem;text-transform:uppercase;letter-spacing:.05em;padding:8px 10px;text-align:left}
+td{padding:8px 10px;border-bottom:1px solid var(--s2);font-size:.78rem;vertical-align:top}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+.badge{display:inline-block;padding:3px 9px;border-radius:999px;font-size:.64rem;font-weight:700;border:1px solid transparent;white-space:nowrap;margin:1px}
+.b-ok{background:rgba(5,150,105,.12);color:#059669;border-color:rgba(5,150,105,.3)}
+.b-err{background:rgba(220,38,38,.12);color:#dc2626;border-color:rgba(220,38,38,.3)}
+.b-warn{background:rgba(217,119,6,.12);color:var(--warn);border-color:rgba(217,119,6,.3)}
+.b-vio{background:rgba(124,58,237,.12);color:var(--vio);border-color:rgba(124,58,237,.3)}
+.b-sky{background:rgba(2,132,199,.12);color:var(--muted);border-color:rgba(2,132,199,.3)}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.75rem;border-left:4px solid;margin:8px 0}
+.n-ok{background:rgba(5,150,105,.07);border-color:#059669;color:#065f46}
+.n-warn{background:#fef3c7;border-color:#d97706;color:#78350f}
+.n-err{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .n-warn{background:#451a03;color:#fde68a}
+[data-theme="dark"] .n-err{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .n-ok{background:rgba(110,231,183,.07);color:#6ee7b7}
+strong{color:var(--p)}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 42 · HTML 3 · Cuadro comparativo y tablas operativas para examen</h1>
+    <p>Protocolo para la prevención, detección y actuación en los supuestos de acoso psicológico, acoso sexual y acoso por razón de sexo en la UPNA</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- T1 IDENTIFICACIÓN -->
+<h2>T1 · Identificación del instrumento</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Campo</th><th>Dato</th></tr></thead>
+  <tbody>
+    <tr><td>Tipo de instrumento</td><td><strong>Protocolo</strong> <span class="badge b-err">No reglamento, no ley, no decreto</span></td></tr>
+    <tr><td>Denominación exacta</td><td><strong>Protocolo para la prevención, detección y actuación en los supuestos de acoso psicológico, acoso sexual y acoso por razón de sexo en la UPNA</strong></td></tr>
+    <tr><td>Institución</td><td>Universidad Pública de Navarra (<strong>UPNA</strong>)</td></tr>
+    <tr><td>Órgano aprobador</td><td><strong>Consejo de Gobierno de la UPNA</strong></td></tr>
+    <tr><td>Fecha de aprobación</td><td><strong>Octubre de 2016</strong> <span class="badge b-err">No en 2022</span></td></tr>
+    <tr><td>Tres conductas reguladas</td><td>Acoso <strong>psicológico</strong> · Acoso <strong>sexual</strong> · Acoso por razón de <strong>sexo</strong> <span class="badge b-err">Tres, no dos</span></td></tr>
+    <tr><td>Objetivo general</td><td><strong>Prevenir, evitar y erradicar</strong> el acoso + determinar actuaciones para la <strong>investigación, persecución y sanción</strong></td></tr>
+    <tr><td>Declaración institucional</td><td>La UPNA <strong>"no permitirá ni tolerará"</strong> conductas de acoso · compromiso: <em>"facilitar ayuda · evitar que se repita · sancionar"</em></td></tr>
+    <tr><td>Ámbito aplicación directa</td><td>PDI + PAS + Alumnado de la UPNA</td></tr>
+    <tr><td>Ámbito aplicación indirecta ★★★</td><td><strong>Empresas contratadas</strong> por la UPNA + <strong>empresas que acogen alumnado en prácticas</strong> <span class="badge b-err">Dato de examen clave</span></td></tr>
+    <tr><td>Medidas preventivas</td><td><strong>Dos ámbitos</strong>: sensibilización/formación + modelos de gestión</td></tr>
+    <tr><td>Fases del procedimiento</td><td><strong>Dos</strong>: acogida + queja/denuncia ante la Asesoría Confidencial <span class="badge b-err">No tres fases</span></td></tr>
+    <tr><td>Órgano clave del procedimiento</td><td><strong>Asesoría Confidencial</strong> (gestionada por Unidad de Igualdad + Salud Laboral)</td></tr>
+    <tr><td>Marco normativo principal</td><td><strong>LO 3/2007</strong>, arts. 7.1 (acoso sexual) · 7.2 (razón de sexo) · 48 (obligación de medidas preventivas)</td></tr>
+    <tr><td>Relación con el II Plan UPNA</td><td>Enmarcado en el <strong>Ámbito IV (Gobernanza y personas)</strong> del II Plan de Igualdad 2022-2027, aprobado antes del plan (2016)</td></tr>
+  </tbody>
+</table>
+<div class="note n-err">⚠ Trampas de identificación: instrumento = <strong>protocolo</strong> · fecha = <strong>octubre 2016</strong> (no 2022) · conductas = <strong>tres</strong> · ámbito indirecto = empresas contratadas + prácticas.</div>
+</div>
+
+<!-- T2 COMPARATIVO DE LAS TRES CONDUCTAS -->
+<h2>T2 · Cuadro comparativo de las tres conductas de acoso</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Aspecto</th><th>Acoso psicológico ★★★</th><th>Acoso sexual ★★★</th><th>Acoso por razón de sexo ★★★</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>Definición</strong></td>
+      <td>Conducta abusiva, reiterada, sistemática y/o prolongada en el ámbito laboral/estudiantil que atenta contra la dignidad</td>
+      <td>Comportamiento verbal, no verbal o físico <strong>de índole sexual</strong> no deseado que atenta contra la dignidad o crea entorno intimidatorio</td>
+      <td>Comportamiento realizado <strong>en función del sexo</strong> con propósito o efecto de atentar contra la dignidad y crear entorno intimidatorio</td>
+    </tr>
+    <tr>
+      <td><strong>¿Requiere reiteración?</strong></td>
+      <td><span class="badge b-err">SÍ — sistemático y reiterado</span><br>Un hecho aislado no es suficiente</td>
+      <td><span class="badge b-ok">NO — puede ser un acto único grave</span></td>
+      <td><span class="badge b-ok">NO — puede ser un acto único grave</span></td>
+    </tr>
+    <tr>
+      <td><strong>¿Contenido sexual?</strong></td>
+      <td><span class="badge b-warn">No necesariamente</span> (conducta abusiva en sentido amplio)</td>
+      <td><span class="badge b-err">SÍ — naturaleza sexual</span> (verbal, no verbal o físico de índole sexual)</td>
+      <td><span class="badge b-ok">NO necesariamente</span> — motivado por el sexo, sin requerir contenido sexual</td>
+    </tr>
+    <tr>
+      <td><strong>Norma de referencia</strong></td>
+      <td>Derecho Laboral / concepto doctrinal <span class="badge b-warn">No LO 3/2007</span></td>
+      <td><strong>LO 3/2007, art. 7.1</strong></td>
+      <td><strong>LO 3/2007, art. 7.2</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Modalidades</strong></td>
+      <td>Ataques a la tarea · relaciones · comunicación · Restricción de medios · Amenazas, gritos, insultos</td>
+      <td>Verbal (insinuaciones, chistes) · No verbal (gestos, imágenes) · Físico (contacto no deseado, agresión)</td>
+      <td>Descalificaciones por razón de sexo · asignación vejatoria de tareas · tratar como inferior por el sexo · chistes sobre rol de género</td>
+    </tr>
+    <tr>
+      <td><strong>Ámbito</strong></td>
+      <td>Laboral y/o estudiantil</td>
+      <td>Cualquier ámbito de la UPNA</td>
+      <td>Cualquier ámbito de la UPNA</td>
+    </tr>
+    <tr>
+      <td><strong>Trampa de examen</strong></td>
+      <td>"No requiere reiteración" → <span class="badge b-err">FALSO: SÍ la requiere</span></td>
+      <td>"Requiere reiteración" → <span class="badge b-err">FALSO: NO la requiere</span></td>
+      <td>"Es lo mismo que el acoso sexual" → <span class="badge b-err">FALSO: no requiere contenido sexual</span></td>
+    </tr>
+  </tbody>
+</table>
+<div class="note n-err">⚠ Distinción más preguntada: solo el <strong>psicológico</strong> requiere reiteración · el sexual tiene contenido de <strong>naturaleza sexual</strong> · el de razón de sexo está motivado por el <strong>sexo</strong> de la persona sin necesidad de contenido sexual.</div>
+</div>
+
+<!-- T3 ÁMBITO DE APLICACIÓN -->
+<h2>T3 · Ámbito de aplicación</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Tipo de ámbito</th><th>Colectivo</th><th>Alcance</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td rowspan="3"><strong>Directo ★★★</strong></td><td>PDI — Personal Docente e Investigador</td><td rowspan="3">Aplicación plena del protocolo en todas sus fases y disposiciones</td><td rowspan="3">El protocolo aplica directamente a <strong>toda la comunidad universitaria</strong></td></tr>
+    <tr><td>PAS — Personal de Administración y Servicios</td></tr>
+    <tr><td>Alumnado (grado, máster, doctorado)</td></tr>
+    <tr><td rowspan="2"><strong>Indirecto ★★★</strong></td><td><strong>Empresas contratadas</strong> por la UPNA (personal externo que trabaja en las instalaciones)</td><td rowspan="2">Deben <strong>conocer y respetar</strong> el protocolo. La UPNA exige su cumplimiento como condición.</td><td rowspan="2"><span class="badge b-err">El examen: "solo aplica a la comunidad universitaria" → FALSO</span><br>La aplicación indirecta es uno de los datos más diferenciales del tema</td></tr>
+    <tr><td><strong>Empresas que acogen alumnado en prácticas</strong> externas de la UPNA</td></tr>
+    <tr><td><strong>Amplitud complementaria</strong></td><td>Personas usuarias de las instalaciones de la UPNA</td><td>Alcance ampliado según el vídeo institucional UPNA (2017)</td><td>Dato complementario de menor peso en examen</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T4 MEDIDAS PREVENTIVAS -->
+<h2>T4 · Medidas preventivas: los dos ámbitos</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Ámbito</th><th>Medidas concretas</th><th>Herramienta estrella ★★★</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>1. Sensibilización, información y formación ★★★</strong></td>
+      <td>
+        • Formación de <strong>mandos intermedios y directivos</strong> (académicos y de servicios) en acoso y gestión de conflictos<br>
+        • Cursos para construir una universidad libre de desigualdades (toda la comunidad)<br>
+        • Potenciación de la <strong>comunicación interna</strong><br>
+        • Acciones de sensibilización y prevención (charlas, jornadas, campañas)
+      </td>
+      <td><span class="badge b-vio">Código de Buenas Conductas ★★★</span><br>Pautas de comportamiento ético esperado en la UPNA</td>
+    </tr>
+    <tr>
+      <td><strong>2. Modelos de gestión ★★★</strong></td>
+      <td>
+        • Evaluación de los posibles <strong>riesgos psicosociales</strong> en puestos de trabajo<br>
+        • Otras medidas de gestión organizacional para mejorar el clima laboral y estudiantil
+      </td>
+      <td>
+        <span class="badge b-ok">Buzón de observaciones y propuestas de mejora ★★★</span><br>
+        <span class="badge b-sky">Informe anual ★★★</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="note n-warn">⚠ Las <strong>tres herramientas</strong> de gestión más preguntadas: <strong>Código de Buenas Conductas · Buzón de Observaciones · Informe Anual</strong>. Son datos de examen de alta recurrencia.</div>
+</div>
+
+<!-- T5 PROCEDIMIENTO -->
+<h2>T5 · Procedimiento de actuación: las dos fases</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Fase</th><th>Denominación</th><th>Quién actúa</th><th>Qué ocurre</th><th>¿Denuncia formal necesaria?</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>FASE 1 ★★★</strong></td>
+      <td><strong>Acogida</strong></td>
+      <td>
+        • Asesoría Confidencial<br>
+        • Salud Laboral y Gestión Medioambiental<br>
+        • Unidad de Asistencia Psicológica y Sanitaria<br>
+        • Acción Social<br>
+        • Unidad de Igualdad<br>
+        • Defensor/a de la Comunidad Universitaria
+      </td>
+      <td>Atención a la persona afectada · información de sus derechos · valoración de la situación · prestación de apoyo y asistencia. <strong>Sin plazos forzados.</strong></td>
+      <td><span class="badge b-ok">NO — voluntaria</span><br>La acogida es una fase de escucha y apoyo, no de denuncia</td>
+    </tr>
+    <tr>
+      <td><strong>FASE 2 ★★★</strong></td>
+      <td><strong>Queja o denuncia</strong></td>
+      <td>
+        <strong>Asesoría Confidencial</strong> (órgano receptor y tramitador)<br>
+        + apoyo posible de Unidad de Asistencia Psicológica y de instancias expertas externas
+      </td>
+      <td>Presentación de queja/denuncia → apertura de investigación con garantías → emisión de <strong>informe de valoración al Rectorado</strong></td>
+      <td><span class="badge b-err">SÍ — queja formal ante la Asesoría Confidencial</span></td>
+    </tr>
+  </tbody>
+</table>
+<div class="note n-err">⚠ El procedimiento tiene <strong>DOS</strong> fases, no tres. No confundir las fases del procedimiento con las tres posibles resoluciones del informe de valoración.</div>
+</div>
+
+<!-- T6 RESOLUCIONES DEL INFORME DE VALORACIÓN -->
+<h2>T6 · Resoluciones del informe de valoración (fase 2)</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Resolución</th><th>Cuándo procede</th><th>Consecuencia</th></tr></thead>
+  <tbody>
+    <tr><td><span class="badge b-ok">Archivo del expediente</span></td><td>No se aprecian indicios de conducta de acoso</td><td>Se cierra el procedimiento. La persona denunciada queda sin cargos. La denunciante mantiene la protección frente a represalias.</td></tr>
+    <tr><td><span class="badge b-warn">Apertura de expediente disciplinario por otra falta tipificada</span></td><td>Se constata una conducta diferente al acoso pero igualmente sancionable según el régimen disciplinario aplicable</td><td>Inicio del procedimiento disciplinario por la falta identificada, distinta al acoso</td></tr>
+    <tr><td><span class="badge b-err">Incoación de expediente disciplinario por falta muy grave de acoso</span></td><td>Hay indicios claros o prueba de conducta de acoso psicológico, sexual o por razón de sexo</td><td>Apertura de expediente disciplinario por <strong>falta muy grave</strong> → posibles sanciones: suspensión, traslado, destitución o separación del servicio según la gravedad</td></tr>
+  </tbody>
+</table>
+<div class="note n-warn">⚠ Tres resoluciones posibles: <strong>archivo · otra falta · falta muy grave de acoso</strong>. El examen puede afirmar "el informe siempre da lugar a expediente disciplinario" → FALSO: puede archivarse.</div>
+</div>
+
+<!-- T7 ASESORÍA CONFIDENCIAL -->
+<h2>T7 · La Asesoría Confidencial</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Aspecto</th><th>Contenido</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Naturaleza</strong></td><td>Órgano <strong>creado específicamente por este protocolo</strong>. Es el órgano central del procedimiento de actuación.</td></tr>
+    <tr><td><strong>Gestión</strong></td><td>Gestionada conjuntamente por la <strong>Unidad de Igualdad</strong> y <strong>Salud Laboral y Gestión Medioambiental</strong> de la UPNA <span class="badge b-err">No actúa en solitario</span></td></tr>
+    <tr><td><strong>Formación de sus integrantes</strong></td><td>Reciben <strong>formación específica</strong> en materia de acoso</td></tr>
+    <tr><td><strong>Apoyos posibles</strong></td><td>Puede contar con el apoyo de: (1) <strong>Unidad de Asistencia Psicológica y Sanitaria</strong> de la UPNA; (2) otras <strong>instancias expertas externas</strong></td></tr>
+    <tr><td><strong>Acceso</strong></td><td>Se puede acudir directamente o derivado desde: Asistencia Psicológica Sanitaria · Acción Social · Defensoría de la Comunidad Universitaria</td></tr>
+    <tr><td><strong>Principio rector propio</strong></td><td><strong>Confidencialidad absoluta</strong> de toda la información conocida en el ejercicio de sus funciones</td></tr>
+    <tr><td><strong>Producto final</strong></td><td><strong>Informe de valoración</strong> que se remite al Rectorado con una de las tres resoluciones posibles</td></tr>
+    <tr><td><strong>Vías que puede canalizar</strong></td><td>Vía formal (procedimiento disciplinario) y vía informal (mediación)</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T8 PRINCIPIOS RECTORES -->
+<h2>T8 · Los 7 principios rectores</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Principio</th><th>★</th><th>Contenido</th><th>Trampa de examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Prevención</strong></td><td>★★★</td><td>Prioridad absoluta de la acción preventiva antes de que se produzcan los hechos. Primera responsabilidad de la UPNA.</td><td>—</td></tr>
+    <tr><td><strong>No represalias</strong></td><td>★★★</td><td>Prohibición <strong>expresa</strong> de represalias contra quien presente queja o denuncia, con independencia del resultado de la investigación.</td><td>"Quien denuncia puede ser sancionado si la denuncia no se acredita" → <span class="badge b-err">FALSO</span></td></tr>
+    <tr><td><strong>Confidencialidad</strong></td><td>★★★</td><td>Secreto <strong>absoluto</strong> de todas las personas implicadas en cualquier fase del procedimiento.</td><td>—</td></tr>
+    <tr><td><strong>Celeridad</strong></td><td>★★</td><td>Tramitación urgente y sin demoras innecesarias.</td><td>—</td></tr>
+    <tr><td><strong>Imparcialidad y objetividad</strong></td><td>★★</td><td>Procedimiento justo para todas las partes: denunciante y denunciado/a tienen derecho a ser oídos y a presentar alegaciones.</td><td>—</td></tr>
+    <tr><td><strong>Presunción de inocencia</strong></td><td>★★</td><td>Hasta que no se acredite la conducta, se presume la inocencia de la persona denunciada.</td><td>—</td></tr>
+    <tr><td><strong>Protección de la víctima</strong></td><td>★★</td><td>Medidas cautelares de <strong>separación</strong> entre presunta víctima y presunto acosador durante la investigación.</td><td>—</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T9 MARCO NORMATIVO -->
+<h2>T9 · Marco normativo</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Norma</th><th>Ámbito</th><th>Artículos relevantes</th><th>Aportación al protocolo</th></tr></thead>
+  <tbody>
+    <tr><td><strong>LO 3/2007, de 22 de marzo ★★★</strong></td><td>Estatal</td><td>Art. 7.1: definición acoso sexual<br>Art. 7.2: definición acoso por razón de sexo<br>Art. 46.2: negociación de medidas<br>Art. 48: obligación de establecer medidas preventivas</td><td>Norma estatal de <strong>referencia directa</strong>. Proporciona las definiciones legales y la obligación de disponer del protocolo.</td></tr>
+    <tr><td><strong>LO 4/2007, de 12 de abril (LOU) ★★</strong></td><td>Estatal</td><td>Derechos de la comunidad universitaria</td><td>Fundamento habilitante universitario para la aprobación del protocolo.</td></tr>
+    <tr><td><strong>LF 17/2019, de 4 de abril ★★</strong></td><td>Navarra</td><td>Marco general de igualdad</td><td>Refuerza la obligación de prevenir el acoso en las instituciones públicas navarras.</td></tr>
+    <tr><td><strong>LF 8/2017, de 19 de junio ★★</strong></td><td>Navarra</td><td>Arts. 5 y Título III</td><td>Complementa el marco para el acoso por razón de orientación sexual e identidad de género.</td></tr>
+    <tr><td><strong>Directiva 2006/54/CE ★</strong></td><td>UE</td><td>Igualdad de oportunidades en el empleo</td><td>Marco europeo de referencia para la igualdad de género en el trabajo.</td></tr>
+    <tr><td><strong>Convenio 190 OIT (2019) ★</strong></td><td>Internacional</td><td>Eliminación de violencia y acoso en el trabajo</td><td>Marco internacional que fundamenta la obligación de prevenir el acoso en entornos laborales y educativos.</td></tr>
+    <tr><td><strong>II Plan Igualdad UPNA 2022-2027 ★★</strong></td><td>Institucional</td><td>Ámbito IV: Gobernanza y personas</td><td>El protocolo (2016) se enmarca en el Ámbito IV del Plan e impulsa su actualización.</td></tr>
+    <tr><td><strong>DF 110/2003 Estatutos UPNA ★</strong></td><td>Institucional</td><td>Derechos de la comunidad universitaria</td><td>Fundamento estatutario: igualdad, no discriminación y dignidad en la UPNA.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T10 COMPROMISOS DE LA UPNA -->
+<h2>T10 · Los 7 compromisos de la UPNA</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Nº</th><th>Compromiso</th><th>★</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Prestar <strong>apoyo y asistencia específica</strong> a las personas que sufren acoso</td><td>★★★</td></tr>
+    <tr><td>2</td><td><strong>Participar activamente</strong> en el seguimiento de los casos y del protocolo</td><td>★★</td></tr>
+    <tr><td>3</td><td><strong>Articular vías de resolución</strong>: formal (disciplinaria) e informal (mediación)</td><td>★★</td></tr>
+    <tr><td>4</td><td><strong>Garantizar que no existan represalias</strong> contra quien presente la queja <span class="badge b-err">El más preguntado</span></td><td>★★★</td></tr>
+    <tr><td>5</td><td>Facilitar <strong>asesoramiento, orientación y presentación de reclamaciones</strong></td><td>★★</td></tr>
+    <tr><td>6</td><td>Facilitar la <strong>investigación</strong> si procede</td><td>★★</td></tr>
+    <tr><td>7</td><td>Garantizar que <em>"se facilitará ayuda a quien lo sufra, se evitará que la situación se repita y se sancionará en función de las circunstancias"</em></td><td>★★★</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T11 COMPARATIVO PROTOCOLO UPNA vs LO 3/2007 art. 48 -->
+<h2>T11 · Comparativo: Protocolo UPNA vs. obligación LO 3/2007 art. 48</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Dimensión</th><th>LO 3/2007 art. 48 (mínimo legal)</th><th>Protocolo UPNA (aplicación e integración)</th></tr></thead>
+  <tbody>
+    <tr><td>Conductas reguladas</td><td>Acoso sexual y acoso por razón de sexo</td><td>Acoso sexual + razón de sexo + <strong>acoso psicológico</strong> (va más allá del mínimo)</td></tr>
+    <tr><td>Obligación</td><td>Promover condiciones de trabajo que eviten el acoso y arbitrar procedimientos específicos para su prevención</td><td>El protocolo cumple e integra esta obligación con un procedimiento específico de dos fases</td></tr>
+    <tr><td>Ámbito</td><td>Empresas y administraciones públicas</td><td>La UPNA como administración pública + extensión a empresas contratadas y de prácticas</td></tr>
+    <tr><td>Vías de resolución</td><td>Obliga a articular procedimientos</td><td>Vía formal (disciplinaria) + vía informal (mediación)</td></tr>
+    <tr><td>Sensibilización</td><td>No especifica detalle</td><td>Código de Buenas Conductas + Buzón de Observaciones + Informe Anual + cursos y formación</td></tr>
+    <tr><td>Represalias</td><td>Art. 9 y 10 LO 3/2007: protegen a quien denuncia</td><td>Compromiso institucional expreso de no represalias en el propio protocolo</td></tr>
+  </tbody>
+</table>
+<div class="note n-warn">⚠ El protocolo UPNA <strong>supera el mínimo</strong> de la LO 3/2007 al incluir también el acoso <strong>psicológico</strong>, que la LO 3/2007 no obliga a incluir expresamente en los protocolos de igualdad.</div>
+</div>
+
+<!-- T12 TRAMPAS -->
+<h2>T12 · Las 12 trampas del examen</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Afirmación trampa</th><th>¿Correcta?</th><th>Corrección exacta</th></tr></thead>
+  <tbody>
+    <tr><td>"El protocolo solo aplica a la comunidad universitaria (PDI + PAS + alumnado)"</td><td><span class="badge b-err">FALSO</span></td><td>También deben conocerlo y respetarlo las <strong>empresas contratadas</strong> y las <strong>empresas de prácticas</strong></td></tr>
+    <tr><td>"El acoso sexual requiere reiteración para considerarse como tal"</td><td><span class="badge b-err">FALSO</span></td><td>El acoso sexual puede ser <strong>un único acto grave</strong>. El que requiere reiteración es el <strong>psicológico</strong>.</td></tr>
+    <tr><td>"El acoso por razón de sexo y el acoso sexual son lo mismo"</td><td><span class="badge b-err">FALSO</span></td><td>Sexual = contenido de <strong>naturaleza sexual</strong>. Razón de sexo = motivado por el <strong>sexo</strong>, sin contenido sexual obligatorio.</td></tr>
+    <tr><td>"El procedimiento de actuación tiene tres fases"</td><td><span class="badge b-err">FALSO</span></td><td>El procedimiento tiene <strong>DOS fases</strong>: acogida + queja/denuncia ante la Asesoría Confidencial.</td></tr>
+    <tr><td>"Quien presenta la queja puede ser sancionado si la denuncia no se acredita"</td><td><span class="badge b-err">FALSO</span></td><td>Prohibición <strong>expresa</strong> de represalias, con independencia del resultado de la investigación.</td></tr>
+    <tr><td>"El protocolo fue aprobado en 2022 como parte del II Plan de Igualdad"</td><td><span class="badge b-err">FALSO</span></td><td>Aprobado por el Consejo de Gobierno en <strong>octubre de 2016</strong>. El II Plan lo recoge como acción, pero es anterior.</td></tr>
+    <tr><td>"La Asesoría Confidencial actúa completamente en solitario"</td><td><span class="badge b-err">FALSO</span></td><td>Puede apoyarse en la <strong>Unidad de Asistencia Psicológica y Sanitaria</strong> y en instancias expertas externas.</td></tr>
+    <tr><td>"El protocolo solo regula el acoso sexual y el acoso por razón de sexo"</td><td><span class="badge b-err">FALSO</span></td><td>Regula <strong>tres</strong> conductas: también el <strong>acoso psicológico</strong>.</td></tr>
+    <tr><td>"El informe de valoración de la Asesoría siempre da lugar a expediente disciplinario"</td><td><span class="badge b-err">FALSO</span></td><td>Puede resultar en tres resoluciones: <strong>archivo · otra falta · falta muy grave de acoso</strong>.</td></tr>
+    <tr><td>"En la fase de acogida la persona debe presentar denuncia formal obligatoriamente"</td><td><span class="badge b-err">FALSO</span></td><td>La acogida es una fase de escucha, información y apoyo. <strong>No hay denuncia obligatoria ni plazos forzados.</strong></td></tr>
+    <tr><td>"El protocolo solo tiene medidas reactivas (de actuación cuando ocurre el acoso)"</td><td><span class="badge b-err">FALSO</span></td><td>El protocolo pone el énfasis en la <strong>prevención</strong>: dos ámbitos preventivos (sensibilización/formación + modelos de gestión).</td></tr>
+    <tr><td>"El acoso psicológico tiene definición legal en el art. 7 de la LO 3/2007"</td><td><span class="badge b-err">FALSO</span></td><td>El art. 7 de la LO 3/2007 define el acoso <strong>sexual</strong> (7.1) y el acoso <strong>por razón de sexo</strong> (7.2). El acoso psicológico es un concepto del Derecho Laboral, no de la LO 3/2007.</td></tr>
+  </tbody>
+</table>
+</div>
+
+</body>
+</html>
