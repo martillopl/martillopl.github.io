@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 45 · HTML 3 · Cuadro comparativo · Tablas operativas · LF 15/2006</title>
+<style>
+:root{--bg:#f0f9ff;--card:#fff;--s2:#f0f9ff;--line:#7dd3fc;--text:#0c4a6e;--muted:#0284c7;--p:#075985;--p2:#0369a1;--warn:#d97706;--red:#dc2626;--grn:#059669;--vio:#7c3aed;--teal:#0d9488;--sh:0 2px 10px rgba(7,89,133,.09)}
+[data-theme="dark"]{--bg:#020c1a;--card:#0a1e35;--s2:#0e2a45;--line:#075985;--text:#bae6fd;--muted:#38bdf8;--p:#38bdf8;--p2:#7dd3fc;--warn:#fbbf24;--red:#fca5a5;--grn:#6ee7b7;--vio:#c4b5fd;--teal:#5eead4;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.6;background:var(--bg);color:var(--text);padding:22px}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}.hdr h1{font-size:.96rem;color:var(--p)}.hdr p{font-size:.73rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.72rem}
+h2{font-size:.88rem;font-weight:800;color:#fff;background:var(--p);padding:8px 15px;border-radius:7px;margin:22px 0 10px;display:inline-block}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.74rem;border-left:4px solid;margin:7px 0}
+.n-ok{background:rgba(5,150,105,.07);border-color:#059669;color:#065f46}.n-warn{background:#fef3c7;border-color:#d97706;color:#78350f}.n-err{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .n-warn{background:#451a03;color:#fde68a}[data-theme="dark"] .n-err{background:#200a0a;color:#fca5a5}[data-theme="dark"] .n-ok{background:rgba(110,231,183,.07);color:#6ee7b7}
+.tbl{width:100%;border-collapse:collapse;margin-bottom:12px;box-shadow:var(--sh);border-radius:10px;overflow:hidden}
+.tbl th{background:var(--p);color:#fff;font-size:.69rem;text-transform:uppercase;letter-spacing:.06em;padding:8px 10px;text-align:left;font-weight:700}
+.tbl td{padding:7px 10px;border-bottom:1px solid var(--s2);font-size:.76rem;vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}.tbl tr:hover td{background:var(--s2)}
+.tbl .h-vio th{background:var(--vio)}.tbl .h-grn th{background:var(--grn)}.tbl .h-teal th{background:var(--teal)}.tbl .h-warn th{background:#b45309}.tbl .h-red th{background:var(--red)}
+.s3{color:#f59e0b;font-size:.72rem}
+.bq{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.62rem;font-weight:700;border:1px solid transparent;white-space:nowrap;margin:1px}.ok{background:rgba(5,150,105,.12);color:#059669;border-color:rgba(5,150,105,.3)}.err{background:rgba(220,38,38,.12);color:#dc2626;border-color:rgba(220,38,38,.3)}.warn{background:rgba(180,83,9,.12);color:#b45309;border-color:rgba(180,83,9,.3)}.vio{background:rgba(124,58,237,.12);color:var(--vio);border-color:rgba(124,58,237,.3)}.sky{background:rgba(2,132,199,.12);color:var(--muted);border-color:rgba(2,132,199,.3)}.teal{background:rgba(13,148,136,.12);color:var(--teal);border-color:rgba(13,148,136,.3)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:13px 16px;box-shadow:var(--sh);margin-bottom:14px}
+strong{color:var(--p2)}
+.art{background:var(--s2);color:var(--muted);padding:2px 7px;border-radius:5px;font-size:.63rem;font-weight:700;border:1px solid var(--line)}
+.tbl .r-ok td{background:rgba(5,150,105,.06)}.tbl .r-err td{background:rgba(220,38,38,.05)}.tbl .r-warn td{background:rgba(217,119,6,.06)}.tbl .r-vio td{background:rgba(124,58,237,.05)}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 45 · HTML 3 · Cuadro comparativo y tablas operativas para examen</h1>
+    <p>LF 15/2006, de 14 de diciembre, de Servicios Sociales (2) · Órganos consultivos y de participación · Profesionales · Iniciativa privada · Calidad · Inspección y régimen sancionador</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<h2>T1 · Ubicación sistemática del Tema 45 <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Título</th><th>Materia</th><th>Artículos</th><th>Clave de examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Título V</strong></td><td>Órganos consultivos y de participación</td><td>56-61</td><td>3 tipos de órganos + Consejo Navarro de Bienestar Social</td></tr>
+<tr><td><strong>Título VI</strong></td><td>Los profesionales de los servicios sociales</td><td>62-68</td><td>Interprofesionalidad + profesional de referencia + Comité de Ética</td></tr>
+<tr><td><strong>Título VII</strong></td><td>La iniciativa privada</td><td>69-81</td><td>Autorización + registro + homologación</td></tr>
+<tr><td><strong>Título VIII</strong></td><td>Calidad de los servicios sociales</td><td>82-84</td><td>Plan de Calidad cada 4 años + satisfacción usuarios</td></tr>
+<tr><td><strong>Título IX</strong></td><td>Inspección y régimen sancionador</td><td>85-95</td><td>Inspección pública/privada + sanciones + prescripción</td></tr>
+</tbody>
+</table>
+
+<h2>T2 · Título V · Los 3 tipos de órganos consultivos y de participación <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Tipo</th><th>Órgano</th><th>Ámbito</th><th>Quién lo crea / regula</th><th>Clave de examen</th></tr></thead>
+<tbody>
+<tr class="r-ok"><td><strong>1</strong></td><td><strong>Consejo Navarro de Bienestar Social</strong></td><td><strong>General</strong></td><td>La ley lo prevé; composición y desarrollo reglamentarios</td><td>⚠ Es <strong>CONSULTIVO</strong> y de participación; no es órgano de decisión</td></tr>
+<tr><td><strong>2</strong></td><td>Órganos consultivos sectoriales</td><td><strong>Sectorial</strong> (uno por cada área)</td><td>Creación reglamentaria por el Gobierno de Navarra</td><td>Representantes de colectivos afectados + profesionales + AAPP</td></tr>
+<tr><td><strong>3</strong></td><td>Consejos de participación</td><td><strong>Territorial</strong> (zona básica y área)</td><td>Desarrollo reglamentario</td><td>Participación de usuarios, familias y entidades del entorno</td></tr>
+</tbody>
+</table>
+<div class="note n-err">⚠ Trampa clásica: el Consejo Navarro de Bienestar Social ≠ Consejo Interadministrativo de SS.SS. El primero es consultivo; el segundo es de cooperación entre AAPP.</div>
+
+<h2>T3 · Consejo Navarro de Bienestar Social: naturaleza, funciones y composición <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Dimensión</th><th>Dato correcto</th><th>Trampa / matización operativa</th></tr></thead>
+<tbody>
+<tr class="r-ok"><td><strong>Naturaleza</strong></td><td>Órgano <strong>consultivo y de participación</strong> de ámbito general</td><td>⚠ No es de decisión ni de gestión</td></tr>
+<tr><td><strong>Adscripción</strong></td><td>Departamento competente en materia de servicios sociales</td><td>—</td></tr>
+<tr><td><strong>Función 1</strong></td><td>Emitir informes y formular propuestas sobre políticas de SS.SS.</td><td>—</td></tr>
+<tr><td><strong>Función 2</strong></td><td>Promover la colaboración y participación de los diferentes agentes</td><td>—</td></tr>
+<tr><td><strong>Función 3</strong></td><td>Conocer la situación de los SS.SS. en Navarra</td><td>—</td></tr>
+<tr class="r-ok"><td><strong>Función 4 ★★★</strong></td><td><strong>Emitir informe preceptivo</strong> sobre los <strong>planes estratégicos</strong></td><td>⚠ Informa, pero NO aprueba</td></tr>
+<tr class="r-ok"><td><strong>Función 5 ★★★</strong></td><td><strong>Emitir informe preceptivo</strong> sobre la <strong>cartera de SS.SS. de ámbito general</strong></td><td>⚠ Informa, pero NO aprueba</td></tr>
+<tr><td><strong>Función 6</strong></td><td>Ser informado de la actividad y evolución del sistema</td><td>—</td></tr>
+<tr><td><strong>Función 7</strong></td><td>Las demás que reglamentariamente se le atribuyan</td><td>—</td></tr>
+<tr class="r-vio"><td><strong>Composición</strong></td><td><strong>REGLAMENTARIA</strong>; con criterios de pluralidad; AAPP + sindicatos + empresarios + entidades sociales + usuarios + colegios profesionales</td><td>⚠ La ley no fija la composición cerrada</td></tr>
+</tbody>
+</table>
+
+<h2>T4 · Título VI · Cuadro operativo de los profesionales de los SS.SS. <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Elemento</th><th>Contenido</th><th>Clave de examen</th></tr></thead>
+<tbody>
+<tr class="r-ok"><td><strong>Carácter de la intervención</strong></td><td><strong>INTERPROFESIONAL</strong></td><td>⚠ No monodisciplinar; objetivo = atención integral</td></tr>
+<tr class="r-ok"><td><strong>Profesional de referencia</strong></td><td>Nueva figura; derecho del ciudadano a la <strong>asignación y elección libre</strong>; orientación y acompañamiento en todo el proceso</td><td>⚠ La elección libre es dato de examen</td></tr>
+<tr><td><strong>Plan de atención individual</strong></td><td>Se vincula funcionalmente al profesional de referencia</td><td>Continuidad y coherencia de la intervención</td></tr>
+<tr class="r-vio"><td><strong>Comité de Ética</strong></td><td>Creado por el Gobierno de Navarra; composición <strong>REGLAMENTARIA</strong>; profesionales de reconocido prestigio</td><td>⚠ La composición no está fijada en la ley</td></tr>
+<tr><td><strong>Función 1 Comité</strong></td><td>Recomendaciones éticas para profesionales</td><td>—</td></tr>
+<tr><td><strong>Función 2 Comité</strong></td><td>Promover códigos de ética profesional</td><td>—</td></tr>
+<tr><td><strong>Función 3 Comité</strong></td><td>Actuar como órgano consultivo en cuestiones éticas</td><td>—</td></tr>
+</tbody>
+</table>
+
+<h2>T5 · Profesionales: derechos frente a deberes <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Derechos de los profesionales</th><th>Deberes de los profesionales</th></tr></thead>
+<tbody>
+<tr><td><strong>Formación adecuada</strong> para mejorar la calidad</td><td>Actuar con <strong>objetividad e imparcialidad</strong></td></tr>
+<tr><td><strong>Apoyo técnico, supervisión y asesoramiento</strong></td><td><strong>Guardar secreto profesional ★★★</strong> sobre la información obtenida</td></tr>
+<tr><td><strong>Medios, recursos y condiciones laborales</strong> adecuadas</td><td>Respetar los <strong>derechos de los usuarios</strong></td></tr>
+<tr><td><strong>Participar en los procesos de evaluación</strong> de la calidad</td><td>Mantener <strong>formación continuada</strong></td></tr>
+<tr><td>Ser <strong>informados de los recursos</strong> disponibles</td><td><strong>Coordinarse</strong> con otros profesionales (interprofesionalidad)</td></tr>
+<tr><td>Los demás derechos laborales y funcionariales</td><td><strong>Notificar obligatoriamente ★★★</strong> situaciones de maltrato o desamparo de menores y personas con discapacidad</td></tr>
+<tr><td>—</td><td>Los demás deberes establecidos en la normativa vigente</td></tr>
+</tbody>
+</table>
+<div class="note n-err">⚠ Datos de examen: secreto profesional (deber) + notificación obligatoria de maltrato/desamparo + interprofesionalidad + elección libre del profesional de referencia.</div>
+
+<h2>T6 · Título VII · Tipos de entidades privadas y principio rector <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Tipo de entidad</th><th>Caracterización</th><th>Regla de examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Iniciativa social</strong></td><td>Sin ánimo de lucro: asociaciones, fundaciones, ONG, entidades voluntarias y solidarias</td><td>⚠ No tienen preferencia automática sobre las mercantiles</td></tr>
+<tr><td><strong>Iniciativa mercantil</strong></td><td>Con ánimo de lucro: empresas, cooperativas y entidades con fines económicos</td><td>Se aplica principio de igualdad y libre competencia</td></tr>
+<tr class="r-ok"><td><strong>Principio rector ★★★</strong></td><td>La <strong>responsabilidad última</strong> de garantizar los SS.SS. corresponde a las <strong>Administraciones Públicas</strong></td><td>⚠ La iniciativa privada coparticipa, pero no sustituye a la responsabilidad pública</td></tr>
+</tbody>
+</table>
+
+<h2>T7 · Autorización, registro y homologación: cuadro comparativo <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Figura</th><th>Qué es</th><th>A quién afecta</th><th>Claves operativas</th></tr></thead>
+<tbody>
+<tr><td><strong>Autorización de apertura y funcionamiento</strong></td><td>Permiso para iniciar la actividad de un servicio social</td><td>Todo nuevo servicio social</td><td>Requiere infraestructura, ratios, titulación, documentación y <strong>estándares de calidad ★★★</strong></td></tr>
+<tr><td><strong>Autorización de modificación sustancial</strong></td><td>Permiso para cambios relevantes en un servicio ya autorizado</td><td>Servicio autorizado que sufre cambios sustanciales</td><td>Control previo administrativo</td></tr>
+<tr><td><strong>Autorización de cierre</strong></td><td>Permiso para cierre definitivo</td><td>Servicio que cesa definitivamente</td><td>Garantía de legalidad del cierre</td></tr>
+<tr><td><strong>Registro de Servicios Sociales</strong></td><td>Registro administrativo de los servicios autorizados</td><td>Todos los servicios autorizados</td><td>Sustituye al antiguo Registro de Entidades, Servicios y Centros; inscripción obligatoria</td></tr>
+<tr class="r-ok"><td><strong>Homologación administrativa ★★★</strong></td><td>Reconocimiento para <strong>formar parte del sistema público</strong></td><td>Servicios de titularidad <strong>pública Y privada</strong></td><td>⚠ Gran novedad de la LF 15/2006; incluye calidad + indicadores objetivos + <strong>calidad en el empleo</strong></td></tr>
+</tbody>
+</table>
+<div class="note n-ok">✓ Fórmula de examen: AUTORIZACIÓN = permiso para funcionar · HOMOLOGACIÓN = reconocimiento para integrarse en el sistema público.</div>
+<div class="note n-err">⚠ "La homologación ya existía en la LF 9/1990" → FALSO. ⚠ "Solo los servicios privados pueden homologarse" → FALSO.</div>
+
+<h2>T8 · Título VIII · Calidad: cuadro operativo <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Elemento</th><th>Dato correcto</th><th>Trampa / clave de examen</th></tr></thead>
+<tbody>
+<tr class="r-ok"><td><strong>Plan de Calidad</strong></td><td>El Gobierno de Navarra elaborará un plan de calidad <strong>cada 4 años</strong></td><td>⚠ No anual ni bienal</td></tr>
+<tr><td><strong>Indicadores</strong></td><td>Objetivos para medir la calidad</td><td>—</td></tr>
+<tr><td><strong>Estándares</strong></td><td>Mínimos de calidad</td><td>—</td></tr>
+<tr class="r-ok"><td><strong>Evaluación ★★★</strong></td><td>Mide aspectos <strong>materiales y funcionales</strong> + <strong>satisfacción de usuarios</strong></td><td>⚠ No solo aspectos materiales</td></tr>
+<tr><td><strong>Publicidad</strong></td><td>Resultados de evaluaciones periódicas de servicios residenciales = públicos</td><td>El usuario residencial tiene derecho a conocerlos antes del ingreso</td></tr>
+<tr><td><strong>Acreditación de calidad</strong></td><td>Puede establecerla el Gobierno de Navarra</td><td>Carácter voluntario</td></tr>
+<tr><td><strong>Calidad en el empleo</strong></td><td>Se incorpora como criterio relevante</td><td>Novedad material de la ley</td></tr>
+</tbody>
+</table>
+
+<h2>T9 · Título IX · Inspección: organismo, ámbito y objeto <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead class="h-teal"><tr><th>Dimensión</th><th>Contenido correcto</th><th>Trampa / clave</th></tr></thead>
+<tbody>
+<tr class="r-ok"><td><strong>Organismo competente</strong></td><td><strong>Departamento competente en materia de servicios sociales</strong> del Gobierno de Navarra</td><td>⚠ No municipios ni mancomunidades</td></tr>
+<tr class="r-ok"><td><strong>Personal inspector</strong></td><td>Acreditado por el Departamento; condición de <strong>AGENTE DE LA AUTORIDAD</strong></td><td>⚠ Dato típico de examen</td></tr>
+<tr class="r-ok"><td><strong>Ámbito subjetivo</strong></td><td>Actuaciones de entidades <strong>PÚBLICAS Y PRIVADAS</strong></td><td>⚠ No solo privadas</td></tr>
+<tr><td><strong>Objeto 1</strong></td><td>Control de adecuación a la normativa vigente</td><td>Requisitos materiales y funcionales</td></tr>
+<tr><td><strong>Objeto 2</strong></td><td>Control del cumplimiento de los conciertos</td><td>—</td></tr>
+<tr class="r-ok"><td><strong>Objeto 3 ★★★</strong></td><td>Vigilancia y respeto de los <strong>derechos de los destinatarios</strong></td><td>Dato relevante</td></tr>
+<tr><td><strong>Objeto 4</strong></td><td>Velar por atención integral, especializada y personalizada</td><td>—</td></tr>
+<tr><td><strong>Objeto 5</strong></td><td>Intervención en autorización, homologación, registro y evaluaciones periódicas</td><td>—</td></tr>
+</tbody>
+</table>
+
+<h2>T10 · Sujetos responsables y tipos de responsabilidad <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Sujeto</th><th>Tipo de responsabilidad</th><th>Clave de examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Titulares de servicios o centros</strong></td><td>Responsabilidad directa</td><td>—</td></tr>
+<tr><td><strong>Administradores, gerentes, directores y responsables técnicos</strong></td><td>Responsabilidad directa en el ámbito de sus funciones</td><td>—</td></tr>
+<tr class="r-ok"><td><strong>Titular no gestor</strong></td><td><strong>Responsabilidad subsidiaria</strong> por las acciones y omisiones de sus gestores</td><td>⚠ Dato clásico de examen</td></tr>
+</tbody>
+</table>
+
+<h2>T11 · Infracciones y sanciones: cuadro general <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead class="h-warn"><tr><th>Categoría</th><th>Descripción general</th><th>Ejemplos / datos de examen</th><th>Sanción económica</th></tr></thead>
+<tbody>
+<tr><td><strong>LEVES</strong></td><td>Incumplimientos menores de la normativa</td><td>Sin afectación grave a seguridad ni derechos esenciales</td><td><strong>Hasta 3.000 €</strong></td></tr>
+<tr><td><strong>GRAVES</strong></td><td>Incumplimientos de requisitos esenciales o de resoluciones de la inspección</td><td>Afectación relevante a derechos de usuarios</td><td><strong>3.001 € a 30.000 €</strong></td></tr>
+<tr class="r-ok"><td><strong>MUY GRAVES ★★★</strong></td><td>Conductas de máxima entidad</td><td>Sin autorización; riesgo para vida/seguridad; obstrucción inspectora; incumplimiento reiterado de resoluciones firmes</td><td><strong>30.001 € a 600.000 €</strong></td></tr>
+</tbody>
+</table>
+
+<h2>T12 · Prescripción de infracciones y sanciones <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead class="h-vio"><tr><th>Tipo</th><th>Prescripción de la infracción</th><th>Prescripción de la sanción</th><th>Clave memorizable</th></tr></thead>
+<tbody>
+<tr><td><strong>LEVES</strong></td><td>6 meses</td><td>1 año</td><td>6m / 1a</td></tr>
+<tr><td><strong>GRAVES</strong></td><td>2 años</td><td>2 años</td><td>2a / 2a</td></tr>
+<tr class="r-ok"><td><strong>MUY GRAVES ★★★</strong></td><td><strong>4 años</strong></td><td><strong>3 años</strong></td><td>4a / 3a</td></tr>
+</tbody>
+</table>
+<div class="note n-warn">⚠ Trampa habitual: el examen invierte los plazos de las muy graves. Recuerda: infracción MG = 4 años; sanción MG = 3 años.</div>
+
+<h2>T13 · Novedades del régimen sancionador respecto a la LF 9/1990 <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Novedad</th><th>Situación en LF 15/2006</th><th>Situación anterior / clave</th></tr></thead>
+<tbody>
+<tr class="r-ok"><td><strong>Elevación de cuantías</strong></td><td>Especialmente las muy graves, hasta <strong>600.000 €</strong></td><td>⚠ Superiores a las de la LF 9/1990</td></tr>
+<tr class="r-ok"><td><strong>Multas coercitivas</strong></td><td>Posibles para forzar el cumplimiento</td><td>⚠ Novedad; no existían en la LF 9/1990</td></tr>
+<tr class="r-ok"><td><strong>Medidas cautelares</strong></td><td>Posibles durante la tramitación del procedimiento</td><td>⚠ Novedad; orientadas a garantizar la seguridad de usuarios</td></tr>
+</tbody>
+</table>
+
+<h2>T14 · Las 14 trampas del examen del Tema 45 <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead class="h-red"><tr><th>#</th><th>Afirmación INCORRECTA</th><th>Corrección exacta</th></tr></thead>
+<tbody>
+<tr class="r-err"><td>1</td><td>"El Consejo Navarro de Bienestar Social es un órgano de decisión"</td><td>FALSO: es un órgano <strong>CONSULTIVO</strong> y de participación</td></tr>
+<tr class="r-err"><td>2</td><td>"Consejo Navarro de Bienestar Social = Consejo Interadministrativo"</td><td>FALSO: el primero es consultivo; el segundo, de cooperación entre AAPP</td></tr>
+<tr class="r-err"><td>3</td><td>"El Consejo Navarro aprueba los planes estratégicos y la cartera general"</td><td>FALSO: emite <strong>informe preceptivo</strong>; aprueba el Gobierno de Navarra</td></tr>
+<tr class="r-err"><td>4</td><td>"El ciudadano no puede elegir a su profesional de referencia"</td><td>FALSO: tiene derecho a la <strong>elección libre</strong></td></tr>
+<tr class="r-err"><td>5</td><td>"La intervención en SS.SS. es monodisciplinar"</td><td>FALSO: es <strong>INTERPROFESIONAL</strong></td></tr>
+<tr class="r-err"><td>6</td><td>"La composición del Comité de Ética está fijada en la ley"</td><td>FALSO: es <strong>REGLAMENTARIA</strong></td></tr>
+<tr class="r-err"><td>7</td><td>"Las entidades de iniciativa social tienen preferencia automática"</td><td>FALSO: rige la <strong>igualdad y libre competencia</strong></td></tr>
+<tr class="r-err"><td>8</td><td>"La homologación ya existía en la LF 9/1990"</td><td>FALSO: es <strong>NOVEDAD</strong> de la LF 15/2006</td></tr>
+<tr class="r-err"><td>9</td><td>"Solo los servicios privados pueden homologarse"</td><td>FALSO: también los servicios de titularidad <strong>PÚBLICA</strong></td></tr>
+<tr class="r-err"><td>10</td><td>"El Plan de Calidad es anual"</td><td>FALSO: se elabora <strong>CADA 4 AÑOS</strong></td></tr>
+<tr class="r-err"><td>11</td><td>"La evaluación de calidad mide solo aspectos materiales"</td><td>FALSO: también mide la <strong>satisfacción de usuarios</strong></td></tr>
+<tr class="r-err"><td>12</td><td>"La inspección corresponde a los municipios"</td><td>FALSO: corresponde al <strong>Departamento autonómico</strong> competente en SS.SS.</td></tr>
+<tr class="r-err"><td>13</td><td>"Solo las entidades privadas están sometidas a inspección"</td><td>FALSO: también las actuaciones de <strong>entidades públicas</strong></td></tr>
+<tr class="r-err"><td>14</td><td>"El titular no gestor no responde por las infracciones de sus gestores"</td><td>FALSO: responde <strong>subsidiariamente</strong></td></tr>
+</tbody>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 45 · HTML 1 · Texto explicativo · LF 15/2006 Servicios Sociales (2)</title>
+<style>
+:root{--bg:#f0f9ff;--card:#fff;--s2:#f0f9ff;--line:#7dd3fc;--text:#0c4a6e;--muted:#0284c7;--p:#075985;--warn:#d97706;--red:#dc2626;--grn:#059669;--vio:#7c3aed;--teal:#0d9488;--sh:0 2px 10px rgba(7,89,133,.09)}
+[data-theme="dark"]{--bg:#020c1a;--card:#0a1e35;--s2:#0e2a45;--line:#075985;--text:#bae6fd;--muted:#38bdf8;--p:#38bdf8;--warn:#fbbf24;--red:#fca5a5;--grn:#6ee7b7;--vio:#c4b5fd;--teal:#5eead4;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:14px;line-height:1.75;background:var(--bg);color:var(--text);padding:24px}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin-bottom:20px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:1rem;color:var(--p)}.hdr p{font-size:.73rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 14px;border-radius:999px;font-size:.73rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:18px 22px;box-shadow:var(--sh);margin-bottom:14px}
+h2{font-size:.92rem;font-weight:800;color:#fff;background:var(--p);padding:8px 16px;border-radius:7px;margin:22px 0 11px}
+h3{font-size:.84rem;font-weight:700;color:var(--p);margin:14px 0 6px;border-bottom:1px solid var(--line);padding-bottom:4px}
+p{margin-bottom:10px;font-size:.84rem}
+ul,ol{padding-left:18px;margin:6px 0 10px}li{margin-bottom:4px;font-size:.83rem}
+strong{color:var(--p)}
+.note{padding:9px 14px;border-radius:0 8px 8px 0;font-size:.78rem;margin:9px 0;border-left:4px solid}
+.nw{background:#fef9c3;border-color:#ca8a04;color:#713f12}
+.nr{background:#fff0f0;border-color:#dc2626;color:#7f1d1d}
+.ng{background:#f0fdf4;border-color:#16a34a;color:#14532d}
+.nv{background:#f5f3ff;border-color:#7c3aed;color:#4c1d95}
+.nt{background:#f0fdfa;border-color:#0d9488;color:#134e4a}
+[data-theme="dark"] .nw{background:#422006;color:#fde68a}
+[data-theme="dark"] .nr{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .ng{background:#021a0e;color:#86efac}
+[data-theme="dark"] .nv{background:#1e1b4b;color:#c4b5fd}
+[data-theme="dark"] .nt{background:#022c27;color:#5eead4}
+table{width:100%;border-collapse:collapse;margin:10px 0}
+th{background:var(--s2);color:var(--muted);font-size:.68rem;text-transform:uppercase;padding:7px 10px;text-align:left}
+td{padding:7px 10px;border-bottom:1px solid var(--s2);font-size:.8rem;vertical-align:top}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+blockquote{border-left:4px solid var(--line);padding:8px 14px;margin:10px 0;font-style:italic;font-size:.82rem;background:var(--s2);border-radius:0 8px 8px 0}
+.art{display:inline-block;background:rgba(7,89,133,.09);color:var(--p);padding:2px 8px;border-radius:5px;font-size:.7rem;font-weight:700;margin-left:4px;white-space:nowrap}
+.new{display:inline-block;background:rgba(5,150,105,.1);color:var(--grn);padding:2px 8px;border-radius:5px;font-size:.68rem;font-weight:700;margin-left:4px}
+</style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 45 · HTML 1 · Texto explicativo y desarrollo narrativo para comprensión y estudio</h1>
+    <p>LF 15/2006, de 14 de diciembre, de Servicios Sociales (2): Órganos consultivos · Profesionales · Iniciativa privada · Calidad · Inspección y régimen sancionador · Títulos V a IX</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- SECCIÓN 0: LOCALIZACIÓN -->
+<h2>0. Localización del Tema 45 en la LF 15/2006</h2>
+<div class="card">
+  <p>El Tema 45 cubre los cinco títulos finales de la LF 15/2006: los Títulos V a IX. Si el Tema 44 construía los cimientos del sistema (disposiciones generales, derechos, sistema público, competencias y financiación), el Tema 45 desarrolla los elementos que hacen que ese sistema funcione en la práctica: quién participa, quién trabaja, quién puede gestionar servicios, cómo se garantiza la calidad y cómo se controla y sanciona el incumplimiento.</p>
+  <table>
+    <thead><tr><th>Título</th><th>Contenido</th><th>Arts.</th></tr></thead>
+    <tbody>
+      <tr><td><strong>V</strong></td><td>Órganos consultivos y de participación</td><td>56-61</td></tr>
+      <tr><td><strong>VI</strong></td><td>Los profesionales de los servicios sociales</td><td>62-68</td></tr>
+      <tr><td><strong>VII</strong></td><td>La iniciativa privada (autorización, registro, homologación)</td><td>69-81</td></tr>
+      <tr><td><strong>VIII</strong></td><td>Calidad de los servicios sociales</td><td>82-84</td></tr>
+      <tr><td><strong>IX</strong></td><td>Inspección y régimen sancionador</td><td>85-95</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECCIÓN 1: TÍTULO V -->
+<h2>1. Título V: Órganos consultivos y de participación (arts. 56-61)</h2>
+<div class="card">
+  <h3>1.1 El principio subyacente y las formas de participación</h3>
+  <p>El Título V desarrolla el principio rector de <strong>participación cívica</strong> recogido en el art. 5.f). La ley considera la participación como un elemento fundamental para el buen funcionamiento del sistema de servicios sociales y la distingue en dos modalidades:</p>
+  <ul>
+    <li><strong>Participación individual:</strong> a través de los derechos reconocidos en el Título I (derecho a participar en la toma de decisiones, a hacer sugerencias y reclamaciones, etc.)</li>
+    <li><strong>Participación colectiva:</strong> a través de los órganos y formas regulados en el Título V</li>
+  </ul>
+
+  <h3>1.2 Los tres tipos de órganos consultivos ★★★ <span class="art">Art. 56</span></h3>
+  <p>La ley establece tres categorías de órganos:</p>
+  <ol>
+    <li><strong>Órganos consultivos de ámbito general:</strong> el Consejo Navarro de Bienestar Social</li>
+    <li><strong>Órganos consultivos sectoriales:</strong> uno por cada área sectorial de los SS.SS.; creados reglamentariamente</li>
+    <li><strong>Consejos de participación:</strong> en cada zona básica y en cada área de SS.SS.</li>
+  </ol>
+  <div class="note nr">⚠ El examen puede presentar solo dos tipos o invertir sus definiciones. Son tres tipos claramente diferenciados por su ámbito (general / sectorial / territorial).</div>
+
+  <h3>1.3 El Consejo Navarro de Bienestar Social ★★★ <span class="art">Arts. 57-58</span></h3>
+  <p>Es el <strong>órgano consultivo y de participación de ámbito GENERAL</strong>. Está adscrito al <strong>Departamento competente en materia de servicios sociales</strong> del Gobierno de Navarra. No es un órgano de decisión ni de gestión: su naturaleza es estrictamente consultiva.</p>
+
+  <p>Sus <strong>funciones principales</strong> incluyen:</p>
+  <ul>
+    <li>Emitir informes y formular propuestas sobre las políticas de SS.SS.</li>
+    <li>Promover la colaboración y participación de los diferentes agentes sociales</li>
+    <li>Conocer la situación de los SS.SS. en Navarra</li>
+    <li><strong>Emitir informe preceptivo</strong> sobre los planes estratégicos de SS.SS. ★★★</li>
+    <li><strong>Emitir informe preceptivo</strong> sobre la cartera de SS.SS. de ámbito general ★★★</li>
+    <li>Ser informado de la actividad y evolución del sistema de SS.SS.</li>
+    <li>Las demás funciones que reglamentariamente se le atribuyan</li>
+  </ul>
+  <div class="note nr">⚠ El Consejo Navarro de Bienestar Social emite <strong>informe preceptivo</strong> sobre los planes estratégicos y la cartera general, pero <strong>no los aprueba</strong>: quien aprueba es el Gobierno de Navarra. El informe es preceptivo (obligatorio pedirlo) pero no vinculante (no obliga a seguirlo).</div>
+
+  <p><strong>Composición:</strong> se determina <strong>reglamentariamente</strong> con criterios de pluralidad. Incluye representantes de las Administraciones Públicas (autonómica y local), organizaciones sindicales, organizaciones empresariales, entidades de iniciativa social, organizaciones de usuarios y colegios profesionales.</p>
+
+  <div class="note nw">⚠ Distinción CLAVE: el <strong>Consejo Navarro de Bienestar Social</strong> es un órgano <strong>consultivo</strong> integrado por ciudadanos, profesionales y entidades sociales. El <strong>Consejo Interadministrativo de SS.SS.</strong> (Título III) es un órgano de <strong>cooperación</strong> entre Administraciones Públicas (autonómica y local). Son dos órganos completamente distintos que el examen suele confundir.</div>
+
+  <h3>1.4 Órganos consultivos sectoriales <span class="art">Art. 59</span></h3>
+  <p>Se constituye <strong>uno por cada área sectorial</strong> de los servicios sociales. Son creados <strong>reglamentariamente</strong> por el Gobierno de Navarra y están integrados por representantes de los colectivos afectados, profesionales y Administraciones Públicas. Permiten la participación especializada en cada sector (infancia, dependencia, exclusión social, etc.).</p>
+
+  <h3>1.5 Consejos de participación <span class="art">Art. 60</span></h3>
+  <p>Se crean en cada <strong>zona básica de SS.SS.</strong> y en cada <strong>área de SS.SS.</strong>, acercando la participación al ámbito territorial más próximo al ciudadano. Permiten la intervención directa de usuarios, familias y entidades del entorno en la gestión y evaluación de los servicios.</p>
+
+  <h3>1.6 Otras formas de participación <span class="art">Art. 61</span></h3>
+  <p>El Gobierno de Navarra favorecerá la utilización de <strong>metodologías participativas</strong> similares a las utilizadas en la propia elaboración de la LF 15/2006, en los procesos de elaboración de normas, planes y programas.</p>
+</div>
+
+<!-- SECCIÓN 2: TÍTULO VI -->
+<h2>2. Título VI: Los profesionales de los servicios sociales (arts. 62-68)</h2>
+<div class="card">
+  <h3>2.1 La interprofesionalidad como principio rector ★★★</h3>
+  <p>La LF 15/2006 establece que la intervención en servicios sociales tiene carácter <strong>INTERPROFESIONAL</strong>. Esto significa que la atención a las personas no puede recaer en un único perfil profesional, sino que requiere la colaboración coordinada de diferentes disciplinas con el objetivo de lograr una <strong>atención integral</strong> de las necesidades. El examen puede presentar la intervención como "monodisciplinar" o "uniprofesional" → FALSO.</p>
+
+  <h3>2.2 El profesional de referencia ★★★ <span class="new">NUEVA FIGURA</span> <span class="art">Art. 6.j + Título VI</span></h3>
+  <p>Es la <strong>gran novedad</strong> del Título VI, ya anticipada en el Título I como un derecho del ciudadano. Su regulación en este Título desarrolla sus características:</p>
+  <ul>
+    <li>El ciudadano tiene derecho a la <strong>asignación y elección libre</strong> de un profesional de referencia (no puede imponer la Administración una persona sin opción de elección)</li>
+    <li>Función: orientar y acompañar a la persona <strong>en todo el proceso</strong> de intervención social (no solo al inicio)</li>
+    <li>Objetivo: garantizar la <strong>continuidad, coherencia y personalización</strong> de la atención</li>
+    <li>Responsable de elaborar el <strong>plan de atención individual</strong> (art. 6.d)</li>
+  </ul>
+  <div class="note nr">⚠ "El profesional de referencia lo asigna la Administración sin posibilidad de elección por parte del usuario" → FALSO: el ciudadano tiene derecho a la asignación Y a la <strong>elección libre</strong> (art. 6.j).</div>
+
+  <h3>2.3 Derechos de los profesionales ★★★</h3>
+  <p>Los profesionales de los SS.SS. tienen los siguientes derechos reconocidos expresamente en la ley:</p>
+  <ul>
+    <li>a) Recibir <strong>formación adecuada</strong> que redunde en la mejora de la calidad del servicio</li>
+    <li>b) Recibir <strong>apoyo técnico, supervisión y asesoramiento</strong> para el ejercicio de sus funciones</li>
+    <li>c) Disponer de los medios, recursos y <strong>condiciones laborales adecuadas</strong> para el ejercicio de su actividad</li>
+    <li>d) <strong>Participar en los procesos de evaluación</strong> de la calidad de los servicios</li>
+    <li>e) Ser <strong>informados sobre los recursos disponibles</strong> en el sistema de SS.SS.</li>
+    <li>f) Los demás derechos reconocidos por la normativa laboral y funcionarial</li>
+  </ul>
+
+  <h3>2.4 Deberes de los profesionales ★★★</h3>
+  <p>Son siete deberes específicos:</p>
+  <ul>
+    <li>a) Actuar con <strong>objetividad e imparcialidad</strong></li>
+    <li>b) Guardar <strong>secreto profesional</strong> sobre la información obtenida en el ejercicio de sus funciones ★★★</li>
+    <li>c) Respetar los <strong>derechos de los usuarios</strong> y facilitar su ejercicio</li>
+    <li>d) Mantener una <strong>formación continuada</strong> para la mejora de la calidad de los servicios</li>
+    <li>e) <strong>Coordinarse con otros profesionales</strong> del sistema (interprofesionalidad en la práctica)</li>
+    <li>f) <strong>Notificar obligatoriamente</strong> las situaciones de maltrato o desamparo de menores y personas con discapacidad a las autoridades competentes ★★★</li>
+    <li>g) Los demás deberes establecidos en la normativa vigente</li>
+  </ul>
+  <div class="note nr">⚠ El deber de <strong>notificación de situaciones de maltrato o desamparo</strong> de menores y personas con discapacidad es <strong>obligatorio</strong>, no potestativo. Un profesional que no lo hiciera incurriría en incumplimiento de sus deberes.</div>
+  <div class="note nr">⚠ El <strong>secreto profesional</strong> (letra b) es un deber fundamental: el profesional no puede divulgar la información obtenida en el ejercicio de sus funciones, aunque se haya terminado la relación con el usuario.</div>
+
+  <h3>2.5 El Comité de Ética de los Servicios Sociales ★★★ <span class="new">NUEVA FIGURA</span></h3>
+  <p>La LF 15/2006 prevé la creación de un <strong>Comité de Ética de los Servicios Sociales</strong> por el Gobierno de Navarra. Sus rasgos esenciales para el examen:</p>
+  <ul>
+    <li><strong>Composición:</strong> determinada <strong>reglamentariamente</strong> (no en la propia ley), con criterios de pluralidad; incluye profesionales de reconocido prestigio en el ámbito de los SS.SS. y de otros sistemas de protección social, a propuesta de las organizaciones profesionales respectivas</li>
+    <li><strong>Funciones:</strong>
+      <ol>
+        <li>Elaborar <strong>recomendaciones de carácter ético</strong> para los profesionales de los SS.SS.</li>
+        <li>Promover la elaboración de <strong>códigos de ética profesional</strong></li>
+        <li>Actuar como <strong>órgano consultivo</strong> en cuestiones éticas de los SS.SS.</li>
+      </ol>
+    </li>
+  </ul>
+  <div class="note nr">⚠ La composición del Comité de Ética se determina <strong>REGLAMENTARIAMENTE</strong> (no en la ley). "La ley establece la composición del Comité de Ética" → FALSO.</div>
+</div>
+
+<!-- SECCIÓN 3: TÍTULO VII -->
+<h2>3. Título VII: La iniciativa privada (arts. 69-81)</h2>
+<div class="card">
+  <h3>3.1 El principio de responsabilidad pública ★★★</h3>
+  <p>La ley parte de un principio irrenunciable: la <strong>responsabilidad última de garantizar los servicios sociales recae en las Administraciones Públicas</strong>. Las entidades privadas (tanto de iniciativa social como mercantil) coparticipan en la satisfacción de las necesidades sociales, pero no sustituyen a esa responsabilidad pública.</p>
+  <div class="note nr">⚠ "La iniciativa privada tiene la responsabilidad última de garantizar los SS.SS." → FALSO: la responsabilidad última es siempre PÚBLICA.</div>
+
+  <h3>3.2 Tipos de entidades de iniciativa privada ★★★ <span class="art">Art. 70</span></h3>
+  <p>La ley reconoce y distingue dos categorías:</p>
+  <ul>
+    <li><strong>Entidades de iniciativa social (sin ánimo de lucro):</strong> asociaciones, fundaciones, organizaciones no gubernamentales y otras entidades de carácter voluntario y solidario</li>
+    <li><strong>Entidades de iniciativa mercantil (con ánimo de lucro):</strong> empresas, cooperativas y demás entidades con fines económicos</li>
+  </ul>
+  <div class="note nw">⚠ La ley no establece preferencia automática de las entidades sin ánimo de lucro sobre las mercantiles: se aplica el principio de <strong>igualdad y libre competencia</strong> derivado del Tratado Constitutivo de la CE. "Las entidades de iniciativa social tienen preferencia" → FALSO (como regla general).</div>
+
+  <h3>3.3 La autorización administrativa ★★★ <span class="art">Arts. 72-74</span></h3>
+  <p>Ningún servicio social puede iniciar su actividad sin la correspondiente <strong>autorización administrativa</strong> del Departamento competente en materia de SS.SS. La ley contempla <strong>tres tipos</strong> de autorización:</p>
+  <ol>
+    <li><strong>Autorización de apertura y funcionamiento:</strong> para iniciar la actividad de un nuevo servicio social</li>
+    <li><strong>Autorización de modificación sustancial:</strong> para cambios relevantes en un servicio ya autorizado</li>
+    <li><strong>Autorización de cierre:</strong> para el cierre definitivo de un servicio social</li>
+  </ol>
+  <p><strong>Gran novedad respecto a la LF 9/1990 ★★★:</strong> la autorización ya no se limita a verificar requisitos materiales y funcionales (infraestructura, ratios, titulación), sino que incorpora la exigencia de cumplimiento de <strong>estándares de CALIDAD</strong> medidos con <strong>indicadores objetivos</strong>.</p>
+  <div class="note nv">✦ Novedad vs. LF 9/1990: ahora se exigen ESTÁNDARES DE CALIDAD (medidos con indicadores objetivos) para obtener la autorización, no solo requisitos materiales y funcionales.</div>
+
+  <h3>3.4 El Registro de Servicios Sociales ★★★ <span class="art">Art. 75</span></h3>
+  <p>La LF 15/2006 crea el <strong>Registro de Servicios Sociales</strong>, que sustituye al antiguo Registro de Entidades, Servicios y Centros previsto en la LF 9/1990. El cambio no es solo de nombre: la nueva denominación refleja que lo que se registra es el <strong>servicio</strong> (no la entidad), lo que permite al ciudadano un <strong>mejor conocimiento</strong> de los servicios sociales existentes en Navarra.</p>
+  <p>La inscripción en el Registro es <strong>obligatoria</strong> para todos los servicios que hayan obtenido autorización.</p>
+
+  <h3>3.5 La homologación administrativa ★★★ <span class="art">Arts. 76-78</span> <span class="new">GRAN NOVEDAD</span></h3>
+  <p>Es la <strong>novedad más importante</strong> del Título VII y una de las más preguntadas del tema. La homologación <strong>no existía en la LF 9/1990</strong>: es una creación exclusiva de la LF 15/2006.</p>
+  <p><strong>¿Qué es la homologación?</strong> Es el reconocimiento oficial por parte del Departamento competente en materia de SS.SS. de que un servicio (público o privado) cumple las condiciones establecidas para <strong>formar parte del sistema público de servicios sociales</strong>. Un servicio homologado puede concertarse con la Administración y prestar servicios en nombre del sistema público.</p>
+  <p>Características esenciales para el examen:</p>
+  <ul>
+    <li>Pueden solicitarla servicios de titularidad <strong>pública Y privada</strong> (no es exclusiva de los privados)</li>
+    <li>Requiere el cumplimiento de estándares de calidad medidos con <strong>indicadores objetivos</strong></li>
+    <li>Incorpora criterios de <strong>calidad en el empleo ★★★</strong> (novedad que no incluía la autorización en la LF 9/1990)</li>
+    <li>La gestiona el Departamento autonómico competente en materia de SS.SS.</li>
+  </ul>
+  <div class="note nr">⚠ "La homologación ya existía en la LF 9/1990" → FALSO: es una <strong>novedad exclusiva de la LF 15/2006</strong>. ⚠ "Solo los servicios privados pueden solicitar la homologación" → FALSO: también los servicios de titularidad pública.</div>
+  <div class="note ng">✓ Diferencia práctica: AUTORIZACIÓN = permiso para abrir y funcionar. HOMOLOGACIÓN = reconocimiento para integrarse en el sistema público y poder concertarse con la Administración.</div>
+</div>
+
+<!-- SECCIÓN 4: TÍTULO VIII -->
+<h2>4. Título VIII: Calidad de los servicios sociales (arts. 82-84)</h2>
+<div class="card">
+  <h3>4.1 El enfoque de la calidad en la LF 15/2006 ★★★</h3>
+  <p>La calidad es uno de los <strong>principios rectores</strong> de la ley (art. 5.m) y, por primera vez, se le dedica un Título específico. La gran novedad conceptual que introduce la LF 15/2006 en materia de calidad es que las evaluaciones no se limitan a verificar aspectos materiales y funcionales (instalaciones, personal, ratios), sino que incorporan necesariamente la medición de la <strong>satisfacción de los usuarios ★★★</strong>.</p>
+  <blockquote>"…introduciendo evaluaciones de los servicios con indicadores objetivos que permitan medir, no solo aspectos materiales y funcionales, sino también los relativos a la satisfacción de los usuarios." — Exposición de motivos de la LF 15/2006</blockquote>
+
+  <h3>4.2 El Plan de Calidad ★★★</h3>
+  <p>El Gobierno de Navarra elaborará un <strong>Plan de Calidad</strong> con la siguiente periodicidad y contenido:</p>
+  <ul>
+    <li><strong>Periodicidad: CADA CUATRO AÑOS ★★★</strong> (no anual, no bienal, no por mandato)</li>
+    <li><strong>Contenido:</strong>
+      <ul>
+        <li>Indicadores objetivos para medir la calidad (materiales y funcionales + satisfacción de usuarios)</li>
+        <li>Estándares mínimos de calidad</li>
+        <li>Mecanismos de evaluación periódica</li>
+        <li>Criterios de <strong>calidad en el empleo</strong></li>
+      </ul>
+    </li>
+  </ul>
+  <div class="note nr">⚠ La periodicidad del Plan de Calidad es <strong>CUATRO AÑOS</strong>. "El Plan de Calidad es anual" o "bienal" → FALSO. ⚠ La evaluación de calidad mide también la <strong>satisfacción de los usuarios</strong>, no solo aspectos materiales → FALSO si el examen solo menciona los materiales.</div>
+
+  <h3>4.3 Evaluaciones periódicas y publicidad</h3>
+  <p>Todos los servicios sociales (públicos y privados) están sometidos a <strong>evaluaciones periódicas de calidad</strong>. Un dato relevante vinculado al Título I: los resultados de las evaluaciones periódicas de los <strong>servicios residenciales</strong> deben ser públicos y, lo que es más importante, el usuario residencial tiene derecho a conocerlos <strong>ANTES del ingreso</strong> (art. 8.c del Título I).</p>
+
+  <h3>4.4 Acreditación de calidad</h3>
+  <p>El Gobierno de Navarra podrá establecer un sistema de <strong>acreditación de calidad</strong> para los servicios sociales. A diferencia de la autorización (que es obligatoria) y la homologación (que se solicita para integrarse en el sistema público), la acreditación de calidad es <strong>voluntaria</strong> y supone un reconocimiento de excelencia.</p>
+</div>
+
+<!-- SECCIÓN 5: TÍTULO IX -->
+<h2>5. Título IX: Inspección y régimen sancionador (arts. 85-95)</h2>
+<div class="card">
+  <h3>5.1 El servicio de inspección ★★★ <span class="art">Arts. 85-88</span></h3>
+  <p>La función inspectora en materia de servicios sociales en Navarra corresponde al <strong>Departamento competente en materia de servicios sociales</strong> del Gobierno de Navarra. Este Departamento acredita al personal inspector, que en el ejercicio de sus funciones tiene la consideración de <strong>agente de la autoridad ★★★</strong>.</p>
+  <div class="note nr">⚠ "La inspección de los SS.SS. en Navarra corresponde a los municipios o mancomunidades" → FALSO: corresponde al <strong>Departamento autonómico</strong> competente. ⚠ "El personal inspector no tiene ninguna consideración especial" → FALSO: tiene la consideración de <strong>agente de la autoridad</strong>.</div>
+
+  <h3>5.2 Ámbito de la inspección ★★★</h3>
+  <p>Están sometidas a inspección <strong>TODAS las actuaciones</strong> realizadas por entidades <strong>públicas Y privadas</strong> dentro del ámbito de aplicación de la LF 15/2006. No se trata de una inspección solo de las entidades privadas: también las actuaciones de entidades públicas (municipios, mancomunidades, la propia Comunidad Foral) están sujetas a la función inspectora.</p>
+  <p>El objeto de la inspección incluye:</p>
+  <ul>
+    <li>Control de adecuación de centros y servicios a la normativa vigente (requisitos materiales y funcionales)</li>
+    <li>Control del cumplimiento de los conciertos</li>
+    <li>Vigilancia del respeto a los <strong>derechos de los destinatarios ★★★</strong></li>
+    <li>Velar porque las personas reciban atención integral, especializada y personalizada adecuada a sus necesidades</li>
+    <li>Intervención en todos los procesos de <strong>autorización, homologación y registro</strong></li>
+    <li>Intervención en las <strong>evaluaciones periódicas</strong> y procesos de calidad</li>
+  </ul>
+
+  <h3>5.3 Sujetos responsables ★★★ <span class="art">Art. 89</span></h3>
+  <p>Son responsables de las infracciones:</p>
+  <ul>
+    <li>Los <strong>titulares</strong> de los servicios o centros de SS.SS.</li>
+    <li>Los <strong>administradores, gerentes, directores y responsables técnicos</strong> en el ámbito de sus funciones</li>
+    <li>Los titulares que no realicen la gestión responden <strong>subsidiariamente</strong> por las acciones y omisiones de sus gestores ★★★</li>
+  </ul>
+  <div class="note nr">⚠ "El titular que no gestiona directamente no tiene responsabilidad" → FALSO: responde <strong>SUBSIDIARIAMENTE</strong> por las acciones y omisiones de sus gestores. Esta responsabilidad subsidiaria es uno de los datos más preguntados del Título IX.</div>
+
+  <h3>5.4 Clasificación de las infracciones ★★★ <span class="art">Arts. 90-91</span></h3>
+  <p>Las infracciones se clasifican en tres categorías:</p>
+
+  <p><strong>INFRACCIONES LEVES:</strong> incumplimientos menores de la normativa de SS.SS. que no pongan en riesgo la seguridad de los usuarios ni vulneren sus derechos esenciales.</p>
+
+  <p><strong>INFRACCIONES GRAVES:</strong> incumplimientos de requisitos esenciales de la autorización u homologación; incumplimiento de resoluciones firmes de la inspección; conductas que afecten a los derechos de los usuarios sin llegar a poner en riesgo su vida o seguridad.</p>
+
+  <p><strong>INFRACCIONES MUY GRAVES ★★★:</strong></p>
+  <ul>
+    <li>Prestar servicios sociales <strong>sin la preceptiva autorización</strong></li>
+    <li>Incumplir las obligaciones frente a los usuarios que generen <strong>riesgo para la vida o la seguridad</strong></li>
+    <li><strong>Obstrucción a la función inspectora</strong></li>
+    <li>Incumplimiento reiterado de resoluciones sancionadoras firmes</li>
+  </ul>
+
+  <h3>5.5 Cuantías de las sanciones ★★★ <span class="art">Art. 92</span></h3>
+  <table>
+    <thead><tr><th>Categoría</th><th>Cuantía</th><th>Datos de examen</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Infracciones LEVES</strong></td><td>Hasta <strong>3.000 €</strong></td><td>⚠ No "hasta 6.000 €"</td></tr>
+      <tr><td><strong>Infracciones GRAVES</strong></td><td>De <strong>3.001 € a 30.000 €</strong></td><td>⚠ No confundir techo con el de muy graves</td></tr>
+      <tr><td><strong>Infracciones MUY GRAVES</strong></td><td>De <strong>30.001 € a 600.000 €</strong></td><td>⚠ Elevadas respecto a la LF 9/1990 ★★★</td></tr>
+    </tbody>
+  </table>
+  <div class="note nv">✦ La LF 15/2006 <strong>ELEVA</strong> las cuantías de las sanciones respecto a la LF 9/1990, especialmente las muy graves (hasta 600.000 €). Esta elevación es una novedad que el examen trabaja.</div>
+
+  <h3>5.6 Sanciones accesorias y medidas cautelares ★★★</h3>
+  <p>Junto a la multa pecuniaria, pueden imponerse <strong>sanciones accesorias</strong>:</p>
+  <ul>
+    <li>Suspensión temporal de la autorización</li>
+    <li>Revocación de la autorización (para infracciones muy graves)</li>
+    <li>Cierre del servicio o centro</li>
+  </ul>
+  <p><strong>Novedades respecto a la LF 9/1990 ★★★:</strong></p>
+  <ul>
+    <li><strong>Multas coercitivas:</strong> pueden imponerse para obligar al infractor a cumplir lo ordenado por la resolución (no son sancionadoras: son un instrumento de ejecución forzosa)</li>
+    <li><strong>Medidas cautelares:</strong> pueden adoptarse durante la tramitación del procedimiento sancionador, cuando sea necesario para garantizar la seguridad de los usuarios</li>
+  </ul>
+  <div class="note nr">⚠ "Las multas coercitivas y las medidas cautelares ya existían en la LF 9/1990" → FALSO: son <strong>NOVEDADES</strong> de la LF 15/2006 ★★★.</div>
+
+  <h3>5.7 Prescripción ★★★</h3>
+  <table>
+    <thead><tr><th>Tipo</th><th>Infracciones</th><th>Sanciones</th></tr></thead>
+    <tbody>
+      <tr><td><strong>LEVES</strong></td><td>6 meses</td><td>1 año</td></tr>
+      <tr><td><strong>GRAVES</strong></td><td>2 años</td><td>2 años</td></tr>
+      <tr><td><strong>MUY GRAVES</strong></td><td>4 años</td><td>3 años</td></tr>
+    </tbody>
+  </table>
+  <div class="note nw">⚠ La prescripción de infracciones MUY GRAVES es <strong>4 años</strong> (no 3). Y la prescripción de las sanciones MUY GRAVES es <strong>3 años</strong> (no 4). Son los plazos que más confunde el examen.</div>
+</div>
+
+<!-- SECCIÓN 6: CUADRO DE NOVEDADES -->
+<h2>6. Cuadro de novedades del Tema 45 respecto a la LF 9/1990 ★★★</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Novedad en LF 15/2006</th><th>Situación en LF 9/1990</th><th>Importancia examen</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Profesional de referencia</strong> (nueva figura)</td><td>No existía</td><td>★★★</td></tr>
+      <tr><td><strong>Comité de Ética</strong> de los SS.SS.</td><td>No existía</td><td>★★</td></tr>
+      <tr><td><strong>Estándares de calidad</strong> como requisito de autorización</td><td>Solo requisitos materiales y funcionales</td><td>★★★</td></tr>
+      <tr><td><strong>Homologación administrativa</strong></td><td>No existía</td><td>★★★</td></tr>
+      <tr><td>Nuevo <strong>Registro de Servicios Sociales</strong></td><td>Registro de Entidades, Servicios y Centros</td><td>★★</td></tr>
+      <tr><td><strong>Plan de Calidad</strong> cuatrienal</td><td>No existía (solo evaluaciones puntuales)</td><td>★★★</td></tr>
+      <tr><td>Evaluación con <strong>satisfacción de usuarios</strong></td><td>Solo aspectos materiales y funcionales</td><td>★★★</td></tr>
+      <tr><td><strong>Elevación</strong> de cuantías sancionadoras</td><td>Cuantías inferiores, especialmente muy graves</td><td>★★★</td></tr>
+      <tr><td><strong>Multas coercitivas</strong></td><td>No existían</td><td>★★★</td></tr>
+      <tr><td><strong>Medidas cautelares</strong> en procedimiento sancionador</td><td>No existían</td><td>★★★</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECCIÓN 7: TRAMPAS -->
+<h2>7. Las 14 trampas de examen del Tema 45</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>#</th><th>Trampa (afirmación incorrecta)</th><th>Corrección exacta</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>"El Consejo Navarro de Bienestar Social es un órgano de decisión"</td><td>FALSO: es un órgano <strong>CONSULTIVO Y DE PARTICIPACIÓN</strong></td></tr>
+      <tr><td>2</td><td>"Consejo Navarro de Bienestar Social y Consejo Interadministrativo son el mismo órgano"</td><td>FALSO: el Navarro de Bienestar Social = consultivo (ciudadanos/entidades/prof.); el Interadministrativo = cooperación entre <strong>AAPP</strong></td></tr>
+      <tr><td>3</td><td>"El Consejo Navarro de Bienestar Social aprueba los planes estratégicos y la cartera general"</td><td>FALSO: solo emite <strong>informe preceptivo</strong>; quien aprueba es el <strong>Gobierno de Navarra</strong></td></tr>
+      <tr><td>4</td><td>"El ciudadano no puede elegir a su profesional de referencia"</td><td>FALSO: tiene derecho a la asignación Y a la <strong>elección libre</strong></td></tr>
+      <tr><td>5</td><td>"La intervención en SS.SS. es monodisciplinar"</td><td>FALSO: tiene carácter <strong>INTERPROFESIONAL</strong></td></tr>
+      <tr><td>6</td><td>"El Comité de Ética tiene composición fijada por ley"</td><td>FALSO: la composición se determina <strong>REGLAMENTARIAMENTE</strong></td></tr>
+      <tr><td>7</td><td>"Las entidades de iniciativa social tienen preferencia sobre las mercantiles"</td><td>FALSO: se aplica el principio de <strong>igualdad y libre competencia</strong></td></tr>
+      <tr><td>8</td><td>"La homologación ya existía en la LF 9/1990"</td><td>FALSO: es una <strong>NOVEDAD</strong> de la LF 15/2006</td></tr>
+      <tr><td>9</td><td>"Solo los servicios privados pueden homologarse"</td><td>FALSO: también los de titularidad <strong>PÚBLICA</strong></td></tr>
+      <tr><td>10</td><td>"El Plan de Calidad se elabora anualmente"</td><td>FALSO: se elabora <strong>CADA CUATRO AÑOS</strong></td></tr>
+      <tr><td>11</td><td>"La evaluación de calidad mide solo aspectos materiales y funcionales"</td><td>FALSO: también mide la <strong>SATISFACCIÓN DE LOS USUARIOS</strong></td></tr>
+      <tr><td>12</td><td>"La inspección corresponde a los municipios"</td><td>FALSO: corresponde al <strong>DEPARTAMENTO AUTONÓMICO</strong> competente en SS.SS.</td></tr>
+      <tr><td>13</td><td>"Solo las entidades privadas están sometidas a inspección"</td><td>FALSO: también las actuaciones de <strong>ENTIDADES PÚBLICAS</strong></td></tr>
+      <tr><td>14</td><td>"El titular no gestor no tiene responsabilidad por las infracciones de sus gestores"</td><td>FALSO: responde <strong>SUBSIDIARIAMENTE</strong></td></tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
