@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 50 · HTML 2 · Esquema-resumen visual · Ley 19/2021 · IMV</title>
+<style>
+:root{--bg:#f0fbff;--card:#fff;--s2:#e0f2fe;--line:#7dd3fc;--text:#0c4a6e;--muted:#0284c7;--p:#075985;--warn:#d97706;--red:#dc2626;--grn:#059669;--vio:#7c3aed;--teal:#0d9488;--rose:#e11d48;--sh:0 2px 10px rgba(7,89,133,.09)}
+[data-theme="dark"]{--bg:#020c1a;--card:#0a1e35;--s2:#0e2a45;--line:#075985;--text:#bae6fd;--muted:#38bdf8;--p:#38bdf8;--warn:#fbbf24;--red:#fca5a5;--grn:#6ee7b7;--vio:#c4b5fd;--teal:#5eead4;--rose:#fda4af;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:22px}
+.wrap{max-width:1220px;margin:0 auto}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 20px;margin-bottom:14px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.97rem;color:var(--p)}.hdr p{font-size:.72rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.71rem}
+h2{font-size:.88rem;font-weight:800;color:#fff;background:var(--p);padding:7px 15px;border-radius:8px;margin:20px 0 10px;display:inline-block}
+strong{color:var(--p)}
+/* KPI */
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:8px;margin-bottom:14px}
+.kb{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:10px;box-shadow:var(--sh);text-align:center}
+.big{font-size:.95rem;font-weight:800;color:var(--p);margin-bottom:2px}.ksm{font-size:.68rem;color:var(--muted)}.kmi{font-size:.64rem;margin-top:3px}
+/* notes */
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.73rem;border-left:4px solid;margin:7px 0}
+.nok{background:rgba(5,150,105,.07);border-color:#059669}
+.nerr{background:rgba(220,38,38,.07);border-color:#dc2626}
+.nw{background:rgba(180,83,9,.07);border-color:#b45309}
+.nvio{background:rgba(124,58,237,.07);border-color:#7c3aed}
+.nsky{background:var(--s2);border-color:var(--muted)}
+.nteal{background:rgba(13,148,136,.07);border-color:#0d9488}
+.nrose{background:rgba(225,29,72,.07);border-color:#e11d48}
+[data-theme="dark"] .nw{background:#451a03;color:#fde68a}
+[data-theme="dark"] .nerr{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .nok{background:rgba(110,231,183,.07);color:#6ee7b7}
+[data-theme="dark"] .nvio{background:#1e1b4b;color:#c4b5fd}
+/* grids */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px}
+.g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:9px;margin-bottom:14px}
+/* blk */
+.blk{background:var(--card);border-radius:12px;padding:12px 14px;box-shadow:var(--sh)}
+.b1{border-top:5px solid var(--p)}.b2{border-top:5px solid var(--vio)}.b3{border-top:5px solid var(--grn)}.b4{border-top:5px solid var(--teal)}.b5{border-top:5px solid var(--warn)}.b6{border-top:5px solid var(--red)}.b7{border-top:5px solid var(--rose)}
+.blk h3{font-size:.8rem;font-weight:800;margin-bottom:7px}
+.b1 h3{color:var(--p)}.b2 h3{color:var(--vio)}.b3 h3{color:var(--grn)}.b4 h3{color:var(--teal)}.b5 h3{color:var(--warn)}.b6 h3{color:var(--red)}.b7 h3{color:var(--rose)}
+.blk ul{padding-left:14px}.blk li{font-size:.72rem;margin:.25rem 0}
+/* art row */
+.ar{display:flex;align-items:flex-start;gap:8px;padding:7px 10px;border-radius:8px;margin:5px 0;background:var(--card);border:1px solid var(--line);box-shadow:0 1px 4px rgba(7,89,133,.05)}
+.ar-cod{font-weight:800;font-size:.68rem;color:var(--muted);min-width:40px;padding-top:1px;white-space:nowrap}
+.ar-body{flex:1;font-size:.73rem}
+.ar-name{font-weight:700;color:var(--p)}
+/* tables */
+table{width:100%;border-collapse:collapse;margin:8px 0}
+th{background:var(--s2);color:var(--muted);font-size:.66rem;text-transform:uppercase;padding:6px 9px;text-align:left}
+td{padding:6px 9px;border-bottom:1px solid var(--s2);font-size:.74rem;vertical-align:top}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+/* trap */
+.trap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:8px;margin-bottom:14px}
+.trap{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:9px 11px;box-shadow:var(--sh)}
+.trap .q{font-size:.7rem;color:var(--red);font-weight:600;margin-bottom:3px}
+.trap .a{font-size:.7rem}
+/* cadena */
+.chain{display:flex;gap:6px;align-items:stretch;flex-wrap:wrap;margin:8px 0}
+.cstep{background:var(--s2);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:.7rem;font-weight:700;color:var(--p);text-align:center;flex:1;min-width:90px}
+.cstep small{display:block;font-weight:400;color:var(--muted);margin-top:3px}
+.carrow{font-size:1rem;color:var(--muted);align-self:center}
+/* norma */
+.norma{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:9px 12px;box-shadow:var(--sh);font-size:.73rem;margin-bottom:7px}
+.norma .cod{font-weight:800;color:var(--p);margin-right:6px}
+.norma .desc{color:var(--muted);font-size:.67rem;margin-top:2px}
+/* cuantia box */
+.cbox{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;box-shadow:var(--sh);text-align:center}
+.ceur{font-size:1.1rem;font-weight:800;color:var(--p)}.clab{font-size:.68rem;color:var(--muted)}.csub{font-size:.64rem;margin-top:3px}
+@media(max-width:720px){.g2,.g3,.g4{grid-template-columns:1fr}.trap-grid{grid-template-columns:1fr}.chain{flex-direction:column}.carrow{transform:rotate(90deg);text-align:center}}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+<div class="hdr">
+  <div>
+    <h1>Tema 50 · HTML 2 · Esquema-resumen visual para memorización rápida</h1>
+    <p>Ley 19/2021, de 20 de diciembre · Ingreso Mínimo Vital · IMV · BOE 21-dic-2021 · Vigencia 1-ene-2022 · INSS · RD 789/2022</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- FICHAS FLASH -->
+<h2>Fichas flash de identificación ★★★</h2>
+<div class="kpi">
+  <div class="kb"><div class="big">Ley 19/2021</div><div class="ksm">20 de diciembre</div><div class="kmi">BOE 21-dic · Vigencia 1-ene-2022</div></div>
+  <div class="kb"><div class="big">NO contrib.</div><div class="ksm">Derecho SUBJETIVO</div><div class="kmi">Art. 2 · Seguridad Social</div></div>
+  <div class="kb"><div class="big">INSS</div><div class="ksm">Órgano gestor</div><div class="kmi">Instituto Nac. Seguridad Social</div></div>
+  <div class="kb"><div class="big">Diferencial</div><div class="ksm">Renta gtda − ingresos reales</div><div class="kmi">No es cuantía fija para todos</div></div>
+  <div class="kb"><div class="big">23–65 años</div><div class="ksm">Edad beneficiaria individual</div><div class="kmi">Art. 10 · excepciones en VG y menores</div></div>
+  <div class="kb"><div class="big">1 año</div><div class="ksm">Residencia previa mínima</div><div class="kmi">Art. 10 · continuada · legal</div></div>
+  <div class="kb"><div class="big">2.º grado</div><div class="ksm">Consanguinidad/afinidad UC</div><div class="kmi">Art. 6 · unidad de convivencia</div></div>
+  <div class="kb"><div class="big">Art. 9</div><div class="ksm">Convivientes sin parentesco</div><div class="kmi">Por situación de necesidad ★★★</div></div>
+  <div class="kb"><div class="big">RD 789/2022</div><div class="ksm">Compatibilidad con empleo</div><div class="kmi">Vigente 1-ene-2023</div></div>
+  <div class="kb"><div class="big">115 €</div><div class="ksm">Complemento infancia &lt; 3 años</div><div class="kmi">Art. 11.6</div></div>
+  <div class="kb"><div class="big">D.T. 6ª</div><div class="ksm">Sin nuevas solicitudes asig. hijo &lt;33%</div><div class="kmi">Incompatibilidad desde 2022</div></div>
+  <div class="kb"><div class="big">Art. 40-41</div><div class="ksm">Comisión de Seguimiento IMV</div><div class="kmi">CCAA + entidades locales</div></div>
+</div>
+
+<!-- MARCO NORMATIVO -->
+<h2>Marco normativo completo ★★★</h2>
+<div class="g2">
+  <div>
+    <div class="norma"><span class="cod">Ley 19/2021, de 20 de diciembre</span> <strong>Norma principal.</strong> Establece el IMV. Deroga el RDL 20/2020.<div class="desc">BOE núm. 304 · 21-dic-2021 · Entrada en vigor: 1-ene-2022</div></div>
+    <div class="norma"><span class="cod">RDL 20/2020, de 29 de mayo</span> Creó el IMV de forma urgente (durante la pandemia).<div class="desc">Derogado en lo regulado por la Ley 19/2021</div></div>
+    <div class="norma"><span class="cod">RD 789/2022, de 27 de septiembre ★★★</span> Regula la compatibilidad del IMV con ingresos del trabajo.<div class="desc">Vigente desde 1-enero-2023</div></div>
+  </div>
+  <div>
+    <div class="blk b1">
+      <h3>Estructura de la Ley 19/2021</h3>
+      <ul>
+        <li>9 capítulos · 41 artículos</li>
+        <li>10 disposiciones adicionales</li>
+        <li>8 disposiciones transitorias</li>
+        <li>1 disposición derogatoria</li>
+        <li>12 disposiciones finales</li>
+        <li>4 Anexos (cuantías y escala UC)</li>
+      </ul>
+      <div class="note nsky" style="margin-top:8px">Los artículos más preguntados: 2, 4, 5, 6, 9, 10, 11, 13, 18, 19, 33, 40-41</div>
+    </div>
+  </div>
+</div>
+
+<!-- NATURALEZA -->
+<h2>Idea fuerza · Naturaleza del IMV ★★★</h2>
+<div class="blk b4" style="margin-bottom:14px">
+  <h3>Los 4 pilares de la naturaleza jurídica del IMV (art. 2)</h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin-top:8px">
+    <div class="note nok"><strong>1. DERECHO SUBJETIVO</strong><br>Exigible ante el INSS y ante los tribunales si se cumplen los requisitos</div>
+    <div class="note nteal"><strong>2. NO CONTRIBUTIVO</strong><br>No requiere cotización previa. A diferencia de pensiones ordinarias</div>
+    <div class="note nvio"><strong>3. INSS</strong><br>Órgano gestor único en todo el Estado. Garantía de homogeneidad</div>
+    <div class="note nw"><strong>4. FINANCIACIÓN ESTATAL</strong><br>Cargo del Estado. Transferencia a Presupuestos de la Seguridad Social</div>
+  </div>
+  <div class="note nerr" style="margin-top:10px">⚠ Y además: es una prestación <strong>DIFERENCIAL</strong>. Cubre la diferencia entre la renta garantizada del Anexo I y los ingresos reales. No tiene cuantía fija igual para todos.</div>
+</div>
+
+<!-- BENEFICIARIOS -->
+<h2>Beneficiarios y unidad de convivencia ★★★</h2>
+<div class="g3">
+  <div class="blk b1">
+    <h3>3 tipos de beneficiarios (art. 4)</h3>
+    <ul>
+      <li><strong>Persona sola</strong> (beneficiaria individual)</li>
+      <li>Miembros de una <strong>unidad de convivencia</strong></li>
+      <li><strong>Convivientes sin parentesco</strong> por situación de necesidad (art. 9)</li>
+    </ul>
+    <div class="note nerr">⚠ Titular ≠ beneficiarios: todos los UC son beneficiarios; solo uno es titular (art. 5)</div>
+  </div>
+  <div class="blk b3">
+    <h3>Unidad de convivencia · art. 6 ★★★</h3>
+    <ul>
+      <li>≥ 2 personas en la misma vivienda</li>
+      <li>Unidas por consanguinidad o afinidad hasta el <strong>2.º grado</strong></li>
+      <li>O por matrimonio / pareja de hecho inscrita</li>
+      <li>También: menores en acogida</li>
+    </ul>
+    <div class="note nok"><strong>Art. 9:</strong> convivientes SIN parentesco → forman UC válida si la convivencia deriva de una <strong>situación de necesidad</strong> ★★★</div>
+  </div>
+  <div class="blk b5">
+    <h3>Exclusiones · quiénes NO son beneficiarios</h3>
+    <ul>
+      <li>Residentes en centros de atención social financiados públicamente (con carácter permanente) ★★★</li>
+      <li>Personas sin residencia legal en España</li>
+      <li>Mayores de 65 años → pensión no contributiva</li>
+    </ul>
+  </div>
+</div>
+
+<!-- REQUISITOS -->
+<h2>Requisitos de acceso · art. 10 ★★★</h2>
+<div class="g4">
+  <div class="blk b1">
+    <h3>1. Residencia</h3>
+    <ul>
+      <li>Legal y efectiva en España</li>
+      <li>Continuada: mínimo <strong>1 año natural</strong> antes de la solicitud</li>
+      <li>Excepciones: VG, trata, tutelados que cumplen mayoría de edad…</li>
+    </ul>
+  </div>
+  <div class="blk b3">
+    <h3>2. Edad (beneficiaria individual)</h3>
+    <ul>
+      <li>Mínimo: <strong>23 años</strong></li>
+      <li>Máximo: <strong>65 años</strong></li>
+      <li>Excepción a 23 años: menores a cargo o víctima de VG</li>
+      <li>A 65 años → pensión no contributiva</li>
+    </ul>
+  </div>
+  <div class="blk b2">
+    <h3>3. Vulnerabilidad económica</h3>
+    <ul>
+      <li>Ingresos año anterior ≥ 10 € <strong>por debajo</strong> de la renta garantizada</li>
+      <li>Patrimonio (excluida vivienda habitual) &lt; límites Anexo II</li>
+    </ul>
+  </div>
+  <div class="blk b5">
+    <h3>4. Independencia de hogar (individual)</h3>
+    <ul>
+      <li>Solo para beneficiaria individual que vive sola</li>
+      <li>Acreditar independencia con <strong>al menos 1 año</strong> de anterioridad</li>
+    </ul>
+    <div class="note nw">Sin este requisito no se puede acceder como beneficiaria individual</div>
+  </div>
+</div>
+
+<!-- CUANTÍA Y COMPLEMENTOS -->
+<h2>Cuantía, renta garantizada y complementos ★★★</h2>
+<div class="g3">
+  <div class="blk b1">
+    <h3>Renta garantizada base (Anexo I)</h3>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin:8px 0">
+      <div class="cbox"><div class="ceur">~491 €/mes</div><div class="clab">1 adulto solo</div><div class="csub">≈ 5.899 €/año · ref. 2024</div></div>
+      <div class="cbox"><div class="ceur">+30 %</div><div class="clab">Cada adulto adicional</div></div>
+      <div class="cbox"><div class="ceur">+30 %</div><div class="clab">Cada menor adicional</div></div>
+    </div>
+    <div class="note nsky">El IMV cubre la diferencia entre la renta garantizada y los ingresos reales</div>
+  </div>
+  <div class="blk b3">
+    <h3>Complemento de infancia · art. 11.6 ★★★</h3>
+    <table>
+      <thead><tr><th>Tramo de edad</th><th>€/mes</th></tr></thead>
+      <tbody>
+        <tr><td>Menor de <strong>3 años</strong></td><td><strong style="color:var(--grn)">115 €</strong></td></tr>
+        <tr><td>De 3 a menos de <strong>6 años</strong></td><td><strong style="color:var(--warn)">80,50 €</strong></td></tr>
+        <tr><td>De 6 a menos de <strong>18 años</strong></td><td><strong style="color:var(--p)">57,50 €</strong></td></tr>
+      </tbody>
+    </table>
+    <div class="note nvio">Regla: cuanto más pequeño el menor, mayor es el complemento</div>
+  </div>
+  <div class="blk b2">
+    <h3>Otros complementos</h3>
+    <table>
+      <thead><tr><th>Complemento</th><th>Incremento</th></tr></thead>
+      <tbody>
+        <tr><td>Discapacidad ≥ 65 %</td><td><strong>+22 %</strong></td></tr>
+        <tr><td>Monoparentalidad</td><td><strong>+22 %</strong></td></tr>
+      </tbody>
+    </table>
+    <div class="note nw">Los dos complementos se calculan sobre la cuantía unipersonal de referencia</div>
+  </div>
+</div>
+
+<!-- COMPATIBILIDAD -->
+<h2>Compatibilidad con empleo e incompatibilidades ★★★</h2>
+<div class="g2">
+  <div class="blk b3">
+    <h3>✅ Compatible con… (art. 11.4)</h3>
+    <ul>
+      <li>Ingresos del <strong>trabajo por cuenta ajena</strong></li>
+      <li>Ingresos de <strong>actividad económica por cuenta propia</strong></li>
+      <li>Rentas mínimas autonómicas (bajo coordinación)</li>
+    </ul>
+    <div class="note nok"><strong>Objetivo:</strong> evitar la "trampa de la pobreza" · el empleo no penaliza el acceso al IMV · desarrollado por <strong>RD 789/2022</strong> (vigente desde 1-ene-2023)</div>
+  </div>
+  <div class="blk b6">
+    <h3>❌ Incompatible con…</h3>
+    <ul>
+      <li>Asignación económica por hijo/menor sin discapacidad o &lt;33 % (identidad de causante) ★★★</li>
+      <li>Residencia en centro social público con carácter permanente</li>
+      <li>Pensión de SS que supere la renta garantizada</li>
+    </ul>
+    <div class="note nerr"><strong>D.T. 6ª:</strong> desde la Ley 19/2021 <strong>no caben nuevas solicitudes</strong> de asignación por hijo sin discapacidad o &lt;33 %</div>
+  </div>
+</div>
+
+<!-- SUSPENSIÓN Y EXTINCIÓN -->
+<h2>Suspensión (art. 18) vs. Extinción (art. 19) ★★★</h2>
+<div class="g2">
+  <div class="blk b5">
+    <h3>⏸ Suspensión · art. 18 · Pausa temporal</h3>
+    <ul>
+      <li>Incumplimiento de obligaciones sin causa justificada</li>
+      <li>Superación temporal del umbral de patrimonio</li>
+      <li>Ingreso en centro social con financiación pública</li>
+    </ul>
+    <div class="note nw">La suspensión no extingue el derecho. Cesa cuando desaparece la causa.</div>
+  </div>
+  <div class="blk b6">
+    <h3>⛔ Extinción · art. 19 · Fin definitivo</h3>
+    <ul>
+      <li>Fallecimiento del beneficiario individual</li>
+      <li>Cumplimiento de los <strong>65 años</strong> (→ pensión no contributiva)</li>
+      <li>Superación reiterada y sostenida de la renta garantizada</li>
+      <li>Reconocimiento de pensión de SS que supere la renta garantizada</li>
+    </ul>
+  </div>
+</div>
+
+<!-- OBLIGACIONES ART. 33 -->
+<h2>Obligaciones del beneficiario · art. 33 ★★★</h2>
+<div class="blk b4" style="margin-bottom:14px">
+  <h3>Los 4 deberes clave (art. 33)</h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin-top:8px">
+    <div class="note nteal"><strong>Comunicar</strong> cambios en situación económica, familiar o laboral</div>
+    <div class="note nteal"><strong>Participar</strong> en estrategias de inclusión social y laboral del Ministerio ★★★</div>
+    <div class="note nteal"><strong>Presentar</strong> la documentación que requiera el INSS</div>
+    <div class="note nteal"><strong>Cumplir</strong> las condiciones de compatibilidad si percibe rentas del trabajo</div>
+  </div>
+  <div class="note nerr" style="margin-top:10px">⚠ Trampa: "el IMV no tiene condiciones de inclusión activa" → FALSO. El art. 33 exige participar en estrategias de inclusión del Ministerio.</div>
+</div>
+
+<!-- COORDINACIÓN -->
+<h2>Coordinación territorial y Comisión de Seguimiento ★★★</h2>
+<div class="g2">
+  <div class="blk b1">
+    <h3>Comisión de Seguimiento del IMV · arts. 40-41</h3>
+    <ul>
+      <li>Órgano de cooperación entre AGE + CCAA + entidades locales</li>
+      <li>Función: coherencia, complementariedad y eficiencia del sistema</li>
+      <li>Los Ayuntamientos comunican cambios en el Padrón que afecten al IMV</li>
+    </ul>
+  </div>
+  <div class="blk b3">
+    <h3>IMV vs. Renta Garantizada de Navarra ★★★</h3>
+    <ul>
+      <li>IMV: estatal · INSS · Ley 19/2021</li>
+      <li>RG Navarra: autonómica · LF 15/2016 · DF 26/2018</li>
+      <li>NO se sustituyen: son <strong>complementarias</strong></li>
+      <li>D.A. 9ª: mecanismo de reintegro para evitar doble cobro retroactivo ★★★</li>
+    </ul>
+    <div class="note nok">El examinador navarro usa "¿el IMV sustituye a la RG de Navarra?" como trampa. Respuesta: <strong>NO</strong>.</div>
+  </div>
+</div>
+
+<!-- DISPOSICIONES ESPECIALES -->
+<h2>Disposiciones especiales más preguntadas ★★★</h2>
+<div class="g3">
+  <div class="blk b2">
+    <h3>D.A. 2ª</h3>
+    <ul><li>El IMV se incluye en el <strong>Registro de Prestaciones Sociales Públicas</strong></li></ul>
+  </div>
+  <div class="blk b5">
+    <h3>D.A. 9ª ★★★</h3>
+    <ul><li>Reintegro de renta mínima autonómica cuando se reconoce el IMV con efectos retroactivos → <strong>evita el doble cobro</strong></li></ul>
+  </div>
+  <div class="blk b3">
+    <h3>D.T. 4ª ★★★</h3>
+    <ul><li>Exención de precios públicos académicos universitarios para beneficiarios del IMV</li>
+    <li>Menores de 14 años beneficiarios: exentos del pago de expedición del DNI</li></ul>
+  </div>
+  <div class="blk b6">
+    <h3>D.T. 6ª ★★★</h3>
+    <ul><li>Desde Ley 19/2021: <strong>no caben nuevas solicitudes</strong> de asignación económica por hijo sin discapacidad o &lt;33 %</li></ul>
+  </div>
+  <div class="blk b1">
+    <h3>D.T. 3ª</h3>
+    <ul><li>Integración progresiva de las prestaciones por hijo a cargo en el IMV</li></ul>
+  </div>
+  <div class="blk b4">
+    <h3>D.F. 4ª</h3>
+    <ul><li>Título competencial: <strong>149.1.17 CE</strong> · Legislación básica del régimen económico de la Seguridad Social</li></ul>
+  </div>
+</div>
+
+<!-- TRAMPAS -->
+<h2>Las 10 trampas del examen ★★★</h2>
+<div class="trap-grid">
+  <div class="trap"><div class="q">❌ "El IMV es una prestación contributiva de la Seguridad Social"</div><div class="a">✓ Es <strong>NO CONTRIBUTIVA</strong> (art. 2) · No requiere cotización previa</div></div>
+  <div class="trap"><div class="q">❌ "El titular del IMV y los beneficiarios son la misma cosa"</div><div class="a">✓ El titular es uno; todos los miembros de la UC son <strong>beneficiarios</strong> (art. 5)</div></div>
+  <div class="trap"><div class="q">❌ "La UC solo puede formarse por personas con parentesco familiar"</div><div class="a">✓ Art. 9: convivientes sin parentesco pueden formar UC si la convivencia deriva de una <strong>situación de necesidad</strong></div></div>
+  <div class="trap"><div class="q">❌ "El IMV es incompatible con cualquier ingreso de trabajo"</div><div class="a">✓ Es <strong>compatible</strong> con ingresos del trabajo (art. 11.4) · RD 789/2022 lo desarrolla</div></div>
+  <div class="trap"><div class="q">❌ "El IMV tiene una cuantía fija igual para todos los beneficiarios"</div><div class="a">✓ Es una prestación <strong>diferencial</strong>: cubre la diferencia entre renta garantizada e ingresos reales</div></div>
+  <div class="trap"><div class="q">❌ "El IMV sustituye a la Renta Garantizada de Navarra"</div><div class="a">✓ Son prestaciones <strong>complementarias</strong> de distinto nivel territorial. No se sustituyen.</div></div>
+  <div class="trap"><div class="q">❌ "Los residentes en centros sociales públicos pueden cobrar el IMV"</div><div class="a">✓ La residencia permanente en centros sociales financiados públicamente impide el acceso y causa suspensión</div></div>
+  <div class="trap"><div class="q">❌ "El complemento de infancia es igual para todos los menores"</div><div class="a">✓ Varía por tramos: &lt;3 años = <strong>115 €</strong>, 3-6 años = <strong>80,50 €</strong>, 6-18 años = <strong>57,50 €</strong></div></div>
+  <div class="trap"><div class="q">❌ "El RD 789/2022 regula la cuantía del IMV"</div><div class="a">✓ El RD 789/2022 regula la <strong>compatibilidad del IMV con rentas del trabajo</strong> · vigente desde 1-ene-2023</div></div>
+  <div class="trap"><div class="q">❌ "El IMV no lleva aparejadas obligaciones de inclusión activa"</div><div class="a">✓ Art. 33: el beneficiario debe <strong>participar en estrategias de inclusión</strong> del Ministerio</div></div>
+</div>
+
+</div>
+</body>
+</html>

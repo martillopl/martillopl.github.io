@@ -1,0 +1,284 @@
+TEMA 50 · PUNTOS CLAVE DE EXAMEN Y ARTÍCULOS CLAVE
+Ley 19/2021, de 20 de diciembre, por la que se establece el Ingreso Mínimo Vital (IMV)
+(BOE núm. 304, de 21 de diciembre de 2021 · vigencia desde 1 de enero de 2022)
+======================================================================
+
+I. IDENTIFICACIÓN BÁSICA DE LA NORMA ★★★
+──────────────────────────────────────────────────────────────────────
+· Nombre completo: Ley 19/2021, de 20 de diciembre, por la que se establece
+  el Ingreso Mínimo Vital
+· Entrada en vigor: 1 de enero de 2022
+· Derogó parcialmente: RDL 20/2020 (que había creado el IMV de forma urgente)
+· Estructura: 9 capítulos, 41 artículos, 10 disposiciones adicionales,
+  8 transitorias, 1 derogatoria, 12 finales y 4 Anexos
+· Órgano gestor: INSS (Instituto Nacional de la Seguridad Social)
+· Ministerio competente: Ministerio de Inclusión, Seguridad Social y Migraciones
+
+DESARROLLO REGLAMENTARIO CLAVE:
+· Real Decreto 789/2022, de 27 de septiembre ★★★
+  Regula la compatibilidad del IMV con ingresos de trabajo o actividad
+  económica por cuenta propia · en vigor desde 1 de enero de 2023
+
+
+II. NATURALEZA JURÍDICA ★★★
+──────────────────────────────────────────────────────────────────────
+· El IMV es un DERECHO SUBJETIVO a una prestación económica (art. 2.1)
+· Naturaleza: prestación de la Seguridad Social de carácter NO CONTRIBUTIVO
+· Gestión y financiación: a cargo del Estado mediante transferencia a los
+  Presupuestos de la Seguridad Social
+· Objetivo: garantizar un nivel mínimo de renta a personas en situación de
+  VULNERABILIDAD ECONÓMICA y mejorar sus OPORTUNIDADES DE INCLUSIÓN SOCIAL
+  Y LABORAL
+· Periodicidad: MENSUAL ★★★ (cubre la diferencia entre ingresos reales y
+  renta garantizada)
+
+FÓRMULA DEL IMPORTE:
+IMV = Renta garantizada (Anexo I) - Ingresos/rentas anuales del año anterior
+(dividido a partes mensuales)
+→ Es una prestación diferencial: no es una cuantía fija para todos
+
+
+III. ÁMBITO SUBJETIVO — BENEFICIARIOS ★★★
+──────────────────────────────────────────────────────────────────────
+TRES TIPOS DE BENEFICIARIOS:
+1. Personas que viven SOLAS (beneficiaria individual)
+2. Integrantes de una UNIDAD DE CONVIVENCIA
+3. Casos especiales: convivientes SIN VÍNCULO DE PARENTESCO por necesidad
+   (art. 9) ★★★
+
+TITULAR:
+· Art. 5: el titular es quien solicita y figura como receptor formal
+  → La titularidad NO es equivalente a la condición de beneficiario
+  → Todos los miembros de la unidad de convivencia son beneficiarios;
+    solo uno puede ser titular ★★★
+
+UNIDAD DE CONVIVENCIA (art. 6) ★★★:
+· Dos o más personas que residan en la misma vivienda y estén unidas
+  por consanguinidad o afinidad hasta el SEGUNDO GRADO ★★★
+· Excepciones: menores acogidos, personas en acogida por situación
+  de necesidad sin vínculo familiar (art. 9)
+
+
+IV. REQUISITOS DE ACCESO (art. 10) ★★★
+──────────────────────────────────────────────────────────────────────
+Requisitos GENERALES:
+1. RESIDENCIA LEGAL Y EFECTIVA en España de forma continuada durante
+   al menos el año natural anterior a la solicitud ★★★
+   (excepciones en art. 10.3: víctimas trata, VG, personas tuteladas...)
+2. EDAD: entre 23 y 65 años (beneficiaria individual) ★★★
+   - Excepción a los 23 años: tener menores a cargo o ser víctima de VG
+   - No se exige para unidades de convivencia con menores
+3. Situación de VULNERABILIDAD ECONÓMICA:
+   - Ingresos del año anterior al menos 10 € INFERIOR a la renta garantizada
+   - Patrimonio (excluida vivienda habitual) inferior a los límites del Anexo II
+
+REQUISITO ESPECIAL PARA BENEFICIARIA INDIVIDUAL:
+· Si vive sola: acreditar independencia de hogar con al menos 1 año
+  de anterioridad a la solicitud ★★★
+
+NO SON BENEFICIARIOS:
+· Personas con residencia en centros de carácter social con carácter permanente
+  (siempre que financiadas por fondos públicos) (art. 10.2) ★★★
+
+
+V. CUANTÍA Y RENTA GARANTIZADA ★★★
+──────────────────────────────────────────────────────────────────────
+REFERENCIA BASE (Anexo I):
+· Un adulto solo: 5.899,60 €/año (2024) ≈ 491,63 €/mes ★★★
+  (importe exacto puede actualizarse; en examen se exige saber que es
+  la cuantía de referencia para 1 adulto sin menores)
+
+COMPLEMENTOS:
+1. COMPLEMENTO POR DISCAPACIDAD (≥ 65 %): +22 % sobre la cuantía unipersonal ★★★
+2. COMPLEMENTO DE MONOPARENTALIDAD: +22 % sobre cuantía de PNC unipersonal ★★★
+3. COMPLEMENTO DE AYUDA PARA LA INFANCIA (art. 11.6) ★★★:
+   - < 3 años: 115 €/mes ★★★
+   - ≥ 3 años y < 6 años: 80,50 €/mes ★★★
+   - ≥ 6 años y < 18 años: 57,50 €/mes ★★★
+
+ESCALA DE PONDERACIÓN UNIDAD DE CONVIVENCIA (Anexo I):
+· 1 adulto: 1,00 · 1 adulto + 1 menor: 1,52 · 1 adulto + 2 menores: 1,74
+· 2 adultos: 1,30 · Cada adulto adicional: +0,30 · Cada menor adicional: +0,30
+
+
+VI. COMPATIBILIDAD E INCOMPATIBILIDADES ★★★
+──────────────────────────────────────────────────────────────────────
+COMPATIBLE con (art. 11.4) ★★★:
+· Ingresos procedentes del TRABAJO O ACTIVIDAD ECONÓMICA por cuenta propia
+  (para no desincentivar el empleo = "trampa de la pobreza")
+· RD 789/2022: desarrolla esta compatibilidad en vigor desde 1/1/2023
+· Rentas mínimas autonómicas (bajo ciertas condiciones y con mecanismos
+  de coordinación) ★★★
+
+INCOMPATIBLE con:
+· Percepción de la ASIGNACIÓN ECONÓMICA POR HIJO/MENOR A CARGO sin discapacidad
+  o con discapacidad < 33% cuando haya identidad de causante ★★★
+· Residencia en centros públicos de atención social con carácter permanente
+· Percepción de otras prestaciones de Seguridad Social salvo excepciones
+
+
+VII. SUSPENSIÓN Y EXTINCIÓN ★★★
+──────────────────────────────────────────────────────────────────────
+SUSPENSIÓN (art. 18):
+· Incumplimiento de obligaciones sin causa justificada
+· Superación del umbral de patrimonio
+· Ingreso en centro de carácter social con financiación pública
+
+EXTINCIÓN (art. 19):
+· Fallecimiento del beneficiario individual
+· Superación reiterada y sostenida de la renta garantizada
+· Cumplimiento de los 65 años (acceso a pensión no contributiva)
+· Reconocimiento de cualquier pensión de Seguridad Social que supere
+  la renta garantizada
+· Resolución por acuerdo en el marco de la inclusión activa
+
+REINTEGRO:
+· Las prestaciones indebidas se reintegran conforme a los mecanismos
+  de la Seguridad Social
+· D.A. 9ª: procedimiento especial para reintegro de renta mínima
+  autonómica indebidamente percibida
+
+
+VIII. CAPÍTULOS DE LA LEY Y SU CONTENIDO ★★★
+──────────────────────────────────────────────────────────────────────
+· Cap. I (arts. 1-3): Disposiciones generales · objeto · concepto ·
+  naturaleza · características
+· Cap. II (arts. 4-11): Ámbito subjetivo · beneficiarios · titular ·
+  unidad de convivencia · vulnerabilidad · complemento infancia ·
+  compatibilidad con empleo
+· Cap. III (arts. 12-13): Acción protectora · cuantía · renta garantizada
+· Cap. IV (arts. 14-20): Nacimiento, suspensión, extinción e incompatibilidades
+· Cap. V (arts. 21-26): Gestión · procedimiento · resolución · INSS
+· Cap. VI (arts. 27-28): Financiación (cargo del Estado · transferencia
+  a Presupuestos de la SS)
+· Cap. VII (art. 29-34): Régimen de OBLIGACIONES ★★★
+· Cap. VIII (arts. 35-39): Régimen de INFRACCIONES Y SANCIONES ★★★
+· Cap. IX (arts. 40-41): Cooperación entre AAPP · Comisión de Seguimiento
+
+OBLIGACIONES DEL BENEFICIARIO (cap. VII · art. 33) ★★★:
+· Comunicar cambios en la situación económica, familiar o laboral
+· Participar en estrategias de INCLUSIÓN que promueva el Ministerio
+· Presentar la documentación requerida por el INSS
+· Si compatible con empleo: cumplir condiciones de acceso y mantenimiento
+
+
+IX. COOPERACIÓN Y COORDINACIÓN ★★★
+──────────────────────────────────────────────────────────────────────
+· Comisión de Seguimiento del IMV: órgano de cooperación entre CCAA
+  y entidades locales ★★★
+· Mecanismo de complementariedad con rentas mínimas autonómicas:
+  CCAA pueden complementar el IMV con sus rentas mínimas sin penalización
+· Obligación de Ayuntamientos: comunicar cambios en el Padrón
+· Tercer Sector: D.T. 6ª permite acreditar circunstancias de los solicitantes
+
+
+X. DISPOSICIONES ESPECIALES MÁS PREGUNTADAS ★★★
+──────────────────────────────────────────────────────────────────────
+· D.A. 2ª: inclusión del IMV en el Registro de Prestaciones Sociales Públicas
+· D.A. 9ª: reintegro de renta mínima autonómica cuando se reconoce el IMV ★★★
+· D.T. 6ª: integración de la prestación por hijo/menor a cargo en el IMV ★★★
+  → Desde la entrada en vigor no se pueden hacer nuevas solicitudes
+    de la asignación económica por hijo sin discapacidad o con < 33%
+· D.T. 4ª: exención del pago de precios públicos por servicios académicos
+  universitarios para beneficiarios del IMV ★★★
+· Menores de 14 años beneficiarios exentos del pago de expedición del DNI
+
+
+XI. ARTÍCULOS CLAVE ★★★
+──────────────────────────────────────────────────────────────────────
+Art. 1   : Objeto de la Ley
+Art. 2   : Concepto y naturaleza del IMV (DERECHO SUBJETIVO · NO CONTRIBUTIVO)
+Art. 4   : Beneficiarios del IMV (3 tipos)
+Art. 5   : Titular del IMV ★★★
+Art. 6   : Unidad de convivencia (2.º grado consanguinidad/afinidad) ★★★
+Art. 7   : Situaciones especiales
+Art. 9   : Convivientes sin vínculo de parentesco ★★★
+Art. 10  : Requisitos de acceso (edad 23-65, residencia 1 año, vulnerabilidad) ★★★
+Art. 11  : Cuantía · complementos · compatibilidad con empleo (art. 11.4) ★★★
+Art. 11.6: Complemento de ayuda para la infancia ★★★
+Art. 13  : Renta garantizada (Anexo I) ★★★
+Art. 18  : Suspensión del derecho
+Art. 19  : Extinción del derecho
+Art. 33  : Obligaciones del beneficiario ★★★
+Art. 40-41: Cooperación · Comisión de Seguimiento ★★★
+
+
+XII. RELACIÓN CON LA RENTA GARANTIZADA DE NAVARRA (LF 15/2016) ★★★
+──────────────────────────────────────────────────────────────────────
+· El IMV (estatal) y la Renta Garantizada de Navarra (LF 15/2016) son
+  prestaciones de distinto nivel territorial
+· El IMV NO sustituye a la RG de Navarra; son complementarias ★★★
+· La D.A. 9ª LI 19/2021: si se reconoce el IMV a alguien que ya percibía
+  una renta mínima autonómica, se activa el procedimiento de reintegro ★★★
+· Regla de coordinación práctica: el INSS gestiona el IMV (estatal);
+  los órganos de SS.SS. de Navarra gestionan la RG navarra
+· El examinador navarro puede preguntar si el IMV sustituye a la RG:
+  RESPUESTA: NO. Son prestaciones de distintos sistemas normativos.
+
+
+XIII. FRASES MEMORIZABLES DE OPOSICIÓN ★★★
+──────────────────────────────────────────────────────────────────────
+1. "El IMV es un DERECHO SUBJETIVO de naturaleza NO CONTRIBUTIVA
+    de la Seguridad Social" (art. 2)
+2. "El INSS gestiona el IMV · se financia a cargo del Estado mediante
+    transferencia a los Presupuestos de la SS" (cap. VI)
+3. "La unidad de convivencia incluye personas unidas por consanguinidad
+    o afinidad hasta el SEGUNDO GRADO" (art. 6)
+4. "Puede haber convivientes sin parentesco si la convivencia se debe
+    a una situación de necesidad" (art. 9)
+5. "Para la beneficiaria individual la edad mínima es 23 años, salvo
+    que tenga menores a cargo o sea víctima de VG" (art. 10)
+6. "Acreditar independencia de hogar con al menos 1 año de anterioridad
+    es requisito para la beneficiaria individual"
+7. "El IMV es compatible con ingresos del trabajo para no generar
+    la trampa de la pobreza" (art. 11.4 + RD 789/2022)
+8. "El complemento de infancia: < 3 años = 115 €; 3-6 años = 80,50 €;
+    6-18 años = 57,50 €" (art. 11.6)
+9. "El IMV NO sustituye a la Renta Garantizada de Navarra:
+    son de distinto nivel territorial y compatibles bajo coordinación"
+10. "Exención de precios académicos universitarios y de DNI para menores
+     de 14 años beneficiarios del IMV" (D.T. 4ª)
+11. "A partir de la LI 19/2021 no caben nuevas solicitudes de asignación
+     económica por hijo o menor sin discapacidad o con < 33%" (D.T. 6ª)
+12. "La Comisión de Seguimiento del IMV es el órgano de cooperación
+     entre CCAA y entidades locales" (art. 40)
+
+
+XIV. TRAMPAS DE EXAMEN FRECUENTES
+──────────────────────────────────────────────────────────────────────
+T1 ❌ "El IMV es una prestación contributiva"
+   ✓ Es NO CONTRIBUTIVA (art. 2) ★★★
+
+T2 ❌ "El titular y los beneficiarios del IMV son la misma persona"
+   ✓ El titular es uno; todos los miembros de la UC son beneficiarios
+
+T3 ❌ "La unidad de convivencia solo puede formarse por personas con
+     vínculo familiar"
+   ✓ El art. 9 permite convivientes sin parentesco cuando la
+     convivencia obedece a una situación de necesidad ★★★
+
+T4 ❌ "El IMV es incompatible con cualquier ingreso de trabajo"
+   ✓ Es compatible con rentas del trabajo (art. 11.4 + RD 789/2022)
+
+T5 ❌ "El IMV tiene una cuantía fija igual para todos"
+   ✓ Es una prestación DIFERENCIAL: cubre la diferencia entre
+     ingresos reales y renta garantizada
+
+T6 ❌ "El IMV sustituye a la Renta Garantizada de Navarra"
+   ✓ Son prestaciones COMPLEMENTARIAS de distinto nivel territorial
+
+T7 ❌ "Los beneficiarios del IMV que están en centros sociales públicos
+     siguen percibiendo la prestación"
+   ✓ La residencia en centros sociales financiados públicamente es
+     causa de NO acceso y de suspensión ★★★
+
+T8 ❌ "El complemento de infancia lo reciben todos los hogares"
+   ✓ Solo las unidades de convivencia con menores de edad y que cumplan
+     el límite del 300% de la cuantía garantizada y el 150% del patrimonio
+
+T9 ❌ "El RD 789/2022 regula la cuantía del IMV"
+   ✓ El RD 789/2022 regula la COMPATIBILIDAD del IMV con el trabajo
+
+T10 ❌ "No hay obligaciones de inclusión ligadas al IMV"
+    ✓ El art. 33 exige participar en estrategias de inclusión
+      del Ministerio ★★★
