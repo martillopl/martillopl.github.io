@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 52 · HTML 3 · Cuadro comparativo y tablas operativas · Plan SM Navarra · RSMNa · Carta TSS</title>
+<style>
+:root{--bg:#f0fff8;--card:#fff;--s2:#dcfce7;--line:#86efac;--text:#052e16;--muted:#16a34a;--p:#15803d;--warn:#d97706;--red:#dc2626;--grn:#059669;--vio:#7c3aed;--teal:#0d9488;--rose:#e11d48;--sky:#0284c7;--sh:0 2px 10px rgba(21,128,61,.08)}
+[data-theme="dark"]{--bg:#020d08;--card:#061a0e;--s2:#0a2a12;--line:#166534;--text:#bbf7d0;--muted:#4ade80;--p:#4ade80;--warn:#fbbf24;--red:#fca5a5;--grn:#86efac;--vio:#c4b5fd;--teal:#5eead4;--rose:#fda4af;--sky:#7dd3fc;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:22px}
+.wrap{max-width:1220px;margin:0 auto}
+header{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:14px 20px;box-shadow:var(--sh);margin-bottom:14px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+h1{font-size:.92rem;color:var(--p)}.sub{font-size:.71rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.71rem}
+h2{font-size:.85rem;font-weight:800;color:#fff;background:var(--p);padding:7px 15px;border-radius:8px;margin:18px 0 10px;display:inline-block}
+.tbl{width:100%;border-collapse:collapse;box-shadow:var(--sh);border-radius:10px;overflow:hidden;background:var(--card);margin-bottom:14px}
+.tbl th{background:var(--p);color:#fff;text-align:left;padding:8px 11px;font-size:.67rem;text-transform:uppercase;letter-spacing:.03em}
+.tbl td{padding:8px 11px;border-bottom:1px solid var(--s2);font-size:.73rem;vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:nth-child(even) td{background:rgba(134,239,172,.05)}
+.tbl tr:hover td{background:var(--s2)}
+.g{color:#059669;font-weight:700}.ng{color:#dc2626;font-weight:700}.nu{color:var(--vio);font-weight:700}.ex{color:var(--warn);font-weight:700}.rs{color:var(--rose);font-weight:700}.sk{color:var(--sky);font-weight:700}.te{color:var(--teal);font-weight:700}
+.note{padding:9px 12px;border-radius:0 9px 9px 0;font-size:.72rem;border-left:4px solid;margin:8px 0}
+.n-ok{background:rgba(5,150,105,.07);border-color:#059669}
+.n-err{background:rgba(220,38,38,.07);border-color:#dc2626}
+.n-w{background:rgba(180,83,9,.07);border-color:#b45309}
+.n-vio{background:rgba(124,58,237,.07);border-color:#7c3aed}
+.n-sky{background:var(--s2);border-color:var(--muted)}
+.n-teal{background:rgba(13,148,136,.07);border-color:#0d9488}
+[data-theme="dark"] .n-w{background:#2a1300;color:#fde68a}
+[data-theme="dark"] .n-err{background:#1a0000;color:#fca5a5}
+[data-theme="dark"] .n-ok{background:#001a0e;color:#86efac}
+[data-theme="dark"] .n-vio{background:#12003a;color:#c4b5fd}
+strong{color:var(--p)}
+.s3{color:#fbbf24;font-weight:800}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+<header>
+  <div>
+    <h1>Tema 52 · HTML 3 · Cuadro comparativo y tablas operativas para examen</h1>
+    <div class="sub">Plan de Salud Mental Navarra 2019-2023 · RSMNa · Carta de Servicios TSS 2021 · LF 21/2010 · SNS-O</div>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</header>
+
+<!-- T1 -->
+<h2>T1 · Identificación del marco normativo y gestor <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Atributo</th><th>Contenido</th><th>Clave de examen</th></tr></thead>
+<tbody>
+<tr><td>Base jurídica</td><td><strong>Ley Foral 21/2010, de 13 de diciembre, de Salud Mental de Navarra</strong></td><td>—</td></tr>
+<tr><td>Órgano gestor</td><td><strong>Dirección de Salud Mental</strong></td><td class="g">Órgano central de gestión con máxima responsabilidad técnica ★★★</td></tr>
+<tr><td>Ámbito de la Dirección</td><td>Región Sanitaria de Navarra</td><td>—</td></tr>
+<tr><td>Dependencia</td><td><strong>SNS-O</strong> (Servicio Navarro de Salud-Osasunbidea)</td><td class="ng">No depende del Departamento de Salud directamente ★★★</td></tr>
+<tr><td>Funciones principales</td><td>Elaborar y actualizar el Plan SM · Planificar, organizar y evaluar la RSMNa · Promover calidad asistencial</td><td>—</td></tr>
+<tr><td>Plan vigente</td><td>Plan Estratégico de Salud Mental de Navarra <strong>2019-2023</strong></td><td class="ex">No confundir con el anterior (2012-2016)</td></tr>
+<tr><td>Carta/Cartera TSS</td><td>Publicada en Pamplona, <strong>2021</strong> · Gerencia de Salud Mental de Navarra · SNS-O</td><td class="ng">Año 2021, no 2019 ni 2023 ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T2 -->
+<h2>T2 · Plan 2019-2023 · Los 4 números clave <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Elemento</th><th>Número</th><th>Denominación / contenido</th><th>Clave de examen</th></tr></thead>
+<tbody>
+<tr><td>Metas (Triple Meta Ampliada)</td><td class="g"><strong>4</strong></td><td>Salud de la población · Cuidados y experiencia de pacientes · Eficiencia · Implicación de los profesionales</td><td class="g">La 4ª meta (profesionales) es la que convierte la Triple Meta en "Ampliada" ★★★</td></tr>
+<tr><td>Líneas estratégicas</td><td class="g"><strong>12</strong></td><td>Desde atención centrada en persona hasta sistemas de información</td><td class="ng">No 8 ni 10: son 12 ★★★</td></tr>
+<tr><td>Objetivos</td><td class="g"><strong>40</strong></td><td>Distribuidos entre las 12 líneas</td><td class="ng">No 50 ni 30: son 40 ★★★</td></tr>
+<tr><td>Indicadores clave</td><td class="g"><strong>21</strong></td><td>Entre ellos: TPNT (meses) · % TMG con PAI · % TMG en inserción laboral</td><td class="g">21 indicadores ★★★</td></tr>
+</tbody>
+</table>
+<div class="note n-vio"><strong>Mnemotecnia:</strong> 4 – 12 – 40 – 21. Los 4 números del Plan 2019-2023 son el principal foco de preguntas numéricas del Tema 52.</div>
+
+<!-- T3 -->
+<h2>T3 · Las 4 metas de la Triple Meta Ampliada <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Meta</th><th>Enfoque</th></tr></thead>
+<tbody>
+<tr><td class="g">1</td><td>Mejorar la <strong>salud</strong> de la población</td><td>Resultados en salud de la comunidad</td></tr>
+<tr><td class="g">2</td><td>Mejorar los <strong>cuidados y experiencia</strong> de los pacientes</td><td>Calidad percibida y satisfacción de las personas usuarias</td></tr>
+<tr><td class="g">3</td><td>Mejorar la <strong>eficiencia</strong> del sistema</td><td>Uso óptimo de recursos sanitarios y económicos</td></tr>
+<tr><td class="ex">4 ★★★</td><td>Mejorar la <strong>implicación y satisfacción</strong> de los profesionales</td><td>Meta "ampliada": los profesionales como clave del sistema</td></tr>
+</tbody>
+</table>
+
+<!-- T4 -->
+<h2>T4 · Las 12 líneas estratégicas del Plan <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Línea estratégica</th><th>Relevancia para el examen</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Atención centrada en la persona y la familia</td><td>—</td></tr>
+<tr><td>2</td><td>Participación de personas usuarias y familias</td><td>—</td></tr>
+<tr><td>3</td><td>Continuidad de cuidados e integración asistencial</td><td>—</td></tr>
+<tr><td class="ng">4 ★★★</td><td>Atención al <strong>Trastorno Mental Grave (TMG)</strong></td><td class="ng">Colectivo prioritario del TSS ★★★</td></tr>
+<tr><td class="ng">5 ★★★</td><td>Atención a <strong>primeros episodios de psicosis (PEP)</strong></td><td class="ng">Programa referente de la RSMNa ★★★</td></tr>
+<tr><td>6</td><td>Salud mental en la infancia y adolescencia</td><td>Grupo específico del TSS ★</td></tr>
+<tr><td>7</td><td>Promoción de la salud mental y prevención</td><td>—</td></tr>
+<tr><td>8</td><td>Atención a urgencias y situaciones de crisis</td><td>—</td></tr>
+<tr><td>9</td><td>Empleo óptimo de los recursos</td><td>—</td></tr>
+<tr><td>10</td><td>Formación de profesionales</td><td>—</td></tr>
+<tr><td>11</td><td>Investigación e innovación</td><td>—</td></tr>
+<tr><td>12</td><td>Sistemas de información y evaluación</td><td>—</td></tr>
+</tbody>
+</table>
+
+<!-- T5 -->
+<h2>T5 · Estructura RSMNa · 2 niveles comparados <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Aspecto</th><th>1.er nivel · CSM</th><th>2.º nivel · Dispositivos de apoyo</th></tr></thead>
+<tbody>
+<tr><td>Función</td><td><strong>Puerta de entrada</strong> y elemento <strong>vertebrador</strong> de la RSMNa ★★★</td><td>Apoyo especializado y más intensivo al CSM</td></tr>
+<tr><td>Población</td><td>Adultos desde <strong>17 años</strong> + drogodependencias; CSM I-J: menores de 17 ★★★</td><td>Según dispositivo y criterio clínico</td></tr>
+<tr><td>Número</td><td><strong>10 CSM adultos + 1 CSM Infanto-Juvenil</strong> (Sarriguren)</td><td>Múltiples dispositivos (ver T6)</td></tr>
+<tr><td>Modalidad</td><td>Ambulatoria · en la comunidad</td><td>Variable: hospitalaria, de día, residencial, programa</td></tr>
+<tr><td>Derivación hacia el nivel</td><td>Desde AP · Pediatría · Urgencias/UHA · otras especialidades</td><td>Desde los propios CSM u otros dispositivos</td></tr>
+<tr><td>Modelo de atención</td><td colspan="2" style="text-align:center"><strong>COMUNITARIO</strong>: el CSM es el eje; el 2.º nivel es transitorio y de apoyo</td></tr>
+</tbody>
+</table>
+<div class="note n-err"><strong>Trampa:</strong> "el CSM es el segundo nivel" → FALSO. El CSM es el <strong>PRIMER nivel</strong>. ★★★</div>
+
+<!-- T6 -->
+<h2>T6 · Dispositivos del 2.º nivel · datos de examen <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Dispositivo</th><th>Nº / Ubicación</th><th>Clave de examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Unidades de Hospitalización de Agudos (UHA)</strong></td><td class="g"><strong>3</strong>: 2 Pamplona + 1 Tudela</td><td class="ng">No son 5 ni 4: son 3 ★★★</td></tr>
+<tr><td>Unidad de Hospitalización Infanto-Juvenil</td><td>1 · Pamplona</td><td>—</td></tr>
+<tr><td><strong>Hospitales de Día Psiquiátricos</strong></td><td class="g"><strong>3</strong>: 2 Pamplona + 1 Tudela</td><td>—</td></tr>
+<tr><td>Hospital de Día Infanto-Juvenil</td><td>1 · Pamplona</td><td>—</td></tr>
+<tr><td>Hospital de Día Psicogeriátrico</td><td>1</td><td>Específico para personas mayores con patología mental</td></tr>
+<tr><td>Hospital de Día de Trastornos Adictivos</td><td>1</td><td>—</td></tr>
+<tr><td>Unidad de Rehabilitación</td><td>—</td><td>Hospitalización completa + parcial + programa de día</td></tr>
+<tr><td>Unidad de Media Estancia (UME)</td><td>—</td><td>Subagudos; semanas a meses</td></tr>
+<tr><td>Unidad de Larga Estancia (ULE)</td><td>—</td><td>Pacientes crónicos de alta complejidad</td></tr>
+<tr><td>Centro San Francisco Javier (CSFJ)</td><td>—</td><td>Unidades residenciales + rehabilitación ★</td></tr>
+<tr><td>Unidades de daño cerebral adquirido</td><td>—</td><td>Adultos + infantil (dos unidades)</td></tr>
+<tr><td><strong>Programa PEP</strong></td><td>—</td><td class="g">Programa referente de la RSMNa ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T7 -->
+<h2>T7 · 10 CSM de adultos de Navarra <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Zona Pamplona / entorno</th><th>Resto de Navarra</th></tr></thead>
+<tbody>
+<tr><td>Ansoáin · Buztintxuri · Burlada · Casco Antiguo · Ermitagaña · Milagrosa · San Juan</td><td>Estella · Tafalla · Tudela</td></tr>
+<tr><td colspan="2"><strong>+ CSM Infanto-Juvenil</strong>: Sarriguren (menores de 17 años)</td></tr>
+</tbody>
+</table>
+
+<!-- T8 -->
+<h2>T8 · Principios síntesis RSMNa vs. Principios completos <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Principios SÍNTESIS (3) ★★★</th><th>Significado</th><th>Los 12 principios completos del Plan</th></tr></thead>
+<tbody>
+<tr><td class="g"><strong>EFICIENCIA</strong></td><td>Óptimo aprovechamiento de recursos humanos y materiales</td><td rowspan="3" style="vertical-align:middle">Compromiso profesional · Autonomía ★ · Recuperación personal ★ · Humanización · Continuidad de cuidados ★ · Accesibilidad · Equidad ★ · Salud mental positiva ★ · Responsabilización · Calidad · Formación/Investigación/Innovación · Sostenibilidad</td></tr>
+<tr><td class="g"><strong>SATISFACCIÓN</strong></td><td>De personas usuarias y profesionales</td></tr>
+<tr><td class="g"><strong>EVIDENCIA</strong></td><td>Procedimientos basados en la mejor evidencia disponible</td></tr>
+</tbody>
+</table>
+<div class="note n-err"><strong>Trampa frecuente:</strong> usar "calidad" o "equidad" como uno de los 3 principios síntesis → FALSO. Son <strong>Eficiencia · Satisfacción · Evidencia</strong> ★★★</div>
+
+<!-- T9 -->
+<h2>T9 · Programa PEP · 5 principios + indicador TPNT <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Elemento</th><th>Contenido</th><th>Clave de examen</th></tr></thead>
+<tbody>
+<tr><td>Denominación</td><td>Programa de Intervención en <strong>Primeros Episodios de Psicosis</strong></td><td class="g">Programa referente / emblemático de la RSMNa ★★★</td></tr>
+<tr><td>Línea estratégica</td><td>Línea 5 del Plan 2019-2023</td><td>—</td></tr>
+<tr><td>Indicador clave asociado</td><td><strong>TPNT</strong>: Trastorno Psicótico No Tratado (en meses)</td><td class="ex">Su reducción es un objetivo explícito del Plan ★</td></tr>
+<tr><td>Principio 1</td><td><strong>Accesibilidad</strong>: entrada directa sin largas esperas</td><td>—</td></tr>
+<tr><td>Principio 2</td><td><strong>Abordaje integral</strong>: bio-psico-social</td><td>—</td></tr>
+<tr><td>Principio 3</td><td><strong>Coordinación continua</strong>: entre dispositivos RSMNa y AP</td><td>—</td></tr>
+<tr><td>Principio 4</td><td><strong>Evaluación de intervenciones</strong>: escalas estandarizadas</td><td>—</td></tr>
+<tr><td>Principio 5</td><td><strong>Recuperación personal</strong>: reintegración en vida ordinaria</td><td class="g">No solo remisión de síntomas ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T10 -->
+<h2>T10 · TMG · Criterios, PAI y rol del TSS <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Aspecto</th><th>Contenido</th><th>Clave de examen</th></tr></thead>
+<tbody>
+<tr><td>Criterio 1</td><td><strong>Diagnóstico</strong>: psicosis, trastornos afectivos graves u otros</td><td>—</td></tr>
+<tr><td>Criterio 2</td><td><strong>Duración</strong>: más de <strong>2 años</strong></td><td class="ex">Dato numérico preguntado ★</td></tr>
+<tr><td>Criterio 3</td><td><strong>Discapacidad funcional</strong> significativa en actividades cotidianas</td><td>—</td></tr>
+<tr><td>Instrumento clave</td><td><strong>Plan de Atención Individual (PAI)</strong>: consensuado en equipo + participación de la persona y familia</td><td class="g">% TMG con PAI activo = indicador clave del Plan ★★★</td></tr>
+<tr><td>Rol del TSS con TMG</td><td>Coordinación con SS.SS., gestión de dependencia/discapacidad/IMV/RGN, apoyo a familias cuidadoras, inserción social y laboral</td><td class="g">Colectivo prioritario del TSS en la RSMNa ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T11 -->
+<h2>T11 · Carta de Servicios TSS (2021) · 6 bloques comparados <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Bloque de servicio</th><th>Contenido principal</th><th>Datos más preguntados</th></tr></thead>
+<tbody>
+<tr><td class="g">1</td><td><strong>Acogida e información</strong></td><td>Primera entrevista social · necesidades psicosociales · información sobre recursos</td><td class="g">Inicio de la <strong>Historia de TSS</strong> ★★★</td></tr>
+<tr><td class="g">2</td><td><strong>Valoración e intervención psicosocial</strong></td><td>Evaluación social · diagnóstico social · intervención en crisis sociales</td><td class="g">Atención a <strong>familias y personas cuidadoras</strong> ★★★</td></tr>
+<tr><td class="g">3</td><td><strong>Coordinación y gestión de casos</strong></td><td>SS.SS. de Base · AP · prestaciones · tercer sector · ANASAPS</td><td class="g">Dependencia · discapacidad · <strong>RGN · IMV</strong> ★★★</td></tr>
+<tr><td class="g">4</td><td><strong>Atención a grupos específicos</strong></td><td>TMG · drogodependencias · infancia y adolescencia · personas mayores</td><td class="ng">TMG = prioritario; infancia = grupo específico ★★★</td></tr>
+<tr><td class="g">5</td><td><strong>Intervención comunitaria y promoción</strong></td><td>Lucha contra el estigma · programas de promoción SM · autoayuda</td><td class="g">Lucha contra el <strong>estigma</strong> ★★★</td></tr>
+<tr><td class="g">6</td><td><strong>Docencia, investigación y calidad</strong></td><td>Formación de residentes · colaboración en investigación · evaluación calidad TSS</td><td class="ex">Formación de <strong>residentes</strong> ★</td></tr>
+</tbody>
+</table>
+<div class="note n-sky"><strong>Carta TSS:</strong> "Cartera de Servicios de Trabajo Social Sanitario en la Red de Salud Mental de Navarra" · Pamplona, <strong>2021</strong> · Gerencia de Salud Mental de Navarra, SNS-O.</div>
+
+<!-- T12 -->
+<h2>T12 · Historia de Trabajo Social Sanitario · 6 apartados <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Apartado</th><th>Contenido</th><th>Clave de examen</th></tr></thead>
+<tbody>
+<tr><td class="g">1</td><td><strong>Motivo de consulta y demanda</strong></td><td>Razón por la que se produce el contacto con el TSS</td><td class="g">El más preguntado: siempre es el primero ★★★</td></tr>
+<tr><td>2</td><td><strong>Situación familiar y de convivencia</strong></td><td>Composición del hogar, relaciones familiares, cuidadores</td><td>—</td></tr>
+<tr><td>3</td><td><strong>Situación económica y laboral</strong></td><td>Ingresos, empleo, prestaciones activas o pendientes</td><td>—</td></tr>
+<tr><td>4</td><td><strong>Red de apoyo social</strong></td><td>Relaciones sociales significativas, vínculos comunitarios</td><td>—</td></tr>
+<tr><td>5</td><td><strong>Antecedentes de interés social</strong></td><td>Intervenciones sociales previas, historia de exclusión</td><td>—</td></tr>
+<tr><td>6</td><td><strong>Diagnóstico y plan de intervención social</strong></td><td>Síntesis valorativa y líneas de actuación acordadas con la persona</td><td class="ex">El diagnóstico SOCIAL es el cierre de la historia ★</td></tr>
+</tbody>
+</table>
+
+<!-- T13 -->
+<h2>T13 · TSS en la RSMNa · Definición, principios y función comparados <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Aspecto</th><th>Contenido</th><th>Clave de examen</th></tr></thead>
+<tbody>
+<tr><td>Definición del TSS en SM</td><td>Disciplina que atiende los <strong>conflictos y problemas PSICOSOCIALES</strong> derivados del enfermar</td><td class="g">Adjetivo clave: PSICOSOCIALES (no solo sociales) ★★★</td></tr>
+<tr><td>Objetivo fundamental</td><td>Mejorar la atención al paciente · reducir el <strong>ESTIGMA</strong> y la marginación · trabajar con familias y entornos de apoyo</td><td class="g">3 objetivos simultáneos: atención + estigma + familias ★★★</td></tr>
+<tr><td>Integración en la RSMNa</td><td>En los equipos <strong>MULTIDISCIPLINARES</strong> de todos los dispositivos (1.er y 2.º nivel)</td><td class="ng">No actúa en paralelo: forma parte constitutiva del equipo ★★★</td></tr>
+<tr><td>Principio rector 1</td><td>Atención centrada en la persona</td><td>—</td></tr>
+<tr><td>Principio rector 2</td><td>Modelo de <strong>recuperación personal</strong></td><td class="g">Conecta con el principio RSMNa de igual nombre ★</td></tr>
+<tr><td>Principio rector 3</td><td>Intervención sobre los <strong>determinantes sociales</strong> de la salud</td><td>—</td></tr>
+<tr><td>Principio rector 4</td><td>Coordinación con SS.SS., AP y <strong>tercer sector</strong></td><td class="ex">El tercer sector (ANASAPS, etc.) es parte del trabajo ★★★</td></tr>
+<tr><td>Principio rector 5</td><td>Perspectiva de <strong>género e interseccionalidad</strong></td><td>—</td></tr>
+<tr><td>Principio rector 6</td><td>Promoción de la <strong>autonomía</strong> del paciente y familia</td><td>—</td></tr>
+</tbody>
+</table>
+
+<!-- T14 -->
+<h2>T14 · Artículos y referencias clave · guía rápida <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Referencia</th><th>Contenido</th><th>Importancia</th></tr></thead>
+<tbody>
+<tr><td class="g">LF 21/2010</td><td>Ley Foral de Salud Mental de Navarra · base jurídica · crea Dirección SM</td><td>★★★</td></tr>
+<tr><td class="g">Dirección SM</td><td>Órgano central de gestión · máxima responsabilidad técnica · depende SNS-O</td><td>★★★</td></tr>
+<tr><td class="g">Plan 2019-2023</td><td>4 metas · 12 líneas · 40 objetivos · 21 indicadores · Triple Meta Ampliada</td><td>★★★</td></tr>
+<tr><td class="g">RSMNa · 2 niveles</td><td>1.º: CSM (puerta entrada) · 2.º: dispositivos de apoyo</td><td>★★★</td></tr>
+<tr><td class="g">CSM</td><td>Adultos ≥17 años + drogodependencias · 10 adultos + 1 I-J (Sarriguren)</td><td>★★★</td></tr>
+<tr><td class="g">UHA</td><td>3 unidades: 2 Pamplona + 1 Tudela</td><td>★★★</td></tr>
+<tr><td class="g">Principios síntesis</td><td>Eficiencia · Satisfacción · Evidencia</td><td>★★★</td></tr>
+<tr><td class="g">PEP</td><td>Programa referente RSMNa · línea 5 · 5 principios · indicador TPNT</td><td>★★★</td></tr>
+<tr><td class="g">TMG</td><td>3 criterios: diagnóstico + 2 años + discapacidad · requiere PAI</td><td>★★★</td></tr>
+<tr><td class="g">Carta TSS 2021</td><td>6 bloques · publicada Pamplona 2021 · Gerencia SM SNS-O</td><td>★★★</td></tr>
+<tr><td class="g">Historia TSS</td><td>6 apartados: motivo consulta · familia · economía · red apoyo · antecedentes · diagnóstico social</td><td>★★★</td></tr>
+<tr><td class="g">12 principios RSMNa</td><td>Incluye autonomía · recuperación personal · equidad · salud mental positiva · continuidad cuidados</td><td>★★</td></tr>
+</tbody>
+</table>
+
+<!-- T15 -->
+<h2>T15 · Las 12 trampas del examen <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Afirmación incorrecta</th><th>Corrección exacta</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>El CSM atiende a personas a partir de los 18 años</td><td>Art. LF 21/2010 y Plan: a partir de los <strong>17 años</strong> ★★★</td></tr>
+<tr><td>2</td><td>El CSM es el segundo nivel de la RSMNa</td><td>El CSM es el <strong>PRIMER nivel</strong>: puerta de entrada y elemento vertebrador ★★★</td></tr>
+<tr><td>3</td><td>El Plan 2019-2023 tiene 50 objetivos</td><td>Tiene <strong>40 objetivos</strong> y 21 indicadores clave ★★★</td></tr>
+<tr><td>4</td><td>El Plan tiene 8 líneas estratégicas</td><td>Tiene <strong>12 líneas estratégicas</strong> ★★★</td></tr>
+<tr><td>5</td><td>La Triple Meta Ampliada tiene 3 metas</td><td>Tiene <strong>4 metas</strong>: la 4ª (profesionales) es la que la hace "ampliada" ★★★</td></tr>
+<tr><td>6</td><td>Los 3 principios síntesis son eficiencia, calidad y equidad</td><td>Son <strong>Eficiencia · Satisfacción · Evidencia</strong> ★★★</td></tr>
+<tr><td>7</td><td>Las UHA son 5 unidades en toda Navarra</td><td>Son <strong>3 UHA</strong>: 2 en Pamplona + 1 en Tudela ★★★</td></tr>
+<tr><td>8</td><td>La Cartera de Servicios TSS fue publicada en 2019</td><td>Fue publicada en <strong>2021</strong> (Pamplona, Gerencia SM SNS-O) ★★★</td></tr>
+<tr><td>9</td><td>El TSS trabaja solo con el paciente individual</td><td>También con <strong>familias, cuidadores</strong> y en intervención comunitaria ★★★</td></tr>
+<tr><td>10</td><td>La Dirección de SM depende del Departamento de Salud</td><td>Depende del <strong>SNS-O</strong> (Servicio Navarro de Salud-Osasunbidea) ★★★</td></tr>
+<tr><td>11</td><td>El TMG se define solo por el diagnóstico de psicosis</td><td>Requiere 3 criterios: diagnóstico + <strong>más de 2 años</strong> de duración + discapacidad funcional ★</td></tr>
+<tr><td>12</td><td>El PEP es un recurso residencial del 2.º nivel sin vínculo al CSM</td><td>El PEP es el <strong>programa referente</strong> de la RSMNa, coordinado en red con el principio de continuidad de cuidados ★★★</td></tr>
+</tbody>
+</table>
+
+</div>
+</body>
+</html>
