@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 40 · HTML 3 · Cuadro comparativo y tablas operativas · II Plan Igualdad UPNA 2022-2027</title>
+<style>
+:root{--bg:#f0f9ff;--card:#fff;--s2:#f0f9ff;--line:#7dd3fc;--text:#0c4a6e;--muted:#0284c7;--p:#075985;--warn:#d97706;--red:#dc2626;--grn:#059669;--vio:#7c3aed;--sh:0 2px 10px rgba(7,89,133,.09)}
+[data-theme="dark"]{--bg:#020c1a;--card:#0a1e35;--s2:#0e2a45;--line:#075985;--text:#bae6fd;--muted:#38bdf8;--p:#38bdf8;--warn:#fbbf24;--red:#fca5a5;--grn:#6ee7b7;--vio:#c4b5fd;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.5;background:var(--bg);color:var(--text);padding:22px}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.97rem;color:var(--p)}.hdr p{font-size:.74rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.72rem}
+h2{font-size:.87rem;font-weight:800;color:#fff;background:var(--p);padding:8px 15px;border-radius:7px;margin:22px 0 10px;display:inline-block}
+.tw{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:var(--sh);overflow-x:auto;margin-bottom:12px}
+table{width:100%;border-collapse:collapse}
+th{background:var(--s2);color:var(--muted);font-size:.67rem;text-transform:uppercase;letter-spacing:.05em;padding:8px 10px;text-align:left}
+td{padding:8px 10px;border-bottom:1px solid var(--s2);font-size:.78rem;vertical-align:top}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+.badge{display:inline-block;padding:3px 9px;border-radius:999px;font-size:.65rem;font-weight:700;border:1px solid transparent;white-space:nowrap}
+.b-ok{background:rgba(5,150,105,.12);color:#059669;border-color:rgba(5,150,105,.3)}
+.b-err{background:rgba(220,38,38,.12);color:#dc2626;border-color:rgba(220,38,38,.3)}
+.b-warn{background:rgba(217,119,6,.12);color:var(--warn);border-color:rgba(217,119,6,.3)}
+.b-vio{background:rgba(124,58,237,.12);color:var(--vio);border-color:rgba(124,58,237,.3)}
+.b-sky{background:rgba(2,132,199,.12);color:var(--muted);border-color:rgba(2,132,199,.3)}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.75rem;border-left:4px solid;margin:8px 0}
+.n-ok{background:rgba(5,150,105,.07);border-color:#059669;color:#065f46}
+.n-warn{background:#fef3c7;border-color:#d97706;color:#78350f}
+.n-err{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .n-warn{background:#451a03;color:#fde68a}
+[data-theme="dark"] .n-err{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .n-ok{background:rgba(110,231,183,.07);color:#6ee7b7}
+strong{color:var(--p)}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 40 · HTML 3 · Cuadro comparativo y tablas operativas para examen</h1>
+    <p>II Plan de Igualdad entre Mujeres y Hombres de la UPNA (2022-2027) · Universidad Pública de Navarra</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- T1 IDENTIFICACIÓN -->
+<h2>T1 · Identificación de la norma/plan</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Campo</th><th>Dato</th></tr></thead>
+  <tbody>
+    <tr><td>Nombre oficial</td><td><strong>II Plan de Igualdad entre Mujeres y Hombres de la UPNA</strong> <span class="badge b-err">No "Plan de género", no "Plan LGTBI+"</span></td></tr>
+    <tr><td>Institución</td><td>Universidad Pública de Navarra (<strong>UPNA</strong>)</td></tr>
+    <tr><td>Número de plan</td><td><strong>II Plan</strong> (segundo plan de igualdad de la UPNA) <span class="badge b-err">No es el primero</span></td></tr>
+    <tr><td>Vigencia</td><td><strong>2022–2027</strong> · 6 años <span class="badge b-err">No 2022-2026</span></td></tr>
+    <tr><td>Aprobación</td><td>Consejo de Gobierno de la UPNA · <strong>28 de febrero de 2022</strong></td></tr>
+    <tr><td>Presentación pública</td><td><strong>1 de marzo de 2022</strong> · Pamplona</td></tr>
+    <tr><td>Presentado por</td><td>Vicerrectora de Proyección Universitaria, Cultura y Divulgación: <strong>Begoña Pérez Eransus</strong> <span class="badge b-err">No el rector</span></td></tr>
+    <tr><td>Rector UPNA</td><td><strong>Ramón Gonzalo</strong> · "Plan ambicioso pero realista · referente universitario nacional"</td></tr>
+    <tr><td>Presidenta del acto</td><td><strong>María Chivite</strong> · Presidenta del Gobierno de Navarra</td></tr>
+    <tr><td>Otros asistentes</td><td><strong>Unai Hualde</strong> (Presidente Parlamento Navarra) · <strong>Javier Remírez</strong> (Vicepresidente 1.º GN) · <strong>Juan Cruz Cigudosa</strong> (Consejero Universidad, Innovación y Transformación Digital)</td></tr>
+    <tr><td>Objetivos operativos</td><td><strong>15</strong> <span class="badge b-err">No 86</span></td></tr>
+    <tr><td>Acciones</td><td><strong>86</strong> <span class="badge b-err">No 15</span></td></tr>
+    <tr><td>Presupuesto inicial (2022)</td><td><strong>138.000 €</strong> <span class="badge b-err">No 180.000 €</span></td></tr>
+    <tr><td>Financiación</td><td>Dotación <strong>anual</strong> con indicadores anuales de seguimiento</td></tr>
+    <tr><td>Finalidad declarada</td><td>"<strong>Actualizar la mirada</strong> sobre la desigualdad de género"</td></tr>
+    <tr><td>Diagnóstico</td><td>"<strong>Medición dinámica</strong> a lo largo del tiempo para evaluar el impacto del propio plan" <span class="badge b-err">No puntual</span></td></tr>
+  </tbody>
+</table>
+<div class="note n-err">⚠ Las cuatro cifras que el examen invierte con más frecuencia: <strong>15 objetivos</strong> (no 86) y <strong>86 acciones</strong> (no 15) · presupuesto <strong>138.000 €</strong> (no 180.000) · vigencia hasta <strong>2027</strong> (no 2026).</div>
+</div>
+
+<!-- T2 MARCO NORMATIVO -->
+<h2>T2 · Marco normativo del plan</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Norma</th><th>Ámbito</th><th>Relevancia para el plan</th></tr></thead>
+  <tbody>
+    <tr><td><strong>LO 3/2007, de 22 de marzo</strong></td><td>Estatal</td><td>Igualdad efectiva de mujeres y hombres · <strong>obliga a las universidades</strong> a disponer de un plan de igualdad</td></tr>
+    <tr><td><strong>LO 4/2007, de 12 de abril (LOU)</strong></td><td>Estatal</td><td>Reforma universitaria · incorpora perspectiva de género en la educación superior</td></tr>
+    <tr><td><strong>LF 17/2019, de 4 de abril</strong></td><td>Navarra</td><td>Igualdad entre Mujeres y Hombres de Navarra · marco foral de referencia</td></tr>
+    <tr><td><strong>LF 8/2017, de 19 de junio</strong></td><td>Navarra</td><td>Igualdad Social de las personas LGTBI+ · aplicable al ámbito universitario navarro</td></tr>
+    <tr><td><strong>V Plan Estratégico de la UPNA</strong></td><td>Institucional</td><td>Recoge la igualdad como prioridad estratégica · habilita el plan de igualdad</td></tr>
+    <tr><td><strong>Compromiso del rector</strong></td><td>Institucional</td><td>La igualdad fue compromiso explícito del rector Ramón Gonzalo en su candidatura</td></tr>
+  </tbody>
+</table>
+<div class="note n-warn">⚠ La norma que <strong>obliga</strong> a las universidades a tener un plan de igualdad es la <strong>LO 3/2007</strong>. El examen puede atribuir esa obligación a la LOU (LO 4/2007) → FALSO: la LOU la incorpora, pero la obligación directa es de la LO 3/2007.</div>
+</div>
+
+<!-- T3 DIAGNÓSTICO -->
+<h2>T3 · Diagnóstico de partida · Los 6 indicadores clave</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Indicador</th><th>Dato exacto</th><th>Interpretación para el examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Alumnas matriculadas ★★★</strong></td><td><strong>51 %</strong> del total del alumnado</td><td>Mayoría de alumnas; pero esta mayoría <strong>NO</strong> se traduce en paridad en puestos de liderazgo académico → techo de cristal</td></tr>
+    <tr><td><strong>Catedráticas ★★★</strong></td><td><strong>22 %</strong> del total de cátedras</td><td>Solo 1 de cada 5 cátedras es de una mujer. La paradoja: más alumnas pero mucho menos catedráticas</td></tr>
+    <tr><td><strong>Investigadoras principales ★★</strong></td><td><strong>31 %</strong></td><td>Brecha de género en el liderazgo de la investigación; objetivo del plan: incrementar este porcentaje</td></tr>
+    <tr><td><strong>Mujeres en ingenierías ★★</strong></td><td><strong>Menos del 30 %</strong> de matriculadas</td><td>Segregación horizontal: la mujer no accede igual a todas las ramas del conocimiento (STEM)</td></tr>
+    <tr><td><strong>Paridad en personal contratado base ★</strong></td><td><strong>Paridad</strong> (≈ 50 %)</td><td>La igualdad existe en la base, pero desaparece al ascender en la jerarquía</td></tr>
+    <tr><td><strong>Mujeres en puestos altos académicos ★★</strong></td><td><strong>23 %</strong></td><td>El techo de cristal se agudiza progresivamente; solo 23 % de los puestos más altos son de mujeres</td></tr>
+  </tbody>
+</table>
+<div class="note n-err">⚠ La paradoja central del diagnóstico: <strong>51 % de alumnas → 22 % de catedráticas</strong>. Es la justificación más poderosa del plan y el dato más preguntado del tema. El examen puede invertir los porcentajes o mezclarlos.</div>
+</div>
+
+<!-- T4 LOS 4 ÁMBITOS -->
+<h2>T4 · Los 4 ámbitos del Plan de Acción</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Ámbito</th><th>Denominación exacta</th><th>Objetivo general</th><th>Medidas clave para examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>I ★★★</strong></td><td><strong>Docencia</strong></td><td>Incorporar el enfoque de género en la oferta formativa, incluida la formación del PDI</td><td>Todos los nuevos títulos con perspectiva de género · Piloto: <strong>Maestro/a + Medicina</strong> · Asignatura optativa para todo el alumnado · Formación del profesorado · Máster específico en igualdad de género</td></tr>
+    <tr><td><strong>II ★★</strong></td><td><strong>Investigación</strong></td><td>Fomentar la investigación sobre desigualdades e introducir la perspectiva de género en la formación investigadora</td><td>Liderazgo femenino en investigación (actual: 31 %) · Reducir brecha en producción investigadora · Perspectiva de género en formación de investigadores en formación</td></tr>
+    <tr><td><strong>III ★★</strong></td><td><strong>Proyección y relación con la sociedad</strong></td><td>Incorporar la perspectiva de género en la transferencia de conocimiento y en la proyección hacia el entorno navarro</td><td>"<strong>Efecto tractor</strong>" de la UPNA · Visibilizar investigadoras como referentes · Perspectiva de género en contratos con empresas externas</td></tr>
+    <tr><td><strong>IV ★★★</strong></td><td><strong>Gobernanza y personas</strong> <span class="badge b-err">No solo "Gobernanza"</span></td><td>Consolidar un modelo de gobierno igualitario que contribuya al bienestar de la comunidad universitaria</td><td>Conciliación: <strong>40 % reducción docente</strong> para PDI con <strong>menores de 2 años</strong> · Centro Dependencia y Cuidados · Protocolo acoso (psicológico + sexual + por razón de sexo) · Detección de violencia · Género en gobernanza institucional</td></tr>
+  </tbody>
+</table>
+<div class="note n-err">⚠ Dos trampas frecuentes: (1) el cuarto ámbito se llama <strong>"Gobernanza Y PERSONAS"</strong>, no solo "Gobernanza". (2) Las titulaciones piloto son <strong>Maestro/a</strong> y <strong>Medicina</strong>, no Enfermería ni Derecho.</div>
+</div>
+
+<!-- T5 MEDIDA ESTRELLA: CONCILIACIÓN -->
+<h2>T5 · Medida estrella de conciliación (Ámbito IV)</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Campo</th><th>Dato exacto</th></tr></thead>
+  <tbody>
+    <tr><td>Medida</td><td>Reconocimiento de reducción de la <strong>capacidad docente</strong></td></tr>
+    <tr><td>Porcentaje de reducción</td><td><strong>40 %</strong> <span class="badge b-err">No 50 %, no 30 %</span></td></tr>
+    <tr><td>Colectivo beneficiario</td><td>Profesorado (PDI) a <strong>tiempo completo</strong></td></tr>
+    <tr><td>Condición</td><td>Con <strong>menores de dos años</strong> a cargo <span class="badge b-err">No 3 años, no 18 meses</span></td></tr>
+    <tr><td>Ámbito</td><td>Ámbito IV · Gobernanza y personas</td></tr>
+    <tr><td>Finalidad</td><td>Facilitar la conciliación de la vida laboral y familiar sin penalizar la carrera académica</td></tr>
+    <tr><td>Otras medidas de conciliación del Ámbito IV</td><td>Vías de reconocimiento para reducir brechas en la promoción por interrupciones de cuidados · Centro de Estudios de la Dependencia y los Cuidados</td></tr>
+  </tbody>
+</table>
+<div class="note n-err">⚠ Los tres datos exactos de la medida de conciliación: <strong>40 %</strong> · PDI a <strong>tiempo completo</strong> · menores de <strong>2 años</strong>. El examen puede alterar cualquiera de los tres.</div>
+</div>
+
+<!-- T6 PROCESO APROBACIÓN -->
+<h2>T6 · Proceso de elaboración y aprobación</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Fase</th><th>Qué ocurre</th><th>Quién participa</th></tr></thead>
+  <tbody>
+    <tr><td>1. Diagnóstico</td><td>Elaboración de indicadores sobre participación de mujeres y hombres en la UPNA</td><td>Oficina de Igualdad de Género + investigadoras expertas</td></tr>
+    <tr><td>2. Objetivos estratégicos</td><td>Identificación a partir del diagnóstico y prioridades institucionales</td><td>Comisión Permanente de Igualdad</td></tr>
+    <tr><td>3. Documento Base</td><td>Diseño del proceso de consulta y participación</td><td>Toda la comunidad universitaria: PDI + PAS + alumnado</td></tr>
+    <tr><td>4. Validación previa</td><td>Aprobación del documento antes del Consejo de Gobierno</td><td><strong>Comisión Permanente de Igualdad</strong></td></tr>
+    <tr><td>5. Aprobación formal</td><td>Aprobación del plan · <strong>28 de febrero de 2022</strong></td><td><strong>Consejo de Gobierno de la UPNA</strong></td></tr>
+    <tr><td>6. Participación adicional</td><td>Participación en el proceso</td><td><strong>Consejo Social</strong></td></tr>
+    <tr><td>7. Presentación pública</td><td>Acto público de presentación · <strong>1 de marzo de 2022</strong></td><td>Begoña Pérez Eransus · Ramón Gonzalo · María Chivite · Unai Hualde · Javier Remírez · Juan Cruz Cigudosa</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T7 SEGUIMIENTO Y EVALUACIÓN -->
+<h2>T7 · Sistema de seguimiento y evaluación</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Elemento</th><th>Descripción</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Presupuesto anual ★★</strong></td><td>Dotación económica renovada cada año para ejecutar las acciones · Importe inicial: 138.000 € para 2022</td><td>El plan tiene presupuesto ANUAL (no es un presupuesto único para 6 años)</td></tr>
+    <tr><td><strong>Indicadores anuales ★★</strong></td><td>Verificación a finales de cada año del grado de cumplimiento de las acciones del plan</td><td>El seguimiento es ANUAL (no bienal, no al final del periodo)</td></tr>
+    <tr><td><strong>Diagnóstico dinámico ★★★</strong></td><td>"Medición dinámica a lo largo del tiempo para evaluar el impacto del propio plan"</td><td>El diagnóstico se actualiza periódicamente: NO es una fotografía puntual de 2022</td></tr>
+    <tr><td><strong>Oficina de Igualdad de Género ★★</strong></td><td>Órgano técnico especializado de la UPNA · Gestiona y coordina la ejecución y seguimiento del plan</td><td>La ejecución técnica corresponde a la Oficina de Igualdad, no a la Comisión Permanente</td></tr>
+    <tr><td><strong>Comisión Permanente de Igualdad ★★</strong></td><td>Órgano de participación y seguimiento · Recibe informes periódicos de ejecución</td><td>Es consultiva y de participación (no ejecutiva)</td></tr>
+    <tr><td><strong>Consejo de Gobierno ★</strong></td><td>Órgano máximo de aprobación y rendición de cuentas del plan</td><td>—</td></tr>
+    <tr><td><strong>Consejo Social ★</strong></td><td>Representa los intereses sociales y económicos · Participa en el seguimiento</td><td>—</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T8 CUADRO COMPARATIVO: PLAN UPNA VS. PLAN NAVARRA -->
+<h2>T8 · Cuadro comparativo · II Plan UPNA 2022-2027 vs. Plan Estratégico para la Igualdad GN</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Aspecto</th><th>II Plan Igualdad UPNA 2022-2027</th><th>Plan Estratégico para la Igualdad GN (Navarra)</th></tr></thead>
+  <tbody>
+    <tr><td>Institución</td><td>Universidad Pública de Navarra (UPNA)</td><td>Gobierno de Navarra</td></tr>
+    <tr><td>Ámbito</td><td>Comunidad universitaria UPNA (PDI + PAS + alumnado)</td><td>Administración de la Comunidad Foral de Navarra</td></tr>
+    <tr><td>Colectivo</td><td>Mujeres y hombres de la comunidad universitaria UPNA</td><td>Mujeres y hombres de la sociedad navarra</td></tr>
+    <tr><td>Marco normativo principal</td><td>LO 3/2007 + V Plan Estratégico UPNA</td><td>LF 17/2019 para la Igualdad entre Mujeres y Hombres de Navarra</td></tr>
+    <tr><td>Ámbitos/ejes</td><td>4 ámbitos: Docencia · Investigación · Proyección · Gobernanza y personas</td><td>Ejes transversales de la LF 17/2019</td></tr>
+    <tr><td>Órgano de igualdad</td><td>Oficina de Igualdad de Género de la UPNA + Comisión Permanente de Igualdad</td><td>Instituto Navarro para la Igualdad (INAI)</td></tr>
+    <tr><td>Medida estrella</td><td>40 % reducción docente para PDI con menores de 2 años</td><td>Medidas sectoriales para empresas y administración pública</td></tr>
+  </tbody>
+</table>
+<div class="note n-warn">⚠ El II Plan de la UPNA es un plan de igualdad de una institución específica (la universidad), no un plan general de la CF de Navarra. El examen puede confundir ambos instrumentos.</div>
+</div>
+
+<!-- T9 PERSONAS E INSTITUCIONES -->
+<h2>T9 · Personas e instituciones clave</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Persona/institución</th><th>Cargo/función</th><th>Relación con el plan</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Begoña Pérez Eransus ★★★</strong></td><td>Vicerrectora de Proyección Universitaria, Cultura y Divulgación</td><td><strong>Presentó el plan</strong> el 1/03/2022 · Es la vicerrectora responsable del área de igualdad</td></tr>
+    <tr><td><strong>Ramón Gonzalo ★★★</strong></td><td>Rector de la UPNA</td><td>Promovió el plan en su candidatura · Lo calificó de "ambicioso pero realista" y "referente universitario nacional"</td></tr>
+    <tr><td><strong>María Chivite ★★</strong></td><td>Presidenta del Gobierno de Navarra</td><td>Presidió el acto público de presentación del plan (1/03/2022)</td></tr>
+    <tr><td><strong>Unai Hualde ★</strong></td><td>Presidente del Parlamento de Navarra</td><td>Presente en el acto de presentación</td></tr>
+    <tr><td><strong>Javier Remírez ★</strong></td><td>Vicepresidente primero del Gobierno de Navarra</td><td>Presente en el acto de presentación</td></tr>
+    <tr><td><strong>Juan Cruz Cigudosa ★</strong></td><td>Consejero de Universidad, Innovación y Transformación Digital</td><td>Presente en el acto de presentación</td></tr>
+    <tr><td><strong>Consejo de Gobierno ★★★</strong></td><td>Máximo órgano de gobierno de la UPNA</td><td><strong>Aprobó el plan</strong> formalmente el 28/02/2022</td></tr>
+    <tr><td><strong>Comisión Permanente de Igualdad ★★</strong></td><td>Órgano consultivo y de participación de la UPNA</td><td>Elaboró y validó el plan antes de su aprobación por el Consejo de Gobierno</td></tr>
+    <tr><td><strong>Oficina de Igualdad de Género ★★</strong></td><td>Órgano técnico especializado de la UPNA</td><td>Responsable de la ejecución, gestión y seguimiento del plan</td></tr>
+    <tr><td><strong>Consejo Social ★</strong></td><td>Órgano de participación de la sociedad en la UPNA</td><td>Participó en el proceso de elaboración y aprobación del plan</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T10 TRAMPAS -->
+<h2>T10 · Las 12 trampas del examen</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Afirmación trampa</th><th>¿Correcta?</th><th>Corrección exacta</th></tr></thead>
+  <tbody>
+    <tr><td>"El plan tiene 80 acciones y 15 objetivos operativos"</td><td><span class="badge b-err">FALSO</span></td><td>Son <strong>86 acciones</strong> y <strong>15 objetivos operativos</strong></td></tr>
+    <tr><td>"El plan tiene 86 objetivos operativos y 15 acciones"</td><td><span class="badge b-err">FALSO</span></td><td>Al revés: <strong>15 objetivos</strong> y <strong>86 acciones</strong></td></tr>
+    <tr><td>"El presupuesto inicial es 180.000 €"</td><td><span class="badge b-err">FALSO</span></td><td>El presupuesto inicial (2022) es <strong>138.000 €</strong></td></tr>
+    <tr><td>"La vigencia del plan es 2022-2026"</td><td><span class="badge b-err">FALSO</span></td><td>La vigencia es <strong>2022-2027</strong> (6 años)</td></tr>
+    <tr><td>"El plan se estructura en 3 ámbitos"</td><td><span class="badge b-err">FALSO</span></td><td>Son <strong>4 ámbitos</strong>: Docencia · Investigación · Proyección y relación con la sociedad · Gobernanza y personas</td></tr>
+    <tr><td>"El cuarto ámbito se denomina solo 'Gobernanza'"</td><td><span class="badge b-err">FALSO</span></td><td>Se llama <strong>"Gobernanza y Personas"</strong></td></tr>
+    <tr><td>"Las titulaciones piloto en perspectiva de género son Enfermería y Medicina"</td><td><span class="badge b-err">FALSO</span></td><td>Los piloto son <strong>Grado de Maestro/a</strong> y <strong>Grado de Medicina</strong></td></tr>
+    <tr><td>"La reducción docente por conciliación es del 50 % para menores de 3 años"</td><td><span class="badge b-err">FALSO</span></td><td>Es el <strong>40 %</strong> para menores de <strong>2 años</strong> (PDI a tiempo completo)</td></tr>
+    <tr><td>"El diagnóstico es una evaluación puntual inicial que no se actualiza"</td><td><span class="badge b-err">FALSO</span></td><td>Es una <strong>"medición dinámica a lo largo del tiempo"</strong></td></tr>
+    <tr><td>"El plan fue presentado por el rector Ramón Gonzalo"</td><td><span class="badge b-err">FALSO</span></td><td>Lo presentó la <strong>vicerrectora Begoña Pérez Eransus</strong></td></tr>
+    <tr><td>"Es el primer plan de igualdad de la UPNA"</td><td><span class="badge b-err">FALSO</span></td><td>Es el <strong>SEGUNDO</strong> (II Plan)</td></tr>
+    <tr><td>"La obligación de que las universidades tengan plan de igualdad viene de la LOU (LO 4/2007)"</td><td><span class="badge b-err">FALSO</span></td><td>La obligación directa procede de la <strong>LO 3/2007</strong> de igualdad efectiva</td></tr>
+  </tbody>
+</table>
+</div>
+
+</body>
+</html>
