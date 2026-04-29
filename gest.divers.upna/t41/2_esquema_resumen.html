@@ -1,0 +1,291 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 41 · HTML 2 · Esquema-resumen visual · Protocolo cambio nombre UPNA</title>
+<style>
+:root{--bg:#f0f9ff;--card:#fff;--s2:#f0f9ff;--line:#7dd3fc;--text:#0c4a6e;--muted:#0284c7;--p:#075985;--warn:#d97706;--red:#dc2626;--grn:#059669;--vio:#7c3aed;--sh:0 2px 10px rgba(7,89,133,.09)}
+[data-theme="dark"]{--bg:#020c1a;--card:#0a1e35;--s2:#0e2a45;--line:#075985;--text:#bae6fd;--muted:#38bdf8;--p:#38bdf8;--warn:#fbbf24;--red:#fca5a5;--grn:#6ee7b7;--vio:#c4b5fd;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.6;background:var(--bg);color:var(--text);padding:22px}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.97rem;color:var(--p)}.hdr p{font-size:.74rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.72rem}
+h2{font-size:.87rem;font-weight:800;color:#fff;background:var(--p);padding:8px 15px;border-radius:7px;margin:22px 0 10px;display:inline-block}
+/* KPI strip */
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:14px}
+.kbox{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:11px 13px;box-shadow:var(--sh);text-align:center}
+.big{font-size:1.1rem;font-weight:800;color:var(--p);margin-bottom:2px}
+.ksmall{font-size:.7rem;color:var(--muted)}.kmini{font-size:.7rem;margin-top:3px}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:11px;margin-bottom:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:13px 15px;box-shadow:var(--sh)}
+.tag{display:block;font-size:.63rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:5px}
+.card p,.card li{font-size:.79rem;margin:.25rem 0}
+.card ul{padding-left:15px}
+strong{color:var(--p)}
+/* accent borders */
+.l1{border-left:4px solid var(--p)}
+.l2{border-left:4px solid var(--warn)}
+.l3{border-left:4px solid var(--vio)}
+.l4{border-left:4px solid var(--grn)}
+.l5{border-left:4px solid var(--red)}
+/* notes */
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.74rem;border-left:4px solid;margin:7px 0}
+.n-ok{background:rgba(5,150,105,.07);border-color:#059669;color:#065f46}
+.n-warn{background:#fef3c7;border-color:#d97706;color:#78350f}
+.n-err{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .n-warn{background:#451a03;color:#fde68a}
+[data-theme="dark"] .n-err{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .n-ok{background:rgba(110,231,183,.07);color:#6ee7b7}
+/* 3 colectivos */
+.col-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+.col{background:var(--card);border-radius:12px;padding:14px 15px;box-shadow:var(--sh);text-align:center}
+.col-T{border-top:5px solid var(--p)}
+.col-TG{border-top:5px solid var(--vio)}
+.col-I{border-top:5px solid var(--warn)}
+.col h3{font-size:.83rem;font-weight:800;margin:6px 0 4px}
+.col-T h3{color:var(--p)}.col-TG h3{color:var(--vio)}.col-I h3{color:var(--warn)}
+.col p{font-size:.75rem;margin:.22rem 0}
+/* nombre sentido vs legal */
+.dos-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.vcol{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 15px;box-shadow:var(--sh)}
+.vcol-title{font-size:.78rem;font-weight:800;margin-bottom:8px;padding:5px 10px;border-radius:6px;text-align:center;color:#fff}
+.vcol.sentido .vcol-title{background:var(--grn)}
+.vcol.legal .vcol-title{background:var(--red)}
+.vcol ul{padding-left:15px}.vcol li{font-size:.76rem;margin:.22rem 0}
+/* flujo procedimiento */
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:14px}
+.step{background:var(--card);border:2px solid var(--line);border-radius:11px;padding:12px 13px;box-shadow:var(--sh);text-align:center}
+.step .num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--p);color:#fff;border-radius:50%;font-size:.82rem;font-weight:800;margin-bottom:6px}
+.step h4{font-size:.78rem;font-weight:700;color:var(--p);margin:0 0 4px}
+.step p{font-size:.73rem;margin:0}
+/* principios */
+.pris{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-bottom:14px}
+.pri{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 13px;box-shadow:var(--sh)}
+.pri .ico{font-size:1.2rem;display:block;margin-bottom:5px}
+.pri h4{font-size:.78rem;font-weight:800;color:var(--p);margin-bottom:4px}
+.pri p{font-size:.73rem;margin:0}
+/* normas */
+.pill{display:inline-block;background:var(--s2);border:1px solid var(--line);color:var(--p);padding:3px 10px;border-radius:999px;font-size:.72rem;font-weight:600;margin:2px}
+/* trampas */
+.trap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(245px,1fr));gap:10px;margin-bottom:14px}
+.trap{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 13px;box-shadow:var(--sh)}
+.trap .q{font-size:.74rem;color:var(--red);font-weight:600;margin-bottom:4px}
+.trap .a{font-size:.74rem}
+@media(max-width:700px){.col-grid,.dos-col{grid-template-columns:1fr}}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 41 · HTML 2 · Esquema-resumen con bloques visuales para memorización rápida</h1>
+    <p>Protocolo de cambio de nombre para personas transexuales, transgénero e intersexuales en la UPNA</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- FICHAS FLASH KPI -->
+<h2>Fichas flash</h2>
+<div class="kpi">
+  <div class="kbox"><div class="big">Protocolo</div><div class="ksmall">Tipo de instrumento</div><div class="kmini">No reglamento, no ley</div></div>
+  <div class="kbox"><div class="big">UPNA</div><div class="ksmall">Institución</div><div class="kmini">Universidad Pública de Navarra</div></div>
+  <div class="kbox"><div class="big">3</div><div class="ksmall">Colectivos</div><div class="kmini">Transexual · Transgénero · Intersexual</div></div>
+  <div class="kbox"><div class="big">PDI+PAS+<br>Alumnado</div><div class="ksmall">Comunidad universitaria completa</div><div class="kmini">⚠ No solo alumnado</div></div>
+  <div class="kbox"><div class="big">Oficina de Igualdad</div><div class="ksmall">Único órgano receptor</div><div class="kmini">⚠ No otros servicios</div></div>
+  <div class="kbox"><div class="big">Sin informe médico</div><div class="ksmall">Principio rector</div><div class="kmini">Autodeterminación de género</div></div>
+  <div class="kbox"><div class="big">5 días lab.</div><div class="ksmall">Resolución autorización</div><div class="kmini">Desde presentación solicitud</div></div>
+  <div class="kbox"><div class="big">10 días lab.</div><div class="ksmall">Cambio efectivo</div><div class="kmini">Desde la resolución</div></div>
+</div>
+
+<!-- IDEA FUERZA -->
+<h2>Idea fuerza</h2>
+<div class="card l1" style="margin-bottom:14px">
+  <span class="tag">Concepto central del protocolo — para el examen</span>
+  <p>El protocolo garantiza el derecho a ser identificado/a en la UPNA con el <strong>nombre sentido</strong> (el de la identidad de género), aunque difiera del nombre legal (registral/DNI). Es un instrumento <strong>interno</strong>: no modifica el DNI ni tiene efectos jurídicos externos.</p>
+  <p>La <strong>Oficina de Igualdad de Género</strong> es el único órgano que recibe y gestiona la solicitud. Cualquier otra unidad que reciba una solicitud de este tipo debe derivarla a la Oficina.</p>
+  <div class="note n-err">⚠ Principio rector: <strong>autodeterminación de género</strong> → la propia manifestación de la identidad sentida es suficiente. No se exige ningún informe médico, diagnóstico ni tratamiento previo.</div>
+</div>
+
+<!-- LOS 3 COLECTIVOS -->
+<h2>Los 3 colectivos</h2>
+<div class="col-grid">
+  <div class="col col-T">
+    <div style="font-size:1.5rem">🔵</div>
+    <h3>Transexual</h3>
+    <p>Identidad de género ≠ sexo asignado al nacer</p>
+    <p>Ha iniciado o completado proceso de <strong>modificación corporal</strong> o registral</p>
+    <p style="margin-top:6px;font-size:.7rem">El protocolo aplica <strong>independientemente</strong> de si ha cambiado o no el DNI</p>
+  </div>
+  <div class="col col-TG">
+    <div style="font-size:1.5rem">🟣</div>
+    <h3>Transgénero</h3>
+    <p>Identidad de género ≠ sexo asignado al nacer</p>
+    <p><strong>SIN</strong> modificación corporal (concepto más amplio que transexual)</p>
+    <p style="margin-top:6px;font-size:.7rem">⚠ Toda transexual es transgénero, pero no al revés</p>
+  </div>
+  <div class="col col-I">
+    <div style="font-size:1.5rem">🟠</div>
+    <h3>Intersexual</h3>
+    <p>Variación <strong>biológica</strong> en cromosomas, gónadas o genitales</p>
+    <p>No se ajusta al dimorfismo sexual binario</p>
+    <p style="margin-top:6px;font-size:.7rem">⚠ No es identidad de género: es característica <strong>biológica</strong></p>
+  </div>
+</div>
+<div class="note n-err" style="margin-bottom:14px">⚠ Intersexual ≠ transexual ≠ transgénero. El examen puede presentarlos como sinónimos. Intersexual = variación del <strong>cuerpo</strong>; trans = identidad de <strong>género</strong>.</div>
+
+<!-- NOMBRE SENTIDO VS LEGAL -->
+<h2>Nombre sentido vs. nombre legal</h2>
+<div class="dos-col">
+  <div class="vcol sentido">
+    <div class="vcol-title">✅ Nombre SENTIDO — efectos internos UPNA</div>
+    <ul>
+      <li>Listas de clase</li>
+      <li>Carnet universitario</li>
+      <li>Correo electrónico institucional</li>
+      <li>Directorios y listados internos</li>
+      <li>Boletines informativos de calificaciones</li>
+      <li>Documentación interna: actas, convocatorias, circulares</li>
+      <li>Fichas de personal en sistemas internos</li>
+      <li>Censos electorales de la UPNA</li>
+    </ul>
+  </div>
+  <div class="vcol legal">
+    <div class="vcol-title">❌ Nombre LEGAL — siempre en documentos oficiales</div>
+    <ul>
+      <li>Títulos universitarios (grado, máster, doctorado)</li>
+      <li>Certificados académicos oficiales (efectos externos)</li>
+      <li>Expediente académico oficial</li>
+      <li>Contratos laborales y nóminas (parte jurídica)</li>
+      <li>Cualquier documento con valor jurídico ante terceros</li>
+    </ul>
+    <p style="font-size:.73rem;margin-top:8px;font-style:italic">EXCEPCIÓN: si la persona ha tramitado el cambio registral (vía Ley 4/2023), los documentos oficiales se actualizan también con el nuevo nombre legal. Reexpedición de títulos: <strong>gratuita</strong>.</p>
+  </div>
+</div>
+
+<!-- PRINCIPIOS RECTORES -->
+<h2>Los 6 principios rectores</h2>
+<div class="pris">
+  <div class="pri l1">
+    <span class="ico">⚙</span>
+    <h4>Autodeterminación de género ★★★</h4>
+    <p>La propia manifestación es suficiente. Sin informe médico, sin diagnóstico de disforia, sin tratamiento previo. Concordante con LF 8/2017 art. 4.1.b) y Ley 4/2023.</p>
+  </div>
+  <div class="pri l5">
+    <span class="ico">🔒</span>
+    <h4>Confidencialidad ★★★</h4>
+    <p>Solo la Oficina de Igualdad de Género recibe solicitudes. Asigna un <strong>código alfanumérico</strong> para preservar la privacidad. Ninguna otra unidad conoce la situación sin consentimiento.</p>
+  </div>
+  <div class="pri l3">
+    <span class="ico">👤</span>
+    <h4>Dignidad ★★</h4>
+    <p>Derecho al libre desarrollo de la personalidad (art. 10 CE). Nadie puede ser identificado de modo que vulnere su identidad de género en la UPNA.</p>
+  </div>
+  <div class="pri l2">
+    <span class="ico">⚖</span>
+    <h4>No discriminación ★★</h4>
+    <p>Prohibición de discriminar por identidad o expresión de género. Toda la comunidad universitaria tiene la <strong>obligación</strong> de usar el nombre sentido una vez tramitado.</p>
+  </div>
+  <div class="pri l4">
+    <span class="ico">💶</span>
+    <h4>Gratuidad ★</h4>
+    <p>El procedimiento es gratuito. La reexpedición de títulos por cambio registral también es gratuita (Disp. Adicional 2.ª Ley 3/2007).</p>
+  </div>
+  <div class="pri l4">
+    <span class="ico">🚪</span>
+    <h4>Accesibilidad ★</h4>
+    <p>Procedimiento sencillo, rápido y accesible. Formulario web disponible en la web de la Oficina de Igualdad de la UPNA.</p>
+  </div>
+</div>
+
+<!-- FLUJO PROCEDIMIENTO -->
+<h2>Flujo del procedimiento</h2>
+<div class="flow">
+  <div class="step"><div class="num">1</div><h4>Solicitud</h4><p>Formulario a la <strong>Oficina de Igualdad</strong> + copia DNI/NIE. Sin informe médico.</p></div>
+  <div class="step"><div class="num">2</div><h4>Código alfanumérico</h4><p>La Oficina asigna un código que garantiza la <strong>confidencialidad</strong></p></div>
+  <div class="step"><div class="num">3</div><h4>Resolución</h4><p>Oficina autoriza el cambio en un máximo de <strong>5 días laborables</strong></p></div>
+  <div class="step"><div class="num">4</div><h4>Comunicación</h4><p>Oficina informa a todos los servicios implicados (Informática, Secretaría, RRHH, Biblioteca…)</p></div>
+  <div class="step"><div class="num">5</div><h4>Cambio efectivo</h4><p>Servicios aplican el cambio en <strong>10 días laborables</strong> desde la resolución</p></div>
+  <div class="step"><div class="num">6</div><h4>Confirmación</h4><p>Servicios informan a la Oficina → Oficina informa a la persona solicitante</p></div>
+</div>
+<div class="note n-warn" style="margin-bottom:14px">⚠ Plazos exactos: resolución en <strong>5 días laborables</strong> · cambio efectivo en <strong>10 días laborables</strong> desde la resolución. Los plazos excluyen los periodos de servicios mínimos del calendario laboral.</div>
+
+<!-- DOCUMENTOS MIXTOS -->
+<h2>Fórmula en documentos mixtos</h2>
+<div class="card l3" style="margin-bottom:14px">
+  <span class="tag">Cuando un documento debe incluir tanto el nombre legal como el sentido</span>
+  <p>Cuando la naturaleza administrativa de la gestión requiere que figuren los datos del documento de identidad junto al nombre sentido, se usa la fórmula:</p>
+  <div style="background:var(--s2);border-radius:8px;padding:10px 14px;margin:8px 0;font-size:.82rem;font-weight:700;color:var(--p)">
+    INICIALES del nombre legal + APELLIDOS completos + NOMBRE SENTIDO
+  </div>
+  <p style="font-size:.75rem">Ejemplo: R.G. (nombre legal: Roberto) → R.G. García López, <em>nombre sentido:</em> <strong>Rocío</strong></p>
+  <div class="note n-warn">⚠ Esta fórmula garantiza la identificación jurídica (iniciales + apellidos) sin exponer innecesariamente el nombre legal discordante.</div>
+</div>
+
+<!-- MARCO NORMATIVO -->
+<h2>Marco normativo</h2>
+<div class="card l3" style="margin-bottom:14px">
+  <span class="tag">Normas que sustentan el protocolo</span>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px">
+    <span class="pill">LF 8/2017 · arts. 4.1.b), 5, Título III ★★★</span>
+    <span class="pill">Ley 4/2023 · art. 49 ★★★</span>
+    <span class="pill">LF 17/2019 ★★</span>
+    <span class="pill">II Plan Igualdad UPNA 2022-2027 · Ámbito IV ★★</span>
+    <span class="pill">Principios de Yogyakarta ★</span>
+    <span class="pill">DF 110/2003 Estatutos UPNA ★</span>
+    <span class="pill">Orden Foral 16E/2018 (atención sanitaria) ★</span>
+  </div>
+  <div class="note n-warn" style="margin-top:8px">⚠ La norma <strong>foral específica</strong> de referencia es la <strong>LF 8/2017</strong> (no la LF 17/2019). La LF 17/2019 es el marco general de igualdad; la LF 8/2017 es la norma LGTBI+ específica.</div>
+</div>
+
+<!-- ÓRGANOS IMPLICADOS -->
+<h2>Órganos implicados</h2>
+<div class="grid">
+  <div class="card l5">
+    <span class="tag">Oficina de Igualdad de Género ★★★</span>
+    <ul>
+      <li>Único órgano receptor de solicitudes</li>
+      <li>Asigna código alfanumérico (confidencialidad)</li>
+      <li>Dicta resolución autorizando el cambio</li>
+      <li>Coordina con todos los servicios</li>
+      <li>Hace seguimiento hasta la finalización</li>
+      <li>Informa a la persona solicitante</li>
+    </ul>
+  </div>
+  <div class="card l2">
+    <span class="tag">Otros servicios implicados ★★</span>
+    <ul>
+      <li><strong>Servicios Informáticos:</strong> correo, directorios, sistemas</li>
+      <li><strong>Secretaría / Gestión Académica:</strong> listas, carnet, boletines</li>
+      <li><strong>Recursos Humanos:</strong> fichas PDI y PAS</li>
+      <li><strong>Biblioteca:</strong> carnet de biblioteca</li>
+    </ul>
+    <p style="font-size:.73rem;margin-top:6px">Estos servicios reciben instrucción de la Oficina de Igualdad y <strong>no actúan por iniciativa propia</strong>.</p>
+  </div>
+</div>
+
+<!-- TRAMPAS -->
+<h2>Las 10 trampas de examen</h2>
+<div class="trap-grid">
+  <div class="trap"><div class="q">❌ "Se exige informe médico para solicitar el cambio"</div><div class="a">✓ Principio de <strong>autodeterminación</strong>: sin informe médico ni diagnóstico</div></div>
+  <div class="trap"><div class="q">❌ "Solo se aplica al alumnado"</div><div class="a">✓ Se aplica a <strong>PDI + PAS + alumnado</strong> (toda la comunidad universitaria)</div></div>
+  <div class="trap"><div class="q">❌ "Cualquier unidad de la UPNA tramita la solicitud"</div><div class="a">✓ Solo la <strong>Oficina de Igualdad de Género</strong> (único receptor)</div></div>
+  <div class="trap"><div class="q">❌ "El cambio afecta a los títulos universitarios"</div><div class="a">✓ Los títulos siguen con el nombre <strong>legal</strong> (salvo cambio registral previo)</div></div>
+  <div class="trap"><div class="q">❌ "Intersexual = transexual"</div><div class="a">✓ Intersexual = variación <strong>biológica</strong>; transexual = identidad de <strong>género</strong></div></div>
+  <div class="trap"><div class="q">❌ "Solo incluye transexuales e intersexuales"</div><div class="a">✓ También incluye <strong>transgénero</strong> (tres colectivos)</div></div>
+  <div class="trap"><div class="q">❌ "Norma de referencia: LF 17/2019"</div><div class="a">✓ La norma específica es la <strong>LF 8/2017</strong> (LGTBI+)</div></div>
+  <div class="trap"><div class="q">❌ "Se exige haber iniciado tratamiento hormonal"</div><div class="a">✓ No se exige ningún proceso médico (autodeterminación de género)</div></div>
+  <div class="trap"><div class="q">❌ "El cambio tiene efectos jurídicos externos"</div><div class="a">✓ Solo tiene efectos <strong>internos</strong> en la UPNA; no altera derechos jurídicos</div></div>
+  <div class="trap"><div class="q">❌ "Transgénero = transexual"</div><div class="a">✓ Transgénero es más amplio: no precisa modificación corporal. Todo transexual es transgénero, no al revés.</div></div>
+</div>
+
+</body>
+</html>
