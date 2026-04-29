@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 30 · HTML 3 – Cuadro comparativo · Tablas operativas · Ley Foral 31/2022</title>
+<style>
+:root{--bg:#f0fdf4;--surface:#fff;--s2:#dcfce7;--s3:#bbf7d0;--border:#86efac;--div:#d1fae5;--text:#052e16;--muted:#166534;--p:#15803d;--pl:#16a34a;--warn:#b45309;--danger:#b91c1c;--ok:#065f46;--vio:#6d28d9;--sh:0 2px 10px rgba(21,128,61,.08)}
+[data-theme="dark"]{--bg:#071a0e;--surface:#0a1f10;--s2:#0d2b14;--s3:#12361b;--border:#166534;--div:#1a3b24;--text:#dcfce7;--muted:#86efac;--p:#4ade80;--pl:#86efac;--warn:#fbbf24;--danger:#f87171;--ok:#34d399;--vio:#c4b5fd;--sh:0 2px 10px rgba(0,0,0,.3)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.6;background:var(--bg);color:var(--text);padding:20px}
+.hdr{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.96rem;color:var(--p);line-height:1.3}.hdr p{font-size:.72rem;color:var(--muted);margin-top:2px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--border);background:var(--s2);color:var(--text);padding:5px 12px;border-radius:999px;font-size:.72rem}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:10px 12px;text-align:center;flex:1 1 100px;box-shadow:var(--sh)}.sv{font-size:1.15rem;font-weight:900;color:var(--p)}.sk{font-size:.64rem;color:var(--muted);margin-top:2px}
+h2{font-size:.84rem;font-weight:800;color:#fff;background:var(--p);padding:7px 14px;border-radius:7px;margin:22px 0 9px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:14px 16px;box-shadow:var(--sh);overflow:auto;margin-bottom:10px}
+.dual{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+table{width:100%;border-collapse:collapse}
+th{background:var(--s2);color:var(--muted);font-weight:700;font-size:.67rem;text-transform:uppercase;letter-spacing:.06em;padding:7px 9px;text-align:left;position:sticky;top:0;z-index:1}
+th.tc{background:rgba(21,128,61,.18);color:var(--ok)}
+th.ta{background:rgba(109,40,217,.13);color:var(--vio)}
+th.tb{background:rgba(21,128,61,.10);color:var(--pl)}
+th.tw{background:rgba(180,83,9,.13);color:var(--warn)}
+th.tr{background:rgba(185,28,28,.13);color:var(--danger)}
+td{border-bottom:1px solid var(--div);padding:7px 9px;vertical-align:top;font-size:.78rem}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+.badge{display:inline-flex;padding:2px 8px;border-radius:999px;font-size:.64rem;font-weight:700;border:1px solid transparent;white-space:nowrap;margin:1px}
+.bb{background:rgba(21,128,61,.12);color:var(--pl);border-color:rgba(21,128,61,.3)}
+.bg{background:rgba(6,95,70,.12);color:var(--ok);border-color:rgba(6,95,70,.22)}
+.br{background:rgba(185,28,28,.12);color:var(--danger);border-color:rgba(185,28,28,.22)}
+.by{background:rgba(180,83,9,.12);color:var(--warn);border-color:rgba(180,83,9,.22)}
+.bv{background:rgba(109,40,217,.12);color:var(--vio);border-color:rgba(109,40,217,.22)}
+.bk{background:var(--s2);color:var(--text);border-color:var(--border)}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.75rem;margin:8px 0;border-left:4px solid}
+.nb{background:var(--s2);border-color:var(--pl);color:var(--muted)}.nw{background:#fef3c7;border-color:#d97706;color:#78350f}.nr{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .nw{background:#451a03;color:#fde68a}[data-theme="dark"] .nr{background:#450a0a;color:#fca5a5}
+ul{padding-left:15px;margin:4px 0}li{margin-bottom:3px;font-size:.77rem} strong{color:var(--p)}
+@media(max-width:700px){.dual{grid-template-columns:1fr}}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 30 · HTML 3 · Cuadro comparativo con tablas operativas para examen</h1>
+    <p>Ley Foral 31/2022, de 28 de noviembre · Atención a las personas con discapacidad en Navarra y garantía de sus derechos</p>
+  </div>
+  <button class="btn" onclick="var d=document.documentElement,t=d.getAttribute('data-theme');d.setAttribute('data-theme',t==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+<div class="stats">
+  <div class="stat"><div class="sv">LF 31/2022</div><div class="sk">28 nov · BON 15/12 · EV 16/12</div></div>
+  <div class="stat"><div class="sv">10 títulos</div><div class="sk">estructura de la ley</div></div>
+  <div class="stat"><div class="sv">13 DD.AA.</div><div class="sk">disposiciones adicionales</div></div>
+  <div class="stat"><div class="sv">13 DD.FF.</div><div class="sk">disposiciones finales</div></div>
+  <div class="stat"><div class="sv">LF 12/2018</div><div class="sk">ley que deroga</div></div>
+  <div class="stat"><div class="sv">Art. 17</div><div class="sk">OVI y asistencia personal</div></div>
+  <div class="stat"><div class="sv">2016/2102</div><div class="sk">Directiva accesibilidad web</div></div>
+  <div class="stat"><div class="sv">2019/882</div><div class="sk">Acta Europea Accesibilidad</div></div>
+</div>
+
+<!-- T1 IDENTIFICACIÓN -->
+<h2>T1 · Identificación y datos clave</h2>
+<div class="card"><table>
+<thead><tr><th>Elemento</th><th>Contenido</th><th>Dato de examen</th></tr></thead>
+<tbody>
+<tr><td>Norma</td><td><strong>Ley Foral 31/2022, de 28 de noviembre</strong></td><td>Tipo: Ley Foral del Parlamento de Navarra</td></tr>
+<tr><td>BON</td><td>Núm. 250 · <strong>15 de diciembre de 2022</strong></td><td>BON marca la entrada en vigor</td></tr>
+<tr><td>BOE</td><td>Núm. 310 · 27 de diciembre de 2022</td><td>El BOE no determina la EV; es solo publicación estatal</td></tr>
+<tr><td>Entrada en vigor</td><td><strong>16 de diciembre de 2022</strong></td><td>Al día siguiente de su publicación en el BON (D.F. 13.ª)</td></tr>
+<tr><td>Ley derogada principal</td><td><strong>Ley Foral 12/2018, de 14 de junio</strong>, de Accesibilidad Universal</td><td>También deroga DF 57/1990 (transportes) y DF 154/1989 (barreras físicas)</td></tr>
+<tr><td>Normas que modifica</td><td>Fuero Nuevo de Navarra · Ley Foral 17/2010 (salud) · Ley Foral de Servicios Sociales · legislación foral de contratos públicos</td><td>Mod. en DD.FF. 1.ª, 2.ª, 4.ª y 6.ª</td></tr>
+<tr><td>Base competencial</td><td>Arts. 44, 47, 49, 53, 55.1, 58.1.b) y 58.2 LORAFNA</td><td>Múltiple: urbanismo, educación plena, transporte, sanidad, TV, laboral, tratados</td></tr>
+<tr><td>Referentes</td><td>Convención ONU 2006 · Estrategia Europea Discapacidad 2021-2030 · Plan Navarra Discapacidad 2019-2025</td><td>Adopta el modelo social y de DDHH</td></tr>
+<tr><td>Estructura</td><td>10 títulos + 13 DD.AA. + 2 DD.TT. + 1 D.Dera. + 13 DD.FF.</td><td>TRAMPA: no son 8 ni 12 títulos</td></tr>
+</tbody>
+</table></div>
+
+<!-- T2 LF 31/2022 vs LF 12/2018 -->
+<h2>T2 · LF 31/2022 vs. LF 12/2018 — qué cambia</h2>
+<div class="card"><table>
+<thead><tr><th>Aspecto</th><th class="tb">LF 12/2018 · Accesibilidad Universal</th><th class="tc">LF 31/2022 · Atención a PcD y garantía de derechos</th></tr></thead>
+<tbody>
+<tr><td>Denominación</td><td>De Accesibilidad Universal</td><td>De atención a las personas con discapacidad en Navarra y garantía de sus derechos</td></tr>
+<tr><td>Enfoque principal</td><td>Accesibilidad universal del entorno</td><td>Derechos, autonomía, vida independiente y accesibilidad integral</td></tr>
+<tr><td>Modelo conceptual</td><td>Accesibilidad como condición técnica</td><td>Modelo social y de DDHH · persona con discapacidad como sujeto de derechos</td></tr>
+<tr><td>Discriminación interseccional</td><td>No contemplada expresamente</td><td><strong>Sí incorporada</strong> (arts. 5 y ss.)</td></tr>
+<tr><td>Autonomía y vida independiente</td><td>No regulada específicamente</td><td><strong>Título II, cap. III completo</strong> (arts. 15-19): asistencia personal, OVI, desinstitucionalización</td></tr>
+<tr><td>Capacidad jurídica</td><td>No regulada</td><td><strong>Título II, cap. IV</strong>: sistema de apoyos según art. 12 Convención ONU + Ley 8/2021</td></tr>
+<tr><td>Ámbitos de aplicación</td><td>Urbanismo, transporte, comunicación, servicios, AAPP, justicia, electoral, patrimonio, empleo</td><td>Los mismos más: <strong>sanidad</strong>, <strong>protección social y servicios sociales</strong> y <strong>cooperación al desarrollo</strong></td></tr>
+<tr><td>Educación universitaria</td><td>No regulada en cap. específico</td><td><strong>Título IV, cap. II</strong>: unidades de atención, ajustes razonables, planes de inclusión</td></tr>
+<tr><td>Régimen sancionador</td><td>Remisión al RDL 1/2013</td><td>Igual: <strong>Título X remite al RDL 1/2013</strong></td></tr>
+</tbody>
+</table></div>
+
+<!-- T3 TÍTULO I ARTÍCULO POR ARTÍCULO -->
+<h2>T3 · Título I — Disposiciones generales (arts. 1-4)</h2>
+<div class="card"><table>
+<thead><tr><th>Art.</th><th>Denominación</th><th>Contenido operativo</th><th>Trampa / Dato clave</th></tr></thead>
+<tbody>
+<tr><td><span class="badge bb">1</span></td><td>Objeto</td><td>Garantizar derechos de las PcD en Navarra · condiciones de accesibilidad universal · autonomía personal · vida independiente · igualdad de oportunidades</td><td>El objeto incluye accesibilidad, no solo derechos subjetivos; doble carácter: sustantivo y regulatorio</td></tr>
+<tr><td><span class="badge bb">2</span></td><td>Principios</td><td>Dignidad · autonomía · vida independiente · no discriminación · igualdad · accesibilidad universal · diseño universal · transversalidad · normalización · diálogo civil · igualdad M/H · perspectiva de género · desarrollo de la personalidad</td><td>La perspectiva de género es expresamente mencionada como principio propio, a diferencia del RDL 1/2013</td></tr>
+<tr><td><span class="badge bb">3</span></td><td>Definiciones</td><td>Persona con discapacidad · accesibilidad · apoyos · ajustes razonables · diseño universal · vida independiente · asistencia personal · <strong>discriminación interseccional</strong> · accesibilidad cognitiva</td><td>La discriminación interseccional distingue esta ley foral del RDL 1/2013</td></tr>
+<tr><td><span class="badge bb">4</span></td><td>Ámbito de aplicación</td><td>Amplía LF 12/2018: añade <strong>sanidad</strong>, <strong>protección social y servicios sociales</strong> y <strong>cooperación al desarrollo</strong></td><td>Son 3 ámbitos nuevos respecto a la anterior LF 12/2018. En total: 12 ámbitos</td></tr>
+</tbody>
+</table></div>
+
+<!-- T4 TÍTULO II CAP. III ART. 15-19 -->
+<h2>T4 · Título II, Cap. III — Autonomía personal (arts. 15-19) · El bloque más preguntado</h2>
+<div class="card"><table>
+<thead><tr><th>Art.</th><th>Denominación</th><th>Contenido operativo</th><th>Elemento clave</th></tr></thead>
+<tbody>
+<tr><td><span class="badge bb">15</span></td><td>Medidas para garantizar la autonomía personal y la vida independiente</td><td>Los poderes públicos de Navarra adoptarán medidas para que las PcD ejerzan su autonomía y lleven una vida independiente, con acceso a apoyos <strong>humanos, técnicos, tecnológicos o animales</strong></td><td>Los 4 tipos de apoyos: humano · técnico · tecnológico · animal</td></tr>
+<tr><td><span class="badge bb">16</span></td><td>Desinstitucionalización y medidas voluntarias</td><td>Impulsa el tránsito de la institucionalización al modelo de <strong>vida en la comunidad</strong>; la institución puede provocar pérdida de libertad y control</td><td>Desinstitucionalización: de los centros residenciales a la vida comunitaria con apoyos</td></tr>
+<tr><td><span class="badge bb">17</span></td><td><strong>Asistencia personal y Oficina de Vida Independiente</strong></td><td>Se garantiza la prestación del servicio de asistencia personal. La <strong>Oficina de Vida Independiente</strong> (OVI) es el organismo de referencia en Navarra para gestión y asesoramiento en vida independiente y asistencia personal</td><td>★★★ MUY PREGUNTADO: OVI = organismo navarro. El asistente personal actúa bajo instrucciones de la PcD</td></tr>
+<tr><td><span class="badge bb">18</span></td><td>Itinerarios de intervención</td><td>Planes personalizados de apoyo para el desarrollo de la vida independiente</td><td>Personalización del apoyo: cada persona diseña su propio plan</td></tr>
+<tr><td><span class="badge bb">19</span></td><td>Teleasistencia</td><td>Servicio tecnológico de apoyo a distancia para la autonomía personal</td><td>Apoyo tecnológico como forma de asistencia remota</td></tr>
+</tbody>
+</table>
+<div class="note nr">⚠ TRAMPA: "La Oficina de Vida Independiente es un organismo del Estado" → FALSO: es el organismo de referencia específico de NAVARRA (art. 17).</div>
+</div>
+
+<!-- T5 TÍTULO II CAP. IV -->
+<h2>T5 · Título II, Cap. IV — Capacidad jurídica (arts. 20-24)</h2>
+<div class="card"><table>
+<thead><tr><th>Elemento</th><th>Contenido</th><th>Conexión normativa</th></tr></thead>
+<tbody>
+<tr><td>Modelo anterior</td><td>Sustitución de la persona en la toma de decisiones (tutela, curatela)</td><td>Código Civil anterior a la Ley 8/2021</td></tr>
+<tr><td>Nuevo modelo</td><td>Sistema de <strong>provisión de apoyos</strong>: la persona siempre decide; los apoyos facilitan sin sustituir</td><td>Art. 12 Convención ONU + <strong>Ley 8/2021, de 2 de junio</strong></td></tr>
+<tr><td>En Navarra</td><td>La D.F. 1.ª de la LF 31/2022 modifica el <strong>Fuero Nuevo de Navarra</strong> para adaptar el derecho foral a este nuevo modelo</td><td>Competencia civil foral de Navarra (art. 48.1 LORAFNA)</td></tr>
+<tr><td>Medidas de apoyo</td><td>Curador · guardador de hecho · defensor judicial · poderes preventivos · directivas anticipadas</td><td>Ley 8/2021 (Código Civil estatal) y Fuero Nuevo</td></tr>
+</tbody>
+</table></div>
+
+<!-- T6 EDUCACIÓN UNIVERSITARIA -->
+<h2>T6 · Título IV, Cap. II — Educación universitaria</h2>
+<div class="card"><table>
+<thead><tr><th>Obligación</th><th>Detalle</th><th>Conexión</th></tr></thead>
+<tbody>
+<tr><td>Unidad de atención</td><td>Toda universidad de Navarra debe disponer de una <strong>unidad de atención a estudiantes con discapacidad</strong></td><td>UPNA y Universidad de Navarra</td></tr>
+<tr><td>Ajustes razonables</td><td>En los procesos de evaluación y en el acceso a los estudios</td><td>RDL 1/2013 art. 63 · Ley 3/2022</td></tr>
+<tr><td>Accesibilidad digital</td><td>Plataformas virtuales, campus online, materiales didácticos digitales</td><td>Directiva 2016/2102 · UNE-EN 301549:2020</td></tr>
+<tr><td>Diseño universal de aprendizaje</td><td>Metodologías accesibles para todos desde el diseño curricular</td><td>Convención ONU art. 24</td></tr>
+<tr><td>Planes de inclusión</td><td>Cada universidad elabora su plan de inclusión para estudiantes con discapacidad</td><td>Conexión con Tema 28 y Ley 3/2022 (Tema 25)</td></tr>
+<tr><td>Formación en discapacidad</td><td>Incluir formación en discapacidad e inclusión en planes de estudio</td><td>Sensibilización del profesorado</td></tr>
+</tbody>
+</table></div>
+
+<!-- T7 COMUNICACIÓN WEB CADENA NORMATIVA -->
+<h2>T7 · Accesibilidad en comunicación — cadena normativa completa</h2>
+<div class="card"><table>
+<thead><tr><th>Nivel</th><th>Norma</th><th>Ámbito</th><th>Contenido esencial</th></tr></thead>
+<tbody>
+<tr><td><span class="badge bv">UE</span></td><td><strong>Directiva (UE) 2016/2102</strong>, de 26 de octubre</td><td>Organismos del sector público</td><td>Accesibilidad de sitios web y aplicaciones para dispositivos móviles de organismos del sector público</td></tr>
+<tr><td><span class="badge by">Estado</span></td><td><strong>Real Decreto 1112/2018, de 7 de septiembre</strong></td><td>Todo el territorio</td><td>Transpone la Directiva 2016/2102 al ordenamiento estatal</td></tr>
+<tr><td><span class="badge bb">Navarra</span></td><td><strong>Decreto Foral 69/2019, de 12 de junio</strong></td><td>Navarra</td><td>Adapta las obligaciones de accesibilidad web al ámbito de la Administración foral</td></tr>
+<tr><td><span class="badge bg">Técnica</span></td><td><strong>UNE-EN 301549:2020</strong></td><td>Estándar técnico</td><td>Requisitos de accesibilidad para productos y servicios TIC; sustituyó a la V1.1.2:2015</td></tr>
+<tr><td><span class="badge bg">Complem.</span></td><td><strong>UNE170001-1 y 2</strong></td><td>Accesibilidad universal</td><td>Criterios DALCO (deambulación, aprehensión, localización, comunicación)</td></tr>
+</tbody>
+</table>
+<div class="note nw">⚠ TRAMPA: la norma técnica web de referencia es la <strong>UNE-EN 301549:2020</strong>, no la V1.1.2 de 2015 (ya obsoleta).</div>
+</div>
+
+<!-- T8 HERRAMIENTAS COMUNICACIÓN -->
+<h2>T8 · Herramientas de accesibilidad en comunicación</h2>
+<div class="card"><table>
+<thead><tr><th>Herramienta</th><th>Tipo de accesibilidad</th><th>Colectivo principal</th></tr></thead>
+<tbody>
+<tr><td>Lengua de signos española (LSE)</td><td>Visual-gestual</td><td>Personas sordas</td></tr>
+<tr><td>Lectura fácil</td><td>Cognitiva</td><td>Discapacidad intelectual, personas con bajo nivel lector</td></tr>
+<tr><td>Pictogramas</td><td>Cognitiva / visual</td><td>Discapacidad intelectual, TEA, afasia</td></tr>
+<tr><td>SAAC (sistemas aumentativos y alternativos de comunicación)</td><td>Comunicativa</td><td>Personas sin lenguaje oral funcional</td></tr>
+<tr><td>Subtitulación</td><td>Auditiva</td><td>Personas sordas o con dificultad auditiva</td></tr>
+<tr><td>Audiodescripción</td><td>Visual</td><td>Personas ciegas o con discapacidad visual</td></tr>
+<tr><td>Bucle de inducción magnética</td><td>Auditiva técnica</td><td>Usuarios de audífonos con bobina T</td></tr>
+<tr><td>Accesibilidad web y apps (UNE-EN 301549:2020)</td><td>Digital</td><td>Todas las personas con discapacidad</td></tr>
+</tbody>
+</table></div>
+
+<!-- T9 PRODUCTOS Y SERVICIOS -->
+<h2>T9 · Accesibilidad en productos y servicios — tabla operativa</h2>
+<div class="card"><table>
+<thead><tr><th>Elemento</th><th>Contenido</th><th>Dato clave</th></tr></thead>
+<tbody>
+<tr><td>Norma marco UE</td><td><strong>Directiva (UE) 2019/882</strong>, de 17 de abril de 2019 (Acta Europea de Accesibilidad)</td><td>Establece requisitos de accesibilidad aplicables a productos y servicios en el mercado interior</td></tr>
+<tr><td>Principio 1</td><td><strong>Diseño universal</strong>: concebir productos y servicios accesibles desde el origen para todas las personas</td><td>Sin necesidad de adaptaciones especializadas posteriores</td></tr>
+<tr><td>Principio 2</td><td><strong>Ajustes razonables</strong>: modificaciones que no impongan carga desproporcionada</td><td>El límite es la proporcionalidad de la carga; no exime de la obligación</td></tr>
+<tr><td>Productos TIC</td><td>Equipos informáticos, sistemas operativos, navegadores</td><td>Obligación de accesibilidad en diseño y fabricación</td></tr>
+<tr><td>Terminales de autoservicio</td><td>Cajeros automáticos, máquinas de billetes, kioskos de información</td><td>Accesibilidad de interfaz, altura, output sonoro y táctil</td></tr>
+<tr><td>Telefonía</td><td>Servicios de comunicaciones electrónicas de voz</td><td>Incluye servicios de emergencia accesibles</td></tr>
+<tr><td>Medios audiovisuales</td><td>Plataformas de streaming, servicios de medios audiovisuales</td><td>Subtitulación, audiodescripción, lengua de signos</td></tr>
+<tr><td>Servicios bancarios</td><td>Servicios de banca al por menor: sitios web, aplicaciones, cajeros</td><td>Obligación de accesibilidad desde julio 2025 (Directiva 2019/882)</td></tr>
+<tr><td>Libros electrónicos</td><td>Lectores de e-book y dispositivos lectores</td><td>Formato EPUB accesible</td></tr>
+<tr><td>Comercio electrónico</td><td>Servicios de comercio por internet</td><td>Incluye proceso de compra y atención al cliente digital</td></tr>
+</tbody>
+</table></div>
+
+<!-- T10 COMPARATIVA RDL 1/2013 VS LF 31/2022 -->
+<h2>T10 · Comparativa RDL 1/2013 (Tema 29) vs. LF 31/2022 (Tema 30)</h2>
+<div class="card"><table>
+<thead><tr><th>Aspecto</th><th class="tb">RDL 1/2013 (Texto Refundido estatal)</th><th class="tc">LF 31/2022 (Ley Foral navarra)</th></tr></thead>
+<tbody>
+<tr><td>Tipo de norma</td><td>Real Decreto Legislativo (texto refundido)</td><td>Ley Foral del Parlamento de Navarra</td></tr>
+<tr><td>Ámbito territorial</td><td>Todo el territorio del Estado</td><td>Comunidad Foral de Navarra</td></tr>
+<tr><td>Enfoque</td><td>Refunde 3 leyes (LISMI + LIONDAU + L.49/2007)</td><td>Marco foral propio, integrado y actualizado</td></tr>
+<tr><td>Definición de discapacidad</td><td>Art. 2: deficiencias permanentes + barreras</td><td>Art. 3: misma base conceptual (modelo social)</td></tr>
+<tr><td>Principios</td><td>Art. 3: 13 principios (a-m)</td><td>Art. 2: mismos principios + <strong>perspectiva de género expresamente</strong></td></tr>
+<tr><td>Discriminación interseccional</td><td><strong>No</strong> la contempla expresamente</td><td><strong>Sí</strong> (arts. 5 y ss.) — novedad clave de la LF 31/2022</td></tr>
+<tr><td>Autonomía y vida independiente</td><td>Arts. 29-33 (cap. V del Título I)</td><td>Arts. 15-19 + Oficina de Vida Independiente</td></tr>
+<tr><td>Cuota de reserva de empleo</td><td><strong>2% en empresas de 50+ trabajadores</strong></td><td>Se remite a la regulación estatal</td></tr>
+<tr><td>Régimen sancionador</td><td>Título III: leve/grave/muy grave (hasta 1M €)</td><td>Título X: remisión al RDL 1/2013</td></tr>
+<tr><td>Accesibilidad cognitiva</td><td>Incorporada por Ley 6/2022</td><td>Presente desde su origen en 2022</td></tr>
+<tr><td>Educación universitaria</td><td>Referencias genéricas</td><td>Título IV, cap. II específico</td></tr>
+</tbody>
+</table></div>
+
+<!-- T11 TRAMPAS -->
+<h2>T11 · Las 12 trampas más frecuentes del examen</h2>
+<div class="card"><table>
+<thead><tr><th>Afirmación trampa</th><th>¿Correcta?</th><th>Corrección exacta</th></tr></thead>
+<tbody>
+<tr><td>La LF 31/2022 entró en vigor el 27 de diciembre de 2022</td><td><span class="badge br">FALSO</span></td><td>Entró en vigor el <strong>16/12/2022</strong> (al día siguiente del BON del 15/12)</td></tr>
+<tr><td>La LF 31/2022 tiene 8 títulos</td><td><span class="badge br">FALSO</span></td><td>Tiene <strong>10 títulos</strong></td></tr>
+<tr><td>La LF 31/2022 crea su propio régimen sancionador navarro</td><td><span class="badge br">FALSO</span></td><td>Título X se remite al <strong>RDL 1/2013</strong></td></tr>
+<tr><td>La Oficina de Vida Independiente es un organismo estatal</td><td><span class="badge br">FALSO</span></td><td>Es el organismo de referencia específico <strong>en Navarra</strong> (art. 17)</td></tr>
+<tr><td>La LF 31/2022 deroga la LF 5/2010</td><td><span class="badge br">FALSO</span></td><td>Deroga la <strong>LF 12/2018</strong> (que a su vez ya derogó la LF 5/2010)</td></tr>
+<tr><td>Los ámbitos de aplicación son los mismos que en la LF 12/2018</td><td><span class="badge br">FALSO</span></td><td>Añade 3 nuevos: <strong>sanidad</strong>, <strong>servicios sociales</strong> y <strong>cooperación al desarrollo</strong></td></tr>
+<tr><td>La norma técnica web de referencia es la UNE-EN 301549 V1.1.2:2015</td><td><span class="badge br">FALSO</span></td><td>La actual es la <strong>UNE-EN 301549:2020</strong></td></tr>
+<tr><td>El Decreto Foral navarro de accesibilidad web es el DF 69/2022</td><td><span class="badge br">FALSO</span></td><td>Es el <strong>DF 69/2019, de 12 de junio</strong></td></tr>
+<tr><td>La discriminación interseccional ya estaba en el RDL 1/2013</td><td><span class="badge br">FALSO</span></td><td>Es una <strong>aportación propia</strong> de la LF 31/2022 frente al RDL estatal</td></tr>
+<tr><td>La LF 31/2022 no modifica el Fuero Nuevo de Navarra</td><td><span class="badge br">FALSO</span></td><td>Sí lo modifica (D.F. 1.ª) para adaptar el derecho foral al art. 12 Convención ONU y Ley 8/2021</td></tr>
+<tr><td>El asistente personal sustituye a la persona con discapacidad en sus decisiones</td><td><span class="badge br">FALSO</span></td><td>Actúa <strong>bajo las instrucciones de la PcD</strong>, que siempre decide</td></tr>
+<tr><td>La LF 31/2022 entró en vigor el mismo día que se publicó en el BOE</td><td><span class="badge br">FALSO</span></td><td>La EV la determina la publicación en el <strong>BON</strong> (15/12), no el BOE (27/12)</td></tr>
+</tbody>
+</table></div>
+</body>
+</html>
