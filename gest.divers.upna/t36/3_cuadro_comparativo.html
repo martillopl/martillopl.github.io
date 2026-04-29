@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 36 · HTML 3 · Cuadro comparativo y tablas operativas · LF 14/2015 + LF 3/2018</title>
+<style>
+:root{--bg:#f0fdf4;--card:#fff;--s2:#f0fdf4;--line:#86efac;--text:#14532d;--muted:#16a34a;--p:#15803d;--warn:#d97706;--sky:#0284c7;--err:#dc2626;--vio:#7c3aed;--sh:0 2px 10px rgba(21,128,61,.09)}
+[data-theme="dark"]{--bg:#020d06;--card:#051a0c;--s2:#0a2e14;--line:#166534;--text:#bbf7d0;--muted:#86efac;--p:#86efac;--warn:#fbbf24;--sky:#38bdf8;--err:#f87171;--vio:#c4b5fd;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.5;background:var(--bg);color:var(--text);padding:22px}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.97rem;color:var(--p)}.hdr p{font-size:.74rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.72rem}
+h2{font-size:.87rem;font-weight:800;color:#fff;background:var(--p);padding:8px 15px;border-radius:7px;margin:22px 0 10px;display:inline-block}
+.tw{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:var(--sh);overflow-x:auto;margin-bottom:12px}
+table{width:100%;border-collapse:collapse}
+th{background:var(--s2);color:var(--muted);font-size:.67rem;text-transform:uppercase;letter-spacing:.05em;padding:8px 10px;text-align:left}
+td{padding:8px 10px;border-bottom:1px solid var(--s2);font-size:.78rem;vertical-align:top}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+.badge{display:inline-block;padding:3px 9px;border-radius:999px;font-size:.65rem;font-weight:700;border:1px solid transparent;white-space:nowrap}
+.b-ok{background:rgba(21,128,61,.12);color:var(--p);border-color:rgba(21,128,61,.3)}
+.b-err{background:rgba(220,38,38,.12);color:#dc2626;border-color:rgba(220,38,38,.3)}
+.b-warn{background:rgba(217,119,6,.12);color:var(--warn);border-color:rgba(217,119,6,.3)}
+.b-vio{background:rgba(124,58,237,.12);color:var(--vio);border-color:rgba(124,58,237,.3)}
+.b-sky{background:rgba(2,132,199,.12);color:var(--sky);border-color:rgba(2,132,199,.3)}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.75rem;border-left:4px solid;margin:8px 0}
+.n-ok{background:rgba(21,128,61,.07);border-color:var(--p);color:var(--p)}
+.n-warn{background:#fef3c7;border-color:#d97706;color:#78350f}
+.n-err{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .n-warn{background:#451a03;color:#fde68a}
+[data-theme="dark"] .n-err{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .n-ok{background:rgba(134,239,172,.07);color:#86efac}
+strong{color:var(--p)}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 36 · HTML 3 · Cuadro comparativo y tablas operativas para examen</h1>
+    <p>LF 14/2015, de 10 de abril, para actuar contra la violencia hacia las mujeres · Títulos I, IV, V y IX + LF 3/2018, de 19 de abril (modificación)</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- T1: IDENTIFICACIÓN -->
+<h2>T1 · Identificación de las normas</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Campo</th><th>LF 14/2015 (norma principal)</th><th>LF 3/2018 (norma modificadora)</th></tr></thead>
+  <tbody>
+    <tr><td>Título completo</td><td>Ley Foral 14/2015, de 10 de abril, para actuar contra la violencia hacia las mujeres</td><td>Ley Foral 3/2018, de 19 de abril, para la modificación de la Ley Foral 14/2015</td></tr>
+    <tr><td>Publicación</td><td>BON núm. 71, de 15 de abril de 2015</td><td>BON núm. 84, de 3 de mayo de 2018</td></tr>
+    <tr><td>Entrada en vigor</td><td><strong>1 mes</strong> tras publicación → 16 de mayo de 2015</td><td><strong>Día siguiente</strong> a la publicación → 4 de mayo de 2018</td></tr>
+    <tr><td>Norma derogada</td><td>LF 22/2002, de 2 de julio, contra la violencia sexista</td><td>— (solo modifica la LF 14/2015)</td></tr>
+    <tr><td>Estructura</td><td>10 Títulos + 2 D.A. + 1 D. Derogatoria + 2 D.F.</td><td>Artículo único con 2 modificaciones</td></tr>
+    <tr><td>Marco internacional</td><td>Convenio de Estambul (vigente en España desde 01/08/2014)</td><td>Motivación: vínculo entre trata y prostitución; postura abolicionista</td></tr>
+    <tr><td>Órgano de seguimiento</td><td>Observatorio Navarro de la Violencia contra las Mujeres</td><td>—</td></tr>
+  </tbody>
+</table>
+<div class="note n-warn">⚠ Dato trampa: el examen confunde los plazos. LF 14/2015 = <strong>1 mes</strong>. LF 3/2018 = <strong>día siguiente</strong>.</div>
+</div>
+
+<!-- T2: TÍTULO I — ART. 1 OBJETO -->
+<h2>T2 · Art. 1 — Objeto: los 7 ámbitos de actuación</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>#</th><th>Ámbito de actuación</th><th>Título de la LF 14/2015 que lo desarrolla</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Investigación y recogida de información</td><td>Título II (arts. 7–8)</td></tr>
+    <tr><td>2</td><td>Prevención y sensibilización</td><td>Título III (arts. 9–21)</td></tr>
+    <tr><td>3</td><td>Detección</td><td>Título IV (arts. 22–27) ← <strong>tema de examen</strong></td></tr>
+    <tr><td>4</td><td>Atención integral</td><td>Título IV y V (arts. 22–39) ← <strong>tema de examen</strong></td></tr>
+    <tr><td>5</td><td>Protección</td><td>Título VII (arts. 51–57)</td></tr>
+    <tr><td>6</td><td>Acceso a la justicia</td><td>Título VIII (arts. 58–63)</td></tr>
+    <tr><td>7</td><td>Reparación</td><td>Título IX (arts. 64–66) ← <strong>tema de examen</strong></td></tr>
+  </tbody>
+</table>
+<div class="note n-ok">💡 Los 7 ámbitos del art. 1 están directamente relacionados con los 10 Títulos. El examen pregunta a qué Título corresponde cada ámbito y cuántos son (7, no 6 ni 8).</div>
+</div>
+
+<!-- T3: ART. 2 ÁMBITO -->
+<h2>T3 · Art. 2 — Ámbito de aplicación</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Supuesto</th><th>Contenido</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td>Supuesto general</td><td>Mujeres que <strong>vivan o trabajen</strong> en la Comunidad Foral de Navarra, en situación de violencia de género, sus hijas e hijos menores y, en su caso, otros familiares convivientes víctimas</td><td>No requiere residencia permanente: basta <strong>trabajar</strong> en Navarra</td></tr>
+    <tr><td>Supuesto circunstancial</td><td>Mujeres que se hallen <strong>de forma circunstancial</strong> en la CFN cuando suceda la situación de violencia, sin perjuicio de las facultades de otras administraciones</td><td>El término <strong>"circunstancialmente"</strong> es el más preguntado del art. 2</td></tr>
+    <tr><td>Comparación con LO 1/2004</td><td>La LO 1/2004 se aplica a mujeres residentes en España, en el ámbito de la pareja o expareja</td><td>La LF 14/2015 es más amplia en sujetos (circunstanciales) y en tipos de VG (8 manifestaciones)</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T4: ART. 3.2 — 8 MANIFESTACIONES -->
+<h2>T4 · Art. 3.2 — Las 8 manifestaciones de la violencia</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Letra</th><th>Manifestación</th><th>Núcleo diferenciador / dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td>a)</td><td>Violencia en la pareja o expareja</td><td>Violencia física, psicológica, económica o sexual. Con <strong>o sin convivencia</strong>. Incluye repercusión en niños y niñas</td></tr>
+    <tr><td>b)</td><td>Violencia sexual</td><td>Agresión, abuso y acoso sexual en ámbito laboral, educativo, familiar, comunitario y espacio público</td></tr>
+    <tr><td>c)</td><td>Feminicidio</td><td>Homicidios en pareja/expareja + crímenes vinculados a discriminación de género (asesinato en prostitución/trata, por honor, infanticidio de niñas, muertes por dote)</td></tr>
+    <tr><td>d)</td><td>Trata de mujeres y niñas</td><td>Captación, transporte, traslado, acogida o recepción mediante coacción, fraude o engaño con fin de explotación sexual, laboral o matrimonio servil</td></tr>
+    <tr><td>e) <span class="badge b-warn">Mod. LF 3/2018</span></td><td>Prostitución y/o explotación sexual</td><td>Obtención de beneficios con la explotación de la prostitución ajena <strong>"AUN CON SU CONSENTIMIENTO"</strong>. Incluye pornografía. El examen pregunta qué añadió la LF 3/2018</td></tr>
+    <tr><td>f)</td><td>Matrimonio a edad temprana, concertado o forzado</td><td>Matrimonio sin consentimiento libre: acuerdo ajeno a la voluntad, bajo intimidación o sin alcanzar la edad legal</td></tr>
+    <tr><td>g)</td><td>Mutilación genital femenina</td><td>Cualquier procedimiento que elimine o produzca lesiones en los genitales femeninos, <strong>aunque exista consentimiento</strong></td></tr>
+    <tr><td>h)</td><td>Cualquier otra forma de violencia</td><td>La que lesione la dignidad, integridad o libertad de las mujeres, prevista en tratados, CP o normativa estatal o foral</td></tr>
+  </tbody>
+</table>
+<div class="note n-ok">💡 Mnemotecnia: <strong>Pa-Se-Fe-Tra-Pro-Ma-Mu-Cual</strong> (Pareja · Sexual · Feminicidio · Trata · Prostitución · Matrimonio · Mutilación · Cualquier otra).</div>
+</div>
+
+<!-- T5: ART. 3.3 — 4 TIPOS DE DAÑO -->
+<h2>T5 · Art. 3.3 — Los 4 tipos de daño</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Tipo</th><th>Definición operativa</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Física</strong></td><td>Cualquier acto violento contra el cuerpo, con resultado o riesgo de lesión física o daño</td><td>La más intuitiva y la que el examen usa como distractor básico</td></tr>
+    <tr><td><strong>Psicológica</strong></td><td>Conductas verbales o no verbales (amenazas, coacciones, humillaciones, vejaciones, acoso, insultos) que producen sufrimiento, desvalorización, aislamiento o limitación de libertad</td><td>Incluye conductas no verbales: el examen limita erróneamente la definición a actos verbales</td></tr>
+    <tr><td><strong>Económica</strong> ★</td><td>Privación intencionada y no justificada de recursos para el bienestar físico o psicológico de la mujer y sus hijos/as, o discriminación en la disposición de recursos compartidos en la convivencia de pareja</td><td><span class="badge b-warn">Más preguntada:</span> el examen la omite de la lista o la define incorrectamente. Incluye la discriminación en recursos de pareja</td></tr>
+    <tr><td><strong>Sexual</strong></td><td>Cualquier acto de naturaleza sexual no consentido, en el que medie violencia, intimidación, prevalencia o manipulación emocional, incluida la exhibición, la observación y la imposición de relaciones sexuales</td><td>Incluye la exhibición y la observación forzada: el examen omite estas modalidades</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T6: ART. 4 — 8 MEDIOS DE ACREDITACIÓN -->
+<h2>T6 · Art. 4 — Los 8 medios de acreditación de la situación de VG</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Letra</th><th>Medio de acreditación</th><th>Particularidad / dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td>a)</td><td>Sentencia firme de cualquier orden jurisdiccional que declare que la mujer sufrió violencia</td><td>Cualquier orden jurisdiccional (penal, civil…), no solo penal</td></tr>
+    <tr><td>b)</td><td>Orden de protección o resolución judicial con medidas cautelares en vigor</td><td>Debe estar en <strong>vigor</strong> · medio ordinario tanto en LF 14/2015 como en LO 1/2004</td></tr>
+    <tr><td>c)</td><td>Informe del Ministerio Fiscal con indicios de violencia</td><td>Medio excepcional en la LO 1/2004; en la LF 14/2015 es un medio ordinario más</td></tr>
+    <tr><td>d) ★</td><td>Acta de la autoridad policial con indicios razonables de ser víctima de trata con fines de explotación sexual</td><td>Solo para <strong>trata con fines de explotación sexual</strong>. Exclusivo de la LF 14/2015</td></tr>
+    <tr><td>e) ★</td><td>Certificación y/o informe de los <strong>servicios sociales y/o sanitarios</strong> de la AAPP competente</td><td>No existe en la LO 1/2004. Acredita para cualquier manifestación de la VG</td></tr>
+    <tr><td>f) ★</td><td>Certificación y/o informe de los <strong>servicios de acogida</strong> de la AAPP competente</td><td>No existe en la LO 1/2004. Especialmente útil para mujeres en casas de acogida</td></tr>
+    <tr><td>g) ★</td><td>Informe de la <strong>Inspección de Trabajo y de la Seguridad Social</strong>, en casos de acoso sexual y por razón de sexo en el ámbito laboral</td><td>Solo para <strong>acoso sexual o por razón de sexo en el trabajo</strong>. Exclusivo de la LF 14/2015</td></tr>
+    <tr><td>h)</td><td>Cualquier otra que venga establecida por norma de rango legal</td><td>Lista no tasada: admite otros títulos habilitantes</td></tr>
+  </tbody>
+</table>
+<div class="note n-warn">⚠ Los medios d), e), f) y g) son exclusivos de la LF 14/2015 y los más preguntados. La LO 1/2004 solo tiene orden de protección + informe Fiscal (+ otros genéricos).</div>
+</div>
+
+<!-- T7: ART. 5 SUPERVIVIENTE Y ART. 6 PRINCIPIOS -->
+<h2>T7 · Art. 5 — Supervivientes + Art. 6 — 9 principios rectores</h2>
+<div class="tw">
+<table>
+  <thead><tr><th colspan="3">Art. 5 · Supervivientes</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Víctima</strong></td><td>Quien ha sufrido consecuencias directas de los actos violentos. También los hijos e hijas que conviven en el entorno violento</td><td>En situación activa de violencia</td></tr>
+    <tr><td><strong>Superviviente</strong></td><td>Víctima de VG que <strong>ha emprendido un proceso de recuperación</strong> a fin de superar el proceso de violencia sufrida</td><td>En proceso de recuperación. Concepto exclusivo de la LF 14/2015 (no existe en la LO 1/2004)</td></tr>
+  </tbody>
+</table>
+</div>
+<div class="tw">
+<table>
+  <thead><tr><th>Letra</th><th>Principio rector (art. 6)</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td>a)</td><td>Respeto, protección y promoción de los derechos humanos</td><td>Toda actuación institucional y profesional se orienta a los DDHH de las mujeres</td></tr>
+    <tr><td>b)</td><td>Debida diligencia</td><td>Incluye: prevención + protección + asistencia + reparación + promoción de la justicia. Las 5 esferas de la debida diligencia</td></tr>
+    <tr><td>c) ★★★</td><td>Enfoque de género + <strong>PROHIBICIÓN EXPRESA DE LA MEDIACIÓN</strong></td><td>La mediación está EXPRESAMENTE PROHIBIDA. Sin excepciones. El examen la propone como alternativa válida en casos leves → FALSO</td></tr>
+    <tr><td>d)</td><td>Prohibición de discriminación</td><td>Sin discriminación por etnia, lengua, religión, opiniones, nacionalidad, orientación sexual, identidad de género, edad, discapacidad, estado civil, estatus migrante…</td></tr>
+    <tr><td>e)</td><td>Atención a la discriminación múltiple</td><td>Factores añadidos: edad, clase social, nacionalidad, etnia, discapacidad, situación administrativa… Vulnerabilidad agravada</td></tr>
+    <tr><td>f)</td><td>Respuesta integral y coordinación</td><td>La VG es multifactorial → respuesta integral y trabajo en red entre instancias y administraciones</td></tr>
+    <tr><td>g) ★★</td><td>Respeto y no revictimización</td><td>Mecanismos para evitar la <strong>victimización secundaria</strong> (daño adicional causado por el trato institucional inadecuado) · garantizar autonomía y libertad de las supervivientes</td></tr>
+    <tr><td>h)</td><td>Responsabilidad</td><td>Formación de profesionales + exigencia de responsabilidades por falta de diligencia en la respuesta institucional</td></tr>
+    <tr><td>i)</td><td>Participación</td><td>Fomentar la participación de las víctimas y organizaciones de mujeres en el diseño y evaluación de servicios y políticas públicas</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T8: TÍTULO IV -->
+<h2>T8 · Título IV — Detección y atención (arts. 22–27)</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Art.</th><th>Contenido</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td>22</td><td>Detección en el ámbito sanitario: estrategias de <strong>detección precoz</strong> en atención primaria y especializada + formación continuada de profesionales sanitarios</td><td>El ámbito sanitario es el primer recurso de detección: el examen puede preguntar cuáles son los dos ámbitos de detección (sanitario y SS)</td></tr>
+    <tr><td>23</td><td>Atención sanitaria: protocolos específicos con respeto a intimidad y dignidad + información a la víctima de sus derechos y recursos disponibles</td><td>La obligación de informar sobre derechos y recursos es un requisito activo, no pasivo, de los centros sanitarios</td></tr>
+    <tr><td>24</td><td>Detección en los servicios sociales: protocolos de detección, atención y derivación + indicadores de riesgo + procedimientos homogéneos en SS de atención primaria</td><td>Los procedimientos han de ser <strong>homogéneos</strong> (mismos indicadores en todos los SS de Navarra)</td></tr>
+    <tr><td>25</td><td>Atención en SS: valoración del riesgo + asesoramiento sobre derechos y recursos + plan de intervención personalizado + seguimiento + coordinación SS primaria/especializada</td><td>El plan de intervención es <strong>personalizado</strong> (no estándar) y requiere seguimiento posterior</td></tr>
+    <tr><td>26</td><td>Formación de profesionales: planes de formación <strong>inicial y continuada</strong> de profesionales de sanidad y SS en detección, atención, derivación y coordinación interinstitucional</td><td>La formación es <strong>inicial Y continuada</strong>: el examen suele poner solo "continuada" → incompleto</td></tr>
+    <tr><td>27</td><td>Registros de casos: <strong>Registro de casos de VG</strong> en sanidad y SS con datos desagregados + coordinación con el Observatorio Navarro de la VG</td><td>Los datos del registro se coordinan con el <strong>Observatorio Navarro de la Violencia contra las Mujeres</strong></td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T9: TÍTULO V PRINCIPIOS -->
+<h2>T9 · Título V — Arts. 28–29 · Atención integral y principios</h2>
+<div class="tw">
+<table>
+  <thead><tr><th colspan="3">Art. 28 · Las 4 dimensiones de la atención integral</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Información y orientación sobre derechos y recursos</td><td>Primera dimensión: siempre presente en cualquier intervención</td></tr>
+    <tr><td>2</td><td>Atención a la <strong>salud física y mental</strong> para paliar las secuelas de la violencia</td><td>Las dos dimensiones de la salud deben mencionarse juntas: física + mental</td></tr>
+    <tr><td>3</td><td>Atención a las necesidades económicas, laborales, de vivienda, educativas y sociales</td><td>5 tipos de necesidades: económicas · laborales · vivienda · educativas · sociales</td></tr>
+    <tr><td>4</td><td><strong>Alojamiento temporal seguro</strong> cuando proceda</td><td>No siempre necesario: "cuando proceda". El examen puede decir que es siempre obligatorio → FALSO</td></tr>
+  </tbody>
+</table>
+</div>
+<div class="tw">
+<table>
+  <thead><tr><th colspan="3">Art. 29 · Los 5 principios de la atención en los recursos</th></tr></thead>
+  <thead><tr><th>Principio</th><th>Significado operativo</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Accesibilidad universal</strong></td><td>Sin discriminación y adaptada a las necesidades de cada mujer</td><td>Universal: para cualquier mujer, sin barreras</td></tr>
+    <tr><td><strong>Gratuidad</strong> ★</td><td>Los servicios de la red pública son gratuitos para las víctimas</td><td>El examen pregunta si los servicios tienen coste → GRATUITOS</td></tr>
+    <tr><td><strong>Confidencialidad</strong></td><td>Garantía de discreción de los datos de la mujer víctima</td><td>El deber de confidencialidad protege a la víctima de represalias del agresor</td></tr>
+    <tr><td><strong>Atención integral</strong></td><td>Abordaje de todas las dimensiones del problema (física, psicológica, social, jurídica, económica)</td><td>No fragmentada: respuesta global, no solo en una dimensión</td></tr>
+    <tr><td><strong>Coordinación interinstitucional</strong></td><td>Trabajo en red entre recursos y administraciones (sanitaria, SS, judicial, policial)</td><td>El examen puede proponer "publicidad" o "transparencia" como principio → FALSO</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T10: RED DE ACOGIDA -->
+<h2>T10 · Título V — Red de acogida · 3 niveles</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Nivel</th><th>Recurso</th><th>Tipo de acogida</th><th>Duración</th><th>Perfil de la mujer</th></tr></thead>
+  <tbody>
+    <tr><td><strong>1</strong></td><td><strong>Centros de emergencia</strong></td><td>Urgente e inmediata</td><td><strong>Breve</strong></td><td>Situación de crisis aguda; necesita alejarse inmediatamente del agresor</td></tr>
+    <tr><td><strong>2</strong></td><td><strong>Casas de acogida</strong></td><td>A medio plazo</td><td><strong>Media</strong></td><td>Mujer con sus hijos/as que necesita trabajar el proceso de recuperación con apoyo especializado</td></tr>
+    <tr><td><strong>3</strong></td><td><strong>Pisos tutelados o de transición</strong></td><td>En proceso avanzado de recuperación</td><td><strong>Larga / previa a normalización</strong></td><td>Mayor autonomía; se prepara para acceder a una vivienda normalizada</td></tr>
+  </tbody>
+</table>
+<div class="note n-warn">⚠ El examen: (1) desordena los 3 niveles; (2) atribuye estancias largas a los centros de emergencia; (3) omite los pisos tutelados. El orden correcto es siempre de urgencia a autonomía: emergencia → acogida → pisos.</div>
+</div>
+
+<!-- T11: TÍTULO IX REPARACIÓN -->
+<h2>T11 · Título IX — Reparación (arts. 64–66)</h2>
+<div class="tw">
+<table>
+  <thead><tr><th colspan="3">Las 2 dimensiones de la reparación</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Individual</strong></td><td>Poner los medios necesarios para lograr la completa recuperación de cada víctima en todas sus facetas: física, psicológica, social y económica</td><td>La dimensión individual es la base: sin recuperación personal no hay reparación real</td></tr>
+    <tr><td><strong>Colectiva</strong></td><td>Reconocimientos y homenajes públicos a las víctimas, especialmente a las víctimas <strong>mortales</strong></td><td>Exclusiva de la LF 14/2015: no existe en la LO 1/2004. El examen pregunta qué aporta el Título IX que no tiene la norma estatal</td></tr>
+  </tbody>
+</table>
+</div>
+<div class="tw">
+<table>
+  <thead><tr><th>Art.</th><th>Contenido</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td>64 ★★★</td><td>Derecho a la <strong>reparación integral</strong>: restitución + indemnización + rehabilitación + satisfacción + garantías de no repetición</td><td>Las 5 medidas de reparación integral. El examen omite una o añade una falsa ("compensación social", "protección"). Provienen del DIDH y del Convenio de Estambul</td></tr>
+    <tr><td>65</td><td><strong>Reconocimiento público y homenaje</strong> a las mujeres que hayan perdido la vida como consecuencia de la VG. Homenaje institucional <strong>específico</strong></td><td>Las AAPP navarras realizarán ACTOS DE RECONOCIMIENTO PÚBLICO. El carácter "específico" del homenaje a las víctimas mortales es el dato diferenciador</td></tr>
+    <tr><td>66</td><td>Actuaciones de reparación: atención psicológica continuada + acceso <strong>prioritario</strong> a empleo, vivienda y formación + indemnizaciones complementarias a las estatales + asistencia jurídica para exigir responsabilidades</td><td>El acceso es PRIORITARIO (no exclusivo). Las indemnizaciones son COMPLEMENTARIAS a las estatales (no sustitutivas)</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T12: LF 3/2018 MODIFICACIONES -->
+<h2>T12 · LF 3/2018 — Modificaciones al artículo único</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Modificación</th><th>Precepto afectado</th><th>Nueva redacción / contenido</th><th>Clave de examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Primera</strong></td><td>Art. 3.2.e) de la LF 14/2015</td><td>"Práctica de mantener relaciones sexuales a cambio de dinero. Obtención de beneficios financieros o de otra índole con la explotación del ejercicio de la prostitución ajena (incluidos actos pornográficos o la producción de material pornográfico), <strong>aun con su consentimiento</strong>."</td><td><span class="badge b-warn">"aun con su consentimiento"</span> es la adición clave. Postura abolicionista: el consentimiento no excluye que sea VG. El examen pregunta qué añadió la LF 3/2018</td></tr>
+    <tr><td><strong>Segunda, apdo. 3</strong></td><td>Art. 18.3 de la LF 14/2015 (nuevo)</td><td>Las AAPP de Navarra <strong>NO insertarán publicidad institucional</strong> en medios de comunicación privados que contengan anuncios de prostitución o contenidos vejatorios contra las mujeres</td><td>La prohibición afecta a la <strong>publicidad institucional</strong>. El examen la confunde con la publicidad comercial</td></tr>
+    <tr><td><strong>Segunda, apdo. 4</strong></td><td>Art. 18.4 de la LF 14/2015 (nuevo)</td><td>Las AAPP de Navarra <strong>NO aceptarán solicitudes de subvenciones</strong> de los medios de comunicación privados que contengan anuncios de prostitución o contenidos vejatorios contra las mujeres</td><td>Las dos prohibiciones son acumulativas: ni publicidad institucional ni subvenciones. El examen pregunta si solo es una o dos medidas</td></tr>
+  </tbody>
+</table>
+<div class="note n-ok">💡 La LF 3/2018 tiene <strong>artículo único</strong> con dos modificaciones: (1) art. 3.2.e) [definición de prostitución] + (2) art. 18 apds. 3 y 4 [medios de comunicación]. Nada más.</div>
+</div>
+
+<!-- T13: COMPARATIVA LF 14/2015 vs LO 1/2004 -->
+<h2>T13 · Comparativa LF 14/2015 vs. LO 1/2004</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Aspecto</th><th>LO 1/2004 (estatal)</th><th>LF 14/2015 (navarra)</th></tr></thead>
+  <tbody>
+    <tr><td>Tipos de violencia cubiertos</td><td>Solo pareja o expareja sentimental</td><td>8 manifestaciones (pareja, sexual, feminicidio, trata, prostitución, matrimonio forzado, mutilación genital, otras)</td></tr>
+    <tr><td>Ámbito público/privado</td><td>Fundamentalmente ámbito privado/doméstico</td><td>Vida pública <strong>Y</strong> privada</td></tr>
+    <tr><td>Ámbito territorial y personal</td><td>Mujeres residentes en España</td><td>Mujeres que vivan, trabajen o estén circunstancialmente en Navarra</td></tr>
+    <tr><td>Tipos de daño</td><td>Físico, psicológico, libertad sexual, amenazas, coacciones, privación de libertad</td><td>Físico + psicológico + <strong>económico</strong> + sexual (art. 3.3) → incluye expresamente el daño económico</td></tr>
+    <tr><td>Medios de acreditación</td><td>Orden de protección + informe Fiscal (+ otros genéricos)</td><td>8 medios específicos incluyendo SS, acogida, Inspección Trabajo y acta policial (trata)</td></tr>
+    <tr><td>Concepto de "superviviente"</td><td>No definido</td><td>Art. 5: víctima en proceso de recuperación</td></tr>
+    <tr><td>Mediación</td><td>No regulada específicamente</td><td>EXPRESAMENTE PROHIBIDA (art. 6.c)</td></tr>
+    <tr><td>Reparación colectiva</td><td>No contemplada</td><td>Reconocimientos y homenajes públicos a víctimas mortales (arts. 64–66)</td></tr>
+    <tr><td>Órgano de seguimiento</td><td>Observatorio Estatal de la VG (art. 30 LO 1/2004)</td><td>Observatorio <strong>Navarro</strong> de la Violencia contra las Mujeres</td></tr>
+    <tr><td>Marco internacional</td><td>CEDAW 1979, Beijing 1995, Declaración ONU 1993</td><td>Convenio de Estambul (vigente en España desde 01/08/2014)</td></tr>
+    <tr><td>Mediación en medios de comunicación</td><td>No regula la publicidad ni las subvenciones a medios</td><td>Prohíbe publicidad institucional y subvenciones a medios con anuncios de prostitución (art. 18, mod. LF 3/2018)</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T14: TRAMPAS -->
+<h2>T14 · Las 12 trampas de examen</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Afirmación trampa</th><th>¿Correcta?</th><th>Corrección exacta</th></tr></thead>
+  <tbody>
+    <tr><td>La LF 14/2015 solo se aplica a mujeres con residencia permanente en Navarra</td><td><span class="badge b-err">FALSO</span></td><td>También a quienes trabajen o estén <strong>circunstancialmente</strong> en Navarra cuando suceda la violencia (art. 2)</td></tr>
+    <tr><td>La LF 14/2015 limita la VG al ámbito de la pareja o expareja como la LO 1/2004</td><td><span class="badge b-err">FALSO</span></td><td>Incluye <strong>8 manifestaciones</strong> en vida pública y privada. Solo la manifestación a) coincide con el ámbito de la LO 1/2004</td></tr>
+    <tr><td>La mediación entre víctima y agresor es una herramienta válida en casos de VG leve</td><td><span class="badge b-err">FALSO</span></td><td>La mediación está <strong>EXPRESAMENTE PROHIBIDA</strong> (art. 6.c) sin ninguna excepción</td></tr>
+    <tr><td>La LF 3/2018 entró en vigor 1 mes tras su publicación en el BON</td><td><span class="badge b-err">FALSO</span></td><td>Entró en vigor al <strong>DÍA SIGUIENTE</strong> a su publicación (4 de mayo de 2018). La LF 14/2015 sí tardó 1 mes</td></tr>
+    <tr><td>La LF 3/2018 modificó la definición de trata de mujeres</td><td><span class="badge b-err">FALSO</span></td><td>Modificó la definición de <strong>PROSTITUCIÓN</strong> [art. 3.2.e)] y el art. 18 apds. 3 y 4 (medios de comunicación)</td></tr>
+    <tr><td>La explotación sexual solo es VG si la mujer no ha prestado su consentimiento</td><td><span class="badge b-err">FALSO</span></td><td>La LF 3/2018 añade <strong>"AUN CON SU CONSENTIMIENTO"</strong> al art. 3.2.e). El consentimiento no neutraliza la violencia</td></tr>
+    <tr><td>Los servicios de la red de atención y recuperación del Título V tienen coste para la víctima</td><td><span class="badge b-err">FALSO</span></td><td>Son <strong>GRATUITOS</strong> para las víctimas (principio de gratuidad del art. 29)</td></tr>
+    <tr><td>Los centros de emergencia son recursos para estancias prolongadas de recuperación</td><td><span class="badge b-err">FALSO</span></td><td>Son de acogida <strong>urgente con estancia BREVE</strong>. Las estancias prolongadas son en las <strong>casas de acogida</strong></td></tr>
+    <tr><td>La reparación del Título IX solo tiene dimensión individual</td><td><span class="badge b-err">FALSO</span></td><td>Tiene dos dimensiones: <strong>INDIVIDUAL</strong> (completa recuperación) y <strong>COLECTIVA</strong> (reconocimientos y homenajes públicos a víctimas mortales)</td></tr>
+    <tr><td>El acta policial del art. 4.2.d) acredita cualquier tipo de VG</td><td><span class="badge b-err">FALSO</span></td><td>El acta policial solo sirve para acreditar la situación de <strong>TRATA CON FINES DE EXPLOTACIÓN SEXUAL</strong></td></tr>
+    <tr><td>El informe de la Inspección de Trabajo acredita cualquier tipo de VG previsto en la LF 14/2015</td><td><span class="badge b-err">FALSO</span></td><td>Solo acredita situaciones de <strong>acoso sexual y por razón de sexo en el ámbito laboral</strong></td></tr>
+    <tr><td>La LF 3/2018 solo prohíbe la publicidad institucional en medios con anuncios de prostitución</td><td><span class="badge b-err">FALSO</span></td><td>Prohíbe <strong>DOS</strong> cosas: publicidad institucional (apdo. 3) Y subvenciones (apdo. 4) a esos medios</td></tr>
+  </tbody>
+</table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,379 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 36 · HTML 2 · Esquema-resumen visual · LF 14/2015 + LF 3/2018</title>
+<style>
+:root{--bg:#f0fdf4;--card:#fff;--s2:#f0fdf4;--line:#86efac;--text:#14532d;--muted:#16a34a;--p:#15803d;--p2:#22c55e;--warn:#d97706;--sky:#0284c7;--err:#dc2626;--vio:#7c3aed;--sh:0 2px 10px rgba(21,128,61,.09)}
+[data-theme="dark"]{--bg:#020d06;--card:#051a0c;--s2:#0a2e14;--line:#166534;--text:#bbf7d0;--muted:#86efac;--p:#86efac;--p2:#bbf7d0;--warn:#fbbf24;--sky:#38bdf8;--err:#f87171;--vio:#c4b5fd;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.6;background:var(--bg);color:var(--text);padding:22px}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.97rem;color:var(--p)}.hdr p{font-size:.74rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.72rem}
+h2{font-size:.87rem;font-weight:800;color:#fff;background:var(--p);padding:8px 15px;border-radius:7px;margin:22px 0 10px;display:inline-block}
+h3{font-size:.82rem;font-weight:700;color:var(--p);margin:12px 0 5px;border-bottom:1px solid var(--line);padding-bottom:3px}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:10px;margin-bottom:12px}
+.kbox{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:12px 14px;box-shadow:var(--sh);text-align:center}
+.big{font-size:1.1rem;font-weight:800;color:var(--p);margin-bottom:3px}.small{font-size:.73rem;color:var(--muted)}.mini{font-size:.72rem;margin-top:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:11px;margin-bottom:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:13px 15px;box-shadow:var(--sh)}
+.tag{display:block;font-size:.64rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:5px}
+.card p{font-size:.79rem;margin:.28rem 0}
+.card ul{padding-left:16px;margin:.28rem 0}.card li{margin:.22rem 0;font-size:.78rem}
+.card strong{color:var(--p)}
+.l1{border-left:4px solid var(--p)}
+.l2{border-left:4px solid #d97706}
+.l3{border-left:4px solid #7c3aed}
+.l4{border-left:4px solid #0284c7}
+.l5{border-left:4px solid #dc2626}
+.tw{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:12px;box-shadow:var(--sh);overflow-x:auto;margin-bottom:12px}
+table{width:100%;border-collapse:collapse}
+th{background:var(--s2);color:var(--muted);font-size:.66rem;text-transform:uppercase;padding:7px 9px;text-align:left}
+td{padding:7px 9px;border-bottom:1px solid var(--s2);font-size:.78rem;vertical-align:top}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.65rem;font-weight:700;border:1px solid transparent}
+.b-err{background:rgba(220,38,38,.12);color:#dc2626;border-color:rgba(220,38,38,.3)}
+.b-ok{background:rgba(21,128,61,.12);color:var(--p);border-color:rgba(21,128,61,.3)}
+.b-warn{background:rgba(217,119,6,.12);color:var(--warn);border-color:rgba(217,119,6,.3)}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.75rem;border-left:4px solid;margin:8px 0}
+.n-warn{background:#fef3c7;border-color:#d97706;color:#78350f}
+.n-ok{background:#f0fdf4;border-color:#15803d;color:#14532d}
+.n-err{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .n-warn{background:#451a03;color:#fde68a}
+[data-theme="dark"] .n-err{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .n-ok{background:#020d06;color:#86efac}
+.pill{display:inline-block;background:var(--s2);border:1px solid var(--line);color:var(--p);padding:3px 10px;border-radius:999px;font-size:.73rem;font-weight:600;margin:2px}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
+.step{background:var(--card);border:2px solid var(--line);border-radius:11px;padding:12px 14px;box-shadow:var(--sh);text-align:center}
+.step .num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:var(--p);color:#fff;border-radius:50%;font-size:.8rem;font-weight:800;margin-bottom:7px}
+.step h4{font-size:.82rem;font-weight:700;color:var(--p);margin:0 0 5px}
+.step p{font-size:.75rem;margin:0}
+.divider{border:none;border-top:1px solid var(--line);margin:16px 0}
+@media(max-width:800px){.flow{grid-template-columns:1fr}}
+@media(max-width:600px){.grid,.kpi{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 36 · HTML 2 · Esquema-resumen con bloques visuales para memorización rápida</h1>
+    <p>LF 14/2015, de 10 de abril, para actuar contra la violencia hacia las mujeres · Títulos I, IV, V y IX + LF 3/2018, de 19 de abril (modificación)</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- FICHAS FLASH -->
+<h2>Fichas flash</h2>
+<div class="kpi">
+  <div class="kbox"><div class="big">LF 14/2015</div><div class="small">Norma principal</div><div class="mini">Actuar contra la VG en Navarra</div></div>
+  <div class="kbox"><div class="big">10/04/2015</div><div class="small">Fecha de aprobación</div><div class="mini">BON núm. 71, 15/04/2015</div></div>
+  <div class="kbox"><div class="big">16/05/2015</div><div class="small">Entrada en vigor</div><div class="mini">1 mes tras publicación en BON</div></div>
+  <div class="kbox"><div class="big">LF 22/2002</div><div class="small">Norma derogada</div><div class="mini">Medidas integrales contra la violencia sexista</div></div>
+  <div class="kbox"><div class="big">10 Títulos</div><div class="small">Estructura</div><div class="mini">+ 2 D.A. + 1 D. Derog. + 2 D.F.</div></div>
+  <div class="kbox"><div class="big">Estambul</div><div class="small">Marco internacional</div><div class="mini">Vigente en España desde 01/08/2014</div></div>
+</div>
+<div class="kpi">
+  <div class="kbox"><div class="big">LF 3/2018</div><div class="small">Norma modificadora</div><div class="mini">Modifica art. 3.2.e) + art. 18 apds. 3-4</div></div>
+  <div class="kbox"><div class="big">19/04/2018</div><div class="small">Fecha de aprobación</div><div class="mini">BON núm. 84, 03/05/2018</div></div>
+  <div class="kbox"><div class="big">04/05/2018</div><div class="small">Entrada en vigor</div><div class="mini">DÍA SIGUIENTE al BON (no 1 mes)</div></div>
+  <div class="kbox"><div class="big">"Aun con..."</div><div class="small">Clave LF 3/2018</div><div class="mini">"Aun con su consentimiento" (art. 3.2.e)</div></div>
+</div>
+
+<!-- IDEA FUERZA -->
+<h2>Idea fuerza</h2>
+<div class="card l1" style="margin-bottom:12px">
+  <p><strong>Objeto:</strong> actuación en Navarra frente a la VG mediante medidas integrales en 7 ámbitos: <strong>investigación · prevención/sensibilización · detección · atención integral · protección · acceso a la justicia · reparación</strong>, a las mujeres que la sufren y a sus hijos e hijas.</p>
+  <p><strong>Ámbito más amplio que la LO 1/2004:</strong> 8 manifestaciones de VG (no solo pareja/expareja), en vida pública y privada, y para mujeres que vivan, trabajen o estén <strong>circunstancialmente</strong> en Navarra.</p>
+  <p><strong>Principio nuclear:</strong> la mediación entre víctima y agresor está <strong>EXPRESAMENTE PROHIBIDA</strong> (art. 6.c).</p>
+</div>
+
+<!-- TÍTULO I -->
+<h2>Título I · Arts. 1–6 · Disposiciones generales</h2>
+<div class="grid">
+  <div class="card l1">
+    <span class="tag">Art. 1 · Objeto ★★★</span>
+    <p>Medidas integrales en <strong>7 ámbitos:</strong></p>
+    <ul>
+      <li>Investigación</li>
+      <li>Prevención y sensibilización</li>
+      <li>Detección</li>
+      <li>Atención integral</li>
+      <li>Protección</li>
+      <li>Acceso a la justicia</li>
+      <li>Reparación</li>
+    </ul>
+    <p>Garantía de <strong>intérprete</strong> para mujeres con discapacidades sensoriales y extranjeras, en plazo razonable, en <strong>todas las fases del procedimiento</strong>.</p>
+  </div>
+  <div class="card l1">
+    <span class="tag">Art. 2 · Ámbito de aplicación ★★</span>
+    <p>Mujeres que <strong>VIVAN, TRABAJEN</strong> o estén <strong>CIRCUNSTANCIALMENTE</strong> en Navarra cuando suceda la violencia.</p>
+    <p>También: <strong>hijos e hijas menores</strong> y <strong>familiares convivientes</strong> víctimas de la situación.</p>
+    <div class="note n-warn">⚠ No requiere residencia permanente. Más amplio que LO 1/2004.</div>
+  </div>
+  <div class="card l1">
+    <span class="tag">Art. 3.1 · Definición ★★★</span>
+    <p>Violencia <strong>POR EL HECHO DE SER MUJER</strong> o de forma <strong>DESPROPORCIONADA</strong> como <strong>discriminación de género</strong>.</p>
+    <p>→ Daños <strong>FÍSICOS + PSICOLÓGICOS + SEXUALES + ECONÓMICOS</strong></p>
+    <p>→ En la <strong>vida pública O privada</strong></p>
+    <p>→ Las <strong>niñas menores de edad</strong> están incluidas en el concepto de víctimas.</p>
+  </div>
+  <div class="card l1">
+    <span class="tag">Art. 3.2 · 8 manifestaciones ★★★</span>
+    <p>Mnemotecnia: <strong>Pa-Se-Fe-Tra-Pro-Ma-Mu-Cual</strong></p>
+    <ul>
+      <li><strong>a)</strong> Pareja o expareja</li>
+      <li><strong>b)</strong> Violencia sexual</li>
+      <li><strong>c)</strong> Feminicidio</li>
+      <li><strong>d)</strong> Trata de mujeres y niñas</li>
+      <li><strong>e)</strong> Prostitución/explotación sexual <span class="badge b-warn">LF 3/2018</span></li>
+      <li><strong>f)</strong> Matrimonio forzado/a edad temprana</li>
+      <li><strong>g)</strong> Mutilación genital femenina</li>
+      <li><strong>h)</strong> Cualquier otra forma</li>
+    </ul>
+  </div>
+  <div class="card l1">
+    <span class="tag">Art. 3.3 · 4 tipos de daño</span>
+    <ul>
+      <li>Violencia <strong>física</strong></li>
+      <li>Violencia <strong>psicológica</strong></li>
+      <li>Violencia <strong>económica</strong> ← más preguntada</li>
+      <li>Violencia <strong>sexual</strong></li>
+    </ul>
+    <div class="note n-warn">⚠ El examen suele omitir la VIOLENCIA ECONÓMICA: privación intencionada de recursos para el bienestar de la mujer.</div>
+  </div>
+  <div class="card l1">
+    <span class="tag">Art. 4 · Acreditación · 8 medios ★★★</span>
+    <ul>
+      <li>a) Sentencia firme</li>
+      <li>b) Orden de protección o medida cautelar</li>
+      <li>c) Informe del Ministerio Fiscal</li>
+      <li>d) Acta policial <em>(solo trata explotación sexual)</em></li>
+      <li>e) Informe SS y/o servicios sanitarios ★</li>
+      <li>f) Informe servicios de acogida ★</li>
+      <li>g) Informe Inspección de Trabajo <em>(acoso sexual laboral)</em> ★</li>
+      <li>h) Cualquier otro por norma legal</li>
+    </ul>
+    <div class="note n-ok">💡 Los marcados con ★ no existen en la LO 1/2004 → son los más preguntados.</div>
+  </div>
+  <div class="card l1">
+    <span class="tag">Art. 5 · Supervivientes</span>
+    <p><strong>Superviviente</strong> = víctima de VG que ha emprendido un proceso de recuperación para superar la violencia sufrida.</p>
+    <p>Diferencia: <strong>víctima</strong> (en situación activa) ≠ <strong>superviviente</strong> (en proceso de recuperación).</p>
+  </div>
+  <div class="card l1">
+    <span class="tag">Art. 6 · 9 principios rectores ★★★</span>
+    <ul>
+      <li>a) Respeto, protección y promoción de los DDHH</li>
+      <li>b) <strong>Debida diligencia</strong></li>
+      <li>c) Enfoque de género + <strong>MEDIACIÓN PROHIBIDA</strong> ★★★</li>
+      <li>d) Prohibición de discriminación</li>
+      <li>e) Atención a la discriminación múltiple</li>
+      <li>f) Respuesta integral y coordinación</li>
+      <li>g) <strong>Respeto y no revictimización</strong> ★★</li>
+      <li>h) Responsabilidad</li>
+      <li>i) Participación</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TÍTULO IV -->
+<h2>Título IV · Arts. 22–27 · Detección y atención</h2>
+<div class="grid">
+  <div class="card l2">
+    <span class="tag">Idea central ★★</span>
+    <p>Los <strong>servicios sanitarios</strong> y los <strong>servicios sociales</strong> son los recursos clave para la <strong>detección y atención</strong> de la violencia.</p>
+    <p>Actuación coordinada con el <strong>Observatorio Navarro de la Violencia contra las Mujeres</strong>.</p>
+  </div>
+  <div class="card l2">
+    <span class="tag">Arts. 22–23 · Ámbito sanitario</span>
+    <ul>
+      <li>Estrategias de <strong>detección precoz</strong> en atención primaria y especializada</li>
+      <li>Formación continuada de profesionales sanitarios</li>
+      <li>Protocolos con respeto a intimidad y dignidad</li>
+      <li>Información a la víctima de sus derechos y recursos disponibles</li>
+    </ul>
+  </div>
+  <div class="card l2">
+    <span class="tag">Arts. 24–25 · Servicios sociales</span>
+    <ul>
+      <li>Protocolos de <strong>detección, atención y derivación</strong></li>
+      <li>Indicadores de riesgo y procedimientos homogéneos</li>
+      <li>Valoración del riesgo + plan de intervención personalizado + seguimiento</li>
+      <li>Coordinación entre SS primaria y especializada</li>
+    </ul>
+  </div>
+  <div class="card l2">
+    <span class="tag">Arts. 26–27 · Formación y registros</span>
+    <ul>
+      <li>Formación inicial y continuada de profesionales sanitarios y de SS</li>
+      <li><strong>Registro de casos</strong> con datos desagregados para seguimiento y evaluación</li>
+      <li>Coordinación con el Observatorio Navarro de la VG</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TÍTULO V -->
+<h2>Título V · Arts. 28–39 · Recursos y servicios de atención y recuperación</h2>
+
+<h3>Principios de la atención (art. 29)</h3>
+<div class="grid" style="margin-bottom:12px">
+  <div class="card l2">
+    <span class="tag">5 principios rectores</span>
+    <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:4px">
+      <span class="pill">Accesibilidad universal</span>
+      <span class="pill">Gratuidad ★</span>
+      <span class="pill">Confidencialidad</span>
+      <span class="pill">Atención integral</span>
+      <span class="pill">Coordinación interinstitucional</span>
+    </div>
+    <div class="note n-warn">⚠ La GRATUIDAD de los servicios de la red es el dato más preguntado del art. 29.</div>
+  </div>
+  <div class="card l2">
+    <span class="tag">4 dimensiones de la atención integral (art. 28)</span>
+    <ul>
+      <li>Información y orientación sobre derechos y recursos</li>
+      <li>Atención a la <strong>salud física y mental</strong></li>
+      <li>Atención a necesidades económicas, laborales, de vivienda, educativas y sociales</li>
+      <li><strong>Alojamiento temporal seguro</strong> cuando proceda</li>
+    </ul>
+  </div>
+</div>
+
+<h3>Red de acogida · 3 niveles ★★★</h3>
+<div class="flow">
+  <div class="step">
+    <div class="num">1</div>
+    <h4>CENTROS DE EMERGENCIA</h4>
+    <p>Acogida <strong>urgente e inmediata</strong>. Estancia <strong>breve</strong> hasta adopción de medidas de protección e itinerario.</p>
+  </div>
+  <div class="step">
+    <div class="num">2</div>
+    <h4>CASAS DE ACOGIDA</h4>
+    <p>Acogida a <strong>medio plazo</strong> para mujeres y sus hijos/as. Proceso de recuperación con apoyo especializado.</p>
+  </div>
+  <div class="step">
+    <div class="num">3</div>
+    <h4>PISOS TUTELADOS O DE TRANSICIÓN</h4>
+    <p>Proceso <strong>avanzado de recuperación</strong>, mayor autonomía, antes de acceder a vivienda normalizada.</p>
+  </div>
+</div>
+<div class="note n-ok">💡 Orden de menor a mayor autonomía: EMERGENCIA → ACOGIDA → PISOS. El examen los desordena o asigna estancias largas a los centros de emergencia → FALSO.</div>
+
+<!-- TÍTULO IX -->
+<h2>Título IX · Arts. 64–66 · Reparación</h2>
+<div class="grid">
+  <div class="card l3">
+    <span class="tag">2 dimensiones ★★★</span>
+    <p><strong>INDIVIDUAL:</strong> poner los medios para la completa recuperación de cada víctima (física, psicológica, social, económica).</p>
+    <p><strong>COLECTIVA:</strong> reconocimientos y homenajes públicos a las víctimas, especialmente a las víctimas <strong>mortales</strong>.</p>
+  </div>
+  <div class="card l3">
+    <span class="tag">Art. 64 · Reparación integral · 5 medidas ★★★</span>
+    <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:4px">
+      <span class="pill">Restitución</span>
+      <span class="pill">Indemnización</span>
+      <span class="pill">Rehabilitación</span>
+      <span class="pill">Satisfacción</span>
+      <span class="pill">Garantías de no repetición</span>
+    </div>
+    <div class="note n-warn">⚠ Las 5 medidas provienen del Derecho internacional de los DDHH. El examen omite una o añade una falsa.</div>
+  </div>
+  <div class="card l3">
+    <span class="tag">Art. 65 · Víctimas mortales</span>
+    <p>Las AAPP navarras realizarán <strong>actos de reconocimiento público</strong> en memoria de las mujeres que hayan perdido la vida como consecuencia de la VG.</p>
+    <p>Homenaje institucional <strong>específico</strong> para las víctimas mortales.</p>
+  </div>
+  <div class="card l3">
+    <span class="tag">Art. 66 · Actuaciones de reparación del daño</span>
+    <ul>
+      <li>Atención psicológica especializada y continuada</li>
+      <li>Acceso <strong>prioritario</strong> a empleo, vivienda y formación</li>
+      <li>Indemnizaciones económicas complementarias a las de normativa estatal</li>
+      <li>Asistencia jurídica especializada para exigir responsabilidades</li>
+    </ul>
+  </div>
+</div>
+
+<!-- LF 3/2018 -->
+<h2>Ley Foral 3/2018 · Modificaciones</h2>
+<div class="grid">
+  <div class="card l5">
+    <span class="tag">Modificación 1 · Art. 3.2.e) ★★★</span>
+    <p>Nueva definición de <strong>prostitución y/o explotación sexual</strong>:</p>
+    <p>Incluye la obtención de beneficios con la explotación de la prostitución ajena <strong>"AUN CON SU CONSENTIMIENTO"</strong>.</p>
+    <div class="note n-err">★ "Aun con su consentimiento" = postura abolicionista. El examen pregunta exactamente qué añadió la LF 3/2018.</div>
+  </div>
+  <div class="card l5">
+    <span class="tag">Modificación 2 · Art. 18 apds. 3 y 4 ★★</span>
+    <p>Las AAPP de Navarra <strong>NO insertarán publicidad institucional</strong> en medios privados con anuncios de prostitución o contenidos vejatorios.</p>
+    <p>Las AAPP de Navarra <strong>NO aceptarán solicitudes de subvenciones</strong> de esos mismos medios.</p>
+  </div>
+</div>
+
+<!-- COMPARATIVA LF 14/2015 vs LO 1/2004 -->
+<h2>Comparativa LF 14/2015 vs. LO 1/2004</h2>
+<div class="tw">
+  <table>
+    <thead><tr><th>Aspecto</th><th>LO 1/2004 (estatal)</th><th>LF 14/2015 (navarra)</th></tr></thead>
+    <tbody>
+      <tr><td>Tipo de violencia</td><td>Solo pareja o expareja sentimental</td><td>8 manifestaciones (pareja, sexual, feminicidio, trata, prostitución, matrimonio forzado, mutilación, otras)</td></tr>
+      <tr><td>Ámbito territorial</td><td>Todo el territorio nacional</td><td>Mujeres que vivan, trabajen o estén circunstancialmente en Navarra</td></tr>
+      <tr><td>Medios de acreditación</td><td>2-3 (orden protección + informe Fiscal + otros genéricos)</td><td>8 medios específicos (incluyendo SS, acogida, Inspección Trabajo, acta policial trata)</td></tr>
+      <tr><td>Definición de "superviviente"</td><td>No existe</td><td>Art. 5: víctima que ha iniciado proceso de recuperación</td></tr>
+      <tr><td>Mediación</td><td>No la regula específicamente</td><td>EXPRESAMENTE PROHIBIDA (art. 6.c)</td></tr>
+      <tr><td>Reparación colectiva</td><td>No contemplada</td><td>Reconocimientos y homenajes públicos a víctimas mortales (Título IX)</td></tr>
+      <tr><td>Órgano de seguimiento</td><td>Observatorio Estatal de la VG</td><td>Observatorio <strong>Navarro</strong> de la Violencia contra las Mujeres</td></tr>
+      <tr><td>Marco internacional</td><td>CEDAW 1979, Beijing 1995, ONU 1993</td><td>Convenio de Estambul (vigente en España desde 01/08/2014)</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- TRAMPAS -->
+<h2>Trampas del examen</h2>
+<div class="grid">
+  <div class="card l5">
+    <h3>Trampa 1</h3>
+    <p><strong>Falso:</strong> la LF 14/2015 requiere residencia permanente en Navarra.<br><strong>Correcto:</strong> basta vivir, trabajar o estar <strong>circunstancialmente</strong> en Navarra.</p>
+  </div>
+  <div class="card l5">
+    <h3>Trampa 2</h3>
+    <p><strong>Falso:</strong> la LF 14/2015 limita la VG a pareja/expareja.<br><strong>Correcto:</strong> incluye <strong>8 manifestaciones</strong>, vida pública y privada.</p>
+  </div>
+  <div class="card l5">
+    <h3>Trampa 3</h3>
+    <p><strong>Falso:</strong> la mediación es válida en casos leves de VG.<br><strong>Correcto:</strong> la mediación está <strong>EXPRESAMENTE PROHIBIDA</strong> (art. 6.c) sin excepciones.</p>
+  </div>
+  <div class="card l5">
+    <h3>Trampa 4</h3>
+    <p><strong>Falso:</strong> la LF 3/2018 entró en vigor 1 mes tras su publicación.<br><strong>Correcto:</strong> entró en vigor el <strong>DÍA SIGUIENTE</strong> al BON (04/05/2018).</p>
+  </div>
+  <div class="card l5">
+    <h3>Trampa 5</h3>
+    <p><strong>Falso:</strong> la explotación sexual solo es VG sin consentimiento.<br><strong>Correcto:</strong> la LF 3/2018 añade <strong>"AUN CON SU CONSENTIMIENTO"</strong>.</p>
+  </div>
+  <div class="card l5">
+    <h3>Trampa 6</h3>
+    <p><strong>Falso:</strong> los centros de emergencia son para estancias prolongadas.<br><strong>Correcto:</strong> son de acogida <strong>urgente y breve</strong>. Las prolongadas son las <strong>casas de acogida</strong>.</p>
+  </div>
+  <div class="card l5">
+    <h3>Trampa 7</h3>
+    <p><strong>Falso:</strong> la reparación del Título IX solo tiene dimensión individual.<br><strong>Correcto:</strong> tiene dimensión <strong>individual y colectiva</strong> (homenajes a víctimas mortales).</p>
+  </div>
+  <div class="card l5">
+    <h3>Trampa 8</h3>
+    <p><strong>Falso:</strong> los servicios de la red de atención tienen coste.<br><strong>Correcto:</strong> son <strong>GRATUITOS</strong> para las víctimas (principio de gratuidad, art. 29).</p>
+  </div>
+</div>
+
+</body>
+</html>

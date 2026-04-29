@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 36 · HTML 1 · Texto explicativo · LF 14/2015 y LF 3/2018</title>
+<style>
+:root{--bg:#f0fdf4;--surface:#fff;--s2:#f0fdf4;--border:#86efac;--text:#14532d;--muted:#16a34a;--p:#15803d;--pl:#22c55e;--sh:0 2px 10px rgba(21,128,61,.09)}
+[data-theme="dark"]{--bg:#020d06;--surface:#051a0c;--s2:#0a2e14;--border:#166534;--text:#bbf7d0;--muted:#86efac;--p:#86efac;--pl:#bbf7d0;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:14px;line-height:1.75;background:var(--bg);color:var(--text);padding:24px}
+.hdr{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 22px;margin-bottom:20px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:1rem;color:var(--p)}.hdr p{font-size:.73rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--border);background:var(--s2);color:var(--text);padding:5px 14px;border-radius:999px;font-size:.73rem}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:18px 22px;box-shadow:var(--sh);margin-bottom:14px}
+h2{font-size:.92rem;font-weight:800;color:#fff;background:var(--p);padding:8px 16px;border-radius:7px;margin:22px 0 11px}
+h3{font-size:.84rem;font-weight:700;color:var(--p);margin:14px 0 6px;border-bottom:1px solid var(--border);padding-bottom:4px}
+p{margin-bottom:10px;font-size:.84rem}
+ul,ol{padding-left:18px;margin:6px 0 10px}li{margin-bottom:4px;font-size:.83rem}
+strong{color:var(--p)}
+.note{padding:9px 14px;border-radius:0 8px 8px 0;font-size:.78rem;margin:9px 0;border-left:4px solid}
+.nw{background:#fef9c3;border-color:#ca8a04;color:#713f12}
+.nr{background:#fff0f0;border-color:#dc2626;color:#7f1d1d}
+.ng{background:#f0fdf4;border-color:#16a34a;color:#14532d}
+[data-theme="dark"] .nw{background:#422006;color:#fde68a}
+[data-theme="dark"] .nr{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .ng{background:#020d06;color:#86efac}
+table{width:100%;border-collapse:collapse;margin:10px 0}
+th{background:var(--s2);color:var(--muted);font-size:.68rem;text-transform:uppercase;padding:7px 10px;text-align:left}
+td{padding:7px 10px;border-bottom:1px solid var(--s2);font-size:.8rem;vertical-align:top}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 36 · HTML 1 · Texto explicativo y desarrollo narrativo para comprensión y estudio</h1>
+    <p>Ley Foral 14/2015, de 10 de abril, para actuar contra la violencia hacia las mujeres · Títulos I, IV, V y IX + Ley Foral 3/2018, de 19 de abril (modificación)</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<h2>1. Identificación y contexto</h2>
+<div class="card">
+  <h3>1.1 Normas del tema</h3>
+  <table>
+    <thead><tr><th>Norma</th><th>Fecha</th><th>Publicación</th><th>Entrada en vigor</th></tr></thead>
+    <tbody>
+      <tr><td>Ley Foral 14/2015, de 10 de abril, para actuar contra la violencia hacia las mujeres</td><td>10/04/2015</td><td>BON núm. 71, de 15 de abril de 2015</td><td>1 mes tras publicación: 16 de mayo de 2015</td></tr>
+      <tr><td>Ley Foral 3/2018, de 19 de abril, para la modificación de la Ley Foral 14/2015</td><td>19/04/2018</td><td>BON núm. 84, de 3 de mayo de 2018</td><td>Día siguiente a su publicación en el BON: 4 de mayo de 2018</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="card">
+  <h3>1.2 Por qué nace la LF 14/2015</h3>
+  <p>En 2002 entró en vigor en Navarra la <strong>Ley Foral 22/2002, de 2 de julio</strong>, para la adopción de medidas integrales contra la violencia sexista, una de las primeras leyes específicas contra la VG en España. Tras más de once años de vigencia, el tiempo transcurrido y la ratificación por España del <strong>Convenio de Estambul (11 de mayo de 2011, en vigor en España desde el 1 de agosto de 2014)</strong> hicieron necesaria una actualización normativa.</p>
+  <p>El Convenio de Estambul obliga a los firmantes a adaptar su legislación, reconociendo la violencia contra las mujeres como violación de los derechos humanos y discriminación, y estableciendo la responsabilidad del Estado si no responde adecuadamente. Este es el motor de la LF 14/2015.</p>
+  <p>La LF 14/2015 amplía el ámbito respecto a la LO 1/2004: mientras la norma estatal circunscribe la VG al ámbito de la pareja o expareja, la LF 14/2015 incluye <strong>todas las manifestaciones de la violencia contra las mujeres</strong> (feminicidio, trata, explotación sexual, matrimonio forzado, mutilación genital…) con independencia del ámbito donde se produzcan (vida pública o privada).</p>
+</div>
+<div class="card">
+  <h3>1.3 Estructura de la LF 14/2015</h3>
+  <table>
+    <thead><tr><th>Título</th><th>Denominación</th><th>Arts.</th></tr></thead>
+    <tbody>
+      <tr><td>I</td><td>Disposiciones generales</td><td>1–6</td></tr>
+      <tr><td>II</td><td>Investigación y recogida de información</td><td>7–8</td></tr>
+      <tr><td>III</td><td>Prevención y sensibilización</td><td>9–21</td></tr>
+      <tr><td>IV</td><td>Detección y atención de la violencia contra las mujeres</td><td>22–27</td></tr>
+      <tr><td>V</td><td>Recursos y servicios de atención y recuperación</td><td>28–39</td></tr>
+      <tr><td>VI</td><td>Inserción laboral, autonomía económica y vivienda</td><td>40–50</td></tr>
+      <tr><td>VII</td><td>Atención policial y protección efectiva</td><td>51–57</td></tr>
+      <tr><td>VIII</td><td>Asistencia jurídica especializada y acceso a la justicia</td><td>58–63</td></tr>
+      <tr><td>IX</td><td>Reparación</td><td>64–66</td></tr>
+      <tr><td>X</td><td>Garantías de aplicación</td><td>67–72</td></tr>
+    </tbody>
+  </table>
+  <div class="note ng">💡 Estructura completa: 10 Títulos + 2 D.A. + 1 D. Derogatoria + 2 D.F.</div>
+</div>
+
+<h2>2. Título I — Disposiciones generales (arts. 1–6)</h2>
+<div class="card">
+  <h3>Art. 1 — Objeto</h3>
+  <p>La LF 14/2015 tiene como objeto la <strong>actuación en la Comunidad Foral de Navarra frente a la violencia contra las mujeres o violencia de género</strong>, a través de la adopción de medidas integrales para:</p>
+  <ul>
+    <li>La <strong>investigación</strong> y recogida de información</li>
+    <li>La <strong>prevención y sensibilización</strong></li>
+    <li>La <strong>detección</strong></li>
+    <li>La <strong>atención integral</strong></li>
+    <li>La <strong>protección</strong></li>
+    <li>El <strong>acceso a la justicia</strong></li>
+    <li>La <strong>reparación</strong></li>
+  </ul>
+  <p>…a las mujeres que la sufren y, en su caso, a sus <strong>hijos e hijas</strong>.</p>
+  <p>La Administración de la Comunidad Foral garantizará la asistencia de <strong>intérprete</strong> a mujeres con discapacidades sensoriales y a mujeres extranjeras que desconozcan el idioma, en un plazo de tiempo razonable, en todas las fases del procedimiento.</p>
+</div>
+<div class="card">
+  <h3>Art. 2 — Ámbito de aplicación</h3>
+  <p>Las medidas son de aplicación a:</p>
+  <ul>
+    <li>Todas las mujeres que <strong>vivan o trabajen en la Comunidad Foral de Navarra</strong> y que se encuentren en situación de violencia de género, a sus hijas e hijos menores y, en su caso, a otros familiares convivientes que sean víctimas.</li>
+    <li>Las mujeres que se hallen <strong>de forma circunstancial</strong> en la Comunidad Foral cuando suceda la situación de violencia, sin perjuicio de las facultades de otras administraciones.</li>
+  </ul>
+  <div class="note nw">⚠ El ámbito es más amplio que la LO 1/2004: no requiere que la víctima resida en Navarra de forma permanente. También basta con trabajar o estar circunstancialmente en Navarra.</div>
+</div>
+<div class="card">
+  <h3>Art. 3 — Definición y manifestaciones de la violencia contra las mujeres</h3>
+  <h3>Definición general (art. 3.1)</h3>
+  <p>Se entiende por violencia contra las mujeres la que se ejerce contra éstas <strong>por el hecho de serlo</strong> o que les afecta de forma <strong>desproporcionada como manifestación de la discriminación por motivo de género</strong> y que implique o pueda implicar daños o sufrimientos de naturaleza <strong>física, psicológica, sexual o económica</strong>, incluidas las amenazas, intimidaciones y coacciones o la privación arbitraria de la libertad, <strong>en la vida pública o privada</strong>.</p>
+  <p>Se entienden comprendidas dentro del concepto de mujeres víctimas de violencia <strong>las niñas menores de edad</strong>.</p>
+  <h3>Las 8 manifestaciones de la violencia (art. 3.2)</h3>
+  <table>
+    <thead><tr><th>Letra</th><th>Manifestación</th><th>Núcleo definitorio</th></tr></thead>
+    <tbody>
+      <tr><td>a)</td><td>Violencia en la pareja o expareja</td><td>Violencia física, psicológica, económica o sexual ejercida por el hombre que es o ha sido cónyuge o pareja, con o sin convivencia, incluida su repercusión en niños y niñas</td></tr>
+      <tr><td>b)</td><td>Violencia sexual</td><td>Agresión sexual, abuso sexual, acoso sexual en ámbito laboral o educativo, abuso en ámbito familiar, comunitario, educativo, laboral y espacio público</td></tr>
+      <tr><td>c)</td><td>Feminicidio</td><td>Homicidios en pareja o expareja + crímenes vinculados a discriminación de género: asesinato vinculado a violencia sexual, en prostitución y trata, por honor, infanticidio de niñas, muertes por dote</td></tr>
+      <tr><td>d)</td><td>Trata de mujeres y niñas</td><td>Captación, transporte, traslado, acogimiento o recepción mediante coacción, fraude o engaño, con finalidad de explotación sexual, laboral o matrimonio servil</td></tr>
+      <tr><td>e) (mod. LF 3/2018)</td><td>Prostitución y/o explotación sexual</td><td>Práctica de mantener relaciones sexuales a cambio de dinero. Obtención de beneficios con la explotación de la prostitución ajena (incluidos actos pornográficos), aun con su consentimiento</td></tr>
+      <tr><td>f)</td><td>Matrimonio a edad temprana, concertado o forzado</td><td>Matrimonio sin consentimiento libre y pleno: acuerdo ajeno a la voluntad de la mujer, celebrado bajo intimidación o violencia, o sin alcanzar la edad legal</td></tr>
+      <tr><td>g)</td><td>Mutilación genital femenina</td><td>Cualquier procedimiento que implique eliminación total o parcial de los genitales femeninos o produzca lesiones, aunque exista consentimiento</td></tr>
+      <tr><td>h)</td><td>Cualquier otra forma de violencia</td><td>La que lesione o pueda lesionar la dignidad, integridad o libertad de las mujeres, prevista en tratados internacionales, Código Penal o normativa estatal o foral</td></tr>
+    </tbody>
+  </table>
+  <h3>Los 4 tipos de daño (art. 3.3)</h3>
+  <ul>
+    <li><strong>Violencia física:</strong> cualquier acto violento contra el cuerpo, con resultado o riesgo de lesión física o daño.</li>
+    <li><strong>Violencia psicológica:</strong> cualquier conducta (verbal o no verbal) —amenazas, coacciones, humillaciones, vejaciones, exigencia de sumisión, acoso, insultos— que produzca sufrimiento, desvalorización, aislamiento o limitación de libertad.</li>
+    <li><strong>Violencia económica:</strong> privación intencionada y no justificada de recursos para el bienestar físico o psicológico de la mujer y sus hijos/as, o discriminación en la disposición de recursos compartidos en la convivencia de pareja.</li>
+    <li><strong>Violencia sexual:</strong> cualquier acto de naturaleza sexual no consentido, en el que medie violencia, intimidación, prevalencia o manipulación emocional, incluida la exhibición, la observación y la imposición de relaciones sexuales.</li>
+  </ul>
+</div>
+<div class="card">
+  <h3>Art. 4 — Víctimas y acreditación de la situación de violencia</h3>
+  <p><strong>Víctimas</strong> son quienes han sufrido las consecuencias directas o en primera persona de los actos violentos, así como los <strong>hijos e hijas que conviven en el entorno violento</strong> y que por situación de vulnerabilidad están directamente afectados.</p>
+  <p>La situación de violencia se acredita mediante cualquiera de estas <strong>8 modalidades</strong>:</p>
+  <ol type="a">
+    <li>Sentencia firme de cualquier orden jurisdiccional que declare que la mujer sufrió violencia</li>
+    <li>Orden de protección o resolución judicial con medidas cautelares en vigor</li>
+    <li>Informe del Ministerio Fiscal con indicios de violencia</li>
+    <li>Acta de la autoridad policial con indicios razonables sobre condición de víctima de trata (para casos de trata con fines de explotación sexual)</li>
+    <li>Certificación y/o informe de los servicios sociales y/o sanitarios de la Administración Pública competente</li>
+    <li>Certificación y/o informe de los servicios de acogida de la Administración Pública competente</li>
+    <li>Informe de la Inspección de Trabajo y de la Seguridad Social, en los casos de acoso sexual y por razón de sexo en el ámbito laboral</li>
+    <li>Cualquier otra que venga establecida por norma de rango legal</li>
+  </ol>
+  <div class="note nw">⚠ Dato diferenciador clave respecto a la LO 1/2004: la LF 14/2015 establece <strong>8 medios de acreditación</strong> (la LO 1/2004 solo tiene 2 medios ordinarios + otros). La ampliación incluye informes de SS, servicios de acogida e Inspección de Trabajo, adaptados a las diversas manifestaciones de la VG.</div>
+</div>
+<div class="card">
+  <h3>Art. 5 — Supervivientes</h3>
+  <p>Las <strong>supervivientes</strong> son las víctimas de violencia de género que han emprendido un proceso de recuperación a fin de superar el proceso de violencia sufrida. Esta definición formal diferencia la víctima activa en un proceso de violencia de quien ya ha iniciado el camino de recuperación.</p>
+</div>
+<div class="card">
+  <h3>Art. 6 — Principios rectores (9 principios, letras a-i)</h3>
+  <table>
+    <thead><tr><th>Letra</th><th>Principio</th><th>Clave</th></tr></thead>
+    <tbody>
+      <tr><td>a)</td><td>Respeto, protección y promoción de los derechos humanos</td><td>Toda actuación institucional y profesional se orienta a respetar, proteger y promover los DDHH de las mujeres</td></tr>
+      <tr><td>b)</td><td>Debida diligencia</td><td>La respuesta se extiende a todas las esferas: prevención + protección + asistencia + reparación + promoción de la justicia</td></tr>
+      <tr><td>c)</td><td>Enfoque de género y prohibición expresa de la mediación</td><td>La mediación entre víctima y agresor está <strong>expresamente prohibida</strong></td></tr>
+      <tr><td>d)</td><td>Prohibición de discriminación</td><td>Sin discriminación por etnia, lengua, religión, opiniones, nacionalidad, orientación sexual, identidad de género, edad, discapacidad, estado civil, estatus migrante…</td></tr>
+      <tr><td>e)</td><td>Atención a la discriminación múltiple</td><td>Especial consideración a mujeres con factores añadidos: edad, clase social, nacionalidad, etnia, discapacidad, situación administrativa…</td></tr>
+      <tr><td>f)</td><td>Respuesta integral y coordinación</td><td>La VG es multifactorial → respuesta integral y trabajo en red entre instancias</td></tr>
+      <tr><td>g)</td><td>Respeto y no revictimización</td><td>Mecanismos para evitar la victimización secundaria · garantizar la autonomía y libertad de las supervivientes</td></tr>
+      <tr><td>h)</td><td>Responsabilidad</td><td>Formación de profesionales para garantizar el ejercicio efectivo de derechos · exigencia de responsabilidades por falta de diligencia</td></tr>
+      <tr><td>i)</td><td>Participación</td><td>Fomentar la participación de las víctimas y organizaciones de mujeres en el diseño y evaluación de servicios y políticas públicas</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>3. Título IV — Detección y atención (arts. 22–27)</h2>
+<div class="card">
+  <h3>Propósito del Título IV</h3>
+  <p>El Título IV configura los <strong>servicios públicos sanitarios y de servicios sociales como recursos clave para la detección y atención</strong> de las situaciones de violencia contra las mujeres. Se articulan estrategias, protocolos, formación y registros, con la finalidad de detectar e identificar situaciones de riesgo o existencia de violencia en cualquiera de sus manifestaciones.</p>
+  <h3>Art. 22 — Detección en el ámbito sanitario</h3>
+  <p>La Administración sanitaria elaborará y pondrá en marcha <strong>estrategias de detección precoz de la violencia contra las mujeres</strong> en los servicios de atención primaria y especializada. Se incluye la formación continuada de profesionales sanitarios para la detección e intervención.</p>
+  <h3>Art. 23 — Atención sanitaria</h3>
+  <p>Los servicios sanitarios atenderán a las mujeres víctimas de violencia con protocolos específicos, garantizando atención integral con respeto a la intimidad y dignidad. Los centros sanitarios deben informar a la víctima de sus derechos y de los recursos disponibles.</p>
+  <h3>Art. 24 — Detección en los servicios sociales</h3>
+  <p>Los servicios sociales elaborarán <strong>protocolos de detección, atención y derivación</strong> de mujeres víctimas. La detección activa en los servicios sociales de atención primaria se desarrollará mediante indicadores de riesgo y procedimientos homogéneos.</p>
+  <h3>Art. 25 — Atención en los servicios sociales</h3>
+  <p>La atención en SS comprende: valoración de la situación de riesgo, asesoramiento sobre derechos y recursos, elaboración del plan de intervención personalizado y seguimiento del caso. Los SS de atención primaria y especializada actuarán coordinados.</p>
+  <h3>Art. 26 — Formación de profesionales</h3>
+  <p>Los planes y programas de formación inicial y continuada de los profesionales de los servicios sanitarios y sociales incluirán contenidos específicos sobre la violencia contra las mujeres: detección, atención, derivación y coordinación interinstitucional.</p>
+  <h3>Art. 27 — Registros de casos y coordinación</h3>
+  <p>Se establecerá un <strong>Registro de casos de violencia contra las mujeres</strong> en el ámbito sanitario y en los servicios sociales, con datos estadísticos desagregados que permitan el seguimiento de la evolución y la evaluación de las medidas. Los datos se coordinarán con los del Observatorio Navarro de la Violencia contra las Mujeres.</p>
+</div>
+
+<h2>4. Título V — Recursos y servicios de atención y recuperación (arts. 28–39)</h2>
+<div class="card">
+  <h3>4.1 Principios de la atención integral (art. 28)</h3>
+  <p>La atención integral se orienta a la <strong>completa recuperación de las mujeres</strong> que han padecido alguna de las manifestaciones de la violencia. Comprende:</p>
+  <ul>
+    <li>Información y orientación sobre derechos y recursos.</li>
+    <li>Atención a la <strong>salud física y mental</strong> para paliar las secuelas.</li>
+    <li>Atención a las necesidades económicas, laborales, de vivienda, educativas y sociales.</li>
+    <li>Alojamiento temporal seguro cuando proceda.</li>
+  </ul>
+  <h3>4.2 Principios rectores de la atención (art. 29)</h3>
+  <p>Los principios que rigen la atención en los recursos son:</p>
+  <ul>
+    <li><strong>Accesibilidad universal:</strong> sin discriminación y adaptada a las necesidades de cada mujer.</li>
+    <li><strong>Gratuidad:</strong> los servicios de la red pública son gratuitos para las víctimas.</li>
+    <li><strong>Confidencialidad:</strong> garantía de discreción de los datos de la mujer víctima.</li>
+    <li><strong>Atención integral:</strong> abordaje de todas las dimensiones del problema.</li>
+    <li><strong>Coordinación interinstitucional:</strong> trabajo en red entre recursos y administraciones.</li>
+  </ul>
+  <h3>4.3 Catálogo de recursos y servicios de la red (arts. 30–39)</h3>
+  <p>La red de atención y recuperación se integra por tres bloques:</p>
+  <table>
+    <thead><tr><th>Bloque</th><th>Recursos</th><th>Funciones principales</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Recursos generales de información y atención</strong></td><td>Servicio de información y asesoramiento · Atención telefónica 24h · Recursos de atención primaria</td><td>Primera acogida, información sobre derechos y recursos, asesoramiento jurídico inicial</td></tr>
+      <tr><td><strong>Servicios de recuperación y atención especializada</strong></td><td>Unidades de intervención especializada · Atención psicológica especializada · Equipos multidisciplinares</td><td>Atención psicológica, social y jurídica especializada; elaboración del plan de recuperación personalizado</td></tr>
+      <tr><td><strong>Red de acogida y alojamiento temporal seguro</strong></td><td>Centros de emergencia · Casas de acogida · Pisos tutelados o de transición</td><td>Alojamiento de urgencia (centros de emergencia) y estancias más prolongadas (casas de acogida y pisos) hasta la autonomía de la mujer</td></tr>
+    </tbody>
+  </table>
+  <h3>4.4 Red de acogida (arts. 35–38)</h3>
+  <p>La red de acogida está compuesta por tres tipos de recursos diferenciados por el plazo y el nivel de apoyo:</p>
+  <ul>
+    <li><strong>Centros de emergencia:</strong> acogida urgente e inmediata. Estancia breve hasta que se adopten medidas de protección y se planifique el itinerario de la mujer.</li>
+    <li><strong>Casas de acogida:</strong> acogida a medio plazo para mujeres y sus hijos/as que necesitan alejarse del entorno violento y trabajar su proceso de recuperación.</li>
+    <li><strong>Pisos tutelados o de transición:</strong> alojamiento para mujeres en proceso avanzado de recuperación, con mayor autonomía, antes de acceder a una vivienda normalizada.</li>
+  </ul>
+  <div class="note nw">⚠ Los tres niveles de la red de acogida (emergencia → casa de acogida → pisos tutelados) son un dato de examen frecuente. Su orden y denominación deben memorizarse.</div>
+</div>
+
+<h2>5. Título IX — Reparación (arts. 64–66)</h2>
+<div class="card">
+  <h3>5.1 Concepto de reparación</h3>
+  <p>El Título IX contempla el derecho a la reparación de las mujeres víctimas en dos dimensiones:</p>
+  <ul>
+    <li><strong>Dimensión individual:</strong> poner los medios necesarios para lograr la completa recuperación de cada víctima en todas sus facetas (física, psicológica, social y económica).</li>
+    <li><strong>Dimensión colectiva:</strong> reconocimientos y homenajes públicos a las víctimas, especialmente a las víctimas mortales.</li>
+  </ul>
+  <h3>Art. 64 — Derecho a la reparación</h3>
+  <p>Las mujeres víctimas de violencia y, en su caso, sus hijos e hijas tienen derecho a recibir <strong>medidas de reparación integral</strong> que incluyan la restitución, indemnización, rehabilitación, satisfacción y garantías de no repetición.</p>
+  <h3>Art. 65 — Reconocimiento público y homenaje a las víctimas mortales</h3>
+  <p>Las Administraciones de Navarra realizarán <strong>actos de reconocimiento público</strong> en memoria de las mujeres que hayan perdido la vida como consecuencia de la violencia contra las mujeres. Las víctimas mortales serán objeto de un homenaje institucional específico.</p>
+  <h3>Art. 66 — Actuaciones de reparación del daño</h3>
+  <p>La reparación del daño incluye:</p>
+  <ul>
+    <li>Atención psicológica especializada y continuada.</li>
+    <li>Acceso prioritario a recursos de empleo, vivienda y formación.</li>
+    <li>Indemnizaciones económicas complementarias a las previstas en la normativa estatal.</li>
+    <li>Acceso al servicio de asistencia jurídica especializada para exigir responsabilidades civiles y penales.</li>
+  </ul>
+</div>
+
+<h2>6. Ley Foral 3/2018, de 19 de abril — Modificación de la LF 14/2015</h2>
+<div class="card">
+  <h3>6.1 Contexto y motivación</h3>
+  <p>La LF 3/2018 responde a la necesidad de reconocer que la <strong>trata de mujeres y la prostitución</strong> están estrechamente vinculadas y que la prostitución constituye una actividad que comercia con las mujeres, vulnerando su dignidad y los derechos humanos. El preámbulo señala que la prostitución es el <strong>principal objetivo del tráfico de mujeres</strong>.</p>
+  <h3>6.2 Modificaciones introducidas (artículo único)</h3>
+  <p>La LF 3/2018 modifica la LF 14/2015 en dos aspectos:</p>
+  <table>
+    <thead><tr><th>Modificación</th><th>Precepto afectado</th><th>Contenido</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Uno</strong></td><td>Art. 3.2.e) · Definición de prostitución y/o explotación sexual</td><td>Nueva redacción: "Práctica de mantener relaciones sexuales con otras personas a cambio de dinero. Obtención de beneficios financieros o de otra índole con la explotación del ejercicio de la prostitución ajena (incluidos actos pornográficos o la producción de material pornográfico), <strong>aun con su consentimiento</strong>."</td></tr>
+      <tr><td><strong>Dos</strong></td><td>Art. 18 · Medidas en el ámbito de los medios de comunicación</td><td>Añade los apartados 3 y 4: (3) Las AAPP de Navarra <strong>no insertarán publicidad institucional</strong> en medios privados que contengan anuncios de prostitución o contenidos vejatorios. (4) Las AAPP de Navarra <strong>no aceptarán solicitudes de subvenciones</strong> de dichos medios.</td></tr>
+    </tbody>
+  </table>
+  <h3>6.3 Elemento clave de la modificación</h3>
+  <p>El añadido <strong>"aun con su consentimiento"</strong> en la definición de prostitución es el elemento diferenciador: la explotación sexual es violencia contra las mujeres aunque la mujer haya consentido en la actividad. Esta es la postura abolicionista que adopta la norma navarra. El examen pregunta qué añadió la LF 3/2018 y cuál es la clave jurídica.</p>
+  <h3>6.4 Entrada en vigor de la LF 3/2018</h3>
+  <p>La LF 3/2018 entró en vigor al <strong>día siguiente de su publicación en el BON</strong> (núm. 84, de 3 de mayo de 2018), es decir, el <strong>4 de mayo de 2018</strong>. Diferencia importante respecto a la LF 14/2015, que tardó 1 mes en entrar en vigor.</p>
+</div>
+</body>
+</html>
