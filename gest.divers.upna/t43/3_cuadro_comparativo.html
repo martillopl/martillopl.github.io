@@ -1,0 +1,356 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 43 · HTML 3 · Cuadro comparativo y tablas operativas · Lenguaje inclusivo UPNA</title>
+<style>
+:root{--bg:#f0f9ff;--card:#fff;--s2:#f0f9ff;--line:#7dd3fc;--text:#0c4a6e;--muted:#0284c7;--p:#075985;--warn:#d97706;--red:#dc2626;--grn:#059669;--vio:#7c3aed;--teal:#0d9488;--sh:0 2px 10px rgba(7,89,133,.09)}
+[data-theme="dark"]{--bg:#020c1a;--card:#0a1e35;--s2:#0e2a45;--line:#075985;--text:#bae6fd;--muted:#38bdf8;--p:#38bdf8;--warn:#fbbf24;--red:#fca5a5;--grn:#6ee7b7;--vio:#c4b5fd;--teal:#5eead4;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.5;background:var(--bg);color:var(--text);padding:22px}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.97rem;color:var(--p)}.hdr p{font-size:.74rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.72rem}
+h2{font-size:.87rem;font-weight:800;color:#fff;background:var(--p);padding:8px 15px;border-radius:7px;margin:22px 0 10px;display:inline-block}
+.tw{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:var(--sh);overflow-x:auto;margin-bottom:12px}
+table{width:100%;border-collapse:collapse}
+th{background:var(--s2);color:var(--muted);font-size:.67rem;text-transform:uppercase;letter-spacing:.05em;padding:8px 10px;text-align:left}
+td{padding:7px 10px;border-bottom:1px solid var(--s2);font-size:.78rem;vertical-align:top}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+.badge{display:inline-block;padding:3px 9px;border-radius:999px;font-size:.63rem;font-weight:700;border:1px solid transparent;white-space:nowrap;margin:1px}
+.b-ok{background:rgba(5,150,105,.12);color:#059669;border-color:rgba(5,150,105,.3)}
+.b-err{background:rgba(220,38,38,.12);color:#dc2626;border-color:rgba(220,38,38,.3)}
+.b-warn{background:rgba(217,119,6,.12);color:var(--warn);border-color:rgba(217,119,6,.3)}
+.b-vio{background:rgba(124,58,237,.12);color:var(--vio);border-color:rgba(124,58,237,.3)}
+.b-sky{background:rgba(2,132,199,.12);color:var(--muted);border-color:rgba(2,132,199,.3)}
+.b-teal{background:rgba(13,148,136,.12);color:var(--teal);border-color:rgba(13,148,136,.3)}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.75rem;border-left:4px solid;margin:8px 0}
+.n-ok{background:rgba(5,150,105,.07);border-color:#059669;color:#065f46}
+.n-warn{background:#fef3c7;border-color:#d97706;color:#78350f}
+.n-err{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .n-warn{background:#451a03;color:#fde68a}
+[data-theme="dark"] .n-err{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .n-ok{background:rgba(110,231,183,.07);color:#6ee7b7}
+strong{color:var(--p)}
+code{background:var(--s2);padding:1px 6px;border-radius:4px;font-size:.75rem;font-family:monospace}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 43 · HTML 3 · Cuadro comparativo y tablas operativas para examen</h1>
+    <p>El uso inclusivo y no sexista del lenguaje en la UPNA. Estrategias lingüísticas: formas concretas, desdoblamientos, formas genéricas y otros recursos.</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- T1 IDENTIFICACIÓN -->
+<h2>T1 · Identificación del instrumento</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Campo</th><th>Dato</th></tr></thead>
+  <tbody>
+    <tr><td>Tipo de instrumento</td><td><strong>Directrices y recomendaciones de política lingüística institucional</strong> <span class="badge b-err">No reglamento, no ley, no decreto</span></td></tr>
+    <tr><td>Institución</td><td>Universidad Pública de Navarra (<strong>UPNA</strong>)</td></tr>
+    <tr><td>Responsable</td><td><strong>Unidad de Igualdad de la UPNA</strong></td></tr>
+    <tr><td>Instrumento específico</td><td><strong>Guía de Lenguaje Inclusivo y No Sexista de la UPNA</strong> (elaborada y difundida por la Unidad de Igualdad)</td></tr>
+    <tr><td>Marco plan</td><td><strong>II Plan de Igualdad entre Mujeres y Hombres de la UPNA 2022-2027</strong> · Eje de Comunicación e Imagen Institucional · 86 acciones · 138.000 €/año</td></tr>
+    <tr><td>Objetivo general</td><td>Promover una comunicación <strong>libre de sexismo</strong> que visibilice a mujeres y hombres en condiciones de igualdad y contribuya a la igualdad real y efectiva</td></tr>
+    <tr><td>Principio fundamental</td><td>El lenguaje <strong>NO es neutro</strong>: las palabras construyen realidades sociales, visibilizan o invisibilizan a las personas</td></tr>
+    <tr><td>Cuatro estrategias ★★★</td><td>Formas concretas · Desdoblamientos · Formas genéricas · Otros recursos <span class="badge b-err">No solo desdoblamientos</span></td></tr>
+    <tr><td>Estrategia más recomendada</td><td><strong>Formas genéricas</strong> (colectivos y abstractos): economía lingüística + inclusividad total <span class="badge b-warn">No el desdoblamiento</span></td></tr>
+    <tr><td>Ámbito de comunicación</td><td>Escrita · oral · iconográfica · digital <span class="badge b-err">No solo escrita</span></td></tr>
+    <tr><td>Destinatarios</td><td>PDI + PAS + alumnado de la UPNA · comunicación corporativa · convocatorias · formularios · webs · publicaciones académicas</td></tr>
+    <tr><td>Referente suprainstitucional</td><td>Recomendaciones de la <strong>CRUE</strong> para el uso adecuado del lenguaje en las universidades</td></tr>
+    <tr><td>Norma estatal</td><td><strong>LO 3/2007</strong>: art. 4 (transversalidad de género) + art. 14.11 (lenguaje no sexista en el ámbito administrativo)</td></tr>
+    <tr><td>Norma foral</td><td><strong>LF 17/2019</strong> de Igualdad entre Mujeres y Hombres de Navarra: obliga a las administraciones públicas navarras</td></tr>
+  </tbody>
+</table>
+<div class="note n-err">⚠ Trampas de identificación: instrumento = <strong>directrices/recomendaciones</strong> (no ley) · estrategia más recomendada = <strong>formas genéricas</strong> (no desdoblamiento) · ámbito = <strong>cuatro</strong> dimensiones (no solo escrito).</div>
+</div>
+
+<!-- T2 TIPOS DE SEXISMO -->
+<h2>T2 · Tipos de sexismo lingüístico</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Tipo</th><th>Definición</th><th>Manifestaciones concretas</th><th>Ejemplo de examen</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>Sexismo léxico ★★★</strong></td>
+      <td>Sexismo en las palabras: términos que invisibilizan, jerarquizan o degradan en función del género</td>
+      <td>
+        • <strong>Masculino genérico:</strong> "los alumnos" para referirse a todos<br>
+        • <strong>Asimetría en fórmulas:</strong> "Sr. Director" / "Señorita López" (uno por cargo, otro por estado civil)<br>
+        • <strong>Masculino para cargos:</strong> "el rector", "el presidente" como si fueran exclusivamente masculinos<br>
+        • <strong>Derivaciones degradantes:</strong> gobernador/gobernanta (misma raíz, connotaciones distintas)<br>
+        • <strong>Duales aparentes:</strong> "hombre público" (honorable) / "mujer pública" (insulto)
+      </td>
+      <td>"El masculino genérico es neutro" → <span class="badge b-err">FALSO: invisibiliza a las mujeres</span></td>
+    </tr>
+    <tr>
+      <td><strong>Sexismo estructural ★★★</strong></td>
+      <td>Sexismo en las estructuras gramaticales y en el orden de aparición de los géneros</td>
+      <td>
+        • <strong>Orden siempre masculino primero</strong> en enumeraciones<br>
+        • <strong>Salto semántico ★★★:</strong> término aparentemente genérico que se revela exclusivamente masculino en el contexto<br>
+        &nbsp;&nbsp;<em>Ej.: "el seguro cubre a los afiliados y a sus mujeres"</em> → "afiliados" resulta ser solo hombres<br>
+        • <strong>Representación desproporcionada:</strong> solo imágenes masculinas en publicaciones, iconos, ilustraciones
+      </td>
+      <td>"El salto semántico es un error gramatical" → <span class="badge b-err">FALSO: es sexismo estructural</span></td>
+    </tr>
+  </tbody>
+</table>
+<div class="note n-warn">⚠ El <strong>SALTO SEMÁNTICO</strong> es el concepto más específico del tipo estructural y uno de los más preguntados: masculino aparentemente genérico que al avanzar en el texto se revela como exclusivamente masculino.</div>
+</div>
+
+<!-- T3 CUADRO COMPARATIVO DE LAS 4 ESTRATEGIAS -->
+<h2>T3 · Cuadro comparativo de las 4 estrategias lingüísticas ★★★</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Estrategia</th><th>Tipo de actuación</th><th>Herramientas</th><th>Ejemplo concreto</th><th>Recomendación</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>1. Formas concretas 🔵</strong></td>
+      <td>Visibilización directa: nombrar explícitamente a ambos sexos</td>
+      <td>
+        • Doble forma completa (femenino y masculino)<br>
+        • Alternancia de orden en el texto
+      </td>
+      <td>"las alumnas y los alumnos" · "estimadas compañeras y estimados compañeros"</td>
+      <td><span class="badge b-ok">Recomendada</span> para saludos, encabezados y momentos de alta visibilización</td>
+    </tr>
+    <tr>
+      <td><strong>2. Desdoblamientos 🟣</strong></td>
+      <td>Duplicación de formas femenina y masculina con reglas precisas de uso</td>
+      <td>
+        • Doble sustantivo completo<br>
+        • Barra / ✓<br>
+        • Paréntesis ( ) ✓<br>
+        • Arroba @ ✗<br>
+        • Morfema -e/-x ✗
+      </td>
+      <td>director/a · el/la tutor/a · "los alumnos y las alumnas"</td>
+      <td><span class="badge b-warn">Uso ocasional</span> solo el sustantivo; concordar por proximidad; alternar orden</td>
+    </tr>
+    <tr>
+      <td><strong>3. Formas genéricas 🟢 ★★★</strong></td>
+      <td>Neutralización: términos sin marca de género que incluyen a todos</td>
+      <td>
+        • Sustantivos colectivos<br>
+        • Sustantivos abstractos<br>
+        • Sustantivos epicenos<br>
+        • Adjetivos sin marca de género
+      </td>
+      <td>alumnado · la dirección · quien · cada estudiante</td>
+      <td><span class="badge b-ok">MÁS RECOMENDADA</span> Economía lingüística + inclusividad total</td>
+    </tr>
+    <tr>
+      <td><strong>4. Otros recursos 🩵</strong></td>
+      <td>Reformulación estructural de la frase para evitar el género</td>
+      <td>
+        • Se impersonal<br>
+        • Imperativo<br>
+        • 2ª persona (tú/usted)<br>
+        • 1ª persona plural<br>
+        • Perífrasis<br>
+        • Quien / quienes
+      </td>
+      <td>"Se solicita…" · "Presente su documentación" · "Si desea participar…"</td>
+      <td><span class="badge b-ok">Muy recomendada</span> para textos largos, evitando repeticiones</td>
+    </tr>
+  </tbody>
+</table>
+<div class="note n-ok">✓ La estrategia <strong>MÁS RECOMENDADA</strong> son las formas genéricas. El examen puede afirmar que la más recomendada es el desdoblamiento → <strong>FALSO</strong>: los colectivos y abstractos son más eficientes por economía lingüística.</div>
+</div>
+
+<!-- T4 FORMAS ABREVIADAS -->
+<h2>T4 · Formas abreviadas de desdoblamiento: cuáles sí y cuáles no</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Forma</th><th>Ejemplo</th><th>¿Recomendada?</th><th>Motivo</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Doble forma completa</strong></td><td>"los alumnos y las alumnas"</td><td><span class="badge b-ok">✓ Sí</span></td><td>Forma más clara y completa; recomendada para encabezados y saludos</td></tr>
+    <tr><td><strong>Barra oblicua /</strong></td><td>director/a · el/la tutor/a</td><td><span class="badge b-ok">✓ Sí</span></td><td>Aceptada en documentos administrativos; económica y pronunciable</td></tr>
+    <tr><td><strong>Paréntesis ( )</strong></td><td>director(a) · alumno(a)</td><td><span class="badge b-ok">✓ Sí</span></td><td>Aceptada; menos frecuente que la barra</td></tr>
+    <tr><td><strong>Arroba @</strong></td><td>alumn@s · compañer@s</td><td><span class="badge b-err">✗ NO</span></td><td>Impronunciable en oral; no es un signo lingüístico reconocido por la RAE; no válida en documentos oficiales</td></tr>
+    <tr><td><strong>Morfema -e</strong></td><td>todes · les alumnxes</td><td><span class="badge b-err">✗ NO en docs. admin.</span></td><td>Fenómeno sociolingüístico en debate social; no aceptada por la RAE; no es recomendación oficial de la UPNA para documentos administrativos</td></tr>
+    <tr><td><strong>Morfema -x</strong></td><td>alumnxs · Latinx</td><td><span class="badge b-err">✗ NO en docs. admin.</span></td><td>Igual que la -e; no aceptada por la RAE; misma posición institucional</td></tr>
+  </tbody>
+</table>
+<div class="note n-err">⚠ El examen puede presentar la arroba o el morfema -e como "formas recomendadas por la UPNA" → <strong>FALSO</strong>. Solo la barra (/) y el paréntesis son formas recomendadas en documentos administrativos y académicos.</div>
+</div>
+
+<!-- T5 FORMAS GENÉRICAS -->
+<h2>T5 · Formas genéricas: tabla completa de sustitución ★★★</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Tipo de forma genérica</th><th>En lugar de…</th><th>Usar…</th><th>Dato de examen</th></tr></thead>
+  <tbody>
+    <tr><td rowspan="6"><strong>Sustantivos colectivos ★★★</strong><br><em>Designan un conjunto sin marca de género</em></td>
+        <td>los alumnos / las alumnas</td><td><strong>el alumnado</strong></td><td rowspan="6">Son el recurso estrella: incluyen a todos con una sola forma · <span class="badge b-err">NO son desdoblamientos</span></td></tr>
+    <tr><td>los profesores / las profesoras</td><td><strong>el profesorado</strong></td></tr>
+    <tr><td>los ciudadanos / las ciudadanas</td><td><strong>la ciudadanía</strong></td></tr>
+    <tr><td>los trabajadores / las trabajadoras</td><td><strong>el personal</strong></td></tr>
+    <tr><td>los investigadores</td><td><strong>el personal investigador</strong></td></tr>
+    <tr><td>los estudiantes</td><td><strong>el estudiantado</strong></td></tr>
+    <tr><td rowspan="6"><strong>Sustantivos abstractos (nominalizaciones) ★★★</strong><br><em>Nombre del cargo/función en forma abstracta</em></td>
+        <td>el director / la directora</td><td><strong>la dirección</strong></td><td rowspan="6"><span class="badge b-err">NO son desdoblamientos</span>: son sustituciones por el nombre abstracto del cargo</td></tr>
+    <tr><td>el presidente / la presidenta</td><td><strong>la presidencia</strong></td></tr>
+    <tr><td>el coordinador / la coordinadora</td><td><strong>la coordinación</strong></td></tr>
+    <tr><td>el autor / la autora</td><td><strong>la autoría</strong></td></tr>
+    <tr><td>el rector / la rectora</td><td><strong>el rectorado</strong></td></tr>
+    <tr><td>el representante / la representante</td><td><strong>la representación</strong></td></tr>
+    <tr><td rowspan="4"><strong>Sustantivos epicenos ★★★</strong><br><em>Una sola forma; abarca ambos sexos</em></td>
+        <td>el individuo / el sujeto</td><td><strong>la persona</strong></td><td rowspan="4">Priorizar los epicenos de género <strong>femenino</strong> (la persona, la víctima) porque al concordar en femenino refuerza la inclusividad</td></tr>
+    <tr><td>el testigo</td><td><strong>la persona testigo</strong></td></tr>
+    <tr><td>el que lo solicite</td><td><strong>quien lo solicite</strong></td></tr>
+    <tr><td>todo aquel que</td><td><strong>cualquier persona que</strong></td></tr>
+    <tr><td rowspan="3"><strong>Adjetivos y determinantes sin marca ★★</strong></td>
+        <td>todos los / todas las</td><td><strong>cada</strong></td><td rowspan="3">Evitan la necesidad de duplicar el determinante</td></tr>
+    <tr><td>todo aquel</td><td><strong>cualquier</strong></td></tr>
+    <tr><td>distintos y distintas</td><td><strong>diferente</strong></td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T6 REGLAS DEL DESDOBLAMIENTO -->
+<h2>T6 · Las 5 reglas del desdoblamiento ★★★</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>#</th><th>Regla</th><th>Qué ocurre si no se respeta</th><th>Trampa de examen</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>1</strong></td>
+      <td><strong>Uso OCASIONAL</strong>, no sistemático en cada palabra del texto</td>
+      <td>Texto confuso, pesado y difícil de leer: <em>"Los/las nuevos/as becarios/as seleccionados/as deberán…"</em></td>
+      <td>"El desdoblamiento debe usarse en todas las palabras" → <span class="badge b-err">FALSO: uso ocasional</span></td>
+    </tr>
+    <tr>
+      <td><strong>2</strong></td>
+      <td>Solo desdoblar el <strong>SUSTANTIVO PRINCIPAL</strong>; el resto concuerda por proximidad</td>
+      <td>Frases agramaticales o extremadamente pesadas si se desdoblan artículos, adjetivos, participios y pronombres simultáneamente</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><strong>3</strong></td>
+      <td><strong>ALTERNAR EL ORDEN</strong> en el texto (femenino primero unas veces, masculino otras)</td>
+      <td>Si el masculino aparece siempre primero se refuerza la jerarquía de género en el lenguaje</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><strong>4</strong></td>
+      <td>En textos largos, <strong>COMBINAR</strong> el desdoblamiento con formas genéricas</td>
+      <td>Textos redundantes si se usa solo el desdoblamiento en documentos de varios folios</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><strong>5</strong></td>
+      <td>Usar solo <strong>barra /</strong> o <strong>paréntesis</strong> en las formas abreviadas; <strong>nunca la arroba ni la -e</strong></td>
+      <td>La arroba es impronunciable en oral; la -e/-x no está reconocida por la RAE</td>
+      <td>"La arroba es una forma recomendada" → <span class="badge b-err">FALSO</span></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T7 OTROS RECURSOS -->
+<h2>T7 · Otros recursos lingüísticos: tabla de sustitución operativa ★★★</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Recurso</th><th>Frase sexista o con masculino genérico</th><th>Reformulación correcta</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Impersonalización con "se"</strong></td><td>"Los interesados presentarán la documentación"</td><td><strong>"Se presentará la documentación"</strong></td></tr>
+    <tr><td><strong>Imperativo</strong></td><td>"Los solicitantes rellenarán el formulario"</td><td><strong>"Rellene el formulario"</strong></td></tr>
+    <tr><td><strong>2ª persona (usted/tú)</strong></td><td>"Los que quieran participar deberán inscribirse"</td><td><strong>"Si desea participar, inscríbase"</strong></td></tr>
+    <tr><td><strong>Quien / quienes (epiceno)</strong></td><td>"El abajo firmante declara que…"</td><td><strong>"Quien abajo firma declara que…"</strong></td></tr>
+    <tr><td><strong>Quien / quienes</strong></td><td>"Los que lo soliciten recibirán…"</td><td><strong>"Quienes lo soliciten recibirán…"</strong></td></tr>
+    <tr><td><strong>1ª persona plural</strong></td><td>"Los miembros del equipo deben…"</td><td><strong>"Como equipo, debemos…"</strong></td></tr>
+    <tr><td><strong>Perífrasis</strong></td><td>"los investigadores"</td><td><strong>"el personal investigador"</strong></td></tr>
+    <tr><td><strong>Perífrasis</strong></td><td>"los becarios"</td><td><strong>"las personas titulares de beca"</strong></td></tr>
+    <tr><td><strong>Alternancia de orden</strong></td><td>"señores y señoras" siempre así</td><td><strong>Alternar: "señoras y señores" / "señores y señoras"</strong> en el mismo documento</td></tr>
+    <tr><td><strong>Evitar salto semántico</strong></td><td>"el seguro cubre a los afiliados y a sus mujeres"</td><td><strong>"el seguro cubre a las personas afiliadas y a sus familias"</strong></td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T8 MARCO NORMATIVO -->
+<h2>T8 · Marco normativo</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Norma</th><th>Ámbito</th><th>Artículos / contenido relevante</th><th>Aportación al tema</th></tr></thead>
+  <tbody>
+    <tr><td><strong>LO 3/2007, de 22 de marzo ★★★</strong></td><td>Estatal</td><td>Art. 4: transversalidad de género (gender mainstreaming)<br>Art. 14.11: principio de uso del lenguaje no sexista en el ámbito administrativo</td><td>Norma estatal de referencia directa: establece la obligación de implantar el lenguaje no sexista en la administración pública</td></tr>
+    <tr><td><strong>LF 17/2019, de 4 de abril ★★</strong></td><td>Navarra</td><td>Igualdad entre Mujeres y Hombres de Navarra</td><td>Obliga a las <strong>administraciones públicas navarras</strong> (incluida la UPNA) a promover el lenguaje no sexista en toda su comunicación</td></tr>
+    <tr><td><strong>LF 8/2017, de 19 de junio ★★</strong></td><td>Navarra</td><td>Igualdad Social de las personas LGTBI+ de Navarra</td><td>Amplía el marco del lenguaje inclusivo a identidades de género no binarias y orientaciones sexuales diversas</td></tr>
+    <tr><td><strong>II Plan Igualdad UPNA 2022-2027 ★★</strong></td><td>Institucional UPNA</td><td>Eje de Comunicación e Imagen Institucional · Acción: elaborar y difundir la Guía de Lenguaje Inclusivo · formación en lenguaje inclusivo</td><td>Marco institucional de implementación en la UPNA</td></tr>
+    <tr><td><strong>Recomendaciones CRUE ★★</strong></td><td>Universidades españolas</td><td>"Recomendaciones para un uso adecuado del lenguaje en las universidades"</td><td>Referente suprainstitucional que la UPNA toma como base</td></tr>
+    <tr><td><strong>Parlamento Europeo 2018 ★</strong></td><td>Europeo</td><td>Guía de lenguaje neutro al género en los 24 idiomas oficiales de la UE</td><td>Referente europeo para el lenguaje institucional no sexista</td></tr>
+    <tr><td><strong>Naciones Unidas ★</strong></td><td>Internacional</td><td>Directrices sobre lenguaje inclusivo en cuanto al género</td><td>Marco internacional de referencia; apoya el desdoblamiento selectivo</td></tr>
+  </tbody>
+</table>
+<div class="note n-warn">⚠ La norma estatal es la <strong>LO 3/2007</strong> (arts. 4 y 14.11); la norma foral es la <strong>LF 17/2019</strong>. Ambas son de mayor peso en examen que las europeas e internacionales.</div>
+</div>
+
+<!-- T9 COMPARATIVO DE LAS 4 ESTRATEGIAS EN PROFUNDIDAD -->
+<h2>T9 · Comparativo en profundidad: las 4 estrategias en 7 dimensiones</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Dimensión</th><th>Formas concretas</th><th>Desdoblamientos</th><th>Formas genéricas ★★★</th><th>Otros recursos</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Tipo de actuación</strong></td><td>Visibilización directa</td><td>Duplicación (femenino + masculino)</td><td>Neutralización (sin marca de género)</td><td>Reformulación estructural</td></tr>
+    <tr><td><strong>Economía lingüística</strong></td><td><span class="badge b-warn">Media</span> (repetición)</td><td><span class="badge b-warn">Baja</span> si sistemático</td><td><span class="badge b-ok">Alta</span> (una sola forma)</td><td><span class="badge b-ok">Alta</span> (reformula)</td></tr>
+    <tr><td><strong>Visibilización explícita</strong></td><td><span class="badge b-ok">Alta</span></td><td><span class="badge b-ok">Alta</span></td><td><span class="badge b-warn">Media</span> (invisible pero inclusiva)</td><td><span class="badge b-warn">Media</span></td></tr>
+    <tr><td><strong>Uso más adecuado</strong></td><td>Saludos, encabezados, momentos de alta visibilización</td><td>Documentos formales, convocatorias; uso selectivo</td><td>Cuerpo del texto; documentación general; formularios</td><td>Texto corrido largo; instrucciones; folletos</td></tr>
+    <tr><td><strong>Herramientas clave</strong></td><td>Doble forma · alternancia de orden</td><td>Barra / · paréntesis · doble sustantivo; <span class="badge b-err">no @, no -e</span></td><td>Colectivos: alumnado, profesorado · Abstractos: la dirección, la presidencia · Epicenos: quien</td><td>Se impersonal · imperativo · 2ª persona · perífrasis · quien</td></tr>
+    <tr><td><strong>Dificultad de aplicación</strong></td><td>Baja</td><td>Media (requiere conocer las reglas)</td><td>Baja (basta conocer los colectivos y abstractos)</td><td>Baja-media (requiere reformular)</td></tr>
+    <tr><td><strong>Recomendación institucional</strong></td><td><span class="badge b-ok">Recomendada</span></td><td><span class="badge b-warn">Ocasional</span></td><td><span class="badge b-ok">MÁS RECOMENDADA 🏆</span></td><td><span class="badge b-ok">Muy recomendada</span></td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- T10 COMUNICACIÓN ICONOGRÁFICA -->
+<h2>T10 · Los 4 ámbitos de comunicación inclusiva en la UPNA</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Ámbito</th><th>Qué incluye</th><th>Requisitos de inclusividad</th></tr></thead>
+  <tbody>
+    <tr><td><strong>✍️ Escrito</strong></td><td>Documentos oficiales · convocatorias · normativa interna · formularios · publicaciones académicas · correos institucionales · informes</td><td>Aplicar las 4 estrategias lingüísticas · evitar el masculino genérico · usar colectivos y abstractos</td></tr>
+    <tr><td><strong>🗣️ Oral</strong></td><td>Clases magistrales · actos académicos · presentaciones · reuniones de órganos de gobierno · intervenciones públicas</td><td>Usar desdoblamientos ocasionales · epicenos · "quien/quienes" · evitar masculino genérico en el discurso</td></tr>
+    <tr><td><strong>🖼️ Iconográfico</strong></td><td>Fotografías · ilustraciones · pictogramas · logotipos · presentaciones visuales · materiales docentes</td><td>Representación equilibrada de mujeres y hombres · sin roles de género estereotipados · iconografía neutra cuando sea posible</td></tr>
+    <tr><td><strong>💻 Digital</strong></td><td>Web institucional · redes sociales · formularios digitales · plataformas educativas · correo electrónico · banner y publicidad digital</td><td>Lenguaje inclusivo en todos los textos digitales · revisión de formularios online · imágenes equilibradas en la web</td></tr>
+  </tbody>
+</table>
+<div class="note n-err">⚠ El examen puede afirmar "el lenguaje inclusivo de la UPNA solo afecta a los textos escritos" → <strong>FALSO</strong>: aplica a los <strong>cuatro ámbitos</strong>: escrito · oral · iconográfico · digital.</div>
+</div>
+
+<!-- T11 TRAMPAS -->
+<h2>T11 · Las 11 trampas del examen</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Afirmación trampa</th><th>¿Correcta?</th><th>Corrección exacta</th></tr></thead>
+  <tbody>
+    <tr><td>"El desdoblamiento es la única estrategia lingüística inclusiva"</td><td><span class="badge b-err">FALSO</span></td><td>Hay <strong>4 estrategias</strong>: formas concretas · desdoblamientos · formas genéricas · otros recursos</td></tr>
+    <tr><td>"El desdoblamiento debe usarse de forma sistemática en todas las palabras del texto"</td><td><span class="badge b-err">FALSO</span></td><td>Uso <strong>ocasional</strong>; solo el sustantivo principal; concordar por proximidad; combinar con otras estrategias</td></tr>
+    <tr><td>"La arroba (@) es una forma de desdoblamiento recomendada oficialmente por la UPNA"</td><td><span class="badge b-err">FALSO</span></td><td><strong>NO recomendada</strong>: impronunciable; no reconocida por la RAE; no válida en documentos administrativos</td></tr>
+    <tr><td>"El morfema -e (todes, les alumnxes) es una recomendación oficial de la UPNA"</td><td><span class="badge b-err">FALSO</span></td><td><strong>NO</strong>: fenómeno sociolingüístico en debate; no aceptada por la RAE para documentos administrativos</td></tr>
+    <tr><td>"'Alumnado' o 'profesorado' son un tipo de desdoblamiento"</td><td><span class="badge b-err">FALSO</span></td><td>Son <strong>formas genéricas</strong> (sustantivos colectivos), no desdoblamientos</td></tr>
+    <tr><td>"'La dirección' en lugar de 'el director/la directora' es un desdoblamiento"</td><td><span class="badge b-err">FALSO</span></td><td>Es un <strong>sustantivo abstracto</strong> (forma genérica); no desdoblamiento</td></tr>
+    <tr><td>"El lenguaje inclusivo de la UPNA solo afecta a los textos escritos"</td><td><span class="badge b-err">FALSO</span></td><td>También aplica a la comunicación <strong>oral, iconográfica y digital</strong></td></tr>
+    <tr><td>"El masculino genérico es neutro y no supone sexismo lingüístico"</td><td><span class="badge b-err">FALSO</span></td><td>El masculino genérico <strong>invisibiliza a las mujeres</strong>: principal manifestación del sexismo léxico</td></tr>
+    <tr><td>"La estrategia más recomendada es el desdoblamiento por su mayor visibilización"</td><td><span class="badge b-err">FALSO</span></td><td>La más recomendada son las <strong>formas genéricas</strong> (colectivos y abstractos) por economía lingüística + inclusividad</td></tr>
+    <tr><td>"El salto semántico es un error gramatical"</td><td><span class="badge b-err">FALSO</span></td><td>Es una manifestación del <strong>sexismo estructural</strong>: masculino aparentemente genérico que se revela exclusivamente masculino en el contexto</td></tr>
+    <tr><td>"El lenguaje inclusivo solo afecta al léxico (a las palabras)"</td><td><span class="badge b-err">FALSO</span></td><td>También afecta a las <strong>estructuras gramaticales</strong> (sexismo estructural: orden, salto semántico) y a la comunicación <strong>iconográfica</strong> (imágenes y pictogramas)</td></tr>
+  </tbody>
+</table>
+</div>
+
+</body>
+</html>

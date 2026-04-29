@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 43 · HTML 2 · Esquema-resumen visual · Lenguaje inclusivo UPNA</title>
+<style>
+:root{--bg:#f0f9ff;--card:#fff;--s2:#f0f9ff;--line:#7dd3fc;--text:#0c4a6e;--muted:#0284c7;--p:#075985;--warn:#d97706;--red:#dc2626;--grn:#059669;--vio:#7c3aed;--teal:#0d9488;--sh:0 2px 10px rgba(7,89,133,.09)}
+[data-theme="dark"]{--bg:#020c1a;--card:#0a1e35;--s2:#0e2a45;--line:#075985;--text:#bae6fd;--muted:#38bdf8;--p:#38bdf8;--warn:#fbbf24;--red:#fca5a5;--grn:#6ee7b7;--vio:#c4b5fd;--teal:#5eead4;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.6;background:var(--bg);color:var(--text);padding:22px}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.97rem;color:var(--p)}.hdr p{font-size:.74rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.72rem}
+h2{font-size:.87rem;font-weight:800;color:#fff;background:var(--p);padding:8px 15px;border-radius:7px;margin:22px 0 10px;display:inline-block}
+.badge{display:inline-block;padding:3px 9px;border-radius:999px;font-size:.64rem;font-weight:700;border:1px solid transparent;white-space:nowrap;margin:1px}
+.b-ok{background:rgba(5,150,105,.12);color:#059669;border-color:rgba(5,150,105,.3)}
+.b-err{background:rgba(220,38,38,.12);color:#dc2626;border-color:rgba(220,38,38,.3)}
+.b-warn{background:rgba(217,119,6,.12);color:var(--warn);border-color:rgba(217,119,6,.3)}
+.b-vio{background:rgba(124,58,237,.12);color:var(--vio);border-color:rgba(124,58,237,.3)}
+.b-sky{background:rgba(2,132,199,.12);color:var(--muted);border-color:rgba(2,132,199,.3)}
+.b-teal{background:rgba(13,148,136,.12);color:var(--teal);border-color:rgba(13,148,136,.3)}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.74rem;border-left:4px solid;margin:7px 0}
+.n-ok{background:rgba(5,150,105,.07);border-color:#059669;color:#065f46}
+.n-warn{background:#fef3c7;border-color:#d97706;color:#78350f}
+.n-err{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .n-warn{background:#451a03;color:#fde68a}
+[data-theme="dark"] .n-err{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .n-ok{background:rgba(110,231,183,.07);color:#6ee7b7}
+strong{color:var(--p)}
+/* KPI strip */
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:14px}
+.kbox{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:11px 13px;box-shadow:var(--sh);text-align:center}
+.big{font-size:1rem;font-weight:800;color:var(--p);margin-bottom:2px}
+.ksmall{font-size:.7rem;color:var(--muted)}.kmini{font-size:.68rem;margin-top:3px}
+/* 4 estrategias */
+.est-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:14px}
+.est{background:var(--card);border-radius:12px;padding:14px 16px;box-shadow:var(--sh)}
+.est-1{border-top:5px solid var(--p)}
+.est-2{border-top:5px solid var(--vio)}
+.est-3{border-top:5px solid var(--grn)}
+.est-4{border-top:5px solid var(--teal)}
+.est h3{font-size:.82rem;font-weight:800;margin:4px 0 7px}
+.est-1 h3{color:var(--p)}.est-2 h3{color:var(--vio)}.est-3 h3{color:var(--grn)}.est-4 h3{color:var(--teal)}
+.est p,.est li{font-size:.76rem;margin:.2rem 0}
+.est ul{padding-left:15px}
+/* card genérica */
+.card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:13px 16px;box-shadow:var(--sh);margin-bottom:12px}
+.tag{display:block;font-size:.63rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:5px}
+.card p,.card li{font-size:.78rem;margin:.2rem 0}
+.card ul{padding-left:15px}
+/* tabla sustitución */
+table{width:100%;border-collapse:collapse;margin:8px 0}
+th{background:var(--s2);color:var(--muted);font-size:.67rem;text-transform:uppercase;padding:7px 10px;text-align:left}
+td{padding:6px 10px;border-bottom:1px solid var(--s2);font-size:.76rem;vertical-align:top}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+/* sexismo grid */
+.sex-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.sex{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 15px;box-shadow:var(--sh)}
+.sex h4{font-size:.79rem;font-weight:800;margin-bottom:7px}
+.sex.lexico h4{color:var(--red)}.sex.struct h4{color:var(--warn)}
+.sex ul{padding-left:15px}.sex li{font-size:.74rem;margin:.2rem 0}
+/* recursos otros */
+.rec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;margin-bottom:14px}
+.rec{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 13px;box-shadow:var(--sh)}
+.rec .ico{font-size:1.1rem;display:block;margin-bottom:5px}
+.rec h4{font-size:.76rem;font-weight:800;color:var(--teal);margin-bottom:4px}
+.rec p,.rec li{font-size:.72rem;margin:.2rem 0}
+.rec ul{padding-left:13px}
+/* formas abreviadas */
+.fa-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.fa{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 13px;box-shadow:var(--sh);text-align:center}
+.fa .ico{font-size:1.3rem;display:block;margin-bottom:6px}
+.fa h4{font-size:.77rem;font-weight:800;margin-bottom:4px}
+.fa p{font-size:.71rem}
+.fa.ok{border-color:var(--grn)}.fa.no{border-color:var(--red);opacity:.8}
+.fa.ok h4{color:var(--grn)}.fa.no h4{color:var(--red)}
+/* trampas */
+.trap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(245px,1fr));gap:10px;margin-bottom:14px}
+.trap{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 13px;box-shadow:var(--sh)}
+.trap .q{font-size:.72rem;color:var(--red);font-weight:600;margin-bottom:4px}
+.trap .a{font-size:.72rem}
+/* normas */
+.pill{display:inline-block;background:var(--s2);border:1px solid var(--line);color:var(--p);padding:3px 10px;border-radius:999px;font-size:.71rem;font-weight:600;margin:2px}
+/* intercambio */
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.vcol{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 15px;box-shadow:var(--sh)}
+.vcol-title{font-size:.76rem;font-weight:800;padding:5px 10px;border-radius:6px;text-align:center;color:#fff;margin-bottom:8px}
+.vcol ul{padding-left:15px}.vcol li{font-size:.76rem;margin:.22rem 0}
+@media(max-width:680px){.est-grid,.sex-grid,.fa-grid,.dos{grid-template-columns:1fr}}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 43 · HTML 2 · Esquema-resumen con bloques visuales para memorización rápida</h1>
+    <p>El uso inclusivo y no sexista del lenguaje en la UPNA. Estrategias lingüísticas: formas concretas, desdoblamientos, formas genéricas y otros recursos.</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- KPI FLASH -->
+<h2>Fichas flash</h2>
+<div class="kpi">
+  <div class="kbox"><div class="big">Política lingüística</div><div class="ksmall">Tipo de instrumento</div><div class="kmini">No reglamento ni ley</div></div>
+  <div class="kbox"><div class="big">UPNA</div><div class="ksmall">Institución</div><div class="kmini">Unidad de Igualdad como responsable</div></div>
+  <div class="kbox"><div class="big">4 estrategias</div><div class="ksmall">Concretas · desdoblamientos · genéricas · otros recursos</div><div class="kmini">⚠ No solo desdoblamientos</div></div>
+  <div class="kbox"><div class="big">II Plan<br>2022-2027</div><div class="ksmall">Eje Comunicación e Imagen Institucional</div><div class="kmini">86 acciones</div></div>
+  <div class="kbox"><div class="big">4 ámbitos</div><div class="ksmall">Escrito · oral · iconográfico · digital</div><div class="kmini">⚠ No solo escrito</div></div>
+  <div class="kbox"><div class="big">Más recomendada</div><div class="ksmall">Formas genéricas (colectivos + abstractos)</div><div class="kmini">Economía + inclusividad</div></div>
+  <div class="kbox"><div class="big">LO 3/2007</div><div class="ksmall">Norma estatal · lenguaje no sexista</div><div class="kmini">Art. 14.11 + Art. 4</div></div>
+  <div class="kbox"><div class="big">LF 17/2019</div><div class="ksmall">Norma foral navarra</div><div class="kmini">Obliga a admins. navarras</div></div>
+</div>
+
+<!-- IDEA FUERZA -->
+<h2>Idea fuerza</h2>
+<div class="card" style="border-left:4px solid var(--p);margin-bottom:14px">
+  <span class="tag">Principio fundamental del tema · para el examen</span>
+  <p style="font-size:.82rem">El lenguaje <strong>no es neutro</strong>: las palabras y estructuras lingüísticas que usamos construyen realidades sociales, visibilizan o invisibilizan a las personas y contribuyen a perpetuar o erradicar las desigualdades de género.</p>
+  <p style="font-size:.82rem">La LO 3/2007 establece como principio general: <em>"la implantación de un lenguaje no sexista en el ámbito administrativo y su fomento en la totalidad de las relaciones sociales, culturales y artísticas"</em>.</p>
+  <div class="note n-err">⚠ El masculino genérico <strong>NO es neutro</strong>: invisibiliza a las mujeres y es la principal manifestación del sexismo léxico. Esta idea es el eje central del tema.</div>
+</div>
+
+<!-- SEXISMO LINGÜÍSTICO -->
+<h2>Sexismo lingüístico: dos tipos</h2>
+<div class="sex-grid">
+  <div class="sex lexico">
+    <h4>🔴 Sexismo LÉXICO (en las palabras)</h4>
+    <ul>
+      <li><strong>Masculino genérico:</strong> "los alumnos" para referirse a todos</li>
+      <li><strong>Asimetría en fórmulas:</strong> "Sr. Director" / "Señorita López"</li>
+      <li><strong>Masculino para cargos:</strong> "el rector", "el presidente"</li>
+      <li><strong>Derivaciones degradantes:</strong> gobernador/gobernanta</li>
+      <li><strong>Duales aparentes:</strong> "hombre público" (honorable) / "mujer pública" (negativo)</li>
+    </ul>
+  </div>
+  <div class="sex struct">
+    <h4>🟠 Sexismo ESTRUCTURAL (en la estructura)</h4>
+    <ul>
+      <li><strong>Orden siempre masculino primero:</strong> "señores y señoras"</li>
+      <li><strong>Salto semántico ★★★:</strong> término aparentemente genérico que se revela solo masculino en el contexto<br><em>Ej.: "el seguro cubre a los afiliados y a sus mujeres"</em></li>
+      <li><strong>Representación desproporcionada:</strong> solo imágenes masculinas en publicaciones</li>
+    </ul>
+  </div>
+</div>
+<div class="note n-err" style="margin-bottom:14px">⚠ El <strong>SALTO SEMÁNTICO</strong> es el dato de examen más específico del tipo estructural: un término masculino aparentemente genérico que al avanzar en el texto se revela como exclusivamente masculino.</div>
+
+<!-- LAS 4 ESTRATEGIAS -->
+<h2>Las 4 estrategias lingüísticas</h2>
+<div class="est-grid">
+  <!-- Estrategia 1 -->
+  <div class="est est-1">
+    <div style="font-size:1.3rem">🔵</div>
+    <h3>1. Formas concretas ★★★</h3>
+    <p><em>Visibilización directa: nombrar ambos sexos explícitamente</em></p>
+    <ul>
+      <li><strong>Doble forma completa:</strong> "las alumnas y los alumnos"</li>
+      <li><strong>Alternancia de orden</strong> en el texto (femenino primero a veces)</li>
+      <li><strong>Doble forma en saludos:</strong> "Estimadas compañeras y estimados compañeros"</li>
+    </ul>
+    <div style="margin-top:6px"><span class="badge b-sky">Ámbito: texto escrito y oral formal</span></div>
+  </div>
+  <!-- Estrategia 2 -->
+  <div class="est est-2">
+    <div style="font-size:1.3rem">🟣</div>
+    <h3>2. Desdoblamientos ★★★</h3>
+    <p><em>Duplicación de las formas femenina y masculina con reglas precisas</em></p>
+    <ul>
+      <li><strong>Doble sustantivo:</strong> "alumnos y alumnas"</li>
+      <li><strong>Barra (/) ✓:</strong> director/a · el/la estudiante</li>
+      <li><strong>Paréntesis ✓:</strong> director(a)</li>
+      <li><strong>Arroba (@) ✗:</strong> no pronunciable → <strong>NO recomendada</strong></li>
+      <li><strong>Morfema -e/-x ✗:</strong> no aceptada por la RAE → <strong>NO en docs. administrativos</strong></li>
+    </ul>
+    <div style="margin-top:6px">
+      <span class="badge b-warn">Uso: ocasional, no sistemático</span>
+      <span class="badge b-warn">Solo el sustantivo; concordancia por proximidad</span>
+    </div>
+  </div>
+  <!-- Estrategia 3 -->
+  <div class="est est-3">
+    <div style="font-size:1.3rem">🟢</div>
+    <h3>3. Formas genéricas ★★★ 🏆 MÁS RECOMENDADA</h3>
+    <p><em>Neutralización: términos sin marca de género que incluyen a todos</em></p>
+    <ul>
+      <li><strong>Colectivos:</strong> alumnado · profesorado · ciudadanía · personal · estudiantado</li>
+      <li><strong>Abstractos:</strong> la dirección · la presidencia · la coordinación · la autoría</li>
+      <li><strong>Epicenos:</strong> la persona · quien · quienes · la víctima</li>
+      <li><strong>Adjetivos sin marca:</strong> cada · cualquier · diferente</li>
+    </ul>
+    <div style="margin-top:6px"><span class="badge b-ok">Economía lingüística + inclusividad total</span></div>
+  </div>
+  <!-- Estrategia 4 -->
+  <div class="est est-4">
+    <div style="font-size:1.3rem">🩵</div>
+    <h3>4. Otros recursos ★★★</h3>
+    <p><em>Reformulación estructural de la frase para evitar el género</em></p>
+    <ul>
+      <li><strong>Se impersonal:</strong> "se solicita…" / "se recomienda…"</li>
+      <li><strong>Imperativo:</strong> "Presente su documentación"</li>
+      <li><strong>2ª persona (tú/usted):</strong> "Si desea participar…"</li>
+      <li><strong>Perífrasis:</strong> "el personal investigador"</li>
+      <li><strong>1ª plural:</strong> "Como comunidad, debemos…"</li>
+      <li><strong>Alternancia de orden</strong> en el texto</li>
+    </ul>
+  </div>
+</div>
+<div class="note n-ok" style="margin-bottom:14px">✓ La estrategia <strong>más recomendada</strong> son las formas genéricas (colectivos y abstractos): combinan economía lingüística con inclusividad, sin necesitar desdoblamiento ni perder claridad.</div>
+
+<!-- FORMAS ABREVIADAS -->
+<h2>Formas abreviadas: cuáles sí y cuáles no</h2>
+<div class="fa-grid">
+  <div class="fa ok">
+    <span class="ico">✅</span>
+    <h4>Barra oblicua /</h4>
+    <p>director/a · el/la tutor/a</p>
+    <p style="margin-top:4px"><span class="badge b-ok">Recomendada</span> en documentos administrativos</p>
+  </div>
+  <div class="fa ok">
+    <span class="ico">✅</span>
+    <h4>Paréntesis ( )</h4>
+    <p>el/la director(a) · alumno(a)</p>
+    <p style="margin-top:4px"><span class="badge b-ok">Aceptada</span> en documentos formales</p>
+  </div>
+  <div class="fa no">
+    <span class="ico">❌</span>
+    <h4>Arroba @</h4>
+    <p>alumn@s · compañer@s</p>
+    <p style="margin-top:4px"><span class="badge b-err">NO recomendada</span> Impronunciable · no reconocida por la RAE</p>
+  </div>
+  <div class="fa no">
+    <span class="ico">❌</span>
+    <h4>Morfema -e / -x</h4>
+    <p>todes · les alumnxes · alumnxs</p>
+    <p style="margin-top:4px"><span class="badge b-err">NO en docs. admin.</span> Fenómeno en debate · no aceptada por la RAE</p>
+  </div>
+</div>
+<div class="note n-err" style="margin-bottom:14px">⚠ El examen puede afirmar que la arroba o el morfema -e son "formas recomendadas por la UPNA" → <strong>FALSO</strong>. Solo la barra (/) y el paréntesis son formas recomendadas en documentos administrativos.</div>
+
+<!-- TABLA COLECTIVOS -->
+<h2>Tabla de sustitución: colectivos y abstractos ★★★</h2>
+<div class="dos">
+  <div class="vcol">
+    <div class="vcol-title" style="background:var(--grn)">Sustantivos colectivos</div>
+    <table>
+      <thead><tr><th>En lugar de…</th><th>Usar…</th></tr></thead>
+      <tbody>
+        <tr><td>los alumnos / las alumnas</td><td><strong>el alumnado</strong></td></tr>
+        <tr><td>los profesores / las profesoras</td><td><strong>el profesorado</strong></td></tr>
+        <tr><td>los ciudadanos / las ciudadanas</td><td><strong>la ciudadanía</strong></td></tr>
+        <tr><td>los trabajadores / las trabajadoras</td><td><strong>el personal</strong></td></tr>
+        <tr><td>los investigadores</td><td><strong>el personal investigador</strong></td></tr>
+        <tr><td>los estudiantes</td><td><strong>el estudiantado</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="vcol">
+    <div class="vcol-title" style="background:var(--p)">Sustantivos abstractos (nominalizaciones)</div>
+    <table>
+      <thead><tr><th>En lugar de…</th><th>Usar…</th></tr></thead>
+      <tbody>
+        <tr><td>el director / la directora</td><td><strong>la dirección</strong></td></tr>
+        <tr><td>el presidente / la presidenta</td><td><strong>la presidencia</strong></td></tr>
+        <tr><td>el coordinador / la coordinadora</td><td><strong>la coordinación</strong></td></tr>
+        <tr><td>el autor / la autora</td><td><strong>la autoría</strong></td></tr>
+        <tr><td>el rector / la rectora</td><td><strong>el rectorado</strong></td></tr>
+        <tr><td>el representante / la representante</td><td><strong>la representación</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="note n-err" style="margin-bottom:14px">⚠ Los abstractos <strong>NO son desdoblamientos</strong>: son formas genéricas. "La dirección" no es un desdoblamiento de "el director/la directora"; es un <strong>sustantivo abstracto</strong> que incluye a ambos sin marca de género.</div>
+
+<!-- OTROS RECURSOS -->
+<h2>Los 6 recursos de reformulación</h2>
+<div class="rec-grid">
+  <div class="rec">
+    <span class="ico">🔄</span>
+    <h4>Impersonalización con "se"</h4>
+    <ul>
+      <li>"Los interesados presentarán…" → <strong>"Se presentará…"</strong></li>
+      <li>"Se recomienda el uso de…"</li>
+    </ul>
+  </div>
+  <div class="rec">
+    <span class="ico">📢</span>
+    <h4>Imperativo</h4>
+    <ul>
+      <li>"Los solicitantes deberán…" → <strong>"Presente su documentación"</strong></li>
+      <li>Dirige la acción a la persona concreta sin marcar género</li>
+    </ul>
+  </div>
+  <div class="rec">
+    <span class="ico">👤</span>
+    <h4>2ª persona (tú/usted)</h4>
+    <ul>
+      <li>"Los que quieran participar…" → <strong>"Si deseas participar…"</strong></li>
+      <li>Evita la necesidad del masculino genérico</li>
+    </ul>
+  </div>
+  <div class="rec">
+    <span class="ico">🔍</span>
+    <h4>Quien / quienes (epiceno)</h4>
+    <ul>
+      <li>"El que lo solicite" → <strong>"Quien lo solicite"</strong></li>
+      <li>"El abajo firmante" → <strong>"Quien abajo firma"</strong></li>
+    </ul>
+  </div>
+  <div class="rec">
+    <span class="ico">🤝</span>
+    <h4>1ª persona del plural</h4>
+    <ul>
+      <li>"Los miembros deben…" → <strong>"Como equipo, debemos…"</strong></li>
+      <li>Incluye sin marcar género</li>
+    </ul>
+  </div>
+  <div class="rec">
+    <span class="ico">📝</span>
+    <h4>Perífrasis y reformulación</h4>
+    <ul>
+      <li>"los investigadores" → <strong>"el personal investigador"</strong></li>
+      <li>"los becarios" → <strong>"las personas titulares de beca"</strong></li>
+    </ul>
+  </div>
+</div>
+
+<!-- REGLAS DEL DESDOBLAMIENTO -->
+<h2>Las 5 reglas del desdoblamiento ★★★</h2>
+<div class="card" style="border-left:4px solid var(--vio);margin-bottom:14px">
+  <span class="tag">Uso correcto del desdoblamiento — los errores más frecuentes del examen</span>
+  <table>
+    <thead><tr><th>#</th><th>Regla</th><th>Ejemplo correcto</th></tr></thead>
+    <tbody>
+      <tr><td><strong>1</strong></td><td>Uso <strong>OCASIONAL</strong>, no sistemático en cada palabra del texto</td><td>No desdoblar cada sustantivo, adjetivo y artículo de la misma frase</td></tr>
+      <tr><td><strong>2</strong></td><td>Solo desdoblar el <strong>SUSTANTIVO PRINCIPAL</strong>; el resto concuerda por proximidad</td><td>"Los nuevos alumnos y las nuevas alumnas" → "Los/las nuevos/as <u>alumnos/as</u>" → mejor: solo "alumnos/as"</td></tr>
+      <tr><td><strong>3</strong></td><td><strong>ALTERNAR EL ORDEN</strong> en el texto (femenino primero unas veces, masculino otras)</td><td>"Las alumnas y los alumnos" / "los profesores y las profesoras" (alternando a lo largo del documento)</td></tr>
+      <tr><td><strong>4</strong></td><td>En documentos largos, <strong>COMBINAR</strong> el desdoblamiento con formas genéricas</td><td>Usar "alumnado" en el cuerpo del texto y "alumnas y alumnos" solo en el encabezado</td></tr>
+      <tr><td><strong>5</strong></td><td>Usar la <strong>barra / o paréntesis</strong> para las formas abreviadas; nunca la arroba ni la -e</td><td>director/a ✓ · alumn@ ✗ · todes ✗</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- MARCO NORMATIVO -->
+<h2>Marco normativo</h2>
+<div class="card" style="border-left:4px solid var(--vio);margin-bottom:14px">
+  <span class="tag">Normas que sustentan el uso del lenguaje inclusivo en la UPNA</span>
+  <div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:5px">
+    <span class="pill">LO 3/2007 arts. 4 y 14.11 ★★★</span>
+    <span class="pill">LF 17/2019 Navarra ★★</span>
+    <span class="pill">LF 8/2017 LGTBI+ ★★</span>
+    <span class="pill">II Plan Igualdad UPNA 2022-2027 · Eje Comunicación ★★</span>
+    <span class="pill">CRUE Recomendaciones ★★</span>
+    <span class="pill">Parlamento Europeo 2018 ★</span>
+    <span class="pill">Naciones Unidas lenguaje inclusivo ★</span>
+  </div>
+  <div class="note n-warn" style="margin-top:8px">⚠ La norma estatal de referencia es la <strong>LO 3/2007</strong>: art. 4 (transversalidad de género) + art. 14.11 (lenguaje no sexista en el ámbito administrativo). La norma foral de referencia es la <strong>LF 17/2019</strong>.</div>
+</div>
+
+<!-- ICONOGRÁFICO Y DIGITAL -->
+<h2>4 ámbitos de comunicación</h2>
+<div class="kpi" style="margin-bottom:14px">
+  <div class="kbox"><div class="big">✍️</div><div class="ksmall">Comunicación ESCRITA</div><div class="kmini">Documentos, formularios, convocatorias, normativa, publicaciones académicas</div></div>
+  <div class="kbox"><div class="big">🗣️</div><div class="ksmall">Comunicación ORAL</div><div class="kmini">Clases, actos académicos, reuniones, presentaciones</div></div>
+  <div class="kbox"><div class="big">🖼️</div><div class="ksmall">Comunicación ICONOGRÁFICA</div><div class="kmini">Imágenes, fotografías, pictogramas, ilustraciones sin roles estereotipados</div></div>
+  <div class="kbox"><div class="big">💻</div><div class="ksmall">Comunicación DIGITAL</div><div class="kmini">Web, redes sociales, formularios digitales, correo electrónico institucional</div></div>
+</div>
+<div class="note n-err" style="margin-bottom:14px">⚠ El examen puede afirmar "el lenguaje inclusivo solo afecta a los textos escritos" → <strong>FALSO</strong>: aplica a los <strong>cuatro ámbitos</strong> (escrito · oral · iconográfico · digital).</div>
+
+<!-- TRAMPAS -->
+<h2>Las 10 trampas del examen</h2>
+<div class="trap-grid">
+  <div class="trap"><div class="q">❌ "Solo existe una estrategia: el desdoblamiento"</div><div class="a">✓ Hay <strong>4 estrategias</strong>: concretas · desdoblamientos · genéricas · otros recursos</div></div>
+  <div class="trap"><div class="q">❌ "El desdoblamiento debe usarse en todas las palabras"</div><div class="a">✓ Uso <strong>ocasional</strong>; solo el sustantivo; concordancia por proximidad</div></div>
+  <div class="trap"><div class="q">❌ "La arroba (@) es recomendada por la UPNA"</div><div class="a">✓ <strong>NO recomendada</strong>: impronunciable; no reconocida por la RAE</div></div>
+  <div class="trap"><div class="q">❌ "El morfema -e (todes) es una recomendación oficial"</div><div class="a">✓ <strong>NO</strong>: fenómeno sociolingüístico en debate; no aceptada por la RAE para documentos administrativos</div></div>
+  <div class="trap"><div class="q">❌ "'Alumnado' es un tipo de desdoblamiento"</div><div class="a">✓ Es una <strong>forma genérica</strong> (sustantivo colectivo), no un desdoblamiento</div></div>
+  <div class="trap"><div class="q">❌ "'La dirección' es un desdoblamiento"</div><div class="a">✓ Es un <strong>sustantivo abstracto</strong> (forma genérica); no desdoblamiento</div></div>
+  <div class="trap"><div class="q">❌ "El lenguaje inclusivo solo afecta a textos escritos"</div><div class="a">✓ También: <strong>oral · iconográfico · digital</strong></div></div>
+  <div class="trap"><div class="q">❌ "El masculino genérico es neutro y no es sexismo"</div><div class="a">✓ <strong>Invisibiliza</strong> a las mujeres: principal manifestación del sexismo léxico</div></div>
+  <div class="trap"><div class="q">❌ "La estrategia más recomendada es el desdoblamiento"</div><div class="a">✓ La más recomendada son las <strong>formas genéricas</strong> (colectivos y abstractos)</div></div>
+  <div class="trap"><div class="q">❌ "El salto semántico es un error gramatical"</div><div class="a">✓ Es una manifestación del <strong>sexismo estructural</strong>: masculino aparentemente genérico que se revela exclusivo</div></div>
+</div>
+
+</body>
+</html>
