@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 47 · HTML 2 · Esquema-resumen visual · Discapacidad y Enfermedad Mental</title>
+<style>
+:root{--bg:#f0f9ff;--card:#fff;--s2:#e0f2fe;--line:#7dd3fc;--text:#0c4a6e;--muted:#0284c7;--p:#075985;--warn:#d97706;--red:#dc2626;--grn:#059669;--vio:#7c3aed;--teal:#0d9488;--sh:0 2px 10px rgba(7,89,133,.09)}
+[data-theme="dark"]{--bg:#020c1a;--card:#0a1e35;--s2:#0e2a45;--line:#075985;--text:#bae6fd;--muted:#38bdf8;--p:#38bdf8;--warn:#fbbf24;--red:#fca5a5;--grn:#6ee7b7;--vio:#c4b5fd;--teal:#5eead4;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:22px}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:14px 20px;margin-bottom:14px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.95rem;color:var(--p)}.hdr p{font-size:.73rem;color:var(--muted);margin-top:2px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.71rem}
+h2{font-size:.86rem;font-weight:800;color:#fff;background:var(--p);padding:7px 14px;border-radius:7px;margin:20px 0 10px;display:inline-block}
+strong{color:var(--p)}
+/* badges */
+.bq{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.62rem;font-weight:700;border:1px solid transparent;white-space:nowrap;margin:1px}
+.ok{background:rgba(5,150,105,.12);color:#059669;border-color:rgba(5,150,105,.3)}
+.ng{background:rgba(220,38,38,.12);color:#dc2626;border-color:rgba(220,38,38,.3)}
+.warn{background:rgba(180,83,9,.12);color:#b45309;border-color:rgba(180,83,9,.3)}
+.vio{background:rgba(124,58,237,.12);color:var(--vio);border-color:rgba(124,58,237,.3)}
+.sky{background:rgba(2,132,199,.12);color:var(--muted);border-color:rgba(2,132,199,.3)}
+/* notes */
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.73rem;border-left:4px solid;margin:7px 0}
+.n-ok{background:rgba(5,150,105,.07);border-color:#059669;color:#065f46}
+.n-warn{background:#fef3c7;border-color:#d97706;color:#78350f}
+.n-err{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+.n-vio{background:#f5f3ff;border-color:#7c3aed;color:#4c1d95}
+[data-theme="dark"] .n-warn{background:#451a03;color:#fde68a}
+[data-theme="dark"] .n-err{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .n-ok{background:rgba(110,231,183,.07);color:#6ee7b7}
+[data-theme="dark"] .n-vio{background:#1e1b4b;color:#c4b5fd}
+/* KPI */
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:8px;margin-bottom:14px}
+.kbox{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:10px;box-shadow:var(--sh);text-align:center}
+.big{font-size:.98rem;font-weight:800;color:var(--p);margin-bottom:2px}.ksmall{font-size:.68rem;color:var(--muted)}.kmini{font-size:.65rem;margin-top:3px}
+/* grids */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px}
+/* blk */
+.blk{background:var(--card);border-radius:12px;padding:12px 14px;box-shadow:var(--sh)}
+.b1{border-top:5px solid var(--p)}.b2{border-top:5px solid var(--vio)}.b3{border-top:5px solid var(--grn)}.b4{border-top:5px solid var(--teal)}.b5{border-top:5px solid var(--warn)}.b6{border-top:5px solid var(--red)}
+.blk h3{font-size:.79rem;font-weight:800;margin-bottom:7px}
+.b1 h3{color:var(--p)}.b2 h3{color:var(--vio)}.b3 h3{color:var(--grn)}.b4 h3{color:var(--teal)}.b5 h3{color:var(--warn)}.b6 h3{color:var(--red)}
+.blk ul,.blk ol{padding-left:14px}.blk li{font-size:.72rem;margin:.2rem 0}
+/* tables */
+table{width:100%;border-collapse:collapse;margin:8px 0}
+th{background:var(--s2);color:var(--muted);font-size:.66rem;text-transform:uppercase;padding:6px 9px;text-align:left}
+td{padding:6px 9px;border-bottom:1px solid var(--s2);font-size:.74rem;vertical-align:top}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+/* prestacion row */
+.pr{display:flex;align-items:flex-start;gap:8px;padding:7px 10px;border-radius:8px;margin:5px 0;background:var(--card);border:1px solid var(--line);box-shadow:0 1px 4px rgba(7,89,133,.05)}
+.pr-cod{font-weight:800;font-size:.68rem;color:var(--muted);min-width:26px;padding-top:2px}
+.pr-body{flex:1;font-size:.73rem}
+.pr-name{font-weight:700;color:var(--p)}
+.pr-tip{font-size:.62rem;font-weight:700;padding:1px 6px;border-radius:999px;margin-left:5px;border:1px solid}
+.pr-g{background:rgba(5,150,105,.1);color:#059669;border-color:rgba(5,150,105,.3)}
+.pr-ng{background:rgba(220,38,38,.1);color:#dc2626;border-color:rgba(220,38,38,.3)}
+.pr-new{background:rgba(124,58,237,.1);color:var(--vio);border-color:rgba(124,58,237,.3)}
+.pr-up{background:rgba(13,148,136,.1);color:var(--teal);border-color:rgba(13,148,136,.3)}
+/* trap */
+.trap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:8px;margin-bottom:14px}
+.trap{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:9px 11px;box-shadow:var(--sh)}
+.trap .q{font-size:.7rem;color:var(--red);font-weight:600;margin-bottom:3px}
+.trap .a{font-size:.7rem}
+/* criteros */
+.crit{display:grid;grid-template-columns:32px 1fr;gap:6px;align-items:start;margin:5px 0}
+.cn{background:var(--p);color:#fff;border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:.73rem;font-weight:800;flex-shrink:0}
+.ct{font-size:.73rem;padding-top:3px}
+@media(max-width:700px){.g2,.g3{grid-template-columns:1fr}.trap-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 47 · HTML 2 · Esquema-resumen visual para memorización rápida</h1>
+    <p>Cartera de SS.SS. Ámbito General (5) · Área D Discapacidad + Área E Enfermedad Mental · DF 69/2008 mod. DF 30/2019</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- FLASH KPIs -->
+<h2>Fichas flash de identificación ★★★</h2>
+<div class="kpi">
+  <div class="kbox"><div class="big">2 áreas</div><div class="ksmall">Área D (disc.) + Área E (EM)</div><div class="kmini">Tema 47</div></div>
+  <div class="kbox"><div class="big">≥ 33 %</div><div class="ksmall">Requisito discapacidad</div><div class="kmini">⚠ No en enfermedad mental</div></div>
+  <div class="kbox"><div class="big">2 años</div><div class="ksmall">Residencia general</div><div class="kmini">⚠ Excepciones existen</div></div>
+  <div class="kbox"><div class="big">E12 = 1 año</div><div class="ksmall">Ingreso temporal EM</div><div class="kmini">Excepción a la regla general</div></div>
+  <div class="kbox"><div class="big">D5 = 0-3</div><div class="ksmall">Atención temprana</div><div class="kmini">Garantizado · sin 2 años residencia</div></div>
+  <div class="kbox"><div class="big">CRPS</div><div class="ksmall">Centro Rehab. Psicosocial</div><div class="kmini">Exclusivo del Área E</div></div>
+  <div class="kbox"><div class="big">E8 GARAN.</div><div class="ksmall">Piso supervisado en EM</div><div class="kmini">⚠ C4 (disc.) = NO garantizado</div></div>
+  <div class="kbox"><div class="big">E7 GARAN.</div><div class="ksmall">Centro de día en CRPS</div><div class="kmini">⚠ C1 (disc.) = NO garantizado</div></div>
+  <div class="kbox"><div class="big">E10</div><div class="ksmall">Residencia-hogar</div><div class="kmini">Solo Área E · Garantizado</div></div>
+  <div class="kbox"><div class="big">4 cambios</div><div class="ksmall">DF 30/2019 pasan a garantizados</div><div class="kmini">E3 · E7 · E10 · E13</div></div>
+  <div class="kbox"><div class="big">1º urgencia</div><div class="ksmall">Criterio adjudicación plaza</div><div class="kmini">⚠ No la fecha</div></div>
+  <div class="kbox"><div class="big">Vinculada</div><div class="ksmall">Prestación econ. si no hay plaza</div><div class="kmini">⚠ No por falta de dinero</div></div>
+</div>
+
+<!-- IDEA FUERZA -->
+<h2>Idea fuerza del Tema 47</h2>
+<div class="blk b4" style="margin-bottom:14px">
+  <h3>El DF 30/2019 = el cambio estructural del tema</h3>
+  <ul>
+    <li>Crea el <strong>Área E de Enfermedad Mental</strong> como área propia (antes los servicios estaban en el área de dependencia)</li>
+    <li>Con ello, las personas con EM <strong>ya no necesitan discapacidad ni dependencia reconocida</strong></li>
+    <li>Eleva a garantizados los 4 servicios nucleares de EM: <strong>E3, E7, E10 y E13</strong></li>
+    <li>Crea nuevas prestaciones: D6, D8, E15, C3, C4, D1</li>
+  </ul>
+  <div class="note n-ok">Regla de estudio: en EM, los pisos (supervisado + tutelado + residencia-hogar) y el centro de día del CRPS son todos GARANTIZADOS. En discapacidad, los mismos servicios diurnos y piso supervisado son NO garantizados.</div>
+</div>
+
+<!-- ÁREA D DISCAPACIDAD -->
+<h2>Área D · Discapacidad · Prestaciones garantizadas (D1–D12) ★★★</h2>
+<div class="pr"><span class="pr-cod">D1</span><div class="pr-body"><span class="pr-name">Valoración de la discapacidad</span><span class="pr-tip pr-g">G</span> · Ambulatorio · Cualquier persona de Navarra con posible discapacidad</div></div>
+<div class="pr"><span class="pr-cod">D2</span><div class="pr-body"><span class="pr-name">Valoración idoneidad ocupacional/laboral</span><span class="pr-tip pr-g">G</span> · Personas con discapacidad en edad laboral</div></div>
+<div class="pr"><span class="pr-cod">D3</span><div class="pr-body"><span class="pr-name">Valoración situación familiar para plaza residencial</span><span class="pr-tip pr-g">G</span> · ≥ 33 % · Para verificar conflicto familiar o ausencia de soporte</div></div>
+<div class="pr"><span class="pr-cod">D4</span><div class="pr-body"><span class="pr-name">Orientación productos de apoyo y adaptación de vivienda</span><span class="pr-tip pr-g">G</span> · Ambulatorio</div></div>
+<div class="pr"><span class="pr-cod">D5</span><div class="pr-body"><span class="pr-name">Atención temprana 0-3 años</span><span class="pr-tip pr-g">G</span><span class="pr-tip pr-new">★ Sin 2 años residencia</span> · Menores 0-3 con alteraciones o en riesgo · carácter preventivo</div></div>
+<div class="pr"><span class="pr-cod">D6</span><div class="pr-body"><span class="pr-name">Intervención familiar para personas con discapacidad</span><span class="pr-tip pr-g">G</span><span class="pr-tip pr-new">NUEVO DF 30/2019</span> · Apoya a familias cuidadoras</div></div>
+<div class="pr"><span class="pr-cod">D7</span><div class="pr-body"><span class="pr-name">Teleasistencia</span><span class="pr-tip pr-g">G</span> · Personas con discapacidad y dependencia reconocida</div></div>
+<div class="pr"><span class="pr-cod">D8</span><div class="pr-body"><span class="pr-name">Oficina de vida independiente</span><span class="pr-tip pr-g">G</span><span class="pr-tip pr-new">NUEVO DF 30/2019</span> · Promueve la autogestión · dependencia reconocida</div></div>
+<div class="pr"><span class="pr-cod">D9</span><div class="pr-body"><span class="pr-name">Piso tutelado/funcional</span><span class="pr-tip pr-g">G</span> · 18-65 a. · ≥ 33 % + 2 años res. + idoneidad · COPAGO</div></div>
+<div class="pr"><span class="pr-cod">D10</span><div class="pr-body"><span class="pr-name">Ingreso temporal en residencia</span><span class="pr-tip pr-g">G</span> · ≥ 33 % + 2 años res.</div></div>
+<div class="pr"><span class="pr-cod">D11</span><div class="pr-body"><span class="pr-name">Atención residencial permanente</span><span class="pr-tip pr-g">G</span> · ≥ 33 % + 2 años res. + idoneidad · COPAGO</div></div>
+<div class="pr"><span class="pr-cod">D12</span><div class="pr-body"><span class="pr-name">Ayuda económica de libre disposición</span><span class="pr-tip pr-g">G</span> · Gastos básicos en residencia · Sin recursos</div></div>
+
+<!-- NO GARANTIZADOS DISC -->
+<h2>Área C · Discapacidad · No garantizados (Anexo II) ★★★</h2>
+<div class="g3">
+  <div class="blk b6">
+    <h3>C1 · Centro de día NG</h3>
+    <ul>
+      <li>≥ 33 % + 2 años res. + idoneidad</li>
+      <li>COPAGO</li>
+      <li><strong>⚠ EN DISCAPACIDAD EL CENTRO DE DÍA ES NO GARANTIZADO</strong></li>
+    </ul>
+  </div>
+  <div class="blk b6">
+    <h3>C3/C4 · Nuevos DF 30/2019 NG</h3>
+    <ul>
+      <li>C3: <strong>Vivienda con apoyo</strong></li>
+      <li>C4: <strong>Piso supervisado</strong></li>
+      <li><strong>⚠ PISO SUPERVISADO EN DISCAPACIDAD = NO GARANTIZADO</strong></li>
+    </ul>
+  </div>
+  <div class="blk b6">
+    <h3>C10 · Centro ocupacional NG</h3>
+    <ul>
+      <li>≥ 33 %</li>
+      <li>Alternativa al mercado laboral</li>
+      <li>No garantizado en AMBAS áreas</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ÁREA E ENFERMEDAD MENTAL -->
+<h2>Área E · Enfermedad Mental · Prestaciones garantizadas (E1–E15) ★★★</h2>
+<div class="pr"><span class="pr-cod">E1</span><div class="pr-body"><span class="pr-name">Valoración situación familiar para plaza residencial</span><span class="pr-tip pr-g">G</span> · Equivale al D3 de discapacidad</div></div>
+<div class="pr"><span class="pr-cod">E2</span><div class="pr-body"><span class="pr-name">Valoración idoneidad ocupacional/laboral</span><span class="pr-tip pr-g">G</span> · 18-65 años</div></div>
+<div class="pr"><span class="pr-cod">E3</span><div class="pr-body"><span class="pr-name">Intervención sociocomunitaria para TMG</span><span class="pr-tip pr-g">G</span><span class="pr-tip pr-up">↑ DF 30/2019</span> · 18-65 a. · Antes no garantizado</div></div>
+<div class="pr"><span class="pr-cod">E4</span><div class="pr-body"><span class="pr-name">Teleasistencia</span><span class="pr-tip pr-g">G</span> · Personas con EM en situación de necesidad</div></div>
+<div class="pr"><span class="pr-cod">E5</span><div class="pr-body"><span class="pr-name">Transporte adaptado y asistido</span><span class="pr-tip pr-g">G</span> · COPAGO</div></div>
+<div class="pr"><span class="pr-cod">E6</span><div class="pr-body"><span class="pr-name">Rehabilitación psicosocial</span><span class="pr-tip pr-g">G</span><span class="pr-tip pr-new">Exclusivo Área E</span> · En CRPS · Sin equivalente en discapacidad</div></div>
+<div class="pr"><span class="pr-cod">E7</span><div class="pr-body"><span class="pr-name">Centro de día en CRPS</span><span class="pr-tip pr-g">G</span><span class="pr-tip pr-up">↑ DF 30/2019</span> · COPAGO · <strong>⚠ GARANTIZADO (≠ C1 en discapacidad)</strong></div></div>
+<div class="pr"><span class="pr-cod">E8</span><div class="pr-body"><span class="pr-name">Piso supervisado</span><span class="pr-tip pr-g">G</span> · 18-65 a. · COPAGO · <strong>⚠ GARANTIZADO (≠ C4 en discapacidad)</strong></div></div>
+<div class="pr"><span class="pr-cod">E9</span><div class="pr-body"><span class="pr-name">Piso tutelado/funcional</span><span class="pr-tip pr-g">G</span> · 18-65 a. · COPAGO · Mayor apoyo que E8</div></div>
+<div class="pr"><span class="pr-cod">E10</span><div class="pr-body"><span class="pr-name">Residencia-hogar</span><span class="pr-tip pr-g">G</span><span class="pr-tip pr-up">↑ DF 30/2019</span><span class="pr-tip pr-new">Exclusivo Área E</span> · COPAGO · No existe en Área D</div></div>
+<div class="pr"><span class="pr-cod">E11</span><div class="pr-body"><span class="pr-name">Estancia nocturna</span><span class="pr-tip pr-g">G</span> · Pernocta con supervisión</div></div>
+<div class="pr"><span class="pr-cod">E12</span><div class="pr-body"><span class="pr-name">Ingreso temporal en residencia</span><span class="pr-tip pr-g">G</span><span class="pr-tip pr-new">★ Residencia = 1 año</span> · 18-65 a. · Excepción al límite general</div></div>
+<div class="pr"><span class="pr-cod">E13</span><div class="pr-body"><span class="pr-name">Atención residencial permanente para TMG</span><span class="pr-tip pr-g">G</span><span class="pr-tip pr-up">↑ DF 30/2019</span> · COPAGO · Antes no garantizado</div></div>
+<div class="pr"><span class="pr-cod">E14</span><div class="pr-body"><span class="pr-name">Ayuda económica de libre disposición</span><span class="pr-tip pr-g">G</span> · Gastos básicos en residencia</div></div>
+<div class="pr"><span class="pr-cod">E15</span><div class="pr-body"><span class="pr-name">Ayuda de apoyo a la integración familiar y social</span><span class="pr-tip pr-g">G</span><span class="pr-tip pr-new">NUEVO DF 30/2019</span> · Permanencia en entorno familiar</div></div>
+
+<!-- NO GARANTIZADOS EM -->
+<h2>Área D (EM) · No garantizados Anexo II ★★★</h2>
+<div class="g3">
+  <div class="blk b6"><h3>D1 · Vivienda con apoyo NG</h3><ul><li>Nueva DF 30/2019</li><li>Menor apoyo que piso supervisado</li></ul></div>
+  <div class="blk b6"><h3>D3 · Centro ocupacional NG</h3><ul><li>18-65 años</li><li><strong>No garantizado</strong>, igual que en discapacidad</li></ul></div>
+  <div class="blk b3"><h3>Regla rápida</h3><ul><li>Centro ocupacional = NO garantizado en ambas áreas</li></ul></div>
+</div>
+
+<!-- TABLA COMPARATIVA -->
+<h2>Tabla comparativa Discapacidad vs. Enfermedad Mental ★★★</h2>
+<table>
+  <thead><tr><th>Servicio</th><th>Área D · Discapacidad</th><th>Área E · Enfermedad Mental</th></tr></thead>
+  <tbody>
+    <tr><td>Requisito base</td><td>Discapacidad ≥ 33 %</td><td>Diagnóstico TMG (sin discapacidad)</td></tr>
+    <tr><td>Límite edad</td><td>Sin límite superior general</td><td>18-65 años</td></tr>
+    <tr><td>Piso supervisado</td><td><span class="bq ng">NO garantizado C4</span></td><td><span class="bq ok">GARANTIZADO E8</span></td></tr>
+    <tr><td>Piso tutelado</td><td><span class="bq ok">GARANTIZADO D9</span></td><td><span class="bq ok">GARANTIZADO E9</span></td></tr>
+    <tr><td>Residencia-hogar</td><td>No existe</td><td><span class="bq ok">GARANTIZADO E10</span></td></tr>
+    <tr><td>Centro de día</td><td><span class="bq ng">NO garantizado C1</span></td><td><span class="bq ok">GARANTIZADO E7 (CRPS)</span></td></tr>
+    <tr><td>Centro ocupacional</td><td><span class="bq ng">NO garantizado C10</span></td><td><span class="bq ng">NO garantizado D3</span></td></tr>
+    <tr><td>Rehabilitación específica</td><td>No existe</td><td><span class="bq ok">GARANTIZADO E6 (CRPS)</span></td></tr>
+    <tr><td>Atención temprana 0-3</td><td><span class="bq ok">GARANTIZADO D5</span></td><td>No existe</td></tr>
+  </tbody>
+</table>
+
+<!-- DF 30/2019 -->
+<h2>DF 30/2019 · Los 4 servicios que pasan a garantizados ★★★</h2>
+<div class="g2">
+  <div class="blk b2">
+    <h3>↑ De NO garantizado a GARANTIZADO</h3>
+    <ul>
+      <li><strong>E3</strong> · Intervención sociocomunitaria para TMG</li>
+      <li><strong>E7</strong> · Centro de día en CRPS para EM</li>
+      <li><strong>E10</strong> · Residencia-hogar para EM</li>
+      <li><strong>E13</strong> · Atención residencial para TMG</li>
+    </ul>
+  </div>
+  <div class="blk b3">
+    <h3>✚ Nuevas prestaciones creadas</h3>
+    <ul>
+      <li><strong>D6</strong> · Intervención familiar (discapacidad) → G</li>
+      <li><strong>D8</strong> · Oficina vida independiente → G</li>
+      <li><strong>E15</strong> · Apoyo integración familiar/social (EM) → G</li>
+      <li><strong>C3</strong> · Vivienda con apoyo (discapacidad) → NG</li>
+      <li><strong>C4</strong> · Piso supervisado (discapacidad) → NG</li>
+      <li><strong>D1</strong> · Vivienda con apoyo (EM) → NG</li>
+    </ul>
+  </div>
+</div>
+
+<!-- CRITERIOS ADJUDICACIÓN -->
+<h2>Criterios de adjudicación de plazas en lista de espera ★★★</h2>
+<div class="crit"><div class="cn">1</div><div class="ct"><strong>Urgencia</strong> en el ingreso</div></div>
+<div class="crit"><div class="cn">2</div><div class="ct"><strong>Fecha de la solicitud</strong></div></div>
+<div class="crit"><div class="cn">3</div><div class="ct">Grado de valoración de dependencia, discapacidad o idoneidad (informe CSM)</div></div>
+<div class="crit"><div class="cn">4</div><div class="ct"><strong>Peor situación económica</strong></div></div>
+<div class="crit"><div class="cn">5</div><div class="ct">Intensidad de apoyos, red sociofamiliar, adecuación del domicilio y otros factores de vulnerabilidad</div></div>
+<div class="note n-err" style="margin-top:8px">⚠ Trampa clásica: "El primer criterio es la fecha de solicitud" → FALSO. El primero es la <strong>URGENCIA</strong>. Regla especial: solicitudes con más de <strong>6 meses de antigüedad</strong> prevalecen.</div>
+
+<!-- PRESTACIÓN VINCULADA -->
+<h2>Prestación económica vinculada al servicio ★★★</h2>
+<div class="blk b1" style="margin-bottom:14px">
+  <h3>¿Cuándo se activa?</h3>
+  <ul>
+    <li>Cuando no hay plaza disponible en un servicio residencial <strong>GARANTIZADO</strong> público o concertado</li>
+    <li>Se sustituye la plaza por una <strong>prestación económica</strong> para costear el servicio privado</li>
+    <li>Cuantía: mismos criterios que el servicio correspondiente</li>
+    <li>Supervisada por el Departamento competente</li>
+  </ul>
+  <div class="note n-err">⚠ NO se activa por falta de medios económicos del usuario, sino por <strong>falta de plaza</strong> pública o concertada.</div>
+</div>
+
+<!-- TRAMPAS -->
+<h2>Las 10 trampas del examen</h2>
+<div class="trap-grid">
+  <div class="trap"><div class="q">❌ "Los servicios de EM son garantizados solo si tienen dependencia reconocida"</div><div class="a">✓ Con DF 30/2019 basta el <strong>diagnóstico de TMG</strong></div></div>
+  <div class="trap"><div class="q">❌ "El piso supervisado en EM es no garantizado"</div><div class="a">✓ <strong>E8 es GARANTIZADO</strong>; el no garantizado es C4 en discapacidad</div></div>
+  <div class="trap"><div class="q">❌ "El centro de día del CRPS siempre fue garantizado"</div><div class="a">✓ Pasó a garantizado con el <strong>DF 30/2019</strong></div></div>
+  <div class="trap"><div class="q">❌ "La residencia-hogar existe en discapacidad y en EM"</div><div class="a">✓ La residencia-hogar (E10) es <strong>exclusiva del Área E</strong></div></div>
+  <div class="trap"><div class="q">❌ "El requisito de residencia es siempre 2 años"</div><div class="a">✓ E12 (ingresos temporales EM) puede ser <strong>1 año</strong></div></div>
+  <div class="trap"><div class="q">❌ "La atención temprana 0-3 es no garantizada"</div><div class="a">✓ D5 es <strong>GARANTIZADA</strong>, sin requisito de 2 años de residencia</div></div>
+  <div class="trap"><div class="q">❌ "El primer criterio de adjudicación de plazas es la fecha"</div><div class="a">✓ El primero es la <strong>URGENCIA</strong>; la fecha es el segundo</div></div>
+  <div class="trap"><div class="q">❌ "El centro ocupacional para EM es garantizado"</div><div class="a">✓ D3 (EM) y C10 (discapacidad) son <strong>NO GARANTIZADOS</strong></div></div>
+  <div class="trap"><div class="q">❌ "La prestación vinculada se da cuando el usuario no tiene dinero"</div><div class="a">✓ Se activa cuando <strong>no hay plaza pública disponible</strong></div></div>
+  <div class="trap"><div class="q">❌ "El piso supervisado en discapacidad es garantizado"</div><div class="a">✓ <strong>C4 NO garantizado</strong>; el garantizado en discapacidad es el piso tutelado D9</div></div>
+</div>
+
+</body>
+</html>
