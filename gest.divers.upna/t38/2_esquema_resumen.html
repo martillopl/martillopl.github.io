@@ -1,0 +1,403 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 38 · HTML 2 · Esquema-resumen visual · Ley 4/2023 Trans y LGTBI</title>
+<style>
+:root{--bg:#f0fdf4;--card:#fff;--s2:#f0fdf4;--line:#6ee7b7;--text:#14532d;--muted:#059669;--p:#065f46;--warn:#d97706;--sky:#0284c7;--red:#dc2626;--vio:#7c3aed;--sh:0 2px 10px rgba(6,95,70,.09)}
+[data-theme="dark"]{--bg:#021a0e;--card:#052e16;--s2:#064e3b;--line:#065f46;--text:#bbf7d0;--muted:#6ee7b7;--p:#6ee7b7;--warn:#fbbf24;--sky:#38bdf8;--red:#fca5a5;--vio:#c4b5fd;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.6;background:var(--bg);color:var(--text);padding:22px}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.97rem;color:var(--p)}.hdr p{font-size:.74rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.72rem}
+h2{font-size:.87rem;font-weight:800;color:#fff;background:var(--p);padding:8px 15px;border-radius:7px;margin:22px 0 10px;display:inline-block}
+h3{font-size:.81rem;font-weight:700;color:var(--p);margin:11px 0 5px;border-bottom:1px solid var(--line);padding-bottom:3px}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(138px,1fr));gap:10px;margin-bottom:12px}
+.kbox{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:11px 13px;box-shadow:var(--sh);text-align:center}
+.big{font-size:1.05rem;font-weight:800;color:var(--p);margin-bottom:3px}.ksmall{font-size:.72rem;color:var(--muted)}.kmini{font-size:.71rem;margin-top:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(252px,1fr));gap:11px;margin-bottom:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:13px 15px;box-shadow:var(--sh)}
+.tag{display:block;font-size:.63rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:5px}
+.card p{font-size:.79rem;margin:.28rem 0}
+.card ul{padding-left:15px;margin:.25rem 0}.card li{margin:.22rem 0;font-size:.78rem}
+.card strong{color:var(--p)}
+.l1{border-left:4px solid var(--p)}
+.l2{border-left:4px solid #d97706}
+.l3{border-left:4px solid #7c3aed}
+.l4{border-left:4px solid #0284c7}
+.l5{border-left:4px solid var(--red)}
+.tw{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:12px;box-shadow:var(--sh);overflow-x:auto;margin-bottom:12px}
+table{width:100%;border-collapse:collapse}
+th{background:var(--s2);color:var(--muted);font-size:.66rem;text-transform:uppercase;padding:7px 9px;text-align:left}
+td{padding:7px 9px;border-bottom:1px solid var(--s2);font-size:.78rem;vertical-align:top}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.64rem;font-weight:700;border:1px solid transparent}
+.b-err{background:rgba(220,38,38,.12);color:#dc2626;border-color:rgba(220,38,38,.3)}
+.b-ok{background:rgba(5,150,105,.12);color:#059669;border-color:rgba(5,150,105,.3)}
+.b-warn{background:rgba(217,119,6,.12);color:var(--warn);border-color:rgba(217,119,6,.3)}
+.b-vio{background:rgba(124,58,237,.12);color:var(--vio);border-color:rgba(124,58,237,.3)}
+.b-sky{background:rgba(2,132,199,.12);color:var(--sky);border-color:rgba(2,132,199,.3)}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.75rem;border-left:4px solid;margin:7px 0}
+.n-warn{background:#fef3c7;border-color:#d97706;color:#78350f}
+.n-ok{background:#f0fdf4;border-color:#16a34a;color:#14532d}
+.n-err{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .n-warn{background:#451a03;color:#fde68a}
+[data-theme="dark"] .n-err{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .n-ok{background:#021a0e;color:#86efac}
+.pill{display:inline-block;background:var(--s2);border:1px solid var(--line);color:var(--p);padding:3px 10px;border-radius:999px;font-size:.72rem;font-weight:600;margin:2px}
+.flow4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}
+.step{background:var(--card);border:2px solid var(--line);border-radius:11px;padding:12px 13px;box-shadow:var(--sh);text-align:center}
+.step .num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--p);color:#fff;border-radius:50%;font-size:.9rem;font-weight:800;margin-bottom:6px}
+.step h4{font-size:.81rem;font-weight:700;color:var(--p);margin:0 0 4px}
+.step p{font-size:.75rem;margin:0}
+.master{background:var(--card);border:2px solid var(--line);border-radius:11px;padding:14px 18px;box-shadow:var(--sh);margin-bottom:12px}
+.master p{font-size:.81rem;margin-bottom:7px}
+.lgtbi-strip{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.lc{padding:5px 12px;border-radius:999px;font-size:.77rem;font-weight:700;color:#fff}
+.lc-l{background:#ff4081}.lc-g{background:#e91e63}.lc-t{background:#9c27b0}.lc-b{background:#673ab7}.lc-i{background:#3f51b5}
+@media(max-width:900px){.flow4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid,.kpi,.flow4{grid-template-columns:1fr}}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 38 · HTML 2 · Esquema-resumen con bloques visuales para memorización rápida</h1>
+    <p>Ley 4/2023, de 28 de febrero, para la igualdad real y efectiva de las personas trans y para la garantía de los derechos de las personas LGTBI · "Ley Trans" · Título Preliminar · Títulos I, II y III</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- FICHAS FLASH -->
+<h2>Fichas flash</h2>
+<div class="kpi">
+  <div class="kbox"><div class="big">Ley 4/2023</div><div class="ksmall">Norma</div><div class="kmini">"Ley Trans" · <strong>Ley ordinaria</strong></div></div>
+  <div class="kbox"><div class="big">28/02/2023</div><div class="ksmall">Aprobación</div><div class="kmini">BOE núm. 51, 01/03/2023</div></div>
+  <div class="kbox"><div class="big">02/03/2023</div><div class="ksmall">Entrada en vigor</div><div class="kmini">DÍA SIGUIENTE a la publicación</div></div>
+  <div class="kbox"><div class="big">4 Títulos</div><div class="ksmall">Estructura</div><div class="kmini">T.Prelim.+4T+4DA+2DT+1DD+20DF</div></div>
+  <div class="kbox"><div class="big">Ley 3/2007</div><div class="ksmall">Norma derogada</div><div class="kmini">Rectificación registral (exigía diagnóstico y tratamiento)</div></div>
+  <div class="kbox"><div class="big">CIE-11 OMS</div><div class="ksmall">Marco sanitario</div><div class="kmini">2018: transexualidad fuera de trastornos mentales</div></div>
+</div>
+
+<!-- IDEA FUERZA -->
+<h2>Idea fuerza</h2>
+<div class="master">
+  <p><strong>Finalidad (art. 1):</strong> "Garantizar y promover el derecho a la <strong>igualdad real y efectiva</strong> de las personas <strong>L-G-T-B-I</strong>, así como de sus <strong>familias</strong>."</p>
+  <hr style="border-color:var(--line);margin:8px 0"/>
+  <p><strong>El colectivo protegido:</strong></p>
+  <div class="lgtbi-strip">
+    <span class="lc lc-l">L · Lesbianas</span>
+    <span class="lc lc-g">G · Gais</span>
+    <span class="lc lc-t">T · Trans</span>
+    <span class="lc lc-b">B · Bisexuales</span>
+    <span class="lc lc-i">I · Intersexuales</span>
+    <span class="pill">+ sus familias</span>
+  </div>
+  <hr style="border-color:var(--line);margin:8px 0"/>
+  <p><strong>Novedad central:</strong> Despatologización de la identidad trans. Para la rectificación registral del sexo solo se requiere la <strong>voluntad libremente manifestada</strong> de la persona. Sin diagnóstico, sin tratamiento, sin edad mínima de 18 años.</p>
+</div>
+
+<!-- TÍTULO PRELIMINAR -->
+<h2>Título Preliminar · Arts. 1–3</h2>
+<div class="grid">
+  <div class="card l1">
+    <span class="tag">Art. 1 · Finalidad ★★★</span>
+    <p><strong>Garantizar y promover</strong> la igualdad real y efectiva de las personas <strong>LGTBI y sus familias</strong></p>
+    <p>Mediante: principios de actuación de poderes públicos + derechos y deberes + medidas anti-discriminación + procedimiento de rectificación registral</p>
+    <div class="note n-warn">⚠ El objeto incluye expresamente "<strong>y sus familias</strong>". El examen puede omitirlo.</div>
+  </div>
+  <div class="card l1">
+    <span class="tag">Art. 2 · Ámbito ★★</span>
+    <p><strong>TODA</strong> persona física o jurídica, pública o privada</p>
+    <p>Que <strong>resida, se encuentre o actúe</strong> en territorio español</p>
+    <p>Sin importar: nacionalidad · origen · edad · estado civil · situación administrativa</p>
+    <div class="note n-warn">⚠ Ámbito UNIVERSAL: protege también a extranjeros indocumentados. El examen puede restringirlo a españoles → FALSO.</div>
+  </div>
+  <div class="card l1">
+    <span class="tag">Art. 3 · Definiciones clave ★★★</span>
+    <ul>
+      <li><strong>Persona trans:</strong> identidad sexual no corresponde con el sexo asignado al nacer</li>
+      <li><strong>Identidad sexual:</strong> vivencia <em>interna e individual</em> del sexo</li>
+      <li><strong>Expresión de género:</strong> manifestación que cada persona hace de su identidad</li>
+      <li><strong>Orientación sexual:</strong> atracción física, sexual o afectiva</li>
+      <li><strong>Intersexualidad:</strong> características biológicas no correspondientes a nociones sociales de masculino/femenino</li>
+      <li><strong>LGTBIfobia:</strong> rechazo por serlo <strong>O SER PERCIBIDA COMO TAL</strong> ★★★</li>
+      <li><strong>Familia LGTBI:</strong> con uno o más integrantes LGTBI; incluye familias homoparentales</li>
+    </ul>
+  </div>
+  <div class="card l1">
+    <span class="tag">Art. 3 · Los 4 tipos de discriminación</span>
+    <ul>
+      <li><strong>Directa:</strong> trato menos favorable por razón LGTBI</li>
+      <li><strong>Indirecta:</strong> disposición aparentemente neutra que crea desventaja</li>
+      <li><strong>Múltiple:</strong> dos o más causas simultáneas o consecutivas</li>
+      <li><strong>Interseccional:</strong> causas que <em>interactúan</em> generando forma <em>específica</em> de discriminación</li>
+    </ul>
+    <div class="note n-err">⚠ Múltiple ≠ interseccional. Múltiple = suma. Interseccional = interacción que crea un tipo específico. El examen los confunde.</div>
+  </div>
+</div>
+
+<!-- TÍTULO I SALUD -->
+<h2>Título I · Cap. II · Secc. 4.ª — Salud LGTBI general (arts. 21–24)</h2>
+<div class="grid">
+  <div class="card l2">
+    <span class="tag">Art. 21 · Líneas de actuación en salud</span>
+    <ul>
+      <li>Incorporación de perspectiva LGTBI en políticas de salud</li>
+      <li>Formación del personal sanitario libre de LGTBIfobia</li>
+      <li>Investigación sobre necesidades específicas de salud LGTBI</li>
+    </ul>
+  </div>
+  <div class="card l2">
+    <span class="tag">Art. 22 · Terapias de conversión ★★★</span>
+    <p><strong>EXPRESAMENTE PROHIBIDAS</strong> las prácticas de conversión consistentes en:</p>
+    <ul>
+      <li>Aversión, modificación o supresión</li>
+      <li>De la orientación sexual, identidad sexual o expresión de género</li>
+      <li>Realizadas por <strong>cualquier persona</strong>: sanitarios, psicólogos u otras</li>
+    </ul>
+    <div class="note n-err">⚠ La prohibición no distingue quién las realiza: profesional o no profesional. Son infracción tipificada en el Título IV.</div>
+  </div>
+  <div class="card l2">
+    <span class="tag">Arts. 23-24 · Salud sexual y reproductiva</span>
+    <ul>
+      <li>Campañas de educación sexual y reproductiva específicas para LGTBI</li>
+      <li>Información sobre ITS/VIH adaptada al colectivo</li>
+      <li>Acceso sin discriminación a servicios de salud sexual y reproductiva</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TÍTULO I EDUCACIÓN -->
+<h2>Título I · Cap. II · Secc. 5.ª — Educación LGTBI general (arts. 25–29)</h2>
+<div class="grid">
+  <div class="card l2">
+    <span class="tag">Art. 25 · Currículo ★★</span>
+    <p>El principio de igualdad de trato LGTBI se incluirá en el <strong>currículo de TODAS las etapas educativas</strong>.</p>
+    <div class="note n-warn">⚠ TODAS las etapas: desde infantil hasta secundaria y FP. El examen puede limitar a alguna etapa concreta → FALSO.</div>
+  </div>
+  <div class="card l2">
+    <span class="tag">Art. 26 · Formación del profesorado</span>
+    <p>Las administraciones educativas garantizarán formación <strong>inicial y continua</strong> del profesorado en:</p>
+    <ul>
+      <li>Igualdad de trato LGTBI</li>
+      <li>Prevención del acoso escolar por LGTBIfobia</li>
+    </ul>
+  </div>
+  <div class="card l2">
+    <span class="tag">Art. 27 · Protocolos contra acoso escolar ★★</span>
+    <p>Los centros docentes dispondrán de <strong>protocolos específicos</strong> para la detección y actuación ante situaciones de acoso escolar y discriminación del alumnado LGTBI.</p>
+  </div>
+  <div class="card l2">
+    <span class="tag">Art. 29 · Pruebas selectivas y universidad</span>
+    <p>Planes de estudios universitarios, <strong>pruebas selectivas</strong> de acceso a la función pública y cursos de formación de <strong>FFCCSS</strong> incluirán contenidos sobre derechos LGTBI.</p>
+  </div>
+</div>
+
+<!-- TÍTULO II RECTIFICACIÓN -->
+<h2>Título II · Cap. I — Rectificación registral · Legitimación y efectos (arts. 43–51)</h2>
+
+<h3>Art. 43 · Legitimación por edades · Fórmula 16-14-12 ★★★</h3>
+<div class="flow4" style="margin-bottom:12px">
+  <div class="step">
+    <div class="num">≥16</div>
+    <h4>AUTÓNOMA</h4>
+    <p>Solicitud <strong>por sí misma</strong> ante el Registro Civil, sin representante legal</p>
+  </div>
+  <div class="step">
+    <div class="num">14</div>
+    <h4>ASISTIDA</h4>
+    <p>Con <strong>representantes legales</strong>. En caso de desacuerdo: <strong>defensor judicial</strong></p>
+  </div>
+  <div class="step">
+    <div class="num">12</div>
+    <h4>JUDICIAL</h4>
+    <p>Mediante <strong>expediente de jurisdicción voluntaria</strong> ante el juez</p>
+  </div>
+  <div class="step">
+    <div class="num">&lt;12</div>
+    <h4>SOLO NOMBRE</h4>
+    <p>Cambio de <strong>nombre registral</strong> por identidad sexual. No rectificación de sexo</p>
+  </div>
+</div>
+<div class="note n-err" style="margin-bottom:12px">⚠ La Ley 3/2007 exigía 18 años + diagnóstico de disforia de género + 2 años de tratamiento hormonal. La Ley 4/2023 elimina los tres requisitos. El umbral de <strong>16 años para la solicitud autónoma</strong> es el dato más preguntado del Título II.</div>
+
+<div class="grid">
+  <div class="card l3">
+    <span class="tag">Art. 44 · Procedimiento · Despatologización ★★</span>
+    <p>Autoridad competente: <strong>Encargado/a de la Oficina del Registro Civil</strong></p>
+    <p>Solo se requiere la <strong>voluntad libremente manifestada</strong></p>
+    <ul>
+      <li>Sin diagnóstico médico</li>
+      <li>Sin informe psicológico</li>
+      <li>Sin tratamiento hormonal previo</li>
+    </ul>
+  </div>
+  <div class="card l3">
+    <span class="tag">Art. 46 · Efectos ★★</span>
+    <p>La resolución tiene efectos <strong>CONSTITUTIVOS</strong> desde su inscripción en el Registro Civil.</p>
+    <div class="note n-err">⚠ Constitutivos (el derecho nace con la inscripción) ≠ declarativos (reconocen un derecho preexistente). El examen confunde los términos.</div>
+  </div>
+  <div class="card l3">
+    <span class="tag">Art. 47 · Reversibilidad ★</span>
+    <p>La reversión de la rectificación es posible a partir de los <strong>6 MESES</strong> desde la inscripción.</p>
+    <p>Mismo procedimiento que la rectificación original.</p>
+    <div class="note n-warn">⚠ El examen puede decir que la reversión puede pedirse en cualquier momento → FALSO: hay que esperar 6 meses.</div>
+  </div>
+  <div class="card l3">
+    <span class="tag">Art. 48 · Adecuación documental ★★</span>
+    <p>DNI y pasaporte se adaptan a la nueva mención registral.</p>
+    <p>Se <strong>conserva el mismo número</strong> de DNI y pasaporte.</p>
+    <p>Cualquier título, diploma o certificado público o privado puede reexpedirse.</p>
+  </div>
+</div>
+
+<!-- TÍTULO II SALUD TRANS -->
+<h2>Título II · Cap. II · Secc. 3.ª — Salud específica trans (arts. 56–59)</h2>
+<div class="grid">
+  <div class="card l4">
+    <span class="tag">Art. 56 · Atención sanitaria integral ★★★</span>
+    <p>El <strong>SNS</strong> garantizará la <strong>atención sanitaria integral</strong> de las personas trans.</p>
+    <p>Los tratamientos hormonales y quirúrgicos de <strong>afirmación de género</strong> serán incluidos en la <strong>cartera de servicios comunes del SNS</strong>.</p>
+    <div class="note n-ok">💡 Que los tratamientos de afirmación de género formen parte del SNS es el dato más preguntado del Título II en materia de salud.</div>
+  </div>
+  <div class="card l4">
+    <span class="tag">Art. 57 · Consentimiento informado ★★</span>
+    <p>Ningún tratamiento médico puede realizarse sin <strong>consentimiento informado</strong>.</p>
+    <p>Para menores: consentimiento del menor (con <strong>suficiente madurez</strong>) + representantes legales.</p>
+    <p>En caso de conflicto: interviene el <strong>juez</strong>.</p>
+  </div>
+  <div class="card l4">
+    <span class="tag">Art. 59 · Protocolos y servicios especializados ★★</span>
+    <p><strong>Protocolos de actuación</strong> específicos para personas trans.</p>
+    <p>Creación/designación de <strong>unidades o servicios especializados</strong> en la atención a personas trans en el SNS.</p>
+  </div>
+  <div class="card l4">
+    <span class="tag">Secc. 4.ª (Tít. I) vs. Secc. 3.ª (Tít. II) ★★</span>
+    <p><strong>Secc. 4.ª · Tít. I:</strong> Salud para personas <strong>LGTBI en general</strong></p>
+    <p>(art. 22: prohíbe terapias conversión · arts. 23-24: salud sexual)</p>
+    <p><strong>Secc. 3.ª · Tít. II:</strong> Salud <strong>específica para personas TRANS</strong></p>
+    <p>(art. 56: cartera SNS · art. 59: unidades especializadas)</p>
+    <div class="note n-err">⚠ El examen confunde qué sección corresponde a LGTBI general y cuál a trans específico.</div>
+  </div>
+</div>
+
+<!-- TÍTULO III PROTECCIÓN -->
+<h2>Título III — Protección, reparación y violencia por LGTBIfobia</h2>
+<div class="grid">
+  <div class="card l5">
+    <span class="tag">Art. 63 · Nulidad de contratos discriminatorios ★★</span>
+    <p>Las cláusulas contractuales y negocios jurídicos que vulneren el derecho a la no discriminación LGTBI son <strong>NULAS</strong> y se tendrán por <strong>NO PUESTAS</strong>.</p>
+  </div>
+  <div class="card l5">
+    <span class="tag">Art. 66 · Legitimación activa ★★★</span>
+    <p>Pueden intervenir en procesos civiles, C-A y sociales:</p>
+    <ul>
+      <li>Personas afectadas directamente</li>
+      <li>Organizaciones LGTBI (con autorización del afectado)</li>
+      <li>Partidos políticos, sindicatos, patronal, autónomos, consumidores</li>
+    </ul>
+    <p>También para <strong>intereses difusos</strong> cuando los afectados sean indeterminados.</p>
+    <div class="note n-warn">⚠ Los partidos políticos y sindicatos tienen legitimación. Dato muy preguntado.</div>
+  </div>
+  <div class="card l5">
+    <span class="tag">Art. 67 · Inversión de la carga de la prueba ★★★</span>
+    <p>Si la parte actora aporta <strong>indicios fundados</strong> de discriminación →</p>
+    <p>Corresponde a la parte <strong>demandada</strong> probar justificación objetiva, razonable y proporcional.</p>
+    <p>El juez puede recabar informes de oficio.</p>
+    <div class="note n-err">⚠ La víctima no debe probar la discriminación, solo los indicios. La carga recae en quien discrimina.</div>
+  </div>
+  <div class="card l5">
+    <span class="tag">Cap. II · Violencia por LGTBIfobia ★★</span>
+    <ul>
+      <li>Asistencia jurídica gratuita e inmediata</li>
+      <li>Atención psicológica especializada</li>
+      <li>Mecanismos de denuncia accesibles</li>
+      <li>Protección policial y judicial reforzada (delitos de odio)</li>
+    </ul>
+  </div>
+  <div class="card l5">
+    <span class="tag">Cap. III · Situaciones especiales ★★</span>
+    <ul>
+      <li><strong>Menores LGTBI:</strong> protección frente a acoso escolar y familiar</li>
+      <li><strong>Discapacidad/dependencia LGTBI:</strong> atención especializada en centros</li>
+      <li><strong>Migrantes LGTBI:</strong> asilo por persecución por LGTBIfobia (D.F. 10.ª)</li>
+      <li><strong>Personas intersexuales:</strong> protección frente a intervenciones no consentidas</li>
+      <li><strong>LGTBI sin hogar:</strong> acceso sin discriminación a recursos</li>
+      <li><strong>Personas mayores LGTBI:</strong> servicios gerontológicos y de dependencia</li>
+    </ul>
+  </div>
+  <div class="card l5">
+    <span class="tag">D.A. 3.ª · Concepto de sexilio ★</span>
+    <p>"Situación de las personas LGTBI que se ven <strong>obligadas a abandonar su lugar de residencia habitual</strong> a causa de LGTBIfobia."</p>
+    <p>Concepto exclusivo de la Ley 4/2023. El examen puede preguntar en qué norma aparece → Ley 4/2023, D.A. 3.ª.</p>
+  </div>
+</div>
+
+<!-- EMPRESAS Y LGTBI -->
+<h2>Medidas en el ámbito laboral · Empresas</h2>
+<div class="grid">
+  <div class="card l1">
+    <span class="tag">Empresas de más de 50 trabajadores ★★</span>
+    <p>Deben contar, en el plazo de <strong>12 meses</strong> desde la entrada en vigor, con:</p>
+    <ul>
+      <li>Un <strong>conjunto planificado de medidas</strong> para la igualdad real y efectiva de las personas LGTBI</li>
+      <li>Un <strong>protocolo</strong> frente al acoso o violencia contra personas LGTBI</li>
+    </ul>
+    <div class="note n-warn">⚠ El umbral son 50 trabajadores (mismo que el Plan de Igualdad de género). El examen puede decir 25 o 100 → FALSO.</div>
+  </div>
+</div>
+
+<!-- COMPARATIVA Ley 3/2007 vs Ley 4/2023 -->
+<h2>Comparativa rectificación registral · Ley 3/2007 vs. Ley 4/2023</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Requisito</th><th>Ley 3/2007 (derogada)</th><th>Ley 4/2023</th></tr></thead>
+  <tbody>
+    <tr><td>Edad mínima</td><td>18 años</td><td>16 autónoma · 14 asistida · 12 judicial · &lt;12 solo nombre</td></tr>
+    <tr><td>Diagnóstico médico</td><td>Disforia de género obligatoria</td><td>No se requiere <span class="badge b-ok">DESPATOLOGIZADA</span></td></tr>
+    <tr><td>Tratamiento hormonal</td><td>Obligatorio (mín. 2 años)</td><td>No se requiere</td></tr>
+    <tr><td>Voluntad</td><td>No era suficiente por sí sola</td><td>Voluntad libremente manifestada = único requisito</td></tr>
+    <tr><td>Reversión</td><td>No prevista</td><td>Posible a partir de los 6 meses</td></tr>
+    <tr><td>Terapias de conversión</td><td>No reguladas</td><td>Expresamente prohibidas (art. 22)</td></tr>
+    <tr><td>Efectos</td><td>Constitutivos</td><td>Constitutivos (desde la inscripción)</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- TRAMPAS -->
+<h2>Trampas del examen</h2>
+<div class="grid">
+  <div class="card l1"><span class="tag">Trampa 1</span>
+    <p><strong>Falso:</strong> La Ley 4/2023 es una Ley Orgánica.<br><strong>Correcto:</strong> Es Ley <strong>ordinaria</strong>.</p></div>
+  <div class="card l1"><span class="tag">Trampa 2</span>
+    <p><strong>Falso:</strong> Entró en vigor 30 días después.<br><strong>Correcto:</strong> Al <strong>día siguiente</strong> (02/03/2023).</p></div>
+  <div class="card l1"><span class="tag">Trampa 3</span>
+    <p><strong>Falso:</strong> Solo protege a quienes son efectivamente LGTBI.<br><strong>Correcto:</strong> También a quienes son <strong>percibidos como LGTBI</strong>.</p></div>
+  <div class="card l1"><span class="tag">Trampa 4</span>
+    <p><strong>Falso:</strong> Para la rectificación registral se necesita diagnóstico médico.<br><strong>Correcto:</strong> Solo la <strong>voluntad libremente manifestada</strong>.</p></div>
+  <div class="card l1"><span class="tag">Trampa 5</span>
+    <p><strong>Falso:</strong> Solo mayores de 18 años pueden pedir la rectificación.<br><strong>Correcto:</strong> Desde los <strong>16 años</strong> de forma autónoma.</p></div>
+  <div class="card l1"><span class="tag">Trampa 6</span>
+    <p><strong>Falso:</strong> Los efectos de la rectificación son declarativos.<br><strong>Correcto:</strong> Son <strong>constitutivos</strong> desde la inscripción.</p></div>
+  <div class="card l1"><span class="tag">Trampa 7</span>
+    <p><strong>Falso:</strong> La reversión puede pedirse en cualquier momento.<br><strong>Correcto:</strong> Solo a partir de los <strong>6 meses</strong>.</p></div>
+  <div class="card l1"><span class="tag">Trampa 8</span>
+    <p><strong>Falso:</strong> Las terapias de conversión son legales si las hace un médico.<br><strong>Correcto:</strong> Prohibidas por <strong>cualquier persona</strong> (art. 22).</p></div>
+  <div class="card l1"><span class="tag">Trampa 9</span>
+    <p><strong>Falso:</strong> La víctima de discriminación debe probar la discriminación.<br><strong>Correcto:</strong> Solo aporta <strong>indicios</strong>; la carga recae en el demandado (art. 67).</p></div>
+  <div class="card l1"><span class="tag">Trampa 10</span>
+    <p><strong>Falso:</strong> La discriminación múltiple y la interseccional son lo mismo.<br><strong>Correcto:</strong> Múltiple = suma de causas; interseccional = causas que <strong>interactúan</strong> generando forma específica.</p></div>
+</div>
+
+</body>
+</html>
