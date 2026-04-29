@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 32 · HTML 3 – Cuadro comparativo · Tablas operativas · Ley 4/2015 Estatuto Víctima</title>
+<style>
+:root{--bg:#fff8f0;--surface:#fff;--s2:#fff1e0;--s3:#fde8c8;--border:#fdba74;--div:#fde8c8;--text:#431407;--muted:#9a3412;--p:#c2410c;--pl:#ea580c;--warn:#b45309;--danger:#b91c1c;--ok:#065f46;--vio:#6d28d9;--sh:0 2px 10px rgba(194,65,12,.09)}
+[data-theme="dark"]{--bg:#180d05;--surface:#1c100a;--s2:#251509;--s3:#2e1a0c;--border:#9a3412;--div:#2e1a0c;--text:#fff1e0;--muted:#fdba74;--p:#fb923c;--pl:#fed7aa;--warn:#fbbf24;--danger:#f87171;--ok:#34d399;--vio:#c4b5fd;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.6;background:var(--bg);color:var(--text);padding:20px}
+.hdr{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.96rem;color:var(--p);line-height:1.3}.hdr p{font-size:.72rem;color:var(--muted);margin-top:2px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--border);background:var(--s2);color:var(--text);padding:5px 12px;border-radius:999px;font-size:.72rem}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:10px 12px;text-align:center;flex:1 1 90px;box-shadow:var(--sh)}.sv{font-size:1.05rem;font-weight:900;color:var(--p)}.sk{font-size:.63rem;color:var(--muted);margin-top:2px}
+h2{font-size:.84rem;font-weight:800;color:#fff;background:var(--p);padding:7px 14px;border-radius:7px;margin:22px 0 9px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:14px 16px;box-shadow:var(--sh);overflow:auto;margin-bottom:10px}
+table{width:100%;border-collapse:collapse}
+th{background:var(--s2);color:var(--muted);font-weight:700;font-size:.67rem;text-transform:uppercase;letter-spacing:.05em;padding:7px 9px;text-align:left;position:sticky;top:0;z-index:1}
+th.tc{background:rgba(194,65,12,.15);color:var(--pl)}
+th.ta{background:rgba(109,40,217,.12);color:var(--vio)}
+th.tb{background:rgba(6,95,70,.12);color:var(--ok)}
+th.tw{background:rgba(180,83,9,.13);color:var(--warn)}
+th.tr{background:rgba(185,28,28,.12);color:var(--danger)}
+td{border-bottom:1px solid var(--div);padding:7px 9px;vertical-align:top;font-size:.78rem}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+.badge{display:inline-flex;padding:2px 8px;border-radius:999px;font-size:.64rem;font-weight:700;border:1px solid transparent;white-space:nowrap;margin:1px}
+.bb{background:rgba(194,65,12,.1);color:var(--pl);border-color:rgba(194,65,12,.3)}
+.bg{background:rgba(6,95,70,.12);color:var(--ok);border-color:rgba(6,95,70,.22)}
+.br{background:rgba(185,28,28,.12);color:var(--danger);border-color:rgba(185,28,28,.22)}
+.by{background:rgba(180,83,9,.12);color:var(--warn);border-color:rgba(180,83,9,.22)}
+.bv{background:rgba(109,40,217,.12);color:var(--vio);border-color:rgba(109,40,217,.22)}
+.bk{background:var(--s2);color:var(--text);border-color:var(--border)}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.75rem;margin:8px 0;border-left:4px solid}
+.nb{background:var(--s2);border-color:var(--pl);color:var(--muted)}
+.nw{background:#fef3c7;border-color:#d97706;color:#78350f}
+.nr{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .nw{background:#451a03;color:#fde68a}
+[data-theme="dark"] .nr{background:#450a0a;color:#fca5a5}
+ul{padding-left:15px;margin:4px 0}li{margin-bottom:2px;font-size:.77rem}
+strong{color:var(--p)}
+@media(max-width:700px){table{font-size:.72rem}td,th{padding:5px 6px}}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 32 · HTML 3 · Cuadro comparativo con tablas operativas para examen</h1>
+    <p>Ley 4/2015, de 27 de abril · Estatuto de la víctima del delito · Título Preliminar · Derechos básicos · Protección · Oficinas de Asistencia a las Víctimas</p>
+  </div>
+  <button class="btn" onclick="var d=document.documentElement,t=d.getAttribute('data-theme');d.setAttribute('data-theme',t==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="sv">Ley 4/2015</div><div class="sk">27 de abril</div></div>
+  <div class="stat"><div class="sv">28/04/2015</div><div class="sk">BOE núm. 101</div></div>
+  <div class="stat"><div class="sv">28/10/2015</div><div class="sk">entrada en vigor (6 meses)</div></div>
+  <div class="stat"><div class="sv">Dir. 2012/29/UE</div><div class="sk">base europea</div></div>
+  <div class="stat"><div class="sv">35 arts.</div><div class="sk">5 títulos</div></div>
+  <div class="stat"><div class="sv">45 días</div><div class="sk">art. 8 reflexión</div></div>
+  <div class="stat"><div class="sv">13 extremos</div><div class="sk">art. 5 información</div></div>
+  <div class="stat"><div class="sv">P-I-A-A-R-P-T</div><div class="sk">7 derechos art. 3</div></div>
+</div>
+
+<!-- T1 IDENTIFICACIÓN -->
+<h2>T1 · Identificación de la norma</h2>
+<div class="card"><table>
+<thead><tr><th>Elemento</th><th class="tc">Dato</th></tr></thead>
+<tbody>
+<tr><td>Norma</td><td><strong>Ley 4/2015, de 27 de abril, del Estatuto de la víctima del delito</strong></td></tr>
+<tr><td>BOE</td><td>Núm. 101 · <strong>28 de abril de 2015</strong></td></tr>
+<tr><td>Entrada en vigor</td><td><strong>28 de octubre de 2015</strong> (6 meses después de la publicación — vacatio legis larga)</td></tr>
+<tr><td>Directiva transpuesta</td><td><strong>Directiva 2012/29/UE</strong> del PE y del Consejo, de 25 de octubre de 2012 (plazo: 16/11/2015)</td></tr>
+<tr><td>Sustituye a</td><td>Decisión Marco <strong>2001/220/JAI</strong> del Consejo (primer instrumento europeo)</td></tr>
+<tr><td>Transpone también</td><td>Parcialmente: <strong>Directiva 2011/92/UE</strong> (menores, explotación sexual) y <strong>Directiva 2011/36/UE</strong> (trata de seres humanos)</td></tr>
+<tr><td>Antecedente español</td><td><strong>Ley 35/1995</strong> (víctimas de delitos violentos y contra libertad sexual) + <strong>RD 738/1997</strong> (desarrollo)</td></tr>
+<tr><td>Propósito</td><td>Primer <strong>catálogo único y general</strong> de derechos procesales Y extraprocesales de TODAS las víctimas de delitos en España</td></tr>
+<tr><td>Estructura</td><td>T. Preliminar (1-3) · Tít. I (4-10) · Tít. II (11-17) · Tít. III (18-26) · Tít. IV (27-35) + 2 Disp. Adicionales + Disp. Finales</td></tr>
+<tr><td>Modificaciones</td><td>LECrim (múltiples artículos) · art. 126.2 CP · Estatutos de la Abogacía y Procuraduría</td></tr>
+<tr><td>Modificada por</td><td><strong>LO 10/2022, de 6 de septiembre</strong> (art. 3.1: veda mediación/conciliación en violencia sexual y de género)</td></tr>
+</tbody>
+</table></div>
+
+<!-- T2 ESTRUCTURA ARTÍCULO A ARTÍCULO -->
+<h2>T2 · Artículo por artículo — Título Preliminar y Título I (arts. 1–10)</h2>
+<div class="card"><table>
+<thead><tr><th>Art.</th><th>Denominación</th><th>Contenido operativo</th><th>Dato clave de examen</th></tr></thead>
+<tbody>
+<tr><td><span class="badge bb">1</span></td><td>Ámbito de aplicación</td><td>Víctimas de delitos cometidos en España o perseguibles en España, con independencia de: nacionalidad · edad (mayor o menor) · situación de residencia legal. Excepción: art. 17 (víctimas en otros países UE)</td><td><strong>★★★ Triple independencia: nacionalidad + edad + residencia legal</strong></td></tr>
+<tr><td><span class="badge bb">2a)</span></td><td>Víctima directa</td><td>Toda <strong>persona física</strong> que haya sufrido daño o perjuicio directamente causado por la comisión de un delito: lesiones físicas/psíquicas, daños emocionales, perjuicios económicos. Terceros perjudicados: EXCLUIDOS</td><td>Solo persona FÍSICA. Daño DIRECTO. Terceros: excluidos</td></tr>
+<tr><td><span class="badge bb">2b)</span></td><td>Víctima indirecta</td><td>Solo en muerte o desaparición causada por el delito. 1.º: cónyuge no separado + pareja de hecho + sus hijos + hijos convivientes + progenitores + parientes hasta 3.er grado bajo guarda + tutela/curatela/acogimiento. 2.º: si no hay anteriores: demás parientes línea recta + hermanos</td><td><strong>★★★ Orden de prelación + solo en muerte/desaparición</strong></td></tr>
+<tr><td><span class="badge bb">3</span></td><td>Derechos básicos (P-I-A-A-R-P-T)</td><td>Protección · Información · Apoyo · Asistencia y atención · Reparación · Participación activa en el proceso penal · Trato respetuoso, profesional, individualizado y no discriminatorio. Desde el primer contacto y durante un período adecuado después de la conclusión del proceso. Con independencia de la identidad del infractor y del resultado del proceso. PROHIBICIÓN (LO 10/2022): mediación/conciliación vedadas en violencia sexual y de género</td><td><strong>★★★ Los 7 derechos + la prohibición LO 10/2022</strong></td></tr>
+<tr><td><span class="badge bb">4</span></td><td>Entender y ser entendida</td><td>Lenguaje claro, sencillo y accesible · adaptado a discapacidades sensoriales/intelectuales y menores · lengua de signos reconocida legalmente · medios de apoyo a la comunicación oral de personas sordas y sordociegas · derecho de acompañamiento por persona de su elección desde el primer contacto</td><td>Acompañamiento desde el PRIMER contacto (no solo en juicio)</td></tr>
+<tr><td><span class="badge bb">5</span></td><td>Derecho a la información inmediata (13 extremos)</td><td>Desde el primer contacto, con carácter inmediato, se informa de: a) asistencia y apoyo · b) derecho a denunciar · c) asesoramiento jurídico (gratuito si procede) · d) protección · e) indemnizaciones · f) traducción/interpretación · g) juicio · h) ejercicio derechos fuera de España · i) recursos · j) datos de contacto · k) justicia restaurativa · l) reembolso de gastos · m) notificación de resoluciones del art. 7</td><td><strong>★★★ Inmediata + de oficio + 13 extremos + actualizada en cada fase</strong></td></tr>
+<tr><td><span class="badge bb">6</span></td><td>Derechos como denunciante</td><td>Copia de la denuncia <strong>debidamente certificada</strong> · asistencia lingüística gratuita · traducción escrita de la copia de la denuncia cuando no comprenda la lengua oficial</td><td>La copia es CERTIFICADA siempre. La traducción solo si no comprende la lengua oficial</td></tr>
+<tr><td><span class="badge bb">7</span></td><td>Información sobre la causa penal</td><td>5 resoluciones obligatorias: a) no inicio · b) sentencia · c) prisión/libertad/fuga del infractor · d) medidas cautelares que garanticen la seguridad · e) resoluciones penitenciarias con riesgo. Notificación: preferentemente por <strong>email</strong>. Incluye parte dispositiva y breve resumen de fundamentos. La víctima puede manifestar en cualquier momento su deseo de NO ser informada. <strong>VG: recibe c) y d) automáticamente sin solicitarlo</strong></td><td><strong>★★★ 5 resoluciones · VG: automático sin solicitud</strong></td></tr>
+<tr><td><span class="badge bb">8</span></td><td>Período de reflexión</td><td>Abogados y procuradores no pueden ofrecer servicios a víctimas de catástrofes, calamidades públicas u otros sucesos con número elevado de víctimas durante los <strong>45 días</strong> desde el hecho. Excepción: si la víctima lo solicita expresamente. Infracción: <strong>muy grave con responsabilidad disciplinaria</strong></td><td><strong>★★ 45 DÍAS — la cifra más preguntada del art. 8</strong></td></tr>
+<tr><td><span class="badge bb">9</span></td><td>Traducción e interpretación</td><td>Gratuita · incluye limitaciones auditivas y de expresión oral · puede ser por videoconferencia o telecomunicación · la traducción escrita puede sustituirse excepcionalmente por resumen oral. Se deniega cuando: la víctima habla la lengua del proceso</td><td>Gratuita + videoconferencia posible + resumen oral excepcional</td></tr>
+<tr><td><span class="badge bb">10</span></td><td>Acceso a servicios de asistencia y apoyo (OAV)</td><td>Gratuito y confidencial · autoridades deben derivar a OAV cuando la gravedad lo exija o la víctima lo solicite · los <strong>hijos menores y menores bajo tutela/guarda/custodia</strong> de víctimas de violencia de género, violencia sexual o violencia doméstica también tienen este derecho</td><td><strong>★★ Extensión a menores hijos de víctimas VG/sexual/doméstica</strong></td></tr>
+</tbody>
+</table></div>
+
+<!-- T3 TÍTULO II Y III -->
+<h2>T3 · Artículos relevantes Títulos II y III (arts. 11–26)</h2>
+<div class="card"><table>
+<thead><tr><th>Art.</th><th>Denominación</th><th>Contenido operativo</th><th>Dato clave</th></tr></thead>
+<tbody>
+<tr><td><span class="badge bb">11</span></td><td>Participación activa en el proceso penal</td><td>Derecho a acreditar la comisión del delito y a ejercer la acción penal aun no siendo perjudicada directamente en algunos supuestos. Derecho a impugnar el sobreseimiento</td><td>Distinción víctima como parte procesal vs. víctima no personada</td></tr>
+<tr><td><span class="badge bb">12</span></td><td>Comunicación y revisión del sobreseimiento</td><td>La víctima puede impugnar el auto de sobreseimiento aunque no se haya personado en el proceso. Plazo suficiente desde la comunicación de la resolución</td><td>Derecho a impugnar el archivo aunque no esté personada</td></tr>
+<tr><td><span class="badge bb">15</span></td><td>Servicios de justicia restaurativa</td><td>Requisitos acumulativos: 1.º consentimiento libre e informado de la víctima + 2.º reconocimiento de los hechos esenciales por el infractor. No debe suponer riesgo para la víctima ni causarle perjuicio. EXCLUIDA: violencia sexual y violencia de género · si hay riesgo para la víctima</td><td><strong>★★★ Doble candado + exclusión en VG/violencia sexual</strong></td></tr>
+<tr><td><span class="badge bb">18-22</span></td><td>Protección de la intimidad y medidas generales</td><td>Derecho a la protección de la intimidad · evitar difusión de información que revele identidad · solicitar medidas para no difundir imágenes en sala · solicitar juicio a puerta cerrada · evitar victimización secundaria · mínimas declaraciones y reconocimientos</td><td>Victimización secundaria: concepto clave del Título III</td></tr>
+<tr><td><span class="badge bb">23</span></td><td>Evaluación individualizada</td><td>Previa a las medidas de protección. Factores: características personales · naturaleza del delito · gravedad del daño · vulnerabilidad · relación con el infractor · relación familiar. Debe <strong>actualizarse</strong> a lo largo del proceso y con circunstancias sobrevenidas. Si es menor: guía el <strong>interés superior del menor</strong></td><td><strong>★★ Se ACTUALIZA — no es estática · interés superior del menor</strong></td></tr>
+<tr><td><span class="badge bb">24</span></td><td>Competencia y procedimiento de evaluación</td><td>La evaluación la realizan las autoridades competentes para la instrucción y enjuiciamiento con participación de los servicios de asistencia. Se realiza cuanto antes</td><td>Quién evalúa: autoridades competentes para instrucción y enjuiciamiento</td></tr>
+<tr><td><span class="badge bb">25</span></td><td>Medidas de protección específicas</td><td>Para víctimas con necesidades especiales: declaración en aislamiento o distancia del acusado · grabación en vídeo para reproducirla en juicio · presencia de psicólogo durante la declaración</td><td>Estas medidas requieren evaluación individualizada previa</td></tr>
+<tr><td><span class="badge bb">26</span></td><td>Medidas para menores, PcD y víctimas de violencias sexuales</td><td>El menor interrogado por persona especializada · grabación audiovisual de la declaración · evitar contacto directo · sala separada. Para PcD y víctimas de violencias sexuales: medidas específicas adaptadas</td><td>Menores: siempre persona especializada para el interrogatorio</td></tr>
+</tbody>
+</table></div>
+
+<!-- T4 TÍTULO IV OAV -->
+<h2>T4 · Título IV — OAV y disposiciones comunes (arts. 27–35)</h2>
+<div class="card"><table>
+<thead><tr><th>Art.</th><th>Denominación</th><th>Contenido operativo</th><th>Dato clave</th></tr></thead>
+<tbody>
+<tr><td><span class="badge bb">27</span></td><td>Organización y funciones de las OAV</td><td>Funciones: información sobre derechos y proceso · apoyo emocional · acompañamiento en diligencias · coordinación con otros servicios sociales y asistenciales · orientación sobre justicia restaurativa · facilitar la solicitud de justicia gratuita. Carácter: <strong>gratuitas y confidenciales</strong>. Las autoridades que contacten con víctimas deben derivar a OAV cuando sea necesario</td><td><strong>★★★ OAV = gratuitas + confidenciales + 6 funciones</strong></td></tr>
+<tr><td><span class="badge bb">28</span></td><td>Acceso a la justicia gratuita</td><td>La víctima puede presentar la solicitud de justicia gratuita ante la autoridad encargada de informarle. La autoridad la transmite al Colegio de Abogados competente. Evita que la víctima tenga que conocer qué órgano es competente</td><td>Presentación simplificada: ante cualquier autoridad informante</td></tr>
+<tr><td><span class="badge bb">29</span></td><td>Víctimas de delitos en otros Estados UE</td><td>Víctima residente en España que sufre delito en otro Estado UE: puede presentar denuncia en España. Las autoridades españolas la transmiten al Estado donde se cometió el delito</td><td>Cooperación entre EEMM: denuncia en España válida para delito en otro Estado UE</td></tr>
+<tr><td><span class="badge bb">30</span></td><td>Formación</td><td>Fomento de la formación específica de operadores jurídicos (jueces, fiscales, secretarios, policía) y personal de la Administración de Justicia en el trato a las víctimas, con enfoque en necesidades especiales</td><td>Formación específica: no genérica, adaptada a cada tipo de víctima</td></tr>
+<tr><td><span class="badge bb">31</span></td><td>Sensibilización</td><td>Campañas de información, investigación y educación para apoyar y proteger a las víctimas. Programas de prevención de la victimización</td><td>La sociedad también como destinataria de la protección a víctimas</td></tr>
+<tr><td><span class="badge bb">32</span></td><td>Cooperación con profesionales y evaluación</td><td>Cooperación con profesionales especializados. Evaluación periódica del sistema de atención a víctimas</td><td>D.A. 1.ª: evaluación anual por el <strong>Ministerio de Justicia</strong></td></tr>
+<tr><td><span class="badge bb">33</span></td><td>Cooperación internacional</td><td>Cooperación internacional y con la sociedad civil (ONG, asociaciones de víctimas)</td><td>Papel de la sociedad civil en la protección de víctimas</td></tr>
+<tr><td><span class="badge bb">34</span></td><td>Medios de comunicación</td><td>Fomento de la autorregulación de los medios de comunicación en el tratamiento de informaciones que afecten a la dignidad de las víctimas y a la intimidad de las víctimas menores</td><td>Autorregulación (no imposición directa a los medios)</td></tr>
+<tr><td><span class="badge bb">35</span></td><td>Obligación de reembolso</td><td>La víctima <strong>condenada por denuncia falsa o simulación de delito</strong> deberá reembolsar los gastos que su reconocimiento, información, protección y apoyo haya ocasionado a la Administración</td><td><strong>★★ Contrapeso a la gratuidad: denuncia falsa = reembolso obligatorio</strong></td></tr>
+</tbody>
+</table></div>
+
+<!-- T5 CONCEPTO DE VÍCTIMA COMPARADO -->
+<h2>T5 · Víctima directa vs. víctima indirecta — comparativa operativa</h2>
+<div class="card"><table>
+<thead><tr><th>Aspecto</th><th class="tc">Víctima DIRECTA</th><th class="tw">Víctima INDIRECTA</th></tr></thead>
+<tbody>
+<tr><td>Definición</td><td>Persona física que sufre daño <strong>directamente</strong> causado por el delito</td><td>Familiares/allegados de la víctima muerta o desaparecida directamente por el delito</td></tr>
+<tr><td>Tipo de daño</td><td>Físico · psíquico · emocional · económico</td><td>No aplica daño directo (el daño es la muerte/desaparición de la víctima directa)</td></tr>
+<tr><td>Supuesto</td><td>Cualquier delito</td><td>Solo cuando el delito cause <strong>muerte o desaparición</strong> de la víctima directa</td></tr>
+<tr><td>Quiénes</td><td>Cualquier persona física con daño directo</td><td>1.º: Cónyuge no separado · pareja de hecho · sus hijos · hijos convivientes · progenitores · parientes hasta 3.er grado bajo guarda · personas en tutela/curatela/acogimiento<br/>2.º (si no hay anteriores): demás parientes en línea recta + hermanos</td></tr>
+<tr><td>Exclusión expresa</td><td>Personas jurídicas · terceros perjudicados derivados del delito</td><td>Los que sean responsables del hecho causante de la muerte/desaparición</td></tr>
+<tr><td>Prestación subsidiaria</td><td>Accede a todos los derechos de la Ley</td><td>Solo en ausencia de víctimas del orden de prelación anterior</td></tr>
+</tbody>
+</table>
+<div class="note nr">⚠ TRAMPA: las personas jurídicas no pueden ser víctimas directas. Los terceros perjudicados (ej. aseguradoras) están expresamente excluidos.</div>
+</div>
+
+<!-- T6 DERECHOS ART. 3 COMPARADO -->
+<h2>T6 · Los 7 derechos básicos (art. 3) — tabla con alcance y condición</h2>
+<div class="card"><table>
+<thead><tr><th>Derecho</th><th>Letra</th><th>Alcance específico</th><th>¿Depende de algo?</th></tr></thead>
+<tbody>
+<tr><td><strong>Protección</strong></td><td>P</td><td>Medidas para evitar represalias, intimidación y victimización secundaria (arts. 18-26)</td><td>Evaluación individualizada previa</td></tr>
+<tr><td><strong>Información</strong></td><td>I</td><td>13 extremos desde el primer contacto (art. 5) + información sobre la causa (art. 7)</td><td>De oficio · actualizada en cada fase</td></tr>
+<tr><td><strong>Apoyo</strong></td><td>A</td><td>Apoyo emocional y psicológico prestado por las OAV y servicios de asistencia</td><td>Gratuito y confidencial (art. 10)</td></tr>
+<tr><td><strong>Asistencia y atención</strong></td><td>A</td><td>Atención jurídica, social, médica y material a través de las OAV y servicios públicos</td><td>Gratuita · derivación obligatoria por autoridades</td></tr>
+<tr><td><strong>Reparación</strong></td><td>R</td><td>Indemnización por daños sufridos, incluyendo indemnizaciones estatales cuando el responsable no puede pagarlas</td><td>Independiente del resultado del proceso</td></tr>
+<tr><td><strong>Participación activa</strong></td><td>P</td><td>Derechos procesales de parte, impugnación del sobreseimiento, participación en la ejecución (arts. 11-13)</td><td>Puede ejercerse sin personarse formalmente en algunos supuestos</td></tr>
+<tr><td><strong>Trato respetuoso y no discriminatorio</strong></td><td>T</td><td>Trato profesional, individualizado, respetuoso con la dignidad y no discriminatorio en todas las actuaciones</td><td>Desde el primer contacto, durante y después del proceso</td></tr>
+</tbody>
+</table>
+<p style="margin-top:8px;font-size:.77rem">Los derechos del art. 3 se reconocen <strong>con independencia de que se conozca o no la identidad del infractor</strong> y <strong>del resultado del proceso penal</strong>.</p>
+<div class="note nr">🚫 LO 10/2022 añadió al art. 3.1: <strong>en supuestos de violencia sexual y de violencia de género</strong> estará vedada la <strong>mediación y la conciliación</strong>. Sin excepción, aunque la víctima consienta.</div>
+</div>
+
+<!-- T7 JUSTICIA RESTAURATIVA vs NO -->
+<h2>T7 · Justicia restaurativa (art. 15) — cuándo sí y cuándo no</h2>
+<div class="card"><table>
+<thead><tr><th>Condición</th><th class="tb">Justicia restaurativa POSIBLE</th><th class="tr">Justicia restaurativa EXCLUIDA</th></tr></thead>
+<tbody>
+<tr><td>Consentimiento de la víctima</td><td>Libre e informado de los riesgos del proceso y posibles resultados</td><td>Sin consentimiento o con consentimiento viciado</td></tr>
+<tr><td>Reconocimiento del infractor</td><td>Reconocimiento previo de los hechos esenciales</td><td>Si el infractor no reconoce los hechos esenciales</td></tr>
+<tr><td>Tipo de violencia</td><td>Cualquier delito que no entre en las exclusiones</td><td><strong>Violencia de género y violencia sexual</strong> (veda absoluta por LO 10/2022)</td></tr>
+<tr><td>Riesgo para la víctima</td><td>Sin riesgo identificado ni perjuicio para la víctima</td><td>Cuando el proceso pueda suponer riesgo o perjuicio para la víctima</td></tr>
+</tbody>
+</table>
+<div class="note nb">📌 El término "justicia restaurativa" incluye mediación, conciliación y otros procesos restaurativos. En violencia de género y sexual quedan excluidos TODOS sin excepción.</div>
+</div>
+
+<!-- T8 EVALUACIÓN Y MEDIDAS DE PROTECCIÓN -->
+<h2>T8 · Evaluación individualizada (art. 23) y medidas de protección</h2>
+<div class="card"><table>
+<thead><tr><th>Aspecto</th><th class="tc">Contenido</th></tr></thead>
+<tbody>
+<tr><td>Finalidad</td><td>Determinar las <strong>necesidades especiales de protección</strong> de cada víctima</td></tr>
+<tr><td>Momento</td><td>Lo antes posible · se <strong>actualiza</strong> a lo largo del proceso · no es estática</td></tr>
+<tr><td>Quién evalúa</td><td>Autoridades competentes para instrucción y enjuiciamiento con participación de los servicios de asistencia</td></tr>
+<tr><td>Factor 1</td><td>Características personales: discapacidad · relación de dependencia con el infractor · minoría de edad · especial vulnerabilidad</td></tr>
+<tr><td>Factor 2</td><td>Naturaleza del delito y gravedad de los perjuicios, riesgo de reiteración. Especialmente: terrorismo · crimen organizado · trata · violencia sexual · violencia de género</td></tr>
+<tr><td>Factor 3</td><td>Opiniones y necesidades expresadas por la víctima</td></tr>
+<tr><td>Menores</td><td>Si la víctima es menor: el <strong>interés superior del menor</strong> guía toda decisión o medida</td></tr>
+<tr><td>Medidas generales (19-22)</td><td>Declaración sin demora · mínimas declaraciones y reconocimientos médicos · salas separadas · no contacto con el infractor · posible juicio a puerta cerrada</td></tr>
+<tr><td>Medidas específicas (25)</td><td>Declaración en aislamiento del acusado · grabación en vídeo para juicio · presencia de psicólogo · interrogatorio por persona especializada (menores)</td></tr>
+</tbody>
+</table></div>
+
+<!-- T9 MAPA NORMATIVO -->
+<h2>T9 · Mapa de conexiones normativas del Tema 32</h2>
+<div class="card"><table>
+<thead><tr><th>Norma</th><th>Relación con la Ley 4/2015</th></tr></thead>
+<tbody>
+<tr><td><strong>Directiva 2012/29/UE</strong></td><td>Norma europea que transpone principalmente. Sustituyó a la Decisión Marco 2001/220/JAI. Establece los mínimos comunes europeos</td></tr>
+<tr><td><strong>Decisión Marco 2001/220/JAI</strong></td><td>Primer antecedente europeo sobre el estatuto de la víctima en el proceso penal. Derogada por la Directiva 2012/29/UE</td></tr>
+<tr><td><strong>Directiva 2011/92/UE</strong></td><td>Abusos sexuales y explotación sexual de menores. Transposición parcial en la Ley 4/2015 (medidas para menores)</td></tr>
+<tr><td><strong>Directiva 2011/36/UE</strong></td><td>Trata de seres humanos. Transposición parcial (medidas específicas para víctimas de trata)</td></tr>
+<tr><td><strong>LO 10/2022, de 6 de septiembre</strong></td><td>Garantía integral de la libertad sexual. Modificó el art. 3.1 de la Ley 4/2015: veda la mediación/conciliación en violencia sexual y de género</td></tr>
+<tr><td><strong>LO 1/2004</strong></td><td>Medidas de protección integral contra la violencia de género. La Ley 4/2015 remite a esta norma especial para el régimen reforzado de víctimas de VG</td></tr>
+<tr><td><strong>Ley 35/1995</strong></td><td>Antecedente español: ayudas y asistencia a víctimas de delitos violentos y contra la libertad sexual. Ámbito más limitado que la Ley 4/2015</td></tr>
+<tr><td><strong>RD 738/1997</strong></td><td>Desarrollo reglamentario de la Ley 35/1995</td></tr>
+<tr><td><strong>Ley 29/2011</strong></td><td>Reconocimiento y protección integral de las víctimas del terrorismo. Normativa especial a la que remite la Ley 4/2015</td></tr>
+<tr><td><strong>LECrim</strong></td><td>Modificada en múltiples artículos para incorporar los derechos de las víctimas y transponer la Directiva</td></tr>
+<tr><td><strong>Código Penal, art. 126.2</strong></td><td>Prelación de pagos en ejecución: modificado para dar prioridad a la indemnización a la víctima</td></tr>
+</tbody>
+</table></div>
+
+<!-- T10 COMPARATIVA DERECHOS PROCESALES VS EXTRAPROCESALES -->
+<h2>T10 · Derechos procesales vs. extraprocesales — la novedad de la Ley</h2>
+<div class="card"><table>
+<thead><tr><th>Aspecto</th><th class="tb">Derechos EXTRAPROCESALES (Tít. I, arts. 4-10)</th><th class="tc">Derechos PROCESALES (Tít. II, arts. 11-17)</th></tr></thead>
+<tbody>
+<tr><td>¿Qué requieren?</td><td>No requieren personarse en el proceso ni interponer denuncia</td><td>Implican participación activa en el proceso penal</td></tr>
+<tr><td>¿Desde cuándo?</td><td>Desde el <strong>primer contacto</strong> con las autoridades</td><td>Desde la apertura del proceso hasta su finalización</td></tr>
+<tr><td>Independencia</td><td>Independientes de la identidad del infractor, resultado del proceso y situación procesal</td><td>Vinculados a la existencia de un proceso penal activo</td></tr>
+<tr><td>Ejemplos clave</td><td>Información inmediata (art. 5) · traducción gratuita (art. 9) · OAV (art. 10) · período reflexión (art. 8)</td><td>Impugnar sobreseimiento (art. 12) · justicia restaurativa (art. 15) · participar en ejecución (art. 13)</td></tr>
+<tr><td>La gran novedad de 2015</td><td>Los derechos extraprocesales existían fragmentados antes de la Ley 4/2015. Esta Ley los unifica y potencia</td><td>Ya recogidos parcialmente en LECrim; la Ley 4/2015 los amplía y refuerza</td></tr>
+</tbody>
+</table></div>
+
+<!-- T11 TRAMPAS -->
+<h2>T11 · Las 12 trampas más frecuentes del examen</h2>
+<div class="card"><table>
+<thead><tr><th>Afirmación trampa</th><th>¿Correcta?</th><th>Corrección exacta</th></tr></thead>
+<tbody>
+<tr><td>La Ley solo se aplica a víctimas españolas con residencia legal</td><td><span class="badge br">FALSO</span></td><td>Se aplica con independencia de nacionalidad, edad y situación de residencia legal</td></tr>
+<tr><td>Las personas jurídicas pueden ser víctimas directas</td><td><span class="badge br">FALSO</span></td><td>Solo las personas <strong>físicas</strong> pueden ser víctimas directas</td></tr>
+<tr><td>Los terceros perjudicados derivados del delito son víctimas indirectas</td><td><span class="badge br">FALSO</span></td><td>Expresamente excluidos (art. 2 in fine)</td></tr>
+<tr><td>La información del art. 5 se proporciona solo si la víctima la solicita</td><td><span class="badge br">FALSO</span></td><td>Es inmediata, de oficio y desde el primer contacto</td></tr>
+<tr><td>En violencia de género la mediación es posible si la víctima consiente</td><td><span class="badge br">FALSO</span></td><td>VEDADA sin excepción alguna desde la LO 10/2022</td></tr>
+<tr><td>Para la JR basta el consentimiento de la víctima</td><td><span class="badge br">FALSO</span></td><td>También requiere reconocimiento de los hechos esenciales por el infractor</td></tr>
+<tr><td>El período de reflexión para abogados es de 30 días</td><td><span class="badge br">FALSO</span></td><td>Son <strong>45 días</strong></td></tr>
+<tr><td>La Ley entró en vigor el 28 de abril de 2015 (publicación en BOE)</td><td><span class="badge br">FALSO</span></td><td>Entró en vigor el <strong>28 de octubre de 2015</strong>, 6 meses después</td></tr>
+<tr><td>La víctima de VG debe solicitar expresamente la notificación de la puesta en libertad</td><td><span class="badge br">FALSO</span></td><td>La recibe <strong>automáticamente sin necesidad de solicitarlo</strong></td></tr>
+<tr><td>La evaluación individualizada es un trámite único al inicio del proceso</td><td><span class="badge br">FALSO</span></td><td>Debe <strong>actualizarse</strong> a lo largo del proceso con las circunstancias sobrevenidas</td></tr>
+<tr><td>Las OAV tienen un coste para las víctimas que no tienen justicia gratuita</td><td><span class="badge br">FALSO</span></td><td>Las OAV son siempre <strong>gratuitas y confidenciales</strong></td></tr>
+<tr><td>La obligación de reembolso del art. 35 aplica a toda víctima que pierda el proceso</td><td><span class="badge br">FALSO</span></td><td>Solo aplica a la víctima <strong>condenada por denuncia falsa o simulación de delito</strong></td></tr>
+</tbody>
+</table></div>
+</body>
+</html>

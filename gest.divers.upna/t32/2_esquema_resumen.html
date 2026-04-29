@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 32 · HTML 2 – Esquema-resumen visual · Ley 4/2015 Estatuto de la Víctima</title>
+<style>
+:root{--bg:#fff8f0;--surface:#fff;--s2:#fff1e0;--s3:#fde8c8;--border:#fdba74;--div:#fde8c8;--text:#431407;--muted:#9a3412;--p:#c2410c;--pl:#ea580c;--warn:#b45309;--danger:#b91c1c;--ok:#065f46;--vio:#6d28d9;--sh:0 2px 10px rgba(194,65,12,.09)}
+[data-theme="dark"]{--bg:#180d05;--surface:#1c100a;--s2:#251509;--s3:#2e1a0c;--border:#9a3412;--div:#2e1a0c;--text:#fff1e0;--muted:#fdba74;--p:#fb923c;--pl:#fed7aa;--warn:#fbbf24;--danger:#f87171;--ok:#34d399;--vio:#c4b5fd;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.6;background:var(--bg);color:var(--text);padding:20px}
+.hdr{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.95rem;color:var(--p);line-height:1.3}.hdr p{font-size:.72rem;color:var(--muted);margin-top:2px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--border);background:var(--s2);color:var(--text);padding:5px 12px;border-radius:999px;font-size:.72rem}
+/* stats */
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:10px 12px;text-align:center;flex:1 1 90px;box-shadow:var(--sh)}.sv{font-size:1.1rem;font-weight:900;color:var(--p)}.sk{font-size:.63rem;color:var(--muted);margin-top:2px}
+/* headings */
+h2{font-size:.84rem;font-weight:800;color:#fff;background:var(--p);padding:7px 14px;border-radius:7px;margin:22px 0 9px}
+h3{font-size:.79rem;font-weight:700;color:var(--p);margin:12px 0 5px;border-bottom:1px solid var(--border);padding-bottom:3px}
+/* cards */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:13px 16px;box-shadow:var(--sh)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin-bottom:10px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+p{font-size:.77rem;margin-bottom:6px}
+ul,ol{padding-left:15px;margin:4px 0}li{margin-bottom:3px;font-size:.77rem}
+strong{color:var(--p)}
+/* badges */
+.badge{display:inline-flex;padding:2px 8px;border-radius:999px;font-size:.64rem;font-weight:700;border:1px solid transparent;margin:2px}
+.bb{background:rgba(194,65,12,.1);color:var(--pl);border-color:rgba(194,65,12,.3)}
+.bg{background:rgba(6,95,70,.12);color:var(--ok);border-color:rgba(6,95,70,.22)}
+.br{background:rgba(185,28,28,.12);color:var(--danger);border-color:rgba(185,28,28,.22)}
+.by{background:rgba(180,83,9,.12);color:var(--warn);border-color:rgba(180,83,9,.22)}
+.bv{background:rgba(109,40,217,.12);color:var(--vio);border-color:rgba(109,40,217,.22)}
+.bk{background:var(--s2);color:var(--text);border-color:var(--border)}
+/* notes */
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.75rem;margin:8px 0;border-left:4px solid}
+.nb{background:var(--s2);border-color:var(--pl);color:var(--muted)}
+.nw{background:#fef3c7;border-color:#d97706;color:#78350f}
+.nr{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .nw{background:#451a03;color:#fde68a}
+[data-theme="dark"] .nr{background:#450a0a;color:#fca5a5}
+/* flujos */
+.flow{display:grid;gap:6px;margin-bottom:10px}
+.flow3{grid-template-columns:repeat(3,1fr)}.flow4{grid-template-columns:repeat(4,1fr)}.flow5{grid-template-columns:repeat(5,1fr)}
+.step{background:var(--surface);border:1px solid var(--border);border-radius:9px;padding:9px 8px;text-align:center;box-shadow:var(--sh);position:relative}
+.num{width:23px;height:23px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--p);color:#fff;font-weight:900;font-size:.72rem;margin-bottom:4px}
+.step p{font-size:.71rem;margin:0}
+.step:not(:last-child)::after{content:"→";position:absolute;right:-9px;top:50%;transform:translateY(-50%);color:var(--pl);font-size:.95rem;font-weight:900;z-index:2}
+/* víctima mockup */
+.victim-box{border-radius:12px;padding:16px 20px;margin-bottom:8px;border:2px solid}
+.vd{background:rgba(194,65,12,.07);border-color:var(--pl)}
+.vi{background:rgba(180,83,9,.07);border-color:var(--warn)}
+/* tabla */
+table{width:100%;border-collapse:collapse}
+th{background:var(--s2);color:var(--muted);font-size:.67rem;text-transform:uppercase;padding:7px 9px;text-align:left}
+td{padding:7px 9px;border-bottom:1px solid var(--div);font-size:.78rem;vertical-align:top}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+/* piaapt hexagonal */
+.piaapt{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:10px 0}
+.pitem{background:var(--p);color:#fff;border-radius:10px;padding:10px 14px;text-align:center;min-width:90px;flex:1 1 90px}
+.pitem .pi{font-size:1.2rem;font-weight:900}.pitem .pp{font-size:.65rem;margin-top:2px;opacity:.85}
+/* derecho timeline */
+.dtimeline{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;align-items:start;margin:6px 0}
+.dart{font-size:.7rem;font-weight:800;color:var(--pl);white-space:nowrap;padding-top:2px}
+.dcont{font-size:.76rem;border-left:2px solid var(--border);padding-left:10px;padding-bottom:6px}
+@media(max-width:680px){.flow3,.flow4,.flow5{grid-template-columns:1fr 1fr}.step:not(:last-child)::after{display:none}.grid2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 32 · HTML 2 · Esquema-resumen con bloques visuales para memorización rápida</h1>
+    <p>Ley 4/2015, de 27 de abril · Estatuto de la víctima del delito · Título Preliminar · Derechos básicos · Protección · OAV</p>
+  </div>
+  <button class="btn" onclick="var d=document.documentElement,t=d.getAttribute('data-theme');d.setAttribute('data-theme',t==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><div class="sv">4/2015</div><div class="sk">27 de abril</div></div>
+  <div class="stat"><div class="sv">BOE 28/4</div><div class="sk">EV 28/10/2015</div></div>
+  <div class="stat"><div class="sv">6 meses</div><div class="sk">vacatio legis</div></div>
+  <div class="stat"><div class="sv">Dir. 2012/29</div><div class="sk">transposición UE</div></div>
+  <div class="stat"><div class="sv">35</div><div class="sk">artículos</div></div>
+  <div class="stat"><div class="sv">45 días</div><div class="sk">período reflexión</div></div>
+  <div class="stat"><div class="sv">13</div><div class="sk">extremos info. art. 5</div></div>
+  <div class="stat"><div class="sv">OAV</div><div class="sk">gratuitas · confidenciales</div></div>
+</div>
+
+<!-- Idea fuerza -->
+<h2>¿Qué es la Ley 4/2015?</h2>
+<div class="grid">
+  <div class="card"><h3>Propósito</h3><p>Primer texto único que aglutina el <strong>catálogo general de derechos procesales Y extraprocesales</strong> de TODAS las víctimas de delitos en España. Va más allá de los mínimos europeos.</p></div>
+  <div class="card"><h3>Fundamento europeo</h3><p>Transpone la <strong>Directiva 2012/29/UE</strong> (sustituyó a la Decisión Marco 2001/220/JAI) y parcialmente las Directivas <strong>2011/92/UE</strong> (menores) y <strong>2011/36/UE</strong> (trata de seres humanos).</p></div>
+  <div class="card"><h3>Ámbito (art. 1)</h3><p>Delitos cometidos o perseguibles en España. <strong>Sin importar:</strong> nacionalidad · mayoría de edad · situación de residencia legal.</p></div>
+  <div class="card"><h3>Estructura</h3><p>T.P. (1-3) · Tít. I Derechos básicos (4-10) · Tít. II Proceso (11-17) · Tít. III Protección (18-26) · Tít. IV OAV/Disposiciones comunes (27-35).</p></div>
+</div>
+
+<!-- CONCEPTO DE VÍCTIMA -->
+<h2>Art. 2 · Concepto de víctima — quién es y quién no es</h2>
+<div class="grid2">
+  <div class="victim-box vd">
+    <h3>✅ Víctima DIRECTA</h3>
+    <p><strong>Persona física</strong> que sufre daño <strong>directamente</strong> causado por el delito:</p>
+    <ul>
+      <li>Lesiones físicas o psíquicas</li>
+      <li>Daños emocionales</li>
+      <li>Perjuicios económicos</li>
+    </ul>
+  </div>
+  <div class="victim-box vi">
+    <h3>⚠️ Víctima INDIRECTA</h3>
+    <p>Solo en <strong>muerte o desaparición causada por el delito</strong>:</p>
+    <p><strong>1.º</strong> Cónyuge no separado / pareja de hecho + sus hijos + hijos de la víctima convivientes + progenitores + parientes hasta <strong>3.er grado</strong> bajo guarda + personas en tutela/curatela/acogimiento.</p>
+    <p><strong>2.º</strong> Si no hay anteriores: parientes en línea recta + hermanos.</p>
+  </div>
+</div>
+<div class="note nr">⚠ EXCLUIDOS EXPRESAMENTE: los terceros perjudicados derivados del delito (ej. aseguradoras). Y los que sean responsables del hecho.</div>
+
+<!-- LOS 7 DERECHOS ART. 3 -->
+<h2>Art. 3 · Los 7 derechos básicos — mnemotecnia P-I-A-A-R-P-T</h2>
+<div class="piaapt">
+  <div class="pitem"><div class="pi">P</div><div class="pp">Protección</div></div>
+  <div class="pitem"><div class="pi">I</div><div class="pp">Información</div></div>
+  <div class="pitem"><div class="pi">A</div><div class="pp">Apoyo</div></div>
+  <div class="pitem"><div class="pi">A</div><div class="pp">Asistencia y atención</div></div>
+  <div class="pitem"><div class="pi">R</div><div class="pp">Reparación</div></div>
+  <div class="pitem"><div class="pi">P</div><div class="pp">Participación activa en el proceso penal</div></div>
+  <div class="pitem"><div class="pi">T</div><div class="pp">Trato respetuoso, profesional, individualizado y no discriminatorio</div></div>
+</div>
+<div class="card" style="margin-top:4px">
+  <p><strong>¿Desde cuándo?</strong> Desde el <strong>primer contacto</strong> con autoridades/funcionarios, durante el proceso y por un <strong>período adecuado después de su conclusión</strong>.</p>
+  <p><strong>¿Con qué independencia?</strong> De que se conozca o no la identidad del infractor y <strong>del resultado del proceso</strong>.</p>
+</div>
+<div class="note nr">🚫 PROHIBICIÓN ART. 3 (LO 10/2022): en violencia sexual y violencia de género, la <strong>mediación y la conciliación están VEDADAS</strong> sin excepción alguna, aunque la víctima consienta.</div>
+
+<!-- DERECHOS TÍTULO I timeline -->
+<h2>Título I · Derechos básicos arts. 4–10 — panel rápido</h2>
+<div class="card">
+  <div class="dtimeline">
+    <div class="dart">Art. 4</div>
+    <div class="dcont"><strong>Entender y ser entendida:</strong> lenguaje claro, sencillo y accesible · lengua de signos · <strong>acompañamiento por persona de su elección desde el primer contacto</strong></div>
+    <div class="dart">Art. 5</div>
+    <div class="dcont"><strong>Información inmediata:</strong> 13 extremos · sin retrasos innecesarios · desde el primer contacto · actualizada en cada fase · la víctima puede indicar su email para notificaciones</div>
+    <div class="dart">Art. 6</div>
+    <div class="dcont"><strong>Denunciante:</strong> <strong>copia certificada</strong> de la denuncia · asistencia lingüística gratuita · traducción escrita de la denuncia si no comprende la lengua oficial</div>
+    <div class="dart">Art. 7</div>
+    <div class="dcont"><strong>Información sobre la causa:</strong> fecha/hora/lugar del juicio · acusación · 5 resoluciones obligatorias → VG: notificación automática de prisión/libertad y medidas cautelares <strong>sin solicitarlo</strong></div>
+    <div class="dart">Art. 8</div>
+    <div class="dcont"><strong>Período de reflexión:</strong> <span style="font-weight:900;color:var(--p)">45 DÍAS</span> en catástrofes/calamidades con múltiples víctimas. Abogados y procuradores no pueden ofrecer servicios. Incumplimiento = infracción MUY GRAVE</div>
+    <div class="dart">Art. 9</div>
+    <div class="dcont"><strong>Traducción e interpretación:</strong> gratuita · incluye limitaciones auditivas · puede ser por videoconferencia · la traducción escrita puede sustituirse por resumen oral (excepcionalmente)</div>
+    <div class="dart">Art. 10</div>
+    <div class="dcont"><strong>Servicios de asistencia (OAV):</strong> gratuito y confidencial · derivación obligatoria por autoridades si la gravedad lo exige o la víctima lo solicita · menores hijos de víctimas VG también protegidos</div>
+  </div>
+</div>
+
+<!-- ART. 5 LOS 13 EXTREMOS -->
+<h2>Art. 5 · Los 13 extremos de la información inmediata</h2>
+<div class="card"><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:7px">
+  <div style="background:var(--s2);border-radius:8px;padding:8px 10px;border:1px solid var(--border)"><div style="font-weight:800;color:var(--p);font-size:.7rem">a)</div><div style="font-size:.73rem">Medidas de asistencia, apoyo y alojamiento alternativo si procede</div></div>
+  <div style="background:var(--s2);border-radius:8px;padding:8px 10px;border:1px solid var(--border)"><div style="font-weight:800;color:var(--p);font-size:.7rem">b)</div><div style="font-size:.73rem">Derecho a denunciar y procedimiento para interponerla</div></div>
+  <div style="background:var(--s2);border-radius:8px;padding:8px 10px;border:1px solid var(--border)"><div style="font-weight:800;color:var(--p);font-size:.7rem">c)</div><div style="font-size:.73rem">Asesoramiento y defensa jurídica (gratuita si procede)</div></div>
+  <div style="background:var(--s2);border-radius:8px;padding:8px 10px;border:1px solid var(--border)"><div style="font-weight:800;color:var(--p);font-size:.7rem">d)</div><div style="font-size:.73rem">Medidas de protección disponibles</div></div>
+  <div style="background:var(--s2);border-radius:8px;padding:8px 10px;border:1px solid var(--border)"><div style="font-weight:800;color:var(--p);font-size:.7rem">e)</div><div style="font-size:.73rem">Indemnizaciones y ayudas económicas</div></div>
+  <div style="background:var(--s2);border-radius:8px;padding:8px 10px;border:1px solid var(--border)"><div style="font-weight:800;color:var(--p);font-size:.7rem">f)</div><div style="font-size:.73rem">Servicios de traducción e interpretación disponibles</div></div>
+  <div style="background:var(--s2);border-radius:8px;padding:8px 10px;border:1px solid var(--border)"><div style="font-weight:800;color:var(--p);font-size:.7rem">g)</div><div style="font-size:.73rem">Fechas y lugar del juicio y estado de la causa si lo solicita</div></div>
+  <div style="background:var(--s2);border-radius:8px;padding:8px 10px;border:1px solid var(--border)"><div style="font-weight:800;color:var(--p);font-size:.7rem">h)</div><div style="font-size:.73rem">Procedimiento para ejercer derechos si reside fuera de España</div></div>
+  <div style="background:var(--s2);border-radius:8px;padding:8px 10px;border:1px solid var(--border)"><div style="font-weight:800;color:var(--p);font-size:.7rem">i)</div><div style="font-size:.73rem">Recursos contra las resoluciones que no satisfagan sus derechos</div></div>
+  <div style="background:var(--s2);border-radius:8px;padding:8px 10px;border:1px solid var(--border)"><div style="font-weight:800;color:var(--p);font-size:.7rem">j)</div><div style="font-size:.73rem">Datos de contacto de la autoridad responsable y cauces de comunicación</div></div>
+  <div style="background:var(--s2);border-radius:8px;padding:8px 10px;border:1px solid var(--border)"><div style="font-weight:800;color:var(--p);font-size:.7rem">k)</div><div style="font-size:.73rem">Servicios de justicia restaurativa disponibles</div></div>
+  <div style="background:var(--s2);border-radius:8px;padding:8px 10px;border:1px solid var(--border)"><div style="font-weight:800;color:var(--p);font-size:.7rem">l)</div><div style="font-size:.73rem">Supuestos de reembolso de gastos procesales</div></div>
+  <div style="background:var(--s2);border-radius:8px;padding:8px 10px;border:1px solid var(--border)"><div style="font-weight:800;color:var(--p);font-size:.7rem">m)</div><div style="font-size:.73rem">Derecho a ser notificada de las resoluciones del art. 7</div></div>
+</div></div>
+
+<!-- ART. 7 LAS 5 RESOLUCIONES -->
+<h2>Art. 7 · Las 5 resoluciones de notificación obligatoria</h2>
+<div class="flow flow5">
+  <div class="step"><div class="num">1</div><p>No inicio del procedimiento penal</p></div>
+  <div class="step"><div class="num">2</div><p>Sentencia que ponga fin al procedimiento</p></div>
+  <div class="step"><div class="num">3</div><p>Prisión o puesta en libertad del infractor (incluida fuga)</p></div>
+  <div class="step"><div class="num">4</div><p>Medidas cautelares personales que garanticen la seguridad de la víctima</p></div>
+  <div class="step"><div class="num">5</div><p>Resoluciones penitenciarias con riesgo para la víctima</p></div>
+</div>
+<div class="note nb">📌 Notificación preferente: <strong>correo electrónico</strong>. La víctima puede indicar en cualquier momento su deseo de <strong>NO ser informada</strong>. Las víctimas de <strong>violencia de género</strong> reciben las notificaciones 3 y 4 <strong>automáticamente, sin necesidad de solicitarlo</strong>.</div>
+
+<!-- JUSTICIA RESTAURATIVA -->
+<h2>Art. 15 · Justicia restaurativa — los dos candados</h2>
+<div class="grid2">
+  <div class="card" style="border-left:4px solid var(--pl)">
+    <h3>🔑 Candado 1</h3>
+    <p><strong>Consentimiento libre e informado de la víctima.</strong> No basta el consentimiento tácito; debe ser expreso e informado de los riesgos.</p>
+  </div>
+  <div class="card" style="border-left:4px solid var(--warn)">
+    <h3>🔑 Candado 2</h3>
+    <p><strong>Reconocimiento previo de los hechos esenciales por parte del infractor.</strong> Sin reconocimiento de los hechos, no hay justicia restaurativa.</p>
+  </div>
+</div>
+<div class="note nr">🚫 EXCLUIDA en violencia de género y violencia sexual · EXCLUIDA cuando suponga riesgo para la víctima o le cause perjuicio.</div>
+
+<!-- EVALUACIÓN Y PROTECCIÓN -->
+<h2>Título III · Protección — evaluación individualizada (art. 23)</h2>
+<div class="card">
+  <h3>Factores de la evaluación</h3>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px">
+    <span class="badge bb">Características personales</span>
+    <span class="badge bb">Naturaleza del delito</span>
+    <span class="badge bb">Gravedad del daño</span>
+    <span class="badge bb">Vulnerabilidad de la víctima</span>
+    <span class="badge bb">Relación víctima-infractor</span>
+    <span class="badge bb">Relación familiar con el infractor</span>
+  </div>
+</div>
+<div class="note nb">📌 La evaluación NO es estática: se <strong>actualiza a lo largo del proceso</strong> y en función de circunstancias sobrevenidas. Si la víctima es menor, el <strong>interés superior del menor</strong> guía cualquier decisión.</div>
+
+<div class="grid">
+  <div class="card">
+    <h3>Medidas de protección generales (arts. 19-22)</h3>
+    <ul>
+      <li>Declaración sin dilaciones injustificadas</li>
+      <li>Mínimas declaraciones y reconocimientos médicos</li>
+      <li>Salas separadas en tribunales (no coincidir con el infractor)</li>
+      <li>Uso de medios audiovisuales para declaraciones de especialmente vulnerables</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Medidas de protección específicas (arts. 25-26)</h3>
+    <ul>
+      <li>Declaración en aislamiento o distancia del acusado</li>
+      <li>Grabación en vídeo para reproducirla en juicio</li>
+      <li>Presencia de psicólogo durante la declaración</li>
+      <li>Menor interrogado por persona especializada</li>
+    </ul>
+    <p>Para: menores · PcD · víctimas de trata · víctimas de terrorismo.</p>
+  </div>
+</div>
+
+<!-- OAV -->
+<h2>Título IV · Las OAV (art. 27) y art. 35</h2>
+<div class="grid2">
+  <div class="card">
+    <h3>Oficinas de Asistencia a las Víctimas (OAV)</h3>
+    <p>Carácter: <span class="badge bg">Gratuitas</span> <span class="badge bg">Confidenciales</span></p>
+    <ul style="margin-top:8px">
+      <li>Información sobre derechos y proceso penal</li>
+      <li>Apoyo <strong>emocional</strong></li>
+      <li>Acompañamiento en diligencias</li>
+      <li>Coordinación con servicios sociales</li>
+      <li>Orientación sobre justicia restaurativa</li>
+      <li>Facilitar solicitud de justicia gratuita</li>
+    </ul>
+    <div class="note nb">📌 Las autoridades que contacten con víctimas <strong>deben derivar a OAV</strong> cuando sea necesario por la gravedad o cuando la víctima lo solicite.</div>
+  </div>
+  <div class="card">
+    <h3>Art. 35 · Obligación de reembolso</h3>
+    <p>La víctima que sea <strong>condenada por denuncia falsa o simulación de delito</strong> deberá <strong>reembolsar todos los gastos</strong> que su reconocimiento, información, protección y apoyo hayan ocasionado a la Administración.</p>
+    <div class="note nw">⚠ Es el contrapeso a la gratuidad del sistema. Incentiva la honestidad en las denuncias.</div>
+    <h3 style="margin-top:12px">Resto del Título IV</h3>
+    <ul>
+      <li>Art. 28: justicia gratuita</li>
+      <li>Art. 29: víctimas en la UE</li>
+      <li>Art. 30: formación de operadores jurídicos</li>
+      <li>Art. 34: autorregulación medios de comunicación</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TRAMPAS -->
+<h2>Las 10 trampas del examen</h2>
+<div class="card"><table>
+<thead><tr><th>Afirmación trampa</th><th>¿?</th><th>Corrección</th></tr></thead>
+<tbody>
+<tr><td>La Ley solo protege a víctimas españolas o con residencia legal</td><td><span class="badge br">FALSO</span></td><td>Aplica con independencia de nacionalidad y residencia</td></tr>
+<tr><td>Los terceros perjudicados también son víctimas indirectas</td><td><span class="badge br">FALSO</span></td><td>Expresamente excluidos (art. 2 in fine)</td></tr>
+<tr><td>La información del art. 5 se da solo si la víctima la solicita</td><td><span class="badge br">FALSO</span></td><td>Es inmediata y de oficio desde el primer contacto</td></tr>
+<tr><td>En VG la mediación es posible con consentimiento de la víctima</td><td><span class="badge br">FALSO</span></td><td>VEDADA sin excepción (art. 3.1, LO 10/2022)</td></tr>
+<tr><td>Para JR basta el consentimiento de la víctima</td><td><span class="badge br">FALSO</span></td><td>También requiere reconocimiento de los hechos por el infractor</td></tr>
+<tr><td>El período de reflexión para abogados es de 30 días</td><td><span class="badge br">FALSO</span></td><td>Son <strong>45 días</strong></td></tr>
+<tr><td>La Ley entró en vigor el día de su publicación</td><td><span class="badge br">FALSO</span></td><td>6 meses después: 28 de octubre de 2015</td></tr>
+<tr><td>La víctima de VG debe solicitar la notificación de puesta en libertad</td><td><span class="badge br">FALSO</span></td><td>La recibe automáticamente sin necesidad de solicitarlo</td></tr>
+<tr><td>La evaluación individualizada se realiza solo al inicio</td><td><span class="badge br">FALSO</span></td><td>Se actualiza a lo largo del proceso</td></tr>
+<tr><td>Las OAV son de pago y solo accesibles previa solicitud</td><td><span class="badge br">FALSO</span></td><td>Gratuitas, confidenciales y con derivación obligatoria si procede</td></tr>
+</tbody>
+</table></div>
+
+<!-- REGLAS EXPRÉS -->
+<h2>Reglas exprés de memoria — último repaso</h2>
+<div class="grid">
+  <div class="card"><h3>Regla 1</h3><p><strong>Ley 4/2015 = catálogo único y general de derechos procesales Y extraprocesales de TODAS las víctimas.</strong></p></div>
+  <div class="card"><h3>Regla 2</h3><p><strong>Art. 3 = P-I-A-A-R-P-T + PROHIBICIÓN mediación/conciliación en VG y violencia sexual (LO 10/2022).</strong></p></div>
+  <div class="card"><h3>Regla 3</h3><p><strong>Art. 5 = 13 extremos de información INMEDIATA, de oficio, desde el primer contacto, actualizada en cada fase.</strong></p></div>
+  <div class="card"><h3>Regla 4</h3><p><strong>Art. 8 = 45 días de período de reflexión para abogados/procuradores ante catástrofes con múltiples víctimas.</strong></p></div>
+  <div class="card"><h3>Regla 5</h3><p><strong>Art. 15 JR = doble llave: consentimiento víctima + reconocimiento hechos por infractor. Excluida en VG/violencia sexual.</strong></p></div>
+  <div class="card"><h3>Regla 6</h3><p><strong>Art. 27 OAV = gratuitas y confidenciales. Art. 35 = denuncia falsa obliga a reembolsar los gastos.</strong></p></div>
+</div>
+</body>
+</html>
