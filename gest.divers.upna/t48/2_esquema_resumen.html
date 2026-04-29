@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 48 · HTML 2 · Esquema-resumen visual · Exclusión Social · Cartera SS.SS. Navarra</title>
+<style>
+:root{--bg:#f0f9ff;--card:#fff;--s2:#e0f2fe;--line:#7dd3fc;--text:#0c4a6e;--muted:#0284c7;--p:#075985;--warn:#d97706;--red:#dc2626;--grn:#059669;--vio:#7c3aed;--teal:#0d9488;--sh:0 2px 10px rgba(7,89,133,.09)}
+[data-theme="dark"]{--bg:#020c1a;--card:#0a1e35;--s2:#0e2a45;--line:#075985;--text:#bae6fd;--muted:#38bdf8;--p:#38bdf8;--warn:#fbbf24;--red:#fca5a5;--grn:#6ee7b7;--vio:#c4b5fd;--teal:#5eead4;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:22px}
+.wrap{max-width:1200px;margin:0 auto}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:14px 20px;margin-bottom:14px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.96rem;color:var(--p)}.hdr p{font-size:.72rem;color:var(--muted);margin-top:2px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.71rem}
+h2{font-size:.86rem;font-weight:800;color:#fff;background:var(--p);padding:7px 14px;border-radius:7px;margin:20px 0 10px;display:inline-block}
+strong{color:var(--p)}
+/* KPI */
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:8px;margin-bottom:14px}
+.kbox{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:10px;box-shadow:var(--sh);text-align:center}
+.big{font-size:.98rem;font-weight:800;color:var(--p);margin-bottom:2px}.ksmall{font-size:.68rem;color:var(--muted)}.kmini{font-size:.65rem;margin-top:3px}
+/* badges */
+.bq{display:inline-block;padding:2px 7px;border-radius:999px;font-size:.63rem;font-weight:700;border:1px solid;white-space:nowrap;margin:1px}
+.gok{background:rgba(5,150,105,.12);color:#059669;border-color:rgba(5,150,105,.3)}
+.gng{background:rgba(220,38,38,.12);color:#dc2626;border-color:rgba(220,38,38,.3)}
+.gnew{background:rgba(124,58,237,.12);color:var(--vio);border-color:rgba(124,58,237,.3)}
+.gw{background:rgba(180,83,9,.12);color:#b45309;border-color:rgba(180,83,9,.3)}
+/* notes */
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.73rem;border-left:4px solid;margin:7px 0}
+.n-ok{background:rgba(5,150,105,.07);border-color:#059669}
+.n-err{background:rgba(220,38,38,.07);border-color:#dc2626}
+.n-w{background:rgba(180,83,9,.08);border-color:#b45309}
+.n-vio{background:rgba(124,58,237,.07);border-color:#7c3aed}
+.n-sky{background:var(--s2);border-color:var(--muted)}
+.n-teal{background:rgba(13,148,136,.07);border-color:#0d9488}
+[data-theme="dark"] .n-w{background:#451a03;color:#fde68a}
+[data-theme="dark"] .n-err{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .n-ok{background:rgba(110,231,183,.07);color:#6ee7b7}
+[data-theme="dark"] .n-vio{background:#1e1b4b;color:#c4b5fd}
+/* grids */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px}
+.g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:9px;margin-bottom:14px}
+/* blk */
+.blk{background:var(--card);border-radius:12px;padding:12px 14px;box-shadow:var(--sh)}
+.b1{border-top:5px solid var(--p)}.b2{border-top:5px solid var(--vio)}.b3{border-top:5px solid var(--grn)}.b4{border-top:5px solid var(--teal)}.b5{border-top:5px solid var(--warn)}.b6{border-top:5px solid var(--red)}
+.blk h3{font-size:.79rem;font-weight:800;margin-bottom:7px}
+.b1 h3{color:var(--p)}.b2 h3{color:var(--vio)}.b3 h3{color:var(--grn)}.b4 h3{color:var(--teal)}.b5 h3{color:var(--warn)}.b6 h3{color:var(--red)}
+.blk ul{padding-left:14px}.blk li{font-size:.72rem;margin:.2rem 0}
+/* prestacion row */
+.pr{display:flex;align-items:flex-start;gap:8px;padding:7px 10px;border-radius:8px;margin:5px 0;background:var(--card);border:1px solid var(--line);box-shadow:0 1px 4px rgba(7,89,133,.05)}
+.pr-cod{font-weight:800;font-size:.68rem;color:var(--muted);min-width:24px;padding-top:2px}
+.pr-body{flex:1;font-size:.73rem}
+.pr-name{font-weight:700;color:var(--p)}
+.pr-tip{font-size:.62rem;font-weight:700;padding:1px 6px;border-radius:999px;margin-left:5px;border:1px solid}
+.pr-g{background:rgba(5,150,105,.1);color:#059669;border-color:rgba(5,150,105,.3)}
+.pr-ng{background:rgba(220,38,38,.1);color:#dc2626;border-color:rgba(220,38,38,.3)}
+/* tables */
+table{width:100%;border-collapse:collapse;margin:8px 0}
+th{background:var(--s2);color:var(--muted);font-size:.66rem;text-transform:uppercase;padding:6px 9px;text-align:left}
+td{padding:6px 9px;border-bottom:1px solid var(--s2);font-size:.74rem;vertical-align:top}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+/* trap */
+.trap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px;margin-bottom:14px}
+.trap{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:9px 11px;box-shadow:var(--sh)}
+.trap .q{font-size:.7rem;color:var(--red);font-weight:600;margin-bottom:3px}
+.trap .a{font-size:.7rem}
+@media(max-width:700px){.g2,.g3,.g4{grid-template-columns:1fr}.trap-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+<div class="hdr">
+  <div>
+    <h1>Tema 48 · HTML 2 · Esquema-resumen visual para memorización rápida</h1>
+    <p>Cartera de SS.SS. Ámbito General (6) · Área F · Exclusión social · DF 69/2008 mod. DF 30/2019 · LF 15/2016</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- FICHAS FLASH -->
+<h2>Fichas flash de identificación ★★★</h2>
+<div class="kpi">
+  <div class="kbox"><div class="big">Área F</div><div class="ksmall">Exclusión social en la Cartera</div><div class="kmini">DF 69/2008 mod. DF 30/2019</div></div>
+  <div class="kbox"><div class="big">F1–F12</div><div class="ksmall">12 prestaciones garantizadas</div><div class="kmini">Anexo I de la Cartera</div></div>
+  <div class="kbox"><div class="big">F9 = RG</div><div class="ksmall">Renta Garantizada</div><div class="kmini">También en LF 15/2016</div></div>
+  <div class="kbox"><div class="big">F10 = G+EX</div><div class="ksmall">Ayudas Extra. · Garantizadas</div><div class="kmini">⚠ Pero excepcionales</div></div>
+  <div class="kbox"><div class="big">OF 442/2020</div><div class="ksmall">Regula el procedimiento de F10</div><div class="kmini">Solo F10</div></div>
+  <div class="kbox"><div class="big">F5 = 24h</div><div class="ksmall">Emergencia social</div><div class="kmini">365 días · sin residencia previa</div></div>
+  <div class="kbox"><div class="big">F7 ≠ F8</div><div class="ksmall">Emergencia vs. acogida estable</div><div class="kmini">Distinción crítica</div></div>
+  <div class="kbox"><div class="big">F1 ≠ F6</div><div class="ksmall">Acreditación vs. inserción</div><div class="kmini">Distinción crítica</div></div>
+  <div class="kbox"><div class="big">F12 = mix</div><div class="ksmall">Económica + acompañamiento</div><div class="kmini">No solo dinero</div></div>
+  <div class="kbox"><div class="big">Pisos NG</div><div class="ksmall">Supervisado, tutelado, residencia</div><div class="kmini">Todos no garantizados en Área F</div></div>
+  <div class="kbox"><div class="big">Art. 4.4</div><div class="ksmall">LF 15/2006 · urgencias</div><div class="kmini">Sin requisito de residencia</div></div>
+  <div class="kbox"><div class="big">2 normas RG</div><div class="ksmall">LF 15/2016 + Cartera F9</div><div class="kmini">Doble exigibilidad</div></div>
+</div>
+
+<!-- IDEA FUERZA -->
+<h2>Idea fuerza del Tema 48</h2>
+<div class="blk b4" style="margin-bottom:14px">
+  <h3>El Área F = 4 bloques funcionales + conexión directa con LF 15/2016</h3>
+  <ul>
+    <li><strong>Bloque A – Valoración / orientación:</strong> F1 (acreditación EIS), F2 (idoneidad laboral), F3 (información, diagnóstico y orientación)</li>
+    <li><strong>Bloque B – Intervención / inserción:</strong> F4 (socioeducativa), F6 (inserción sociolaboral), F12 (económica + acompañamiento medio abierto)</li>
+    <li><strong>Bloque C – Alojamiento / emergencia:</strong> F5 (emergencia 24h), F7 (alojamiento urgente), F8 (acogida sin hogar estable)</li>
+    <li><strong>Bloque D – Prestaciones económicas:</strong> F9 (RG), F10 (Ayudas Extraordinarias), F11 (apoyo integración familiar)</li>
+  </ul>
+  <div class="note n-ok">La Renta Garantizada (F9) es la única prestación del Área F regulada en otra ley (LF 15/2016); el resto se regula directamente en la Cartera.</div>
+</div>
+
+<!-- F1-F12 PRESTACIONES -->
+<h2>Las 12 prestaciones garantizadas del Área F ★★★</h2>
+<div class="g4">
+  <div class="blk b1">
+    <h3>Valoración y orientación</h3>
+    <div class="pr"><span class="pr-cod">F1</span><div class="pr-body"><span class="pr-name">Acreditación para EIS</span><span class="pr-tip pr-g">G</span> · Certifica la exclusión social para acceder a Empresa de Inserción</div></div>
+    <div class="pr"><span class="pr-cod">F2</span><div class="pr-body"><span class="pr-name">Valoración idoneidad laboral</span><span class="pr-tip pr-g">G</span> · Empleo ordinario / protegido / ocupacional</div></div>
+    <div class="pr"><span class="pr-cod">F3</span><div class="pr-body"><span class="pr-name">Información, diagnóstico y orientación</span><span class="pr-tip pr-g">G</span> · Puerta de entrada al itinerario</div></div>
+  </div>
+  <div class="blk b2">
+    <h3>Intervención e inserción</h3>
+    <div class="pr"><span class="pr-cod">F4</span><div class="pr-body"><span class="pr-name">Intervención socioeducativa y psicosocial</span><span class="pr-tip pr-g">G</span> · Instrumento de la Inclusión Social</div></div>
+    <div class="pr"><span class="pr-cod">F6</span><div class="pr-body"><span class="pr-name">Inserción sociolaboral</span><span class="pr-tip pr-g">G</span> · Acompañamiento + intermediación laboral activa</div></div>
+    <div class="pr"><span class="pr-cod">F12</span><div class="pr-body"><span class="pr-name">Ayuda económica + acompañamiento medio abierto</span><span class="pr-tip pr-g">G</span> · No es solo dinero</div></div>
+  </div>
+  <div class="blk b3">
+    <h3>Alojamiento y emergencia</h3>
+    <div class="pr"><span class="pr-cod">F5</span><div class="pr-body"><span class="pr-name">Emergencia social</span><span class="pr-tip pr-g">G</span> · <strong>24h / 365 días</strong> · Sin residencia previa</div></div>
+    <div class="pr"><span class="pr-cod">F7</span><div class="pr-body"><span class="pr-name">Alojamiento de emergencia</span><span class="pr-tip pr-g">G</span> · Urgente y puntual · Sin residencia previa</div></div>
+    <div class="pr"><span class="pr-cod">F8</span><div class="pr-body"><span class="pr-name">Acogida para personas sin hogar</span><span class="pr-tip pr-g">G</span> · Estable · Con acompañamiento</div></div>
+  </div>
+  <div class="blk b5">
+    <h3>Prestaciones económicas</h3>
+    <div class="pr"><span class="pr-cod">F9</span><div class="pr-body"><span class="pr-name">Renta Garantizada</span><span class="pr-tip pr-g">G</span> · LF 15/2016 + Cartera</div></div>
+    <div class="pr"><span class="pr-cod">F10</span><div class="pr-body"><span class="pr-name">Ayudas extraordinarias IS</span><span class="pr-tip pr-g">G</span> · ⚠ Excepcionales · OF 442/2020</div></div>
+    <div class="pr"><span class="pr-cod">F11</span><div class="pr-body"><span class="pr-name">Apoyo integración familiar y social</span><span class="pr-tip pr-g">G</span> · Permanencia en entorno</div></div>
+  </div>
+</div>
+
+<!-- NO GARANTIZADOS -->
+<h2>Prestaciones no garantizadas Área F (Anexo II) ★★★</h2>
+<div class="g3">
+  <div class="blk b6"><h3>Recursos residenciales · NG</h3>
+    <ul>
+      <li>E1 · Atención diurna</li>
+      <li>E2 · <strong>Piso supervisado</strong></li>
+      <li>E3 · <strong>Piso tutelado</strong></li>
+      <li>E4 · <strong>Atención residencial</strong></li>
+      <li>E5 · Subvenciones a entidades</li>
+    </ul>
+  </div>
+  <div class="blk b6"><h3>Contraste áreas ★★★</h3>
+    <ul>
+      <li>Área D (discapacidad): residencia = <span class="bq gok">G</span></li>
+      <li>Área E (EM): piso supervisado = <span class="bq gok">G</span></li>
+      <li>Área F (exclusión): <strong>todos los pisos y residencias = <span class="bq gng">NG</span></strong></li>
+    </ul>
+  </div>
+  <div class="blk b3"><h3>Lo que SÍ es garantizado en alojamiento</h3>
+    <ul>
+      <li>F7 = alojamiento de emergencia <span class="bq gok">G</span></li>
+      <li>F8 = acogida para sin hogar <span class="bq gok">G</span></li>
+    </ul>
+    <div class="note n-ok">Solo 2 servicios de alojamiento son garantizados; ambos son básicos, no intensivos.</div>
+  </div>
+</div>
+
+<!-- F7 vs F8 -->
+<h2>F7 vs. F8 · Distinción crítica ★★★</h2>
+<table>
+  <thead><tr><th>Aspecto</th><th>F7 · Alojamiento de emergencia</th><th>F8 · Acogida para sin hogar</th></tr></thead>
+  <tbody>
+    <tr><td>Carácter</td><td><strong>Urgente y puntual</strong></td><td><strong>Estable y continuado</strong></td></tr>
+    <tr><td>Duración</td><td>Limitada (una o pocas noches)</td><td>Mayor duración</td></tr>
+    <tr><td>Apoyo profesional</td><td>Mínimo</td><td>Acompañamiento social integral</td></tr>
+    <tr><td>Acceso sin residencia</td><td>Sí (urgencia)</td><td>No siempre</td></tr>
+    <tr><td>Copago</td><td>No</td><td>No</td></tr>
+  </tbody>
+</table>
+<div class="note n-teal"><strong>Regla:</strong> F7 = primera noche de emergencia. F8 = proceso de reintegración sostenido. Pueden activarse juntos en la misma situación.</div>
+
+<!-- F1 vs F6 -->
+<h2>F1 vs. F6 · Otra distinción crítica ★★★</h2>
+<div class="g2">
+  <div class="blk b1">
+    <h3>F1 · Acreditación para EIS</h3>
+    <ul>
+      <li>Objeto: <strong>certificar</strong> que la persona está en exclusión</li>
+      <li>Para: que pueda acceder legalmente a una EIS</li>
+      <li>No ejecuta la inserción laboral</li>
+      <li>Carácter: certificador / documental</li>
+    </ul>
+  </div>
+  <div class="blk b2">
+    <h3>F6 · Inserción sociolaboral</h3>
+    <ul>
+      <li>Objeto: <strong>acompañar e intermediar</strong> activamente</li>
+      <li>Para: facilitar la incorporación real al empleo</li>
+      <li>Ejecuta el proceso de inserción</li>
+      <li>Carácter: interventivo / activo</li>
+    </ul>
+  </div>
+</div>
+<div class="note n-vio">La trampa típica es confundir F1 (certifica) con F6 (actúa). Ambos están en el mismo ámbito (empleo e inserción), pero tienen funciones completamente distintas.</div>
+
+<!-- F10 AYUDAS EXTRAORDINARIAS -->
+<h2>F10 · Ayudas Extraordinarias de Inclusión Social ★★★</h2>
+<div class="blk b5" style="margin-bottom:14px">
+  <h3>Los 6 datos clave de F10</h3>
+  <ul>
+    <li><strong>Son GARANTIZADAS</strong> (Anexo I de la Cartera) → se pueden exigir como derecho subjetivo</li>
+    <li><strong>Son EXCEPCIONALES</strong> → no se otorgan periódicamente como la RG</li>
+    <li><strong>No sustituyen</strong> a la RG (F9) ni a otras prestaciones ordinarias</li>
+    <li>Evaluación técnica previa obligatoria por parte de los SS.SS.</li>
+    <li>El Departamento supervisa el destino de los fondos</li>
+    <li><strong>Procedimiento regulado por la Orden Foral 442/2020</strong> ★★★</li>
+  </ul>
+  <div class="note n-err">⚠ Trampa clásica: "F10 es no garantizada porque es excepcional." → FALSO. Es GARANTIZADA (Anexo I) pero de otorgamiento excepcional.</div>
+</div>
+
+<!-- F9 DOBLE EXIGIBILIDAD -->
+<h2>F9 · Renta Garantizada · Doble exigibilidad ★★★</h2>
+<div class="g2">
+  <div class="blk b1">
+    <h3>Desde LF 15/2016 (Tema 46)</h3>
+    <ul>
+      <li>Derecho subjetivo reconocido por Ley Foral</li>
+      <li>Desarrollada por DF 26/2018</li>
+      <li>Requisitos: edad, residencia, carencia de medios</li>
+    </ul>
+  </div>
+  <div class="blk b3">
+    <h3>Desde la Cartera (Tema 48)</h3>
+    <ul>
+      <li>Prestación F9 del Área F (garantizada)</li>
+      <li>Se puede exigir también desde el Catálogo</li>
+      <li>Mismos requisitos que la LF 15/2016</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ACCESO URGENTE -->
+<h2>Acceso urgente · Art. 4.4 LF 15/2006 ★★★</h2>
+<div class="blk b3" style="margin-bottom:14px">
+  <h3>Principio de acceso en urgencia o indigencia</h3>
+  <ul>
+    <li>Las personas en <strong>situación de urgencia o indigencia</strong> pueden acceder a determinadas prestaciones del sistema</li>
+    <li><strong>Sin necesidad de cumplir el requisito de residencia previa</strong> en Navarra</li>
+    <li>Servicios afectados: F5 (emergencia social 24h), F7 (alojamiento de emergencia)</li>
+  </ul>
+  <div class="note n-ok">El servicio de emergencia social (F5) es obligatorio con apertura 24 horas / 365 días en los municipios que tienen SS.SS. de base propios.</div>
+</div>
+
+<!-- RELACIÓN F CON LF 15/2016 -->
+<h2>Relación Área F ↔ LF 15/2016 ★★★</h2>
+<table>
+  <thead><tr><th>Derecho LF 15/2016</th><th>Instrumento Área F</th><th>Clave de examen</th></tr></thead>
+  <tbody>
+    <tr><td>Derecho a la Inclusión Social</td><td>F4 + F6 + F12</td><td>F4 = intervención; F6 = empleo; F12 = econ. + acompañamiento</td></tr>
+    <tr><td>Renta Garantizada</td><td>F9</td><td>Doble exigibilidad: LF + Cartera</td></tr>
+    <tr><td>Necesidades urgentes no cubiertas por RG</td><td>F10 (Ayudas Extraordinarias)</td><td>Excepcional pero garantizado</td></tr>
+    <tr><td>Co-diagnóstico (DF 26/2018)</td><td>Orienta hacia F3 + F4 + F6</td><td>El diagnóstico lleva al recurso adecuado</td></tr>
+  </tbody>
+</table>
+
+<!-- 10 TRAMPAS -->
+<h2>Las 10 trampas del examen</h2>
+<div class="trap-grid">
+  <div class="trap"><div class="q">❌ "Las Ayudas Extraordinarias son no garantizadas"</div><div class="a">✓ Son <strong>GARANTIZADAS (F10, Anexo I)</strong>, aunque de carácter excepcional</div></div>
+  <div class="trap"><div class="q">❌ "F7 y F8 son lo mismo: alojamiento para personas sin hogar"</div><div class="a">✓ F7 = urgencia puntual; F8 = acogida <strong>estable</strong></div></div>
+  <div class="trap"><div class="q">❌ "Para F5 y F7 se requieren 2 años de residencia previa"</div><div class="a">✓ En urgencias: sin residencia previa (art. 4.4 LF 15/2006)</div></div>
+  <div class="trap"><div class="q">❌ "F1 es el servicio de inserción sociolaboral"</div><div class="a">✓ F1 = acreditación para EIS; inserción sociolaboral = <strong>F6</strong></div></div>
+  <div class="trap"><div class="q">❌ "La Renta Garantizada solo es exigible por LF 15/2016"</div><div class="a">✓ También es exigible como <strong>F9 de la Cartera</strong></div></div>
+  <div class="trap"><div class="q">❌ "Las Ayudas Extraordinarias se conceden periódicamente"</div><div class="a">✓ Son <strong>puntuales y excepcionales</strong>, no periódicas</div></div>
+  <div class="trap"><div class="q">❌ "El procedimiento de F10 se regula por OF 197/2018"</div><div class="a">✓ Se regula por la <strong>Orden Foral 442/2020</strong></div></div>
+  <div class="trap"><div class="q">❌ "Los pisos tutelados en exclusión social son garantizados"</div><div class="a">✓ En el Área F los pisos son <strong>NO garantizados</strong></div></div>
+  <div class="trap"><div class="q">❌ "F12 es solo una ayuda económica"</div><div class="a">✓ F12 = económica + <strong>acompañamiento social en el medio ordinario</strong></div></div>
+  <div class="trap"><div class="q">❌ "El Área F no tiene relación con la LF 15/2016"</div><div class="a">✓ F9 es la RG, F10 sus ayudas complementarias, F4 y F6 el derecho a inclusión</div></div>
+</div>
+
+</div>
+</body>
+</html>
