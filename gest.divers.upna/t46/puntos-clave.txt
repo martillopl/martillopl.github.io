@@ -1,0 +1,316 @@
+TEMA 46 · PUNTOS CLAVE DE EXAMEN Y ARTÍCULOS CLAVE
+LF 15/2016, de 11 de noviembre, de Inclusión Social y Renta Garantizada
+DF 26/2018, de 25 de abril, de desarrollo reglamentario
+======================================================================
+
+I. ESTRUCTURA Y PUBLICACIÓN
+──────────────────────────────────────────────────────────────────────
+· LF 15/2016: BON núm. 223, de 18 de noviembre de 2016; BOE 8-12-2016
+· DF 26/2018: BON de 5 de junio de 2018
+· La LF 15/2016 estructura: CAPÍTULO I (disposiciones generales: art. 1)
+  + CAPÍTULO II (inclusión social: arts. 2-4) + CAPÍTULO III (Renta
+  Garantizada: arts. 5-35) + disposiciones adicionales/transitorias/finales
+· DF 26/2018 estructura: CAPÍTULO I (objeto: art. 1) + CAPÍTULO II
+  (Inclusión Social: arts. 2-5) + CAPÍTULO III (Renta Garantizada: arts.
+  6-34, 6 secciones) + CAPÍTULO IV (evaluación: art. 35)
+
+
+II. ARTÍCULOS CLAVE – LF 15/2016
+──────────────────────────────────────────────────────────────────────
+★★★ Art. 1 – Objeto y finalidad (PREGUNTAS MUY FRECUENTES)
+  · Dos derechos: (1) derecho a la inclusión social y (2) Renta Garantizada
+  · Inclusión social = acompañamiento personalizado + inclusión plena + todas
+    las dimensiones + libre y voluntariamente aceptado
+  · Renta Garantizada = prestación BÁSICA, ECONÓMICA, PERIÓDICA + subsidiaria
+    + complementaria + intransferible + inembargable (salvo reintegro)
+  · EVALUACIÓN del impacto: al menos CADA DOS AÑOS (★★★)
+  · Responsabilidad de las AAPP de Navarra: atención personalizada, continua
+    e integral + co-diagnóstico objetivo e integral
+
+★★★ Art. 2 – Titulares del derecho a la inclusión social
+  · Toda persona con residencia en Navarra en situación de exclusión social
+  · Exclusión social = proceso dinámico de acumulación/combinación de déficits
+    personales, relacionales, laborales o socioambientales que persisten en
+    el tiempo e impiden el ejercicio efectivo de derechos
+
+★★★ Art. 3 – Responsabilidad pública en inclusión social
+  · AAPP de Navarra garantizan el derecho al proceso de inclusión
+  · Plan estratégico de inclusión: cada CUATRO AÑOS con evaluación
+    intermedia a los DOS AÑOS + otra evaluación FINAL (★★★)
+  · Los planes se remiten al Parlamento de Navarra
+  · Ejercicio del derecho: LIBRE Y VOLUNTARIO (★★★)
+
+★★★ Art. 4 – Procedimiento de inclusión social
+  · Se inicia a solicitud de la persona interesada
+  · Co-diagnóstico social objetivo con participación ACTIVA de la persona
+  · Programa personalizado → incluye CONVENIO DE INCLUSIÓN SOCIAL
+  · Convenio: duración + objetivos + compromisos + resultados previstos
+  · Partes del convenio: Servicios Sociales de Base (o EIS) + persona
+    solicitante y, si procede, otros miembros de la UF
+
+★★★ Art. 5 – Titulares del derecho a la Renta Garantizada (REQUISITOS)
+  a) Mayor de 18 años o menor emancipado con menores a cargo
+     - 18-24 años sin menores: independencia ≥ 2 años antes de la solicitud
+       (alta SS ≥ 1 año + domicilio distinto a progenitores ≥ 2 años)
+  b) Residencia en Navarra ≥ 2 AÑOS (o ≥ 1 AÑO si hay menores o dependientes
+     o discapacidad ≥ 65 %) (★★★ DATO DE EXAMEN)
+  c) Carencia de medios para cubrir necesidades básicas (capacidad económica
+     < cuantía de Renta Garantizada correspondiente)
+  d) Haber ejercido previamente otros derechos (pensiones, prestaciones,
+     acciones por alimentos/compensatorias)
+
+★★★ Art. 6 – Unidad perceptora, unidad familiar y núcleo familiar
+  · Unidad familiar = solicitante + cónyuge/análoga + parentesco hasta 2º
+    grado consanguinidad o 1º afinidad
+  · Núcleo familiar = solicitante + cónyuge/análoga + hijos convivientes
+  · Con carácter GENERAL: una sola Renta Garantizada por UF
+  · EXCEPCIÓN: dos RG si existen dos núcleos y uno incluye menores o
+    dependientes/discapacidad ≥ 65 %
+  · Domicilio compartido por 2+ UF: una RG por UF con MÁXIMO DE TRES en
+    ese domicilio (★★★)
+  · Nadie puede formar parte de dos UF simultáneamente (★★★)
+
+★★★ Art. 7 – Cuantías
+  · Base = 600 € (unidad de 1 miembro) [cuantía inicial; actualizable]
+  · 2ª persona: +35 % | 3ª persona: +25 % | 4ª y siguientes: +15 % (★★★)
+  · Cuantía total ≤ DOBLE del límite para una persona
+  · Actualización ANUAL: máximo entre incremento IPC Navarra y salarios
+    medios Navarra (★★★)
+  · Si cuantía < 10 % de la prestación para 1 persona → se equipara al 10 %
+  · OF 5/2026 (21 enero 2026): cuantía base = 810,83 € (+2,6 %)
+
+★★★ Art. 8 – Capacidad económica
+  · Configurada por ingresos + patrimonio de la UF en su conjunto
+
+★★★ Art. 9 – Ingresos computables (últimos 6 meses)
+  · Rendimientos trabajo c/ajena (bruto - SS)
+  · Prestaciones y pensiones (regímenes previsión social)
+  · Rendimientos actividades empresariales y profesionales
+  · Actividad no constitutiva de medio fundamental de vida (módulos)
+  · Rendimientos netos capital inmobiliario (último semestre)
+  · Cualquier otro ingreso no exceptuado
+
+★★★ Art. 10 – Ingresos NO computables (exceptuados)
+  · Ayudas económicas de carácter finalista
+  · Prestaciones acogimiento familiar de menores
+  · Prestaciones SS por hijos con discapacidad ≥ 65 %
+  · Incentivos/gratificaciones de centros ocupacionales de inserción
+  · Pensiones miembros UF fuera del núcleo o hijos a cargo: hasta el 45 %
+    de la RG mensual para 1 miembro (★★★)
+
+★★★ Art. 11/12 – Patrimonio computable y no computable
+  · Bienes muebles: valor nominal (cuentas, fondos, acciones) / valor
+    mercado (joyas, arte)
+  · Bienes inmuebles: valor catastral
+  · NO computable (hasta 300.000 €): vivienda habitual + mobiliario + ajuar +
+    vehículo habitual (★★★)
+  · NO computable: instrumentos laborales/empresariales
+
+★★★ Art. 13 – Capacidad económica que da derecho a la prestación
+  1. Media mensual ingresos < cuantía RG correspondiente
+  2. Bienes muebles ≤ 65 % de RG anual para 1 miembro (★★★)
+  3. Bienes inmuebles computables ≤ 10 veces RG anual para 1 miembro (★★★)
+
+★★★ Art. 14 – Estímulos al empleo
+  · Una parte de los rendimientos laborales queda excluida del cómputo
+  · Se determinan reglamentariamente
+  · Ingresos sobrevenidos laborales → afectan a la cuantía percibida
+  · Contratos subvencionados: sistema específico de incentivos
+
+  Art. 15 – Determinación de la cuantía
+  · Cuantía = RG correspondiente − ingresos computables mensuales (−
+    estímulos al empleo en su caso)
+
+★★★ Art. 16 – Período de percepción
+  · Concesión: DOCE MESES renovables mientras persista la situación de
+    necesidad (★★★)
+  · Competente: servicio competente en materia de garantía de ingresos
+
+  Art. 17 – Seguimiento y control
+  · AAPP pueden controlar y verificar el mantenimiento de requisitos
+  · Pueden proponer medidas de acompañamiento social
+
+★★★ Art. 18 – Obligaciones de las UF perceptoras
+  a) Residir efectiva y continuadamente en Navarra
+  b) Hacer valer todos los derechos económicos correspondientes
+  c) Disponibilidad para empleo adecuado + inscripción como demandante SNE-NL
+     (salvo situación administrativa irregular)
+  d) Participar en actividades de inserción sociolaboral propuestas
+  e) Comunicar cambios de circunstancias
+  f) Reintegrar prestaciones indebidamente percibidas
+
+  Arts. 19-21 – Procedimiento: solicitud, resolución, suspensión, extinción
+  · Plazo resolución: 3 MESES (silencio positivo) (★★)
+  · Pago: MENSUAL + dos pagas extraordinarias en junio y diciembre (★★)
+
+★★★ Arts. 24-25 – Infracciones y sanciones (régimen sancionador RG)
+  · LEVES: hasta 300 €
+  · GRAVES: 301 € a 1.500 €
+  · MUY GRAVES: 1.501 € a 3.000 € (★★★)
+  · Sanciones adicionales: suspensión de la prestación y/o extinción
+  · Órgano decisor: Director/a del Departamento competente
+
+★★★ Arts. 34-35 – Ejercicio conjunto de ambos derechos
+  · Ejercicio CONJUNTO obligatorio cuando la UF lleve ≥ 1 año percibiendo RG
+    sin rentas de trabajo (★★★)
+  · Con ≥ 2 años: programa personalizado obligatorio + recurso propuesto
+  · Ejercicio conjunto excepcional: exclusión social GRAVE
+
+
+III. ARTÍCULOS CLAVE – DF 26/2018
+──────────────────────────────────────────────────────────────────────
+★★★ Art. 1 – Objeto
+  · Desarrollo reglamentario de los derechos a la inclusión social y a la RG
+
+★★★ Arts. 2-5 – Capítulo II · Inclusión Social (desarrollo reglamentario)
+  · Art. 2: Titulares = personas que RESIDEN en Navarra en exclusión social
+  · Art. 3: Procedimiento en fases: co-diagnóstico → programa personalizado
+    → convenio → realización → seguimiento → evaluación → reorientación
+  · Art. 4: CO-DIAGNÓSTICO social · 5 dimensiones (★★★):
+    (a) económica y laboral
+    (b) residencial y espacial
+    (c) personal (salud, formación, empleabilidad)
+    (d) relacional
+    (e) social
+  · Categorías diagnósticas: (a) inclusión | (b) riesgo de exclusión |
+    (c) exclusión leve / moderada / grave (★★★)
+  · Art. 5: Programa personalizado: objetivos + recursos idóneos + duración
+    + seguimiento + compromisos de ambas partes
+
+★★★ Art. 6 – Personas computables en la RG
+  · Personas adultas y menores emancipados que cumplen requisitos del art. 5 LF
+  · + menores de edad de la UF
+
+★★★ Art. 9 – Edad (requisito)
+  · 18-24 años sin menores: independencia 2 años + alta SS ≥ 1 año +
+    domicilio distinto progenitores ≥ 2 años
+  · Excepción: ambos progenitores fallecidos o procede de institución de
+    protección de menores
+
+★★★ Art. 16 – Supuestos de ejercicio CONJUNTO (obligatorio)
+  a) Voluntario si UF en exclusión social y desea inclusión
+  b) y c) Si se dan supuestos arts. 34.2 y 34.3 LF 15/2016
+  d) Si exclusión social GRAVE
+  e) Tercer grado penitenciario + programa específico incorporación social
+
+★★★ Art. 21 – Estímulos al empleo (desarrollo)
+  · Regulación del mecanismo de suspensión por incorporación laboral
+
+★★★ Art. 27 – Tramitación violencia de género
+  · Tramitación específica y protegida para víctimas de VG
+
+★★★ Arts. 31-33 – Comisión de Verificación
+  · Órgano creado por la LF 15/2016; composición y funcionamiento en el DF
+  · Garantía suplementaria para personas presuntas infractoras
+  · Art. 31: composición; Art. 32: régimen interno; Art. 33: funcionamiento
+  · Art. 34: intervención en suspensión cautelar de la RG
+
+★★★ Art. 35 – Evaluación de los derechos
+  · Evaluación de proceso e impacto de ambos derechos (★★★)
+  · Cada DOS AÑOS al menos (remisión al art. 1.4 LF 15/2016)
+
+
+IV. LAS 10 NOVEDADES CLAVE DE LA LF 15/2016 vs. LF 1/2012 (RIS)
+──────────────────────────────────────────────────────────────────────
+1. MODELO DE DOBLE DERECHO: inclusión social + Renta Garantizada (independientes)
+2. La inclusión social es DERECHO SUBJETIVO (no mera orientación)
+3. EJERCICIO LIBRE Y VOLUNTARIO del derecho a la inclusión social
+4. CONVENIO DE INCLUSIÓN SOCIAL como instrumento central
+5. CO-DIAGNÓSTICO SOCIAL MULTIDIMENSIONAL (5 dimensiones)
+6. ESTÍMULOS AL EMPLEO específicos + trabajadores empobrecidos
+7. Evaluación del impacto de AMBOS derechos al menos CADA DOS AÑOS
+8. PLANES ESTRATÉGICOS CUATRIENALES de inclusión social
+9. COMISIÓN DE VERIFICACIÓN como garantía adicional
+10. Intransferibilidad + inembargabilidad de la RG (norma expresa)
+
+
+V. COMPARATIVO: LF 15/2016 vs. DF 26/2018
+──────────────────────────────────────────────────────────────────────
+ASPECTO                    | LF 15/2016               | DF 26/2018
+─────────────────────────────────────────────────────────────────────
+Rango normativo            | Ley Foral (Parlamento)   | Decreto Foral (Gobierno)
+Objeto                     | Regulación de los derechos| Desarrollo reglamentario
+Co-diagnóstico             | Prevé el instrumento     | Desarrolla 5 dimensiones
+                           | (art. 4)                 | y categorías (art. 4)
+Convenio inclusión         | Regula el contenido mín. | Desarrolla la propuesta y
+                           | (art. 4)                 | contenido mínimo (art. 5)
+Cuantías RG                | Fija la base 600 € (art. 7)| Regula el cómputo (arts. 12-14)
+Estimulos empleo           | Principio (art. 14)      | Mecanismo concreto (art. 21)
+Ejercicio conjunto         | Supuestos (arts. 34-35)  | Procedimiento (arts. 16-20)
+Comisión Verificación      | La crea (art. 31)        | Composición y funcionamiento
+                           |                          | (arts. 31-34)
+VG                         | No hay art. específico   | Art. 27 tramitación especial
+Evaluación                 | Cada 2 años (art. 1.4)   | Art. 35 desarrollo
+
+
+VI. FRASES MEMORIZABLES PARA EXAMEN (★★★)
+──────────────────────────────────────────────────────────────────────
+1. "La LF 15/2016 regula DOS derechos: INCLUSIÓN SOCIAL + RENTA GARANTIZADA"
+2. "La inclusión social se ejerce LIBRE Y VOLUNTARIAMENTE"
+3. "La RG es BÁSICA, ECONÓMICA, PERIÓDICA, COMPLEMENTARIA, SUBSIDIARIA e
+   INTRANSFERIBLE"
+4. "La evaluación de ambos derechos se realiza al menos CADA DOS AÑOS"
+5. "El Plan Estratégico de Inclusión Social se aprueba CADA CUATRO AÑOS,
+   con evaluación intermedia a los DOS AÑOS"
+6. "REQUISITOS para la RG: 18 años / 2 años de residencia (o 1 año con
+   menores) / carencia de medios / ejercicio previo de otros derechos"
+7. "En el mismo domicilio: máximo TRES Rentas Garantizadas"
+8. "Cuantías: 1ª persona base | 2ª +35% | 3ª +25% | 4ª y ss. +15%"
+9. "Bienes muebles computables ≤ 65% RG anual de 1 miembro"
+10. "Bienes inmuebles computables ≤ 10 veces RG anual de 1 miembro"
+11. "Vivienda habitual + mobiliario + ajuar + vehículo NO computan hasta
+    300.000 €"
+12. "Concesión: 12 MESES renovables; actualización anual de cuantías"
+13. "Co-diagnóstico: 5 dimensiones (económica, residencial, personal,
+    relacional, social)"
+14. "Categorías diagnósticas: inclusión / riesgo de exclusión / exclusión
+    leve / moderada / GRAVE"
+15. "Con ≥ 1 año de RG sin rentas de trabajo → ejercicio CONJUNTO obligatorio"
+16. "Sanciones RG: leves ≤300 € | graves 301-1.500 € | muy graves
+    1.501-3.000 €"
+17. "La Comisión de Verificación es garantía suplementaria para las personas
+    presuntas infractoras"
+18. "DF 26/2018 es el DESARROLLO REGLAMENTARIO de la LF 15/2016 (Disp.
+    Final 1ª LF)"
+
+
+VII. TRAMPAS FRECUENTES DE EXAMEN
+──────────────────────────────────────────────────────────────────────
+T1 ❌ "La LF 15/2016 sustituyó a la LF 15/2006"
+   ✓ Sustituyó a la LF 1/2012 (Renta de Inclusión Social – RIS)
+
+T2 ❌ "El derecho a la inclusión social es obligatorio para el perceptor"
+   ✓ Es LIBRE Y VOLUNTARIO
+
+T3 ❌ "La evaluación de los derechos se realiza cada cuatro años"
+   ✓ Al menos CADA DOS AÑOS (el Plan Estratégico sí es cada cuatro años)
+
+T4 ❌ "El Plan Estratégico se elabora cada dos años"
+   ✓ Cada CUATRO AÑOS (evaluación intermedia: a los dos años)
+
+T5 ❌ "La vivienda habitual siempre es no computable sin límite"
+   ✓ No computa HASTA 300.000 €; el exceso sí computa
+
+T6 ❌ "En un domicilio compartido puede haber ilimitadas Rentas Garantizadas"
+   ✓ MÁXIMO TRES Rentas Garantizadas en el mismo domicilio
+
+T7 ❌ "La RG es compatible con cualquier otro ingreso sin deducción"
+   ✓ La cuantía = RG - ingresos computables; es complementaria y subsidiaria
+
+T8 ❌ "Los ingresos se computan de los últimos doce meses"
+   ✓ De los últimos SEIS MESES incluido el mes de la solicitud
+
+T9 ❌ "El Comité de Ética del DF 26/2018 es la Comisión de Verificación"
+   ✓ La Comisión de Verificación (DF 26/2018) es garantía del régimen
+     sancionador de la RG; el Comité de Ética pertenece a la LF 15/2006
+
+T10 ❌ "El incremento del 35% se aplica a la 3ª persona de la UF"
+    ✓ El 35% es para la 2ª persona; la 3ª es el 25%
+
+T11 ❌ "La Renta Garantizada se puede embargar siempre"
+    ✓ Es INEMBARGABLE salvo para el reintegro de prestaciones
+      indebidamente percibidas (y límites de la legislación general del Estado)
+
+T12 ❌ "El co-diagnóstico tiene 3 dimensiones"
+    ✓ Tiene CINCO dimensiones: económica, residencial, personal, relacional
+      y social (art. 4 DF 26/2018)

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tema 46 · HTML 3 · Cuadro comparativo · Tablas operativas para examen</title>
+<style>
+:root{--bg:#f0f9ff;--card:#ffffff;--soft:#e0f2fe;--line:#7dd3fc;--text:#0c4a6e;--muted:#0369a1;--strong:#075985;--ok:#059669;--warn:#d97706;--red:#dc2626;--vio:#7c3aed;--teal:#0d9488;--shadow:0 2px 10px rgba(7,89,133,.08)}
+[data-theme="dark"]{--bg:#020c1a;--card:#0a1e35;--soft:#0e2a45;--line:#075985;--text:#bae6fd;--muted:#38bdf8;--strong:#7dd3fc;--ok:#6ee7b7;--warn:#fbbf24;--red:#fca5a5;--vio:#c4b5fd;--teal:#5eead4;--shadow:0 2px 10px rgba(0,0,0,.35)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;font-size:13px;padding:22px}
+.container{max-width:1200px;margin:0 auto}
+header{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;box-shadow:var(--shadow);margin-bottom:18px;display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+h1{font-size:1rem;color:var(--strong);margin-bottom:5px}.subtitle{color:var(--muted);font-size:.74rem}button{border:1px solid var(--line);background:var(--soft);color:var(--text);padding:6px 13px;border-radius:999px;cursor:pointer;font:inherit;font-size:.72rem}
+h2{font-size:.88rem;font-weight:800;color:#fff;background:var(--strong);padding:8px 15px;border-radius:7px;margin:20px 0 10px;display:inline-block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow);margin-bottom:14px}
+.tbl{width:100%;border-collapse:collapse;box-shadow:var(--shadow);border-radius:10px;overflow:hidden;background:var(--card);margin-bottom:14px}.tbl th{background:var(--strong);color:#fff;text-align:left;padding:8px 10px;font-size:.68rem;text-transform:uppercase;letter-spacing:.05em}.tbl td{padding:8px 10px;border-bottom:1px solid var(--soft);vertical-align:top;font-size:.75rem}.tbl tr:last-child td{border-bottom:none}.tbl tr:nth-child(even) td{background:rgba(125,211,252,.06)}
+.note{background:var(--soft);border-left:4px solid var(--muted);padding:10px 12px;border-radius:0 10px 10px 0;margin:10px 0;font-size:.74rem}.warn{background:rgba(217,119,6,.08);border-left:4px solid var(--warn)}.ok{background:rgba(5,150,105,.08);border-left:4px solid var(--ok)}.err{background:rgba(220,38,38,.08);border-left:4px solid var(--red)}.vio{background:rgba(124,58,237,.08);border-left:4px solid var(--vio)}
+strong{color:var(--strong)}
+.s3{color:#fbbf24;font-weight:800}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="container">
+<header>
+  <div>
+    <h1>Tema 46 · HTML 3 · Cuadro comparativo y tablas operativas para examen</h1>
+    <div class="subtitle">Ley Foral 15/2016 · Decreto Foral 26/2018 · Inclusión Social y Renta Garantizada</div>
+  </div>
+  <button onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</header>
+
+<h2>T1 · Ley vs. Decreto <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Aspecto</th><th>Ley Foral 15/2016</th><th>Decreto Foral 26/2018</th><th>Clave de examen</th></tr></thead>
+<tbody>
+<tr><td>Rango</td><td>Ley Foral</td><td>Decreto Foral</td><td>La ley reconoce; el decreto desarrolla</td></tr>
+<tr><td>Objeto</td><td>Regula los derechos a la Inclusión Social y a la Renta Garantizada</td><td>Desarrolla reglamentariamente ambos derechos</td><td>Pregunta clásica: qué hace cada norma</td></tr>
+<tr><td>Enfoque</td><td>Define derechos, requisitos, cuantías, obligaciones y sanciones</td><td>Detalla procedimiento, co-diagnóstico, ejercicio conjunto y verificación</td><td>Ley = qué; decreto = cómo</td></tr>
+<tr><td>Núcleo</td><td>Dos derechos subjetivos diferenciados</td><td>Aplicación técnica y operativa</td><td>No confundir objeto con desarrollo</td></tr>
+</tbody>
+</table>
+
+<h2>T2 · Los 2 derechos del tema <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Derecho</th><th>Naturaleza</th><th>Contenido básico</th><th>Dato que cae en examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Inclusión Social</strong></td><td>Derecho subjetivo de acompañamiento</td><td>Proceso personalizado para la inclusión plena</td><td><strong>Se ejerce libre y voluntariamente</strong></td></tr>
+<tr><td><strong>Renta Garantizada</strong></td><td>Prestación básica, económica y periódica</td><td>Garantiza ingresos mínimos a quien cumple requisitos</td><td><strong>Es subsidiaria, complementaria, intransferible e inembargable</strong></td></tr>
+</tbody>
+</table>
+<div class="note vio"><strong>Memoria rápida:</strong> Tema 46 = <strong>dos derechos</strong>, no una sola ayuda económica.</div>
+
+<h2>T3 · Plazos clave del tema <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Institución</th><th>Plazo</th><th>Norma</th><th>Trampa habitual</th></tr></thead>
+<tbody>
+<tr><td>Evaluación del impacto de los derechos</td><td><strong>Cada 2 años</strong></td><td>LF 15/2016</td><td>Se confunde con el plan estratégico</td></tr>
+<tr><td>Plan Estratégico de Inclusión Social</td><td><strong>Cada 4 años</strong></td><td>LF 15/2016</td><td>No es bianual</td></tr>
+<tr><td>Evaluación intermedia del plan</td><td><strong>A los 2 años</strong></td><td>LF 15/2016</td><td>No sustituye la evaluación general de derechos</td></tr>
+<tr><td>Ingresos computables para RG</td><td><strong>Últimos 6 meses</strong></td><td>LF 15/2016</td><td>No son 12 meses</td></tr>
+<tr><td>Concesión de la RG</td><td><strong>12 meses renovables</strong></td><td>LF 15/2016</td><td>No es indefinida desde el inicio</td></tr>
+</tbody>
+</table>
+
+<h2>T4 · Inclusión social: procedimiento básico <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Fase</th><th>Contenido</th><th>Instrumento</th><th>Dato operativo</th></tr></thead>
+<tbody>
+<tr><td>Inicio</td><td>A solicitud de la persona interesada</td><td>Petición formal</td><td>No se impone automáticamente</td></tr>
+<tr><td>Diagnóstico</td><td>Valoración objetiva y participada</td><td><strong>Co-diagnóstico social</strong></td><td>Participación activa de la persona</td></tr>
+<tr><td>Diseño</td><td>Definición de objetivos y recursos</td><td><strong>Programa personalizado</strong></td><td>Ajustado a la situación real</td></tr>
+<tr><td>Compromiso</td><td>Acuerdo de actuación</td><td><strong>Convenio de inclusión social</strong></td><td>Fija duración, objetivos y compromisos</td></tr>
+<tr><td>Control</td><td>Valoración continua de la intervención</td><td>Seguimiento y evaluación</td><td>Puede haber reorientación</td></tr>
+</tbody>
+</table>
+<div class="note ok">Fórmula rentable: <strong>co-diagnóstico + programa + convenio</strong>.</div>
+
+<h2>T5 · Co-diagnóstico del DF 26/2018 <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Dimensiones</th><th>Categorías diagnósticas</th><th>Clave de examen</th></tr></thead>
+<tbody>
+<tr><td>1. Económica y laboral</td><td rowspan="5">Inclusión · Riesgo de exclusión · Exclusión leve · Exclusión moderada · Exclusión grave</td><td rowspan="5">Dato típico: <strong>5 dimensiones</strong></td></tr>
+<tr><td>2. Residencial y espacial</td></tr>
+<tr><td>3. Personal</td></tr>
+<tr><td>4. Relacional</td></tr>
+<tr><td>5. Social</td></tr>
+</tbody>
+</table>
+<div class="note err">⚠ Error típico: reducir el co-diagnóstico a 3 dimensiones. Son <strong>5</strong>.</div>
+
+<h2>T6 · Requisitos para la Renta Garantizada <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Requisito</th><th>Contenido</th><th>Matiz importante</th></tr></thead>
+<tbody>
+<tr><td>Edad</td><td>18 años o menor emancipado con menores a cargo</td><td>18-24 sin menores: independencia reforzada</td></tr>
+<tr><td>Residencia</td><td>2 años en Navarra</td><td><strong>1 año</strong> con menores, dependientes o discapacidad ≥ 65 %</td></tr>
+<tr><td>Capacidad económica</td><td>Insuficiencia de medios para cubrir necesidades básicas</td><td>Se valora sobre la unidad familiar</td></tr>
+<tr><td>Ejercicio previo de otros derechos</td><td>Haber reclamado otras prestaciones o derechos económicos</td><td>Pensiones, alimentos, compensatorias, etc.</td></tr>
+</tbody>
+</table>
+
+<h2>T7 · Unidad familiar, núcleo familiar y domicilio <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Concepto</th><th>Qué incluye</th><th>Función</th><th>Regla de examen</th></tr></thead>
+<tbody>
+<tr><td>Unidad familiar</td><td>Solicitante + convivencia con parentesco en los términos legales</td><td>Sujeto general de la prestación</td><td><strong>Una RG por unidad familiar</strong></td></tr>
+<tr><td>Núcleo familiar</td><td>Solicitante + cónyuge/análoga + hijos convivientes</td><td>Concepto más restringido</td><td>Puede generar excepciones</td></tr>
+<tr><td>Domicilio compartido</td><td>Pueden convivir varias UF</td><td>Determina concurrencia de prestaciones</td><td><strong>Máximo 3 RG por domicilio</strong></td></tr>
+</tbody>
+</table>
+<div class="note warn">⚠ Trampa frecuente: no es “una RG por vivienda”; puede haber varias, con máximo de <strong>tres</strong>.</div>
+
+<h2>T8 · Cuantías de la RG <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Miembro añadido</th><th>Incremento</th><th>Dato memorizable</th></tr></thead>
+<tbody>
+<tr><td>2ª persona</td><td><strong>+35 %</strong></td><td>Mayor incremento</td></tr>
+<tr><td>3ª persona</td><td><strong>+25 %</strong></td><td>Segundo escalón</td></tr>
+<tr><td>4ª y siguientes</td><td><strong>+15 %</strong></td><td>Tramo residual</td></tr>
+</tbody>
+</table>
+<table class="tbl">
+<thead><tr><th>Regla adicional</th><th>Contenido</th></tr></thead>
+<tbody>
+<tr><td>Límite máximo</td><td>La cuantía total no puede superar el doble de la cuantía de una persona</td></tr>
+<tr><td>Actualización</td><td>Anual, según el mayor entre IPC Navarra y salarios medios de Navarra</td></tr>
+<tr><td>Mínimo técnico</td><td>Si la cuantía resultante es inferior al 10 % de la prestación de 1 persona, se eleva a ese mínimo</td></tr>
+<tr><td>Cálculo real</td><td>Prestación teórica − ingresos computables</td></tr>
+</tbody>
+</table>
+
+<h2>T9 · Ingresos computables y no computables <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Computan</th><th>No computan</th><th>Clave operativa</th></tr></thead>
+<tbody>
+<tr><td>Rendimientos del trabajo</td><td>Ayudas de carácter finalista</td><td rowspan="6">Se miran los <strong>últimos 6 meses</strong></td></tr>
+<tr><td>Pensiones y prestaciones</td><td>Acogimiento familiar de menores</td></tr>
+<tr><td>Rendimientos de actividades económicas</td><td>Prestaciones por hijos con discapacidad en supuestos legales</td></tr>
+<tr><td>Determinados rendimientos de actividades no fundamentales</td><td>Incentivos de centros ocupacionales</td></tr>
+<tr><td>Rendimientos netos del capital inmobiliario</td><td>Ciertas pensiones o prestaciones protegidas dentro de límites</td></tr>
+<tr><td>Otros ingresos no exceptuados</td><td>Otros supuestos expresamente exceptuados</td></tr>
+</tbody>
+</table>
+
+<h2>T10 · Patrimonio computable y no computable <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Elemento</th><th>Régimen</th><th>Dato de examen</th></tr></thead>
+<tbody>
+<tr><td>Bienes muebles</td><td>Computables dentro del límite legal</td><td><strong>≤ 65 %</strong> de la RG anual de 1 miembro</td></tr>
+<tr><td>Bienes inmuebles computables</td><td>Computables según valor catastral</td><td><strong>≤ 10 veces</strong> la RG anual de 1 miembro</td></tr>
+<tr><td>Vivienda habitual</td><td>No computable hasta cierto límite</td><td><strong>Hasta 300.000 €</strong></td></tr>
+<tr><td>Mobiliario, ajuar y vehículo habitual</td><td>No computables con la vivienda habitual</td><td>También dentro del límite de 300.000 €</td></tr>
+<tr><td>Instrumentos laborales</td><td>No computables</td><td>En los términos legales y reglamentarios</td></tr>
+</tbody>
+</table>
+
+<h2>T11 · Estímulos al empleo, duración y control <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Materia</th><th>Contenido</th><th>Idea práctica</th></tr></thead>
+<tbody>
+<tr><td>Estímulos al empleo</td><td>Parte de los rendimientos laborales queda excluida del cómputo</td><td>Evita desincentivar la incorporación laboral</td></tr>
+<tr><td>Contratos subvencionados</td><td>Tienen tratamiento específico</td><td>No se aplica sin más la regla general</td></tr>
+<tr><td>Duración de la RG</td><td><strong>12 meses renovables</strong></td><td>Mientras persista la necesidad</td></tr>
+<tr><td>Seguimiento</td><td>Verificación de mantenimiento de requisitos</td><td>Control administrativo continuado</td></tr>
+</tbody>
+</table>
+
+<h2>T12 · Obligaciones del perceptor <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Obligación</th><th>Contenido</th><th>Clave de examen</th></tr></thead>
+<tbody>
+<tr><td>Residencia efectiva</td><td>Residir efectiva y continuadamente en Navarra</td><td>Es obligación de mantenimiento</td></tr>
+<tr><td>Activación de otros derechos</td><td>Hacer valer prestaciones y acciones económicas previas</td><td>No puede elegirse la RG ignorando otros derechos</td></tr>
+<tr><td>Disponibilidad para empleo</td><td>Estar disponible para empleo adecuado</td><td>Con inscripción en SNE-NL cuando proceda</td></tr>
+<tr><td>Inserción sociolaboral</td><td>Participar en actividades propuestas</td><td>Conecta con inclusión social</td></tr>
+<tr><td>Comunicación</td><td>Informar de cambios de circunstancias</td><td>Muy preguntable</td></tr>
+<tr><td>Reintegro</td><td>Devolver prestaciones indebidamente percibidas</td><td>Obligación final clásica</td></tr>
+</tbody>
+</table>
+
+<h2>T13 · Ejercicio conjunto de Inclusión Social y RG <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Supuesto</th><th>Regla</th><th>Norma</th><th>Dato clave</th></tr></thead>
+<tbody>
+<tr><td>Percepción prolongada de RG sin rentas de trabajo</td><td>Ejercicio conjunto obligatorio</td><td>LF 15/2016 + DF 26/2018</td><td><strong>Desde 1 año</strong> sin rentas de trabajo</td></tr>
+<tr><td>Permanencia más larga en la prestación</td><td>Mayor peso del programa personalizado y recursos propuestos</td><td>LF 15/2016 + DF 26/2018</td><td>Especial atención a partir de <strong>2 años</strong></td></tr>
+<tr><td>Exclusión social grave</td><td>Posibilidad de articulación conjunta excepcional</td><td>DF 26/2018</td><td>Supuesto específico</td></tr>
+<tr><td>Tercer grado penitenciario y programa específico</td><td>Supuesto reglamentario</td><td>DF 26/2018</td><td>Dato fino para test difíciles</td></tr>
+</tbody>
+</table>
+
+<h2>T14 · Régimen sancionador de la RG <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Tipo</th><th>Multa</th><th>Sanciones accesorias</th><th>Clave memorizable</th></tr></thead>
+<tbody>
+<tr><td>Leves</td><td><strong>Hasta 300 €</strong></td><td rowspan="3">Puede haber suspensión o extinción de la prestación</td><td>≤ 300</td></tr>
+<tr><td>Graves</td><td><strong>301 a 1.500 €</strong></td><td>301 – 1.500</td></tr>
+<tr><td>Muy graves</td><td><strong>1.501 a 3.000 €</strong></td><td>1.501 – 3.000</td></tr>
+</tbody>
+</table>
+
+<h2>T15 · Comisión de Verificación <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Aspecto</th><th>Contenido</th><th>Pregunta típica</th></tr></thead>
+<tbody>
+<tr><td>Naturaleza</td><td>Garantía suplementaria para personas presuntamente infractoras</td><td>No confundir con órganos de la LF 15/2006 de Servicios Sociales</td></tr>
+<tr><td>Regulación</td><td>Desarrollada por el DF 26/2018</td><td>La ley la crea y el decreto concreta composición y funcionamiento</td></tr>
+<tr><td>Función</td><td>Interviene en el ámbito del procedimiento sancionador y verificación</td><td>Dato típico en preguntas finas</td></tr>
+</tbody>
+</table>
+
+<h2>T16 · Las 12 trampas del examen <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Afirmación incorrecta</th><th>Corrección exacta</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>La LF 15/2016 regula solo una prestación económica</td><td>Regula <strong>dos derechos</strong>: Inclusión Social y Renta Garantizada</td></tr>
+<tr><td>2</td><td>La inclusión social es obligatoria para cualquier perceptor</td><td>Se ejerce <strong>libre y voluntariamente</strong></td></tr>
+<tr><td>3</td><td>La evaluación general de los derechos es cada 4 años</td><td>Es al menos cada <strong>2 años</strong></td></tr>
+<tr><td>4</td><td>El Plan Estratégico es bianual</td><td>Es <strong>cuatrienal</strong></td></tr>
+<tr><td>5</td><td>El co-diagnóstico tiene 3 dimensiones</td><td>Tiene <strong>5 dimensiones</strong></td></tr>
+<tr><td>6</td><td>Solo puede haber una RG por domicilio</td><td>Pueden existir varias, con <strong>máximo de 3</strong></td></tr>
+<tr><td>7</td><td>La 3ª persona suma un 35 %</td><td>La <strong>2ª</strong> suma 35 % y la <strong>3ª</strong> suma 25 %</td></tr>
+<tr><td>8</td><td>La vivienda habitual nunca computa</td><td>No computa hasta <strong>300.000 €</strong></td></tr>
+<tr><td>9</td><td>Los ingresos se miran en 12 meses</td><td>Se computan los últimos <strong>6 meses</strong></td></tr>
+<tr><td>10</td><td>La RG se concede de una vez para siempre</td><td>Se concede por <strong>12 meses renovables</strong></td></tr>
+<tr><td>11</td><td>La RG es embargable como regla general</td><td>Es <strong>inembargable</strong> con los límites legales</td></tr>
+<tr><td>12</td><td>La Comisión de Verificación pertenece a la LF 15/2006</td><td>Pertenece al sistema de RG desarrollado por el <strong>DF 26/2018</strong></td></tr>
+</tbody>
+</table>
+
+</div>
+</body>
+</html>

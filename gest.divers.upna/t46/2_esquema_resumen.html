@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 46 · HTML 2 · Esquema-resumen visual · Inclusión Social y Renta Garantizada</title>
+<style>
+:root{--bg:#f0f9ff;--card:#fff;--s2:#f0f9ff;--line:#7dd3fc;--text:#0c4a6e;--muted:#0284c7;--p:#075985;--warn:#d97706;--red:#dc2626;--grn:#059669;--vio:#7c3aed;--teal:#0d9488;--sh:0 2px 10px rgba(7,89,133,.09)}
+[data-theme="dark"]{--bg:#020c1a;--card:#0a1e35;--s2:#0e2a45;--line:#075985;--text:#bae6fd;--muted:#38bdf8;--p:#38bdf8;--warn:#fbbf24;--red:#fca5a5;--grn:#6ee7b7;--vio:#c4b5fd;--teal:#5eead4;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:22px}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}.hdr h1{font-size:.97rem;color:var(--p)}.hdr p{font-size:.74rem;color:var(--muted);margin-top:3px}.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.72rem}
+h2{font-size:.87rem;font-weight:800;color:#fff;background:var(--p);padding:8px 15px;border-radius:7px;margin:22px 0 10px;display:inline-block}
+.bq{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.62rem;font-weight:700;border:1px solid transparent;white-space:nowrap;margin:1px}.ok{background:rgba(5,150,105,.12);color:#059669;border-color:rgba(5,150,105,.3)}.err{background:rgba(220,38,38,.12);color:#dc2626;border-color:rgba(220,38,38,.3)}.warn{background:rgba(180,83,9,.12);color:#b45309;border-color:rgba(180,83,9,.3)}.vio{background:rgba(124,58,237,.12);color:var(--vio);border-color:rgba(124,58,237,.3)}.sky{background:rgba(2,132,199,.12);color:var(--muted);border-color:rgba(2,132,199,.3)}.teal{background:rgba(13,148,136,.12);color:var(--teal);border-color:rgba(13,148,136,.3)}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.73rem;border-left:4px solid;margin:7px 0}.n-ok{background:rgba(5,150,105,.07);border-color:#059669;color:#065f46}.n-warn{background:#fef3c7;border-color:#d97706;color:#78350f}.n-err{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}.n-vio{background:#f5f3ff;border-color:#7c3aed;color:#4c1d95}[data-theme="dark"] .n-warn{background:#451a03;color:#fde68a}[data-theme="dark"] .n-err{background:#200a0a;color:#fca5a5}[data-theme="dark"] .n-ok{background:rgba(110,231,183,.07);color:#6ee7b7}[data-theme="dark"] .n-vio{background:#1e1b4b;color:#c4b5fd}
+strong{color:var(--p)}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:9px;margin-bottom:16px}.kbox{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:10px 12px;box-shadow:var(--sh);text-align:center}.big{font-size:1rem;font-weight:800;color:var(--p);margin-bottom:2px}.ksmall{font-size:.69rem;color:var(--muted)}.kmini{font-size:.66rem;margin-top:3px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:13px 16px;box-shadow:var(--sh);margin-bottom:12px}.tag{display:block;font-size:.63rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:5px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px}.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:14px}
+.blk{background:var(--card);border-radius:12px;padding:13px 15px;box-shadow:var(--sh)}.b1{border-top:5px solid var(--p)}.b2{border-top:5px solid var(--vio)}.b3{border-top:5px solid var(--grn)}.b4{border-top:5px solid var(--teal)}.b5{border-top:5px solid var(--warn)}.b6{border-top:5px solid var(--red)}.blk h3{font-size:.8rem;font-weight:800;margin-bottom:7px}.b1 h3{color:var(--p)}.b2 h3{color:var(--vio)}.b3 h3{color:var(--grn)}.b4 h3{color:var(--teal)}.b5 h3{color:var(--warn)}.b6 h3{color:var(--red)}.blk ul,.blk ol{padding-left:15px}.blk li{font-size:.73rem;margin:.22rem 0}
+table{width:100%;border-collapse:collapse;margin:8px 0}th{background:var(--s2);color:var(--muted);font-size:.67rem;text-transform:uppercase;padding:6px 10px;text-align:left}td{padding:6px 10px;border-bottom:1px solid var(--s2);font-size:.75rem;vertical-align:top}tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+.trap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:9px;margin-bottom:14px}.trap{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:10px 12px;box-shadow:var(--sh)}.trap .q{font-size:.71rem;color:var(--red);font-weight:600;margin-bottom:4px}.trap .a{font-size:.71rem}
+.step{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:14px}.st{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;box-shadow:var(--sh);text-align:center}.st .n{font-size:.9rem;font-weight:800;color:var(--p)}.st .t{font-size:.68rem;margin-top:4px}
+@media(max-width:800px){.g2,.g3,.g4,.step{grid-template-columns:1fr}.trap-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 46 · HTML 2 · Esquema-resumen con bloques visuales para memorización rápida</h1>
+    <p>LF 15/2016 + DF 26/2018 · Inclusión Social · Renta Garantizada · Co-diagnóstico · Ejercicio conjunto · Régimen sancionador</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<h2>Fichas flash de identificación ★★★</h2>
+<div class="kpi">
+  <div class="kbox"><div class="big">2 derechos</div><div class="ksmall">Inclusión Social + RG</div><div class="kmini">Dato nuclear del tema</div></div>
+  <div class="kbox"><div class="big">Libre y voluntario</div><div class="ksmall">Derecho a la inclusión</div><div class="kmini">⚠ No impuesto</div></div>
+  <div class="kbox"><div class="big">Cada 2 años</div><div class="ksmall">Evaluación del impacto</div><div class="kmini">⚠ No 4 años</div></div>
+  <div class="kbox"><div class="big">Cada 4 años</div><div class="ksmall">Plan Estratégico</div><div class="kmini">Con evaluación intermedia a 2 años</div></div>
+  <div class="kbox"><div class="big">5 dimensiones</div><div class="ksmall">Co-diagnóstico</div><div class="kmini">DF 26/2018</div></div>
+  <div class="kbox"><div class="big">3 RG máx.</div><div class="ksmall">Por domicilio</div><div class="kmini">⚠ Trampa típica</div></div>
+  <div class="kbox"><div class="big">+35 / +25 / +15</div><div class="ksmall">Escalado cuantías RG</div><div class="kmini">2ª, 3ª, 4ª y ss.</div></div>
+  <div class="kbox"><div class="big">12 meses</div><div class="ksmall">Concesión RG</div><div class="kmini">Renovable</div></div>
+  <div class="kbox"><div class="big">300.000 €</div><div class="ksmall">No computa vivienda habitual</div><div class="kmini">+ mobiliario + ajuar + vehículo</div></div>
+  <div class="kbox"><div class="big">65 % / 10 veces</div><div class="ksmall">Límites patrimoniales</div><div class="kmini">Muebles / inmuebles</div></div>
+  <div class="kbox"><div class="big">1 año sin trabajo</div><div class="ksmall">Ejercicio conjunto</div><div class="kmini">Obligatorio</div></div>
+  <div class="kbox"><div class="big">≤300 / 1500 / 3000</div><div class="ksmall">Sanciones RG</div><div class="kmini">Leves / graves / muy graves</div></div>
+</div>
+
+<h2>Idea fuerza del Tema 46</h2>
+<div class="card" style="border-left:4px solid var(--p);margin-bottom:14px">
+  <span class="tag">Modelo dual de protección</span>
+  <p style="font-size:.82rem">La <strong>LF 15/2016</strong> no regula solo una prestación económica. Regula <strong>dos derechos subjetivos</strong>: el derecho a la <strong>Inclusión Social</strong> y el derecho a la <strong>Renta Garantizada</strong>. La ley responde al <strong>qué</strong> y el <strong>DF 26/2018</strong> responde al <strong>cómo</strong>.</p>
+  <p style="font-size:.82rem">La lógica del sistema es: <strong>diagnosticar bien</strong>, <strong>acompañar mejor</strong> y <strong>garantizar ingresos mínimos</strong> cuando la unidad familiar no alcanza por sí sola un nivel suficiente de recursos.</p>
+</div>
+
+<h2>Bloque 1 · Los 2 derechos de la ley ★★★</h2>
+<div class="g2">
+  <div class="blk b2">
+    <h3>🧭 Derecho a la Inclusión Social</h3>
+    <ul>
+      <li>Dirigido a personas en <strong>situación de exclusión social</strong></li>
+      <li>Se ejerce <strong>LIBRE Y VOLUNTARIAMENTE</strong></li>
+      <li>Implica acompañamiento social <strong>personalizado</strong></li>
+      <li>Se articula mediante <strong>co-diagnóstico + programa + convenio</strong></li>
+    </ul>
+    <div class="note n-err">⚠ No es una obligación automática por cobrar RG</div>
+  </div>
+  <div class="blk b1">
+    <h3>💶 Derecho a la Renta Garantizada</h3>
+    <ul>
+      <li>Prestación <strong>básica, económica y periódica</strong></li>
+      <li>Además es <strong>subsidiaria y complementaria</strong></li>
+      <li>También es <strong>intransferible e inembargable</strong></li>
+      <li>Se reconoce si se cumplen los <strong>requisitos legales</strong></li>
+    </ul>
+    <div class="note n-err">⚠ No es una ayuda discrecional: es un derecho si concurren requisitos</div>
+  </div>
+</div>
+
+<h2>Bloque 2 · Plazos que más caen en examen ★★★</h2>
+<div class="g4">
+  <div class="blk b5"><h3>📅 2 años</h3><ul><li>Evaluación del <strong>impacto</strong> de ambos derechos</li></ul></div>
+  <div class="blk b5"><h3>📘 4 años</h3><ul><li><strong>Plan Estratégico</strong> de Inclusión Social</li></ul></div>
+  <div class="blk b5"><h3>⏳ 6 meses</h3><ul><li><strong>Ingresos computables</strong> para valorar la RG</li></ul></div>
+  <div class="blk b5"><h3>🗓️ 12 meses</h3><ul><li><strong>Duración</strong> de la concesión de la RG</li></ul></div>
+</div>
+<div class="note n-warn">⚠ Trampa clásica: evaluación de derechos = <strong>2 años</strong>; plan estratégico = <strong>4 años</strong>.</div>
+
+<h2>Bloque 3 · Procedimiento de inclusión social</h2>
+<div class="step">
+  <div class="st"><div class="n">1</div><div class="t">Solicitud de la persona interesada</div></div>
+  <div class="st"><div class="n">2</div><div class="t">Co-diagnóstico social objetivo</div></div>
+  <div class="st"><div class="n">3</div><div class="t">Programa personalizado</div></div>
+  <div class="st"><div class="n">4</div><div class="t">Convenio de inclusión social</div></div>
+  <div class="st"><div class="n">5</div><div class="t">Seguimiento y evaluación</div></div>
+  <div class="st"><div class="n">6</div><div class="t">Reorientación si procede</div></div>
+</div>
+<div class="card">
+  <span class="tag">Instrumentos clave</span>
+  <p style="font-size:.8rem">El corazón del proceso es: <strong>co-diagnóstico + programa personalizado + convenio</strong>. El convenio fija duración, objetivos, compromisos, resultados previstos y recursos a utilizar.</p>
+</div>
+
+<h2>Bloque 4 · Co-diagnóstico: las 5 dimensiones ★★★</h2>
+<div class="g3">
+  <div class="blk b4"><h3>① Económica y laboral</h3><ul><li>Ingresos</li><li>Empleo</li><li>Empleabilidad</li></ul></div>
+  <div class="blk b4"><h3>② Residencial y espacial</h3><ul><li>Vivienda</li><li>Entorno</li><li>Estabilidad residencial</li></ul></div>
+  <div class="blk b4"><h3>③ Personal</h3><ul><li>Salud</li><li>Formación</li><li>Autonomía</li></ul></div>
+  <div class="blk b4"><h3>④ Relacional</h3><ul><li>Apoyos familiares</li><li>Vínculos</li><li>Red social</li></ul></div>
+  <div class="blk b4"><h3>⑤ Social</h3><ul><li>Participación</li><li>Integración comunitaria</li><li>Inclusión real</li></ul></div>
+  <div class="blk b2"><h3>Categorías diagnósticas</h3><ul><li>Inclusión</li><li>Riesgo de exclusión</li><li>Exclusión leve</li><li>Exclusión moderada</li><li>Exclusión grave</li></ul></div>
+</div>
+<div class="note n-vio">Memoria rápida: <strong>eco – res – per – rel – soc</strong>.</div>
+
+<h2>Bloque 5 · Requisitos de acceso a la Renta Garantizada ★★★</h2>
+<div class="g2">
+  <div class="blk b1">
+    <h3>🔑 Requisitos básicos</h3>
+    <ul>
+      <li><strong>Edad</strong>: 18 años o menor emancipado con menores a cargo</li>
+      <li><strong>Residencia</strong>: 2 años en Navarra</li>
+      <li><strong>Carencia de medios</strong>: capacidad económica insuficiente</li>
+      <li><strong>Agotar otros derechos</strong>: pensiones, prestaciones, alimentos, compensatorias</li>
+    </ul>
+  </div>
+  <div class="blk b5">
+    <h3>⚠ Excepciones / matices</h3>
+    <ul>
+      <li>18-24 años sin menores: independencia reforzada previa</li>
+      <li>Residencia puede bajar a <strong>1 año</strong> con menores, dependientes o discapacidad ≥ 65 %</li>
+      <li>La referencia económica es la <strong>unidad familiar</strong>, no solo la persona solicitante</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Bloque 6 · Unidad familiar, núcleo familiar y domicilio ★★★</h2>
+<div class="g3">
+  <div class="blk b2"><h3>👪 Unidad familiar</h3><ul><li>Sujeto general perceptor de la RG</li><li>Incluye solicitante + convivencia con vínculos legales de parentesco</li></ul></div>
+  <div class="blk b2"><h3>🏠 Núcleo familiar</h3><ul><li>Solicitante + cónyuge/análoga + hijos convivientes</li><li>Concepto más restringido</li></ul></div>
+  <div class="blk b6"><h3>🚨 Regla de examen</h3><ul><li><strong>Una RG por UF</strong></li><li><strong>Máximo tres RG por domicilio</strong></li><li>Nadie puede integrar dos UF simultáneamente</li></ul></div>
+</div>
+<div class="note n-err">⚠ Trampa: en domicilio compartido no hay una única RG para toda la vivienda; puede haber varias, pero con <strong>máximo de tres</strong>.</div>
+
+<h2>Bloque 7 · Cuantías de la RG ★★★</h2>
+<div class="card" style="margin-bottom:14px">
+  <span class="tag">Escalado clásico de examen</span>
+  <table>
+    <thead><tr><th>Persona añadida</th><th>Incremento</th><th>Recuerdo rápido</th></tr></thead>
+    <tbody>
+      <tr><td>2ª persona</td><td><strong>+35 %</strong></td><td>El mayor salto</td></tr>
+      <tr><td>3ª persona</td><td><strong>+25 %</strong></td><td>Segundo salto</td></tr>
+      <tr><td>4ª y siguientes</td><td><strong>+15 %</strong></td><td>Tramo residual</td></tr>
+    </tbody>
+  </table>
+  <div class="note n-ok">✓ Fórmula rápida: <strong>35 – 25 – 15</strong></div>
+</div>
+<div class="g2">
+  <div class="blk b3"><h3>📈 Reglas de cuantía</h3><ul><li>La cuantía total no puede superar el <strong>doble</strong> del límite de una persona</li><li>Actualización <strong>anual</strong> según el mayor entre IPC Navarra y salarios medios</li><li>Mínimo técnico del <strong>10 %</strong> de la prestación de 1 persona</li></ul></div>
+  <div class="blk b5"><h3>⚠ Ojo</h3><ul><li>La cuantía percibida = prestación teórica − <strong>ingresos computables</strong></li><li>La RG funciona como <strong>garantía de mínimos</strong>, no como cantidad fija idéntica para todos</li></ul></div>
+</div>
+
+<h2>Bloque 8 · Capacidad económica: ingresos y patrimonio ★★★</h2>
+<div class="g2">
+  <div class="blk b1">
+    <h3>💼 Ingresos</h3>
+    <ul>
+      <li>Se miran los <strong>últimos 6 meses</strong></li>
+      <li>Computan: trabajo, pensiones, prestaciones, actividad profesional, capital inmobiliario y otros ingresos no exceptuados</li>
+      <li>No computan: ayudas finalistas, acogimiento familiar, ciertos incentivos y determinadas prestaciones protegidas</li>
+    </ul>
+  </div>
+  <div class="blk b2">
+    <h3>🏡 Patrimonio</h3>
+    <ul>
+      <li><strong>No computa</strong> vivienda habitual + mobiliario + ajuar + vehículo habitual, hasta <strong>300.000 €</strong></li>
+      <li>Bienes muebles computables ≤ <strong>65 %</strong> de la RG anual de 1 miembro</li>
+      <li>Bienes inmuebles computables ≤ <strong>10 veces</strong> la RG anual de 1 miembro</li>
+    </ul>
+  </div>
+</div>
+<div class="note n-warn">⚠ Trampa: la vivienda habitual no es siempre intocable sin límite; no computa <strong>hasta 300.000 €</strong>.</div>
+
+<h2>Bloque 9 · Estímulos al empleo y duración</h2>
+<div class="g2">
+  <div class="blk b3"><h3>🛠️ Estímulos al empleo</h3><ul><li>Una parte de los rendimientos laborales queda fuera del cómputo</li><li>La incorporación laboral no debe penalizarse de forma brusca</li><li>El decreto concreta el mecanismo</li></ul></div>
+  <div class="blk b1"><h3>🗓️ Duración y control</h3><ul><li>Concesión por <strong>12 meses</strong> renovables</li><li>Seguimiento administrativo del mantenimiento de requisitos</li><li>Posibilidad de acompañamiento social</li></ul></div>
+</div>
+
+<h2>Bloque 10 · Obligaciones del perceptor ★★★</h2>
+<div class="g3">
+  <div class="blk b5"><h3>Residencia</h3><ul><li>Residir efectiva y continuadamente en Navarra</li></ul></div>
+  <div class="blk b5"><h3>Otros derechos</h3><ul><li>Hacer valer prestaciones y derechos económicos previos</li></ul></div>
+  <div class="blk b5"><h3>Empleo</h3><ul><li>Disponibilidad para empleo adecuado e inscripción como demandante si procede</li></ul></div>
+  <div class="blk b5"><h3>Inserción</h3><ul><li>Participar en actividades de inserción sociolaboral propuestas</li></ul></div>
+  <div class="blk b5"><h3>Comunicación</h3><ul><li>Comunicar cambios de circunstancias</li></ul></div>
+  <div class="blk b5"><h3>Reintegro</h3><ul><li>Reintegrar prestaciones indebidamente percibidas</li></ul></div>
+</div>
+
+<h2>Bloque 11 · Ejercicio conjunto de los dos derechos ★★★</h2>
+<div class="card" style="border-left:4px solid var(--vio)">
+  <span class="tag">No siempre juntos, pero a veces sí obligatoriamente</span>
+  <p style="font-size:.8rem"><strong>Regla clave:</strong> cuando la unidad familiar lleve <strong>1 año</strong> percibiendo Renta Garantizada <strong>sin rentas de trabajo</strong>, el ejercicio conjunto de inclusión social y RG se vuelve una pieza central del sistema.</p>
+  <p style="font-size:.8rem">El decreto desarrolla además otros supuestos: exclusión social grave, determinadas situaciones penitenciarias y otros escenarios previstos reglamentariamente.</p>
+</div>
+
+<h2>Bloque 12 · Régimen sancionador de la RG ★★★</h2>
+<div class="g3">
+  <div class="blk b3"><h3>🟢 Leves</h3><ul><li>Hasta <strong>300 €</strong></li></ul></div>
+  <div class="blk b5"><h3>🟠 Graves</h3><ul><li><strong>301 – 1.500 €</strong></li></ul></div>
+  <div class="blk b6"><h3>🔴 Muy graves</h3><ul><li><strong>1.501 – 3.000 €</strong></li></ul></div>
+</div>
+<div class="g2">
+  <div class="blk b6"><h3>📌 Sanciones accesorias</h3><ul><li>Suspensión de la prestación</li><li>Extinción de la prestación</li></ul></div>
+  <div class="blk b2"><h3>🛡️ Comisión de Verificación</h3><ul><li>Desarrollada por el DF 26/2018</li><li>Garantía suplementaria para personas presuntas infractoras</li><li>Dato muy preguntable</li></ul></div>
+</div>
+
+<h2>Bloque 13 · Ley vs. Decreto</h2>
+<div class="g2">
+  <div class="blk b1"><h3>📘 La Ley Foral 15/2016</h3><ul><li>Reconoce los derechos</li><li>Define requisitos, cuantías y obligaciones</li><li>Regula capacidad económica y sanciones</li></ul></div>
+  <div class="blk b4"><h3>⚙️ El Decreto Foral 26/2018</h3><ul><li>Desarrolla el procedimiento</li><li>Concreta el co-diagnóstico en 5 dimensiones</li><li>Regula Comisión de Verificación y aspectos operativos</li></ul></div>
+</div>
+<div class="note n-ok">✓ Regla fácil: <strong>Ley = qué derecho existe</strong> · <strong>Decreto = cómo se aplica</strong>.</div>
+
+<h2>Las 12 trampas del examen</h2>
+<div class="trap-grid">
+  <div class="trap"><div class="q">❌ "La LF 15/2016 regula solo una prestación económica"</div><div class="a">✓ Regula <strong>DOS derechos</strong>: Inclusión Social y RG</div></div>
+  <div class="trap"><div class="q">❌ "La inclusión social es obligatoria para todo perceptor"</div><div class="a">✓ Se ejerce <strong>libre y voluntariamente</strong></div></div>
+  <div class="trap"><div class="q">❌ "La evaluación de los derechos es cada 4 años"</div><div class="a">✓ Es al menos cada <strong>2 años</strong></div></div>
+  <div class="trap"><div class="q">❌ "El Plan Estratégico es bianual"</div><div class="a">✓ Es <strong>cuatrienal</strong>, con evaluación intermedia a los 2 años</div></div>
+  <div class="trap"><div class="q">❌ "El co-diagnóstico tiene 3 dimensiones"</div><div class="a">✓ Tiene <strong>5 dimensiones</strong></div></div>
+  <div class="trap"><div class="q">❌ "En un domicilio compartido solo puede haber una RG"</div><div class="a">✓ Puede haber varias, con <strong>máximo de 3</strong></div></div>
+  <div class="trap"><div class="q">❌ "La 3ª persona incrementa la RG un 35 %"</div><div class="a">✓ El <strong>35 %</strong> corresponde a la <strong>2ª</strong>; la 3ª suma <strong>25 %</strong></div></div>
+  <div class="trap"><div class="q">❌ "La vivienda habitual nunca computa"</div><div class="a">✓ No computa hasta <strong>300.000 €</strong></div></div>
+  <div class="trap"><div class="q">❌ "Los ingresos se valoran en 12 meses"</div><div class="a">✓ Se computan los <strong>últimos 6 meses</strong></div></div>
+  <div class="trap"><div class="q">❌ "La RG dura indefinidamente desde el primer reconocimiento"</div><div class="a">✓ Se concede por <strong>12 meses renovables</strong></div></div>
+  <div class="trap"><div class="q">❌ "La Comisión de Verificación pertenece a la LF 15/2006 de SS.SS."</div><div class="a">✓ Pertenece al desarrollo del régimen de la <strong>RG</strong> en el <strong>DF 26/2018</strong></div></div>
+  <div class="trap"><div class="q">❌ "La RG es embargable como regla general"</div><div class="a">✓ Es <strong>inembargable</strong> con los límites legales</div></div>
+</div>
+
+</body>
+</html>
