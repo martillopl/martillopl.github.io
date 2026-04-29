@@ -1,0 +1,414 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 44 · HTML 2 · Esquema-resumen visual · LF 15/2006 Servicios Sociales</title>
+<style>
+:root{--bg:#f0f9ff;--card:#fff;--s2:#f0f9ff;--line:#7dd3fc;--text:#0c4a6e;--muted:#0284c7;--p:#075985;--warn:#d97706;--red:#dc2626;--grn:#059669;--vio:#7c3aed;--teal:#0d9488;--sh:0 2px 10px rgba(7,89,133,.09)}
+[data-theme="dark"]{--bg:#020c1a;--card:#0a1e35;--s2:#0e2a45;--line:#075985;--text:#bae6fd;--muted:#38bdf8;--p:#38bdf8;--warn:#fbbf24;--red:#fca5a5;--grn:#6ee7b7;--vio:#c4b5fd;--teal:#5eead4;--sh:0 2px 10px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:22px}
+.hdr{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.97rem;color:var(--p)}.hdr p{font-size:.74rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 13px;border-radius:999px;font-size:.72rem}
+h2{font-size:.87rem;font-weight:800;color:#fff;background:var(--p);padding:8px 15px;border-radius:7px;margin:22px 0 10px;display:inline-block}
+.badge{display:inline-block;padding:3px 9px;border-radius:999px;font-size:.63rem;font-weight:700;border:1px solid transparent;white-space:nowrap;margin:1px}
+.b-ok{background:rgba(5,150,105,.12);color:#059669;border-color:rgba(5,150,105,.3)}
+.b-err{background:rgba(220,38,38,.12);color:#dc2626;border-color:rgba(220,38,38,.3)}
+.b-warn{background:rgba(217,119,6,.12);color:var(--warn);border-color:rgba(217,119,6,.3)}
+.b-vio{background:rgba(124,58,237,.12);color:var(--vio);border-color:rgba(124,58,237,.3)}
+.b-sky{background:rgba(2,132,199,.12);color:var(--muted);border-color:rgba(2,132,199,.3)}
+.b-teal{background:rgba(13,148,136,.12);color:var(--teal);border-color:rgba(13,148,136,.3)}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.74rem;border-left:4px solid;margin:7px 0}
+.n-ok{background:rgba(5,150,105,.07);border-color:#059669;color:#065f46}
+.n-warn{background:#fef3c7;border-color:#d97706;color:#78350f}
+.n-err{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .n-warn{background:#451a03;color:#fde68a}
+[data-theme="dark"] .n-err{background:#200a0a;color:#fca5a5}
+[data-theme="dark"] .n-ok{background:rgba(110,231,183,.07);color:#6ee7b7}
+strong{color:var(--p)}
+/* KPI */
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:9px;margin-bottom:14px}
+.kbox{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:10px 12px;box-shadow:var(--sh);text-align:center}
+.big{font-size:1rem;font-weight:800;color:var(--p);margin-bottom:2px}
+.ksmall{font-size:.69rem;color:var(--muted)}.kmini{font-size:.67rem;margin-top:3px}
+/* card */
+.card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:13px 16px;box-shadow:var(--sh);margin-bottom:12px}
+.tag{display:block;font-size:.63rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:5px}
+.card p,.card li{font-size:.78rem;margin:.2rem 0}
+.card ul,.card ol{padding-left:15px}
+/* tabla */
+table{width:100%;border-collapse:collapse;margin:8px 0}
+th{background:var(--s2);color:var(--muted);font-size:.67rem;text-transform:uppercase;padding:7px 10px;text-align:left}
+td{padding:6px 10px;border-bottom:1px solid var(--s2);font-size:.76rem;vertical-align:top}
+tr:last-child td{border-bottom:none}tr:hover td{background:var(--s2)}
+/* principios grid */
+.princ-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:9px;margin-bottom:14px}
+.princ{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:9px 12px;box-shadow:var(--sh)}
+.princ .letra{font-size:.65rem;font-weight:800;color:var(--muted);display:block;margin-bottom:2px}
+.princ h4{font-size:.76rem;font-weight:800;color:var(--p);margin-bottom:3px}
+.princ p{font-size:.71rem}
+.princ.nuevo{border-color:var(--grn)}
+.princ.nuevo h4{color:var(--grn)}
+/* derechos deberes */
+.dd-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.dd{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 15px;box-shadow:var(--sh)}
+.dd h3{font-size:.79rem;font-weight:800;margin-bottom:7px}
+.dd.der h3{color:var(--grn)}.dd.deb h3{color:var(--warn)}
+.dd ul,.dd ol{padding-left:15px}.dd li{font-size:.73rem;margin:.22rem 0}
+/* bloques estructura */
+.est2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.blk{background:var(--card);border-radius:12px;padding:13px 15px;box-shadow:var(--sh)}
+.blk-1{border-top:5px solid var(--p)}
+.blk-2{border-top:5px solid var(--vio)}
+.blk-3{border-top:5px solid var(--grn)}
+.blk-4{border-top:5px solid var(--teal)}
+.blk h3{font-size:.8rem;font-weight:800;margin-bottom:7px}
+.blk-1 h3{color:var(--p)}.blk-2 h3{color:var(--vio)}.blk-3 h3{color:var(--grn)}.blk-4 h3{color:var(--teal)}
+.blk ul{padding-left:15px}.blk li{font-size:.74rem;margin:.22rem 0}
+/* programas */
+.prog{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:14px}
+.pbox{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:10px 11px;box-shadow:var(--sh);text-align:center}
+.pbox .num{font-size:1.3rem;font-weight:800;color:var(--p);display:block;margin-bottom:4px}
+.pbox p{font-size:.7rem}
+/* fin grid */
+.fin-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px}
+.fbox{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 13px;box-shadow:var(--sh)}
+.fbox .ico{font-size:1.1rem;display:block;margin-bottom:5px}
+.fbox h4{font-size:.76rem;font-weight:800;color:var(--p);margin-bottom:4px}
+.fbox p,.fbox li{font-size:.71rem;margin:.2rem 0}
+.fbox ul{padding-left:13px}
+/* trampas */
+.trap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:9px;margin-bottom:14px}
+.trap{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:10px 12px;box-shadow:var(--sh)}
+.trap .q{font-size:.71rem;color:var(--red);font-weight:600;margin-bottom:4px}
+.trap .a{font-size:.71rem}
+/* pill */
+.pill{display:inline-block;background:var(--s2);border:1px solid var(--line);color:var(--p);padding:3px 10px;border-radius:999px;font-size:.71rem;font-weight:600;margin:2px}
+@media(max-width:680px){.dd-grid,.est2,.fin-grid{grid-template-columns:1fr}.prog{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 44 · HTML 2 · Esquema-resumen con bloques visuales para memorización rápida</h1>
+    <p>LF 15/2006, de 14 de diciembre, de Servicios Sociales · Disposiciones generales · Derechos y deberes · Sistema público · Régimen competencial · Financiación</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<!-- KPI FLASH -->
+<h2>Fichas flash de identificación ★★★</h2>
+<div class="kpi">
+  <div class="kbox"><div class="big">LF 15/2006</div><div class="ksmall">14 de diciembre</div><div class="kmini">Parlamento de Navarra</div></div>
+  <div class="kbox"><div class="big">95 arts.</div><div class="ksmall">10 Títulos</div><div class="kmini">Prel. + I a IX</div></div>
+  <div class="kbox"><div class="big">Deroga</div><div class="ksmall">LF 14/1983 + LF 9/1990</div><div class="kmini">⚠ No fue la 1ª ley: LF 14/1983 lo fue</div></div>
+  <div class="kbox"><div class="big">4º pilar</div><div class="ksmall">SS.SS. = atención social</div><div class="kmini">Junto a salud, educación y pensiones</div></div>
+  <div class="kbox"><div class="big">Derecho<br>subjetivo</div><div class="ksmall">Exigible ante los Tribunales</div><div class="kmini">Gran novedad vs. LF 14/1983</div></div>
+  <div class="kbox"><div class="big">14</div><div class="ksmall">Principios rectores (a-n)</div><div class="kmini">⚠ No 10 ni 12</div></div>
+  <div class="kbox"><div class="big">13</div><div class="ksmall">Derechos destinatarios (a-m)</div><div class="kmini">Art. 6 ★★★</div></div>
+  <div class="kbox"><div class="big">6</div><div class="ksmall">Deberes destinatarios (a-f)</div><div class="kmini">Art. 7 ★★★</div></div>
+  <div class="kbox"><div class="big">4</div><div class="ksmall">Programas básicos SS.SS. de base</div><div class="kmini">⚠ No 3 ni 5</div></div>
+  <div class="kbox"><div class="big">≥ 50%</div><div class="ksmall">Gobierno Navarra financia SS.SS. base</div><div class="kmini">Corresponsabilidad</div></div>
+  <div class="kbox"><div class="big">Cartera<br>general</div><div class="ksmall">Aprueba: Gobierno de Navarra</div><div class="kmini">Cartera local: entidades locales</div></div>
+  <div class="kbox"><div class="big">Arts. 44.17<br>+ 44.18</div><div class="ksmall">LORAFNA (LO 13/1982)</div><div class="kmini">Competencia habilitante</div></div>
+</div>
+
+<!-- IDEA FUERZA -->
+<h2>Idea fuerza</h2>
+<div class="card" style="border-left:4px solid var(--p);margin-bottom:14px">
+  <span class="tag">El cambio estructural de la LF 15/2006</span>
+  <p style="font-size:.82rem">La LF 15/2006 convierte los servicios sociales en el <strong>cuarto pilar del Estado de bienestar</strong>, reconociendo por primera vez un <strong>derecho subjetivo exigible ante los Tribunales</strong>. Ya no es una prestación graciable: es un derecho.</p>
+  <p style="font-size:.82rem">Para garantizarlo, crea las <strong>Carteras de Servicios Sociales</strong> (con prestaciones garantizadas de crédito ampliable), los <strong>4 programas básicos obligatorios</strong> y la figura del <strong>Consejo Interadministrativo</strong>.</p>
+  <div class="note n-err">⚠ El cuarto pilar NO es la vivienda ni las pensiones: es la <strong>atención social (servicios sociales)</strong>. Esta es la trampa de identificación más frecuente del tema.</div>
+</div>
+
+<!-- ÁMBITO DE APLICACIÓN -->
+<h2>Art. 4 · Ámbito de aplicación ★★★</h2>
+<div class="est2" style="margin-bottom:0">
+  <div class="blk blk-3">
+    <h3>✅ Titulares del derecho</h3>
+    <ul>
+      <li>Nacionales de la UE <strong>empadronados</strong> en Navarra</li>
+      <li>Extranjeros <strong>residentes</strong> (salvo excepciones de reciprocidad)</li>
+      <li><strong>Exiliados, refugiados y apátridas</strong> en Navarra</li>
+    </ul>
+  </div>
+  <div class="blk blk-1">
+    <h3>⚠ Urgencia e indigencia ★★★</h3>
+    <ul>
+      <li>Cualquier persona que se encuentre en Navarra en situación de <strong>urgencia personal e indigencia</strong></li>
+      <li><strong>Sin requisito de empadronamiento ni residencia</strong></li>
+      <li>La situación se valora por los profesionales según gravedad, precariedad y perentoriedad</li>
+    </ul>
+  </div>
+</div>
+<div class="note n-err" style="margin-bottom:14px">⚠ "Solo los empadronados tienen acceso a los SS.SS." → <strong>FALSO</strong>: en <strong>urgencia e indigencia</strong>, cualquier persona en Navarra accede a las prestaciones necesarias.</div>
+
+<!-- 14 PRINCIPIOS -->
+<h2>Art. 5 · Los 14 principios rectores ★★★</h2>
+<div class="princ-grid">
+  <div class="princ"><span class="letra">a)</span><h4>Universalidad</h4><p>Acceso de toda la población · igualdad, equidad y justicia redistributiva · puede condicionarse a requisitos</p></div>
+  <div class="princ"><span class="letra">b)</span><h4>Responsabilidad pública</h4><p>Los poderes públicos garantizan la disponibilidad con medios humanos, técnicos y financieros</p></div>
+  <div class="princ"><span class="letra">c)</span><h4>Igualdad</h4><p>Prestaciones mínimas <strong>HOMOGÉNEAS</strong> en todo el territorio navarro</p></div>
+  <div class="princ nuevo"><span class="letra">d) ✅ NUEVO</span><h4>Solidaridad</h4><p>Fomentar respeto y aceptación de las diferencias para la convivencia en armonía</p></div>
+  <div class="princ"><span class="letra">e)</span><h4>Proximidad y descentralización</h4><p>Prestarse en el ámbito más próximo posible a las personas</p></div>
+  <div class="princ"><span class="letra">f)</span><h4>Participación cívica</h4><p>Promover participación de personas, grupos y entidades</p></div>
+  <div class="princ nuevo"><span class="letra">g) ✅ NUEVO</span><h4>Atención personalizada e integral</h4><p>Atención integral de las necesidades de forma personalizada</p></div>
+  <div class="princ"><span class="letra">h)</span><h4>Prevención</h4><p>Orientar actuaciones principalmente a <strong>EVITAR</strong> situaciones de necesidad</p></div>
+  <div class="princ nuevo"><span class="letra">i) ✅ NUEVO</span><h4>Normalización</h4><p>Prioridad = mantener a las personas en su <strong>entorno social, familiar y personal</strong></p></div>
+  <div class="princ nuevo"><span class="letra">j) ✅ NUEVO</span><h4>Promoción de la autonomía personal</h4><p>Favorecer la capacidad de tomar decisiones y participar en la vida social</p></div>
+  <div class="princ nuevo"><span class="letra">k) ✅ NUEVO (evaluación)</span><h4>Planificación y evaluación</h4><p>Planificar de forma ordenada + evaluación periódica de los objetivos</p></div>
+  <div class="princ"><span class="letra">l)</span><h4>Coordinación y cooperación interadministrativa</h4><p>Máxima eficiencia y eficacia del sistema</p></div>
+  <div class="princ nuevo"><span class="letra">m) ✅ NUEVO</span><h4>Calidad</h4><p>Gobierno de Navarra garantizará estándares mínimos y fomentará su mejora</p></div>
+  <div class="princ nuevo"><span class="letra">n) ✅ NUEVO</span><h4>Promoción del voluntariado</h4><p>Colaboración solidaria · <strong>NUNCA sustituyendo</strong> los servicios profesionales necesarios</p></div>
+</div>
+<div class="note n-err" style="margin-bottom:14px">⚠ Son <strong>14 principios</strong> (a-n). Los marcados en verde son los 7 <strong>nuevos en 2006</strong> respecto a la LF 14/1983. El examen puede afirmar "12" o "10" → FALSO.</div>
+
+<!-- DERECHOS Y DEBERES -->
+<h2>Arts. 6-7 · Derechos (13) y Deberes (6) ★★★</h2>
+<div class="dd-grid">
+  <div class="dd der">
+    <h3>🟢 13 DERECHOS · Art. 6 (a-m)</h3>
+    <ol>
+      <li>a) Igualdad sin discriminación (origen, idioma, etnia, sexo, orientación sexual, estado civil, edad, discapacidad, religión, ideología…)</li>
+      <li>b) Información suficiente y veraz sobre prestaciones y recursos</li>
+      <li>c) Valoración de su situación <strong>por escrito y en lenguaje claro</strong></li>
+      <li>d) <strong>Plan de atención individual</strong> personal y/o familiar</li>
+      <li>e) <strong>Participar en la toma de decisiones</strong> y elegir entre opciones</li>
+      <li>f) Consentimiento específico y libre · <strong>POR ESCRITO solo para internamiento en centro residencial ★★★</strong></li>
+      <li>g) <strong>Renunciar</strong> a las prestaciones</li>
+      <li>h) <strong>Confidencialidad</strong> de la información</li>
+      <li>i) <strong>Acceso a su expediente</strong> individual en cualquier momento</li>
+      <li>j) <strong>Profesional de referencia ★★★</strong> (asignación y elección libre)</li>
+      <li>k) Participación (regulada en Título V)</li>
+      <li>l) Servicios de <strong>calidad</strong> y conocer sus estándares</li>
+      <li>m) <strong>Sugerir y hacer reclamaciones</strong></li>
+    </ol>
+  </div>
+  <div class="dd deb">
+    <h3>🟠 6 DEBERES · Art. 7 (a-f)</h3>
+    <ol>
+      <li>a) Cumplir normas y <strong>participar activamente</strong> en el proceso de intervención</li>
+      <li>b) Facilitar <strong>información veraz</strong> y comunicar variaciones</li>
+      <li>c) Destinar la prestación a la <strong>finalidad concedida</strong></li>
+      <li>d) <strong>Acudir a las entrevistas</strong> citadas por los profesionales</li>
+      <li>e) <strong>Contribuir a la financiación</strong> (copago) cuando se tenga capacidad económica y se establezca normativamente<br><span class="badge b-ok">Sin exclusión por insuficiencia económica ★★★</span></li>
+      <li>f) El resto de deberes que establezca la normativa reguladora</li>
+    </ol>
+  </div>
+</div>
+<div class="note n-err" style="margin-bottom:14px">⚠ <strong>Consentimiento escrito SOLO</strong> para internamiento en centro residencial (art. 6.f). ⚠ <strong>Ningún usuario queda excluido</strong> por insuficiencia económica (art. 7.e).</div>
+
+<!-- ART. 8 RESIDENCIALES -->
+<h2>Art. 8 · Usuarios residenciales ★★</h2>
+<div class="card" style="border-left:4px solid var(--vio);margin-bottom:14px">
+  <span class="tag">Derechos adicionales (13) y deberes adicionales (3) para usuarios de servicios residenciales</span>
+  <p style="font-size:.79rem">Además de los derechos del art. 6 y los deberes del art. 7, los usuarios de <strong>servicios residenciales</strong> tienen:</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px">
+    <div>
+      <p style="font-weight:700;font-size:.75rem;color:var(--grn);margin-bottom:5px">🟢 Derechos adicionales más relevantes</p>
+      <ul style="padding-left:15px">
+        <li style="font-size:.73rem">Libertad individual para <strong>permanecer o salir</strong> del servicio</li>
+        <li style="font-size:.73rem">Conocer el reglamento interno y disponer de copia</li>
+        <li style="font-size:.73rem">Conocer el informe de evaluación periódica <strong>ANTES del ingreso</strong></li>
+        <li style="font-size:.73rem">Secreto en sus comunicaciones (salvo resolución judicial)</li>
+        <li style="font-size:.73rem">Considerar el centro como su <strong>domicilio</strong></li>
+        <li style="font-size:.73rem"><strong>No ser sometido a inmovilización/restricción física sin prescripción facultativa</strong> → <strong>ÚLTIMO RECURSO</strong> ★★★ · comunicar al <strong>MINISTERIO FISCAL</strong> · protocolo de reducción/eliminación</li>
+        <li style="font-size:.73rem">Conocer el <strong>precio</strong> del servicio y la contraprestación</li>
+      </ul>
+    </div>
+    <div>
+      <p style="font-weight:700;font-size:.75rem;color:var(--warn);margin-bottom:5px">🟠 Deberes adicionales</p>
+      <ul style="padding-left:15px">
+        <li style="font-size:.73rem">a) Conducta basada en <strong>respeto mutuo, tolerancia y colaboración</strong></li>
+        <li style="font-size:.73rem">b) Respetar al personal y sus derechos</li>
+        <li style="font-size:.73rem">c) Utilizar y cuidar responsablemente las instalaciones</li>
+      </ul>
+      <div class="note n-err" style="margin-top:8px">⚠ Inmovilización/restricción: (1) solo con prescripción · (2) <strong>último recurso</strong> · (3) comunicar al <strong>Ministerio Fiscal</strong> · (4) protocolo de reducción/eliminación</div>
+    </div>
+  </div>
+</div>
+
+<!-- SISTEMA PÚBLICO: ESTRUCTURA -->
+<h2>Sistema público: estructura y carteras ★★★</h2>
+<div class="est2" style="margin-bottom:10px">
+  <div class="blk blk-1">
+    <h3>🔵 Art. 3 vs. Art. 9</h3>
+    <table>
+      <thead><tr><th></th><th>Art. 3 Sistema SS.SS.</th><th>Art. 9 Sistema PÚBLICO</th></tr></thead>
+      <tbody>
+        <tr><td>Titularidad</td><td>Pública <strong>y privada</strong></td><td>Solo <strong>AAPP de Navarra</strong></td></tr>
+        <tr><td>Gestión</td><td>Directa e indirecta</td><td>Directa e indirecta</td></tr>
+      </tbody>
+    </table>
+    <div class="note n-err">⚠ El examen confunde ambos conceptos: el sistema GENERAL incluye privada; el sistema PÚBLICO solo lo que dan las AAPP.</div>
+  </div>
+  <div class="blk blk-3">
+    <h3>🟢 Carteras de servicios sociales ★★★</h3>
+    <ul>
+      <li><strong>Cartera de ámbito general:</strong> aprueba el <strong>Gobierno de Navarra</strong> · mínimos para toda Navarra</li>
+      <li><strong>Carteras locales:</strong> aprueban las <strong>entidades locales</strong> · amplían la general en su territorio</li>
+      <li>Prestaciones <strong>GARANTIZADAS</strong> → crédito AMPLIABLE ★★★ (garantiza el derecho subjetivo)</li>
+      <li>Prestaciones <strong>no garantizadas</strong> → sin derecho subjetivo exigible</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TIPOS DE PRESTACIONES -->
+<div class="card" style="margin-bottom:12px">
+  <span class="tag">Art. 10 · Tipos de prestaciones del sistema público (3 tipos principales)</span>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:6px">
+    <div style="background:var(--s2);border-radius:8px;padding:9px 11px">
+      <p style="font-weight:800;font-size:.76rem;color:var(--p)">Técnicas (art. 11)</p>
+      <p style="font-size:.71rem">Servicios realizados por equipos profesionales · prevención + autonomía + atención · garantizadas o no · temporales o permanentes · en domicilio / ambulatorio / centros</p>
+    </div>
+    <div style="background:var(--s2);border-radius:8px;padding:9px 11px">
+      <p style="font-weight:800;font-size:.76rem;color:var(--vio)">Económicas (art. 12)</p>
+      <p style="font-size:.71rem">Disposiciones dinerarias · garantizadas o no garantizadas</p>
+    </div>
+    <div style="background:var(--s2);border-radius:8px;padding:9px 11px">
+      <p style="font-weight:800;font-size:.76rem;color:var(--grn)">Materiales (art. 13)</p>
+      <p style="font-size:.71rem">Recursos no económicos de apoyo a las técnicas · para individuos, familias y grupos</p>
+    </div>
+  </div>
+  <p style="font-size:.74rem;margin-top:6px">+ <strong>Prestaciones mixtas (art. 14):</strong> combinación de técnicas con económicas o materiales, con fines complementarios</p>
+</div>
+
+<!-- 4 PROGRAMAS BÁSICOS -->
+<h2>Los 4 programas básicos obligatorios de los SS.SS. de Base ★★★</h2>
+<div class="prog">
+  <div class="pbox">
+    <span class="num">1</span>
+    <p><strong>Acogida y Orientación Social</strong></p>
+  </div>
+  <div class="pbox">
+    <span class="num">2</span>
+    <p><strong>Promoción de la Autonomía Personal y Atención a las Personas en situación de Dependencia</strong></p>
+  </div>
+  <div class="pbox">
+    <span class="num">3</span>
+    <p><strong>Incorporación Social en Atención Primaria</strong></p>
+  </div>
+  <div class="pbox">
+    <span class="num">4</span>
+    <p><strong>Atención a la Infancia y Familia en Atención Primaria</strong></p>
+  </div>
+</div>
+<div class="note n-err" style="margin-bottom:14px">⚠ Son exactamente <strong>4 programas</strong> (no 3 ni 5). Implantación obligatoria en TODOS los servicios sociales de base del territorio navarro.</div>
+
+<!-- ESTRUCTURA TERRITORIAL Y COMPETENCIAL -->
+<h2>Régimen competencial y estructura territorial ★★★</h2>
+<div class="est2">
+  <div class="blk blk-2">
+    <h3>🟣 Gobierno de Navarra / Comunidad Foral</h3>
+    <ul>
+      <li>Prestaciones mínimas <strong>homogéneas</strong> en todo Navarra</li>
+      <li>Aprueba la <strong>cartera general</strong></li>
+      <li>Aprueba el <strong>Plan Estratégico de SS.SS. de Navarra</strong></li>
+      <li>Financia los <strong>4 programas básicos</strong> (≥50% de los SS.SS. base)</li>
+      <li>Titularidad y gestión de los <strong>SS.SS. especializados de ámbito general</strong></li>
+      <li>Titularidad de los <strong>Centros de SS.SS.</strong> (salvo Pamplona)</li>
+      <li>Autoriza, homologa y registra · Inspección y sanción</li>
+    </ul>
+  </div>
+  <div class="blk blk-4">
+    <h3>🩵 Entidades Locales (municipios y mancomunidades)</h3>
+    <ul>
+      <li>Titularidad y gestión de los <strong>SS.SS. de Base</strong></li>
+      <li>Gestión de los <strong>4 programas básicos</strong> de atención primaria</li>
+      <li>Pueden aprobar <strong>carteras de SS.SS. locales</strong></li>
+      <li>Pueden crear SS.SS. especializados en su ámbito</li>
+      <li><strong>Corresponsabilidad financiera</strong> (financian ≥50% de los SS.SS. base junto con el GN)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ORGANIZACIÓN TERRITORIAL -->
+<div class="est2">
+  <div class="blk blk-1">
+    <h3>📍 Zona básica de servicios sociales</h3>
+    <ul>
+      <li>Marco territorial de la <strong>atención primaria</strong></li>
+      <li>Ámbito más <strong>próximo</strong> al ciudadano</li>
+      <li>Sede de los <strong>SS.SS. de Base</strong></li>
+      <li>Competencia: <strong>entidades locales</strong></li>
+    </ul>
+  </div>
+  <div class="blk blk-2">
+    <h3>🗺️ Área de servicios sociales</h3>
+    <ul>
+      <li>Agrupa <strong>varias zonas básicas</strong></li>
+      <li>Sede de los <strong>Centros de SS.SS.</strong> (nueva figura) y SS.SS. especializados</li>
+      <li>Centros de SS.SS.: titularidad <strong>Comunidad Foral</strong> (salvo Pamplona)</li>
+      <li>Configuración concreta: <strong>reglamentaria</strong></li>
+    </ul>
+  </div>
+</div>
+<div class="card" style="margin-top:10px;border-left:4px solid var(--teal);margin-bottom:14px">
+  <span class="tag">Consejo Interadministrativo de Servicios Sociales ★★★</span>
+  <p style="font-size:.78rem"><strong>Órgano de COOPERACIÓN</strong> (no de decisión) entre la administración autonómica y las entidades locales · finalidad: coordinar políticas públicas de SS.SS. e impulsar la descentralización adecuada.</p>
+  <div class="note n-err">⚠ Es un órgano de <strong>COOPERACIÓN</strong>. No es un órgano de decisión. Integrado por administración <strong>autonómica Y local</strong>.</div>
+</div>
+
+<!-- FINANCIACIÓN -->
+<h2>Título IV · Financiación ★★★</h2>
+<div class="fin-grid">
+  <div class="fbox">
+    <span class="ico">🤝</span>
+    <h4>Corresponsabilidad</h4>
+    <ul>
+      <li><strong>Gobierno de Navarra: ≥ 50%</strong> del coste de los SS.SS. de Base</li>
+      <li>Entidades locales: el resto (≥ 50% conjunto)</li>
+      <li>Establecido en <strong>convenios plurianuales</strong></li>
+    </ul>
+    <div class="note n-err">⚠ NO solo el Gobierno de Navarra: es CORRESPONSABILIDAD</div>
+  </div>
+  <div class="fbox">
+    <span class="ico">📈</span>
+    <h4>Créditos ampliables ★★★</h4>
+    <ul>
+      <li>Las prestaciones <strong>GARANTIZADAS</strong> se financian con créditos de carácter <strong>AMPLIABLE</strong></li>
+      <li>Si hay más demanda que crédito disponible → el crédito se amplía automáticamente</li>
+      <li>Garantía financiera del derecho subjetivo</li>
+    </ul>
+  </div>
+  <div class="fbox">
+    <span class="ico">💶</span>
+    <h4>Copago sin exclusión ★★★</h4>
+    <ul>
+      <li>Deber de contribuir cuando se tiene <strong>capacidad económica</strong> y así se establece normativamente</li>
+      <li><strong>Ningún usuario queda excluido</strong> por insuficiencia de medios económicos</li>
+    </ul>
+    <div class="note n-ok">✓ Principio de no exclusión económica</div>
+  </div>
+</div>
+
+<!-- TRAMPAS -->
+<h2>Las 13 trampas del examen</h2>
+<div class="trap-grid">
+  <div class="trap"><div class="q">❌ "Tiene 100 artículos"</div><div class="a">✓ <strong>95 artículos</strong> · 10 Títulos</div></div>
+  <div class="trap"><div class="q">❌ "El cuarto pilar es la vivienda"</div><div class="a">✓ Es la <strong>atención social (SS.SS.)</strong> junto a salud, educación y pensiones</div></div>
+  <div class="trap"><div class="q">❌ "El sistema de SS.SS. (art. 3) solo incluye entidades públicas"</div><div class="a">✓ Art. 3 = pública <strong>Y privada</strong> · art. 9 = solo AAPP</div></div>
+  <div class="trap"><div class="q">❌ "Solo los empadronados tienen acceso"</div><div class="a">✓ En <strong>urgencia e indigencia</strong> accede cualquier persona en Navarra</div></div>
+  <div class="trap"><div class="q">❌ "El consentimiento siempre es por escrito"</div><div class="a">✓ Por escrito <strong>solo para ingreso en centro residencial</strong></div></div>
+  <div class="trap"><div class="q">❌ "Los principios son 10 (o 12)"</div><div class="a">✓ Son <strong>14</strong> (letras a a n)</div></div>
+  <div class="trap"><div class="q">❌ "Los derechos son 10"</div><div class="a">✓ Son <strong>13</strong> (letras a a m)</div></div>
+  <div class="trap"><div class="q">❌ "Los deberes son 4"</div><div class="a">✓ Son <strong>6</strong> (letras a a f)</div></div>
+  <div class="trap"><div class="q">❌ "Los programas básicos son 3"</div><div class="a">✓ Son <strong>4</strong>: acogida · autonomía/dependencia · incorporación · infancia/familia</div></div>
+  <div class="trap"><div class="q">❌ "Los Centros de SS.SS. dependen siempre de la entidad local"</div><div class="a">✓ Dependen de la <strong>Comunidad Foral</strong> (salvo Pamplona)</div></div>
+  <div class="trap"><div class="q">❌ "El Gobierno de Navarra financia el 100% de los SS.SS. de base"</div><div class="a">✓ Financia <strong>≥ 50%</strong>; el resto corresponde a las entidades locales</div></div>
+  <div class="trap"><div class="q">❌ "Un usuario puede quedar excluido por no poder pagar"</div><div class="a">✓ <strong>Ningún usuario queda excluido</strong> por insuficiencia económica</div></div>
+  <div class="trap"><div class="q">❌ "El Consejo Interadministrativo es órgano de decisión"</div><div class="a">✓ Es órgano de <strong>COOPERACIÓN</strong> entre administración autonómica y local</div></div>
+</div>
+
+</body>
+</html>
