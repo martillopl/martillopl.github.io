@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tema 34 · HTML 2 · Esquema-resumen visual</title>
+<style>
+:root{
+  --bg:#f0fff4;--card:#ffffff;--soft:#e6ffed;--line:#86efac;--text:#064e3b;--muted:#047857;
+  --p:#059669;--p2:#10b981;--warn:#d97706;--danger:#dc2626;--vio:#7c3aed;--shadow:0 2px 10px rgba(5,150,105,.10);
+}
+[data-theme="dark"]{
+  --bg:#03110a;--card:#081c12;--soft:#0d2a1a;--line:#166534;--text:#d1fae5;--muted:#6ee7b7;
+  --p:#34d399;--p2:#a7f3d0;--warn:#fbbf24;--danger:#f87171;--vio:#c4b5fd;--shadow:0 2px 10px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box} body{margin:0;padding:24px;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.45}
+.header{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;box-shadow:var(--shadow);margin-bottom:18px}
+.header h1{margin:0;font-size:1.02rem;color:var(--p)} .header p{margin:.35rem 0 0;font-size:.78rem;color:var(--muted)}
+.btn{border:1px solid var(--line);background:var(--soft);color:var(--text);padding:7px 12px;border-radius:999px;font:inherit;cursor:pointer}
+.section{margin:18px 0}
+.section h2{margin:0 0 10px;font-size:.88rem;background:var(--p);color:#fff;padding:9px 14px;border-radius:8px;display:inline-block}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 15px;box-shadow:var(--shadow)}
+.tag{display:inline-block;font-size:.64rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:6px}
+.card h3{margin:0 0 8px;font-size:.88rem;color:var(--p)}
+.card p{margin:.32rem 0;font-size:.79rem}
+.card ul{margin:.35rem 0 .1rem 0;padding-left:18px}.card li{margin:.22rem 0;font-size:.78rem}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.kpi .box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 14px;box-shadow:var(--shadow)}
+.big{font-size:1.15rem;font-weight:800;color:var(--p);margin-bottom:4px}.small{font-size:.75rem;color:var(--muted)}
+.mini{font-size:.72rem;color:var(--text)}
+.note{background:var(--soft);border-left:4px solid var(--p2);padding:10px 12px;border-radius:0 8px 8px 0;font-size:.76rem;margin-top:8px}
+.warn{border-left-color:var(--warn)} .danger{border-left-color:var(--danger)}
+.tablewrap{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:var(--shadow);overflow:auto}
+table{width:100%;border-collapse:collapse} th{background:var(--soft);color:var(--muted);font-size:.67rem;text-transform:uppercase;padding:8px 10px;text-align:left}
+td{padding:8px 10px;border-bottom:1px solid var(--soft);font-size:.78rem;vertical-align:top} tr:last-child td{border-bottom:none}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px} .step{background:var(--card);border:2px solid var(--line);border-radius:12px;padding:12px;box-shadow:var(--shadow);position:relative}
+.step h4{margin:0 0 6px;color:var(--p);font-size:.8rem}.step p{margin:0;font-size:.75rem}
+.badge{display:inline-block;padding:3px 8px;border-radius:999px;font-size:.67rem;font-weight:700;background:var(--soft);color:var(--muted);border:1px solid var(--line)}
+@media(max-width:900px){.flow{grid-template-columns:1fr 1fr}} @media(max-width:640px){.flow,.grid,.kpi{grid-template-columns:1fr}}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="header">
+  <div>
+    <h1>Tema 34 · HTML 2 · Esquema-resumen con bloques visuales para memorización rápida</h1>
+    <p>Ley Foral 17/2019, de 4 de abril, de Igualdad entre Mujeres y Hombres · Título I · Título III · Título IV Cap. I y III</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<div class="section">
+  <h2>Ficha flash</h2>
+  <div class="kpi">
+    <div class="box"><div class="big">17/2019</div><div class="small">Ley Foral</div><div class="mini">Igualdad entre Mujeres y Hombres</div></div>
+    <div class="box"><div class="big">04/04/2019</div><div class="small">Fecha</div><div class="mini">Aprobación</div></div>
+    <div class="box"><div class="big">BON 71</div><div class="small">Publicación</div><div class="mini">11/04/2019</div></div>
+    <div class="box"><div class="big">12/04/2019</div><div class="small">Entrada en vigor</div><div class="mini">Día siguiente al BON</div></div>
+    <div class="box"><div class="big">66 arts.</div><div class="small">Estructura</div><div class="mini">5 títulos</div></div>
+    <div class="box"><div class="big">44.18</div><div class="small">LORAFNA</div><div class="mini">Competencia exclusiva Navarra</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Idea fuerza</h2>
+  <div class="card">
+    <p><strong>Meta central:</strong> hacer real y efectiva la igualdad entre mujeres y hombres en Navarra en todos los ámbitos y etapas de la vida.</p>
+    <p><strong>Enfoque:</strong> igualdad sustantiva, transversalidad de género, empoderamiento y sostenibilidad de la vida.</p>
+    <p><strong>Claves de examen:</strong> mujeres como <strong>sujetos de derecho</strong>, desigualdad como <strong>fenómeno estructural</strong>, y regla 60/40 que <strong>tiende al 50%</strong>.</p>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Título I · Disposiciones generales</h2>
+  <div class="grid">
+    <div class="card">
+      <span class="tag">Art. 1</span>
+      <h3>Objeto</h3>
+      <p>Promover las condiciones para que la igualdad sea <strong>real y efectiva</strong> en Navarra.</p>
+      <ul>
+        <li>Cambio de valores.</li>
+        <li>Autonomía y empoderamiento de las mujeres.</li>
+        <li>Eliminación de obstáculos.</li>
+        <li>Sostenibilidad de la vida en el centro.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="tag">Art. 2</span>
+      <h3>Ámbito</h3>
+      <ul>
+        <li>Administración Foral y entes dependientes.</li>
+        <li>Entidades Locales de Navarra.</li>
+        <li>Universidades navarras, respetando su autonomía.</li>
+        <li>Resto de poderes públicos y personas físicas y jurídicas, en los términos legales.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="tag">Art. 3</span>
+      <h3>10 definiciones</h3>
+      <p><strong>Palabras a fijar:</strong> brecha de género, coeducación, conciliación, corresponsabilidad, igualdad sustantiva, perspectiva de género, segregación ocupacional, sostenibilidad de la vida, transversalidad, discriminación múltiple.</p>
+      <div class="note">Mnemotecnia útil: <strong>Be-Co-Con-Cor-Ig-Per-Seg-Sos-Trans-Dis</strong>.</div>
+    </div>
+    <div class="card">
+      <span class="tag">Art. 4</span>
+      <h3>13 principios</h3>
+      <p>Principios de actuación de los poderes públicos.</p>
+      <ul>
+        <li>Transversalidad.</li>
+        <li>Acciones positivas temporales.</li>
+        <li>Empoderamiento.</li>
+        <li>Corresponsabilidad.</li>
+        <li>Representación equilibrada 60/40.</li>
+        <li>Comunicación inclusiva.</li>
+        <li>Derechos sexuales y reproductivos.</li>
+      </ul>
+      <div class="note warn">Dato trampa: el art. 4.f añade que la representación equilibrada <strong>tenderá al 50%</strong>.</div>
+    </div>
+    <div class="card">
+      <span class="tag">Art. 5</span>
+      <h3>Asociaciones de mujeres</h3>
+      <p>Se reconocen como <strong>personas interesadas</strong> titulares de intereses legítimos colectivos ante las Administraciones Públicas navarras.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Art. 3 · Diccionario mínimo</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Concepto</th><th>Idea de memoria</th></tr></thead>
+      <tbody>
+        <tr><td>Brecha de género</td><td>Diferencia entre tasas masculina y femenina que revela desigual distribución de recursos, acceso y poder.</td></tr>
+        <tr><td>Coeducación</td><td>Educación en igualdad sin estereotipos sexistas, homofóbicos, bifóbicos, transfóbicos o androcéntricos.</td></tr>
+        <tr><td>Conciliación</td><td>Equilibrio de tiempos y recursos en vida personal, laboral, profesional y familiar.</td></tr>
+        <tr><td>Corresponsabilidad</td><td>Reparto equitativo de deberes y obligaciones para hacer viable y sostenible la vida.</td></tr>
+        <tr><td>Igualdad sustantiva</td><td>No basta la igualdad formal; importa el acceso real al ejercicio de derechos.</td></tr>
+        <tr><td>Sostenibilidad de la vida</td><td>Paradigma que une recursos materiales con cuidado y afecto.</td></tr>
+        <tr><td>Transversalidad</td><td>Perspectiva de género en todas las políticas, niveles y fases.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Título III · Mecanismos del sistema de igualdad</h2>
+  <div class="grid">
+    <div class="card"><span class="tag">Art. 13</span><h3>Base del título</h3><p>La transversalidad del derecho de igualdad y las acciones positivas son el eje de toda la intervención pública.</p></div>
+    <div class="card"><span class="tag">Art. 14</span><h3>Plan Estratégico</h3><p><strong>Cadena de memoria:</strong> INAI elabora → Presidencia propone → Consejo informa → Gobierno aprueba → Parlamento debate y aprueba.</p></div>
+    <div class="card"><span class="tag">Art. 15</span><h3>Coordinación</h3><p>Cooperación entre Administración Foral y Entidades Locales para aplicar la ley en todo Navarra.</p></div>
+    <div class="card"><span class="tag">Art. 16</span><h3>Representación equilibrada</h3><p>Aplicación del 60/40 en órganos de dirección, asesoramiento, tribunales y comités de selección.</p></div>
+    <div class="card"><span class="tag">Art. 17</span><h3>Contratación pública</h3><p>Cláusulas y condiciones de igualdad en la contratación pública.</p></div>
+    <div class="card"><span class="tag">Art. 18</span><h3>Ayudas públicas</h3><p>Las subvenciones y ayudas deben integrar el principio de igualdad.</p></div>
+    <div class="card"><span class="tag">Art. 19</span><h3>Estadística</h3><p>Variable sexo y datos desagregados para detectar brechas de género.</p></div>
+    <div class="card"><span class="tag">Art. 20</span><h3>Capacitación</h3><p>Formación específica en igualdad para el personal público; el INAI fija condiciones mínimas.</p></div>
+    <div class="card"><span class="tag">Art. 21</span><h3>Comunicación</h3><p>Lenguaje inclusivo, no sexista y libre de estereotipos en la actuación pública.</p></div>
+    <div class="card"><span class="tag">Art. 22</span><h3>Impacto de género</h3><p>Obligatorio en proyectos normativos y planes de especial relevancia.</p></div>
+    <div class="card"><span class="tag">Art. 23</span><h3>Presupuestos</h3><p>Presupuestos con perspectiva de género.</p></div>
+    <div class="card"><span class="tag">Art. 24</span><h3>Gestión de personal</h3><p>Igualdad en selección, provisión, promoción, formación y evaluación del personal.</p></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Cadena del Plan Estratégico</h2>
+  <div class="flow">
+    <div class="step"><span class="badge">Paso 1</span><h4>INAI</h4><p>Elabora el Plan Estratégico para la Igualdad.</p></div>
+    <div class="step"><span class="badge">Paso 2</span><h4>Presidencia</h4><p>Lo eleva y formula la propuesta.</p></div>
+    <div class="step"><span class="badge">Paso 3</span><h4>Gobierno</h4><p>Lo aprueba.</p></div>
+    <div class="step"><span class="badge">Paso 4</span><h4>Parlamento</h4><p>Lo debate y aprueba.</p></div>
+  </div>
+  <div class="note">Frase de memoria: <strong>INAI redacta, Presidencia impulsa, Gobierno aprueba, Parlamento valida.</strong></div>
+</div>
+
+<div class="section">
+  <h2>Título IV · Capítulo I · Ciudadanía activa</h2>
+  <div class="grid">
+    <div class="card"><span class="tag">Arts. 25–30</span><h3>Bloque completo</h3><p>Capítulo orientado al empoderamiento y a la presencia de las mujeres en la vida pública, social, rural, deportiva y digital.</p></div>
+    <div class="card"><span class="tag">Art. 25</span><h3>Ciudadanía activa</h3><p>Impulso de la participación de las mujeres en todos los ámbitos de la vida pública.</p></div>
+    <div class="card"><span class="tag">Art. 26</span><h3>Participación política</h3><p>Medidas para garantizar la presencia igualitaria en espacios de decisión política.</p></div>
+    <div class="card"><span class="tag">Art. 27</span><h3>Participación social</h3><p>Apoyo al tejido asociativo y al movimiento feminista.</p></div>
+    <div class="card"><span class="tag">Art. 28</span><h3>Mujeres del mundo rural</h3><p>Perspectiva de género en el desarrollo rural y acceso igualitario a recursos y participación.</p></div>
+    <div class="card"><span class="tag">Art. 29</span><h3>Deporte</h3><p>Igualdad en práctica deportiva, órganos de dirección, financiación y visibilidad.</p></div>
+    <div class="card"><span class="tag">Art. 30</span><h3>TIC y sociedad digital</h3><p>Lucha contra la brecha digital de género y contra la reproducción tecnológica de estereotipos o violencia digital.</p></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Título IV · Capítulo III · Sostenibilidad de la vida</h2>
+  <div class="grid">
+    <div class="card">
+      <span class="tag">Idea central</span>
+      <h3>Dos trabajos, mismo valor</h3>
+      <p>La ley une <strong>trabajo productivo</strong> y <strong>trabajo reproductivo</strong> bajo la lógica de la sostenibilidad de la vida.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Arts. 42–45</span>
+      <h3>Trabajo productivo</h3>
+      <ul>
+        <li>Igualdad en empleo.</li>
+        <li>Brecha salarial.</li>
+        <li>Segregación horizontal y vertical.</li>
+        <li>Políticas activas de empleo con perspectiva de género.</li>
+        <li>Planes de igualdad en sector público.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="tag">Arts. 46–47</span>
+      <h3>Trabajo reproductivo</h3>
+      <ul>
+        <li>Visibilización del trabajo de cuidados.</li>
+        <li>Valor social y económico del cuidado.</li>
+        <li>Reconocimiento del rol de persona cuidadora.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="tag">Arts. 48–49</span>
+      <h3>Conciliación y corresponsabilidad</h3>
+      <ul>
+        <li>Conciliar vida personal, laboral, profesional y familiar.</li>
+        <li>Distribuir los cuidados entre mujeres y hombres.</li>
+        <li>Romper estereotipos de reparto doméstico.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="tag">Arts. 50–51</span>
+      <h3>Salud con género</h3>
+      <p>Perspectiva de género en salud, investigación, salud sexual y reproductiva y prevención desde el sistema sanitario.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Arts. 52–53</span>
+      <h3>Inclusión y comunidad</h3>
+      <p>Perspectiva de género en inclusión social, servicios sociales, cooperación y acción humanitaria.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Los 5 datos más preguntables</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Dato</th><th>Memoria rápida</th></tr></thead>
+      <tbody>
+        <tr><td>Objeto de la ley</td><td>Igualdad real y efectiva en todos los ámbitos y etapas de la vida.</td></tr>
+        <tr><td>Regla de equilibrio</td><td>60/40 y tendencia al 50%.</td></tr>
+        <tr><td>Plan Estratégico</td><td>INAI → Presidencia → Gobierno → Parlamento.</td></tr>
+        <tr><td>Definición diferencial</td><td>Sostenibilidad de la vida.</td></tr>
+        <tr><td>Bloque estrella del Cap. III</td><td>Trabajo productivo + trabajo reproductivo + conciliación/corresponsabilidad.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Trampas típicas</h2>
+  <div class="grid">
+    <div class="card"><h3>Trampa 1</h3><p><strong>Falso:</strong> la regla de representación es solo 60/40. <br><strong>Correcto:</strong> además <strong>tiende al 50%</strong>.</p></div>
+    <div class="card"><h3>Trampa 2</h3><p><strong>Falso:</strong> el Plan lo aprueba el INAI. <br><strong>Correcto:</strong> el INAI lo elabora; Gobierno y Parlamento intervienen.</p></div>
+    <div class="card"><h3>Trampa 3</h3><p><strong>Falso:</strong> conciliación y corresponsabilidad son lo mismo. <br><strong>Correcto:</strong> una ordena tiempos; la otra reparte responsabilidades.</p></div>
+    <div class="card"><h3>Trampa 4</h3><p><strong>Falso:</strong> sostenibilidad de la vida es un concepto ambiental. <br><strong>Correcto:</strong> es un paradigma social de recursos, cuidados y afectos.</p></div>
+  </div>
+</div>
+
+</body>
+</html>
