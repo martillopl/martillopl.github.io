@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 53 · HTML 2 · Esquema-resumen visual · Modelos Intervención Social · MAI · ACP</title>
+<style>
+:root{
+  --bg:#f5f3ff;--card:#fff;--s2:#ede9fe;--s3:#ddd6fe;--line:#a78bfa;
+  --text:#1e1b4b;--muted:#7c3aed;--p:#6d28d9;--p2:#4c1d95;
+  --grn:#059669;--grn2:#d1fae5;--red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;--sky:#0284c7;--sky2:#e0f2fe;
+  --teal:#0d9488;--teal2:#ccfbf1;--rose:#be185d;--rose2:#fce7f3;
+  --sh:0 2px 12px rgba(109,40,217,.10)
+}
+[data-theme="dark"]{
+  --bg:#09030f;--card:#110822;--s2:#1a0e33;--s3:#261550;--line:#5b21b6;
+  --text:#ede9fe;--muted:#c4b5fd;--p:#a78bfa;--p2:#c4b5fd;
+  --grn:#86efac;--grn2:#052e16;--red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;--sky:#7dd3fc;--sky2:#082038;
+  --teal:#5eead4;--teal2:#031a16;--rose:#fda4af;--rose2:#1a0010;
+  --sh:0 2px 14px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:20px}
+.wrap{max-width:1180px;margin:0 auto}
+
+/* HEADER */
+header{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:14px 22px;box-shadow:var(--sh);margin-bottom:16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+h1{font-size:.93rem;font-weight:800;color:var(--p);line-height:1.35}
+.sub{font-size:.7rem;color:var(--muted);margin-top:4px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 14px;border-radius:999px;font-size:.7rem}
+
+/* SECTION TITLE */
+.stitle{font-size:.82rem;font-weight:800;color:#fff;background:var(--p);padding:7px 16px;border-radius:8px;margin:18px 0 10px;display:inline-block;letter-spacing:.01em}
+
+/* GRID LAYOUTS */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:12px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}
+@media(max-width:900px){.g4{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.g2,.g3,.g4{grid-template-columns:1fr}}
+
+/* CARDS */
+.card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:13px 15px;box-shadow:var(--sh)}
+.card h3{font-size:.76rem;font-weight:800;color:var(--p2);margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--s2);padding-bottom:5px}
+.card p,.card li{font-size:.76rem;line-height:1.55}
+.card ul{padding-left:16px}
+.card li{margin-bottom:.3em}
+
+/* COLOR VARIANTS */
+.c-grn{border-color:#6ee7b7;background:var(--grn2)}
+.c-red{border-color:#fca5a5;background:var(--red2)}
+.c-warn{border-color:#fcd34d;background:var(--warn2)}
+.c-sky{border-color:#7dd3fc;background:var(--sky2)}
+.c-teal{border-color:#5eead4;background:var(--teal2)}
+.c-rose{border-color:#f9a8d4;background:var(--rose2)}
+.c-vio{border-color:var(--line);background:var(--s2)}
+
+.c-grn h3{color:var(--grn)}
+.c-red h3{color:var(--red)}
+.c-warn h3{color:var(--warn)}
+.c-sky h3{color:var(--sky)}
+.c-teal h3{color:var(--teal)}
+.c-rose h3{color:var(--rose)}
+.c-vio h3{color:var(--p)}
+
+/* FLASH CARDS */
+.flash-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:14px}
+.flash{background:var(--s2);border:1px solid var(--line);border-radius:8px;padding:8px 13px;font-size:.74rem;min-width:150px;flex:1}
+.flash .fq{font-weight:700;color:var(--p2);margin-bottom:3px;font-size:.7rem;text-transform:uppercase;letter-spacing:.03em}
+.flash .fa{font-weight:800;color:var(--p);font-size:.85rem}
+
+/* PILLS */
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.pill{background:var(--s2);border:1px solid var(--line);border-radius:999px;padding:3px 11px;font-size:.7rem;color:var(--p2);font-weight:600}
+.pill.g{background:var(--grn2);border-color:#6ee7b7;color:var(--grn)}
+.pill.r{background:var(--red2);border-color:#fca5a5;color:var(--red)}
+.pill.w{background:var(--warn2);border-color:#fcd34d;color:var(--warn)}
+.pill.t{background:var(--teal2);border-color:#5eead4;color:var(--teal)}
+
+/* NOTES */
+.nota{padding:8px 13px;border-radius:0 9px 9px 0;font-size:.75rem;border-left:4px solid;margin:10px 0;line-height:1.5}
+.n-ok{background:var(--grn2);border-color:var(--grn)}
+.n-err{background:var(--red2);border-color:var(--red)}
+.n-w{background:var(--warn2);border-color:var(--warn)}
+.n-vio{background:var(--s2);border-color:var(--p)}
+.n-sky{background:var(--sky2);border-color:var(--sky)}
+.n-teal{background:var(--teal2);border-color:var(--teal)}
+[data-theme="dark"] .n-w strong{color:#fde68a}
+[data-theme="dark"] .n-err strong{color:#fca5a5}
+[data-theme="dark"] .n-ok strong{color:#86efac}
+
+/* TABLE */
+.tbl{width:100%;border-collapse:collapse;font-size:.74rem;background:var(--card);border-radius:9px;overflow:hidden;box-shadow:var(--sh);margin-bottom:12px}
+.tbl th{background:var(--p);color:#fff;text-align:left;padding:7px 11px;font-size:.65rem;text-transform:uppercase;letter-spacing:.03em}
+.tbl td{padding:7px 11px;border-bottom:1px solid var(--s2);vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:nth-child(even) td{background:rgba(167,139,250,.04)}
+.tbl tr:hover td{background:var(--s2)}
+
+/* PROCESS FLOW */
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}
+.fstep{background:var(--p);color:#fff;border-radius:8px;padding:6px 13px;font-size:.73rem;font-weight:700;text-align:center}
+.farr{font-size:1.1rem;color:var(--muted)}
+
+/* 4 SISTEMAS */
+.sis-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+.sis{border-radius:10px;padding:11px 14px;border:1px solid}
+.sis .sn{font-size:1.3rem;font-weight:900;display:block;margin-bottom:4px}
+.sis .st{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;display:block;margin-bottom:4px}
+.sis .sd{font-size:.74rem}
+.s-cli{background:var(--grn2);border-color:#6ee7b7}.s-cli .sn,.s-cli .st{color:var(--grn)}
+.s-cam{background:var(--sky2);border-color:#7dd3fc}.s-cam .sn,.s-cam .st{color:var(--sky)}
+.s-obj{background:var(--warn2);border-color:#fcd34d}.s-obj .sn,.s-obj .st{color:var(--warn)}
+.s-acc{background:var(--rose2);border-color:#f9a8d4}.s-acc .sn,.s-acc .st{color:var(--rose)}
+
+/* TRAP CARDS */
+.trap{background:var(--red2);border:1px solid #fca5a5;border-radius:10px;padding:10px 14px;margin-bottom:8px}
+.trap .tq{font-size:.71rem;font-weight:700;color:var(--red);margin-bottom:4px}
+.trap .ta{font-size:.75rem;color:var(--text)}
+.trap .ta strong{color:var(--grn)}
+
+strong{color:var(--p)}
+.s3{color:#f59e0b;font-weight:800}
+.g{color:#059669;font-weight:700}
+.r{color:#dc2626;font-weight:700}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<header>
+  <div>
+    <h1>Tema 53 · HTML 2 · Esquema-resumen visual · Bloques para memorización rápida</h1>
+    <div class="sub">Modelos y métodos de intervención social · Modelo de Atención Integral (MAI) · Modelo de Atención Centrado en la Persona (ACP)</div>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</header>
+
+<!-- ══ BLOQUE 0: FICHAS FLASH ══ -->
+<div class="stitle">⚡ Fichas flash · Datos inmediatos de examen <span class="s3">★★★</span></div>
+<div class="flash-row">
+  <div class="flash"><div class="fq">Fundadora TS científico</div><div class="fa">Mary Richmond</div></div>
+  <div class="flash"><div class="fq">Obra clave (año)</div><div class="fa">Social Diagnosis · 1917</div></div>
+  <div class="flash"><div class="fq">Origen ACP</div><div class="fa">Carl Rogers · 1951</div></div>
+  <div class="flash"><div class="fq">4 sistemas (Pincus-Minahan)</div><div class="fa">Cliente · Cambio · Objetivo · Acción</div></div>
+  <div class="flash"><div class="fq">Calidad Integral MAI</div><div class="fa">Técnica + Percibida + Eficiencia</div></div>
+  <div class="flash"><div class="fq">Principios ACP (nº)</div><div class="fa">8 principios · D-A-I-P-A-I-I-C</div></div>
+  <div class="flash"><div class="fq">Ley tutela (ACP)</div><div class="fa">Ley 8/2021 · elimina incapacitación</div></div>
+  <div class="flash"><div class="fq">Escala calidad de vida ACP</div><div class="fa">Schalock-Verdugo · 8 dimensiones</div></div>
+  <div class="flash"><div class="fq">Estrategia MAI Navarra</div><div class="fa">2012 · SNS-O</div></div>
+  <div class="flash"><div class="fq">e-paciente (4 E)</div><div class="fa">Equipped · Enabled · Empowered · Engaged</div></div>
+  <div class="flash"><div class="fq">Fases metodológicas</div><div class="fa">6 fases · info→diag→plan→interv→seg→eval</div></div>
+  <div class="flash"><div class="fq">Métodos clásicos (años 30)</div><div class="fa">Caso · Grupo · Comunidad</div></div>
+</div>
+
+<!-- ══ BLOQUE 1: JERARQUÍA CONCEPTUAL ══ -->
+<div class="stitle">1 · Paradigma → Teoría → Modelo → Método <span class="s3">★★★</span></div>
+<div class="g4">
+  <div class="card c-vio">
+    <h3>Paradigma</h3>
+    <p>Marco epistemológico más amplio. Conjunto de creencias y supuestos compartidos por la comunidad científica.</p>
+    <p style="margin-top:6px"><strong>Autor:</strong> Thomas Kuhn (1962).</p>
+    <p><em>"Revolución científica"</em> = cambio de paradigma.</p>
+  </div>
+  <div class="card c-sky">
+    <h3>Teoría</h3>
+    <p>Sistema de hipótesis contrastadas que describe/explica una parte de la realidad.</p>
+    <p style="margin-top:6px"><strong>Es parcial y provisional.</strong> Mayor alcance que el modelo.</p>
+  </div>
+  <div class="card c-teal">
+    <h3>Modelo ★★★</h3>
+    <p>Representación simplificada de la realidad. Guía la práctica. Emana de la teoría.</p>
+    <p style="margin-top:6px"><em>"No puede demostrarse falso o verdadero; su valor está en representar lo más fielmente posible la situación."</em></p>
+  </div>
+  <div class="card c-grn">
+    <h3>Método</h3>
+    <p>Procedimiento racional, planificado y ordenado para alcanzar un fin.</p>
+    <p style="margin-top:6px"><strong>Es instrumento, no fin en sí mismo.</strong> La <em>metodología</em> es la ciencia de los métodos.</p>
+  </div>
+</div>
+<div class="nota n-err"><strong>Trampa:</strong> "El modelo y la teoría son lo mismo" → FALSO. La teoría explica fenómenos; el modelo guía la práctica profesional. ★★★</div>
+
+<!-- ══ BLOQUE 2: EVOLUCIÓN HISTÓRICA ══ -->
+<div class="stitle">2 · Evolución histórica del TS · Línea temporal <span class="s3">★★★</span></div>
+<div class="g3">
+  <div class="card c-rose">
+    <h3>S. XIX · COS (1869)</h3>
+    <p><strong>Charity Organisation Society</strong> · Londres.</p>
+    <p>1er intento de sistematizar la ayuda: registro de casos, visitas domiciliarias, diferenciación "merecedores / no merecedores".</p>
+    <p style="margin-top:5px">Enfoque moralizante pero embrión del casework.</p>
+  </div>
+  <div class="card c-warn">
+    <h3>1917-1922 · Mary Richmond ★★★</h3>
+    <p><strong>"Social Diagnosis"</strong> (1917): 1ª obra científica del TS. Método: estudio → diagnóstico → tratamiento.</p>
+    <p style="margin-top:4px"><strong>"Social Case Work"</strong> (1922): consolida el trabajo individual de caso.</p>
+    <p style="margin-top:4px"><strong>Paradigma:</strong> psicodinámico-diagnóstico.</p>
+  </div>
+  <div class="card c-sky">
+    <h3>Años 30 · 3 métodos clásicos ★★★</h3>
+    <p>1. <strong>Caso individual</strong> (casework)</p>
+    <p>2. <strong>Trabajo con grupos</strong></p>
+    <p>3. <strong>Intervención comunitaria</strong></p>
+    <p style="margin-top:4px">Estructuran la profesión durante décadas.</p>
+  </div>
+  <div class="card c-teal">
+    <h3>Años 60-70 · Reconceptualización</h3>
+    <p>Movimiento latinoamericano. Influencia de <strong>Paulo Freire</strong> y el marxismo crítico.</p>
+    <p style="margin-top:4px"><strong>Método Básico:</strong> conocer para transformar.</p>
+    <p style="margin-top:4px">Fases: estudio → plan → ejecución → evaluación.</p>
+  </div>
+  <div class="card c-grn">
+    <h3>Actualidad · Pluralismo metodológico</h3>
+    <p>No existe un único método válido. Se combina lo mejor de cada paradigma.</p>
+    <p style="margin-top:4px">Paradigma dominante: <strong>sistémico-ecológico</strong>.</p>
+    <p style="margin-top:4px">Persona = inmersa en múltiples sistemas.</p>
+  </div>
+</div>
+
+<!-- ══ BLOQUE 3: 4 PARADIGMAS ══ -->
+<div class="stitle">3 · Los 4 paradigmas y sus modelos <span class="s3">★★★</span></div>
+<div class="g2">
+  <div class="card c-rose">
+    <h3>Paradigma Psicodinámico</h3>
+    <p>Foco: procesos psicológicos internos + relación de ayuda.</p>
+    <div class="pills" style="margin-top:8px">
+      <span class="pill">Modelo psicosocial / diagnóstico</span>
+      <span class="pill">Modelo intervención en crisis</span>
+      <span class="pill">Modelo centrado en la tarea (Reid-Epstein)</span>
+    </div>
+    <p style="margin-top:8px"><strong>Autores:</strong> Richmond · Hamilton · Hollis · Perlman</p>
+  </div>
+  <div class="card c-warn">
+    <h3>Paradigma Conductista</h3>
+    <p>Foco: conductas observables + aprendizaje.</p>
+    <div class="pills" style="margin-top:8px">
+      <span class="pill w">Modelo modificación de conducta</span>
+    </div>
+    <p style="margin-top:8px">Objetivo: obtener / suprimir / disminuir / reforzar conductas de forma duradera.</p>
+    <p style="margin-top:4px"><strong>Autores:</strong> Watson · Skinner · Bandura</p>
+  </div>
+  <div class="card c-sky">
+    <h3>Paradigma Crítico</h3>
+    <p>Foco: estructuras sociales injustas + transformación social.</p>
+    <div class="pills" style="margin-top:8px">
+      <span class="pill">Modelo concientización (Freire)</span>
+      <span class="pill">Modelo estructural</span>
+      <span class="pill">Modelo feminista</span>
+    </div>
+    <p style="margin-top:8px">No adaptar al individuo: cambiar el sistema.</p>
+  </div>
+  <div class="card c-grn">
+    <h3>Paradigma Sistémico-Ecológico ★★★</h3>
+    <p>Foco: interacción persona-entorno · múltiples sistemas.</p>
+    <div class="pills" style="margin-top:8px">
+      <span class="pill g">4 sistemas (Pincus-Minahan) ★★★</span>
+      <span class="pill g">Ecosistémico (Bronfenbrenner)</span>
+      <span class="pill g">Intervención en redes</span>
+    </div>
+    <p style="margin-top:8px">Paradigma <strong>dominante</strong> en la práctica actual.</p>
+  </div>
+</div>
+
+<!-- ══ BLOQUE 4: MODELO 4 SISTEMAS ══ -->
+<div class="stitle">4 · Modelo de los 4 sistemas · Pincus-Minahan ★★★</div>
+<div class="sis-grid">
+  <div class="sis s-cli">
+    <span class="sn">S1</span>
+    <span class="st">Sistema Cliente</span>
+    <span class="sd">La persona, familia o grupo que demanda la intervención y se beneficia del cambio.</span>
+  </div>
+  <div class="sis s-cam">
+    <span class="sn">S2</span>
+    <span class="st">Sistema de Cambio</span>
+    <span class="sd">El/la trabajador/a social y la organización en la que trabaja. El agente profesional del cambio.</span>
+  </div>
+  <div class="sis s-obj">
+    <span class="sn">S3</span>
+    <span class="st">Sistema Objetivo</span>
+    <span class="sd">Personas, organizaciones o condiciones que deben modificarse para lograr los objetivos de la intervención.</span>
+  </div>
+  <div class="sis s-acc">
+    <span class="sn">S4</span>
+    <span class="st">Sistema de Acción</span>
+    <span class="sd">Personas, grupos e instituciones con quienes trabaja el TS para lograr el cambio en el sistema objetivo.</span>
+  </div>
+</div>
+<div class="nota n-vio"><strong>Clave:</strong> S1 ≠ S3. El sistema cliente es quien se beneficia; el sistema objetivo es lo que hay que cambiar. A veces coinciden, pero no siempre. ★★★</div>
+
+<!-- ══ BLOQUE 5: NIVELES Y FASES ══ -->
+<div class="stitle">5 · 3 niveles de intervención + 6 fases metodológicas</div>
+<div class="g2">
+  <div class="card c-vio">
+    <h3>3 niveles de intervención</h3>
+    <p><strong>1. Individual / familiar</strong>: atención directa + plan individualizado. Técnicas: entrevista + visita domiciliaria.</p>
+    <p style="margin-top:6px"><strong>2. Grupal</strong>: grupos terapéuticos, psicoeducativos, autoayuda. Fomenta apoyo mutuo y empowerment.</p>
+    <p style="margin-top:6px"><strong>3. Comunitario</strong>: diagnóstico participativo + movilización + coordinación institucional.</p>
+  </div>
+  <div class="card c-teal">
+    <h3>6 fases del proceso metodológico ★★★</h3>
+    <div class="flow" style="flex-direction:column;gap:5px;align-items:flex-start">
+      <div><span class="fstep">1 · Recogida de información</span></div>
+      <div><span class="farr">↓</span></div>
+      <div><span class="fstep">2 · Análisis y diagnóstico social</span></div>
+      <div><span class="farr">↓</span></div>
+      <div><span class="fstep">3 · Planificación / objetivos</span></div>
+      <div><span class="farr">↓</span></div>
+      <div><span class="fstep">4 · Intervención</span></div>
+      <div><span class="farr">↓</span></div>
+      <div><span class="fstep">5 · Seguimiento y ajustes</span></div>
+      <div><span class="farr">↓</span></div>
+      <div><span class="fstep">6 · Evaluación de resultados</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ BLOQUE 6: MAI ══ -->
+<div class="stitle">6 · Modelo de Atención Integral (MAI) · Características y principios <span class="s3">★★★</span></div>
+<div class="g3">
+  <div class="card c-sky">
+    <h3>¿Qué supera el MAI?</h3>
+    <p>Supera el <strong>modelo biomédico</strong> (centrado en órgano y enfermedad).</p>
+    <p style="margin-top:6px">Adopta la perspectiva <strong>bio-psico-social</strong> (George Engel, 1977).</p>
+    <p style="margin-top:6px">Los 4 retos que lo justifican: envejecimiento · cronicidad · demanda creciente · medicalización.</p>
+  </div>
+  <div class="card c-teal">
+    <h3>6 características del MAI ★★★</h3>
+    <ul>
+      <li>Centrado en el <strong>ciudadano</strong> (no en la enfermedad)</li>
+      <li><strong>Continuidad asistencial</strong>: AP ↔ especializada ↔ SS.SS.</li>
+      <li>Prevención y <strong>promoción</strong> de la salud</li>
+      <li><strong>Empoderamiento</strong> y participación del paciente</li>
+      <li>Equipos <strong>multidisciplinares</strong></li>
+      <li>Uso racional de los recursos: <strong>eficiencia</strong></li>
+    </ul>
+  </div>
+  <div class="card c-grn">
+    <h3>MAI Navarra · Estrategia 2012 ★★★</h3>
+    <p>Calidad Integral SNS-O:</p>
+    <div style="margin:8px 0;background:var(--grn);color:#fff;border-radius:8px;padding:8px 12px;font-size:.8rem;font-weight:700;text-align:center">
+      Técnica + Percibida + Eficiencia
+    </div>
+    <p><strong>Misión SNS-O:</strong> prestar atención sanitaria y contribuir a mejorar la salud de los ciudadanos de Navarra.</p>
+    <p style="margin-top:5px"><strong>Visión SNS-O:</strong> sistema centrado en el paciente, sostenible, resolutivo, innovador y abierto a la sociedad.</p>
+  </div>
+</div>
+<div class="card c-warn" style="margin-bottom:12px">
+  <h3>El e-paciente (Tom Ferguson) · Las 4 E ★★★</h3>
+  <div class="g4" style="margin-top:8px">
+    <div style="text-align:center"><div style="font-size:1.4rem;font-weight:900;color:var(--warn)">E</div><div style="font-size:.72rem;font-weight:700">Equipped</div><div style="font-size:.7rem">Equipado con información</div></div>
+    <div style="text-align:center"><div style="font-size:1.4rem;font-weight:900;color:var(--warn)">E</div><div style="font-size:.72rem;font-weight:700">Enabled</div><div style="font-size:.7rem">Habilitado para actuar</div></div>
+    <div style="text-align:center"><div style="font-size:1.4rem;font-weight:900;color:var(--warn)">E</div><div style="font-size:.72rem;font-weight:700">Empowered</div><div style="font-size:.7rem">Empoderado en su salud</div></div>
+    <div style="text-align:center"><div style="font-size:1.4rem;font-weight:900;color:var(--warn)">E</div><div style="font-size:.72rem;font-weight:700">Engaged</div><div style="font-size:.7rem">Comprometido activamente</div></div>
+  </div>
+</div>
+
+<!-- ══ BLOQUE 7: ACP PRINCIPIOS ══ -->
+<div class="stitle">7 · ACP · 8 principios · Mnemotecnia D-A-I-P-A-I-I-C <span class="s3">★★★</span></div>
+<div class="g4">
+  <div class="card c-vio" style="text-align:center">
+    <div style="font-size:2rem;font-weight:900;color:var(--p)">D</div>
+    <h3 style="text-transform:none;font-size:.8rem;margin-bottom:4px">Dignidad</h3>
+    <p>Trato digno e incondicional independientemente del estado de salud.</p>
+  </div>
+  <div class="card c-grn" style="text-align:center">
+    <div style="font-size:2rem;font-weight:900;color:var(--grn)">A</div>
+    <h3 style="text-transform:none;font-size:.8rem;margin-bottom:4px">Autonomía ★★★</h3>
+    <p>La persona decide. El profesional acompaña y facilita, no dirige.</p>
+  </div>
+  <div class="card c-sky" style="text-align:center">
+    <div style="font-size:2rem;font-weight:900;color:var(--sky)">I</div>
+    <h3 style="text-transform:none;font-size:.8rem;margin-bottom:4px">Individualidad</h3>
+    <p>Cada persona es única. Atención adaptada a historia, valores y preferencias.</p>
+  </div>
+  <div class="card c-teal" style="text-align:center">
+    <div style="font-size:2rem;font-weight:900;color:var(--teal)">P</div>
+    <h3 style="text-transform:none;font-size:.8rem;margin-bottom:4px">Participación</h3>
+    <p>La persona es protagonista activa de su plan de atención.</p>
+  </div>
+  <div class="card c-warn" style="text-align:center">
+    <div style="font-size:2rem;font-weight:900;color:var(--warn)">A</div>
+    <h3 style="text-transform:none;font-size:.8rem;margin-bottom:4px">Autodeterminación ★★★</h3>
+    <p>Capacidad de decidir. Apoyo = potenciar voluntad, nunca sustituirla. (Ley 8/2021)</p>
+  </div>
+  <div class="card c-rose" style="text-align:center">
+    <div style="font-size:2rem;font-weight:900;color:var(--rose)">I</div>
+    <h3 style="text-transform:none;font-size:.8rem;margin-bottom:4px">Inclusión social</h3>
+    <p>Participar en la comunidad ordinaria. Sin segregación ni institucionalización innecesaria.</p>
+  </div>
+  <div class="card c-sky" style="text-align:center">
+    <div style="font-size:2rem;font-weight:900;color:var(--sky)">I</div>
+    <h3 style="text-transform:none;font-size:.8rem;margin-bottom:4px">Integralidad</h3>
+    <p>Atender todas las dimensiones: bio-psico-social-espiritual.</p>
+  </div>
+  <div class="card c-teal" style="text-align:center">
+    <div style="font-size:2rem;font-weight:900;color:var(--teal)">C</div>
+    <h3 style="text-transform:none;font-size:.8rem;margin-bottom:4px">Continuidad</h3>
+    <p>El plan de vida se mantiene en el tiempo con coherencia entre dispositivos.</p>
+  </div>
+</div>
+
+<!-- ══ BLOQUE 8: ACP INSTRUMENTOS + ESCALA ══ -->
+<div class="stitle">8 · ACP · Origen, instrumentos y marco jurídico <span class="s3">★★★</span></div>
+<div class="g3">
+  <div class="card c-rose">
+    <h3>Origen: Carl Rogers ★★★</h3>
+    <p><em>"Counseling and Psychotherapy"</em> (1942): primera formulación.</p>
+    <p style="margin-top:5px"><em>"Client-Centered Therapy"</em> (1951): obra fundacional del enfoque centrado en la persona.</p>
+    <p style="margin-top:5px">Ruptura: el terapeuta no impone, <strong>acompaña</strong> desde la empatía, autenticidad y consideración positiva incondicional.</p>
+    <p style="margin-top:5px">España: <strong>Fundación Pilares</strong> (Pepa Rodríguez) · referente en SS.SS. y Salud.</p>
+  </div>
+  <div class="card c-sky">
+    <h3>Instrumentos de la ACP ★★★</h3>
+    <ul>
+      <li><strong>PAP</strong> (Plan de Atención Personalizado): herramienta central. Qué le importa + qué apoyos necesita + objetivos vitales.</li>
+      <li><strong>Historia de vida</strong>: trayectoria, valores, preferencias, relaciones.</li>
+      <li><strong>PCP</strong> (Planificación Centrada en la Persona): proceso participativo con persona + familia + profesionales.</li>
+      <li><strong>Escala Schalock-Verdugo</strong>: 8 dimensiones de calidad de vida. ★★★</li>
+    </ul>
+  </div>
+  <div class="card c-grn">
+    <h3>8 dimensiones Schalock-Verdugo ★★★</h3>
+    <div class="pills">
+      <span class="pill g">Bienestar emocional</span>
+      <span class="pill g">Relaciones interpersonales</span>
+      <span class="pill g">Bienestar material</span>
+      <span class="pill g">Desarrollo personal</span>
+      <span class="pill g">Bienestar físico</span>
+      <span class="pill g">Autodeterminación</span>
+      <span class="pill g">Inclusión social</span>
+      <span class="pill g">Derechos</span>
+    </div>
+    <p style="margin-top:8px"><strong>Marco jurídico ACP:</strong></p>
+    <ul style="margin-top:4px">
+      <li>Convención ONU Discapacidad (2006 / ratif. 2008): arts. 12 y 19.</li>
+      <li>Ley 39/2006 (Dependencia): atención personalizada.</li>
+      <li><strong>Ley 8/2021</strong>: elimina incapacitación → apoyos a la autonomía. ★★★</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ══ BLOQUE 9: MAI vs ACP ══ -->
+<div class="stitle">9 · MAI vs. ACP · Diferencia clave <span class="s3">★★★</span></div>
+<div class="g2">
+  <div class="card c-sky">
+    <h3>MAI · Modelo de Atención Integral</h3>
+    <p><strong>Nivel:</strong> organizativo-sistémico (macro/meso).</p>
+    <p style="margin-top:5px"><strong>Foco:</strong> coordinación entre niveles asistenciales, eficiencia del sistema, continuidad de cuidados estructural.</p>
+    <p style="margin-top:5px"><strong>Actores:</strong> la organización sanitaria, las instituciones, los equipos.</p>
+    <p style="margin-top:5px"><strong>Clave:</strong> Calidad = Técnica + Percibida + Eficiencia.</p>
+  </div>
+  <div class="card c-rose">
+    <h3>ACP · Atención Centrada en la Persona</h3>
+    <p><strong>Nivel:</strong> individual-relacional (micro).</p>
+    <p style="margin-top:5px"><strong>Foco:</strong> proyecto de vida de la persona, relación de acompañamiento, plan personalizado.</p>
+    <p style="margin-top:5px"><strong>Actores:</strong> la persona, su red de apoyo, el profesional como facilitador.</p>
+    <p style="margin-top:5px"><strong>Clave:</strong> 8 principios D-A-I-P-A-I-I-C.</p>
+  </div>
+</div>
+<div class="nota n-ok"><strong>Son COMPLEMENTARIOS:</strong> el MAI crea el marco estructural del sistema de atención; la ACP concreta la filosofía relacional con cada persona. Ambos están presentes en el Plan SM Navarra 2019-2023. ★★★</div>
+
+<!-- ══ BLOQUE 10: CONEXIÓN TEMA 52 ══ -->
+<div class="stitle">10 · Conexión Tema 52 · RSMNa · Plan SM 2019-2023 <span class="s3">★★★</span></div>
+<div class="g3">
+  <div class="card c-vio">
+    <h3>MAI en la RSMNa</h3>
+    <ul>
+      <li>Red integrada de 2 niveles (CSM + dispositivos apoyo)</li>
+      <li>Equipo multidisciplinar en todos los dispositivos</li>
+      <li>Coordinación AP ↔ SM ↔ SS.SS.</li>
+      <li>Línea 3 del Plan: "Continuidad de cuidados e integración asistencial"</li>
+    </ul>
+  </div>
+  <div class="card c-grn">
+    <h3>ACP en el Plan SM 2019-2023</h3>
+    <ul>
+      <li><strong>Línea 1:</strong> "Atención centrada en la persona y la familia"</li>
+      <li>Principio de <strong>Recuperación personal</strong> ★★★</li>
+      <li><strong>PAI del TMG</strong>: instrumento ACP en práctica</li>
+      <li><strong>PEP principio 5</strong>: recuperación personal</li>
+      <li>Carta TSS 2021 · Bloque 5: inclusión + lucha estigma</li>
+    </ul>
+  </div>
+  <div class="card c-teal">
+    <h3>Rol del TSS en MAI + ACP</h3>
+    <ul>
+      <li>Evaluación de <strong>determinantes sociales</strong> de la salud</li>
+      <li>Co-diseño del PAP / PAI con la persona</li>
+      <li>Coordinación con SS.SS. · AP · tercer sector</li>
+      <li>Gestión: dependencia · discapacidad · IMV · RGN</li>
+      <li>Función de <strong>advocacy</strong> (defensa de derechos)</li>
+      <li>Apoyo a familias y cuidadoras</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ══ BLOQUE 11: TRAMPAS ══ -->
+<div class="stitle">11 · Las 10 trampas del examen <span class="s3">★★★</span></div>
+<div class="g2">
+  <div>
+    <div class="trap"><div class="tq">✗ "El modelo puede demostrarse falso o verdadero"</div><div class="ta">→ FALSO. El modelo <strong>no se demuestra</strong>: su valor reside en representar fielmente la situación. ★★★</div></div>
+    <div class="trap"><div class="tq">✗ "Mary Richmond creó el modelo sistémico"</div><div class="ta">→ FALSO. Richmond fundó el paradigma <strong>psicodinámico-diagnóstico</strong>. El sistémico es de Pincus-Minahan. ★★★</div></div>
+    <div class="trap"><div class="tq">✗ "En la ACP el profesional marca los objetivos de atención"</div><div class="ta">→ FALSO. Los marca <strong>la propia persona</strong>, con apoyo del profesional. ★★★</div></div>
+    <div class="trap"><div class="tq">✗ "La ACP se centra en los déficits del paciente"</div><div class="ta">→ FALSO. Se centra en <strong>capacidades, fortalezas y proyecto de vida</strong>. ★★★</div></div>
+    <div class="trap"><div class="tq">✗ "El MAI y la ACP son modelos equivalentes e intercambiables"</div><div class="ta">→ FALSO. MAI = nivel organizativo-sistémico; ACP = nivel individual-relacional. <strong>Son complementarios</strong>. ★★★</div></div>
+  </div>
+  <div>
+    <div class="trap"><div class="tq">✗ "La Ley 8/2021 mantiene la incapacitación judicial"</div><div class="ta">→ FALSO. La <strong>elimina</strong> y la sustituye por medidas de apoyo a la autonomía. ★★★</div></div>
+    <div class="trap"><div class="tq">✗ "Calidad Integral (MAI Navarra) = calidad técnica + calidad del edificio"</div><div class="ta">→ FALSO. = Técnica + <strong>Percibida</strong> + Eficiencia. ★★★</div></div>
+    <div class="trap"><div class="tq">✗ "El TSS en la ACP sólo gestiona recursos económicos"</div><div class="ta">→ FALSO. Es <strong>facilitador del proyecto de vida</strong>, co-diseña el PAP y ejerce advocacy. ★★★</div></div>
+    <div class="trap"><div class="tq">✗ "La Escala Schalock-Verdugo tiene 6 dimensiones"</div><div class="ta">→ FALSO. Tiene <strong>8 dimensiones</strong>. ★★★</div></div>
+    <div class="trap"><div class="tq">✗ "El e-paciente es solo el que usa internet para buscar síntomas"</div><div class="ta">→ FALSO. Son las 4 E: <strong>Equipped · Enabled · Empowered · Engaged</strong>. ★★★</div></div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

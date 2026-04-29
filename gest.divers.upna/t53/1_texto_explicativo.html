@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 53 · HTML 1 · Texto explicativo · Modelos e intervención social · MAI · ACP</title>
+<style>
+:root{
+  --bg:#f5f3ff;--card:#fff;--s2:#ede9fe;--line:#a78bfa;--text:#1e1b4b;
+  --muted:#7c3aed;--p:#6d28d9;--p2:#4c1d95;--warn:#d97706;--red:#dc2626;
+  --grn:#059669;--teal:#0d9488;--rose:#e11d48;--sky:#0284c7;
+  --sh:0 2px 14px rgba(109,40,217,.09)
+}
+[data-theme="dark"]{
+  --bg:#09030f;--card:#110822;--s2:#1a0e33;--line:#5b21b6;--text:#ede9fe;
+  --muted:#c4b5fd;--p:#a78bfa;--p2:#c4b5fd;--warn:#fbbf24;--red:#fca5a5;
+  --grn:#86efac;--teal:#5eead4;--rose:#fda4af;--sky:#7dd3fc;
+  --sh:0 2px 14px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,'Times New Roman',serif;font-size:14.5px;line-height:1.8;background:var(--bg);color:var(--text);padding:26px}
+.wrap{max-width:880px;margin:0 auto}
+/* CABECERA */
+header{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:22px 28px;box-shadow:var(--sh);margin-bottom:22px}
+.hdr-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+h1{font-family:Inter,Arial,sans-serif;font-size:1.05rem;font-weight:800;color:var(--p);line-height:1.35}
+.sub{font-size:.72rem;color:var(--muted);margin-top:5px;font-family:Inter,sans-serif}
+.badge{font:600 .65rem/1 Inter,sans-serif;background:var(--s2);color:var(--p2);padding:4px 10px;border-radius:999px;border:1px solid var(--line)}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:6px 15px;border-radius:999px;font-size:.71rem;font-family:Inter,sans-serif}
+/* ÍNDICE */
+.indice{background:var(--s2);border-left:4px solid var(--p);border-radius:0 10px 10px 0;padding:14px 20px;margin-bottom:22px;font-family:Inter,sans-serif;font-size:.8rem}
+.indice h2{font-size:.78rem;font-weight:800;color:var(--p);margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em}
+.indice ol{padding-left:18px;line-height:1.9}
+.indice a{color:var(--p);text-decoration:none}.indice a:hover{text-decoration:underline}
+/* SECCIONES */
+section{background:var(--card);border-radius:13px;box-shadow:var(--sh);border:1px solid var(--line);padding:24px 28px;margin-bottom:18px}
+h2.sec{font-family:Inter,Arial,sans-serif;font-size:.95rem;font-weight:800;color:#fff;background:var(--p);padding:8px 18px;border-radius:8px;margin:-24px -28px 18px -28px;letter-spacing:.01em}
+h3{font-family:Inter,Arial,sans-serif;font-size:.85rem;font-weight:700;color:var(--p);margin:18px 0 8px;border-bottom:1px solid var(--s2);padding-bottom:4px}
+p{margin-bottom:1em}
+.lema{background:var(--s2);border-left:4px solid var(--p);border-radius:0 9px 9px 0;padding:10px 16px;font-style:italic;margin:14px 0;font-size:.88rem}
+.nota{padding:9px 14px;border-radius:0 9px 9px 0;font-size:.8rem;border-left:4px solid;margin:12px 0;font-family:Inter,sans-serif;line-height:1.5}
+.n-ok{background:rgba(5,150,105,.07);border-color:#059669}
+.n-err{background:rgba(220,38,38,.07);border-color:#dc2626}
+.n-w{background:rgba(180,83,9,.08);border-color:#b45309}
+.n-vio{background:rgba(124,58,237,.07);border-color:#7c3aed}
+[data-theme="dark"] .n-w{background:#2a1300;color:#fde68a}
+[data-theme="dark"] .n-err{background:#1a0000;color:#fca5a5}
+[data-theme="dark"] .n-ok{background:#001a0e;color:#86efac}
+[data-theme="dark"] .n-vio{background:#12003a;color:#c4b5fd}
+.tbl{width:100%;border-collapse:collapse;margin:14px 0;box-shadow:var(--sh);border-radius:9px;overflow:hidden;font-family:Inter,sans-serif;font-size:.78rem}
+.tbl th{background:var(--p);color:#fff;text-align:left;padding:8px 11px;text-transform:uppercase;letter-spacing:.03em;font-size:.68rem}
+.tbl td{padding:8px 11px;border-bottom:1px solid var(--s2);vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:nth-child(even) td{background:rgba(167,139,250,.04)}
+.tbl tr:hover td{background:var(--s2)}
+strong{color:var(--p)}
+.def{background:var(--s2);border-radius:9px;padding:11px 15px;margin:12px 0;font-size:.83rem;font-family:Inter,sans-serif;border:1px dashed var(--line)}
+.def .dt{font-weight:800;color:var(--p2);display:block;margin-bottom:4px;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}
+ul,ol{padding-left:20px;margin-bottom:1em}
+li{margin-bottom:.35em}
+.chip{display:inline-block;background:var(--s2);border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:.7rem;font-family:Inter,sans-serif;color:var(--p2);margin:2px 2px 2px 0}
+.g{color:#059669;font-weight:700}.r{color:#dc2626;font-weight:700}.w{color:#b45309;font-weight:700}
+.s3{color:#f59e0b;font-weight:800}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<header>
+  <div class="hdr-top">
+    <div>
+      <h1>TEMA 53 · Modelos y métodos de intervención social<br>Modelo de Atención Integral · Modelo de Atención Centrado en la Persona</h1>
+      <div class="sub">Oposiciones Gestor de Mantenimiento · Navarra · HTML 1 · Texto explicativo y desarrollo narrativo</div>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:flex-start">
+      <span class="badge">HTML 1 / texto</span>
+      <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+    </div>
+  </div>
+</header>
+
+<!-- ÍNDICE -->
+<nav class="indice">
+  <h2>Índice del tema</h2>
+  <ol>
+    <li><a href="#s1">Marco conceptual: paradigma, teoría, modelo y método</a></li>
+    <li><a href="#s2">Evolución histórica de los métodos en Trabajo Social</a></li>
+    <li><a href="#s3">Los principales paradigmas y modelos de intervención social</a></li>
+    <li><a href="#s4">Métodos según nivel de intervención</a></li>
+    <li><a href="#s5">El Modelo de Atención Integral (MAI)</a></li>
+    <li><a href="#s6">El Modelo de Atención Centrado en la Persona (ACP)</a></li>
+    <li><a href="#s7">Rol del Trabajador Social en los modelos MAI y ACP</a></li>
+    <li><a href="#s8">Conexión con el Plan SM Navarra 2019-2023 y la RSMNa</a></li>
+  </ol>
+</nav>
+
+<!-- S1 -->
+<section id="s1">
+  <h2 class="sec">1. Marco conceptual: paradigma, teoría, modelo y método</h2>
+
+  <p>Antes de entrar en los modelos concretos de intervención social, resulta imprescindible comprender los conceptos básicos que articulan el conocimiento científico de cualquier disciplina, incluido el Trabajo Social. Estos conceptos —paradigma, teoría, modelo y método— no son sinónimos; tienen distinto grado de abstracción y distinta función en la práctica profesional.</p>
+
+  <div class="def">
+    <span class="dt">Paradigma</span>
+    Conjunto de creencias, supuestos básicos, teorías y métodos compartidos por la comunidad científica de una disciplina en un momento histórico concreto. El filósofo <strong>Thomas Kuhn</strong> acuñó este concepto en <em>"La estructura de las revoluciones científicas"</em> (1962). El paradigma actúa como el marco epistemológico más amplio: define qué preguntas son legítimas, qué métodos son válidos y qué resultados se consideran significativos. Cuando el paradigma dominante ya no resuelve los problemas, se produce un cambio de paradigma o <em>revolución científica</em>.
+  </div>
+
+  <div class="def">
+    <span class="dt">Teoría</span>
+    Sistema de hipótesis contrastadas que describe y explica una parte de la realidad. Es parcial (no pretende explicarlo todo), provisional (puede revisarse o refutarse) y tiene alcance mayor que el modelo. Las teorías pueden ser generales (como la teoría de sistemas) o de alcance medio. En Trabajo Social, las teorías nutren el conocimiento disciplinar pero no guían directamente la intervención: para eso se construyen los modelos.
+  </div>
+
+  <div class="def">
+    <span class="dt">Modelo</span>
+    Representación simplificada y esquemática de una parte de la realidad. El modelo procede de la teoría, pero está construido para orientar la acción. Es la herramienta intermedia entre la teoría abstracta y la práctica concreta. <strong>Clave de examen:</strong> <em>"El modelo no puede demostrarse falso o verdadero; su valor reside en su capacidad para representar de manera lo más real posible la situación"</em>. En Trabajo Social, el modelo indica cómo conceptualizar la situación del usuario, qué objetivos perseguir y qué tipo de relación profesional establecer.
+  </div>
+
+  <div class="def">
+    <span class="dt">Método</span>
+    Procedimiento racional, planificado y ordenado para alcanzar un fin. El método es el instrumento operativo que concreta el modelo en acciones profesionales: entrevista, diagnóstico social, visita domiciliaria, trabajo en red. La <strong>metodología</strong>, por su parte, es la disciplina que estudia y reflexiona sobre los métodos (la ciencia de los métodos).
+  </div>
+
+  <div class="nota n-vio">
+    <strong>Trampas frecuentes:</strong> No confundir paradigma con teoría (la teoría es más concreta), ni modelo con método (el modelo orienta la intervención; el método la ejecuta). Tampoco es lo mismo modelo que metodología.
+  </div>
+
+  <p>Esta jerarquía —paradigma → teoría → modelo → método— es la arquitectura lógica del Trabajo Social como disciplina científica. Comprenderla es el punto de partida para estudiar los modelos concretos que se desarrollan a continuación.</p>
+</section>
+
+<!-- S2 -->
+<section id="s2">
+  <h2 class="sec">2. Evolución histórica de los métodos en Trabajo Social</h2>
+
+  <p>El Trabajo Social ha recorrido un largo camino desde sus primeras formulaciones caritativas hasta convertirse en una disciplina con base científica sólida. Comprender esa evolución permite entender por qué coexisten hoy modelos tan distintos y por qué no existe un único método universalmente válido.</p>
+
+  <h3>Precientífico: de la filantropía a la organización</h3>
+  <p>En el siglo XIX, la atención a los pobres y marginados dependía fundamentalmente de iniciativas religiosas, filantrópicas y voluntaristas. La <strong>Charity Organisation Society</strong> (COS, Londres, 1869) supuso el primer intento de sistematizar la ayuda, diferenciando entre pobres "merecedores" e "inmerecedores" de auxilio y organizando un registro de casos para evitar duplicidades. Aunque su enfoque era moralizante, fue el embrión del trabajo social de casos individual.</p>
+
+  <h3>Primera forma científica: Mary Richmond y el paradigma diagnóstico</h3>
+  <p><strong>Mary Ellen Richmond</strong> (1861-1928) es la fundadora reconocida del Trabajo Social como disciplina científica. Su obra <em>"Social Diagnosis"</em> (1917) introdujo el primer método sistemático: <strong>estudio → diagnóstico → tratamiento</strong>, tomando prestada la terminología médica. Años después, <em>"Social Case Work"</em> (1922) consolidó el trabajo de caso individual como método central. Este paradigma psicodinámico dominó la práctica durante décadas, influido posteriormente por las teorías freudianas y la psicología del yo.</p>
+
+  <div class="lema">"El diagnóstico social es la determinación exacta, en la medida en que sea posible, de la situación y personalidad de un ser humano dado y sus necesidades sociales, realizado en relación a otros seres humanos y a sus condiciones sociales." — Mary Richmond (1917)</div>
+
+  <h3>Los tres métodos clásicos (años 30)</h3>
+  <p>A lo largo de los años 30 y 40, el Trabajo Social consolida tres grandes métodos de intervención que estructuraron la profesión durante décadas:</p>
+  <ul>
+    <li><strong>Trabajo Social de Caso Individual</strong> (<em>Social Casework</em>): atención directa y personalizada a la persona o familia.</li>
+    <li><strong>Trabajo Social de Grupo</strong>: intervención con grupos que comparten una problemática; fomenta el apoyo mutuo y la participación.</li>
+    <li><strong>Trabajo Social Comunitario</strong>: intervención sobre la comunidad como unidad de cambio; diagnóstico participativo y movilización social.</li>
+  </ul>
+
+  <h3>La reconceptualización latinoamericana (años 60-70)</h3>
+  <p>En América Latina surge el movimiento de reconceptualización, influido por el pensamiento crítico de <strong>Paulo Freire</strong> y el marxismo. Se cuestiona el enfoque asistencialista y adaptativo del paradigma diagnóstico para proponer un <strong>método básico</strong> orientado a la transformación social: <em>conocer para transformar</em>. Sus fases son: estudio e interpretación de la realidad → planificación → ejecución → evaluación. Este movimiento desemboca en la adopción del pluralismo metodológico y el reconocimiento de que no existe un único método válido.</p>
+
+  <h3>Actualidad: pluralismo metodológico y paradigma sistémico-ecológico</h3>
+  <p>Hoy el Trabajo Social opera desde el <strong>pluralismo metodológico</strong>: se elige el enfoque en función de la situación, el contexto y los valores profesionales. El paradigma dominante es el <strong>sistémico-ecológico</strong>, que concibe a la persona como inmersa en múltiples sistemas de interacción (familia, red social, instituciones, cultura), todos ellos en constante interdependencia. Este marco teórico es la base del Modelo de Atención Integral y de muchos enfoques actuales de la ACP.</p>
+</section>
+
+<!-- S3 -->
+<section id="s3">
+  <h2 class="sec">3. Los principales paradigmas y modelos de intervención social</h2>
+
+  <p>A lo largo de la historia de la disciplina han cristalizado cuatro grandes paradigmas, cada uno con sus modelos específicos. No son mutuamente excluyentes: en la práctica profesional actual se combinan elementos de varios de ellos.</p>
+
+  <h3>Paradigma psicodinámico</h3>
+  <p>Es el más antiguo, heredero directo de la tradición diagnóstica de Richmond y de las teorías freudianas. Centra su atención en los procesos psicológicos internos, la relación de ayuda y el significado subjetivo de las dificultades. Sus principales modelos son:</p>
+  <ul>
+    <li><strong>Modelo psicosocial o diagnóstico</strong> (Hamilton, Hollis): diagnóstico de la situación psicosocial de la persona; intervención directa e indirecta; adaptación al entorno.</li>
+    <li><strong>Modelo de intervención en crisis</strong>: situaciones de ruptura del equilibrio vital (duelo, enfermedad grave, violencia); intervención breve e intensiva para restablecer el funcionamiento.</li>
+    <li><strong>Modelo centrado en la tarea</strong> (Epstein-Reid): objetivos concretos y a corto plazo acordados con el usuario; tiempo limitado; foco en el aquí y ahora.</li>
+  </ul>
+
+  <h3>Paradigma conductista</h3>
+  <p>Basado en las teorías del aprendizaje (Watson, Skinner, Bandura). El objetivo de la intervención es obtener, suprimir, disminuir o reforzar determinadas conductas de manera duradera. El <strong>modelo de modificación de conducta</strong> aplica técnicas como el refuerzo positivo, el modelado o la extinción. Aunque frecuente en contextos clínicos, en Trabajo Social puro se critica por centrarse en el comportamiento observable, obviando el contexto social estructural.</p>
+
+  <h3>Paradigma crítico</h3>
+  <p>Parte de que las dificultades individuales son, en gran medida, el resultado de estructuras sociales injustas. No basta con adaptar al individuo: hay que transformar las condiciones sociales que generan la desigualdad.</p>
+  <ul>
+    <li><strong>Modelo de concientización</strong> (Freire): despertar la conciencia crítica de los oprimidos para que sean protagonistas de su liberación.</li>
+    <li><strong>Modelo estructural</strong>: análisis de las causas estructurales de los problemas sociales; trabajo por el cambio de políticas y legislación.</li>
+    <li><strong>Modelo feminista</strong>: visibiliza el género como factor de desigualdad y opresión; análisis interseccional.</li>
+  </ul>
+
+  <h3>Paradigma sistémico-ecológico <span class="s3">★★★</span></h3>
+  <p>Es el paradigma dominante en la práctica actual del Trabajo Social, incluyendo los servicios sociales y la atención sanitaria en Navarra. Concibe a la persona como parte de múltiples sistemas interrelacionados. El modelo más importante para el examen es:</p>
+
+  <div class="def">
+    <span class="dt">Modelo de los 4 sistemas (Pincus y Minahan) ★★★</span>
+    Todo proceso de intervención implica cuatro sistemas en interacción:<br>
+    1. <strong>Sistema cliente</strong>: la persona o grupo que demanda y se beneficia de la intervención.<br>
+    2. <strong>Sistema de cambio</strong>: el/la trabajador/a social y la organización en la que trabaja.<br>
+    3. <strong>Sistema objetivo</strong>: personas, organizaciones o condiciones que es necesario cambiar para lograr los objetivos.<br>
+    4. <strong>Sistema de acción</strong>: personas, grupos e instituciones con quienes trabaja el/la trabajador/a social para conseguir el cambio.
+  </div>
+
+  <p>La <strong>teoría ecológica</strong> (Bronfenbrenner) enriquece este modelo describiendo los diferentes niveles del entorno de la persona: microsistema (familia, amigos próximos), mesosistema (interacciones entre microsistemas), exosistema (instituciones que afectan indirectamente) y macrosistema (cultura, valores, legislación).</p>
+
+  <table class="tbl">
+    <thead><tr><th>Paradigma</th><th>Modelos principales</th><th>Autores clave</th><th>Foco de intervención</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Psicodinámico</strong></td><td>Psicosocial · Crisis · Tarea</td><td>Richmond · Hamilton · Perlman · Hollis · Reid-Epstein</td><td>Procesos psicológicos internos y relación</td></tr>
+      <tr><td><strong>Conductista</strong></td><td>Modificación de conducta</td><td>Watson · Skinner · Bandura</td><td>Conductas observables y aprendizaje</td></tr>
+      <tr><td><strong>Crítico</strong></td><td>Concientización · Estructural · Feminista</td><td>Freire</td><td>Estructuras sociales injustas; transformación</td></tr>
+      <tr><td class="g"><strong>Sistémico-ecológico ★</strong></td><td>4 sistemas · Redes sociales · Ecosistémico</td><td>Pincus-Minahan · Bronfenbrenner</td><td>Interacción persona-entorno; múltiples sistemas</td></tr>
+    </tbody>
+  </table>
+
+  <div class="nota n-w">
+    <strong>Variables para elegir un modelo</strong> (R. Hill): tipo de fenómenos, contenido conceptual, naturaleza de la intervención, marco institucional, sociología de la práctica, valores éticos, concepción del individuo y naturaleza de la relación profesional. ★
+  </div>
+</section>
+
+<!-- S4 -->
+<section id="s4">
+  <h2 class="sec">4. Métodos según nivel de intervención</h2>
+
+  <p>Independientemente del paradigma o modelo elegido, la intervención social se organiza en tres niveles diferenciados por la unidad de intervención y los objetivos perseguidos. En la práctica profesional, los tres niveles se combinan y complementan.</p>
+
+  <h3>Intervención individual y familiar (caso social)</h3>
+  <p>Es la forma más clásica de intervención: atención directa, personalizada e intensiva a una persona o familia en situación de dificultad. El proceso metodológico incluye la recogida de información, el diagnóstico social, la planificación individualizada, la intervención directa (gestión de recursos, orientación, acompañamiento) y la evaluación. Las técnicas privilegiadas son la <strong>entrevista social</strong> y la <strong>visita domiciliaria</strong>. El instrumento documental es la <strong>historia social</strong>.</p>
+
+  <h3>Intervención grupal</h3>
+  <p>Se trabaja con grupos de personas que comparten una problemática o característica relevante. El grupo se convierte en un espacio terapéutico, educativo o de apoyo mutuo en sí mismo. Sus ventajas: reduce el aislamiento, normaliza las experiencias, genera redes informales de apoyo y empodera a los participantes. Los grupos pueden ser terapéuticos, de autoayuda, psicoeducativos, de habilidades sociales o formativos. En el contexto de Salud Mental, los grupos son especialmente relevantes en el trabajo con familiares de personas con TMG.</p>
+
+  <h3>Intervención comunitaria</h3>
+  <p>La comunidad es la unidad de intervención. El objetivo es transformar el entorno social, activar recursos comunitarios y fomentar la participación ciudadana. El <strong>diagnóstico participativo</strong> implica a la propia comunidad en la identificación de sus problemas y potencialidades. En Salud Mental, la intervención comunitaria incluye campañas contra el estigma, la promoción de la salud mental en espacios cotidianos (escuela, barrio, empresa) y la articulación del tercer sector (ANASAPS en Navarra).</p>
+
+  <h3>Proceso metodológico general (fases)</h3>
+  <p>Con independencia del nivel o modelo, la intervención social sigue un proceso metodológico común:</p>
+  <ol>
+    <li><strong>Recogida de información</strong>: entrevistas, observación, documentación, coordinación.</li>
+    <li><strong>Análisis y diagnóstico social</strong>: interpretación de la situación; identificación de necesidades y capacidades.</li>
+    <li><strong>Planificación</strong>: formulación de objetivos, selección de intervenciones, temporalización.</li>
+    <li><strong>Intervención</strong>: ejecución del plan de actuación.</li>
+    <li><strong>Seguimiento</strong>: monitorización del proceso y ajustes.</li>
+    <li><strong>Evaluación de resultados</strong>: valoración del logro de objetivos; aprendizaje para futuras intervenciones.</li>
+  </ol>
+
+  <div class="lema">"La intervención no puede considerarse como la puesta en marcha arbitraria de técnicas; es un proceso de implicación y acción planificada basado en un método científico."</div>
+</section>
+
+<!-- S5 -->
+<section id="s5">
+  <h2 class="sec">5. El Modelo de Atención Integral (MAI)</h2>
+
+  <h3>Origen y superación del modelo biomédico</h3>
+  <p>Durante décadas, los sistemas sanitarios occidentales funcionaron bajo el <strong>modelo biomédico</strong>: el foco era la enfermedad, el órgano dañado, la curación farmacológica o quirúrgica. El paciente era un receptor pasivo de prestaciones técnicas. Este enfoque resultó insuficiente ante la creciente complejidad de los problemas de salud del siglo XXI: cronicidad, multimorbilidad, envejecimiento poblacional, determinantes sociales de la salud y mayor exigencia ciudadana.</p>
+
+  <p>El <strong>Modelo de Atención Integral (MAI)</strong> surge como respuesta a estas limitaciones adoptando la perspectiva <strong>bio-psico-social</strong> formulada por George Engel (1977): la salud y la enfermedad no son solo fenómenos biológicos, sino el resultado de la interacción entre factores biológicos, psicológicos y sociales. El MAI no niega la importancia de la biología, pero la inscribe en un contexto más amplio de vida de la persona.</p>
+
+  <h3>Características del MAI <span class="s3">★★★</span></h3>
+  <ul>
+    <li><strong>Centrado en el ciudadano</strong>: el centro no es la enfermedad ni el órgano, sino la persona en su totalidad.</li>
+    <li><strong>Continuidad asistencial</strong>: coordinación fluida entre Atención Primaria, Atención Especializada y Servicios Sociales para evitar rupturas en el itinerario de la persona.</li>
+    <li><strong>Prevención y promoción de la salud</strong>: no solo curar; también prevenir, detectar precozmente y educar en salud.</li>
+    <li><strong>Participación activa del paciente</strong>: empoderamiento y co-responsabilidad de la persona en el manejo de su propia salud.</li>
+    <li><strong>Trabajo en equipos multidisciplinares</strong>: médico, enfermería, Trabajo Social, Psicología, Fisioterapia… actuando de forma coordinada.</li>
+    <li><strong>Uso racional de los recursos</strong>: eficiencia sistémica; evitar intervenciones innecesarias y duplicidades.</li>
+  </ul>
+
+  <h3>El MAI en Navarra: Estrategia 2012 <span class="s3">★★★</span></h3>
+  <p>La <em>Estrategia para el Desarrollo del Modelo de Atención Sanitaria de Navarra</em> (2012) formaliza el MAI en el SNS-O. Define la misión y visión del sistema sanitario navarro y establece el concepto de <strong>Calidad Integral</strong> como eje de la evaluación:</p>
+
+  <div class="def">
+    <span class="dt">Calidad Integral (MAI Navarra) ★★★</span>
+    <strong>Calidad técnica</strong> (excelencia clínica y de procedimientos) + <strong>Calidad percibida</strong> (satisfacción de pacientes y familias) + <strong>Eficiencia</strong> (óptimo aprovechamiento de los recursos disponibles).
+  </div>
+
+  <p>Los cuatro grandes retos que justifican el MAI en Navarra son: el <strong>envejecimiento poblacional</strong>, el incremento de enfermedades <strong>crónicas y de multimorbilidad</strong>, el aumento de la <strong>demanda de servicios</strong> y el riesgo de <strong>medicalización</strong> de situaciones que responderían mejor a intervención social o comunitaria.</p>
+
+  <h3>El "e-paciente": el ciudadano en el MAI <span class="s3">★★★</span></h3>
+  <p>El sociólogo <strong>Tom Ferguson</strong> describió el nuevo perfil de ciudadano que el MAI requiere y promueve: el <strong>e-paciente</strong>, es decir, el paciente <em>equipado, habilitado, empoderado y comprometido</em> (las cuatro E: <em>Equipped, Enabled, Empowered, Engaged</em>). Este ciudadano busca información, participa activamente en las decisiones sobre su salud y ejerce una corresponsabilidad que el sistema debe facilitar y no obstaculizar. Esta figura conecta directamente con los principios de autonomía y autodeterminación de la ACP.</p>
+
+  <div class="nota n-err">
+    <strong>No confundir MAI con ACP:</strong> el MAI es un modelo de <em>organización sistémica de los servicios</em> (nivel macro y meso); la ACP es un modelo de <em>relación terapéutica y planificación individual</em> (nivel micro). Son complementarios: el MAI crea el marco estructural y la ACP lo concreta en la relación con cada persona.
+  </div>
+
+  <h3>Principios del MAI en Navarra</h3>
+  <table class="tbl">
+    <thead><tr><th>Principio</th><th>Contenido</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Universalidad</strong></td><td>Toda la ciudadanía navarra tiene derecho a la atención sanitaria.</td></tr>
+      <tr><td><strong>Equidad</strong></td><td>Acceso equitativo independientemente de lugar de residencia, género, origen o nivel socioeconómico.</td></tr>
+      <tr><td><strong>Calidad integral</strong></td><td>Técnica + percibida + eficiencia. ★★★</td></tr>
+      <tr><td><strong>Continuidad de cuidados</strong></td><td>Coordinación entre niveles; sin fracturas en el itinerario de la persona.</td></tr>
+      <tr><td><strong>Empoderamiento ciudadano</strong></td><td>Participación activa; e-paciente; corresponsabilidad en salud.</td></tr>
+      <tr><td><strong>Sostenibilidad</strong></td><td>Sistema viable a largo plazo: eficiencia + innovación + uso racional.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- S6 -->
+<section id="s6">
+  <h2 class="sec">6. El Modelo de Atención Centrado en la Persona (ACP)</h2>
+
+  <h3>Origen: Carl Rogers y la psicología humanista</h3>
+  <p>El origen teórico de la Atención Centrada en la Persona se sitúa en la obra del psicólogo estadounidense <strong>Carl Rogers</strong> (1902-1987). En <em>"Counseling and Psychotherapy"</em> (1942) y especialmente en <em>"Client-Centered Therapy"</em> (1951), Rogers formuló una ruptura radical con el paradigma directivo y experto dominante: el terapeuta no es el poseedor del saber que impone un tratamiento, sino un <strong>facilitador</strong> que acompaña a la persona en su propio proceso de cambio desde la autenticidad, la empatía y la consideración positiva incondicional.</p>
+
+  <p>Aunque nació en el ámbito de la psicoterapia, el enfoque de Rogers fue progresivamente adoptado por el Trabajo Social, la Enfermería y la Medicina, especialmente en contextos de cuidados de larga duración, salud mental y discapacidad. En el Reino Unido, <strong>Tom Kitwood</strong> lo aplicó específicamente a la atención a personas con demencia; <strong>Simon Duffy</strong> lo desarrolló en el campo de la discapacidad intelectual y la vida independiente. En España, la <strong>Fundación Pilares</strong> (Pepa Rodríguez) es el principal referente en la difusión de la ACP en los servicios sociales y sanitarios.</p>
+
+  <h3>Los 8 principios fundamentales de la ACP <span class="s3">★★★</span></h3>
+
+  <div class="nota n-ok">
+    <strong>Mnemotecnia:</strong> D-A-I-P-A-I-I-C → Dignidad · Autonomía · Individualidad · Participación · Autodeterminación · Inclusión · Integralidad · Continuidad.
+  </div>
+
+  <ol>
+    <li><strong>Dignidad</strong>: toda persona merece trato digno, respetuoso e incondicional, independientemente de su capacidad funcional o estado de salud.</li>
+    <li><strong>Autonomía</strong>: la persona tiene derecho a tomar sus propias decisiones. El profesional acompaña y facilita, no dirige ni decide por ella.</li>
+    <li><strong>Individualidad</strong>: cada persona es única. La atención se adapta a su historia de vida, valores, preferencias y relaciones significativas —no al diagnóstico ni a la categoría administrativa—.</li>
+    <li><strong>Participación activa</strong>: la persona es protagonista de su propio proyecto de atención y de vida; no es objeto de intervención sino sujeto de ella.</li>
+    <li><strong>Autodeterminación</strong>: capacidad de tomar decisiones propias y de asumir las consecuencias. Cuando la persona necesita apoyo para decidir, ese apoyo se articula de manera que potencie —no sustituya— su voluntad.</li>
+    <li><strong>Inclusión social</strong>: la persona debe poder participar en la comunidad ordinaria, en los espacios sociales habituales, sin segregación ni institucionalización innecesaria.</li>
+    <li><strong>Integralidad</strong>: se atienden todas las dimensiones de la persona: bio-psico-social y espiritual.</li>
+    <li><strong>Continuidad</strong>: el plan de vida y el apoyo se mantienen en el tiempo con coherencia; los cambios de profesional o de dispositivo no interrumpen la atención.</li>
+  </ol>
+
+  <h3>Diferencia entre el modelo tradicional y la ACP <span class="s3">★★★</span></h3>
+  <table class="tbl">
+    <thead><tr><th>Dimensión</th><th>Modelo tradicional / asistencialista</th><th>Modelo ACP</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Centro del sistema</strong></td><td>El profesional / la institución</td><td class="g">La persona y su proyecto de vida</td></tr>
+      <tr><td><strong>Formulación de objetivos</strong></td><td>Los decide el profesional</td><td class="g">Los decide la persona con apoyo profesional</td></tr>
+      <tr><td><strong>Rol del usuario</strong></td><td>Receptor pasivo de prestaciones</td><td class="g">Protagonista activo de su atención</td></tr>
+      <tr><td><strong>Foco de la evaluación</strong></td><td>Déficits, patologías, necesidades clínicas</td><td class="g">Capacidades, fortalezas, historia de vida, valores</td></tr>
+      <tr><td><strong>Relación profesional</strong></td><td>Asimétrica: experto – paciente</td><td class="g">De acompañamiento: facilitador – persona</td></tr>
+      <tr><td><strong>Resultado esperado</strong></td><td>Curación / reducción de síntomas / cumplimiento normativo</td><td class="g">Bienestar percibido · calidad de vida · recuperación personal</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Instrumentos de la ACP</h3>
+  <p>La ACP no es solo una filosofía de atención: se concreta en herramientas específicas que documentan y guían la intervención.</p>
+  <ul>
+    <li><strong>Plan de Atención Personalizado (PAP)</strong> / <strong>Plan de Vida</strong>: herramienta central. Recoge quién es la persona, qué le importa, qué apoyos necesita y qué objetivos vitales quiere alcanzar. Se elabora con la persona, no para la persona.</li>
+    <li><strong>Historia de vida</strong>: documento biográfico que recoge la trayectoria, los valores, las preferencias y las relaciones significativas de la persona; es el sustrato sobre el que se construye el PAP.</li>
+    <li><strong>Planificación Centrada en la Persona (PCP)</strong>: proceso participativo que reúne a la persona, su familia o red de apoyo y los profesionales para diseñar conjuntamente el plan de apoyos.</li>
+    <li><strong>Escala de calidad de vida Schalock-Verdugo (Escala GENCAT)</strong>: instrumento de evaluación de la calidad de vida basado en <strong>8 dimensiones</strong>: bienestar emocional, relaciones interpersonales, bienestar material, desarrollo personal, bienestar físico, autodeterminación, inclusión social y derechos. ★★★</li>
+  </ul>
+
+  <h3>Marco jurídico de la ACP <span class="s3">★★★</span></h3>
+  <p>La ACP ha encontrado un sólido respaldo en la legislación española e internacional de los últimos años.</p>
+  <ul>
+    <li><strong>Convención de la ONU sobre los Derechos de las Personas con Discapacidad</strong> (2006, ratificada por España en 2008): artículo 12 (capacidad jurídica en igualdad de condiciones) y artículo 19 (vida independiente e inclusión en la comunidad). Es el fundamento internacional de la ACP en discapacidad.</li>
+    <li><strong>Ley 39/2006, de Promoción de la Autonomía Personal y Atención a las Personas en Situación de Dependencia</strong>: recoge la atención personalizada e individualizada como principio del SAAD.</li>
+    <li><strong>Ley 8/2021, de 2 de junio</strong> (reforma del Código Civil): elimina la figura de la incapacitación judicial y la sustituye por un sistema de <strong>medidas de apoyo para el ejercicio de la capacidad jurídica</strong>. Supone la aplicación legislativa más directa de los principios de la ACP: se apoya la decisión de la persona, no se la sustituye. <span class="s3">★★★</span></li>
+  </ul>
+
+  <div class="nota n-err">
+    <strong>Trampa de examen:</strong> "La Ley 8/2021 mantiene la figura de la incapacitación judicial" → FALSO. La <strong>elimina</strong> y la reemplaza por apoyos para la toma de decisiones. ★★★
+  </div>
+</section>
+
+<!-- S7 -->
+<section id="s7">
+  <h2 class="sec">7. Rol del Trabajador Social en los modelos MAI y ACP</h2>
+
+  <h3>El TSS en el MAI</h3>
+  <p>Dentro del Modelo de Atención Integral, el <strong>Trabajo Social Sanitario (TSS)</strong> es el componente que incorpora la dimensión social al equipo multidisciplinar. Su aportación específica consiste en:</p>
+  <ul>
+    <li>Evaluar los <strong>determinantes sociales de la salud</strong> (condiciones económicas, vivienda, red de apoyo, exclusión social) que influyen en el proceso de enfermar y en la recuperación.</li>
+    <li>Actuar como <strong>nexo de coordinación</strong> entre el sistema sanitario y los Servicios Sociales, el tercer sector y la red comunitaria informal.</li>
+    <li>Gestionar el acceso a recursos y prestaciones sociales (dependencia, discapacidad, RGN, IMV).</li>
+    <li>Apoyar a <strong>familias y personas cuidadoras</strong>: información, orientación, acceso a respiro, grupos de apoyo.</li>
+    <li>Contribuir a la <strong>continuidad de cuidados</strong> mediante el trabajo en red con Atención Primaria y otros dispositivos.</li>
+  </ul>
+
+  <h3>El TSS en la ACP</h3>
+  <p>La ACP transforma el rol tradicional del TSS: de gestor de recursos y evaluador de déficits, pasa a ser un <strong>facilitador del proyecto de vida</strong> de la persona. Esto implica:</p>
+  <ul>
+    <li><strong>Evaluación desde las capacidades</strong>: no solo identificar lo que la persona no puede hacer, sino lo que puede, quiere y tiene en su entorno.</li>
+    <li><strong>Co-diseño del PAP</strong>: elaborar el plan de atención con la persona, respetando sus preferencias y objetivos vitales, no los del sistema.</li>
+    <li><strong>Función de advocacy</strong>: defender los derechos de la persona frente a la institución cuando es necesario.</li>
+    <li><strong>Apoyo a la toma de decisiones</strong> (en consonancia con la Ley 8/2021): cuando la persona tiene dificultades para decidir, el TSS articula apoyos sin sustituir su voluntad.</li>
+    <li><strong>Trabajo comunitario</strong>: facilitar la inclusión social en entornos ordinarios; lucha contra el estigma (especialmente relevante en Salud Mental).</li>
+  </ul>
+</section>
+
+<!-- S8 -->
+<section id="s8">
+  <h2 class="sec">8. Conexión con el Plan SM Navarra 2019-2023 y la RSMNa</h2>
+
+  <p>El Plan Estratégico de Salud Mental de Navarra 2019-2023 es la materialización práctica de los dos modelos estudiados en este tema, aplicados al ámbito de la salud mental.</p>
+
+  <h3>El MAI en el Plan SM Navarra</h3>
+  <p>La <strong>Red de Salud Mental de Navarra (RSMNa)</strong> articula su funcionamiento sobre los principios del MAI: red de dispositivos integrados (1.er y 2.º nivel) coordinados bajo la Dirección de Salud Mental del SNS-O; equipo multidisciplinar en todos los dispositivos; coordinación con AP y SS.SS.; enfoque bio-psico-social del trastorno mental. La <strong>línea estratégica 3</strong> del Plan ("Continuidad de cuidados e integración asistencial") es la traslación directa del MAI al campo de la Salud Mental.</p>
+
+  <h3>La ACP en el Plan SM Navarra <span class="s3">★★★</span></h3>
+  <ul>
+    <li><strong>Línea estratégica 1</strong>: "Atención centrada en la persona y la familia" → denominación explícita de la ACP.</li>
+    <li><strong>Principio de Recuperación personal</strong>: recuperación entendida no como mera remisión de síntomas, sino como reintegración a la vida ordinaria elegida por la persona. Este concepto es la ACP aplicada a la Salud Mental.</li>
+    <li><strong>Plan de Atención Individual (PAI)</strong> del TMG: instrumento de la ACP adaptado al contexto de los Trastornos Mentales Graves; elaborado en equipo con la persona y su familia; revisado periódicamente. El porcentaje de personas TMG con PAI activo es uno de los 21 indicadores clave del Plan.</li>
+    <li><strong>Programa PEP</strong>: principio 5 ("recuperación personal") = ACP directamente aplicada al primer episodio de psicosis.</li>
+    <li><strong>Carta de Servicios de TSS (2021)</strong>: el bloque 5 ("Intervención comunitaria y promoción") incluye la lucha contra el estigma = dimensión comunitaria de la ACP.</li>
+  </ul>
+
+  <div class="nota n-ok">
+    <strong>Síntesis integradora para el examen:</strong> Tema 53 (MAI + ACP) y Tema 52 (RSMNa + Carta TSS) son dos temas que se explican mutuamente. La RSMNa aplica el MAI en su organización estructural y aplica la ACP en su filosofía de relación con el paciente. El TSS es el profesional que integra ambas lógicas en la práctica cotidiana.
+  </div>
+</section>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,221 @@
+PUNTOS CLAVE PARA EXAMEN – TEMA 53
+Modelos y métodos de intervención social.
+Modelo de Atención Integral. Modelo de Atención centrado en la persona.
+=========================================================================
+
+=== BLOQUE A: MODELOS Y MÉTODOS DE INTERVENCIÓN SOCIAL ===
+
+A1. CONCEPTOS BÁSICOS (pregunta segura)
+- Paradigma: conjunto de creencias/teorías/métodos compartidos por una comunidad científica
+  (T. Kuhn). Marco más amplio que engloba teorías y modelos.
+- Teoría: sistema de hipótesis contrastadas que describe/explica la realidad. Parcial y provisional.
+- Modelo: representación simplificada y esquemática de una parte de la realidad. Guía para la
+  práctica; emana de la teoría y puede contrastarse empíricamente.
+  ▶ Frase clave examen: "El modelo no puede demostrar si es falso o verdadero; su valor
+    reside en su capacidad para representar de manera lo más real posible la situación."
+- Método: procedimiento racional, planificado y ordenado para alcanzar un fin. Instrumento,
+  no fin en sí mismo.
+- Metodología: estudio de los métodos de conocimiento y procedimiento; la ciencia de los métodos.
+
+A2. EVOLUCIÓN HISTÓRICA DE LOS MÉTODOS EN TS (pregunta segura)
+- 1ª forma científica: Mary Richmond → "Diagnóstico Social" (1917) y "Caso Social Individual" (1922).
+  ▶ Enfoque clínico: estudio → diagnóstico → tratamiento.
+- Años 30: enfoque tradicional → 3 métodos clásicos:
+  1) Caso individual (casework)
+  2) Trabajo con grupos
+  3) Intervención comunitaria
+- Años 60-70: reconceptualización → Método Básico (conocer para transformar).
+  Fases: estudio e interpretación → plan de trabajo → ejecución → evaluación.
+- Actualidad: paradigma sistémico-ecológico predominante; pluralismo metodológico.
+
+A3. PRINCIPALES PARADIGMAS Y MODELOS EN TS (cuadro comparativo clave)
+Paradigma psicodinámico:
+  - Modelo psicosocial/diagnóstico (Richmond, Hamilton, Perlman, Hollis)
+  - Modelo de intervención en crisis
+  - Modelo centrado en la tarea (objetivos a corto plazo; Epstein-Reid)
+Paradigma conductista:
+  - Modelo de modificación de conducta (Watson, Skinner)
+  - Objetivo: obtener/suprimir/disminuir/reforzar conductas de forma duradera
+Paradigma crítico:
+  - Modelo de concientización (Freire)
+  - Modelo estructural
+  - Modelo feminista
+Paradigma sistémico-ecológico (dominante):
+  - Modelo de los 4 sistemas (Pincus-Minahan): sistema cliente, sistema de cambio, sistema
+    objetivo, sistema de acción ★★★
+  - Terapia familiar sistémica
+  - Intervención en redes y apoyo social
+
+A4. MÉTODOS SEGÚN NIVEL DE INTERVENCIÓN (pregunta segura)
+1) Intervención Individual (caso social): atención directa a persona o familia; plan
+   individualizado; técnicas: entrevista, visita domiciliaria, gestión de recursos.
+2) Intervención Grupal: trabajo con grupos que comparten problemática; fomenta participación
+   y apoyo mutuo; grupos terapéuticos, autoayuda, psicoeducativos.
+3) Intervención Comunitaria: transformación de la comunidad mediante participación activa;
+   diagnóstico participativo; fomenta liderazgo; coordinación institucional.
+
+A5. PROCESO METODOLÓGICO GENERAL (fases)
+Recogida de información → Análisis/diagnóstico → Planificación/objetivos → Intervención →
+Seguimiento → Evaluación de resultados.
+▶ Frase clave: "La intervención no puede considerarse como puesta en marcha arbitraria de
+  técnicas; es un proceso de implicación y acción planificada en base a un método científico."
+
+A6. VARIABLES PARA ELEGIR UN MODELO (según R. Hill) ★★★
+1. Tipo de fenómenos al que se dirige el modelo
+2. Contenido conceptual para describir/analizar problemas
+3. Naturaleza de la intervención y sus objetivos
+4. Marco institucional donde se aplica
+5. Sociología de la práctica
+6. Valores y ética subyacentes
+7. Concepción del individuo que vive el problema
+8. Naturaleza de la relación trabajador social – sistema cliente
+
+
+=== BLOQUE B: MODELO DE ATENCIÓN INTEGRAL (MAI) ===
+
+B1. DEFINICIÓN Y PRINCIPIOS ★★★
+- Modelo bio-psico-social: considera simultáneamente los aspectos biológicos, psicológicos
+  y sociales de la persona.
+- Supera el modelo biomédico tradicional (centrado en enfermedad/órgano).
+- Introducido en España como referente de los sistemas sanitarios públicos.
+  En Navarra: "Estrategia para el Desarrollo del Modelo de Atención Sanitaria de Navarra" (2012).
+- Principios del MAI en Navarra (Dpto. Salud / SNS-O):
+  ▶ Universalidad
+  ▶ Equidad
+  ▶ Calidad integral (técnica + percibida + eficiencia)
+  ▶ Continuidad de cuidados / integración asistencial
+  ▶ Orientación al paciente / empoderamiento del ciudadano
+  ▶ Sostenibilidad
+
+B2. CARACTERÍSTICAS DEL MAI ★★★
+- Atención centrada en el CIUDADANO (no en la enfermedad ni en el órgano).
+- Continuidad asistencial: coordinación entre niveles (AP ↔ especializada ↔ SS.SS.).
+- Prevención y promoción de la salud: no solo curar, también prevenir y educar.
+- Participación activa del paciente: empoderamiento y autorresponsabilidad.
+- Trabajo en equipos multidisciplinares.
+- Uso racional de los recursos: eficiencia sistémica.
+▶ Frase clave: "El objetivo no son mejores hospitales, sino pacientes más sanos y más felices"
+  (Libro Blanco del e-paciente, Safran).
+
+B3. CONTEXTO NAVARRA (estrategia 2012)
+- Misión SNS-O: prestar atención sanitaria a los ciudadanos de Navarra y contribuir a mejorar
+  su nivel de salud.
+- Visión SNS-O: sistema sanitario centrado en el paciente, sostenible, resolutivo, innovador
+  y abierto a la sociedad.
+- Calidad Integral = Calidad técnica + Calidad percibida + Eficiencia. ★★★
+- Retos que justifican el MAI: envejecimiento + cronicidad + demanda creciente + medicalización.
+
+B4. EL "E-PACIENTE" (dato frecuente en examen)
+- Definición (Tom Ferguson): paciente proactivo, equipado, capacitado, empoderado y comprometido.
+  Las 4 E: Equipped · Enabled · Empowered · Engaged ★★★
+- Supone mayor responsabilidad del paciente sobre su propia salud.
+
+B5. MAI EN SALUD MENTAL (conexión con Tema 52)
+- RSMNa aplica el MAI: red de dispositivos integrados + equipo multidisciplinar + continuidad.
+- Plan SM Navarra 2019-2023 recoge la integración entre niveles como línea estratégica.
+- El TSS en SM es parte del MAI: aborda los determinantes sociales de la salud.
+
+
+=== BLOQUE C: MODELO DE ATENCIÓN CENTRADO EN LA PERSONA (ACP) ===
+
+C1. ORIGEN Y AUTORES ★★★
+- Origen: Carl Rogers (psicología humanista, años 50-60) → "Counseling and Psychotherapy"
+  (1942); "Client-Centered Therapy" (1951).
+- Rogers acuñó el concepto de "relación de ayuda" centrada en la persona.
+- En España: aplicado en SS.SS., SM, dependencia y discapacidad desde los años 90-2000.
+- Modelo impulsado en España por la Fundación Pilares (Pepa Rodríguez).
+  Referentes internacionales: Tom Kitwood (demencia), Simon Duffy (vida independiente).
+
+C2. PRINCIPIOS FUNDAMENTALES DE LA ACP ★★★ (los más preguntados)
+1. DIGNIDAD: toda persona merece trato digno, independientemente de su estado de salud.
+2. AUTONOMÍA: la persona decide sobre su propia vida; el profesional acompaña, no dirige.
+3. INDIVIDUALIDAD: cada persona es única; la atención se adapta a su historia, valores y
+   preferencias personales (no al diagnóstico).
+4. PARTICIPACIÓN ACTIVA: la persona es protagonista de su propio proyecto de vida.
+5. AUTODETERMINACIÓN: capacidad de tomar decisiones propias; se apoya con apoyos,
+   no se sustituye la voluntad de la persona.
+6. INCLUSIÓN SOCIAL: participar en la comunidad ordinaria, no segregar.
+7. INTEGRALIDAD: atender todas las dimensiones (bio-psico-social-espiritual).
+8. CONTINUIDAD: el plan de vida / plan de apoyo se mantiene en el tiempo con coherencia.
+▶ Mnemotecnia: D-A-I-P-A-I-I-C (Dignidad · Autonomía · Individualidad · Participación ·
+  Autodeterminación · Inclusión · Integralidad · Continuidad)
+
+C3. DIFERENCIA CLAVE: MODELO TRADICIONAL vs. ACP ★★★
+Modelo tradicional (biomédico/asistencial):
+  - Centro: el profesional / la institución
+  - Objetivos: los marcados por el profesional
+  - Usuario: receptor pasivo de servicios
+  - Foco: diagnóstico, déficit, necesidades clínicas
+  - Relación: asimétrica (experto–paciente)
+Modelo ACP:
+  - Centro: la persona y su proyecto de vida
+  - Objetivos: los marcados por la propia persona con apoyo profesional
+  - Usuario: protagonista activo de su atención
+  - Foco: capacidades, fortalezas, historia de vida, valores personales
+  - Relación: de acompañamiento; el profesional es "facilitador"
+
+C4. INSTRUMENTOS DE LA ACP ★★★
+- Plan de Vida / Plan de Atención Personalizado (PAP): herramienta central.
+  Recoge: quién es la persona · qué le importa · qué apoyos necesita · objetivos vitales.
+- Historia de vida: recoge trayectoria, valores, preferencias y relaciones significativas.
+- Planificación Centrada en la Persona (PCP): proceso participativo con persona, familia y
+  profesionales para diseñar el apoyo.
+- Evaluación de la calidad de vida (Escala GENCAT, Escala de Schalock y Verdugo):
+  8 dimensiones → bienestar emocional, relaciones interpersonales, bienestar material,
+  desarrollo personal, bienestar físico, autodeterminación, inclusión social, derechos. ★★★
+
+C5. ACP EN SALUD MENTAL (conexión con Tema 52)
+- El Plan SM Navarra 2019-2023 incluye la ACP explícitamente:
+  ▶ Línea 1: "Atención centrada en la persona y la familia"
+  ▶ Principio: "Recuperación personal" = reintegración a vida ordinaria (no solo remisión)
+  ▶ PEP: principio 5 = recuperación personal; PAI = herramienta de la ACP en TMG
+- El TSS en la RSMNa aplica la ACP: evalúa capacidades, potencia la autonomía, co-diseña
+  el plan de intervención con la persona.
+
+C6. ACP EN DEPENDENCIA Y DISCAPACIDAD (marco normativo)
+- Ley 39/2006 (Dependencia): menciona la atención personalizada.
+- Convención ONU sobre los Derechos de las Personas con Discapacidad (2006 / ratificada
+  por España 2008): autonomía, vida independiente, participación.
+- Ley 8/2021 (reforma tutela): elimina la incapacitación; sustituye por apoyos a la autonomía.
+  ▶ Dato clave: la Ley 8/2021 aplica directamente los principios de la ACP (autodeterminación,
+    apoyos en lugar de sustitución de la voluntad). ★★★
+
+C7. ROL DEL TRABAJADOR SOCIAL EN LA ACP ★★★
+- Evaluador de las capacidades y del contexto de vida (no solo de déficits).
+- Facilitador del Plan de Vida / PAP en coordinación con el equipo multidisciplinar.
+- Promotor de la autonomía y de la red de apoyo informal.
+- Defensor de los derechos de la persona (advocacy).
+- Coordinador con SS.SS. de Base, entidades del tercer sector (ACP en comunidad).
+
+=== ARTÍCULOS / REFERENCIAS CLAVE PARA EXAMEN ===
+- Mary Richmond: "Diagnóstico Social" (1917) → 1ª teoría científica de TS ★★★
+- Carl Rogers: "Client-Centered Therapy" (1951) → origen teórico de la ACP ★★★
+- Ley 8/2021 (reforma del sistema de tutela) → base jurídica de la ACP en discapacidad ★★★
+- Ley 39/2006 (Dependencia) → atención personalizada ★
+- Convención ONU Discapacidad (ratif. España 2008) → autonomía + vida independiente ★★★
+- Estrategia Modelo Atención Sanitaria Navarra (2012): Calidad Integral = técnica + percibida + eficiencia ★★★
+- Plan SM Navarra 2019-2023: línea 1 (ACP y familia); principio recuperación personal ★★★
+- Escala de calidad de vida Schalock-Verdugo: 8 dimensiones ★★
+
+=== TRAMPAS FRECUENTES EN EXAMEN ===
+T1: "El modelo es lo mismo que la teoría" → FALSO. El modelo guía la práctica; la teoría
+    explica un conjunto de fenómenos de la disciplina.
+T2: "Mary Richmond es la autora del modelo sistémico" → FALSO. Es la fundadora del TS
+    científico / paradigma psicodinámico-diagnóstico.
+T3: "En la ACP el profesional marca los objetivos de atención" → FALSO. Los marca la
+    PERSONA con apoyo del profesional.
+T4: "La ACP se centra en los déficits y necesidades clínicas" → FALSO. Se centra en
+    capacidades, fortalezas y proyecto de vida.
+T5: "El MAI es lo mismo que la ACP" → FALSO. MAI = modelo bio-psico-social sistémico
+    (nivel organizativo-sanitario); ACP = centrado en la persona (nivel individual-relacional).
+    Ambos son complementarios.
+T6: "La Ley 8/2021 mantiene la figura de la incapacitación judicial" → FALSO. La elimina y
+    la sustituye por apoyos para la toma de decisiones (art. 249 ss. CC reformados). ★★★
+T7: "El método de trabajo social de grupos es más moderno que la intervención comunitaria"
+    → FALSO. Ambos forman parte del enfoque tradicional de los años 30 (3 métodos clásicos).
+T8: "Calidad Integral en el MAI Navarra = calidad técnica + calidad del edificio" → FALSO.
+    = Calidad técnica + Calidad PERCIBIDA + Eficiencia. ★★★
+
+=========================================================================
+Archivo: puntos-clave_T53.txt | Tema 53 | Oposiciones Gestor Mantenimiento Navarra
+=========================================================================

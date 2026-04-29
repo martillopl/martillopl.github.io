@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 53 · HTML 3 · Cuadro comparativo y tablas operativas · Modelos Intervención Social · MAI · ACP</title>
+<style>
+:root{
+  --bg:#f5f3ff;--card:#fff;--s2:#ede9fe;--line:#a78bfa;
+  --text:#1e1b4b;--muted:#7c3aed;--p:#6d28d9;--p2:#4c1d95;
+  --grn:#059669;--grn2:#d1fae5;--red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;--sky:#0284c7;--sky2:#e0f2fe;
+  --teal:#0d9488;--teal2:#ccfbf1;--rose:#be185d;--rose2:#fce7f3;
+  --sh:0 2px 12px rgba(109,40,217,.09)
+}
+[data-theme="dark"]{
+  --bg:#09030f;--card:#110822;--s2:#1a0e33;--line:#5b21b6;
+  --text:#ede9fe;--muted:#c4b5fd;--p:#a78bfa;--p2:#c4b5fd;
+  --grn:#86efac;--grn2:#052e16;--red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;--sky:#7dd3fc;--sky2:#082038;
+  --teal:#5eead4;--teal2:#031a16;--rose:#fda4af;--rose2:#1a0010;
+  --sh:0 2px 14px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:22px}
+.wrap{max-width:1220px;margin:0 auto}
+header{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:14px 22px;box-shadow:var(--sh);margin-bottom:16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+h1{font-size:.93rem;font-weight:800;color:var(--p)}
+.sub{font-size:.7rem;color:var(--muted);margin-top:4px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 14px;border-radius:999px;font-size:.7rem}
+h2{font-size:.83rem;font-weight:800;color:#fff;background:var(--p);padding:7px 16px;border-radius:8px;margin:18px 0 10px;display:inline-block}
+.tbl{width:100%;border-collapse:collapse;box-shadow:var(--sh);border-radius:10px;overflow:hidden;background:var(--card);margin-bottom:14px}
+.tbl th{background:var(--p);color:#fff;text-align:left;padding:8px 11px;font-size:.67rem;text-transform:uppercase;letter-spacing:.03em}
+.tbl td{padding:8px 11px;border-bottom:1px solid var(--s2);font-size:.74rem;vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:nth-child(even) td{background:rgba(167,139,250,.04)}
+.tbl tr:hover td{background:var(--s2)}
+.nota{padding:9px 13px;border-radius:0 9px 9px 0;font-size:.73rem;border-left:4px solid;margin:8px 0;line-height:1.5}
+.n-ok{background:var(--grn2);border-color:var(--grn)}
+.n-err{background:var(--red2);border-color:var(--red)}
+.n-w{background:var(--warn2);border-color:var(--warn)}
+.n-vio{background:var(--s2);border-color:var(--p)}
+.n-sky{background:var(--sky2);border-color:var(--sky)}
+.n-teal{background:var(--teal2);border-color:var(--teal)}
+[data-theme="dark"] .n-w strong{color:#fde68a}
+[data-theme="dark"] .n-err strong{color:#fca5a5}
+[data-theme="dark"] .n-ok strong{color:#86efac}
+strong{color:var(--p)}
+.g{color:#059669;font-weight:700}.r{color:#dc2626;font-weight:700}.w{color:#b45309;font-weight:700}.sk{color:#0284c7;font-weight:700}.te{color:#0d9488;font-weight:700}.ro{color:#be185d;font-weight:700}
+.s3{color:#f59e0b;font-weight:800}
+td.hl{background:var(--s2)!important;font-weight:700;color:var(--p2)}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<header>
+  <div>
+    <h1>Tema 53 · HTML 3 · Cuadro comparativo y tablas operativas para examen</h1>
+    <div class="sub">Modelos y métodos de intervención social · Modelo de Atención Integral (MAI) · Modelo de Atención Centrado en la Persona (ACP) · Oposiciones Navarra</div>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</header>
+
+<!-- T1 -->
+<h2>T1 · Jerarquía conceptual: paradigma – teoría – modelo – método <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Concepto</th><th>Definición operativa</th><th>Nivel de abstracción</th><th>Función en TS</th><th>Autor clave</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Paradigma</strong></td><td>Marco epistemológico general: creencias, supuestos y métodos compartidos por la comunidad científica</td><td class="g">MAYOR</td><td>Define qué preguntas son legítimas y qué métodos son válidos</td><td>Thomas Kuhn (1962)</td><td class="g">El paradigma engloba a las teorías y modelos ★★★</td></tr>
+<tr><td><strong>Teoría</strong></td><td>Sistema de hipótesis contrastadas que describe/explica una parte de la realidad; parcial y provisional</td><td>Intermedio-alto</td><td>Nutre el conocimiento disciplinar; base de los modelos</td><td>Diversidad según corriente</td><td>Más concreta que el paradigma, más abstracta que el modelo</td></tr>
+<tr><td><strong>Modelo</strong></td><td>Representación simplificada y esquemática de una parte de la realidad para guiar la acción</td><td>Intermedio</td><td>Orienta la intervención; indica cómo conceptualizar la situación y qué relación establecer</td><td>Según cada modelo</td><td class="r">"No puede demostrarse falso o verdadero" ★★★</td></tr>
+<tr><td><strong>Método</strong></td><td>Procedimiento racional, planificado y ordenado para alcanzar un fin</td><td class="r">MENOR</td><td>Ejecuta el modelo en acciones concretas: entrevista, diagnóstico, visita domiciliaria</td><td>—</td><td>Instrumento, no fin en sí mismo ★★★</td></tr>
+<tr><td><strong>Metodología</strong></td><td>Ciencia y reflexión sobre los métodos</td><td>—</td><td>Estudio crítico de los métodos de conocimiento y procedimiento</td><td>—</td><td class="r">No confundir con "método" ★</td></tr>
+</tbody>
+</table>
+
+<!-- T2 -->
+<h2>T2 · Evolución histórica de los métodos en Trabajo Social <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Período</th><th>Hito / Movimiento</th><th>Autores / Organizaciones</th><th>Método / Aportación clave</th><th>Paradigma</th></tr></thead>
+<tbody>
+<tr><td>S. XIX · 1869</td><td>Charity Organisation Society (COS)</td><td>COS · Londres</td><td>Primeras visitas domiciliarias sistematizadas; registro de casos; diferenciación de pobres "merecedores"</td><td>Filantrópico / pre-científico</td></tr>
+<tr><td class="hl">1917 · 1922 ★★★</td><td><strong>"Social Diagnosis"</strong> (1917) · <strong>"Social Case Work"</strong> (1922)</td><td><strong>Mary Richmond</strong></td><td>1ª teoría científica del TS · Método: <strong>estudio → diagnóstico → tratamiento</strong></td><td>Psicodinámico-diagnóstico</td></tr>
+<tr><td>Años 30</td><td>Consolidación de los 3 métodos clásicos</td><td>Diversas escuelas</td><td>Caso individual (casework) · Grupo · Comunidad</td><td>Psicodinámico</td></tr>
+<tr><td>Años 40-50</td><td>Influencia del psicoanálisis y del funcionalismo</td><td>Hamilton · Perlman · Hollis</td><td>Refinamiento del diagnóstico psicosocial; modelo centrado en la tarea (Reid-Epstein)</td><td>Psicodinámico</td></tr>
+<tr><td>1942 · 1951</td><td>Psicología humanista · <em>Client-Centered Therapy</em></td><td><strong>Carl Rogers</strong></td><td>Origen teórico de la ACP; relación de ayuda basada en empatía, autenticidad y consideración positiva</td><td>Humanista</td></tr>
+<tr><td>Años 60-70</td><td>Reconceptualización latinoamericana</td><td><strong>Paulo Freire</strong> y otros</td><td>Método Básico: conocer para transformar · Fases: estudio → plan → ejecución → evaluación</td><td>Crítico</td></tr>
+<tr><td>1973</td><td>Modelo de los 4 sistemas</td><td><strong>Pincus y Minahan</strong></td><td>Sistema cliente · sistema de cambio · sistema objetivo · sistema de acción</td><td>Sistémico-ecológico</td></tr>
+<tr><td>Actualidad</td><td>Pluralismo metodológico</td><td>—</td><td>Elección del modelo según situación y contexto; paradigma sistémico-ecológico dominante</td><td>Sistémico-ecológico</td></tr>
+</tbody>
+</table>
+
+<!-- T3 -->
+<h2>T3 · Los 4 paradigmas de intervención social comparados <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Paradigma</th><th>Foco principal</th><th>Modelos principales</th><th>Autores clave</th><th>Concepción del problema</th><th>Rol del TS</th></tr></thead>
+<tbody>
+<tr><td><strong>Psicodinámico</strong></td><td>Procesos psicológicos internos + relación de ayuda</td><td>Psicosocial/diagnóstico · Intervención en crisis · Centrado en la tarea (Reid-Epstein)</td><td>Richmond · Hamilton · Hollis · Perlman</td><td>El problema tiene raíces en la psicología individual y la historia personal</td><td>Terapeuta / diagnosticador</td></tr>
+<tr><td><strong>Conductista</strong></td><td>Conductas observables y aprendizaje</td><td>Modificación de conducta</td><td>Watson · Skinner · Bandura</td><td>La conducta inadaptada es aprendida y puede desaprenderse</td><td>Modificador de conducta</td></tr>
+<tr><td><strong>Crítico</strong></td><td>Estructuras sociales injustas; transformación</td><td>Concientización (Freire) · Estructural · Feminista</td><td>Freire · Galper · Langan-Lee</td><td>El problema es consecuencia de la desigualdad estructural y las relaciones de poder</td><td>Agente de cambio social</td></tr>
+<tr><td class="hl"><strong>Sistémico-ecológico ★★★</strong></td><td>Interacción persona-entorno · múltiples sistemas</td><td><strong>4 sistemas (Pincus-Minahan) ★★★</strong> · Ecosistémico (Bronfenbrenner) · Redes de apoyo</td><td>Pincus · Minahan · Bronfenbrenner</td><td>El problema es resultado de la interacción disfuncional entre la persona y sus sistemas</td><td>Mediador / articulador de sistemas</td></tr>
+</tbody>
+</table>
+<div class="nota n-vio"><strong>Paradigma dominante en la actualidad:</strong> el sistémico-ecológico, que es también el sustrato teórico del MAI (continuidad asistencial, coordinación entre sistemas) y de la ACP (persona en interacción con su entorno). ★★★</div>
+
+<!-- T4 -->
+<h2>T4 · Modelo de los 4 sistemas (Pincus-Minahan) · Detalle operativo <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Sistema</th><th>Definición</th><th>Ejemplo en RSMNa / SS.SS.</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td class="g"><strong>S1 · Cliente</strong></td><td>Persona, familia o grupo que demanda la intervención y se beneficia del cambio</td><td>Persona con TMG + familia que solicita atención en el CSM</td><td class="g">Es quien se beneficia del cambio ★★★</td></tr>
+<tr><td class="sk"><strong>S2 · Cambio</strong></td><td>El/la trabajador/a social y la organización en la que trabaja</td><td>TSS del equipo multidisciplinar de la RSMNa</td><td class="sk">El agente profesional ★★★</td></tr>
+<tr><td class="w"><strong>S3 · Objetivo</strong></td><td>Personas, organizaciones o condiciones que es necesario cambiar para lograr los objetivos de intervención</td><td>La institución que deniega una prestación, la red familiar que genera dependencia patológica</td><td class="r">S1 ≠ S3: no siempre coinciden ★★★</td></tr>
+<tr><td class="ro"><strong>S4 · Acción</strong></td><td>Personas, grupos e instituciones con quienes trabaja el TS para conseguir el cambio en el sistema objetivo</td><td>SS.SS. de Base + AP + ANASAPS + Trabajo del SNS-O</td><td class="ro">La red de colaboradores de la intervención ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T5 -->
+<h2>T5 · Niveles de intervención y proceso metodológico <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Nivel</th><th>Unidad de intervención</th><th>Objetivo</th><th>Técnicas principales</th><th>Instrumento documental</th></tr></thead>
+<tbody>
+<tr><td><strong>Individual / familiar</strong></td><td>Persona o familia</td><td>Atención directa personalizada; plan individualizado</td><td>Entrevista social · visita domiciliaria · gestión de recursos · orientación</td><td>Historia social (Historia de TSS en SM)</td></tr>
+<tr><td><strong>Grupal</strong></td><td>Grupo con problemática común</td><td>Apoyo mutuo, reducción aislamiento, empoderamiento</td><td>Dinámica grupal · grupos terapéuticos / psicoeducativos / autoayuda</td><td>Memoria de grupo; actas</td></tr>
+<tr><td><strong>Comunitario</strong></td><td>Comunidad como sistema</td><td>Transformación social; participación ciudadana; movilización de recursos</td><td>Diagnóstico participativo · coordinación institucional · campañas estigma</td><td>Plan Comunitario; memorias de red</td></tr>
+</tbody>
+</table>
+<table class="tbl">
+<thead><tr><th>#</th><th>Fase metodológica</th><th>Contenido</th><th>Nota operativa</th></tr></thead>
+<tbody>
+<tr><td class="g">1</td><td><strong>Recogida de información</strong></td><td>Entrevistas, observación, documentación, coordinación</td><td>Incluye la historia de vida en la ACP</td></tr>
+<tr><td class="g">2</td><td><strong>Análisis y diagnóstico social</strong></td><td>Interpretación de la situación; necesidades y capacidades</td><td>En ACP: énfasis en capacidades y fortalezas, no solo déficits</td></tr>
+<tr><td class="g">3</td><td><strong>Planificación</strong></td><td>Objetivos + selección de intervenciones + temporalización</td><td>PAP / PAI en ACP; elaborado CON la persona</td></tr>
+<tr><td class="g">4</td><td><strong>Intervención</strong></td><td>Ejecución del plan de actuación</td><td>Individual + grupal + comunitario según necesidad</td></tr>
+<tr><td class="g">5</td><td><strong>Seguimiento</strong></td><td>Monitorización y ajustes del proceso</td><td>Continuidad de cuidados en el MAI</td></tr>
+<tr><td class="g">6</td><td><strong>Evaluación de resultados</strong></td><td>Valoración del logro de objetivos; aprendizaje</td><td>Indicadores del Plan (21 en SM Navarra 2019-2023)</td></tr>
+</tbody>
+</table>
+
+<!-- T6 -->
+<h2>T6 · MAI · Marco conceptual, principios y Estrategia Navarra 2012 <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Atributo</th><th>Contenido</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Modelo que supera</strong></td><td>Modelo biomédico: centrado en la enfermedad y el órgano; paciente receptor pasivo</td><td class="r">El MAI NO es el modelo biomédico ★★★</td></tr>
+<tr><td><strong>Perspectiva adoptada</strong></td><td>Bio-psico-social (George Engel, 1977): factores biológicos + psicológicos + sociales</td><td class="g">Las 3 dimensiones son simultáneas ★★★</td></tr>
+<tr><td><strong>Retos que justifican el MAI</strong></td><td>Envejecimiento poblacional · cronicidad y multimorbilidad · aumento de la demanda · medicalización</td><td class="w">4 retos ★</td></tr>
+<tr><td><strong>Calidad Integral (Navarra 2012)</strong></td><td><strong>Calidad técnica + Calidad percibida + Eficiencia</strong></td><td class="r">Las 3 componentes son exactas ★★★</td></tr>
+<tr><td><strong>Misión SNS-O</strong></td><td>Prestar atención sanitaria a los ciudadanos de Navarra y contribuir a mejorar su nivel de salud</td><td>—</td></tr>
+<tr><td><strong>Visión SNS-O</strong></td><td>Sistema centrado en el paciente, sostenible, resolutivo, innovador y abierto a la sociedad</td><td>—</td></tr>
+<tr><td><strong>e-paciente (4 E)</strong></td><td>Equipped · Enabled · Empowered · Engaged (Tom Ferguson)</td><td class="g">Las 4 E ★★★</td></tr>
+</tbody>
+</table>
+<table class="tbl">
+<thead><tr><th>#</th><th>Principio MAI Navarra</th><th>Contenido</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Universalidad</strong></td><td>Toda la ciudadanía navarra tiene derecho a la atención sanitaria</td></tr>
+<tr><td>2</td><td><strong>Equidad</strong></td><td>Acceso equitativo sin discriminación por residencia, género, origen ni nivel socioeconómico</td></tr>
+<tr><td>3</td><td><strong>Calidad integral ★★★</strong></td><td>Técnica + percibida + eficiencia</td></tr>
+<tr><td>4</td><td><strong>Continuidad de cuidados</strong></td><td>Coordinación entre niveles: AP ↔ especializada ↔ SS.SS. Sin fracturas en el itinerario</td></tr>
+<tr><td>5</td><td><strong>Empoderamiento ciudadano</strong></td><td>Participación activa del paciente; co-responsabilidad en la salud; e-paciente</td></tr>
+<tr><td>6</td><td><strong>Sostenibilidad</strong></td><td>Sistema viable a largo plazo: eficiencia + innovación + uso racional de recursos</td></tr>
+</tbody>
+</table>
+
+<!-- T7 -->
+<h2>T7 · ACP · Origen, principios y autores <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Elemento</th><th>Contenido</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Origen teórico</strong></td><td>Carl Rogers · psicología humanista · <em>"Client-Centered Therapy"</em> (1951)</td><td class="g">Año 1951 + Rogers = ACP ★★★</td></tr>
+<tr><td><strong>Obra precedente</strong></td><td><em>"Counseling and Psychotherapy"</em> (1942) · Carl Rogers</td><td>—</td></tr>
+<tr><td><strong>Ruptura clave</strong></td><td>El terapeuta no es el experto que impone; es un facilitador que acompaña desde empatía, autenticidad y consideración positiva incondicional</td><td class="g">Profesional = facilitador, no experto directivo ★★★</td></tr>
+<tr><td><strong>Referente ACP en demencia</strong></td><td>Tom Kitwood (Reino Unido)</td><td>—</td></tr>
+<tr><td><strong>Referente ACP en discapacidad</strong></td><td>Simon Duffy · vida independiente · Reino Unido</td><td>—</td></tr>
+<tr><td><strong>Referente ACP en España</strong></td><td>Fundación Pilares · Pepa Rodríguez</td><td class="w">Referente español ★</td></tr>
+</tbody>
+</table>
+<table class="tbl">
+<thead><tr><th>#</th><th>Principio ACP</th><th>Letra</th><th>Definición operativa</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Dignidad</strong></td><td class="g">D</td><td>Trato digno e incondicional independientemente del estado de salud o capacidad funcional</td><td>—</td></tr>
+<tr><td>2</td><td><strong>Autonomía</strong></td><td class="g">A</td><td>La persona decide sobre su propia vida; el profesional acompaña y facilita, nunca dirige</td><td class="g">★★★</td></tr>
+<tr><td>3</td><td><strong>Individualidad</strong></td><td class="sk">I</td><td>Cada persona es única; atención adaptada a historia, valores y preferencias personales (no al diagnóstico)</td><td>—</td></tr>
+<tr><td>4</td><td><strong>Participación activa</strong></td><td class="te">P</td><td>La persona es protagonista de su propio plan de atención y de vida</td><td class="g">★★★</td></tr>
+<tr><td>5</td><td><strong>Autodeterminación</strong></td><td class="w">A</td><td>Tomar decisiones propias; cuando se necesita apoyo, éste potencia —no sustituye— la voluntad (Ley 8/2021)</td><td class="r">★★★ · Ley 8/2021</td></tr>
+<tr><td>6</td><td><strong>Inclusión social</strong></td><td class="ro">I</td><td>Participar en la comunidad ordinaria sin segregación ni institucionalización innecesaria</td><td>—</td></tr>
+<tr><td>7</td><td><strong>Integralidad</strong></td><td class="sk">I</td><td>Atender todas las dimensiones: bio-psico-social-espiritual</td><td>—</td></tr>
+<tr><td>8</td><td><strong>Continuidad</strong></td><td class="te">C</td><td>El plan de vida se mantiene coherente en el tiempo, incluso con cambios de profesional o dispositivo</td><td>—</td></tr>
+</tbody>
+</table>
+<div class="nota n-ok"><strong>Mnemotecnia:</strong> D-A-I-P-A-I-I-C · Dignidad · Autonomía · Individualidad · Participación · Autodeterminación · Inclusión · Integralidad · Continuidad ★★★</div>
+
+<!-- T8 -->
+<h2>T8 · Modelo tradicional vs. ACP · Cuadro comparativo central <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Dimensión</th><th>Modelo tradicional / asistencialista</th><th>Modelo ACP ★★★</th></tr></thead>
+<tbody>
+<tr><td><strong>Centro del sistema</strong></td><td>El profesional / la institución</td><td class="g">La persona y su proyecto de vida</td></tr>
+<tr><td><strong>Formulación de objetivos</strong></td><td>Los decide el profesional (top-down)</td><td class="g">Los decide la persona con apoyo del profesional</td></tr>
+<tr><td><strong>Rol del usuario</strong></td><td>Receptor pasivo de prestaciones</td><td class="g">Protagonista activo; sujeto de derechos</td></tr>
+<tr><td><strong>Foco de la evaluación</strong></td><td>Déficits, patologías, necesidades clínicas</td><td class="g">Capacidades, fortalezas, historia de vida, valores</td></tr>
+<tr><td><strong>Relación profesional</strong></td><td>Asimétrica: experto dirige · paciente obedece</td><td class="g">De acompañamiento: facilitador + persona</td></tr>
+<tr><td><strong>Plan de intervención</strong></td><td>Elaborado por el profesional para el usuario</td><td class="g">Co-elaborado con la persona (PAP / PCP)</td></tr>
+<tr><td><strong>Resultado esperado</strong></td><td>Curación / reducción de síntomas / cumplimiento normativo</td><td class="g">Bienestar percibido · calidad de vida · recuperación personal</td></tr>
+<tr><td><strong>Concepción del problema</strong></td><td>Patología o carencia a corregir</td><td class="g">Situación vital a acompañar desde las fortalezas</td></tr>
+</tbody>
+</table>
+
+<!-- T9 -->
+<h2>T9 · MAI vs. ACP · Complementariedad <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Atributo</th><th>MAI (Modelo de Atención Integral)</th><th>ACP (Atención Centrada en la Persona)</th></tr></thead>
+<tbody>
+<tr><td><strong>Nivel de actuación</strong></td><td>Organizativo-sistémico (macro/meso)</td><td>Individual-relacional (micro)</td></tr>
+<tr><td><strong>Foco</strong></td><td>Coordinación entre niveles; eficiencia del sistema; continuidad estructural</td><td>Proyecto de vida de la persona; relación de acompañamiento</td></tr>
+<tr><td><strong>Actores principales</strong></td><td>Organizaciones sanitarias, instituciones, equipos multidisciplinares</td><td>La persona, su red de apoyo, el profesional como facilitador</td></tr>
+<tr><td><strong>Herramienta central</strong></td><td>Protocolos de coordinación; continuidad asistencial; equipos multidisciplinares</td><td>PAP (Plan de Atención Personalizado) / Historia de vida / PCP</td></tr>
+<tr><td><strong>Marco teórico base</strong></td><td>Sistémico-ecológico + bio-psico-social (Engel 1977)</td><td>Humanista (Rogers 1951) + sistémico-ecológico</td></tr>
+<tr><td><strong>En Navarra</strong></td><td>Estrategia Modelo Atención Sanitaria 2012 · Calidad Integral = T+P+E</td><td>Plan SM 2019-2023: Línea 1 + Recuperación personal + PAI/TMG</td></tr>
+<tr><td><strong>Relación entre ambos</strong></td><td colspan="2" style="text-align:center"><strong>COMPLEMENTARIOS:</strong> el MAI crea el marco estructural del sistema; la ACP concreta la filosofía relacional con cada persona ★★★</td></tr>
+</tbody>
+</table>
+<div class="nota n-err"><strong>Trampa:</strong> "MAI y ACP son modelos equivalentes e intercambiables" → FALSO. Son complementarios pero operan a niveles distintos. ★★★</div>
+
+<!-- T10 -->
+<h2>T10 · Instrumentos de la ACP y Escala de calidad de vida <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Instrumento</th><th>Descripción</th><th>Contenido / Componentes</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>PAP</strong> (Plan de Atención Personalizado)</td><td>Herramienta central de la ACP</td><td>Quién es la persona · qué le importa · qué apoyos necesita · objetivos vitales</td><td class="g">Co-elaborado CON la persona ★★★</td></tr>
+<tr><td><strong>Historia de vida</strong></td><td>Documento biográfico</td><td>Trayectoria vital · valores · preferencias · relaciones significativas</td><td class="g">Sustrato del PAP ★★</td></tr>
+<tr><td><strong>PCP</strong> (Planificación Centrada en la Persona)</td><td>Proceso participativo</td><td>Persona + familia o red + profesionales co-diseñan el plan de apoyos</td><td>—</td></tr>
+<tr><td><strong>Escala Schalock-Verdugo (GENCAT)</strong></td><td>Evaluación de calidad de vida</td><td>8 dimensiones (ver T11)</td><td class="r">8 dimensiones ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T11 -->
+<h2>T11 · Escala Schalock-Verdugo · 8 dimensiones de calidad de vida <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Dimensión</th><th>Indicadores representativos</th></tr></thead>
+<tbody>
+<tr><td class="g">1</td><td><strong>Bienestar emocional</strong></td><td>Satisfacción con la vida · autoconcepto · ausencia de estrés o sentimientos negativos</td></tr>
+<tr><td class="g">2</td><td><strong>Relaciones interpersonales</strong></td><td>Interacciones sociales · relaciones de amistad · apoyo social</td></tr>
+<tr><td class="g">3</td><td><strong>Bienestar material</strong></td><td>Situación económica · condiciones del hogar · empleo</td></tr>
+<tr><td class="g">4</td><td><strong>Desarrollo personal</strong></td><td>Educación · competencias · actividades significativas</td></tr>
+<tr><td class="g">5</td><td><strong>Bienestar físico</strong></td><td>Atención sanitaria · estado de salud · ocio y actividad física</td></tr>
+<tr><td class="g">6</td><td><strong>Autodeterminación</strong></td><td>Autonomía · metas personales · elecciones propias</td></tr>
+<tr><td class="g">7</td><td><strong>Inclusión social</strong></td><td>Integración y participación en la comunidad · roles sociales valorados</td></tr>
+<tr><td class="g">8</td><td><strong>Derechos</strong></td><td>Derechos humanos · derechos legales · respeto</td></tr>
+</tbody>
+</table>
+<div class="nota n-err"><strong>Trampa:</strong> "La escala Schalock-Verdugo tiene 6 dimensiones" → FALSO. Tiene exactamente <strong>8 dimensiones</strong>. ★★★</div>
+
+<!-- T12 -->
+<h2>T12 · Marco jurídico de la ACP · Referencias normativas <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Norma</th><th>Año</th><th>Contenido relevante para la ACP</th><th>Importancia examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Convención ONU Discapacidad</strong></td><td>2006 / ratif. España 2008</td><td>Art. 12: capacidad jurídica en igualdad de condiciones. Art. 19: derecho a vida independiente e inclusión en la comunidad</td><td class="g">★★★ Fundamento internacional</td></tr>
+<tr><td><strong>Ley 39/2006 (Dependencia)</strong></td><td>2006</td><td>Atención personalizada como principio del SAAD; proyecto de vida individualizado</td><td class="w">★★</td></tr>
+<tr><td class="hl"><strong>Ley 8/2021 (reforma tutela)</strong></td><td>2021</td><td>Elimina la incapacitación judicial. Sustituye por <strong>medidas de apoyo para el ejercicio de la capacidad jurídica</strong>. Aplica el principio de autodeterminación de la ACP.</td><td class="r">★★★ DATO CLAVE</td></tr>
+<tr><td><strong>Plan SM Navarra 2019-2023</strong></td><td>2019</td><td>Línea estratégica 1: "Atención centrada en la persona y la familia". Principio de recuperación personal. PAI del TMG.</td><td class="g">★★★ Conexión Tema 52</td></tr>
+<tr><td><strong>Carta TSS RSMNa 2021</strong></td><td>2021</td><td>Bloque 1: acogida e inicio de la Historia de TSS (instrumento ACP). Bloque 5: inclusión y lucha contra el estigma (ACP comunitaria).</td><td class="g">★★★ Conexión Tema 52</td></tr>
+</tbody>
+</table>
+
+<!-- T13 -->
+<h2>T13 · Rol del TSS en el MAI y en la ACP <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Función</th><th>En el MAI</th><th>En la ACP</th></tr></thead>
+<tbody>
+<tr><td><strong>Evaluación</strong></td><td>Determinantes sociales de la salud: vivienda, economía, red de apoyo, exclusión</td><td>Evaluación de capacidades y fortalezas (no solo déficits); historia de vida</td></tr>
+<tr><td><strong>Planificación</strong></td><td>Coordinación del plan de cuidados con el equipo multidisciplinar</td><td>Co-diseño del PAP/PAI con la persona y su familia</td></tr>
+<tr><td><strong>Coordinación</strong></td><td>Nexo con SS.SS., AP, tercer sector (ANASAPS); gestión de dependencia/discapacidad/RGN/IMV</td><td>Coordinación para facilitar la inclusión social en comunidad ordinaria</td></tr>
+<tr><td><strong>Apoyo a familias</strong></td><td>Información, orientación, acceso a respiro, grupos de apoyo</td><td>Apoyo a la red informal como componente del plan de vida de la persona</td></tr>
+<tr><td><strong>Advocacy</strong></td><td>Defensa del acceso de la persona a los recursos del sistema</td><td>Defensa de los derechos y la autodeterminación de la persona frente a la institución</td></tr>
+<tr><td><strong>Comunitario</strong></td><td>Intervención comunitaria en SM: lucha contra el estigma, promoción de salud mental positiva</td><td>Facilitación de la inclusión social en entornos ordinarios; articulación del tercer sector</td></tr>
+</tbody>
+</table>
+
+<!-- T14 -->
+<h2>T14 · Guía rápida de referencias clave del tema <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Referencia</th><th>Contenido esencial</th><th>★</th></tr></thead>
+<tbody>
+<tr><td class="g">Thomas Kuhn (1962)</td><td>Concepto de paradigma · cambio de paradigma = revolución científica</td><td>★★</td></tr>
+<tr><td class="g">Mary Richmond · 1917 · 1922</td><td>1ª teoría científica TS · Social Diagnosis · Social Case Work · método: estudio→diagnóstico→tratamiento</td><td>★★★</td></tr>
+<tr><td class="g">Pincus y Minahan · 1973</td><td>Modelo de los 4 sistemas: cliente · cambio · objetivo · acción</td><td>★★★</td></tr>
+<tr><td class="g">Carl Rogers · 1951</td><td>Client-Centered Therapy · origen teórico de la ACP · empatía, autenticidad, consideración positiva</td><td>★★★</td></tr>
+<tr><td class="g">George Engel · 1977</td><td>Perspectiva bio-psico-social · fundamento teórico del MAI</td><td>★★</td></tr>
+<tr><td class="g">Tom Ferguson</td><td>E-paciente · 4 E: Equipped · Enabled · Empowered · Engaged</td><td>★★★</td></tr>
+<tr><td class="g">Schalock y Verdugo</td><td>Escala de calidad de vida · 8 dimensiones · herramienta ACP en discapacidad</td><td>★★★</td></tr>
+<tr><td class="g">Estrategia MAI Navarra (2012)</td><td>Calidad Integral = técnica + percibida + eficiencia · misión y visión SNS-O</td><td>★★★</td></tr>
+<tr><td class="g">Convención ONU Discapacidad (2006/2008)</td><td>Arts. 12 y 19 · capacidad jurídica + vida independiente · base internacional de la ACP</td><td>★★★</td></tr>
+<tr><td class="g">Ley 8/2021</td><td>Elimina incapacitación · apoyos a la autonomía · aplicación jurídica de la autodeterminación ACP</td><td>★★★</td></tr>
+<tr><td class="g">Plan SM Navarra 2019-2023</td><td>Línea 1: ACP y familia · Principio recuperación personal · PAI TMG · 21 indicadores</td><td>★★★</td></tr>
+<tr><td class="g">Carta TSS RSMNa (2021)</td><td>6 bloques · Historia TSS · bloque 5: inclusión comunitaria = ACP en SM</td><td>★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T15 -->
+<h2>T15 · Las 12 trampas del examen <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Afirmación incorrecta</th><th>Corrección exacta</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>El modelo puede demostrarse falso o verdadero</td><td>El modelo <strong>no puede demostrarse</strong>: su valor reside en representar fielmente la situación ★★★</td></tr>
+<tr><td>2</td><td>Paradigma y modelo son sinónimos</td><td>El paradigma es el marco más amplio; el modelo guía la práctica; el método ejecuta la intervención ★★★</td></tr>
+<tr><td>3</td><td>Mary Richmond creó el modelo sistémico</td><td>Richmond fundó el paradigma <strong>psicodinámico-diagnóstico</strong>; el sistémico es de Pincus-Minahan ★★★</td></tr>
+<tr><td>4</td><td>En la ACP el profesional marca los objetivos de atención</td><td>Los objetivos los marca <strong>la propia persona</strong> con apoyo del profesional ★★★</td></tr>
+<tr><td>5</td><td>La ACP se centra en los déficits y necesidades clínicas del paciente</td><td>Se centra en <strong>capacidades, fortalezas y proyecto de vida</strong> ★★★</td></tr>
+<tr><td>6</td><td>El MAI y la ACP son modelos equivalentes e intercambiables</td><td>MAI = nivel organizativo-sistémico; ACP = nivel individual-relacional. Son <strong>complementarios</strong> ★★★</td></tr>
+<tr><td>7</td><td>La Ley 8/2021 mantiene la incapacitación judicial</td><td>La <strong>elimina</strong> y la sustituye por medidas de apoyo para el ejercicio de la capacidad jurídica ★★★</td></tr>
+<tr><td>8</td><td>Calidad Integral (MAI Navarra) = calidad técnica + calidad del edificio</td><td>= Calidad técnica + Calidad <strong>percibida</strong> + Eficiencia ★★★</td></tr>
+<tr><td>9</td><td>La Escala Schalock-Verdugo tiene 6 dimensiones</td><td>Tiene exactamente <strong>8 dimensiones</strong> ★★★</td></tr>
+<tr><td>10</td><td>El e-paciente (Tom Ferguson) es quien solo busca información online</td><td>Son las 4 E: <strong>Equipped · Enabled · Empowered · Engaged</strong> ★★★</td></tr>
+<tr><td>11</td><td>Sistema cliente y sistema objetivo siempre coinciden (Pincus-Minahan)</td><td>El sistema cliente es quien se beneficia; el sistema objetivo es lo que hay que cambiar. <strong>No siempre coinciden</strong> ★★★</td></tr>
+<tr><td>12</td><td>El principio de recuperación personal del Plan SM 2019-2023 equivale a remisión de síntomas</td><td>Recuperación personal = <strong>reintegración a la vida ordinaria</strong> elegida por la persona; es el principio ACP en SM ★★★</td></tr>
+</tbody>
+</table>
+
+</div>
+</body>
+</html>
