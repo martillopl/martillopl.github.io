@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 28 · HTML 3 – Cuadro comparativo · Tablas operativas · UPNA</title>
+<style>
+:root{--bg:#f0f7ff;--surface:#fff;--s2:#e0eefe;--s3:#c7dffe;--border:#93c5fd;--div:#dbeafe;--text:#1e3a5f;--muted:#1d4ed8;--p:#1e40af;--pl:#2563eb;--warn:#b45309;--danger:#b91c1c;--ok:#0f766e;--vio:#7c3aed;--sh:0 2px 10px rgba(30,58,143,.08)}
+[data-theme="dark"]{--bg:#0a1628;--surface:#0f1f3d;--s2:#162a50;--s3:#1e3a68;--border:#2d5299;--div:#1e3565;--text:#e0eefe;--muted:#93c5fd;--p:#60a5fa;--pl:#93c5fd;--warn:#fbbf24;--danger:#f87171;--ok:#34d399;--vio:#a78bfa;--sh:0 2px 10px rgba(0,0,0,.25)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.6;background:var(--bg);color:var(--text);padding:20px}
+.hdr{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.96rem;color:var(--p);line-height:1.3}.hdr p{font-size:.72rem;color:var(--muted);margin-top:2px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--border);background:var(--s2);color:var(--text);padding:5px 12px;border-radius:999px;font-size:.72rem}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:10px 12px;text-align:center;flex:1 1 100px;box-shadow:var(--sh)}.sv{font-size:1.2rem;font-weight:900;color:var(--p)}.sk{font-size:.64rem;color:var(--muted);margin-top:2px}
+h2{font-size:.84rem;font-weight:800;color:#fff;background:var(--p);padding:7px 14px;border-radius:7px;margin:22px 0 9px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:14px 16px;box-shadow:var(--sh);overflow:auto;margin-bottom:10px}
+.dual{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.triple{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:10px}
+table{width:100%;border-collapse:collapse}
+th{background:var(--s2);color:var(--muted);font-weight:700;font-size:.67rem;text-transform:uppercase;letter-spacing:.06em;padding:7px 9px;text-align:left;position:sticky;top:0;z-index:1}
+th.td{background:rgba(185,28,28,.13);color:var(--danger)}
+th.tg{background:rgba(15,118,110,.13);color:var(--ok)}
+th.tw{background:rgba(180,83,9,.13);color:var(--warn)}
+th.tv{background:rgba(124,58,237,.13);color:var(--vio)}
+th.tb{background:rgba(37,99,235,.13);color:var(--pl)}
+td{border-bottom:1px solid var(--div);padding:7px 9px;vertical-align:top;font-size:.78rem}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--s2)}
+.badge{display:inline-flex;padding:2px 8px;border-radius:999px;font-size:.64rem;font-weight:700;border:1px solid transparent;white-space:nowrap;margin:1px}
+.bb{background:rgba(37,99,235,.12);color:var(--pl);border-color:rgba(37,99,235,.22)}
+.bg{background:rgba(15,118,110,.12);color:var(--ok);border-color:rgba(15,118,110,.22)}
+.br{background:rgba(185,28,28,.12);color:var(--danger);border-color:rgba(185,28,28,.22)}
+.by{background:rgba(180,83,9,.12);color:var(--warn);border-color:rgba(180,83,9,.22)}
+.bv{background:rgba(124,58,237,.12);color:var(--vio);border-color:rgba(124,58,237,.22)}
+.bk{background:var(--s2);color:var(--text);border-color:var(--border)}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.75rem;margin:8px 0;border-left:4px solid}
+.nb{background:var(--s2);border-color:var(--pl);color:var(--muted)}
+.nw{background:#fef3c7;border-color:#d97706;color:#78350f}
+.nr{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+[data-theme="dark"] .nw{background:#451a03;color:#fde68a}
+[data-theme="dark"] .nr{background:#450a0a;color:#fca5a5}
+ul{padding-left:16px;margin:5px 0}li{margin-bottom:3px;font-size:.78rem}
+@media(max-width:700px){.dual,.triple{grid-template-columns:1fr}}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 28 · HTML 3 · Cuadro comparativo con tablas operativas para examen</h1>
+    <p>Extensión universitaria y reconocimiento de créditos · Formación complementaria en enseñanzas de Grado · UPNA</p>
+  </div>
+  <button class="btn" onclick="var d=document.documentElement,t=d.getAttribute('data-theme');d.setAttribute('data-theme',t==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="sv">6 ECTS</div><div class="sk">mínimo garantizado · art.12.8 RD 1393/2007</div></div>
+  <div class="stat"><div class="sv">25 h</div><div class="sk">1 ECTS en la UPNA</div></div>
+  <div class="stat"><div class="sv">150 h</div><div class="sk">6 ECTS en horas totales</div></div>
+  <div class="stat"><div class="sv">APTO</div><div class="sk">calificación · no computa media</div></div>
+  <div class="stat"><div class="sv">Optativos</div><div class="sk">tipo de crédito reconocido</div></div>
+  <div class="stat"><div class="sv">727/2010</div><div class="sk">Resolución Rector UPNA · 14/05/2010</div></div>
+</div>
+
+<!-- T1: Jerarquía normativa completa -->
+<h2>T1 · Jerarquía normativa completa — referencia exacta para el examen</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Nivel</th><th>Norma</th><th>Fecha</th><th>Artículo / Precepto clave</th><th>Lo que aporta al tema</th></tr></thead>
+    <tbody>
+      <tr><td><span class="badge bb">1</span></td><td><strong>Constitución Española</strong></td><td>1978</td><td>Art. 27.10</td><td>Autonomía universitaria · base para que la UPNA apruebe su normativa propia</td></tr>
+      <tr><td><span class="badge bb">2</span></td><td><strong>LOU — Ley Orgánica 6/2001, de 21 de diciembre</strong></td><td>21/12/2001</td><td>Art. 46.2.i)</td><td>Consagra el <strong>derecho del estudiante</strong> al reconocimiento por actividades culturales, deportivas, representación, solidarias y cooperación</td></tr>
+      <tr><td><span class="badge bb">3</span></td><td><strong>RD 1393/2007, de 29 de octubre</strong></td><td>29/10/2007</td><td>Art. 12.8</td><td>Obliga a los planes de Grado a prever el reconocimiento de <strong>al menos 6 ECTS</strong> (mínimo estatal)</td></tr>
+      <tr><td><span class="badge bb">4</span></td><td><strong>RD 861/2010, de 2 de julio</strong></td><td>02/07/2010</td><td>Modifica art. 12 RD 1393/2007</td><td>Añade explícitamente la <strong>representación estudiantil</strong> al catálogo de actividades reconocibles</td></tr>
+      <tr><td><span class="badge bb">5</span></td><td><strong>RD 1791/2010 — Estatuto del Estudiante Universitario</strong></td><td>30/12/2010</td><td>Art. 7.1.i)</td><td>Reitera el derecho y lo integra en el Estatuto del Estudiante. Vincula reconocimiento a la representación estudiantil.</td></tr>
+      <tr><td><span class="badge bg">6</span></td><td><strong>Resolución 1854/2008 del Rector UPNA</strong></td><td>BON 14/11/2008</td><td>Acuerdo CG 24/10/2008</td><td>Normativa general de Reconocimiento y Transferencia de créditos de la UPNA</td></tr>
+      <tr><td><span class="badge bg">7</span></td><td><strong>Resolución 727/2010 del Rector UPNA</strong></td><td>14/05/2010 · BON</td><td>Normativa completa</td><td><strong>NORMA ESPECÍFICA DEL TEMA</strong> · Normativa reguladora del reconocimiento académico en créditos por actividades de extensión universitaria en Grado</td></tr>
+      <tr><td><span class="badge by">8</span></td><td><strong>Resolución 2019/2012 del Rector UPNA</strong></td><td>BON 11/01/2013</td><td>Acuerdo CG 20/12/2012</td><td>Reglamento de prácticas externas de estudiantes UPNA · base para reconocimiento de prácticas extracurriculares</td></tr>
+      <tr><td><span class="badge by">9</span></td><td><strong>RD 592/2014, de 11 de julio</strong></td><td>11/07/2014</td><td>Prácticas externas universitarias</td><td>Marco estatal para prácticas externas universitarias (curriculares y extracurriculares)</td></tr>
+      <tr><td><span class="badge bv">10</span></td><td><strong>Convenio UPNA–INJ</strong></td><td>Agosto 2025</td><td>"Dale crédito a tu solidaridad"</td><td>Reconocimiento de voluntariado y actividades juveniles del INJ en créditos ECTS</td></tr>
+    </tbody>
+  </table>
+  <div class="note nb">📌 Pregunta frecuente: "¿Cuál es la norma de la UPNA que regula el reconocimiento de extensión universitaria?" → <strong>Resolución 727/2010, de 14 de mayo, del Rector de la UPNA</strong>.</div>
+</div>
+
+<!-- T2: LOU vs RD 1393 vs Estatuto Estudiante -->
+<h2>T2 · Comparativa LOU — RD 1393/2007 — RD 1791/2010 (Estatuto del Estudiante)</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Aspecto</th><th class="tb">LOU art. 46.2.i)</th><th class="tg">RD 1393/2007 art. 12.8</th><th class="tv">RD 1791/2010 art. 7.1.i)</th></tr></thead>
+    <tbody>
+      <tr><td>Naturaleza de la norma</td><td>Ley Orgánica estatal</td><td>Real Decreto estatal</td><td>Real Decreto estatal</td></tr>
+      <tr><td>Fechas</td><td>21 de diciembre de 2001</td><td>29 de octubre de 2007</td><td>30 de diciembre de 2010</td></tr>
+      <tr><td>Destinatario</td><td>Las universidades en general</td><td>Los planes de estudios de Grado</td><td>El estudiantado universitario</td></tr>
+      <tr><td>Lo que hace en el tema</td><td>Reconoce el <strong>derecho</strong> del estudiante al reconocimiento académico</td><td>Obliga a prever al menos <strong>6 ECTS</strong> en el plan de estudios</td><td>Reitera el derecho · añade representación estudiantil · vincula al Estatuto</td></tr>
+      <tr><td>Categorías que menciona</td><td>Culturales, deportivas, representación, solidarias y de cooperación</td><td>Culturales, deportivas, solidarias y de cooperación (representación añadida por RD 861/2010)</td><td>Actividades universitarias (enumeradas como en la LOU)</td></tr>
+      <tr><td>Tipo de obligación</td><td>Reconoce derecho subjetivo</td><td>Obligación para las universidades de prever el reconocimiento</td><td>Derecho del estudiante a exigirlo</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- T3: Las 5 categorías operativa -->
+<h2>T3 · Las 5 categorías de actividades reconocibles — tabla operativa completa</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Categoría</th><th>Actividades incluidas</th><th>Actividades NO incluidas</th><th>Requisito clave</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="badge bb">CULTURALES</span></td>
+        <td>Cursos, talleres, seminarios y jornadas organizados o avalados por la UPNA · actividades artísticas (coro, teatro, orquesta, grupos) universitarios</td>
+        <td>Actividades culturales externas sin vinculación universitaria</td>
+        <td>Organizadas o reconocidas expresamente por la UPNA</td>
+      </tr>
+      <tr>
+        <td><span class="badge bg">DEPORTIVAS</span></td>
+        <td>Competiciones deportivas universitarias (autonómicas, nacionales) · programas del Servicio de Deportes de la UPNA</td>
+        <td>Práctica deportiva personal sin vinculación a un programa universitario</td>
+        <td>Vinculadas a estructura deportiva universitaria</td>
+      </tr>
+      <tr>
+        <td><span class="badge bv">REPRESENTACIÓN ESTUDIANTIL</span></td>
+        <td>Miembro del Claustro, del Consejo de Gobierno, de Junta de Centro, de Consejo de Departamento, del Consejo de Estudiantes UPNA, de delegaciones de estudiantes</td>
+        <td>Representación en entidades externas no universitarias</td>
+        <td>Cargo formal en órganos de gobierno o representación de la universidad</td>
+      </tr>
+      <tr>
+        <td><span class="badge by">SOLIDARIAS</span></td>
+        <td>Programas de voluntariado vinculados a la UPNA · actividades del convenio UPNA–INJ (2025)</td>
+        <td>Voluntariado en organizaciones externas sin convenio con la UPNA</td>
+        <td>Vinculación formal a la UPNA o convenio reconocido</td>
+      </tr>
+      <tr>
+        <td><span class="badge br">COOPERACIÓN</span></td>
+        <td>Cooperación al desarrollo con aval universitario · prácticas extracurriculares (cooperación educativa) mediante convenio</td>
+        <td>Cooperación personal sin acreditación universitaria</td>
+        <td>Marco de convenio de cooperación educativa (Res. 2019/2012)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- T4: Régimen de reconocimiento: el cuadro central del tema -->
+<h2>T4 · Régimen del reconocimiento académico — todos los parámetros en paralelo</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Parámetro</th><th>Regla aplicable</th><th>Fuente normativa</th><th>Trampa asociada</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Límite cuantitativo</strong></td><td>Al menos <strong>6 ECTS</strong> sobre el total del plan de estudios</td><td>Art. 12.8 RD 1393/2007</td><td>"El máximo son 6" → FALSO: es el mínimo garantizado</td></tr>
+      <tr><td><strong>Equivalencia del ECTS (UPNA)</strong></td><td>1 ECTS = <strong>25 horas</strong> de trabajo del estudiante · 6 ECTS = 150 horas</td><td>Normas Reguladoras de Títulos Oficiales UPNA</td><td>"1 ECTS = 30 horas" → FALSO en la UPNA (30 h es otra referencia)</td></tr>
+      <tr><td><strong>Tipo de crédito</strong></td><td>Se incorporan con consideración de <strong>créditos optativos</strong></td><td>Normativa UPNA</td><td>"Son créditos básicos" → FALSO</td></tr>
+      <tr><td><strong>Calificación</strong></td><td><strong>APTO / NO APTO</strong> (no numérica)</td><td>Normativa UPNA / RD 1393/2007</td><td>"Pueden mejorar la nota media" → FALSO</td></tr>
+      <tr><td><strong>Efecto en la nota media</strong></td><td><strong>No computa</strong> a efectos de la nota media del expediente</td><td>Normativa UPNA</td><td>"APTO cuenta como 10 en la media" → FALSO</td></tr>
+      <tr><td><strong>Incorporación al expediente</strong></td><td>Con carácter general, en el <strong>último semestre</strong> de los estudios</td><td>Normativa UPNA</td><td>"Se pueden pedir en cualquier momento del grado" → MATIZ</td></tr>
+      <tr><td><strong>Relación con el plan de estudios</strong></td><td>Forman <strong>parte del total</strong> de ECTS del plan (no se añaden por encima)</td><td>RD 1393/2007</td><td>"Hay que cursar 240+6 = 246 ECTS" → FALSO</td></tr>
+      <tr><td><strong>Publicidad en el título</strong></td><td>Constan en el <strong>Suplemento Europeo al Título (SET)</strong></td><td>RD 1002/2010 sobre expedición de títulos</td><td>"No quedan registradas en ningún documento oficial" → FALSO</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- T5: Créditos curriculares vs extracurriculares vs extensión -->
+<h2>T5 · Tres tipos de prácticas / actividades: diferencias operativas clave</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Aspecto</th><th class="tg">Prácticas curriculares</th><th class="tw">Prácticas extracurriculares</th><th class="tb">Actividades extensión universitaria</th></tr></thead>
+    <tbody>
+      <tr><td>¿Forman parte del plan?</td><td><span class="badge bg">SÍ</span></td><td><span class="badge br">NO</span></td><td><span class="badge bg">SÍ (reserva de 6 ECTS)</span></td></tr>
+      <tr><td>¿Son obligatorias?</td><td>Depende del plan de estudios</td><td><span class="badge br">NO · voluntarias</span></td><td><span class="badge br">NO · voluntarias</span></td></tr>
+      <tr><td>¿Requieren convenio empresa?</td><td><span class="badge bg">SÍ</span></td><td><span class="badge bg">SÍ</span></td><td>Depende (depende del tipo de actividad)</td></tr>
+      <tr><td>Calificación</td><td>Numérica (0-10)</td><td><strong>APTO / NO APTO</strong></td><td><strong>APTO / NO APTO</strong></td></tr>
+      <tr><td>Computa en nota media</td><td><span class="badge bg">SÍ</span></td><td><span class="badge br">NO</span></td><td><span class="badge br">NO</span></td></tr>
+      <tr><td>Norma UPNA aplicable</td><td>Resolución 2019/2012 (Res.1854/2008)</td><td>Resolución 2019/2012 del Rector UPNA</td><td>Resolución 727/2010 del Rector UPNA</td></tr>
+      <tr><td>¿Pueden generar los 6 ECTS del art. 12.8?</td><td>No (son créditos propios del plan)</td><td><span class="badge bg">SÍ</span></td><td><span class="badge bg">SÍ</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- T6: Procedimiento comparado -->
+<h2>T6 · Procedimiento de reconocimiento — fases y responsables</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Fase</th><th>Qué ocurre</th><th>Quién actúa</th><th>Resultado</th></tr></thead>
+    <tbody>
+      <tr><td><span class="badge bb">1</span></td><td>Realización de la actividad</td><td>El estudiante</td><td>Participación efectiva acreditada</td></tr>
+      <tr><td><span class="badge bb">2</span></td><td>Obtención de certificado / diploma de participación con horas acreditadas</td><td>La entidad organizadora (UPNA u otra avalada)</td><td>Documento justificativo</td></tr>
+      <tr><td><span class="badge bb">3</span></td><td>Solicitud formal de reconocimiento con documentación acreditativa</td><td>El estudiante → Centro (Facultad/Escuela)</td><td>Expediente de reconocimiento abierto</td></tr>
+      <tr><td><span class="badge bb">4</span></td><td>Verificación del cumplimiento de requisitos y conversión de horas en créditos</td><td>Junta de Centro o Comisión Docente del Centro</td><td>Propuesta de reconocimiento (nº créditos)</td></tr>
+      <tr><td><span class="badge bb">5</span></td><td>Resolución del reconocimiento</td><td>Vicerrectorado competente en estudios de Grado (o delegación)</td><td>Acto administrativo de reconocimiento</td></tr>
+      <tr><td><span class="badge bb">6</span></td><td>Incorporación al expediente como créditos optativos con calificación APTO</td><td>Servicio de Gestión Académica / OAU</td><td>Créditos visibles en el expediente</td></tr>
+      <tr><td><span class="badge bg">7</span></td><td>Constancia en el SET (Suplemento Europeo al Título)</td><td>Servicio de Gestión Académica</td><td>Publicidad oficial de la actividad realizada</td></tr>
+    </tbody>
+  </table>
+  <div class="note nw">⚠ Recursos administrativos: al ser resolución de un órgano universitario, el recurso ordinario es el recurso de alzada ante el Rector (Ley 39/2015 de aplicación supletoria).</div>
+</div>
+
+<!-- T7: Comparativa 6 ECTS extensión vs 6 ECTS reconocimiento ordinario -->
+<h2>T7 · Los 6 ECTS de extensión universitaria vs. reconocimiento y transferencia ordinarios</h2>
+<div class="dual">
+  <div class="card">
+    <table>
+      <thead><tr><th class="tb">6 ECTS de extensión universitaria</th><th class="tb">Clave</th></tr></thead>
+      <tbody>
+        <tr><td>Base legal</td><td>Art. 12.8 RD 1393/2007 + Res. 727/2010</td></tr>
+        <tr><td>Origen de los créditos</td><td>Actividades complementarias (CUL-DEP-REP-SOL-COO)</td></tr>
+        <tr><td>Calificación</td><td>APTO / NO APTO</td></tr>
+        <tr><td>Efecto nota media</td><td>No computa</td></tr>
+        <tr><td>Tipo</td><td>Optativos</td></tr>
+        <tr><td>¿Hay que "cursar" algo?</td><td>No en el sentido ordinario: se participa y se acredita</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card">
+    <table>
+      <thead><tr><th class="tg">Reconocimiento y transferencia ordinarios</th><th class="tg">Clave</th></tr></thead>
+      <tbody>
+        <tr><td>Base legal</td><td>Arts. 6-13 RD 1393/2007 + Res. 1854/2008 UPNA</td></tr>
+        <tr><td>Origen de los créditos</td><td>Estudios previos, títulos, experiencia profesional</td></tr>
+        <tr><td>Calificación</td><td>Se puede reconocer con nota o sin ella</td></tr>
+        <tr><td>Efecto nota media</td><td>Los reconocidos sin nota no computan; los reconocidos con nota, sí</td></tr>
+        <tr><td>Tipo</td><td>Cualquier tipo (básicos, obligatorios, optativos)</td></tr>
+        <tr><td>¿Hay que "cursar" algo?</td><td>No: se reconocen estudios ya cursados</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="note nr">⚠ TRAMPA CLÁSICA: confundir el reconocimiento de extensión universitaria (Res.727/2010 · 6 ECTS) con el reconocimiento general de créditos (Res.1854/2008). Son dos figuras distintas con normativa diferente.</div>
+
+<!-- T8: Convenio UPNA-INJ y otros convenios -->
+<h2>T8 · Convenio UPNA–INJ (agosto 2025) — tabla operativa</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Elemento</th><th>Contenido</th></tr></thead>
+    <tbody>
+      <tr><td>Nombre del programa</td><td><strong>"Dale crédito a tu solidaridad"</strong></td></tr>
+      <tr><td>Partes firmantes</td><td>Universidad Pública de Navarra (UPNA) + Instituto Navarro de la Juventud (INJ)</td></tr>
+      <tr><td>Fecha</td><td>Agosto de 2025</td></tr>
+      <tr><td>Tipo de actividades reconocibles</td><td>Campos de voluntariado organizados por el INJ · Programa de corresponsales de información juvenil · Otras actividades juveniles acreditadas por el INJ</td></tr>
+      <tr><td>Encuadre normativo</td><td>Categoría "solidarias" del art. 12.8 RD 1393/2007 y Res. 727/2010 UPNA</td></tr>
+      <tr><td>Criterio de valoración</td><td>Horas dedicadas → convertidas en ECTS según tablas de la UPNA (1 ECTS = 25 h)</td></tr>
+      <tr><td>Límite aplicable</td><td>Dentro del máximo de 6 ECTS de extensión universitaria</td></tr>
+      <tr><td>Significado jurídico-académico</td><td>Ejemplo de ampliación del catálogo de actividades reconocibles mediante convenio, en el marco de la autonomía universitaria</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- T9: Derechos del estudiante conectados -->
+<h2>T9 · Derechos del estudiantado conectados con este tema</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Norma</th><th>Derecho</th><th>Artículo</th><th>Conexión con el tema 28</th></tr></thead>
+    <tbody>
+      <tr><td>LOU</td><td>Reconocimiento por actividades universitarias</td><td>Art. 46.2.i)</td><td>Fundamento primario del tema</td></tr>
+      <tr><td>RD 1791/2010 (EEU)</td><td>Reconocimiento de créditos por actividades universitarias</td><td>Art. 7.1.i)</td><td>Reitera el derecho en el marco del EEU</td></tr>
+      <tr><td>RD 1791/2010 (EEU)</td><td>Conciliación entre representación estudiantil y vida académica</td><td>Arts. 21-23</td><td>La representación genera derechos de reconocimiento</td></tr>
+      <tr><td>DF 110/2003 (Estatutos UPNA)</td><td>Participación en órganos de representación</td><td>Título IV (estudiantes)</td><td>La participación en el Claustro, CG, JC genera créditos reconocibles</td></tr>
+      <tr><td>Ley 3/2022 convivencia universitaria</td><td>Actividades solidarias en el marco universitario</td><td>Arts. varios</td><td>Conexión indirecta: entorno de convivencia y programas solidarios</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- T10: Trampas -->
+<h2>T10 · Las 12 trampas más frecuentes del examen</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Afirmación trampa</th><th>¿Correcta?</th><th>Corrección exacta</th></tr></thead>
+    <tbody>
+      <tr><td>El art. 12.8 RD 1393/2007 fija un <em>máximo</em> de 6 ECTS</td><td><span class="badge br">FALSO</span></td><td>Fija un <strong>mínimo</strong> de 6 ECTS; la universidad puede ampliar</td></tr>
+      <tr><td>Los 6 créditos se añaden a los 240 del Grado, resultando 246</td><td><span class="badge br">FALSO</span></td><td>Forman <strong>parte del total</strong> del plan de estudios; no se suman por encima</td></tr>
+      <tr><td>Los créditos de extensión universitaria computan en la nota media</td><td><span class="badge br">FALSO</span></td><td>Calificación APTO/NO APTO; <strong>no computan</strong> en la nota media</td></tr>
+      <tr><td>Son créditos básicos del plan de estudios</td><td><span class="badge br">FALSO</span></td><td>Se asimilan a <strong>créditos optativos</strong></td></tr>
+      <tr><td>1 ECTS equivale a 30 horas de trabajo en la UPNA</td><td><span class="badge br">FALSO</span></td><td>En la UPNA, 1 ECTS = <strong>25 horas</strong> de trabajo del estudiante</td></tr>
+      <tr><td>La norma específica de la UPNA para este tema es la Res. 1854/2008</td><td><span class="badge br">FALSO</span></td><td>La Res. 1854/2008 es la normativa general de reconocimiento; la específica del tema es la <strong>Res. 727/2010</strong></td></tr>
+      <tr><td>La Resolución 727/2010 la aprueba el Consejo de Gobierno</td><td><span class="badge by">MATIZ</span></td><td>La firma y aprueba el <strong>Rector</strong> de la UPNA (el CG aprueba la normativa general)</td></tr>
+      <tr><td>El deporte personal no vinculado a la universidad genera reconocimiento</td><td><span class="badge br">FALSO</span></td><td>Solo las actividades deportivas vinculadas a programas o competiciones universitarias son reconocibles</td></tr>
+      <tr><td>Las prácticas extracurriculares forman parte del plan de estudios</td><td><span class="badge br">FALSO</span></td><td>Son <strong>voluntarias</strong> y están fuera del plan de estudios (las curriculares sí forman parte)</td></tr>
+      <tr><td>Los créditos se pueden incorporar en cualquier momento del grado</td><td><span class="badge by">MATIZ</span></td><td>Con carácter general, se incorporan en el <strong>último semestre</strong></td></tr>
+      <tr><td>Las actividades de extensión no constan en ningún documento oficial</td><td><span class="badge br">FALSO</span></td><td>Constan en el <strong>Suplemento Europeo al Título (SET)</strong></td></tr>
+      <tr><td>El convenio UPNA–INJ permite reconocer más de 6 ECTS</td><td><span class="badge br">FALSO</span></td><td>Sigue aplicando el límite de los <strong>6 ECTS</strong> de extensión universitaria</td></tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

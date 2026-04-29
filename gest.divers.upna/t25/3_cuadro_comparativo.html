@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Tema 25 · HTML 3 – Cuadro comparativo · Ley 3/2022 Convivencia Universitaria</title>
+  <style>
+    :root,[data-theme="light"]{
+      --bg:#f0fdf4;
+      --surface:#ffffff;
+      --surface-2:#dcfce7;
+      --surface-offset:#bbf7d0;
+      --border:#86efac;
+      --divider:#d1fae5;
+      --text:#14532d;
+      --text-muted:#166534;
+      --text-faint:#4ade80;
+      --primary:#166534;
+      --primary-light:#16a34a;
+      --accent:#0f766e;
+      --warn:#b45309;
+      --danger:#b91c1c;
+      --info:#0369a1;
+      --inverse:#ffffff;
+      --shadow-sm:0 1px 3px rgba(20,83,45,.07);
+      --shadow-md:0 6px 20px rgba(20,83,45,.09);
+    }
+    [data-theme="dark"]{
+      --bg:#0a1f0f;
+      --surface:#0f2d18;
+      --surface-2:#163b20;
+      --surface-offset:#1d4d2a;
+      --border:#2d6a40;
+      --divider:#1e4d28;
+      --text:#f0fdf4;
+      --text-muted:#86efac;
+      --text-faint:#4ade80;
+      --primary:#4ade80;
+      --primary-light:#86efac;
+      --accent:#2dd4bf;
+      --warn:#fbbf24;
+      --danger:#f87171;
+      --info:#38bdf8;
+      --inverse:#0a1f0f;
+      --shadow-sm:0 1px 3px rgba(0,0,0,.2);
+      --shadow-md:0 6px 20px rgba(0,0,0,.3);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,Arial,sans-serif;font-size:14px;line-height:1.6;background:var(--bg);color:var(--text);min-height:100vh}
+    button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+    table{width:100%;border-collapse:collapse}
+    /* ─── Layout ─── */
+    .wrap{max-width:1160px;margin:0 auto;padding:24px}
+    /* ─── Topbar ─── */
+    .topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,#166534,#16a34a);display:grid;place-items:center;box-shadow:var(--shadow-md);flex-shrink:0}
+    .logo svg{width:24px;height:24px;color:#fff}
+    .brand-text h1{font-size:clamp(1rem,.9rem + .5vw,1.3rem);line-height:1.2;color:var(--text)}
+    .brand-text p{font-size:.8rem;color:var(--text-muted);margin-top:2px}
+    .theme-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid var(--border);border-radius:999px;background:var(--surface);box-shadow:var(--shadow-sm);font-size:.8rem;white-space:nowrap}
+    /* ─── Hero ─── */
+    .hero{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px 32px;box-shadow:var(--shadow-md);margin-bottom:28px;display:grid;grid-template-columns:1.5fr 1fr;gap:24px;align-items:center}
+    .hero-left .eyebrow{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;background:var(--surface-2);border:1px solid var(--border);border-radius:999px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--primary-light);margin-bottom:12px}
+    .hero-left h2{font-size:clamp(1.2rem,1rem+1.2vw,1.9rem);line-height:1.15;margin-bottom:10px;color:var(--text)}
+    .hero-left p{font-size:.85rem;color:var(--text-muted)}
+    .pills{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .pill{background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:14px;text-align:center}
+    .pill .pv{font-size:1.4rem;font-weight:900;color:var(--primary)}
+    .pill .pk{font-size:.72rem;color:var(--text-muted);margin-top:2px}
+    /* ─── Section ─── */
+    .section{margin-bottom:26px}
+    .section-hd{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--surface-offset)}
+    .section-hd h3{font-size:.95rem;font-weight:700;color:var(--text)}
+    .section-hd span{font-size:.78rem;color:var(--text-muted)}
+    /* ─── Card ─── */
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:var(--shadow-sm);overflow:auto}
+    .dual{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .triple{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+    /* ─── Stat strip ─── */
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:26px}
+    .stat{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 12px;text-align:center;box-shadow:var(--shadow-sm)}
+    .stat .sv{font-size:1.5rem;font-weight:900;color:var(--primary)}
+    .stat .sk{font-size:.7rem;color:var(--text-muted);margin-top:3px}
+    /* ─── Tables ─── */
+    th,td{padding:9px 11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--divider)}
+    th{font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);background:var(--surface-2);font-weight:700;position:sticky;top:0;z-index:1}
+    td{font-size:.82rem;color:var(--text)}
+    tr:last-child td{border-bottom:none}
+    tr:hover td{background:var(--surface-2)}
+    /* ─── Badges ─── */
+    .badge{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:999px;font-size:.7rem;font-weight:700;border:1px solid transparent;white-space:nowrap}
+    .b-green{background:rgba(22,163,74,.12);color:#16a34a;border-color:rgba(22,163,74,.2)}
+    .b-yellow{background:rgba(180,83,9,.12);color:var(--warn);border-color:rgba(180,83,9,.2)}
+    .b-red{background:rgba(185,28,28,.12);color:var(--danger);border-color:rgba(185,28,28,.2)}
+    .b-blue{background:rgba(3,105,161,.12);color:var(--info);border-color:rgba(3,105,161,.2)}
+    .b-teal{background:rgba(15,118,110,.12);color:#0f766e;border-color:rgba(15,118,110,.2)}
+    .b-dark{background:rgba(20,83,45,.12);color:#14532d;border-color:rgba(20,83,45,.2)}
+    /* ─── Notes ─── */
+    .note{padding:10px 14px;border-radius:0 8px 8px 0;font-size:.8rem;margin-top:10px;border-left:4px solid}
+    .note-green{background:var(--surface-2);border-color:var(--primary-light);color:var(--text-muted)}
+    .note-warn{background:#fef3c7;border-color:#d97706;color:#78350f}
+    .note-red{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+    .note strong{color:var(--text)}
+    [data-theme="dark"] .note-warn{background:#451a03;color:#fde68a}
+    [data-theme="dark"] .note-red{background:#450a0a;color:#fca5a5}
+    /* ─── Flujo ─── */
+    .flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:14px;background:var(--surface-2);border-radius:10px;margin-bottom:10px}
+    .f-step{background:var(--primary);color:#fff;border-radius:8px;padding:8px 12px;font-size:.75rem;font-weight:700;text-align:center;min-width:80px}
+    .f-step.warn{background:var(--warn)}
+    .f-step.danger{background:var(--danger)}
+    .f-step.info{background:var(--info)}
+    .f-arrow{font-size:1rem;color:var(--primary);font-weight:700}
+    /* ─── Responsive ─── */
+    @media(max-width:860px){
+      .hero{grid-template-columns:1fr}
+      .dual,.triple{grid-template-columns:1fr}
+      .pills{grid-template-columns:1fr 1fr}
+    }
+    /* ─── Footer ─── */
+    footer{padding:24px;text-align:center;font-size:.75rem;color:var(--text-muted)}
+  </style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+  <!-- topbar -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/>
+          <path d="M9.5 12.5l1.7 1.7 3.6-4"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <h1>Tema 25 · HTML 3 · Cuadro comparativo con tablas operativas para examen</h1>
+        <p>Ley 3/2022, de 24 de febrero, de Convivencia Universitaria</p>
+      </div>
+    </div>
+    <button class="theme-btn" data-theme-toggle>
+      <span>Modo</span><span id="themeLabel">claro</span>
+    </button>
+  </header>
+
+  <!-- hero -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="eyebrow">Ley 3/2022 · BOE 25/02/2022 · Oposición</div>
+      <h2>Tablas operativas para fijar lo que se pregunta en examen</h2>
+      <p>Diseñado para repaso rápido: comparativas directas entre ámbitos, faltas, sanciones, mediación, procedimiento y cifras clave, con foco en las trampas habituales del tribunal.</p>
+    </div>
+    <div class="pills">
+      <div class="pill"><div class="pv">22</div><div class="pk">artículos · 3 títulos</div></div>
+      <div class="pill"><div class="pv">1954</div><div class="pk">decreto derogado</div></div>
+      <div class="pill"><div class="pv">11 · 7 · 3</div><div class="pk">conductas MG · G · L</div></div>
+      <div class="pill"><div class="pv">1 año</div><div class="pk">plazo Normas Convivencia</div></div>
+    </div>
+  </section>
+
+  <!-- stats -->
+  <div class="stats">
+    <div class="stat"><div class="sv">24/02/2022</div><div class="sk">fecha de aprobación</div></div>
+    <div class="stat"><div class="sv">26/02/2022</div><div class="sk">entrada en vigor</div></div>
+    <div class="stat"><div class="sv">3 Títulos</div><div class="sk">Preliminar · I · II</div></div>
+    <div class="stat"><div class="sv">9</div><div class="sk">principios de mediación</div></div>
+    <div class="stat"><div class="sv">6</div><div class="sk">principios disciplinarios</div></div>
+    <div class="stat"><div class="sv">8</div><div class="sk">criterios de graduación</div></div>
+  </div>
+
+  <!-- ── S1: Normas y ámbitos ── -->
+  <section class="section">
+    <div class="section-hd"><h3>Fuentes, objeto y ámbito de aplicación</h3><span>Lo primero que hay que saber</span></div>
+    <div class="card">
+      <table>
+        <thead><tr><th>Aspecto</th><th>Contenido</th><th>Clave de examen</th></tr></thead>
+        <tbody>
+          <tr><td>Denominación</td><td>Ley 3/2022, de 24 de febrero, de convivencia universitaria</td><td>BOE n.º 48 del 25/02/2022</td></tr>
+          <tr><td>Entrada en vigor</td><td>26 de febrero de 2022</td><td>Al día siguiente de su publicación en el BOE</td></tr>
+          <tr><td>Estructura</td><td>22 artículos · 3 Títulos · 4 DD.AA. · 1 D.T. · 1 D.Derog. · 4 DD.FF.</td><td>Mínima estructura: fácil de memorizar</td></tr>
+          <tr><td>Norma derogada</td><td>Decreto de 8 de septiembre de 1954 (Reglamento de Disciplina Académica)</td><td>Aprobado en "El Pazo de Meirás" durante el franquismo</td></tr>
+          <tr><td>Título competencial</td><td>Arts. 149.1.18.ª y 149.1.30.ª CE</td><td>Bases régimen AAPP + normas básicas educación</td></tr>
+          <tr><td>Objeto 1 (art. 1.1)</td><td>Bases de la convivencia universitaria; uso <strong>preferente</strong> de medios alternativos</td><td>La mediación es <strong>preferente</strong>, no obligatoria</td></tr>
+          <tr><td>Objeto 2 (art. 1.2)</td><td>Régimen disciplinario del <strong>estudiantado</strong></td><td>PDI y PAS tienen su propia normativa disciplinaria</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── S2: Quién se aplica qué ── -->
+  <section class="section">
+    <div class="section-hd"><h3>¿A quién se aplica cada título?</h3><span>La distinción más preguntada (art. 2)</span></div>
+    <div class="card">
+      <table>
+        <thead><tr><th>Título / Capítulo</th><th>Se aplica a…</th><th>Trampa frecuente</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="badge b-dark">Título Preliminar</span> Arts. 1–4</td>
+            <td><strong>Todos</strong>: estudiantado + PDI + PAS<br>También universidades privadas (Normas de Convivencia)</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><span class="badge b-teal">Título I</span> Arts. 5–7 · Mediación</td>
+            <td><strong>Todos</strong>: estudiantado + PDI + PAS</td>
+            <td>No es exclusivo de los estudiantes</td>
+          </tr>
+          <tr>
+            <td><span class="badge b-red">Título II</span> Arts. 8–22 · Régimen disciplinario</td>
+            <td><strong>Solo estudiantado</strong>, incluido el de movilidad y quien colabore en falta muy grave</td>
+            <td>Creer que también se aplica a PDI o PAS</td>
+          </tr>
+          <tr>
+            <td>Universidades privadas</td>
+            <td>Solo Título Preliminar y Título I (Normas de Convivencia con los principios de la ley)</td>
+            <td>No les aplica el Título II directamente</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── S3: Normas de Convivencia vs. acoso ── -->
+  <section class="section">
+    <div class="section-hd"><h3>Normas de Convivencia y protocolo de acoso</h3><span>Arts. 3–4</span></div>
+    <div class="dual">
+      <div class="card">
+        <table>
+          <thead><tr><th>Art. 3 — Normas de Convivencia</th><th>Detalle</th></tr></thead>
+          <tbody>
+            <tr><td>¿Quién las aprueba?</td><td>Todas las universidades (públicas y privadas)</td></tr>
+            <tr><td>¿Para quién son obligatorias?</td><td>Para todos los miembros de la comunidad universitaria</td></tr>
+            <tr><td>¿Cómo se elaboran?</td><td>Con participación y audiencia de todos los sectores</td></tr>
+            <tr><td>¿Qué garantizan?</td><td>Libertad de expresión, reunión, asociación, manifestación y huelga</td></tr>
+            <tr><td>Plazo de aprobación (DA 4.ª)</td><td><strong>Un año</strong> desde la entrada en vigor (antes del 26/02/2023)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <table>
+          <thead><tr><th>Art. 4 — Violencia, discriminación y acoso</th><th>Detalle</th></tr></thead>
+          <tbody>
+            <tr><td>Enfoque obligatorio</td><td><strong>Género con perspectiva interseccional</strong></td></tr>
+            <tr><td>Prevención primaria</td><td>Sensibilización, concienciación y formación</td></tr>
+            <tr><td>Prevención secundaria</td><td>Intervenir sobre factores de riesgo</td></tr>
+            <tr><td>Medidas procedimentales</td><td>Procedimientos específicos de quejas y denuncias</td></tr>
+            <tr><td>Medidas de apoyo</td><td>Provisionales para evitar daños + acompañamiento psicológico y jurídico a víctimas</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── S4: Mediación ── -->
+  <section class="section">
+    <div class="section-hd"><h3>Mediación y Comisión de Convivencia</h3><span>Título I · Arts. 5–7</span></div>
+    <div class="card" style="margin-bottom:14px">
+      <table>
+        <thead><tr><th>Principio de mediación (art. 5)</th><th>Significado operativo</th></tr></thead>
+        <tbody>
+          <tr><td><span class="badge b-green">Voluntariedad</span></td><td>Las partes deben querer someterse; no es obligatoria</td></tr>
+          <tr><td><span class="badge b-green">Confidencialidad</span></td><td>Lo que se diga no puede usarse en el disciplinario si fracasa</td></tr>
+          <tr><td><span class="badge b-green">Equidad</span></td><td>Las partes están en pie de igualdad durante el proceso</td></tr>
+          <tr><td><span class="badge b-green">Imparcialidad</span></td><td>El mediador/a no tiene interés en el resultado</td></tr>
+          <tr><td><span class="badge b-green">Buena fe y respeto mutuo</span></td><td>Actuar con lealtad y sin ánimo de perjudicar</td></tr>
+          <tr><td><span class="badge b-green">Prohibición de represalias</span></td><td>No puede perjudicarse a quien participe en la mediación</td></tr>
+          <tr><td><span class="badge b-green">Flexibilidad</span></td><td>Adaptable a las necesidades del conflicto</td></tr>
+          <tr><td><span class="badge b-green">Claridad</span></td><td>El proceso debe ser comprensible para todas las partes</td></tr>
+          <tr><td><span class="badge b-green">Transparencia</span></td><td>Las partes conocen el proceso y sus fases</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="dual">
+      <div class="card">
+        <table>
+          <thead><tr><th colspan="2">Art. 6 — Comisión de Convivencia</th></tr></thead>
+          <tbody>
+            <tr><td>Composición</td><td><strong>Paritaria</strong> entre los tres sectores: estudiantado + PDI + PAS</td></tr>
+            <tr><td>Funciones</td><td>Aprobar o no el inicio de la mediación; gestionar el proceso</td></tr>
+            <tr><td>Organización interna</td><td>La regula cada universidad (nombramiento, incompatibilidades, abstención y recusación)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <table>
+          <thead><tr><th colspan="2">Flujo mediación ↔ procedimiento disciplinario</th></tr></thead>
+          <tbody>
+            <tr><td>¿Cuándo puede usarse?</td><td><strong>Antes y durante</strong> el procedimiento disciplinario</td></tr>
+            <tr><td>Si se activa la mediación</td><td>Comisión aprueba → disciplinario <strong>suspendido</strong></td></tr>
+            <tr><td>Si mediación tiene éxito</td><td>Conflicto resuelto sin sanción</td></tr>
+            <tr><td>Si mediación fracasa</td><td>Disciplinario <strong>se reanuda</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── S5: Potestad disciplinaria ── -->
+  <section class="section">
+    <div class="section-hd"><h3>Potestad disciplinaria: órganos y principios</h3><span>Art. 8</span></div>
+    <div class="dual">
+      <div class="card">
+        <table>
+          <thead><tr><th>Órgano</th><th>Función</th><th>Garantía</th></tr></thead>
+          <tbody>
+            <tr><td>Rector/a</td><td>Titular de la potestad disciplinaria; puede delegarla (Ley 40/2015)</td><td>Órgano máximo de decisión</td></tr>
+            <tr><td>Instructor/a</td><td>Designado por el rector; dirige la instrucción</td><td>Independencia, autonomía y transparencia</td></tr>
+            <tr><td>Órgano sancionador</td><td>Dicta la resolución; puede apartarse de la propuesta del instructor</td><td>Si se aparta, debe motivarlo; se atiene a hechos probados</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-green"><strong>Separación obligatoria:</strong> instrucción y resolución deben recaer en órganos DISTINTOS (art. 18).</div>
+      </div>
+      <div class="card">
+        <table>
+          <thead><tr><th>#</th><th>Principio de la potestad disciplinaria (art. 8)</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Legalidad y tipicidad de faltas y sanciones</td></tr>
+            <tr><td>2</td><td>Irretroactividad de normas no favorables / retroactividad de las favorables</td></tr>
+            <tr><td>3</td><td>Responsabilidad</td></tr>
+            <tr><td>4</td><td>Proporcionalidad</td></tr>
+            <tr><td>5</td><td>Prescripción de faltas y sanciones</td></tr>
+            <tr><td>6</td><td>Garantía del procedimiento</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-warn"><strong>Non bis in idem (art. 8.5):</strong> si hay identidad de sujeto, hecho y fundamento, no cabe doble sanción. Si aparecen indicios de delito → suspensión y comunicación al <strong>Ministerio Fiscal</strong>.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── S6: Faltas ── -->
+  <section class="section">
+    <div class="section-hd"><h3>Clasificación de faltas: muy graves, graves y leves</h3><span>Arts. 11–13</span></div>
+    <div class="card">
+      <table>
+        <thead><tr><th>Tipo</th><th>N.º</th><th>Letras</th><th>Conductas más preguntadas</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="badge b-red">Muy graves</span></td>
+            <td>11</td>
+            <td>a – k</td>
+            <td>
+              a) Novatadas vejatorias · b) Acoso/violencia grave · c) Acoso sexual<br>
+              d) Discriminación · e) Falsificación documentos académicos<br>
+              f) Destruir patrimonio histórico irreparablemente<br>
+              <strong>g) Plagiar TFG/TFM/Tesis o fraude académico en trabajos fin de estudios</strong><br>
+              h) Incumplir normas salud pública · i) Suplantar / ser suplantado<br>
+              j) Impedir procesos electorales · k) Condena firme por delito doloso
+            </td>
+          </tr>
+          <tr>
+            <td><span class="badge b-yellow">Graves</span></td>
+            <td>7</td>
+            <td>a – g</td>
+            <td>
+              a) Apoderarse de exámenes/pruebas · b) Deteriorar gravemente patrimonio<br>
+              c) Impedir actividades docencia/investigación/transferencia<br>
+              <strong>d) Fraude académico en evaluación ordinaria</strong><br>
+              e) Uso indebido de propiedad intelectual · f) Incumplir normas seguridad y salud<br>
+              g) Acceso no autorizado a sistemas informáticos
+            </td>
+          </tr>
+          <tr>
+            <td><span class="badge b-green">Leves</span></td>
+            <td>3</td>
+            <td>a – c</td>
+            <td>
+              a) Acceder a instalaciones sin autorización<br>
+              b) Usar servicios incumpliendo requisitos de general conocimiento<br>
+              c) Deteriorar bienes del patrimonio (sin llegar a falta grave)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note note-warn"><strong>Diferencia clave plagio:</strong> Plagio en TFG / TFM / Tesis Doctoral → falta <strong>MUY GRAVE</strong> (art. 11.g). Fraude académico en evaluación ordinaria → falta <strong>GRAVE</strong> (art. 12.d). Muy preguntado en test.</div>
+    </div>
+  </section>
+
+  <!-- ── S7: Sanciones ── -->
+  <section class="section">
+    <div class="section-hd"><h3>Sanciones y sus límites</h3><span>Art. 14</span></div>
+    <div class="card">
+      <table>
+        <thead><tr><th>Tipo de falta</th><th>Sanción prevista</th><th>Límites y matices</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="badge b-red">Muy grave</span></td>
+            <td>a) Expulsión de <strong>2 meses a 3 años</strong><br>b) Pérdida de derechos de matrícula parcial (curso o semestre)</td>
+            <td>La expulsión consta en el expediente académico hasta su total cumplimiento</td>
+          </tr>
+          <tr>
+            <td><span class="badge b-yellow">Grave</span></td>
+            <td>a) Expulsión de <strong>hasta 1 mes</strong><br>b) Pérdida de la convocatoria ordinaria del semestre / asignatura</td>
+            <td>La expulsión <strong>NO puede aplicarse</strong> en períodos de evaluación ni de matriculación<br>La pérdida de matrícula <strong>NO afecta a los derechos de becas</strong></td>
+          </tr>
+          <tr>
+            <td><span class="badge b-green">Leve</span></td>
+            <td><strong>Amonestación privada</strong></td>
+            <td>Única sanción posible para las faltas leves</td>
+          </tr>
+          <tr>
+            <td><span class="badge b-teal">Sustitutivas</span></td>
+            <td>Medidas de carácter educativo o recuperador</td>
+            <td>Solo para faltas <strong>GRAVES</strong>. Excluidas si hay fraude en evaluación. Nunca funciones del RPT.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── S8: Graduación de sanciones ── -->
+  <section class="section">
+    <div class="section-hd"><h3>Criterios de graduación de las sanciones</h3><span>Art. 15 — 8 criterios</span></div>
+    <div class="card">
+      <table>
+        <thead><tr><th>#</th><th>Criterio</th><th>Relevancia práctica</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Intencionalidad o reiteración</td><td>Agrava la sanción</td></tr>
+          <tr><td>2</td><td>Naturaleza de los perjuicios causados</td><td>Mayor daño = mayor sanción</td></tr>
+          <tr><td>3</td><td>Ánimo de lucro</td><td>Agrava la conducta</td></tr>
+          <tr><td>4</td><td>Reconocimiento de responsabilidad previo al procedimiento</td><td>Atenúa la sanción</td></tr>
+          <tr><td>5</td><td>Reparación del daño previa al procedimiento</td><td>Atenúa la sanción</td></tr>
+          <tr><td>6</td><td>Circunstancias personales, económicas, de salud, familiares o sociales del infractor</td><td>Pueden atenuar</td></tr>
+          <tr><td>7</td><td>Grado de participación en los hechos</td><td>Responsabilidad parcial atenúa</td></tr>
+          <tr><td>8</td><td>Haber actuado por causa de violencia, discriminación o acoso</td><td>Relevante cuando la víctima se defiende</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── S9: Procedimiento ── -->
+  <section class="section">
+    <div class="section-hd"><h3>Procedimiento disciplinario</h3><span>Arts. 17–22</span></div>
+    <div class="dual">
+      <div class="card">
+        <table>
+          <thead><tr><th>Aspecto</th><th>Regla</th></tr></thead>
+          <tbody>
+            <tr><td>Inicio</td><td>De oficio o por denuncia</td></tr>
+            <tr><td>Ley aplicable</td><td><strong>Ley 39/2015</strong> del Procedimiento Administrativo Común</td></tr>
+            <tr><td>Separación de funciones</td><td>Instrucción y resolución en órganos DISTINTOS</td></tr>
+            <tr><td>Asistencia del infractor</td><td>Derecho a ser asistido por persona de su elección</td></tr>
+            <tr><td>Resolución</td><td>Obligatoriamente motivada</td></tr>
+            <tr><td>Medidas provisionales</td><td>Art. 21: durante instrucción, conforme a Ley 39/2015</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <table>
+          <thead><tr><th>Extinción de la responsabilidad (art. 17)</th></tr></thead>
+          <tbody>
+            <tr><td>Cumplimiento de la sanción</td></tr>
+            <tr><td>Fallecimiento</td></tr>
+            <tr><td>Prescripción de la falta o de la sanción</td></tr>
+            <tr><td>Amnistía o indulto</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-green" style="margin-top:10px"><strong>Disposición Transitoria Única:</strong> A los procedimientos iniciados antes de la entrada en vigor, se aplican las faltas y sanciones de la nueva ley si resultan más favorables (retroactividad favorable).</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── S10: Trampas frecuentes ── -->
+  <section class="section">
+    <div class="section-hd"><h3>Trampas frecuentes en el examen</h3><span>Lee antes del test</span></div>
+    <div class="card">
+      <table>
+        <thead><tr><th>Afirmación</th><th>¿Correcta?</th><th>Corrección exacta</th></tr></thead>
+        <tbody>
+          <tr><td>El régimen disciplinario se aplica a todo el personal universitario</td><td><span class="badge b-red">No</span></td><td>Solo al estudiantado (Título II). PDI y PAS tienen su propio régimen</td></tr>
+          <tr><td>El Título I de mediación es solo para estudiantes</td><td><span class="badge b-red">No</span></td><td>Los Títulos Preliminar y I se aplican a todos: estudiantado, PDI y PAS</td></tr>
+          <tr><td>La Ley 3/2022 entró en vigor el 24 de febrero de 2022</td><td><span class="badge b-red">No</span></td><td>Aprobada el 24/02, publicada en el BOE el 25/02, vigente desde el 26/02/2022</td></tr>
+          <tr><td>Todo plagio es siempre falta muy grave</td><td><span class="badge b-yellow">Matiz</span></td><td>Plagio en TFG/TFM/Tesis → falta MUY GRAVE. Fraude en evaluación ordinaria → falta GRAVE</td></tr>
+          <tr><td>La expulsión por falta grave puede imponerse durante los exámenes</td><td><span class="badge b-red">No</span></td><td>No puede aplicarse en períodos de evaluación ni de matriculación</td></tr>
+          <tr><td>La pérdida de matrícula puede afectar a las becas</td><td><span class="badge b-red">No</span></td><td>La pérdida de matrícula no puede afectar a los derechos de becas (art. 14.4)</td></tr>
+          <tr><td>El instructor impone directamente la sanción</td><td><span class="badge b-red">No</span></td><td>El instructor instruye y propone; el órgano sancionador resuelve, pudiendo apartarse motivadamente</td></tr>
+          <tr><td>La Comisión de Convivencia solo tiene estudiantes y PDI</td><td><span class="badge b-red">No</span></td><td>Es paritaria entre los tres sectores: estudiantado, PDI y PAS (art. 6)</td></tr>
+          <tr><td>Las medidas sustitutivas son posibles para cualquier falta</td><td><span class="badge b-red">No</span></td><td>Solo para faltas GRAVES, y quedan excluidas si hay fraude académico en evaluación. Nunca funciones del RPT</td></tr>
+          <tr><td>Las universidades privadas no están sujetas a la ley</td><td><span class="badge b-yellow">Matiz</span></td><td>Sí deben aprobar Normas de Convivencia. Solo el Título II (disciplina) se aplica exclusivamente a las públicas</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</div>
+<footer>Archivo HTML 3 preparado para estudio visual y repaso operativo del Tema 25 · Ley 3/2022 de Convivencia Universitaria</footer>
+
+<script>
+(function(){
+  var root=document.documentElement,label=document.getElementById('themeLabel');
+  var theme=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+  root.setAttribute('data-theme',theme);
+  label.textContent=theme==='dark'?'oscuro':'claro';
+  document.querySelector('[data-theme-toggle]').addEventListener('click',function(){
+    theme=theme==='dark'?'light':'dark';
+    root.setAttribute('data-theme',theme);
+    label.textContent=theme==='dark'?'oscuro':'claro';
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Tema 26 · HTML 3 – Cuadro comparativo · RD 1791/2010 Estatuto del Estudiante Universitario</title>
+  <style>
+    :root,[data-theme="light"]{
+      --bg:#f0f7ff;--surface:#fff;--surface-2:#e0eefe;--surface-off:#c7dffe;
+      --border:#93c5fd;--divider:#dbeafe;--text:#1e3a5f;--text-muted:#1d4ed8;
+      --text-faint:#60a5fa;--primary:#1e40af;--primary-l:#2563eb;
+      --accent:#0369a1;--warn:#b45309;--danger:#b91c1c;--info:#0f766e;
+      --inv:#fff;--sh-sm:0 1px 3px rgba(30,58,143,.07);--sh-md:0 6px 20px rgba(30,58,143,.09);
+    }
+    [data-theme="dark"]{
+      --bg:#0a1628;--surface:#0f1f3d;--surface-2:#162a50;--surface-off:#1e3a68;
+      --border:#2d5299;--divider:#1e3565;--text:#e0eefe;--text-muted:#93c5fd;
+      --text-faint:#60a5fa;--primary:#60a5fa;--primary-l:#93c5fd;
+      --accent:#38bdf8;--warn:#fbbf24;--danger:#f87171;--info:#34d399;
+      --inv:#0a1628;--sh-sm:0 1px 3px rgba(0,0,0,.2);--sh-md:0 6px 20px rgba(0,0,0,.3);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,Arial,sans-serif;font-size:14px;line-height:1.6;background:var(--bg);color:var(--text);min-height:100vh}
+    button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+    table{width:100%;border-collapse:collapse}
+    .wrap{max-width:1180px;margin:0 auto;padding:24px}
+    /* topbar */
+    .topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,#1e3a5f,#2563eb);display:grid;place-items:center;box-shadow:var(--sh-md);flex-shrink:0}
+    .logo svg{width:24px;height:24px;color:#fff}
+    .brand-text h1{font-size:clamp(.95rem,.85rem + .5vw,1.25rem);line-height:1.25;color:var(--text)}
+    .brand-text p{font-size:.8rem;color:var(--text-muted);margin-top:2px}
+    .theme-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid var(--border);border-radius:999px;background:var(--surface);box-shadow:var(--sh-sm);font-size:.8rem;white-space:nowrap}
+    /* hero */
+    .hero{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:26px 30px;box-shadow:var(--sh-md);margin-bottom:26px;display:grid;grid-template-columns:1.6fr 1fr;gap:24px;align-items:center}
+    .hero-left .eyebrow{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;background:var(--surface-2);border:1px solid var(--border);border-radius:999px;font-size:.73rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--primary-l);margin-bottom:12px}
+    .hero-left h2{font-size:clamp(1.1rem,.95rem+1.1vw,1.8rem);line-height:1.15;margin-bottom:10px}
+    .hero-left p{font-size:.84rem;color:var(--text-muted)}
+    .pills{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .pill{background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:13px;text-align:center}
+    .pill .pv{font-size:1.35rem;font-weight:900;color:var(--primary)}
+    .pill .pk{font-size:.72rem;color:var(--text-muted);margin-top:2px}
+    /* stats */
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:10px;margin-bottom:26px}
+    .stat{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:13px;text-align:center;box-shadow:var(--sh-sm)}
+    .stat .sv{font-size:1.4rem;font-weight:900;color:var(--primary)}
+    .stat .sk{font-size:.7rem;color:var(--text-muted);margin-top:3px}
+    /* section */
+    .section{margin-bottom:26px}
+    .section-hd{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--surface-off)}
+    .section-hd h3{font-size:.94rem;font-weight:700}
+    .section-hd span{font-size:.78rem;color:var(--text-muted)}
+    /* card */
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:var(--sh-sm);overflow:auto}
+    .dual{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .triple{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+    /* tables */
+    th,td{padding:9px 11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--divider)}
+    th{font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);background:var(--surface-2);font-weight:700;position:sticky;top:0;z-index:1}
+    th.td{background:rgba(185,28,28,.15);color:var(--danger)}
+    th.tg{background:rgba(15,118,110,.15);color:var(--info)}
+    th.tp{background:rgba(180,83,9,.15);color:var(--warn)}
+    th.tv{background:var(--surface-2);color:var(--text-muted)}
+    td{font-size:.82rem}
+    tr:last-child td{border-bottom:none}
+    tr:hover td{background:var(--surface-2)}
+    /* badges */
+    .badge{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:999px;font-size:.7rem;font-weight:700;border:1px solid transparent;white-space:nowrap}
+    .b-blue{background:rgba(37,99,235,.12);color:var(--primary-l);border-color:rgba(37,99,235,.22)}
+    .b-green{background:rgba(15,118,110,.12);color:var(--info);border-color:rgba(15,118,110,.22)}
+    .b-red{background:rgba(185,28,28,.12);color:var(--danger);border-color:rgba(185,28,28,.22)}
+    .b-yellow{background:rgba(180,83,9,.12);color:var(--warn);border-color:rgba(180,83,9,.22)}
+    .b-dark{background:var(--surface-2);color:var(--text);border-color:var(--border)}
+    /* notes */
+    .note{padding:10px 14px;border-radius:0 8px 8px 0;font-size:.8rem;margin-top:10px;border-left:4px solid}
+    .note-blue{background:var(--surface-2);border-color:var(--primary-l);color:var(--text-muted)}
+    .note-warn{background:#fef3c7;border-color:#d97706;color:#78350f}
+    .note-red{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+    .note-green{background:#ecfdf5;border-color:#059669;color:#065f46}
+    [data-theme="dark"] .note-warn{background:#451a03;color:#fde68a}
+    [data-theme="dark"] .note-red{background:#450a0a;color:#fca5a5}
+    [data-theme="dark"] .note-green{background:#064e3b;color:#6ee7b7}
+    /* flow */
+    .flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:14px;background:var(--surface-2);border-radius:10px;margin-bottom:10px}
+    .f-step{border-radius:8px;padding:8px 12px;font-size:.75rem;font-weight:700;text-align:center;min-width:85px;color:#fff}
+    .fs-dark{background:#1e3a5f}.fs-blue{background:#2563eb}.fs-teal{background:#0f766e}.fs-warn{background:#d97706}.fs-red{background:#b91c1c}.fs-purple{background:#7c3aed}
+    .f-arrow{font-size:1rem;color:var(--primary);font-weight:700}
+    /* responsive */
+    @media(max-width:860px){.hero{grid-template-columns:1fr}.dual,.triple{grid-template-columns:1fr}.pills{grid-template-columns:1fr 1fr}}
+    footer{padding:24px;text-align:center;font-size:.75rem;color:var(--text-muted)}
+  </style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <h1>Tema 26 · HTML 3 · Cuadro comparativo con tablas operativas para examen</h1>
+        <p>Real Decreto 1791/2010, de 30 de diciembre · Estatuto del Estudiante Universitario</p>
+      </div>
+    </div>
+    <button class="theme-btn" data-theme-toggle><span>Modo</span><span id="themeLabel">claro</span></button>
+  </header>
+
+  <section class="hero">
+    <div class="hero-left">
+      <div class="eyebrow">RD 1791/2010 · BOE 31/12/2010 · Oposición</div>
+      <h2>Tablas operativas para fijar lo que se pregunta en examen</h2>
+      <p>Comparativas directas entre ciclos, derechos, deberes, movilidad, tutorías, evaluación, representación y Consejo de Estudiantes. Incluye trampas habituales del tribunal.</p>
+    </div>
+    <div class="pills">
+      <div class="pill"><div class="pv">77</div><div class="pk">artículos · 11 capítulos</div></div>
+      <div class="pill"><div class="pv">1/1/2011</div><div class="pk">entrada en vigor</div></div>
+      <div class="pill"><div class="pv">a – x</div><div class="pk">derechos comunes art. 7</div></div>
+      <div class="pill"><div class="pv">Cap. XI</div><div class="pk">único bloque no básico</div></div>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="stat"><div class="sv">30/12/2010</div><div class="sk">fecha de aprobación</div></div>
+    <div class="stat"><div class="sv">149.1.30.ª CE</div><div class="sk">título competencial</div></div>
+    <div class="stat"><div class="sv">Art. 46.5 LOU</div><div class="sk">habilitación legal</div></div>
+    <div class="stat"><div class="sv">15</div><div class="sk">deberes (art. 13, a–o)</div></div>
+    <div class="stat"><div class="sv">1 año</div><div class="sk">DA 2.ª: ley disciplinaria</div></div>
+    <div class="stat"><div class="sv">6 meses</div><div class="sk">DF 2.ª: reglamento Consejo</div></div>
+  </div>
+
+  <!-- S1: Identificación -->
+  <section class="section">
+    <div class="section-hd"><h3>Identificación, origen y estructura</h3><span>Lo primero que pregunta el tribunal</span></div>
+    <div class="card">
+      <table>
+        <thead><tr><th>Aspecto</th><th>Contenido</th><th>Clave de examen</th></tr></thead>
+        <tbody>
+          <tr><td>Denominación</td><td>Real Decreto 1791/2010, de 30 de diciembre</td><td>BOE n.º 318 del 31/12/2010</td></tr>
+          <tr><td>Entrada en vigor</td><td>1 de enero de 2011</td><td>Al día siguiente de su publicación</td></tr>
+          <tr><td>Habilitación legal</td><td>Art. 46.5 LOU (LO 6/2001), modificado por LOMLOU (LO 4/2007)</td><td>El art. 46.5 LOU ordena expresamente al Gobierno aprobar el Estatuto</td></tr>
+          <tr><td>Título competencial</td><td>Art. 149.1.30.ª CE</td><td>Normas básicas para el desarrollo del art. 27 CE</td></tr>
+          <tr><td>Carácter básico</td><td>Toda la norma, excepto el Capítulo XI</td><td>El único bloque no básico es el Capítulo XI (Consejo estatal)</td></tr>
+          <tr><td>Estructura</td><td>77 artículos · 11 Capítulos · 4 DD.AA. · 4 DD.FF.</td><td>Capítulos I a XI</td></tr>
+          <tr><td>Ámbito de aplicación</td><td>Universidades públicas y privadas + centros propios y adscritos + formación continua</td><td>NO solo universidades públicas</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- S2: Objeto y ámbito -->
+  <section class="section">
+    <div class="section-hd"><h3>Objeto y principios generales</h3><span>Arts. 1–6</span></div>
+    <div class="card">
+      <table>
+        <thead><tr><th>Artículo</th><th>Contenido</th><th>Trampa / matiz</th></tr></thead>
+        <tbody>
+          <tr><td><span class="badge b-blue">Art. 1</span> Doble objeto</td><td>1. Desarrollar derechos y deberes del estudiantado<br>2. Crear el <strong>Consejo de Estudiantes Universitario del Estado</strong></td><td>Ambos objetos son inseparables</td></tr>
+          <tr><td><span class="badge b-blue">Art. 1.2</span> Ámbito</td><td>Universidades públicas y privadas; centros propios, adscritos y de formación continua</td><td>Creer que solo aplica a públicas → FALSO</td></tr>
+          <tr><td><span class="badge b-blue">Art. 2.1</span> Igualdad</td><td>Todos los estudiantes tienen garantizados los mismos derechos y deberes con independencia del centro, enseñanzas o etapa vital</td><td>No hay distinción por tipo de universidad</td></tr>
+          <tr><td><span class="badge b-blue">Art. 2.2</span> Corresponsabilidad</td><td><em>«Reciprocidad en el ejercicio de los derechos y libertades y el respeto de las personas y de la institución universitaria como bien común»</em></td><td>Definición textual muy preguntada</td></tr>
+          <tr><td><span class="badge b-blue">Art. 4</span> No discriminación</td><td>Nacimiento · racial/étnico · sexo · religión · convicción · edad · discapacidad · nacionalidad · enfermedad · orientación sexual e identidad de género · socioeconómica · lingüística · política/sindical · apariencia · obesidad · cualquier otra condición</td><td>Lista larga; el tribunal pregunta si "apariencia" o "obesidad" están incluidas → SÍ</td></tr>
+          <tr><td><span class="badge b-blue">Art. 6</span> Reconocimiento</td><td>Reconocimiento de conocimientos, competencias o experiencia profesional previa; Suplemento Europeo al Título; Marco de Cualificaciones</td><td>El SET acredita la movilidad y el reconocimiento</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- S3: Derechos por ciclo -->
+  <section class="section">
+    <div class="section-hd"><h3>Derechos por ciclo formativo</h3><span>Arts. 7–11 · La comparativa más preguntada</span></div>
+    <div class="card">
+      <table>
+        <thead><tr><th>Ciclo / Art.</th><th>Derechos específicos más preguntados</th><th>Peculiaridad clave</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="badge b-dark">Comunes · Art. 7</span></td>
+            <td>b) Igualdad en acceso, ingreso, permanencia · d) Conciliación estudios/vida laboral · g) Criterios de evaluación previos · h) Evaluación objetiva y continua si posible · i) Reconocimiento académico por actividades · k) Movilidad · o) Portabilidad de becas · r) Libertad expresión/reunión/asociación · s) Representación · w) Trato no sexista · x) Autoría y propiedad intelectual de trabajos</td>
+            <td>Son de <strong>todos</strong> los estudiantes, sin distinción de ciclo</td>
+          </tr>
+          <tr>
+            <td><span class="badge b-blue">Grado · Art. 8</span></td>
+            <td>e) Tutoría en primer año y al concluir · f) Prácticas curriculares y extracurriculares · g) Tutela efectiva en TFG · h) Propiedad intelectual del TFG · i) Movilidad preferentemente en la <strong>segunda mitad</strong></td>
+            <td>La movilidad se sitúa en la segunda mitad de la carrera</td>
+          </tr>
+          <tr>
+            <td><span class="badge b-blue">Máster · Art. 9</span></td>
+            <td>g) Tutela efectiva en TFM · h) Propiedad intelectual del TFM · i) Movilidad: <strong>1 semestre</strong> (60–90 créditos) o <strong>1 curso completo</strong> (90–120 créditos)</td>
+            <td>La duración de la movilidad depende de los créditos del máster</td>
+          </tr>
+          <tr>
+            <td><span class="badge b-blue">Doctorado · Art. 10</span></td>
+            <td>b) Derecho a <strong>tutor</strong> (orienta proceso formativo) y a <strong>director</strong> –y codirector– (supervisa tesis) · f) Propiedad intelectual de la tesis · g) Considerado <strong>personal investigador en formación</strong> a efectos de representación en órganos de gobierno</td>
+            <td>Tutor ≠ Director: son funciones distintas (y personas distintas si es necesario)</td>
+          </tr>
+          <tr>
+            <td><span class="badge b-blue">Form. Continua · Art. 11</span></td>
+            <td>a) Admisión flexible · b) Reconocimiento de formación previa y experiencia laboral · c) Carta de servicios de la universidad con oferta detallada · d) Conciliación con vida laboral</td>
+            <td>Carta de servicios: tipo, duración, validez académica y medios disponibles</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- S4: Deberes -->
+  <section class="section">
+    <div class="section-hd"><h3>Deberes de los estudiantes</h3><span>Art. 13 — 15 deberes (a–o)</span></div>
+    <div class="card">
+      <table>
+        <thead><tr><th>Letra</th><th>Deber</th><th>Relevancia práctica</th></tr></thead>
+        <tbody>
+          <tr><td>a)</td><td>El estudio y la participación activa en actividades académicas</td><td>Deber nuclear: el estudiante no es receptor pasivo</td></tr>
+          <tr><td>b)</td><td>Respetar a todos los miembros de la comunidad universitaria</td><td>Base del régimen de convivencia</td></tr>
+          <tr><td>c)</td><td>Cuidar y usar debidamente bienes e instalaciones universitarias</td><td>—</td></tr>
+          <tr><td>d)</td><td>Abstenerse de procedimientos fraudulentos en evaluaciones, trabajos y documentos oficiales</td><td><strong>Antecedente directo de las faltas de la Ley 3/2022</strong></td></tr>
+          <tr><td>e)</td><td>Participar responsablemente en actividades universitarias</td><td>—</td></tr>
+          <tr><td>f)</td><td>Conocer y cumplir Estatutos y normas universitarias</td><td>—</td></tr>
+          <tr><td>g)</td><td>Cumplir normas de seguridad y salud en laboratorios, talleres y prácticas</td><td>—</td></tr>
+          <tr><td>h)</td><td>Respetar el nombre, los símbolos y emblemas de la universidad</td><td>—</td></tr>
+          <tr><td>i)</td><td>Respetar los actos académicos</td><td>—</td></tr>
+          <tr><td>j)</td><td>Ejercer y promover activamente la no discriminación en todas sus formas</td><td>Recoge la misma lista de causas que el art. 4</td></tr>
+          <tr><td>k)</td><td>Si es representante: ejercer las responsabilidades del cargo</td><td rowspan="3">Las tres obligaciones del representante estudiantil</td></tr>
+          <tr><td>l)</td><td>Informar a sus representados sobre temas de su competencia</td></tr>
+          <tr><td>m)</td><td>Participar activamente en los órganos colegiados de los que forme parte</td></tr>
+          <tr><td>n)</td><td>Contribuir a la mejora de los fines y funcionamiento de la universidad</td><td>—</td></tr>
+          <tr><td>o)</td><td>Cualquier otro que se deriven de las normas universitarias y del Estatuto</td><td>Cláusula de cierre</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- S5: Movilidad y evaluación -->
+  <section class="section">
+    <div class="section-hd"><h3>Movilidad, tutorías y evaluación</h3><span>Capítulos III–VI · Arts. 14–26</span></div>
+    <div class="dual">
+      <div class="card">
+        <table>
+          <thead><tr><th>Movilidad · Arts. 16–18</th><th>Regla</th></tr></thead>
+          <tbody>
+            <tr><td>Grado</td><td>Preferentemente en la <strong>segunda mitad</strong> de los estudios</td></tr>
+            <tr><td>Máster 60–90 ECTS</td><td>Hasta <strong>1 semestre</strong></td></tr>
+            <tr><td>Máster 90–120 ECTS</td><td>Hasta <strong>1 curso completo</strong></td></tr>
+            <tr><td>Tutor docente</td><td>Asignado para elaborar el <strong>contrato de estudios</strong></td></tr>
+            <tr><td>Contrato</td><td>Carácter <strong>vinculante</strong></td></tr>
+            <tr><td>Reconocimiento</td><td>Por <strong>valor formativo conjunto</strong>, no por identidad de asignaturas</td></tr>
+            <tr><td>Registro</td><td>Consta en el <strong>Suplemento Europeo al Título (SET)</strong></td></tr>
+            <tr><td>Calificaciones</td><td>Tablas de correspondencia en cada convenio bilateral</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-warn">⚠ TRAMPA: el reconocimiento en movilidad NO exige identidad entre asignaturas; atiende al valor formativo conjunto (art. 17.3).</div>
+      </div>
+      <div class="card">
+        <table>
+          <thead><tr><th>Tutorías · Arts. 19–22</th><th>Regla</th></tr></thead>
+          <tbody>
+            <tr><td>Tutoría de titulación (arts. 19–20)</td><td>Orientación transversal sobre toda la titulación: objetivos, estructura, metodología, evaluación, inserción laboral</td></tr>
+            <tr><td>Tutoría de materia (art. 21)</td><td>Asistencia individual en cada asignatura; los <strong>departamentos</strong> velan por su cumplimiento</td></tr>
+            <tr><td>Discapacidad (art. 22)</td><td>Tutorías en lugares accesibles; posibles tutores permanentes durante toda la carrera</td></tr>
+          </tbody>
+        </table>
+        <table style="margin-top:12px">
+          <thead><tr><th>Evaluación · Arts. 23–26</th><th>Regla</th></tr></thead>
+          <tbody>
+            <tr><td>Planes docentes (art. 23)</td><td>Conocerse <strong>antes de la apertura del plazo de matrícula</strong></td></tr>
+            <tr><td>Tipo de evaluación (art. 24)</td><td>Objetiva y siempre que sea posible <strong>continua</strong></td></tr>
+            <tr><td>Criterios (art. 24)</td><td>Conocidos antes del inicio del período formativo</td></tr>
+            <tr><td>Revisión (art. 24)</td><td>Derecho a revisión de calificaciones</td></tr>
+            <tr><td>Discapacidad (art. 25)</td><td>Adaptaciones metodológicas y temporales; sin rebajar el nivel académico</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6: Becas y prácticas -->
+  <section class="section">
+    <div class="section-hd"><h3>Becas, ayudas y prácticas externas</h3><span>Capítulo VII · Arts. 27–35</span></div>
+    <div class="card">
+      <table>
+        <thead><tr><th>Materia</th><th>Artículo</th><th>Regla clave</th></tr></thead>
+        <tbody>
+          <tr><td>Becas y ayudas al estudio</td><td>Art. 27–28</td><td>Principios: <strong>equidad · mérito · progresividad</strong></td></tr>
+          <tr><td>Portabilidad de becas</td><td>Art. 7.o)</td><td>Las becas se disfrutan en todo el territorio nacional</td></tr>
+          <tr><td>Residencias y alojamiento</td><td>Art. 29</td><td>Acceso a residencias y alojamientos universitarios</td></tr>
+          <tr><td>Prácticas externas</td><td>Arts. 30–31</td><td>Curriculares y extracurriculares; pueden hacerse en entidades externas o en la propia universidad</td></tr>
+          <tr><td>Garantía de las prácticas</td><td>Art. 30</td><td>No pueden usarse para <strong>sustituir relaciones laborales</strong></td></tr>
+          <tr><td>Discapacidad</td><td>Art. 32</td><td>Igualdad de oportunidades en acceso a todos los servicios</td></tr>
+          <tr><td>Seguro escolar</td><td>Art. 34 + DA 1.ª</td><td>Sigue vigente hasta su reforma; el Gobierno estudiará su actualización</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- S7: Representación -->
+  <section class="section">
+    <div class="section-hd"><h3>Representación estudiantil y Defensor Universitario</h3><span>Capítulos IX–X · Arts. 46–56</span></div>
+    <div class="dual">
+      <div class="card">
+        <table>
+          <thead><tr><th>Quién es representante (art. 46)</th></tr></thead>
+          <tbody>
+            <tr><td>Elegidos en órganos colegiados de gobierno de la universidad</td></tr>
+            <tr><td>Delegados de grupo, curso, titulación y centro</td></tr>
+            <tr><td>Miembros del Consejo de Estudiantes de la universidad u órganos análogos autonómicos</td></tr>
+            <tr><td>Representantes ante el Consejo de Estudiantes Universitario del Estado</td></tr>
+          </tbody>
+        </table>
+        <table style="margin-top:12px">
+          <thead><tr><th>Obligaciones de las universidades · Art. 46.3</th></tr></thead>
+          <tbody>
+            <tr><td>Impulsar la participación activa en procesos de elección</td></tr>
+            <tr><td>Proporcionar información y medios materiales</td></tr>
+            <tr><td>Fomentar el debate entre el alumnado</td></tr>
+            <tr><td>Facilitar y promover la implicación del alumnado en el diseño de los mecanismos de participación</td></tr>
+          </tbody>
+        </table>
+        <table style="margin-top:12px">
+          <thead><tr><th>Garantías del representante · Art. 47</th></tr></thead>
+          <tbody>
+            <tr><td>Protección frente a represalias por el ejercicio de su función</td></tr>
+            <tr><td>Derecho a la información necesaria para el desempeño del cargo</td></tr>
+            <tr><td>Créditos horarios para la representación</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <table>
+          <thead><tr><th>Defensor Universitario · Arts. 55–56</th><th>Regla</th></tr></thead>
+          <tbody>
+            <tr><td>Obligatoriedad</td><td>Todas las universidades deben tenerlo (ya previsto en la LOU)</td></tr>
+            <tr><td>Quién puede acudir</td><td>Cualquier estudiante que considere lesionados sus derechos o libertades</td></tr>
+            <tr><td>Independencia</td><td>Actúa con independencia y autonomía respecto a los órganos universitarios</td></tr>
+            <tr><td>Resoluciones</td><td><strong>No son vinculantes</strong>, pero sí obligatoriamente motivadas</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-red">⚠ TRAMPA: las resoluciones del Defensor Universitario NO son vinculantes.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S8: Consejo estatal -->
+  <section class="section">
+    <div class="section-hd"><h3>Consejo de Estudiantes Universitario del Estado</h3><span>Capítulo XI (único bloque NO básico) · Arts. 57–77</span></div>
+    <div class="card">
+      <table>
+        <thead><tr><th>Aspecto</th><th>Regla</th><th>Trampa frecuente</th></tr></thead>
+        <tbody>
+          <tr><td>Naturaleza</td><td>Órgano colegiado de representación estudiantil</td><td>—</td></tr>
+          <tr><td>Adscripción</td><td>Al <strong>Ministerio con competencias en materia de universidades</strong></td><td>No está adscrito al Consejo de Universidades</td></tr>
+          <tr><td>Participan</td><td>Estudiantes de todas las universidades públicas y privadas + consejos autonómicos</td><td>No solo públicas</td></tr>
+          <tr><td>Estructura</td><td><strong>Pleno + Comisión Permanente + Grupos de Trabajo</strong></td><td>El Pleno es el órgano supremo</td></tr>
+          <tr><td>Gastos</td><td>Presupuesto ordinario del Ministerio por redistribución de efectivos</td><td>Sin aumento de puestos ni retribuciones (DA 3.ª)</td></tr>
+          <tr><td>Carácter básico</td><td><strong>NO tiene carácter básico</strong> (DF 1.ª)</td><td>El único bloque que escapa a la basicidad</td></tr>
+          <tr><td>Reglamento propio</td><td>El Consejo lo elabora en <strong>6 meses</strong> desde su constitución (DF 2.ª)</td><td>El plazo es 6 meses, no 1 año</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- S9: DD.AA. y DD.FF. -->
+  <section class="section">
+    <div class="section-hd"><h3>Disposiciones adicionales y finales más preguntadas</h3><span>Las cuatro DA y las cuatro DF</span></div>
+    <div class="dual">
+      <div class="card">
+        <table>
+          <thead><tr><th>Disposición</th><th>Contenido clave</th></tr></thead>
+          <tbody>
+            <tr><td><span class="badge b-dark">DA 1.ª</span> Seguro escolar</td><td>Sigue vigente hasta su reforma. El Gobierno estudiará su actualización.</td></tr>
+            <tr><td><span class="badge b-yellow">DA 2.ª</span> Potestad disciplinaria</td><td>El Gobierno presentará a las Cortes, en <strong>un año</strong>, proyecto de ley de potestad disciplinaria. <em>→ Semilla de la Ley 3/2022</em></td></tr>
+            <tr><td><span class="badge b-dark">DA 3.ª</span> Gastos del Consejo</td><td>Con cargo al presupuesto ordinario del Ministerio por redistribución de efectivos. Sin aumento de puestos ni retribuciones.</td></tr>
+            <tr><td><span class="badge b-dark">DA 4.ª</span> Centros de defensa</td><td>Estudiantes de centros universitarios de defensa: les aplica también el régimen jurídico de las Fuerzas Armadas.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <table>
+          <thead><tr><th>Disposición</th><th>Contenido clave</th></tr></thead>
+          <tbody>
+            <tr><td><span class="badge b-red">DF 1.ª</span> Carácter básico</td><td>Toda la norma tiene carácter básico, <strong>excepto el Capítulo XI</strong> (Consejo de Estudiantes estatal).</td></tr>
+            <tr><td><span class="badge b-dark">DF 2.ª</span> Reglamento del Consejo</td><td>El Consejo elaborará su reglamento en <strong>6 meses</strong> desde su constitución. Lo eleva para aprobación al Ministro.</td></tr>
+            <tr><td><span class="badge b-dark">DF 3.ª</span> Desarrollo reglamentario</td><td>Autoriza al Ministro de Educación a dictar las normas de desarrollo necesarias.</td></tr>
+            <tr><td><span class="badge b-dark">DF 4.ª</span> Entrada en vigor</td><td>Al día siguiente de su publicación en el BOE → <strong>1 de enero de 2011</strong>.</td></tr>
+          </tbody>
+        </table>
+        <div class="note note-blue">📌 La DA 2.ª tardó 11 años en cumplirse: la Ley 3/2022 de Convivencia Universitaria (Tema 25) es la ley de potestad disciplinaria que ordena dictar esta disposición.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S10: Trampas -->
+  <section class="section">
+    <div class="section-hd"><h3>Trampas frecuentes en el examen</h3><span>Lee antes del test</span></div>
+    <div class="card">
+      <table>
+        <thead><tr><th>Afirmación</th><th>¿Correcta?</th><th>Corrección exacta</th></tr></thead>
+        <tbody>
+          <tr><td>El Estatuto solo se aplica a universidades públicas</td><td><span class="badge b-red">Falso</span></td><td>Se aplica a universidades públicas y privadas (art. 1.2)</td></tr>
+          <tr><td>El Capítulo XI tiene carácter básico</td><td><span class="badge b-red">Falso</span></td><td>Es el único capítulo que NO tiene carácter básico (DF 1.ª)</td></tr>
+          <tr><td>El Consejo de Estudiantes está adscrito al Consejo de Universidades</td><td><span class="badge b-red">Falso</span></td><td>Está adscrito al Ministerio con competencias en materia de universidades</td></tr>
+          <tr><td>Sus gastos suponen aumento de puestos y retribuciones</td><td><span class="badge b-red">Falso</span></td><td>Sin aumento: redistribución de efectivos existentes (DA 3.ª)</td></tr>
+          <tr><td>La movilidad de grado es preferente al inicio de la carrera</td><td><span class="badge b-red">Falso</span></td><td>Preferentemente en la segunda mitad de los estudios (art. 16.3.a)</td></tr>
+          <tr><td>El reconocimiento en movilidad exige identidad de contenidos</td><td><span class="badge b-red">Falso</span></td><td>Atiende al valor formativo conjunto, no a la identidad (art. 17.3)</td></tr>
+          <tr><td>El Defensor Universitario dicta resoluciones vinculantes</td><td><span class="badge b-red">Falso</span></td><td>No son vinculantes, pero deben ser motivadas (art. 55)</td></tr>
+          <tr><td>Los planes docentes pueden publicarse después de la matrícula</td><td><span class="badge b-red">Falso</span></td><td>Deben conocerse antes de la apertura del plazo de matrícula (art. 23)</td></tr>
+          <tr><td>La DA 2.ª daba 3 años para la ley disciplinaria</td><td><span class="badge b-red">Falso</span></td><td>El plazo era de un año desde la entrada en vigor</td></tr>
+          <tr><td>Tutor y director de tesis son la misma figura</td><td><span class="badge b-yellow">Matiz</span></td><td>El art. 10.b distingue: el tutor orienta el proceso formativo; el director supervisa la tesis</td></tr>
+          <tr><td>"Sobrepeso y obesidad" no aparecen entre las causas de no discriminación</td><td><span class="badge b-red">Falso</span></td><td>Sí aparecen expresamente en el art. 4</td></tr>
+          <tr><td>Las prácticas externas pueden sustituir contratos laborales</td><td><span class="badge b-red">Falso</span></td><td>Expresamente prohibido: las prácticas no sustituyen relaciones laborales (art. 30)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</div>
+<footer>Archivo HTML 3 preparado para estudio visual y repaso operativo del Tema 26 · RD 1791/2010 Estatuto del Estudiante Universitario</footer>
+
+<script>
+(function(){
+  var root=document.documentElement,label=document.getElementById('themeLabel');
+  var theme=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+  root.setAttribute('data-theme',theme);
+  label.textContent=theme==='dark'?'oscuro':'claro';
+  document.querySelector('[data-theme-toggle]').addEventListener('click',function(){
+    theme=theme==='dark'?'light':'dark';
+    root.setAttribute('data-theme',theme);
+    label.textContent=theme==='dark'?'oscuro':'claro';
+  });
+})();
+</script>
+</body>
+</html>

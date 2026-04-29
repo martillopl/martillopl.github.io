@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Tema 27 · HTML 2 – Esquema visual · UPNA</title>
+  <style>
+    :root{
+      --bg:#f0f7ff;--surface:#fff;--s2:#e0eefe;--s3:#c7dffe;
+      --border:#93c5fd;--div:#dbeafe;--text:#1e3a5f;--muted:#1d4ed8;
+      --p:#1e40af;--pl:#2563eb;--sh:0 2px 10px rgba(30,58,143,.08)
+    }
+    [data-theme="dark"]{
+      --bg:#0a1628;--surface:#0f1f3d;--s2:#162a50;--s3:#1e3a68;
+      --border:#2d5299;--div:#1e3565;--text:#e0eefe;--muted:#93c5fd;
+      --p:#60a5fa;--pl:#93c5fd;--sh:0 2px 10px rgba(0,0,0,.25)
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,Arial,sans-serif;font-size:13.5px;line-height:1.6;background:var(--bg);color:var(--text);padding:22px}
+    /* header */
+    .hdr{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:18px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+    .hdr h1{font-size:1rem;color:var(--p);line-height:1.3}
+    .hdr p{font-size:.75rem;color:var(--muted);margin-top:3px}
+    .btn{font:inherit;cursor:pointer;border:1px solid var(--border);background:var(--s2);color:var(--text);padding:6px 13px;border-radius:999px;font-size:.75rem}
+    /* section title */
+    h2{font-size:.88rem;font-weight:700;color:var(--surface);background:var(--p);padding:8px 14px;border-radius:7px;margin:22px 0 10px}
+    h3{font-size:.82rem;font-weight:700;color:var(--pl);border-bottom:1px solid var(--div);padding-bottom:3px;margin:12px 0 7px}
+    /* cards */
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:15px 18px;box-shadow:var(--sh);margin-bottom:12px}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+    .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:12px}
+    /* stat pills */
+    .pills{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:12px}
+    .pill{background:var(--s2);border:1px solid var(--border);border-radius:10px;padding:10px 13px;text-align:center;flex:1 1 100px}
+    .pill .pv{font-size:1.3rem;font-weight:900;color:var(--p)}
+    .pill .pk{font-size:.67rem;color:var(--muted);margin-top:2px}
+    /* coloured boxes */
+    .cbox{border-radius:10px;padding:13px 15px;color:#fff}
+    .c1{background:#1e3a5f}.c2{background:#1e40af}.c3{background:#0369a1}.c4{background:#0f766e}.c5{background:#6d28d9}.c6{background:#b45309}.c7{background:#b91c1c}.c8{background:#7c3aed}
+    .cbox h3{color:rgba(255,255,255,.85);border-color:rgba(255,255,255,.2)}
+    .cbox ul{padding-left:15px;font-size:.8rem} .cbox li{margin-bottom:4px}
+    /* organigram */
+    .org{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+    .org-row{display:flex;gap:8px;align-items:stretch;justify-content:center;flex-wrap:wrap}
+    .org-box{border-radius:9px;padding:9px 13px;text-align:center;font-size:.75rem;font-weight:700;min-width:110px;flex:1 1 110px;max-width:210px;color:#fff;border:2px solid transparent}
+    .ob1{background:#1e3a5f}.ob2{background:#1e40af}.ob3{background:#2563eb}.ob4{background:#0369a1}
+    .ob5{background:#0f766e}.ob6{background:#6d28d9}.ob7{background:#b45309}.ob8{background:#b91c1c}
+    .ob-outline{background:var(--s2);border-color:var(--border);color:var(--text)}
+    .org-label{text-align:center;font-size:.7rem;font-weight:700;color:var(--muted);margin:4px 0 2px;text-transform:uppercase;letter-spacing:.05em}
+    .arrow-down{text-align:center;font-size:1.1rem;color:var(--p);font-weight:700;margin:2px 0}
+    /* flow */
+    .flow{display:flex;flex-wrap:wrap;align-items:center;gap:7px;padding:12px;background:var(--s2);border-radius:9px;margin-bottom:10px}
+    .f-step{border-radius:7px;padding:7px 11px;font-size:.72rem;font-weight:700;color:#fff;text-align:center}
+    .fs1{background:#1e3a5f}.fs2{background:#1e40af}.fs3{background:#0369a1}.fs4{background:#0f766e}.fs5{background:#6d28d9}
+    .f-arrow{font-size:.95rem;color:var(--p);font-weight:700}
+    /* table */
+    table{width:100%;border-collapse:collapse;font-size:.78rem}
+    th{background:var(--s2);color:var(--muted);font-weight:700;padding:7px 10px;text-align:left;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em}
+    td{border-bottom:1px solid var(--div);padding:7px 10px;vertical-align:top}
+    tr:last-child td{border-bottom:none}
+    tr:hover td{background:var(--s2)}
+    /* notes */
+    .note{padding:8px 13px;border-radius:0 7px 7px 0;font-size:.76rem;margin:8px 0;border-left:4px solid}
+    .nb{background:var(--s2);border-color:var(--pl);color:var(--muted)}
+    .nw{background:#fef3c7;border-color:#d97706;color:#78350f}
+    .nr{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}
+    [data-theme="dark"] .nw{background:#451a03;color:#fde68a}
+    [data-theme="dark"] .nr{background:#450a0a;color:#fca5a5}
+    /* badge */
+    .badge{display:inline-flex;padding:2px 8px;border-radius:999px;font-size:.67rem;font-weight:700;border:1px solid transparent}
+    .bb{background:rgba(37,99,235,.12);color:var(--pl);border-color:rgba(37,99,235,.22)}
+    .bg{background:rgba(15,118,110,.12);color:#0f766e;border-color:rgba(15,118,110,.22)}
+    .br{background:rgba(185,28,28,.12);color:#b91c1c;border-color:rgba(185,28,28,.22)}
+    .by{background:rgba(180,83,9,.12);color:#b45309;border-color:rgba(180,83,9,.22)}
+    ul{padding-left:17px;margin:5px 0} li{margin-bottom:4px;font-size:.8rem}
+    p{font-size:.8rem;margin:5px 0}
+    /* comparison cols */
+    .vs{display:flex;gap:10px;margin-bottom:12px}
+    .vs .col{flex:1;border-radius:10px;padding:12px 14px;color:#fff}
+    @media(max-width:700px){.grid2,.grid3,.vs{grid-template-columns:1fr;flex-direction:column}.org-row{flex-direction:column;align-items:stretch}}
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 27 · HTML 2 · Esquema visual para memorización rápida</h1>
+    <p>Organigrama, estructura, órganos de gobierno y servicios · Universidad Pública de Navarra (UPNA)</p>
+  </div>
+  <button class="btn" onclick="var d=document.documentElement,t=d.getAttribute('data-theme');d.setAttribute('data-theme',t==='dark'?'light':'dark')">Modo claro/oscuro</button>
+</div>
+
+<!-- Grandes números -->
+<h2>🔢 GRANDES NÚMEROS DEL TEMA</h2>
+<div class="pills">
+  <div class="pill"><div class="pv">1987</div><div class="pk">Ley Foral 8/1987 · creación</div></div>
+  <div class="pill"><div class="pv">1995</div><div class="pk">DF 68/1995 · 1.ª Estatutos</div></div>
+  <div class="pill"><div class="pv">2003</div><div class="pk">DF 110/2003 · Estatutos vigentes</div></div>
+  <div class="pill"><div class="pv">120</div><div class="pk">electos en el Claustro</div></div>
+  <div class="pill"><div class="pv">4 años</div><div class="pk">renovación Claustro y CG</div></div>
+  <div class="pill"><div class="pv">2 años</div><div class="pk">renovación estudiantes</div></div>
+  <div class="pill"><div class="pv">1×/trimestre</div><div class="pk">Consejo de Gobierno</div></div>
+  <div class="pill"><div class="pv">1×/año</div><div class="pk">Claustro (ordinaria)</div></div>
+  <div class="pill"><div class="pv">2×/año</div><div class="pk">Junta Consultiva</div></div>
+  <div class="pill"><div class="pv">25%</div><div class="pk">iniciativa reforma Estatutos</div></div>
+  <div class="pill"><div class="pv">20 PDI</div><div class="pk">mínimo para Departamento</div></div>
+  <div class="pill"><div class="pv">30%</div><div class="pk">quórum extraordinaria Claustro/CG</div></div>
+</div>
+
+<!-- Origen normativo -->
+<h2>📜 LÍNEA NORMATIVA: DE LA LEY FORAL A LOS ESTATUTOS</h2>
+<div class="flow">
+  <div class="f-step fs1">CE 1978<br>art. 27.10<br>Autonomía univ.</div>
+  <div class="f-arrow">→</div>
+  <div class="f-step fs2">LOU 6/2001<br>+ LOMLOU 4/2007<br>Marco estatal</div>
+  <div class="f-arrow">→</div>
+  <div class="f-step fs3">Ley Foral<br>8/1987<br>Creación UPNA</div>
+  <div class="f-arrow">→</div>
+  <div class="f-step fs4">DF 68/1995<br>1.ª Estatutos</div>
+  <div class="f-arrow">→</div>
+  <div class="f-step fs5">DF 110/2003<br>Estatutos vigentes<br>BON 63 · 19/05/2003</div>
+</div>
+<div class="note nb">📌 Última revisión vigente: 1 de mayo de 2011. BOE n.º 170 · 17/07/2003.</div>
+
+<!-- Organigrama -->
+<h2>🏛 ORGANIGRAMA COMPLETO DE LA UPNA (Art. 15)</h2>
+<div class="card">
+  <div class="org-label">RECTOR (preside todos los órganos generales)</div>
+  <div class="arrow-down">↓</div>
+
+  <div class="org-label">ÓRGANOS COLEGIADOS GENERALES</div>
+  <div class="org-row">
+    <div class="org-box ob1">Consejo Social<br><span style="font-size:.65rem;opacity:.8">Participación sociedad</span></div>
+    <div class="org-box ob2">Consejo de Gobierno<br><span style="font-size:.65rem;opacity:.8">ÓRGANO DE GOBIERNO</span></div>
+    <div class="org-box ob3">Claustro Universitario<br><span style="font-size:.65rem;opacity:.8">MÁX. ÓRGANO REPRES.</span></div>
+    <div class="org-box ob4">Junta Consultiva<br><span style="font-size:.65rem;opacity:.8">Asesoramiento académico</span></div>
+    <div class="org-box ob5">Consejo de Dirección<br><span style="font-size:.65rem;opacity:.8">Asistencia al Rector</span></div>
+  </div>
+
+  <div class="arrow-down" style="margin-top:8px">↓</div>
+  <div class="org-label">ÓRGANOS UNIPERSONALES GENERALES</div>
+  <div class="org-row">
+    <div class="org-box ob2">Rector</div>
+    <div class="org-box ob3">Vicerrectores</div>
+    <div class="org-box ob4">Secretario General</div>
+    <div class="org-box ob5">Gerente</div>
+  </div>
+
+  <div class="arrow-down" style="margin-top:8px">↓</div>
+  <div class="org-label">ÓRGANOS COLEGIADOS PARTICULARES</div>
+  <div class="org-row">
+    <div class="org-box ob6">Junta de Centro<br><span style="font-size:.65rem;opacity:.8">Presidida por Decano/Dir.</span></div>
+    <div class="org-box ob7">Consejo de Departamento</div>
+    <div class="org-box ob8">Consejo de Instituto U.I.</div>
+  </div>
+
+  <div class="arrow-down" style="margin-top:8px">↓</div>
+  <div class="org-label">ÓRGANOS UNIPERSONALES PARTICULARES</div>
+  <div class="org-row">
+    <div class="org-box ob-outline">Decano / Director</div>
+    <div class="org-box ob-outline">Director de Departamento</div>
+    <div class="org-box ob-outline">Director de Instituto U.I.</div>
+    <div class="org-box ob-outline">Vicedecanos · Subdirectores · Secretarios</div>
+  </div>
+</div>
+<div class="note nb">📌 Regla de prevalencia (art. 15.2): <strong>órganos generales &gt; particulares; colegiados &gt; unipersonales.</strong></div>
+
+<!-- Claustro vs Consejo de Gobierno -->
+<h2>⚡ LA CONFUSIÓN MÁS PREGUNTADA: CLAUSTRO vs. CONSEJO DE GOBIERNO</h2>
+<div class="vs">
+  <div class="col c1">
+    <h3>Claustro Universitario · Arts. 21–25</h3>
+    <ul>
+      <li><strong>MÁXIMO ÓRGANO DE REPRESENTACIÓN</strong></li>
+      <li>Presidido por el Rector</li>
+      <li>Composición: 1 Rector + 3 cargos natos + 120 electos</li>
+      <li>71 profes doctores vinc. perm. + 13 PDI + 24 estudiantes + 12 PAS</li>
+      <li>Renovación: 4 años (estudiantes: 2 años)</li>
+      <li>Sesión ordinaria: mínimo <strong>1 vez al año</strong></li>
+      <li>Convocatoria extraord.: ¼ claustrales, Rector o CG</li>
+    </ul>
+    <div style="margin-top:9px;background:rgba(255,255,255,.12);border-radius:7px;padding:8px 10px;font-size:.76rem">
+      <strong>Funciones:</strong> elaborar y reformar Estatutos · convocar elección a Rector (extraord.) · elegir y revocar al Defensor · elegir representantes en el Consejo de Gobierno
+    </div>
+  </div>
+  <div class="col c2">
+    <h3>Consejo de Gobierno · Arts. 18–20</h3>
+    <ul>
+      <li><strong>ÓRGANO DE GOBIERNO</strong></li>
+      <li>Presidido por el Rector</li>
+      <li>Composición: Rector + SG + Gerente + Vicerrectores + 12 del Claustro (6 profes doctores + 2 PDI + 2 estudiantes + 2 PAS) + 2 Decanos/Dirs. + 4 Dirs. Depto. + <strong>2 del Consejo Social</strong></li>
+      <li>Renovación: 4 años (estudiantes: 2 años)</li>
+      <li>Sesión ordinaria: mínimo <strong>1 vez al trimestre</strong></li>
+      <li>Convocatoria extraord.: solicitud del 30% de sus miembros</li>
+    </ul>
+    <div style="margin-top:9px;background:rgba(255,255,255,.12);border-radius:7px;padding:8px 10px;font-size:.76rem">
+      <strong>Funciones:</strong> Plan Estratégico con Consejo Social · aprobar planes de estudio · programación docente anual · presupuesto (a propuesta al CS) · calendario académico · doctores honoris causa · RPT
+    </div>
+  </div>
+</div>
+<div class="note nr">⚠ TRAMPA CLÁSICA: "El Claustro es el órgano de gobierno" → FALSO. El Claustro REPRESENTA; el Consejo de Gobierno GOBIERNA.</div>
+
+<!-- Rector y nombramientos -->
+<h2>👤 EL RECTOR — MÁXIMA AUTORIDAD ACADÉMICA</h2>
+<div class="grid2">
+  <div class="cbox c1">
+    <h3>Cómo se elige</h3>
+    <ul>
+      <li>Sufragio universal, libre, directo y secreto</li>
+      <li>Solo entre profesores funcionarios de los cuerpos docentes universitarios con dedicación a tiempo completo</li>
+    </ul>
+  </div>
+  <div class="cbox c3">
+    <h3>A quién nombra (y cesa)</h3>
+    <ul>
+      <li>Secretario General → libremente</li>
+      <li>Vicerrectores → libremente</li>
+      <li>Gerente → <strong>oído el Consejo Social</strong></li>
+    </ul>
+  </div>
+</div>
+<div class="card">
+  <h3>Funciones clave del Rector</h3>
+  <table>
+    <tbody>
+      <tr><td>Dirige y representa a la Universidad ante poderes públicos y entidades</td></tr>
+      <tr><td>Ejecuta los acuerdos del Consejo de Gobierno</td></tr>
+      <tr><td>Ejerce la jefatura superior sobre todo el personal</td></tr>
+      <tr><td>Interpone recursos en nombre de la Universidad</td></tr>
+      <tr><td>Concede la <em>venia docendi</em> al profesorado de centros adscritos</td></tr>
+      <tr><td>Preside: Consejo de Gobierno · Claustro · Junta Consultiva · Consejo de Dirección</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="note nw">⚠ TRAMPA: "El Gerente es nombrado por el Consejo Social" → FALSO. Lo nombra el RECTOR, aunque oído el Consejo Social.</div>
+
+<!-- Tabla comparativa órganos asesores -->
+<h2>🔍 JUNTA CONSULTIVA vs. CONSEJO DE DIRECCIÓN — No confundirlos</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Órgano</th><th>Art.</th><th>Función</th><th>Composición</th><th>Reuniones</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Junta Consultiva</strong></td>
+        <td>26</td>
+        <td>Asesoramiento <strong>académico</strong> al Rector y Consejo de Gobierno</td>
+        <td>Rector (pres.) + Secretario General + 12 miembros designados por el CG (profesores/investigadores de reconocido prestigio)</td>
+        <td>Mín. <span class="badge bb">2 veces/año</span></td>
+      </tr>
+      <tr>
+        <td><strong>Consejo de Dirección</strong></td>
+        <td>27</td>
+        <td>Asistencia ejecutiva al Rector</td>
+        <td>Rector + Vicerrectores + Secretario General + Gerente</td>
+        <td>Cuando lo convoca el Rector</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Consejo Social -->
+<h2>🤝 CONSEJO SOCIAL — La sociedad en la Universidad</h2>
+<div class="grid2">
+  <div class="cbox c4">
+    <h3>Naturaleza</h3>
+    <ul>
+      <li>Órgano de participación de la sociedad en la Universidad</li>
+      <li>Regulado por Ley Foral específica</li>
+      <li>Aprueba el presupuesto a propuesta del CG</li>
+      <li>Elabora el Plan Estratégico con el Consejo de Gobierno</li>
+    </ul>
+  </div>
+  <div class="cbox c5">
+    <h3>Representación universitaria en él</h3>
+    <ul>
+      <li>1 profesor</li>
+      <li>1 estudiante</li>
+      <li>1 miembro del PAS</li>
+      <li>2 miembros del CS sin vinculación a la universidad → en el <strong>Consejo de Gobierno</strong></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Estructura académica -->
+<h2>🏫 ESTRUCTURA ACADÉMICA: CENTROS Y UNIDADES</h2>
+<div class="grid3">
+  <div class="cbox c1">
+    <h3>Facultades y Escuelas · Art. 6</h3>
+    <ul>
+      <li>Organizan enseñanzas de <strong>grado</strong> (y otros títulos que el CG les asigne)</li>
+      <li>Tienen Junta de Centro y Decano/Director</li>
+      <li>Crean, modifican o suprimen por el Consejo de Gobierno</li>
+    </ul>
+  </div>
+  <div class="cbox c2">
+    <h3>Departamentos · Art. 8</h3>
+    <ul>
+      <li>Unidades de docencia e investigación</li>
+      <li>Mínimo <strong>20</strong> profesores funcionarios doctores vinc. permanente TC</li>
+      <li>Tienen Consejo de Departamento y Director</li>
+    </ul>
+  </div>
+  <div class="cbox c3">
+    <h3>Institutos U. I. · Art. 11</h3>
+    <ul>
+      <li>Investigación, creación artística</li>
+      <li>Pueden ser propios, adscritos, mixtos o interuniversitarios</li>
+      <li>Pueden organizar doctorado</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Campus y centros -->
+<h2>📍 CAMPUS, CENTROS Y SERVICIOS</h2>
+<div class="grid2">
+  <div class="card">
+    <h3>Distribución territorial</h3>
+    <table>
+      <thead><tr><th>Campus / Ubicación</th><th>Centros / Titulaciones</th></tr></thead>
+      <tbody>
+        <tr><td>Campus de Arrosadia (Pamplona) · sede principal</td><td>Ciencias Económicas · Ciencias Jurídicas · Ciencias Humanas y Sociales · Ingenieros Agrónomos · Ingenieros Industriales y de Telecomunicación · Biblioteca · OAU · Residencia Los Abedules · Deportes</td></tr>
+        <tr><td>Facultad de Ciencias de la Salud (zona hospitalaria, Pamplona)</td><td>Grado en Medicina · Grado en Enfermería</td></tr>
+        <tr><td>Campus de Tudela</td><td>Grado en Fisioterapia · Grado en Ingeniería en Diseño Mecánico</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card">
+    <h3>Servicios principales (Título V)</h3>
+    <ul>
+      <li><strong>OAU</strong> (Oficina de Atención Universitaria) · planta baja Biblioteca Arrosadia: Registro, Acogida Internacional, Registro Cl@ve</li>
+      <li><strong>Biblioteca</strong> central</li>
+      <li><strong>Residencia Universitaria Los Abedules</strong> (campus Arrosadia)</li>
+      <li><strong>Servicio de Informática</strong></li>
+      <li><strong>Servicio de Recursos Humanos</strong></li>
+      <li><strong>Servicio de Gestión Académica</strong></li>
+      <li><strong>Instalaciones deportivas</strong></li>
+      <li><strong>Fundación Universidad-Sociedad</strong> (inserción laboral)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Comunidad universitaria -->
+<h2>👥 COMUNIDAD UNIVERSITARIA — Título IV</h2>
+<div class="grid3">
+  <div class="cbox c1">
+    <h3>PDI · Cap. I</h3>
+    <ul>
+      <li>Funcionarios: CU · TU · CEU · TEU</li>
+      <li>Contratados: Ayudante · Ayudante Doctor · Prof. Contratado Doctor · Prof. Colaborador · Prof. Asociado · Visitante · Emérito</li>
+    </ul>
+  </div>
+  <div class="cbox c4">
+    <h3>Estudiantes · Cap. II</h3>
+    <ul>
+      <li>Derecho a representación en todos los órganos colegiados</li>
+      <li>Consejo de Estudiantes de la UPNA: órgano de representación estudiantil</li>
+      <li>Se renuevan cada <strong>2 años</strong> en CG y Claustro</li>
+    </ul>
+  </div>
+  <div class="cbox c5">
+    <h3>PAS · Cap. III</h3>
+    <ul>
+      <li>Apoyo, asistencia, gestión técnica, económica y administrativa</li>
+      <li>Dirección orgánica por el Gerente (por delegación del Rector)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Defensor -->
+<h2>🛡 DEFENSOR DE LA COMUNIDAD UNIVERSITARIA — Arts. 115–117</h2>
+<div class="grid2">
+  <div class="cbox c6">
+    <h3>Cómo se elige</h3>
+    <ul>
+      <li>Elegido y revocado por el <strong>CLAUSTRO</strong> (no por el Rector ni CG)</li>
+      <li>Actúa con independencia</li>
+      <li>No está sujeto a mandato imperativo</li>
+    </ul>
+  </div>
+  <div class="cbox c7">
+    <h3>Sus resoluciones</h3>
+    <ul>
+      <li><strong>NO son vinculantes</strong></li>
+      <li>Sí deben ser motivadas</li>
+      <li>Equivale al Defensor Universitario del RD 1791/2010</li>
+    </ul>
+  </div>
+</div>
+<div class="note nr">⚠ TRAMPA: "El Defensor lo elige el Consejo de Gobierno" → FALSO. Lo elige el CLAUSTRO.</div>
+
+<!-- Reforma de Estatutos -->
+<h2>📝 REFORMA DE LOS ESTATUTOS — Art. 146</h2>
+<div class="flow">
+  <div class="f-step fs1">Iniciativa:<br>Rector</div>
+  <div class="f-arrow">o</div>
+  <div class="f-step fs2">Iniciativa:<br>Consejo de Gobierno</div>
+  <div class="f-arrow">o</div>
+  <div class="f-step fs3">Iniciativa:<br>25% claustrales</div>
+  <div class="f-arrow">→</div>
+  <div class="f-step fs4">Aprobación:<br>Claustro</div>
+  <div class="f-arrow">→</div>
+  <div class="f-step fs5">Aprobación:<br>Gobierno de Navarra</div>
+</div>
+<div class="note nw">⚠ TRAMPA: "El 10% del Claustro puede iniciar una reforma" → FALSO. El umbral es el <strong>25%</strong>.</div>
+
+<!-- Trampas -->
+<h2>⚠ TRAMPAS DE EXAMEN — Repaso final</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Afirmación trampa</th><th>¿Correcta?</th><th>Corrección</th></tr></thead>
+    <tbody>
+      <tr><td>El Claustro es el órgano de gobierno</td><td><span class="badge br">FALSO</span></td><td>Es el máximo órgano de representación; el CG es el órgano de gobierno</td></tr>
+      <tr><td>Los Estatutos vigentes son el DF 68/1995</td><td><span class="badge br">FALSO</span></td><td>Los vigentes son el DF 110/2003 (los de 1995 fueron los primeros)</td></tr>
+      <tr><td>El Gerente lo nombra el Consejo Social</td><td><span class="badge br">FALSO</span></td><td>Lo nombra el Rector, oído el Consejo Social</td></tr>
+      <tr><td>La UPNA fue creada por la LOU de 2001</td><td><span class="badge br">FALSO</span></td><td>La creó la Ley Foral 8/1987, de 21 de abril</td></tr>
+      <tr><td>La iniciativa de reforma la puede tomar el 10% del Claustro</td><td><span class="badge br">FALSO</span></td><td>El umbral mínimo es el 25% de los claustrales</td></tr>
+      <tr><td>La Junta Consultiva se reúne una vez al año</td><td><span class="badge br">FALSO</span></td><td>Mínimo 2 veces al año</td></tr>
+      <tr><td>El Consejo de Gobierno se reúne una vez al semestre</td><td><span class="badge br">FALSO</span></td><td>Mínimo una vez al trimestre</td></tr>
+      <tr><td>El Defensor lo elige el Consejo de Gobierno</td><td><span class="badge br">FALSO</span></td><td>Lo elige y revoca el Claustro Universitario</td></tr>
+      <tr><td>Las resoluciones del Defensor son vinculantes</td><td><span class="badge br">FALSO</span></td><td>No son vinculantes (aunque sí motivadas)</td></tr>
+      <tr><td>Los Estatutos se aprueban solo por el Claustro</td><td><span class="badge by">MATIZ</span></td><td>Los aprueba el Claustro pero también requieren aprobación del Gobierno de Navarra</td></tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+</body>
+</html>

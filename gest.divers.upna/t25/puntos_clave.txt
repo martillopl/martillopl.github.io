@@ -1,0 +1,223 @@
+TEMA 25 – LEY 3/2022, DE 24 DE FEBRERO, DE CONVIVENCIA UNIVERSITARIA
+Puntos que suelen aparecer en examen y artículos clave
+═══════════════════════════════════════════════════════════════════════
+
+DATOS IDENTIFICATIVOS ESENCIALES
+──────────────────────────────────
+Denominación   : Ley 3/2022, de 24 de febrero, de convivencia universitaria
+BOE            : n.º 48, de 25 de febrero de 2022
+Entrada en vigor: 26 de febrero de 2022 (al día siguiente de su publicación)
+Estructura     : 22 artículos · 3 Títulos · 4 DD.AA. · 1 D.T. · 1 D.Derog. · 4 DD.FF.
+Norma derogada : Decreto de 8 de septiembre de 1954 (Reglamento de Disciplina Académica)
+Título competencial: arts. 149.1.18.ª y 30.ª CE
+
+═══════════════════════════════════════════════════════════════════════
+I. DISPOSICIONES GENERALES (Título Preliminar) — PUNTOS DE EXAMEN
+═══════════════════════════════════════════════════════════════════════
+
+★ ART. 1 — DOBLE OBJETO:
+   1. Establecer las bases de la convivencia universitaria, fomentando la utilización
+      PREFERENTE de modalidades alternativas de resolución de conflictos
+   2. Establecer el régimen disciplinario del ESTUDIANTADO universitario
+   → El régimen disciplinario del PDI y del PAS se rige por su NORMATIVA ESPECÍFICA
+
+★ ART. 2 — ÁMBITO DE APLICACIÓN:
+   Comunidad universitaria = estudiantado + PDI + PAS (universidades públicas)
+   Universidades privadas: solo aprueban Normas de Convivencia con base en los principios de esta ley
+   DISTINCIÓN CLAVE:
+   - Título Preliminar + Título I → aplicables a TODOS (estudiantado, PDI, PAS)
+   - Título II (disciplina) → aplicable SOLO al estudiantado (incluido movilidad)
+   → TRAMPA: creer que el régimen disciplinario de esta ley se aplica también al PDI o al PAS
+
+★ ART. 3 — NORMAS DE CONVIVENCIA:
+   → Todas las universidades (públicas y privadas) deben aprobarlas
+   → Obligatorio cumplimiento para TODOS los miembros
+   → Elaboradas con PARTICIPACIÓN Y AUDIENCIA de todos los sectores a través de sus órganos de representación
+   → Deben garantizar expresamente: libertad de expresión, reunión, asociación, manifestación y huelga
+   → DA 4.ª: plazo máximo de UN AÑO desde la entrada en vigor para aprobarlas (antes del 26/02/2023)
+
+★ ART. 4 — VIOLENCIA, DISCRIMINACIÓN Y ACOSO:
+   Las Normas de Convivencia incorporarán ENFOQUE DE GÉNERO con perspectiva interseccional
+   Tipos de medidas:
+   a) PREVENCIÓN PRIMARIA: sensibilización, concienciación y formación
+   b) PREVENCIÓN SECUNDARIA: actuar sobre factores de riesgo
+   c) PROCEDIMIENTOS ESPECÍFICOS de quejas y denuncias
+   Posibilidad de: medidas provisionales + acompañamiento psicológico y jurídico a víctimas
+   Principios específicos: enfoque de género · respeto/protección · confidencialidad ·
+   diligencia y celeridad · imparcialidad y contradicción · prohibición de represalias
+
+═══════════════════════════════════════════════════════════════════════
+II. TÍTULO I — MEDIOS ALTERNATIVOS (MEDIACIÓN) — PUNTOS DE EXAMEN
+═══════════════════════════════════════════════════════════════════════
+
+★ ART. 5 — MEDIACIÓN (principios):
+   LOS 9 PRINCIPIOS: Voluntariedad · Confidencialidad · Equidad · Imparcialidad ·
+   Buena fe y respeto mutuo · Prevención y prohibición de represalias · Flexibilidad ·
+   Claridad · Transparencia
+   → ANTES Y DURANTE el procedimiento disciplinario
+   → Si partes optan por mediación + Comisión lo aprueba → SUSPENSIÓN del disciplinario
+   → Si fracasa la mediación → se reanuda el procedimiento disciplinario
+
+★ ART. 6 — COMISIÓN DE CONVIVENCIA:
+   → Integrada de manera PARITARIA por representantes de los TRES sectores: estudiantado + PDI + PAS
+   → Las universidades desarrollarán su organización, funcionamiento, nombramiento, incompatibilidades y causas de abstención/recusación
+
+★ ART. 7 — COMPETENCIA NORMATIVA:
+   Faltas y sanciones fijadas por la ley estatal, sin perjuicio de regulaciones de las CC.AA.
+
+═══════════════════════════════════════════════════════════════════════
+III. TÍTULO II — RÉGIMEN DISCIPLINARIO — PUNTOS DE EXAMEN
+═══════════════════════════════════════════════════════════════════════
+
+★ ART. 8 — POTESTAD DISCIPLINARIA:
+   Titular: RECTOR/A → puede delegarla (Ley 40/2015)
+   Instructor: designado por el rector → independencia, autonomía y transparencia
+   El órgano SANCIONADOR puede apartarse de la propuesta del instructor de forma MOTIVADA
+   Principios de la potestad disciplinaria (6):
+   1. Legalidad y tipicidad
+   2. Irretroactividad de normas no favorables / retroactividad de favorables
+   3. Responsabilidad
+   4. Proporcionalidad
+   5. Prescripción de faltas y sanciones
+   6. Garantía del procedimiento
+   Non bis in idem (art. 8.5): no se sanciona dos veces si hay identidad de sujeto, hecho y fundamento
+   Si hay indicios de delito → se suspende el procedimiento y se comunica al MINISTERIO FISCAL
+
+★ ART. 9 — ÁMBITO SUBJETIVO:
+   → Estudiantado en instalaciones, sistemas y espacios de la universidad
+   → También el estudiantado que COLABORE en actos constitutivos de falta muy grave
+
+★ ART. 10 — CLASIFICACIÓN DE FALTAS: MUY GRAVES · GRAVES · LEVES
+
+★ ART. 11 — FALTAS MUY GRAVES (11 conductas: a a k):
+   a) Novatadas u otras conductas vejatorias
+   b) Acoso o violencia grave contra cualquier miembro de la comunidad
+   c) Acoso sexual o por razón de sexo
+   d) Discriminación por cualquier causa (sexo, orientación sexual, etnia, edad, salud, etc.)
+   e) Alterar, falsificar, sustraer o destruir documentos académicos / usar documentos falsos
+   f) Destruir irreparablemente o sustraer obras catalogadas del patrimonio histórico y cultural
+   g) PLAGIO TOTAL O PARCIAL / Fraude académico en TFG, TFM o TESIS DOCTORAL
+      → Definición: "comportamiento premeditado tendente a falsear los resultados de un
+        examen o trabajo, propio o ajeno, como requisito para superar asignatura o acreditar rendimiento"
+   h) Incumplir normas de salud pública poniendo en riesgo a la comunidad
+   i) Suplantar a un miembro de la comunidad universitaria / consentir ser suplantado
+   j) Impedir el desarrollo de los PROCESOS ELECTORALES de la universidad
+   k) Condena firme por delito doloso cometido en centros universitarios o relacionado con actividad académica
+
+★ ART. 12 — FALTAS GRAVES (7 conductas: a a g):
+   a) Apoderarse del contenido de pruebas, exámenes o controles de conocimiento
+   b) Deteriorar gravemente bienes catalogados del patrimonio histórico y cultural
+   c) Impedir la celebración de actividades de docencia, investigación o transferencia
+   d) Fraude académico (definido en art. 11.g)
+   e) Utilizar indebidamente contenidos sujetos a propiedad intelectual
+   f) Incumplir normas de seguridad y salud de los centros universitarios
+   g) Acceder sin autorización a los sistemas informáticos de la universidad
+
+★ ART. 13 — FALTAS LEVES (3 conductas: a a c):
+   a) Acceder a instalaciones universitarias sin autorización
+   b) Utilizar servicios universitarios incumpliendo requisitos de general conocimiento
+   c) Realizar actos que deterioren bienes del patrimonio de la universidad
+
+★ ART. 14 — SANCIONES (CLAVE DE EXAMEN):
+   FALTAS MUY GRAVES:
+   a) Expulsión de 2 meses a 3 años (consta en expediente académico hasta su cumplimiento)
+   b) Pérdida de derechos de matrícula parcial, durante un curso o semestre académico
+
+   FALTAS GRAVES:
+   a) Expulsión de hasta un mes (NO se aplica en períodos de evaluación o matriculación)
+   b) Pérdida del derecho a la convocatoria ordinaria del semestre en que se comete / asignatura
+   ★ La pérdida de matrícula NO afecta a derechos de becas
+
+   FALTAS LEVES:
+   Amonestación privada
+
+   MEDIDAS SUSTITUTIVAS (art. 14.6 y art. 20):
+   → Solo para faltas GRAVES
+   → EXCEPCIÓN: NO cuando la falta implique fraude académico en el proceso de evaluación
+   → NUNCA pueden consistir en funciones/tareas de puestos de trabajo del RPT universitario
+
+★ ART. 15 — GRADUACIÓN DE LAS SANCIONES (8 criterios):
+   a) Intencionalidad o reiteración
+   b) Naturaleza de los perjuicios causados
+   c) Ánimo de lucro
+   d) Reconocimiento de responsabilidad previo al procedimiento
+   e) Reparación del daño previa al procedimiento
+   f) Circunstancias personales, económicas, de salud, familiares o sociales del infractor
+   g) Grado de participación en los hechos
+   h) Haber actuado por causa de violencia, discriminación o acoso (art. 3.2.c)
+
+★ ART. 17 — EXTINCIÓN DE LA RESPONSABILIDAD:
+   Causas: cumplimiento de la sanción · fallecimiento · prescripción · amnistía o indulto
+
+★ ART. 18 — PRINCIPIOS DEL PROCEDIMIENTO:
+   Separación instrucción-resolución (órganos distintos)
+   Derecho a ser asistido por persona de elección propia
+   Motivación obligatoria de la resolución
+   Aplicación Ley 39/2015 PAC
+
+★ ART. 19 — PROCEDIMIENTO DISCIPLINARIO:
+   → Inicio: de oficio o por denuncia
+   → Si partes optan por mediación + Comisión lo aprueba → suspensión
+   → Si mediación fracasa → reanudación del disciplinario
+
+★ ART. 20 — MEDIDAS SUSTITUTIVAS:
+   Solo para faltas graves y con los límites del art. 14.6
+
+★ ART. 21 — MEDIDAS PROVISIONALES:
+   Adoptadas durante instrucción conforme a Ley 39/2015
+
+═══════════════════════════════════════════════════════════════════════
+IV. LOS GRANDES NÚMEROS DEL TEMA 25
+═══════════════════════════════════════════════════════════════════════
+
+Ley 3/2022         → 24 de febrero de 2022 · BOE 25/02/2022
+Vigente            → 26 de febrero de 2022
+22 artículos       → Estructura de la ley
+3 Títulos          → Preliminar + I (mediación) + II (disciplina)
+Decreto 1954       → Norma derogada: Reglamento de Disciplina Académica preconstitucional
+1 año              → Plazo para que las universidades aprueben sus Normas de Convivencia (DA 4.ª)
+11 faltas MG       → Art. 11 (letras a a k)
+7 faltas graves    → Art. 12 (letras a a g)
+3 faltas leves     → Art. 13 (letras a a c)
+2 meses a 3 años   → Sanción expulsión por falta muy grave
+Hasta 1 mes        → Sanción expulsión por falta grave (no en evaluación/matriculación)
+Amonestación privada → Única sanción por falta leve
+Paritaria          → Composición de la Comisión de Convivencia (3 sectores a partes iguales)
+149.1.18.ª y 30.ª CE → Título competencial del Estado para dictar la ley
+
+═══════════════════════════════════════════════════════════════════════
+V. TRAMPAS FRECUENTES
+═══════════════════════════════════════════════════════════════════════
+
+"El régimen disciplinario de la Ley 3/2022 se aplica a todo el personal universitario."
+→ FALSO: solo se aplica al ESTUDIANTADO. El PDI y el PAS tienen su propio régimen (Título II solo = estudiantado)
+
+"El Título I de mediación solo se aplica a los estudiantes."
+→ FALSO: Los Títulos Preliminar y I se aplican a TODOS: estudiantado, PDI y PAS.
+
+"Para imponer una medida sustitutiva puede usarse cualquier falta."
+→ FALSO: las medidas sustitutivas solo son posibles para faltas GRAVES, y con excepciones.
+
+"Si hay fraude académico en un examen, el órgano sancionador puede proponer medida sustitutiva."
+→ FALSO: cuando la falta grave implique fraude académico en el proceso de evaluación, QUEDA EXCLUIDA la medida sustitutiva.
+
+"La expulsión por falta grave puede imponerse durante los exámenes."
+→ FALSO: la expulsión por falta grave NO puede aplicarse durante los períodos de evaluación ni de matriculación.
+
+"La pérdida de matrícula puede afectar a las becas del estudiante."
+→ FALSO: la pérdida de derechos de matrícula NO puede afectar a los derechos relativos a becas.
+
+"La Comisión de Convivencia la integran solo los estudiantes y el PDI."
+→ FALSO: es PARITARIA entre los TRES sectores: estudiantado + PDI + PAS.
+
+"El plagio en un trabajo ordinario de clase es siempre falta muy grave."
+→ MATIZ: el plagio en TFG, TFM o Tesis Doctoral es falta MUY GRAVE (art. 11.g). El fraude académico en
+  actividades de evaluación ordinaria es falta GRAVE (art. 12.d).
+
+"El instructor puede imponer la sanción directamente."
+→ FALSO: hay separación entre instrucción (instructor) y resolución (órgano sancionador). Son órganos distintos.
+
+"La Ley 3/2022 entró en vigor el 24 de febrero de 2022."
+→ FALSO: se aprobó el 24/02/2022, se publicó en el BOE el 25/02/2022 y entró en vigor el 26/02/2022.
+
+═══════════════════════════════════════════════════════════════════════

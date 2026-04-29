@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 28 · HTML 2 – Esquema-resumen visual · UPNA</title>
+<style>
+:root{--bg:#f0f7ff;--surface:#fff;--s2:#e0eefe;--s3:#c7dffe;--border:#93c5fd;--div:#dbeafe;--text:#1e3a5f;--muted:#1d4ed8;--p:#1e40af;--pl:#2563eb;--warn:#b45309;--danger:#b91c1c;--ok:#0f766e;--vio:#7c3aed;--sh:0 2px 10px rgba(30,58,143,.08)}
+[data-theme="dark"]{--bg:#0a1628;--surface:#0f1f3d;--s2:#162a50;--s3:#1e3a68;--border:#2d5299;--div:#1e3565;--text:#e0eefe;--muted:#93c5fd;--p:#60a5fa;--pl:#93c5fd;--warn:#fbbf24;--danger:#f87171;--ok:#34d399;--vio:#a78bfa;--sh:0 2px 10px rgba(0,0,0,.25)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.6;background:var(--bg);color:var(--text);padding:20px}
+.hdr{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 20px;margin-bottom:16px;box-shadow:var(--sh);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.96rem;color:var(--p);line-height:1.3}.hdr p{font-size:.72rem;color:var(--muted);margin-top:2px}.btn{font:inherit;cursor:pointer;border:1px solid var(--border);background:var(--s2);color:var(--text);padding:5px 12px;border-radius:999px;font-size:.72rem}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}.stat{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:10px 12px;text-align:center;flex:1 1 100px;box-shadow:var(--sh)}.sv{font-size:1.2rem;font-weight:900;color:var(--p)}.sk{font-size:.64rem;color:var(--muted);margin-top:2px}
+h2{font-size:.84rem;font-weight:800;color:#fff;background:var(--p);padding:7px 14px;border-radius:7px;margin:20px 0 9px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}.card{background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:14px 16px;box-shadow:var(--sh)}
+.card h3{font-size:.8rem;color:var(--p);margin-bottom:8px;display:flex;align-items:center;gap:6px}.card p{font-size:.77rem;margin-bottom:6px}.mini{font-size:.72rem;color:var(--muted)}
+ul{padding-left:16px;margin:6px 0}li{margin-bottom:3px;font-size:.77rem}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.step{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center;box-shadow:var(--sh);position:relative}.step .num{width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--p);color:#fff;font-weight:800;font-size:.78rem;margin-bottom:6px}.step p{font-size:.73rem;margin:0}.step:not(:last-child)::after{content:'→';position:absolute;right:-11px;top:50%;transform:translateY(-50%);color:var(--pl);font-size:1rem;font-weight:900}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.64rem;font-weight:700;border:1px solid transparent;margin:2px 3px 0 0}.bb{background:rgba(37,99,235,.12);color:var(--pl);border-color:rgba(37,99,235,.22)}.bg{background:rgba(15,118,110,.12);color:var(--ok);border-color:rgba(15,118,110,.22)}.br{background:rgba(185,28,28,.12);color:var(--danger);border-color:rgba(185,28,28,.22)}.by{background:rgba(180,83,9,.12);color:var(--warn);border-color:rgba(180,83,9,.22)}.bv{background:rgba(124,58,237,.12);color:var(--vio);border-color:rgba(124,58,237,.22)}
+.tablewrap{overflow:auto}.tbl{width:100%;border-collapse:collapse}.tbl th{background:var(--s2);color:var(--muted);font-size:.67rem;text-transform:uppercase;padding:7px 9px;text-align:left}.tbl td{padding:7px 9px;border-bottom:1px solid var(--div);font-size:.77rem;vertical-align:top}.tbl tr:last-child td{border-bottom:none}.tbl tr:hover td{background:var(--s2)}
+.note{padding:8px 12px;border-radius:0 8px 8px 0;font-size:.75rem;margin:8px 0;border-left:4px solid}.nb{background:var(--s2);border-color:var(--pl);color:var(--muted)}.nw{background:#fef3c7;border-color:#d97706;color:#78350f}.nr{background:#fff5f5;border-color:#dc2626;color:#7f1d1d}[data-theme="dark"] .nw{background:#451a03;color:#fde68a}[data-theme="dark"] .nr{background:#450a0a;color:#fca5a5}
+@media(max-width:820px){.flow{grid-template-columns:1fr}.step:not(:last-child)::after{content:'↓';right:auto;left:50%;top:auto;bottom:-14px;transform:translateX(-50%)}}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="hdr">
+  <div>
+    <h1>Tema 28 · HTML 2 · Esquema-resumen con bloques visuales para memorización rápida</h1>
+    <p>Extensión universitaria y reconocimiento de créditos · Normativa de actividades universitarias de formación complementaria · UPNA</p>
+  </div>
+  <button class="btn" onclick="var d=document.documentElement,t=d.getAttribute('data-theme');d.setAttribute('data-theme',t==='dark'?'light':'dark')">Claro / Oscuro</button>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="sv">6 ECTS</div><div class="sk">mínimo garantizado por RD 1393/2007</div></div>
+  <div class="stat"><div class="sv">25 h</div><div class="sk">1 ECTS en la UPNA</div></div>
+  <div class="stat"><div class="sv">5</div><div class="sk">categorías de actividades reconocibles</div></div>
+  <div class="stat"><div class="sv">14/05/2010</div><div class="sk">Resolución 727/2010 Rector UPNA</div></div>
+  <div class="stat"><div class="sv">APTO</div><div class="sk">calificación sin efecto en la media</div></div>
+  <div class="stat"><div class="sv">2025</div><div class="sk">convenio UPNA–INJ solidaridad</div></div>
+</div>
+
+<h2>1 · Idea-fuerza del tema</h2>
+<div class="grid">
+  <div class="card">
+    <h3>🎯 Qué regula</h3>
+    <p>La posibilidad de que el estudiantado de Grado en la UPNA obtenga <strong>reconocimiento académico en créditos ECTS</strong> por actividades universitarias de formación complementaria.</p>
+    <p class="mini">No es una asignatura; es un reconocimiento por actividades realizadas fuera de la docencia ordinaria.</p>
+  </div>
+  <div class="card">
+    <h3>🧠 Finalidad</h3>
+    <p>Favorecer la <strong>formación integral</strong> del estudiante: cultura, deporte, participación, solidaridad, cooperación y aprendizaje práctico.</p>
+    <p class="mini">La universidad forma profesionales, pero también ciudadanos.</p>
+  </div>
+  <div class="card">
+    <h3>⚖️ Fundamento</h3>
+    <p>Se apoya en la <strong>LOU</strong>, en el <strong>RD 1393/2007</strong>, en el <strong>Estatuto del Estudiante</strong> y en la normativa propia de la <strong>UPNA</strong>.</p>
+    <p class="mini">La norma específica de la UPNA es la Resolución 727/2010.</p>
+  </div>
+</div>
+
+<h2>2 · Pirámide normativa visual</h2>
+<div class="grid">
+  <div class="card"><h3>1️⃣ Constitución</h3><p><strong>Art. 27.10 CE</strong></p><p>Reconoce la autonomía universitaria, base que permite a la UPNA regular este reconocimiento.</p></div>
+  <div class="card"><h3>2️⃣ LOU</h3><p><strong>Art. 46.2.i) LOU 6/2001</strong></p><p>Derecho del estudiante al reconocimiento por actividades culturales, deportivas, de representación, solidarias y de cooperación.</p></div>
+  <div class="card"><h3>3️⃣ RD 1393/2007</h3><p><strong>Art. 12.8</strong></p><p>Obliga a que el plan de Grado contemple reconocimiento de <strong>al menos 6 ECTS</strong>.</p></div>
+  <div class="card"><h3>4️⃣ RD 861/2010 + RD 1791/2010</h3><p><strong>Art. 7.1.i) Estatuto</strong></p><p>Refuerzan el derecho e incluyen expresamente la representación estudiantil.</p></div>
+  <div class="card"><h3>5️⃣ UPNA</h3><p><strong>Resolución 727/2010</strong></p><p>Norma reguladora específica de reconocimiento académico en créditos por actividades de extensión universitaria.</p></div>
+</div>
+
+<h2>3 · Las 5 categorías que hay que saberse de memoria</h2>
+<div class="card">
+  <p><span class="badge bb">Culturales</span><span class="badge bg">Deportivas</span><span class="badge bv">Representación estudiantil</span><span class="badge by">Solidarias</span><span class="badge br">Cooperación</span></p>
+  <div class="note nb">📌 Regla mnemotécnica: <strong>CUL – DEP – REP – SOL – COO</strong></div>
+  <div class="grid" style="margin-top:10px">
+    <div class="card"><h3>🎭 Culturales</h3><p>Cursos, talleres, seminarios, jornadas, teatro, coro, actividades artísticas o formativas organizadas o reconocidas por la UPNA.</p></div>
+    <div class="card"><h3>🏅 Deportivas</h3><p>Competiciones y programas deportivos universitarios gestionados por el Servicio de Deportes o con aval universitario.</p></div>
+    <div class="card"><h3>🏛️ Representación</h3><p>Participación en Claustro, Consejo de Gobierno, Juntas de Centro, Consejos de Departamento, Consejo de Estudiantes o delegaciones.</p></div>
+    <div class="card"><h3>🤝 Solidarias</h3><p>Voluntariado y actividades solidarias vinculadas a la universidad o a convenios reconocidos.</p></div>
+    <div class="card"><h3>🌍 Cooperación</h3><p>Acciones de cooperación al desarrollo y, en la práctica, ciertas actividades de cooperación educativa y prácticas extracurriculares.</p></div>
+  </div>
+</div>
+
+<h2>4 · Los números del examen</h2>
+<div class="grid">
+  <div class="card"><h3>6 ECTS</h3><p>Es el mínimo garantizado por el art. 12.8 RD 1393/2007.</p><p class="mini">Ojo: es un mínimo estatal; la universidad podría ampliar.</p></div>
+  <div class="card"><h3>1 ECTS = 25 horas</h3><p>Dato técnico de la UPNA para convertir dedicación del estudiante en créditos.</p><p class="mini">6 ECTS equivalen a 150 horas.</p></div>
+  <div class="card"><h3>APTO / NO APTO</h3><p>La calificación no es numérica.</p><p class="mini">No computa en la nota media del expediente.</p></div>
+  <div class="card"><h3>Créditos optativos</h3><p>Se incorporan al expediente como créditos optativos.</p><p class="mini">No se suman por encima del plan, forman parte de él.</p></div>
+  <div class="card"><h3>Último semestre</h3><p>Con carácter general, se incorporan en el tramo final de la titulación.</p><p class="mini">Idea clave de gestión administrativa.</p></div>
+</div>
+
+<h2>5 · Procedimiento en 5 pasos</h2>
+<div class="flow">
+  <div class="step"><div class="num">1</div><p>El estudiante realiza la actividad reconocible</p></div>
+  <div class="step"><div class="num">2</div><p>Obtiene certificado o diploma acreditativo</p></div>
+  <div class="step"><div class="num">3</div><p>Presenta solicitud al Centro con la documentación</p></div>
+  <div class="step"><div class="num">4</div><p>El Centro verifica y propone el reconocimiento</p></div>
+  <div class="step"><div class="num">5</div><p>Se resuelve e incorpora al expediente académico</p></div>
+</div>
+
+<h2>6 · Qué órgano o norma hace qué cosa</h2>
+<div class="tablewrap card">
+  <table class="tbl">
+    <thead><tr><th>Elemento</th><th>Función</th><th>Clave memorizable</th></tr></thead>
+    <tbody>
+      <tr><td>Art. 46.2.i) LOU</td><td>Reconoce el derecho del estudiante</td><td>La LOU da la base</td></tr>
+      <tr><td>Art. 12.8 RD 1393/2007</td><td>Obliga a prever al menos 6 ECTS</td><td>El RD fija el mínimo</td></tr>
+      <tr><td>RD 1791/2010 art. 7.1.i)</td><td>Refuerza el derecho en el Estatuto del Estudiante</td><td>El Estatuto lo confirma</td></tr>
+      <tr><td>Resolución 727/2010 UPNA</td><td>Regula el reconocimiento en la universidad</td><td>La norma directa del tema</td></tr>
+      <tr><td>Centro / comisión correspondiente</td><td>Verifica la actividad y propone</td><td>El centro comprueba</td></tr>
+      <tr><td>Órgano académico competente</td><td>Resuelve la incorporación al expediente</td><td>La universidad reconoce formalmente</td></tr>
+      <tr><td>SET</td><td>Refleja la actividad reconocida</td><td>Queda constancia oficial</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>7 · Prácticas extracurriculares y formación complementaria</h2>
+<div class="grid">
+  <div class="card">
+    <h3>🏢 Qué son</h3>
+    <p>Prácticas externas voluntarias, fuera del plan de estudios, realizadas mediante convenio de cooperación educativa.</p>
+  </div>
+  <div class="card">
+    <h3>📜 Norma UPNA</h3>
+    <p><strong>Resolución 2019/2012</strong> del Rector · acuerdo del Consejo de Gobierno de 20 de diciembre de 2012.</p>
+  </div>
+  <div class="card">
+    <h3>🎓 Relación con el tema</h3>
+    <p>Pueden utilizarse para el reconocimiento de los créditos de formación complementaria previstos en el art. 12 del RD 1393/2007.</p>
+  </div>
+</div>
+
+<h2>8 · Convenio UPNA–INJ 2025</h2>
+<div class="card">
+  <p><strong>Programa:</strong> "Dale crédito a tu solidaridad".</p>
+  <p><strong>Idea:</strong> convertir determinadas actividades juveniles y de voluntariado en créditos ECTS reconocibles por la UPNA.</p>
+  <p><strong>Ejemplos:</strong> campos de voluntariado, corresponsales de información juvenil y otras experiencias acreditadas.</p>
+  <div class="note nb">📌 Ejemplo perfecto de cómo la universidad abre el catálogo de actividades mediante convenio, manteniendo el marco general de reconocimiento.</div>
+</div>
+
+<h2>9 · Las trampas que más caen en examen</h2>
+<div class="tablewrap card">
+  <table class="tbl">
+    <thead><tr><th>Afirmación trampa</th><th>Corrección exacta</th></tr></thead>
+    <tbody>
+      <tr><td>"El RD 1393/2007 fija un máximo de 6 ECTS"</td><td>Falso: fija un <strong>mínimo</strong> de 6 ECTS</td></tr>
+      <tr><td>"Estos créditos computan en la nota media"</td><td>Falso: van como <strong>APTO/NO APTO</strong> y no computan</td></tr>
+      <tr><td>"Son créditos básicos"</td><td>Falso: se asimilan a <strong>créditos optativos</strong></td></tr>
+      <tr><td>"6 ECTS se añaden a los 240 del grado"</td><td>Falso: forman parte del total del plan</td></tr>
+      <tr><td>"1 ECTS son 30 horas en la UPNA"</td><td>Falso: en la UPNA <strong>1 ECTS = 25 horas</strong></td></tr>
+      <tr><td>"La norma UPNA básica del tema es la Res. 2019/2012"</td><td>Falso: la norma específica del tema es la <strong>Resolución 727/2010</strong></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>10 · Fórmulas de memoria exprés</h2>
+<div class="grid">
+  <div class="card"><h3>📌 Regla 1</h3><p><strong>LOU reconoce · RD obliga · UPNA desarrolla.</strong></p></div>
+  <div class="card"><h3>📌 Regla 2</h3><p><strong>6 ECTS · 25 horas · APTO · optativos.</strong></p></div>
+  <div class="card"><h3>📌 Regla 3</h3><p><strong>CUL-DEP-REP-SOL-COO.</strong></p></div>
+  <div class="card"><h3>📌 Regla 4</h3><p><strong>Certificado → solicitud → verificación → resolución → expediente.</strong></p></div>
+</div>
+
+</body>
+</html>
