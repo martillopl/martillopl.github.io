@@ -1,0 +1,362 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1_texto_explicativo.html · Tema 58 · Exclusión social en España</title>
+<style>
+:root{
+  --bg:#f0fdf4;--paper:#fff;--ink:#052e16;--muted:#15803d;--accent:#16a34a;--accent2:#15803d;
+  --line:#bbf7d0;--soft:#f0fdf4;--soft2:#dcfce7;
+  --ok:#065f46;--okbg:#d1fae5;--warn:#92400e;--warnbg:#fef3c7;
+  --red:#b91c1c;--redbg:#fee2e2;--sky:#0284c7;--skybg:#e0f2fe;
+  --vio:#7c3aed;--viobg:#ede9fe;--ora:#c2410c;--orabg:#ffedd5;
+  --sh:0 10px 30px rgba(22,163,74,.09)
+}
+[data-theme="dark"]{
+  --bg:#001a08;--paper:#002810;--ink:#bbf7d0;--muted:#4ade80;--accent:#4ade80;--accent2:#86efac;
+  --line:#14532d;--soft:#002810;--soft2:#003515;
+  --ok:#86efac;--okbg:#052e16;--warn:#fde68a;--warnbg:#1c1000;
+  --red:#fca5a5;--redbg:#1a0000;--sky:#7dd3fc;--sky2:#082038;
+  --vio:#c4b5fd;--viobg:#1a0e33;--ora:#fdba74;--orabg:#2a1000;
+  --sh:0 10px 30px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75}
+.container{max-width:1080px;margin:0 auto;padding:32px 20px 60px}
+header{background:var(--paper);border:1.5px solid var(--line);border-radius:20px;padding:28px;box-shadow:var(--sh);margin-bottom:24px}
+h1{margin:0 0 10px;font-size:1.85rem;line-height:1.2;color:var(--accent)}
+.subtitle{font-size:.98rem;color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.badge{background:var(--soft2);color:var(--accent);border:1px solid var(--line);padding:6px 13px;border-radius:999px;font-weight:700;font-size:.88rem}
+.btn{font:inherit;cursor:pointer;border:1.5px solid var(--line);background:var(--soft2);color:var(--ink);padding:6px 16px;border-radius:999px;font-size:.75rem;font-weight:700;margin-top:10px}
+nav{position:sticky;top:0;background:rgba(240,253,244,.93);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin-bottom:20px;z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+[data-theme="dark"] nav{background:rgba(0,26,8,.93)}
+nav a{color:var(--accent);text-decoration:none;font-weight:700;font-size:.88rem}
+section{background:var(--paper);border:1.5px solid var(--line);border-radius:18px;padding:26px 28px 22px;box-shadow:var(--sh);margin-bottom:20px}
+h2{margin:0 0 14px;font-size:1.38rem;color:var(--accent)}
+h3{margin:22px 0 8px;font-size:1.05rem;color:var(--accent2)}
+p{margin:10px 0}
+ul,ol{margin:8px 0 12px 22px}
+li{margin:6px 0}
+.note,.warn,.memo,.legal,.err,.sky,.vio,.ora{border-radius:14px;padding:14px 16px;margin:14px 0;line-height:1.6;border-left:5px solid}
+.note{background:var(--soft2);border-color:var(--accent)}
+.warn{background:var(--warnbg);border-color:var(--warn)}
+.memo{background:var(--okbg);border-color:var(--ok)}
+.legal{background:var(--skybg);border-color:var(--sky)}
+.err{background:var(--redbg);border-color:var(--red)}
+.sky{background:var(--skybg);border-color:var(--sky)}
+.vio{background:var(--viobg);border-color:var(--vio)}
+.ora{background:var(--orabg);border-color:var(--ora)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:14px 0}
+.card{background:var(--soft2);border:1.5px solid var(--line);border-radius:14px;padding:16px}
+.card h4{margin:0 0 8px;color:var(--accent);font-size:1rem}
+table{width:100%;border-collapse:collapse;margin:14px 0;border-radius:10px;overflow:hidden;box-shadow:var(--sh)}
+th{background:var(--accent);color:#fff;padding:10px 13px;text-align:left;font-size:.85rem}
+td{border:1px solid var(--line);padding:10px 13px;vertical-align:top;font-size:.88rem}
+tr:nth-child(even) td{background:var(--soft2)}
+.k{font-weight:800;color:var(--accent)}
+footer{color:var(--muted);font-size:.88rem;padding:8px 4px;margin-top:10px}
+.arope-box{background:var(--paper);border:2.5px solid var(--accent);border-radius:18px;padding:20px 22px;box-shadow:var(--sh);margin:16px 0}
+.arope-box .arope-title{font-size:1.1rem;font-weight:900;color:var(--accent);margin-bottom:12px}
+.criterio{background:var(--soft2);border-radius:12px;padding:13px 16px;margin-bottom:10px;border-left:5px solid var(--accent)}
+.criterio .c-num{font-size:1.3rem;font-weight:900;color:var(--accent);margin-right:6px}
+.criterio .c-title{font-size:.88rem;font-weight:800;color:var(--accent2)}
+.criterio .c-desc{font-size:.82rem;margin-top:4px;line-height:1.55}
+.items-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px;margin-top:8px}
+.item-pill{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:5px 9px;font-size:.73rem;text-align:center}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="container">
+
+<header>
+  <h1>Tema 58 · La exclusión social en España:<br>concepto, dimensiones e indicadores</h1>
+  <div class="subtitle">Texto explicativo y desarrollo narrativo · Comprensión, estudio y repaso de oposición</div>
+  <div class="meta">
+    <span class="badge">Exclusión social</span>
+    <span class="badge">Pobreza vs. exclusión</span>
+    <span class="badge">6 dimensiones FOESSA</span>
+    <span class="badge">Indicador AROPE</span>
+    <span class="badge">Tezanos · Subirats · Laparra</span>
+    <span class="badge">IX FOESSA 2025</span>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">🌙 Claro / Oscuro</button>
+</header>
+
+<nav>
+  <a href="#s1">1. Concepto</a>
+  <a href="#s2">2. Pobreza vs. exclusión</a>
+  <a href="#s3">3. Origen histórico</a>
+  <a href="#s4">4. Características</a>
+  <a href="#s5">5. Dimensiones</a>
+  <a href="#s6">6. Modelo FOESSA</a>
+  <a href="#s7">7. Subirats</a>
+  <a href="#s8">8. AROPE</a>
+  <a href="#s9">9. Otros indicadores</a>
+  <a href="#s10">10. España hoy</a>
+  <a href="#s11">11. Memorización</a>
+</nav>
+
+<!-- 1 -->
+<section id="s1">
+  <h2>1. Concepto de exclusión social</h2>
+  <p>La <span class="k">exclusión social</span> es uno de los conceptos centrales del Trabajo Social contemporáneo y una de las categorías de análisis más utilizadas en la política social europea. No existe una única definición cerrada, pero sí un consenso amplio sobre sus elementos esenciales.</p>
+  <p>La exclusión social puede definirse como un <span class="k">proceso social multidimensional y dinámico</span> mediante el cual personas o grupos quedan progresivamente fuera de la participación plena en la vida económica, laboral, social, política y cultural de la sociedad. No se trata de un estado puntual, sino de un proceso acumulativo que puede agravarse o revertirse a lo largo del tiempo.</p>
+  <p>Esta definición recoge tres ideas fundamentales que conviene fijar para el examen: la exclusión es un <span class="k">proceso</span> (no un estado fijo), es <span class="k">multidimensional</span> (no se reduce a la economía) y es <span class="k">relacional</span> (se define siempre en relación a la sociedad de referencia, porque estar excluido significa estar excluido <em>de</em> algo).</p>
+  <div class="note"><strong>Definición para examen:</strong> "Proceso social de separación de un individuo o grupo respecto a las posibilidades laborales, económicas, políticas y culturales a las que otros sí tienen acceso y que permiten una vida digna y con agencia social." ★★★</div>
+</section>
+
+<!-- 2 -->
+<section id="s2">
+  <h2>2. Pobreza vs. exclusión social ★★★</h2>
+  <p>La distinción entre pobreza y exclusión social es una de las preguntas más frecuentes en examen. Son conceptos relacionados pero no equivalentes.</p>
+  <p>La <span class="k">pobreza</span> es un concepto esencialmente <span class="k">unidimensional</span>: hace referencia a la insuficiencia de recursos económicos para cubrir las necesidades básicas. Se mide por el nivel de ingresos y puede cuantificarse con relativa precisión mediante umbrales económicos.</p>
+  <p>La <span class="k">exclusión social</span>, en cambio, es <span class="k">multidimensional</span>: incluye la dimensión económica, pero también las dimensiones laboral, educativa, residencial, sanitaria, relacional y política. Una persona puede ser pobre sin estar plenamente excluida (si conserva redes de apoyo, acceso a servicios y participación social), y puede experimentar exclusión en alguna dimensión sin ser económicamente pobre (por ejemplo, por aislamiento social o situación irregular).</p>
+  <div class="grid2">
+    <div class="card">
+      <h4>Pobreza</h4>
+      <ul>
+        <li>Unidimensional: ingresos insuficientes.</li>
+        <li>Se mide por umbrales económicos.</li>
+        <li>Puede ser temporal o crónica.</li>
+        <li>Condición necesaria pero no suficiente para la exclusión.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Exclusión social ★★★</h4>
+      <ul>
+        <li>Multidimensional: laboral, educativa, residencial, sanitaria, relacional, política.</li>
+        <li>Proceso dinámico y acumulativo.</li>
+        <li>Supera el enfoque de ingresos.</li>
+        <li>Incluye la pobreza pero la supera ampliamente.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="err"><strong>Trampa de examen:</strong> "Exclusión social y pobreza son sinónimos." → FALSO. La exclusión es multidimensional; la pobreza es una de sus dimensiones. ★★★</div>
+</section>
+
+<!-- 3 -->
+<section id="s3">
+  <h2>3. Origen y evolución histórica del concepto ★★★</h2>
+  <p>El término <span class="k">exclusión social</span> no es un invento reciente ni anglosajón. Su origen está en Francia, y su desarrollo ha estado ligado a la evolución del estado del bienestar europeo.</p>
+  <p>En <span class="k">1974</span>, el sociólogo francés <span class="k">René Lenoir</span> publicó <em>"Les exclus: un Français sur dix"</em>, donde acuñó el término para referirse a todos aquellos que quedaban fuera del sistema de protección social francés: personas con discapacidad, personas mayores en situación de abandono, familias monoparentales, jóvenes sin cualificación, etc. Este fue el punto de partida conceptual.</p>
+  <p>Durante los años 80, con el aumento del desempleo estructural en Europa occidental, el concepto se fue extendiendo. En los años 90, la <span class="k">Unión Europea</span> lo adoptó como categoría central de análisis, reconociendo que los problemas sociales iban más allá de la pobreza económica. El <span class="k">Tratado de Ámsterdam (1997)</span> incluye por primera vez la lucha contra la exclusión social como objetivo europeo. El <span class="k">Consejo de Lisboa (2000)</span> impulsa los Planes de Acción para la Inclusión Social. La <span class="k">Estrategia Europa 2020</span> fija el indicador AROPE como herramienta de medición común.</p>
+  <div class="note"><strong>Frase clave:</strong> "El concepto de exclusión social lo acuña René Lenoir en Francia en 1974. No es anglosajón." ★★★</div>
+
+  <h3>Fractura social: Tezanos ★★★</h3>
+  <p>El sociólogo español <span class="k">José Félix Tezanos</span> introduce el concepto de <span class="k">fractura social</span> para describir el proceso por el que la sociedad se divide en dos zonas: un <span class="k">sector integrado</span> que participa plenamente en la vida económica, social y cultural, y un <span class="k">sector excluido</span> que queda progresivamente al margen, con escasas posibilidades de movilidad entre ambos. Su obra <em>"La sociedad dividida"</em> es referencia obligada. La fractura social supone la ruptura de la cohesión del tejido social y la erosión de la ciudadanía plena.</p>
+</section>
+
+<!-- 4 -->
+<section id="s4">
+  <h2>4. Características de la exclusión social ★★★</h2>
+  <p>Para comprender la exclusión social es fundamental conocer sus características esenciales, que la distinguen de otros fenómenos sociales como la pobreza o la marginación:</p>
+  <ol>
+    <li><span class="k">Multidimensional:</span> no se reduce a la economía. Afecta simultáneamente a varios ámbitos: laboral, educativo, residencial, sanitario, relacional y ciudadano.</li>
+    <li><span class="k">Dinámica y procesual:</span> es un proceso de acumulación progresiva de desventajas a lo largo del tiempo, no un estado estático. Puede agravarse o revertirse.</li>
+    <li><span class="k">Relacional:</span> se define siempre en comparación con la sociedad de referencia. Estar excluido es estar excluido <em>de</em> la participación en esa sociedad concreta.</li>
+    <li><span class="k">Acumulativa:</span> los factores de exclusión se potencian entre sí. El desempleo lleva a dificultades económicas, que generan problemas de vivienda, que agravan la salud, que dificultan el acceso al empleo. Es un círculo de retroalimentación negativa.</li>
+    <li><span class="k">Heterogénea:</span> no hay una forma única de estar excluido; afecta a distintos colectivos de maneras muy diversas.</li>
+    <li><span class="k">Involuntaria:</span> las personas excluidas no han elegido esa situación; es el resultado de procesos estructurales, no de decisiones individuales.</li>
+    <li><span class="k">Estructural:</span> hunde sus raíces en las desigualdades del sistema económico y social, no en deficiencias individuales.</li>
+  </ol>
+  <div class="warn"><strong>Para examen:</strong> cuando una pregunta diga que la exclusión social es "un estado fijo" o "solo económica", la respuesta es FALSA. La exclusión es proceso, dinámica y multidimensional. ★★★</div>
+</section>
+
+<!-- 5 -->
+<section id="s5">
+  <h2>5. Las dimensiones de la exclusión social ★★★</h2>
+  <p>El análisis de la exclusión social requiere identificar en qué ámbitos vitales se produce la ruptura con la participación social. Existe un consenso amplio en la literatura sobre las siguientes dimensiones principales:</p>
+
+  <h3>1. Dimensión económica y laboral ★★★</h3>
+  <p>El <span class="k">mercado de trabajo</span> es el eje principal de integración social en las sociedades contemporáneas. El desempleo, el empleo precario o la ausencia de ingresos suficientes son los factores de exclusión más potentes. Incluye también el endeudamiento grave, la privación material severa y la dependencia de prestaciones asistenciales sin perspectiva de salida.</p>
+
+  <h3>2. Dimensión formativa y educativa ★★★</h3>
+  <p>El <span class="k">abandono escolar temprano</span>, el analfabetismo, la falta de cualificación profesional y la <span class="k">brecha digital</span> constituyen factores de exclusión de creciente relevancia. La formación es la llave de acceso al mercado laboral y a la participación ciudadana.</p>
+
+  <h3>3. Dimensión residencial ★★★</h3>
+  <p>La <span class="k">vivienda</span> es una necesidad básica y un derecho. La carencia de vivienda (sinhogarismo), el hacinamiento, las condiciones insalubres o la imposibilidad de acceso a una vivienda digna (especialmente por el precio del alquiler) son dimensiones de exclusión con enorme peso en España. El IX Informe FOESSA (2025) sitúa la vivienda como uno de los dos grandes motores de la exclusión actual.</p>
+
+  <h3>4. Dimensión sanitaria ★★★</h3>
+  <p>La falta de acceso a la atención sanitaria, las enfermedades crónicas sin tratamiento adecuado, los problemas de salud mental sin atender y las adicciones son factores de exclusión que interactúan con todas las demás dimensiones. La salud deteriorada dificulta el empleo; el desempleo deteriora la salud.</p>
+
+  <h3>5. Dimensión relacional y social ★★★</h3>
+  <p>El <span class="k">aislamiento social</span> —la ruptura o debilitamiento de las redes familiares, de amistad y comunitarias— es una dimensión de exclusión a menudo invisible pero de enorme impacto. Las personas sin redes de apoyo son mucho más vulnerables ante cualquier adversidad.</p>
+
+  <h3>6. Dimensión política y ciudadana ★★</h3>
+  <p>La falta de acceso a los derechos ciudadanos, la no participación en la vida política, la situación irregular y la exclusión del sistema de protección social configuran esta dimensión, que pone en cuestión la ciudadanía efectiva de los excluidos.</p>
+</section>
+
+<!-- 6 -->
+<section id="s6">
+  <h2>6. El modelo FOESSA y la escala ISES ★★★</h2>
+  <p>La <span class="k">Fundación FOESSA</span> (Fundación Fomento de Estudios Sociales y de Sociología Aplicada), vinculada a Cáritas Española, es la principal fuente de análisis de la exclusión social en España. Publica periódicamente el <span class="k">Informe FOESSA</span>, que es la referencia nacional sobre exclusión y desarrollo social.</p>
+  <p>El modelo FOESSA mide la exclusión social a través de <span class="k">6 dimensiones</span> y <span class="k">35 indicadores</span>, y construye el <span class="k">Índice Sintético de Exclusión Social (ISES)</span>, que permite clasificar los hogares en cuatro zonas de un continuum:</p>
+  <div class="grid2">
+    <div class="card"><h4>1 · Integración plena</h4><p>Sin factores de exclusión detectados.</p></div>
+    <div class="card"><h4>2 · Integración precaria</h4><p>Algún factor de riesgo presente, pero sin exclusión consolidada.</p></div>
+    <div class="card"><h4>3 · Exclusión moderada</h4><p>Varios factores de exclusión en distintas dimensiones.</p></div>
+    <div class="card"><h4>4 · Exclusión severa ★★★</h4><p>Exclusión intensa en múltiples dimensiones simultáneas.</p></div>
+  </div>
+  <div class="memo"><strong>IX Informe FOESSA (2025):</strong> la exclusión severa se sitúa un <strong>52% por encima</strong> de los niveles de 2007. Afecta a <strong>4,3 millones de personas</strong>. Un tercio de toda la exclusión severa corresponde a <strong>menores de edad</strong>. Vivienda y empleo son los dos grandes motores. ★★★</div>
+</section>
+
+<!-- 7 -->
+<section id="s7">
+  <h2>7. Subirats y los ejes generadores de exclusión (2004) ★★★</h2>
+  <p>Joan Subirats, junto a otros investigadores, publicó en 2004 para la Fundación La Caixa el estudio <em>"Pobreza y exclusión social. Un análisis de la realidad española y europea"</em>, que es una referencia fundamental del tema.</p>
+  <p>Subirats identifica <span class="k">seis ejes estructurales</span> que generan o potencian procesos de exclusión en España:</p>
+  <ol>
+    <li><span class="k">Eje género:</span> las mujeres enfrentan mayor riesgo de exclusión por razones estructurales (brecha salarial, responsabilidades de cuidado, violencia de género, monoparentalidad).</li>
+    <li><span class="k">Eje edad:</span> jóvenes sin cualificación ni empleo y personas mayores sin red de apoyo son especialmente vulnerables.</li>
+    <li><span class="k">Eje etnia/origen:</span> personas de minorías étnicas (especialmente comunidad gitana) e inmigrantes en situación irregular.</li>
+    <li><span class="k">Eje salud/discapacidad:</span> personas con discapacidad física, intelectual o sensorial, con enfermedad mental o con adicciones.</li>
+    <li><span class="k">Eje territorio:</span> zonas rurales, periferias urbanas degradadas o territorios con menor acceso a servicios.</li>
+    <li><span class="k">Eje relacional:</span> el aislamiento social como factor generador de vulnerabilidad.</li>
+  </ol>
+  <div class="note"><strong>Para examen:</strong> los 6 ejes de Subirats son: género · edad · etnia/origen · salud/discapacidad · territorio · relacional. ★★★</div>
+</section>
+
+<!-- 8 -->
+<section id="s8">
+  <h2>8. El indicador AROPE ★★★</h2>
+  <p>El <span class="k">indicador AROPE</span> (At Risk Of Poverty or Social Exclusion, en castellano "En riesgo de pobreza o exclusión social") es el principal indicador europeo para medir la exclusión social. Fue creado en el marco de la <span class="k">Estrategia Europa 2020</span> y es calculado anualmente por <span class="k">Eurostat</span> y, en España, por el <span class="k">INE</span> a través de la Encuesta de Condiciones de Vida (ECV). EAPN España publica cada año un informe específico sobre el AROPE en España.</p>
+  <p>El indicador AROPE considera que una persona está en riesgo de pobreza o exclusión social si cumple <span class="k">al menos uno</span> de los tres criterios siguientes:</p>
+
+  <div class="arope-box">
+    <div class="arope-title">🔴 Indicador AROPE — 3 criterios (basta con 1) ★★★</div>
+
+    <div class="criterio">
+      <span class="c-num">1</span><span class="c-title">Riesgo de pobreza relativa (RdP)</span>
+      <div class="c-desc">Ingresos del hogar inferiores al <strong>60% de la mediana</strong> de ingresos del país (no de la media). Se llama "umbral de pobreza relativa". Mide la distribución de ingresos, no la pobreza absoluta.</div>
+    </div>
+
+    <div class="criterio">
+      <span class="c-num">2</span><span class="c-title">Privación material severa (PMS)</span>
+      <div class="c-desc">El hogar no puede permitirse al menos <strong>4 de los siguientes 9 ítems:</strong></div>
+      <div class="items-grid">
+        <div class="item-pill">Pagar alquiler/hipoteca</div>
+        <div class="item-pill">Temperatura adecuada</div>
+        <div class="item-pill">Gastos imprevistos</div>
+        <div class="item-pill">Proteínas cada 2 días</div>
+        <div class="item-pill">Vacaciones ≥ 1 semana</div>
+        <div class="item-pill">Coche</div>
+        <div class="item-pill">Lavadora</div>
+        <div class="item-pill">TV en color</div>
+        <div class="item-pill">Teléfono</div>
+      </div>
+    </div>
+
+    <div class="criterio">
+      <span class="c-num">3</span><span class="c-title">Baja intensidad de empleo (BIE)</span>
+      <div class="c-desc">Personas en hogares donde los adultos de <strong>16 a 64 años</strong> trabajan menos del <strong>20%</strong> de su potencial laboral durante el año de referencia.</div>
+    </div>
+  </div>
+
+  <div class="err"><strong>Trampas de examen sobre AROPE:</strong><br>
+  ✗ "AROPE exige cumplir los 3 criterios" → FALSO: basta con 1. ★★★<br>
+  ✗ "Umbral: 50% de la media" → FALSO: es 60% de la MEDIANA. ★★★<br>
+  ✗ "Privación severa: no permitirse 6 de 9 ítems" → FALSO: son 4 de 9. ★★★<br>
+  ✗ "BIE: trabajar menos del 50%" → FALSO: es menos del 20%. ★★★<br>
+  ✗ "AROPE lo creó FOESSA" → FALSO: es la Estrategia Europa 2020 / Eurostat. ★★★</div>
+</section>
+
+<!-- 9 -->
+<section id="s9">
+  <h2>9. Otros indicadores sociales clave ★★★</h2>
+  <p>Además del AROPE, existen otros indicadores que permiten cuantificar distintas dimensiones de la exclusión social:</p>
+  <table>
+    <thead><tr><th>Indicador</th><th>Qué mide</th><th>Referencia</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Índice de Gini</strong></td><td>Desigualdad de ingresos. 0 = perfecta igualdad; 1 = desigualdad absoluta.</td><td>Eurostat / INE</td></tr>
+      <tr><td><strong>Tasa de abandono escolar temprano</strong></td><td>% de jóvenes 18-24 años sin estudios secundarios completados.</td><td>España históricamente por encima de la media UE. ★★★</td></tr>
+      <tr><td><strong>Tasa de desempleo juvenil</strong></td><td>% de jóvenes activos sin empleo. Factor crítico de exclusión.</td><td>EPA / Eurostat</td></tr>
+      <tr><td><strong>Tasa de cobertura de desempleo</strong></td><td>% de desempleados que reciben prestación por desempleo.</td><td>SEPE / Ministerio</td></tr>
+      <tr><td><strong>Tasa de sobrecarga de vivienda</strong></td><td>% de hogares que destinan más del 40% de sus ingresos a gastos de vivienda (alquiler/hipoteca). ★★★</td><td>Eurostat / INE</td></tr>
+      <tr><td><strong>Sinhogarismo</strong></td><td>Nº de personas sin hogar (sin techo + sin vivienda + en vivienda insegura/inadecuada).</td><td>INE · ETHOS (FEANTSA)</td></tr>
+      <tr><td><strong>Brecha de género salarial</strong></td><td>% de diferencia salarial entre hombres y mujeres.</td><td>INE / Eurostat</td></tr>
+      <tr><td><strong>ISES (FOESSA)</strong></td><td>Índice Sintético de Exclusión Social: clasifica hogares en 4 zonas.</td><td>Informes FOESSA</td></tr>
+    </tbody>
+  </table>
+  <div class="sky"><strong>Clasificación ETHOS del sinhogarismo (FEANTSA):</strong> sin techo (roofless) · sin vivienda (houseless) · vivienda insegura · vivienda inadecuada. Es la tipología europea de referencia para medir el sinhogarismo. ★★</div>
+</section>
+
+<!-- 10 -->
+<section id="s10">
+  <h2>10. La exclusión social en España: situación actual ★★★</h2>
+  <p>España presenta algunas características estructurales que la diferencian de otros países europeos en materia de exclusión social:</p>
+  <ul>
+    <li><span class="k">Precariedad laboral estructural:</span> elevada tasa de temporalidad, subempleo y empleo a tiempo parcial involuntario. El mercado de trabajo español genera exclusión incluso en etapas de crecimiento económico.</li>
+    <li><span class="k">Crisis de la vivienda:</span> el precio del alquiler y la compra ha alcanzado niveles que generan exclusión residencial masiva, especialmente en grandes ciudades. Es el principal factor emergente de exclusión en España según FOESSA 2025.</li>
+    <li><span class="k">Sistema de protección social insuficiente:</span> España tiene un nivel de gasto en protección social por debajo de la media de la UE-27. Las prestaciones asistenciales tienen brechas de cobertura relevantes.</li>
+    <li><span class="k">Abandono escolar elevado:</span> aunque ha mejorado en los últimos años, España sigue por encima de la media europea.</li>
+    <li><span class="k">Brecha digital:</span> nueva forma de exclusión que afecta especialmente a personas mayores, con bajo nivel educativo o en zonas rurales.</li>
+  </ul>
+  <div class="memo"><strong>Datos IX Informe FOESSA (2025):</strong><br>
+  · Exclusión severa: <strong>52% por encima de los niveles de 2007</strong>. ★★★<br>
+  · <strong>4,3 millones de personas</strong> en exclusión severa.<br>
+  · Un tercio de la exclusión severa: <strong>menores de edad</strong>.<br>
+  · Tasa de pobreza infantil: <strong>29%</strong>, la más alta de todos los grupos de edad.<br>
+  · Motores principales: <strong>vivienda y empleo precario</strong>. ★★★</div>
+
+  <h3>Colectivos más vulnerables en España ★★★</h3>
+  <ul>
+    <li>Personas sin hogar.</li>
+    <li>Personas con discapacidad y/o enfermedad mental.</li>
+    <li>Mujeres víctimas de violencia de género.</li>
+    <li>Jóvenes sin cualificación ni empleo (NINIs).</li>
+    <li>Personas mayores sin red de apoyo.</li>
+    <li>Inmigrantes en situación irregular.</li>
+    <li>Comunidad gitana.</li>
+    <li>Familias monoparentales (en su mayoría encabezadas por mujeres).</li>
+    <li>Menores en contextos de exclusión.</li>
+    <li>Personas con adicciones.</li>
+    <li>Reclusos y ex-reclusos.</li>
+  </ul>
+</section>
+
+<!-- 11 -->
+<section id="s11">
+  <h2>11. Memorización para examen</h2>
+
+  <h3>Frases memorizables ★★★</h3>
+  <ul>
+    <li>"La exclusión social incluye la pobreza pero la supera: es multidimensional." ★★★</li>
+    <li>"AROPE: al menos uno de tres criterios — renta al 60% de la mediana, privación severa (4 de 9), baja intensidad de empleo (&lt;20%)." ★★★</li>
+    <li>"El umbral de pobreza relativa es el 60% de la MEDIANA, no de la media." ★★★</li>
+    <li>"FOESSA: 6 dimensiones · 35 indicadores · escala ISES · 4 zonas: integración plena / precaria / exclusión moderada / severa." ★★★</li>
+    <li>"Lenoir acuñó 'exclusión social' en Francia en 1974." ★★★</li>
+    <li>"Tezanos: fractura social = sociedad dual con escasa movilidad entre integrados y excluidos." ★★★</li>
+    <li>"Subirats (2004): 6 ejes — género · edad · etnia · salud/discapacidad · territorio · relacional." ★★★</li>
+    <li>"IX FOESSA (2025): exclusión severa un 52% por encima de 2007; vivienda y empleo son los motores." ★★★</li>
+    <li>"La exclusión social es un proceso dinámico, multidimensional, relacional, acumulativo e involuntario." ★★★</li>
+  </ul>
+
+  <h3>10 trampas del examen ★★★</h3>
+  <ul>
+    <li>"Exclusión social y pobreza son sinónimos" → FALSO. La exclusión es multidimensional. ★★★</li>
+    <li>"AROPE exige cumplir los 3 criterios" → FALSO. Basta con 1 de los 3. ★★★</li>
+    <li>"Umbral de pobreza relativa: 50% de la media" → FALSO. Es el 60% de la MEDIANA. ★★★</li>
+    <li>"La exclusión social es un estado fijo" → FALSO. Es un proceso dinámico y acumulativo. ★★★</li>
+    <li>"El concepto de exclusión social es anglosajón" → FALSO. Lo acuña Lenoir en Francia (1974). ★★★</li>
+    <li>"Privación material severa: no permitirse 6 de los 9 ítems" → FALSO. Son 4 de 9. ★★★</li>
+    <li>"FOESSA solo mide la dimensión económica" → FALSO. Mide 6 dimensiones con 35 indicadores. ★★★</li>
+    <li>"La tasa de pobreza relativa mide pobreza absoluta" → FALSO. Mide distribución de ingresos relativa. ★★★</li>
+    <li>"AROPE lo creó FOESSA" → FALSO. Es la Estrategia Europa 2020 / Eurostat. ★★★</li>
+    <li>"Baja intensidad de empleo: menos del 50% del potencial laboral" → FALSO. Es menos del 20%. ★★★</li>
+  </ul>
+</section>
+
+<footer>Archivo: <strong>1_texto_explicativo.html</strong> · Tema 58 · Exclusión social en España · Formato narrativo para oposición</footer>
+
+</div>
+</body>
+</html>

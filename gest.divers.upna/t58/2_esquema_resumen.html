@@ -1,0 +1,441 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 58 · HTML 2 · Esquema-resumen visual · Exclusión social en España</title>
+<style>
+:root{
+  --bg:#f0fdf4;--card:#fff;--s2:#dcfce7;--s3:#bbf7d0;--line:#4ade80;
+  --text:#052e16;--muted:#15803d;--p:#16a34a;--p2:#15803d;
+  --grn:#059669;--grn2:#d1fae5;--red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;--sky:#0284c7;--sky2:#e0f2fe;
+  --teal:#0d9488;--teal2:#ccfbf1;--rose:#be185d;--rose2:#fce7f3;
+  --vio:#7c3aed;--vio2:#ede9fe;--ora:#c2410c;--ora2:#ffedd5;
+  --sh:0 3px 18px rgba(22,163,74,.11)
+}
+[data-theme="dark"]{
+  --bg:#001a08;--card:#002810;--s2:#003515;--s3:#004520;--line:#16a34a;
+  --text:#bbf7d0;--muted:#4ade80;--p:#4ade80;--p2:#86efac;
+  --grn:#86efac;--grn2:#052e16;--red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;--sky:#7dd3fc;--sky2:#082038;
+  --teal:#5eead4;--teal2:#031a16;--rose:#fda4af;--rose2:#1a0010;
+  --vio:#c4b5fd;--vio2:#1a0e33;--ora:#fdba74;--ora2:#2a1000;
+  --sh:0 3px 18px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:20px}
+.wrap{max-width:1260px;margin:0 auto}
+.hdr{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:16px 22px;box-shadow:var(--sh);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.95rem;font-weight:900;color:var(--p)}
+.hdr p{font-size:.7rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1.5px solid var(--line);background:var(--s2);color:var(--text);padding:6px 16px;border-radius:999px;font-size:.7rem;font-weight:700}
+.sec{background:var(--p);color:#fff;font-size:.79rem;font-weight:900;padding:7px 18px;border-radius:10px;display:inline-block;margin:20px 0 10px;text-transform:uppercase;letter-spacing:.04em}
+
+/* FLASH */
+.flash-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;margin-bottom:16px}
+.flash{background:var(--card);border:1.5px solid var(--line);border-radius:13px;padding:11px 13px;box-shadow:var(--sh);position:relative;overflow:hidden}
+.flash .num{font-size:2rem;font-weight:900;color:var(--p);opacity:.12;position:absolute;top:4px;right:8px;line-height:1}
+.flash .q{font-size:.67rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+.flash .a{font-size:.81rem;font-weight:800;color:var(--text)}
+
+/* VERSUS */
+.versus{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch;margin-bottom:16px}
+.vs-left{background:var(--sky2);border:2px solid var(--sky);border-radius:16px 0 0 16px;padding:16px}
+.vs-mid{background:var(--red2);border-top:2px solid var(--red);border-bottom:2px solid var(--red);display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:900;color:var(--red);padding:0 10px;width:48px}
+.vs-right{background:var(--s2);border:2px solid var(--p);border-radius:0 16px 16px 0;padding:16px}
+.vs-left h3,.vs-right h3{font-size:.84rem;font-weight:900;margin-bottom:7px}
+.vs-left h3{color:var(--sky)}
+.vs-right h3{color:var(--p)}
+.vs-left ul,.vs-right ul{margin:0 0 0 15px;font-size:.74rem;line-height:1.65}
+@media(max-width:580px){.versus{grid-template-columns:1fr}.vs-left{border-radius:16px 16px 0 0}.vs-mid{border-radius:0;width:100%;height:36px;border:2px solid var(--red)}.vs-right{border-radius:0 0 16px 16px}}
+
+/* TIMELINE */
+.timeline{position:relative;padding-left:28px;margin-bottom:16px}
+.timeline::before{content:'';position:absolute;left:9px;top:0;bottom:0;width:2px;background:var(--p);opacity:.3}
+.tl-item{position:relative;margin-bottom:10px}
+.tl-dot{position:absolute;left:-23px;top:3px;width:14px;height:14px;border-radius:50%;background:var(--p);border:2px solid var(--card)}
+.tl-box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 12px;box-shadow:var(--sh)}
+.tl-year{font-size:.7rem;font-weight:900;color:var(--p);margin-bottom:2px}
+.tl-text{font-size:.76rem;line-height:1.5}
+
+/* DIMS GRID */
+.dim-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:16px}
+.dim-card{border-radius:14px;padding:13px 15px;border:2px solid;box-shadow:var(--sh)}
+.dc1{background:var(--ora2);border-color:var(--ora)}
+.dc2{background:var(--sky2);border-color:var(--sky)}
+.dc3{background:var(--vio2);border-color:var(--vio)}
+.dc4{background:var(--rose2);border-color:var(--rose)}
+.dc5{background:var(--teal2);border-color:var(--teal)}
+.dc6{background:var(--warn2);border-color:var(--warn)}
+.dim-card .d-ico{font-size:1.4rem;margin-bottom:4px}
+.dim-card .d-title{font-size:.82rem;font-weight:900;margin-bottom:5px}
+.dc1 .d-title{color:var(--ora)}
+.dc2 .d-title{color:var(--sky)}
+.dc3 .d-title{color:var(--vio)}
+.dc4 .d-title{color:var(--rose)}
+.dc5 .d-title{color:var(--teal)}
+.dc6 .d-title{color:var(--warn)}
+.dim-card ul{margin:0 0 0 14px;font-size:.72rem;line-height:1.6}
+
+/* AROPE BLOQUE */
+.arope-wrap{background:var(--card);border:2.5px solid var(--p);border-radius:18px;padding:18px;margin-bottom:16px;box-shadow:var(--sh)}
+.arope-top{font-size:.88rem;font-weight:900;color:var(--p);margin-bottom:12px}
+.arope-crit{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media(max-width:640px){.arope-crit{grid-template-columns:1fr}}
+.ac{border-radius:13px;padding:13px;border:2px solid}
+.ac1{background:var(--red2);border-color:var(--red)}
+.ac2{background:var(--warn2);border-color:var(--warn)}
+.ac3{background:var(--sky2);border-color:var(--sky)}
+.ac .ac-num{font-size:1.6rem;font-weight:900;line-height:1}
+.ac1 .ac-num{color:var(--red)}
+.ac2 .ac-num{color:var(--warn)}
+.ac3 .ac-num{color:var(--sky)}
+.ac .ac-title{font-size:.78rem;font-weight:900;margin:4px 0}
+.ac .ac-key{font-size:.88rem;font-weight:900;margin:6px 0 4px}
+.ac .ac-desc{font-size:.72rem;line-height:1.55}
+.items-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:6px}
+.ip{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:4px 6px;font-size:.67rem;text-align:center}
+.arope-note{background:var(--s2);border:1.5px solid var(--p);border-radius:10px;padding:10px 14px;margin-top:10px;font-size:.76rem;font-weight:800;color:var(--p2)}
+
+/* ISES */
+.ises-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--card);border:2px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:16px;box-shadow:var(--sh)}
+@media(max-width:600px){.ises-flow{grid-template-columns:1fr 1fr}}
+.ises-zone{padding:13px;text-align:center;border-right:1px solid var(--line)}
+.ises-zone:last-child{border-right:none}
+.iz1{background:var(--grn2)}
+.iz2{background:var(--warn2)}
+.iz3{background:var(--ora2)}
+.iz4{background:var(--red2)}
+.ises-zone .iz-n{font-size:1.6rem;font-weight:900;line-height:1;margin-bottom:4px}
+.iz1 .iz-n{color:var(--grn)}
+.iz2 .iz-n{color:var(--warn)}
+.iz3 .iz-n{color:var(--ora)}
+.iz4 .iz-n{color:var(--red)}
+.ises-zone .iz-t{font-size:.77rem;font-weight:900;margin-bottom:4px}
+.ises-zone .iz-d{font-size:.68rem;line-height:1.45}
+
+/* SUBIRATS EJES */
+.ejes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:16px}
+.eje{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;box-shadow:var(--sh);display:flex;gap:10px;align-items:flex-start}
+.eje .e-num{width:28px;height:28px;border-radius:50%;background:var(--p);color:#fff;font-weight:900;font-size:.82rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.eje .e-title{font-size:.79rem;font-weight:900;color:var(--p2);margin-bottom:3px}
+.eje .e-desc{font-size:.71rem;line-height:1.45}
+
+/* FOESSA DATOS */
+.foessa-datos{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:16px}
+.fd{background:var(--card);border:2px solid var(--p);border-radius:13px;padding:12px 14px;box-shadow:var(--sh);text-align:center}
+.fd .fd-num{font-size:1.7rem;font-weight:900;color:var(--p);line-height:1.1}
+.fd .fd-label{font-size:.72rem;color:var(--muted);margin-top:4px;line-height:1.4}
+
+/* INDICADORES */
+.ind-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;margin-bottom:16px}
+.ind{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 13px;box-shadow:var(--sh)}
+.ind .i-t{font-size:.77rem;font-weight:900;color:var(--p);margin-bottom:4px}
+.ind .i-d{font-size:.72rem;line-height:1.5}
+
+/* TRAMPAS */
+.trap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:10px;margin-bottom:16px}
+.trap{background:var(--card);border:1px solid var(--line);border-radius:13px;overflow:hidden;box-shadow:var(--sh)}
+.trap-w{background:var(--red2);padding:8px 13px;font-size:.73rem;font-weight:700;color:var(--red)}
+.trap-ok{background:var(--grn2);padding:8px 13px;font-size:.73rem;color:var(--grn)}
+.trap-n{font-size:.62rem;font-weight:900;opacity:.6;margin-bottom:2px;text-transform:uppercase}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<div class="hdr">
+  <div>
+    <h1>Tema 58 · HTML 2 · Esquema-resumen con bloques visuales para memorización rápida</h1>
+    <p>La exclusión social en España: concepto, dimensiones e indicadores · Oposiciones Navarra / TSS</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">🌙 Claro / Oscuro</button>
+</div>
+
+<!-- ══════ FLASH ══════ -->
+<div class="sec">⚡ Fichas flash — 20 datos inmediatos</div>
+<div class="flash-grid">
+  <div class="flash"><div class="num">1</div><div class="q">¿Quién acuñó "exclusión social"?</div><div class="a">René Lenoir · Francia · 1974 ★★★</div></div>
+  <div class="flash"><div class="num">2</div><div class="q">Exclusión vs. pobreza</div><div class="a">Exclusión: multidimensional · pobreza: unidimensional (ingresos) ★★★</div></div>
+  <div class="flash"><div class="num">3</div><div class="q">Fractura social</div><div class="a">Tezanos · sociedad dual: integrados ↔ excluidos ★★★</div></div>
+  <div class="flash"><div class="num">4</div><div class="q">AROPE: nº de criterios</div><div class="a">3 criterios · basta con cumplir 1 ★★★</div></div>
+  <div class="flash"><div class="num">5</div><div class="q">Criterio 1 AROPE</div><div class="a">Ingresos &lt; 60% de la MEDIANA nacional ★★★</div></div>
+  <div class="flash"><div class="num">6</div><div class="q">Criterio 2 AROPE</div><div class="a">Privación material severa: no poder permitirse ≥4 de 9 ítems ★★★</div></div>
+  <div class="flash"><div class="num">7</div><div class="q">Criterio 3 AROPE</div><div class="a">Baja intensidad de empleo: &lt;20% del potencial laboral ★★★</div></div>
+  <div class="flash"><div class="num">8</div><div class="q">¿Quién creó AROPE?</div><div class="a">Estrategia Europa 2020 / Eurostat · NO FOESSA ★★★</div></div>
+  <div class="flash"><div class="num">9</div><div class="q">FOESSA: dimensiones e indicadores</div><div class="a">6 dimensiones · 35 indicadores · escala ISES ★★★</div></div>
+  <div class="flash"><div class="num">10</div><div class="q">Escala ISES: 4 zonas</div><div class="a">Integración plena · Precaria · Exclusión moderada · Severa ★★★</div></div>
+  <div class="flash"><div class="num">11</div><div class="q">Subirats (2004): nº de ejes</div><div class="a">6 ejes: género · edad · etnia · salud/discapacidad · territorio · relacional ★★★</div></div>
+  <div class="flash"><div class="num">12</div><div class="q">Tezanos: obra de referencia</div><div class="a">"La sociedad dividida" ★★★</div></div>
+  <div class="flash"><div class="num">13</div><div class="q">IX FOESSA (2025): exclusión severa</div><div class="a">52% por encima de niveles de 2007 · 4,3 millones ★★★</div></div>
+  <div class="flash"><div class="num">14</div><div class="q">IX FOESSA (2025): motores</div><div class="a">Vivienda y empleo precario ★★★</div></div>
+  <div class="flash"><div class="num">15</div><div class="q">Pobreza infantil en España</div><div class="a">29%: la más alta de todos los grupos de edad ★★★</div></div>
+  <div class="flash"><div class="num">16</div><div class="q">Índice de Gini</div><div class="a">Desigualdad de ingresos: 0=igualdad perfecta; 1=desigualdad absoluta ★★</div></div>
+  <div class="flash"><div class="num">17</div><div class="q">Tasa de sobrecarga de vivienda</div><div class="a">Hogares que destinan &gt;40% ingresos a vivienda ★★★</div></div>
+  <div class="flash"><div class="num">18</div><div class="q">Subirats: obra</div><div class="a">"Pobreza y exclusión social" · Fundación La Caixa · 2004 ★★★</div></div>
+  <div class="flash"><div class="num">19</div><div class="q">Sinhogarismo: tipología europea</div><div class="a">ETHOS (FEANTSA): sin techo · sin vivienda · insegura · inadecuada ★★</div></div>
+  <div class="flash"><div class="num">20</div><div class="q">Características de la exclusión</div><div class="a">Multidimensional · dinámica · relacional · acumulativa · involuntaria · estructural ★★★</div></div>
+</div>
+
+<!-- ══════ POBREZA VS EXCLUSIÓN ══════ -->
+<div class="sec">⚖️ Bloque 1 · Pobreza vs. Exclusión social ★★★</div>
+<div class="versus">
+  <div class="vs-left">
+    <h3>POBREZA</h3>
+    <ul>
+      <li>Concepto unidimensional.</li>
+      <li>Insuficiencia de ingresos económicos.</li>
+      <li>Se mide por umbrales económicos.</li>
+      <li>Puede ser temporal o crónica.</li>
+      <li>Condición necesaria pero NO suficiente para la exclusión.</li>
+    </ul>
+  </div>
+  <div class="vs-mid">≠</div>
+  <div class="vs-right">
+    <h3>EXCLUSIÓN SOCIAL ★★★</h3>
+    <ul>
+      <li>Concepto multidimensional.</li>
+      <li>Proceso dinámico y acumulativo.</li>
+      <li>Abarca: laboral · educativa · residencial · sanitaria · relacional · política.</li>
+      <li>Incluye la pobreza pero la supera.</li>
+      <li>Relacional: se define frente a la sociedad de referencia.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ══════ TIMELINE ══════ -->
+<div class="sec">📅 Bloque 2 · Línea del tiempo ★★★</div>
+<div class="timeline">
+  <div class="tl-item"><div class="tl-dot"></div><div class="tl-box"><div class="tl-year">1974</div><div class="tl-text"><strong>René Lenoir</strong> acuña "exclusión social" en Francia. <em>"Les exclus: un Français sur dix."</em> ★★★</div></div></div>
+  <div class="tl-item"><div class="tl-dot"></div><div class="tl-box"><div class="tl-year">Años 80</div><div class="tl-text">Desempleo estructural en Europa. El concepto se extiende.</div></div></div>
+  <div class="tl-item"><div class="tl-dot"></div><div class="tl-box"><div class="tl-year">Años 90</div><div class="tl-text">La UE adopta el término. Reconoce carácter multidimensional. Programas europeos contra la exclusión.</div></div></div>
+  <div class="tl-item"><div class="tl-dot"></div><div class="tl-box"><div class="tl-year">1997</div><div class="tl-text"><strong>Tratado de Ámsterdam:</strong> lucha contra la exclusión social como objetivo europeo. ★★★</div></div></div>
+  <div class="tl-item"><div class="tl-dot"></div><div class="tl-box"><div class="tl-year">2000</div><div class="tl-text"><strong>Consejo de Lisboa:</strong> Planes de Acción para la Inclusión Social (PNAin). ★★</div></div></div>
+  <div class="tl-item"><div class="tl-dot"></div><div class="tl-box"><div class="tl-year">2004</div><div class="tl-text"><strong>Subirats et al.:</strong> "Pobreza y exclusión social". 6 ejes. Fundación La Caixa. ★★★</div></div></div>
+  <div class="tl-item"><div class="tl-dot"></div><div class="tl-box"><div class="tl-year">2010</div><div class="tl-text"><strong>Estrategia Europa 2020:</strong> indicador AROPE como instrumento de medición común. ★★★</div></div></div>
+  <div class="tl-item"><div class="tl-dot"></div><div class="tl-box"><div class="tl-year">2025</div><div class="tl-text"><strong>IX Informe FOESSA:</strong> exclusión severa 52% sobre 2007. Vivienda y empleo como motores. ★★★</div></div></div>
+</div>
+
+<!-- ══════ 6 DIMENSIONES ══════ -->
+<div class="sec">🔷 Bloque 3 · Las 6 dimensiones de la exclusión social ★★★</div>
+<div class="dim-grid">
+  <div class="dim-card dc1">
+    <div class="d-ico">💼</div>
+    <div class="d-title">1. Laboral / económica</div>
+    <ul>
+      <li>Desempleo (factor principal UE).</li>
+      <li>Empleo precario y temporal.</li>
+      <li>Ingresos insuficientes.</li>
+      <li>Endeudamiento grave.</li>
+      <li>Privación material severa.</li>
+    </ul>
+  </div>
+  <div class="dim-card dc2">
+    <div class="d-ico">📚</div>
+    <div class="d-title">2. Formativa / educativa</div>
+    <ul>
+      <li>Abandono escolar temprano.</li>
+      <li>Analfabetismo.</li>
+      <li>Falta de cualificación.</li>
+      <li>Brecha digital (nueva exclusión).</li>
+    </ul>
+  </div>
+  <div class="dim-card dc3">
+    <div class="d-ico">🏠</div>
+    <div class="d-title">3. Residencial</div>
+    <ul>
+      <li>Sinhogarismo.</li>
+      <li>Hacinamiento / insalubridad.</li>
+      <li>Imposibilidad de acceso a vivienda.</li>
+      <li>Segregación residencial.</li>
+    </ul>
+  </div>
+  <div class="dim-card dc4">
+    <div class="d-ico">🏥</div>
+    <div class="d-title">4. Sanitaria</div>
+    <ul>
+      <li>Falta de acceso a atención sanitaria.</li>
+      <li>Enfermedad crónica sin atender.</li>
+      <li>Salud mental sin tratamiento.</li>
+      <li>Adicciones.</li>
+    </ul>
+  </div>
+  <div class="dim-card dc5">
+    <div class="d-ico">🤝</div>
+    <div class="d-title">5. Relacional / social</div>
+    <ul>
+      <li>Aislamiento social.</li>
+      <li>Ruptura de redes familiares.</li>
+      <li>Ausencia de apoyos informales.</li>
+      <li>Conflictos relacionales graves.</li>
+    </ul>
+  </div>
+  <div class="dim-card dc6">
+    <div class="d-ico">🗳️</div>
+    <div class="d-title">6. Política / ciudadana</div>
+    <ul>
+      <li>Falta de derechos ciudadanos.</li>
+      <li>No participación política.</li>
+      <li>Situación irregular.</li>
+      <li>Exclusión del sistema de protección.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ══════ AROPE ══════ -->
+<div class="sec">🔴 Bloque 4 · Indicador AROPE ★★★</div>
+<div class="arope-wrap">
+  <div class="arope-top">AROPE (At Risk Of Poverty or Social Exclusion) — Estrategia Europa 2020 · Basta con cumplir 1 de los 3 criterios ★★★</div>
+  <div class="arope-crit">
+    <div class="ac ac1">
+      <div class="ac-num">①</div>
+      <div class="ac-title">Riesgo de pobreza relativa</div>
+      <div class="ac-key">60% de la MEDIANA ★★★</div>
+      <div class="ac-desc">Ingresos del hogar inferiores al 60% de la mediana nacional. NO es el 50%, NO es la media.</div>
+    </div>
+    <div class="ac ac2">
+      <div class="ac-num">②</div>
+      <div class="ac-title">Privación material severa</div>
+      <div class="ac-key">≥ 4 de 9 ítems ★★★</div>
+      <div class="ac-desc">El hogar no puede permitirse al menos 4 de estos 9 ítems:</div>
+      <div class="items-grid">
+        <div class="ip">Alquiler / hipoteca</div>
+        <div class="ip">Temperatura adecuada</div>
+        <div class="ip">Gastos imprevistos</div>
+        <div class="ip">Proteínas c/2 días</div>
+        <div class="ip">Vacaciones ≥1 semana</div>
+        <div class="ip">Coche</div>
+        <div class="ip">Lavadora</div>
+        <div class="ip">TV en color</div>
+        <div class="ip">Teléfono</div>
+      </div>
+    </div>
+    <div class="ac ac3">
+      <div class="ac-num">③</div>
+      <div class="ac-title">Baja intensidad de empleo</div>
+      <div class="ac-key">&lt; 20% del potencial ★★★</div>
+      <div class="ac-desc">Adultos (16-64 años) del hogar que trabajan menos del 20% de su potencial laboral durante el año. NO es el 50%.</div>
+    </div>
+  </div>
+  <div class="arope-note">⚠️ Clave examen: AROPE = cumplir AL MENOS 1 de los 3 · 60% mediana · 4 de 9 ítems · &lt;20% potencial · lo crea Estrategia Europa 2020, NO FOESSA ★★★</div>
+</div>
+
+<!-- ══════ ISES FOESSA ══════ -->
+<div class="sec">📊 Bloque 5 · Modelo FOESSA — Escala ISES ★★★</div>
+<div class="ises-flow">
+  <div class="ises-zone iz1">
+    <div class="iz-n">✔</div>
+    <div class="iz-t">Integración plena</div>
+    <div class="iz-d">Sin factores de exclusión detectados.</div>
+  </div>
+  <div class="ises-zone iz2">
+    <div class="iz-n">⚠</div>
+    <div class="iz-t">Integración precaria</div>
+    <div class="iz-d">Algún factor de riesgo presente sin exclusión consolidada.</div>
+  </div>
+  <div class="ises-zone iz3">
+    <div class="iz-n">▲</div>
+    <div class="iz-t">Exclusión moderada</div>
+    <div class="iz-d">Varios factores en distintas dimensiones.</div>
+  </div>
+  <div class="ises-zone iz4">
+    <div class="iz-n">✖</div>
+    <div class="iz-t">Exclusión severa ★★★</div>
+    <div class="iz-d">Exclusión intensa en múltiples dimensiones simultáneas.</div>
+  </div>
+</div>
+<div style="background:var(--card);border:1.5px solid var(--line);border-radius:11px;padding:11px 14px;font-size:.74rem;margin-bottom:14px;box-shadow:var(--sh)">
+  <strong style="color:var(--p)">FOESSA: 6 dimensiones · 35 indicadores · escala ISES</strong><br>
+  Las 6 dimensiones: <strong>1. Empleo · 2. Consumo e ingresos · 3. Vivienda · 4. Educación · 5. Salud · 6. Participación política y social ★★★</strong>
+</div>
+
+<!-- ══════ DATOS FOESSA 2025 ══════ -->
+<div class="sec">📈 Bloque 6 · Datos IX Informe FOESSA (2025) ★★★</div>
+<div class="foessa-datos">
+  <div class="fd"><div class="fd-num">+52%</div><div class="fd-label">Exclusión severa sobre niveles de 2007 ★★★</div></div>
+  <div class="fd"><div class="fd-num">4,3M</div><div class="fd-label">Personas en exclusión severa en España ★★★</div></div>
+  <div class="fd"><div class="fd-num">1/3</div><div class="fd-label">De la exclusión severa corresponde a menores de edad ★★★</div></div>
+  <div class="fd"><div class="fd-num">29%</div><div class="fd-label">Tasa de pobreza infantil en España — la más alta por grupos de edad ★★★</div></div>
+  <div class="fd"><div class="fd-num">🏠+💼</div><div class="fd-label">Vivienda y empleo: motores principales de la exclusión en España ★★★</div></div>
+</div>
+
+<!-- ══════ SUBIRATS 6 EJES ══════ -->
+<div class="sec">🔑 Bloque 7 · Subirats (2004) — 6 ejes generadores de exclusión ★★★</div>
+<div class="ejes-grid">
+  <div class="eje"><div class="e-num">1</div><div><div class="e-title">Género</div><div class="e-desc">Mujeres: brecha salarial · cuidados · violencia de género · monoparentalidad.</div></div></div>
+  <div class="eje"><div class="e-num">2</div><div><div class="e-title">Edad</div><div class="e-desc">Jóvenes sin cualificación (NINIs) y personas mayores sin red de apoyo.</div></div></div>
+  <div class="eje"><div class="e-num">3</div><div><div class="e-title">Etnia / Origen</div><div class="e-desc">Comunidad gitana · inmigrantes en situación irregular.</div></div></div>
+  <div class="eje"><div class="e-num">4</div><div><div class="e-title">Salud / Discapacidad</div><div class="e-desc">Discapacidad física, intelectual o sensorial · enfermedad mental · adicciones.</div></div></div>
+  <div class="eje"><div class="e-num">5</div><div><div class="e-title">Territorio</div><div class="e-desc">Zonas rurales · periferias urbanas degradadas · menor acceso a servicios.</div></div></div>
+  <div class="eje"><div class="e-num">6</div><div><div class="e-title">Relacional</div><div class="e-desc">Aislamiento social como factor generador de vulnerabilidad.</div></div></div>
+</div>
+
+<!-- ══════ OTROS INDICADORES ══════ -->
+<div class="sec">📐 Bloque 8 · Otros indicadores sociales clave ★★★</div>
+<div class="ind-grid">
+  <div class="ind"><div class="i-t">Índice de Gini ★★</div><div class="i-d">Desigualdad de ingresos: 0 = igualdad perfecta · 1 = desigualdad absoluta.</div></div>
+  <div class="ind"><div class="i-t">Abandono escolar temprano ★★★</div><div class="i-d">% jóvenes 18-24 sin estudios secundarios. España históricamente sobre media UE.</div></div>
+  <div class="ind"><div class="i-t">Desempleo juvenil ★★★</div><div class="i-d">Factor crítico de exclusión. Especialmente relevante en España.</div></div>
+  <div class="ind"><div class="i-t">Sobrecarga de vivienda ★★★</div><div class="i-d">% hogares que destinan &gt;40% de ingresos a alquiler/hipoteca.</div></div>
+  <div class="ind"><div class="i-t">Sinhogarismo ★★</div><div class="i-d">ETHOS (FEANTSA): sin techo · sin vivienda · vivienda insegura · inadecuada.</div></div>
+  <div class="ind"><div class="i-t">Brecha de género salarial ★★</div><div class="i-d">% diferencia salarial entre hombres y mujeres.</div></div>
+  <div class="ind"><div class="i-t">Cobertura prestaciones desempleo ★★</div><div class="i-d">% desempleados que reciben prestación. Mide el alcance del sistema de protección.</div></div>
+  <div class="ind"><div class="i-t">ISES (FOESSA) ★★★</div><div class="i-d">Índice Sintético de Exclusión Social. Clasifica hogares en 4 zonas del continuum.</div></div>
+</div>
+
+<!-- ══════ TRAMPAS ══════ -->
+<div class="sec">⚠️ Bloque 9 · 10 trampas del examen ★★★</div>
+<div class="trap-grid">
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 1 ✗</div>"Exclusión social y pobreza son sinónimos."</div>
+    <div class="trap-ok">✓ La exclusión es multidimensional; la pobreza es una sola dimensión dentro de ella. ★★★</div>
+  </div>
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 2 ✗</div>"AROPE exige cumplir los 3 criterios simultáneamente."</div>
+    <div class="trap-ok">✓ Basta con cumplir AL MENOS 1 de los 3 criterios. ★★★</div>
+  </div>
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 3 ✗</div>"El umbral de pobreza relativa es el 50% de la media."</div>
+    <div class="trap-ok">✓ Es el 60% de la MEDIANA (no media, no 50%). ★★★</div>
+  </div>
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 4 ✗</div>"La exclusión social es un estado fijo."</div>
+    <div class="trap-ok">✓ Es un proceso dinámico, acumulativo y reversible. ★★★</div>
+  </div>
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 5 ✗</div>"El concepto de exclusión social es anglosajón."</div>
+    <div class="trap-ok">✓ Lo acuña René Lenoir en Francia en 1974. ★★★</div>
+  </div>
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 6 ✗</div>"Privación material severa: no permitirse 6 de los 9 ítems."</div>
+    <div class="trap-ok">✓ Son 4 de los 9 ítems. ★★★</div>
+  </div>
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 7 ✗</div>"FOESSA solo mide la dimensión económica."</div>
+    <div class="trap-ok">✓ FOESSA mide 6 dimensiones con 35 indicadores. ★★★</div>
+  </div>
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 8 ✗</div>"La tasa de pobreza relativa mide pobreza absoluta."</div>
+    <div class="trap-ok">✓ Mide desigualdad distributiva relativa, no pobreza absoluta. ★★★</div>
+  </div>
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 9 ✗</div>"AROPE lo creó FOESSA."</div>
+    <div class="trap-ok">✓ Lo crea la Estrategia Europa 2020 / Eurostat. ★★★</div>
+  </div>
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 10 ✗</div>"Baja intensidad de empleo: trabajar menos del 50%."</div>
+    <div class="trap-ok">✓ Es menos del 20% del potencial laboral. ★★★</div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

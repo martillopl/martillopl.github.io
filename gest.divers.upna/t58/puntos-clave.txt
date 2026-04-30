@@ -1,0 +1,252 @@
+PUNTOS CLAVE PARA EXAMEN – TEMA 58
+La exclusión social en España: concepto de exclusión social.
+Indicadores sociales para identificar a las personas excluidas y cuantificar
+las dimensiones de los procesos de exclusión.
+=========================================================================
+
+FUENTES PRINCIPALES:
+· Informe FOESSA (sucesivos, especialmente VII 2014 / VIII 2019 / IX 2025). ★★★
+· Tezanos, José Félix: "La sociedad dividida" y concepto de fractura social. ★★★
+· Subirats, Joan et al. (2004): "Pobreza y exclusión social. Un análisis de la realidad
+  española y europea". Fundación La Caixa. ★★★
+· EAPN España: Informes AROPE (anuales). ★★★
+· Laparra, Miguel et al. (FOESSA): Escala ISES / dimensiones de la exclusión. ★★★
+· Estrategia Europa 2020 → indicador AROPE. ★★★
+· Red Europea de Lucha contra la Pobreza (EAPN). ★★
+· Plan Nacional de Acción para la Inclusión Social (PNAin). ★★
+· OIT: concepto de trabajo decente. ★★
+=========================================================================
+
+=== BLOQUE A: CONCEPTO DE EXCLUSIÓN SOCIAL ===
+
+A1. DISTINCIÓN POBREZA ≠ EXCLUSIÓN SOCIAL ★★★
+- POBREZA: insuficiencia de ingresos económicos para cubrir necesidades básicas.
+  Es unidimensional: se mide por nivel de ingresos.
+- EXCLUSIÓN SOCIAL: proceso multidimensional y dinámico mediante el cual
+  personas o grupos quedan fuera de la participación en la vida económica, social,
+  política y cultural de la sociedad.
+  Es multidimensional: va mucho más allá de la pobreza económica.
+▶ Clave examen: la exclusión social INCLUYE la pobreza pero la SUPERA. ★★★
+
+A2. DEFINICIÓN OPERATIVA ★★★
+"Proceso social de separación de un individuo o grupo respecto a las posibilidades
+laborales, económicas, políticas y culturales a las que otros sí tienen acceso
+y que les permite tener una vida digna y con agencia social."
+(Tezanos y otros; adaptación FOESSA.)
+▶ Elementos clave: proceso (no estado estático) · multidimensional · dinámico ·
+  relacional (comparativo) · acumulativo · asociado a ruptura de vínculos sociales. ★★★
+
+A3. DE LA POBREZA A LA EXCLUSIÓN: EVOLUCIÓN CONCEPTUAL ★★★
+- Años 60-70: predomina concepto de pobreza (carácter económico).
+- Años 80: surge el término "exclusión social" en Francia (René Lenoir, 1974).
+- Años 90: la UE adopta el término; reconoce carácter multidimensional.
+- Tratado de Ámsterdam (1997): introduce lucha contra la exclusión como objetivo.
+- Consejo de Lisboa (2000): planes de acción para la inclusión social.
+- Estrategia Europa 2020: indicador AROPE como instrumento de medición. ★★★
+▶ Trampa examen: Lenoir acuñó el concepto en 1974 en Francia, NO es un
+  concepto anglosajón original. ★★★
+
+A4. CARACTERÍSTICAS DE LA EXCLUSIÓN SOCIAL ★★★
+1. MULTIDIMENSIONAL: afecta a varios ámbitos a la vez (laboral, económico,
+   residencial, sanitario, relacional, etc.).
+2. DINÁMICA / PROCESUAL: no es un estado fijo; es un proceso de
+   acumulación de desventajas a lo largo del tiempo.
+3. RELACIONAL: se define en relación a la sociedad de referencia
+   (exclusión es exclusión DE algo).
+4. ACUMULATIVA: los factores se potencian entre sí.
+5. HETEROGÉNEA: afecta a distintos grupos de formas distintas.
+6. INVOLUNTARIA: las personas excluidas no han elegido estarlo.
+
+A5. FRACTURA SOCIAL (Tezanos) ★★★
+- Tezanos introduce el concepto de "fractura social" o "sociedad dual":
+  una sociedad que se divide en un sector integrado y un sector excluido,
+  con escasas posibilidades de movilidad entre ambos.
+- La fractura social supone la ruptura del tejido social de cohesión.
+▶ "La sociedad dividida" (Tezanos): texto de referencia. ★★★
+
+
+=== BLOQUE B: DIMENSIONES DE LA EXCLUSIÓN SOCIAL ===
+
+B1. DIMENSIONES PRINCIPALES (Subirats 2004 / FOESSA) ★★★
+La exclusión social se estructura en torno a varias dimensiones o esferas vitales.
+Las más aceptadas para examen son:
+
+1. DIMENSIÓN ECONÓMICA / LABORAL ★★★
+   - Desempleo (principal factor según la Comisión Europea).
+   - Empleo precario, temporal, subempleo.
+   - Ausencia o insuficiencia de ingresos.
+   - Endeudamiento grave.
+   - Privación material severa.
+
+2. DIMENSIÓN FORMATIVA / EDUCATIVA ★★★
+   - Abandono escolar temprano.
+   - Analfabetismo o bajo nivel educativo.
+   - Falta de cualificación profesional.
+   - Exclusión digital (brecha digital).
+
+3. DIMENSIÓN RESIDENCIAL / HABITACIONAL ★★★
+   - Carencia de vivienda (sin hogar / sinhogarismo).
+   - Vivienda en malas condiciones (hacinamiento, insalubridad).
+   - Imposibilidad de acceso a vivienda digna.
+   - Segregación residencial.
+
+4. DIMENSIÓN SANITARIA ★★★
+   - Falta de acceso a la atención sanitaria.
+   - Enfermedad crónica sin atención adecuada.
+   - Problemas de salud mental sin tratamiento.
+   - Adicciones.
+
+5. DIMENSIÓN RELACIONAL / SOCIAL ★★★
+   - Aislamiento social: rotura de redes familiares y de amistad.
+   - Deterioro o ausencia de apoyos informales.
+   - Conflictos relacionales graves.
+
+6. DIMENSIÓN POLÍTICA / CIUDADANA ★★
+   - Falta de acceso a derechos ciudadanos.
+   - No participación política o cívica.
+   - Situación irregular (sin papeles).
+
+B2. MODELO FOESSA: 6 DIMENSIONES / 35 INDICADORES ★★★
+El modelo FOESSA (Fundación Fomento de Estudios Sociales y de Sociología Aplicada)
+es el más utilizado en España para medir la exclusión social.
+Dimensiones del modelo FOESSA:
+1. Empleo.
+2. Consumo e ingresos.
+3. Vivienda.
+4. Educación.
+5. Salud.
+6. Participación política y social.
+▶ Escala ISES (Índice Sintético de Exclusión Social): instrumento de medición
+  de FOESSA. Permite clasificar los hogares en:
+  - Integración plena.
+  - Integración precaria.
+  - Exclusión moderada.
+  - Exclusión severa. ★★★
+
+B3. SUBIRATS (2004): EJES Y COLECTIVOS ★★★
+Joan Subirats identifica 6 ejes generadores de exclusión social en España:
+1. Eje género.
+2. Eje edad.
+3. Eje etnia / origen.
+4. Eje salud / discapacidad.
+5. Eje territorio (rural vs. urbano).
+6. Eje relacional (aislamiento).
+▶ Colectivos más vulnerables según Subirats: mujeres · jóvenes sin cualificación ·
+  personas mayores · personas con discapacidad · inmigrantes en situación irregular ·
+  personas sin hogar · personas con adicciones · reclusos. ★★★
+
+
+=== BLOQUE C: INDICADORES SOCIALES ===
+
+C1. QUÉ ES UN INDICADOR SOCIAL ★★★
+- Instrumento de medida que permite cuantificar, monitorear y comparar la situación
+  de grupos de población en relación con una dimensión de la exclusión social.
+- Características: objetividad · comparabilidad · sensibilidad al cambio · disponibilidad
+  de datos · cobertura temporal.
+
+C2. INDICADOR AROPE ★★★ (At Risk Of Poverty or Social Exclusion)
+Indicador europeo de referencia. Mide el riesgo de pobreza o exclusión social.
+Creado en el marco de la Estrategia Europa 2020.
+Una persona está en situación AROPE si cumple AL MENOS UNO de estos 3 criterios:
+
+  CRITERIO 1: RIESGO DE POBREZA RELATIVA ★★★
+  Ingresos inferiores al 60% de la mediana de los ingresos del país.
+  (umbral de pobreza relativa)
+
+  CRITERIO 2: PRIVACIÓN MATERIAL SEVERA (PMS) ★★★
+  El hogar no puede permitirse al menos 4 de los siguientes 9 ítems:
+  1. Pagar el alquiler/hipoteca a tiempo.
+  2. Mantener la vivienda con temperatura adecuada.
+  3. Hacer frente a gastos imprevistos.
+  4. Comer carne, pollo o pescado (o proteína equivalente) cada 2 días.
+  5. Ir de vacaciones fuera de casa al menos 1 semana al año.
+  6. Tener coche.
+  7. Tener lavadora.
+  8. Tener TV en color.
+  9. Tener teléfono.
+
+  CRITERIO 3: BAJA INTENSIDAD DE EMPLEO (BIE) ★★★
+  Personas en hogares donde los adultos (16-64 años) trabajan menos del 20%
+  de su potencial laboral durante el año de referencia.
+
+▶ FÓRMULA: AROPE = RdP (60% mediana) + PMS (4 de 9 ítems) + BIE (<20%) ★★★
+▶ En España (EAPN, 2021-2024): entorno al 26-27% de la población.
+
+C3. TASA DE POBREZA RELATIVA ★★★
+- Umbral: ingresos inferiores al 60% de la mediana nacional.
+- En España: uno de los valores más altos de la UE de forma estructural.
+- No mide pobreza absoluta sino desigualdad distributiva.
+- Puede haber reducción de la tasa de pobreza relativa sin mejora real si todos
+  bajan a la vez. ★★★
+
+C4. OTROS INDICADORES CLAVE ★★★
+- Tasa de abandono escolar temprano: % de jóvenes 18-24 sin estudios secundarios.
+  España: históricamente por encima de la media UE.
+- Tasa de desempleo juvenil: indicador crítico de exclusión.
+- Tasa de cobertura de prestaciones por desempleo.
+- Tasa de sinhogarismo (personas sin hogar).
+- Índice de Gini: mide desigualdad de ingresos (0 = perfecta igualdad; 1 = total).
+- Brecha de género salarial.
+- Tasa de sobrecarga de vivienda: % de hogares que destinan más del 40% de ingresos
+  a vivienda (alquiler/hipoteca). ★★★
+
+C5. INDICADORES FOESSA / ISES ★★★
+- 35 indicadores en 6 dimensiones.
+- Permite calcular el espacio social de la exclusión:
+  % de hogares e individuos en cada zona del continuum integración-exclusión.
+- DATO CLAVE: en 2025 (IX Informe FOESSA) la exclusión severa se sitúa
+  un 52% por encima de los niveles de 2007. ★★★
+
+
+=== BLOQUE D: COLECTIVOS EN RIESGO DE EXCLUSIÓN EN ESPAÑA ===
+
+D1. PRINCIPALES COLECTIVOS ★★★
+- Personas sin hogar.
+- Personas con discapacidad física, intelectual o sensorial.
+- Personas con enfermedad mental.
+- Personas con adicciones.
+- Mujeres víctimas de violencia de género.
+- Jóvenes sin cualificación ni empleo (NINIs).
+- Personas mayores sin red de apoyo.
+- Inmigrantes en situación irregular.
+- Minorías étnicas (especialmente comunidad gitana).
+- Familias monoparentales (mayoría encabezadas por mujeres).
+- Menores en contextos de exclusión.
+- Reclusos y ex-reclusos.
+
+D2. FACTORES ESTRUCTURALES EN ESPAÑA ★★★
+- Precariedad laboral y temporalidad estructural del mercado de trabajo.
+- Elevado precio de la vivienda (alquiler e hipoteca).
+- Sistema de protección social con coberturas inferiores a la media UE.
+- Abandono escolar temprano históricamente elevado.
+- Brecha digital como nueva forma de exclusión.
+▶ IX FOESSA (2025): vivienda y empleo son los dos grandes motores de la exclusión
+  en España. ★★★
+
+
+=== BLOQUE E: TRAMPAS DE EXAMEN ★★★ ===
+
+T1: "Exclusión social y pobreza son sinónimos" → FALSO.
+    La exclusión es multidimensional; la pobreza es una dimensión dentro de ella. ★★★
+T2: "El indicador AROPE exige cumplir los 3 criterios simultáneamente" → FALSO.
+    Basta con cumplir AL MENOS UNO de los tres criterios. ★★★
+T3: "El umbral de pobreza relativa se fija en el 50% de la media de ingresos" → FALSO.
+    Es el 60% de la MEDIANA (no la media). ★★★
+T4: "La exclusión social es un estado fijo" → FALSO.
+    Es un proceso dinámico y acumulativo. ★★★
+T5: "El concepto de exclusión social es anglosajón" → FALSO.
+    Lo acuña René Lenoir en Francia en 1974. ★★★
+T6: "La privación material severa requiere no poder permitirse 6 de los 9 ítems" → FALSO.
+    Son 4 de los 9 ítems. ★★★
+T7: "FOESSA solo mide la dimensión económica de la exclusión" → FALSO.
+    Mide 6 dimensiones con 35 indicadores. ★★★
+T8: "La tasa de pobreza relativa mide la pobreza absoluta" → FALSO.
+    Mide la pobreza relativa (distribución de ingresos), no la absoluta. ★★★
+T9: "Los indicadores AROPE son creación de FOESSA" → FALSO.
+    Son indicadores de la Estrategia Europa 2020 / Eurostat. ★★★
+T10: "La baja intensidad de empleo se define como trabajar menos del 50%
+     del potencial laboral" → FALSO. Es menos del 20%. ★★★
+
+=========================================================================
+Archivo: puntos-clave_T58.txt | Tema 58 | Oposiciones Navarra / TSS
+=========================================================================
