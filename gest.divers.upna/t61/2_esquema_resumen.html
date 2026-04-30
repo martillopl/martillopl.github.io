@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 61 · HTML 2 · Esquema-resumen visual · CRUE: Comisiones y Redes · UPNA</title>
+<style>
+:root{
+  --bg:#f0fdf4;--card:#fff;--s2:#dcfce7;--s3:#bbf7d0;--line:#4ade80;
+  --text:#14532d;--muted:#16a34a;--p:#15803d;--p2:#166534;
+  --grn:#059669;--grn2:#d1fae5;--red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;--sky:#0284c7;--sky2:#e0f2fe;
+  --vio:#7c3aed;--vio2:#ede9fe;--ora:#c2410c;--ora2:#ffedd5;
+  --teal:#0d9488;--teal2:#ccfbf1;--rose:#be185d;--rose2:#fce7f3;
+  --sh:0 2px 12px rgba(21,128,61,.1)
+}
+[data-theme="dark"]{
+  --bg:#001a0a;--card:#00260e;--s2:#003314;--s3:#00421b;--line:#16a34a;
+  --text:#bbf7d0;--muted:#4ade80;--p:#4ade80;--p2:#86efac;
+  --grn:#86efac;--grn2:#052e16;--red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;--sky:#7dd3fc;--sky2:#082038;
+  --vio:#c4b5fd;--vio2:#1a0e33;--ora:#fdba74;--ora2:#2a1000;
+  --teal:#5eead4;--teal2:#031a16;--rose:#fda4af;--rose2:#1a0010;
+  --sh:0 2px 14px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:20px}
+.wrap{max-width:1280px;margin:0 auto}
+.hdr{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:14px 22px;box-shadow:var(--sh);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.93rem;font-weight:900;color:var(--p)}
+.hdr p{font-size:.7rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1.5px solid var(--line);background:var(--s2);color:var(--text);padding:5px 14px;border-radius:999px;font-size:.7rem;font-weight:700}
+.sec{background:var(--p);color:#fff;font-size:.78rem;font-weight:900;padding:6px 16px;border-radius:8px;display:inline-block;margin:18px 0 10px;text-transform:uppercase;letter-spacing:.04em}
+/* NOTA */
+.nota{padding:9px 14px;border-radius:0 10px 10px 0;border-left:4px solid;font-size:.74rem;margin:8px 0 12px;line-height:1.55}
+.n-ok{background:var(--grn2);border-color:var(--grn)}
+.n-err{background:var(--red2);border-color:var(--red)}
+.n-w{background:var(--warn2);border-color:var(--warn)}
+.n-sky{background:var(--sky2);border-color:var(--sky)}
+.n-teal{background:var(--teal2);border-color:var(--teal)}
+strong{color:var(--p2)}
+
+/* ── FLASH CARDS ── */
+.flash-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:9px;margin-bottom:14px}
+.flash{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;box-shadow:var(--sh);position:relative;overflow:hidden}
+.flash .num{font-size:2rem;font-weight:900;color:var(--p);opacity:.1;position:absolute;top:2px;right:8px;line-height:1}
+.flash .q{font-size:.63rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:3px}
+.flash .a{font-size:.79rem;font-weight:800;color:var(--text)}
+
+/* ── ÁRBOL ORGÁNICO ── */
+.tree{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:18px 22px;box-shadow:var(--sh);margin-bottom:14px}
+.tree-root{background:var(--p);color:#fff;border-radius:10px;padding:10px 18px;text-align:center;font-weight:900;font-size:.88rem;margin-bottom:14px}
+.tree-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.tree-node{flex:1;min-width:150px;border-radius:10px;padding:9px 12px;font-size:.74rem;border:1.5px solid}
+.t-gov{background:var(--sky2);border-color:var(--sky)}
+.t-ase{background:var(--warn2);border-color:var(--warn)}
+.t-ges{background:var(--s2);border-color:var(--line)}
+.tree-node .tn-h{font-weight:900;font-size:.76rem;margin-bottom:3px}
+.tree-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.68rem;margin-top:8px}
+.tl-dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:4px}
+
+/* ── PIRÁMIDE COMISIONES ── */
+.pir{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:16px 20px;box-shadow:var(--sh);margin-bottom:14px}
+.pir h3{font-size:.8rem;font-weight:900;color:var(--p);margin-bottom:10px}
+.pir-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.pir-item{border-radius:10px;padding:9px 12px;border:1.5px solid}
+.pir-item .pi-num{font-size:1.4rem;font-weight:900;opacity:.18;float:right;line-height:1}
+.pir-item .pi-name{font-size:.74rem;font-weight:800;margin-bottom:4px}
+.pir-item .pi-red{font-size:.67rem;font-weight:700;padding:2px 7px;border-radius:999px;display:inline-block;margin-top:2px}
+.pi-a{background:var(--grn2);border-color:var(--grn)}
+.pi-b{background:var(--sky2);border-color:var(--sky)}
+.pi-c{background:var(--warn2);border-color:var(--warn)}
+.pi-d{background:var(--vio2);border-color:var(--vio)}
+.pi-e{background:var(--teal2);border-color:var(--teal)}
+.pi-f{background:var(--ora2);border-color:var(--ora)}
+.pi-g{background:var(--rose2);border-color:var(--rose)}
+.pi-h{background:var(--s2);border-color:var(--line)}
+.pi-i{background:var(--red2);border-color:var(--red)}
+.pi-badge-ok{background:var(--p);color:#fff}
+.pi-badge-no{background:var(--s2);color:var(--p2)}
+
+/* ── 4 TARJETAS REDES ── */
+.redes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin-bottom:14px}
+.red-card{border-radius:14px;border:2px solid;padding:16px;box-shadow:var(--sh)}
+.rc-sapdu{background:var(--teal2);border-color:var(--teal)}
+.rc-rud{background:var(--vio2);border-color:var(--vio)}
+.rc-ccu{background:var(--sky2);border-color:var(--sky)}
+.rc-sal{background:var(--grn2);border-color:var(--grn)}
+.red-card .rc-ico{font-size:1.6rem;margin-bottom:6px}
+.red-card .rc-name{font-size:.88rem;font-weight:900;margin-bottom:2px}
+.rc-sapdu .rc-name{color:var(--teal)}
+.rc-rud .rc-name{color:var(--vio)}
+.rc-ccu .rc-name{color:var(--sky)}
+.rc-sal .rc-name{color:var(--grn)}
+.red-card .rc-com{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px;opacity:.8}
+.red-card ul{margin:0 0 0 14px;font-size:.72rem;line-height:1.7}
+.red-card .rc-tag{font-size:.62rem;font-weight:700;padding:2px 8px;border-radius:999px;display:inline-block;margin-top:6px;background:var(--card)}
+.rc-sapdu .rc-tag{color:var(--teal);border:1px solid var(--teal)}
+.rc-rud .rc-tag{color:var(--vio);border:1px solid var(--vio)}
+.rc-ccu .rc-tag{color:var(--sky);border:1px solid var(--sky)}
+.rc-sal .rc-tag{color:var(--grn);border:1px solid var(--grn)}
+
+/* ── 4 ÁMBITOS RUD ── */
+.amb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:9px;margin-bottom:14px}
+.amb{border-radius:13px;border:2px solid;padding:13px;box-shadow:var(--sh);text-align:center}
+.amb .amb-ico{font-size:2rem;margin-bottom:5px}
+.amb .amb-n{font-weight:900;font-size:.82rem;margin-bottom:4px}
+.amb .amb-d{font-size:.7rem;line-height:1.5}
+.a1{background:var(--rose2);border-color:var(--rose)}.a1 .amb-n{color:var(--rose)}
+.a2{background:var(--sky2);border-color:var(--sky)}.a2 .amb-n{color:var(--sky)}
+.a3{background:var(--ora2);border-color:var(--ora)}.a3 .amb-n{color:var(--ora)}
+.a4{background:var(--vio2);border-color:var(--vio)}.a4 .amb-n{color:var(--vio)}
+
+/* ── 9 COMISIONES EXPANDIDO ── */
+.com9{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+.com-row{display:flex;align-items:center;gap:10px;background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:9px 14px;box-shadow:var(--sh)}
+.com-n{font-size:1rem;font-weight:900;color:var(--p);width:26px;flex-shrink:0}
+.com-name{font-size:.79rem;font-weight:800;flex:1}
+.com-badge{font-size:.65rem;font-weight:700;padding:3px 10px;border-radius:999px;border:1.5px solid;white-space:nowrap}
+.badge-tema{background:var(--p);color:#fff;border-color:var(--p)}
+.badge-no{background:var(--s2);color:var(--muted);border-color:var(--line)}
+
+/* ── DATOS NUMÉRICOS ── */
+.datos{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:9px;margin-bottom:14px}
+.dato{background:var(--card);border:2px solid var(--p);border-radius:13px;padding:13px;box-shadow:var(--sh);text-align:center}
+.dato .d-num{font-size:1.7rem;font-weight:900;color:var(--p);line-height:1.15}
+.dato .d-label{font-size:.7rem;color:var(--muted);margin-top:4px;line-height:1.4}
+
+/* ── 7 GT SOSTENIBILIDAD ── */
+.gt7{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px;margin-bottom:14px}
+.gt-item{background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:10px 13px;box-shadow:var(--sh);display:flex;align-items:center;gap:10px}
+.gt-num{font-size:1.5rem;font-weight:900;color:var(--p);opacity:.18;line-height:1;flex-shrink:0}
+.gt-text{font-size:.75rem;font-weight:800}
+.gt-sal{background:var(--grn2);border-color:var(--grn)}
+.gt-sal .gt-text{color:var(--p2)}
+
+/* ── TRAMPAS ── */
+.trap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:9px;margin-bottom:14px}
+.trap{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--sh)}
+.trap-w{background:var(--red2);padding:8px 12px;font-size:.71rem;font-weight:700;color:var(--red)}
+.trap-ok{background:var(--grn2);padding:8px 12px;font-size:.72rem;color:var(--grn)}
+.trap-n{font-size:.6rem;font-weight:900;opacity:.65;margin-bottom:2px;text-transform:uppercase}
+
+/* ── MINI ESQUEMA ── */
+.mini{background:var(--card);border:2px solid var(--p);border-radius:14px;padding:16px;box-shadow:var(--sh);margin-bottom:14px;font-size:.77rem;line-height:1.78}
+.mini strong{color:var(--p2)}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<div class="hdr">
+  <div>
+    <h1>Tema 61 · HTML 2 · Esquema-resumen visual · CRUE: Comisiones sectoriales y redes</h1>
+    <p>SAPDU · RUD · RedCCU · Universidades Saludables · Oposiciones Navarra</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">🌙 Claro / Oscuro</button>
+</div>
+
+<!-- FLASH -->
+<div class="sec">⚡ Fichas flash — 24 datos inmediatos ★★★</div>
+<div class="flash-grid">
+  <div class="flash"><div class="num">1</div><div class="q">¿Qué es la CRUE?</div><div class="a">Conferencia de Rectores y Rectoras de las Universidades Españolas. Asociación sin ánimo de lucro. ★★★</div></div>
+  <div class="flash"><div class="num">2</div><div class="q">Año de fundación CRUE</div><div class="a">1994. 30.º aniversario en 2024. ★★★</div></div>
+  <div class="flash"><div class="num">3</div><div class="q">Universidades miembro</div><div class="a">77 (50 públicas + 27 privadas). ★★★</div></div>
+  <div class="flash"><div class="num">4</div><div class="q">Máximo órgano de gobierno</div><div class="a">Asamblea General: reúne a los 77 rectores/as. ★★★</div></div>
+  <div class="flash"><div class="num">5</div><div class="q">Comisiones Sectoriales</div><div class="a">9 en total. Órganos de asesoramiento y trabajo. Sin capacidad decisoria salvo delegación expresa. ★★★</div></div>
+  <div class="flash"><div class="num">6</div><div class="q">¿Quién preside cada Comisión?</div><div class="a">Un rector/a designado por la Asamblea General a propuesta de la Presidencia. ★★★</div></div>
+  <div class="flash"><div class="num">7</div><div class="q">SAPDU — comisión</div><div class="a">Crue-Estudiantes (antes: Crue Asuntos Estudiantiles). ★★★</div></div>
+  <div class="flash"><div class="num">8</div><div class="q">SAPDU — universidades</div><div class="a">Más de 66 universidades adheridas. ★★★</div></div>
+  <div class="flash"><div class="num">9</div><div class="q">SAPDU — producto propio</div><div class="a">Banco de Productos de Apoyo: catálogo compartido de recursos para personas con discapacidad. ★★★</div></div>
+  <div class="flash"><div class="num">10</div><div class="q">SAPDU — convenio</div><div class="a">CRUE + Fundación ONCE → Guía de buenas prácticas para la transición del alumnado con discapacidad a la universidad. ★★★</div></div>
+  <div class="flash"><div class="num">11</div><div class="q">RUD — constitución</div><div class="a">Diciembre de 2021 en Valencia. 25 representantes fundadores. ★★★</div></div>
+  <div class="flash"><div class="num">12</div><div class="q">RUD — universidades</div><div class="a">44 universidades adheridas. ★★★</div></div>
+  <div class="flash"><div class="num">13</div><div class="q">RUD — 4 ámbitos</div><div class="a">Afectivosexual y de género · Familiar · Étnico-cultural · Religiosa. ★★★</div></div>
+  <div class="flash"><div class="num">14</div><div class="q">RUD — encuentros</div><div class="a">2 encuentros anuales de trabajo. ★★</div></div>
+  <div class="flash"><div class="num">15</div><div class="q">RedCCU — comisión</div><div class="a">Crue-Secretarías Generales. ★★★</div></div>
+  <div class="flash"><div class="num">16</div><div class="q">RedCCU — año</div><div class="a">2024 (reglamento aprobado en 2024, tras LOSU 2023). ★★★</div></div>
+  <div class="flash"><div class="num">17</div><div class="q">RedCCU — universidades</div><div class="a">Públicas y privadas. ★★★</div></div>
+  <div class="flash"><div class="num">18</div><div class="q">RedCCU — objetivo</div><div class="a">Espacios universitarios emocionalmente seguros. Prevención de violencias. Encuentro Anual. ★★★</div></div>
+  <div class="flash"><div class="num">19</div><div class="q">Universidades Saludables — comisión</div><div class="a">Crue-Sostenibilidad (creada en 2009). ★★★</div></div>
+  <div class="flash"><div class="num">20</div><div class="q">Universidades Saludables — número GT</div><div class="a">Grupo de Trabajo n.º 7 de Crue-Sostenibilidad. ★★★</div></div>
+  <div class="flash"><div class="num">21</div><div class="q">REUPS — fecha</div><div class="a">Red Española de Universidades Promotoras de Salud: 22 de septiembre de 2008. ★★★</div></div>
+  <div class="flash"><div class="num">22</div><div class="q">¿Cuántos GT tiene Crue-Sostenibilidad?</div><div class="a">7 grupos de trabajo. Universidades Saludables es el n.º 7. ★★★</div></div>
+  <div class="flash"><div class="num">23</div><div class="q">LOSU y la CRUE</div><div class="a">Ley Orgánica 2/2023 del Sistema Universitario. Obligó a las universidades a crear Comisiones de Convivencia → origen de la RedCCU. ★★★</div></div>
+  <div class="flash"><div class="num">24</div><div class="q">Reglamento Marco CS</div><div class="a">Aprobado el 14 de marzo de 2024 por la Asamblea General. Aplica a las 9 Comisiones Sectoriales. ★★★</div></div>
+</div>
+
+<!-- ÁRBOL ORGÁNICO -->
+<div class="sec">🏛 Estructura orgánica de la CRUE ★★★</div>
+<div class="tree">
+  <div class="tree-root">🎓 CRUE — Conferencia de Rectores y Rectoras de las Universidades Españolas<br><small style="font-weight:400;font-size:.72rem">Asociación sin ánimo de lucro · Fundada en 1994 · 77 universidades (50 públicas + 27 privadas)</small></div>
+  <div style="font-size:.67rem;font-weight:800;color:var(--muted);text-transform:uppercase;margin-bottom:8px;letter-spacing:.05em">Órganos de gobierno y representación</div>
+  <div class="tree-row">
+    <div class="tree-node t-gov"><div class="tn-h">📋 ASAMBLEA GENERAL ★★★</div>Máximo órgano de gobierno. 77 rectores/as. Aprueba presupuesto, acuerdos y creación de Comisiones Sectoriales.</div>
+    <div class="tree-node t-gov"><div class="tn-h">📌 JUNTA RECTORA ★★★</div>Presidencia + 2 Vicepresidencias + 4 Vocalías + hasta 3 Delegados/as + Presidentes de las 9 CS.</div>
+    <div class="tree-node t-gov"><div class="tn-h">👤 PRESIDENCIA ★★</div>Preside y representa a la CRUE. Elegida por la Asamblea General.</div>
+  </div>
+  <div style="font-size:.67rem;font-weight:800;color:var(--warn);text-transform:uppercase;margin:10px 0 8px;letter-spacing:.05em">Órganos de asesoramiento y trabajo</div>
+  <div class="tree-row">
+    <div class="tree-node t-ase"><div class="tn-h">⚙ 9 COMISIONES SECTORIALES ★★★</div>Asesoramiento técnico. Sin capacidad decisoria ni de representación <strong>salvo delegación expresa de la Asamblea</strong>. Un rector/a como presidente. Un representante por universidad.</div>
+  </div>
+  <div style="font-size:.67rem;font-weight:800;color:var(--muted);text-transform:uppercase;margin:10px 0 8px;letter-spacing:.05em">Órganos de gestión y coordinación</div>
+  <div class="tree-row">
+    <div class="tree-node t-ges"><div class="tn-h">📂 COMITÉ PERMANENTE ★★</div>Gestión operativa entre sesiones de la Asamblea.</div>
+    <div class="tree-node t-ges"><div class="tn-h">📬 SECRETARÍA GENERAL ★★</div>Gestión administrativa. Asiste con voz pero sin voto a la Junta Rectora. Sede: Madrid.</div>
+  </div>
+  <div class="nota n-err"><strong>Trampa ★★★:</strong> "Las Comisiones Sectoriales representan a la CRUE." → FALSO. <strong>No tienen capacidad decisoria ni de representación salvo delegación expresa</strong> de la Asamblea General.</div>
+</div>
+
+<!-- 9 COMISIONES -->
+<div class="sec">⚙ Las 9 Comisiones Sectoriales ★★★</div>
+<div class="com9">
+  <div class="com-row"><div class="com-n">1</div><div class="com-name">Crue-Asuntos Económicos</div><span class="com-badge badge-no">— Sin red en Tema 61</span></div>
+  <div class="com-row"><div class="com-n">2</div><div class="com-name">Crue-Tecnologías de la Información y las Comunicaciones (TIC)</div><span class="com-badge badge-no">— Sin red en Tema 61</span></div>
+  <div class="com-row"><div class="com-n">3</div><div class="com-name">Crue-Internacionalización y Cooperación</div><span class="com-badge badge-no">— Sin red en Tema 61</span></div>
+  <div class="com-row"><div class="com-n">4</div><div class="com-name">Crue-Investigación</div><span class="com-badge badge-no">— Sin red en Tema 61</span></div>
+  <div class="com-row" style="background:var(--teal2);border-color:var(--teal)"><div class="com-n" style="color:var(--teal)">5</div><div class="com-name"><strong>Crue-Secretarías Generales</strong></div><span class="com-badge badge-tema">🏛 RedCCU ★★★</span></div>
+  <div class="com-row" style="background:var(--grn2);border-color:var(--grn)"><div class="com-n">6</div><div class="com-name"><strong>Crue-Sostenibilidad</strong> (creada 2009)</div><span class="com-badge badge-tema">🌱 Universidades Saludables (GT 7) ★★★</span></div>
+  <div class="com-row" style="background:var(--sky2);border-color:var(--sky)"><div class="com-n" style="color:var(--sky)">7</div><div class="com-name"><strong>Crue-Estudiantes</strong></div><span class="com-badge badge-tema">♿ Red SAPDU ★★★</span></div>
+  <div class="com-row"><div class="com-n">8</div><div class="com-name">Crue-Igualdad</div><span class="com-badge badge-no">— Sin red en Tema 61</span></div>
+  <div class="com-row"><div class="com-n">9</div><div class="com-name">Crue-Calidad</div><span class="com-badge badge-no">— Sin red en Tema 61</span></div>
+</div>
+<div class="nota n-w"><strong>Mnemotecnia ★★★:</strong> Las 3 redes del Tema 61 dependen de las Comisiones n.º 5 (Secretarías → CCU), n.º 6 (Sostenibilidad → Saludables) y n.º 7 (Estudiantes → SAPDU). "5-6-7: CCU · Saludables · SAPDU."</div>
+
+<!-- 4 TARJETAS REDES -->
+<div class="sec">🌐 Las 4 redes del Tema 61 ★★★</div>
+<div class="redes-grid">
+
+  <div class="red-card rc-sapdu">
+    <div class="rc-ico">♿</div>
+    <div class="rc-name">Red SAPDU</div>
+    <div class="rc-com">Crue-Estudiantes ★★★</div>
+    <ul>
+      <li>+66 universidades adheridas. ★★★</li>
+      <li>Servicios de apoyo a personas con discapacidad.</li>
+      <li>Gestiona el <strong>Banco de Productos de Apoyo</strong>. ★★★</li>
+      <li>Guía con Fundación ONCE. ★★★</li>
+      <li>Propone medidas a las AA.EE. ★★★</li>
+      <li>Promueve buenas prácticas. ★★★</li>
+      <li>La UPNA forma parte. ★★★</li>
+    </ul>
+    <div class="rc-tag">♿ Discapacidad</div>
+  </div>
+
+  <div class="red-card rc-rud">
+    <div class="rc-ico">🌈</div>
+    <div class="rc-name">Red RUD</div>
+    <div class="rc-com">Independiente (constitutiva propia) ★★★</div>
+    <ul>
+      <li>Diciembre 2021 · Valencia · 25 fundadores. ★★★</li>
+      <li>44 universidades adheridas. ★★★</li>
+      <li>4 ámbitos: afectivosexual · familiar · étnico-cultural · religiosa. ★★★</li>
+      <li>2 encuentros anuales. ★★</li>
+      <li>Manifiesto RUD periódico.</li>
+      <li>Espacios universitarios libres de discriminación. ★★★</li>
+    </ul>
+    <div class="rc-tag">🌈 Diversidad</div>
+  </div>
+
+  <div class="red-card rc-ccu">
+    <div class="rc-ico">🤝</div>
+    <div class="rc-name">RedCCU</div>
+    <div class="rc-com">Crue-Secretarías Generales ★★★</div>
+    <ul>
+      <li>Constituida en 2024. ★★★</li>
+      <li>Impulsada por la LOSU 2023. ★★★</li>
+      <li>Universidades públicas y privadas.</li>
+      <li>Espacios <strong>emocionalmente seguros</strong>. ★★★</li>
+      <li>Prevención de violencias. ★★★</li>
+      <li>Encuentro Anual de Comisiones de Convivencia. ★★★</li>
+      <li>Art. 2 del Reglamento → funciones. ★★★</li>
+    </ul>
+    <div class="rc-tag">🤝 Convivencia</div>
+  </div>
+
+  <div class="red-card rc-sal">
+    <div class="rc-ico">💚</div>
+    <div class="rc-name">Universidades Saludables</div>
+    <div class="rc-com">Crue-Sostenibilidad · GT n.º 7 ★★★</div>
+    <ul>
+      <li>Crue-Sostenibilidad creada en 2009. ★★★</li>
+      <li>GT n.º 7 de los 7 existentes. ★★★</li>
+      <li>REUPS: 22 septiembre 2008. ★★★</li>
+      <li>Marco OMS: universidad promotora de salud. ★★★</li>
+      <li>Campus saludable y sostenible. ★★★</li>
+      <li>Docencia + Investigación en Promoción de Salud. ★★★</li>
+      <li>Espacios universitarios seguros y saludables. ★★</li>
+    </ul>
+    <div class="rc-tag">💚 Salud</div>
+  </div>
+
+</div>
+
+<!-- 4 ÁMBITOS RUD -->
+<div class="sec">🌈 Los 4 ámbitos de la RUD ★★★</div>
+<div class="amb-grid">
+  <div class="amb a1"><div class="amb-ico">🏳️‍🌈</div><div class="amb-n">Afectivosexual y de género ★★★</div><div class="amb-d">Orientación sexual, identidad de género. Colectivo LGTBI+. Protección frente a discriminación por género.</div></div>
+  <div class="amb a2"><div class="amb-ico">👨‍👩‍👧</div><div class="amb-n">Familiar ★★★</div><div class="amb-d">Diversidad de modelos familiares: monoparentales, homoparentales, reconstituidas. Protección de la persona según su entorno familiar.</div></div>
+  <div class="amb a3"><div class="amb-ico">🌍</div><div class="amb-n">Étnico-cultural ★★★</div><div class="amb-d">Diversidad de origen nacional, étnico o cultural. Combatir el racismo y la xenofobia en los campus universitarios.</div></div>
+  <div class="amb a4"><div class="amb-ico">☯</div><div class="amb-n">Religiosa ★★★</div><div class="amb-d">Libertad de creencia. Protección frente a discriminación por motivos religiosos o de conciencia.</div></div>
+</div>
+<div class="nota n-ok"><strong>Mnemotecnia ★★★:</strong> "Los 4 ámbitos RUD = A·F·E·R = Afectivosexual · Familiar · Étnico-cultural · Religiosa."</div>
+
+<!-- 7 GT SOSTENIBILIDAD -->
+<div class="sec">🌱 Los 7 GT de Crue-Sostenibilidad ★★★</div>
+<div class="gt7">
+  <div class="gt-item"><div class="gt-num">1</div><div class="gt-text">🌿 Biodiversidad y Clima</div></div>
+  <div class="gt-item"><div class="gt-num">2</div><div class="gt-text">👥 Desarrollo Humano Sostenible y Participación</div></div>
+  <div class="gt-item"><div class="gt-num">3</div><div class="gt-text">🏗 Edificación y Urbanismo Universitario Sostenible</div></div>
+  <div class="gt-item"><div class="gt-num">4</div><div class="gt-text">📊 Evaluación de la Sostenibilidad Universitaria</div></div>
+  <div class="gt-item"><div class="gt-num">5</div><div class="gt-text">📚 Sostenibilidad en la Docencia Universitaria</div></div>
+  <div class="gt-item"><div class="gt-num">6</div><div class="gt-text">🚲 Universidad y Movilidad Sostenible</div></div>
+  <div class="gt-item gt-sal"><div class="gt-num">7</div><div class="gt-text">💚 UNIVERSIDADES SALUDABLES ★★★</div></div>
+</div>
+<div class="nota n-ok"><strong>Mnemotecnia ★★★:</strong> "Biodiversidad · Desarrollo · Edificación · Evaluación · Docencia · Movilidad · <strong>Saludables</strong> (n.º 7)."</div>
+
+<!-- DATOS NUMÉRICOS -->
+<div class="sec">📊 Datos y cifras clave ★★★</div>
+<div class="datos">
+  <div class="dato"><div class="d-num">1994</div><div class="d-label">Año de fundación de la CRUE. ★★★</div></div>
+  <div class="dato"><div class="d-num">77</div><div class="d-label">Universidades miembro: 50 públicas + 27 privadas. ★★★</div></div>
+  <div class="dato"><div class="d-num">9</div><div class="d-label">Comisiones Sectoriales de la CRUE. ★★★</div></div>
+  <div class="dato"><div class="d-num">+66</div><div class="d-label">Universidades adheridas a la Red SAPDU. ★★★</div></div>
+  <div class="dato"><div class="d-num">Dic. 2021</div><div class="d-label">Constitución de la RUD en Valencia. ★★★</div></div>
+  <div class="dato"><div class="d-num">25</div><div class="d-label">Representantes fundadores de la RUD. ★★★</div></div>
+  <div class="dato"><div class="d-num">44</div><div class="d-label">Universidades adheridas a la RUD. ★★★</div></div>
+  <div class="dato"><div class="d-num">4</div><div class="d-label">Ámbitos de diversidad de la RUD. ★★★</div></div>
+  <div class="dato"><div class="d-num">2024</div><div class="d-label">Constitución de la RedCCU. LOSU 2023 es su impulso. ★★★</div></div>
+  <div class="dato"><div class="d-num">2009</div><div class="d-label">Creación de la Comisión Sectorial Crue-Sostenibilidad. ★★★</div></div>
+  <div class="dato"><div class="d-num">7</div><div class="d-label">Grupos de trabajo de Crue-Sostenibilidad. ★★★</div></div>
+  <div class="dato"><div class="d-num">22 sep. 2008</div><div class="d-label">Constitución de la REUPS (Universidades Promotoras de Salud). ★★★</div></div>
+</div>
+
+<!-- MINI ESQUEMA -->
+<div class="sec">🧠 Mini esquema de repaso rápido ★★★</div>
+<div class="mini">
+  <strong>CRUE:</strong> 1994 · asociación sin ánimo de lucro · 77 univ. (50 pub + 27 priv.) · Asamblea General (máximo órgano) · 9 CS sin capacidad decisoria salvo delegación · Reglamento Marco CS: 14 marzo 2024<br><br>
+  <strong>♿ SAPDU:</strong> Crue-Estudiantes · +66 univ. · discapacidad · Banco de Productos de Apoyo · Guía ONCE-CRUE · UPNA miembro<br><br>
+  <strong>🌈 RUD:</strong> Dic. 2021 · Valencia · 25 fundadores · 44 univ. · 4 ámbitos (A·F·E·R) · 2 encuentros/año · espacios libres discriminación<br><br>
+  <strong>🤝 RedCCU:</strong> 2024 · Crue-Secretarías Generales · LOSU 2023 · espacios emocionalmente seguros · prevención violencias · Encuentro Anual · art. 2 Reglamento<br><br>
+  <strong>💚 Universidades Saludables:</strong> GT n.º 7 · Crue-Sostenibilidad (2009) · 7 GT totales · REUPS 22-sep-2008 · OMS · campus promotor de salud · docencia + investigación en salud
+</div>
+
+<!-- TRAMPAS -->
+<div class="sec">⚠️ Las 10 trampas del examen ★★★</div>
+<div class="trap-grid">
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 1 ✗</div>"La CRUE se fundó en 2000."</div><div class="trap-ok">✓ Se fundó en <strong>1994</strong>. 30.º aniversario en 2024. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 2 ✗</div>"La CRUE es un organismo público."</div><div class="trap-ok">✓ Es una <strong>asociación sin ánimo de lucro</strong> de carácter privado. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 3 ✗</div>"Las Comisiones Sectoriales representan a la CRUE."</div><div class="trap-ok">✓ <strong>No tienen capacidad decisoria ni de representación salvo delegación expresa</strong> de la Asamblea General. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 4 ✗</div>"SAPDU depende de Crue-Sostenibilidad."</div><div class="trap-ok">✓ SAPDU depende de <strong>Crue-Estudiantes</strong>. Es Universidades Saludables la que depende de Crue-Sostenibilidad. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 5 ✗</div>"La RUD se fundó en 2020."</div><div class="trap-ok">✓ Se constituyó en <strong>diciembre de 2021</strong> en Valencia con 25 representantes fundadores. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 6 ✗</div>"La RUD solo trabaja la diversidad LGTBI+."</div><div class="trap-ok">✓ Trabaja 4 ámbitos: <strong>afectivosexual · familiar · étnico-cultural · religiosa</strong>. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 7 ✗</div>"La RedCCU se creó en 2020."</div><div class="trap-ok">✓ Se constituyó en <strong>2024</strong>, impulsada por la LOSU 2023 (obligó a crear Comisiones de Convivencia). ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 8 ✗</div>"Universidades Saludables es una red independiente."</div><div class="trap-ok">✓ Es el <strong>GT n.º 7</strong> de la Comisión Sectorial Crue-Sostenibilidad. No es independiente. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 9 ✗</div>"La RedCCU depende de Crue-Igualdad."</div><div class="trap-ok">✓ La RedCCU depende de <strong>Crue-Secretarías Generales</strong>. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 10 ✗</div>"La CRUE tiene 76 universidades."</div><div class="trap-ok">✓ La CRUE integra <strong>77 universidades</strong> (50 públicas + 27 privadas). ★★★</div></div>
+</div>
+
+</div>
+</body>
+</html>

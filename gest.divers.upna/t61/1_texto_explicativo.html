@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 61 · HTML 1 · Texto explicativo · CRUE: Comisiones sectoriales y redes · UPNA</title>
+<style>
+:root{
+  --bg:#f0fdf4;--card:#fff;--s2:#dcfce7;--line:#4ade80;
+  --text:#14532d;--muted:#15803d;--p:#15803d;--p2:#166534;
+  --grn:#059669;--grn2:#d1fae5;--red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;--sky:#0284c7;--sky2:#e0f2fe;
+  --vio:#7c3aed;--vio2:#ede9fe;--ora:#c2410c;--ora2:#ffedd5;
+  --teal:#0d9488;--teal2:#ccfbf1;--rose:#be185d;--rose2:#fce7f3;
+  --sh:0 2px 12px rgba(21,128,61,.10)
+}
+[data-theme="dark"]{
+  --bg:#001a0a;--card:#00260e;--s2:#003314;--line:#16a34a;
+  --text:#bbf7d0;--muted:#4ade80;--p:#4ade80;--p2:#86efac;
+  --grn:#86efac;--grn2:#052e16;--red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;--sky:#7dd3fc;--sky2:#082038;
+  --vio:#c4b5fd;--vio2:#1a0e33;--ora:#fdba74;--ora2:#2a1000;
+  --teal:#5eead4;--teal2:#031a16;--rose:#fda4af;--rose2:#1a0010;
+  --sh:0 2px 14px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:14px;line-height:1.72;background:var(--bg);color:var(--text);padding:24px}
+.wrap{max-width:1040px;margin:0 auto}
+header{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:18px 26px;box-shadow:var(--sh);margin-bottom:22px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px}
+header h1{font-size:.98rem;font-weight:900;color:var(--p)}
+header p{font-size:.73rem;color:var(--muted);margin-top:4px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:6px 16px;border-radius:999px;font-size:.71rem;font-weight:700;white-space:nowrap}
+/* SECCIÓN */
+.sec{background:var(--p);color:#fff;font-size:.82rem;font-weight:900;padding:8px 20px;border-radius:9px;display:inline-block;margin:28px 0 14px;text-transform:uppercase;letter-spacing:.04em}
+/* PÁRRAFOS */
+.blk{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:22px 28px;box-shadow:var(--sh);margin-bottom:16px}
+.blk h2{font-size:1.05rem;font-weight:900;color:var(--p);margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid var(--line)}
+.blk h3{font-size:.9rem;font-weight:800;color:var(--p2);margin:16px 0 6px}
+.blk p{margin-bottom:10px;font-size:.83rem;line-height:1.74}
+.blk ul,.blk ol{margin:6px 0 12px 22px;font-size:.82rem;line-height:1.75}
+.blk li{margin-bottom:2px}
+/* NOTA */
+.nota{padding:10px 16px;border-radius:0 10px 10px 0;border-left:4px solid;font-size:.78rem;margin:10px 0 14px;line-height:1.6}
+.n-ok{background:var(--grn2);border-color:var(--grn)}
+.n-err{background:var(--red2);border-color:var(--red)}
+.n-w{background:var(--warn2);border-color:var(--warn)}
+.n-sky{background:var(--sky2);border-color:var(--sky)}
+.n-teal{background:var(--teal2);border-color:var(--teal)}
+.n-vio{background:var(--vio2);border-color:var(--vio)}
+/* DESTAQUE INLINE */
+strong{color:var(--p2);font-weight:800}
+em{font-style:normal;background:var(--s2);padding:1px 4px;border-radius:4px;font-weight:700;color:var(--p2)}
+/* TABLA */
+.tbl{width:100%;border-collapse:collapse;font-size:.79rem;margin:10px 0 16px;border-radius:10px;overflow:hidden;box-shadow:var(--sh)}
+.tbl th{background:var(--p);color:#fff;text-align:left;padding:8px 12px;font-size:.69rem;text-transform:uppercase;letter-spacing:.03em}
+.tbl td{padding:8px 12px;border-bottom:1px solid var(--s2)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:nth-child(even) td{background:rgba(21,128,61,.03)}
+/* INDICE */
+.indice{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:16px 22px;box-shadow:var(--sh);margin-bottom:22px}
+.indice h2{font-size:.82rem;font-weight:900;color:var(--p);margin-bottom:10px;text-transform:uppercase}
+.indice ol{margin-left:20px;font-size:.8rem;line-height:1.9}
+.indice li a{color:var(--p);text-decoration:none;font-weight:700}
+.indice li a:hover{text-decoration:underline}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<header>
+  <div>
+    <h1>Tema 61 · HTML 1 · Texto explicativo y desarrollo narrativo · CRUE: Comisiones sectoriales y redes</h1>
+    <p>SAPDU · RUD · RedCCU · Grupo de Universidades Saludables · Oposiciones Navarra</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">🌙 Claro / Oscuro</button>
+</header>
+
+<!-- ÍNDICE -->
+<div class="indice">
+  <h2>📋 Índice del tema</h2>
+  <ol>
+    <li><a href="#s1">Concepto y contexto de la CRUE</a></li>
+    <li><a href="#s2">Fundación, naturaleza jurídica y composición</a></li>
+    <li><a href="#s3">Estructura orgánica: órganos de gobierno, asesoramiento y gestión</a></li>
+    <li><a href="#s4">Las 9 Comisiones Sectoriales</a></li>
+    <li><a href="#s5">Red SAPDU: Servicios de Apoyo a Personas con Discapacidad</a></li>
+    <li><a href="#s6">Red RUD: Universidades por la Diversidad</a></li>
+    <li><a href="#s7">Red CCU: Comisiones de Convivencia Universitaria</a></li>
+    <li><a href="#s8">Grupo de Universidades Saludables (Crue-Sostenibilidad)</a></li>
+    <li><a href="#s9">Vínculos entre redes y la UPNA</a></li>
+    <li><a href="#s10">Relación con la LOSU 2023 y el marco normativo</a></li>
+  </ol>
+</div>
+
+<!-- S1 -->
+<div class="sec" id="s1">1. Concepto y contexto de la CRUE ★★★</div>
+<div class="blk">
+  <h2>¿Por qué existe la CRUE?</h2>
+  <p>El sistema universitario español es uno de los más complejos de Europa: agrupa a más de <strong>77 universidades</strong> repartidas por todas las comunidades autónomas, con competencias compartidas entre el Estado central, las Comunidades Autónomas y cada institución académica. En este contexto de descentralización, la necesidad de contar con una voz común que representara a todas las universidades ante el Gobierno, el Parlamento y la sociedad se hizo evidente desde finales del siglo XX.</p>
+  <p>La <strong>Conferencia de Rectores y Rectoras de las Universidades Españolas (CRUE)</strong> nació precisamente para cubrir esa necesidad: ser el principal interlocutor del sistema universitario español con el Gobierno de España y con los organismos internacionales en materia de política universitaria, educación superior, ciencia e innovación.</p>
+  <p>Más allá de la representación institucional, la CRUE actúa como plataforma de cooperación técnica entre universidades: sus <strong>Comisiones Sectoriales</strong> y <strong>Redes temáticas</strong> permiten que los servicios universitarios de materias específicas (tecnología, sostenibilidad, discapacidad, convivencia, salud…) trabajen de forma coordinada, compartan buenas prácticas, elaboren informes y propongan políticas comunes.</p>
+  <div class="nota n-ok"><strong>Clave de examen ★★★:</strong> La CRUE no es un órgano público ni una Administración: es una <em>asociación sin ánimo de lucro</em> de carácter privado que agrupa voluntariamente a las universidades españolas.</div>
+</div>
+
+<!-- S2 -->
+<div class="sec" id="s2">2. Fundación, naturaleza jurídica y composición ★★★</div>
+<div class="blk">
+  <h2>Cuándo y cómo se fundó la CRUE</h2>
+  <p>La CRUE se fundó en <strong>1994</strong>, año en que los rectores de las universidades españolas decidieron institucionalizar su cooperación en una organización formal con estatutos propios. En 2024 celebró su <em>30.º aniversario</em>.</p>
+  <p>Su naturaleza jurídica es la de una <strong>asociación sin ánimo de lucro</strong>, constituida al amparo de la legislación española de asociaciones. Esto la diferencia de organismos públicos como el Consejo de Universidades o la Conferencia General de Política Universitaria, que son órganos de la Administración del Estado.</p>
+
+  <h3>Composición</h3>
+  <p>En la actualidad la CRUE integra a <strong>77 universidades</strong>: <em>50 públicas</em> y <em>27 privadas</em>. La adhesión es voluntaria, pero prácticamente la totalidad de las universidades españolas forman parte de ella. La pertenencia implica el derecho de participación en la Asamblea General y en las Comisiones Sectoriales, así como el acceso a todos los servicios y redes de la organización.</p>
+
+  <h3>Misión, visión y valores</h3>
+  <p>La misión de la CRUE es <strong>representar, coordinar y defender los intereses del sistema universitario español</strong> ante el Gobierno, el Parlamento, la sociedad y los organismos internacionales. Su actuación se rige por valores de <em>cooperación</em>, <em>excelencia</em>, <em>autonomía universitaria</em>, <em>inclusión</em> y <em>responsabilidad social</em>.</p>
+  <div class="nota n-w"><strong>Trampa frecuente ★★★:</strong> "La CRUE se fundó en 2000" o "la CRUE es un organismo público". Ambas afirmaciones son FALSAS. Se fundó en <strong>1994</strong> y es una <strong>asociación sin ánimo de lucro</strong>.</div>
+</div>
+
+<!-- S3 -->
+<div class="sec" id="s3">3. Estructura orgánica ★★★</div>
+<div class="blk">
+  <h2>Tres tipos de órganos</h2>
+  <p>Los Estatutos de la CRUE establecen una estructura orgánica articulada en tres niveles funcionales: <em>órganos de gobierno y representación</em>, <em>órganos de asesoramiento y trabajo</em>, y <em>órganos de gestión y coordinación</em>. Esta distinción es fundamental para el examen, especialmente lo relativo a las Comisiones Sectoriales.</p>
+
+  <h3>Órganos de gobierno y representación</h3>
+  <p><strong>La Asamblea General</strong> es el máximo órgano de gobierno de la CRUE. La componen los rectores y rectoras de las 77 universidades miembros. Entre sus funciones destacan: planificar la organización, el funcionamiento y las actividades de la CRUE; aprobar el presupuesto y las cuentas; dar a conocer el posicionamiento de la CRUE mediante acuerdos y declaraciones públicas; y acordar la creación de Comisiones Sectoriales. Se reúne al menos dos veces al año.</p>
+  <p><strong>La Junta Rectora</strong> es el órgano de gobierno y representación de la CRUE entre las reuniones de la Asamblea. Está integrada por la Presidencia, dos Vicepresidencias, cuatro Vocalías, hasta tres Delegados/as y los Presidentes y Presidentas de las nueve Comisiones Sectoriales. La Secretaría General asiste con voz pero sin voto.</p>
+  <p><strong>La Presidencia</strong> preside y representa a la CRUE. Es elegida por la Asamblea General.</p>
+
+  <h3>Órganos de asesoramiento y trabajo: las Comisiones Sectoriales</h3>
+  <p>Las <strong>Comisiones Sectoriales</strong> son órganos de asesoramiento y trabajo de la CRUE, constituidas por acuerdo de la Asamblea General. Su función es técnica y consultiva: no tienen capacidad decisoria ni de representación, salvo delegación expresa de la Asamblea. Son el motor técnico de la organización: elaboran documentos, propuestas y buenas prácticas, y elevan recomendaciones a la Junta Rectora y a la Asamblea.</p>
+  <p>Cada Comisión Sectorial está formada por un/a Presidente/a (rector/a de una universidad miembro designado por la Asamblea) y un Pleno (un representante técnico por universidad). Actualmente existen <strong>9 Comisiones Sectoriales</strong>.</p>
+
+  <h3>Órganos de gestión y coordinación</h3>
+  <p>El <strong>Comité Permanente</strong> y la <strong>Secretaría General</strong> se encargan de la gestión administrativa y operativa de la organización. La Secretaría General tiene sede en Madrid.</p>
+
+  <div class="nota n-ok"><strong>Frase memorizable ★★★:</strong> "Asamblea (máximo órgano) → Junta Rectora → Presidencia → 9 Comisiones Sectoriales (asesoramiento, sin capacidad decisoria salvo delegación)."</div>
+  <div class="nota n-err"><strong>Trampa ★★★:</strong> "Las Comisiones Sectoriales pueden representar a la CRUE." → FALSO. No tienen capacidad decisoria ni de representación <strong>salvo delegación expresa</strong> de la Asamblea General.</div>
+</div>
+
+<!-- S4 -->
+<div class="sec" id="s4">4. Las 9 Comisiones Sectoriales ★★★</div>
+<div class="blk">
+  <h2>Cuáles son las 9 Comisiones Sectoriales</h2>
+  <p>La CRUE articula su trabajo técnico a través de <strong>9 Comisiones Sectoriales</strong>. Conocer el nombre de cada una y, sobre todo, a cuál pertenecen las redes del Tema 61, es imprescindible para el examen.</p>
+
+  <table class="tbl">
+    <thead><tr><th>#</th><th>Comisión Sectorial</th><th>Red del Tema 61 que depende de ella</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Crue-Asuntos Económicos</td><td>—</td></tr>
+      <tr><td>2</td><td>Crue-Tecnologías de la Información y las Comunicaciones (TIC)</td><td>—</td></tr>
+      <tr><td>3</td><td>Crue-Internacionalización y Cooperación</td><td>—</td></tr>
+      <tr><td>4</td><td>Crue-Investigación</td><td>—</td></tr>
+      <tr><td>5</td><td><strong>Crue-Secretarías Generales</strong></td><td><strong>RedCCU</strong> ★★★</td></tr>
+      <tr><td>6</td><td><strong>Crue-Sostenibilidad</strong></td><td><strong>Grupo de Universidades Saludables (GT n.º 7)</strong> ★★★</td></tr>
+      <tr><td>7</td><td><strong>Crue-Estudiantes</strong></td><td><strong>Red SAPDU</strong> ★★★</td></tr>
+      <tr><td>8</td><td>Crue-Igualdad</td><td>—</td></tr>
+      <tr><td>9</td><td>Crue-Calidad</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <p>La <strong>RUD</strong> (Red de Universidades por la Diversidad) tiene un carácter propio e independiente, con vínculos con diversas Comisiones según los ámbitos trabajados.</p>
+  <div class="nota n-err"><strong>Trampa ★★★:</strong> "SAPDU depende de Crue-Sostenibilidad." → FALSO. SAPDU depende de <strong>Crue-Estudiantes</strong>. La confusión con Sostenibilidad viene de que el Grupo de Universidades Saludables sí depende de ella.</div>
+</div>
+
+<!-- S5 -->
+<div class="sec" id="s5">5. Red SAPDU ★★★</div>
+<div class="blk">
+  <h2>Red de Servicios de Apoyo a Personas con Discapacidad en las Universidades</h2>
+  <p>La <strong>Red SAPDU</strong> (acrónimo de Servicios de Apoyo a Personas con Discapacidad en las Universidades) es una de las redes temáticas más veteranas y activas de la CRUE. Integra a los servicios, unidades y oficinas de atención a personas con discapacidad de las universidades españolas, tanto públicas como privadas. Actualmente cuenta con la adhesión de <strong>más de 66 universidades</strong>.</p>
+
+  <h3>Marco de referencia y vinculación con la UPNA</h3>
+  <p>SAPDU se encuadra en la <strong>Comisión Sectorial Crue-Estudiantes</strong>. La UPNA forma parte activa de esta red, lo que conecta el Tema 61 con el Tema 59 (mentoría y atención a la discapacidad en la UPNA) y el Tema 60. La pertenencia de la UPNA a SAPDU garantiza que los compromisos y estándares de la red se aplican en el Servicio de Atención a la Diversidad de la propia institución.</p>
+
+  <h3>Objetivos y funciones de SAPDU ★★★</h3>
+  <p>La finalidad de SAPDU es <strong>fomentar la colaboración entre los servicios universitarios de atención a personas con discapacidad</strong> para mejorar su impacto, compartir recursos y proponer políticas comunes. Sus funciones principales son:</p>
+  <ul>
+    <li>Fomentar la colaboración de los distintos servicios universitarios de atención al alumnado con discapacidad. ★★★</li>
+    <li>Proponer actuaciones de carácter transversal en materia de discapacidad que puedan ser asumidas por las distintas universidades. ★★★</li>
+    <li>Proponer a las Administraciones Educativas la adopción de medidas para el cumplimiento efectivo de la normativa en materia de discapacidad. ★★★</li>
+    <li>Promover, difundir e intercambiar buenas prácticas. ★★★</li>
+    <li>Impulsar el reconocimiento de la atención a la discapacidad en los sistemas de evaluación universitarios. ★★★</li>
+    <li>Fomentar la colaboración con el tejido social del ámbito de la discapacidad. ★★</li>
+    <li>Gestionar el <strong>Banco de Productos de Apoyo</strong>. ★★★</li>
+  </ul>
+
+  <h3>El Banco de Productos de Apoyo ★★★</h3>
+  <p>El <strong>Banco de Productos de Apoyo</strong> es una herramienta propia de la Red SAPDU que consiste en un catálogo de dispositivos y recursos de apoyo técnico disponibles en las universidades miembros para ser compartidos y prestados. Este banco permite que una persona con discapacidad pueda acceder a un producto específico (lupas electrónicas, amplificadores de voz, software de accesibilidad, sillas especializadas…) sin que su universidad tenga que adquirirlo si ya existe en otra institución de la red. Es un ejemplo de uso eficiente de recursos y solidaridad interuniversitaria.</p>
+
+  <h3>Convenio CRUE-Fundación ONCE ★★★</h3>
+  <p>SAPDU ha desarrollado, en el marco del convenio firmado entre la CRUE y la <strong>Fundación ONCE</strong>, la <em>Guía de buenas prácticas para la transición, el acceso y la acogida del alumnado con necesidad específica de apoyo educativo en los estudios universitarios</em>. Esta guía orienta a las universidades sobre cómo facilitar la incorporación del alumnado con discapacidad desde la educación secundaria a la educación superior, abordando aspectos como la información previa, los procesos de admisión, la adaptación del entorno y el seguimiento inicial.</p>
+
+  <div class="nota n-ok"><strong>Frase memorizable ★★★:</strong> "SAPDU (Crue-Estudiantes, +66 universidades) gestiona el Banco de Productos de Apoyo y elaboró con Fundación ONCE la Guía de transición del alumnado con discapacidad a la universidad."</div>
+</div>
+
+<!-- S6 -->
+<div class="sec" id="s6">6. Red RUD ★★★</div>
+<div class="blk">
+  <h2>Red de Universidades por la Diversidad</h2>
+  <p>La <strong>RUD</strong> (Red de Universidades por la Diversidad) es la red interuniversitaria más joven de las que forman parte del Tema 61. Se constituyó formalmente en <strong>diciembre de 2021</strong> en <strong>Valencia</strong>, en un encuentro fundacional al que asistieron <em>25 representantes de universidades españolas</em>. Desde su fundación ha crecido significativamente: en la actualidad reúne a <strong>44 universidades</strong> comprometidas con la diversidad.</p>
+
+  <h3>Por qué se crea la RUD ★★★</h3>
+  <p>La RUD surge de la constatación de que las universidades españolas comparten el reto de garantizar que sus campus sean <strong>espacios seguros, inclusivos y libres de discriminación</strong> para todas las personas, independientemente de su orientación sexual, identidad de género, origen étnico, religión o configuración familiar. Sin embargo, muchas instituciones abordaban este reto de forma aislada y sin coordinación. La RUD nace para crear sinergias, compartir experiencias y articular una voz común en defensa de la diversidad en la educación superior.</p>
+
+  <h3>Los 4 ámbitos de diversidad de la RUD ★★★</h3>
+  <p>La RUD trabaja específicamente en cuatro ámbitos de diversidad que son los que con mayor frecuencia generan situaciones de discriminación, exclusión o vulnerabilidad en el entorno universitario:</p>
+  <ol>
+    <li><strong>Diversidad afectivosexual y de género.</strong> Incluye la atención al colectivo LGTBI+ y la protección frente a la discriminación por orientación sexual e identidad de género.</li>
+    <li><strong>Diversidad familiar.</strong> Hace referencia a los distintos modelos de familia (monoparentales, homoparentales, reconstituidas…) y a la protección de las personas universitarias en función de su estructura familiar.</li>
+    <li><strong>Diversidad étnico-cultural.</strong> Aborda la diversidad derivada del origen nacional, étnico o cultural, y la necesidad de combatir el racismo y la xenofobia en los campus.</li>
+    <li><strong>Diversidad religiosa.</strong> Contempla la libertad de creencia y la protección frente a la discriminación por motivos religiosos o de conciencia.</li>
+  </ol>
+
+  <h3>Objetivos de la RUD ★★★</h3>
+  <p>Los objetivos fundacionales de la RUD son:</p>
+  <ul>
+    <li>Compartir conocimientos, sinergias, buenas prácticas, experiencias, actividades, resultados y recursos que promuevan y mejoren la diversidad. ★★★</li>
+    <li>Brindar a sus integrantes un canal de información, asesoramiento y apoyo mutuo.</li>
+    <li>Generar políticas y acciones comunes para superar los obstáculos que dificultan la igualdad de trato y de oportunidades. ★★★</li>
+    <li>Elaborar informes, estudios, escritos, manifiestos y propuestas en temas de diversidad. ★★★</li>
+    <li>Fomentar el respeto a la diversidad mediante acciones de información, concienciación y difusión. ★★★</li>
+    <li>Establecer vínculos con entidades públicas y privadas comprometidas con la diversidad.</li>
+  </ul>
+
+  <h3>Funcionamiento ★★</h3>
+  <p>La RUD celebra <strong>dos encuentros anuales</strong> de trabajo para abordar sus cuatro ámbitos temáticos. Publica periódicamente su <em>Manifiesto RUD</em>, que recoge los compromisos actualizados de las universidades integrantes.</p>
+
+  <div class="nota n-ok"><strong>Frase memorizable ★★★:</strong> "RUD: diciembre 2021 · Valencia · 25 fundadores · 44 universidades · 4 ámbitos (afectivosexual · familiar · étnico-cultural · religiosa) · 2 encuentros/año."</div>
+  <div class="nota n-err"><strong>Trampa ★★★:</strong> "La RUD solo trabaja la diversidad LGTBI+." → FALSO. Trabaja 4 ámbitos: afectivosexual y de género · familiar · étnico-cultural · religiosa.</div>
+</div>
+
+<!-- S7 -->
+<div class="sec" id="s7">7. RedCCU ★★★</div>
+<div class="blk">
+  <h2>Red de Comisiones de Convivencia de las Universidades Españolas</h2>
+  <p>La <strong>RedCCU</strong> (Red de Comisiones de Convivencia de las Universidades Españolas) es la más reciente de las redes que componen este tema. Se constituyó en <strong>2024</strong>, al amparo de las modificaciones estatutarias de la CRUE aprobadas en marzo de ese año y de la entrada en vigor de la <strong>LOSU 2023</strong> (Ley Orgánica del Sistema Universitario), que impuso a las universidades la obligación de contar con Comisiones de Convivencia.</p>
+
+  <h3>Marco orgánico ★★★</h3>
+  <p>La RedCCU depende de la <strong>Comisión Sectorial Crue-Secretarías Generales</strong>. Esta adscripción refleja el carácter transversal de la convivencia universitaria, cuya gestión corresponde en muchas instituciones a los órganos de gobierno y secretarías generales. El Reglamento de la RedCCU fue aprobado en 2024.</p>
+
+  <h3>Finalidad y colectivos destinatarios ★★★</h3>
+  <p>La RedCCU tiene como finalidad fomentar la <strong>cooperación entre las Comisiones de Convivencia</strong> de las universidades españolas, tanto públicas como privadas, para compartir y difundir el conocimiento en todos los ámbitos relacionados con la convivencia universitaria. Sus actuaciones están destinadas a toda la <strong>comunidad universitaria</strong> (personal docente e investigador, personal de administración y servicios, y alumnado) y a la sociedad en general.</p>
+
+  <h3>Funciones de la RedCCU ★★★</h3>
+  <p>El Reglamento de la RedCCU (artículo 2) establece las siguientes funciones principales:</p>
+  <ul>
+    <li>Elaborar propuestas, informes y estudios en materia de convivencia universitaria. ★★★</li>
+    <li>Compartir y difundir buenas prácticas entre las Comisiones de Convivencia. ★★★</li>
+    <li>Impulsar medidas de <strong>prevención de violencias</strong> y la generación de espacios universitarios <strong>emocionalmente seguros</strong> y estables. ★★★</li>
+    <li>Organizar jornadas y reuniones, y en especial un <strong>Encuentro Anual</strong> de Comisiones de Convivencia Universitarias. ★★★</li>
+    <li>Promover la coordinación de las Comisiones dentro de cada universidad. ★★</li>
+    <li>Facilitar la colaboración transversal con otras unidades, comisiones y órganos universitarios.</li>
+    <li>Elevar a la Comisión Sectorial Crue-Secretarías Generales propuestas e informes. ★★</li>
+  </ul>
+
+  <div class="nota n-ok"><strong>Frase memorizable ★★★:</strong> "RedCCU (Crue-Secretarías Generales, 2024): impulsa espacios universitarios emocionalmente seguros, previene violencias y organiza un Encuentro Anual de Comisiones de Convivencia."</div>
+  <div class="nota n-err"><strong>Trampa ★★★:</strong> "La RedCCU se creó en 2020." → FALSO. Se constituyó en <strong>2024</strong>, al amparo de la LOSU 2023.</div>
+</div>
+
+<!-- S8 -->
+<div class="sec" id="s8">8. Grupo de Universidades Saludables ★★★</div>
+<div class="blk">
+  <h2>Grupo de Trabajo de Universidades Saludables (Crue-Sostenibilidad)</h2>
+  <p>El <strong>Grupo de Trabajo de Universidades Saludables</strong> es el séptimo y último grupo de trabajo de la <strong>Comisión Sectorial Crue-Sostenibilidad</strong>, la cual fue constituida en <strong>2009</strong>. No se trata de una red independiente como SAPDU o la RUD, sino de uno de los siete grupos temáticos internos de esa Comisión Sectorial, lo que refuerza la idea de que la <em>salud y la sostenibilidad son inseparables</em> en la visión de la CRUE.</p>
+
+  <h3>Los 7 grupos de trabajo de Crue-Sostenibilidad ★★★</h3>
+  <ol>
+    <li>Biodiversidad y Clima.</li>
+    <li>Desarrollo Humano Sostenible y Participación.</li>
+    <li>Edificación y Urbanismo Universitario Sostenible.</li>
+    <li>Evaluación de la Sostenibilidad Universitaria.</li>
+    <li>Sostenibilidad en la Docencia Universitaria.</li>
+    <li>Universidad y Movilidad Sostenible.</li>
+    <li><strong>Universidades Saludables.</strong> ★★★</li>
+  </ol>
+
+  <h3>Concepto de Universidad Promotora de Salud ★★★</h3>
+  <p>El marco conceptual del grupo arranca del movimiento internacional de <strong>Universidades Promotoras de Salud</strong> impulsado por la Organización Mundial de la Salud (OMS). Una universidad promotora de la salud es aquella que incorpora la salud como un eje transversal de su misión docente, investigadora y de gestión: protege y favorece la salud de sus miembros, promueve conocimientos y habilidades para estilos de vida saludables, proporciona infraestructuras y espacios saludables, y favorece la socialización y el ocio saludable.</p>
+  <p>En España, este movimiento se materializó en la creación de la <strong>Red Española de Universidades Promotoras de Salud (REUPS)</strong>, constituida el <em>22 de septiembre de 2008</em>. La REUPS es el referente nacional del grupo de Universidades Saludables de la CRUE.</p>
+
+  <h3>Objetivos del Grupo de Universidades Saludables ★★★</h3>
+  <ul>
+    <li>Potenciar la universidad como entorno promotor de la salud de la comunidad universitaria y de la sociedad. ★★★</li>
+    <li>Fomentar la Investigación y la Docencia en Promoción de la Salud. ★★★</li>
+    <li>Favorecer el intercambio de experiencias en Promoción de la Salud entre universidades. ★★★</li>
+    <li>Promover el trabajo conjunto entre organismos de salud pública, instituciones comunitarias y universidades. ★★★</li>
+    <li>Consensuar líneas estratégicas para un proyecto de universidad promotora de salud. ★★</li>
+    <li>Favorecer una gestión sostenible y saludable del campus. ★★★</li>
+    <li>Impulsar espacios universitarios emocionalmente seguros y saludables. ★★</li>
+    <li>Favorecer una gobernanza institucional bajo el enfoque saludable y sostenible. ★★</li>
+  </ul>
+
+  <div class="nota n-ok"><strong>Frase memorizable ★★★:</strong> "Universidades Saludables = GT n.º 7 de Crue-Sostenibilidad (2009). La REUPS nació el 22 de septiembre de 2008. La salud es sostenibilidad."</div>
+  <div class="nota n-err"><strong>Trampa ★★★:</strong> "El Grupo de Universidades Saludables es una red independiente de la CRUE." → FALSO. Es el GT n.º 7 de la Comisión Sectorial <strong>Crue-Sostenibilidad</strong>.</div>
+</div>
+
+<!-- S9 -->
+<div class="sec" id="s9">9. Vínculos entre redes y la UPNA ★★★</div>
+<div class="blk">
+  <h2>Por qué importa conocer estos vínculos</h2>
+  <p>Las oposiciones de la UPNA exigen conocer no solo las estructuras generales, sino también cómo se articula la UPNA dentro del sistema universitario español. La pertenencia de la UPNA a las redes de la CRUE es un indicador de su compromiso institucional con la inclusión, la diversidad, la convivencia y la salud.</p>
+  <ul>
+    <li><strong>SAPDU:</strong> La UPNA forma parte activa de la Red SAPDU, lo que garantiza que su servicio de atención a la discapacidad sigue los estándares interuniversitarios y tiene acceso al Banco de Productos de Apoyo. ★★★</li>
+    <li><strong>RUD:</strong> La adhesión a la RUD implica que la UPNA se compromete con los cuatro ámbitos de diversidad y participa en los encuentros anuales de la red. ★★</li>
+    <li><strong>RedCCU:</strong> La Comisión de Convivencia de la UPNA forma parte de la RedCCU desde su constitución en 2024. ★★★</li>
+    <li><strong>Universidades Saludables:</strong> La UPNA tiene iniciativas de campus saludable vinculadas al enfoque REUPS y al GT n.º 7 de Crue-Sostenibilidad. ★★</li>
+  </ul>
+  <p>Estos vínculos refuerzan la coherencia temática del bloque de temas 59, 60 y 61 del temario: todos ellos confluyen en el compromiso de la UPNA con la <strong>inclusión, la diversidad, la convivencia y el bienestar</strong> de su comunidad universitaria.</p>
+</div>
+
+<!-- S10 -->
+<div class="sec" id="s10">10. Marco normativo: la LOSU 2023 ★★★</div>
+<div class="blk">
+  <h2>La Ley Orgánica del Sistema Universitario y su impacto en las redes de la CRUE</h2>
+  <p>La <strong>Ley Orgánica 2/2023, de 22 de marzo, del Sistema Universitario (LOSU)</strong> es el marco legal que vertebra la educación superior española y que ha impulsado la actualización de muchas de las estructuras de la CRUE. En el contexto del Tema 61, su impacto más directo es la obligación que impone a las universidades de contar con <strong>Comisiones de Convivencia</strong>, lo que dio origen a la creación de la <strong>RedCCU</strong> en 2024.</p>
+  <p>La LOSU también refuerza los derechos del alumnado con discapacidad, la igualdad de género, la inclusión de la diversidad sexual y la promoción de la salud en el campus, lo que entronca directamente con las misiones de SAPDU, la RUD y el Grupo de Universidades Saludables.</p>
+
+  <h3>Otros referentes normativos ★★</h3>
+  <ul>
+    <li><strong>Real Decreto Legislativo 1/2013</strong> (Texto Refundido de la Ley de Derechos de las Personas con Discapacidad): base jurídica del trabajo de SAPDU. ★★</li>
+    <li><strong>Ley Orgánica 3/2007</strong> de Igualdad efectiva de mujeres y hombres: contexto de la RUD y de Crue-Igualdad. ★★</li>
+    <li><strong>Reglamento (UE) FSE+</strong>: financia proyectos de inclusión social en universidades (relevante para Prometeus, Tema 60). ★★★</li>
+    <li><strong>Estatutos de la CRUE</strong> (actualizados en 2023-2024): regulan los órganos, las Comisiones Sectoriales y las redes. ★★★</li>
+    <li><strong>Reglamento de la RedCCU</strong> (2024): artículo 2 sobre funciones. ★★★</li>
+  </ul>
+
+  <div class="nota n-teal"><strong>Recuerda ★★★:</strong> La LOSU 2023 es el principal impulsor de la RedCCU (obligó a crear Comisiones de Convivencia en las universidades). El Reglamento de la RedCCU (art. 2) es el artículo de referencia para sus funciones en el examen.</div>
+</div>
+
+</div>
+</body>
+</html>
