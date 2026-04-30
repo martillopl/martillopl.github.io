@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 60 · HTML 2 · Esquema-resumen visual · Ruiseñor y Prometeus · UPNA</title>
+<style>
+:root{
+  --bg:#f0fdf4;--card:#fff;--s2:#dcfce7;--s3:#bbf7d0;--line:#4ade80;
+  --text:#14532d;--muted:#16a34a;--p:#15803d;--p2:#166534;
+  --grn:#059669;--grn2:#d1fae5;--red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;--sky:#0284c7;--sky2:#e0f2fe;
+  --vio:#7c3aed;--vio2:#ede9fe;--ora:#c2410c;--ora2:#ffedd5;
+  --teal:#0d9488;--teal2:#ccfbf1;--rose:#be185d;--rose2:#fce7f3;
+  --sh:0 2px 12px rgba(21,128,61,.1)
+}
+[data-theme="dark"]{
+  --bg:#001a0a;--card:#00260e;--s2:#003314;--s3:#00421b;--line:#16a34a;
+  --text:#bbf7d0;--muted:#4ade80;--p:#4ade80;--p2:#86efac;
+  --grn:#86efac;--grn2:#052e16;--red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;--sky:#7dd3fc;--sky2:#082038;
+  --vio:#c4b5fd;--vio2:#1a0e33;--ora:#fdba74;--ora2:#2a1000;
+  --teal:#5eead4;--teal2:#031a16;--rose:#fda4af;--rose2:#1a0010;
+  --sh:0 2px 14px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:20px}
+.wrap{max-width:1260px;margin:0 auto}
+.hdr{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:14px 22px;box-shadow:var(--sh);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.93rem;font-weight:900;color:var(--p)}
+.hdr p{font-size:.7rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1.5px solid var(--line);background:var(--s2);color:var(--text);padding:5px 14px;border-radius:999px;font-size:.7rem;font-weight:700}
+.sec{background:var(--p);color:#fff;font-size:.78rem;font-weight:900;padding:6px 16px;border-radius:8px;display:inline-block;margin:18px 0 10px;text-transform:uppercase;letter-spacing:.04em}
+
+/* FLASH */
+.flash-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(188px,1fr));gap:9px;margin-bottom:14px}
+.flash{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;box-shadow:var(--sh);position:relative;overflow:hidden}
+.flash .num{font-size:2.1rem;font-weight:900;color:var(--p);opacity:.1;position:absolute;top:2px;right:8px;line-height:1}
+.flash .q{font-size:.64rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:3px}
+.flash .a{font-size:.78rem;font-weight:800;color:var(--text)}
+
+/* VERSUS */
+.versus{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch;margin-bottom:14px}
+.vs-a{background:var(--teal2);border:2px solid var(--teal);border-radius:14px 0 0 14px;padding:16px}
+.vs-mid{background:var(--red2);border-top:2px solid var(--red);border-bottom:2px solid var(--red);display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:900;color:var(--red);padding:0 10px;width:46px}
+.vs-b{background:var(--ora2);border:2px solid var(--ora);border-radius:0 14px 14px 0;padding:16px}
+.vs-a h3{color:var(--teal);font-size:.85rem;font-weight:900;margin-bottom:8px}
+.vs-b h3{color:var(--ora);font-size:.85rem;font-weight:900;margin-bottom:8px}
+.vs-a ul,.vs-b ul{margin:0 0 0 14px;font-size:.73rem;line-height:1.7}
+@media(max-width:560px){.versus{grid-template-columns:1fr}.vs-a{border-radius:14px 14px 0 0}.vs-mid{width:100%;height:36px;border:2px solid var(--red);border-radius:0}.vs-b{border-radius:0 0 14px 14px}}
+
+/* FASES PIPELINE */
+.pipeline{display:flex;flex-wrap:wrap;gap:0;background:var(--card);border:2px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--sh);margin-bottom:14px}
+.pipe-step{flex:1;min-width:160px;padding:14px 13px;border-right:1px solid var(--line)}
+.pipe-step:last-child{border-right:none}
+.pipe-step .ps-ico{font-size:1.5rem;margin-bottom:4px}
+.pipe-step .ps-n{font-size:.62rem;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.pipe-step .ps-t{font-size:.82rem;font-weight:900;color:var(--p);margin:2px 0 5px}
+.pipe-step .ps-d{font-size:.71rem;line-height:1.5}
+.p-f1{background:var(--ora2)}.p-f2{background:var(--sky2)}.p-f3{background:var(--s2)}.p-f4{background:var(--vio2)}
+
+/* TIMELINE */
+.timeline{position:relative;padding-left:28px;margin-bottom:14px}
+.timeline::before{content:'';position:absolute;left:10px;top:0;bottom:0;width:3px;background:var(--line);border-radius:2px}
+.tl-item{position:relative;margin-bottom:12px}
+.tl-dot{width:18px;height:18px;border-radius:50%;background:var(--p);border:3px solid var(--card);position:absolute;left:-23px;top:3px;display:flex;align-items:center;justify-content:center}
+.tl-dot span{font-size:.6rem;color:#fff;font-weight:900}
+.tl-year{font-size:.7rem;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.tl-t{font-size:.82rem;font-weight:800;color:var(--p2)}
+.tl-d{font-size:.73rem;line-height:1.5}
+
+/* CARDS GRID */
+.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;margin-bottom:14px}
+.crd{background:var(--card);border:1.5px solid var(--line);border-radius:13px;padding:13px;box-shadow:var(--sh)}
+.crd h4{font-size:.8rem;font-weight:900;color:var(--p);margin-bottom:6px}
+.crd ul{margin:0 0 0 13px;font-size:.72rem;line-height:1.65}
+
+/* DATOS */
+.datos{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:10px;margin-bottom:14px}
+.dato{background:var(--card);border:2px solid var(--p);border-radius:13px;padding:13px;box-shadow:var(--sh);text-align:center}
+.dato .d-num{font-size:1.7rem;font-weight:900;color:var(--p);line-height:1.15}
+.dato .d-label{font-size:.71rem;color:var(--muted);margin-top:4px;line-height:1.4}
+
+/* TRAMPAS */
+.trap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(295px,1fr));gap:9px;margin-bottom:14px}
+.trap{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--sh)}
+.trap-w{background:var(--red2);padding:8px 12px;font-size:.72rem;font-weight:700;color:var(--red)}
+.trap-ok{background:var(--grn2);padding:8px 12px;font-size:.72rem;color:var(--grn)}
+.trap-n{font-size:.62rem;font-weight:900;opacity:.65;margin-bottom:2px;text-transform:uppercase}
+
+/* MINI */
+.mini{background:var(--card);border:2px solid var(--p);border-radius:14px;padding:16px;box-shadow:var(--sh);margin-bottom:14px;font-size:.77rem;line-height:1.75}
+.mini strong{color:var(--p2)}
+
+/* NOTA */
+.nota{padding:10px 14px;border-radius:0 10px 10px 0;border-left:4px solid;font-size:.76rem;margin:8px 0;line-height:1.5}
+.n-ok{background:var(--grn2);border-color:var(--grn)}
+.n-err{background:var(--red2);border-color:var(--red)}
+.n-sky{background:var(--sky2);border-color:var(--sky)}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<div class="hdr">
+  <div>
+    <h1>Tema 60 · HTML 2 · Esquema-resumen visual · Ruiseñor/Urretxindorra y Prometeus · UPNA</h1>
+    <p>Programas de mentoría social de la Universidad Pública de Navarra · Oposiciones Navarra</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">🌙 Claro / Oscuro</button>
+</div>
+
+<!-- FLASH 22 fichas -->
+<div class="sec">⚡ Fichas flash — 22 datos inmediatos ★★★</div>
+<div class="flash-grid">
+  <div class="flash"><div class="num">1</div><div class="q">¿Dónde nació Ruiseñor?</div><div class="a">Malmö (Suecia), 1997. Se inspira en el proyecto PERACH (Israel). ★★★</div></div>
+  <div class="flash"><div class="num">2</div><div class="q">¿Qué edición en 2025-2026?</div><div class="a">15.ª edición de Ruiseñor en la UPNA. ★★★</div></div>
+  <div class="flash"><div class="num">3</div><div class="q">Significado del nombre</div><div class="a">El ruiseñor canta maravillosamente cuando se siente seguro. ★★★</div></div>
+  <div class="flash"><div class="num">4</div><div class="q">Colegios de Ruiseñor</div><div class="a">San Jorge y García Galdeano (Pamplona). ★★★</div></div>
+  <div class="flash"><div class="num">5</div><div class="q">Colectivo Ruiseñor</div><div class="a">Menores de Educación Primaria o 1.º ESO en contextos vulnerables. ★★★</div></div>
+  <div class="flash"><div class="num">6</div><div class="q">Mentores Ruiseñor (25-26)</div><div class="a">12 mentores universitarios (de 16 en total entre ambos programas). ★★★</div></div>
+  <div class="flash"><div class="num">7</div><div class="q">Metodología Ruiseñor</div><div class="a">Actividades lúdicas y culturales fuera del horario escolar. Modelo positivo. ★★★</div></div>
+  <div class="flash"><div class="num">8</div><div class="q">Red estatal Ruiseñor</div><div class="a">Coordinadora de Mentoría Social: +1.000 participantes/año en España. ★★</div></div>
+  <div class="flash"><div class="num">9</div><div class="q">¿Dónde se inspiró Prometeus?</div><div class="a">Ayuntamiento de Barcelona + universidades públicas, desde 2016. ★★★</div></div>
+  <div class="flash"><div class="num">10</div><div class="q">Inicio piloto Prometeus UPNA</div><div class="a">Curso 2023-2024. Duración: 3 cursos (hasta 2025-2026). ★★★</div></div>
+  <div class="flash"><div class="num">11</div><div class="q">Institutos de Prometeus</div><div class="a">IES Julio Caro Baroja e IES Plaza de la Cruz (Pamplona). ★★★</div></div>
+  <div class="flash"><div class="num">12</div><div class="q">Objetivo Prometeus</div><div class="a">Acceso + permanencia + inserción laboral para jóvenes vulnerables. ★★★</div></div>
+  <div class="flash"><div class="num">13</div><div class="q">Nº de fases Prometeus</div><div class="a">4 fases: Motivación · Transición · Apoyo UPNA · Inserción laboral. ★★★</div></div>
+  <div class="flash"><div class="num">14</div><div class="q">¿Qué es el retorno social?</div><div class="a">Los mentorizados se convierten en mentores de las nuevas generaciones. ★★★</div></div>
+  <div class="flash"><div class="num">15</div><div class="q">Financiación Prometeus</div><div class="a">FSE+ (UE) + Gobierno de Navarra (Dir. Gral. Políticas Migratorias). ★★★</div></div>
+  <div class="flash"><div class="num">16</div><div class="q">Financiación Ruiseñor</div><div class="a">UPNA (Plan Estratégico) + Cátedra UNESCO Ciudadanía UPNA. ★★</div></div>
+  <div class="flash"><div class="num">17</div><div class="q">Datos 2024-2025 Prometeus</div><div class="a">19 estudiantes universitarios acompañados · 5 mentores sociales · 33 alumnos de secundaria apoyados. ★★★</div></div>
+  <div class="flash"><div class="num">18</div><div class="q">AULEXNA en Prometeus</div><div class="a">Voluntariado intergeneracional: clases de Matemáticas e Inglés a alumnado de secundaria. ★★</div></div>
+  <div class="flash"><div class="num">19</div><div class="q">Vicerrectorado común</div><div class="a">Ambos programas dependen del Vicerrectorado de Proyección Universitaria, Cultura y Divulgación. ★★★</div></div>
+  <div class="flash"><div class="num">20</div><div class="q">Plan que los integra</div><div class="a">Plan Estratégico de la UPNA (Responsabilidad Social Universitaria). ★★★</div></div>
+  <div class="flash"><div class="num">21</div><div class="q">Nombre en euskera y catalán</div><div class="a">Urretxindorra (euskera) · Rossinyol (catalán). ★★</div></div>
+  <div class="flash"><div class="num">22</div><div class="q">Proyecto israelí que inspiró Ruiseñor</div><div class="a">PERACH ("flor" en hebreo): programa israelí de mentoría universitaria. ★★★</div></div>
+</div>
+
+<!-- VERSUS -->
+<div class="sec">🔀 Ruiseñor vs. Prometeus ★★★</div>
+<div class="versus">
+  <div class="vs-a">
+    <h3>🐦 RUISEÑOR / URRETXINDORRA</h3>
+    <ul>
+      <li>Origen: Malmö (Suecia), 1997.</li>
+      <li>Inspirado en PERACH (Israel).</li>
+      <li>En UPNA: +10 años. 15.ª ed. 2025-26.</li>
+      <li>Colectivo: Primaria / 1.º ESO vulnerable.</li>
+      <li>Mentor: estudiante universitario UPNA.</li>
+      <li>Metodología: actividades lúdicas y culturales fuera de horario escolar.</li>
+      <li>Centros: San Jorge · García Galdeano.</li>
+      <li>Financiación: UPNA (Plan Estratégico).</li>
+      <li>Red: Coordinadora Mentoría Social (estatal).</li>
+      <li>Fases: relación continua sin fases formales.</li>
+    </ul>
+  </div>
+  <div class="vs-mid">≠</div>
+  <div class="vs-b">
+    <h3>🔥 PROMETEUS</h3>
+    <ul>
+      <li>Origen: Ayto. Barcelona, 2016.</li>
+      <li>Piloto UPNA: 2023-2024 (3 cursos).</li>
+      <li>Colectivo: jóvenes vuln. (ESO → empleo).</li>
+      <li>Mentor: técnicos + mentores sociales (estudiantes avanzados).</li>
+      <li>Metodología: acompañamiento integral en 4 fases.</li>
+      <li>Centros: IES Julio Caro Baroja · IES Plaza de la Cruz.</li>
+      <li>Financiación: FSE+ (UE) + Gob. Navarra.</li>
+      <li>Red: entidades tercer sector + agentes educativos.</li>
+      <li>Hilo conductor: retorno social.</li>
+    </ul>
+  </div>
+</div>
+<div class="nota n-err"><strong>Trampa ★★★:</strong> "Ruiseñor y Prometeus son el mismo programa." → FALSO: distintos orígenes, colectivos, metodologías, centros y fuentes de financiación.</div>
+
+<!-- TIMELINE -->
+<div class="sec">📅 Línea del tiempo ★★★</div>
+<div class="timeline">
+  <div class="tl-item">
+    <div class="tl-dot"><span>1</span></div>
+    <div class="tl-year">1997</div>
+    <div class="tl-t">Nacimiento de Ruiseñor — Malmö (Suecia)</div>
+    <div class="tl-d">Inspirado en el proyecto PERACH (Israel). El nombre evoca al pájaro que canta cuando se siente seguro. ★★★</div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot"><span>2</span></div>
+    <div class="tl-year">≈ 2010</div>
+    <div class="tl-t">Ruiseñor llega a la UPNA</div>
+    <div class="tl-d">La UPNA adopta el programa como parte de su responsabilidad social universitaria. Red estatal en Coordinadora de Mentoría Social. ★★</div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot"><span>3</span></div>
+    <div class="tl-year">2016</div>
+    <div class="tl-t">Nacimiento de Prometeus — Barcelona</div>
+    <div class="tl-d">El Ayuntamiento de Barcelona, junto a universidades públicas, crea Prometeus como buena práctica estatal. ★★★</div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot"><span>4</span></div>
+    <div class="tl-year">2023-2024</div>
+    <div class="tl-t">Piloto Prometeus en la UPNA</div>
+    <div class="tl-d">Arranca el piloto con los IES Julio Caro Baroja y Plaza de la Cruz. 70 personas trabajadas de forma individualizada. ★★★</div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot"><span>5</span></div>
+    <div class="tl-year">2024-2025</div>
+    <div class="tl-t">Consolidación: 19 acompañados + 5 mentores sociales + 33 de secundaria</div>
+    <div class="tl-d">Se estrena el voluntariado intergeneracional AULEXNA (Matemáticas e Inglés). ★★★</div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot"><span>6</span></div>
+    <div class="tl-year">2025-2026</div>
+    <div class="tl-t">15.ª edición Ruiseñor + 3.er año piloto Prometeus</div>
+    <div class="tl-d">16 mentores totales (12 Ruiseñor + 4 Prometeus). Último año del piloto. ★★★</div>
+  </div>
+</div>
+
+<!-- 4 FASES -->
+<div class="sec">🔷 Las 4 fases de Prometeus ★★★</div>
+<div class="pipeline">
+  <div class="pipe-step p-f1">
+    <div class="ps-ico">🏫</div>
+    <div class="ps-n">Fase 1</div>
+    <div class="ps-t">MOTIVACIÓN</div>
+    <div class="ps-d">En el instituto (ESO y Bachillerato). Talleres · entrevistas · charlas · apoyo en becas · trabajo con familias · encuentros con universitarios.</div>
+  </div>
+  <div class="pipe-step p-f2">
+    <div class="ps-ico">🌉</div>
+    <div class="ps-n">Fase 2</div>
+    <div class="ps-t">TRANSICIÓN</div>
+    <div class="ps-d">Entre el fin del instituto y el acceso a la universidad o FP. Presencia continua en el período de incertidumbre y cambio.</div>
+  </div>
+  <div class="pipe-step p-f3">
+    <div class="ps-ico">🎓</div>
+    <div class="ps-n">Fase 3</div>
+    <div class="ps-t">APOYO EN LA UPNA</div>
+    <div class="ps-d">Acompañamiento individual · trámites académicos · apoyo emocional · encuentros grupales · actividades lúdicas · 19 acompañados en 2024-25.</div>
+  </div>
+  <div class="pipe-step p-f4">
+    <div class="ps-ico">💼</div>
+    <div class="ps-n">Fase 4</div>
+    <div class="ps-t">INSERCIÓN LABORAL</div>
+    <div class="ps-d">Una vez concluidos los estudios. Orientación profesional · apoyo en transición al empleo · conexión con recursos laborales.</div>
+  </div>
+</div>
+<div class="nota n-ok"><strong>Frase memorizable ★★★:</strong> "Las 4 fases: Motivación (instituto) → Transición → Apoyo en la UPNA → Inserción laboral."</div>
+
+<!-- DATOS NUMÉRICOS -->
+<div class="sec">📊 Datos y cifras clave ★★★</div>
+<div class="datos">
+  <div class="dato"><div class="d-num">1997</div><div class="d-label">Año de nacimiento de Ruiseñor en Malmö, Suecia. ★★★</div></div>
+  <div class="dato"><div class="d-num">15.ª</div><div class="d-label">Edición de Ruiseñor en la UPNA en el curso 2025-2026. ★★★</div></div>
+  <div class="dato"><div class="d-num">2016</div><div class="d-label">Año de inicio de Prometeus en Barcelona (Ayto.). ★★★</div></div>
+  <div class="dato"><div class="d-num">3</div><div class="d-label">Cursos de piloto Prometeus en la UPNA (2023-24 a 2025-26). ★★★</div></div>
+  <div class="dato"><div class="d-num">4</div><div class="d-label">Fases del Programa Prometeus. ★★★</div></div>
+  <div class="dato"><div class="d-num">16</div><div class="d-label">Mentores totales en 2025-2026: 12 Ruiseñor + 4 Prometeus. ★★★</div></div>
+  <div class="dato"><div class="d-num">19</div><div class="d-label">Estudiantes universitarios acompañados en Prometeus (2024-2025). ★★★</div></div>
+  <div class="dato"><div class="d-num">5</div><div class="d-label">Mentores sociales de Prometeus en 2024-2025. ★★★</div></div>
+  <div class="dato"><div class="d-num">33</div><div class="d-label">Alumnos de secundaria apoyados por AULEXNA en 2024-2025. ★★</div></div>
+  <div class="dato"><div class="d-num">+1.000</div><div class="d-label">Participantes anuales en proyectos Ruiseñor en todo el Estado. ★★</div></div>
+</div>
+
+<!-- COLECTIVOS Y CENTROS -->
+<div class="sec">👥 Colectivos y centros ★★★</div>
+<div class="cg">
+  <div class="crd">
+    <h4>🐦 Ruiseñor — colectivo</h4>
+    <ul>
+      <li>Menores de Educación Primaria o 1.º ESO. ★★★</li>
+      <li>Procedentes de contextos vulnerables.</li>
+      <li>Especial presencia de origen migrante.</li>
+      <li>Colegios públicos de Pamplona.</li>
+    </ul>
+  </div>
+  <div class="crd">
+    <h4>🐦 Ruiseñor — centros ★★★</h4>
+    <ul>
+      <li>Colegio público San Jorge (Pamplona). ★★★</li>
+      <li>Colegio público García Galdeano (Pamplona). ★★★</li>
+      <li>(Ed. anteriores: Bernart Etxepare, Vázquez de Mella).</li>
+    </ul>
+  </div>
+  <div class="crd">
+    <h4>🔥 Prometeus — colectivo</h4>
+    <ul>
+      <li>Jóvenes en vulnerabilidad socioeducativa. ★★★</li>
+      <li>Migración o ascendencia migrante.</li>
+      <li>Entorno rural o socioeconóm. desfavorecido.</li>
+      <li>ESO, Bachillerato y universitarios.</li>
+    </ul>
+  </div>
+  <div class="crd">
+    <h4>🔥 Prometeus — centros ★★★</h4>
+    <ul>
+      <li>IES Julio Caro Baroja (Pamplona). ★★★</li>
+      <li>IES Plaza de la Cruz (Pamplona). ★★★</li>
+    </ul>
+  </div>
+</div>
+
+<!-- RETORNO SOCIAL + AULEXNA -->
+<div class="sec">🔄 Retorno social y voluntariado AULEXNA ★★★</div>
+<div class="cg">
+  <div class="crd">
+    <h4>🔄 Retorno social (Prometeus) ★★★</h4>
+    <ul>
+      <li>Concepto clave y propio de Prometeus.</li>
+      <li>El mentorizado, una vez en la universidad, se convierte en mentor de nuevos participantes. ★★★</li>
+      <li>Triple valor: empoderamiento · modelo de referencia · sostenibilidad del programa.</li>
+      <li>5 mentores sociales en 2024-2025 acompañan a 5 personas de los IES.</li>
+    </ul>
+  </div>
+  <div class="crd">
+    <h4>🧓 Voluntariado intergeneracional AULEXNA ★★</h4>
+    <ul>
+      <li>AULEXNA = Asociación de Antiguo Alumnado del Aula de la Experiencia (UPNA).</li>
+      <li>Voluntarios mayores imparten Matemáticas e Inglés a alumnado de 4.º ESO de los IES. ★★</li>
+      <li>Sesiones en la UPNA para familiarizar al alumnado con el entorno universitario.</li>
+      <li>33 estudiantes de secundaria beneficiados en 2024-2025.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- FINANCIACIÓN -->
+<div class="sec">💰 Financiación ★★★</div>
+<div class="cg">
+  <div class="crd">
+    <h4>🐦 Ruiseñor — financiación</h4>
+    <ul>
+      <li>Recursos propios de la UPNA. ★★</li>
+      <li>Plan Estratégico UPNA (RSU). ★★</li>
+      <li>Cátedra UNESCO de Ciudadanía, Convivencia y Pluralismo (UPNA): formación de mentores.</li>
+    </ul>
+  </div>
+  <div class="crd">
+    <h4>🔥 Prometeus — financiación ★★★</h4>
+    <ul>
+      <li><strong>Fondo Social Europeo Plus (FSE+)</strong>: Reglamento UE 2021/1057. ★★★</li>
+      <li><strong>Gobierno de Navarra</strong>: Dirección General de Políticas Migratorias (Dto. Vivienda, Juventud y Políticas Migratorias). ★★★</li>
+      <li>Convenio de colaboración firmado entre UPNA y Gobierno de Navarra.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- MINI ESQUEMA -->
+<div class="sec">🧠 Mini esquema de repaso rápido ★★★</div>
+<div class="mini">
+  <strong>RUISEÑOR/URRETXINDORRA:</strong> Malmö 1997 · Perach Israel · 15.ª ed. (2025-26) · menores Primaria/1.ºESO · San Jorge + García Galdeano · actividades lúdicas · modelo positivo · Coordinadora Mentoría Social · Plan Estratégico UPNA<br><br>
+  <strong>PROMETEUS:</strong> Barcelona 2016 · piloto UPNA 2023-24 · 3 cursos · IES Julio Caro Baroja + IES Plaza de la Cruz · 4 fases (Motivación → Transición → Apoyo UPNA → Inserción) · retorno social · AULEXNA · FSE+ UE + Gob. Navarra<br><br>
+  <strong>LO QUE COMPARTEN:</strong> Vicerrectorado de Proyección Universitaria, Cultura y Divulgación · Plan Estratégico UPNA · RSU · 16 mentores totales en 2025-26 · Pamplona como territorio de actuación
+</div>
+
+<!-- TRAMPAS -->
+<div class="sec">⚠️ Las 8 trampas del examen ★★★</div>
+<div class="trap-grid">
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 1 ✗</div>"Ruiseñor nació en la UPNA."</div><div class="trap-ok">✓ Nació en Malmö (Suecia) en 1997; se inspira en el proyecto Perach (Israel). ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 2 ✗</div>"Ruiseñor y Prometeus son el mismo programa."</div><div class="trap-ok">✓ Distintos orígenes, colectivos, metodologías, centros y financiación. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 3 ✗</div>"Prometeus solo actúa en la universidad."</div><div class="trap-ok">✓ Empieza en el instituto desde la Fase 1 (Motivación, ESO y Bachillerato). ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 4 ✗</div>"Prometeus se financia solo con fondos de la UPNA."</div><div class="trap-ok">✓ Se cofinancia con FSE+ (UE) y Gobierno de Navarra. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 5 ✗</div>"El retorno social es un pago económico."</div><div class="trap-ok">✓ Es la participación de los mentorizados como mentores de nuevas generaciones. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 6 ✗</div>"Los mentores de Ruiseñor son profesores."</div><div class="trap-ok">✓ Son estudiantes universitarios de grado y máster de la UPNA. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 7 ✗</div>"Prometeus va dirigido solo a migrantes."</div><div class="trap-ok">✓ A cualquier joven en situación de vulnerabilidad socioeducativa. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 8 ✗</div>"La mentoría interna de la UPNA es igual que Ruiseñor."</div><div class="trap-ok">✓ La mentoría interna es entre universitarios; Ruiseñor acompaña a menores escolares. ★★★</div></div>
+</div>
+
+</div>
+</body>
+</html>

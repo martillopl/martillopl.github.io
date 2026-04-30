@@ -1,0 +1,389 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 60 · HTML 1 · Texto explicativo · Ruiseñor y Prometeus · UPNA</title>
+<style>
+:root{
+  --bg:#f0fdf4;--card:#fff;--s2:#dcfce7;--s3:#bbf7d0;--line:#4ade80;
+  --text:#14532d;--muted:#16a34a;--p:#15803d;--p2:#166534;
+  --grn:#059669;--grn2:#d1fae5;--red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;--sky:#0284c7;--sky2:#e0f2fe;
+  --vio:#7c3aed;--vio2:#ede9fe;--ora:#c2410c;--ora2:#ffedd5;
+  --teal:#0d9488;--teal2:#ccfbf1;
+  --sh:0 3px 14px rgba(21,128,61,.1)
+}
+[data-theme="dark"]{
+  --bg:#001a0a;--card:#00260e;--s2:#003314;--s3:#00421b;--line:#16a34a;
+  --text:#bbf7d0;--muted:#4ade80;--p:#4ade80;--p2:#86efac;
+  --grn:#86efac;--grn2:#052e16;--red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;--sky:#7dd3fc;--sky2:#082038;
+  --vio:#c4b5fd;--vio2:#1a0e33;--ora:#fdba74;--ora2:#2a1000;
+  --teal:#5eead4;--teal2:#031a16;
+  --sh:0 3px 16px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13.5px;line-height:1.72;background:var(--bg);color:var(--text);padding:24px}
+.wrap{max-width:1080px;margin:0 auto}
+header{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:22px 26px;box-shadow:var(--sh);margin-bottom:18px}
+h1{font-size:1.05rem;font-weight:900;color:var(--p);margin-bottom:5px}
+.sub{font-size:.77rem;color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.badge{background:var(--s2);color:var(--p);border:1px solid var(--line);padding:4px 12px;border-radius:999px;font-size:.73rem;font-weight:700}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 14px;border-radius:999px;font-size:.72rem;font-weight:700;margin-top:10px}
+nav{position:sticky;top:0;background:rgba(240,253,244,.93);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:18px;z-index:5;display:flex;flex-wrap:wrap;gap:8px}
+[data-theme="dark"] nav{background:rgba(0,26,10,.93)}
+nav a{color:var(--p);text-decoration:none;font-weight:700;font-size:.8rem}
+section{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:22px 26px 18px;box-shadow:var(--sh);margin-bottom:16px}
+h2{margin:0 0 12px;font-size:1.1rem;color:var(--p)}
+h3{margin:18px 0 7px;font-size:.95rem;color:var(--p2)}
+p{margin:9px 0}
+ul,ol{margin:8px 0 10px 22px}
+li{margin:5px 0}
+.note,.warn,.memo,.err,.sky,.vio,.teal{border-radius:12px;padding:12px 15px;margin:12px 0;line-height:1.6;border-left:5px solid;font-size:.84rem}
+.note{background:var(--s2);border-color:var(--p)}
+.warn{background:var(--warn2);border-color:var(--warn)}
+.memo{background:var(--grn2);border-color:var(--grn)}
+.err{background:var(--red2);border-color:var(--red)}
+.sky{background:var(--sky2);border-color:var(--sky)}
+.vio{background:var(--vio2);border-color:var(--vio)}
+.teal{background:var(--teal2);border-color:var(--teal)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:12px 0}
+.card{background:var(--s2);border:1.5px solid var(--line);border-radius:12px;padding:14px}
+.card h4{margin:0 0 7px;color:var(--p);font-size:.88rem}
+.card ul{margin:0 0 0 16px;font-size:.78rem}
+.fase{border-radius:12px;padding:14px 16px;margin:10px 0;border-left:5px solid}
+.f1{background:var(--ora2);border-color:var(--ora)}
+.f2{background:var(--sky2);border-color:var(--sky)}
+.f3{background:var(--s2);border-color:var(--p)}
+.f4{background:var(--vio2);border-color:var(--vio)}
+.fase h4{font-size:.85rem;font-weight:900;margin-bottom:5px}
+.f1 h4{color:var(--ora)}.f2 h4{color:var(--sky)}.f3 h4{color:var(--p)}.f4 h4{color:var(--vio)}
+.fase ul{margin:0 0 0 14px;font-size:.78rem}
+strong{color:var(--p2)}
+footer{color:var(--muted);font-size:.78rem;margin-top:6px;padding:4px}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<header>
+  <h1>Tema 60 · Programas de mentoría social de la UPNA: Ruiseñor/Urretxindorra y Prometeus</h1>
+  <div class="sub">Texto explicativo y desarrollo narrativo para comprensión y estudio · Oposiciones Navarra</div>
+  <div class="meta">
+    <span class="badge">Mentoría social</span>
+    <span class="badge">Ruiseñor / Urretxindorra</span>
+    <span class="badge">Prometeus</span>
+    <span class="badge">UPNA</span>
+    <span class="badge">Malmö 1997</span>
+    <span class="badge">Proyecto Perach</span>
+    <span class="badge">FSE+</span>
+    <span class="badge">Retorno social</span>
+    <span class="badge">Plan Estratégico UPNA</span>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">🌙 Claro / Oscuro</button>
+</header>
+
+<nav>
+  <a href="#s1">1. Mentoría social</a>
+  <a href="#s2">2. Ruiseñor</a>
+  <a href="#s3">3. Prometeus</a>
+  <a href="#s4">4. Las 4 fases</a>
+  <a href="#s5">5. Retorno social</a>
+  <a href="#s6">6. Voluntariado AULEXNA</a>
+  <a href="#s7">7. Financiación</a>
+  <a href="#s8">8. Coordinación</a>
+  <a href="#s9">9. Plan Estratégico</a>
+  <a href="#s10">10. Comparativa</a>
+  <a href="#s11">11. Memorización</a>
+</nav>
+
+<!-- S1 -->
+<section id="s1">
+  <h2>1. Concepto de mentoría social ★★★</h2>
+  <p>La <strong>mentoría social</strong> es una relación de acompañamiento entre una persona mentora y una persona mentorizada, orientada no solo al apoyo académico sino a la transformación social y al desarrollo integral de la persona. La figura del mentor actúa como <strong>modelo positivo</strong>, ofreciendo al mentorizado una referencia adulta de confianza, especialmente cuando su entorno carece de esos referentes.</p>
+  <p>En el contexto universitario, la mentoría social tiene un doble valor: por un lado, <strong>beneficia al menor o joven mentorizado</strong>, que gana apoyo, confianza y cohesión social; y por otro, <strong>forma al estudiante universitario</strong> como agente de cambio social, desarrollando competencias relacionales, empáticas y ciudadanas que complementan su formación académica.</p>
+  <p>La UPNA impulsa la mentoría social como parte de su <strong>responsabilidad social universitaria</strong>, articulada en el Plan Estratégico de la institución. Los dos programas de mentoría social de la UPNA son el <strong>Programa Ruiseñor/Urretxindorra</strong> y el <strong>Programa Prometeus</strong>.</p>
+  <div class="memo"><strong>Frase clave:</strong> "La mentoría social convierte a estudiantes universitarios en agentes de cambio que acompañan a menores y jóvenes vulnerables para favorecer su inclusión social y desarrollo integral." ★★★</div>
+</section>
+
+<!-- S2 -->
+<section id="s2">
+  <h2>2. Programa Ruiseñor / Urretxindorra ★★★</h2>
+
+  <h3>Origen e historia ★★★</h3>
+  <p>El <strong>Proyecto Ruiseñor/Urretxindorra</strong> nació en <strong>1997 en la Universidad de Malmö (Suecia)</strong>, inspirado en el proyecto israelí <strong>PERACH</strong> (cuyo nombre significa "flor" en hebreo). La elección del nombre "Ruiseñor" no es casual: evoca a un pájaro que <strong>canta maravillosamente cuando se siente seguro</strong>, una metáfora del menor que solo puede desarrollarse plenamente cuando se le ofrecen las condiciones de seguridad, vínculo y apoyo adecuadas.</p>
+  <p>La UPNA incorporó el proyecto hace <strong>más de una década</strong>. En el curso <strong>2025-2026 celebra su 15.ª edición</strong>, lo que lo convierte en el programa de mentoría social más veterano de la universidad. El proyecto se enmarca en la <strong>Coordinadora de Mentoría Social</strong>, red estatal a la que pertenecen más de 1.000 participantes anuales en todo España. En catalán se denomina <strong>Rossinyol</strong> y en euskera <strong>Urretxindorra</strong>.</p>
+
+  <h3>Objetivo ★★★</h3>
+  <p>El objetivo central de Ruiseñor es <strong>vincular a estudiantes universitarios con menores de colegios públicos</strong> de Pamplona que provienen de contextos vulnerables, especialmente de origen migrante o en riesgo de exclusión social. El universitario actúa como modelo positivo y realiza con el menor <strong>actividades lúdicas y culturales fuera del horario escolar</strong>, creando espacios de encuentro, aprendizaje personal y cohesión social.</p>
+  <p>Para el alumnado universitario, el programa representa a la vez una <strong>experiencia de responsabilidad social</strong> y una oportunidad de desarrollo personal y profesional: aprende a escuchar, a construir vínculos, a gestionar la diversidad y a ser referente para alguien que lo necesita.</p>
+
+  <h3>Colectivo destinatario ★★★</h3>
+  <ul>
+    <li>Menores de <strong>Educación Primaria</strong> o <strong>1.º de ESO</strong> en contextos vulnerables.</li>
+    <li>Con especial presencia de menores de <strong>origen migrante o con familias de diversas procedencias</strong>.</li>
+    <li>Alumnado de colegios públicos de Pamplona con necesidades sociales.</li>
+  </ul>
+
+  <h3>Centros educativos participantes ★★★</h3>
+  <p>En el curso 2025-2026 (15.ª edición) los centros son:</p>
+  <ul>
+    <li><strong>Colegio público San Jorge</strong> (Pamplona). ★★★</li>
+    <li><strong>Colegio público García Galdeano</strong> (Pamplona). ★★★</li>
+  </ul>
+  <p>En ediciones anteriores también participaron el Colegio Bernart Etxepare (para línea en euskera) y el Colegio Vázquez de Mella.</p>
+
+  <h3>Los mentores universitarios ★★★</h3>
+  <p>En el curso 2025-2026 participan <strong>12 mentores</strong> procedentes de diversas disciplinas como <strong>Psicología, Trabajo Social, Sociología y Magisterio</strong>. Son estudiantes de grado y máster de la UPNA que se comprometen durante todo el curso con un menor. Reciben <strong>formación específica</strong> coordinada con la Cátedra UNESCO de Ciudadanía, Convivencia y Pluralismo de la UPNA.</p>
+
+  <h3>Metodología ★★★</h3>
+  <ul>
+    <li>Relación de acompañamiento individualizado (un mentor / un menor) durante el curso académico.</li>
+    <li>Actividades lúdicas, culturales y de aprendizaje fuera del horario escolar.</li>
+    <li>Creación de espacios de encuentro cultural, social y personal.</li>
+    <li>El mentor se muestra como <strong>modelo adulto positivo</strong>: accesible, consistente y cálido.</li>
+    <li>Coordinación continuada con los centros escolares participantes.</li>
+  </ul>
+
+  <h3>Impacto acreditado ★★</h3>
+  <p>Investigaciones académicas (entre ellas una tesis doctoral de la Universitat Rovira i Virgili, 2022) demuestran que la participación en el Proyecto Ruiseñor <strong>reduce significativamente el estrés ambiental</strong> de los menores inmigrantes y mejora su percepción de apoyo social, su bienestar psicológico y su integración escolar.</p>
+
+  <div class="memo"><strong>Frase memorizable:</strong> "Ruiseñor: Malmö 1997 · proyecto Perach · pájaro que canta cuando se siente seguro · universitario como modelo positivo · 15.ª edición 2025-2026 · colegios San Jorge y García Galdeano." ★★★</div>
+</section>
+
+<!-- S3 -->
+<section id="s3">
+  <h2>3. Programa Prometeus ★★★</h2>
+
+  <h3>Origen e inspiración ★★★</h3>
+  <p>El <strong>Programa Prometeus</strong> de la UPNA se inspira en el programa del mismo nombre que el <strong>Ayuntamiento de Barcelona</strong> promueve, junto a las universidades públicas de la ciudad, <strong>desde 2016</strong>. Ese modelo está reconocido a nivel estatal como <strong>"buena práctica universitaria"</strong>. La UPNA pone en marcha su versión del programa en el curso <strong>2023-2024</strong> como piloto de tres cursos (2023-24, 2024-25 y 2025-26).</p>
+  <p>El programa se impulsa desde el <strong>Vicerrectorado de Proyección Universitaria, Cultura y Divulgación</strong> de la UPNA, en coordinación con agentes educativos y entidades del tercer sector de Navarra.</p>
+
+  <h3>Objetivo ★★★</h3>
+  <p>Prometeus tiene tres objetivos articulados en su nombre:</p>
+  <ul>
+    <li><strong>Acceso:</strong> motivar y orientar a jóvenes vulnerables para que den el paso de acceder a estudios superiores.</li>
+    <li><strong>Permanencia:</strong> acompañarles durante sus estudios universitarios para que no abandonen.</li>
+    <li><strong>Inserción laboral:</strong> apoyarles en la transición al mercado de trabajo una vez concluida la formación.</li>
+  </ul>
+  <p>El programa tiene en cuenta los factores socioeconómicos que condicionan el itinerario educativo, como <strong>migrar o tener ascendencia migrante</strong>, provenir de un entorno rural o de un contexto socioeconómico desfavorecido.</p>
+
+  <h3>Colectivo destinatario ★★★</h3>
+  <ul>
+    <li>Jóvenes en <strong>situación de vulnerabilidad socioeducativa</strong>.</li>
+    <li>Con especial atención a quienes <strong>migran o tienen ascendencia migrante</strong>.</li>
+    <li>Alumnado de ESO y Bachillerato (fases 1 y 2) y universitario (fases 3 y 4).</li>
+  </ul>
+
+  <h3>Centros de secundaria participantes ★★★</h3>
+  <ul>
+    <li><strong>IES Julio Caro Baroja</strong> (Pamplona). ★★★</li>
+    <li><strong>IES Plaza de la Cruz</strong> (Pamplona). ★★★</li>
+  </ul>
+
+  <div class="memo"><strong>Frase memorizable:</strong> "Prometeus: Barcelona 2016 · piloto UPNA 2023-2024 · 3 cursos · acceso + permanencia + inserción laboral · IES Julio Caro Baroja e IES Plaza de la Cruz." ★★★</div>
+</section>
+
+<!-- S4 -->
+<section id="s4">
+  <h2>4. Las 4 fases de Prometeus ★★★</h2>
+  <p>El programa se estructura en cuatro fases que acompañan al joven desde la secundaria hasta el empleo:</p>
+
+  <div class="fase f1">
+    <h4>FASE 1 · MOTIVACIÓN (en el instituto) ★★★</h4>
+    <ul>
+      <li>Actuación en ESO y Bachillerato de los dos IES de Pamplona.</li>
+      <li>Información, asesoramiento y motivación sobre el acceso a la universidad.</li>
+      <li>Talleres, entrevistas individuales y charlas informativas.</li>
+      <li>Encuentros entre alumnado universitario y del instituto.</li>
+      <li>Apoyo en la solicitud de becas y en el proceso de matriculación.</li>
+      <li>Trabajo con familias y otros agentes comunitarios.</li>
+    </ul>
+  </div>
+
+  <div class="fase f2">
+    <h4>FASE 2 · TRANSICIÓN ★★★</h4>
+    <ul>
+      <li>Acompañamiento en el período comprendido entre el fin del instituto y el acceso a la universidad o FP.</li>
+      <li>Presencia continua durante ese momento de incertidumbre y cambio.</li>
+      <li>Orientación para no perder el vínculo con la red de apoyo.</li>
+    </ul>
+  </div>
+
+  <div class="fase f3">
+    <h4>FASE 3 · APOYO EN LA UPNA ★★★</h4>
+    <ul>
+      <li>Acompañamiento individual en trámites académicos y administrativos.</li>
+      <li>Apoyo transversal en el ámbito académico, personal y emocional.</li>
+      <li>Encuentros grupales para fomentar la red de ayuda mutua entre participantes.</li>
+      <li>Actividades lúdicas y espacios de reflexión sobre temas relevantes.</li>
+      <li>En el curso 2024-2025: <strong>19 estudiantes universitarios acompañados</strong>.</li>
+      <li>En ese mismo curso: <strong>5 mentores sociales</strong> (alumnado de 3.º, 4.º de grado y máster) mentorizan a 5 estudiantes de los IES.</li>
+    </ul>
+  </div>
+
+  <div class="fase f4">
+    <h4>FASE 4 · INSERCIÓN LABORAL ★★★</h4>
+    <ul>
+      <li>Acompañamiento una vez concluidos los estudios superiores.</li>
+      <li>Apoyo en la transición al mercado laboral.</li>
+      <li>Orientación profesional y conexión con recursos de empleo.</li>
+    </ul>
+  </div>
+
+  <div class="memo"><strong>Frase memorizable:</strong> "Las 4 fases: Motivación (instituto) → Transición → Apoyo en la UPNA → Inserción laboral." ★★★</div>
+</section>
+
+<!-- S5 -->
+<section id="s5">
+  <h2>5. El retorno social ★★★</h2>
+  <p>Uno de los conceptos más propios y originales de Prometeus, y muy probable en examen, es el <strong>retorno social</strong>. Consiste en que el propio alumnado que ha participado en el programa Prometeus como mentorizado <strong>toma parte activa en acciones orientadas a acompañar a las nuevas generaciones de participantes</strong>. Los antes mentorizados se convierten en mentores.</p>
+  <p>El retorno social tiene una triple lectura:</p>
+  <ul>
+    <li><strong>Empoderamiento:</strong> el participante pasa de receptor de apoyo a agente activo del programa.</li>
+    <li><strong>Modelo de referencia:</strong> un joven de origen vulnerable que llega a la universidad y regresa al instituto como mentor es el mejor referente posible para los que vienen después.</li>
+    <li><strong>Sostenibilidad:</strong> el programa genera su propia cadena de continuidad.</li>
+  </ul>
+  <div class="memo"><strong>Frase memorizable:</strong> "El retorno social de Prometeus convierte a los mentorizados en mentores de las nuevas generaciones." ★★★</div>
+</section>
+
+<!-- S6 -->
+<section id="s6">
+  <h2>6. Voluntariado intergeneracional: AULEXNA ★★</h2>
+  <p>Como componente adicional del Programa Prometeus, la UPNA ha desarrollado una <strong>experiencia de voluntariado intergeneracional</strong> a través de <strong>AULEXNA</strong> (Asociación de Antiguo Alumnado del Aula de la Experiencia de la UPNA). En el curso 2024-2025, dos voluntarios de AULEXNA, <strong>César Blanco Álvarez y Henry Patterson</strong>, impartieron clases de refuerzo de <strong>Matemáticas e Inglés</strong> a alumnado de los dos IES participantes.</p>
+  <p>Las sesiones se realizaron en las <strong>instalaciones de la UPNA</strong>, con el doble objetivo de proporcionar apoyo académico y de <strong>familiarizar al alumnado con el entorno universitario</strong> para fomentar su confianza en poder cursar estudios superiores. En el primer año, beneficiaron a <strong>33 estudiantes de secundaria</strong>.</p>
+  <div class="note"><strong>Para examen:</strong> el voluntariado intergeneracional de AULEXNA es una novedad de 2024-2025 que añade la dimensión de los mayores como agentes de apoyo educativo dentro de Prometeus. ★★</div>
+</section>
+
+<!-- S7 -->
+<section id="s7">
+  <h2>7. Financiación de los programas ★★★</h2>
+  <h3>Ruiseñor / Urretxindorra</h3>
+  <p>El Programa Ruiseñor se financia fundamentalmente con <strong>recursos propios de la UPNA</strong>, enmarcado en las actividades de responsabilidad social del Plan Estratégico de la institución. Cuenta también con la colaboración de la <strong>Cátedra UNESCO de Ciudadanía, Convivencia y Pluralismo</strong> de la UPNA para la formación de mentores.</p>
+
+  <h3>Prometeus ★★★</h3>
+  <p>El Programa Prometeus cuenta con una doble financiación externa:</p>
+  <ul>
+    <li><strong>Fondo Social Europeo Plus (FSE+)</strong>: instrumento financiero de la Unión Europea para la inclusión social, el empleo y la educación (Reglamento UE 2021/1057). ★★★</li>
+    <li><strong>Dirección General de Políticas Migratorias</strong> del Departamento de Vivienda, Juventud y Políticas Migratorias del <strong>Gobierno de Navarra</strong>, con quien la UPNA ha firmado un convenio de colaboración. ★★★</li>
+  </ul>
+  <div class="memo"><strong>Frase memorizable:</strong> "Prometeus: cofinanciado por la UE (FSE+) y el Gobierno de Navarra (Dirección General de Políticas Migratorias)." ★★★</div>
+</section>
+
+<!-- S8 -->
+<section id="s8">
+  <h2>8. Coordinación y trabajo en red ★★★</h2>
+  <p>Ambos programas se desarrollan en coordinación con distintos agentes:</p>
+  <div class="grid2">
+    <div class="card">
+      <h4>Ruiseñor — coordinación</h4>
+      <ul>
+        <li>Colegios públicos San Jorge y García Galdeano.</li>
+        <li>Cátedra UNESCO de Ciudadanía, Convivencia y Pluralismo (UPNA).</li>
+        <li>Coordinadora de Mentoría Social (red estatal).</li>
+        <li>Vicerrectorado de Proyección Universitaria, Cultura y Divulgación.</li>
+        <li>Unidad de Acción Social de la UPNA.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Prometeus — coordinación</h4>
+      <ul>
+        <li>IES Julio Caro Baroja e IES Plaza de la Cruz.</li>
+        <li>Entidades del tercer sector de Navarra.</li>
+        <li>Agentes educativos del territorio.</li>
+        <li>Gobierno de Navarra (Políticas Migratorias).</li>
+        <li>AULEXNA (voluntariado intergeneracional).</li>
+        <li>Vicerrectorado de Proyección Universitaria, Cultura y Divulgación.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note"><strong>Clave examen:</strong> ambos programas dependen del <strong>Vicerrectorado de Proyección Universitaria, Cultura y Divulgación</strong> de la UPNA. ★★★</div>
+</section>
+
+<!-- S9 -->
+<section id="s9">
+  <h2>9. Vínculo con el Plan Estratégico de la UPNA ★★★</h2>
+  <p>Tanto Ruiseñor como Prometeus están <strong>integrados en el Plan Estratégico</strong> de la Universidad Pública de Navarra. No son proyectos aislados ni de voluntariado puntual: expresan la <strong>misión de responsabilidad social universitaria</strong> de la UPNA y su compromiso con la reducción de las desigualdades educativas en Navarra.</p>
+  <p>La UPNA entiende que una universidad pública tiene la obligación de <strong>devolver a la sociedad</strong> los conocimientos y recursos que la sociedad le confía. Los programas de mentoría social son una de las vías concretas para materializar ese compromiso, conectando el campus universitario con los barrios, las familias y los jóvenes más vulnerables de la comunidad.</p>
+  <div class="memo"><strong>Frase memorizable:</strong> "Ruiseñor y Prometeus no son voluntariado puntual: son expresión del compromiso de responsabilidad social universitaria integrado en el Plan Estratégico de la UPNA." ★★★</div>
+</section>
+
+<!-- S10 -->
+<section id="s10">
+  <h2>10. Comparativa entre Ruiseñor y Prometeus ★★★</h2>
+  <div class="grid2">
+    <div class="card">
+      <h4>🐦 Ruiseñor / Urretxindorra</h4>
+      <ul>
+        <li>Origen: Malmö, Suecia, 1997. Inspirado en Perach (Israel).</li>
+        <li>En la UPNA: desde hace +10 años. 15.ª edición en 2025-2026.</li>
+        <li>Colectivo: menores de Primaria / 1.º ESO vulnerables.</li>
+        <li>Mentor: estudiante universitario UPNA.</li>
+        <li>Metodología: actividades lúdicas y culturales fuera del horario escolar.</li>
+        <li>Centros: San Jorge y García Galdeano (Pamplona).</li>
+        <li>Financiación: UPNA (Plan Estratégico).</li>
+        <li>Red: Coordinadora de Mentoría Social (estatal).</li>
+        <li>Fases: relación continua durante el curso (sin fases formales).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>🔥 Prometeus</h4>
+      <ul>
+        <li>Origen: Ayuntamiento de Barcelona, 2016. Piloto UPNA 2023-2024.</li>
+        <li>Duración: 3 cursos piloto (hasta 2025-2026).</li>
+        <li>Colectivo: jóvenes vulnerables (ESO, Bachillerato, universitarios).</li>
+        <li>Mentor: equipo técnico UPNA + mentores sociales (estudiantes avanzados).</li>
+        <li>Metodología: acompañamiento integral en 4 fases.</li>
+        <li>Centros: IES Julio Caro Baroja e IES Plaza de la Cruz (Pamplona).</li>
+        <li>Financiación: FSE+ (UE) + Gobierno de Navarra.</li>
+        <li>Red: entidades del tercer sector + agentes educativos.</li>
+        <li>Hilo conductor: retorno social (mentorizados → mentores).</li>
+      </ul>
+    </div>
+  </div>
+  <div class="warn"><strong>Trampa de examen:</strong> "Ruiseñor y Prometeus son el mismo programa." → FALSO. Tienen orígenes, colectivos, metodologías, centros y fuentes de financiación distintos. ★★★</div>
+</section>
+
+<!-- S11 -->
+<section id="s11">
+  <h2>11. Frases memorizables y trampas ★★★</h2>
+  <h3>Frases memorizables ★★★</h3>
+  <ul>
+    <li>"Ruiseñor: nació en Malmö (Suecia) en 1997, se inspira en el proyecto Perach israelí; en la UPNA cumple su 15.ª edición en 2025-2026." ★★★</li>
+    <li>"El ruiseñor canta maravillosamente cuando se siente seguro: el menor se desarrolla cuando tiene vínculos de apoyo seguros." ★★★</li>
+    <li>"En Ruiseñor, el universitario es el modelo positivo que acompaña al menor en actividades lúdicas fuera del horario escolar." ★★★</li>
+    <li>"Prometeus: Barcelona 2016 · piloto UPNA 2023-2024 · 3 cursos · acceso + permanencia + inserción laboral." ★★★</li>
+    <li>"Las 4 fases de Prometeus: Motivación → Transición → Apoyo en la UPNA → Inserción laboral." ★★★</li>
+    <li>"El retorno social convierte a los mentorizados en mentores de las nuevas generaciones." ★★★</li>
+    <li>"Prometeus: cofinanciado por el FSE+ de la UE y el Gobierno de Navarra (Dirección General de Políticas Migratorias)." ★★★</li>
+    <li>"Ruiseñor: colegios San Jorge y García Galdeano. Prometeus: IES Julio Caro Baroja e IES Plaza de la Cruz." ★★★</li>
+    <li>"Ambos programas dependen del Vicerrectorado de Proyección Universitaria, Cultura y Divulgación de la UPNA." ★★★</li>
+    <li>"Ruiseñor y Prometeus son expresión del Plan Estratégico de la UPNA y su responsabilidad social universitaria." ★★★</li>
+  </ul>
+  <h3>Trampas habituales ★★★</h3>
+  <ul>
+    <li>"Ruiseñor nació en la UPNA." → FALSO: nació en Malmö (Suecia) en 1997. ★★★</li>
+    <li>"Prometeus solo actúa en la universidad." → FALSO: empieza en el instituto desde la Fase 1. ★★★</li>
+    <li>"Prometeus se financia solo con fondos propios de la UPNA." → FALSO: FSE+ (UE) + Gobierno de Navarra. ★★★</li>
+    <li>"El retorno social es un pago económico." → FALSO: es que los mentorizados se convierten en mentores. ★★★</li>
+    <li>"Los mentores de Ruiseñor son profesores." → FALSO: son estudiantes universitarios. ★★★</li>
+    <li>"Prometeus va dirigido solo a personas migrantes." → FALSO: a toda persona en vulnerabilidad socioeducativa. ★★★</li>
+    <li>"Ambos programas tienen el mismo colectivo." → FALSO: Ruiseñor atiende a menores de Primaria/ESO y Prometeus a jóvenes de Secundaria y universitarios. ★★★</li>
+    <li>"La mentoría interna de la UPNA es lo mismo que Ruiseñor." → FALSO: la interna es entre universitarios; Ruiseñor es con menores escolares. ★★★</li>
+  </ul>
+</section>
+
+<footer>Archivo: <strong>1_texto_explicativo.html</strong> · Tema 60 · Ruiseñor y Prometeus · UPNA · Oposición Navarra</footer>
+
+</div>
+</body>
+</html>
