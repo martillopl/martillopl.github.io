@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 59 · HTML 3 · Cuadro comparativo y tablas operativas · UDI · UPNA</title>
+<style>
+:root{
+  --bg:#eff6ff;--card:#fff;--s2:#dbeafe;--s3:#bfdbfe;--line:#60a5fa;
+  --text:#1e3a5f;--muted:#1d4ed8;--p:#1d4ed8;--p2:#1e40af;
+  --grn:#059669;--grn2:#d1fae5;--red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;--sky:#0284c7;--sky2:#e0f2fe;
+  --vio:#7c3aed;--vio2:#ede9fe;--ora:#c2410c;--ora2:#ffedd5;
+  --sh:0 2px 12px rgba(29,78,216,.09)
+}
+[data-theme="dark"]{
+  --bg:#000d1a;--card:#001428;--s2:#00213d;--s3:#002d52;--line:#1d4ed8;
+  --text:#bfdbfe;--muted:#60a5fa;--p:#60a5fa;--p2:#93c5fd;
+  --grn:#86efac;--grn2:#052e16;--red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;--sky:#7dd3fc;--sky2:#082038;
+  --vio:#c4b5fd;--vio2:#1a0e33;--ora:#fdba74;--ora2:#2a1000;
+  --sh:0 2px 14px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:22px}
+.wrap{max-width:1240px;margin:0 auto}
+header{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:14px 22px;box-shadow:var(--sh);margin-bottom:16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+h1{font-size:.92rem;font-weight:800;color:var(--p)}
+.sub{font-size:.7rem;color:var(--muted);margin-top:4px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 14px;border-radius:999px;font-size:.7rem;font-weight:700}
+h2{font-size:.82rem;font-weight:800;color:#fff;background:var(--p);padding:7px 16px;border-radius:8px;margin:18px 0 10px;display:inline-block}
+.tbl{width:100%;border-collapse:collapse;box-shadow:var(--sh);border-radius:10px;overflow:hidden;background:var(--card);margin-bottom:14px}
+.tbl th{background:var(--p);color:#fff;text-align:left;padding:8px 11px;font-size:.67rem;text-transform:uppercase;letter-spacing:.03em}
+.tbl td{padding:8px 11px;border-bottom:1px solid var(--s2);font-size:.74rem;vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:nth-child(even) td{background:rgba(29,78,216,.03)}
+.tbl tr:hover td{background:var(--s2)}
+.nota{padding:9px 13px;border-radius:0 9px 9px 0;font-size:.73rem;border-left:4px solid;margin:8px 0;line-height:1.5}
+.n-ok{background:var(--grn2);border-color:var(--grn)}
+.n-err{background:var(--red2);border-color:var(--red)}
+.n-w{background:var(--warn2);border-color:var(--warn)}
+.n-sky{background:var(--sky2);border-color:var(--sky)}
+strong{color:var(--p2)}
+td.hl{background:var(--s2)!important;font-weight:700;color:var(--p2)}
+td.ok{background:var(--grn2)!important}
+td.er{background:var(--red2)!important}
+td.wa{background:var(--warn2)!important}
+td.sk{background:var(--sky2)!important}
+td.vi{background:var(--vio2)!important}
+td.or{background:var(--ora2)!important}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<header>
+  <div>
+    <h1>Tema 59 · HTML 3 · Cuadro comparativo y tablas operativas para examen · UDI · UPNA</h1>
+    <div class="sub">La Unidad de Diversidad e Inclusión de la Universidad Pública de Navarra · programas, servicios y tipología de ayudas · Oposiciones Navarra</div>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</header>
+
+<!-- T1 -->
+<h2>T1 · Qué es la UDI: definición operativa ★★★</h2>
+<table class="tbl">
+<thead><tr><th>Elemento</th><th>Contenido</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Nombre completo</strong></td><td>Unidad de Diversidad e Inclusión (UDI) de la Universidad Pública de Navarra (UPNA).</td><td class="hl">UDI · UPNA ★★★</td></tr>
+<tr><td><strong>Naturaleza</strong></td><td>Servicio universitario de atención, orientación y apoyo a la diversidad e inclusión.</td><td>No es un órgano de gobierno; es un servicio.</td></tr>
+<tr><td><strong>Finalidad principal</strong></td><td>Garantizar la igualdad de oportunidades y la participación plena del alumnado con necesidades específicas de apoyo.</td><td class="hl">Igualdad real, no solo formal. ★★★</td></tr>
+<tr><td><strong>Enfoque</strong></td><td>Enfoque de derechos, no asistencialista.</td><td class="er">No es caridad ni beneficencia: es un derecho. ★★★</td></tr>
+<tr><td><strong>Ámbito de actuación</strong></td><td>Acceso · permanencia · rendimiento académico · inserción laboral.</td><td class="ok">Todo el itinerario universitario. ★★★</td></tr>
+<tr><td><strong>Red nacional</strong></td><td>Pertenece a la Red SAPDU (Servicios de Apoyo a Personas con Discapacidad en la Universidad): más de 66 universidades españolas.</td><td class="hl">+66 universidades · Red SAPDU. ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T2 -->
+<h2>T2 · Integración vs. Inclusión ★★★</h2>
+<table class="tbl">
+<thead><tr><th>Dimensión</th><th>Integración</th><th>Inclusión ★★★</th></tr></thead>
+<tbody>
+<tr><td><strong>Lógica</strong></td><td class="sk">La persona se adapta al sistema existente.</td><td class="ok">El sistema se transforma para acoger a todas las personas. ★★★</td></tr>
+<tr><td><strong>Cambio exigido</strong></td><td>Cambios en la persona (para encajar).</td><td class="ok">Cambios estructurales en el entorno y la institución. ★★★</td></tr>
+<tr><td><strong>Apoyos</strong></td><td>Apoyos puntuales para compensar diferencias.</td><td>Transformación del diseño del sistema para que sirva a todos.</td></tr>
+<tr><td><strong>Responsabilidad</strong></td><td>Recae principalmente en la persona con necesidades.</td><td class="ok">Responsabilidad institucional compartida. ★★★</td></tr>
+<tr><td><strong>Modelo</strong></td><td class="er">Modelo asistencial / rehabilitador.</td><td class="ok">Modelo de derechos. ★★★</td></tr>
+<tr><td><strong>Resultado</strong></td><td>Incorporación al sistema sin modificarlo.</td><td class="hl">Participación plena en igualdad real. ★★★</td></tr>
+</tbody>
+</table>
+<div class="nota n-err"><strong>Trampa de examen:</strong> "Integración e inclusión son lo mismo." → FALSO. La inclusión exige transformar el entorno y la institución, no solo incorporar a la persona. ★★★</div>
+
+<!-- T3 -->
+<h2>T3 · Principios de actuación de la UDI ★★★</h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Principio</th><th>Significado operativo</th></tr></thead>
+<tbody>
+<tr><td class="hl">1</td><td><strong>Igualdad de oportunidades ★★★</strong></td><td>Todas las personas tienen derecho a participar en igualdad de condiciones en la vida universitaria.</td></tr>
+<tr><td class="hl">2</td><td><strong>No discriminación ★★★</strong></td><td>Ninguna diferencia personal puede ser motivo de trato desfavorable no justificado.</td></tr>
+<tr><td class="hl">3</td><td><strong>Accesibilidad universal ★★★</strong></td><td>Todos los entornos, procesos y materiales deben ser utilizables por todas las personas.</td></tr>
+<tr><td class="hl">4</td><td><strong>Diseño para todas las personas ★★★</strong></td><td>Los entornos y materiales deben diseñarse desde el origen para ser accesibles, no adaptarse a posteriori.</td></tr>
+<tr><td class="hl">5</td><td><strong>Personalización ★★★</strong></td><td>Los apoyos se diseñan de forma individual para cada estudiante.</td></tr>
+<tr><td class="hl">6</td><td><strong>Confidencialidad ★★★</strong></td><td>La información sobre las necesidades del alumnado se trata con estricta reserva.</td></tr>
+<tr><td class="hl">7</td><td><strong>Participación activa del estudiante ★★★</strong></td><td>El estudiante es agente activo, no receptor pasivo de los apoyos.</td></tr>
+<tr><td class="hl">8</td><td><strong>Coordinación interinstitucional ★★★</strong></td><td>La UDI trabaja en red con servicios internos y entidades externas.</td></tr>
+<tr><td class="hl">9</td><td><strong>Prevención y anticipación ★★</strong></td><td>Actúa antes de que aparezcan los problemas, no solo cuando surgen.</td></tr>
+<tr><td class="hl">10</td><td><strong>Enfoque de derechos ★★★</strong></td><td>La inclusión no es un favor ni una medida asistencial: es una obligación jurídica.</td></tr>
+</tbody>
+</table>
+
+<!-- T4 -->
+<h2>T4 · Marco normativo de referencia ★★★</h2>
+<table class="tbl">
+<thead><tr><th>Norma</th><th>Año</th><th>Contenido relevante</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Constitución Española ★★★</strong></td><td class="hl">1978</td><td>Art. 14 (igualdad / no discriminación) · Art. 9.2 (igualdad real y efectiva) · Art. 27 (derecho a la educación).</td><td class="ok">3 artículos: 14, 9.2 y 27. ★★★</td></tr>
+<tr><td><strong>Convención ONU Discapacidad ★★★</strong></td><td class="hl">2006 / 2008</td><td>Aprobada 2006, ratificada por España en 2008. Marco de derechos: accesibilidad, ajustes razonables, no discriminación.</td><td class="ok">Modelo de derechos. ★★★</td></tr>
+<tr><td><strong>RDL 1/2013 ★★★</strong></td><td class="hl">2013</td><td>TR Ley General de derechos de las personas con discapacidad. Accesibilidad universal, ajustes razonables, no discriminación.</td><td class="hl">Ajustes razonables. ★★★</td></tr>
+<tr><td><strong>LOSU ★★★</strong></td><td class="hl">2023</td><td>Ley Orgánica del Sistema Universitario. Regula inclusión universitaria y derechos del estudiantado con necesidades de apoyo.</td><td class="ok">Norma universitaria de referencia actual. ★★★</td></tr>
+<tr><td><strong>Normativa foral navarra ★★</strong></td><td>Vigente</td><td>Ley Foral de igualdad y no discriminación. Marco autonómico de inclusión.</td><td>Ámbito territorial de la UPNA.</td></tr>
+<tr><td><strong>Normativa propia UPNA ★★★</strong></td><td>Vigente</td><td>Estatutos, convocatorias de ayudas y procedimientos internos de la universidad.</td><td>Regula las ayudas concretas.</td></tr>
+</tbody>
+</table>
+
+<!-- T5 -->
+<h2>T5 · Colectivos destinatarios ★★★</h2>
+<table class="tbl">
+<thead><tr><th>Colectivo</th><th>Tipo de necesidad</th><th>Intervención principal de la UDI</th></tr></thead>
+<tbody>
+<tr><td><strong>Estudiantes con discapacidad ★★★</strong></td><td>Física · sensorial · intelectual · mental.</td><td class="hl">Colectivo principal. Ajustes razonables, becas ONCE-CRUE, Banco de Productos. ★★★</td></tr>
+<tr><td><strong>Necesidades específicas de apoyo ★★★</strong></td><td>No necesariamente vinculadas a la discapacidad.</td><td>Valoración individual · diseño de apoyos · seguimiento.</td></tr>
+<tr><td><strong>Salud mental / bienestar emocional ★★★</strong></td><td>Ansiedad · depresión · estrés académico · malestar psicológico.</td><td>Detección · apoyo psicosocial · derivación a recursos sanitarios.</td></tr>
+<tr><td><strong>Dificultades económicas ★★★</strong></td><td>Riesgo de abandono por razones económicas.</td><td>Becas matrícula · valoración económica (6 pts) · orientación.</td></tr>
+<tr><td><strong>Vulnerabilidad social ★★</strong></td><td>Situación de exclusión, marginación o riesgo.</td><td>Orientación · derivación · coordinación con servicios externos.</td></tr>
+<tr><td><strong>Diversidad cultural / inmigración ★★</strong></td><td>Jóvenes inmigrados en proceso de inclusión social.</td><td>Proyecto Aukera (UPNA-Ayto. Pamplona, 2026).</td></tr>
+<tr><td><strong>Comunidad universitaria ★★</strong></td><td>Toda la institución: alumnado, PDI, PAS.</td><td>Sensibilización · formación · cultura inclusiva.</td></tr>
+</tbody>
+</table>
+
+<!-- T6 -->
+<h2>T6 · Funciones de la UDI ★★★</h2>
+<table class="tbl">
+<thead><tr><th>Eje</th><th>Función</th><th>Descripción operativa</th></tr></thead>
+<tbody>
+<tr><td class="hl" rowspan="6"><strong>Atención directa</strong></td><td>Información y orientación</td><td>Primera acogida, información de recursos y apoyos disponibles.</td></tr>
+<tr><td>Detección y valoración</td><td>Entrevista inicial, diagnóstico de necesidades específicas.</td></tr>
+<tr><td>Diseño de apoyos</td><td>Plan individualizado de apoyos académicos, técnicos y personales.</td></tr>
+<tr><td>Propuesta de ajustes ★★★</td><td>Adaptaciones metodológicas y de evaluación para el profesorado.</td></tr>
+<tr><td>Seguimiento ★★★</td><td>Monitorización del itinerario académico y de la eficacia de los apoyos.</td></tr>
+<tr><td>Empleabilidad</td><td>Orientación para prácticas, inserción laboral y programas externos.</td></tr>
+<tr><td class="hl" rowspan="4"><strong>Coordinación</strong></td><td>Asesoramiento al profesorado ★★★</td><td>Orientar al docente sobre necesidades y ajustes sin vulnerar la confidencialidad.</td></tr>
+<tr><td>Coord. servicios internos</td><td>Orientación, Biblioteca, Informática, RRII, Igualdad.</td></tr>
+<tr><td>Derivación externa</td><td>A servicios sanitarios, sociales, entidades especializadas.</td></tr>
+<tr><td>Gestión de becas ★★★</td><td>Tramitación y valoración de ayudas y convocatorias.</td></tr>
+<tr><td class="hl" rowspan="3"><strong>Cultura inclusiva</strong></td><td>Sensibilización ★★★</td><td>Jornadas, campañas y talleres para toda la comunidad universitaria.</td></tr>
+<tr><td>Formación</td><td>Formación del PDI y PAS en inclusión, diversidad y ajustes.</td></tr>
+<tr><td>Accesibilidad universal ★★★</td><td>Impulsar entornos y materiales accesibles en todos los ámbitos.</td></tr>
+</tbody>
+</table>
+
+<!-- T7 -->
+<h2>T7 · Los 8 programas de la UDI ★★★</h2>
+<table class="tbl">
+<thead><tr><th>Prog.</th><th>Nombre</th><th>Contenido</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td class="hl">A</td><td><strong>Acogida y orientación ★★★</strong></td><td>Información inicio de curso · detección temprana · planificación inicial de apoyos.</td><td class="ok">Reduce riesgo de abandono. ★★★</td></tr>
+<tr><td class="hl">B</td><td><strong>Apoyo académico ★★★</strong></td><td>Adaptaciones metodológicas · ajustes en evaluación · seguimiento rendimiento · asesoramiento al profesorado.</td><td class="hl">El más preguntado. ★★★</td></tr>
+<tr><td class="hl">C</td><td><strong>Accesibilidad universal ★★★</strong></td><td>Eliminación de barreras físicas, digitales, comunicativas y académicas.</td><td class="ok">Física + digital + comunicativa + académica. ★★★</td></tr>
+<tr><td class="hl">D</td><td><strong>Asesoramiento al profesorado ★★★</strong></td><td>Orientación sobre necesidades del alumnado · propuestas de ajustes · buenas prácticas inclusivas.</td><td>Docente como agente activo. ★★★</td></tr>
+<tr><td class="hl">E</td><td><strong>Sensibilización y formación ★★</strong></td><td>Jornadas · campañas · talleres para toda la comunidad universitaria.</td><td>Cambio cultural institucional.</td></tr>
+<tr><td class="hl">F</td><td><strong>Bienestar psicosocial ★★★</strong></td><td>Salud mental · malestar emocional · prevención del aislamiento · derivación a recursos.</td><td class="er">Incluye salud mental, no solo discapacidad. ★★★</td></tr>
+<tr><td class="hl">G</td><td><strong>Empleabilidad e inserción ★★★</strong></td><td>Becas ONCE-CRUE · Proyecto Unidos (Adecco) · Erasmus+Inclusión · orientación laboral.</td><td class="ok">Transición al empleo. ★★★</td></tr>
+<tr><td class="hl">H</td><td><strong>Mentoría y apoyo entre iguales ★★★</strong></td><td>Acompañamiento por otros estudiantes · integración académica y social · reduce abandono.</td><td class="hl">Apoyo informal y red de pares. ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T8 -->
+<h2>T8 · Ajustes razonables: definición y tipos ★★★</h2>
+<table class="tbl">
+<thead><tr><th>Aspecto</th><th>Contenido</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Definición</strong></td><td>Modificaciones y adaptaciones necesarias y adecuadas para garantizar el ejercicio de un derecho en igualdad de condiciones, sin carga desproporcionada.</td><td class="hl">Convención ONU 2006 · RDL 1/2013. ★★★</td></tr>
+<tr><td><strong>Finalidad</strong></td><td>Compensar barreras de acceso al aprendizaje y la evaluación.</td><td class="ok">Compensan barreras, no rebajan objetivos. ★★★</td></tr>
+<tr><td><strong>Tiempo de examen</strong></td><td>Ampliación del tiempo para la realización de pruebas de evaluación.</td><td>El más habitual. ★★★</td></tr>
+<tr><td><strong>Formato de evaluación</strong></td><td>Oral · escrita · con soporte tecnológico · en aula separada · en formato alternativo.</td><td>Adapta el modo, no el contenido.</td></tr>
+<tr><td><strong>Materiales</strong></td><td>Braille · audio · letra grande · lectura fácil · formato digital accesible.</td><td>Accesibilidad de los recursos docentes.</td></tr>
+<tr><td><strong>Recursos tecnológicos</strong></td><td>Magnificadores · lectores de pantalla · auriculares · software específico · comunicadores.</td><td>Productos de apoyo técnico.</td></tr>
+<tr><td><strong>Organización</strong></td><td>Adaptación de prácticas · actividades grupales · movilidad internacional.</td><td>Erasmus+Inclusión como ejemplo.</td></tr>
+<tr><td><strong>Trampa 1</strong></td><td class="er">"Los ajustes razonables rebajan el nivel académico."</td><td class="er">FALSO. No modifican los objetivos ni los contenidos. ★★★</td></tr>
+<tr><td><strong>Trampa 2</strong></td><td class="er">"Son privilegios discrecionales."</td><td class="er">FALSO. Son obligación jurídica derivada de la normativa de igualdad. ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T9 -->
+<h2>T9 · Tipología de ayudas ★★★</h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Tipo de ayuda</th><th>Contenido concreto</th><th>★</th></tr></thead>
+<tbody>
+<tr><td class="hl">1</td><td><strong>Académicas</strong></td><td>Adaptaciones de docencia y evaluación · materiales accesibles · apoyo tutorial · flexibilidad organizativa justificada.</td><td class="ok">★★★</td></tr>
+<tr><td class="hl">2</td><td><strong>Técnicas</strong></td><td>Productos de apoyo · software específico · comunicadores · Banco de Productos de Apoyo ONCE-SAPDU (préstamo por curso a alumnado con discapacidad ≥33%).</td><td class="ok">★★★</td></tr>
+<tr><td class="hl">3</td><td><strong>Económicas</strong></td><td>Ayudas para pago de matrícula · Becas de Colaboración (la UDI otorga hasta <strong>6 puntos</strong> en la valoración) · Becas equidad GN (≤9.500 €/curso) · becas externas (ONCE, Adecco...).</td><td class="ok">★★★</td></tr>
+<tr><td class="hl">4</td><td><strong>Accesibilidad</strong></td><td>Eliminación de barreras arquitectónicas · accesibilidad digital y tecnológica · espacios y materiales adaptados.</td><td class="ok">★★★</td></tr>
+<tr><td class="hl">5</td><td><strong>Acompañamiento</strong></td><td>Mentoría entre iguales · voluntariado universitario · seguimiento individualizado · orientación continua.</td><td class="ok">★★★</td></tr>
+<tr><td class="hl">6</td><td><strong>Inserción laboral</strong></td><td>Becas prácticas Fundación ONCE-CRUE (discapacidad ≥33%) · Proyecto Unidos (Fundación Adecco) · Erasmus+Inclusión · orientación profesional.</td><td class="ok">★★★</td></tr>
+</tbody>
+</table>
+<div class="nota n-err"><strong>Trampa:</strong> "Las ayudas de la UDI son solo económicas." → FALSO. Son 6 tipos distintos, siendo las académicas y técnicas las más habituales. ★★★</div>
+
+<!-- T10 -->
+<h2>T10 · Becas y ayudas económicas: cuadro comparativo ★★★</h2>
+<table class="tbl">
+<thead><tr><th>Convocatoria</th><th>Organismo</th><th>Destinatarios</th><th>Importe / condición clave</th><th>★</th></tr></thead>
+<tbody>
+<tr><td><strong>Ayudas pago matrícula</strong></td><td class="hl">UPNA</td><td>Alumnado con dificultades económicas (Grado y Máster habilitante).</td><td>Cobertura parcial o total de matrícula. UDI valora con hasta 6 pts la situación económica. ★★★</td><td class="ok">★★★</td></tr>
+<tr><td><strong>Becas Colaboración</strong></td><td class="hl">UPNA</td><td>Alumnado con dificultades económicas + criterios académicos.</td><td>Combina apoyo económico y experiencia investigadora.</td><td class="ok">★★★</td></tr>
+<tr><td><strong>Becas equidad</strong></td><td class="hl">Gobierno de Navarra</td><td>Jóvenes de entornos de bajos ingresos que acceden a la educación superior.</td><td>Hasta 9.500 € por persona y curso. ★★</td><td class="ok">★★</td></tr>
+<tr><td><strong>Becas ONCE-CRUE</strong></td><td class="hl">Fundación ONCE + Red CRUE</td><td>Estudiantes con discapacidad reconocida ≥33%.</td><td>Becas de prácticas extracurriculares. ★★★</td><td class="ok">★★★</td></tr>
+<tr><td><strong>Proyecto Unidos</strong></td><td class="hl">Fundación Adecco</td><td>Estudiantes universitarios con discapacidad.</td><td>Mentoría, orientación laboral y contacto con empresas. ★★</td><td>★★</td></tr>
+<tr><td><strong>Erasmus+Inclusión</strong></td><td class="hl">UE / SEPIE</td><td>Estudiantes con discapacidad en programas de movilidad.</td><td>Ayuda económica adicional a la beca Erasmus. ★★</td><td>★★</td></tr>
+<tr><td><strong>Banco Productos de Apoyo</strong></td><td class="hl">Fundación ONCE / SAPDU</td><td>Estudiantes con discapacidad ≥33%.</td><td>Préstamo de productos de apoyo por curso académico. ★★★</td><td class="ok">★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T11 -->
+<h2>T11 · Red SAPDU ★★★</h2>
+<table class="tbl">
+<thead><tr><th>Aspecto</th><th>Contenido</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Nombre completo</strong></td><td>SAPDU: Red de Servicios de Apoyo a Personas con Discapacidad en la Universidad.</td><td class="hl">SAPDU · Red estatal. ★★★</td></tr>
+<tr><td><strong>Composición</strong></td><td>Más de 66 universidades españolas. La UPNA forma parte de ella.</td><td class="hl">+66 universidades. ★★★</td></tr>
+<tr><td><strong>Finalidad</strong></td><td>Intercambio de buenas prácticas · coordinación de programas · acceso al Banco de Productos ONCE · iniciativas conjuntas.</td><td>Marco nacional de referencia.</td></tr>
+<tr><td><strong>Banco de Productos</strong></td><td>Gestionado con la Fundación ONCE. Préstamo de productos de apoyo a estudiantes con discapacidad ≥33%.</td><td class="ok">Discapacidad ≥33% para acceder. ★★★</td></tr>
+<tr><td><strong>Relevancia examen</strong></td><td>Sitúa a la UDI de la UPNA dentro del marco nacional de inclusión universitaria.</td><td class="ok">Conecta con el nivel estatal. ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T12 -->
+<h2>T12 · Coordinación interna y externa ★★★</h2>
+<table class="tbl">
+<thead><tr><th>Tipo</th><th>Entidad / Servicio</th><th>Función en la coordinación</th></tr></thead>
+<tbody>
+<tr><td class="hl" rowspan="7"><strong>Interna</strong></td><td>Profesorado y centros/facultades.</td><td>Propuesta de ajustes razonables · seguimiento del alumnado.</td></tr>
+<tr><td>Servicio de Orientación Universitaria.</td><td>Derivación y complementariedad en orientación académica y vocacional.</td></tr>
+<tr><td>Unidad de Igualdad de Género.</td><td>Trabajo conjunto en políticas de igualdad y no discriminación.</td></tr>
+<tr><td>Servicio de Informática.</td><td>Accesibilidad digital de plataformas, campus virtual y webs.</td></tr>
+<tr><td>Biblioteca.</td><td>Materiales docentes accesibles y recursos en formatos alternativos.</td></tr>
+<tr><td>Servicio de Relaciones Internacionales.</td><td>Gestión de Erasmus+Inclusión y movilidad de alumnado con discapacidad.</td></tr>
+<tr><td>Órganos de gobierno de la UPNA.</td><td>Apoyo institucional y marco de actuación.</td></tr>
+<tr><td class="hl" rowspan="7"><strong>Externa</strong></td><td>Fundación ONCE · Red CRUE.</td><td>Becas prácticas · Banco de Productos ONCE-SAPDU.</td></tr>
+<tr><td>Fundación Adecco.</td><td>Proyecto Unidos: mentoría y orientación laboral.</td></tr>
+<tr><td>Fundación Universia.</td><td>Becas y programas para estudiantes con discapacidad.</td></tr>
+<tr><td>Gobierno de Navarra.</td><td>Becas equidad · marco normativo foral.</td></tr>
+<tr><td>Ayuntamiento de Pamplona.</td><td>Proyecto Aukera (2026): inclusión de jóvenes inmigrados.</td></tr>
+<tr><td>Entidades del tercer sector (CERMIN...).</td><td>Recursos especializados en discapacidad e inclusión.</td></tr>
+<tr><td>Servicios sanitarios y sociales.</td><td>Derivación y coordinación para bienestar psicosocial.</td></tr>
+</tbody>
+</table>
+
+<!-- T13 -->
+<h2>T13 · Accesibilidad universitaria: 5 dimensiones ★★★</h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Dimensión</th><th>Qué incluye</th><th>Trampa habitual</th></tr></thead>
+<tbody>
+<tr><td class="hl">1</td><td><strong>Física / arquitectónica</strong></td><td>Rampas · ascensores · señalización · espacios adaptados · movilidad reducida en el campus.</td><td class="er">Confundir accesibilidad SOLO con esto. ★★★</td></tr>
+<tr><td class="hl">2</td><td><strong>Digital / tecnológica</strong></td><td>Campus virtual · webs accesibles (WCAG) · plataformas de e-learning · materiales en formato accesible.</td><td>La accesibilidad digital es cada vez más relevante.</td></tr>
+<tr><td class="hl">3</td><td><strong>Comunicativa</strong></td><td>Lengua de signos · subtitulación · sistemas aumentativos y alternativos de comunicación.</td><td>Fundamental para personas con discapacidad auditiva o comunicativa.</td></tr>
+<tr><td class="hl">4</td><td><strong>Académica</strong></td><td>Materiales en formatos alternativos · metodologías inclusivas · ajustes en evaluación.</td><td>Se trabaja en coordinación con profesorado.</td></tr>
+<tr><td class="hl">5</td><td><strong>Social</strong></td><td>Inclusión en la vida universitaria y social · participación en actividades · mentoría · red de pares.</td><td>La dimensión más invisible pero esencial.</td></tr>
+</tbody>
+</table>
+
+<!-- T14 -->
+<h2>T14 · Datos numéricos clave para examen ★★★</h2>
+<table class="tbl">
+<thead><tr><th>Dato</th><th>Cifra</th><th>Contexto</th></tr></thead>
+<tbody>
+<tr><td><strong>Red SAPDU</strong></td><td class="hl">+66 universidades</td><td>Red estatal de apoyo a la discapacidad universitaria. La UPNA es miembro. ★★★</td></tr>
+<tr><td><strong>Discapacidad mínima (becas ONCE-CRUE)</strong></td><td class="hl">≥33%</td><td>Requisito para acceder a las becas de prácticas ONCE-CRUE y al Banco de Productos. ★★★</td></tr>
+<tr><td><strong>Puntuación UDI en becas colaboración</strong></td><td class="hl">Hasta 6 puntos</td><td>La UDI valora la situación económica del solicitante con hasta 6 puntos en la convocatoria. ★★★</td></tr>
+<tr><td><strong>Becas equidad Gobierno de Navarra</strong></td><td class="hl">≤ 9.500 €</td><td>Ayuda máxima por persona y curso para jóvenes de bajos ingresos. ★★</td></tr>
+<tr><td><strong>Programas principales UDI</strong></td><td class="hl">8 programas</td><td>A-Acogida · B-Apoyo académico · C-Accesibilidad · D-Profesorado · E-Sensibilización · F-Bienestar · G-Empleabilidad · H-Mentoría. ★★★</td></tr>
+<tr><td><strong>Tipos de ayuda</strong></td><td class="hl">6 tipos</td><td>Académicas · técnicas · económicas · accesibilidad · acompañamiento · inserción. ★★★</td></tr>
+<tr><td><strong>Principios de actuación</strong></td><td class="hl">10 principios</td><td>Igualdad · no discriminación · accesibilidad · diseño universal · personalización · confidencialidad · participación · coordinación · prevención · derechos. ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T15 -->
+<h2>T15 · Entidades externas y programas asociados ★★★</h2>
+<table class="tbl">
+<thead><tr><th>Entidad / programa</th><th>Tipo</th><th>Aportación a la UDI / UPNA</th><th>★</th></tr></thead>
+<tbody>
+<tr><td><strong>Fundación ONCE</strong></td><td>Fundación / ONG</td><td>Becas prácticas ONCE-CRUE · Banco de Productos SAPDU · orientación laboral.</td><td class="ok">★★★</td></tr>
+<tr><td><strong>Red CRUE</strong></td><td>Red universitaria</td><td>Convenio CRUE-ONCE: becas de prácticas para estudiantes con discapacidad ≥33%.</td><td class="ok">★★★</td></tr>
+<tr><td><strong>Fundación Adecco · Proyecto Unidos</strong></td><td>Fundación empresarial</td><td>Mentoría laboral · orientación · contacto con empresas para universitarios con discapacidad.</td><td>★★</td></tr>
+<tr><td><strong>Fundación Universia</strong></td><td>Fundación universitaria</td><td>Becas y recursos para estudiantes universitarios con discapacidad.</td><td>★★</td></tr>
+<tr><td><strong>Erasmus+Inclusión</strong></td><td>Programa europeo / SEPIE</td><td>Ayuda económica adicional para estudiantes con discapacidad en movilidad internacional.</td><td>★★</td></tr>
+<tr><td><strong>Gobierno de Navarra</strong></td><td>Administración foral</td><td>Becas equidad (≤9.500 €/curso) · marco normativo foral.</td><td>★★</td></tr>
+<tr><td><strong>Ayto. Pamplona · Proyecto Aukera</strong></td><td>Administración local</td><td>Convenio 2026 con UPNA para inclusión social de jóvenes inmigrados.</td><td>★★</td></tr>
+</tbody>
+</table>
+
+<!-- T16 -->
+<h2>T16 · Las 12 trampas del examen ★★★</h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Afirmación incorrecta</th><th>Corrección exacta</th></tr></thead>
+<tbody>
+<tr><td>1</td><td class="er">La UDI solo atiende discapacidad física.</td><td class="ok">Atiende toda la diversidad: discapacidad · salud mental · dificultades económicas · vulnerabilidad · migración. ★★★</td></tr>
+<tr><td>2</td><td class="er">Los ajustes razonables rebajan el nivel académico.</td><td class="ok">Compensan barreras de acceso; no modifican objetivos ni contenidos. ★★★</td></tr>
+<tr><td>3</td><td class="er">La inclusión es responsabilidad exclusiva de la UDI.</td><td class="ok">Es responsabilidad de toda la institución universitaria. ★★★</td></tr>
+<tr><td>4</td><td class="er">La UDI solo actúa cuando hay fracaso académico.</td><td class="ok">Actúa de forma preventiva, orientadora y continua desde el acceso. ★★★</td></tr>
+<tr><td>5</td><td class="er">Accesibilidad = solo barreras arquitectónicas.</td><td class="ok">También es digital, comunicativa, académica y social. ★★★</td></tr>
+<tr><td>6</td><td class="er">Las ayudas de la UDI son solo económicas.</td><td class="ok">Son 6 tipos: académicas · técnicas · económicas · accesibilidad · acompañamiento · inserción. ★★★</td></tr>
+<tr><td>7</td><td class="er">La UDI no necesita coordinarse con entidades externas.</td><td class="ok">La coordinación externa (ONCE, Adecco, GN, Ayto.) es esencial y estructural. ★★★</td></tr>
+<tr><td>8</td><td class="er">Integración e inclusión son lo mismo.</td><td class="ok">La inclusión exige transformar el entorno; la integración solo incorpora a la persona. ★★★</td></tr>
+<tr><td>9</td><td class="er">El enfoque de la UDI es asistencialista.</td><td class="ok">Es enfoque de derechos: la inclusión es una obligación jurídica, no un favor. ★★★</td></tr>
+<tr><td>10</td><td class="er">Las becas ONCE-CRUE son para cualquier estudiante.</td><td class="ok">Son para estudiantes con discapacidad reconocida ≥33%. ★★★</td></tr>
+<tr><td>11</td><td class="er">La UPNA no pertenece a ninguna red nacional de apoyo.</td><td class="ok">Pertenece a la Red SAPDU, formada por más de 66 universidades. ★★★</td></tr>
+<tr><td>12</td><td class="er">Los ajustes razonables son privilegios discrecionales.</td><td class="ok">Son obligación jurídica derivada de la normativa de igualdad y la Convención ONU. ★★★</td></tr>
+</tbody>
+</table>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,410 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 59 · HTML 1 · Texto explicativo · Unidad de Diversidad e Inclusión · UPNA</title>
+<style>
+:root{
+  --bg:#eff6ff;--card:#fff;--s2:#dbeafe;--s3:#bfdbfe;--line:#60a5fa;
+  --text:#1e3a5f;--muted:#1d4ed8;--p:#1d4ed8;--p2:#1e40af;
+  --grn:#059669;--grn2:#d1fae5;--red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;--sky:#0284c7;--sky2:#e0f2fe;
+  --vio:#7c3aed;--vio2:#ede9fe;--ora:#c2410c;--ora2:#ffedd5;
+  --sh:0 3px 16px rgba(29,78,216,.09)
+}
+[data-theme="dark"]{
+  --bg:#000d1a;--card:#001428;--s2:#00213d;--s3:#002d52;--line:#1d4ed8;
+  --text:#bfdbfe;--muted:#60a5fa;--p:#60a5fa;--p2:#93c5fd;
+  --grn:#86efac;--grn2:#052e16;--red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;--sky:#7dd3fc;--sky2:#082038;
+  --vio:#c4b5fd;--vio2:#1a0e33;--ora:#fdba74;--ora2:#2a1000;
+  --sh:0 3px 16px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13.5px;line-height:1.72;background:var(--bg);color:var(--text);padding:24px}
+.wrap{max-width:1080px;margin:0 auto}
+header{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:22px 26px;box-shadow:var(--sh);margin-bottom:18px}
+h1{font-size:1.05rem;font-weight:900;color:var(--p);margin-bottom:6px}
+.sub{font-size:.77rem;color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.badge{background:var(--s2);color:var(--p);border:1px solid var(--line);padding:4px 12px;border-radius:999px;font-size:.74rem;font-weight:700}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 14px;border-radius:999px;font-size:.72rem;font-weight:700;margin-top:10px}
+nav{position:sticky;top:0;background:rgba(239,246,255,.93);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:18px;z-index:5;display:flex;flex-wrap:wrap;gap:8px}
+[data-theme="dark"] nav{background:rgba(0,13,26,.93)}
+nav a{color:var(--p);text-decoration:none;font-weight:700;font-size:.8rem}
+section{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:22px 26px 18px;box-shadow:var(--sh);margin-bottom:16px}
+h2{margin:0 0 12px;font-size:1.12rem;color:var(--p)}
+h3{margin:18px 0 7px;font-size:.96rem;color:var(--p2)}
+p{margin:9px 0}
+ul,ol{margin:8px 0 10px 22px}
+li{margin:5px 0}
+.note,.warn,.memo,.err,.sky,.vio{border-radius:12px;padding:12px 15px;margin:12px 0;line-height:1.6;border-left:5px solid;font-size:.84rem}
+.note{background:var(--s2);border-color:var(--p)}
+.warn{background:var(--warn2);border-color:var(--warn)}
+.memo{background:var(--grn2);border-color:var(--grn)}
+.err{background:var(--red2);border-color:var(--red)}
+.sky{background:var(--sky2);border-color:var(--sky)}
+.vio{background:var(--vio2);border-color:var(--vio)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:12px 0}
+.card{background:var(--s2);border:1.5px solid var(--line);border-radius:12px;padding:14px}
+.card h4{margin:0 0 7px;color:var(--p);font-size:.88rem}
+.card ul{margin:0 0 0 16px;font-size:.78rem}
+table{width:100%;border-collapse:collapse;margin:12px 0;box-shadow:var(--sh);border-radius:10px;overflow:hidden}
+th{background:var(--p);color:#fff;padding:9px 11px;text-align:left;font-size:.75rem}
+td{border:1px solid var(--s2);padding:9px 11px;font-size:.8rem;vertical-align:top}
+tr:nth-child(even) td{background:var(--s2)}
+strong{color:var(--p2)}
+.k{font-weight:800;color:var(--p)}
+footer{color:var(--muted);font-size:.78rem;margin-top:6px;padding:4px}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<header>
+  <h1>Tema 59 · La Unidad de Diversidad e Inclusión (UDI) de la Universidad Pública de Navarra (UPNA)</h1>
+  <div class="sub">Programas, servicios y tipología de ayudas · Texto explicativo para comprensión y estudio · Oposiciones Navarra</div>
+  <div class="meta">
+    <span class="badge">UDI · UPNA</span>
+    <span class="badge">Inclusión universitaria</span>
+    <span class="badge">Ajustes razonables</span>
+    <span class="badge">Discapacidad</span>
+    <span class="badge">Ayudas económicas</span>
+    <span class="badge">Accesibilidad universal</span>
+    <span class="badge">Red SAPDU</span>
+    <span class="badge">LOSU</span>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">🌙 Claro / Oscuro</button>
+</header>
+
+<nav>
+  <a href="#s1">1. La UDI</a>
+  <a href="#s2">2. Misión y principios</a>
+  <a href="#s3">3. Marco normativo</a>
+  <a href="#s4">4. Colectivos</a>
+  <a href="#s5">5. Funciones</a>
+  <a href="#s6">6. Servicios</a>
+  <a href="#s7">7. Programas</a>
+  <a href="#s8">8. Ajustes razonables</a>
+  <a href="#s9">9. Tipología de ayudas</a>
+  <a href="#s10">10. Red SAPDU</a>
+  <a href="#s11">11. Coordinación</a>
+  <a href="#s12">12. Memorización</a>
+</nav>
+
+<!-- S1 -->
+<section id="s1">
+  <h2>1. La Unidad de Diversidad e Inclusión (UDI) de la UPNA</h2>
+  <p>La <span class="k">Unidad de Diversidad e Inclusión (UDI)</span> es el servicio de la <span class="k">Universidad Pública de Navarra (UPNA)</span> encargado de garantizar la igualdad de oportunidades, la accesibilidad y la participación plena del alumnado, en especial de aquellos estudiantes que presentan necesidades específicas de apoyo. Su actuación responde a un enfoque de derechos y no discriminación, coherente con el marco europeo y la legislación española en materia de inclusión universitaria.</p>
+  <p>La UDI no se limita a gestionar recursos puntuales: articula una visión integral de la inclusión que abarca el <span class="k">acceso, la permanencia, el rendimiento académico y la transición al empleo</span>. Actúa como referente institucional de la UPNA para todas las cuestiones relacionadas con la diversidad, la discapacidad, el apoyo académico personalizado y la sensibilización de la comunidad universitaria.</p>
+  <div class="note"><strong>Frase clave para examen:</strong> "La UDI es el servicio de la UPNA que convierte la igualdad formal en igualdad real, eliminando barreras y articulando apoyos a lo largo de todo el itinerario universitario." ★★★</div>
+</section>
+
+<!-- S2 -->
+<section id="s2">
+  <h2>2. Misión, finalidad y principios ★★★</h2>
+  <p>La misión central de la UDI es <span class="k">favorecer la plena participación del alumnado en la vida universitaria</span>, eliminando barreras de todo tipo y garantizando que las diferencias personales no se conviertan en obstáculos para el aprendizaje y el éxito académico.</p>
+  <h3>Finalidades principales ★★★</h3>
+  <ul>
+    <li>Favorecer la igualdad de oportunidades en el acceso, permanencia y egreso universitario.</li>
+    <li>Detectar necesidades específicas del alumnado de forma temprana.</li>
+    <li>Diseñar y proponer apoyos, adaptaciones y ajustes razonables individualizados.</li>
+    <li>Coordinar los recursos universitarios y externos disponibles.</li>
+    <li>Sensibilizar y formar a la comunidad universitaria en diversidad e inclusión.</li>
+    <li>Impulsar entornos físicamente accesibles, académicamente adaptados y socialmente integradores.</li>
+    <li>Favorecer la inserción laboral y las prácticas inclusivas.</li>
+  </ul>
+  <h3>Principios de actuación ★★★</h3>
+  <div class="grid2">
+    <div class="card">
+      <h4>Principios de igualdad</h4>
+      <ul>
+        <li>Igualdad de oportunidades.</li>
+        <li>No discriminación.</li>
+        <li>Equidad.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Principios de accesibilidad</h4>
+      <ul>
+        <li>Accesibilidad universal.</li>
+        <li>Diseño para todas las personas.</li>
+        <li>Eliminación de barreras.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Principios de apoyo</h4>
+      <ul>
+        <li>Personalización de los apoyos.</li>
+        <li>Confidencialidad.</li>
+        <li>Participación activa del estudiante.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Principios de sistema</h4>
+      <ul>
+        <li>Coordinación interinstitucional.</li>
+        <li>Prevención y anticipación.</li>
+        <li>Inclusión como responsabilidad institucional.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="warn"><strong>Trampa de examen:</strong> la UDI no solo actúa cuando hay un problema grave o un fracaso académico. También cumple funciones preventivas, de asesoramiento temprano y de sensibilización de toda la comunidad. ★★★</div>
+</section>
+
+<!-- S3 -->
+<section id="s3">
+  <h2>3. Marco normativo de referencia ★★★</h2>
+  <p>La actuación de la UDI se encuadra en un marco normativo multinivel que va desde los textos internacionales hasta la normativa interna de la UPNA:</p>
+  <ul>
+    <li><span class="k">Constitución Española (1978):</span> artículos 14 (igualdad y no discriminación), 9.2 (igualdad real y efectiva) y 27 (derecho a la educación).</li>
+    <li><span class="k">Convención Internacional sobre los Derechos de las Personas con Discapacidad (ONU, 2006):</span> ratificada por España en 2008. Marco de derechos, no asistencialista.</li>
+    <li><span class="k">Ley Orgánica del Sistema Universitario (LOSU, 2023):</span> regula la inclusión universitaria y los derechos del estudiantado con necesidades de apoyo.</li>
+    <li><span class="k">Texto Refundido de la Ley General de derechos de las personas con discapacidad y de su inclusión social (RDL 1/2013):</span> accesibilidad universal, ajustes razonables, no discriminación.</li>
+    <li><span class="k">Estatutos y normativa propia de la UPNA:</span> regulación interna de servicios, convocatorias y procedimientos de apoyos.</li>
+    <li><span class="k">Ley Foral de Navarra en materia de igualdad y no discriminación.</span></li>
+  </ul>
+  <div class="memo"><strong>Clave examen:</strong> el enfoque de la UDI no es asistencialista sino de <strong>derechos</strong>: la inclusión universitaria es un derecho reconocido a nivel internacional, europeo, estatal y autonómico. ★★★</div>
+</section>
+
+<!-- S4 -->
+<section id="s4">
+  <h2>4. Colectivos destinatarios ★★★</h2>
+  <p>La UDI tiene vocación universal, pero sus apoyos se dirigen prioritariamente a los siguientes colectivos:</p>
+  <ul>
+    <li><span class="k">Estudiantes con discapacidad</span> (física, sensorial, intelectual, mental): constituyen el colectivo principal de intervención.</li>
+    <li><span class="k">Estudiantes con necesidades específicas de apoyo educativo</span> no necesariamente vinculadas a la discapacidad.</li>
+    <li><span class="k">Estudiantes con problemas de salud mental o bienestar emocional:</span> ansiedad, depresión, malestar psicológico que impacta en el rendimiento.</li>
+    <li><span class="k">Estudiantes con dificultades económicas</span> en riesgo de abandono de sus estudios.</li>
+    <li><span class="k">Estudiantes en situación de vulnerabilidad social</span> por cualquier causa.</li>
+    <li><span class="k">Estudiantes procedentes de contextos migratorios o de diversidad cultural,</span> incluyendo jóvenes inmigrados en proceso de inclusión social.</li>
+    <li>En sentido amplio, <span class="k">toda la comunidad universitaria,</span> a través de acciones de sensibilización y formación.</li>
+  </ul>
+  <div class="sky"><strong>Dato actual:</strong> en 2026 la UPNA colabora con el Ayuntamiento de Pamplona a través de un convenio (Proyecto Aukera) para favorecer la inclusión social de jóvenes inmigrados, en coordinación directa con la Unidad de Diversidad e Inclusión. ★★</div>
+</section>
+
+<!-- S5 -->
+<section id="s5">
+  <h2>5. Funciones principales de la UDI ★★★</h2>
+  <p>Las funciones de la UDI pueden agruparse en tres grandes ejes:</p>
+  <h3>Eje de atención directa al estudiante</h3>
+  <ol>
+    <li>Información y orientación inicial.</li>
+    <li>Detección y valoración de necesidades.</li>
+    <li>Diseño de planes de apoyo individualizados.</li>
+    <li>Propuesta de adaptaciones y ajustes razonables.</li>
+    <li>Seguimiento del itinerario académico.</li>
+    <li>Apoyo a la empleabilidad y transición al mercado laboral.</li>
+  </ol>
+  <h3>Eje de coordinación institucional</h3>
+  <ol>
+    <li>Asesoramiento al profesorado sobre necesidades del alumnado.</li>
+    <li>Coordinación con servicios universitarios internos.</li>
+    <li>Derivación a recursos externos cuando sea necesario.</li>
+    <li>Gestión de becas, ayudas y programas específicos.</li>
+  </ol>
+  <h3>Eje de sensibilización y cultura inclusiva</h3>
+  <ol>
+    <li>Diseño y realización de acciones de sensibilización.</li>
+    <li>Formación de la comunidad universitaria.</li>
+    <li>Promoción de la accesibilidad universal.</li>
+    <li>Difusión de buenas prácticas inclusivas.</li>
+  </ol>
+  <div class="note"><strong>Frase memorizable:</strong> "La UDI informa, valora, adapta, coordina, sensibiliza y acompaña." ★★★</div>
+</section>
+
+<!-- S6 -->
+<section id="s6">
+  <h2>6. Servicios concretos ★★★</h2>
+  <p>En términos operativos, los servicios que presta la UDI incluyen:</p>
+  <ul>
+    <li>Atención personalizada e individualizada al estudiante.</li>
+    <li>Entrevista inicial y diagnóstico de necesidades.</li>
+    <li>Elaboración de informes y propuestas de apoyo para el profesorado y los centros.</li>
+    <li>Asesoramiento sobre recursos técnicos y tecnológicos de apoyo.</li>
+    <li>Orientación sobre accesibilidad en instalaciones, plataformas digitales y materiales.</li>
+    <li>Apoyo en la organización del estudio y la gestión del tiempo.</li>
+    <li>Coordinación con el profesorado para adaptar metodologías y evaluaciones.</li>
+    <li>Seguimiento del rendimiento y la permanencia académica.</li>
+    <li>Información y gestión de becas, ayudas y convocatorias.</li>
+    <li>Mediación ante dificultades de inclusión o conflictos.</li>
+    <li>Acciones de sensibilización, campañas y jornadas de inclusión.</li>
+    <li>Promoción del voluntariado o apoyo entre iguales (mentoría).</li>
+    <li>Apoyo a la inserción laboral y orientación para prácticas inclusivas.</li>
+    <li>Coordinación con el Servicio de Orientación Universitaria.</li>
+    <li>Evaluación de la situación económica para orientar a ayudas de matrícula.</li>
+  </ul>
+  <div class="note"><strong>Para examen:</strong> La UDI otorga una puntuación (hasta 6 puntos) en la valoración de solicitudes de Becas de Colaboración por Dificultades Económicas, en función de la situación económica acreditada del estudiante. ★★★</div>
+</section>
+
+<!-- S7 -->
+<section id="s7">
+  <h2>7. Programas de la UDI ★★★</h2>
+  <p>La UDI organiza su actuación en distintos programas o líneas de intervención. Los más relevantes para el examen son:</p>
+
+  <h3>A) Programa de Acogida y Orientación ★★★</h3>
+  <p>Facilita la <span class="k">transición del alumnado con necesidades específicas</span> al entorno universitario. Incluye información al inicio de curso, detección temprana de necesidades y planificación inicial de apoyos. Una acogida adecuada reduce el riesgo de abandono y favorece la integración social y académica.</p>
+
+  <h3>B) Programa de Apoyo Académico ★★★</h3>
+  <p>Diseña y gestiona las <span class="k">adaptaciones metodológicas, organizativas y de evaluación</span> que cada estudiante puede necesitar para alcanzar los objetivos académicos en igualdad de condiciones. Incluye el asesoramiento al profesorado y el seguimiento del rendimiento.</p>
+
+  <h3>C) Programa de Accesibilidad Universal ★★★</h3>
+  <p>Trabaja por la eliminación de <span class="k">barreras físicas, digitales, comunicativas y académicas</span>. La accesibilidad universitaria no se limita a las rampas: abarca el entorno tecnológico, los materiales docentes, los espacios de estudio y todas las actividades universitarias.</p>
+
+  <h3>D) Programa de Asesoramiento al Profesorado ★★★</h3>
+  <p>Orienta al profesorado sobre las necesidades específicas del alumnado que atiende y les propone <span class="k">ajustes razonables</span> concretos: adaptación de tiempos, materiales alternativos, cambios en el formato de la evaluación, etc. La inclusión requiere que el profesorado sea parte activa del proceso.</p>
+
+  <h3>E) Programa de Sensibilización y Formación ★★</h3>
+  <p>Diseña y realiza <span class="k">jornadas, campañas, talleres y acciones formativas</span> dirigidas a toda la comunidad universitaria (alumnado, profesorado, personal de administración y servicios). La sensibilización es indispensable para construir una cultura institucional genuinamente inclusiva.</p>
+
+  <h3>F) Programa de Apoyo al Bienestar Psicosocial ★★★</h3>
+  <p>Atiende las necesidades emocionales y psicosociales del alumnado, especialmente los problemas de <span class="k">salud mental, malestar emocional, estrés académico o riesgo de aislamiento</span>. La UPNA ha desarrollado en años recientes estudios específicos sobre la salud psicológica del alumnado. Incluye derivación o coordinación con recursos sanitarios cuando procede.</p>
+
+  <h3>G) Programa de Empleabilidad e Inserción Laboral ★★★</h3>
+  <p>Apoya la <span class="k">transición del alumnado con discapacidad y necesidades de apoyo al mercado laboral</span>. La UPNA participa en programas como el <span class="k">Proyecto Unidos</span> (Fundación Adecco), que incluye mentoría, orientación laboral y contacto con empresas. También gestiona las convocatorias de <span class="k">becas de prácticas para estudiantes con discapacidad</span> (Fundación ONCE-CRUE, Fundación Universia, Erasmus+Inclusión).</p>
+
+  <h3>H) Programa de Mentoría y Apoyo entre Iguales ★★★</h3>
+  <p>Fomenta el <span class="k">acompañamiento por parte de otros estudiantes</span> (de cursos superiores o del mismo curso) que actúan como mentores. Facilita la integración académica y social, reduce el riesgo de abandono y construye redes de apoyo informal dentro de la universidad.</p>
+</section>
+
+<!-- S8 -->
+<section id="s8">
+  <h2>8. Los ajustes razonables ★★★</h2>
+  <p>Uno de los conceptos más importantes del tema y de los más preguntados en examen es el de <span class="k">ajuste razonable</span>. Procede de la Convención ONU y del RDL 1/2013, y hace referencia a las <span class="k">modificaciones y adaptaciones necesarias y adecuadas</span> que se adoptan para garantizar que el estudiante con necesidades específicas pueda participar en igualdad de condiciones, sin que supongan una carga desproporcionada.</p>
+  <p>En la práctica universitaria, los ajustes razonables más habituales son:</p>
+  <ul>
+    <li>Ampliación del tiempo de realización de pruebas de evaluación.</li>
+    <li>Cambio del formato de evaluación (oral, escrita, con soporte tecnológico...).</li>
+    <li>Materiales docentes en formatos alternativos (braille, audio, letra grande, lectura fácil...).</li>
+    <li>Recursos técnicos o tecnológicos de apoyo (magnificadores, lectores de pantalla, audífonos...).</li>
+    <li>Adaptaciones organizativas en prácticas o actividades grupales.</li>
+    <li>Medidas para garantizar la participación en actividades de movilidad y Erasmus.</li>
+  </ul>
+  <div class="err"><strong>Trampa de examen:</strong> los ajustes razonables NO suponen rebajar el nivel académico ni los objetivos de aprendizaje. Compensan barreras de acceso; no eliminan el contenido ni la exigencia. ★★★</div>
+  <div class="warn"><strong>Otra trampa habitual:</strong> no confundir "ajuste razonable" con "privilegio". Es una obligación jurídica derivada de la normativa de igualdad y no discriminación. ★★★</div>
+</section>
+
+<!-- S9 -->
+<section id="s9">
+  <h2>9. Tipología de ayudas ★★★</h2>
+  <p>La UDI gestiona o facilita el acceso a distintos tipos de ayudas, que pueden clasificarse según su naturaleza:</p>
+
+  <h3>1. Ayudas académicas ★★★</h3>
+  <p>No son ayudas económicas sino de <span class="k">carácter metodológico y organizativo</span>: adaptaciones de docencia y evaluación, materiales accesibles, apoyo tutorial personalizado, coordinación con el profesorado.</p>
+
+  <h3>2. Ayudas técnicas ★★★</h3>
+  <p>Recursos materiales o tecnológicos que compensan limitaciones funcionales: productos de apoyo, software específico, dispositivos de comunicación aumentativa y alternativa, adaptaciones de mobiliario o espacios.</p>
+  <p>La UPNA participa en el <span class="k">Banco de Productos de Apoyo</span> de la Fundación ONCE a través de la Red SAPDU, que permite el préstamo de productos por curso académico a estudiantes con discapacidad ≥33%.</p>
+
+  <h3>3. Ayudas económicas ★★★</h3>
+  <p>Incluyen varias modalidades:</p>
+  <ul>
+    <li><span class="k">Ayudas para el pago de matrícula por dificultades económicas:</span> la UPNA convoca anualmente estas ayudas dirigidas a alumnado de Grado y Máster habilitante que enfrenta riesgo de abandono por razones económicas. El importe puede cubrir parcial o totalmente el coste de la matrícula. La UDI otorga hasta 6 puntos en la valoración de estas solicitudes en función de la situación económica acreditada. ★★★</li>
+    <li><span class="k">Becas de Colaboración por Dificultades Económicas:</span> combinan apoyo económico y experiencia en investigación. Se valoran criterios académicos y socioeconómicos. ★★★</li>
+    <li><span class="k">Becas equidad del Gobierno de Navarra:</span> ayudas de hasta 9.500 euros por persona y curso para jóvenes de bajos ingresos que acceden a la UPNA. ★★</li>
+    <li>Becas de entidades externas: Fundación ONCE, Fundación Universia, Fundación Adecco, etc.</li>
+  </ul>
+
+  <h3>4. Ayudas a prácticas e inserción laboral ★★★</h3>
+  <ul>
+    <li><span class="k">Becas Prácticas Fundación ONCE-CRUE:</span> la UPNA participa a través de la Red CRUE en esta convocatoria de becas de prácticas extracurriculares para estudiantes con discapacidad ≥33%. ★★★</li>
+    <li><span class="k">Erasmus+Inclusión:</span> ayuda económica adicional para estudiantes con discapacidad que participan en programas de movilidad internacional. ★★</li>
+    <li><span class="k">Proyecto Unidos (Fundación Adecco):</span> programa de mentoring, formación y orientación laboral para estudiantes con discapacidad universitaria. La UPNA se adhirió a este proyecto. ★★</li>
+    <li>Becas Fundación Universia, Becas Oportunidad al Talento (ONCE), Becas Adecco, etc.</li>
+  </ul>
+
+  <h3>5. Ayudas de accesibilidad ★★★</h3>
+  <p>Medidas orientadas a eliminar barreras físicas, digitales y comunicativas en el campus y en los recursos universitarios, para garantizar que todos los espacios y materiales sean utilizables por todas las personas.</p>
+
+  <h3>6. Ayudas de acompañamiento ★★★</h3>
+  <p>Mentoría entre iguales, apoyo personalizado de orientadores, voluntariado universitario y seguimiento individualizado a lo largo del itinerario académico.</p>
+
+  <div class="memo"><strong>Frase memorizable:</strong> "Las ayudas de la UDI son: académicas · técnicas · económicas · de accesibilidad · de acompañamiento · de inserción laboral." ★★★</div>
+</section>
+
+<!-- S10 -->
+<section id="s10">
+  <h2>10. La Red SAPDU ★★★</h2>
+  <p>La <span class="k">Red SAPDU</span> (Servicios de Apoyo a Personas con Discapacidad en la Universidad) es la red estatal de servicios universitarios de atención a la discapacidad, formada por más de 66 universidades españolas. La UPNA forma parte de esta red.</p>
+  <p>La Red SAPDU facilita el <span class="k">intercambio de buenas prácticas</span>, la coordinación de programas, el acceso al Banco de Productos de Apoyo de la Fundación ONCE y la participación en iniciativas conjuntas de inclusión universitaria a nivel nacional.</p>
+  <div class="sky"><strong>Para examen:</strong> la pertenencia de la UPNA a la Red SAPDU es un dato importante porque sitúa a la UDI dentro del marco nacional de servicios de apoyo a la discapacidad en la universidad española. ★★★</div>
+</section>
+
+<!-- S11 -->
+<section id="s11">
+  <h2>11. Coordinación interna y externa ★★★</h2>
+  <p>La UDI no actúa de forma aislada. Su eficacia depende de una <span class="k">red de coordinación</span> tanto interna como externa:</p>
+  <div class="grid2">
+    <div class="card">
+      <h4>Coordinación interna</h4>
+      <ul>
+        <li>Profesorado y centros/facultades.</li>
+        <li>Servicio de Orientación Universitaria.</li>
+        <li>Unidad de Igualdad de Género.</li>
+        <li>Servicio de Informática (accesibilidad digital).</li>
+        <li>Biblioteca (materiales accesibles).</li>
+        <li>Servicio de Relaciones Internacionales (Erasmus).</li>
+        <li>Órganos de gobierno de la UPNA.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Coordinación externa</h4>
+      <ul>
+        <li>Fundación ONCE y Red CRUE.</li>
+        <li>Fundación Universia y Fundación Adecco.</li>
+        <li>CERMIN (Consejo Estatal de ONG de acción social).</li>
+        <li>Entidades de discapacidad de Navarra.</li>
+        <li>Gobierno de Navarra.</li>
+        <li>Ayuntamiento de Pamplona (convenio Proyecto Aukera).</li>
+        <li>Servicios sanitarios y sociales de referencia.</li>
+        <li>Red SAPDU (66 universidades españolas).</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note"><strong>Clave examen:</strong> la UDI trabaja en red, no en solitario. La coordinación es uno de sus principios fundamentales. ★★★</div>
+</section>
+
+<!-- S12 -->
+<section id="s12">
+  <h2>12. Frases memorizables y trampas ★★★</h2>
+
+  <h3>Frases memorizables ★★★</h3>
+  <ul>
+    <li>"La UDI convierte la igualdad formal en igualdad real a través de apoyos, accesibilidad y ajustes razonables." ★★★</li>
+    <li>"La inclusión no adapta a la persona al sistema; adapta el sistema a la diversidad." ★★★</li>
+    <li>"La UDI actúa en acceso, permanencia, participación y éxito académico y laboral." ★★★</li>
+    <li>"Sus funciones: informar · orientar · valorar · adaptar · coordinar · sensibilizar · acompañar." ★★★</li>
+    <li>"Los ajustes razonables compensan barreras; no rebajan el nivel académico ni los objetivos." ★★★</li>
+    <li>"La accesibilidad universitaria es física, digital, comunicativa, académica y social." ★★★</li>
+    <li>"Las ayudas son: académicas · técnicas · económicas · de accesibilidad · de acompañamiento · de inserción." ★★★</li>
+    <li>"La UPNA forma parte de la Red SAPDU, con más de 66 universidades españolas." ★★★</li>
+    <li>"La UDI valora con hasta 6 puntos la situación económica en las Becas de Colaboración." ★★★</li>
+    <li>"La inclusión universitaria es un derecho, no un privilegio ni una medida asistencial." ★★★</li>
+  </ul>
+
+  <h3>Trampas habituales del examen ★★★</h3>
+  <ul>
+    <li>"La UDI solo atiende discapacidad física." → FALSO: atiende toda la diversidad de necesidades de apoyo. ★★★</li>
+    <li>"Los ajustes razonables rebajan el nivel académico." → FALSO: compensan barreras, no eliminan objetivos. ★★★</li>
+    <li>"La inclusión es responsabilidad exclusiva de la UDI." → FALSO: es responsabilidad de toda la institución. ★★★</li>
+    <li>"La accesibilidad se refiere solo a barreras arquitectónicas." → FALSO: también es digital, comunicativa, académica y social. ★★★</li>
+    <li>"Las ayudas de la UDI son solo económicas." → FALSO: son también académicas, técnicas, de acompañamiento e inserción. ★★★</li>
+    <li>"La UDI no necesita coordinarse con entidades externas." → FALSO: la coordinación es esencial y múltiple. ★★★</li>
+    <li>"Integración e inclusión son lo mismo." → FALSO: la inclusión exige transformar el entorno, no solo incorporar a la persona. ★★★</li>
+    <li>"La UDI solo actúa cuando hay un fracaso académico." → FALSO: actúa de forma preventiva, orientadora y continua. ★★★</li>
+  </ul>
+</section>
+
+<footer>Archivo: <strong>1_texto_explicativo.html</strong> · Tema 59 · Unidad de Diversidad e Inclusión · UPNA · Oposición Navarra</footer>
+
+</div>
+</body>
+</html>

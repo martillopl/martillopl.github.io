@@ -1,0 +1,452 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 59 · HTML 2 · Esquema-resumen visual · UDI · UPNA</title>
+<style>
+:root{
+  --bg:#eff6ff;--card:#fff;--s2:#dbeafe;--s3:#bfdbfe;--line:#60a5fa;
+  --text:#1e3a5f;--muted:#1d4ed8;--p:#1d4ed8;--p2:#1e40af;
+  --grn:#059669;--grn2:#d1fae5;--red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;--sky:#0284c7;--sky2:#e0f2fe;
+  --teal:#0d9488;--teal2:#ccfbf1;--rose:#be185d;--rose2:#fce7f3;
+  --vio:#7c3aed;--vio2:#ede9fe;--ora:#c2410c;--ora2:#ffedd5;
+  --sh:0 2px 12px rgba(29,78,216,.09)
+}
+[data-theme="dark"]{
+  --bg:#000d1a;--card:#001428;--s2:#00213d;--s3:#002d52;--line:#1d4ed8;
+  --text:#bfdbfe;--muted:#60a5fa;--p:#60a5fa;--p2:#93c5fd;
+  --grn:#86efac;--grn2:#052e16;--red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;--sky:#7dd3fc;--sky2:#082038;
+  --teal:#5eead4;--teal2:#031a16;--rose:#fda4af;--rose2:#1a0010;
+  --vio:#c4b5fd;--vio2:#1a0e33;--ora:#fdba74;--ora2:#2a1000;
+  --sh:0 2px 14px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:20px}
+.wrap{max-width:1260px;margin:0 auto}
+.hdr{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:14px 22px;box-shadow:var(--sh);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.93rem;font-weight:900;color:var(--p)}
+.hdr p{font-size:.7rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1.5px solid var(--line);background:var(--s2);color:var(--text);padding:5px 14px;border-radius:999px;font-size:.7rem;font-weight:700}
+.sec{background:var(--p);color:#fff;font-size:.78rem;font-weight:900;padding:6px 16px;border-radius:8px;display:inline-block;margin:18px 0 10px;text-transform:uppercase;letter-spacing:.04em}
+
+/* FLASH */
+.flash-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:9px;margin-bottom:14px}
+.flash{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;box-shadow:var(--sh);position:relative;overflow:hidden}
+.flash .num{font-size:2.1rem;font-weight:900;color:var(--p);opacity:.10;position:absolute;top:2px;right:8px;line-height:1}
+.flash .q{font-size:.66rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:3px}
+.flash .a{font-size:.79rem;font-weight:800;color:var(--text)}
+
+/* VERSUS */
+.versus{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch;margin-bottom:14px}
+.vs-left{background:var(--sky2);border:2px solid var(--sky);border-radius:14px 0 0 14px;padding:15px}
+.vs-mid{background:var(--red2);border-top:2px solid var(--red);border-bottom:2px solid var(--red);display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:900;color:var(--red);padding:0 9px;width:44px}
+.vs-right{background:var(--s2);border:2px solid var(--p);border-radius:0 14px 14px 0;padding:15px}
+.vs-left h3,.vs-right h3{font-size:.82rem;font-weight:900;margin-bottom:6px}
+.vs-left h3{color:var(--sky)}
+.vs-right h3{color:var(--p)}
+.vs-left ul,.vs-right ul{margin:0 0 0 14px;font-size:.73rem;line-height:1.6}
+@media(max-width:560px){.versus{grid-template-columns:1fr}.vs-left{border-radius:14px 14px 0 0}.vs-mid{border-radius:0;width:100%;height:34px;border:2px solid var(--red)}.vs-right{border-radius:0 0 14px 14px}}
+
+/* PIPELINE */
+.pipeline{display:flex;flex-wrap:wrap;gap:0;margin-bottom:14px;background:var(--card);border:2px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--sh)}
+.pipe-step{flex:1;min-width:140px;padding:14px 12px;text-align:center;border-right:1px solid var(--line);position:relative}
+.pipe-step:last-child{border-right:none}
+.pipe-step .ps-n{font-size:1.8rem;font-weight:900;color:var(--p);opacity:.15;line-height:1}
+.pipe-step .ps-ico{font-size:1.3rem;margin-bottom:4px}
+.pipe-step .ps-t{font-size:.78rem;font-weight:900;color:var(--p);margin-bottom:3px}
+.pipe-step .ps-d{font-size:.7rem;line-height:1.45}
+
+/* PROGRAMAS */
+.prog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:14px}
+.prog{border-radius:14px;padding:13px 15px;border:2px solid;box-shadow:var(--sh)}
+.p1{background:var(--ora2);border-color:var(--ora)}
+.p2{background:var(--sky2);border-color:var(--sky)}
+.p3{background:var(--vio2);border-color:var(--vio)}
+.p4{background:var(--rose2);border-color:var(--rose)}
+.p5{background:var(--teal2);border-color:var(--teal)}
+.p6{background:var(--warn2);border-color:var(--warn)}
+.p7{background:var(--grn2);border-color:var(--grn)}
+.p8{background:var(--s2);border-color:var(--p)}
+.prog .p-ico{font-size:1.3rem;margin-bottom:4px}
+.prog .p-title{font-size:.8rem;font-weight:900;margin-bottom:4px}
+.p1 .p-title{color:var(--ora)}
+.p2 .p-title{color:var(--sky)}
+.p3 .p-title{color:var(--vio)}
+.p4 .p-title{color:var(--rose)}
+.p5 .p-title{color:var(--teal)}
+.p6 .p-title{color:var(--warn)}
+.p7 .p-title{color:var(--grn)}
+.p8 .p-title{color:var(--p)}
+.prog ul{margin:0 0 0 13px;font-size:.71rem;line-height:1.6}
+
+/* AYUDAS */
+.ayuda-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:14px}
+.ayuda{background:var(--card);border:2px solid var(--line);border-radius:13px;padding:13px 15px;box-shadow:var(--sh)}
+.ayuda .a-num{width:28px;height:28px;border-radius:50%;background:var(--p);color:#fff;font-weight:900;font-size:.82rem;display:flex;align-items:center;justify-content:center;margin-bottom:7px}
+.ayuda .a-title{font-size:.8rem;font-weight:900;color:var(--p);margin-bottom:4px}
+.ayuda ul{margin:0 0 0 13px;font-size:.71rem;line-height:1.6}
+
+/* NORM */
+.norm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:9px;margin-bottom:14px}
+.norm{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:11px 13px;box-shadow:var(--sh);display:flex;gap:10px;align-items:flex-start}
+.norm .n-ico{font-size:1.3rem;flex-shrink:0;margin-top:2px}
+.norm .n-title{font-size:.77rem;font-weight:900;color:var(--p);margin-bottom:3px}
+.norm .n-desc{font-size:.71rem;line-height:1.5}
+
+/* COORD */
+.coord-box{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+@media(max-width:600px){.coord-box{grid-template-columns:1fr}}
+.coord-card{background:var(--card);border:1.5px solid var(--line);border-radius:13px;padding:13px 15px;box-shadow:var(--sh)}
+.coord-card h4{font-size:.82rem;font-weight:900;color:var(--p);margin-bottom:7px}
+.coord-card ul{margin:0 0 0 14px;font-size:.73rem;line-height:1.7}
+
+/* DATOS */
+.datos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:14px}
+.dato{background:var(--card);border:2px solid var(--p);border-radius:13px;padding:12px 14px;box-shadow:var(--sh);text-align:center}
+.dato .d-num{font-size:1.6rem;font-weight:900;color:var(--p);line-height:1.15}
+.dato .d-label{font-size:.72rem;color:var(--muted);margin-top:4px;line-height:1.4}
+
+/* TRAMPAS */
+.trap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:9px;margin-bottom:14px}
+.trap{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--sh)}
+.trap-w{background:var(--red2);padding:8px 12px;font-size:.72rem;font-weight:700;color:var(--red)}
+.trap-ok{background:var(--grn2);padding:8px 12px;font-size:.72rem;color:var(--grn)}
+.trap-n{font-size:.62rem;font-weight:900;opacity:.6;margin-bottom:2px;text-transform:uppercase}
+
+/* MINI ESQUEMA */
+.mini{background:var(--card);border:2px solid var(--p);border-radius:14px;padding:16px;box-shadow:var(--sh);margin-bottom:14px;font-size:.77rem;line-height:1.7}
+.mini strong{color:var(--p)}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<div class="hdr">
+  <div>
+    <h1>Tema 59 · HTML 2 · Esquema-resumen visual · UDI · Universidad Pública de Navarra</h1>
+    <p>Unidad de Diversidad e Inclusión: programas, servicios y tipología de ayudas · Oposiciones Navarra</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">🌙 Claro / Oscuro</button>
+</div>
+
+<!-- FLASH -->
+<div class="sec">⚡ Fichas flash — 20 datos inmediatos</div>
+<div class="flash-grid">
+  <div class="flash"><div class="num">1</div><div class="q">¿Qué es la UDI?</div><div class="a">Unidad de Diversidad e Inclusión de la UPNA. Garantiza igualdad real y apoyos personalizados. ★★★</div></div>
+  <div class="flash"><div class="num">2</div><div class="q">Colectivo principal</div><div class="a">Estudiantes con discapacidad, aunque atiende a toda la diversidad de necesidades. ★★★</div></div>
+  <div class="flash"><div class="num">3</div><div class="q">Concepto clave de ajuste</div><div class="a">Ajuste razonable: adaptación necesaria sin rebajar objetivos académicos. ★★★</div></div>
+  <div class="flash"><div class="num">4</div><div class="q">Red nacional</div><div class="a">SAPDU: Red de Servicios de Apoyo a Personas con Discapacidad en la Universidad. +66 universidades. ★★★</div></div>
+  <div class="flash"><div class="num">5</div><div class="q">Marco normativo base</div><div class="a">LOSU 2023 · RDL 1/2013 · Convención ONU 2006 · CE art. 14, 9.2 y 27. ★★★</div></div>
+  <div class="flash"><div class="num">6</div><div class="q">Funciones clave</div><div class="a">Informar · orientar · valorar · adaptar · coordinar · sensibilizar · acompañar. ★★★</div></div>
+  <div class="flash"><div class="num">7</div><div class="q">Nº de programas principales</div><div class="a">8 programas: acogida · apoyo académico · accesibilidad · profesorado · sensibilización · bienestar · empleabilidad · mentoría. ★★★</div></div>
+  <div class="flash"><div class="num">8</div><div class="q">Tipos de ayuda</div><div class="a">6 tipos: académicas · técnicas · económicas · accesibilidad · acompañamiento · inserción. ★★★</div></div>
+  <div class="flash"><div class="num">9</div><div class="q">Beca de prácticas externa</div><div class="a">Fundación ONCE-CRUE · para estudiantes con discapacidad ≥33%. ★★★</div></div>
+  <div class="flash"><div class="num">10</div><div class="q">Ayudas matrícula</div><div class="a">La UDI valora con hasta 6 puntos la situación económica en las becas de colaboración. ★★★</div></div>
+  <div class="flash"><div class="num">11</div><div class="q">Integración vs. inclusión</div><div class="a">Integración: la persona se adapta al sistema. Inclusión: el sistema se transforma. ★★★</div></div>
+  <div class="flash"><div class="num">12</div><div class="q">Producto de apoyo</div><div class="a">Banco ONCE-SAPDU: préstamo de productos de apoyo por curso a alumnado con discapacidad ≥33%. ★★★</div></div>
+  <div class="flash"><div class="num">13</div><div class="q">Proyecto Unidos</div><div class="a">Fundación Adecco: mentoría y orientación laboral para universitarios con discapacidad. ★★</div></div>
+  <div class="flash"><div class="num">14</div><div class="q">Movilidad inclusiva</div><div class="a">Erasmus+Inclusión: ayuda adicional para estudiantes con discapacidad en programas internacionales. ★★</div></div>
+  <div class="flash"><div class="num">15</div><div class="q">Becas equidad GN</div><div class="a">Gobierno de Navarra: hasta 9.500 € por persona y curso para jóvenes de bajos ingresos. ★★</div></div>
+  <div class="flash"><div class="num">16</div><div class="q">Proyecto Aukera</div><div class="a">Convenio UPNA-Ayuntamiento de Pamplona para inclusión social de jóvenes inmigrados (2026). ★★</div></div>
+  <div class="flash"><div class="num">17</div><div class="q">Principio de diseño</div><div class="a">Diseño universal / para todas las personas: base de la accesibilidad universitaria. ★★★</div></div>
+  <div class="flash"><div class="num">18</div><div class="q">Enfoque de la UDI</div><div class="a">Enfoque de derechos, no asistencialista. ★★★</div></div>
+  <div class="flash"><div class="num">19</div><div class="q">Accesibilidad universitaria</div><div class="a">Física + digital + comunicativa + académica + social. ★★★</div></div>
+  <div class="flash"><div class="num">20</div><div class="q">Discapacidad mínima para ciertas becas</div><div class="a">≥33% de discapacidad reconocida. ★★★</div></div>
+</div>
+
+<!-- VERSUS -->
+<div class="sec">⚖️ Integración vs. Inclusión ★★★</div>
+<div class="versus">
+  <div class="vs-left">
+    <h3>INTEGRACIÓN</h3>
+    <ul>
+      <li>La persona se adapta al sistema existente.</li>
+      <li>El entorno no cambia sustancialmente.</li>
+      <li>Se ofrecen apoyos puntuales para "encajar".</li>
+      <li>Responsabilidad recae en la persona.</li>
+      <li>Modelo asistencial.</li>
+    </ul>
+  </div>
+  <div class="vs-mid">≠</div>
+  <div class="vs-right">
+    <h3>INCLUSIÓN ★★★</h3>
+    <ul>
+      <li>El sistema se transforma para todas las personas.</li>
+      <li>El entorno se adapta a la diversidad.</li>
+      <li>Cambios estructurales, no solo apoyos.</li>
+      <li>Responsabilidad institucional compartida.</li>
+      <li>Modelo de derechos. ★★★</li>
+    </ul>
+  </div>
+</div>
+
+<!-- PIPELINE FASES -->
+<div class="sec">📍 Las 4 fases del itinerario universitario inclusivo ★★★</div>
+<div class="pipeline">
+  <div class="pipe-step">
+    <div class="ps-ico">🚪</div>
+    <div class="ps-t">ACCESO</div>
+    <div class="ps-d">Información · orientación · acogida · detección de necesidades · adaptación de procesos de admisión.</div>
+  </div>
+  <div class="pipe-step">
+    <div class="ps-ico">📚</div>
+    <div class="ps-t">PERMANENCIA</div>
+    <div class="ps-d">Ajustes académicos · apoyo al estudio · seguimiento · ayudas económicas · bienestar emocional.</div>
+  </div>
+  <div class="pipe-step">
+    <div class="ps-ico">🎓</div>
+    <div class="ps-t">ÉXITO ACADÉMICO</div>
+    <div class="ps-d">Adaptaciones en evaluación · TFG/TFM · prácticas · movilidad internacional (Erasmus+Inclusión).</div>
+  </div>
+  <div class="pipe-step">
+    <div class="ps-ico">💼</div>
+    <div class="ps-t">INSERCIÓN LABORAL</div>
+    <div class="ps-d">Becas ONCE-CRUE · Proyecto Unidos · orientación profesional · transición al empleo.</div>
+  </div>
+</div>
+
+<!-- 8 PROGRAMAS -->
+<div class="sec">🔷 Los 8 programas de la UDI ★★★</div>
+<div class="prog-grid">
+  <div class="prog p1">
+    <div class="p-ico">🚪</div>
+    <div class="p-title">A · Acogida y orientación</div>
+    <ul>
+      <li>Información al inicio de curso.</li>
+      <li>Detección temprana de necesidades.</li>
+      <li>Planificación inicial de apoyos.</li>
+      <li>Reduce riesgo de abandono. ★★★</li>
+    </ul>
+  </div>
+  <div class="prog p2">
+    <div class="p-ico">📖</div>
+    <div class="p-title">B · Apoyo académico</div>
+    <ul>
+      <li>Adaptaciones metodológicas.</li>
+      <li>Ajustes en evaluación.</li>
+      <li>Seguimiento del rendimiento.</li>
+      <li>Asesoramiento al profesorado. ★★★</li>
+    </ul>
+  </div>
+  <div class="prog p3">
+    <div class="p-ico">♿</div>
+    <div class="p-title">C · Accesibilidad universal</div>
+    <ul>
+      <li>Barreras físicas, digitales, comunicativas.</li>
+      <li>Materiales en formatos alternativos.</li>
+      <li>Entornos, plataformas y campus. ★★★</li>
+    </ul>
+  </div>
+  <div class="prog p4">
+    <div class="p-ico">🧑‍🏫</div>
+    <div class="p-title">D · Asesoramiento al profesorado</div>
+    <ul>
+      <li>Orientación sobre necesidades del alumnado.</li>
+      <li>Propuestas de ajustes razonables.</li>
+      <li>Buenas prácticas inclusivas. ★★★</li>
+    </ul>
+  </div>
+  <div class="prog p5">
+    <div class="p-ico">📢</div>
+    <div class="p-title">E · Sensibilización y formación</div>
+    <ul>
+      <li>Jornadas, campañas, talleres.</li>
+      <li>Para toda la comunidad universitaria.</li>
+      <li>Cultura institucional inclusiva. ★★</li>
+    </ul>
+  </div>
+  <div class="prog p6">
+    <div class="p-ico">🧠</div>
+    <div class="p-title">F · Bienestar psicosocial</div>
+    <ul>
+      <li>Salud mental y malestar emocional.</li>
+      <li>Detección, apoyo y derivación.</li>
+      <li>Prevención del aislamiento. ★★★</li>
+    </ul>
+  </div>
+  <div class="prog p7">
+    <div class="p-ico">💼</div>
+    <div class="p-title">G · Empleabilidad e inserción</div>
+    <ul>
+      <li>Becas prácticas ONCE-CRUE.</li>
+      <li>Proyecto Unidos (Adecco).</li>
+      <li>Erasmus+Inclusión.</li>
+      <li>Orientación laboral. ★★★</li>
+    </ul>
+  </div>
+  <div class="prog p8">
+    <div class="p-ico">🤝</div>
+    <div class="p-title">H · Mentoría y apoyo entre iguales</div>
+    <ul>
+      <li>Acompañamiento de otros estudiantes.</li>
+      <li>Integración académica y social.</li>
+      <li>Reduce abandono y soledad. ★★★</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 6 TIPOS DE AYUDA -->
+<div class="sec">💡 Los 6 tipos de ayuda ★★★</div>
+<div class="ayuda-grid">
+  <div class="ayuda">
+    <div class="a-num">1</div>
+    <div class="a-title">Académicas ★★★</div>
+    <ul>
+      <li>Adaptaciones de docencia.</li>
+      <li>Adaptaciones de evaluación.</li>
+      <li>Materiales accesibles.</li>
+      <li>Apoyo tutorial personalizado.</li>
+    </ul>
+  </div>
+  <div class="ayuda">
+    <div class="a-num">2</div>
+    <div class="a-title">Técnicas ★★★</div>
+    <ul>
+      <li>Productos de apoyo.</li>
+      <li>Software específico.</li>
+      <li>Dispositivos de comunicación.</li>
+      <li>Banco ONCE-SAPDU (préstamo). ★★★</li>
+    </ul>
+  </div>
+  <div class="ayuda">
+    <div class="a-num">3</div>
+    <div class="a-title">Económicas ★★★</div>
+    <ul>
+      <li>Ayudas para pago de matrícula.</li>
+      <li>Becas colaboración (6 pts. UDI). ★★★</li>
+      <li>Becas equidad GN (≤9.500 €). ★★</li>
+      <li>Becas externas (ONCE, Adecco…).</li>
+    </ul>
+  </div>
+  <div class="ayuda">
+    <div class="a-num">4</div>
+    <div class="a-title">Accesibilidad ★★★</div>
+    <ul>
+      <li>Eliminación barreras arquitectónicas.</li>
+      <li>Accesibilidad digital y tecnológica.</li>
+      <li>Espacios y materiales adaptados.</li>
+    </ul>
+  </div>
+  <div class="ayuda">
+    <div class="a-num">5</div>
+    <div class="a-title">Acompañamiento ★★★</div>
+    <ul>
+      <li>Mentoría entre iguales.</li>
+      <li>Voluntariado universitario.</li>
+      <li>Seguimiento individualizado.</li>
+      <li>Orientación continua.</li>
+    </ul>
+  </div>
+  <div class="ayuda">
+    <div class="a-num">6</div>
+    <div class="a-title">Inserción laboral ★★★</div>
+    <ul>
+      <li>Becas ONCE-CRUE (discap. ≥33%). ★★★</li>
+      <li>Proyecto Unidos (Adecco). ★★</li>
+      <li>Erasmus+Inclusión. ★★</li>
+      <li>Orientación profesional.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- AJUSTES RAZONABLES -->
+<div class="sec">⚙️ Ajustes razonables ★★★</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:9px;margin-bottom:14px">
+  <div style="background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;box-shadow:var(--sh);font-size:.76rem"><strong style="color:var(--p);display:block;margin-bottom:4px">⏱ Tiempo de examen</strong>Ampliación del tiempo en pruebas de evaluación.</div>
+  <div style="background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;box-shadow:var(--sh);font-size:.76rem"><strong style="color:var(--p);display:block;margin-bottom:4px">📝 Formato evaluación</strong>Oral, escrita, con soporte tecnológico, en aula separada.</div>
+  <div style="background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;box-shadow:var(--sh);font-size:.76rem"><strong style="color:var(--p);display:block;margin-bottom:4px">📄 Materiales</strong>Braille · audio · letra grande · lectura fácil · formato digital accesible.</div>
+  <div style="background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;box-shadow:var(--sh);font-size:.76rem"><strong style="color:var(--p);display:block;margin-bottom:4px">🖥 Recursos tecnológicos</strong>Magnificadores · lectores de pantalla · auriculares · software específico.</div>
+  <div style="background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;box-shadow:var(--sh);font-size:.76rem"><strong style="color:var(--p);display:block;margin-bottom:4px">🏢 Organización</strong>Prácticas inclusivas · adaptación de actividades grupales · movilidad internacional.</div>
+  <div style="background:var(--red2);border:1.5px solid var(--red);border-radius:12px;padding:11px 13px;box-shadow:var(--sh);font-size:.76rem"><strong style="color:var(--red);display:block;margin-bottom:4px">⚠ TRAMPA ★★★</strong>Los ajustes NO rebajan el nivel académico ni los objetivos. Compensan barreras.</div>
+</div>
+
+<!-- MARCO NORMATIVO -->
+<div class="sec">📜 Marco normativo clave ★★★</div>
+<div class="norm-grid">
+  <div class="norm"><div class="n-ico">🇪🇸</div><div><div class="n-title">Constitución Española (1978)</div><div class="n-desc">Art. 14: igualdad y no discriminación · Art. 9.2: igualdad real · Art. 27: derecho a educación. ★★★</div></div></div>
+  <div class="norm"><div class="n-ico">🌍</div><div><div class="n-title">Convención ONU sobre Discapacidad (2006)</div><div class="n-desc">Ratificada por España en 2008. Marco de derechos: accesibilidad, ajustes razonables, no discriminación. ★★★</div></div></div>
+  <div class="norm"><div class="n-ico">📗</div><div><div class="n-title">LOSU (2023)</div><div class="n-desc">Ley Orgánica del Sistema Universitario. Regula inclusión universitaria y derechos del estudiantado. ★★★</div></div></div>
+  <div class="norm"><div class="n-ico">📘</div><div><div class="n-title">RDL 1/2013</div><div class="n-desc">TR Ley General de derechos de personas con discapacidad. Accesibilidad universal, ajustes razonables. ★★★</div></div></div>
+  <div class="norm"><div class="n-ico">🟢</div><div><div class="n-title">Normativa foral navarra</div><div class="n-desc">Ley Foral de igualdad y no discriminación. Normativa propia UPNA: estatutos, convocatorias. ★★</div></div></div>
+</div>
+
+<!-- DATOS CLAVE -->
+<div class="sec">📊 Datos y cifras clave ★★★</div>
+<div class="datos-grid">
+  <div class="dato"><div class="d-num">+66</div><div class="d-label">Universidades en la Red SAPDU. La UPNA pertenece a ella. ★★★</div></div>
+  <div class="dato"><div class="d-num">≥33%</div><div class="d-label">Discapacidad mínima reconocida para acceder a becas ONCE-CRUE y Banco de Productos. ★★★</div></div>
+  <div class="dato"><div class="d-num">6 pts</div><div class="d-label">Puntuación máxima que la UDI otorga en la valoración económica de becas de colaboración. ★★★</div></div>
+  <div class="dato"><div class="d-num">9.500€</div><div class="d-label">Importe máximo de las Becas equidad del Gobierno de Navarra por persona y curso. ★★</div></div>
+  <div class="dato"><div class="d-num">8</div><div class="d-label">Programas principales de la UDI. ★★★</div></div>
+  <div class="dato"><div class="d-num">6</div><div class="d-label">Tipos de ayuda: académicas · técnicas · económicas · accesibilidad · acompañamiento · inserción. ★★★</div></div>
+</div>
+
+<!-- COORDINACION -->
+<div class="sec">🔗 Coordinación interna y externa ★★★</div>
+<div class="coord-box">
+  <div class="coord-card">
+    <h4>🏛 Coordinación interna</h4>
+    <ul>
+      <li>Profesorado y centros / facultades.</li>
+      <li>Servicio de Orientación Universitaria.</li>
+      <li>Unidad de Igualdad de Género.</li>
+      <li>Servicio de Informática (accesibilidad digital).</li>
+      <li>Biblioteca (materiales accesibles).</li>
+      <li>Servicio de Relaciones Internacionales (Erasmus).</li>
+      <li>Órganos de gobierno de la UPNA.</li>
+    </ul>
+  </div>
+  <div class="coord-card">
+    <h4>🌐 Coordinación externa</h4>
+    <ul>
+      <li>Fundación ONCE · Red CRUE · Red SAPDU.</li>
+      <li>Fundación Universia · Fundación Adecco.</li>
+      <li>CERMIN (entidades de discapacidad).</li>
+      <li>Gobierno de Navarra (GN).</li>
+      <li>Ayuntamiento de Pamplona (Proyecto Aukera).</li>
+      <li>Servicios sanitarios y sociales de referencia.</li>
+      <li>Entidades del tercer sector de Navarra.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- MINI ESQUEMA -->
+<div class="sec">🧠 Mini esquema de repaso rápido ★★★</div>
+<div class="mini">
+  <strong>UDI</strong> = inclusión + accesibilidad + igualdad real + apoyos personalizados + enfoque de derechos<br><br>
+  <strong>Funciones:</strong> informar · orientar · valorar · adaptar · coordinar · sensibilizar · acompañar<br><br>
+  <strong>8 Programas:</strong> acogida · apoyo académico · accesibilidad · profesorado · sensibilización · bienestar · empleabilidad · mentoría<br><br>
+  <strong>6 Tipos de ayuda:</strong> académicas · técnicas · económicas · accesibilidad · acompañamiento · inserción laboral<br><br>
+  <strong>Marco:</strong> CE 1978 · ONU 2006 · LOSU 2023 · RDL 1/2013 · normativa UPNA<br><br>
+  <strong>Redes:</strong> SAPDU (+66 univ.) · CRUE · ONCE · Adecco · GN · Ayto. Pamplona<br><br>
+  <strong>Objetivo final:</strong> garantizar acceso · permanencia · participación plena · éxito académico · inserción laboral en igualdad real.
+</div>
+
+<!-- TRAMPAS -->
+<div class="sec">⚠️ Las 10 trampas del examen ★★★</div>
+<div class="trap-grid">
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 1 ✗</div>"La UDI solo atiende discapacidad física."</div><div class="trap-ok">✓ Atiende toda la diversidad: discapacidad · salud mental · vulnerabilidad social · migración. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 2 ✗</div>"Los ajustes razonables rebajan el nivel académico."</div><div class="trap-ok">✓ Compensan barreras; no eliminan objetivos ni contenidos. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 3 ✗</div>"La inclusión es responsabilidad exclusiva de la UDI."</div><div class="trap-ok">✓ Es responsabilidad de toda la institución universitaria. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 4 ✗</div>"La UDI solo actúa cuando hay fracaso académico."</div><div class="trap-ok">✓ También actúa de forma preventiva, orientadora y continua. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 5 ✗</div>"Accesibilidad = solo barreras arquitectónicas."</div><div class="trap-ok">✓ También es digital, comunicativa, académica y social. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 6 ✗</div>"Las ayudas de la UDI son solo económicas."</div><div class="trap-ok">✓ Son también académicas, técnicas, de accesibilidad, acompañamiento e inserción. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 7 ✗</div>"La UDI no necesita coordinarse con entidades externas."</div><div class="trap-ok">✓ La coordinación externa (ONCE, Adecco, GN, Ayto.) es esencial. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 8 ✗</div>"Integración e inclusión son lo mismo."</div><div class="trap-ok">✓ La inclusión exige transformar el entorno; la integración solo incorpora a la persona. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 9 ✗</div>"El enfoque de la UDI es asistencialista."</div><div class="trap-ok">✓ El enfoque es de derechos, igualdad y participación plena, no de caridad. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 10 ✗</div>"Las becas ONCE-CRUE son para cualquier estudiante."</div><div class="trap-ok">✓ Son para estudiantes con discapacidad reconocida ≥33%. ★★★</div></div>
+</div>
+
+</div>
+</body>
+</html>
