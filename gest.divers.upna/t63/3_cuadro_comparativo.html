@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 63 · HTML 3 · Cuadro comparativo · LO 4/2000 + RD 1155/2024 · Extranjería España</title>
+<style>
+:root{
+  --bg:#eff6ff;--card:#fff;--s2:#dbeafe;--s3:#bfdbfe;--line:#60a5fa;
+  --text:#1e3a5f;--muted:#1d4ed8;--p:#1d4ed8;--p2:#1e40af;
+  --grn:#059669;--grn2:#d1fae5;--grnd:#047857;
+  --red:#dc2626;--red2:#fee2e2;--redd:#b91c1c;
+  --warn:#b45309;--warn2:#fef3c7;--warnd:#92400e;
+  --sky:#0284c7;--sky2:#e0f2fe;--skyd:#0369a1;
+  --vio:#7c3aed;--vio2:#ede9fe;--viod:#6d28d9;
+  --teal:#0d9488;--teal2:#ccfbf1;--teald:#0f766e;
+  --ora:#c2410c;--ora2:#ffedd5;--orad:#9a3412;
+  --rose:#be185d;--rose2:#fce7f3;--rosed:#9d174d;
+  --ind:#3730a3;--ind2:#e0e7ff;
+  --sh:0 2px 12px rgba(29,78,216,.10)
+}
+[data-theme="dark"]{
+  --bg:#000d1a;--card:#001529;--s2:#001f3d;--s3:#00274d;--line:#2563eb;
+  --text:#bfdbfe;--muted:#60a5fa;--p:#60a5fa;--p2:#93c5fd;
+  --grn:#6ee7b7;--grn2:#022c22;--grnd:#34d399;
+  --red:#fca5a5;--red2:#1a0000;--redd:#f87171;
+  --warn:#fde68a;--warn2:#1c1000;--warnd:#fcd34d;
+  --sky:#7dd3fc;--sky2:#082038;--skyd:#38bdf8;
+  --vio:#c4b5fd;--vio2:#1a0e33;--viod:#a78bfa;
+  --teal:#5eead4;--teal2:#031a16;--teald:#2dd4bf;
+  --ora:#fdba74;--ora2:#2a1000;--orad:#fb923c;
+  --rose:#fda4af;--rose2:#1a0010;--rosed:#fb7185;
+  --ind:#a5b4fc;--ind2:#1e1b4b;
+  --sh:0 2px 14px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:18px}
+.wrap{max-width:1340px;margin:0 auto}
+header{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:13px 22px;box-shadow:var(--sh);margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+header h1{font-size:.88rem;font-weight:900;color:var(--p)}
+header p{font-size:.68rem;color:var(--muted);margin-top:2px}
+.btn{font:inherit;cursor:pointer;border:1.5px solid var(--line);background:var(--s2);color:var(--text);padding:5px 14px;border-radius:999px;font-size:.69rem;font-weight:700}
+.sec{background:var(--p);color:#fff;font-size:.74rem;font-weight:900;padding:5px 14px;border-radius:7px;display:inline-block;margin:14px 0 8px;text-transform:uppercase;letter-spacing:.04em}
+.nota{padding:8px 13px;border-radius:0 9px 9px 0;border-left:4px solid;font-size:.71rem;margin:6px 0 10px;line-height:1.55}
+.n-ok{background:var(--grn2);border-color:var(--grn)}
+.n-err{background:var(--red2);border-color:var(--red)}
+.n-w{background:var(--warn2);border-color:var(--warn)}
+.n-sky{background:var(--sky2);border-color:var(--sky)}
+.n-vio{background:var(--vio2);border-color:var(--vio)}
+.n-teal{background:var(--teal2);border-color:var(--teal)}
+strong{color:var(--p2);font-weight:800}
+
+/* TABLA OPERATIVA */
+.tbl{width:100%;border-collapse:collapse;font-size:.76rem;margin:6px 0 12px;border-radius:10px;overflow:hidden;box-shadow:var(--sh)}
+.tbl th{text-align:left;padding:8px 11px;font-size:.67rem;text-transform:uppercase;letter-spacing:.03em;color:#fff}
+.tbl td{padding:8px 11px;border-bottom:1px solid var(--s2);vertical-align:top;line-height:1.6}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:nth-child(even) td{background:rgba(29,78,216,.03)}
+.th-p{background:var(--p)}
+.th-grn{background:var(--grnd)}
+.th-sky{background:var(--skyd)}
+.th-vio{background:var(--viod)}
+.th-teal{background:var(--teald)}
+.th-warn{background:var(--warnd)}
+.th-ora{background:var(--orad)}
+.th-red{background:var(--redd)}
+.th-rose{background:var(--rosed)}
+.th-ind{background:var(--ind);color:var(--text)}
+
+/* BADGE */
+.badge{display:inline-block;font-size:.6rem;font-weight:900;padding:1px 7px;border-radius:4px;margin-left:3px;vertical-align:middle}
+.b-ok{background:var(--grn2);color:var(--grnd)}
+.b-ko{background:var(--red2);color:var(--redd)}
+.b-w{background:var(--warn2);color:var(--warnd)}
+.b-sky{background:var(--sky2);color:var(--skyd)}
+.b-vio{background:var(--vio2);color:var(--viod)}
+.b-teal{background:var(--teal2);color:var(--teald)}
+.b-ora{background:var(--ora2);color:var(--orad)}
+.b-p{background:var(--s2);color:var(--p2)}
+
+/* GRID 2 COLS */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+@media(max-width:720px){.g2{grid-template-columns:1fr}}
+
+/* CARD */
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--sh)}
+.card h3{font-size:.82rem;font-weight:900;color:var(--p);margin-bottom:8px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<header>
+  <div>
+    <h1>Tema 63 · HTML 3 · Cuadro comparativo — 15 tablas operativas · LO 4/2000 + RD 1155/2024 · Derechos y libertades de los extranjeros en España</h1>
+    <p>Régimen jurídico · entrada · visados · estancia · residencia · estudios · Oposiciones Navarra</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">🌙 Claro / Oscuro</button>
+</header>
+
+<!-- T1: DATOS GENERALES -->
+<div class="sec">T1 · Datos generales — LO 4/2000 y RD 1155/2024 ★★★</div>
+<table class="tbl">
+  <thead><tr><th class="th-p">Campo</th><th class="th-p">LO 4/2000 (norma primaria)</th><th class="th-p">RD 1155/2024 (Reglamento)</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Nombre oficial</strong></td><td>Ley Orgánica 4/2000, de 11 de enero, sobre derechos y libertades de los extranjeros en España y su integración social. ★★★</td><td>Real Decreto 1155/2024, de 19 de noviembre, por el que se aprueba el Reglamento de la LO 4/2000. ★★★</td></tr>
+    <tr><td><strong>Fecha de la norma</strong></td><td>11 de enero de 2000. ★★★</td><td>19 de noviembre de 2024. ★★★</td></tr>
+    <tr><td><strong>Publicación BOE</strong></td><td>BOE núm. 10, de 12-01-2000. ★★★</td><td>BOE de 20-11-2024. ★★★</td></tr>
+    <tr><td><strong>Entrada en vigor</strong></td><td>1 de febrero de 2000. ★★★</td><td>20 de mayo de 2025 (6 meses después de la publicación). ★★★</td></tr>
+    <tr><td><strong>Rango normativo</strong></td><td>Ley Orgánica (mayoría absoluta Congreso). ★★★</td><td>Real Decreto (aprobado por el Consejo de Ministros). ★★★</td></tr>
+    <tr><td><strong>Base competencial</strong></td><td>Art. 149.1.2.ª CE: competencia exclusiva del Estado en extranjería, inmigración, emigración, nacionalidad y derecho de asilo. ★★★</td><td>Igual: art. 149.1.2.ª CE. ★★★</td></tr>
+    <tr><td><strong>Estructura</strong></td><td>4 títulos · 76 artículos originales (con modificaciones) · Exposición de motivos. ★★</td><td>265 artículos · 15 títulos · 19 disposiciones adicionales · 1 disposición transitoria. ★★★</td></tr>
+    <tr><td><strong>Norma derogada / reformas</strong></td><td>Reformas: LO 8/2000 · LO 14/2003 · LO 2/2009. ★★★</td><td>Deroga el RD 557/2011, de 20 de abril. ★★★</td></tr>
+    <tr><td><strong>Órgano proponente</strong></td><td>Jefatura del Estado. ★★</td><td>Ministra de Inclusión, Seguridad Social y Migraciones + Ministros de AAEE, Interior y Política Territorial. ★★★</td></tr>
+    <tr><td><strong>Directivas transpuestas</strong></td><td>—</td><td>Directiva 2016/801/UE (estudios) · 2014/36/UE (temporeros) · 2021/1883/UE (alta cualificación) · 2024/1233/UE (permiso único). ★★★</td></tr>
+  </tbody>
+</table>
+<div class="nota n-ok"><strong>Clave examen ★★★:</strong> LO 4/2000 = norma primaria vigente desde 01-02-2000 · RD 1155/2024 = Reglamento vigente desde 20-05-2025 · Derogó el RD 557/2011.</div>
+
+<!-- T2: CONCEPTO EXTRANJERO Y EXCLUSIONES -->
+<div class="sec">T2 · Concepto de extranjero y ámbito de aplicación — Arts. 1-2 LO 4/2000 ★★★</div>
+<table class="tbl">
+  <thead><tr><th class="th-sky">Categoría</th><th class="th-sky">Definición / Régimen</th><th class="th-sky">Norma</th><th class="th-sky">Clave examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Extranjero</strong></td><td>Quien carece de la nacionalidad española. Sin importar lugar de nacimiento ni tiempo de residencia.</td><td>Art. 1.1 LO 4/2000 ★★★</td><td>Frase exacta: "carezcan de la nacionalidad española". ★★★</td></tr>
+    <tr><td><strong>Ciudadanos UE</strong></td><td>Se rigen por el régimen comunitario (RD 240/2007). La LO 4/2000 les aplica solo en lo que sea más favorable.</td><td>Art. 1.3 LO 4/2000 ★★★</td><td>NO excluidos totalmente. Régimen comunitario prevalece, pero rige la LO en lo más favorable. ★★★</td></tr>
+    <tr><td><strong>Excluidos (diplomáticos)</strong></td><td>Agentes diplomáticos acreditados en España · Representantes y delegados de Misiones permanentes ante OO.II. · Funcionarios de OO.II. con sede en España.</td><td>Art. 2 LO 4/2000 ★★★</td><td>Trampa: los excluidos son los DIPLOMÁTICOS, no los ciudadanos UE. ★★★</td></tr>
+    <tr><td><strong>Política migratoria</strong></td><td>El Gobierno define, planifica, regula y desarrolla la política de inmigración. Respeto al reparto competencial art. 149.1.2.ª CE.</td><td>Art. 2 bis LO 4/2000 ★★★</td><td>Añadido por LO 2/2009. Gobierno = titular de la política migratoria. ★★★</td></tr>
+    <tr><td><strong>Plan estratégico</strong></td><td>El Gobierno aprueba un Plan estratégico plurianual de ciudadanía e integración para la integración de los inmigrantes.</td><td>Art. 2 ter LO 4/2000 ★★</td><td>Añadido por LO 2/2009. Plan plurianual de integración. ★★</td></tr>
+    <tr><td><strong>Interpretación</strong></td><td>Las normas relativas a derechos fundamentales de extranjeros se interpretarán conforme a la Declaración Universal de Derechos Humanos y tratados internacionales ratificados por España.</td><td>Art. 3 LO 4/2000 ★★★</td><td>DUDH = criterio interpretativo. ★★★</td></tr>
+  </tbody>
+</table>
+
+<!-- T3: RÉGIMEN DE DERECHOS -->
+<div class="sec">T3 · Régimen de derechos según situación administrativa ★★★</div>
+<table class="tbl">
+  <thead><tr><th class="th-grn">Derecho</th><th class="th-grn">Artículo</th><th class="th-grn">Todos los extranjeros</th><th class="th-grn">Solo residentes</th><th class="th-grn">Residentes LD</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Tutela judicial efectiva</strong></td><td>Art. 20 ★★★</td><td class="b-ok">✓ Sí, cualquiera que sea su situación.</td><td>—</td><td>—</td></tr>
+    <tr><td><strong>Asistencia jurídica gratuita</strong></td><td>Art. 22 ★★★</td><td>✓ En todos los procedimientos en que sean parte, incluida la expulsión.</td><td>—</td><td>—</td></tr>
+    <tr><td><strong>Servicios sociales básicos</strong></td><td>Art. 14.3 ★★★</td><td>✓ Cualquiera que sea su situación.</td><td>—</td><td>—</td></tr>
+    <tr><td><strong>Asistencia sanitaria de urgencia</strong></td><td>Art. 12.1 ★★★</td><td>✓ Urgencias por enf. grave o accidente.</td><td>—</td><td>—</td></tr>
+    <tr><td><strong>Educación obligatoria</strong></td><td>Art. 9.1 ★★★</td><td>✓ Menores de 16: derecho Y DEBER.</td><td>—</td><td>—</td></tr>
+    <tr><td><strong>No discriminación</strong></td><td>Art. 23 ★★★</td><td>✓ Todos.</td><td>—</td><td>—</td></tr>
+    <tr><td><strong>Seguridad Social</strong></td><td>Art. 14.1 ★★★</td><td>—</td><td>✓ En igualdad con españoles.</td><td>✓ Ídem.</td></tr>
+    <tr><td><strong>Prestaciones sociales generales</strong></td><td>Art. 14.2 ★★★</td><td>—</td><td>✓ Sí.</td><td>✓ Ídem.</td></tr>
+    <tr><td><strong>Educación posobligatoria</strong></td><td>Art. 9.2 ★★★</td><td>—</td><td>✓ Menores de 18 años.</td><td>✓ Ídem.</td></tr>
+    <tr><td><strong>Reagrupación familiar</strong></td><td>Art. 16 ★★★</td><td>—</td><td>✓ Solo residentes.</td><td>✓ Ídem.</td></tr>
+    <tr><td><strong>Acceso a ayudas de vivienda</strong></td><td>Art. 13 ★★★</td><td>—</td><td>✓ Acceso al sistema.</td><td>✓ En igualdad con españoles.</td></tr>
+    <tr><td><strong>Trabajo sin autorización adicional</strong></td><td>Art. 32 ★★★</td><td>—</td><td>—</td><td>✓ Solo residentes LD.</td></tr>
+  </tbody>
+</table>
+<div class="nota n-ok"><strong>Regla de oro ★★★:</strong> Básicos = TODOS · Plenos = RESIDENTES · Igualdad total con españoles = RESIDENTES DE LARGA DURACIÓN (5 años continuados).</div>
+<div class="nota n-err"><strong>Trampa ★★★:</strong> "Los extranjeros en situación irregular no tienen ningún derecho." → FALSO. Tienen derechos básicos garantizados por los arts. 14.3, 20, 22 y 12. ★★★</div>
+
+<!-- T4: 6 REQUISITOS ENTRADA -->
+<div class="sec">T4 · Los 6 requisitos para la entrada — Art. 25 LO 4/2000 + Tít. I RD 1155/2024 ★★★</div>
+<table class="tbl">
+  <thead><tr><th class="th-vio" style="width:32px">Nº</th><th class="th-vio">Requisito</th><th class="th-vio">Contenido</th><th class="th-vio">Cifra / detalle clave</th></tr></thead>
+  <tbody>
+    <tr><td><strong>1</strong></td><td>Documentación válida ★★★</td><td>Pasaporte o documento de viaje en vigor que acredite identidad y otorgue derecho a cruzar la frontera.</td><td>Válido ≥3 meses después de la fecha prevista de partida. Expedido en los últimos 10 años. ★★★</td></tr>
+    <tr><td><strong>2</strong></td><td>Visado en vigor ★★★</td><td>Cuando sea exigible conforme al Reglamento (UE) 2018/1806 (lista de países).</td><td>No exigible si: permiso de residencia válido o VLD vigente. ★★★</td></tr>
+    <tr><td><strong>3</strong></td><td>Documentación del motivo ★★★</td><td>Justificación del objeto y condiciones de la estancia (reserva, invitación, matrícula, contrato, etc.).</td><td>Debe ser coherente con el tipo de visado solicitado. ★★</td></tr>
+    <tr><td><strong>4</strong></td><td>Medios económicos suficientes ★★★</td><td>Para el sostenimiento durante toda la estancia.</td><td>Cuantía de referencia fijada reglamentariamente (vinculada al IPREM). ★★★</td></tr>
+    <tr><td><strong>5</strong></td><td>No estar sujeto a prohibición ★★★</td><td>No figurar como persona no admisible; no tener orden de expulsión vigente.</td><td>Registro SIS II del espacio Schengen. ★★</td></tr>
+    <tr><td><strong>6</strong></td><td>Paso por puesto habilitado ★★★</td><td>Entrada por puesto fronterizo habilitado en horario de apertura.</td><td>Puestos habilitados por Orden del Ministerio del Interior. ★★</td></tr>
+  </tbody>
+</table>
+<div class="nota n-w"><strong>Excepción urgencia ★★★:</strong> En casos de urgencia justificada, el jefe del puesto fronterizo puede suprimir el requisito de 3 meses adicionales de vigencia del pasaporte tras la partida.</div>
+
+<!-- T5: LOS 3 TIPOS DE VISADO -->
+<div class="sec">T5 · Cuadro comparativo: los 3 tipos de visado — Título II RD 1155/2024 ★★★</div>
+<table class="tbl">
+  <thead><tr><th class="th-teal">Campo</th><th class="th-teal">Tipo A — Tránsito aeroportuario ★★★</th><th class="th-teal">Tipo C — Corta duración / Schengen ★★★</th><th class="th-teal">Tipo D — Larga duración ★★★</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Mnemotecnia</strong></td><td>T · Tránsito</td><td>C · Corta duración</td><td>L · Larga duración</td></tr>
+    <tr><td><strong>Duración</strong></td><td>Tránsito sin entrada en territorio Schengen.</td><td>Hasta 90 días en cualquier período de 180 días naturales. ★★★</td><td>Superior a 90 días. ★★★</td></tr>
+    <tr><td><strong>Finalidad</strong></td><td>Pasar por zona internacional de aeropuerto español sin entrar en territorio Schengen.</td><td>Turismo · visitas familiares · negocios · tránsito terrestre.</td><td>Trabajo · estudios · residencia · reagrupación familiar · investigación · emprendimiento. ★★★</td></tr>
+    <tr><td><strong>¿Permite entrada en España?</strong></td><td>NO (zona internacional del aeropuerto). ★★★</td><td>SÍ, en todos los Estados Schengen. ★★★</td><td>SÍ, y además habilita a solicitar la autorización de residencia. ★★★</td></tr>
+    <tr><td><strong>Quién lo necesita</strong></td><td>Nacionales de determinados países en tránsito aeroportuario.</td><td>Nacionales de países obligados por Reglamento (UE) 2018/1806 para estancias cortas.</td><td>Todo extranjero que quiera permanecer más de 90 días en España. ★★★</td></tr>
+    <tr><td><strong>Novedad RD 1155/2024</strong></td><td>Regulación sistematizada en Título II. ★★★</td><td>Regulación sistematizada en Título II. ★★★</td><td>Capítulo propio con doble valoración: consular (generales) + Extranjería (específicos). ★★★</td></tr>
+    <tr><td><strong>Órgano expedidor</strong></td><td>Misión diplomática u Oficina Consular en exterior. ★★★</td><td>Misión diplomática u Oficina Consular en exterior. ★★★</td><td>Misión diplomática u Oficina Consular en exterior. ★★★</td></tr>
+  </tbody>
+</table>
+<div class="nota n-err"><strong>Trampa ★★★:</strong> El visado lo expide la MISIÓN DIPLOMÁTICA u OFICINA CONSULAR en el exterior, NO la Oficina de Extranjería en España. ★★★</div>
+
+<!-- T6: EXPEDICIÓN VISADO -->
+<div class="sec">T6 · Expedición del visado: doble competencia y requisitos ★★★</div>
+<table class="tbl">
+  <thead><tr><th class="th-warn">Fase</th><th class="th-warn">Órgano competente</th><th class="th-warn">Qué valora</th><th class="th-warn">Clave examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>1. Solicitud</strong></td><td>Misión diplomática u Oficina Consular española en el país de residencia u origen del solicitante. ★★★</td><td>Recepción de la documentación. Comprobación de requisitos generales.</td><td>Se presenta por el interesado o mediante representación. Antelación mínima: 2 meses antes del inicio de la actividad. ★★★</td></tr>
+    <tr><td><strong>2. Requisitos generales</strong></td><td>Oficina Consular. ★★★</td><td>Pasaporte válido · medios económicos · seguro médico · documentación personal · antecedentes penales (si > 6 meses). ★★★</td><td>La valoración de requisitos GENERALES corresponde siempre a la OFICINA CONSULAR. ★★★</td></tr>
+    <tr><td><strong>3. Requisitos específicos</strong></td><td>Oficina de Extranjería competente (en España). ★★★</td><td>Viabilidad del objeto de la estancia: aceptación del centro educativo, oferta de trabajo, etc. ★★★</td><td>La valoración de requisitos ESPECÍFICOS corresponde a la OFICINA DE EXTRANJERÍA. ★★★</td></tr>
+    <tr><td><strong>4. Resolución</strong></td><td>Misión diplomática u Oficina Consular (comunica la resolución). ★★★</td><td>Expedición del visado si se cumplen todos los requisitos. Puede ser denegado, limitado o anulado.</td><td>El visado DE ESTUDIOS conlleva implícitamente la solicitud de la autorización de estancia. ★★★</td></tr>
+  </tbody>
+</table>
+<table class="tbl" style="margin-top:8px">
+  <thead><tr><th class="th-warn">Requisito general</th><th class="th-warn">Siempre</th><th class="th-warn">Solo si estancia > 6 meses</th></tr></thead>
+  <tbody>
+    <tr><td>Pasaporte válido durante toda la estancia</td><td>✓</td><td>—</td></tr>
+    <tr><td>Formulario solicitud cumplimentado</td><td>✓</td><td>—</td></tr>
+    <tr><td>Medios económicos suficientes</td><td>✓</td><td>—</td></tr>
+    <tr><td>Seguro médico que cubra el período de estancia</td><td>✓</td><td>—</td></tr>
+    <tr><td>Certificado de antecedentes penales ★★★</td><td>—</td><td>✓</td></tr>
+    <tr><td>Certificado médico ★★★</td><td>—</td><td>✓</td></tr>
+    <tr><td>Documentación específica de la actividad</td><td>✓</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<!-- T7: SITUACIONES ADMINISTRATIVAS -->
+<div class="sec">T7 · Situaciones administrativas: estancia y residencia ★★★</div>
+<table class="tbl">
+  <thead><tr><th class="th-sky">Situación</th><th class="th-sky">Artículo LO 4/2000</th><th class="th-sky">Duración</th><th class="th-sky">Actividad laboral</th><th class="th-sky">Derechos</th><th class="th-sky">Clave examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Estancia corta</strong> ★★★</td><td>Art. 29</td><td>≤ 90 días en período de 180 días naturales.</td><td>NO (salvo exención específica).</td><td>Básicos (todos los extranjeros).</td><td>Visado tipo C o exención. Regla 90/180. ★★★</td></tr>
+    <tr><td><strong>Estancia larga duración</strong> ★★★</td><td>Art. 30 + Tít. III Reglamento</td><td>> 90 días. Por la duración de la actividad.</td><td>Compatible según el tipo (estudios: sí, con límites). ★★★</td><td>Básicos.</td><td>Visado tipo D + autorización de estancia. Estudios, movilidad, voluntariado, formativas. ★★★</td></tr>
+    <tr><td><strong>Residencia temporal</strong> ★★★</td><td>Art. 31</td><td>> 90 días y ≤ 5 años.</td><td>Puede habilitarse para trabajar (residencia y trabajo).</td><td>Plenos (residentes).</td><td>Renovable. Genera derechos plenos. ★★★</td></tr>
+    <tr><td><strong>Residencia larga duración</strong> ★★★</td><td>Art. 32</td><td>5 años de residencia legal y continuada → indefinida.</td><td>SÍ, sin autorización adicional. ★★★</td><td>Igualdad con españoles (vivienda, SS, educación).</td><td>5 años continuados → indefinida. ★★★</td></tr>
+  </tbody>
+</table>
+<div class="nota n-err"><strong>Trampa ★★★:</strong> "La residencia de larga duración se obtiene con 3 años." → FALSO. Son <strong>5 años</strong> de residencia legal y continuada (art. 32). ★★★</div>
+
+<!-- T8: TIE -->
+<div class="sec">T8 · La Tarjeta de Identidad de Extranjero (TIE) — Art. 4.2 LO 4/2000 ★★★</div>
+<table class="tbl">
+  <thead><tr><th class="th-ora">Aspecto</th><th class="th-ora">Contenido</th><th class="th-ora">Clave examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>¿Cuándo es obligatoria? ★★★</strong></td><td>Cuando se concede visado o autorización de estancia o residencia por período superior a 6 MESES.</td><td>Umbral: > 6 meses. Frase exacta del art. 4.2: "expedido visado o autorización…por período superior a seis meses". ★★★</td></tr>
+    <tr><td><strong>Plazo de solicitud ★★★</strong></td><td>1 MES desde la entrada en España (si lleva visado de larga duración) o desde la concesión de la autorización (si se obtiene en España).</td><td>Trampa: "3 meses" → FALSO. Es 1 MES. ★★★</td></tr>
+    <tr><td><strong>¿Quién la solicita?</strong></td><td>El propio extranjero obligado. Puede hacerse mediante representación.</td><td>Se solicita en la Oficina de Extranjería o Comisaría de Policía. ★★</td></tr>
+    <tr><td><strong>Excepción ★★★</strong></td><td>No están obligados los titulares de visado de residencia y trabajo de TEMPORADA.</td><td>Temporada = sin TIE obligatoria. ★★★</td></tr>
+    <tr><td><strong>Incumplimiento</strong></td><td>La no solicitud en plazo puede constituir infracción administrativa leve.</td><td>La LO 4/2000 tipifica infracciones leves, graves y muy graves. ★★</td></tr>
+  </tbody>
+</table>
+
+<!-- T9: REAGRUPACIÓN FAMILIAR -->
+<div class="sec">T9 · Reagrupación familiar — Arts. 16-19 LO 4/2000 ★★★</div>
+<table class="tbl">
+  <thead><tr><th class="th-rose">Aspecto</th><th class="th-rose">Contenido</th><th class="th-rose">Norma</th><th class="th-rose">Clave examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Titulares del derecho ★★★</strong></td><td>Extranjeros RESIDENTES (no los que están en situación de estancia).</td><td>Art. 16 LO 4/2000 ★★★</td><td>Trampa: los "estantes" NO pueden reagrupar. Solo RESIDENTES. ★★★</td></tr>
+    <tr><td><strong>Cónyuge ★★★</strong></td><td>No separado de hecho ni de derecho. No pueden reagruparse más de un cónyuge. Novedad RD 1155/2024: edad mínima 18 años. ★★★</td><td>Art. 17.a LO 4/2000</td><td>Novedad: cónyuge reagrupado debe tener ≥ 18 años. ★★★</td></tr>
+    <tr><td><strong>Hijos ★★★</strong></td><td>Menores de 18 años o con discapacidad que les haga dependientes del reagrupante.</td><td>Art. 17.b LO 4/2000 ★★★</td><td>Menores de 18 o discapacitados dependientes. ★★★</td></tr>
+    <tr><td><strong>Representados / menores</strong></td><td>Menores de los que el reagrupante sea representante legal.</td><td>Art. 17.c LO 4/2000 ★★</td><td>Representación legal del reagrupante. ★★</td></tr>
+    <tr><td><strong>Ascendientes ★★★</strong></td><td>Ascendientes en PRIMER GRADO (padres), mayores de 65 años, a cargo del reagrupante, cuando haya razones justificativas.</td><td>Art. 17.d LO 4/2000 ★★★</td><td>Edad: > 65 años. Grado: primer grado (no abuelos). A cargo. Razones justificativas. ★★★</td></tr>
+    <tr><td><strong>¿Cuándo se puede reagrupar? ★★★</strong></td><td>Tras la RENOVACIÓN de la autorización de residencia inicial.</td><td>Art. 18 LO 4/2000 ★★★</td><td>NO desde el primer momento. Hay que esperar a la renovación. ★★★</td></tr>
+    <tr><td><strong>Requisitos materiales ★★★</strong></td><td>1. Vivienda adecuada. 2. Medios económicos suficientes.</td><td>Art. 18.2 LO 4/2000 ★★★</td><td>DOS condiciones: vivienda + medios. ★★★</td></tr>
+    <tr><td><strong>Autorización independiente ★★</strong></td><td>El familiar reagrupado obtiene su propia autorización. Puede independizarse en casos de vulnerabilidad (violencia de género, etc.).</td><td>Art. 19 LO 4/2000 ★★</td><td>La autorización del reagrupado puede independizarse de la del reagrupante. ★★</td></tr>
+  </tbody>
+</table>
+
+<!-- T10: 4 SUPUESTOS ESTUDIOS -->
+<div class="sec">T10 · Los 4 supuestos de la estancia de larga duración por estudios — Título III RD 1155/2024 ★★★</div>
+<table class="tbl">
+  <thead><tr><th class="th-vio">Supuesto</th><th class="th-vio">Denominación exacta</th><th class="th-vio">Requisitos de edad</th><th class="th-vio">Centro/entidad</th><th class="th-vio">Duración autorización</th></tr></thead>
+  <tbody>
+    <tr><td><strong>A · Estudios ★★★</strong></td><td>Cursar o ampliar estudios (FP, Bachillerato, Universidad, enseñanzas de régimen especial).</td><td>Educación obligatoria/posobligatoria: la exigida por la normativa educativa. Educación superior: ≥ 17 años (art. 52.1 Reglamento). ★★★</td><td>Centro de enseñanza reconocido. Nuevo: Registro de Instituciones y Centros de Enseñanza Superior (RD 1155/2024). ★★★</td><td>Coincide con la duración del curso/estudios. Estudios superiores: con la duración oficial de los estudios. ★★★</td></tr>
+    <tr><td><strong>B · Movilidad de alumnos ★★★</strong></td><td>Programas de movilidad para seguir programa de enseñanza secundaria obligatoria o postobligatoria.</td><td>La permitida por la normativa de educación para los estudios inherentes al programa. ★★★</td><td>Centro docente o científico oficialmente reconocido. ★★★</td><td>Coincide con la duración del programa. ★★★</td></tr>
+    <tr><td><strong>C · Servicios de voluntariado ★★★</strong></td><td>Servicio de voluntariado dentro de un programa con objetivos de interés general sin ánimo de lucro.</td><td>Edad mínima: la requerida en la normativa sectorial vigente. ★★★</td><td>Organización reconocida, programa transnacional o de interés general. ★★★</td><td>Coincide con la duración del programa de voluntariado. ★★★</td></tr>
+    <tr><td><strong>D · Actividades formativas ★★★</strong></td><td>Actividades formativas (prácticas no curriculares y otras actividades de aprendizaje vinculadas al proceso formativo).</td><td>≥ 18 años (art. 52.1.e Reglamento). ★★★</td><td>Organismo o entidad pública o privada. ★★★</td><td>Duración > 90 días (si ≤ 90 días: visado de corta duración). ★★★</td></tr>
+  </tbody>
+</table>
+<div class="nota n-vio"><strong>Directiva aplicable ★★★:</strong> Directiva 2016/801/UE del PE y del Consejo, de 11 de mayo de 2016 (estudios, prácticas, voluntariado, intercambio de alumnos, proyectos educativos y au pair).</div>
+<div class="nota n-ok"><strong>Estadísticas OPI 31-12-2023 ★★★:</strong> 75.857 autorizaciones en vigor · 70% = iniciales y para estudios superiores · Media de edad: 26 años.</div>
+<div class="nota n-err"><strong>Trampa ★★★:</strong> "Solo incluye estudios universitarios." → FALSO. Incluye 4 supuestos: estudios · movilidad · voluntariado · actividades formativas. ★★★</div>
+
+<!-- T11: VISADOS LARGA DURACIÓN TIPOS -->
+<div class="sec">T11 · Principales tipos de visado de larga duración (Tipo D) — Título II RD 1155/2024 ★★★</div>
+<table class="tbl">
+  <thead><tr><th class="th-teal">Tipo de VLD</th><th class="th-teal">Finalidad</th><th class="th-teal">Norma de desarrollo</th><th class="th-teal">Clave examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>VLD residencia (sin trabajo)</strong></td><td>Residir en España sin actividad laboral (jubilados, rentistas, etc.).</td><td>Título IV Reglamento. ★★</td><td>No habilita para trabajar. ★★</td></tr>
+    <tr><td><strong>VLD residencia y trabajo (cuenta ajena)</strong></td><td>Residir y trabajar por cuenta ajena.</td><td>Título V Reglamento. ★★★</td><td>Requiere oferta de empleo en España. ★★★</td></tr>
+    <tr><td><strong>VLD residencia y trabajo (cuenta propia)</strong></td><td>Residir y ejercer actividad empresarial o profesional autónoma.</td><td>Título V Reglamento. ★★★</td><td>Plan de negocio viable. ★★</td></tr>
+    <tr><td><strong>VLD estudios / movilidad / voluntariado / formativas ★★★</strong></td><td>Estancia superior a 90 días para estudios, movilidad, voluntariado o actividades formativas.</td><td>Título III Reglamento. ★★★</td><td>4 supuestos. Directiva 2016/801/UE. El visado conlleva implícitamente la autorización de estancia. ★★★</td></tr>
+    <tr><td><strong>VLD reagrupación familiar</strong></td><td>Reunir a los familiares reagrupables en España.</td><td>Arts. 16-19 LO 4/2000 + Reglamento. ★★★</td><td>Solo para residentes. Tras renovación. Vivienda + medios. ★★★</td></tr>
+    <tr><td><strong>VLD investigadores / alta cualificación</strong></td><td>Investigación y trabajo altamente cualificado. Vinculado a Ley 14/2013.</td><td>Ley 14/2013 + Directiva 2021/1883/UE. ★★★</td><td>Tarjeta azul UE para alta cualificación. ★★</td></tr>
+    <tr><td><strong>VLD temporada (trabajo de temporada)</strong></td><td>Trabajo de duración determinada en sectores de temporada (agricultura, hostelería).</td><td>Título V Reglamento. ★★★</td><td>NO genera obligación de TIE. ★★★</td></tr>
+  </tbody>
+</table>
+
+<!-- T12: ESTRUCTURA 15 TÍTULOS RD 1155/2024 -->
+<div class="sec">T12 · Estructura del RD 1155/2024 — Los 15 Títulos del Reglamento ★★★</div>
+<table class="tbl">
+  <thead><tr><th class="th-ind" style="width:60px">Título</th><th class="th-ind">Contenido</th><th class="th-ind">Novedad/Clave</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Título I</strong></td><td>Régimen de entrada y salida. Pasos fronterizos. Código de Fronteras Schengen.</td><td>6 requisitos de entrada. ★★★</td></tr>
+    <tr><td><strong>Título II</strong></td><td>Visados: clases, procedimiento y requisitos (tránsito · corta duración · larga duración).</td><td>NUEVO: primer título reglamentario propio para visados. Sistematiza T-C-L. ★★★</td></tr>
+    <tr><td><strong>Título III</strong></td><td>Estancias de larga duración: estudios, movilidad, voluntariado, actividades formativas.</td><td>4 supuestos. Directiva 2016/801/UE. Registro centros. ★★★</td></tr>
+    <tr><td><strong>Título IV</strong></td><td>Residencia temporal (sin actividad laboral).</td><td>Residencia ≤ 5 años sin trabajo. ★★★</td></tr>
+    <tr><td><strong>Título V</strong></td><td>Autorizaciones de residencia y trabajo (cuenta ajena, cuenta propia, temporada).</td><td>Gestión colectiva de contrataciones en origen. ★★★</td></tr>
+    <tr><td><strong>Título VI</strong></td><td>Gestión colectiva de contrataciones en origen.</td><td>Procedimiento de contratación en el país de origen. ★★</td></tr>
+    <tr><td><strong>Título VII</strong></td><td>Residencia temporal por circunstancias excepcionales: arraigo sociolaboral, social, socioformativo, familiar y NUEVA segunda oportunidad.</td><td>NUEVO arraigo de segunda oportunidad. ★★★</td></tr>
+    <tr><td><strong>Título VIII</strong></td><td>Trabajadores transfronterizos.</td><td>Régimen especial. ★★</td></tr>
+    <tr><td><strong>Título IX</strong></td><td>Menores extranjeros.</td><td>Protección especial menores. ★★</td></tr>
+    <tr><td><strong>Título X</strong></td><td>Residencia de larga duración (5 años continuados → indefinida).</td><td>Art. 32 LO 4/2000. En igualdad con españoles. ★★★</td></tr>
+    <tr><td><strong>Título XI</strong></td><td>Modificación de situaciones (cambio de estatus sin salir de España).</td><td>NOVEDAD ABSOLUTA: retención de talento. Ej. estudiante → trabajador. ★★★</td></tr>
+    <tr><td><strong>Título XII</strong></td><td>Disposiciones comunes: competencias, extinción de autorizaciones.</td><td>Doble valoración: consular + extranjería. ★★★</td></tr>
+    <tr><td><strong>Título XIII</strong></td><td>Documentación de extranjeros: TIE.</td><td>Art. 4.2 LO 4/2000. > 6 meses → TIE. Plazo 1 mes. ★★★</td></tr>
+    <tr><td><strong>Título XIV</strong></td><td>Infracciones y régimen sancionador.</td><td>Infracciones leves, graves y muy graves. ★★</td></tr>
+    <tr><td><strong>Título XV</strong></td><td>Oficinas de Extranjería y Centros de Migraciones.</td><td>Órganos periféricos de la Administración migratoria. ★★</td></tr>
+  </tbody>
+</table>
+<div class="nota n-ok"><strong>Clave ★★★:</strong> 265 artículos · 15 títulos · 19 disposiciones adicionales · 1 disposición transitoria. Novedad estrella: Título XI (modificación de situaciones).</div>
+
+<!-- T13: COMPARATIVA RD 557/2011 VS RD 1155/2024 -->
+<div class="sec">T13 · Comparativa: RD 557/2011 (derogado) vs RD 1155/2024 (vigente) ★★★</div>
+<table class="tbl">
+  <thead><tr><th class="th-red">Campo</th><th class="th-red">RD 557/2011 (DEROGADO) ★★★</th><th class="th-grn">RD 1155/2024 (VIGENTE) ★★★</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Fecha de aprobación</strong></td><td>20 de abril de 2011.</td><td>19 de noviembre de 2024.</td></tr>
+    <tr><td><strong>Entrada en vigor</strong></td><td>30 de junio de 2011.</td><td>20 de mayo de 2025.</td></tr>
+    <tr><td><strong>Estado actual</strong></td><td>DEROGADO por el RD 1155/2024. ★★★</td><td>VIGENTE desde 20-05-2025. ★★★</td></tr>
+    <tr><td><strong>Número de artículos</strong></td><td>~267 artículos (con múltiples modificaciones fragmentadas).</td><td>265 artículos, redactados de forma sistemática. ★★★</td></tr>
+    <tr><td><strong>Regulación de visados</strong></td><td>Dispersa, sin título propio específico.</td><td>Título II completo para visados. NOVEDAD. ★★★</td></tr>
+    <tr><td><strong>Modificación de situaciones</strong></td><td>No regulada expresamente (había que salir de España).</td><td>Título XI: modificación de situaciones sin salir de España. ★★★</td></tr>
+    <tr><td><strong>Arraigo</strong></td><td>Arraigo social, laboral y familiar.</td><td>Añade nueva modalidad: arraigo de segunda oportunidad. ★★★</td></tr>
+    <tr><td><strong>Estudios</strong></td><td>Sin Registro de Centros de Enseñanza Superior.</td><td>Crea el Registro de Instituciones y Centros de Enseñanza Superior. ★★★</td></tr>
+    <tr><td><strong>Edad mínima cónyuge reagrupado</strong></td><td>No regulada expresamente en el Reglamento.</td><td>18 años mínimo. ★★★</td></tr>
+    <tr><td><strong>Directivas transpuestas</strong></td><td>Directivas anteriores a 2011.</td><td>Directiva 2016/801/UE · 2014/36/UE · 2021/1883/UE · 2024/1233/UE. ★★★</td></tr>
+  </tbody>
+</table>
+<div class="nota n-err"><strong>Trampa ★★★:</strong> "El Reglamento vigente de la LO 4/2000 es el RD 557/2011." → FALSO. El RD 557/2011 fue derogado. El vigente es el RD 1155/2024 (en vigor desde 20-05-2025). ★★★</div>
+
+<!-- T14: ARTÍCULOS CLAVE LO 4/2000 -->
+<div class="sec">T14 · Artículos clave de la LO 4/2000 para examen ★★★</div>
+<table class="tbl">
+  <thead><tr><th class="th-p" style="width:80px">Artículo</th><th class="th-p">Denominación</th><th class="th-p">Contenido esencial</th><th class="th-p">Clave examen</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Art. 1.1 ★★★</strong></td><td>Concepto de extranjero</td><td>Extranjero = quien carece de la nacionalidad española.</td><td>Frase exacta obligatoria. ★★★</td></tr>
+    <tr><td><strong>Art. 1.3 ★★★</strong></td><td>Ciudadanos UE</td><td>Régimen comunitario prevalece; LO 4/2000 aplica en lo más favorable.</td><td>NO excluidos totalmente. ★★★</td></tr>
+    <tr><td><strong>Art. 2 ★★★</strong></td><td>Exclusiones</td><td>Diplomáticos, representantes de misiones, funcionarios OO.II. con sede en España.</td><td>Trampa clásica de examen. ★★★</td></tr>
+    <tr><td><strong>Art. 2 bis ★★★</strong></td><td>Política migratoria</td><td>El Gobierno define, planifica, regula y desarrolla la política de inmigración.</td><td>Añadido por LO 2/2009. ★★★</td></tr>
+    <tr><td><strong>Art. 3 ★★★</strong></td><td>Igualdad + DUDH</td><td>Interpretación conforme a Declaración Universal de Derechos Humanos y tratados.</td><td>DUDH = criterio interpretativo. ★★★</td></tr>
+    <tr><td><strong>Art. 4.2 ★★★</strong></td><td>TIE</td><td>TIE obligatoria si autorización > 6 meses. Plazo: 1 mes.</td><td>6 meses / 1 mes. ★★★</td></tr>
+    <tr><td><strong>Art. 9 ★★★</strong></td><td>Educación</td><td>Menores 16: derecho y DEBER. Menores 18: derecho a posobligatoria.</td><td>Derecho y DEBER (16). Derecho (18). ★★★</td></tr>
+    <tr><td><strong>Art. 12 ★★★</strong></td><td>Salud</td><td>Urgencias para todos. Menores y embarazadas: atención completa.</td><td>Urgencia = todos. ★★★</td></tr>
+    <tr><td><strong>Art. 14 ★★★</strong></td><td>Prestaciones</td><td>14.1: SS = residentes. 14.2: prestaciones generales = residentes. 14.3: básicas = TODOS.</td><td>14.3 es clave: básicos para TODOS. ★★★</td></tr>
+    <tr><td><strong>Art. 16 ★★★</strong></td><td>Reagrupación familiar</td><td>Derecho de extranjeros RESIDENTES a vivir en familia.</td><td>Solo residentes pueden reagrupar. ★★★</td></tr>
+    <tr><td><strong>Art. 17 ★★★</strong></td><td>Familiares reagrupables</td><td>Cónyuge · hijos &lt;18 · representados · ascendientes &gt;65 a cargo.</td><td>Cónyuge ≥18 años (novedad RD 1155/2024). ★★★</td></tr>
+    <tr><td><strong>Art. 18 ★★★</strong></td><td>Condiciones reagrupación</td><td>Tras renovación de la autorización inicial. Vivienda adecuada + medios económicos.</td><td>NO desde el primer momento. ★★★</td></tr>
+    <tr><td><strong>Art. 20 ★★★</strong></td><td>Tutela judicial</td><td>Para todos los extranjeros, cualquiera que sea su situación.</td><td>Sin excepción por situación administrativa. ★★★</td></tr>
+    <tr><td><strong>Art. 22 ★★★</strong></td><td>Asistencia jurídica gratuita</td><td>Para todos, incluidos procedimientos de expulsión o devolución.</td><td>Incluso en expulsión. ★★★</td></tr>
+    <tr><td><strong>Art. 25 ★★★</strong></td><td>Condiciones de entrada</td><td>6 requisitos: documento · visado · motivo · medios · no prohibición · paso habilitado.</td><td>Los 6 de memoria. ★★★</td></tr>
+    <tr><td><strong>Art. 29 ★★★</strong></td><td>Estancia</td><td>Permanencia hasta 90 días en cualquier período de 180 días.</td><td>90/180. ★★★</td></tr>
+    <tr><td><strong>Art. 31 ★★★</strong></td><td>Residencia temporal</td><td>Superior a 90 días y no superior a 5 años. Puede habilitarse para trabajar.</td><td>90 d. → 5 años. ★★★</td></tr>
+    <tr><td><strong>Art. 32 ★★★</strong></td><td>Residencia de larga duración</td><td>5 años de residencia legal y continuada → indefinida. Igualdad con españoles.</td><td>5 años continuados → indefinida. ★★★</td></tr>
+  </tbody>
+</table>
+
+<!-- T15: LAS 10 TRAMPAS DEL EXAMEN -->
+<div class="sec">T15 · Las 10 trampas del examen ★★★</div>
+<table class="tbl">
+  <thead><tr><th class="th-red" style="width:30px">Nº</th><th class="th-red">Afirmación FALSA que suele aparecer ✗</th><th class="th-grn">Afirmación CORRECTA ✓</th></tr></thead>
+  <tbody>
+    <tr><td><strong>1</strong></td><td>"El Reglamento vigente de la LO 4/2000 es el RD 557/2011." ✗</td><td>El RD 557/2011 fue derogado. El vigente es el <strong>RD 1155/2024</strong> (en vigor desde 20-05-2025). ★★★</td></tr>
+    <tr><td><strong>2</strong></td><td>"El visado lo expide la Oficina de Extranjería en España." ✗</td><td>El visado lo expide la <strong>Misión diplomática u Oficina Consular</strong> española en el exterior. ★★★</td></tr>
+    <tr><td><strong>3</strong></td><td>"El plazo para solicitar la TIE es de 3 meses." ✗</td><td>El plazo es de <strong>1 MES</strong> desde la entrada o desde la concesión de la autorización. ★★★</td></tr>
+    <tr><td><strong>4</strong></td><td>"Los extranjeros en situación irregular no tienen ningún derecho." ✗</td><td>Tienen derechos básicos: servicios sociales básicos (art. 14.3) · tutela judicial (art. 20) · asistencia jurídica gratuita (art. 22) · urgencia sanitaria (art. 12). ★★★</td></tr>
+    <tr><td><strong>5</strong></td><td>"La residencia de larga duración se obtiene a los 3 años." ✗</td><td>Son <strong>5 años</strong> de residencia legal y continuada (art. 32 LO 4/2000). ★★★</td></tr>
+    <tr><td><strong>6</strong></td><td>"El RD 1155/2024 entró en vigor el mismo día de su publicación." ✗</td><td>Se publicó el 20-11-2024 y entró en vigor <strong>6 meses después: 20-05-2025</strong>. ★★★</td></tr>
+    <tr><td><strong>7</strong></td><td>"La estancia por estudios solo incluye estudios universitarios." ✗</td><td>Incluye <strong>4 supuestos</strong>: estudios · movilidad de alumnos · servicios de voluntariado · actividades formativas. ★★★</td></tr>
+    <tr><td><strong>8</strong></td><td>"Los ciudadanos UE están totalmente excluidos de la LO 4/2000." ✗</td><td>Los excluidos son los <strong>diplomáticos y funcionarios OO.II.</strong> Los ciudadanos UE se rigen por el régimen comunitario, pero la LO 4/2000 les aplica en lo más favorable (art. 1.3). ★★★</td></tr>
+    <tr><td><strong>9</strong></td><td>"El Reglamento tiene 200 artículos." ✗</td><td>Tiene <strong>265 artículos</strong>, 15 títulos y 19 disposiciones adicionales. ★★★</td></tr>
+    <tr><td><strong>10</strong></td><td>"Los estudiantes de larga duración no pueden trabajar en España." ✗</td><td>Pueden trabajar (por cuenta ajena o propia) si es compatible con los estudios. El Título XI RD 1155/2024 permite cambiar al estatus de trabajador <strong>sin salir de España</strong>. ★★★</td></tr>
+  </tbody>
+</table>
+<div class="nota n-ok"><strong>Frase final de examen ★★★:</strong> La LO 4/2000 garantiza derechos a todos los extranjeros desde la igualdad y la dignidad; el RD 1155/2024 ordena los visados, sistematiza la estancia por estudios y retiene el talento mediante la modificación de situaciones.</div>
+
+</div>
+</body>
+</html>
