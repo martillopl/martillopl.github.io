@@ -1,0 +1,320 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 62 · HTML 3 · Cuadro comparativo y tablas operativas · Plan acogida migrantes Navarra 2021-2026</title>
+<style>
+:root{
+  --bg:#f0fdf4;--card:#fff;--s2:#dcfce7;--line:#4ade80;
+  --text:#14532d;--muted:#15803d;--p:#15803d;--p2:#166534;
+  --grn:#059669;--grn2:#d1fae5;--red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;--sky:#0284c7;--sky2:#e0f2fe;
+  --vio:#7c3aed;--vio2:#ede9fe;--ora:#c2410c;--ora2:#ffedd5;
+  --teal:#0d9488;--teal2:#ccfbf1;--rose:#be185d;--rose2:#fce7f3;
+  --sh:0 2px 12px rgba(21,128,61,.10)
+}
+[data-theme="dark"]{
+  --bg:#001a0a;--card:#00260e;--s2:#003314;--line:#16a34a;
+  --text:#bbf7d0;--muted:#4ade80;--p:#4ade80;--p2:#86efac;
+  --grn:#86efac;--grn2:#052e16;--red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;--sky:#7dd3fc;--sky2:#082038;
+  --vio:#c4b5fd;--vio2:#1a0e33;--ora:#fdba74;--ora2:#2a1000;
+  --teal:#5eead4;--teal2:#031a16;--rose:#fda4af;--rose2:#1a0010;
+  --sh:0 2px 14px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.58;background:var(--bg);color:var(--text);padding:22px}
+.wrap{max-width:1280px;margin:0 auto}
+header{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:16px 24px;box-shadow:var(--sh);margin-bottom:16px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px}
+header h1{font-size:.92rem;font-weight:900;color:var(--p)}
+header p{font-size:.7rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 14px;border-radius:999px;font-size:.7rem;font-weight:700}
+h2{font-size:.82rem;font-weight:900;color:#fff;background:var(--p);padding:7px 16px;border-radius:8px;margin:20px 0 10px;display:inline-block;text-transform:uppercase;letter-spacing:.04em}
+/* TABLA */
+.tbl{width:100%;border-collapse:collapse;box-shadow:var(--sh);border-radius:10px;overflow:hidden;background:var(--card);margin-bottom:16px}
+.tbl th{background:var(--p);color:#fff;text-align:left;padding:8px 11px;font-size:.67rem;text-transform:uppercase;letter-spacing:.03em}
+.tbl td{padding:8px 11px;border-bottom:1px solid var(--s2);font-size:.74rem;vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:nth-child(even) td{background:rgba(21,128,61,.03)}
+.tbl tr:hover td{background:var(--s2)}
+/* COLORES */
+td.hl{background:var(--s2)!important;font-weight:700;color:var(--p2)}
+td.ok{background:var(--grn2)!important}
+td.er{background:var(--red2)!important;color:var(--red)}
+td.wa{background:var(--warn2)!important}
+td.sk{background:var(--sky2)!important}
+td.vi{background:var(--vio2)!important}
+td.tl{background:var(--teal2)!important}
+td.or{background:var(--ora2)!important}
+td.rs{background:var(--rose2)!important}
+/* NOTA */
+.nota{padding:9px 13px;border-radius:0 9px 9px 0;font-size:.73rem;border-left:4px solid;margin:6px 0 14px;line-height:1.55}
+.n-ok{background:var(--grn2);border-color:var(--grn)}
+.n-err{background:var(--red2);border-color:var(--red)}
+.n-w{background:var(--warn2);border-color:var(--warn)}
+.n-sky{background:var(--sky2);border-color:var(--sky)}
+.n-teal{background:var(--teal2);border-color:var(--teal)}
+strong{color:var(--p2);font-weight:800}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<header>
+  <div>
+    <h1>Tema 62 · HTML 3 · Cuadro comparativo y tablas operativas · Plan de Acogida a Personas Migrantes de Navarra 2021-2026</h1>
+    <p>Fundamentación · principios · ejes · LP · seguimiento · Oposiciones Navarra</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">🌙 Claro / Oscuro</button>
+</header>
+
+<!-- T1 -->
+<h2>T1 · Datos generales del Plan ★★★</h2>
+<table class="tbl">
+<thead><tr><th>Elemento</th><th>Contenido</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Nombre completo</strong></td><td>Plan de Acogida a Personas Migrantes de Navarra 2021-2026.</td><td class="hl">Memorizar nombre exacto. ★★★</td></tr>
+<tr><td><strong>Fecha de aprobación</strong></td><td>Acuerdo de Gobierno de Navarra de <strong>29 de diciembre de 2021</strong>.</td><td class="ok">29-12-2021. ★★★</td></tr>
+<tr><td><strong>Vigencia</strong></td><td>2021-2026 (6 años).</td><td class="hl">6 años. ★★★</td></tr>
+<tr><td><strong>Dotación económica</strong></td><td><strong>13.220.554 euros</strong> para los seis años de ejecución.</td><td class="ok">13.220.554 €. ★★★</td></tr>
+<tr><td><strong>Total de medidas</strong></td><td><strong>54 medidas</strong>.</td><td class="hl">54 medidas. ★★★</td></tr>
+<tr><td><strong>Carácter</strong></td><td>Es el <strong>primer Plan de Acogida específico de Navarra</strong>. Los anteriores fueron los PAAIIN (hasta 2010) y la Estrategia Navarra para la Convivencia (2015).</td><td class="ok">1.er Plan específico. ★★★</td></tr>
+<tr><td><strong>Departamento responsable</strong></td><td>Departamento de Políticas Migratorias y Justicia · Dirección General de Políticas Migratorias.</td><td class="hl">DG Políticas Migratorias. ★★★</td></tr>
+<tr><td><strong>Redacción</strong></td><td>Federación Andalucía Acoge + Fundación General Universidad de La Laguna.</td><td>Andalucía Acoge + ULL.</td></tr>
+<tr><td><strong>Proceso participativo</strong></td><td>El Plan se sometió a consulta y participación de entidades sociales, personas migrantes y administraciones antes de su aprobación.</td><td>Participación previa.</td></tr>
+</tbody>
+</table>
+<div class="nota n-err"><strong>Trampas ★★★:</strong> "Se aprobó en 2020" (FALSO, 29-12-2021) · "Tiene 50 medidas" (FALSO, 54) · "La dotación es de 10 M€" (FALSO, 13.220.554 €).</div>
+
+<!-- T2 -->
+<h2>T2 · Definición de acogida ★★★</h2>
+<table class="tbl">
+<thead><tr><th>Elemento de la definición</th><th>Descripción</th></tr></thead>
+<tbody>
+<tr><td class="hl"><strong>Qué es</strong></td><td>El proceso que aporta los elementos necesarios para cubrir las necesidades y contemplar las aspiraciones de las personas que llegan a un territorio. ★★★</td></tr>
+<tr><td class="hl"><strong>Tipo de intervención</strong></td><td>Multidisciplinar y psicosocial. ★★★</td></tr>
+<tr><td class="hl"><strong>Finalidad</strong></td><td>La plena inclusión de la persona acogida. ★★★</td></tr>
+<tr><td class="hl"><strong>Enfoque</strong></td><td>Intercultural, con perspectiva de género y adecuación de los servicios existentes para toda la población del territorio. ★★★</td></tr>
+<tr><td class="hl"><strong>Qué precisa</strong></td><td>Recursos e instrumentos específicos concebidos desde el enfoque intercultural. ★★★</td></tr>
+<tr><td><strong>Visión ampliada</strong></td><td>La acogida no es solo atención de urgencia. Implica también adaptar instituciones y movilizar la comunidad receptora. ★★★</td></tr>
+</tbody>
+</table>
+<div class="nota n-w"><strong>Idea clave ★★★:</strong> Acoger = proceso integral de inclusión que también exige cambios en la sociedad receptora, no solo en la persona migrante.</div>
+
+<!-- T3 -->
+<h2>T3 · Los 4 elementos transversales ★★★ — E·G·I·A</h2>
+<table class="tbl">
+<thead><tr><th>Letra</th><th>Elemento</th><th>Contenido operativo</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td class="tl"><strong>E</strong></td><td class="tl"><strong>Enfoque intercultural</strong></td><td>La diversidad cultural como nuevo patrimonio social de Navarra. Aspectos comunes + riqueza de la diferencia. Interacción de culturas en plano de igualdad.</td><td class="ok">Diversidad = patrimonio. ★★★</td></tr>
+<tr><td class="rs"><strong>G</strong></td><td class="rs"><strong>Perspectiva de Género</strong></td><td>Categoría analítica central. Estrategia DUAL: transversal a todo el Plan + acciones positivas específicas cuando sea necesario. Eliminar barreras. Reducir desigualdades.</td><td class="ok">Transversal + específica. ★★★</td></tr>
+<tr><td class="vi"><strong>I</strong></td><td class="vi"><strong>Interseccionalidad</strong></td><td>Los ejes de desigualdad se cruzan: origen, sexo, edad, situación administrativa, clase social, trayectoria vital. Acción multidimensional desde perspectiva ecosistémica.</td><td class="ok">Ejes que se cruzan. ★★★</td></tr>
+<tr><td class="sk"><strong>A</strong></td><td class="sk"><strong>Agenda 2030 / ODS</strong></td><td>Meta 10.7 como referencia principal: migración ordenada, segura, regular y responsable. También ODS 5 (género), 11 (ciudades), 16 (justicia), 17 (alianzas).</td><td class="ok">ODS 10 meta 10.7. ★★★</td></tr>
+</tbody>
+</table>
+<div class="nota n-err"><strong>Trampa ★★★:</strong> "El elemento transversal es solo la perspectiva de género." → FALSO. Son <strong>4 elementos: E-G-I-A</strong>. La perspectiva de género es uno de ellos.</div>
+
+<!-- T4 -->
+<h2>T4 · Los 4 principios rectores ★★★ — I·C·I·I</h2>
+<table class="tbl">
+<thead><tr><th>Principio</th><th>Contenido esencial</th><th>Frase memorizable ★★★</th></tr></thead>
+<tbody>
+<tr><td class="sk"><strong>I — Igualdad y no discriminación</strong></td><td>Mujeres y hombres iguales en dignidad. Participación en bases iguales en la vida económica, social, política, cultural o civil.</td><td class="ok">"Igual dignidad, igual participación." ★★★</td></tr>
+<tr><td class="ok"><strong>C — Ciudadanía</strong></td><td>Todas las personas son titulares de derechos <strong>independientemente de su situación administrativa</strong>. ★★★</td><td class="ok">"Derechos sin importar el papel." ★★★</td></tr>
+<tr><td class="vi"><strong>I — Inclusión</strong></td><td>Ejercicio por parte de las personas migrantes de todos sus derechos, en igualdad de condiciones y sin discriminación.</td><td class="ok">"Todos los derechos, en igualdad." ★★★</td></tr>
+<tr><td class="tl"><strong>I — Interculturalidad</strong></td><td>Mecanismo de interacción entre personas de distintos orígenes y culturas, dentro de la valoración y el respeto a la diversidad cultural.</td><td class="ok">"Interacción + respeto + valoración." ★★★</td></tr>
+</tbody>
+</table>
+<div class="nota n-err"><strong>Trampa ★★★:</strong> "El principio de Ciudadanía exige residencia legal." → FALSO. Reconoce derechos <strong>independientemente de la situación administrativa</strong>.</div>
+
+<!-- T5 -->
+<h2>T5 · Las 5 dimensiones de los cambios necesarios ★★★</h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Dimensión</th><th>Enfoque principal</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>1</strong></td><td>Integralidad, eficacia y eficiencia de políticas y actuaciones.</td><td>Desde las administraciones públicas, iniciativas privadas y redes ciudadanas.</td><td class="ok">Integralidad de políticas. ★★★</td></tr>
+<tr><td><strong>2</strong></td><td>Fortalecimiento de la organización y participación de las comunidades locales.</td><td>Considerando sus particularidades socio-territoriales.</td><td class="ok">Comunidades locales. ★★★</td></tr>
+<tr><td><strong>3</strong></td><td>Adecuación institucional, normativa y administrativa a la diversidad cultural existente.</td><td>Instituciones que cambian para adaptarse a la diversidad.</td><td class="hl">Adecuación inst. ★★★</td></tr>
+<tr><td><strong>4</strong></td><td>Impulso de las relaciones sociales a todos los niveles.</td><td>Fortalecimiento del sentimiento de pertenencia compartido.</td><td class="ok">Relaciones sociales. ★★★</td></tr>
+<tr><td><strong>5</strong></td><td>Gestión regulada y positiva de la conflictividad social.</td><td>La diversidad genera tensiones que hay que gestionar con criterio y positivamente.</td><td class="ok">Gestión conflictividad. ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T6 -->
+<h2>T6 · Objetivo general ★★★</h2>
+<table class="tbl">
+<thead><tr><th>Elemento del objetivo</th><th>Contenido</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td class="hl"><strong>Qué se desarrolla</strong></td><td>El marco metodológico y operativo de la acogida a personas migrantes en Navarra.</td><td class="ok">Marco metodológico y operativo. ★★★</td></tr>
+<tr><td class="hl"><strong>Perfiles contemplados</strong></td><td>Personas migrantes en sus múltiples perfiles y circunstancias.</td><td>Múltiples perfiles. ★★★</td></tr>
+<tr><td class="hl"><strong>Elementos vertebradores</strong></td><td>Enfoque de derechos + perspectiva de género + interseccionalidad. ★★★</td><td class="ok">3 elementos vertebradores. ★★★</td></tr>
+<tr><td class="hl"><strong>Tipo de acción</strong></td><td>Acción integral, eficaz y eficiente. ★★★</td><td class="ok">Integral + eficaz + eficiente. ★★★</td></tr>
+<tr><td class="hl"><strong>Finalidad</strong></td><td>Favorecer la inclusión desde un proceso que promueve la cohesión social en la sociedad que les recibe. ★★★</td><td class="ok">Inclusión → cohesión social. ★★★</td></tr>
+</tbody>
+</table>
+<div class="nota n-ok"><strong>Frase de examen ★★★:</strong> Marco metodológico + enfoque de derechos + género + interseccionalidad → acción integral → inclusión con cohesión social.</div>
+
+<!-- T7 -->
+<h2>T7 · Los 6 ejes estratégicos ★★★ — O·I·A·C·C·G</h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Nombre del eje</th><th>Contenido clave</th><th>Colectivos / Ámbitos</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td class="tl"><strong>1</strong></td><td class="tl"><strong>Preparación desde origen y atención en llegadas ★★★</strong></td><td>Intervención transnacional. Primera recepción: información, orientación jurídica, alojamiento, idiomas, salud, interpretación cultural, relaciones sociales.</td><td>Todas las personas migrantes en el momento de llegada.</td><td class="ok">Origen · llegada · primera recepción. ★★★</td></tr>
+<tr><td class="vi"><strong>2</strong></td><td class="vi"><strong>Intervención especializada en perfiles concretos ★★★</strong></td><td>Respuestas diferenciadas para colectivos con situaciones específicas de vulnerabilidad o necesidades especiales.</td><td>Protección internacional · apátridas · trata · KIDEAK (jóvenes sin familia) · personas en tránsito · situación irregular.</td><td class="ok">Perfiles específicos = Eje 2. ★★★</td></tr>
+<tr><td class="sk"><strong>3</strong></td><td class="sk"><strong>Adecuación institucional al contexto y diversidad cultural ★★★</strong></td><td>Transformación de las instituciones y servicios públicos para atender a una población diversa con competencias interculturales.</td><td>Servicios públicos, personal de administración, entidades prestadoras.</td><td class="ok">Cambiar instituciones. ★★★</td></tr>
+<tr><td class="wa"><strong>4</strong></td><td class="wa"><strong>Promoción de la comunicación y alianzas efectivas ★★★</strong></td><td>Comunicación inclusiva. Combatir discursos estigmatizantes. Información veraz. Alianzas intersectoriales entre administraciones, entidades y tejido social.</td><td>Medios, ciudadanía, tercer sector, empresas.</td><td class="ok">Comunicación + alianzas. ★★★</td></tr>
+<tr><td class="ok"><strong>5</strong></td><td class="ok"><strong>Fortalecimiento comunitario y participación intercultural ★★★</strong></td><td>La convivencia se construye desde barrios y municipios. Diversidad cultural como activo. Toda la comunidad trabaja para el bien común.</td><td>Comunidad local: vecinos, asociaciones, redes de barrio, entidades locales.</td><td class="ok">Comunidad + diversidad como activo. ★★★</td></tr>
+<tr><td class="rs"><strong>6</strong></td><td class="rs"><strong>Promoción de la igualdad de género ★★★</strong></td><td>El género como categoría analítica central. Estrategia DUAL: transversal a todo el Plan + medidas específicas cuando sea necesario.</td><td>Toda la comunidad, con especial atención a mujeres migrantes.</td><td class="ok">Estrategia dual. ★★★</td></tr>
+</tbody>
+</table>
+<div class="nota n-ok"><strong>Mnemotecnia ★★★:</strong> <strong>O-I-A-C-C-G</strong> = Origen/llegadas · Intervención (perfiles) · Adecuación institucional · Comunicación/alianzas · Comunidad · Género.</div>
+<div class="nota n-err"><strong>Trampa ★★★:</strong> "El Plan tiene 5 ejes." → FALSO. Tiene <strong>6 ejes estratégicos</strong>.</div>
+
+<!-- T8 -->
+<h2>T8 · Las 9 líneas prioritarias de actuación ★★★ — I·A·J·F·F·PI·V·S·L</h2>
+<table class="tbl">
+<thead><tr><th>LP</th><th>Nombre operativo</th><th>Descripción completa</th><th>ODS / Meta</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td class="tl"><strong>1</strong></td><td class="tl"><strong>Información, orientación e idiomas ★★★</strong></td><td>Mejora y desarrollo de los servicios de información, orientación, aprendizaje de idiomas e introducción a los servicios generalistas.</td><td>ODS 11.1</td><td class="ok">LP1 = Idiomas + servicios generalistas. ★★★</td></tr>
+<tr><td class="ok"><strong>2</strong></td><td class="ok"><strong>Alianzas comunitarias y multinivel ★★★</strong></td><td>Acción comunitaria, alianzas estratégicas y multinivel para la gestión global de los procesos migratorios y su impacto local.</td><td>ODS 17.17</td><td class="ok">LP2 = Alianzas y acción comunitaria. ★★★</td></tr>
+<tr><td class="sk"><strong>3</strong></td><td class="sk"><strong>Marco jurídico-administrativo y conceptual ★★★</strong></td><td>Promoción de un marco jurídico, administrativo y conceptual claro, operativo y desde un enfoque de derechos.</td><td>ODS 16.10</td><td class="ok">LP3 = Enfoque de derechos. ★★★</td></tr>
+<tr><td class="wa"><strong>4</strong></td><td class="wa"><strong>Formación en competencias interculturales ★★★</strong></td><td>Creación de un sistema estable de formación, capacitación y sensibilización para el desarrollo de competencias culturales e interculturales.</td><td>ODS 4.3</td><td class="ok">LP4 = Formación intercultural. ★★★</td></tr>
+<tr><td class="vi"><strong>5</strong></td><td class="vi"><strong>Familias, infancia, adolescencia y juventud ★★★</strong></td><td>Creación de procesos integrales y continuados en torno a las unidades familiares, desde la infancia, adolescencia y juventud.</td><td>ODS 10.3</td><td class="ok">LP5 = Unidades familiares. ★★★</td></tr>
+<tr><td class="or"><strong>6</strong></td><td class="or"><strong>Protección internacional ★★★</strong></td><td>Avanzar en la implementación coordinada del sistema de acogida e inclusión de las personas solicitantes y beneficiarias de protección internacional.</td><td>ODS 10.2</td><td class="ok">LP6 = Protec. internacional. ★★★</td></tr>
+<tr><td class="hl"><strong>7</strong></td><td class="hl"><strong>Alojamiento y vivienda ★★★</strong></td><td>Impulso de medidas que den una respuesta adecuada a las necesidades de alojamiento.</td><td>ODS 11.1</td><td class="ok">LP7 = Vivienda. ★★★</td></tr>
+<tr><td class="ok"><strong>8</strong></td><td class="ok"><strong>Salud preventiva e integral ★★★</strong></td><td>Desarrollo de procesos y acciones que permitan abordar una perspectiva preventiva e integral de salud.</td><td>ODS 3.8</td><td class="ok">LP8 = Salud. ★★★</td></tr>
+<tr><td class="tl"><strong>9</strong></td><td class="tl"><strong>Acceso laboral ★★★</strong></td><td>Fortalecimiento de los procesos de acceso al ámbito laboral.</td><td>ODS 8.5</td><td class="ok">LP9 = Empleo/laboral. ★★★</td></tr>
+<tr><td class="rs">★</td><td class="rs"><strong>Perspectiva de GÉNERO (transversal) ★★★</strong></td><td>El enfoque de género está presente de forma transversal en las 9 líneas prioritarias.</td><td>ODS 5.1</td><td class="rs"><strong>Transversal a las 9 LP. ★★★</strong></td></tr>
+</tbody>
+</table>
+<div class="nota n-ok"><strong>Mnemotecnia ★★★:</strong> <strong>I-A-J-F-F-PI-V-S-L</strong> = Información/idiomas · Alianzas · Jurídico · Formación · Familias · Prot.Internacional · Vivienda · Salud · Laboral.</div>
+<div class="nota n-err"><strong>Trampa ★★★:</strong> "Tiene 8 líneas prioritarias." → FALSO. Tiene <strong>9 líneas prioritarias de actuación</strong>. La perspectiva de género es transversal a todas.</div>
+
+<!-- T9 -->
+<h2>T9 · Marco normativo y político por niveles ★★★</h2>
+<table class="tbl">
+<thead><tr><th>Nivel territorial</th><th>Tipo de referencia</th><th>Contenido relevante para el Plan</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td class="hl" rowspan="2"><strong>Internacional</strong></td><td>Normas de derechos humanos</td><td>Convención ONU sobre el Estatuto de los Refugiados. Protocolos de protección internacional. Derechos humanos universales.</td><td>Marco de derechos. ★★</td></tr>
+<tr><td>Pactos globales</td><td>Pacto Mundial para la Migración Segura, Ordenada y Regular (2018). Agenda 2030 ONU.</td><td class="ok">Pacto Mundial migración 2018. ★★★</td></tr>
+<tr><td class="ok" rowspan="2"><strong>Europeo</strong></td><td>Normativa de asilo y protección</td><td>Directivas europeas de protección internacional. Sistema Europeo Común de Asilo (SECA).</td><td>Sistema Europeo Asilo. ★★</td></tr>
+<tr><td>Financiación</td><td>Fondo de Asilo, Migración e Integración (FAMI). Herramienta de cofinanciación europea para políticas de acogida.</td><td class="ok">FAMI. ★★★</td></tr>
+<tr><td class="sk" rowspan="2"><strong>Estatal</strong></td><td>Legislación de extranjería</td><td>LO 4/2000, de 11 de enero, sobre derechos y libertades de los extranjeros en España y su integración social (Ley de Extranjería). Sus reformas posteriores.</td><td class="ok">LO 4/2000. ★★★</td></tr>
+<tr><td>Planes estatales</td><td>Plan Estratégico de Ciudadanía e Integración (PECI 2007-2010 y II PECI 2011-2014). Referentes directos del Plan navarro.</td><td class="ok">PECI estatal. ★★★</td></tr>
+<tr><td class="tl" rowspan="3"><strong>Autonómico (Navarra)</strong></td><td>Antecedentes directos</td><td>PAAIIN: Planes de Acción para la Acogida y la Integración de Inmigrantes de Navarra. Vigentes hasta 2010. Marco: Convenio de 28 de octubre de 2005 entre Ministerio de Trabajo y CFN.</td><td class="ok">PAAIIN hasta 2010. ★★★</td></tr>
+<tr><td>Estrategia</td><td>Estrategia Navarra para la Convivencia (2015). Antecedente inmediato del Plan actual.</td><td class="ok">Convivencia 2015. ★★★</td></tr>
+<tr><td>Marco político actual</td><td>Acuerdo de Programa para una legislatura 2019-2023. Agenda 2030 de Navarra.</td><td class="ok">Agenda 2030 Navarra. ★★★</td></tr>
+<tr><td class="wa"><strong>Local</strong></td><td>Entidades locales</td><td>Participación de ayuntamientos y mancomunidades en la ejecución de medidas del Plan. Especialmente en acción comunitaria (LP2) y alojamiento (LP7).</td><td>Entidades locales. ★★</td></tr>
+</tbody>
+</table>
+
+<!-- T10 -->
+<h2>T10 · ODS vinculados al Plan ★★★</h2>
+<table class="tbl">
+<thead><tr><th>ODS</th><th>Nombre</th><th>Meta(s) clave</th><th>Línea prioritaria del Plan</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td class="ok"><strong>ODS 10 ★★★ PRINCIPAL</strong></td><td class="ok"><strong>Reducción de las desigualdades</strong></td><td>Meta <strong>10.7</strong>: facilitar la migración y movilidad ordenadas, seguras, regulares y responsables. Meta 10.2. Meta 10.3.</td><td>Transversal + LP5 + LP6. ★★★</td><td class="ok"><strong>ODS 10 meta 10.7. ★★★</strong></td></tr>
+<tr><td class="rs"><strong>ODS 5 ★★★</strong></td><td class="rs"><strong>Igualdad de género</strong></td><td>Meta 5.1 (no discriminación) · Meta 5.5 (participación).</td><td>Transversal a las 9 LP + Eje 6. ★★★</td><td class="ok">Género transversal. ★★★</td></tr>
+<tr><td class="tl"><strong>ODS 11 ★★★</strong></td><td class="tl"><strong>Ciudades y comunidades sostenibles</strong></td><td>Meta 11.1: vivienda y servicios básicos adecuados.</td><td>LP1 + LP7.</td><td class="ok">ODS 11.1 = vivienda. ★★★</td></tr>
+<tr><td class="sk"><strong>ODS 16 ★★★</strong></td><td class="sk"><strong>Paz, justicia e instituciones sólidas</strong></td><td>Meta 16.7 (participación) · Meta 16.10 (acceso a información y derechos).</td><td>LP3.</td><td class="ok">ODS 16.10 = marco jurídico. ★★★</td></tr>
+<tr><td class="hl"><strong>ODS 17 ★★★</strong></td><td class="hl"><strong>Alianzas para lograr los objetivos</strong></td><td>Meta 17.17: alianzas eficaces, públicas, público-privadas y de la sociedad civil.</td><td>LP2.</td><td class="ok">ODS 17.17 = alianzas. ★★★</td></tr>
+<tr><td><strong>ODS 3 ★★</strong></td><td>Salud y bienestar</td><td>Meta 3.8: cobertura sanitaria universal.</td><td>LP8.</td><td>ODS 3.8 = salud. ★★</td></tr>
+<tr><td><strong>ODS 4 ★★</strong></td><td>Educación de calidad</td><td>Meta 4.3: acceso a la formación técnica y profesional.</td><td>LP4.</td><td>ODS 4.3 = formación. ★★</td></tr>
+<tr><td><strong>ODS 8 ★★</strong></td><td>Trabajo decente y crecimiento económico</td><td>Meta 8.5: empleo pleno y productivo.</td><td>LP9.</td><td>ODS 8.5 = laboral. ★★</td></tr>
+</tbody>
+</table>
+<div class="nota n-err"><strong>Trampa ★★★:</strong> "El ODS principal es el ODS 11." → FALSO. El principal es el <strong>ODS 10, meta 10.7</strong> (migración ordenada, segura, regular y responsable).</div>
+
+<!-- T11 -->
+<h2>T11 · Servicios y programas con nombre propio ★★★</h2>
+<table class="tbl">
+<thead><tr><th>Servicio / Programa</th><th>Descripción</th><th>Eje / LP vinculada</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td class="tl"><strong>🌿 Servicio KARIBU ★★★</strong></td><td>Servicio de Acogida y Acompañamiento a Personas Migrantes. Adscrito a la DG de Políticas Migratorias. Recurso central de la acogida.</td><td>Eje 1 · LP1</td><td class="ok">KARIBU = acogida y acompañamiento. ★★★</td></tr>
+<tr><td class="ok"><strong>👨‍👩‍👧 SERFAM ★★★</strong></td><td>Servicio de Reagrupación Familiar. Apoyo a los procesos de reunificación familiar en Navarra.</td><td>Eje 1 · LP5</td><td class="ok">SERFAM = reagrupación familiar. ★★★</td></tr>
+<tr><td class="vi"><strong>🧒 Programa KIDEAK ★★★</strong></td><td>Atención especializada a jóvenes migrantes sin apoyo familiar en Navarra. Respuesta a un perfil muy vulnerable.</td><td>Eje 2 (perfiles concretos)</td><td class="ok">KIDEAK = jóvenes sin familia. ★★★</td></tr>
+<tr><td class="sk"><strong>📞 Interpretación telefónica ★★★</strong></td><td>Recurso de interpretación telefónica simultánea. Consolida y extiende la accesibilidad lingüística a los servicios.</td><td>Eje 1 + Eje 3 · LP1</td><td class="ok">Barrera lingüística → interpretación. ★★★</td></tr>
+<tr><td class="wa"><strong>⚖ Asesoramiento en extranjería ★★★</strong></td><td>Servicio de orientación y asesoramiento jurídico en materia de extranjería y protección internacional.</td><td>Eje 1 · LP3</td><td class="ok">Jurídico = LP3. ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T12 -->
+<h2>T12 · Gobernanza, seguimiento y evaluación ★★★</h2>
+<table class="tbl">
+<thead><tr><th>Ámbito</th><th>Contenido</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td class="hl"><strong>Tipo de gobernanza</strong></td><td>Gobernanza <strong>compartida, colaborativa y coordinada</strong> entre todos los agentes que inciden en los procesos de acogida: administraciones, entidades sociales, empresas, iniciativas ciudadanas. ★★★</td><td class="ok">Compartida y colaborativa. ★★★</td></tr>
+<tr><td class="hl"><strong>Espacio 1</strong></td><td>Espacio institucional: relación y coordinación entre las administraciones con competencias en acogida. ★★★</td><td>Institucional. ★★★</td></tr>
+<tr><td class="hl"><strong>Espacio 2</strong></td><td>Espacio técnico interdepartamental: coordinación técnica entre departamentos del Gobierno de Navarra e interadministrativa. ★★★</td><td>Técnica interdepartamental. ★★★</td></tr>
+<tr><td class="hl"><strong>Espacio 3</strong></td><td>Espacio técnico de entidades sociales: participación de asociaciones y entidades del tercer sector. ★★★</td><td>Entidades sociales. ★★★</td></tr>
+<tr><td class="hl"><strong>Espacio 4</strong></td><td>Espacio ciudadano: participación de la ciudadanía en el seguimiento del Plan. ★★★</td><td>Ciudadanía. ★★★</td></tr>
+<tr><td class="ok"><strong>Seguimiento</strong></td><td>Indicadores para cada línea prioritaria y medida. Permite verificar la ejecución, detectar dificultades y ajustar actuaciones. ★★★</td><td class="ok">Indicadores por LP. ★★★</td></tr>
+<tr><td class="ok"><strong>Evaluación</strong></td><td>Evaluación continua + evaluación de impacto. Incorpora perspectiva de género en los instrumentos de evaluación. ★★★</td><td class="ok">Continua + impacto + género. ★★★</td></tr>
+<tr><td class="tl"><strong>Buenas prácticas</strong></td><td>Sistematización e intercambio de buenas prácticas entre agentes del Plan. ★★</td><td>Sistematización. ★★</td></tr>
+</tbody>
+</table>
+<div class="nota n-teal"><strong>Frase memorizable ★★★:</strong> 4 espacios de gobernanza: <strong>Institucional · Técnica interdepartamental · Entidades sociales · Ciudadanía</strong>. Evaluación: continua + impacto + perspectiva de género.</div>
+
+<!-- T13 -->
+<h2>T13 · Arquitectura completa del Plan ★★★</h2>
+<table class="tbl">
+<thead><tr><th>Nivel</th><th>Denominación</th><th>Número</th><th>Ejemplo / detalle</th></tr></thead>
+<tbody>
+<tr><td class="vi"><strong>1 (Base conceptual)</strong></td><td>Definición de acogida + 4 elementos transversales</td><td>4 elementos</td><td>E-G-I-A: Enfoque intercultural · Género · Interseccionalidad · Agenda 2030.</td></tr>
+<tr><td class="sk"><strong>2 (Orientación)</strong></td><td>4 principios rectores</td><td>4 principios</td><td>I-C-I-I: Igualdad · Ciudadanía · Inclusión · Interculturalidad.</td></tr>
+<tr><td class="ok"><strong>3 (Finalidad)</strong></td><td>Objetivo general único</td><td>1 objetivo</td><td>Marco metodológico y operativo → enfoque derechos + género + interseccionalidad → inclusión + cohesión social.</td></tr>
+<tr><td class="tl"><strong>4 (Estratégico)</strong></td><td>Ejes estratégicos</td><td class="hl"><strong>6 ejes ★★★</strong></td><td>O-I-A-C-C-G: Origen · Intervención perfiles · Adecuación inst. · Comunicación · Comunidad · Género.</td></tr>
+<tr><td class="wa"><strong>5 (Prioritario)</strong></td><td>Líneas prioritarias de actuación</td><td class="hl"><strong>9 LP ★★★</strong></td><td>I-A-J-F-F-PI-V-S-L: Idiomas · Alianzas · Jurídico · Formación · Familias · PI · Vivienda · Salud · Laboral.</td></tr>
+<tr><td class="or"><strong>6 (Operativo)</strong></td><td>Objetivos específicos + medidas</td><td class="hl"><strong>54 medidas ★★★</strong></td><td>Nivel de intervención concreta: responsables, plazos, indicadores.</td></tr>
+<tr><td class="ok"><strong>7 (Control)</strong></td><td>Seguimiento y evaluación</td><td>4 espacios</td><td>Institucional · Interdepartamental · Entidades sociales · Ciudadanía. + Evaluación continua e impacto.</td></tr>
+</tbody>
+</table>
+
+<!-- T14 -->
+<h2>T14 · Las 10 trampas del examen ★★★</h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Afirmación incorrecta (trampa)</th><th>Corrección exacta</th></tr></thead>
+<tbody>
+<tr><td>1</td><td class="er">"El Plan se aprobó en 2020."</td><td class="ok">Se aprobó el <strong>29 de diciembre de 2021</strong>. ★★★</td></tr>
+<tr><td>2</td><td class="er">"La dotación es de 10 millones de euros."</td><td class="ok">La dotación total es de <strong>13.220.554 euros</strong>. ★★★</td></tr>
+<tr><td>3</td><td class="er">"Tiene 3 principios rectores."</td><td class="ok">Tiene <strong>4 principios: I-C-I-I</strong>. ★★★</td></tr>
+<tr><td>4</td><td class="er">"Tiene 5 ejes estratégicos."</td><td class="ok">Tiene <strong>6 ejes estratégicos</strong>. ★★★</td></tr>
+<tr><td>5</td><td class="er">"Tiene 8 líneas prioritarias."</td><td class="ok">Tiene <strong>9 líneas prioritarias de actuación</strong>. ★★★</td></tr>
+<tr><td>6</td><td class="er">"Tiene 50 medidas."</td><td class="ok">Tiene <strong>54 medidas</strong>. ★★★</td></tr>
+<tr><td>7</td><td class="er">"El ODS principal es el ODS 11."</td><td class="ok">El principal es el <strong>ODS 10, meta 10.7</strong> (migración ordenada, segura, regular y responsable). ★★★</td></tr>
+<tr><td>8</td><td class="er">"La perspectiva de género solo se aplica al Eje 6."</td><td class="ok">El género es <strong>transversal a los 6 ejes y las 9 líneas prioritarias</strong>. El Eje 6 lo refuerza de forma específica. ★★★</td></tr>
+<tr><td>9</td><td class="er">"Es el tercer Plan de Acogida de Navarra."</td><td class="ok">Es el <strong>primer Plan de Acogida específico</strong>. Anteriores: PAAIIN (hasta 2010) + Estrategia Convivencia (2015). ★★★</td></tr>
+<tr><td>10</td><td class="er">"El principio de Ciudadanía exige situación administrativa regular."</td><td class="ok">Reconoce derechos <strong>independientemente de la situación administrativa</strong>. ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T15 -->
+<h2>T15 · Datos numéricos clave para memorizar ★★★</h2>
+<table class="tbl">
+<thead><tr><th>Cifra</th><th>Significado</th><th>Ámbito</th></tr></thead>
+<tbody>
+<tr><td class="hl"><strong>29-12-2021</strong></td><td>Fecha de aprobación por Acuerdo de Gobierno de Navarra. ★★★</td><td>Plan general</td></tr>
+<tr><td class="hl"><strong>2021-2026</strong></td><td>Vigencia: 6 años. ★★★</td><td>Plan general</td></tr>
+<tr><td class="hl"><strong>13.220.554 €</strong></td><td>Dotación económica total para los 6 años. ★★★</td><td>Plan general</td></tr>
+<tr><td class="hl"><strong>4</strong></td><td>Elementos transversales (E-G-I-A). ★★★</td><td>Fundamentación</td></tr>
+<tr><td class="hl"><strong>4</strong></td><td>Principios rectores (I-C-I-I). ★★★</td><td>Principios</td></tr>
+<tr><td class="hl"><strong>5</strong></td><td>Dimensiones de los cambios necesarios. ★★★</td><td>Marco estratégico</td></tr>
+<tr><td class="hl"><strong>6</strong></td><td>Ejes estratégicos. ★★★</td><td>Ejes</td></tr>
+<tr><td class="hl"><strong>9</strong></td><td>Líneas prioritarias de actuación. ★★★</td><td>LP</td></tr>
+<tr><td class="hl"><strong>54</strong></td><td>Total de medidas. ★★★</td><td>Medidas</td></tr>
+<tr><td class="hl"><strong>ODS 10 / meta 10.7</strong></td><td>ODS principal del Plan: migración ordenada, segura, regular y responsable. ★★★</td><td>Agenda 2030</td></tr>
+<tr><td class="hl"><strong>4</strong></td><td>Espacios de gobernanza y seguimiento: institucional · interdepartamental · entidades sociales · ciudadanía. ★★★</td><td>Seguimiento</td></tr>
+</tbody>
+</table>
+
+</div>
+</body>
+</html>

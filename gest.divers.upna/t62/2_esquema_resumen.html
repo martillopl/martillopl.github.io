@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 62 · HTML 2 · Esquema-resumen visual · Plan acogida migrantes Navarra 2021-2026 · UPNA</title>
+<style>
+:root{
+  --bg:#f0fdf4;--card:#fff;--s2:#dcfce7;--s3:#bbf7d0;--line:#4ade80;
+  --text:#14532d;--muted:#16a34a;--p:#15803d;--p2:#166534;
+  --grn:#059669;--grn2:#d1fae5;--red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;--sky:#0284c7;--sky2:#e0f2fe;
+  --vio:#7c3aed;--vio2:#ede9fe;--ora:#c2410c;--ora2:#ffedd5;
+  --teal:#0d9488;--teal2:#ccfbf1;--rose:#be185d;--rose2:#fce7f3;
+  --sh:0 2px 12px rgba(21,128,61,.10)
+}
+[data-theme="dark"]{
+  --bg:#001a0a;--card:#00260e;--s2:#003314;--s3:#004a1f;--line:#16a34a;
+  --text:#bbf7d0;--muted:#4ade80;--p:#4ade80;--p2:#86efac;
+  --grn:#86efac;--grn2:#052e16;--red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;--sky:#7dd3fc;--sky2:#082038;
+  --vio:#c4b5fd;--vio2:#1a0e33;--ora:#fdba74;--ora2:#2a1000;
+  --teal:#5eead4;--teal2:#031a16;--rose:#fda4af;--rose2:#1a0010;
+  --sh:0 2px 14px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:20px}
+.wrap{max-width:1300px;margin:0 auto}
+header{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:14px 22px;box-shadow:var(--sh);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+header h1{font-size:.92rem;font-weight:900;color:var(--p)}
+header p{font-size:.7rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1.5px solid var(--line);background:var(--s2);color:var(--text);padding:5px 14px;border-radius:999px;font-size:.7rem;font-weight:700}
+.sec{background:var(--p);color:#fff;font-size:.78rem;font-weight:900;padding:6px 16px;border-radius:8px;display:inline-block;margin:18px 0 10px;text-transform:uppercase;letter-spacing:.04em}
+.nota{padding:9px 14px;border-radius:0 10px 10px 0;border-left:4px solid;font-size:.73rem;margin:8px 0 12px;line-height:1.55}
+.n-ok{background:var(--grn2);border-color:var(--grn)}
+.n-err{background:var(--red2);border-color:var(--red)}
+.n-w{background:var(--warn2);border-color:var(--warn)}
+.n-sky{background:var(--sky2);border-color:var(--sky)}
+.n-teal{background:var(--teal2);border-color:var(--teal)}
+strong{color:var(--p2);font-weight:800}
+
+/* FLASH */
+.flash-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(192px,1fr));gap:9px;margin-bottom:14px}
+.flash{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;box-shadow:var(--sh);position:relative;overflow:hidden}
+.flash .num{font-size:1.9rem;font-weight:900;color:var(--p);opacity:.1;position:absolute;top:2px;right:8px;line-height:1}
+.flash .q{font-size:.62rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:3px}
+.flash .a{font-size:.78rem;font-weight:800;color:var(--text)}
+
+/* MINI DATOS */
+.datos{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:9px;margin-bottom:14px}
+.dato{background:var(--card);border:2px solid var(--p);border-radius:13px;padding:13px;box-shadow:var(--sh);text-align:center}
+.dato .d-num{font-size:1.65rem;font-weight:900;color:var(--p);line-height:1.15}
+.dato .d-label{font-size:.68rem;color:var(--muted);margin-top:4px;line-height:1.4}
+
+/* PIRÁMIDE ESTRUCTURA */
+.pir{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:18px 22px;box-shadow:var(--sh);margin-bottom:14px}
+.pir-root{background:var(--p);color:#fff;border-radius:10px;padding:10px 18px;text-align:center;font-weight:900;font-size:.9rem;margin-bottom:14px}
+.pir-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.pir-node{flex:1;min-width:140px;border-radius:10px;padding:9px 12px;font-size:.74rem;border:1.5px solid}
+.t-sky{background:var(--sky2);border-color:var(--sky)}
+.t-warn{background:var(--warn2);border-color:var(--warn)}
+.t-vio{background:var(--vio2);border-color:var(--vio)}
+.t-teal{background:var(--teal2);border-color:var(--teal)}
+.t-grn{background:var(--grn2);border-color:var(--grn)}
+.pir-node .tn-h{font-weight:900;font-size:.77rem;margin-bottom:3px}
+
+/* 4 TARJETAS ELEMENTOS TRANSVERSALES */
+.trans-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:14px}
+.trans{border-radius:14px;border:2px solid;padding:14px;box-shadow:var(--sh)}
+.trans .t-ico{font-size:1.5rem;margin-bottom:6px}
+.trans .t-ltr{font-size:1.8rem;font-weight:900;float:right;opacity:.15;line-height:1}
+.trans .t-name{font-size:.88rem;font-weight:900;margin-bottom:4px}
+.trans .t-body{font-size:.72rem;line-height:1.65}
+.te1{background:var(--teal2);border-color:var(--teal)}.te1 .t-name{color:var(--teal)}
+.te2{background:var(--rose2);border-color:var(--rose)}.te2 .t-name{color:var(--rose)}
+.te3{background:var(--vio2);border-color:var(--vio)}.te3 .t-name{color:var(--vio)}
+.te4{background:var(--sky2);border-color:var(--sky)}.te4 .t-name{color:var(--sky)}
+
+/* 4 PRINCIPIOS */
+.pri-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:14px}
+.pri{border-radius:13px;border:2px solid;padding:14px;box-shadow:var(--sh);text-align:center}
+.pri .pr-ltr{font-size:3rem;font-weight:900;opacity:.12;line-height:1}
+.pri .pr-name{font-size:.87rem;font-weight:900;margin-bottom:4px}
+.pri .pr-body{font-size:.71rem;line-height:1.62}
+.pp1{background:var(--sky2);border-color:var(--sky)}.pp1 .pr-name{color:var(--sky)}
+.pp2{background:var(--grn2);border-color:var(--grn)}.pp2 .pr-name{color:var(--grn)}
+.pp3{background:var(--vio2);border-color:var(--vio)}.pp3 .pr-name{color:var(--vio)}
+.pp4{background:var(--teal2);border-color:var(--teal)}.pp4 .pr-name{color:var(--teal)}
+
+/* 6 EJES */
+.ejes{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+.eje-row{display:flex;align-items:stretch;gap:10px;background:var(--card);border:1.5px solid var(--line);border-radius:11px;overflow:hidden;box-shadow:var(--sh)}
+.eje-num{font-size:1.3rem;font-weight:900;color:#fff;background:var(--p);padding:10px 16px;display:flex;align-items:center;flex-shrink:0;min-width:42px;justify-content:center}
+.eje-body{padding:10px 14px;font-size:.78rem;flex:1}
+.eje-body strong{display:block;font-size:.81rem;font-weight:900;margin-bottom:3px}
+.eje-badge{font-size:.63rem;font-weight:700;padding:2px 9px;border-radius:999px;border:1.5px solid;display:inline-block;margin-top:4px}
+.ej1 .eje-num{background:var(--teal)}
+.ej2 .eje-num{background:var(--vio)}
+.ej3 .eje-num{background:var(--sky)}
+.ej4 .eje-num{background:var(--warn)}
+.ej5 .eje-num{background:var(--grn)}
+.ej6 .eje-num{background:var(--rose)}
+.ej1 .eje-badge{background:var(--teal2);border-color:var(--teal);color:var(--teal)}
+.ej2 .eje-badge{background:var(--vio2);border-color:var(--vio);color:var(--vio)}
+.ej3 .eje-badge{background:var(--sky2);border-color:var(--sky);color:var(--sky)}
+.ej4 .eje-badge{background:var(--warn2);border-color:var(--warn);color:var(--warn)}
+.ej5 .eje-badge{background:var(--grn2);border-color:var(--grn);color:var(--grn)}
+.ej6 .eje-badge{background:var(--rose2);border-color:var(--rose);color:var(--rose)}
+
+/* 9 LÍNEAS PRIORITARIAS */
+.lp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:9px;margin-bottom:14px}
+.lp{background:var(--card);border:1.5px solid var(--line);border-radius:11px;padding:11px 13px;box-shadow:var(--sh);display:flex;gap:10px;align-items:flex-start}
+.lp-n{font-size:1.4rem;font-weight:900;color:var(--p);opacity:.2;line-height:1;flex-shrink:0;padding-top:2px}
+.lp-body{font-size:.73rem;line-height:1.65}
+.lp-body strong{display:block;font-weight:900;font-size:.76rem;margin-bottom:2px;color:var(--p2)}
+.lp-ods{font-size:.62rem;font-weight:700;padding:1px 7px;border-radius:999px;background:var(--p);color:#fff;display:inline-block;margin-top:4px}
+
+/* 5 DIMENSIONES */
+.dim-grid{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+.dim-row{display:flex;gap:10px;background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:9px 13px;box-shadow:var(--sh);align-items:center}
+.dim-n{font-size:1.1rem;font-weight:900;color:var(--p);width:26px;flex-shrink:0}
+.dim-text{font-size:.77rem;font-weight:700}
+
+/* SEGUIMIENTO */
+.seg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:9px;margin-bottom:14px}
+.seg{border-radius:13px;border:2px solid;padding:13px;box-shadow:var(--sh);text-align:center}
+.seg .sg-ico{font-size:1.6rem;margin-bottom:6px}
+.seg .sg-name{font-size:.84rem;font-weight:900;margin-bottom:4px}
+.seg .sg-body{font-size:.7rem;line-height:1.6}
+.sg1{background:var(--sky2);border-color:var(--sky)}.sg1 .sg-name{color:var(--sky)}
+.sg2{background:var(--grn2);border-color:var(--grn)}.sg2 .sg-name{color:var(--grn)}
+.sg3{background:var(--warn2);border-color:var(--warn)}.sg3 .sg-name{color:var(--warn)}
+.sg4{background:var(--teal2);border-color:var(--teal)}.sg4 .sg-name{color:var(--teal)}
+.sg5{background:var(--vio2);border-color:var(--vio)}.sg5 .sg-name{color:var(--vio)}
+
+/* TRAMPAS */
+.trap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:9px;margin-bottom:14px}
+.trap{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--sh)}
+.trap-w{background:var(--red2);padding:8px 12px;font-size:.71rem;font-weight:700;color:var(--red)}
+.trap-ok{background:var(--grn2);padding:8px 12px;font-size:.72rem;color:var(--p2)}
+.trap-n{font-size:.59rem;font-weight:900;opacity:.65;margin-bottom:2px;text-transform:uppercase}
+
+/* MINI RESUMEN */
+.mini{background:var(--card);border:2px solid var(--p);border-radius:14px;padding:16px;box-shadow:var(--sh);margin-bottom:14px;font-size:.76rem;line-height:1.82}
+.mini strong{color:var(--p2)}
+
+/* SERVICIOS */
+.serv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:9px;margin-bottom:14px}
+.serv{background:var(--card);border:1.5px solid var(--line);border-radius:11px;padding:11px 13px;box-shadow:var(--sh)}
+.serv .sv-name{font-size:.82rem;font-weight:900;color:var(--p);margin-bottom:4px}
+.serv .sv-body{font-size:.71rem;line-height:1.6}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<header>
+  <div>
+    <h1>Tema 62 · HTML 2 · Esquema-resumen visual · Plan de Acogida a Personas Migrantes de Navarra 2021-2026</h1>
+    <p>Fundamentación · principios · ejes · líneas prioritarias · seguimiento · Oposiciones Navarra</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">🌙 Claro / Oscuro</button>
+</header>
+
+<!-- FICHAS FLASH -->
+<div class="sec">⚡ Fichas flash — 24 datos inmediatos ★★★</div>
+<div class="flash-grid">
+  <div class="flash"><div class="num">1</div><div class="q">Fecha de aprobación</div><div class="a">29 de diciembre de 2021 (Acuerdo de Gobierno de Navarra). ★★★</div></div>
+  <div class="flash"><div class="num">2</div><div class="q">Vigencia</div><div class="a">2021-2026 (6 años). ★★★</div></div>
+  <div class="flash"><div class="num">3</div><div class="q">Dotación económica</div><div class="a">13.220.554 euros para los 6 años. ★★★</div></div>
+  <div class="flash"><div class="num">4</div><div class="q">Total de medidas</div><div class="a">54 medidas. ★★★</div></div>
+  <div class="flash"><div class="num">5</div><div class="q">Primer plan específico</div><div class="a">Sí. Es el 1.er Plan de Acogida de Navarra (los anteriores eran PAAIIN). ★★★</div></div>
+  <div class="flash"><div class="num">6</div><div class="q">Elementos transversales</div><div class="a">4: Enfoque intercultural · Género · Interseccionalidad · Agenda 2030. (E-G-I-A) ★★★</div></div>
+  <div class="flash"><div class="num">7</div><div class="q">Principios rectores</div><div class="a">4: Igualdad · Ciudadanía · Inclusión · Interculturalidad. (I-C-I-I) ★★★</div></div>
+  <div class="flash"><div class="num">8</div><div class="q">Ejes estratégicos</div><div class="a">6 ejes. ★★★</div></div>
+  <div class="flash"><div class="num">9</div><div class="q">Líneas prioritarias</div><div class="a">9 líneas prioritarias. ★★★</div></div>
+  <div class="flash"><div class="num">10</div><div class="q">ODS principal</div><div class="a">ODS 10 — Reducción de desigualdades. Meta 10.7: migración ordenada, segura, regular y responsable. ★★★</div></div>
+  <div class="flash"><div class="num">11</div><div class="q">Eje 1</div><div class="a">Preparación desde origen y atención en las llegadas. ★★★</div></div>
+  <div class="flash"><div class="num">12</div><div class="q">Eje 2</div><div class="a">Intervención especializada en perfiles concretos. ★★★</div></div>
+  <div class="flash"><div class="num">13</div><div class="q">Eje 3</div><div class="a">Adecuación institucional al contexto y a la diversidad cultural. ★★★</div></div>
+  <div class="flash"><div class="num">14</div><div class="q">Eje 4</div><div class="a">Promoción de la comunicación y desarrollo de alianzas efectivas. ★★★</div></div>
+  <div class="flash"><div class="num">15</div><div class="q">Eje 5</div><div class="a">Fortalecimiento comunitario y participación intercultural. ★★★</div></div>
+  <div class="flash"><div class="num">16</div><div class="q">Eje 6</div><div class="a">Promoción de la igualdad de género. Estrategia dual. ★★★</div></div>
+  <div class="flash"><div class="num">17</div><div class="q">LP7 (alojamiento)</div><div class="a">Impulso de medidas para necesidades de alojamiento. ODS 11.1. ★★★</div></div>
+  <div class="flash"><div class="num">18</div><div class="q">LP6 (protección internacional)</div><div class="a">Sistema coordinado de acogida e inclusión de solicitantes y beneficiarios de protección internacional. ★★★</div></div>
+  <div class="flash"><div class="num">19</div><div class="q">Servicio Karibu</div><div class="a">Servicio de Acogida y Acompañamiento a personas migrantes. DG Políticas Migratorias. ★★★</div></div>
+  <div class="flash"><div class="num">20</div><div class="q">Programa Kideak</div><div class="a">Jóvenes migrantes sin apoyo familiar en Navarra. Eje 2 (perfiles concretos). ★★★</div></div>
+  <div class="flash"><div class="num">21</div><div class="q">Principio de Ciudadanía ★★★</div><div class="a">Titularidad de derechos independientemente de la situación administrativa. ★★★</div></div>
+  <div class="flash"><div class="num">22</div><div class="q">Objetivo general (clave)</div><div class="a">Enfoque de derechos + perspectiva de género + interseccionalidad → acción integral, eficaz, eficiente → inclusión y cohesión social. ★★★</div></div>
+  <div class="flash"><div class="num">23</div><div class="q">Seguimiento: espacios</div><div class="a">Institucional · Técnica interdepartamental · Técnica entidades sociales · Ciudadana. ★★★</div></div>
+  <div class="flash"><div class="num">24</div><div class="q">Antecedentes directos</div><div class="a">PAAIIN (hasta 2010) + Estrategia Navarra para la Convivencia (2015). ★★★</div></div>
+</div>
+
+<!-- DATOS NUMÉRICOS -->
+<div class="sec">📊 Cifras clave ★★★</div>
+<div class="datos">
+  <div class="dato"><div class="d-num">29·12·2021</div><div class="d-label">Fecha aprobación por Acuerdo de Gobierno. ★★★</div></div>
+  <div class="dato"><div class="d-num">2021-2026</div><div class="d-label">Vigencia del Plan (6 años). ★★★</div></div>
+  <div class="dato"><div class="d-num">13,2M€</div><div class="d-label">13.220.554 € dotación total. ★★★</div></div>
+  <div class="dato"><div class="d-num">4</div><div class="d-label">Elementos transversales (E-G-I-A). ★★★</div></div>
+  <div class="dato"><div class="d-num">4</div><div class="d-label">Principios rectores (I-C-I-I). ★★★</div></div>
+  <div class="dato"><div class="d-num">5</div><div class="d-label">Dimensiones de los cambios necesarios. ★★★</div></div>
+  <div class="dato"><div class="d-num">6</div><div class="d-label">Ejes estratégicos. ★★★</div></div>
+  <div class="dato"><div class="d-num">9</div><div class="d-label">Líneas prioritarias de actuación. ★★★</div></div>
+  <div class="dato"><div class="d-num">54</div><div class="d-label">Total de medidas. ★★★</div></div>
+  <div class="dato"><div class="d-num">ODS 10</div><div class="d-label">Meta 10.7 — migración ordenada, segura y regular. ★★★</div></div>
+</div>
+
+<!-- ARQUITECTURA DEL PLAN -->
+<div class="sec">🏗 Arquitectura del Plan: de lo general a lo operativo ★★★</div>
+<div class="pir">
+  <div class="pir-root">🌐 PLAN DE ACOGIDA A PERSONAS MIGRANTES DE NAVARRA 2021-2026<br><small style="font-weight:400;font-size:.71rem">Aprobado 29-12-2021 · 13.220.554 € · 6 años · 1.er Plan de Acogida específico de Navarra</small></div>
+  <div class="pir-row">
+    <div class="pir-node t-sky"><div class="tn-h">🔬 FUNDAMENTACIÓN TEÓRICA</div>Conceptualización de la acogida. 4 elementos transversales. Marco de referencia científico y político.</div>
+    <div class="pir-node t-warn"><div class="tn-h">⚖ MARCO NORMATIVO Y POLÍTICO</div>4 niveles: Internacional · Europeo · Estatal · Autonómico y local.</div>
+  </div>
+  <div class="pir-row">
+    <div class="pir-node t-vio"><div class="tn-h">📌 4 PRINCIPIOS RECTORES (I-C-I-I)</div>Igualdad · Ciudadanía · Inclusión · Interculturalidad</div>
+    <div class="pir-node t-vio"><div class="tn-h">🎯 OBJETIVO GENERAL</div>Enfoque de derechos + género + interseccionalidad → inclusión con cohesión social</div>
+  </div>
+  <div class="pir-row">
+    <div class="pir-node t-grn"><div class="tn-h">🧭 6 EJES ESTRATÉGICOS ★★★</div>O-I-A-C-C-G = Origen · Intervención perfiles · Adecuación institucional · Comunicación · Comunidad · Género</div>
+    <div class="pir-node t-grn"><div class="tn-h">📋 9 LÍNEAS PRIORITARIAS ★★★</div>Idiomas · Alianzas · Jurídico · Formación · Familia · Prot. Internacional · Vivienda · Salud · Laboral</div>
+  </div>
+  <div class="pir-row">
+    <div class="pir-node t-teal"><div class="tn-h">⚙ OBJETIVOS ESPECÍFICOS + 54 MEDIDAS ★★★</div>Nivel operativo: responsables, plazos, indicadores e instrumentos concretos de intervención.</div>
+    <div class="pir-node t-teal"><div class="tn-h">📈 SEGUIMIENTO Y EVALUACIÓN ★★★</div>Gobernanza compartida · 4 espacios · indicadores por LP · perspectiva de género en la evaluación.</div>
+  </div>
+</div>
+
+<!-- 4 ELEMENTOS TRANSVERSALES -->
+<div class="sec">🔬 Los 4 elementos clave transversales ★★★ — Mnemotecnia: E·G·I·A</div>
+<div class="trans-grid">
+  <div class="trans te1">
+    <div class="t-ltr">E</div>
+    <div class="t-ico">🌐</div>
+    <div class="t-name">Enfoque intercultural ★★★</div>
+    <div class="t-body">La diversidad cultural como nuevo patrimonio social de Navarra. Aspectos comunes + riqueza de la diferencia.</div>
+  </div>
+  <div class="trans te2">
+    <div class="t-ltr">G</div>
+    <div class="t-ico">♀</div>
+    <div class="t-name">Perspectiva de Género ★★★</div>
+    <div class="t-body">Categoría analítica central. Eliminar barreras y reducir desigualdades específicas. Estrategia dual: transversal + acciones específicas.</div>
+  </div>
+  <div class="trans te3">
+    <div class="t-ltr">I</div>
+    <div class="t-ico">🔗</div>
+    <div class="t-name">Interseccionalidad ★★★</div>
+    <div class="t-body">Acción multidimensional. Los ejes de desigualdad se cruzan: origen, sexo, edad, situación administrativa, clase, trayectoria vital.</div>
+  </div>
+  <div class="trans te4">
+    <div class="t-ltr">A</div>
+    <div class="t-ico">🌱</div>
+    <div class="t-name">Agenda 2030 / ODS ★★★</div>
+    <div class="t-body">Meta 10.7 como referencia principal. ODS 10 (desigualdades) · 5 (género) · 16 (justicia) · 17 (alianzas) · 3, 4, 8, 11.</div>
+  </div>
+</div>
+<div class="nota n-ok"><strong>Mnemotecnia ★★★:</strong> <strong>E-G-I-A</strong> = Enfoque intercultural · Género · Interseccionalidad · Agenda 2030.</div>
+
+<!-- 4 PRINCIPIOS -->
+<div class="sec">🧭 Los 4 principios rectores ★★★ — Mnemotecnia: I·C·I·I</div>
+<div class="pri-grid">
+  <div class="pri pp1">
+    <div class="pr-ltr">I</div>
+    <div class="pr-name">Igualdad y no discriminación ★★★</div>
+    <div class="pr-body">Todas las personas tienen igual dignidad. Participación en bases iguales en la vida económica, social, política y cultural.</div>
+  </div>
+  <div class="pri pp2">
+    <div class="pr-ltr">C</div>
+    <div class="pr-name">Ciudadanía ★★★</div>
+    <div class="pr-body">Todas las personas son titulares de derechos <strong>independientemente de su situación administrativa</strong>. ★★★</div>
+  </div>
+  <div class="pri pp3">
+    <div class="pr-ltr">I</div>
+    <div class="pr-name">Inclusión ★★★</div>
+    <div class="pr-body">Ejercicio de todos los derechos en igualdad de condiciones y sin discriminación.</div>
+  </div>
+  <div class="pri pp4">
+    <div class="pr-ltr">I</div>
+    <div class="pr-name">Interculturalidad ★★★</div>
+    <div class="pr-body">Interacción entre personas de distintos orígenes y culturas dentro de la valoración y el respeto a la diversidad cultural.</div>
+  </div>
+</div>
+<div class="nota n-err"><strong>Trampa ★★★:</strong> "Tiene 3 principios." → FALSO. Son <strong>4: I-C-I-I</strong>.</div>
+
+<!-- 5 DIMENSIONES -->
+<div class="sec">🔄 Las 5 dimensiones de los cambios necesarios ★★★</div>
+<div class="dim-grid">
+  <div class="dim-row"><div class="dim-n">1</div><div class="dim-text">📋 Integralidad, eficacia y eficiencia de políticas y actuaciones desde todas las esferas (administración pública, iniciativa privada, ciudadanía). ★★★</div></div>
+  <div class="dim-row"><div class="dim-n">2</div><div class="dim-text">👥 Fortalecimiento de la organización y participación de las comunidades locales, considerando sus particularidades socio-territoriales. ★★★</div></div>
+  <div class="dim-row"><div class="dim-n">3</div><div class="dim-text">🏛 Adecuación institucional, normativa y administrativa a la diversidad cultural existente. ★★★</div></div>
+  <div class="dim-row"><div class="dim-n">4</div><div class="dim-text">🤝 Impulso de las relaciones sociales a todos los niveles, enfatizando los elementos de interés común para fortalecer el sentimiento de pertenencia compartido. ★★★</div></div>
+  <div class="dim-row"><div class="dim-n">5</div><div class="dim-text">⚖ Gestión regulada y positiva de la conflictividad social. ★★★</div></div>
+</div>
+
+<!-- 6 EJES -->
+<div class="sec">🧭 Los 6 ejes estratégicos ★★★ — Mnemotecnia: O·I·A·C·C·G</div>
+<div class="ejes">
+  <div class="eje-row ej1"><div class="eje-num">1</div><div class="eje-body"><strong>Preparación desde origen y atención en las llegadas ★★★</strong>Intervención transnacional. Información, orientación, alojamiento urgente, aprendizaje de idiomas, salud, interpretación cultural. Primera recepción.<span class="eje-badge">🚀 ORIGEN/LLEGADA</span></div></div>
+  <div class="eje-row ej2"><div class="eje-num">2</div><div class="eje-body"><strong>Intervención especializada en perfiles concretos ★★★</strong>Solicitantes de protección internacional, apátridas, víctimas de trata, jóvenes sin apoyo familiar (KIDEAK), personas en tránsito, situación irregular.<span class="eje-badge">🎯 PERFILES ESPECÍFICOS</span></div></div>
+  <div class="eje-row ej3"><div class="eje-num">3</div><div class="eje-body"><strong>Adecuación institucional al contexto y a la diversidad cultural ★★★</strong>Formación del personal público. Adaptación de servicios. Competencias interculturales en el sistema público navarro.<span class="eje-badge">🏛 ADECUACIÓN INSTITUCIONAL</span></div></div>
+  <div class="eje-row ej4"><div class="eje-num">4</div><div class="eje-body"><strong>Promoción de la comunicación y desarrollo de alianzas efectivas ★★★</strong>Comunicación inclusiva. Combatir discursos estigmatizantes. Alianzas intersectoriales. Información veraz y equilibrada.<span class="eje-badge">📢 COMUNICACIÓN Y ALIANZAS</span></div></div>
+  <div class="eje-row ej5"><div class="eje-num">5</div><div class="eje-body"><strong>Fortalecimiento comunitario y participación intercultural ★★★</strong>La diversidad como activo. Convivencia desde barrios, municipios, redes vecinales. Toda la comunidad trabaja para el bien común.<span class="eje-badge">🌱 COMUNIDAD Y PARTICIPACIÓN</span></div></div>
+  <div class="eje-row ej6"><div class="eje-num">6</div><div class="eje-body"><strong>Promoción de la igualdad de género ★★★</strong>Género como categoría analítica central. Estrategia DUAL: transversal a todo el Plan + acciones positivas específicas cuando sea necesario.<span class="eje-badge">♀ IGUALDAD DE GÉNERO</span></div></div>
+</div>
+<div class="nota n-ok"><strong>Mnemotecnia ★★★:</strong> <strong>O-I-A-C-C-G</strong> = Origen · Intervención (perfiles) · Adecuación institucional · Comunicación/Alianzas · Comunidad · Género.</div>
+<div class="nota n-err"><strong>Trampa ★★★:</strong> "Son 5 ejes." → FALSO. Son <strong>6 ejes estratégicos</strong>.</div>
+
+<!-- 9 LÍNEAS -->
+<div class="sec">📋 Las 9 líneas prioritarias de actuación ★★★ — Mnemotecnia: I·A·J·F·F·PI·V·S·L</div>
+<div class="lp-grid">
+  <div class="lp"><div class="lp-n">1</div><div class="lp-body"><strong>Información, orientación e idiomas ★★★</strong>Servicios de información, orientación, aprendizaje de idiomas e introducción a servicios generalistas.<div class="lp-ods">ODS 11.1</div></div></div>
+  <div class="lp"><div class="lp-n">2</div><div class="lp-body"><strong>Alianzas comunitarias ★★★</strong>Acción comunitaria, alianzas estratégicas y multinivel para la gestión global de los procesos migratorios y su impacto local.<div class="lp-ods">ODS 17.17</div></div></div>
+  <div class="lp"><div class="lp-n">3</div><div class="lp-body"><strong>Marco jurídico-administrativo ★★★</strong>Promoción de un marco jurídico, administrativo y conceptual claro, operativo y desde un enfoque de derechos.<div class="lp-ods">ODS 16.10</div></div></div>
+  <div class="lp"><div class="lp-n">4</div><div class="lp-body"><strong>Formación intercultural ★★★</strong>Sistema estable de formación, capacitación y sensibilización para competencias culturales e interculturales.<div class="lp-ods">ODS 4.3</div></div></div>
+  <div class="lp"><div class="lp-n">5</div><div class="lp-body"><strong>Familias, infancia y juventud ★★★</strong>Procesos integrales y continuados en torno a las unidades familiares, desde la infancia, adolescencia y juventud.<div class="lp-ods">ODS 10.3</div></div></div>
+  <div class="lp"><div class="lp-n">6</div><div class="lp-body"><strong>Protección internacional ★★★</strong>Implementación coordinada del sistema de acogida e inclusión de solicitantes y beneficiarios de protección internacional.<div class="lp-ods">ODS 10.2</div></div></div>
+  <div class="lp"><div class="lp-n">7</div><div class="lp-body"><strong>Vivienda y alojamiento ★★★</strong>Impulso de medidas que den una respuesta adecuada a las necesidades de alojamiento.<div class="lp-ods">ODS 11.1</div></div></div>
+  <div class="lp"><div class="lp-n">8</div><div class="lp-body"><strong>Salud preventiva ★★★</strong>Desarrollo de procesos y acciones para abordar una perspectiva preventiva e integral de salud.<div class="lp-ods">ODS 3.8</div></div></div>
+  <div class="lp"><div class="lp-n">9</div><div class="lp-body"><strong>Acceso laboral ★★★</strong>Fortalecimiento de los procesos de acceso al ámbito laboral.<div class="lp-ods">ODS 8.5</div></div></div>
+</div>
+<div class="nota n-ok"><strong>Mnemotecnia ★★★:</strong> <strong>I-A-J-F-F-PI-V-S-L</strong> = Información/idiomas · Alianzas · Jurídico · Formación · Familias · Prot. Internacional · Vivienda · Salud · Laboral.<br>+ El Enfoque de Género es <strong>transversal a las 9 LP</strong>. Meta ODS 5.1. ★★★</div>
+<div class="nota n-err"><strong>Trampa ★★★:</strong> "Son 8 líneas prioritarias." → FALSO. Son <strong>9 líneas prioritarias</strong>.</div>
+
+<!-- SEGUIMIENTO -->
+<div class="sec">📈 Gobernanza, seguimiento y evaluación ★★★</div>
+<div class="seg-grid">
+  <div class="seg sg1"><div class="sg-ico">🏛</div><div class="sg-name">Espacio institucional ★★★</div><div class="sg-body">Relación y coordinación entre las administraciones con competencias en acogida.</div></div>
+  <div class="seg sg2"><div class="sg-ico">⚙</div><div class="sg-name">Técnica interdepartamental ★★★</div><div class="sg-body">Coordinación técnica entre departamentos del Gobierno de Navarra e interadministrativa.</div></div>
+  <div class="seg sg3"><div class="sg-ico">🤝</div><div class="sg-name">Técnica entidades sociales ★★★</div><div class="sg-body">Participación de las asociaciones y entidades del tercer sector en el seguimiento.</div></div>
+  <div class="seg sg4"><div class="sg-ico">👥</div><div class="sg-name">Espacio ciudadano ★★★</div><div class="sg-body">Participación de la ciudadanía en el seguimiento del Plan.</div></div>
+  <div class="seg sg5"><div class="sg-ico">📊</div><div class="sg-name">Evaluación con perspectiva de género ★★★</div><div class="sg-body">Indicadores por LP y medidas. Evaluación continua + impacto. Buenas prácticas. Perspectiva de género en toda la evaluación.</div></div>
+</div>
+<div class="nota n-teal"><strong>Idea clave ★★★:</strong> La gobernanza es <strong>compartida y colaborativa</strong>: administraciones + entidades sociales + empresas + iniciativas ciudadanas. Sin seguimiento no hay control; sin evaluación no hay mejora.</div>
+
+<!-- SERVICIOS CON NOMBRE PROPIO -->
+<div class="sec">🔑 Servicios y programas con nombre propio ★★★</div>
+<div class="serv-grid">
+  <div class="serv"><div class="sv-name">🌿 Servicio KARIBU ★★★</div><div class="sv-body">Servicio de Acogida y Acompañamiento a Personas Migrantes. Adscrito a la DG de Políticas Migratorias. Recurso central de la acogida.</div></div>
+  <div class="serv"><div class="sv-name">👨‍👩‍👧 SERFAM ★★★</div><div class="sv-body">Servicio de Reagrupación Familiar. Apoyo a los procesos de reunificación de las familias migrantes en Navarra.</div></div>
+  <div class="serv"><div class="sv-name">🧒 Programa KIDEAK ★★★</div><div class="sv-body">Atención a jóvenes migrantes sin apoyo familiar en Navarra. Vinculado al Eje 2 (perfiles concretos).</div></div>
+  <div class="serv"><div class="sv-name">📞 Interpretación telefónica ★★★</div><div class="sv-body">Consolidación y extensión del recurso de interpretación telefónica simultánea para superar barreras lingüísticas.</div></div>
+  <div class="serv"><div class="sv-name">⚖ Asesoramiento extranjería ★★★</div><div class="sv-body">Servicio de asesoramiento y orientación jurídica en materia de extranjería y protección internacional.</div></div>
+</div>
+
+<!-- MINI RESUMEN -->
+<div class="sec">🧠 Mini esquema de repaso rápido ★★★</div>
+<div class="mini">
+  <strong>📅 CUÁNDO:</strong> Aprobado 29-12-2021 · Vigencia 2021-2026 · 13.220.554 € · 54 medidas · 1.er Plan específico de acogida de Navarra.<br><br>
+  <strong>🔬 TRANSVERSALES (E-G-I-A):</strong> Enfoque intercultural · Perspectiva de género · Interseccionalidad · Agenda 2030 (ODS 10, meta 10.7).<br><br>
+  <strong>🧭 PRINCIPIOS (I-C-I-I):</strong> Igualdad · Ciudadanía (derechos sin importar situación administrativa ★★★) · Inclusión · Interculturalidad.<br><br>
+  <strong>🎯 OBJETIVO GENERAL:</strong> Marco metodológico y operativo + enfoque de derechos + género + interseccionalidad → acción integral, eficaz y eficiente → inclusión + cohesión social.<br><br>
+  <strong>🔄 5 DIMENSIONES:</strong> Integralidad · Comunidades locales · Adecuación institucional · Relaciones sociales · Gestión conflictividad.<br><br>
+  <strong>🧭 6 EJES (O-I-A-C-C-G):</strong> Origen/llegadas · Intervención perfiles · Adecuación inst. · Comunicación/alianzas · Comunidad · Género.<br><br>
+  <strong>📋 9 LÍNEAS (I-A-J-F-F-PI-V-S-L):</strong> Idiomas · Alianzas · Jurídico · Formación · Familias · Prot.Internacional · Vivienda · Salud · Laboral. + Género transversal.<br><br>
+  <strong>📈 SEGUIMIENTO:</strong> 4 espacios (institucional · técnica interdepartamental · entidades sociales · ciudadanía) · evaluación con perspectiva de género.
+</div>
+
+<!-- TRAMPAS -->
+<div class="sec">⚠ Las 10 trampas del examen ★★★</div>
+<div class="trap-grid">
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 1 ✗</div>"Se aprobó en 2020."</div><div class="trap-ok">✓ Aprobado el <strong>29 de diciembre de 2021</strong>. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 2 ✗</div>"La dotación es de 10 millones de euros."</div><div class="trap-ok">✓ La dotación es de <strong>13.220.554 euros</strong>. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 3 ✗</div>"Tiene 3 principios rectores."</div><div class="trap-ok">✓ Tiene <strong>4 principios: I-C-I-I</strong>. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 4 ✗</div>"Tiene 5 ejes estratégicos."</div><div class="trap-ok">✓ Tiene <strong>6 ejes estratégicos</strong>. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 5 ✗</div>"Tiene 8 líneas prioritarias."</div><div class="trap-ok">✓ Tiene <strong>9 líneas prioritarias de actuación</strong>. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 6 ✗</div>"Tiene 50 medidas."</div><div class="trap-ok">✓ Tiene <strong>54 medidas</strong>. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 7 ✗</div>"El ODS principal es el 11."</div><div class="trap-ok">✓ El ODS principal es el <strong>ODS 10, meta 10.7</strong> (migración ordenada, segura, regular y responsable). ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 8 ✗</div>"La perspectiva de género solo se aplica al Eje 6."</div><div class="trap-ok">✓ El género es <strong>transversal a los 6 ejes y las 9 líneas prioritarias</strong>. El Eje 6 lo refuerza específicamente. ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 9 ✗</div>"Es el tercer Plan de Acogida de Navarra."</div><div class="trap-ok">✓ Es el <strong>primer Plan de Acogida específico</strong>. Los anteriores eran los PAAIIN (hasta 2010) y la Estrategia de Convivencia (2015). ★★★</div></div>
+  <div class="trap"><div class="trap-w"><div class="trap-n">TRAMPA 10 ✗</div>"El principio de Ciudadanía exige situación administrativa regular."</div><div class="trap-ok">✓ El principio de Ciudadanía reconoce derechos <strong>independientemente de la situación administrativa</strong>. ★★★</div></div>
+</div>
+
+</div>
+</body>
+</html>
