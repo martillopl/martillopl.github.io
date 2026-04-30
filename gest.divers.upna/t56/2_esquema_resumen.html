@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 56 · HTML 2 · Esquema-resumen visual · Bioética · Beauchamp y Childress</title>
+<style>
+:root{
+  --bg:#faf5ff;--card:#fff;--s2:#ede9fe;--s3:#ddd6fe;--line:#a78bfa;
+  --text:#2e1065;--muted:#7c3aed;--p:#7c3aed;--p2:#6d28d9;
+  --grn:#059669;--grn2:#d1fae5;--red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;--sky:#0284c7;--sky2:#e0f2fe;
+  --teal:#0d9488;--teal2:#ccfbf1;--rose:#be185d;--rose2:#fce7f3;
+  --ora:#ea580c;--ora2:#ffedd5;--sh:0 3px 18px rgba(124,58,237,.11)
+}
+[data-theme="dark"]{
+  --bg:#0d0020;--card:#15003a;--s2:#1f0050;--s3:#2c0070;--line:#7c3aed;
+  --text:#ddd6fe;--muted:#a78bfa;--p:#a78bfa;--p2:#c4b5fd;
+  --grn:#86efac;--grn2:#052e16;--red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;--sky:#7dd3fc;--sky2:#082038;
+  --teal:#5eead4;--teal2:#031a16;--rose:#fda4af;--rose2:#1a0010;
+  --ora:#fb923c;--ora2:#2a1300;--sh:0 3px 18px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:20px}
+.wrap{max-width:1260px;margin:0 auto}
+
+/* HEADER */
+.hdr{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:16px 22px;box-shadow:var(--sh);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.95rem;font-weight:900;color:var(--p)}
+.hdr p{font-size:.7rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1.5px solid var(--line);background:var(--s2);color:var(--text);padding:6px 16px;border-radius:999px;font-size:.7rem;font-weight:700}
+
+/* SECTION TITLE */
+.sec{background:var(--p);color:#fff;font-size:.79rem;font-weight:900;padding:7px 18px;border-radius:10px;display:inline-block;margin:20px 0 10px;text-transform:uppercase;letter-spacing:.04em}
+
+/* FLASH GRID */
+.flash-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(188px,1fr));gap:10px;margin-bottom:16px}
+.flash{background:var(--card);border:1.5px solid var(--line);border-radius:13px;padding:11px 13px;box-shadow:var(--sh);position:relative;overflow:hidden}
+.flash .num{font-size:2rem;font-weight:900;color:var(--p);opacity:.13;position:absolute;top:4px;right:8px;line-height:1}
+.flash .q{font-size:.67rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+.flash .a{font-size:.82rem;font-weight:800;color:var(--text)}
+
+/* TIMELINE */
+.timeline{display:flex;flex-direction:column;gap:0;margin-bottom:16px}
+.tl-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:0}
+.tl-left{display:flex;flex-direction:column;align-items:center;min-width:52px}
+.tl-dot{width:46px;height:46px;border-radius:50%;background:var(--p);color:#fff;font-size:.88rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;box-shadow:var(--sh)}
+.tl-line{width:3px;flex:1;background:var(--line);min-height:18px}
+.tl-body{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;box-shadow:var(--sh);flex:1;margin-bottom:10px}
+.tl-title{font-size:.84rem;font-weight:900;color:var(--p);margin-bottom:3px}
+.tl-desc{font-size:.73rem;line-height:1.55}
+.tl-tag{font-size:.65rem;font-weight:800;background:var(--s2);color:var(--p);padding:2px 8px;border-radius:99px;margin-top:5px;display:inline-block}
+
+/* 4 PRINCIPIOS CARDS */
+.princ-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-bottom:16px}
+.princ{border-radius:16px;padding:16px 18px;border:2px solid;box-shadow:var(--sh)}
+.p-auto{background:#ede9fe;border-color:#7c3aed}
+.p-bene{background:#d1fae5;border-color:#059669}
+.p-noma{background:#fce7f3;border-color:#be185d}
+.p-just{background:#e0f2fe;border-color:#0284c7}
+[data-theme="dark"] .p-auto{background:#1f0050}
+[data-theme="dark"] .p-bene{background:#052e16}
+[data-theme="dark"] .p-noma{background:#1a0010}
+[data-theme="dark"] .p-just{background:#082038}
+.princ .p-label{font-size:.62rem;font-weight:900;text-transform:uppercase;letter-spacing:.07em;opacity:.7;margin-bottom:5px}
+.princ .p-name{font-size:1.15rem;font-weight:900;margin-bottom:7px}
+.p-auto .p-name{color:#6d28d9}
+.p-bene .p-name{color:#059669}
+.p-noma .p-name{color:#be185d}
+.p-just .p-name{color:#0284c7}
+.princ .p-def{font-size:.76rem;line-height:1.6;margin-bottom:8px}
+.princ .p-key{font-size:.7rem;line-height:1.5;background:rgba(255,255,255,.55);border-radius:8px;padding:6px 9px}
+[data-theme="dark"] .princ .p-key{background:rgba(0,0,0,.35)}
+.pill{display:inline-block;padding:2px 9px;border-radius:99px;font-size:.69rem;font-weight:700;margin:2px 2px 2px 0}
+.pill-v{background:var(--s2);color:var(--p);border:1px solid var(--line)}
+.pill-g{background:var(--grn2);color:var(--grn);border:1px solid var(--grn)}
+.pill-r{background:var(--red2);color:var(--red);border:1px solid var(--red)}
+.pill-s{background:var(--sky2);color:var(--sky);border:1px solid var(--sky)}
+.pill-w{background:var(--warn2);color:var(--warn);border:1px solid var(--warn)}
+.pill-ro{background:var(--rose2);color:var(--rose);border:1px solid var(--rose)}
+
+/* BELMONT vs B&C */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+@media(max-width:640px){.compare{grid-template-columns:1fr}}
+.cmp-box{background:var(--card);border:2px solid;border-radius:14px;padding:14px 16px;box-shadow:var(--sh)}
+.cmp-left{border-color:var(--warn)}
+.cmp-right{border-color:var(--p)}
+.cmp-box .c-title{font-size:.78rem;font-weight:900;margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em}
+.cmp-left .c-title{color:var(--warn)}
+.cmp-right .c-title{color:var(--p)}
+.cmp-box ul{margin:0 0 0 16px;font-size:.75rem;line-height:1.7}
+
+/* DIEGO GRACIA */
+.gracia{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+@media(max-width:600px){.gracia{grid-template-columns:1fr}}
+.g-box{border-radius:14px;padding:14px 16px;box-shadow:var(--sh)}
+.g1{background:var(--red2);border:2px solid var(--red)}
+.g2{background:var(--sky2);border:2px solid var(--sky)}
+.g-box .g-lv{font-size:.62rem;font-weight:900;text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px}
+.g1 .g-lv{color:var(--red)}
+.g2 .g-lv{color:var(--sky)}
+.g-box .g-title{font-size:.96rem;font-weight:900;margin-bottom:7px}
+.g-box .g-desc{font-size:.74rem;line-height:1.55}
+
+/* TRAP GRID */
+.trap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px;margin-bottom:16px}
+.trap{background:var(--card);border:1px solid var(--line);border-radius:13px;overflow:hidden;box-shadow:var(--sh)}
+.trap-w{background:var(--red2);padding:8px 13px;font-size:.73rem;font-weight:700;color:var(--red)}
+.trap-ok{background:var(--grn2);padding:8px 13px;font-size:.73rem;color:var(--grn)}
+.trap-n{font-size:.62rem;font-weight:900;opacity:.6;margin-bottom:2px;text-transform:uppercase}
+
+/* NORMATIVA TABLE */
+.tbl{width:100%;border-collapse:collapse;box-shadow:var(--sh);border-radius:10px;overflow:hidden;background:var(--card);margin-bottom:14px}
+.tbl th{background:var(--p);color:#fff;text-align:left;padding:8px 11px;font-size:.67rem;text-transform:uppercase;letter-spacing:.03em}
+.tbl td{padding:8px 11px;border-bottom:1px solid var(--s2);font-size:.74rem;vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:hover td{background:var(--s2)}
+td.hl{background:var(--s2)!important;font-weight:700;color:var(--p2)}
+
+/* REF PILLS */
+.ref-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin-bottom:16px}
+.ref-box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;box-shadow:var(--sh)}
+.ref-box .r-title{font-size:.73rem;font-weight:900;color:var(--p);margin-bottom:5px}
+.ref-box .r-desc{font-size:.72rem;line-height:1.5}
+.star{color:#f59e0b;font-weight:900}
+
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<!-- HEADER -->
+<div class="hdr">
+  <div>
+    <h1>Tema 56 · HTML 2 · Esquema-resumen con bloques visuales</h1>
+    <p>Bioética: Los cuatro principios clásicos. Beauchamp y Childress · Oposiciones Navarra / TSS</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">🌙 Claro / Oscuro</button>
+</div>
+
+<!-- ══════════════════ FICHAS FLASH ══════════════════ -->
+<div class="sec">⚡ Fichas flash — 16 datos inmediatos</div>
+<div class="flash-grid">
+  <div class="flash"><div class="num">1</div><div class="q">¿Quién acuñó "bioética"?</div><div class="a">Van Rensselaer Potter · 1970 ★★★</div></div>
+  <div class="flash"><div class="num">2</div><div class="q">Definición de Potter</div><div class="a">"Puente entre ciencias biológicas y ciencias humanas" / "ciencia de la supervivencia"</div></div>
+  <div class="flash"><div class="num">3</div><div class="q">Escándalo que originó el Informe Belmont</div><div class="a">Estudio Tuskegee (1932-1972) ★★★</div></div>
+  <div class="flash"><div class="num">4</div><div class="q">Año del Informe Belmont</div><div class="a">1978 · National Commission EE.UU. ★★★</div></div>
+  <div class="flash"><div class="num">5</div><div class="q">Nº de principios del Informe Belmont</div><div class="a">3 (autonomía · beneficencia · justicia) ★★★</div></div>
+  <div class="flash"><div class="num">6</div><div class="q">Obra fundacional</div><div class="a">"Principles of Biomedical Ethics" · Beauchamp & Childress · 1979 ★★★</div></div>
+  <div class="flash"><div class="num">7</div><div class="q">Principio que añaden B&C</div><div class="a">NO MALEFICENCIA (ausente en el Informe Belmont) ★★★</div></div>
+  <div class="flash"><div class="num">8</div><div class="q">Naturaleza de los 4 principios</div><div class="a">Prima facie (W.D. Ross): obligan salvo conflicto con otro igual ★★★</div></div>
+  <div class="flash"><div class="num">9</div><div class="q">Conflicto más frecuente en examen</div><div class="a">Autonomía vs. Beneficencia → prevalece AUTONOMÍA ★★★</div></div>
+  <div class="flash"><div class="num">10</div><div class="q">Primum non nocere</div><div class="a">Principio hipocrático (s.V a.C.) · NO es aportación de B&C ★★★</div></div>
+  <div class="flash"><div class="num">11</div><div class="q">Diego Gracia · Nivel 1</div><div class="a">No maleficencia + Justicia (exigencia universal / pública) ★★★</div></div>
+  <div class="flash"><div class="num">12</div><div class="q">Diego Gracia · Nivel 2</div><div class="a">Beneficencia + Autonomía (ejercicio privado / contextual) ★★★</div></div>
+  <div class="flash"><div class="num">13</div><div class="q">CEA: ¿qué tipo de órgano?</div><div class="a">Consultivo, multidisciplinar, independiente. NO vinculante ★★★</div></div>
+  <div class="flash"><div class="num">14</div><div class="q">Comité de Bioética de Navarra</div><div class="a">Decreto Foral 118/2021 · el TS puede ser miembro ★★★</div></div>
+  <div class="flash"><div class="num">15</div><div class="q">Instrumento clave del principio de autonomía</div><div class="a">Consentimiento informado · Instrucciones previas ★★★</div></div>
+  <div class="flash"><div class="num">16</div><div class="q">Ley de autonomía del paciente</div><div class="a">Ley 41/2002, de 14 de noviembre ★★★</div></div>
+</div>
+
+<!-- ══════════════════ LÍNEA DEL TIEMPO ══════════════════ -->
+<div class="sec">🕰️ Bloque 1 · Línea del tiempo histórica ★★★</div>
+<div class="timeline">
+  <div class="tl-item">
+    <div class="tl-left"><div class="tl-dot">470 a.C.</div><div class="tl-line"></div></div>
+    <div class="tl-body"><div class="tl-title">Ética médica hipocrática</div><div class="tl-desc">Corpus Hippocraticum: <em>primum non nocere</em>. Primer código ético de la medicina occidental.</div><span class="tl-tag">Antecedente</span></div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-left"><div class="tl-dot">1932</div><div class="tl-line"></div></div>
+    <div class="tl-body"><div class="tl-title">Inicio del Estudio Tuskegee</div><div class="tl-desc">399 hombres afroamericanos con sífilis · sin consentimiento informado · sin tratamiento aunque la penicilina estuvo disponible desde 1947.</div><span class="tl-tag">Escándalo ★★★</span></div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-left"><div class="tl-dot">1970</div><div class="tl-line"></div></div>
+    <div class="tl-body"><div class="tl-title">Potter acuña "bioética"</div><div class="tl-desc">"Bioethics: The Science of Survival" · "Puente entre ciencias biológicas y humanas."</div><span class="tl-tag">Término ★★★</span></div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-left"><div class="tl-dot">1972</div><div class="tl-line"></div></div>
+    <div class="tl-body"><div class="tl-title">Destape del Estudio Tuskegee</div><div class="tl-desc">Periodista Jean Heller publica el escándalo · reacción del Congreso de EE.UU.</div><span class="tl-tag">Punto de inflexión</span></div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-left"><div class="tl-dot">1974</div><div class="tl-line"></div></div>
+    <div class="tl-body"><div class="tl-title">National Commission</div><div class="tl-desc">National Commission for the Protection of Human Subjects of Biomedical and Behavioral Research. Beauchamp participa como staff filósofo.</div><span class="tl-tag">Precursor</span></div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-left"><div class="tl-dot">1978</div><div class="tl-line"></div></div>
+    <div class="tl-body"><div class="tl-title">Informe Belmont · 3 principios</div><div class="tl-desc">Autonomía · Beneficencia · Justicia. (La no maleficencia aún NO aparece independiente.)</div><span class="tl-tag">3 principios ★★★</span></div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-left"><div class="tl-dot">1979</div><div class="tl-line"></div></div>
+    <div class="tl-body"><div class="tl-title">Beauchamp y Childress · 4 principios</div><div class="tl-desc">"Principles of Biomedical Ethics" · OUP. Desdoblan la beneficencia en beneficencia + no maleficencia. = "La Biblia de la Bioética".</div><span class="tl-tag">4 principios ★★★</span></div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-left"><div class="tl-dot">1997</div><div class="tl-line"></div></div>
+    <div class="tl-body"><div class="tl-title">Convenio de Oviedo</div><div class="tl-desc">Consejo de Europa · Art. 5: consentimiento informado · Art. 9: instrucciones previas.</div><span class="tl-tag">Normativa ★★★</span></div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-left"><div class="tl-dot">2002</div><div class="tl-line"></div></div>
+    <div class="tl-body"><div class="tl-title">Ley 41/2002 — España</div><div class="tl-desc">Ley básica de autonomía del paciente. Regula consentimiento informado e instrucciones previas.</div><span class="tl-tag">Normativa ★★★</span></div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-left"><div class="tl-dot">2021</div></div>
+    <div class="tl-body"><div class="tl-title">Decreto Foral 118/2021 — Navarra</div><div class="tl-desc">Regula el Comité de Bioética de Navarra. Órgano colegiado, deliberativo, multidisciplinar y consultivo. El TS puede ser miembro.</div><span class="tl-tag">Navarra ★★★</span></div>
+  </div>
+</div>
+
+<!-- ══════════════════ BELMONT vs B&C ══════════════════ -->
+<div class="sec">⚖️ Bloque 2 · Informe Belmont (1978) vs. Beauchamp y Childress (1979) ★★★</div>
+<div class="compare">
+  <div class="cmp-box cmp-left">
+    <div class="c-title">📋 Informe Belmont (1978) — 3 principios</div>
+    <ul>
+      <li><strong>1. Respeto a las personas</strong> (autonomía): tratarlos como agentes autónomos; proteger a quienes tienen autonomía disminuida.</li>
+      <li><strong>2. Beneficencia:</strong> maximizar beneficios y minimizar perjuicios. <em>Incluía lo que luego será no maleficencia.</em></li>
+      <li><strong>3. Justicia:</strong> distribución equitativa de cargas y beneficios de la investigación.</li>
+    </ul>
+    <div style="margin-top:8px;font-size:.7rem;font-weight:800;color:var(--warn)">⚠️ No hay no maleficencia como principio independiente</div>
+  </div>
+  <div class="cmp-box cmp-right">
+    <div class="c-title">📚 Beauchamp y Childress (1979) — 4 principios</div>
+    <ul>
+      <li><strong>1. Autonomía:</strong> respetar valores y decisiones de la persona competente.</li>
+      <li><strong>2. Beneficencia:</strong> obligación activa de hacer el bien.</li>
+      <li><strong>3. No maleficencia</strong> ★★★: obligación de no producir daño. <em>Nuevo principio independiente.</em></li>
+      <li><strong>4. Justicia:</strong> trato equitativo y distribución justa.</li>
+    </ul>
+    <div style="margin-top:8px;font-size:.7rem;font-weight:800;color:var(--p)">✅ Desdoblan beneficencia → beneficencia + no maleficencia ★★★</div>
+  </div>
+</div>
+
+<!-- ══════════════════ 4 PRINCIPIOS ══════════════════ -->
+<div class="sec">🔑 Bloque 3 · Los 4 principios en detalle ★★★</div>
+<div class="princ-grid">
+
+  <div class="princ p-auto">
+    <div class="p-label">Principio 1</div>
+    <div class="p-name">Autonomía</div>
+    <div class="p-def">Respetar los valores, creencias y decisiones de la persona competente, informada y voluntaria sobre su propia salud y vida.</div>
+    <div class="p-key">
+      <strong>3 requisitos de la decisión autónoma:</strong><br>
+      1. Competencia o capacidad<br>
+      2. Información adecuada<br>
+      3. Voluntariedad (sin coacción)<br><br>
+      <strong>Instrumentos:</strong> consentimiento informado · instrucciones previas · derecho a rechazar tratamiento<br><br>
+      <span style="color:#dc2626;font-weight:800">⚠️ Autonomía vs. beneficencia → prevalece AUTONOMÍA ★★★</span>
+    </div>
+  </div>
+
+  <div class="princ p-bene">
+    <div class="p-label">Principio 2</div>
+    <div class="p-name">Beneficencia</div>
+    <div class="p-def">Obligación activa de hacer el bien; promover el bienestar; curar el daño; favorecer los mejores intereses de la persona.</div>
+    <div class="p-key">
+      <strong>No basta con no dañar:</strong> exige acción positiva en favor de la persona.<br><br>
+      <strong>El paternalismo médico:</strong> se apoyaba solo en este principio; B&C lo corrigen equilibrándolo con autonomía.<br><br>
+      <span style="color:#b45309;font-weight:800">⚠️ Beneficencia ≠ No maleficencia ★★★</span>
+    </div>
+  </div>
+
+  <div class="princ p-noma">
+    <div class="p-label">Principio 3 — Nuevo en 1979</div>
+    <div class="p-name">No maleficencia</div>
+    <div class="p-def">No producir daño intencionadamente. <em>Primum non nocere</em> (Hipócrates, s.V a.C.), formalizado teóricamente por B&C.</div>
+    <div class="p-key">
+      <strong>Incluye:</strong> no matar · no provocar dolor · no causar sufrimiento · no causar incapacidad · no privar de condiciones para la vida.<br><br>
+      <strong>Ponderación riesgo/beneficio:</strong> intervención justificada si beneficios > perjuicios.<br><br>
+      <span style="color:#dc2626;font-weight:800">⚠️ Primum non nocere NO es creación de B&C; es hipocrático ★★★</span>
+    </div>
+  </div>
+
+  <div class="princ p-just">
+    <div class="p-label">Principio 4</div>
+    <div class="p-name">Justicia</div>
+    <div class="p-def">Tratar a cada persona de forma moralmente correcta y equitativa. Distribución justa de beneficios y cargas.</div>
+    <div class="p-key">
+      <strong>Fórmula Aristóteles:</strong> tratar igual a iguales y desigual a desiguales.<br><br>
+      <strong>Justicia distributiva (Rawls):</strong> en favor de los más desfavorecidos.<br><br>
+      <strong>En TS:</strong> acceso equitativo a recursos; criterio de necesidad; no discriminación.<br><br>
+      <span style="color:#dc2626;font-weight:800">⚠️ Justicia ≠ dar lo mismo a todos. Equidad según necesidad ★★★</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════ PRIMA FACIE + DIEGO GRACIA ══════════════════ -->
+<div class="sec">🏛️ Bloque 4 · Prima facie (Ross) y jerarquía de Diego Gracia ★★★</div>
+<div style="background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:12px;box-shadow:var(--sh)">
+  <strong style="color:var(--p)">W.D. Ross (1930) — Obligaciones prima facie:</strong>
+  <span style="font-size:.76rem;margin-left:8px">Los 4 principios deben cumplirse salvo que entren en conflicto con otro igualmente válido. No hay jerarquía rígida universal. Se sopesa caso a caso.</span>
+</div>
+<div class="gracia">
+  <div class="g-box g1">
+    <div class="g-lv">Diego Gracia · Nivel 1 — Exigencia universal / Carácter PÚBLICO</div>
+    <div class="g-title">🔴 No maleficencia + Justicia</div>
+    <div class="g-desc">Obligaciones erga omnes (frente a todos). Su transgresión es siempre injustificable, independientemente del contexto. No cabe excepción legítima.</div>
+  </div>
+  <div class="g-box g2">
+    <div class="g-lv">Diego Gracia · Nivel 2 — Ejercicio privado / Contextual</div>
+    <div class="g-title">🔵 Beneficencia + Autonomía</div>
+    <div class="g-desc">Dependen del contexto y de las preferencias de las partes. Cabe ponderación legítima entre los dos principios según el caso concreto.</div>
+  </div>
+</div>
+<div style="background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 14px;margin-bottom:14px;font-size:.74rem;box-shadow:var(--sh)">
+  <strong style="color:var(--p)">Conflicto más frecuente en examen:</strong> Autonomía vs. Beneficencia · El profesional cree que algo es bueno para la persona, pero ella no lo quiere → <strong style="color:#dc2626">prevalece la AUTONOMÍA del paciente competente ★★★</strong>
+</div>
+
+<!-- ══════════════════ BIOÉTICA Y TS ══════════════════ -->
+<div class="sec">👥 Bloque 5 · Bioética y Trabajo Social ★★★</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:16px">
+  <div style="background:var(--s2);border:1.5px solid var(--line);border-radius:13px;padding:13px 15px;box-shadow:var(--sh)">
+    <div style="font-size:.73rem;font-weight:900;color:var(--p);margin-bottom:6px;text-transform:uppercase">Autonomía en el TS</div>
+    <div style="font-size:.73rem;line-height:1.6">· Respetar la autodeterminación<br>· Solicitar consentimiento informado<br>· Respetar instrucciones previas<br>· Garantizar confidencialidad</div>
+  </div>
+  <div style="background:var(--grn2);border:1.5px solid var(--grn);border-radius:13px;padding:13px 15px;box-shadow:var(--sh)">
+    <div style="font-size:.73rem;font-weight:900;color:var(--grn);margin-bottom:6px;text-transform:uppercase">Beneficencia en el TS</div>
+    <div style="font-size:.73rem;line-height:1.6">· Orientar la intervención a necesidades reales<br>· Buscar activamente el bienestar<br>· Promover el mejor interés del usuario</div>
+  </div>
+  <div style="background:var(--rose2);border:1.5px solid var(--rose);border-radius:13px;padding:13px 15px;box-shadow:var(--sh)">
+    <div style="font-size:.73rem;font-weight:900;color:var(--rose);margin-bottom:6px;text-transform:uppercase">No maleficencia en el TS</div>
+    <div style="font-size:.73rem;line-height:1.6">· No estigmatizar<br>· No intervenir sin consentimiento (salvo riesgo grave)<br>· No generar dependencia<br>· No prolongar intervenciones innecesarias</div>
+  </div>
+  <div style="background:var(--sky2);border:1.5px solid var(--sky);border-radius:13px;padding:13px 15px;box-shadow:var(--sh)">
+    <div style="font-size:.73rem;font-weight:900;color:var(--sky);margin-bottom:6px;text-transform:uppercase">Justicia en el TS</div>
+    <div style="font-size:.73rem;line-height:1.6">· Acceso equitativo a recursos<br>· No discriminar<br>· Criterio de necesidad<br>· Proteger a los más vulnerables</div>
+  </div>
+</div>
+<table class="tbl">
+<thead><tr><th>Órgano</th><th>Naturaleza</th><th>Funciones</th><th>El TS puede integrarlo</th></tr></thead>
+<tbody>
+  <tr><td><strong>Comité de Ética Asistencial (CEA)</strong></td><td>Consultivo · multidisciplinar · independiente</td><td>Delibera · recomienda · forma · elabora protocolos. NO toma decisiones vinculantes. ★★★</td><td class="hl">SÍ ★★★</td></tr>
+  <tr><td><strong>Comité de Bioética de Navarra</strong></td><td>Colegiado · deliberativo · independiente · multidisciplinar · consultivo (DF 118/2021)</td><td>Consultas bioéticas · formación · normativa · informes</td><td class="hl">SÍ ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- ══════════════════ NORMATIVA ══════════════════ -->
+<div class="sec">📜 Bloque 6 · Normativa clave ★★★</div>
+<div class="ref-grid">
+  <div class="ref-box"><div class="r-title">Convenio de Oviedo (1997) <span class="star">★★★</span></div><div class="r-desc">Consejo de Europa · Art. 5: consentimiento informado como regla general · Art. 9: instrucciones previas.</div></div>
+  <div class="ref-box"><div class="r-title">Ley 41/2002 — España <span class="star">★★★</span></div><div class="r-desc">Ley básica reguladora de la autonomía del paciente. Regula consentimiento informado e instrucciones previas.</div></div>
+  <div class="ref-box"><div class="r-title">Ley Foral 17/2010 — Navarra <span class="star">★★★</span></div><div class="r-desc">Derechos y deberes de las personas en materia de salud en la Comunidad Foral de Navarra.</div></div>
+  <div class="ref-box"><div class="r-title">Decreto Foral 118/2021 — Navarra <span class="star">★★</span></div><div class="r-desc">Regula el Comité de Bioética de Navarra. El TS puede ser miembro.</div></div>
+  <div class="ref-box"><div class="r-title">Código Deontológico TS (CGTS 2012/2022) <span class="star">★★★</span></div><div class="r-desc">Valores: dignidad · autonomía · justicia · solidaridad · respeto a derechos humanos.</div></div>
+</div>
+
+<!-- ══════════════════ REFERENCIAS ══════════════════ -->
+<div class="sec">📚 Bloque 7 · Autores y referencias clave ★★★</div>
+<div class="ref-grid">
+  <div class="ref-box"><div class="r-title">Van Rensselaer Potter (1970) <span class="star">★★★</span></div><div class="r-desc">Acuña el término "bioética". "Puente entre ciencias biológicas y humanas."</div></div>
+  <div class="ref-box"><div class="r-title">Informe Belmont (1978) <span class="star">★★★</span></div><div class="r-desc">3 principios: autonomía · beneficencia · justicia. Nacional Commission EE.UU.</div></div>
+  <div class="ref-box"><div class="r-title">Tom L. Beauchamp (1939) <span class="star">★★★</span></div><div class="r-desc">Filósofo · Georgetown. Staff en la National Commission. Co-autor de los 4 principios.</div></div>
+  <div class="ref-box"><div class="r-title">James F. Childress (1940) <span class="star">★★★</span></div><div class="r-desc">Teólogo y filósofo · Universidad de Virginia. Co-autor de los 4 principios.</div></div>
+  <div class="ref-box"><div class="r-title">W.D. Ross (1930) <span class="star">★★★</span></div><div class="r-desc">Concepto de obligaciones prima facie: deben cumplirse salvo conflicto con otro principio de igual rango.</div></div>
+  <div class="ref-box"><div class="r-title">Diego Gracia <span class="star">★★★</span></div><div class="r-desc">"Como arqueros al blanco" (2001) · Jerarquía en 2 niveles: Nivel 1 (no maleficencia + justicia) · Nivel 2 (beneficencia + autonomía).</div></div>
+  <div class="ref-box"><div class="r-title">Hipócrates (s.V a.C.) <span class="star">★★★</span></div><div class="r-desc"><em>Primum non nocere</em>. Principio hipocrático clásico, no aportación de B&C.</div></div>
+  <div class="ref-box"><div class="r-title">John Rawls <span class="star">★</span></div><div class="r-desc">Justicia distributiva: las desigualdades deben beneficiar a los más desfavorecidos.</div></div>
+</div>
+
+<!-- ══════════════════ TRAMPAS ══════════════════ -->
+<div class="sec">⚠️ Bloque 8 · 10 trampas del examen ★★★</div>
+<div class="trap-grid">
+
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 1 ✗</div>"El término bioética lo acuñó Beauchamp."</div>
+    <div class="trap-ok">✓ Lo acuñó <strong>Van Rensselaer Potter en 1970</strong>. Beauchamp y Childress formulan los 4 principios en 1979. ★★★</div>
+  </div>
+
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 2 ✗</div>"El Informe Belmont establece los 4 principios de bioética."</div>
+    <div class="trap-ok">✓ El Informe Belmont tiene <strong>3 principios</strong>. La no maleficencia la añaden Beauchamp y Childress un año después. ★★★</div>
+  </div>
+
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 3 ✗</div>"Beneficencia y no maleficencia son el mismo principio."</div>
+    <div class="trap-ok">✓ Son principios <strong>distintos</strong>. Beneficencia = acción positiva de hacer el bien. No maleficencia = abstención de causar daño. ★★★</div>
+  </div>
+
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 4 ✗</div>"La autonomía siempre está por debajo de la beneficencia."</div>
+    <div class="trap-ok">✓ No hay jerarquía fija. Cuando hay conflicto, <strong>prevalece la autonomía</strong> del paciente competente. ★★★</div>
+  </div>
+
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 5 ✗</div>"Primum non nocere es una aportación de Beauchamp y Childress."</div>
+    <div class="trap-ok">✓ Es un <strong>principio hipocrático</strong> del siglo V a.C. B&C lo formalizan teóricamente, pero no lo crean. ★★★</div>
+  </div>
+
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 6 ✗</div>"El Comité de Ética Asistencial toma decisiones vinculantes."</div>
+    <div class="trap-ok">✓ El CEA es <strong>consultivo y deliberativo</strong>. Recomienda, pero no decide. ★★★</div>
+  </div>
+
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 7 ✗</div>"Justicia significa dar exactamente lo mismo a todos."</div>
+    <div class="trap-ok">✓ Justicia es equidad: <strong>tratar según necesidad y criterio distributivo</strong>. No es uniformidad. ★★★</div>
+  </div>
+
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 8 ✗</div>"El trabajador/a social no puede formar parte del Comité de Bioética de Navarra."</div>
+    <div class="trap-ok">✓ <strong>SÍ puede ser miembro</strong>. Así lo recoge el Decreto Foral 118/2021. ★★★</div>
+  </div>
+
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 9 ✗</div>"En el modelo de Diego Gracia, la autonomía está en el nivel de exigencia universal."</div>
+    <div class="trap-ok">✓ La autonomía está en el <strong>Nivel 2</strong> (ejercicio privado y contextual). El Nivel 1 es no maleficencia + justicia. ★★★</div>
+  </div>
+
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 10 ✗</div>"Los 4 principios tienen una jerarquía fija e inamovible."</div>
+    <div class="trap-ok">✓ Son obligaciones <strong>prima facie</strong>: no tienen jerarquía rígida universal. Se pondera caso a caso (salvo el modelo de Diego Gracia). ★★★</div>
+  </div>
+
+</div>
+
+</div>
+</body>
+</html>

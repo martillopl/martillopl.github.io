@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1_texto_explicativo.html · Tema 56 · Bioética</title>
+<style>
+:root{
+  --bg:#faf5ff;--paper:#fff;--ink:#2e1065;--muted:#7c3aed;--accent:#7c3aed;--accent2:#6d28d9;
+  --line:#c4b5fd;--soft:#ede9fe;--soft2:#f5f3ff;--ok:#065f46;--okbg:#d1fae5;
+  --warn:#92400e;--warnbg:#fef3c7;--red:#b91c1c;--redbg:#fee2e2;
+  --ora:#c2410c;--orabg:#ffedd5;
+  --shadow:0 10px 30px rgba(124,58,237,.09)
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#fff);color:var(--ink);line-height:1.7}
+.container{max-width:1080px;margin:0 auto;padding:32px 20px 60px}
+header{background:var(--paper);border:1.5px solid var(--line);border-radius:20px;padding:28px;box-shadow:var(--shadow);margin-bottom:24px}
+h1{margin:0 0 10px;font-size:1.9rem;line-height:1.2;color:var(--accent)}
+.subtitle{font-size:1rem;color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.badge{background:var(--soft);color:var(--accent);border:1px solid var(--line);padding:6px 13px;border-radius:999px;font-weight:700;font-size:.88rem}
+nav{position:sticky;top:0;background:rgba(250,245,255,.93);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin-bottom:20px;z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+nav a{color:var(--accent);text-decoration:none;font-weight:700;font-size:.9rem}
+section{background:var(--paper);border:1.5px solid var(--line);border-radius:18px;padding:26px 28px 22px;box-shadow:var(--shadow);margin-bottom:20px}
+h2{margin:0 0 14px;font-size:1.4rem;color:var(--accent)}
+h3{margin:20px 0 8px;font-size:1.05rem;color:var(--accent2)}
+p{margin:10px 0}
+ul,ol{margin:8px 0 12px 22px}
+li{margin:6px 0}
+.note,.warn,.memo,.legal,.err{border-radius:14px;padding:14px 16px;margin:14px 0;line-height:1.6}
+.note{background:var(--soft2);border-left:6px solid var(--accent)}
+.warn{background:var(--warnbg);border-left:6px solid var(--warn)}
+.memo{background:var(--okbg);border-left:6px solid var(--ok)}
+.legal{background:var(--orabg);border-left:6px solid var(--ora)}
+.err{background:var(--redbg);border-left:6px solid var(--red)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:12px 0}
+.card{background:var(--soft2);border:1.5px solid var(--line);border-radius:14px;padding:16px}
+.card h4{margin:0 0 8px;color:var(--accent);font-size:1rem}
+table{width:100%;border-collapse:collapse;margin:14px 0;border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}
+th{background:var(--accent);color:#fff;padding:10px 13px;text-align:left;font-size:.85rem}
+td{border:1px solid var(--line);padding:10px 13px;vertical-align:top;font-size:.88rem}
+tr:nth-child(even) td{background:var(--soft2)}
+footer{color:var(--muted);font-size:.9rem;padding:8px 4px;margin-top:10px}
+.k{font-weight:800;color:var(--accent)}
+.num{display:inline-block;background:var(--accent);color:#fff;border-radius:50%;width:26px;height:26px;text-align:center;line-height:26px;font-weight:900;font-size:.85rem;margin-right:6px;flex-shrink:0}
+.principle-block{border-radius:16px;padding:18px 20px;margin-bottom:16px;border:2px solid}
+.pb-auto{background:#ede9fe;border-color:#7c3aed}
+.pb-bene{background:#d1fae5;border-color:#059669}
+.pb-noma{background:#fce7f3;border-color:#be185d}
+.pb-just{background:#e0f2fe;border-color:#0284c7}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="container">
+
+<header>
+  <h1>Tema 56 · Bioética: los cuatro principios clásicos. Beauchamp y Childress.</h1>
+  <div class="subtitle">Texto explicativo y desarrollo narrativo para comprensión, estudio y repaso de oposición.</div>
+  <div class="meta">
+    <span class="badge">Concepto de bioética</span>
+    <span class="badge">Informe Belmont</span>
+    <span class="badge">Beauchamp &amp; Childress</span>
+    <span class="badge">4 principios</span>
+    <span class="badge">Prima facie · Diego Gracia</span>
+    <span class="badge">Bioética y TS</span>
+  </div>
+</header>
+
+<nav>
+  <a href="#intro">Introducción</a>
+  <a href="#belmont">Informe Belmont</a>
+  <a href="#bc">Beauchamp y Childress</a>
+  <a href="#principios">Los 4 principios</a>
+  <a href="#jerarquia">Jerarquía y conflictos</a>
+  <a href="#ts">Bioética y TS</a>
+  <a href="#normativa">Normativa</a>
+  <a href="#memoria">Memorización</a>
+</nav>
+
+<!-- 1. INTRODUCCIÓN -->
+<section id="intro">
+  <h2>1. Introducción: ¿qué es la bioética?</h2>
+  <p>La bioética es la disciplina que estudia los problemas morales que plantean las ciencias de la vida y la salud. Aunque puede sonar a algo exclusivamente médico, su alcance es mucho mayor: abarca desde la investigación biomédica hasta las políticas sanitarias, desde las decisiones clínicas hasta la distribución de recursos, desde el respeto a la autonomía individual hasta la justicia social. Por eso tiene una conexión directa con el Trabajo Social.</p>
+  <p>El término <span class="k">bioética</span> fue acuñado en 1970 por el oncólogo y bioquímico estadounidense <span class="k">Van Rensselaer Potter</span>, en su artículo "Bioethics: The Science of Survival". Para Potter, la bioética era "un puente entre las ciencias biológicas y las ciencias humanas", un intento de integrar el conocimiento científico con los valores éticos para garantizar la supervivencia humana y el bienestar de la vida en la Tierra.</p>
+  <p>Antes de que existiera el término bioética, existía la llamada <span class="k">ética médica</span>, que regulaba la relación médico-paciente desde la tradición hipocrática (siglo V a.C.). La bioética amplía ese horizonte: ya no se trata solo de la relación entre un médico y su paciente, sino de todas las profesiones sanitarias y sociosanitarias, de la investigación científica y de las implicaciones colectivas de la biomedicina.</p>
+  <div class="note"><strong>Frase-clave para examen:</strong> el término "bioética" lo acuñó Potter (1970), no Beauchamp. Beauchamp y Childress desarrollan los 4 principios en 1979. ★★★</div>
+</section>
+
+<!-- 2. INFORME BELMONT -->
+<section id="belmont">
+  <h2>2. El Informe Belmont (1978) y el origen de los principios</h2>
+  <p>Para entender los cuatro principios de Beauchamp y Childress es imprescindible conocer su contexto histórico, que arranca de uno de los escándalos éticos más graves de la medicina del siglo XX: el <span class="k">Estudio Tuskegee</span>.</p>
+  <p>Entre 1932 y 1972, investigadores del Servicio de Salud Pública de EE.UU. realizaron un experimento con 399 hombres afroamericanos con sífilis en el condado de Macon (Alabama). El objetivo era estudiar la evolución natural de la enfermedad. Los participantes no fueron informados de su diagnóstico, no dieron consentimiento, y —lo más grave— cuando la penicilina se demostró eficaz para tratar la sífilis a partir de 1947, se les siguió negando el tratamiento deliberadamente. El experimento se mantuvo durante 40 años.</p>
+  <p>Cuando en 1972 el periodista Jean Heller destapó el escándalo, la reacción fue inmediata. El Congreso de EE.UU. creó en 1974 la <span class="k">National Commission for the Protection of Human Subjects of Biomedical and Behavioral Research</span>. Tom Beauchamp participó en ella como staff filósofo. En 1978, la Comisión publicó el <span class="k">Informe Belmont</span>, que estableció tres principios fundamentales para la investigación con seres humanos:</p>
+  <ol>
+    <li><strong>Respeto a las personas</strong> (autonomía): los individuos deben ser tratados como agentes autónomos; quienes tienen la autonomía disminuida tienen derecho a protección.</li>
+    <li><strong>Beneficencia</strong>: maximizar los beneficios y minimizar los perjuicios de la investigación.</li>
+    <li><strong>Justicia</strong>: las cargas y los beneficios de la investigación deben distribuirse equitativamente.</li>
+  </ol>
+  <div class="warn"><strong>Punto de examen crítico:</strong> el Informe Belmont tiene <strong>3</strong> principios, no 4. La <strong>no maleficencia</strong> la añaden Beauchamp y Childress un año después, en 1979. ★★★</div>
+</section>
+
+<!-- 3. BEAUCHAMP Y CHILDRESS -->
+<section id="bc">
+  <h2>3. Beauchamp y Childress: quiénes son y qué aportaron</h2>
+  <p><span class="k">Tom L. Beauchamp</span> (1939) es filósofo moral de la Universidad de Georgetown. Como integrante de la National Commission, conoció de primera mano las deliberaciones que darían lugar al Informe Belmont. <span class="k">James F. Childress</span> (1940) es teólogo y filósofo de la Universidad de Virginia, con una orientación marcada en ética normativa y teología moral protestante.</p>
+  <p>En 1979, un año después del Informe Belmont, Beauchamp y Childress publicaron <span class="k">"Principles of Biomedical Ethics"</span> (Oxford University Press), conocida popularmente como "la Biblia de la Bioética". La novedad fue desdoblar el principio de beneficencia del Informe Belmont en dos principios distintos:</p>
+  <ul>
+    <li><strong>Beneficencia:</strong> obligación activa de hacer el bien.</li>
+    <li><strong>No maleficencia:</strong> obligación de no causar daño.</li>
+  </ul>
+  <p>Con esa distinción, el resultado fue el modelo de los <span class="k">cuatro principios</span>: autonomía, beneficencia, no maleficencia y justicia. El libro alcanza hoy su novena edición y sigue siendo la obra de referencia mundial en bioética clínica. El modelo se denomina <span class="k">principialismo</span> o <span class="k">teoría principialista</span>.</p>
+  <div class="note"><strong>Para examen:</strong> Beauchamp participó en el Informe Belmont y luego, con Childress, añadió el 4º principio (no maleficencia). Esta secuencia histórica es examinable. ★★★</div>
+</section>
+
+<!-- 4. LOS 4 PRINCIPIOS -->
+<section id="principios">
+  <h2>4. Los cuatro principios clásicos</h2>
+
+  <div class="principle-block pb-auto">
+    <h3>4.1. Principio de autonomía ★★★</h3>
+    <p>La autonomía es la capacidad de una persona para deliberar sobre sus propias metas y actuar en consecuencia. El principio de autonomía obliga al profesional a <span class="k">respetar los valores, creencias y decisiones de la persona</span> sobre su propia salud y vida, siempre que sea competente para tomarlas.</p>
+    <p>Para que una decisión sea verdaderamente autónoma se necesitan tres condiciones simultáneas: que la persona sea <span class="k">capaz</span> de decidir (competencia), que disponga de <span class="k">información suficiente y comprensible</span>, y que actúe con <span class="k">voluntariedad</span>, es decir, sin coacciones ni manipulaciones.</p>
+    <p>El Informe Belmont ya señalaba que "los individuos deben ser tratados como seres autónomos y las personas que tienen la autonomía mermada tienen derecho a la protección". Esto es clave: la autonomía no se aplica solo cuando la persona es plenamente competente; cuando está disminuida, se activa un deber de protección.</p>
+    <p>Los grandes instrumentos éticos y legales que cristalizan este principio son: el <span class="k">consentimiento informado</span>, las <span class="k">instrucciones previas</span> (testamento vital), el derecho a rechazar tratamiento y el deber del profesional de proporcionar información veraz y comprensible.</p>
+    <div class="memo"><strong>Conflicto más frecuente en examen:</strong> cuando autonomía y beneficencia entran en conflicto, en el principialismo la autonomía del paciente competente prevalece. Respetar la decisión de alguien aunque no coincida con el criterio del profesional es una obligación ética. ★★★</div>
+  </div>
+
+  <div class="principle-block pb-bene">
+    <h3>4.2. Principio de beneficencia ★★★</h3>
+    <p>Beneficencia significa <span class="k">hacer el bien activamente</span>. No basta con no causar daño; el profesional tiene la obligación positiva de promover el bienestar, curar el daño, prevenir la enfermedad y favorecer los mejores intereses de la persona.</p>
+    <p>Históricamente, la medicina tradicional se regía casi exclusivamente por este principio, lo que daba lugar al <span class="k">paternalismo</span>: el médico decidía "lo mejor" para el paciente sin contar con su opinión. El principialismo corrige esta distorsión al colocar la beneficencia en equilibrio con la autonomía: lo que el profesional considera beneficioso no prevalece sobre la voluntad del paciente competente.</p>
+    <p>La beneficencia es un principio de <span class="k">ámbito privado-profesional</span>. Su incumplimiento directo no está tipificado como delito, aunque sí puede dar lugar a responsabilidad deontológica o civil. Se distingue entre beneficencia obligatoria (la que se exige al profesional) y supererogada (la que va más allá del deber y no puede exigirse).</p>
+  </div>
+
+  <div class="principle-block pb-noma">
+    <h3>4.3. Principio de no maleficencia ★★★</h3>
+    <p>La no maleficencia obliga a <span class="k">no producir daño intencionadamente</span>. Es el principio más antiguo de la ética médica, recogido en el aforismo hipocrático <span class="k">primum non nocere</span> ("ante todo, no hacer daño"), del siglo V a.C. Beauchamp y Childress lo formalizan como principio independiente, separándolo de la beneficencia.</p>
+    <p>Esta separación es esencial: la beneficencia exige una acción positiva en favor del paciente; la no maleficencia exige abstenerse de causar daño. Son obligaciones de naturaleza distinta. Causar un daño "por acción" no es lo mismo que no hacer el bien "por omisión".</p>
+    <p>En la práctica clínica y sociosanitaria, casi cualquier intervención conlleva algún riesgo de daño (efectos secundarios, intrusión en la privacidad, generar dependencia). Por eso lo relevante no es la ausencia absoluta de daño, sino la <span class="k">ponderación riesgo/beneficio</span>: la intervención está justificada cuando los beneficios esperados superan razonablemente los perjuicios previsibles.</p>
+    <p>El contenido de este principio incluye: no matar · no provocar dolor · no provocar sufrimiento · no causar incapacidad · no privar de condiciones necesarias para la vida.</p>
+    <div class="err"><strong>Trampa clásica:</strong> "primum non nocere es una aportación de Beauchamp y Childress." FALSO. Es un principio hipocrático milenario que B&C formalizan teóricamente como no maleficencia. ★★★</div>
+  </div>
+
+  <div class="principle-block pb-just">
+    <h3>4.4. Principio de justicia ★★★</h3>
+    <p>Justicia significa <span class="k">tratar a cada persona según lo que es moralmente correcto y adecuado</span>, distribuyendo los beneficios y las cargas de forma equitativa. La fórmula de Aristóteles —"tratar igual a los iguales y desigual a los desiguales"— sigue siendo el punto de partida.</p>
+    <p>En bioética la justicia tiene especial relevancia en la <span class="k">distribución de recursos escasos</span>: ¿cómo se decide quién recibe un trasplante? ¿cómo se priorizan las listas de espera? ¿cómo se garantiza acceso equitativo a los sistemas de salud? El principio de justicia prohíbe la discriminación y exige que la necesidad sea el criterio de atención.</p>
+    <p>Este principio conecta directamente con el <span class="k">Estado de Bienestar y los Servicios Sociales universales</span>. La garantía de acceso a prestaciones sociales y sanitarias sin discriminación por razón de origen, género, situación económica o cualquier otra condición es una aplicación directa del principio de justicia en el ámbito del Trabajo Social.</p>
+    <p>John Rawls (teoría de la justicia como equidad) añade que la justicia exige que las desigualdades beneficien a los más desfavorecidos. Esta perspectiva rawlsiana es compatible con el principio de justicia distributiva de la bioética.</p>
+  </div>
+</section>
+
+<!-- 5. JERARQUÍA Y CONFLICTOS -->
+<section id="jerarquia">
+  <h2>5. Los principios como obligaciones prima facie y la jerarquía práctica</h2>
+  <p>Beauchamp y Childress subrayan que los cuatro principios son obligaciones <span class="k">prima facie</span>, concepto tomado del filósofo W.D. Ross (1930). Prima facie significa que cada principio debe cumplirse a menos que entre en conflicto con otro principio igualmente válido, en cuyo caso debe sopesarse cuál tiene más peso en el caso concreto.</p>
+  <p>Esto implica que no hay una jerarquía rígida y universal entre los principios. En un caso determinado, la autonomía puede pesar más que la beneficencia; en otro, la justicia puede imponerse sobre la autonomía individual. La tarea del profesional es deliberar caso a caso, con responsabilidad y argumentación ética.</p>
+  <h3>La jerarquía práctica de Diego Gracia</h3>
+  <p>El bioeticista español <span class="k">Diego Gracia</span> propone una jerarquía pragmática de dos niveles, muy útil para examen:</p>
+  <div class="grid2">
+    <div class="card">
+      <h4>Nivel 1 — Exigencia universal y pública</h4>
+      <p><strong>No maleficencia + Justicia</strong></p>
+      <p>Son obligaciones erga omnes (frente a todos). Su transgresión es siempre injustificable, independientemente del contexto o de las preferencias de las partes.</p>
+    </div>
+    <div class="card">
+      <h4>Nivel 2 — Ejercicio privado y contextual</h4>
+      <p><strong>Beneficencia + Autonomía</strong></p>
+      <p>Dependen del contexto y de las preferencias y valores de las partes implicadas. En este nivel cabe la ponderación legítima entre los dos principios.</p>
+    </div>
+  </div>
+  <p>En la práctica, el conflicto más frecuente es entre <span class="k">autonomía y beneficencia</span>: el profesional cree que algo es bueno para la persona, pero esta no lo quiere. En el modelo principialista, la decisión autónoma del paciente competente prevalece sobre el criterio profesional. Superar el paternalismo es uno de los grandes logros de la bioética principialista.</p>
+</section>
+
+<!-- 6. BIOÉTICA Y TS -->
+<section id="ts">
+  <h2>6. Bioética y Trabajo Social</h2>
+  <p>Los cuatro principios de Beauchamp y Childress no son exclusivos de la medicina. El Trabajo Social, como disciplina que interviene sobre personas en situación de vulnerabilidad, enfrenta dilemas éticos similares. La pregunta de si hay que respetar la decisión de un usuario que rechaza la ayuda, o la de si un informe social puede revelar información sin el consentimiento de la persona, remiten directamente a estos principios.</p>
+  <ul>
+    <li><strong>Autonomía:</strong> respetar la autodeterminación del usuario; solicitar consentimiento informado; respetar instrucciones previas; garantizar confidencialidad.</li>
+    <li><strong>Beneficencia:</strong> orientar la intervención a las necesidades reales del usuario; buscar activamente el mayor bienestar posible.</li>
+    <li><strong>No maleficencia:</strong> no estigmatizar; no intervenir sin consentimiento salvo riesgo grave; no generar dependencia del recurso; no prolongar intervenciones innecesarias.</li>
+    <li><strong>Justicia:</strong> garantizar acceso equitativo; no discriminar; atender con criterio de necesidad; proteger a los más vulnerables.</li>
+  </ul>
+  <h3>Los Comités de Ética Asistencial (CEA)</h3>
+  <p>Los <span class="k">Comités de Ética Asistencial</span> son órganos <span class="k">consultivos, multidisciplinares e independientes</span> creados en hospitales y centros sociosanitarios para abordar dilemas éticos en la práctica clínica. Sus funciones son deliberar, recomendar, formar y elaborar protocolos, pero <span class="k">no toman decisiones vinculantes</span>. El Trabajo Social es una de las disciplinas que puede y debe estar representada en los CEA.</p>
+  <h3>El Comité de Bioética de Navarra</h3>
+  <p>El <span class="k">Decreto Foral 118/2021, de 22 de diciembre</span>, regula el Comité de Bioética de Navarra, órgano colegiado, deliberativo, independiente, multidisciplinar, participativo y consultivo. Su composición incluye profesionales de medicina, enfermería, psicología, <span class="k">trabajo social</span>, farmacia y otras ciencias de la salud. El TS puede ser miembro del Comité de Bioética de Navarra. ★★★</p>
+  <h3>Código Deontológico del TS</h3>
+  <p>El <span class="k">Código Deontológico del Trabajo Social</span> (CGTS, aprobado en 2012 y actualizado en 2022) refleja los mismos valores que la bioética: dignidad de la persona, autonomía, justicia, solidaridad y respeto a los derechos humanos. La bioética y el TS comparten, en definitiva, un mismo substrato ético.</p>
+</section>
+
+<!-- 7. NORMATIVA -->
+<section id="normativa">
+  <h2>7. Marco normativo clave</h2>
+  <table>
+    <thead>
+      <tr><th>Norma</th><th>Contenido relevante</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Convenio de Oviedo (1997)</strong></td><td>Convenio del Consejo de Europa sobre derechos humanos y biomedicina. Art. 5: consentimiento informado como regla general. Art. 9: instrucciones previas. ★★★</td></tr>
+      <tr><td><strong>Ley 41/2002, de 14 de noviembre</strong></td><td>Ley básica reguladora de la autonomía del paciente y de los derechos en materia de información y documentación clínica. Regula el consentimiento informado e instrucciones previas en España. ★★★</td></tr>
+      <tr><td><strong>Ley Foral 17/2010, de 8 de noviembre</strong></td><td>Derechos y deberes de las personas en materia de salud en Navarra. ★★★</td></tr>
+      <tr><td><strong>Decreto Foral 118/2021</strong></td><td>Regula el Comité de Bioética de Navarra. ★★</td></tr>
+      <tr><td><strong>Código Deontológico TS (CGTS 2012/2022)</strong></td><td>Valores centrales: dignidad · autonomía · justicia · solidaridad. ★★★</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 8. MEMORIZACIÓN -->
+<section id="memoria">
+  <h2>8. Bloque de memorización para examen</h2>
+  <h3>Frases memorizables</h3>
+  <ul>
+    <li><strong>Potter (1970):</strong> acuña el término "bioética". Beauchamp y Childress formalizan los 4 principios en 1979. ★★★</li>
+    <li><strong>Informe Belmont (1978):</strong> 3 principios (autonomía, beneficencia, justicia). La no maleficencia la añaden B&C. ★★★</li>
+    <li><strong>Beauchamp:</strong> filósofo de Georgetown, participó en la National Commission.</li>
+    <li><strong>Childress:</strong> teólogo y filósofo de Virginia.</li>
+    <li><strong>Obra:</strong> "Principles of Biomedical Ethics" (1979) = "la Biblia de la Bioética".</li>
+    <li><strong>Prima facie (W.D. Ross):</strong> los principios obligan salvo conflicto con otro de igual rango. ★★★</li>
+    <li><strong>Diego Gracia:</strong> Nivel 1 = no maleficencia + justicia (universal). Nivel 2 = beneficencia + autonomía (contextual). ★★★</li>
+    <li><strong>Autonomía vs. beneficencia:</strong> cuando hay conflicto, prevalece la autonomía del paciente competente. ★★★</li>
+    <li><strong>Primum non nocere:</strong> principio hipocrático, no creación de B&C. ★★★</li>
+    <li><strong>CEA:</strong> consultivo, no vinculante. TS puede integrarlos. ★★★</li>
+  </ul>
+
+  <h3>Las 8 trampas del examen</h3>
+  <ul>
+    <li>"Bioética la acuñó Beauchamp" → FALSO: Potter, 1970. ★★★</li>
+    <li>"El Informe Belmont tiene 4 principios" → FALSO: tiene 3. ★★★</li>
+    <li>"Beneficencia y no maleficencia son lo mismo" → FALSO: son distintos. ★★★</li>
+    <li>"La autonomía siempre está por debajo de la beneficencia" → FALSO: en conflicto prevalece la autonomía. ★★★</li>
+    <li>"Primum non nocere es aportación de B&C" → FALSO: es hipocrático. ★★★</li>
+    <li>"El CEA decide de forma vinculante" → FALSO: es consultivo. ★★★</li>
+    <li>"La justicia significa dar lo mismo a todos" → FALSO: equidad según necesidad. ★★★</li>
+    <li>"El TS no puede integrar un CEA ni el Comité de Bioética de Navarra" → FALSO. ★★★</li>
+  </ul>
+
+  <div class="memo"><strong>Fórmula ultraresumen:</strong> 4 principios (autonomía · beneficencia · no maleficencia · justicia) + todos prima facie + Belmont tiene solo 3 + no maleficencia la añaden B&C + Potter acuñó el término.</div>
+</section>
+
+<footer>Archivo: <strong>1_texto_explicativo.html</strong> · Tema 56 · Bioética · Formato narrativo de estudio para oposición.</footer>
+
+</div>
+</body>
+</html>

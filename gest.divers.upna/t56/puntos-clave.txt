@@ -1,0 +1,247 @@
+PUNTOS CLAVE PARA EXAMEN – TEMA 56
+Bioética: Los cuatro principios clásicos en bioética. Beauchamp y Childress.
+=========================================================================
+FUENTES PRINCIPALES:
+· Beauchamp, T.L. y Childress, J.F. (1979): "Principles of Biomedical Ethics". Oxford University Press.
+  (Obra fundamental; actualmente en su 9ª edición. Es la fuente principal del tema.) ★★★
+· Informe Belmont (1978): National Commission for the Protection of Human Subjects of Biomedical
+  and Behavioral Research. ★★★
+· Decreto Foral 118/2021, de 22 de diciembre, por el que se regula el Comité de Bioética de Navarra. ★★
+=========================================================================
+
+=== BLOQUE A: QUÉ ES LA BIOÉTICA ===
+
+A1. CONCEPTO DE BIOÉTICA ★★★
+- El término "bioética" lo acuña Van Rensselaer Potter en 1970, en su artículo
+  "Bioethics: The Science of Survival". La define como "la ciencia de la supervivencia humana".
+  Potter: "Un puente entre las ciencias biológicas y las ciencias humanas."
+- La bioética se ocupa del estudio interdisciplinar del conjunto de problemas planteados
+  por las ciencias de la vida y la salud en relación con los valores y principios morales.
+
+A2. DIFERENCIA ENTRE BIOÉTICA Y ÉTICA MÉDICA ★★
+- La ética médica (Hipócrates, s. V a.C.) regula la relación médico-paciente.
+- La bioética amplía el objeto a todas las ciencias de la vida y a todas las
+  profesiones sanitarias y sociosanitarias; incluye la investigación, la política
+  sanitaria y las intervenciones de mejora.
+- La bioética aplica también a otras disciplinas, incluido el Trabajo Social.
+
+A3. NIVELES DE LA BIOÉTICA ★
+- Bioética clínica: decisiones en la práctica clínica individual.
+- Bioética de la investigación: ética de la investigación con seres humanos.
+- Bioética social: implicaciones colectivas de la biomedicina y las políticas sanitarias.
+- Bioética global / ecobioética: relación del ser humano con el entorno.
+
+A4. MODELOS EN BIOÉTICA ★★
+1. Principialismo (Beauchamp y Childress): los 4 principios como marco de análisis.
+2. Personalismo: la dignidad de la persona como fundamento absoluto.
+3. Utilitarismo: la maximización del bienestar del mayor número.
+4. Ética de la virtud (MacIntyre, Pellegrino): el carácter moral del profesional.
+▶ El modelo dominante en la tradición anglosajona y en los comités de ética es
+  el principialismo. ★★★
+
+
+=== BLOQUE B: INFORME BELMONT (1978) ★★★ ===
+
+B1. CONTEXTO HISTÓRICO ★★★
+- El Informe Belmont nace a raíz del escándalo del Estudio Tuskegee (1932-1972):
+  experimento con afroamericanos con sífilis sin consentimiento informado;
+  se les negó el tratamiento con penicilina incluso cuando estuvo disponible.
+- 1972: destape público del escándalo.
+- 1974: Congreso de EE.UU. crea la National Commission for the Protection of Human Subjects.
+- 1978: publicación del Informe Belmont.
+
+B2. TRES PRINCIPIOS DEL INFORME BELMONT ★★★
+1. Respeto a las personas (autonomía).
+2. Beneficencia (hacer el bien y maximizar beneficios).
+3. Justicia (distribución equitativa de cargas y beneficios de la investigación).
+▶ IMPORTANTE: el Informe Belmont contempla 3 principios, no 4.
+  El cuarto (no maleficencia) lo añaden Beauchamp y Childress en 1979. ★★★
+
+B3. RELACIÓN ENTRE INFORME BELMONT Y BEAUCHAMP-CHILDRESS ★★★
+- Beauchamp participó como staff en la National Commission.
+- Junto a Childress, formalizó los 4 principios un año después del Informe Belmont.
+- Tomaron la beneficencia y la desglosaron en dos: beneficencia + no maleficencia.
+- Los 4 principios de B&C amplían y formalizan los 3 del Informe Belmont. ★★★
+
+
+=== BLOQUE C: LOS CUATRO PRINCIPIOS DE BEAUCHAMP Y CHILDRESS (1979) ★★★ ===
+
+C1. AUTONOMÍA ★★★
+Definición: Obligación de respetar los valores, creencias y decisiones de la persona
+sobre su propia salud y vida, siempre que sea competente para tomarlas.
+- Autonomía = capacidad de deliberar sobre fines personales + actuar según esas decisiones.
+- La autonomía exige que la persona sea CAPAZ, esté INFORMADA y actúe VOLUNTARIAMENTE.
+- Persona autónoma: quien rige su vida por razones y valores propios, sin coacciones externas.
+- Persona con autonomía mermada: tiene DERECHO A LA PROTECCIÓN. ★★★
+Requisitos de la decisión autónoma:
+  1. Competencia o capacidad de decisión.
+  2. Información adecuada (Consentimiento Informado).
+  3. Voluntariedad (ausencia de coacción o manipulación).
+Instrumentos éticos y legales del principio de autonomía:
+  · Consentimiento informado.
+  · Instrucciones previas / voluntades anticipadas.
+  · Derecho a rechazar tratamiento.
+  · Deber de información del profesional.
+Clave de examen:
+- Cuando autonomía y beneficencia entran en conflicto, la autonomía del paciente
+  prevalece en el modelo principialista. ★★★
+- "Los individuos deben ser tratados como seres autónomos y las personas que tienen
+  la autonomía mermada tienen derecho a la protección." ★★★
+
+C2. BENEFICENCIA ★★★
+Definición: Obligación moral de actuar en beneficio del otro; hacer el bien activamente;
+curar el daño y promover el bienestar.
+- Exige acciones positivas en favor de la persona (no basta con no hacer daño).
+- "Hacer el bien, promover el bien o el bienestar, curar el daño."
+- Es un principio de ámbito privado/profesional; su incumplimiento no está penado
+  legalmente de forma directa. ★★★
+- El paternalismo médico tradicional se justificaba en exclusividad en la beneficencia.
+- El principialismo corrige ese paternalismo al equilibrar beneficencia con autonomía. ★★★
+Tipos:
+  · Beneficencia obligatoria: hacer el bien cuando está al alcance del profesional.
+  · Beneficencia supererogada: acciones "por encima del deber" (no exigibles legalmente).
+
+C3. NO MALEFICENCIA ★★★
+Definición: Obligación de no producir daño intencionadamente; prevenir el daño.
+- Principio más antiguo de la ética médica: primum non nocere (Hipócrates). ★★★
+- Incluye: no matar · no provocar dolor · no producir sufrimiento · no causar incapacidad ·
+  no privar de condiciones necesarias para la vida.
+- La no maleficencia no es simplemente el reverso de la beneficencia:
+  la beneficencia exige acción positiva; la no maleficencia exige abstención de hacer daño. ★★★
+- En la práctica clínica todo procedimiento puede causar algún riesgo de daño:
+  por eso se habla de ponderación riesgo/beneficio; la acción está justificada cuando
+  los beneficios superan los perjuicios.
+- Clave: Beauchamp y Childress SEPARAN no maleficencia y beneficencia (que el Informe Belmont
+  las agrupaba). Esta separación es un punto de examen frecuente. ★★★
+
+C4. JUSTICIA ★★★
+Definición: Tratar a cada persona de acuerdo a lo que es moralmente correcto y adecuado;
+distribución equitativa de cargas y beneficios.
+- "Dar a cada uno lo que merece."
+- "Las personas con iguales derechos deben ser tratadas con igualdad." ★★★
+- Justicia distributiva: distribución equitativa de recursos escasos.
+- Implica: no discriminar · dar respuesta igual a igual necesidad ·
+  proteger a personas más vulnerables · equidad en el acceso.
+- El principio de justicia está en la base del Estado de Bienestar y de
+  los Servicios Sociales universales. ★★★
+Tipos:
+  · Justicia formal (Aristóteles): tratar igual a los iguales y desigual a los desiguales.
+  · Justicia material: criterios concretos para distribuir recursos (necesidad, esfuerzo,
+    contribución, mérito, etc.).
+  · Justicia distributiva (Rawls): en favor de los más desfavorecidos.
+
+
+=== BLOQUE D: CARACTERÍSTICAS DEL MODELO PRINCIPIALISTA ★★★ ===
+
+D1. PRINCIPIOS "PRIMA FACIE" ★★★
+- Los 4 principios son obligaciones PRIMA FACIE (W.D. Ross):
+  deben cumplirse a menos que entren en conflicto con otros igualmente válidos. ★★★
+- No hay jerarquía rígida: en cada caso concreto debe ponderarse cuál tiene más peso.
+- EXCEPCIÓN AL ORDEN: algunos autores (incluido el propio modelo anglosajón) señalan que
+  la no maleficencia tiene cierta prioridad práctica frente a la beneficencia.
+- El conflicto más frecuente en examen: AUTONOMÍA vs. BENEFICENCIA. ★★★
+
+D2. LA JERARQUÍA PRÁCTICA SEGÚN DIEGO GRACIA ★★★
+Diego Gracia (principalismo hispano) propone dos niveles:
+- Nivel 1 (de exigencia universal): NO MALEFICENCIA + JUSTICIA
+  (obligaciones erga omnes; de carácter público).
+- Nivel 2 (de ejercicio privado): BENEFICENCIA + AUTONOMÍA
+  (dependen del contexto y las preferencias de las partes).
+▶ La transgresión del nivel 1 es siempre injustificable. ★★★
+▶ En el nivel 2 puede haber ponderación legítima. ★★★
+
+D3. BEAUCHAMP Y CHILDRESS: QUIÉNES SON ★★★
+- Tom L. Beauchamp (1939): filósofo americano, Universidad de Georgetown.
+  Participó como staff en la National Commission (Informe Belmont).
+- James F. Childress (1940): teólogo y filósofo americano, Universidad de Virginia.
+- Obra fundamental: "Principles of Biomedical Ethics" (1979) → 9ª edición.
+- Denominada coloquialmente: "La Biblia de la Bioética". ★★★
+
+D4. CRÍTICAS AL PRINCIPIALISMO ★
+1. Bioética de las virtudes: los principios no bastan; importa el carácter moral del profesional.
+2. Ética del cuidado (Carol Gilligan, Nel Noddings): la bioética debe centrarse en
+   la relación de cuidado, no en principios abstractos.
+3. Comunitarismo (MacIntyre): los principios son abstractos y no reconocen el contexto cultural.
+4. Principios sin jerarquía = riesgo de resolución arbitraria de conflictos.
+
+
+=== BLOQUE E: BIOÉTICA Y TRABAJO SOCIAL ★★★ ===
+
+E1. APLICACIÓN AL TRABAJO SOCIAL SANITARIO ★★★
+- El TS aplica los 4 principios en su intervención diaria:
+  · AUTONOMÍA: respetar la autodeterminación de la persona; consentimiento informado;
+    instrucciones previas; confidencialidad.
+  · BENEFICENCIA: trabajar en favor del bienestar del usuario; intervención orientada
+    a sus necesidades.
+  · NO MALEFICENCIA: no estigmatizar; no intervenir sin consentimiento; no crear dependencia;
+    no prolongar intervenciones innecesarias.
+  · JUSTICIA: acceso equitativo a recursos; no discriminar; atender con criterio de necesidad.
+
+E2. LOS COMITÉS DE ÉTICA ASISTENCIAL (CEA) ★★★
+- Son órganos consultivos, multidisciplinares e independientes.
+- Creados en hospitales y centros sociosanitarios para abordar dilemas éticos.
+- El TS es uno de los profesionales que puede y debe formar parte del CEA. ★★★
+- Funciones del CEA: consulta · deliberación · recomendación (no decisión vinculante) ·
+  formación · elaboración de protocolos.
+
+E3. COMITÉ DE BIOÉTICA DE NAVARRA ★★★
+- Regulado por el Decreto Foral 118/2021.
+- Órgano colegiado, deliberativo, independiente, multidisciplinar, participativo y consultivo.
+- Compuesto por 5 profesionales de: medicina · enfermería · psicología · trabajo social ·
+  farmacia · otras ciencias de la salud.
+▶ El TS puede ser miembro del Comité de Bioética de Navarra. ★★★
+
+E4. BIOÉTICA Y CÓDIGO DEONTOLÓGICO TS ★★★
+- El CGTS aprobó el Código Deontológico de Trabajo Social (2012, actualizado en 2022).
+- Los valores centrales del Código: dignidad · autonomía · justicia · solidaridad ·
+  respeto a los derechos humanos.
+- La conexión de la bioética con el TS es directa: ambas comparten el respeto a
+  la autonomía, el principio de justicia y la no maleficencia.
+
+
+=== BLOQUE F: ARTÍCULOS, LEYES Y REFERENCIAS CLAVE PARA EXAMEN ===
+
+F1. NORMATIVA BÁSICA ★★★
+- Convenio de Oviedo (1997): Convenio del Consejo de Europa para la protección
+  de los derechos humanos y la dignidad del ser humano con respecto a las aplicaciones
+  de la biología y la medicina. ★★★
+  Art. 5: Consentimiento informado como regla general.
+  Art. 9: Instrucciones previas.
+- Ley 41/2002, de 14 de noviembre, básica reguladora de la autonomía del paciente y
+  de derechos y obligaciones en materia de información y documentación clínica. ★★★
+  Regula el consentimiento informado y las instrucciones previas en España.
+- Ley Foral 17/2010, de 8 de noviembre, de derechos y deberes de las personas en
+  materia de salud en la Comunidad Foral de Navarra. ★★★
+- Decreto Foral 118/2021: Comité de Bioética de Navarra. ★★
+
+F2. REFERENCIAS BIBLIOGRÁFICAS ★★★
+- Beauchamp y Childress (1979): "Principles of Biomedical Ethics" → obra fundacional. ★★★
+- Informe Belmont (1978): 3 principios → beneficencia · respeto a las personas · justicia. ★★★
+- Potter, V.R. (1970): acuña el término "bioética". ★★★
+- Diego Gracia (2001): "Como arqueros al blanco" → jerarquía en dos niveles. ★★★
+- W.D. Ross (1930): concepto de obligaciones prima facie. ★★★
+- Código Deontológico del Trabajo Social (CGTS, 2012/2022). ★★★
+- Convenio de Oviedo (1997). ★★★
+- Ley 41/2002 de autonomía del paciente. ★★★
+- Ley Foral 17/2010 de derechos en salud en Navarra. ★★★
+
+=== TRAMPAS FRECUENTES DE EXAMEN ===
+T1: "El término bioética lo acuñó Beauchamp" → FALSO. Lo acuñó Van Rensselaer Potter (1970). ★★★
+T2: "El Informe Belmont tiene 4 principios" → FALSO. Tiene 3: autonomía · beneficencia · justicia.
+    La no maleficencia la añaden Beauchamp y Childress en 1979. ★★★
+T3: "Beneficencia y no maleficencia son el mismo principio" → FALSO. Son principios distintos:
+    beneficencia = obligación activa de hacer el bien; no maleficencia = obligación de no dañar. ★★★
+T4: "El principio de autonomía siempre está por debajo de la beneficencia" → FALSO. En el
+    principialismo de B&C no hay jerarquía fija; prima facie todos son iguales. ★★★
+T5: "Primum non nocere es una aportación de Beauchamp" → FALSO. Es un principio hipocrático
+    clásico (s. V a.C.) que B&C formalizan como no maleficencia. ★★★
+T6: "El CEA decide unilateralmente sobre casos éticos" → FALSO. Su función es consultiva
+    y deliberativa; no toma decisiones vinculantes. ★★★
+T7: "El Código Deontológico del TS no conecta con la bioética" → FALSO. Comparten los valores
+    de autonomía, justicia, dignidad y no maleficencia. ★★★
+T8: "La justicia en bioética solo se refiere a dar siempre lo mismo a todos" → FALSO.
+    La justicia distributiva implica dar lo que corresponde según necesidad y criterio de equidad. ★★★
+
+=========================================================================
+Archivo: puntos-clave_T56.txt | Tema 56 | Oposiciones Navarra / TSS
+=========================================================================

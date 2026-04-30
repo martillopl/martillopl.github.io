@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 56 · HTML 3 · Cuadro comparativo y tablas operativas · Bioética</title>
+<style>
+:root{
+  --bg:#faf5ff;--card:#fff;--s2:#ede9fe;--s3:#ddd6fe;--line:#8b5cf6;
+  --text:#2e1065;--muted:#6d28d9;--p:#7c3aed;--p2:#6d28d9;
+  --grn:#059669;--grn2:#d1fae5;--red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;--sky:#0284c7;--sky2:#e0f2fe;
+  --teal:#0d9488;--teal2:#ccfbf1;--vio:#7c3aed;--vio2:#ede9fe;
+  --rose:#be185d;--rose2:#fce7f3;--sh:0 2px 12px rgba(124,58,237,.10)
+}
+[data-theme="dark"]{
+  --bg:#0d0020;--card:#15003a;--s2:#1f0050;--s3:#2c0070;--line:#7c3aed;
+  --text:#ddd6fe;--muted:#a78bfa;--p:#a78bfa;--p2:#c4b5fd;
+  --grn:#86efac;--grn2:#052e16;--red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;--sky:#7dd3fc;--sky2:#082038;
+  --teal:#5eead4;--teal2:#031a16;--vio:#c4b5fd;--vio2:#1a0e33;
+  --rose:#fda4af;--rose2:#1a0010;--sh:0 2px 14px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:22px}
+.wrap{max-width:1240px;margin:0 auto}
+header{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:14px 22px;box-shadow:var(--sh);margin-bottom:16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+h1{font-size:.93rem;font-weight:800;color:var(--p)}
+.sub{font-size:.7rem;color:var(--muted);margin-top:4px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 14px;border-radius:999px;font-size:.7rem}
+h2{font-size:.83rem;font-weight:800;color:#fff;background:var(--p);padding:7px 16px;border-radius:8px;margin:18px 0 10px;display:inline-block}
+.tbl{width:100%;border-collapse:collapse;box-shadow:var(--sh);border-radius:10px;overflow:hidden;background:var(--card);margin-bottom:14px}
+.tbl th{background:var(--p);color:#fff;text-align:left;padding:8px 11px;font-size:.67rem;text-transform:uppercase;letter-spacing:.03em}
+.tbl td{padding:8px 11px;border-bottom:1px solid var(--s2);font-size:.74rem;vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:nth-child(even) td{background:rgba(139,92,246,.05)}
+.tbl tr:hover td{background:var(--s2)}
+.nota{padding:9px 13px;border-radius:0 9px 9px 0;font-size:.73rem;border-left:4px solid;margin:8px 0;line-height:1.5}
+.n-ok{background:var(--grn2);border-color:var(--grn)}
+.n-err{background:var(--red2);border-color:var(--red)}
+.n-w{background:var(--warn2);border-color:var(--warn)}
+.n-vio{background:var(--vio2);border-color:var(--vio)}
+.n-sky{background:var(--sky2);border-color:var(--sky)}
+strong{color:var(--p)}
+.s3{color:#fef08a;font-weight:800}
+td.hl{background:var(--s2)!important;font-weight:700;color:var(--p2)}
+td.ok{background:var(--grn2)!important}
+td.er{background:var(--red2)!important}
+td.wa{background:var(--warn2)!important}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<header>
+  <div>
+    <h1>Tema 56 · HTML 3 · Cuadro comparativo y tablas operativas para examen</h1>
+    <div class="sub">Bioética: los cuatro principios clásicos en bioética · Beauchamp y Childress · Oposiciones Navarra</div>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</header>
+
+<h2>T1 · Bioética, ética médica y principialismo <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Concepto</th><th>Definición operativa</th><th>Clave examen</th><th>Referencia</th></tr></thead>
+<tbody>
+<tr><td><strong>Bioética</strong></td><td>Disciplina interdisciplinar que estudia los problemas morales planteados por las ciencias de la vida y la salud.</td><td>No se limita a medicina clínica.</td><td>Potter / desarrollo posterior</td></tr>
+<tr><td><strong>Ética médica</strong></td><td>Tradición deontológica clásica centrada en la relación médico-paciente.</td><td>Es antecedente, pero más limitada.</td><td>Tradición hipocrática</td></tr>
+<tr><td><strong>Principialismo ★★★</strong></td><td>Modelo bioético basado en 4 principios: autonomía, beneficencia, no maleficencia y justicia.</td><td class="ok">Modelo dominante de Beauchamp y Childress. ★★★</td><td>Beauchamp y Childress (1979)</td></tr>
+<tr><td><strong>Potter (1970) ★★★</strong></td><td>Acuña el término "bioética" y la presenta como puente entre ciencias biológicas y ciencias humanas.</td><td class="er">No fue Beauchamp quien acuñó el término. ★★★</td><td>Potter (1970)</td></tr>
+</tbody>
+</table>
+
+<h2>T2 · Tuskegee, Belmont y B&C: secuencia histórica <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Hito</th><th>Fecha</th><th>Contenido</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Estudio Tuskegee</strong></td><td>1932-1972</td><td>Experimento con hombres afroamericanos con sífilis sin consentimiento informado y sin tratamiento pese a existir penicilina.</td><td>Escándalo que desencadena la reacción ética moderna.</td></tr>
+<tr><td><strong>Destape periodístico</strong></td><td>1972</td><td>Jean Heller hace público el escándalo.</td><td>Punto de inflexión político y social.</td></tr>
+<tr><td><strong>National Commission</strong></td><td>1974</td><td>Comisión para la protección de sujetos humanos de investigación biomédica y conductual.</td><td>Beauchamp participa como staff.</td></tr>
+<tr><td><strong>Informe Belmont ★★★</strong></td><td>1978</td><td>Fija 3 principios: respeto a las personas, beneficencia y justicia.</td><td class="hl">Belmont tiene 3 principios, no 4. ★★★</td></tr>
+<tr><td><strong>Beauchamp y Childress ★★★</strong></td><td>1979</td><td>Publican "Principles of Biomedical Ethics" y formulan los 4 principios.</td><td class="hl">Añaden no maleficencia como principio independiente. ★★★</td></tr>
+</tbody>
+</table>
+<div class="nota n-vio"><strong>Idea clave:</strong> Beauchamp y Childress se inspiran en Belmont, pero lo amplían y formalizan para toda la bioética biomédica, no solo para investigación.</div>
+
+<h2>T3 · Informe Belmont vs. Beauchamp y Childress <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Dimensión</th><th>Informe Belmont (1978)</th><th>Beauchamp y Childress (1979)</th></tr></thead>
+<tbody>
+<tr><td><strong>Ámbito inicial</strong></td><td>Investigación con seres humanos</td><td>Actividad biomédica y bioética clínica en general</td></tr>
+<tr><td><strong>Número de principios</strong></td><td class="wa">3</td><td class="ok">4</td></tr>
+<tr><td><strong>Principios</strong></td><td>Respeto a las personas · Beneficencia · Justicia</td><td>Autonomía · Beneficencia · No maleficencia · Justicia</td></tr>
+<tr><td><strong>No maleficencia</strong></td><td class="er">No aparece como principio independiente</td><td class="ok">Sí aparece diferenciada de beneficencia ★★★</td></tr>
+<tr><td><strong>Clave examen</strong></td><td class="hl">Belmont = 3 principios ★★★</td><td class="hl">B&C = 4 principios ★★★</td></tr>
+</tbody>
+</table>
+
+<h2>T4 · Los 4 principios: definición mínima y función <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Principio</th><th>Definición operativa</th><th>Función práctica</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Autonomía ★★★</strong></td><td>Respetar decisiones de la persona competente, informada y voluntaria.</td><td>Garantiza autodeterminación y consentimiento informado.</td><td class="hl">Paciente competente: prevalece su decisión. ★★★</td></tr>
+<tr><td><strong>Beneficencia ★★★</strong></td><td>Obligación positiva de hacer el bien y promover el bienestar.</td><td>Orienta la intervención a los mejores intereses de la persona.</td><td class="er">No basta con "no dañar". Exige acción. ★★★</td></tr>
+<tr><td><strong>No maleficencia ★★★</strong></td><td>Obligación de no producir daño intencionadamente.</td><td>Impone límites y prevención del daño.</td><td class="hl">No es igual que beneficencia. ★★★</td></tr>
+<tr><td><strong>Justicia ★★★</strong></td><td>Distribución equitativa de beneficios y cargas; trato no discriminatorio.</td><td>Orienta el acceso justo a recursos y servicios.</td><td class="er">No significa dar lo mismo a todos. ★★★</td></tr>
+</tbody>
+</table>
+
+<h2>T5 · Autonomía: requisitos e instrumentos <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Aspecto</th><th>Contenido</th><th>Trampa habitual</th></tr></thead>
+<tbody>
+<tr><td><strong>Capacidad / competencia</strong></td><td>La persona debe poder comprender, valorar opciones y decidir.</td><td>No toda vulnerabilidad implica incapacidad.</td></tr>
+<tr><td><strong>Información</strong></td><td>Debe ser suficiente, comprensible y veraz.</td><td>Informar no es solo entregar un documento.</td></tr>
+<tr><td><strong>Voluntariedad</strong></td><td>La decisión debe adoptarse sin coacción, manipulación o presión ilegítima.</td><td>El consentimiento bajo presión no es plenamente autónomo.</td></tr>
+<tr><td><strong>Consentimiento informado ★★★</strong></td><td>Manifestación libre y consciente tras recibir información adecuada.</td><td class="hl">Instrumento central de la autonomía. ★★★</td></tr>
+<tr><td><strong>Instrucciones previas</strong></td><td>Manifestación anticipada de la voluntad para situaciones futuras.</td><td>Se conectan con la autonomía prospectiva.</td></tr>
+<tr><td><strong>Derecho a rechazar tratamiento</strong></td><td>La autonomía incluye decir "no" a una intervención propuesta.</td><td class="er">No puede anularse por simple desacuerdo profesional. ★★★</td></tr>
+</tbody>
+</table>
+
+<h2>T6 · Beneficencia vs. no maleficencia <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Dimensión</th><th>Beneficencia ★★★</th><th>No maleficencia ★★★</th></tr></thead>
+<tbody>
+<tr><td><strong>Tipo de deber</strong></td><td class="ok">Positivo: hacer el bien</td><td class="ok">Negativo: no causar daño</td></tr>
+<tr><td><strong>Naturaleza</strong></td><td>Promover bienestar, curar, prevenir, ayudar</td><td>Evitar lesiones, sufrimiento, incapacidad o perjuicios evitables</td></tr>
+<tr><td><strong>Pregunta guía</strong></td><td>¿Qué bien debo procurar?</td><td>¿Qué daño debo evitar?</td></tr>
+<tr><td><strong>Riesgo si se absolutiza</strong></td><td>Paternalismo</td><td>Inmovilismo o exceso de cautela</td></tr>
+<tr><td><strong>Clave examen</strong></td><td class="hl">No equivale a no dañar. ★★★</td><td class="hl">No es mera ausencia de beneficencia. ★★★</td></tr>
+</tbody>
+</table>
+<div class="nota n-err"><strong>Trampa clásica:</strong> decir que Belmont ya distinguía beneficencia y no maleficencia. Es falso; esa separación la hacen Beauchamp y Childress.</div>
+
+<h2>T7 · No maleficencia y primum non nocere <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Elemento</th><th>Contenido</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Origen clásico</strong></td><td>Tradición hipocrática: primum non nocere.</td><td class="hl">Hipócrates, no B&C. ★★★</td></tr>
+<tr><td><strong>Sentido operativo</strong></td><td>No matar, no causar dolor innecesario, no producir sufrimiento o incapacidad, no privar de condiciones esenciales.</td><td>Funciona como límite de la acción profesional.</td></tr>
+<tr><td><strong>Riesgo-beneficio</strong></td><td>Casi toda intervención entraña algún riesgo; debe justificarse por balance favorable.</td><td>Ponderación riesgo/beneficio.</td></tr>
+<tr><td><strong>Error frecuente</strong></td><td>Confundirlo con pasividad absoluta.</td><td>No impide actuar; impide dañar injustificadamente.</td></tr>
+</tbody>
+</table>
+
+<h2>T8 · Justicia: formal, material y distributiva <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Tipo</th><th>Definición</th><th>Ejemplo</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Justicia formal</strong></td><td>Tratar igual a los iguales y desigual a los desiguales.</td><td>Criterios homogéneos para casos semejantes.</td><td>Fórmula clásica aristotélica.</td></tr>
+<tr><td><strong>Justicia material</strong></td><td>Determina según qué criterio distribuir: necesidad, mérito, esfuerzo, contribución, etc.</td><td>Priorización por gravedad o vulnerabilidad.</td><td>No existe un único criterio material.</td></tr>
+<tr><td><strong>Justicia distributiva ★★★</strong></td><td>Distribución equitativa de recursos escasos y acceso a servicios.</td><td>Listas de espera, recursos sanitarios y sociales.</td><td class="hl">Equidad ≠ igualdad aritmética. ★★★</td></tr>
+<tr><td><strong>Perspectiva Rawls</strong></td><td>Las desigualdades solo son aceptables si benefician a los menos favorecidos.</td><td>Prioridad a grupos vulnerables.</td><td>Conexión útil con servicios sociales.</td></tr>
+</tbody>
+</table>
+
+<h2>T9 · Los principios como obligaciones prima facie <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Aspecto</th><th>Contenido</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Autor</strong></td><td>W.D. Ross (1930)</td><td>Base conceptual del principialismo.</td></tr>
+<tr><td><strong>Significado ★★★</strong></td><td>Cada principio obliga salvo que entre en conflicto con otro igualmente válido.</td><td class="hl">No hay jerarquía rígida universal. ★★★</td></tr>
+<tr><td><strong>Consecuencia</strong></td><td>Los casos requieren ponderación, especificación y deliberación.</td><td>Se decide según circunstancias concretas.</td></tr>
+<tr><td><strong>Error frecuente</strong></td><td>Creer que uno de los 4 principios prevalece siempre en abstracto.</td><td class="er">Falso en B&C. ★★★</td></tr>
+</tbody>
+</table>
+
+<h2>T10 · Beauchamp y Childress vs. Diego Gracia <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Dimensión</th><th>Beauchamp y Childress</th><th>Diego Gracia</th></tr></thead>
+<tbody>
+<tr><td><strong>Estructura</strong></td><td>4 principios del mismo nivel, prima facie</td><td>Jerarquía práctica en 2 niveles</td></tr>
+<tr><td><strong>Jerarquía fija</strong></td><td class="er">No</td><td class="ok">Sí, en clave operativa</td></tr>
+<tr><td><strong>Nivel 1</strong></td><td>No se formula así</td><td class="hl">No maleficencia + Justicia ★★★</td></tr>
+<tr><td><strong>Nivel 2</strong></td><td>No se formula así</td><td class="hl">Beneficencia + Autonomía ★★★</td></tr>
+<tr><td><strong>Sentido</strong></td><td>Ponderación caso a caso</td><td>Distingue deberes públicos universales y deberes privados contextuales</td></tr>
+</tbody>
+</table>
+
+<h2>T11 · Conflictos típicos entre principios <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Conflicto</th><th>Ejemplo</th><th>Resolución típica</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Autonomía vs. beneficencia</strong></td><td>Paciente competente rechaza tratamiento que el profesional considera beneficioso.</td><td>Predomina la autonomía del paciente competente.</td><td class="hl">Conflicto más preguntado. ★★★</td></tr>
+<tr><td><strong>Beneficencia vs. no maleficencia</strong></td><td>Intervención útil pero con riesgos relevantes.</td><td>Se valora balance riesgo/beneficio.</td><td>No maleficencia actúa como límite.</td></tr>
+<tr><td><strong>Autonomía vs. justicia</strong></td><td>Demanda individual incompatible con criterios equitativos de acceso.</td><td>Debe ponderarse con reglas de equidad.</td><td>Recursos escasos.</td></tr>
+<tr><td><strong>Justicia vs. beneficencia</strong></td><td>Interés máximo de una persona vs. reparto general de recursos.</td><td>La justicia distributiva puede limitar el beneficio individual.</td><td>Perspectiva poblacional.</td></tr>
+</tbody>
+</table>
+
+<h2>T12 · Instrumentos normativos vinculados a los principios <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Norma / instrumento</th><th>Contenido principal</th><th>Principio más conectado</th></tr></thead>
+<tbody>
+<tr><td><strong>Convenio de Oviedo (1997)</strong></td><td>Derechos humanos y biomedicina; art. 5 consentimiento informado; art. 9 instrucciones previas.</td><td class="hl">Autonomía ★★★</td></tr>
+<tr><td><strong>Ley 41/2002</strong></td><td>Autonomía del paciente; derechos de información y documentación clínica.</td><td class="hl">Autonomía ★★★</td></tr>
+<tr><td><strong>Ley Foral 17/2010 (Navarra)</strong></td><td>Derechos y deberes de las personas en materia de salud en Navarra.</td><td>Autonomía + justicia</td></tr>
+<tr><td><strong>Decreto Foral 118/2021</strong></td><td>Regula el Comité de Bioética de Navarra.</td><td>Marco institucional bioético</td></tr>
+<tr><td><strong>Código Deontológico TS</strong></td><td>Dignidad, autonomía, justicia, solidaridad y derechos humanos.</td><td>Aplicación transversal a TS</td></tr>
+</tbody>
+</table>
+
+<h2>T13 · Bioética y Trabajo Social <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Principio</th><th>Aplicación en Trabajo Social</th><th>Riesgo ético si se incumple</th></tr></thead>
+<tbody>
+<tr><td><strong>Autonomía</strong></td><td>Respetar autodeterminación, consentimiento y confidencialidad.</td><td>Paternalismo, sustitución de la voluntad.</td></tr>
+<tr><td><strong>Beneficencia</strong></td><td>Intervenir para mejorar bienestar y responder a necesidades reales.</td><td>Inacción o desprotección.</td></tr>
+<tr><td><strong>No maleficencia</strong></td><td>No estigmatizar, no generar dependencia, no prolongar intervenciones innecesarias.</td><td>Daño institucional o relacional.</td></tr>
+<tr><td><strong>Justicia</strong></td><td>Garantizar acceso equitativo a recursos y trato no discriminatorio.</td><td>Exclusión, arbitrariedad, desigualdad.</td></tr>
+</tbody>
+</table>
+
+<h2>T14 · CEA vs. Comité de Bioética de Navarra <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Dimensión</th><th>CEA</th><th>Comité de Bioética de Navarra</th></tr></thead>
+<tbody>
+<tr><td><strong>Naturaleza</strong></td><td>Órgano consultivo, multidisciplinar e independiente</td><td>Órgano colegiado, deliberativo, consultivo, multidisciplinar</td></tr>
+<tr><td><strong>Ámbito</strong></td><td>Centros sanitarios / sociosanitarios</td><td>Ámbito foral</td></tr>
+<tr><td><strong>Funciones</strong></td><td>Consulta, deliberación, recomendación, formación, protocolos</td><td>Consulta, deliberación, informes, asesoramiento, formación</td></tr>
+<tr><td><strong>Decisiones vinculantes</strong></td><td class="er">No</td><td class="er">No</td></tr>
+<tr><td><strong>Participación del TS</strong></td><td class="ok">Sí</td><td class="ok">Sí ★★★</td></tr>
+</tbody>
+</table>
+
+<h2>T15 · Autores y aportación al tema <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Autor / fuente</th><th>Aportación</th><th>★</th></tr></thead>
+<tbody>
+<tr><td><strong>Van R. Potter (1970)</strong></td><td>Acuña el término bioética.</td><td class="hl">★★★</td></tr>
+<tr><td><strong>Informe Belmont (1978)</strong></td><td>Tres principios para investigación con seres humanos.</td><td class="hl">★★★</td></tr>
+<tr><td><strong>Beauchamp y Childress (1979)</strong></td><td>Modelo de los 4 principios; obra fundacional.</td><td class="hl">★★★</td></tr>
+<tr><td><strong>W.D. Ross (1930)</strong></td><td>Concepto de obligaciones prima facie.</td><td class="hl">★★★</td></tr>
+<tr><td><strong>Diego Gracia</strong></td><td>Jerarquía práctica en 2 niveles.</td><td class="hl">★★★</td></tr>
+<tr><td><strong>Hipócrates</strong></td><td>Tradición del primum non nocere.</td><td class="hl">★★★</td></tr>
+<tr><td><strong>Rawls</strong></td><td>Justicia distributiva y equidad.</td><td>★</td></tr>
+<tr><td><strong>CGTS</strong></td><td>Conexión bioética–deontología del Trabajo Social.</td><td>★★</td></tr>
+</tbody>
+</table>
+
+<h2>T16 · Las 12 trampas del examen <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Afirmación incorrecta</th><th>Corrección exacta</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Beauchamp acuñó el término bioética.</td><td>Lo acuñó <strong>Potter</strong> en 1970. ★★★</td></tr>
+<tr><td>2</td><td>El Informe Belmont contiene 4 principios.</td><td>Contiene <strong>3</strong>: respeto a las personas, beneficencia y justicia. ★★★</td></tr>
+<tr><td>3</td><td>Belmont ya distinguía no maleficencia de beneficencia.</td><td>La distinción la formulan <strong>Beauchamp y Childress</strong>. ★★★</td></tr>
+<tr><td>4</td><td>Beneficencia y no maleficencia son equivalentes.</td><td>Beneficencia = hacer el bien; no maleficencia = no dañar. ★★★</td></tr>
+<tr><td>5</td><td>Los 4 principios tienen jerarquía rígida universal en B&C.</td><td>Son obligaciones <strong>prima facie</strong>. ★★★</td></tr>
+<tr><td>6</td><td>La beneficencia prevalece siempre sobre la autonomía.</td><td>En conflicto con paciente competente, prevalece <strong>autonomía</strong>. ★★★</td></tr>
+<tr><td>7</td><td>Primum non nocere es una aportación de B&C.</td><td>Es un principio <strong>hipocrático</strong>. ★★★</td></tr>
+<tr><td>8</td><td>Justicia significa repartir idénticamente a todos.</td><td>Significa <strong>equidad</strong>, no igualdad aritmética. ★★★</td></tr>
+<tr><td>9</td><td>Diego Gracia sitúa autonomía en el nivel 1.</td><td>Autonomía está en el <strong>nivel 2</strong>. ★★★</td></tr>
+<tr><td>10</td><td>El CEA toma decisiones vinculantes.</td><td>Su función es <strong>consultiva y deliberativa</strong>. ★★★</td></tr>
+<tr><td>11</td><td>El TS no tiene relación con la bioética.</td><td>El TS aplica los 4 principios en su intervención. ★★★</td></tr>
+<tr><td>12</td><td>El TS no puede formar parte del Comité de Bioética de Navarra.</td><td><strong>Sí puede</strong>, según el DF 118/2021. ★★★</td></tr>
+</tbody>
+</table>
+
+</div>
+</body>
+</html>
