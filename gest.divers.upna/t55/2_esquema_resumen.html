@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 55 · HTML 2 · Esquema-resumen visual · Acompañamiento social</title>
+<style>
+:root{
+  --bg:#f0fdf4;--card:#fff;--s2:#dcfce7;--s3:#bbf7d0;--line:#4ade80;
+  --text:#052e16;--muted:#166534;--p:#16a34a;--p2:#15803d;
+  --grn:#059669;--grn2:#d1fae5;--red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;--sky:#0284c7;--sky2:#e0f2fe;
+  --teal:#0d9488;--teal2:#ccfbf1;--vio:#7c3aed;--vio2:#ede9fe;
+  --rose:#be185d;--rose2:#fce7f3;--ora:#ea580c;--ora2:#ffedd5;
+  --sh:0 3px 18px rgba(22,163,74,.11)
+}
+[data-theme="dark"]{
+  --bg:#021008;--card:#0a1f10;--s2:#0f2d17;--s3:#193d22;--line:#16a34a;
+  --text:#bbf7d0;--muted:#4ade80;--p:#4ade80;--p2:#86efac;
+  --grn:#86efac;--grn2:#052e16;--red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;--sky:#7dd3fc;--sky2:#082038;
+  --teal:#5eead4;--teal2:#031a16;--vio:#c4b5fd;--vio2:#1a0e33;
+  --rose:#fda4af;--rose2:#1a0010;--ora:#fb923c;--ora2:#2a1300;
+  --sh:0 3px 18px rgba(0,0,0,.45)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:20px}
+.wrap{max-width:1240px;margin:0 auto}
+
+/* HEADER */
+.hdr{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:16px 22px;box-shadow:var(--sh);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.hdr-t h1{font-size:.94rem;font-weight:900;color:var(--p)}
+.hdr-t p{font-size:.7rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1.5px solid var(--line);background:var(--s2);color:var(--text);padding:6px 16px;border-radius:999px;font-size:.7rem;font-weight:700}
+
+/* SECTION TITLE */
+.sec-title{background:var(--p);color:#fff;font-size:.8rem;font-weight:900;padding:7px 18px;border-radius:10px;display:inline-block;margin:20px 0 10px;text-transform:uppercase;letter-spacing:.04em}
+
+/* FLASH STRIP */
+.flash-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;margin-bottom:16px}
+.flash{background:var(--card);border:1.5px solid var(--line);border-radius:13px;padding:11px 13px;box-shadow:var(--sh);position:relative}
+.flash .num{font-size:1.8rem;font-weight:900;color:var(--p);opacity:.18;position:absolute;top:6px;right:10px}
+.flash .q{font-size:.68rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+.flash .a{font-size:.82rem;font-weight:800;color:var(--text)}
+
+/* TRÍADA CARDS */
+.triad{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-bottom:16px}
+.triad-card{border-radius:14px;padding:14px 16px;box-shadow:var(--sh)}
+.tc-green{background:var(--grn2);border:2px solid var(--grn)}
+.tc-sky{background:var(--sky2);border:2px solid var(--sky)}
+.tc-vio{background:var(--vio2);border:2px solid var(--vio)}
+.tc-ora{background:var(--ora2);border:2px solid var(--ora)}
+.tc-rose{background:var(--rose2);border:2px solid var(--rose)}
+.tc-warn{background:var(--warn2);border:2px solid var(--warn)}
+.triad-card .label{font-size:.62rem;font-weight:900;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;opacity:.75}
+.triad-card .val{font-size:.92rem;font-weight:800;color:var(--text)}
+.triad-card .desc{font-size:.74rem;margin-top:5px;line-height:1.5;color:var(--text)}
+
+/* GRID PILLS */
+.pill-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin-bottom:16px}
+.pill-box{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:11px 14px;box-shadow:var(--sh)}
+.pill-box .pb-title{font-size:.73rem;font-weight:900;color:var(--p);margin-bottom:7px;text-transform:uppercase;letter-spacing:.03em}
+.pill{display:inline-block;background:var(--s2);color:var(--p2);border:1px solid var(--line);border-radius:99px;padding:3px 10px;font-size:.7rem;font-weight:700;margin:2px 3px 2px 0}
+.pill.err{background:var(--red2);color:var(--red);border-color:var(--red)}
+.pill.warn{background:var(--warn2);color:var(--warn);border-color:var(--warn)}
+.pill.sky{background:var(--sky2);color:var(--sky);border-color:var(--sky)}
+.pill.vio{background:var(--vio2);color:var(--vio);border-color:var(--vio)}
+.pill.ora{background:var(--ora2);color:var(--ora);border-color:var(--ora)}
+
+/* FLUJO FASES */
+.flow{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.flow-row{display:flex;align-items:stretch;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:10px 14px;box-shadow:var(--sh)}
+.flow-num{min-width:38px;height:38px;border-radius:50%;background:var(--p);color:#fff;font-size:1.1rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.flow-body{flex:1}
+.flow-title{font-size:.84rem;font-weight:900;color:var(--p);margin-bottom:3px}
+.flow-desc{font-size:.73rem;line-height:1.5;color:var(--text)}
+.flow-key{font-size:.68rem;font-weight:800;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:.03em}
+.flow-arrow{text-align:center;font-size:1.3rem;color:var(--p);opacity:.6;margin:-2px 0}
+
+/* COMPARATIVA TABLE */
+.comp{width:100%;border-collapse:collapse;border-radius:12px;overflow:hidden;box-shadow:var(--sh);margin-bottom:16px}
+.comp th{background:var(--p);color:#fff;padding:9px 12px;text-align:left;font-size:.69rem;text-transform:uppercase;letter-spacing:.04em}
+.comp td{padding:9px 12px;border-bottom:1px solid var(--s2);font-size:.76rem;vertical-align:top;background:var(--card)}
+.comp tr:last-child td{border-bottom:none}
+.comp tr:hover td{background:var(--s2)}
+.hl{background:var(--s3)!important;font-weight:800;color:var(--p2)}
+.ok-cell{background:var(--grn2)!important}
+.err-cell{background:var(--red2)!important}
+
+/* TRAMPAS */
+.trap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:10px;margin-bottom:16px}
+.trap{background:var(--card);border:1px solid var(--line);border-radius:13px;overflow:hidden;box-shadow:var(--sh)}
+.trap-wrong{background:var(--red2);padding:8px 13px;font-size:.73rem;font-weight:700;color:var(--red)}
+.trap-ok{background:var(--grn2);padding:8px 13px;font-size:.73rem;color:var(--grn)}
+.trap-num{font-size:.62rem;font-weight:900;opacity:.6;margin-bottom:2px;text-transform:uppercase}
+
+/* DEFINICION BOX */
+.def-box{background:var(--card);border:3px solid var(--p);border-radius:18px;padding:18px 20px;box-shadow:var(--sh);margin-bottom:16px}
+.def-box .def-title{font-size:.68rem;font-weight:900;color:var(--p);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.def-box .def-text{font-size:.84rem;line-height:1.7;font-style:italic;color:var(--text)}
+.def-box .def-src{font-size:.68rem;color:var(--muted);margin-top:8px}
+.highlight-word{background:var(--s3);color:var(--p2);border-radius:4px;padding:0 3px;font-weight:800;font-style:normal}
+
+/* CASTEL ZONES */
+.castel{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+.castel-z{border-radius:14px;padding:14px 16px;box-shadow:var(--sh);text-align:center}
+.cz-integr{background:var(--grn2);border:2px solid var(--grn)}
+.cz-vuln{background:var(--warn2);border:2px solid var(--warn)}
+.cz-excl{background:var(--red2);border:2px solid var(--red)}
+.castel-z .z-title{font-size:.94rem;font-weight:900;margin-bottom:7px}
+.castel-z .z-items{font-size:.71rem;line-height:1.7;text-align:left}
+
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<!-- HEADER -->
+<div class="hdr">
+  <div class="hdr-t">
+    <h1>Tema 55 · HTML 2 · Esquema-resumen con bloques visuales</h1>
+    <p>El acompañamiento social como método de intervención en los procesos de inclusión · Oposiciones Navarra</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">🌙 Claro / Oscuro</button>
+</div>
+
+<!-- ═══════════════════════════ BLOQUE 0: FICHAS FLASH ════════════════════════ -->
+<div class="sec-title">⚡ Fichas flash — 15 datos inmediatos</div>
+<div class="flash-grid">
+
+  <div class="flash">
+    <div class="num">1</div>
+    <div class="q">Fuente principal del tema</div>
+    <div class="a">Red Navarra de Lucha contra la Pobreza y la Exclusión Social (2016)</div>
+  </div>
+
+  <div class="flash">
+    <div class="num">2</div>
+    <div class="q">¿Es técnica o método?</div>
+    <div class="a">MÉTODO (no técnica aislada; organiza toda la intervención)</div>
+  </div>
+
+  <div class="flash">
+    <div class="num">3</div>
+    <div class="q">Temporalidad</div>
+    <div class="a">TEMPORAL: tiene inicio y cierre planificado; no es indefinido ★★★</div>
+  </div>
+
+  <div class="flash">
+    <div class="num">4</div>
+    <div class="q">Derecho o recurso</div>
+    <div class="a">DERECHO ciudadano independiente de cualquier prestación ★★★</div>
+  </div>
+
+  <div class="flash">
+    <div class="num">5</div>
+    <div class="q">Tipo de relación</div>
+    <div class="a">Proactiva, de confianza y con profesional de REFERENCIA ★★★</div>
+  </div>
+
+  <div class="flash">
+    <div class="num">6</div>
+    <div class="q">Foco de la intervención</div>
+    <div class="a">Potencialidades y CAPACIDADES (no solo déficits) ★★★</div>
+  </div>
+
+  <div class="flash">
+    <div class="num">7</div>
+    <div class="q">Horizonte final</div>
+    <div class="a">AUTONOMÍA de la persona (no dependencia del recurso) ★★★</div>
+  </div>
+
+  <div class="flash">
+    <div class="num">8</div>
+    <div class="q">Cuando no es posible la inclusión plena</div>
+    <div class="a">REDUCCIÓN DE DAÑOS: resultado legítimo y válido ★★★</div>
+  </div>
+
+  <div class="flash">
+    <div class="num">9</div>
+    <div class="q">Diagnóstico en acompañamiento</div>
+    <div class="a">CODIAGNÓSTICO: elaborado CON la persona, no PARA ella ★★★</div>
+  </div>
+
+  <div class="flash">
+    <div class="num">10</div>
+    <div class="q">Plan de caso</div>
+    <div class="a">Plan COMPARTIDO y co-elaborado con la persona ★★★</div>
+  </div>
+
+  <div class="flash">
+    <div class="num">11</div>
+    <div class="q">Nº de fases del plan</div>
+    <div class="a">6 fases: Acogida · Diagnóstico · Plan · Seguimiento · Evaluación · Cierre ★★★</div>
+  </div>
+
+  <div class="flash">
+    <div class="num">12</div>
+    <div class="q">Zonas sociales (Castel, 1997)</div>
+    <div class="a">Integración · Vulnerabilidad · Exclusión (desafiliación) ★★★</div>
+  </div>
+
+  <div class="flash">
+    <div class="num">13</div>
+    <div class="q">Ejes del acompañamiento (Raya y Caparrós, 2014)</div>
+    <div class="a">Eje 1: Participación activa · Eje 2: Acompañamiento / soporte ★★★</div>
+  </div>
+
+  <div class="flash">
+    <div class="num">14</div>
+    <div class="q">Frase Raya (2023)</div>
+    <div class="a">"La relación de acompañamiento no debe mermar sino aumentar la autonomía." ★★★</div>
+  </div>
+
+  <div class="flash">
+    <div class="num">15</div>
+    <div class="q">Frase Funes y Raya (2001)</div>
+    <div class="a">"Excluida no está solo la persona que no recibe, sino la que no puede aportar." ★★★</div>
+  </div>
+
+</div><!-- fin flash-grid -->
+
+<!-- ═══════════════════════════ BLOQUE 1: DEFINICIÓN ════════════════════════ -->
+<div class="sec-title">📖 Bloque 1 · Definición consensuada ★★★</div>
+<div class="def-box">
+  <div class="def-title">Red Navarra de Lucha contra la Pobreza y la Exclusión Social (2016) — Redacción: Beatriz Zugasti Mutilva</div>
+  <div class="def-text">
+    "Método de intervención profesional <span class="highlight-word">temporal</span>, de <span class="highlight-word">intensidad variable</span>, basado en el <span class="highlight-word">derecho</span> de la ciudadanía a una relación de ayuda o atención social <span class="highlight-word">personalizada</span>; partiendo de una relación <span class="highlight-word">proactiva</span> y de <span class="highlight-word">confianza</span>, y mediante el diseño conjunto de un <span class="highlight-word">itinerario individualizado de incorporación</span> con objetivos acordes a las necesidades, debe posibilitar una oportunidad de <span class="highlight-word">mejora o reducción de daños</span>; debe estar encaminada al desarrollo de las <span class="highlight-word">potencialidades y capacidades</span> de la persona y al descubrimiento y reinterpretación de la situación en clave de cambio, tomando el <span class="highlight-word">protagonismo del propio proyecto vital</span>."
+  </div>
+  <div class="def-src">Fuente: Red Navarra de Lucha contra la Pobreza y la Exclusión Social, 2016 · 28 profesionales de 19 organizaciones públicas y privadas de Navarra</div>
+</div>
+<div class="pill-grid">
+  <div class="pill-box">
+    <div class="pb-title">10 palabras-clave de la definición ★★★</div>
+    <span class="pill">Temporal</span>
+    <span class="pill">Intensidad variable</span>
+    <span class="pill">Derecho</span>
+    <span class="pill">Personalizada</span>
+    <span class="pill">Proactiva</span>
+    <span class="pill">Confianza</span>
+    <span class="pill">Itinerario individualizado</span>
+    <span class="pill">Potencialidades y capacidades</span>
+    <span class="pill">Reducción de daños</span>
+    <span class="pill">Protagonismo del proyecto vital</span>
+  </div>
+  <div class="pill-box">
+    <div class="pb-title">6 elementos previos que asume la definición ★★★</div>
+    <span class="pill">No basta con recursos → personalización</span>
+    <span class="pill">No se puede imponer → voluntariedad</span>
+    <span class="pill">Múltiples recursos con hilo conductor → acompañamiento</span>
+    <span class="pill">Las acciones son parte de un proceso</span>
+    <span class="pill">El empleo no siempre es el fin</span>
+    <span class="pill">Trabajo social intenso (como la UCI en medicina)</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ BLOQUE 2: CASTEL ════════════════════════ -->
+<div class="sec-title">🗺️ Bloque 2 · Zonas de cohesión social (Castel, 1997) ★★★</div>
+<div class="castel">
+  <div class="castel-z cz-integr">
+    <div class="z-title" style="color:#166534">✅ Integración</div>
+    <div class="z-items">
+      · Empleo estable<br>
+      · Relaciones sociales sólidas<br>
+      · Pleno ejercicio de derechos<br>
+      · Participación social activa
+    </div>
+  </div>
+  <div class="castel-z cz-vuln">
+    <div class="z-title" style="color:#92400e">⚠️ Vulnerabilidad</div>
+    <div class="z-items">
+      · Empleo precario<br>
+      · Fragilidad relacional<br>
+      · Bajo empoderamiento<br>
+      · Riesgo de deterioro
+    </div>
+  </div>
+  <div class="castel-z cz-excl">
+    <div class="z-title" style="color:#991b1b">❌ Exclusión / desafiliación</div>
+    <div class="z-items">
+      · Desempleo · Aislamiento<br>
+      · Dependencia de protección<br>
+      · Incapacidad de ejercer derechos<br>
+      · Identidades negativas
+    </div>
+  </div>
+</div>
+<div class="pill-box" style="margin-bottom:16px">
+  <div class="pb-title">Clave examen sobre las zonas ★★★</div>
+  <span class="pill">Las zonas son PERMEABLES</span>
+  <span class="pill">El acompañamiento = dispositivo de enganche hacia integración</span>
+  <span class="pill">No son estáticas: se avanza y se retrocede</span>
+</div>
+
+<!-- ═══════════════════════════ BLOQUE 3: REQUISITOS ════════════════════════ -->
+<div class="sec-title">✅ Bloque 3 · Requisitos de participación ★★★</div>
+<div class="triad">
+  <div class="triad-card tc-green">
+    <div class="label">Requisito 1</div>
+    <div class="val">Situación de exclusión o vulnerabilidad</div>
+    <div class="desc">Pluriexclusión en más de un eje (laboral, formativo, residencial, relacional, sanitario...).</div>
+  </div>
+  <div class="triad-card tc-sky">
+    <div class="label">Requisito 2</div>
+    <div class="val">Necesidad de intervención intensiva y continuada</div>
+    <div class="desc">No resuelta con gestión puntual o derivación simple a un recurso.</div>
+  </div>
+  <div class="triad-card tc-vio">
+    <div class="label">Requisito 3</div>
+    <div class="val">Existencia de capacidades trabajables</div>
+    <div class="desc">Potencialidades sobre las que construir el proceso de cambio.</div>
+  </div>
+  <div class="triad-card tc-ora">
+    <div class="label">Requisito 4 ★★★</div>
+    <div class="val">Mínima motivación o posibilidad de construirla</div>
+    <div class="desc">No hace falta motivación plena inicial: el vínculo puede construirla progresivamente.</div>
+  </div>
+  <div class="triad-card tc-rose">
+    <div class="label">Requisito 5</div>
+    <div class="val">Ausencia o insuficiencia de red de apoyo natural</div>
+    <div class="desc">Sin familia, apoyos comunitarios ni referentes positivos suficientes.</div>
+  </div>
+  <div class="triad-card tc-warn">
+    <div class="label">Requisito 6</div>
+    <div class="val">Multiproblematicidad</div>
+    <div class="desc">Problemas en varios ejes simultáneamente que exigen hilo conductor profesional.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ BLOQUE 4: CARACTERÍSTICAS ════════════════════════ -->
+<div class="sec-title">🔑 Bloque 4 · 8 características del acompañamiento ★★★</div>
+<table class="comp">
+<thead><tr><th>#</th><th>Característica</th><th>Descripción operativa</th><th>Clave examen</th></tr></thead>
+<tbody>
+  <tr>
+    <td class="hl">1</td>
+    <td><strong>Relación referencial temporal</strong></td>
+    <td>Vinculación con un profesional de referencia · tiene inicio y cierre planificado</td>
+    <td style="color:var(--red);font-weight:800">No es indefinido ★★★</td>
+  </tr>
+  <tr>
+    <td class="hl">2</td>
+    <td><strong>Intensidad variable</strong></td>
+    <td>Mayor intensidad al inicio y en crisis; menor a medida que crece la autonomía</td>
+    <td>Se ajusta al momento del proceso</td>
+  </tr>
+  <tr>
+    <td class="hl">3</td>
+    <td><strong>Derecho ciudadano</strong></td>
+    <td>Debe ser un derecho independiente de cualquier prestación económica</td>
+    <td style="color:var(--red);font-weight:800">No condicionado a renta ★★★</td>
+  </tr>
+  <tr>
+    <td class="hl">4</td>
+    <td><strong>Énfasis en potencialidades</strong></td>
+    <td>Mirada de activos y fortalezas, no solo de déficits y carencias</td>
+    <td>Strength-based approach ★★★</td>
+  </tr>
+  <tr>
+    <td class="hl">5</td>
+    <td><strong>Empoderamiento</strong></td>
+    <td>La persona es sujeto activo de decisiones y cambios; no objeto de intervención</td>
+    <td style="color:var(--grn);font-weight:800">No se decide POR ella, sino CON ella ★★★</td>
+  </tr>
+  <tr>
+    <td class="hl">6</td>
+    <td><strong>Autonomía como horizonte</strong></td>
+    <td>"La relación de acompañamiento no debe mermar sino aumentar la autonomía." (Raya, 2023)</td>
+    <td style="color:var(--red);font-weight:800">Vínculo ≠ dependencia ★★★</td>
+  </tr>
+  <tr>
+    <td class="hl">7</td>
+    <td><strong>Voluntariedad</strong></td>
+    <td>No puede imponerse; si no hay motivación se trabaja para construirla</td>
+    <td>Tensión con rentas condicionadas ★★★</td>
+  </tr>
+  <tr>
+    <td class="hl">8</td>
+    <td><strong>Reducción de daños como resultado</strong></td>
+    <td>Cuando la inclusión plena no es posible, reducir daños y mejorar calidad de vida es resultado legítimo</td>
+    <td style="color:var(--red);font-weight:800">No siempre = inclusión total ★★★</td>
+  </tr>
+</tbody>
+</table>
+
+<!-- ═══════════════════════════ BLOQUE 5: QUÉ NO ES ════════════════════════ -->
+<div class="sec-title">🚫 Bloque 5 · Qué NO es el acompañamiento ★★★</div>
+<div class="pill-grid">
+  <div class="pill-box">
+    <div class="pb-title">No es...</div>
+    <span class="pill err">Asistencialismo</span>
+    <span class="pill err">Paternalismo</span>
+    <span class="pill err">Gestión exclusiva de recursos</span>
+    <span class="pill err">Intervención puntual</span>
+    <span class="pill err">Indefinido en el tiempo</span>
+    <span class="pill err">Hacer POR la persona</span>
+    <span class="pill err">Hacer SOBRE la persona</span>
+  </div>
+  <div class="pill-box">
+    <div class="pb-title">Sí es...</div>
+    <span class="pill">Método profesional estructurado</span>
+    <span class="pill">Relación de confianza y vínculo</span>
+    <span class="pill">Proceso compartido de cambio</span>
+    <span class="pill">Itinerario individualizado</span>
+    <span class="pill">Foco en potencialidades</span>
+    <span class="pill">Hacer CON la persona</span>
+    <span class="pill">Orientado a autonomía</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ BLOQUE 6: 6 FASES ════════════════════════ -->
+<div class="sec-title">🔄 Bloque 6 · Las 6 fases del plan de intervención ★★★</div>
+<div class="flow">
+
+  <div class="flow-row">
+    <div class="flow-num">1</div>
+    <div class="flow-body">
+      <div class="flow-title">ACOGIDA</div>
+      <div class="flow-desc">Primer contacto · el profesional se presenta y explica el marco · escucha la demanda · crea confianza · primeros pactos bilaterales · el profesional de referencia queda establecido.</div>
+      <div class="flow-key">Comprensión → Confianza → Toma de consciencia → Cambio de posición</div>
+    </div>
+  </div>
+  <div class="flow-arrow">↓</div>
+
+  <div class="flow-row">
+    <div class="flow-num">2</div>
+    <div class="flow-body">
+      <div class="flow-title">DIAGNÓSTICO / CODIAGNÓSTICO ★★★</div>
+      <div class="flow-desc">Comprendiendo para actuar. Se identifica necesidades, potencialidades, capacidades y recursos del entorno. El diagnóstico se elabora <strong>CON la persona</strong>, no PARA ella.</div>
+      <div class="flow-key">Codiagnóstico: comprensión compartida de la situación en clave de cambio ★★★</div>
+    </div>
+  </div>
+  <div class="flow-arrow">↓</div>
+
+  <div class="flow-row">
+    <div class="flow-num">3</div>
+    <div class="flow-body">
+      <div class="flow-title">ELABORACIÓN DEL PLAN DE CASO ★★★</div>
+      <div class="flow-desc">Trabajando conjuntamente. Objetivos concretos · realistas · alcanzables · consensuados · verificables. Plan compartido: el profesional lo co-elabora con la persona.</div>
+      <div class="flow-key">Plan compartido: co-elaborado · no impuesto · con responsabilidades mutuas ★★★</div>
+    </div>
+  </div>
+  <div class="flow-arrow">↓</div>
+
+  <div class="flow-row">
+    <div class="flow-num">4</div>
+    <div class="flow-body">
+      <div class="flow-title">SEGUIMIENTO</div>
+      <div class="flow-desc">Monitorización del proceso · constatar primeros avances · gestión de frustraciones · soporte emocional · reajuste ante imprevistos y crisis · recuperación de vínculos sociales.</div>
+      <div class="flow-key">Proceso dinámico: avances, retrocesos y reajustes forman parte del proceso ★★★</div>
+    </div>
+  </div>
+  <div class="flow-arrow">↓</div>
+
+  <div class="flow-row">
+    <div class="flow-num">5</div>
+    <div class="flow-body">
+      <div class="flow-title">EVALUACIÓN</div>
+      <div class="flow-desc">Valoración de resultados respecto a objetivos pactados · evaluación de proceso (¿cómo?) + de resultados (¿qué?) · participación de la propia persona en la evaluación.</div>
+      <div class="flow-key">Doble evaluación: proceso + resultados, con participación de la persona ★★★</div>
+    </div>
+  </div>
+  <div class="flow-arrow">↓</div>
+
+  <div class="flow-row">
+    <div class="flow-num">6</div>
+    <div class="flow-body">
+      <div class="flow-title">FINALIZACIÓN / CIERRE ★★★</div>
+      <div class="flow-desc">Desvinculación gradual y planificada · transferencia de logros a la autonomía · el cierre no es sinónimo de éxito total ni de fracaso; el proceso puede reiniciarse.</div>
+      <div class="flow-key">Cierre ≠ fracaso si se reinicia. Desvinculación gradual ★★★</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════ BLOQUE 7: 2 EJES ════════════════════════ -->
+<div class="sec-title">⚖️ Bloque 7 · Dos ejes del acompañamiento (Raya y Caparrós, 2014) ★★★</div>
+<div class="triad">
+  <div class="triad-card tc-green">
+    <div class="label">Eje 1 — Participación activa</div>
+    <div class="val">Desarrollo personal e itinerario</div>
+    <div class="desc">Relación con el desarrollo personal y establecimiento de itinerarios para la consecución de los objetivos pactados. Participación activa a través de una relación de ayuda que orienta y guía.</div>
+  </div>
+  <div class="triad-card tc-sky">
+    <div class="label">Eje 2 — Acompañamiento</div>
+    <div class="val">Soporte, facilitación, apoyo, mediación</div>
+    <div class="desc">Define la relación del profesional con la persona a lo largo del proceso: sostener, facilitar, apoyar y mediar cuando sea necesario.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ BLOQUE 8: REFERENCIAS ════════════════════════ -->
+<div class="sec-title">📚 Bloque 8 · Referencias clave del tema ★★★</div>
+<table class="comp">
+<thead><tr><th>Autor / Fuente</th><th>Aportación al tema</th><th>★</th></tr></thead>
+<tbody>
+  <tr><td><strong>Red Navarra Lucha contra Pobreza (2016)</strong></td><td>Definición consensuada · manual principal del tema · 28 profesionales de 19 organizaciones de Navarra</td><td class="hl">★★★</td></tr>
+  <tr><td><strong>Robert Castel (1997)</strong></td><td>Tres zonas de cohesión social: integración · vulnerabilidad · exclusión/desafiliación</td><td class="hl">★★★</td></tr>
+  <tr><td><strong>Funes y Raya (2001)</strong></td><td>"Excluida no está solo la persona que no recibe, sino la que no puede aportar." Marginación = inexistencia de intercambios mutuos.</td><td class="hl">★★★</td></tr>
+  <tr><td><strong>Raya y Caparrós (2014)</strong></td><td>Los dos ejes del acompañamiento: Participación activa + Acompañamiento/soporte</td><td class="hl">★★★</td></tr>
+  <tr><td><strong>Raya Diez (2023)</strong></td><td>"La relación de acompañamiento no debe mermar sino aumentar la autonomía."</td><td class="hl">★★★</td></tr>
+  <tr><td><strong>Observatorio de Procesos de Exclusión (2006)</strong></td><td>Definición de incorporación social: proceso para pasar de exclusión a integración; procesual, multidimensional, personalizado.</td><td>★★★</td></tr>
+  <tr><td><strong>Estivill (2003)</strong></td><td>Definición de exclusión como acumulación de procesos con rupturas sucesivas que alejan de recursos, poder y valores dominantes.</td><td>★</td></tr>
+  <tr><td><strong>Ley Foral 15/2006 de SS.SS. Navarra</strong></td><td>Marco jurídico de la inclusión social en Navarra</td><td>★★</td></tr>
+  <tr><td><strong>ENIS (Estrategia Navarra de Inclusión Social)</strong></td><td>Marco estratégico autonómico; recoge el acompañamiento como eje metodológico</td><td>★★</td></tr>
+</tbody>
+</table>
+
+<!-- ═══════════════════════════ BLOQUE 9: TRAMPA-GRID ════════════════════════ -->
+<div class="sec-title">⚠️ Bloque 9 · 10 trampas del examen ★★★</div>
+<div class="trap-grid">
+
+  <div class="trap">
+    <div class="trap-wrong"><div class="trap-num">TRAMPA 1 ✗</div>"El acompañamiento social es una técnica"</div>
+    <div class="trap-ok">✓ Es un <strong>MÉTODO</strong> de intervención: organiza globalmente la intervención con fases, objetivos y criterios propios. ★★★</div>
+  </div>
+
+  <div class="trap">
+    <div class="trap-wrong"><div class="trap-num">TRAMPA 2 ✗</div>"El acompañamiento es indefinido en el tiempo"</div>
+    <div class="trap-ok">✓ Es <strong>TEMPORAL</strong>: tiene inicio y finalización planificada. La indefinición generaría dependencia, no autonomía. ★★★</div>
+  </div>
+
+  <div class="trap">
+    <div class="trap-wrong"><div class="trap-num">TRAMPA 3 ✗</div>"Solo puede iniciarse cuando la persona muestra plena motivación"</div>
+    <div class="trap-ok">✓ Puede iniciarse con motivación incipiente. El <strong>vínculo profesional puede construir la motivación</strong> progresivamente. ★★★</div>
+  </div>
+
+  <div class="trap">
+    <div class="trap-wrong"><div class="trap-num">TRAMPA 4 ✗</div>"El diagnóstico lo elabora el profesional para la persona"</div>
+    <div class="trap-ok">✓ Es un <strong>CODIAGNÓSTICO</strong>: elaborado CON la persona, no PARA ella. El diagnóstico es compartido. ★★★</div>
+  </div>
+
+  <div class="trap">
+    <div class="trap-wrong"><div class="trap-num">TRAMPA 5 ✗</div>"El plan de intervención lo redacta el profesional"</div>
+    <div class="trap-ok">✓ Es un <strong>PLAN COMPARTIDO</strong>: co-elaborado con la persona. No se impone unilateralmente. ★★★</div>
+  </div>
+
+  <div class="trap">
+    <div class="trap-wrong"><div class="trap-num">TRAMPA 6 ✗</div>"El acompañamiento equivale a asistencialismo"</div>
+    <div class="trap-ok">✓ Es lo contrario: busca <strong>EMPODERAMIENTO y AUTONOMÍA</strong>. El asistencialismo genera dependencia; el acompañamiento la combate. ★★★</div>
+  </div>
+
+  <div class="trap">
+    <div class="trap-wrong"><div class="trap-num">TRAMPA 7 ✗</div>"El único resultado válido es la plena inclusión social"</div>
+    <div class="trap-ok">✓ También la <strong>REDUCCIÓN DE DAÑOS</strong> es un resultado legítimo y valioso cuando la inclusión plena no es posible. ★★★</div>
+  </div>
+
+  <div class="trap">
+    <div class="trap-wrong"><div class="trap-num">TRAMPA 8 ✗</div>"El acompañamiento debe estar condicionado a la percepción de una prestación"</div>
+    <div class="trap-ok">✓ La Red Navarra sostiene que debe ser un <strong>DERECHO INDEPENDIENTE</strong> de cualquier prestación económica. ★★★</div>
+  </div>
+
+  <div class="trap">
+    <div class="trap-wrong"><div class="trap-num">TRAMPA 9 ✗</div>"Las zonas de cohesión de Castel son fijas e impermeables"</div>
+    <div class="trap-ok">✓ Son <strong>PERMEABLES</strong>: se avanza y se retrocede entre zonas. El acompañamiento es el dispositivo de enganche hacia la integración. ★★★</div>
+  </div>
+
+  <div class="trap">
+    <div class="trap-wrong"><div class="trap-num">TRAMPA 10 ✗</div>"El cierre del proceso significa que se han logrado todos los objetivos"</div>
+    <div class="trap-ok">✓ El cierre puede suponer una pausa, reorientación o logro parcial. <strong>No es fracaso si el proceso se reinicia más adelante</strong>. ★★★</div>
+  </div>
+
+</div>
+
+</div><!-- fin wrap -->
+</body>
+</html>

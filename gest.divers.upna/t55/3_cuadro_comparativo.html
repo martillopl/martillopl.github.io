@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 55 · HTML 3 · Cuadro comparativo y tablas operativas · Acompañamiento social</title>
+<style>
+:root{
+  --bg:#f0fdf4;--card:#fff;--s2:#dcfce7;--s3:#bbf7d0;--line:#4ade80;
+  --text:#052e16;--muted:#166534;--p:#16a34a;--p2:#15803d;
+  --grn:#059669;--grn2:#d1fae5;--red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;--sky:#0284c7;--sky2:#e0f2fe;
+  --teal:#0d9488;--teal2:#ccfbf1;--vio:#7c3aed;--vio2:#ede9fe;
+  --rose:#be185d;--rose2:#fce7f3;--sh:0 2px 12px rgba(22,163,74,.10)
+}
+[data-theme="dark"]{
+  --bg:#021008;--card:#0a1f10;--s2:#0f2d17;--s3:#193d22;--line:#16a34a;
+  --text:#bbf7d0;--muted:#4ade80;--p:#4ade80;--p2:#86efac;
+  --grn:#86efac;--grn2:#052e16;--red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;--sky:#7dd3fc;--sky2:#082038;
+  --teal:#5eead4;--teal2:#031a16;--vio:#c4b5fd;--vio2:#1a0e33;
+  --rose:#fda4af;--rose2:#1a0010;--sh:0 2px 14px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:22px}
+.wrap{max-width:1240px;margin:0 auto}
+header{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:14px 22px;box-shadow:var(--sh);margin-bottom:16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+h1{font-size:.93rem;font-weight:800;color:var(--p)}
+.sub{font-size:.7rem;color:var(--muted);margin-top:4px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 14px;border-radius:999px;font-size:.7rem}
+h2{font-size:.83rem;font-weight:800;color:#fff;background:var(--p);padding:7px 16px;border-radius:8px;margin:18px 0 10px;display:inline-block}
+.tbl{width:100%;border-collapse:collapse;box-shadow:var(--sh);border-radius:10px;overflow:hidden;background:var(--card);margin-bottom:14px}
+.tbl th{background:var(--p);color:#fff;text-align:left;padding:8px 11px;font-size:.67rem;text-transform:uppercase;letter-spacing:.03em}
+.tbl td{padding:8px 11px;border-bottom:1px solid var(--s2);font-size:.74rem;vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:nth-child(even) td{background:rgba(74,222,128,.05)}
+.tbl tr:hover td{background:var(--s2)}
+.nota{padding:9px 13px;border-radius:0 9px 9px 0;font-size:.73rem;border-left:4px solid;margin:8px 0;line-height:1.5}
+.n-ok{background:var(--grn2);border-color:var(--grn)}
+.n-err{background:var(--red2);border-color:var(--red)}
+.n-w{background:var(--warn2);border-color:var(--warn)}
+.n-vio{background:var(--vio2);border-color:var(--vio)}
+.n-sky{background:var(--sky2);border-color:var(--sky)}
+strong{color:var(--p)}
+.g{color:#059669;font-weight:700}.r{color:#dc2626;font-weight:700}.w{color:#b45309;font-weight:700}
+.sk{color:#0284c7;font-weight:700}.te{color:#0d9488;font-weight:700}.ro{color:#be185d;font-weight:700}
+.s3{color:#fef08a;font-weight:800}
+td.hl{background:var(--s2)!important;font-weight:700;color:var(--p2)}
+td.ok{background:var(--grn2)!important}
+td.er{background:var(--red2)!important}
+td.wa{background:var(--warn2)!important}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<header>
+  <div>
+    <h1>Tema 55 · HTML 3 · Cuadro comparativo y tablas operativas para examen</h1>
+    <div class="sub">El acompañamiento social como método de intervención en los procesos de inclusión · definición consensuada · requisitos · características · plan de intervención · Oposiciones Navarra</div>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</header>
+
+<h2>T1 · Exclusión social, vulnerabilidad e inclusión <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Concepto</th><th>Definición operativa</th><th>Clave examen</th><th>Autor / Fuente</th></tr></thead>
+<tbody>
+<tr><td><strong>Exclusión social</strong></td><td>Proceso complejo, acumulativo y multidimensional de alejamiento respecto a recursos, poder, vínculos y participación social.</td><td>No se reduce a pobreza económica.</td><td>Estivill (2003)</td></tr>
+<tr><td><strong>Vulnerabilidad</strong></td><td>Situación intermedia e inestable: fragilidad relacional, precariedad y riesgo de deterioro.</td><td>Zona de tránsito; no es aún exclusión consolidada.</td><td>Castel (1997)</td></tr>
+<tr><td><strong>Incorporación social ★★★</strong></td><td>Proceso por el que una persona pasa de una situación o riesgo de exclusión a posiciones de integración, por iniciativa propia o a propuesta de sistemas de protección.</td><td class="ok"><strong>Proceso</strong>, no acto puntual; siempre con itinerario individualizado. ★★★</td><td>Observatorio de Procesos de Exclusión (2006)</td></tr>
+<tr><td><strong>Acompañamiento social ★★★</strong></td><td>Método profesional para sostener ese proceso de incorporación mediante relación personalizada, proactiva y orientada a la autonomía.</td><td class="ok"><strong>Dispositivo de enganche</strong> hacia la integración. ★★★</td><td>Red Navarra (2016)</td></tr>
+</tbody>
+</table>
+
+<h2>T2 · Las 3 zonas de Castel (1997) <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Zona</th><th>Empleo / actividad</th><th>Relaciones sociales</th><th>Derechos / participación</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td class="ok"><strong>Integración</strong></td><td>Estable o socialmente reconocida</td><td>Sólidas</td><td>Ejercicio efectivo de derechos y participación</td><td>Situación de inserción social consolidada</td></tr>
+<tr><td class="wa"><strong>Vulnerabilidad</strong></td><td>Precario o inestable</td><td>Frágiles</td><td>Bajo empoderamiento; riesgo de deterioro</td><td class="hl">Zona intermedia y reversible ★★★</td></tr>
+<tr><td class="er"><strong>Exclusión / desafiliación</strong></td><td>Desempleo o desconexión</td><td>Aislamiento o gran debilidad de red</td><td>Dependencia de sistemas; incapacidad de ejercer derechos</td><td class="hl">No es irreversible: las zonas son permeables ★★★</td></tr>
+</tbody>
+</table>
+<div class="nota n-vio"><strong>Idea clave:</strong> el acompañamiento social opera especialmente en las zonas de vulnerabilidad y exclusión, y pretende reenganchar a la persona hacia posiciones de mayor integración.</div>
+
+<h2>T3 · Definición consensuada del acompañamiento social <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Elemento de la definición</th><th>Contenido exacto</th><th>Valor para examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Naturaleza ★★★</strong></td><td>Método de intervención profesional</td><td class="er">No es técnica aislada. ★★★</td></tr>
+<tr><td><strong>Temporalidad ★★★</strong></td><td>Temporal</td><td class="er">Tiene inicio y cierre planificado; no es indefinido. ★★★</td></tr>
+<tr><td><strong>Intensidad ★★★</strong></td><td>De intensidad variable</td><td>Se ajusta al momento del proceso.</td></tr>
+<tr><td><strong>Fundamento ★★★</strong></td><td>Basado en el derecho de la ciudadanía</td><td class="ok">Debe concebirse como derecho, no favor ni concesión. ★★★</td></tr>
+<tr><td><strong>Tipo de relación ★★★</strong></td><td>Relación de ayuda o atención social personalizada, proactiva y de confianza</td><td>Requiere vínculo profesional de referencia.</td></tr>
+<tr><td><strong>Herramienta central ★★★</strong></td><td>Diseño conjunto de un itinerario individualizado de incorporación</td><td class="ok">Itinerario co-construido, no impuesto. ★★★</td></tr>
+<tr><td><strong>Resultado posible ★★★</strong></td><td>Oportunidad de mejora o reducción de daños</td><td class="er">No exige siempre inclusión plena. ★★★</td></tr>
+<tr><td><strong>Foco ★★★</strong></td><td>Desarrollo de potencialidades y capacidades</td><td>Mirada de fortalezas.</td></tr>
+<tr><td><strong>Horizonte ★★★</strong></td><td>Protagonismo del propio proyecto vital</td><td class="ok">Autonomía y empoderamiento. ★★★</td></tr>
+</tbody>
+</table>
+
+<h2>T4 · Palabras clave de la definición <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Palabra-clave</th><th>Qué debes recordar</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Temporal</strong></td><td>No es indefinido.</td></tr>
+<tr><td>2</td><td><strong>Intensidad variable</strong></td><td>Más intensidad en inicio o crisis; menos cuando crece la autonomía.</td></tr>
+<tr><td>3</td><td><strong>Derecho</strong></td><td>Debe desvincularse de una mera concesión asistencial.</td></tr>
+<tr><td>4</td><td><strong>Personalizada</strong></td><td>No hay itinerarios iguales.</td></tr>
+<tr><td>5</td><td><strong>Proactiva</strong></td><td>El profesional no espera pasivamente.</td></tr>
+<tr><td>6</td><td><strong>Confianza</strong></td><td>Sin vínculo no hay proceso.</td></tr>
+<tr><td>7</td><td><strong>Itinerario individualizado</strong></td><td>Secuencia de objetivos, apoyos y recursos.</td></tr>
+<tr><td>8</td><td><strong>Potencialidades y capacidades</strong></td><td>Foco en activos, no solo en déficits.</td></tr>
+<tr><td>9</td><td><strong>Reducción de daños</strong></td><td>Resultado legítimo cuando la inclusión plena no es viable.</td></tr>
+<tr><td>10</td><td><strong>Proyecto vital</strong></td><td>La persona mantiene el protagonismo. ★★★</td></tr>
+</tbody>
+</table>
+
+<h2>T5 · Requisitos de participación / pertinencia del acompañamiento <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Requisito</th><th>Contenido</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>1. Situación de exclusión o riesgo</strong></td><td>La persona se ubica en vulnerabilidad o exclusión, normalmente con múltiples ejes afectados.</td><td>Pluriexclusión / multiproblematicidad.</td></tr>
+<tr><td><strong>2. Necesidad de ayuda intensiva</strong></td><td>La situación no se resuelve con una gestión puntual o una derivación simple.</td><td class="hl">Intervención continuada, no puntual. ★★★</td></tr>
+<tr><td><strong>3. Existencia de capacidades</strong></td><td>Hay potencialidades sobre las que trabajar aunque no estén desplegadas.</td><td>Mirada de activos.</td></tr>
+<tr><td><strong>4. Motivación mínima o construible ★★★</strong></td><td>Puede existir solo una motivación incipiente; el vínculo puede ayudar a desarrollarla.</td><td class="er">No exige motivación plena inicial. ★★★</td></tr>
+<tr><td><strong>5. Red natural insuficiente</strong></td><td>La persona carece de apoyos suficientes en familia, amistades o comunidad.</td><td>El profesional de referencia cobra especial valor.</td></tr>
+<tr><td><strong>6. Voluntariedad</strong></td><td>El proceso no puede imponerse de modo genuino; requiere algún grado de adhesión.</td><td>Tensión práctica con rentas condicionadas.</td></tr>
+</tbody>
+</table>
+
+<h2>T6 · Qué es / qué no es el acompañamiento social <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Dimensión</th><th>SÍ es</th><th>NO es</th></tr></thead>
+<tbody>
+<tr><td><strong>Naturaleza</strong></td><td>Método profesional estructurado</td><td class="er">Técnica aislada o intervención informal</td></tr>
+<tr><td><strong>Relación</strong></td><td>Vínculo de ayuda, confianza y referencia</td><td class="er">Contacto burocrático sin proceso</td></tr>
+<tr><td><strong>Acción profesional</strong></td><td>Hacer <strong>con</strong> la persona</td><td class="er">Hacer por ella o sobre ella</td></tr>
+<tr><td><strong>Modelo de intervención</strong></td><td>Empoderamiento y autonomía</td><td class="er">Asistencialismo o paternalismo</td></tr>
+<tr><td><strong>Tiempo</strong></td><td>Proceso temporal con fases</td><td class="er">Relación indefinida</td></tr>
+<tr><td><strong>Objetivo</strong></td><td>Mejora, incorporación o reducción de daños</td><td class="er">Obsesión por una única salida estándar</td></tr>
+<tr><td><strong>Contenido</strong></td><td>Itinerario individualizado + trabajo en red</td><td class="er">Gestión exclusiva de recursos</td></tr>
+</tbody>
+</table>
+
+<h2>T7 · Las 8 características del acompañamiento <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Característica</th><th>Descripción</th><th>Trampa habitual</th></tr></thead>
+<tbody>
+<tr><td class="hl">1</td><td><strong>Relación referencial</strong></td><td>Existe un profesional de referencia que sostiene el hilo conductor del proceso.</td><td>Pensar que bastan contactos fragmentados.</td></tr>
+<tr><td class="hl">2</td><td><strong>Temporalidad</strong></td><td>Tiene inicio, desarrollo y cierre planificado.</td><td class="er">Confundir vínculo estable con vínculo indefinido. ★★★</td></tr>
+<tr><td class="hl">3</td><td><strong>Intensidad variable</strong></td><td>La frecuencia y cercanía cambian según fase, crisis y autonomía.</td><td>Creer que todos los casos exigen la misma intensidad.</td></tr>
+<tr><td class="hl">4</td><td><strong>Derecho ciudadano</strong></td><td>Debe entenderse como una respuesta garantizable para quien la requiera.</td><td class="er">Subordinarlo siempre a una prestación. ★★★</td></tr>
+<tr><td class="hl">5</td><td><strong>Potencialidades y capacidades</strong></td><td>Se centra en fortalezas y activos personales y comunitarios.</td><td>Reducir la mirada a déficits.</td></tr>
+<tr><td class="hl">6</td><td><strong>Empoderamiento</strong></td><td>La persona participa activamente en decisiones y cambios.</td><td>Paternalismo o sustitución.</td></tr>
+<tr><td class="hl">7</td><td><strong>Autonomía</strong></td><td>La relación debe aumentar, no mermar, la autonomía.</td><td class="er">Generar dependencia profesional. ★★★</td></tr>
+<tr><td class="hl">8</td><td><strong>Reducción de daños</strong></td><td>Es un resultado válido cuando la inclusión plena no es posible.</td><td class="er">Pensar que solo vale la inclusión total. ★★★</td></tr>
+</tbody>
+</table>
+
+<h2>T8 · Voluntariedad, motivación y derecho: distinción operativa <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Concepto</th><th>Qué significa</th><th>Qué NO significa</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Voluntariedad</strong></td><td>La persona participa con algún grado de adhesión al proceso.</td><td>No implica ausencia total de presión contextual o institucional.</td><td>Principio esencial, pero complejo en la práctica.</td></tr>
+<tr><td><strong>Motivación</strong></td><td>Disposición al cambio que puede ser débil, ambivalente o progresiva.</td><td>No exige claridad plena desde el inicio.</td><td class="ok">Puede construirse en el vínculo. ★★★</td></tr>
+<tr><td><strong>Derecho</strong></td><td>El acompañamiento debe poder ofrecerse como respuesta profesional garantizable.</td><td>No debe verse solo como contraprestación de una ayuda económica.</td><td class="ok">Derecho independiente de la prestación. ★★★</td></tr>
+</tbody>
+</table>
+
+<h2>T9 · Codiagnóstico vs. diagnóstico unilateral <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Dimensión</th><th>Codiagnóstico ★★★</th><th>Diagnóstico unilateral</th></tr></thead>
+<tbody>
+<tr><td><strong>Quién lo elabora</strong></td><td class="ok">Profesional <strong>con</strong> la persona</td><td class="er">Profesional <strong>para</strong> la persona</td></tr>
+<tr><td><strong>Sentido</strong></td><td>Comprensión compartida de la situación en clave de cambio</td><td>Etiquetado externo de problemas</td></tr>
+<tr><td><strong>Participación de la persona</strong></td><td>Alta: interpreta, prioriza y resignifica</td><td>Baja: recibe conclusiones</td></tr>
+<tr><td><strong>Efecto</strong></td><td>Favorece vínculo, adherencia y protagonismo</td><td>Puede generar distancia y resistencia</td></tr>
+<tr><td><strong>Clave examen</strong></td><td class="hl">El acompañamiento trabaja con codiagnóstico. ★★★</td><td class="er">Error frecuente de test. ★★★</td></tr>
+</tbody>
+</table>
+
+<h2>T10 · Plan compartido vs. plan impuesto <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Dimensión</th><th>Plan compartido ★★★</th><th>Plan impuesto</th></tr></thead>
+<tbody>
+<tr><td><strong>Diseño</strong></td><td class="ok">Co-elaborado con la persona</td><td class="er">Definido unilateralmente por el profesional</td></tr>
+<tr><td><strong>Objetivos</strong></td><td>Concretos, realistas, consensuados, verificables</td><td>Genéricos o ajenos a la situación real</td></tr>
+<tr><td><strong>Adhesión</strong></td><td>Mayor implicación y corresponsabilidad</td><td>Menor compromiso y más resistencias</td></tr>
+<tr><td><strong>Relación profesional</strong></td><td>Facilitación y negociación</td><td>Dirección paternalista</td></tr>
+<tr><td><strong>Clave examen</strong></td><td class="hl">Plan de caso = plan compartido. ★★★</td><td class="er">No se impone. ★★★</td></tr>
+</tbody>
+</table>
+
+<h2>T11 · Las 6 fases del plan de intervención <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Fase</th><th>Contenido operativo</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td class="hl">1</td><td><strong>Acogida</strong></td><td>Primer contacto; presentación del servicio; escucha de la demanda; inicio del vínculo; primeros acuerdos; reconocimiento de la persona como sujeto de derechos.</td><td>Comprensión → confianza → consciencia → cambio de posición.</td></tr>
+<tr><td class="hl">2</td><td><strong>Diagnóstico / evaluación</strong></td><td>Identificación de necesidades, capacidades, red, recursos y obstáculos; interpretación compartida.</td><td class="ok">En acompañamiento = codiagnóstico. ★★★</td></tr>
+<tr><td class="hl">3</td><td><strong>Elaboración del plan de caso</strong></td><td>Diseño de objetivos, actividades, recursos, calendario, responsables y secuencia de pasos.</td><td class="ok">Plan compartido y realista. ★★★</td></tr>
+<tr><td class="hl">4</td><td><strong>Seguimiento</strong></td><td>Monitorización del proceso; contención; ajuste del plan; gestión de crisis y frustraciones.</td><td>Los retrocesos forman parte del proceso.</td></tr>
+<tr><td class="hl">5</td><td><strong>Evaluación</strong></td><td>Valoración de proceso y resultados respecto a objetivos pactados.</td><td>Doble evaluación: cómo + qué.</td></tr>
+<tr><td class="hl">6</td><td><strong>Finalización / cierre</strong></td><td>Desvinculación gradual, transferencia de logros a la autonomía, posible reinicio si fuera preciso.</td><td class="er">Cierre ≠ éxito total ni fracaso definitivo. ★★★</td></tr>
+</tbody>
+</table>
+
+<h2>T12 · Fases, objetivo principal y riesgo principal <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Fase</th><th>Objetivo principal</th><th>Riesgo principal si se hace mal</th></tr></thead>
+<tbody>
+<tr><td><strong>Acogida</strong></td><td>Construir vínculo y marco de trabajo</td><td>No generar confianza ni adhesión</td></tr>
+<tr><td><strong>Diagnóstico</strong></td><td>Comprender para actuar</td><td>Etiquetar sin participación</td></tr>
+<tr><td><strong>Plan de caso</strong></td><td>Traducir el análisis en pasos viables</td><td>Fijar objetivos irreales o ajenos</td></tr>
+<tr><td><strong>Seguimiento</strong></td><td>Sostener y reajustar el proceso</td><td>Abandonar ante el primer retroceso</td></tr>
+<tr><td><strong>Evaluación</strong></td><td>Valorar proceso y resultados</td><td>Medir solo logros finales</td></tr>
+<tr><td><strong>Cierre</strong></td><td>Transferir autonomía</td><td>Ruptura brusca o dependencia prolongada</td></tr>
+</tbody>
+</table>
+
+<h2>T13 · Tipos de acciones del acompañamiento <span class="s3">★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Tipo de acción</th><th>Contenido</th><th>Ejemplo práctico</th></tr></thead>
+<tbody>
+<tr><td><strong>Encuentros periódicos</strong></td><td>Contactos frecuentes para sostener vínculo, revisar avances y ajustar objetivos.</td><td>Citas semanales o quincenales.</td></tr>
+<tr><td><strong>Resolución de urgencias</strong></td><td>Actuaciones para cubrir necesidades básicas que bloquean el proceso.</td><td>Vivienda, documentación, ingresos, salud.</td></tr>
+<tr><td><strong>Potenciación de vínculos</strong></td><td>Acciones para crear o recuperar red social y apoyos significativos.</td><td>Trabajo familiar, grupos, participación comunitaria.</td></tr>
+<tr><td><strong>Uso positivo del entorno</strong></td><td>Conexión con recursos formales e informales del territorio.</td><td>Coordinación con SS.SS., salud, empleo, entidades.</td></tr>
+</tbody>
+</table>
+
+<h2>T14 · Competencias profesionales para acompañar <span class="s3">★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Tipo de competencia</th><th>Contenido</th><th>Ejemplos</th></tr></thead>
+<tbody>
+<tr><td><strong>Cognitivas</strong></td><td>Conocimiento del territorio, recursos, marcos teóricos y exclusión multidimensional.</td><td>Conocer ENIS, redes, prestaciones, mapa de servicios.</td></tr>
+<tr><td><strong>Actitudinales</strong></td><td>Empatía, escucha activa, autenticidad, no juicio, tolerancia a la frustración, autocuidado.</td><td>Sostener procesos largos sin desgaste destructivo.</td></tr>
+<tr><td><strong>Estratégicas</strong></td><td>Trabajo en red, mediación, coordinación, negociación, planificación.</td><td>Conectar sistemas y sostener itinerarios complejos.</td></tr>
+</tbody>
+</table>
+
+<h2>T15 · Dimensión individual, grupal y comunitaria <span class="s3">★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Dimensión</th><th>Qué aporta al acompañamiento</th><th>Ejemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Individual</strong></td><td>Vínculo, escucha, codiagnóstico, plan de caso, seguimiento personalizado.</td><td>Profesional de referencia.</td></tr>
+<tr><td><strong>Grupal</strong></td><td>Apoyo entre iguales, aprendizaje mutuo, refuerzo motivacional.</td><td>Grupos de apoyo o talleres de habilidades.</td></tr>
+<tr><td><strong>Comunitaria</strong></td><td>Conexión con recursos, pertenencia, participación y ciudadanía.</td><td>Programas asertivo-comunitarios; redes barriales.</td></tr>
+</tbody>
+</table>
+
+<h2>T16 · Referencias clave y aportación al tema <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Referencia</th><th>Aportación</th><th>★</th></tr></thead>
+<tbody>
+<tr><td><strong>Red Navarra (2016)</strong></td><td>Manual principal; definición consensuada; requisitos, características y fases.</td><td class="hl">★★★</td></tr>
+<tr><td><strong>Castel (1997)</strong></td><td>Zonas de integración, vulnerabilidad y exclusión.</td><td class="hl">★★★</td></tr>
+<tr><td><strong>Observatorio de Procesos de Exclusión (2006)</strong></td><td>Definición de incorporación social.</td><td class="hl">★★★</td></tr>
+<tr><td><strong>Funes y Raya (2001)</strong></td><td>Exclusión como imposibilidad de aportar; marginación como inexistencia de intercambios mutuos.</td><td class="hl">★★★</td></tr>
+<tr><td><strong>Raya y Caparrós (2014)</strong></td><td>Dos ejes: participación activa + acompañamiento.</td><td class="hl">★★★</td></tr>
+<tr><td><strong>Raya Diez (2023)</strong></td><td>La relación de acompañamiento debe aumentar la autonomía.</td><td class="hl">★★★</td></tr>
+<tr><td><strong>Estivill (2003)</strong></td><td>Definición de exclusión como acumulación de rupturas.</td><td>★</td></tr>
+<tr><td><strong>Ley Foral 15/2006 de Servicios Sociales</strong></td><td>Marco jurídico navarro de servicios sociales e inclusión.</td><td>★★</td></tr>
+<tr><td><strong>ENIS</strong></td><td>Marco estratégico de inclusión en Navarra.</td><td>★★</td></tr>
+</tbody>
+</table>
+
+<h2>T17 · Las 12 trampas del examen <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Afirmación incorrecta</th><th>Corrección exacta</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>El acompañamiento social es una técnica.</td><td>Es un <strong>método</strong> de intervención. ★★★</td></tr>
+<tr><td>2</td><td>Es indefinido en el tiempo.</td><td>Es <strong>temporal</strong> y tiene cierre planificado. ★★★</td></tr>
+<tr><td>3</td><td>Solo puede iniciarse con motivación plena.</td><td>La motivación puede ser incipiente y construirse en el vínculo. ★★★</td></tr>
+<tr><td>4</td><td>El diagnóstico lo hace el profesional para la persona.</td><td>Se trabaja con <strong>codiagnóstico</strong>, elaborado con la persona. ★★★</td></tr>
+<tr><td>5</td><td>El plan de intervención lo impone el profesional.</td><td>Es un <strong>plan compartido</strong> y co-elaborado. ★★★</td></tr>
+<tr><td>6</td><td>Equivale a asistencialismo.</td><td>Busca autonomía y empoderamiento, no dependencia. ★★★</td></tr>
+<tr><td>7</td><td>Está necesariamente condicionado a una prestación económica.</td><td>Debe concebirse como <strong>derecho independiente</strong>. ★★★</td></tr>
+<tr><td>8</td><td>Solo vale si el resultado es inclusión plena.</td><td>La <strong>reducción de daños</strong> también es un resultado válido. ★★★</td></tr>
+<tr><td>9</td><td>Las zonas de Castel son rígidas.</td><td>Son <strong>permeables</strong>; se puede avanzar y retroceder. ★★★</td></tr>
+<tr><td>10</td><td>Acompañar es hacer por la persona.</td><td>Acompañar es hacer <strong>con</strong> la persona. ★★★</td></tr>
+<tr><td>11</td><td>El cierre equivale a fracaso si no se lograron todos los objetivos.</td><td>Puede haber logro parcial, pausa o reinicio posterior. ★★★</td></tr>
+<tr><td>12</td><td>El acompañamiento se agota en la relación individual.</td><td>Incluye dimensión grupal, comunitaria y trabajo en red. ★★</td></tr>
+</tbody>
+</table>
+
+</div>
+</body>
+</html>
