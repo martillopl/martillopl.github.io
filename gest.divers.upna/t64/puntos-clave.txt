@@ -1,0 +1,371 @@
+════════════════════════════════════════════════════════════════════
+TEMA 64 · PUNTOS CLAVE PARA EXAMEN
+Acceso a la prestación de la asistencia sanitaria
+Ley 16/2003 · RD 576/2013 · RDL 7/2018 · Acuerdo Gobierno Navarra 06-04-2018
+════════════════════════════════════════════════════════════════════
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BLOQUE 1 · LEY 16/2003, DE 28 DE MAYO, DE COHESIÓN Y CALIDAD DEL SNS ★★★
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+· Nombre completo: Ley 16/2003, de 28 de mayo, de cohesión y calidad del
+  Sistema Nacional de Salud. ★★★
+· BOE: núm. 128, de 29 de mayo de 2003. ★★★
+· Rango: Ley ordinaria (no orgánica). ★★★
+· Fundamento constitucional: art. 43 CE (derecho a la protección de la salud)
+  + art. 41 CE (régimen público de Seguridad Social). ★★★
+· Estructura: capítulo preliminar + 11 capítulos + disposiciones adicionales,
+  transitorias, derogatoria y finales. ★★★
+· Objeto (art. 1): establecer el marco legal para las acciones de coordinación
+  y cooperación de las Administraciones públicas sanitarias a fin de garantizar
+  la EQUIDAD, la CALIDAD y la PARTICIPACIÓN SOCIAL en el SNS. ★★★
+· 6 ámbitos de colaboración: ★★★
+  1. Prestaciones del SNS.
+  2. Farmacia.
+  3. Profesionales sanitarios.
+  4. Investigación.
+  5. Sistema de información sanitaria.
+  6. Calidad del sistema.
+
+Mnemotecnia: "P-F-P-I-I-C" = Prestaciones · Farmacia · Profesionales ·
+  Investigación · Información · Calidad. ★★★
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BLOQUE 2 · CAPÍTULO PRELIMINAR LEY 16/2003 — ARTS. 1-2 ★★★
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ART. 1 — OBJETO: ★★★
+  · Establecer el marco legal para la coordinación y cooperación de las
+    Administraciones públicas sanitarias.
+  · Finalidad: garantizar la equidad, calidad y participación social en el SNS.
+  · El SNS = conjunto de los servicios de salud de la Administración General
+    del Estado y de las Comunidades Autónomas, en los términos de la LGS.
+
+ART. 2 — PRINCIPIOS DE LA LEY: ★★★
+  Los principios que informan la Ley 16/2003 son los mismos que inspiran la
+  Ley General de Sanidad (LGS):
+  a) La prestación de los servicios a todos los ciudadanos.
+  b) La condición de asegurado y beneficiario.
+  c) La integración de las estructuras y servicios públicos al servicio de la salud.
+  d) La financiación pública, universalidad y gratuidad en el momento de su uso.
+  e) La descentralización política de la sanidad en las CCAA.
+  f) La coordinación y, en su caso, la integración de todos los recursos sanitarios
+     públicos en un dispositivo único.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BLOQUE 3 · ART. 3 — TITULARES DEL DERECHO (MODIFICADO POR RDL 7/2018) ★★★
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Artículo 3 (vigente tras la reforma del RDL 7/2018): ★★★
+  1. Son titulares del derecho a la protección de la salud y a la atención
+     sanitaria TODAS LAS PERSONAS con NACIONALIDAD ESPAÑOLA y las personas
+     extranjeras que tengan establecida su residencia en el territorio español.
+  2. Las personas extranjeras sin residencia legal en España accederán a la
+     cartera común básica de servicios asistenciales del SNS en las condiciones
+     previstas en la legislación vigente en materia de extranjería e inmigración.
+     En todo caso:
+     a) Todos los extranjeros menores de 18 años.
+     b) El embarazo, el parto y el puerperio.
+     c) La urgencia por enfermedad grave o accidente hasta la situación de alta
+        médica (art. 12 LO 4/2000).
+
+ANTES del RDL 7/2018 (modelo RDL 16/2012): ★★★
+  · La asistencia se configuraba en torno a la CONDICIÓN DE ASEGURADO.
+  · Asegurado = trabajador por cuenta ajena/propia afiliado a la SS, pensionista,
+    subsidiario, demandante de empleo, etc.
+  · Beneficiario = familiar del asegurado.
+  · Los extranjeros sin residencia legal quedaban excluidos de la asistencia
+    ordinaria (salvo urgencias, menores y embarazo).
+
+TRAS el RDL 7/2018: ★★★
+  · Cambio de modelo: el derecho se basa en la CONDICIÓN DE CIUDADANÍA y
+    en la residencia, desligándose de la condición de asegurado.
+  · UNIVERSALIZACIÓN del acceso al SNS.
+  · Derecho básico de toda persona que se encuentre en el territorio español.
+
+Mnemotecnia RDL 7/2018 (los 3 accesos universales para extranjeros sin
+residencia legal): "MENOR · EMBARAZO · URGENCIA". ★★★
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BLOQUE 4 · ORDENACIÓN DE LAS PRESTACIONES — CAPÍTULO I LEY 16/2003 ★★★
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ART. 7 — CATÁLOGO DE PRESTACIONES: ★★★
+  · El catálogo de prestaciones del SNS = conjunto de servicios preventivos,
+    diagnósticos, terapéuticos, rehabilitadores y de promoción de la salud
+    dirigidos a los ciudadanos.
+  · Comprende: salud pública · atención primaria · especializada · sociosanitaria
+    · urgencias · farmacia · ortoprótesis · productos dietéticos · transporte
+    sanitario. ★★★
+  · Las prestaciones se hacen efectivas mediante la CARTERA DE SERVICIOS
+    acordada en el Consejo Interterritorial del SNS. ★★★
+
+ART. 3 BIS — CARTERA COMÚN DEL SNS (introducido por RDL 16/2012): ★★★
+  3 modalidades de cartera común:
+  a) CARTERA COMÚN BÁSICA de servicios asistenciales: actividades asistenciales
+     de prevención, diagnóstico, tratamiento y rehabilitación en centros sanitarios
+     o sociosanitarios + transporte sanitario urgente. Cubiertos AL 100% con
+     financiación pública. ★★★
+  b) CARTERA COMÚN SUPLEMENTARIA: prestaciones cuya provisión se realiza
+     mediante dispensación ambulatoria (farmacia, ortoprótesis, productos
+     dietéticos, transporte sanitario NO urgente). Sujetas a APORTACIÓN del
+     usuario. ★★★
+  c) CARTERA COMÚN DE SERVICIOS ACCESORIOS: actividades, servicios o técnicas
+     sin carácter esencial, que pueden mejorar prestaciones de la cartera común
+     básica o suplementaria. Sujetas a APORTACIÓN del usuario. ★★★
+
+Mnemotecnia: "B-S-A" = Básica (100% público) · Suplementaria (copago) ·
+Accesorios (copago). ★★★
+
+ART. 8 — ATENCIÓN PRIMARIA:
+  a) Asistencia sanitaria a demanda, programada y urgente (consulta + domicilio).
+  b) Prescripción y realización de procedimientos diagnósticos y terapéuticos.
+  c) Prevención, promoción de la salud, atención familiar y comunitaria.
+  d) Atención paliativa a enfermos terminales.
+  e) Atención a la salud mental en coordinación con atención especializada.
+  f) Atención a la mujer, la infancia, la adolescencia, los adultos mayores,
+     los grupos de riesgo y los enfermos crónicos. ★★★
+
+ART. 9 — ATENCIÓN ESPECIALIZADA:
+  a) Asistencia diagnóstica, terapéutica y rehabilitadora en régimen de internamiento
+     (hospitalización) y en régimen ambulatorio.
+  b) Asistencia paliativa a enfermos terminales. ★★★
+
+ART. 14 — PRESTACIÓN FARMACÉUTICA: ★★★
+  Comprende los medicamentos y productos sanitarios, el conjunto de actuaciones
+  encaminadas a que los pacientes reciban los medicamentos de forma adecuada a sus
+  necesidades clínicas, en dosis precisas, durante el período requerido, con la
+  información para su correcto uso y al menor coste posible para ellos y para la
+  comunidad.
+
+ART. 3.5 LEY 16/2003 — CONVENIO ESPECIAL: ★★★
+  Las personas no incluidas en el ámbito de aplicación del sistema de asistencia
+  sanitaria del SNS podrán acceder a través de un CONVENIO ESPECIAL de prestación
+  de asistencia sanitaria previo pago de la contraprestación económica
+  correspondiente. Desarrollado por el RD 576/2013.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BLOQUE 5 · REAL DECRETO 576/2013, DE 26 DE JULIO — CONVENIO ESPECIAL ★★★
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+· Nombre: RD 576/2013, de 26 de julio, por el que se establecen los requisitos
+  básicos del convenio especial de prestación de asistencia sanitaria a personas
+  que no tengan la condición de aseguradas ni de beneficiarias del SNS. ★★★
+· También modifica el RD 1192/2012, de 3 de agosto, por el que se regula la
+  condición de asegurado y beneficiario. ★★★
+· BOE: 27 de julio de 2013. ★★★
+· Habilita el art. 3.5 Ley 16/2003. ★★★
+
+ARTÍCULO 1 — OBJETO: ★★★
+  Establecer los requisitos básicos del convenio especial de prestación de
+  asistencia sanitaria previsto en el art. 3.5 Ley 16/2003.
+
+ARTÍCULO 2 — ÁMBITO DE APLICACIÓN: ★★★
+  Personas que NO tengan la condición de aseguradas ni de beneficiarias del SNS
+  y que deseen acceder a la asistencia sanitaria pública mediante este convenio.
+
+ARTÍCULO 3 — REQUISITOS PARA LA SUSCRIPCIÓN: ★★★
+  a) No tener la condición de asegurado ni de beneficiario conforme al
+     RD 1192/2012.
+  b) Residir en España (empadronamiento en algún municipio español). ★★★
+  c) No tener acceso a un sistema de protección sanitaria por cualquier
+     otro título (seguro privado o de otro país, etc.).
+
+ARTÍCULO 4 — PROCEDIMIENTO DE SUSCRIPCIÓN: ★★★
+  · Solicitud dirigida al Instituto Nacional de Gestión Sanitaria (INGESA) o al
+    órgano competente de la CCAA correspondiente. ★★★
+  · La resolución de concesión tiene efecto desde el día siguiente a la
+    resolución favorable.
+
+ARTÍCULO 5 — CONTENIDO MÍNIMO DEL CONVENIO: ★★★
+  a) Datos de identidad de la persona suscriptora.
+  b) Fecha de formalización.
+  c) Contraprestación económica y forma de pago.
+  d) Prestaciones cubiertas (cartera común básica y, en su caso, suplementaria).
+  e) Derechos y obligaciones de las partes.
+
+ARTÍCULO 6 — CONTRAPRESTACIÓN ECONÓMICA: ★★★
+  DOS TRAMOS EN FUNCIÓN DE LA EDAD: ★★★
+  a) Suscriptor con MENOS DE 65 AÑOS: cuota mensual de 60 euros. ★★★
+  b) Suscriptor con 65 AÑOS O MÁS: cuota mensual de 157 euros. ★★★
+  · Las cuotas pueden ser incrementadas por las CCAA si incorporan prestaciones
+    adicionales de la cartera complementaria autonómica. ★★★
+  · La actualización al cumplir 65 años tiene efecto desde el PRIMER DÍA DEL
+    MES SIGUIENTE. ★★★
+
+ARTÍCULO 7 — EXTINCIÓN DEL CONVENIO: ★★★
+  El convenio especial se extingue por:
+  a) Renuncia del suscriptor.
+  b) Adquisición de la condición de asegurado o beneficiario.
+  c) Incumplimiento de los requisitos exigidos para su suscripción.
+  d) Por resolución de la administración, previa audiencia del interesado.
+  e) Fallecimiento del suscriptor.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BLOQUE 6 · RD 1192/2012, DE 3 DE AGOSTO — CONDICIÓN DE ASEGURADO Y
+           BENEFICIARIO ★★★
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+· Nombre: RD 1192/2012, de 3 de agosto, por el que se regula la condición de
+  asegurado y de beneficiario a efectos de la asistencia sanitaria en España,
+  con cargo a fondos públicos, a través del SNS. ★★★
+· BOE: 4 de agosto de 2012. ★★★
+· Vigente con las modificaciones introducidas por el RD 576/2013 y el RDL
+  7/2018 (que amplían el ámbito subjetivo de cobertura). ★★★
+
+ASEGURADO (art. 2 RD 1192/2012 + art. 3 tras RDL 7/2018): ★★★
+  Son titulares del derecho:
+  a) Personas con nacionalidad española residentes en España.
+  b) Nacionales de Estados miembros de la UE o del EEE, inscritos en el
+     Registro Central de Extranjeros. ★★★
+  c) Nacionales de otros países con residencia legal en España.
+  d) Personas sin residencia legal en España → acceden a prestaciones básicas
+     del catálogo según legislación de extranjería.
+
+BENEFICIARIO: ★★★
+  Familiar o persona asimilada que tenga derecho a la asistencia sanitaria por
+  razón del vínculo con el asegurado (cónyuge, parejas de hecho reconocidas,
+  descendientes a cargo menores de 26 años). ★★★
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BLOQUE 7 · REAL DECRETO-LEY 7/2018, DE 27 DE JULIO — ACCESO UNIVERSAL ★★★
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+· Nombre: Real Decreto-ley 7/2018, de 27 de julio, sobre el acceso universal
+  al Sistema Nacional de Salud. ★★★
+· BOE: núm. 183, de 30 de julio de 2018. ★★★
+· Entrada en vigor: 31 de julio de 2018. ★★★
+· Convalidado por el Congreso de los Diputados el 6 de septiembre de 2018
+  (BOE 15-09-2018). ★★★
+
+CAMBIO DE MODELO ★★★:
+  · ANTES (RDL 16/2012, de 20 de abril): modelo basado en la CONDICIÓN DE
+    ASEGURADO (vinculada a la Seguridad Social o al pago del convenio especial).
+    Excluía a los extranjeros en situación irregular.
+  · DESPUÉS (RDL 7/2018): modelo basado en la CONDICIÓN DE CIUDADANÍA y
+    en la RESIDENCIA en España. Desvincula el acceso al SNS de la condición
+    de asegurado o afiliado a la SS.
+
+ARTÍCULO 3 (nuevo redactado) — TITULARES DEL DERECHO ★★★:
+  1. Son titulares del derecho a la protección de la salud y a la atención
+     sanitaria TODAS LAS PERSONAS con:
+     a) Nacionalidad española.
+     b) Extranjeros con residencia legal en España.
+  2. Personas extranjeras sin residencia legal: acceden a prestaciones de la
+     CARTERA COMÚN BÁSICA, en todo caso:
+     a) Menores de 18 años (sin distinción). ★★★
+     b) Embarazo, parto y puerperio. ★★★
+     c) Urgencia por enfermedad grave o accidente hasta el alta médica. ★★★
+  3. El derecho se reconoce también a solicitantes de protección internacional.
+
+PRINCIPALES NOVEDADES DEL RDL 7/2018: ★★★
+  1. Elimina el vínculo con la condición de asegurado de la SS.
+  2. Reconoce el derecho a toda persona con residencia en España.
+  3. Garantiza atención a extranjeros sin residencia legal para las 3 prestaciones
+     básicas (menor · embarazo · urgencia). ★★★
+  4. El INGESA, las CCAA y el IMSERSS adaptan sus sistemas de reconocimiento del
+     derecho. ★★★
+  5. El convenio especial del RD 576/2013 queda para personas SIN RESIDENCIA
+     LEGAL que quieran acceso más amplio que el básico. ★★★
+
+Mnemotecnia: "RDL 7/2018 = UNIVERSALIDAD desde la residencia + CIUDADANÍA". ★★★
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BLOQUE 8 · ACUERDO DE GOBIERNO DE NAVARRA DE 6 DE ABRIL DE 2018 ★★★
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+· Nombre completo: Acuerdo del Gobierno de Navarra de 6 de abril de 2018, por
+  el que se acuerda la exención del pago del precio público derivado de los
+  convenios especiales de asistencia sanitaria en Navarra cuando afecte a personas
+  que se encuentren en una situación de especial vulnerabilidad económica y social.
+  ★★★
+· Fecha: 6 de ABRIL de 2018. ★★★
+· Ámbito: Comunidad Foral de Navarra. ★★★
+
+CONTEXTO: ★★★
+  · En el año 2018 (antes del RDL 7/2018 de julio), las personas sin la condición
+    de asegurado o beneficiario del SNS solo podían acceder a la asistencia
+    sanitaria ordinaria mediante el CONVENIO ESPECIAL (previo pago de 60 o 157€/mes).
+  · Esto excluía de facto a personas en situación de especial vulnerabilidad
+    económica y social (extranjeros en situación irregular sin recursos, personas
+    sin ingresos, etc.).
+  · Navarra adoptó este acuerdo ANTES de que el RDL 7/2018 universalizara el acceso,
+    como medida pionera de protección autonómica. ★★★
+
+CONTENIDO DEL ACUERDO: ★★★
+  · EXENCIÓN del pago del precio público derivado del convenio especial de
+    asistencia sanitaria para las personas que se encuentren en situación de
+    ESPECIAL VULNERABILIDAD ECONÓMICA Y SOCIAL. ★★★
+  · Incluye: personas sin recursos, en situación de exclusión social, personas
+    migrantes sin residencia legal con barreras económicas para acceder al convenio
+    especial. ★★★
+  · Fundamento: principio de equidad sanitaria, garantía del derecho a la salud
+    como derecho universal sin discriminación económica. ★★★
+  · La exención es acordada por el GOBIERNO DE NAVARRA (no requiere norma con
+    rango de ley). ★★★
+
+IMPORTANCIA EN EL CONTEXTO NAVARRO: ★★★
+  · Navarra anticipó el modelo de universalidad del RDL 7/2018 mediante este
+    acuerdo, garantizando la atención a las personas más vulnerables desde
+    6 de abril de 2018.
+  · Complementa el modelo autonómico de inclusión: Plan de Acogida a Personas
+    Migrantes 2021-2026 (Tema 62) + atención sanitaria universal (Tema 64). ★★★
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BLOQUE 9 · ARTÍCULOS CLAVE PARA EL EXAMEN ★★★
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ART. 1 Ley 16/2003    → Objeto: marco de coordinación · equidad · calidad · participación social. ★★★
+ART. 2 Ley 16/2003    → Principios: prestación universal · condición asegurado · financiación pública · descentralización. ★★★
+ART. 3 Ley 16/2003    → Titulares (modificado RDL 7/2018): españoles residentes + extranjeros residentes + básicos para todos. ★★★
+ART. 3.5 Ley 16/2003  → Convenio especial para personas no incluidas en SNS. ★★★
+ART. 3 bis Ley 16/2003→ 3 tipos de cartera común: básica · suplementaria · accesorios. ★★★
+ART. 7 Ley 16/2003    → Catálogo de prestaciones: 9 áreas (pública, primaria, especializada, sociosanitaria, urgencias, farmacia, ortoprótesis, dietética, transporte). ★★★
+ART. 8 Ley 16/2003    → Atención primaria. ★★★
+ART. 9 Ley 16/2003    → Atención especializada. ★★★
+ART. 14 Ley 16/2003   → Prestación farmacéutica. ★★★
+ART. 1 RD 576/2013    → Objeto del convenio especial (habilita art. 3.5 L 16/2003). ★★★
+ART. 3 RD 576/2013    → Requisitos: no asegurado/beneficiario + empadronado + sin otra cobertura. ★★★
+ART. 6 RD 576/2013    → Cuotas: < 65 años = 60€/mes · ≥ 65 años = 157€/mes. ★★★
+ART. 7 RD 576/2013    → Extinción del convenio: 5 causas. ★★★
+ART. 3 RDL 7/2018     → Titulares: universalidad desde residencia · básico para todos los extranjeros. ★★★
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BLOQUE 10 · CIFRAS CLAVE PARA MEMORIZAR ★★★
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+28-05-2003     → Fecha Ley 16/2003 de cohesión y calidad del SNS. ★★★
+29-05-2003     → Publicación en BOE de la Ley 16/2003. ★★★
+03-08-2012     → Fecha RD 1192/2012 (condición de asegurado/beneficiario). ★★★
+26-07-2013     → Fecha RD 576/2013 (convenio especial). ★★★
+60 euros       → Cuota mensual convenio especial: menores de 65 años. ★★★
+157 euros      → Cuota mensual convenio especial: 65 o más años. ★★★
+65 años        → Umbral de cambio de tramo de cuota en el convenio especial. ★★★
+06-04-2018     → Acuerdo Gobierno Navarra: exención vulnerabilidad. ★★★
+27-07-2018     → Fecha RDL 7/2018 (acceso universal al SNS). ★★★
+31-07-2018     → Entrada en vigor del RDL 7/2018. ★★★
+06-09-2018     → Convalidación RDL 7/2018 por el Congreso. ★★★
+3              → Modalidades de cartera común: básica · suplementaria · accesorios. ★★★
+9              → Áreas del catálogo de prestaciones (art. 7 Ley 16/2003). ★★★
+6              → Ámbitos de colaboración entre AAPP sanitarias (Ley 16/2003). ★★★
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BLOQUE 11 · TRAMPAS FRECUENTES DEL EXAMEN ★★★
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TRAMPA 1: "El RDL 7/2018 vincula el acceso al SNS a la condición de asegurado."
+  → FALSO. El RDL 7/2018 DESVINCULA el acceso del asegurado. El modelo
+    anterior (RDL 16/2012) sí lo vinculaba. ★★★
+TRAMPA 2: "La cuota del convenio especial es de 60€/mes para todos."
+  → FALSO. Hay DOS TRAMOS: < 65 años = 60€/mes · ≥ 65 años = 157€/mes. ★★★
+TRAMPA 3: "La cartera básica del SNS tiene copago."
+  → FALSO. La cartera BÁSICA está cubierta AL 100% con financiación pública.
+    Son la suplementaria y la de accesorios las que tienen aportación del usuario. ★★★
+TRAMPA 4: "El Acuerdo de Navarra de 6 de abril de 2018 fue posterior al RDL 7/2018."
+  → FALSO. El Acuerdo de Navarra es de 6 de ABRIL de 2018, anterior al RDL
+    7/2018 (27 de JULIO de 2018). Navarra actuó antes. ★★★
+TRAMPA 5: "Los extranjeros sin residencia legal no tienen derecho a ninguna
+  atención sanitaria."
+  → FALSO. Tienen derecho garantizado a: menores de 18 años · embarazo, parto
+    y puerperio · urgencia grave hasta el alta médica. ★★★
+TRAMPA 6: "La Ley 16/2003 es una Ley Orgánica."
+  → FALSO. Es una ley ORDINARIA (no orgánica). ★★★
+TRAMPA 7: "El convenio especial lo gestiona únicamente el INGESA."
+  → FALSO. Lo gestiona el INGESA O EL ÓRGANO COMPETENTE DE LA CCAA
+    correspondiente. En Navarra, el Servicio Navarro de Salud-Osasunbidea. ★★★
+TRAMPA 8: "El catálogo de prestaciones y la cartera de servicios son lo mismo."
+  → FALSO. El CATÁLOGO lo aprueba el Estado; la CARTERA DE SERVICIOS lo acuerda
+    el Consejo Interterritorial del SNS. Son instrumentos relacionados pero
+    distintos. ★★★
+════════════════════════════════════════════════════════════════════
+FIN PUNTOS CLAVE TEMA 64
+════════════════════════════════════════════════════════════════════

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 64 · HTML 1 · Texto explicativo · Acceso asistencia sanitaria · Ley 16/2003 · RD 576/2013 · RDL 7/2018 · Navarra</title>
+<style>
+:root{
+  --bg:#f0fdf4;--card:#fff;--s2:#dcfce7;--line:#4ade80;
+  --text:#14532d;--muted:#15803d;--p:#16a34a;--p2:#166534;
+  --grn:#059669;--grn2:#d1fae5;--grnd:#047857;
+  --red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;
+  --sky:#0284c7;--sky2:#e0f2fe;
+  --vio:#7c3aed;--vio2:#ede9fe;
+  --teal:#0d9488;--teal2:#ccfbf1;
+  --ora:#c2410c;--ora2:#ffedd5;
+  --sh:0 2px 12px rgba(22,163,74,.10)
+}
+[data-theme="dark"]{
+  --bg:#001a0a;--card:#002710;--s2:#003615;--line:#16a34a;
+  --text:#bbf7d0;--muted:#4ade80;--p:#4ade80;--p2:#86efac;
+  --grn:#6ee7b7;--grn2:#022c22;--grnd:#34d399;
+  --red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;
+  --sky:#7dd3fc;--sky2:#082038;
+  --vio:#c4b5fd;--vio2:#1a0e33;
+  --teal:#5eead4;--teal2:#031a16;
+  --ora:#fdba74;--ora2:#2a1000;
+  --sh:0 2px 14px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:14px;line-height:1.74;background:var(--bg);color:var(--text);padding:24px}
+.wrap{max-width:1040px;margin:0 auto}
+header{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:18px 26px;box-shadow:var(--sh);margin-bottom:20px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px}
+header h1{font-size:.95rem;font-weight:900;color:var(--p)}
+header p{font-size:.71rem;color:var(--muted);margin-top:4px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:6px 16px;border-radius:999px;font-size:.71rem;font-weight:700}
+.sec{background:var(--p);color:#fff;font-size:.8rem;font-weight:900;padding:8px 20px;border-radius:9px;display:inline-block;margin:26px 0 14px;text-transform:uppercase;letter-spacing:.04em}
+.blk{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:22px 28px;box-shadow:var(--sh);margin-bottom:16px}
+.blk h2{font-size:1.04rem;font-weight:900;color:var(--p);margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid var(--line)}
+.blk h3{font-size:.9rem;font-weight:800;color:var(--p2);margin:16px 0 6px}
+.blk p{margin-bottom:10px;font-size:.83rem;line-height:1.75}
+.blk ul,.blk ol{margin:6px 0 12px 22px;font-size:.82rem;line-height:1.76}
+.blk li{margin-bottom:3px}
+.nota{padding:10px 16px;border-radius:0 10px 10px 0;border-left:4px solid;font-size:.78rem;margin:10px 0 14px;line-height:1.62}
+.n-ok{background:var(--grn2);border-color:var(--grn)}
+.n-err{background:var(--red2);border-color:var(--red)}
+.n-w{background:var(--warn2);border-color:var(--warn)}
+.n-sky{background:var(--sky2);border-color:var(--sky)}
+.n-vio{background:var(--vio2);border-color:var(--vio)}
+.n-teal{background:var(--teal2);border-color:var(--teal)}
+.n-ora{background:var(--ora2);border-color:var(--ora)}
+strong{color:var(--p2);font-weight:800}
+em{font-style:normal;background:var(--s2);padding:1px 5px;border-radius:4px;font-weight:700;color:var(--p2)}
+.tbl{width:100%;border-collapse:collapse;font-size:.79rem;margin:10px 0 16px;border-radius:10px;overflow:hidden;box-shadow:var(--sh)}
+.tbl th{background:var(--p);color:#fff;text-align:left;padding:8px 12px;font-size:.69rem;text-transform:uppercase;letter-spacing:.03em}
+.tbl td{padding:8px 12px;border-bottom:1px solid var(--s2);vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:nth-child(even) td{background:rgba(22,163,74,.03)}
+.indice{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:16px 22px;box-shadow:var(--sh);margin-bottom:20px}
+.indice h2{font-size:.82rem;font-weight:900;color:var(--p);margin-bottom:10px;text-transform:uppercase}
+.indice ol{margin-left:20px;font-size:.8rem;line-height:1.9}
+.indice li a{color:var(--p);text-decoration:none;font-weight:700}
+.indice li a:hover{text-decoration:underline}
+.timeline{position:relative;margin:14px 0;padding-left:24px}
+.timeline::before{content:"";position:absolute;left:7px;top:0;bottom:0;width:2px;background:var(--line)}
+.tl-item{position:relative;margin-bottom:14px}
+.tl-dot{width:16px;height:16px;border-radius:50%;background:var(--p);border:3px solid var(--card);position:absolute;left:-21px;top:2px}
+.tl-body{font-size:.78rem;line-height:1.65}
+.tl-year{font-weight:900;color:var(--p);font-size:.8rem}
+.art-tag{display:inline-block;font-size:.65rem;font-weight:900;padding:1px 7px;border-radius:4px;background:var(--p);color:#fff;margin-right:4px;vertical-align:middle}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<header>
+  <div>
+    <h1>Tema 64 · HTML 1 · Texto explicativo · Acceso a la prestación de la asistencia sanitaria</h1>
+    <p>Ley 16/2003 · RD 576/2013 · RDL 7/2018 · Acuerdo Gobierno Navarra 06-04-2018 · Oposiciones Navarra</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">🌙 Claro / Oscuro</button>
+</header>
+
+<div class="indice">
+  <h2>📋 Índice del tema</h2>
+  <ol>
+    <li><a href="#s1">Contexto: el derecho a la protección de la salud</a></li>
+    <li><a href="#s2">La Ley 16/2003: objeto, objeto y capítulo preliminar</a></li>
+    <li><a href="#s3">Ordenación de las prestaciones del SNS</a></li>
+    <li><a href="#s4">La cartera común de servicios (art. 3 bis)</a></li>
+    <li><a href="#s5">Los titulares del derecho: art. 3 Ley 16/2003</a></li>
+    <li><a href="#s6">El convenio especial: art. 3.5 Ley 16/2003</a></li>
+    <li><a href="#s7">RD 576/2013: requisitos básicos del convenio especial</a></li>
+    <li><a href="#s8">RD 1192/2012: condición de asegurado y beneficiario</a></li>
+    <li><a href="#s9">Evolución histórica: del RDL 16/2012 al RDL 7/2018</a></li>
+    <li><a href="#s10">RDL 7/2018: acceso universal al SNS</a></li>
+    <li><a href="#s11">El Acuerdo del Gobierno de Navarra de 6 de abril de 2018</a></li>
+    <li><a href="#s12">Claves de examen y cierre del tema</a></li>
+  </ol>
+</div>
+
+<!-- S1 -->
+<div class="sec" id="s1">1. Contexto: el derecho a la protección de la salud ★★★</div>
+<div class="blk">
+  <h2>Por qué existe este tema y cuál es su fundamento constitucional</h2>
+  <p>El <strong>artículo 43 de la Constitución Española</strong> reconoce el derecho a la protección de la salud y encomienda a los poderes públicos organizar y tutelar la salud pública a través de medidas preventivas y de las prestaciones y servicios necesarios. Complementariamente, el <strong>artículo 41 CE</strong> ordena el mantenimiento de un régimen público de Seguridad Social para todos los ciudadanos.</p>
+  <p>Sin embargo, el derecho a la protección de la salud no es un derecho fundamental en sentido estricto (no está en la Sección Primera del Capítulo II del Título I), sino un <em>principio rector de la política social y económica</em> (Capítulo III del Título I CE). Ello tiene consecuencias importantes: su protección depende de la ley que lo desarrolle; no cabe amparo constitucional directo por su vulneración. Esta distinción es relevante porque el modelo de acceso sanitario puede cambiar por Ley o, en casos de urgencia, por Real Decreto-ley.</p>
+  <p>La <strong>Ley General de Sanidad (LGS) de 1986</strong> fue la primera norma que articuló el Sistema Nacional de Salud (SNS) con carácter universal y gratuito. Sobre ese legado, la Ley 16/2003 viene a coordinar y dotar de cohesión a un sistema ya descentralizado en 17 Comunidades Autónomas, garantizando que todos los ciudadanos reciban las mismas prestaciones esenciales con independencia de su lugar de residencia.</p>
+  <div class="nota n-ok"><strong>Datos para examen ★★★:</strong> Art. 43 CE = derecho a la protección de la salud (principio rector, Capítulo III). · LGS 1986 = primer texto articulador del SNS. · Ley 16/2003 = marco de cohesión y calidad.</div>
+</div>
+
+<!-- S2 -->
+<div class="sec" id="s2">2. La Ley 16/2003: objeto, principios y capítulo preliminar ★★★</div>
+<div class="blk">
+  <h2>Qué es y para qué sirve la Ley de cohesión y calidad del SNS</h2>
+  <p>La <strong>Ley 16/2003, de 28 de mayo, de cohesión y calidad del Sistema Nacional de Salud</strong> (publicada en el BOE núm. 128, de 29 de mayo de 2003), es una ley ordinaria que establece el marco legal para las acciones de coordinación y cooperación de las Administraciones públicas sanitarias. Su finalidad es garantizar la equidad, la calidad y la participación social en el SNS.</p>
+  <p>La Ley parte de una realidad estructural: el SNS es un sistema descentralizado en el que cada Comunidad Autónoma gestiona su propio servicio de salud. Sin un instrumento de cohesión, la descentralización puede derivar en desigualdades territoriales inaceptables. La Ley 16/2003 busca precisamente eso: que el ciudadano que vive en Navarra tenga acceso a las mismas prestaciones esenciales que el que vive en Andalucía o en Cataluña.</p>
+
+  <h3>El capítulo preliminar: objeto y principios</h3>
+  <p>El <strong>artículo 1</strong> define el objeto: establecer el marco legal para las acciones de coordinación y cooperación de las Administraciones públicas sanitarias a fin de garantizar la <em>equidad</em>, la <em>calidad</em> y la <em>participación social</em> en el SNS, así como la colaboración activa de este en la reducción de las desigualdades en salud.</p>
+  <p>El <strong>artículo 2</strong> establece los principios que inspiran la Ley, coherentes con los de la LGS: prestación de servicios a todos los ciudadanos, financiación pública, universalidad y gratuidad en el momento del uso, descentralización política de la sanidad en las CCAA y coordinación de todos los recursos sanitarios públicos.</p>
+
+  <h3>Los 6 ámbitos de colaboración entre Administraciones sanitarias</h3>
+  <p>La Ley organiza la cooperación entre el Estado y las CCAA en seis grandes ámbitos. La mnemotecnia <em>P-F-P-I-I-C</em> permite recordarlos fácilmente:</p>
+  <ol>
+    <li><strong>Prestaciones</strong> del SNS (catálogo y cartera de servicios).</li>
+    <li><strong>Farmacia</strong> (garantías de acceso, financiación).</li>
+    <li><strong>Profesionales</strong> sanitarios (formación, movilidad, reconocimiento).</li>
+    <li><strong>Investigación</strong> biomédica.</li>
+    <li><strong>Información</strong> sanitaria (sistema de información del SNS).</li>
+    <li><strong>Calidad</strong> del sistema (agencias, planes, indicadores).</li>
+  </ol>
+  <div class="nota n-ok"><strong>Mnemotecnia ★★★:</strong> P-F-P-I-I-C = Prestaciones · Farmacia · Profesionales · Investigación · Información · Calidad.</div>
+  <div class="nota n-err"><strong>Trampa ★★★:</strong> "La Ley 16/2003 es una Ley Orgánica." → FALSO. Es una ley <strong>ordinaria</strong>. Ley ordinaria = aprobada por mayoría simple del Parlamento.</div>
+</div>
+
+<!-- S3 -->
+<div class="sec" id="s3">3. Ordenación de las prestaciones del SNS ★★★</div>
+<div class="blk">
+  <h2>Qué se puede recibir del SNS: el catálogo y la cartera de servicios</h2>
+  <p>La Ley 16/2003 establece una diferencia importante entre <em>catálogo de prestaciones</em> y <em>cartera de servicios</em>. El catálogo es el marco general aprobado por el Estado; la cartera de servicios es el instrumento concreto, acordado en el <strong>Consejo Interterritorial del SNS</strong>, que detalla qué técnicas, tecnologías y procedimientos están incluidos en cada prestación.</p>
+
+  <h3>Art. 7: el catálogo de prestaciones ★★★</h3>
+  <p>El catálogo de prestaciones del SNS comprende el conjunto de servicios preventivos, diagnósticos, terapéuticos, rehabilitadores y de promoción de la salud dirigidos a los ciudadanos. Las prestaciones se articulan en <strong>9 áreas</strong>:</p>
+  <ol>
+    <li>Salud pública.</li>
+    <li>Atención primaria.</li>
+    <li>Atención especializada.</li>
+    <li>Atención sociosanitaria.</li>
+    <li>Atención de urgencias.</li>
+    <li>Prestación farmacéutica.</li>
+    <li>Prestación ortoprotésica.</li>
+    <li>Prestación con productos dietéticos.</li>
+    <li>Transporte sanitario.</li>
+  </ol>
+
+  <h3>Art. 8: atención primaria ★★★</h3>
+  <p>Comprende las actividades de atención a demanda, programada y urgente, tanto en consulta como a domicilio; prescripción y realización de procedimientos diagnósticos y terapéuticos; prevención, promoción de la salud; atención paliativa a enfermos terminales; atención a la salud mental en coordinación con la especializada; y atención a grupos de riesgo (mujer, infancia, adolescencia, mayores, enfermos crónicos).</p>
+
+  <h3>Art. 9: atención especializada ★★★</h3>
+  <p>Comprende la asistencia diagnóstica, terapéutica y rehabilitadora en régimen de internamiento (hospitalización) y en régimen ambulatorio, así como la atención paliativa a enfermos terminales en centros hospitalarios.</p>
+
+  <h3>Art. 14: prestación farmacéutica ★★★</h3>
+  <p>La prestación farmacéutica comprende los medicamentos y productos sanitarios y el conjunto de actuaciones encaminadas a que los pacientes reciban los medicamentos de forma adecuada a sus necesidades clínicas, en las dosis precisas, durante el período de tiempo requerido y con la información para su correcto uso, al menor coste posible para ellos y para la comunidad.</p>
+  <div class="nota n-ok"><strong>Regla de oro ★★★:</strong> Catálogo = aprueba el ESTADO · Cartera de servicios = acuerda el CONSEJO INTERTERRITORIAL del SNS. No son lo mismo.</div>
+  <div class="nota n-err"><strong>Trampa ★★★:</strong> "El catálogo de prestaciones y la cartera de servicios son idénticos." → FALSO. Son instrumentos relacionados pero distintos en su contenido y órgano que los aprueba.</div>
+</div>
+
+<!-- S4 -->
+<div class="sec" id="s4">4. La cartera común de servicios — Art. 3 bis Ley 16/2003 ★★★</div>
+<div class="blk">
+  <h2>Las tres modalidades de la cartera común</h2>
+  <p>El <strong>artículo 3 bis</strong>, introducido por el RDL 16/2012, de 20 de abril, de medidas urgentes para garantizar la sostenibilidad del SNS, estableció una distinción clave en las prestaciones del SNS al crear tres modalidades de cartera común. Esta distinción afecta directamente a la financiación y al modelo de acceso, y es uno de los contenidos más examinados del tema.</p>
+
+  <h3>1. Cartera común básica de servicios asistenciales ★★★</h3>
+  <p>Comprende todas las actividades asistenciales de prevención, diagnóstico, tratamiento y rehabilitación que se realicen en centros sanitarios o sociosanitarios, así como el transporte sanitario urgente. Es la única modalidad que está cubierta <em>al 100% por financiación pública</em>, sin aportación del usuario. Es el núcleo duro de las prestaciones del SNS al que tienen acceso todos los titulares del derecho.</p>
+
+  <h3>2. Cartera común suplementaria ★★★</h3>
+  <p>Comprende las prestaciones cuya provisión se realiza mediante dispensación ambulatoria: prestación farmacéutica, ortoprotésica, productos dietéticos y transporte sanitario no urgente. Estas prestaciones están <em>sujetas a aportación del usuario</em> (copago), cuya cuantía varía en función de la renta y la condición del beneficiario.</p>
+
+  <h3>3. Cartera común de servicios accesorios ★★★</h3>
+  <p>Comprende actividades, servicios o técnicas que, sin tener carácter esencial, pueden mejorar la eficacia de las prestaciones incluidas en la cartera básica o suplementaria. También están <em>sujetas a aportación del usuario</em>.</p>
+
+  <div class="nota n-ok"><strong>Mnemotecnia B-S-A ★★★:</strong>
+    <ul style="margin:6px 0 0 18px;font-size:.77rem">
+      <li><strong>B</strong>ásica → 100% pública, SIN copago. ★★★</li>
+      <li><strong>S</strong>uplementaria → farmacia, ortoprótesis, dieta, transporte no urgente → CON copago. ★★★</li>
+      <li><strong>A</strong>ccesorios → mejoras técnicas no esenciales → CON copago. ★★★</li>
+    </ul>
+  </div>
+  <div class="nota n-err"><strong>Trampa ★★★:</strong> "La cartera básica tiene copago." → FALSO. La cartera BÁSICA está cubierta al 100% con financiación pública. El copago corresponde a la suplementaria y a la de servicios accesorios.</div>
+
+  <h3>Carteras de servicios autonómicas complementarias</h3>
+  <p>Junto a la cartera común del SNS, las CCAA pueden aprobar sus propias <strong>carteras de servicios complementarias</strong>, que pueden añadir prestaciones adicionales no incluidas en la cartera común. Estas prestaciones adicionales son financiadas íntegramente por las CCAA con sus propios recursos. En Navarra, el Servicio Navarro de Salud-Osasunbidea gestiona esta cartera complementaria.</p>
+</div>
+
+<!-- S5 -->
+<div class="sec" id="s5">5. Los titulares del derecho: art. 3 Ley 16/2003 ★★★</div>
+<div class="blk">
+  <h2>Quién tiene derecho a la asistencia sanitaria del SNS</h2>
+  <p>El <strong>artículo 3</strong> de la Ley 16/2003 es el precepto central del tema. Ha sufrido una modificación profunda a raíz del <strong>RDL 7/2018</strong>, que transformó el modelo de acceso al SNS. Para entender bien el sistema actual, conviene conocer cómo era antes y cómo es ahora.</p>
+
+  <h3>Modelo anterior al RDL 7/2018: condición de asegurado</h3>
+  <p>El RDL 16/2012, de 20 de abril, modificó el artículo 3 para establecer un sistema basado en la <em>condición de asegurado</em>. Solo tenían derecho a la asistencia sanitaria las personas que ostentaran tal condición (trabajadores afiliados a la SS, pensionistas, perceptores de prestaciones, demandantes de empleo, etc.) o la de <em>beneficiario</em> (familiar del asegurado). Este modelo quedó pendiente de desarrollo, pero supuso que los extranjeros en situación irregular quedaran excluidos de la asistencia ordinaria, salvo urgencias, menores y embarazo.</p>
+
+  <h3>Modelo vigente tras el RDL 7/2018: ciudadanía y residencia</h3>
+  <p>El RDL 7/2018 reformó nuevamente el artículo 3 de la Ley 16/2003 para establecer un modelo basado en la <em>ciudadanía y la residencia</em>. El contenido vigente del artículo 3 es:</p>
+  <ol>
+    <li><strong>Son titulares del derecho a la protección de la salud y a la atención sanitaria</strong> todas las personas con:
+      <ul>
+        <li>Nacionalidad española que tengan su residencia habitual en España.</li>
+        <li>Extranjeros con residencia legal establecida en territorio español.</li>
+      </ul>
+    </li>
+    <li><strong>Personas extranjeras sin residencia legal</strong> en España tienen acceso a la cartera común básica de servicios asistenciales del SNS en las condiciones previstas en la legislación de extranjería. En todo caso, se garantizan tres supuestos:
+      <ul>
+        <li>Todos los extranjeros <em>menores de 18 años</em> (sin distinción de situación). ★★★</li>
+        <li><em>Embarazo, parto y puerperio</em>. ★★★</li>
+        <li><em>Urgencia por enfermedad grave o accidente</em> hasta la situación de alta médica (art. 12 LO 4/2000). ★★★</li>
+      </ul>
+    </li>
+  </ol>
+  <div class="nota n-ok"><strong>Mnemotecnia ★★★:</strong> Para extranjeros sin residencia legal: <strong>MENOR · EMBARAZO · URGENCIA</strong>. Estos tres supuestos siempre están garantizados.</div>
+  <div class="nota n-err"><strong>Trampa ★★★:</strong> "Los extranjeros sin residencia legal no tienen ningún derecho sanitario." → FALSO. Tienen garantizados los tres supuestos: menor · embarazo · urgencia. ★★★</div>
+
+  <h3>Art. 3.5: la puerta del convenio especial ★★★</h3>
+  <p>El artículo 3.5 de la Ley 16/2003 abre la posibilidad de acceso al SNS a través de un <strong>convenio especial</strong> para las personas que no tengan la condición de aseguradas ni de beneficiarias, previo pago de la correspondiente contraprestación económica. Este mecanismo es desarrollado por el <strong>RD 576/2013</strong>.</p>
+</div>
+
+<!-- S6 -->
+<div class="sec" id="s6">6. El convenio especial: art. 3.5 Ley 16/2003 ★★★</div>
+<div class="blk">
+  <h2>Qué es el convenio especial y para qué sirve</h2>
+  <p>El <strong>convenio especial de prestación de asistencia sanitaria</strong> es un instrumento jurídico previsto en el artículo 3.5 de la Ley 16/2003 que permite a determinadas personas acceder a las prestaciones del SNS aunque no tengan la condición de aseguradas ni de beneficiarias del mismo, y no estén cubiertas por ningún otro sistema de protección.</p>
+  <p>Antes del RDL 7/2018, el convenio especial era la única vía de acceso ordinario al SNS para personas extranjeras sin residencia legal, personas con residencia en el extranjero que visitaban España por periodos prolongados, españoles residentes en el exterior, etc. Tras el RDL 7/2018, que universalizó el acceso para los residentes legales, el convenio especial quedó principalmente para personas sin residencia legal que quieran un acceso más amplio que el básico garantizado (menores, embarazo, urgencias).</p>
+  <p>El convenio especial es un mecanismo de equidad: permite que quien quiera y pueda pagar una cuota mensual acceda a la cartera común del SNS, garantizando así que el sistema no quede hermético para quien no cumple los requisitos ordinarios de acceso.</p>
+</div>
+
+<!-- S7 -->
+<div class="sec" id="s7">7. RD 576/2013: requisitos básicos del convenio especial ★★★</div>
+<div class="blk">
+  <h2>Cómo se suscribe el convenio especial y cuánto cuesta</h2>
+  <p>El <strong>Real Decreto 576/2013, de 26 de julio</strong> (BOE: 27 de julio de 2013) desarrolla reglamentariamente el artículo 3.5 de la Ley 16/2003, estableciendo los requisitos básicos del convenio especial de prestación de asistencia sanitaria. Además, modifica el RD 1192/2012, de 3 de agosto, que regula la condición de asegurado y de beneficiario.</p>
+
+  <h3>Requisitos para suscribir el convenio especial (art. 3) ★★★</h3>
+  <p>Son tres condiciones acumulativas:</p>
+  <ol>
+    <li>No tener la condición de asegurado ni de beneficiario conforme al RD 1192/2012.</li>
+    <li>Estar <em>empadronado</em> en algún municipio español (residencia en España acreditada mediante el padrón municipal). ★★★</li>
+    <li>No tener acceso a un sistema de protección sanitaria por cualquier otro título (seguro privado, protección del país de origen u otro Estado, etc.).</li>
+  </ol>
+  <div class="nota n-ok"><strong>Tres requisitos acumulativos ★★★:</strong> No asegurado/beneficiario + EMPADRONADO en España + Sin otra cobertura. Los tres deben darse a la vez.</div>
+
+  <h3>Procedimiento de suscripción (art. 4) ★★★</h3>
+  <p>La solicitud se dirige al <strong>Instituto Nacional de Gestión Sanitaria (INGESA)</strong>, cuando el domicilio habitual esté en Ceuta o Melilla, o al órgano competente de la Comunidad Autónoma correspondiente. En Navarra, el órgano competente es el Servicio Navarro de Salud-Osasunbidea. La resolución de concesión produce efectos desde el día siguiente a la resolución favorable.</p>
+
+  <h3>Contraprestación económica (art. 6) ★★★</h3>
+  <p>La cuota mensual se establece en dos tramos en función de la edad del suscriptor:</p>
+  <table class="tbl">
+    <thead><tr><th>Edad del suscriptor</th><th>Cuota mensual</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Menos de 65 años</strong></td><td><strong>60 euros/mes</strong> ★★★</td></tr>
+      <tr><td><strong>65 años o más</strong></td><td><strong>157 euros/mes</strong> ★★★</td></tr>
+    </tbody>
+  </table>
+  <p>Cuando el suscriptor cumple 65 años, el cambio de tramo tiene efecto desde el primer día del mes siguiente. Las CCAA pueden incrementar estas cuotas si incorporan prestaciones adicionales de su cartera complementaria.</p>
+  <div class="nota n-err"><strong>Trampa ★★★:</strong> "La cuota del convenio especial es de 60€/mes para todos." → FALSO. Hay DOS tramos: <strong>< 65 años = 60€/mes · ≥ 65 años = 157€/mes</strong>. ★★★</div>
+
+  <h3>Extinción del convenio especial (art. 7) ★★★</h3>
+  <p>El convenio especial se extingue por:</p>
+  <ul>
+    <li>Renuncia del suscriptor.</li>
+    <li>Adquisición de la condición de asegurado o beneficiario.</li>
+    <li>Incumplimiento sobrevenido de los requisitos exigidos.</li>
+    <li>Por resolución de la administración, previa audiencia del interesado.</li>
+    <li>Fallecimiento del suscriptor.</li>
+  </ul>
+</div>
+
+<!-- S8 -->
+<div class="sec" id="s8">8. RD 1192/2012: condición de asegurado y beneficiario ★★★</div>
+<div class="blk">
+  <h2>Quién es asegurado y quién es beneficiario a efectos sanitarios</h2>
+  <p>El <strong>Real Decreto 1192/2012, de 3 de agosto</strong> (BOE: 4 de agosto de 2012) regula la condición de asegurado y de beneficiario a efectos de la asistencia sanitaria en España con cargo a fondos públicos a través del SNS. Fue modificado por el RD 576/2013 y posteriormente afectado por el RDL 7/2018.</p>
+  <p>En el modelo anterior al RDL 7/2018, el reconocimiento de la condición de asegurado se basaba en la vinculación con la Seguridad Social o con el sistema tributario. Tenían la condición de asegurado:</p>
+  <ul>
+    <li>Trabajadores afiliados a la Seguridad Social y en alta o situación asimilada.</li>
+    <li>Pensionistas de la Seguridad Social.</li>
+    <li>Perceptores de prestaciones periódicas del sistema de protección por desempleo.</li>
+    <li>Personas que habiendo agotado la prestación por desempleo no superaran determinados límites de renta.</li>
+    <li>Personas con residencia en España y sin cobertura obligatoria por otra vía, que acreditaran no superar el límite de ingresos establecido (antes de la reforma de 2012).</li>
+  </ul>
+  <p>Los <strong>beneficiarios</strong> son los familiares o personas asimiladas que, sin ser asegurados, tienen derecho a la asistencia sanitaria por razón del vínculo con el asegurado: cónyuge o pareja de hecho reconocida, descendientes a cargo menores de 26 años y personas asimiladas con una discapacidad.</p>
+  <p>Tras el RDL 7/2018, la categoría de asegurado pierde la centralidad que tenía en el modelo anterior, ya que el acceso al SNS se basa ahora en la residencia, no en la condición de asegurado.</p>
+</div>
+
+<!-- S9 -->
+<div class="sec" id="s9">9. Evolución histórica: del RDL 16/2012 al RDL 7/2018 ★★★</div>
+<div class="blk">
+  <h2>Cómo ha evolucionado el modelo de acceso sanitario en España</h2>
+  <p>Comprender la evolución del acceso al SNS es fundamental para responder con profundidad en el examen. El cambio de modelo de 2012 a 2018 es una de las claves del tema.</p>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-body">
+        <span class="tl-year">1986 · Ley General de Sanidad</span><br>
+        Se crea el SNS. Modelo de <strong>universalidad</strong> basado en la ciudadanía y la residencia. Cobertura para todos los residentes en España.
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-body">
+        <span class="tl-year">2003 · Ley 16/2003</span><br>
+        Marco de cohesión y calidad del SNS. Se introduce el convenio especial (art. 3.5) para personas no incluidas en el sistema. ★★★
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-body">
+        <span class="tl-year">Abril 2012 · RDL 16/2012</span><br>
+        Cambio radical de modelo. Se vincula el acceso al SNS a la <strong>condición de asegurado</strong> (ligada a la SS). Los extranjeros en situación irregular quedan excluidos de la asistencia ordinaria, salvo urgencias, menores y embarazo. ★★★
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-body">
+        <span class="tl-year">2012-2013 · RD 1192/2012 + RD 576/2013</span><br>
+        Se regulan la condición de asegurado/beneficiario y el convenio especial. Cuotas: 60€ (&lt;65 años) / 157€ (≥65 años). ★★★
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-body">
+        <span class="tl-year">6 de abril de 2018 · Acuerdo Gobierno Navarra</span><br>
+        Navarra exime del pago del convenio especial a personas en situación de especial vulnerabilidad económica y social. <strong>Medida pionera ANTES del RDL 7/2018</strong>. ★★★
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-body">
+        <span class="tl-year">27 de julio de 2018 · RDL 7/2018</span><br>
+        Nuevo cambio radical de modelo. Se <strong>universaliza</strong> el acceso al SNS basado en la <strong>ciudadanía y la residencia</strong>. Se desvincula de la condición de asegurado. Vigente desde 31-07-2018. Convalidado el 06-09-2018. ★★★
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S10 -->
+<div class="sec" id="s10">10. RDL 7/2018: acceso universal al SNS ★★★</div>
+<div class="blk">
+  <h2>El modelo de universalidad desde la residencia y la ciudadanía</h2>
+  <p>El <strong>Real Decreto-ley 7/2018, de 27 de julio, sobre el acceso universal al Sistema Nacional de Salud</strong> (BOE núm. 183, de 30 de julio de 2018; entrada en vigor: 31 de julio de 2018) es la norma más reciente y de mayor impacto del tema. Convalidado por el Congreso de los Diputados el 6 de septiembre de 2018.</p>
+  <p>El RDL 7/2018 supone el retorno al modelo de universalidad que había establecido la LGS de 1986, abandonado temporalmente por el RDL 16/2012. La diferencia esencial respecto al modelo anterior es que el acceso al SNS ya no depende de si la persona cotiza o ha cotizado a la Seguridad Social, sino de que tenga su residencia en España.</p>
+
+  <h3>Principales contenidos del RDL 7/2018</h3>
+  <ol>
+    <li><strong>Nuevo artículo 3 de la Ley 16/2003:</strong> Todas las personas con nacionalidad española o con residencia legal en España son titulares del derecho a la protección de la salud y a la atención sanitaria. ★★★</li>
+    <li><strong>Personas sin residencia legal:</strong> Tienen acceso garantizado a la cartera común básica para tres supuestos: menores de 18 años, embarazo/parto/puerperio y urgencias por enfermedad grave o accidente. ★★★</li>
+    <li><strong>Solicitantes de protección internacional:</strong> También se les reconoce el derecho. ★★★</li>
+    <li><strong>El convenio especial</strong> del RD 576/2013 subsiste para personas sin residencia legal que quieran acceso más amplio que el básico. ★★★</li>
+    <li><strong>Adaptación de los sistemas de reconocimiento del derecho</strong> por parte del INGESA, las CCAA y el IMSERSS. ★★★</li>
+  </ol>
+
+  <div class="nota n-err"><strong>Trampa ★★★:</strong> "El RDL 7/2018 vincula el acceso al SNS a la condición de asegurado de la Seguridad Social." → FALSO. Es precisamente lo contrario: el RDL 7/2018 <strong>elimina</strong> ese vínculo. Es el modelo del RDL 16/2012 (2012) el que lo establecía. ★★★</div>
+
+  <h3>Diferencia clave entre los dos modelos</h3>
+  <table class="tbl">
+    <thead><tr><th>Aspecto</th><th>RDL 16/2012 (derogado en este punto)</th><th>RDL 7/2018 (vigente)</th></tr></thead>
+    <tbody>
+      <tr><td>Base del derecho</td><td>Condición de ASEGURADO (SS).</td><td>CIUDADANÍA y RESIDENCIA en España. ★★★</td></tr>
+      <tr><td>Extranjeros con residencia legal</td><td>Asegurados si cotizaban o cumplían condiciones.</td><td>Titulares del derecho directamente. ★★★</td></tr>
+      <tr><td>Extranjeros sin residencia legal</td><td>Solo urgencias, menores y embarazo. Sin convenio especial inicialmente.</td><td>Básico garantizado: menores + embarazo + urgencias. Pueden suscribir convenio especial. ★★★</td></tr>
+      <tr><td>Convenio especial</td><td>Principal vía de acceso para excluidos. 60€/157€ mes.</td><td>Complementario para quienes quieran acceso ampliado. ★★★</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- S11 -->
+<div class="sec" id="s11">11. El Acuerdo del Gobierno de Navarra de 6 de abril de 2018 ★★★</div>
+<div class="blk">
+  <h2>Por qué Navarra actuó antes que el Estado y qué significa ese acuerdo</h2>
+  <p>El <strong>Acuerdo del Gobierno de Navarra de 6 de abril de 2018</strong> por el que se acuerda la exención del pago del precio público derivado de los convenios especiales de asistencia sanitaria cuando afecte a personas en situación de especial vulnerabilidad económica y social es, en el momento en que se adopta, una medida pionera y de gran relevancia en el contexto navarro y español.</p>
+
+  <h3>El contexto: el problema que resuelve el Acuerdo</h3>
+  <p>En los meses previos al verano de 2018, el modelo de acceso al SNS seguía siendo el del RDL 16/2012: para las personas extranjeras sin residencia legal, la única vía de acceso a la asistencia sanitaria ordinaria era el convenio especial, que requería el pago de <em>60 euros mensuales</em> (si era menor de 65 años). Para personas en situación de pobreza severa, exclusión social o sin ingresos, ese pago era materialmente imposible. Quedaban así excluidas de la atención sanitaria ordinaria pese a estar empadronadas.</p>
+  <p>Navarra decidió no esperar a la reforma estatal. El <strong>6 de abril de 2018</strong>, el Gobierno foral adoptó el acuerdo de <em>eximir del pago del precio público</em> del convenio especial a aquellas personas que acreditaran estar en situación de <strong>especial vulnerabilidad económica y social</strong>. De este modo, las personas más vulnerables podían seguir suscribiendo el convenio especial y acceder a la asistencia sanitaria ordinaria sin que el coste económico fuera una barrera.</p>
+
+  <h3>Fundamento jurídico y político del Acuerdo</h3>
+  <p>El acuerdo se fundamenta en el principio de equidad sanitaria, en el derecho a la protección de la salud (art. 43 CE) y en la Ley Foral 17/2010, de 8 de noviembre, de derechos y deberes de las personas en materia de salud en la Comunidad Foral de Navarra, que reconoce el derecho a la atención sanitaria sin discriminación. No requería rango de ley porque actuaba sobre la cuantía del precio público, que puede ser exonerado por decisión gubernamental en atención a circunstancias sociales.</p>
+
+  <h3>Importancia en el contexto actual</h3>
+  <p>Aunque el RDL 7/2018 (julio 2018) vino posteriormente a universalizar el acceso al SNS para los residentes legales y a garantizar el básico para todos, el Acuerdo de Navarra de 6 de abril de 2018 sigue siendo relevante porque:</p>
+  <ul>
+    <li>Navarra actuó como <em>legislador pionero</em>, anticipando la reforma estatal en tres meses. ★★★</li>
+    <li>El convenio especial subsiste tras el RDL 7/2018 para personas sin residencia legal que quieran acceso más amplio. La exención navarra sigue aplicando en ese contexto para personas vulnerables. ★★★</li>
+    <li>Es coherente con el modelo de inclusión del <em>Plan de Acogida a Personas Migrantes 2021-2026</em> (Tema 62): la atención sanitaria sin barreras económicas forma parte del eje de acogida e integración de Navarra. ★★★</li>
+  </ul>
+  <div class="nota n-err"><strong>Trampa ★★★:</strong> "El Acuerdo de Navarra fue posterior al RDL 7/2018." → FALSO. El Acuerdo es de <strong>6 de ABRIL de 2018</strong> y el RDL 7/2018 es de <strong>27 de JULIO de 2018</strong>. Navarra actuó ANTES que el Estado. ★★★</div>
+</div>
+
+<!-- S12 -->
+<div class="sec" id="s12">12. Claves de examen y cierre del tema ★★★</div>
+<div class="blk">
+  <h2>Cómo estructurar la respuesta en un examen de oposición</h2>
+  <p>El Tema 64 articula cuatro normas principales alrededor de una idea central: la evolución del modelo de acceso al SNS, que ha ido de la universalidad (1986) a la condición de asegurado (2012) y de vuelta a la universalidad desde la residencia (2018), con el complemento del convenio especial para quienes no tienen residencia legal. Navarra, con su Acuerdo de 6 de abril de 2018, anticipó esa vuelta a la universalidad.</p>
+  <p>Para la respuesta oral o escrita, se recomienda estructurar el tema en cuatro bloques: <em>marco normativo</em> (Ley 16/2003), <em>ordenación de prestaciones</em> (catálogo, cartera común B-S-A), <em>evolución del modelo de titulares</em> (2012 → 2018, RDL 7/2018) y <em>convenio especial</em> (RD 576/2013 con cuotas 60€/157€ + Acuerdo Navarra).</p>
+
+  <table class="tbl">
+    <thead><tr><th>Norma / Art.</th><th>Contenido clave</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Art. 43 CE ★★★</strong></td><td>Derecho a la protección de la salud. Principio rector (Cap. III Tít. I).</td></tr>
+      <tr><td><strong>Art. 1 Ley 16/2003 ★★★</strong></td><td>Objeto: coordinación AAPP sanitarias · equidad · calidad · participación social.</td></tr>
+      <tr><td><strong>Art. 2 Ley 16/2003 ★★★</strong></td><td>Principios: universalidad · financiación pública · descentralización CCAA.</td></tr>
+      <tr><td><strong>Art. 3 Ley 16/2003 ★★★</strong></td><td>Titulares del derecho (modificado RDL 7/2018): residentes + básico para todos.</td></tr>
+      <tr><td><strong>Art. 3.5 Ley 16/2003 ★★★</strong></td><td>Convenio especial para no asegurados/beneficiarios.</td></tr>
+      <tr><td><strong>Art. 3 bis Ley 16/2003 ★★★</strong></td><td>3 tipos cartera: básica (100% pública) · suplementaria (copago) · accesorios (copago).</td></tr>
+      <tr><td><strong>Art. 7 Ley 16/2003 ★★★</strong></td><td>Catálogo de prestaciones: 9 áreas.</td></tr>
+      <tr><td><strong>Art. 3 RD 576/2013 ★★★</strong></td><td>Requisitos convenio especial: no asegurado + empadronado + sin otra cobertura.</td></tr>
+      <tr><td><strong>Art. 6 RD 576/2013 ★★★</strong></td><td>Cuotas: &lt;65 años = 60€/mes · ≥65 años = 157€/mes.</td></tr>
+      <tr><td><strong>Art. 7 RD 576/2013 ★★★</strong></td><td>Extinción del convenio: 5 causas.</td></tr>
+      <tr><td><strong>RDL 7/2018 ★★★</strong></td><td>Universalidad: residencia = derecho al SNS. Básico garantizado: menor · embarazo · urgencia.</td></tr>
+      <tr><td><strong>Acuerdo Navarra 06-04-2018 ★★★</strong></td><td>Exención pago convenio especial para vulnerabilidad. ANTERIOR al RDL 7/2018.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="nota n-ok"><strong>Frase final ★★★:</strong> El RDL 7/2018 convierte la residencia en el título habilitante del derecho al SNS; el convenio especial del RD 576/2013 (60€/157€/mes) garantiza el acceso a quienes no tienen residencia legal; y Navarra, con su Acuerdo de 6 de abril de 2018, eliminó la barrera económica para los más vulnerables, tres meses antes de que el Estado universalizara el acceso.</div>
+</div>
+
+</div>
+</body>
+</html>

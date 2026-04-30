@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 64 · HTML 2 · Esquema-resumen visual · Acceso SNS · Ley 16/2003 · RD 576/2013 · RDL 7/2018 · Navarra</title>
+<style>
+:root{
+  --bg:#f0fdf4;--card:#fff;--s2:#dcfce7;--s3:#bbf7d0;--line:#4ade80;
+  --text:#14532d;--muted:#15803d;--p:#16a34a;--p2:#166534;
+  --grn:#059669;--grn2:#d1fae5;--grnd:#047857;
+  --red:#dc2626;--red2:#fee2e2;--redd:#b91c1c;
+  --warn:#b45309;--warn2:#fef3c7;--warnd:#92400e;
+  --sky:#0284c7;--sky2:#e0f2fe;--skyd:#0369a1;
+  --vio:#7c3aed;--vio2:#ede9fe;--viod:#6d28d9;
+  --teal:#0d9488;--teal2:#ccfbf1;--teald:#0f766e;
+  --ora:#c2410c;--ora2:#ffedd5;--orad:#9a3412;
+  --rose:#be185d;--rose2:#fce7f3;--rosed:#9d174d;
+  --sh:0 2px 12px rgba(22,163,74,.12)
+}
+[data-theme="dark"]{
+  --bg:#001a0a;--card:#002710;--s2:#003615;--s3:#004d1e;--line:#16a34a;
+  --text:#bbf7d0;--muted:#4ade80;--p:#4ade80;--p2:#86efac;
+  --grn:#6ee7b7;--grn2:#022c22;--grnd:#34d399;
+  --red:#fca5a5;--red2:#1a0000;--redd:#f87171;
+  --warn:#fde68a;--warn2:#1c1000;--warnd:#fcd34d;
+  --sky:#7dd3fc;--sky2:#082038;--skyd:#38bdf8;
+  --vio:#c4b5fd;--vio2:#1a0e33;--viod:#a78bfa;
+  --teal:#5eead4;--teal2:#031a16;--teald:#2dd4bf;
+  --ora:#fdba74;--ora2:#2a1000;--orad:#fb923c;
+  --rose:#fda4af;--rose2:#1a0010;--rosed:#fb7185;
+  --sh:0 2px 14px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:18px}
+.wrap{max-width:1260px;margin:0 auto}
+header{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:13px 22px;box-shadow:var(--sh);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+header h1{font-size:.88rem;font-weight:900;color:var(--p)}
+header p{font-size:.68rem;color:var(--muted);margin-top:2px}
+.btn{font:inherit;cursor:pointer;border:1.5px solid var(--line);background:var(--s2);color:var(--text);padding:5px 14px;border-radius:999px;font-size:.69rem;font-weight:700}
+
+/* GRID */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:12px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:12px}
+@media(max-width:900px){.g3,.g4{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.g2,.g3,.g4{grid-template-columns:1fr}}
+
+/* TÍTULO DE BLOQUE */
+.sec{background:var(--p);color:#fff;font-size:.74rem;font-weight:900;padding:5px 14px;border-radius:7px;display:inline-block;margin:16px 0 8px;text-transform:uppercase;letter-spacing:.04em}
+
+/* TARJETA BASE */
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--sh)}
+.card h3{font-size:.82rem;font-weight:900;margin-bottom:8px;padding-bottom:5px;border-bottom:2px solid var(--line);color:var(--p)}
+.card ul{margin:4px 0 0 16px;font-size:.78rem;line-height:1.7}
+.card li{margin-bottom:2px}
+.card p{font-size:.78rem;line-height:1.65;margin-top:5px}
+
+/* FLASH CARD */
+.flash{border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;box-shadow:var(--sh)}
+.flash .label{font-size:.62rem;font-weight:900;text-transform:uppercase;letter-spacing:.04em;opacity:.75}
+.flash .val{font-size:.9rem;font-weight:900;line-height:1.3}
+.flash .sub{font-size:.68rem;opacity:.8;margin-top:2px}
+.f-grn{background:var(--grn2);color:var(--grnd)}
+.f-red{background:var(--red2);color:var(--redd)}
+.f-warn{background:var(--warn2);color:var(--warnd)}
+.f-sky{background:var(--sky2);color:var(--skyd)}
+.f-vio{background:var(--vio2);color:var(--viod)}
+.f-teal{background:var(--teal2);color:var(--teald)}
+.f-ora{background:var(--ora2);color:var(--orad)}
+.f-rose{background:var(--rose2);color:var(--rosed)}
+.f-p{background:var(--s2);color:var(--p2)}
+
+/* PIRÁMIDE / ARCO */
+.piramide{display:flex;flex-direction:column;gap:5px;align-items:center;padding:14px 0}
+.pir-row{border-radius:7px;color:#fff;font-weight:800;font-size:.72rem;text-align:center;padding:6px 10px;width:100%}
+
+/* NOTA */
+.nota{padding:8px 13px;border-radius:0 9px 9px 0;border-left:4px solid;font-size:.71rem;margin:6px 0 10px;line-height:1.55}
+.n-ok{background:var(--grn2);border-color:var(--grn)}
+.n-err{background:var(--red2);border-color:var(--red)}
+.n-w{background:var(--warn2);border-color:var(--warn)}
+.n-sky{background:var(--sky2);border-color:var(--sky)}
+.n-vio{background:var(--vio2);border-color:var(--vio)}
+.n-teal{background:var(--teal2);border-color:var(--teal)}
+strong{color:var(--p2);font-weight:800}
+
+/* TRAMPA */
+.trampa{border-radius:10px;padding:11px 14px;box-shadow:var(--sh);font-size:.77rem}
+.t-falso{background:var(--red2);border:1.5px solid var(--redd)}
+.t-ok{background:var(--grn2);border:1.5px solid var(--grnd)}
+.t-label{font-size:.62rem;font-weight:900;text-transform:uppercase;letter-spacing:.03em;margin-bottom:3px}
+
+/* TIMELINE */
+.tl{position:relative;padding-left:20px;margin:8px 0}
+.tl::before{content:"";position:absolute;left:7px;top:0;bottom:0;width:2px;background:var(--line)}
+.tl-item{position:relative;margin-bottom:10px;font-size:.77rem;line-height:1.6}
+.tl-dot{width:14px;height:14px;border-radius:50%;background:var(--p);position:absolute;left:-17px;top:2px;border:2px solid var(--card)}
+.tl-yr{font-weight:900;color:var(--p)}
+
+/* STEP BADGE */
+.step{display:flex;align-items:flex-start;gap:10px;margin-bottom:8px}
+.step-num{background:var(--p);color:#fff;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.72rem;flex-shrink:0;margin-top:1px}
+.step-body{font-size:.78rem;line-height:1.65}
+
+/* CUOTA */
+.cuota-box{border-radius:10px;padding:14px;text-align:center;box-shadow:var(--sh)}
+.cuota-num{font-size:2rem;font-weight:900;line-height:1}
+.cuota-label{font-size:.69rem;font-weight:800;margin-top:4px}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<header>
+  <div>
+    <h1>Tema 64 · HTML 2 · Esquema-resumen visual · Acceso SNS · Ley 16/2003 · RD 576/2013 · RDL 7/2018 · Acuerdo Navarra 06-04-2018</h1>
+    <p>Bloques visuales para memorización rápida · Oposiciones Navarra</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">🌙 Claro / Oscuro</button>
+</header>
+
+<!-- B1: FICHAS FLASH DE DATOS -->
+<div class="sec">⚡ Fichas flash — 24 datos inmediatos ★★★</div>
+<div class="g4" style="margin-bottom:6px">
+  <div class="flash f-grn"><span class="label">Ley 16/2003 — fecha ★★★</span><span class="val">28-05-2003</span><span class="sub">BOE 29-05-2003</span></div>
+  <div class="flash f-sky"><span class="label">Ley 16/2003 — tipo ★★★</span><span class="val">Ley ORDINARIA</span><span class="sub">No es Orgánica</span></div>
+  <div class="flash f-p"><span class="label">6 ámbitos ley 16/2003 ★★★</span><span class="val">P-F-P-I-I-C</span><span class="sub">Prestaciones · Farmacia · Profesionales · Investigación · Información · Calidad</span></div>
+  <div class="flash f-vio"><span class="label">Cartera tipos ★★★</span><span class="val">B – S – A</span><span class="sub">Básica · Suplementaria · Accesorios</span></div>
+</div>
+<div class="g4" style="margin-bottom:6px">
+  <div class="flash f-teal"><span class="label">Cartera básica ★★★</span><span class="val">100% pública</span><span class="sub">SIN copago del usuario</span></div>
+  <div class="flash f-warn"><span class="label">Cartera suplementaria ★★★</span><span class="val">CON copago</span><span class="sub">Farmacia · ortoprótesis · dietética · transporte no urgente</span></div>
+  <div class="flash f-ora"><span class="label">Cartera accesorios ★★★</span><span class="val">CON copago</span><span class="sub">Mejoras técnicas no esenciales</span></div>
+  <div class="flash f-grn"><span class="label">Catálogo prestaciones ★★★</span><span class="val">9 áreas</span><span class="sub">Art. 7 Ley 16/2003</span></div>
+</div>
+<div class="g4" style="margin-bottom:6px">
+  <div class="flash f-sky"><span class="label">RD 1192/2012 — fecha ★★★</span><span class="val">03-08-2012</span><span class="sub">Condición asegurado/beneficiario</span></div>
+  <div class="flash f-p"><span class="label">RD 576/2013 — fecha ★★★</span><span class="val">26-07-2013</span><span class="sub">BOE 27-07-2013 · Convenio especial</span></div>
+  <div class="flash f-warn"><span class="label">Convenio especial &lt;65 años ★★★</span><span class="val">60 €/mes</span><span class="sub">Art. 6 RD 576/2013</span></div>
+  <div class="flash f-red"><span class="label">Convenio especial ≥65 años ★★★</span><span class="val">157 €/mes</span><span class="sub">Art. 6 RD 576/2013</span></div>
+</div>
+<div class="g4" style="margin-bottom:6px">
+  <div class="flash f-rose"><span class="label">Acuerdo Navarra ★★★</span><span class="val">06-04-2018</span><span class="sub">ANTES del RDL 7/2018 (27-07-2018)</span></div>
+  <div class="flash f-vio"><span class="label">Renta máx. exención Navarra ★★★</span><span class="val">&lt; 18.000 €</span><span class="sub">Acuerdo Gobierno Navarra 06-04-2018</span></div>
+  <div class="flash f-teal"><span class="label">RDL 7/2018 — fecha ★★★</span><span class="val">27-07-2018</span><span class="sub">Vigor 31-07-2018 · Convalidado 06-09-2018</span></div>
+  <div class="flash f-grn"><span class="label">RDL 7/2018 — modelo ★★★</span><span class="val">CIUDADANÍA + RESIDENCIA</span><span class="sub">Desvincula del asegurado SS</span></div>
+</div>
+<div class="g4" style="margin-bottom:6px">
+  <div class="flash f-sky"><span class="label">Básico garantizado TODOS ★★★</span><span class="val">MENOR · EMBARAZO · URGENCIA</span><span class="sub">Art. 3.2 Ley 16/2003 tras RDL 7/2018</span></div>
+  <div class="flash f-p"><span class="label">Art. 43 CE ★★★</span><span class="val">Principio rector</span><span class="sub">Derecho a la protección de la salud (Cap. III Tít. I)</span></div>
+  <div class="flash f-warn"><span class="label">Art. 3.5 Ley 16/2003 ★★★</span><span class="val">Convenio especial</span><span class="sub">Puerta de acceso para no asegurados</span></div>
+  <div class="flash f-ora"><span class="label">Convenio especial — extinción ★★★</span><span class="val">5 causas</span><span class="sub">Renuncia · asegurado · incumplimiento · admin. · fallecimiento</span></div>
+</div>
+<div class="g4">
+  <div class="flash f-rose"><span class="label">Ley Foral Navarra 8/2013 ★★★</span><span class="val">Residentes Navarra</span><span class="sub">Asistencia sanitaria gratuita · todos los residentes · BON 04-03-2013</span></div>
+  <div class="flash f-grn"><span class="label">RDL 16/2012 — modelo ★★★</span><span class="val">CONDICIÓN ASEGURADO</span><span class="sub">Modelo derogado en este aspecto · excluía irregulares ordinariamente</span></div>
+  <div class="flash f-teal"><span class="label">Req. convenio especial ★★★</span><span class="val">3 acumulativos</span><span class="sub">No asegurado + empadronado + sin otra cobertura</span></div>
+  <div class="flash f-vio"><span class="label">Art. 3 bis 3 modalidades ★★★</span><span class="val">Básica · Suplementaria · Accesorios</span><span class="sub">Introducido por RDL 16/2012</span></div>
+</div>
+<div class="nota n-ok"><strong>24 fichas = todos los datos del examen.</strong> Repasa una fila al día. ★★★</div>
+
+<!-- B2: ARQUITECTURA NORMATIVA -->
+<div class="sec">🏛 Arquitectura normativa — pirámide del Tema 64 ★★★</div>
+<div class="g2">
+  <div class="card">
+    <h3>Pirámide jerárquica</h3>
+    <div class="piramide">
+      <div class="pir-row" style="background:#166534;width:55%">Art. 43 CE — Principio rector salud ★★★</div>
+      <div class="pir-row" style="background:#15803d;width:67%">Ley 16/2003, de 28 de mayo — Cohesión y calidad SNS ★★★</div>
+      <div class="pir-row" style="background:#16a34a;width:77%">RDL 7/2018, de 27 de julio — Acceso universal ★★★</div>
+      <div class="pir-row" style="background:#4ade80;color:#14532d;width:87%">RD 1192/2012, de 3 agosto — Asegurado/Beneficiario ★★★</div>
+      <div class="pir-row" style="background:#86efac;color:#14532d;width:97%">RD 576/2013, de 26 julio — Convenio especial ★★★</div>
+      <div class="pir-row" style="background:var(--warn2);color:var(--warnd);width:100%;border:1px solid var(--warn)">Acuerdo Gobierno Navarra 06-04-2018 — Exención vulnerabilidad ★★★</div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>📅 Línea de tiempo histórica ★★★</h3>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-dot"></div><span class="tl-yr">1986 · LGS</span> — Primera universalidad SNS (ciudadanía + residencia). ★★★</div>
+      <div class="tl-item"><div class="tl-dot"></div><span class="tl-yr">28-05-2003 · Ley 16/2003</span> — Marco de cohesión y calidad. Art. 3.5: convenio especial. ★★★</div>
+      <div class="tl-item"><div class="tl-dot"></div><span class="tl-yr">03-08-2012 · RD 1192/2012</span> — Regula condición de asegurado y beneficiario. ★★★</div>
+      <div class="tl-item"><div class="tl-dot"></div><span class="tl-yr">20-04-2012 · RDL 16/2012</span> — Vincula acceso a condición de asegurado. Excluye irregulares (salvo urgencia/menor/embarazo). ★★★</div>
+      <div class="tl-item"><div class="tl-dot"></div><span class="tl-yr">26-07-2013 · RD 576/2013</span> — Convenio especial: 60€/157€ mes. ★★★</div>
+      <div class="tl-item" style="border:1.5px solid var(--warn);border-radius:7px;padding:6px 10px"><div class="tl-dot" style="background:var(--warn)"></div><span class="tl-yr" style="color:var(--warn)">06-04-2018 · Acuerdo Navarra</span> — Exención pago para vulnerabilidad &lt;18.000€. ANTES del RDL 7/2018. ★★★</div>
+      <div class="tl-item" style="margin-top:5px"><div class="tl-dot"></div><span class="tl-yr">27-07-2018 · RDL 7/2018</span> — Universalidad: residencia = derecho SNS. Vigor 31-07-2018. Convalidado 06-09-2018. ★★★</div>
+    </div>
+  </div>
+</div>
+
+<!-- B3: LOS 2 MODELOS -->
+<div class="sec">⚖ Dos modelos de acceso: 2012 vs. 2018 ★★★</div>
+<div class="g2">
+  <div class="card" style="border-color:var(--redd)">
+    <h3 style="color:var(--redd);border-color:var(--redd)">❌ Modelo RDL 16/2012 (derogado en este punto) ★★★</h3>
+    <ul>
+      <li>Base del derecho: <strong>condición de ASEGURADO</strong> de la SS.</li>
+      <li>Trabajador afiliado · pensionista · parado · demandante de empleo.</li>
+      <li>Familiar: condición de BENEFICIARIO.</li>
+      <li>Extranjero sin residencia legal: <strong>excluido</strong> de asistencia ordinaria.</li>
+      <li>Solo acceso excepcional: urgencia · menores · embarazo.</li>
+      <li>Convenio especial = única vía de acceso general para excluidos.</li>
+    </ul>
+    <div class="nota n-err" style="margin-top:8px"><strong>DEROGADO en este aspecto por el RDL 7/2018. ★★★</strong></div>
+  </div>
+  <div class="card" style="border-color:var(--grnd)">
+    <h3 style="color:var(--grnd);border-color:var(--grnd)">✅ Modelo RDL 7/2018 (vigente) ★★★</h3>
+    <ul>
+      <li>Base del derecho: <strong>CIUDADANÍA + RESIDENCIA</strong> en España.</li>
+      <li>Titulares: españoles residentes + extranjeros con residencia legal.</li>
+      <li>Extranjero sin residencia legal: acceso básico garantizado:
+        <ul style="margin:2px 0 2px 14px">
+          <li><strong>MENOR</strong> de 18 años. ★★★</li>
+          <li><strong>EMBARAZO</strong>, parto y puerperio. ★★★</li>
+          <li><strong>URGENCIA</strong> grave hasta el alta médica. ★★★</li>
+        </ul>
+      </li>
+      <li>Solicitantes protección internacional: también titulares.</li>
+      <li>Convenio especial: sigue para quienes quieran acceso más amplio.</li>
+    </ul>
+    <div class="nota n-ok" style="margin-top:8px"><strong>Mnemotecnia ★★★: MENOR · EMBARAZO · URGENCIA = acceso garantizado siempre.</strong></div>
+  </div>
+</div>
+
+<!-- B4: LA CARTERA COMÚN B-S-A -->
+<div class="sec">🗂 Cartera común del SNS — Art. 3 bis Ley 16/2003 ★★★</div>
+<div class="g3">
+  <div class="card" style="border-color:var(--grnd);border-width:2px">
+    <h3 style="color:var(--grnd)">B · Cartera común BÁSICA ★★★</h3>
+    <p>Actividades asistenciales de prevención, diagnóstico, tratamiento y rehabilitación en centros sanitarios o sociosanitarios + transporte sanitario <strong>urgente</strong>.</p>
+    <div style="text-align:center;margin:10px 0;padding:10px;background:var(--grn2);border-radius:8px">
+      <div style="font-size:1.5rem;font-weight:900;color:var(--grnd)">100% PÚBLICA</div>
+      <div style="font-size:.72rem;color:var(--grnd);font-weight:700">SIN aportación del usuario ★★★</div>
+    </div>
+    <ul>
+      <li>Diagnóstico y tratamiento de enfermedades.</li>
+      <li>Rehabilitación.</li>
+      <li>Transporte sanitario urgente.</li>
+    </ul>
+  </div>
+  <div class="card" style="border-color:var(--warnd);border-width:2px">
+    <h3 style="color:var(--warnd)">S · Cartera SUPLEMENTARIA ★★★</h3>
+    <p>Prestaciones cuya provisión se realiza mediante <strong>dispensación ambulatoria</strong>.</p>
+    <div style="text-align:center;margin:10px 0;padding:10px;background:var(--warn2);border-radius:8px">
+      <div style="font-size:1.5rem;font-weight:900;color:var(--warnd)">CON COPAGO</div>
+      <div style="font-size:.72rem;color:var(--warnd);font-weight:700">Aportación del usuario ★★★</div>
+    </div>
+    <ul>
+      <li>Prestación <strong>farmacéutica</strong>.</li>
+      <li>Prestación <strong>ortoprotésica</strong>.</li>
+      <li>Productos <strong>dietéticos</strong>.</li>
+      <li>Transporte sanitario <strong>no urgente</strong>.</li>
+    </ul>
+  </div>
+  <div class="card" style="border-color:var(--orad);border-width:2px">
+    <h3 style="color:var(--orad)">A · Cartera de ACCESORIOS ★★★</h3>
+    <p>Actividades, servicios o técnicas sin carácter esencial que mejoran las prestaciones básicas o suplementarias.</p>
+    <div style="text-align:center;margin:10px 0;padding:10px;background:var(--ora2);border-radius:8px">
+      <div style="font-size:1.5rem;font-weight:900;color:var(--orad)">CON COPAGO</div>
+      <div style="font-size:.72rem;color:var(--orad);font-weight:700">Aportación del usuario ★★★</div>
+    </div>
+    <ul>
+      <li>Técnicas complementarias no esenciales.</li>
+      <li>Mejoras sobre la cartera básica o suplementaria.</li>
+      <li>A criterio de cada CCAA en su cartera propia.</li>
+    </ul>
+  </div>
+</div>
+<div class="nota n-ok"><strong>Regla B-S-A ★★★:</strong> Básica = sin copago (100% pública). Suplementaria y Accesorios = con aportación del usuario.</div>
+
+<!-- B5: LAS 9 ÁREAS DEL CATÁLOGO -->
+<div class="sec">📋 9 áreas del catálogo de prestaciones — Art. 7 Ley 16/2003 ★★★</div>
+<div class="g3">
+  <div class="flash f-grn" style="border-radius:10px"><span class="label">1 ★★★</span><span class="val">Salud pública</span></div>
+  <div class="flash f-sky" style="border-radius:10px"><span class="label">2 ★★★</span><span class="val">Atención primaria</span><span class="sub">Art. 8 Ley 16/2003</span></div>
+  <div class="flash f-vio" style="border-radius:10px"><span class="label">3 ★★★</span><span class="val">Atención especializada</span><span class="sub">Art. 9 Ley 16/2003</span></div>
+  <div class="flash f-teal" style="border-radius:10px"><span class="label">4 ★★★</span><span class="val">Atención sociosanitaria</span></div>
+  <div class="flash f-warn" style="border-radius:10px"><span class="label">5 ★★★</span><span class="val">Urgencias</span><span class="sub">Garantizado para TODOS</span></div>
+  <div class="flash f-ora" style="border-radius:10px"><span class="label">6 ★★★</span><span class="val">Prestación farmacéutica</span><span class="sub">Art. 14 Ley 16/2003</span></div>
+  <div class="flash f-rose" style="border-radius:10px"><span class="label">7 ★★★</span><span class="val">Ortoprótesis</span></div>
+  <div class="flash f-p" style="border-radius:10px"><span class="label">8 ★★★</span><span class="val">Productos dietéticos</span></div>
+  <div class="flash f-grn" style="border-radius:10px"><span class="label">9 ★★★</span><span class="val">Transporte sanitario</span><span class="sub">Urgente = básica (sin copago) · No urgente = suplementaria (copago)</span></div>
+</div>
+
+<!-- B6: LOS 6 ÁMBITOS P-F-P-I-I-C -->
+<div class="sec">🤝 6 ámbitos de colaboración Ley 16/2003 — mnemotecnia P-F-P-I-I-C ★★★</div>
+<div class="g3">
+  <div class="flash f-grn" style="border-radius:10px"><span class="label">P ★★★</span><span class="val">Prestaciones</span><span class="sub">Catálogo y cartera de servicios del SNS</span></div>
+  <div class="flash f-sky" style="border-radius:10px"><span class="label">F ★★★</span><span class="val">Farmacia</span><span class="sub">Acceso · financiación · garantías</span></div>
+  <div class="flash f-vio" style="border-radius:10px"><span class="label">P ★★★</span><span class="val">Profesionales</span><span class="sub">Formación · movilidad · reconocimiento</span></div>
+  <div class="flash f-teal" style="border-radius:10px"><span class="label">I ★★★</span><span class="val">Investigación</span><span class="sub">Biomédica</span></div>
+  <div class="flash f-warn" style="border-radius:10px"><span class="label">I ★★★</span><span class="val">Información</span><span class="sub">Sistema de información del SNS</span></div>
+  <div class="flash f-ora" style="border-radius:10px"><span class="label">C ★★★</span><span class="val">Calidad</span><span class="sub">Agencias · planes · indicadores</span></div>
+</div>
+
+<!-- B7: EL CONVENIO ESPECIAL RD 576/2013 -->
+<div class="sec">📝 Convenio especial — RD 576/2013, de 26 de julio ★★★</div>
+<div class="g2">
+  <div class="card">
+    <h3>3 requisitos para suscribirlo (art. 3) ★★★</h3>
+    <div class="step"><div class="step-num">1</div><div class="step-body">No tener la condición de <strong>asegurado ni de beneficiario</strong> conforme al RD 1192/2012. ★★★</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><strong>Empadronado</strong> en algún municipio español (residencia acreditada por padrón). ★★★</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body">Sin acceso a sistema de protección sanitaria por <strong>otro título</strong> (seguro privado, protección de otro Estado, etc.). ★★★</div></div>
+    <div class="nota n-ok" style="margin-top:8px"><strong>3 requisitos ACUMULATIVOS. Los tres deben darse. ★★★</strong></div>
+    <h3 style="margin-top:14px">5 causas de extinción (art. 7) ★★★</h3>
+    <ul>
+      <li>Renuncia del suscriptor. ★★★</li>
+      <li>Adquisición de condición de asegurado o beneficiario. ★★★</li>
+      <li>Incumplimiento sobrevenido de requisitos. ★★★</li>
+      <li>Resolución administrativa (previa audiencia). ★★★</li>
+      <li>Fallecimiento del suscriptor. ★★★</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Contraprestación económica (art. 6) ★★★</h3>
+    <div class="g2" style="margin-bottom:8px">
+      <div class="cuota-box" style="background:var(--grn2);color:var(--grnd)">
+        <div class="cuota-num">60 €</div>
+        <div class="cuota-label">MES · &lt; 65 años ★★★</div>
+      </div>
+      <div class="cuota-box" style="background:var(--red2);color:var(--redd)">
+        <div class="cuota-num">157 €</div>
+        <div class="cuota-label">MES · ≥ 65 años ★★★</div>
+      </div>
+    </div>
+    <div class="nota n-w">Cambio de tramo a los 65 años: efecto desde el 1.er día del mes siguiente. ★★★</div>
+    <div class="nota n-teal">Las CCAA pueden incrementar las cuotas si incorporan prestaciones adicionales de su cartera complementaria autonómica. ★★</div>
+    <h3 style="margin-top:10px">Órgano gestor ★★★</h3>
+    <ul>
+      <li><strong>INGESA</strong>: para domiciliados en Ceuta y Melilla.</li>
+      <li><strong>Órgano competente de la CCAA</strong>: para el resto. En Navarra = <strong>SNS-Osasunbidea</strong>. ★★★</li>
+    </ul>
+  </div>
+</div>
+
+<!-- B8: ACUERDO DE NAVARRA 06-04-2018 -->
+<div class="sec">🏔 Acuerdo Gobierno Navarra 06-04-2018 — Exención vulnerabilidad ★★★</div>
+<div class="g2">
+  <div class="card" style="border-color:var(--warnd);border-width:2px">
+    <h3 style="color:var(--warnd)">Qué acuerda exactamente ★★★</h3>
+    <div class="nota n-w">Eximir del pago del <strong>precio público</strong> del convenio especial de asistencia sanitaria a personas en situación de <strong>especial vulnerabilidad económica y social</strong>.</div>
+    <p><strong>Requisitos para obtener la exención ★★★:</strong></p>
+    <div class="step"><div class="step-num">a</div><div class="step-body">Tener derecho de acceso al SNS <strong>únicamente</strong> mediante convenio especial (no tener otra vía). ★★★</div></div>
+    <div class="step"><div class="step-num">b</div><div class="step-body">Tener una <strong>renta inferior a 18.000 euros</strong>. ★★★</div></div>
+    <div class="nota n-ok" style="margin-top:8px"><strong>Clave examen ★★★:</strong> La renta máxima para la exención en Navarra es <strong>18.000 euros</strong>. Dato exacto extraído del Boletín Oficial de Navarra.</div>
+  </div>
+  <div class="card">
+    <h3>Contexto y relevancia ★★★</h3>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-dot" style="background:var(--warn)"></div>Navarra actuó <strong>3 meses antes</strong> que el Estado (RDL 7/2018 = julio 2018). ★★★</div>
+      <div class="tl-item"><div class="tl-dot"></div>Base: <strong>Ley Foral 8/2013</strong> de 25 de febrero, que reconoce el derecho a la asistencia sanitaria gratuita a <em>todos los residentes en Navarra</em> (cualquier edad, nacionalidad o situación legal). ★★★</div>
+      <div class="tl-item"><div class="tl-dot"></div>La exención elimina la barrera económica del convenio especial para los más vulnerables. ★★★</div>
+      <div class="tl-item"><div class="tl-dot"></div>Publicado en el <strong>BON de 25 de abril de 2018</strong>. ★★★</div>
+      <div class="tl-item"><div class="tl-dot"></div>Trasladado a: SNS-Osasunbidea · Dirección General de Salud · Dirección General de Inclusión y Protección Social. ★★★</div>
+      <div class="tl-item"><div class="tl-dot"></div>Coherente con el Plan de Acogida a Personas Migrantes 2021-2026 de Navarra (Tema 62). ★★★</div>
+    </div>
+  </div>
+</div>
+<div class="nota n-err"><strong>Trampa ★★★:</strong> "El Acuerdo de Navarra fue posterior al RDL 7/2018." → FALSO. El Acuerdo es de <strong>6 de ABRIL de 2018</strong>; el RDL 7/2018 es de <strong>27 de JULIO de 2018</strong>. Navarra actuó ANTES. ★★★</div>
+
+<!-- B9: LOS 14 ARTÍCULOS CLAVE -->
+<div class="sec">📌 14 artículos clave para el examen ★★★</div>
+<div class="g2">
+  <div class="card">
+    <h3>Ley 16/2003 ★★★</h3>
+    <ul>
+      <li><strong>Art. 1 ★★★</strong> → Objeto: marco coordinación · equidad · calidad · participación social.</li>
+      <li><strong>Art. 2 ★★★</strong> → Principios: universalidad · financiación pública · descentralización CCAA.</li>
+      <li><strong>Art. 3 ★★★</strong> → Titulares del derecho (modificado RDL 7/2018): residentes + básico para todos.</li>
+      <li><strong>Art. 3.5 ★★★</strong> → Convenio especial para no asegurados/beneficiarios.</li>
+      <li><strong>Art. 3 bis ★★★</strong> → 3 tipos cartera: básica · suplementaria · accesorios (RDL 16/2012).</li>
+      <li><strong>Art. 7 ★★★</strong> → Catálogo de prestaciones: 9 áreas.</li>
+      <li><strong>Art. 8 ★★★</strong> → Atención primaria.</li>
+      <li><strong>Art. 9 ★★★</strong> → Atención especializada.</li>
+      <li><strong>Art. 14 ★★★</strong> → Prestación farmacéutica.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>RD 576/2013 + RDL 7/2018 ★★★</h3>
+    <ul>
+      <li><strong>RD 576/2013, art. 1 ★★★</strong> → Objeto del convenio especial.</li>
+      <li><strong>RD 576/2013, art. 3 ★★★</strong> → 3 requisitos: no asegurado + empadronado + sin otra cobertura.</li>
+      <li><strong>RD 576/2013, art. 6 ★★★</strong> → Cuotas: &lt;65 años = 60€/mes · ≥65 años = 157€/mes.</li>
+      <li><strong>RD 576/2013, art. 7 ★★★</strong> → Extinción: 5 causas.</li>
+      <li><strong>RDL 7/2018, art. 1 ★★★</strong> → Modifica art. 3 Ley 16/2003: universalidad desde la residencia.</li>
+    </ul>
+    <div class="nota n-ok" style="margin-top:10px"><strong>Art. 43 CE ★★★:</strong> Principio rector (no derecho fundamental stricto sensu). Capítulo III del Título I CE.</div>
+  </div>
+</div>
+
+<!-- B10: LAS 10 TRAMPAS -->
+<div class="sec">⚠ Las 10 trampas del examen ★★★</div>
+<div class="g2">
+  <div style="display:flex;flex-direction:column;gap:8px">
+    <div class="trampa t-falso"><div class="t-label" style="color:var(--redd)">✗ TRAMPA 1 ★★★</div>"El RDL 7/2018 vincula el acceso al SNS a la condición de asegurado de la SS."</div>
+    <div class="trampa t-ok"><div class="t-label" style="color:var(--grnd)">✓ CORRECTO</div><strong>DESVINCULA</strong> el acceso del asegurado. Es el RDL 16/2012 el que lo vinculaba. ★★★</div>
+    <div class="trampa t-falso"><div class="t-label" style="color:var(--redd)">✗ TRAMPA 2 ★★★</div>"La cuota del convenio especial es de 60€/mes para todos."</div>
+    <div class="trampa t-ok"><div class="t-label" style="color:var(--grnd)">✓ CORRECTO</div>Hay DOS tramos: <strong>&lt;65 años = 60€/mes · ≥65 años = 157€/mes</strong>. ★★★</div>
+    <div class="trampa t-falso"><div class="t-label" style="color:var(--redd)">✗ TRAMPA 3 ★★★</div>"La cartera básica tiene copago."</div>
+    <div class="trampa t-ok"><div class="t-label" style="color:var(--grnd)">✓ CORRECTO</div>La cartera básica es <strong>100% pública, sin copago</strong>. El copago corresponde a suplementaria y accesorios. ★★★</div>
+    <div class="trampa t-falso"><div class="t-label" style="color:var(--redd)">✗ TRAMPA 4 ★★★</div>"El Acuerdo de Navarra de 6 de abril de 2018 fue posterior al RDL 7/2018."</div>
+    <div class="trampa t-ok"><div class="t-label" style="color:var(--grnd)">✓ CORRECTO</div>El Acuerdo es de <strong>6-04-2018</strong>; el RDL 7/2018 es de <strong>27-07-2018</strong>. Navarra actuó ANTES. ★★★</div>
+    <div class="trampa t-falso"><div class="t-label" style="color:var(--redd)">✗ TRAMPA 5 ★★★</div>"Los extranjeros sin residencia legal no tienen ningún derecho sanitario."</div>
+    <div class="trampa t-ok"><div class="t-label" style="color:var(--grnd)">✓ CORRECTO</div>Garantizados siempre: <strong>MENOR · EMBARAZO · URGENCIA</strong>. ★★★</div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:8px">
+    <div class="trampa t-falso"><div class="t-label" style="color:var(--redd)">✗ TRAMPA 6 ★★★</div>"La Ley 16/2003 es una Ley Orgánica."</div>
+    <div class="trampa t-ok"><div class="t-label" style="color:var(--grnd)">✓ CORRECTO</div>Es una ley <strong>ORDINARIA</strong>. ★★★</div>
+    <div class="trampa t-falso"><div class="t-label" style="color:var(--redd)">✗ TRAMPA 7 ★★★</div>"El convenio especial lo gestiona únicamente el INGESA."</div>
+    <div class="trampa t-ok"><div class="t-label" style="color:var(--grnd)">✓ CORRECTO</div>INGESA (Ceuta/Melilla) <strong>O</strong> el órgano competente de la CCAA (en Navarra, SNS-Osasunbidea). ★★★</div>
+    <div class="trampa t-falso"><div class="t-label" style="color:var(--redd)">✗ TRAMPA 8 ★★★</div>"El catálogo y la cartera de servicios son lo mismo."</div>
+    <div class="trampa t-ok"><div class="t-label" style="color:var(--grnd)">✓ CORRECTO</div>Catálogo = aprueba el <strong>Estado</strong>. Cartera = acuerda el <strong>Consejo Interterritorial SNS</strong>. ★★★</div>
+    <div class="trampa t-falso"><div class="t-label" style="color:var(--redd)">✗ TRAMPA 9 ★★★</div>"La exención de Navarra aplica para cualquier renta."</div>
+    <div class="trampa t-ok"><div class="t-label" style="color:var(--grnd)">✓ CORRECTO</div>Solo cuando la renta es <strong>inferior a 18.000 euros</strong>. ★★★</div>
+    <div class="trampa t-falso"><div class="t-label" style="color:var(--redd)">✗ TRAMPA 10 ★★★</div>"El RDL 7/2018 entró en vigor el mismo día de su publicación."</div>
+    <div class="trampa t-ok"><div class="t-label" style="color:var(--grnd)">✓ CORRECTO</div>Publicado en BOE el 30-07-2018. <strong>Vigor: 31-07-2018</strong>. Convalidado: 06-09-2018. ★★★</div>
+  </div>
+</div>
+
+<!-- B11: MINI RESUMEN DE 60 SEGUNDOS -->
+<div class="sec">🧠 Mini resumen de 60 segundos — Tema 64 ★★★</div>
+<div class="card">
+  <h3>9 líneas para dominar el tema ★★★</h3>
+  <ul style="font-size:.82rem;line-height:1.9">
+    <li><strong>1.</strong> La <em>Ley 16/2003, de 28 de mayo</em> (ley ordinaria) establece el marco de cohesión y calidad del SNS: equidad · calidad · participación social · 6 ámbitos P-F-P-I-I-C. ★★★</li>
+    <li><strong>2.</strong> El catálogo de prestaciones (art. 7) tiene <em>9 áreas</em>; la cartera común tiene <em>3 tipos</em>: Básica (100% pública) · Suplementaria (copago) · Accesorios (copago). ★★★</li>
+    <li><strong>3.</strong> El <em>art. 3.5</em> habilita el convenio especial para personas no incluidas en el SNS. ★★★</li>
+    <li><strong>4.</strong> El <em>RD 576/2013</em> desarrolla el convenio especial: 3 requisitos acumulativos + cuotas 60€/mes (&lt;65 años) y 157€/mes (≥65 años) + 5 causas de extinción. ★★★</li>
+    <li><strong>5.</strong> El <em>RDL 16/2012</em> vinculó el acceso al SNS a la condición de asegurado (SS), excluyendo a los extranjeros sin residencia legal salvo urgencia, menor y embarazo. ★★★</li>
+    <li><strong>6.</strong> El <em>6 de abril de 2018</em>, Navarra eximió del pago del precio público del convenio especial a personas con renta &lt;18.000€, tres meses antes que el Estado. ★★★</li>
+    <li><strong>7.</strong> El <em>RDL 7/2018, de 27 de julio</em> (vigor 31-07-2018) universalizó el acceso: cualquier persona con residencia legal en España es titular del derecho al SNS. ★★★</li>
+    <li><strong>8.</strong> Para extranjeros sin residencia legal se garantizan siempre tres supuestos: <em>MENOR · EMBARAZO · URGENCIA</em>. ★★★</li>
+    <li><strong>9.</strong> El convenio especial subsiste para quien quiera acceso más amplio que el básico garantizado: Navarra lo gestiona a través de SNS-Osasunbidea. ★★★</li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>
