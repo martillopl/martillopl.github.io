@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 57 · HTML 2 · Esquema-resumen visual · Ética en la intervención social</title>
+<style>
+:root{
+  --bg:#fff7ed;--card:#fff;--s2:#ffedd5;--s3:#fed7aa;--line:#fb923c;
+  --text:#431407;--muted:#c2410c;--p:#ea580c;--p2:#c2410c;
+  --grn:#059669;--grn2:#d1fae5;--red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;--sky:#0284c7;--sky2:#e0f2fe;
+  --teal:#0d9488;--teal2:#ccfbf1;--rose:#be185d;--rose2:#fce7f3;
+  --vio:#7c3aed;--vio2:#ede9fe;--sh:0 3px 18px rgba(234,88,12,.11)
+}
+[data-theme="dark"]{
+  --bg:#1a0a00;--card:#2a1000;--s2:#3a1500;--s3:#4a2000;--line:#c2410c;
+  --text:#fed7aa;--muted:#fb923c;--p:#fb923c;--p2:#fdba74;
+  --grn:#86efac;--grn2:#052e16;--red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;--sky:#7dd3fc;--sky2:#082038;
+  --teal:#5eead4;--teal2:#031a16;--rose:#fda4af;--rose2:#1a0010;
+  --vio:#c4b5fd;--vio2:#1a0e33;--sh:0 3px 18px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:20px}
+.wrap{max-width:1260px;margin:0 auto}
+.hdr{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:16px 22px;box-shadow:var(--sh);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.hdr h1{font-size:.95rem;font-weight:900;color:var(--p)}
+.hdr p{font-size:.7rem;color:var(--muted);margin-top:3px}
+.btn{font:inherit;cursor:pointer;border:1.5px solid var(--line);background:var(--s2);color:var(--text);padding:6px 16px;border-radius:999px;font-size:.7rem;font-weight:700}
+.sec{background:var(--p);color:#fff;font-size:.79rem;font-weight:900;padding:7px 18px;border-radius:10px;display:inline-block;margin:20px 0 10px;text-transform:uppercase;letter-spacing:.04em}
+
+/* FLASH */
+.flash-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;margin-bottom:16px}
+.flash{background:var(--card);border:1.5px solid var(--line);border-radius:13px;padding:11px 13px;box-shadow:var(--sh);position:relative;overflow:hidden}
+.flash .num{font-size:2rem;font-weight:900;color:var(--p);opacity:.12;position:absolute;top:4px;right:8px;line-height:1}
+.flash .q{font-size:.67rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+.flash .a{font-size:.81rem;font-weight:800;color:var(--text)}
+
+/* TRIPTICO */
+.triptico{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:16px}
+@media(max-width:700px){.triptico{grid-template-columns:1fr}}
+.trip-box{border-radius:16px;padding:15px 17px;border:2px solid;box-shadow:var(--sh)}
+.t-ora{background:var(--s2);border-color:var(--p)}
+.t-grn{background:var(--grn2);border-color:var(--grn)}
+.t-vio{background:var(--vio2);border-color:var(--vio)}
+.trip-box .t-label{font-size:.62rem;font-weight:900;text-transform:uppercase;letter-spacing:.07em;opacity:.7;margin-bottom:4px}
+.t-ora .t-label{color:var(--p)}
+.t-grn .t-label{color:var(--grn)}
+.t-vio .t-label{color:var(--vio)}
+.trip-box .t-title{font-size:1rem;font-weight:900;margin-bottom:8px}
+.t-ora .t-title{color:var(--p2)}
+.t-grn .t-title{color:var(--grn)}
+.t-vio .t-title{color:var(--vio)}
+.trip-box .t-body{font-size:.74rem;line-height:1.6}
+
+/* VALORES GRID */
+.val-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:16px}
+.val-card{background:var(--card);border:1.5px solid var(--line);border-radius:13px;padding:12px 14px;box-shadow:var(--sh)}
+.val-card .vc-n{font-size:1.6rem;font-weight:900;color:var(--p);opacity:.18;float:right;line-height:1}
+.val-card .vc-t{font-size:.8rem;font-weight:900;color:var(--p);margin-bottom:4px}
+.val-card .vc-d{font-size:.72rem;line-height:1.5}
+
+/* FITS DEFINICION */
+.fits-def{background:var(--card);border:2px solid var(--p);border-radius:16px;padding:16px 18px;box-shadow:var(--sh);margin-bottom:14px;font-size:.82rem;line-height:1.7}
+.fits-def .fd-quote{font-style:italic;font-size:.87rem;color:var(--p2);font-weight:600;border-left:5px solid var(--p);padding-left:12px;margin-bottom:12px}
+.fits-keywords{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
+.fk{background:var(--s2);color:var(--p);border:1px solid var(--line);padding:4px 11px;border-radius:99px;font-size:.73rem;font-weight:800}
+
+/* DILEMAS */
+.dilema-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-bottom:16px}
+.dilema{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:13px 15px;box-shadow:var(--sh)}
+.dilema .d-num{display:inline-block;background:var(--p);color:#fff;border-radius:50%;width:24px;height:24px;text-align:center;line-height:24px;font-size:.75rem;font-weight:900;margin-right:6px}
+.dilema .d-title{font-size:.82rem;font-weight:900;color:var(--p2);margin-bottom:5px;display:flex;align-items:center}
+.dilema .d-tension{font-size:.7rem;background:var(--warn2);border:1px solid var(--warn);border-radius:8px;padding:4px 8px;margin:6px 0;color:var(--warn);font-weight:700}
+.dilema .d-body{font-size:.73rem;line-height:1.5}
+
+/* REAMER */
+.reamer{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-bottom:16px;background:var(--card);border:2px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--sh)}
+@media(max-width:600px){.reamer{grid-template-columns:1fr}}
+.r-step{padding:14px 15px;text-align:center}
+.r-step:nth-child(1){background:var(--red2);border-right:2px solid var(--line)}
+.r-step:nth-child(2){background:var(--warn2);border-right:2px solid var(--line)}
+.r-step:nth-child(3){background:var(--grn2)}
+.r-step .r-num{font-size:2rem;font-weight:900;line-height:1;margin-bottom:4px}
+.r-step:nth-child(1) .r-num{color:var(--red)}
+.r-step:nth-child(2) .r-num{color:var(--warn)}
+.r-step:nth-child(3) .r-num{color:var(--grn)}
+.r-step .r-title{font-size:.82rem;font-weight:900;margin-bottom:4px}
+.r-step .r-desc{font-size:.72rem;line-height:1.5}
+
+/* BANKS PASOS */
+.banks-flow{display:flex;flex-direction:column;gap:4px;margin-bottom:16px}
+.b-step{display:flex;gap:12px;align-items:flex-start}
+.b-dot{width:32px;height:32px;border-radius:50%;background:var(--p);color:#fff;font-size:.85rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.b-body{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 13px;flex:1;box-shadow:var(--sh);font-size:.76rem;line-height:1.5}
+.b-body strong{font-size:.78rem;color:var(--p)}
+
+/* CONFIDENCIALIDAD */
+.conf-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+@media(max-width:580px){.conf-grid{grid-template-columns:1fr}}
+.conf-ok{background:var(--grn2);border:2px solid var(--grn);border-radius:14px;padding:14px 16px}
+.conf-no{background:var(--red2);border:2px solid var(--red);border-radius:14px;padding:14px 16px}
+.conf-ok .c-title{color:var(--grn);font-size:.78rem;font-weight:900;margin-bottom:7px;text-transform:uppercase}
+.conf-no .c-title{color:var(--red);font-size:.78rem;font-weight:900;margin-bottom:7px;text-transform:uppercase}
+.conf-ok ul,.conf-no ul{margin:0 0 0 15px;font-size:.74rem;line-height:1.7}
+
+/* RESPONSABILIDADES */
+.resp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px}
+@media(max-width:500px){.resp-grid{grid-template-columns:1fr}}
+.resp-card{border-radius:13px;padding:12px 14px;border:2px solid;box-shadow:var(--sh)}
+.rca{background:var(--s2);border-color:var(--p)}
+.rcb{background:var(--grn2);border-color:var(--grn)}
+.rcc{background:var(--sky2);border-color:var(--sky)}
+.rcd{background:var(--vio2);border-color:var(--vio)}
+.resp-card .rc-t{font-size:.78rem;font-weight:900;margin-bottom:5px}
+.rca .rc-t{color:var(--p)}
+.rcb .rc-t{color:var(--grn)}
+.rcc .rc-t{color:var(--sky)}
+.rcd .rc-t{color:var(--vio)}
+.resp-card .rc-d{font-size:.73rem;line-height:1.55}
+
+/* NORMATIVA */
+.norm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;margin-bottom:16px}
+.norm-box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 14px;box-shadow:var(--sh)}
+.norm-box .n-t{font-size:.74rem;font-weight:900;color:var(--p);margin-bottom:4px}
+.norm-box .n-d{font-size:.72rem;line-height:1.5}
+.star{color:#f59e0b;font-weight:900}
+
+/* TRAMPAS */
+.trap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:10px;margin-bottom:16px}
+.trap{background:var(--card);border:1px solid var(--line);border-radius:13px;overflow:hidden;box-shadow:var(--sh)}
+.trap-w{background:var(--red2);padding:8px 13px;font-size:.73rem;font-weight:700;color:var(--red)}
+.trap-ok{background:var(--grn2);padding:8px 13px;font-size:.73rem;color:var(--grn)}
+.trap-n{font-size:.62rem;font-weight:900;opacity:.6;margin-bottom:2px;text-transform:uppercase}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<div class="hdr">
+  <div>
+    <h1>Tema 57 · HTML 2 · Esquema-resumen con bloques visuales para memorización rápida</h1>
+    <p>Ética en la intervención social: principios y dilemas éticos · Oposiciones Navarra / TSS</p>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">🌙 Claro / Oscuro</button>
+</div>
+
+<!-- ══════ FLASH ══════ -->
+<div class="sec">⚡ Fichas flash — 18 datos inmediatos</div>
+<div class="flash-grid">
+  <div class="flash"><div class="num">1</div><div class="q">Distinción clave</div><div class="a">Moral → descripción · Ética → reflexión crítica · Deontología → norma profesional ★★★</div></div>
+  <div class="flash"><div class="num">2</div><div class="q">Definición de dilema ético (Banks)</div><div class="a">Elegir entre dos males menores o dos bienes incompatibles · no entre bien y mal ★★★</div></div>
+  <div class="flash"><div class="num">3</div><div class="q">Coste del dilema</div><div class="a">Toda decisión en un dilema implica algún coste ético ★★★</div></div>
+  <div class="flash"><div class="num">4</div><div class="q">4 responsabilidades del TS</div><div class="a">Persona · Institución · Profesión · Sociedad ★★★</div></div>
+  <div class="flash"><div class="num">5</div><div class="q">Dilema más frecuente</div><div class="a">Autonomía / autodeterminación vs. protección / beneficencia ★★★</div></div>
+  <div class="flash"><div class="num">6</div><div class="q">Modelo Banks: nº de pasos</div><div class="a">7 pasos ★★★</div></div>
+  <div class="flash"><div class="num">7</div><div class="q">Reamer: prioridad 1</div><div class="a">Vida · salud · seguridad básica ★★★</div></div>
+  <div class="flash"><div class="num">8</div><div class="q">Reamer: prioridad 2</div><div class="a">Autodeterminación e información veraz ★★★</div></div>
+  <div class="flash"><div class="num">9</div><div class="q">Reamer: prioridad 3</div><div class="a">Bienestar y calidad de vida general ★★★</div></div>
+  <div class="flash"><div class="num">10</div><div class="q">Confidencialidad: ¿es absoluta?</div><div class="a">NO. Cede ante riesgo grave e inminente / ley / consentimiento ★★★</div></div>
+  <div class="flash"><div class="num">11</div><div class="q">Base legal de la confidencialidad</div><div class="a">LOPDGDD (Ley Orgánica 3/2018) ★★</div></div>
+  <div class="flash"><div class="num">12</div><div class="q">Código Deontológico TS</div><div class="a">CGTS · 2012 · actualizado 2022 ★★★</div></div>
+  <div class="flash"><div class="num">13</div><div class="q">FITS/IASSW Definición global</div><div class="a">2014 · justicia social · DDHH · responsabilidad colectiva · diversidad ★★★</div></div>
+  <div class="flash"><div class="num">14</div><div class="q">Principios FITS (2018)</div><div class="a">9 principios: dignidad · autonomía · participación · holístico · no discriminación · justicia · confidencialidad · integridad · competencia ★★★</div></div>
+  <div class="flash"><div class="num">15</div><div class="q">Ética del cuidado</div><div class="a">Gilligan y Noddings · relación de cuidado · persona concreta ★★</div></div>
+  <div class="flash"><div class="num">16</div><div class="q">Imperativo categórico Kant</div><div class="a">Persona siempre como fin, nunca solo como medio ★★</div></div>
+  <div class="flash"><div class="num">17</div><div class="q">Valor central del TS</div><div class="a">Dignidad de la persona ★★★</div></div>
+  <div class="flash"><div class="num">18</div><div class="q">Ruptura de confidencialidad: regla de oro</div><div class="a">Mínima necesaria · justificada · documentada ★★★</div></div>
+</div>
+
+<!-- ══════ TRÍPLICO CONCEPTUAL ══════ -->
+<div class="sec">📐 Bloque 1 · Moral · Ética · Deontología ★★★</div>
+<div class="triptico">
+  <div class="trip-box t-ora">
+    <div class="t-label">Concepto 1</div>
+    <div class="t-title">Moral</div>
+    <div class="t-body">Conjunto de valores, normas y costumbres que orientan el comportamiento humano en una comunidad.<br><br><strong>Carácter:</strong> descriptivo · histórico · cultural.<br><strong>Pregunta:</strong> ¿cómo se comporta este grupo?</div>
+  </div>
+  <div class="trip-box t-grn">
+    <div class="t-label">Concepto 2</div>
+    <div class="t-title">Ética</div>
+    <div class="t-body">Reflexión filosófica y crítica sobre la moral. Disciplina normativa y racional.<br><br><strong>Carácter:</strong> normativo · racional · reflexivo.<br><strong>Pregunta:</strong> ¿cómo deberíamos comportarnos y por qué?</div>
+  </div>
+  <div class="trip-box t-vio">
+    <div class="t-label">Concepto 3</div>
+    <div class="t-title">Deontología profesional</div>
+    <div class="t-body">Normas y deberes que regulan el ejercicio de una profesión. Recogida en códigos deontológicos.<br><br><strong>Carácter:</strong> normativo · exigible · escrito.<br><strong>Pregunta:</strong> ¿qué debo hacer como profesional del TS?</div>
+  </div>
+</div>
+
+<!-- ══════ VALORES ══════ -->
+<div class="sec">💎 Bloque 2 · 7 valores centrales del Trabajo Social ★★★</div>
+<div class="val-grid">
+  <div class="val-card"><div class="vc-n">1</div><div class="vc-t">Dignidad</div><div class="vc-d">Valor supremo. Toda persona es fin en sí misma. Base de todos los demás valores.</div></div>
+  <div class="val-card"><div class="vc-n">2</div><div class="vc-t">Derechos humanos</div><div class="vc-d">Compromiso activo con la promoción y protección de los DDHH de todas las personas.</div></div>
+  <div class="val-card"><div class="vc-n">3</div><div class="vc-t">Justicia social</div><div class="vc-d">Lucha contra la exclusión, la discriminación y las estructuras injustas.</div></div>
+  <div class="val-card"><div class="vc-n">4</div><div class="vc-t">Autonomía</div><div class="vc-d">Derecho de cada persona a dirigir su propia vida y tomar sus propias decisiones.</div></div>
+  <div class="val-card"><div class="vc-n">5</div><div class="vc-t">Igualdad</div><div class="vc-d">No discriminación. Acceso equitativo sin razón de origen, género, edad, religión, etc.</div></div>
+  <div class="val-card"><div class="vc-n">6</div><div class="vc-t">Solidaridad</div><div class="vc-d">Apoyo mutuo y compromiso con el bien común.</div></div>
+  <div class="val-card"><div class="vc-n">7</div><div class="vc-t">Integridad</div><div class="vc-d">Honestidad, coherencia y transparencia en la práctica profesional.</div></div>
+</div>
+
+<!-- ══════ FITS DEFINICION ══════ -->
+<div class="sec">🌍 Bloque 3 · Definición Global del TS (FITS/IASSW, 2014) ★★★</div>
+<div class="fits-def">
+  <div class="fd-quote">"El Trabajo Social es una profesión basada en la práctica y una disciplina académica que promueve el <strong>cambio y el desarrollo social</strong>, la <strong>cohesión social</strong>, y el <strong>empoderamiento y la liberación</strong> de las personas. Los principios de la <strong>justicia social</strong>, los <strong>derechos humanos</strong>, la <strong>responsabilidad colectiva</strong> y el <strong>respeto a la diversidad</strong> son fundamentales para el Trabajo Social."</div>
+  <strong style="font-size:.75rem;color:var(--muted)">8 ELEMENTOS CLAVE — memoriza todos:</strong>
+  <div class="fits-keywords">
+    <span class="fk">Cambio social</span>
+    <span class="fk">Desarrollo social</span>
+    <span class="fk">Cohesión social</span>
+    <span class="fk">Empoderamiento</span>
+    <span class="fk">Liberación</span>
+    <span class="fk">Justicia social</span>
+    <span class="fk">Derechos humanos</span>
+    <span class="fk">Responsabilidad colectiva + diversidad</span>
+  </div>
+</div>
+
+<!-- ══════ DILEMAS ══════ -->
+<div class="sec">⚖️ Bloque 4 · 6 dilemas éticos más frecuentes ★★★</div>
+<div class="dilema-grid">
+  <div class="dilema">
+    <div class="d-title"><span class="d-num">1</span>Autonomía vs. protección</div>
+    <div class="d-tension">Autodeterminación ↔ Beneficencia / No maleficencia</div>
+    <div class="d-body">Persona en riesgo que rechaza la intervención. Dilema más frecuente en examen. El paternalismo es el gran riesgo ético.</div>
+  </div>
+  <div class="dilema">
+    <div class="d-title"><span class="d-num">2</span>Confidencialidad vs. deber de informar</div>
+    <div class="d-tension">Confidencialidad ↔ Protección / Justicia</div>
+    <div class="d-body">Información recibida que implica riesgo para la persona o para terceros. La confidencialidad puede ceder; la ruptura debe ser mínima.</div>
+  </div>
+  <div class="dilema">
+    <div class="d-title"><span class="d-num">3</span>Interés individual vs. colectivo</div>
+    <div class="d-tension">Autonomía individual ↔ Justicia distributiva</div>
+    <div class="d-body">Lo mejor para una persona puede implicar distribuir de forma desigual recursos limitados, perjudicando a otros.</div>
+  </div>
+  <div class="dilema">
+    <div class="d-title"><span class="d-num">4</span>Lealtad al usuario vs. lealtad institucional</div>
+    <div class="d-tension">Integridad ↔ Obligaciones laborales</div>
+    <div class="d-body">El profesional conoce prácticas institucionales contrarias al usuario. Doble lealtad. Riesgo de subordinación ética al sistema.</div>
+  </div>
+  <div class="dilema">
+    <div class="d-title"><span class="d-num">5</span>No juzgar vs. denuncia</div>
+    <div class="d-tension">No discriminación ↔ Justicia social</div>
+    <div class="d-body">Neutralidad profesional ante situaciones graves. ¿Cuándo actuar aunque no lo pida la persona?</div>
+  </div>
+  <div class="dilema">
+    <div class="d-title"><span class="d-num">6</span>Autonomía del menor vs. protección</div>
+    <div class="d-tension">Autodeterminación ↔ Interés superior del menor</div>
+    <div class="d-body">El menor ejerce autonomía pero está en riesgo. El interés superior del menor prevalece en el marco jurídico.</div>
+  </div>
+</div>
+
+<!-- ══════ RESPONSABILIDADES ══════ -->
+<div class="sec">🔄 Bloque 5 · 4 responsabilidades múltiples del TS ★★★</div>
+<div class="resp-grid">
+  <div class="resp-card rca">
+    <div class="rc-t">1 · Persona usuaria</div>
+    <div class="rc-d">Autodeterminación · bienestar · confidencialidad · no discriminación.</div>
+  </div>
+  <div class="resp-card rcb">
+    <div class="rc-t">2 · Institución / organización</div>
+    <div class="rc-d">Cumplimiento de objetivos · normativa · procedimientos · denuncia de malas prácticas.</div>
+  </div>
+  <div class="resp-card rcc">
+    <div class="rc-t">3 · Profesión</div>
+    <div class="rc-d">Código deontológico · buenas prácticas · supervisión · formación continua.</div>
+  </div>
+  <div class="resp-card rcd">
+    <div class="rc-t">4 · Sociedad</div>
+    <div class="rc-d">Justicia social · protección colectiva · derechos humanos · compromiso ciudadano.</div>
+  </div>
+</div>
+
+<!-- ══════ REAMER ══════ -->
+<div class="sec">📊 Bloque 6 · Jerarquía de Reamer ★★★</div>
+<div class="reamer">
+  <div class="r-step">
+    <div class="r-num">1º</div>
+    <div class="r-title">Vida · salud · seguridad</div>
+    <div class="r-desc">Prioridad máxima. Permite actuar aunque la persona no lo quiera si hay riesgo vital.</div>
+  </div>
+  <div class="r-step">
+    <div class="r-num">2º</div>
+    <div class="r-title">Autodeterminación + información veraz</div>
+    <div class="r-desc">Tiene prioridad sobre el bienestar si no hay riesgo vital.</div>
+  </div>
+  <div class="r-step">
+    <div class="r-num">3º</div>
+    <div class="r-title">Bienestar y calidad de vida</div>
+    <div class="r-desc">Se atiende cuando no hay conflicto con los niveles superiores.</div>
+  </div>
+</div>
+<div style="background:var(--card);border:1px solid var(--line);border-radius:11px;padding:10px 14px;font-size:.74rem;margin-bottom:14px;box-shadow:var(--sh)">
+  <strong style="color:var(--red)">Clave examen:</strong> la vida prevalece sobre la autodeterminación. Si hay riesgo vital, el profesional puede y debe actuar aunque la persona lo rechace. ★★★
+</div>
+
+<!-- ══════ BANKS 7 PASOS ══════ -->
+<div class="sec">🧭 Bloque 7 · Modelo Banks (7 pasos) ★★★</div>
+<div class="banks-flow">
+  <div class="b-step"><div class="b-dot">1</div><div class="b-body"><strong>Identificar el problema o dilema ético</strong> — ¿Es realmente un dilema? ¿Qué está en juego?</div></div>
+  <div class="b-step"><div class="b-dot">2</div><div class="b-body"><strong>Reconocer los valores y principios en conflicto</strong> — Nombrar los dos lados del dilema.</div></div>
+  <div class="b-step"><div class="b-dot">3</div><div class="b-body"><strong>Identificar a las personas afectadas</strong> — ¿Quién se ve implicado directa e indirectamente?</div></div>
+  <div class="b-step"><div class="b-dot">4</div><div class="b-body"><strong>Explorar opciones posibles y sus consecuencias</strong> — ¿Qué puede pasar con cada opción?</div></div>
+  <div class="b-step"><div class="b-dot">5</div><div class="b-body"><strong>Seleccionar la opción más justificable éticamente</strong> — Con argumentación, no con intuición.</div></div>
+  <div class="b-step"><div class="b-dot">6</div><div class="b-body"><strong>Documentar la decisión y el proceso</strong> — Registro profesional obligatorio.</div></div>
+  <div class="b-step"><div class="b-dot">7</div><div class="b-body"><strong>Revisión y aprendizaje posterior</strong> — ¿Qué se puede mejorar?</div></div>
+</div>
+
+<!-- ══════ CONFIDENCIALIDAD ══════ -->
+<div class="sec">🔐 Bloque 8 · Confidencialidad: cuándo se mantiene y cuándo cede ★★★</div>
+<div class="conf-grid">
+  <div class="conf-ok">
+    <div class="c-title">✅ La confidencialidad SE MANTIENE cuando…</div>
+    <ul>
+      <li>La información no implica riesgo grave para nadie.</li>
+      <li>No existe obligación legal de comunicar.</li>
+      <li>El usuario no ha dado consentimiento para compartir.</li>
+      <li>La información no es necesaria para la intervención.</li>
+    </ul>
+  </div>
+  <div class="conf-no">
+    <div class="c-title">⚠️ La confidencialidad PUEDE CEDER cuando…</div>
+    <ul>
+      <li>Riesgo grave e inminente para la vida o integridad (propia o de terceros). ★★★</li>
+      <li>Obligación legal de comunicar (maltrato de menores, etc.). ★★★</li>
+      <li>Consentimiento explícito del usuario para compartir. ★★★</li>
+    </ul>
+    <div style="margin-top:8px;font-size:.7rem;font-weight:800;color:var(--red)">⚠️ Regla de oro: mínima necesaria · justificada · documentada ★★★</div>
+  </div>
+</div>
+
+<!-- ══════ NORMATIVA ══════ -->
+<div class="sec">📜 Bloque 9 · Normativa y referencias clave ★★★</div>
+<div class="norm-grid">
+  <div class="norm-box"><div class="n-t">Código Deontológico TS (CGTS, 2012/2022) <span class="star">★★★</span></div><div class="n-d">Marco deontológico del TS en España. Valores: dignidad · libertad · igualdad · solidaridad · integridad · justicia social.</div></div>
+  <div class="norm-box"><div class="n-t">FITS / IASSW (2014) — Definición global <span class="star">★★★</span></div><div class="n-d">8 elementos: cambio social · desarrollo · cohesión · empoderamiento · liberación · justicia · DDHH · responsabilidad colectiva + diversidad.</div></div>
+  <div class="norm-box"><div class="n-t">FITS (2018) — Declaración de principios <span class="star">★★★</span></div><div class="n-d">9 principios éticos globales de la profesión.</div></div>
+  <div class="norm-box"><div class="n-t">LOPDGDD (LO 3/2018) <span class="star">★★</span></div><div class="n-d">Base legal de la confidencialidad. Protección de datos personales y garantía de derechos digitales.</div></div>
+  <div class="norm-box"><div class="n-t">Ley Foral 15/2006 (Navarra) <span class="star">★★</span></div><div class="n-d">Marco de servicios sociales en Navarra donde se encuadra la intervención.</div></div>
+  <div class="norm-box"><div class="n-t">Banks, Sarah (2008) <span class="star">★★★</span></div><div class="n-d">"Ética y valores en el Trabajo Social". Modelo de resolución de dilemas. Definición de dilema como dos males menores.</div></div>
+  <div class="norm-box"><div class="n-t">Reamer, F.G. (1990) <span class="star">★★★</span></div><div class="n-d">"Ethical Dilemmas in Social Service". Jerarquía de principios: vida → autodeterminación → bienestar.</div></div>
+</div>
+
+<!-- ══════ TRAMPAS ══════ -->
+<div class="sec">⚠️ Bloque 10 · 10 trampas del examen ★★★</div>
+<div class="trap-grid">
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 1 ✗</div>"Un dilema ético tiene siempre una solución correcta."</div>
+    <div class="trap-ok">✓ Implica conflicto entre valores igualmente válidos. No tiene respuesta técnica automática. ★★★</div>
+  </div>
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 2 ✗</div>"La confidencialidad en TS es absoluta e irrompible."</div>
+    <div class="trap-ok">✓ Puede ceder ante riesgo grave e inminente, obligación legal o consentimiento del usuario. ★★★</div>
+  </div>
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 3 ✗</div>"La autodeterminación siempre prevalece sobre la protección."</div>
+    <div class="trap-ok">✓ Reamer: la vida y la seguridad tienen prioridad sobre la autodeterminación. ★★★</div>
+  </div>
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 4 ✗</div>"La ética profesional del TS se reduce al Código Deontológico."</div>
+    <div class="trap-ok">✓ El Código es una guía; la ética requiere reflexión moral activa que va más allá del código escrito. ★★★</div>
+  </div>
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 5 ✗</div>"El TS solo tiene responsabilidad con el usuario."</div>
+    <div class="trap-ok">✓ Cuatro responsabilidades simultáneas: persona · institución · profesión · sociedad. ★★★</div>
+  </div>
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 6 ✗</div>"En un dilema ético, la opción elegida no tiene coste."</div>
+    <div class="trap-ok">✓ Toda decisión en un dilema implica algún coste ético. ★★★</div>
+  </div>
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 7 ✗</div>"La justicia social no es un principio ético del TS, es político."</div>
+    <div class="trap-ok">✓ Es principio central del Código Deontológico (CGTS) y de los principios FITS (2014 y 2018). ★★★</div>
+  </div>
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 8 ✗</div>"El Código Deontológico del TS español es de 2015."</div>
+    <div class="trap-ok">✓ Es de 2012, actualizado en 2022. Aprobado por el CGTS. ★★★</div>
+  </div>
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 9 ✗</div>"Los dilemas éticos se resuelven con la legislación."</div>
+    <div class="trap-ok">✓ La ley es un recurso, pero los dilemas requieren deliberación ética razonada y documentada. ★★★</div>
+  </div>
+  <div class="trap">
+    <div class="trap-w"><div class="trap-n">TRAMPA 10 ✗</div>"Banks define el dilema ético como elegir entre el bien y el mal."</div>
+    <div class="trap-ok">✓ Banks lo define como elegir entre dos males menores o dos bienes incompatibles. ★★★</div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

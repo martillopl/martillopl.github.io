@@ -1,0 +1,239 @@
+PUNTOS CLAVE PARA EXAMEN – TEMA 57
+Ética en la intervención social: principios y dilemas éticos.
+=========================================================================
+FUENTES PRINCIPALES:
+· Banks, Sarah (2008): "Ética y valores en el Trabajo Social". Macmillan. ★★★
+· Reamer, Frederic G. (1990): "Ethical Dilemmas in Social Service". Columbia Univ. Press. ★★★
+· FITS / IASSW (2014): Definición Global del Trabajo Social. ★★★
+· FITS (2018): Declaración de principios éticos de la profesión. ★★★
+· Código Deontológico del Trabajo Social (CGTS, 2012; actualizado 2022). ★★★
+· Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales
+  y garantía de los derechos digitales (LOPDGDD). ★★
+· Ley 41/2002, de 14 de noviembre, de autonomía del paciente. ★★
+· Ley Foral 15/2006, de 14 de diciembre, de Servicios Sociales de Navarra. ★★
+=========================================================================
+
+=== BLOQUE A: ÉTICA, MORAL Y DEONTOLOGÍA ===
+
+A1. DISTINCIÓN BÁSICA ★★★
+- MORAL: conjunto de valores, normas y costumbres que orientan el comportamiento
+  humano en una comunidad o cultura. Tiene carácter descriptivo.
+- ÉTICA: reflexión filosófica y crítica sobre la moral. Tiene carácter normativo y racional.
+  Pregunta: ¿qué debemos hacer y por qué?
+- DEONTOLOGÍA PROFESIONAL: conjunto de normas y deberes que regulan el ejercicio
+  de una profesión. Recogida en los códigos deontológicos.
+▶ Relación: la moral es el objeto de estudio de la ética; la deontología aplica
+  la ética a un ámbito profesional concreto. ★★★
+
+A2. ÉTICA APLICADA ★★
+- La ética en la intervención social es una ética aplicada: toma principios generales
+  de la ética y los aplica a las situaciones concretas de la práctica del TS.
+- No se reduce a cumplir el Código Deontológico: requiere reflexión moral activa.
+
+A3. MODELOS ÉTICOS DE REFERENCIA ★★
+1. Ética deontológica (Kant): el deber como principio fundamental, independientemente
+   de las consecuencias. La persona como fin, nunca como medio.
+2. Ética consecuencialista / utilitarista (Mill): la acción correcta es la que
+   produce el mayor bienestar para el mayor número.
+3. Ética de la virtud (Aristóteles, MacIntyre): el carácter moral del profesional
+   como base de la buena práctica.
+4. Ética del cuidado (Gilligan, Noddings): la relación de cuidado como fundamento
+   ético; especialmente relevante en el TS.
+5. Principialismo (Beauchamp y Childress): autonomía, beneficencia, no maleficencia
+   y justicia como marco. (Ver Tema 56.)
+
+
+=== BLOQUE B: VALORES Y PRINCIPIOS ÉTICOS DEL TRABAJO SOCIAL ===
+
+B1. VALORES CENTRALES DEL TS ★★★
+Según el Código Deontológico y FITS (2014 y 2018):
+1. Dignidad de la persona: valor supremo; toda persona es fin en sí mismo.
+2. Derechos humanos: respeto y promoción de los derechos fundamentales.
+3. Justicia social: compromiso activo con los más vulnerables y contra la exclusión.
+4. Autonomía / autodeterminación: derecho de la persona a dirigir su propia vida.
+5. Igualdad y no discriminación: trato equitativo; sin razón de origen, género,
+   edad, religión, ideología, situación económica, etc.
+6. Solidaridad: apoyo mutuo y compromiso social.
+7. Integridad profesional: honestidad, coherencia y transparencia en la práctica.
+
+B2. PRINCIPIOS ÉTICOS DEL TS (FITS, 2018) ★★★
+1. Respeto a los derechos humanos y a la dignidad humana.
+2. Autodeterminación de las personas.
+3. Participación y empoderamiento.
+4. Tratamiento holístico de la persona.
+5. No discriminación.
+6. Justicia social.
+7. Confidencialidad y privacidad.
+8. Integridad profesional.
+9. Competencia profesional.
+
+B3. DEFINICIÓN GLOBAL DEL TS (FITS / IASSW, 2014) ★★★
+"El Trabajo Social es una profesión basada en la práctica y una disciplina académica
+que promueve el cambio y el desarrollo social, la cohesión social, y el empoderamiento
+y la liberación de las personas. Los principios de la justicia social, los derechos
+humanos, la responsabilidad colectiva y el respeto a la diversidad son fundamentales
+para el Trabajo Social."
+▶ Elementos clave: cambio social · desarrollo social · cohesión social · empoderamiento ·
+  liberación · justicia social · derechos humanos · responsabilidad colectiva ·
+  respeto a la diversidad. ★★★
+
+
+=== BLOQUE C: DILEMAS ÉTICOS ★★★ ===
+
+C1. QUÉ ES UN DILEMA ÉTICO ★★★
+- Situación en la que dos o más valores o principios igualmente legítimos entran en
+  conflicto, y no es posible satisfacerlos simultáneamente sin sacrificar algo.
+- No tiene solución técnica ni jurídica automática.
+- No se trata de elegir entre bien y mal, sino entre dos males menores o dos bienes
+  incompatibles (Banks, 2008). ★★★
+- La elección siempre implica algún coste ético.
+- Requiere deliberación, reflexión y argumentación ética.
+
+C2. TIPOS DE DILEMAS EN EL TS ★★★
+1. Autonomía vs. protección (paternalismo):
+   La persona en situación de riesgo rechaza la intervención.
+   Tensión: autodeterminación vs. beneficencia/no maleficencia.
+2. Confidencialidad vs. deber de informar:
+   Información recibida que implica riesgo para terceros.
+   Tensión: confidencialidad vs. protección/justicia.
+3. Interés individual vs. interés colectivo:
+   Lo mejor para un caso puede perjudicar a otros.
+   Tensión: autonomía vs. justicia distributiva.
+4. Lealtad al usuario vs. lealtad institucional:
+   El profesional conoce prácticas institucionales contrarias al usuario.
+   Tensión: integridad vs. obligaciones laborales.
+5. No juzgar vs. responsabilidad de denuncia:
+   Situación grave ante la que el profesional tiene dudas sobre actuar.
+   Tensión: no discriminación vs. justicia social.
+6. Autonomía del menor vs. protección:
+   El menor ejerce su autonomía pero está en riesgo.
+   Tensión: autodeterminación vs. interés superior del menor.
+
+C3. RESPONSABILIDADES MÚLTIPLES DEL TS ★★★
+El trabajador/a social tiene responsabilidades simultáneas frente a:
+1. La persona usuaria: autodeterminación, bienestar.
+2. La institución / organización: objetivos, normativa.
+3. La profesión: código deontológico, buenas prácticas.
+4. La sociedad: justicia social, derechos humanos.
+▶ Cuando estas responsabilidades entran en conflicto → dilema ético de lealtad dividida. ★★★
+
+
+=== BLOQUE D: MODELOS DE RESOLUCIÓN DE DILEMAS ★★★ ===
+
+D1. MODELO DE BANKS (ético-deliberativo) ★★★
+1. Identificar el problema o dilema ético.
+2. Reconocer los valores y principios en conflicto.
+3. Identificar a las personas afectadas.
+4. Explorar las opciones posibles y sus consecuencias.
+5. Seleccionar la opción más justificable éticamente.
+6. Documentar la decisión y el proceso seguido.
+7. Revisión y aprendizaje posterior.
+
+D2. MODELO DE REAMER: JERARQUÍA DE PRINCIPIOS ★★★
+Cuando hay conflicto entre valores, Reamer propone la siguiente prioridad:
+1. Vida, salud y seguridad básica de las personas.
+2. Autodeterminación e información veraz.
+3. Bienestar y calidad de vida.
+▶ Implicación clave: la vida tiene prioridad sobre la autodeterminación. ★★★
+▶ La autodeterminación tiene prioridad sobre el bienestar si no hay riesgo vital.
+
+D3. DELIBERACIÓN ÉTICA (inspirada en Diego Gracia) ★★★
+1. Los hechos: ¿qué está ocurriendo exactamente?
+2. Los valores: ¿qué principios o valores están en juego?
+3. Los deberes: ¿qué obligaciones emergen del conflicto?
+4. La decisión prudente: ¿qué haría una persona virtuosa en esta situación?
+
+D4. PASOS GENERALES EN LA RESOLUCIÓN ★★
+1. Reconocer el dilema como tal.
+2. Reflexión individual y/o deliberación en equipo.
+3. Consultar códigos deontológicos, legislación y supervisión.
+4. Decidir, actuar y registrar la decisión con su justificación.
+5. Revisar los resultados.
+
+
+=== BLOQUE E: CONFIDENCIALIDAD Y SUS LÍMITES ★★★ ===
+
+E1. LA CONFIDENCIALIDAD COMO PRINCIPIO ★★★
+- Es un deber profesional del TS: proteger la información personal compartida en
+  la relación profesional.
+- Fundamento ético: respeto a la intimidad y a la autonomía de la persona.
+- Fundamento legal: LOPDGDD (Ley Orgánica 3/2018) y normativa específica de servicios sociales.
+
+E2. CUÁNDO PUEDE QUEBRARSE ★★★
+La confidencialidad cede excepcionalmente cuando:
+1. Existe riesgo grave e inminente para la vida o integridad de la persona o de terceros.
+2. Existe obligación legal de comunicar (maltrato de menores; denuncia penal).
+3. Hay consentimiento explícito del propio usuario para compartir la información.
+▶ La ruptura debe ser siempre la MÍNIMA NECESARIA, justificada y registrada. ★★★
+▶ Dilema central: confidencialidad vs. protección. ★★★
+
+E3. LÍMITES DE LA AUTODETERMINACIÓN ★★★
+La autodeterminación no es absoluta; puede ceder cuando:
+1. Hay riesgo vital para la persona (prioridad Reamer).
+2. Hay riesgo para terceros.
+3. La persona no tiene capacidad de decisión (competencia disminuida).
+4. Se trata de la protección del interés superior del menor.
+
+
+=== BLOQUE F: CÓDIGO DEONTOLÓGICO DEL TRABAJO SOCIAL ★★★ ===
+
+F1. DATOS BÁSICOS ★★★
+- Aprobado por el Consejo General del Trabajo Social (CGTS).
+- Versión original: 2012.
+- Actualización: 2022.
+- Ámbito: profesión del Trabajo Social en España.
+
+F2. ESTRUCTURA DEL CÓDIGO ★★
+- Preámbulo: fundamentos éticos y profesionales.
+- Principios generales: valores fundamentales de la profesión.
+- Derechos y deberes de los profesionales.
+- Relaciones con los usuarios.
+- Relaciones con las organizaciones.
+- Relaciones entre profesionales.
+- Relaciones con la sociedad.
+
+F3. PRINCIPIOS DEL CÓDIGO ★★★
+1. Dignidad: reconocer el valor y la dignidad de toda persona.
+2. Libertad: respetar la autonomía y la capacidad de elección de las personas.
+3. Igualdad: no discriminación; acceso equitativo.
+4. Solidaridad: compromiso con los más vulnerables.
+5. Integridad: actuar con honestidad y coherencia.
+6. Justicia social: luchar contra la discriminación e injusticia estructural.
+
+
+=== BLOQUE G: LEGISLACIÓN CLAVE ★★ ===
+
+G1. NORMATIVA BÁSICA
+- LOPDGDD (LO 3/2018): protección de datos personales → base legal de confidencialidad.
+- Ley 41/2002: autonomía del paciente → consentimiento informado.
+- Ley Foral 15/2006: Servicios Sociales de Navarra → marco de actuación en Navarra.
+- Código Deontológico TS (CGTS, 2012/2022): marco deontológico profesional.
+- FITS (2014/2018): marco ético global de la profesión.
+
+
+=== BLOQUE H: TRAMPAS DE EXAMEN ★★★ ===
+
+T1: "Un dilema ético tiene siempre una solución correcta" → FALSO.
+    Un dilema implica conflicto entre valores igualmente válidos. ★★★
+T2: "La confidencialidad en TS es absoluta" → FALSO.
+    Puede ceder ante riesgo grave e inminente para la vida. ★★★
+T3: "La autodeterminación siempre prevalece sobre la protección" → FALSO.
+    Cuando hay riesgo vital, la vida tiene prioridad (Reamer). ★★★
+T4: "La ética profesional del TS se reduce al Código Deontológico" → FALSO.
+    El código es una guía, pero la ética requiere reflexión moral activa. ★★★
+T5: "El TS solo tiene responsabilidad con el usuario" → FALSO.
+    Tiene responsabilidades con usuario, institución, profesión y sociedad. ★★★
+T6: "En un dilema, la opción elegida es siempre sin coste ético" → FALSO.
+    Toda decisión en un dilema implica algún coste. ★★★
+T7: "La justicia social no es un principio ético del TS" → FALSO.
+    Es principio central en el Código Deontológico y en FITS (2014). ★★★
+T8: "El Código Deontológico del TS español es de 2015" → FALSO.
+    Es de 2012, actualizado en 2022. ★★★
+T9: "Los dilemas éticos se resuelven con la ley" → FALSO.
+    La ley es un recurso, pero los dilemas requieren deliberación ética. ★★★
+T10: "Banks dice que un dilema es elegir entre el bien y el mal" → FALSO.
+     Banks lo define como elegir entre dos males menores o dos bienes incompatibles. ★★★
+
+=========================================================================
+Archivo: puntos-clave_T57.txt | Tema 57 | Oposiciones Navarra / TSS
+=========================================================================

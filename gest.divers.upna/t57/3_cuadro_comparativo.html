@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tema 57 · HTML 3 · Cuadro comparativo y tablas operativas · Ética en la intervención social</title>
+<style>
+:root{
+  --bg:#fff7ed;--card:#fff;--s2:#ffedd5;--s3:#fed7aa;--line:#fb923c;
+  --text:#431407;--muted:#c2410c;--p:#ea580c;--p2:#c2410c;
+  --grn:#059669;--grn2:#d1fae5;--red:#dc2626;--red2:#fee2e2;
+  --warn:#b45309;--warn2:#fef3c7;--sky:#0284c7;--sky2:#e0f2fe;
+  --vio:#7c3aed;--vio2:#ede9fe;--rose:#be185d;--rose2:#fce7f3;
+  --sh:0 2px 12px rgba(234,88,12,.10)
+}
+[data-theme="dark"]{
+  --bg:#1a0a00;--card:#2a1000;--s2:#3a1500;--s3:#4a2000;--line:#c2410c;
+  --text:#fed7aa;--muted:#fb923c;--p:#fb923c;--p2:#fdba74;
+  --grn:#86efac;--grn2:#052e16;--red:#fca5a5;--red2:#1a0000;
+  --warn:#fde68a;--warn2:#1c1000;--sky:#7dd3fc;--sky2:#082038;
+  --vio:#c4b5fd;--vio2:#1a0e33;--rose:#fda4af;--rose2:#1a0010;
+  --sh:0 2px 14px rgba(0,0,0,.5)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.55;background:var(--bg);color:var(--text);padding:22px}
+.wrap{max-width:1240px;margin:0 auto}
+header{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:14px 22px;box-shadow:var(--sh);margin-bottom:16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+h1{font-size:.93rem;font-weight:800;color:var(--p)}
+.sub{font-size:.7rem;color:var(--muted);margin-top:4px}
+.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--s2);color:var(--text);padding:5px 14px;border-radius:999px;font-size:.7rem}
+h2{font-size:.83rem;font-weight:800;color:#fff;background:var(--p);padding:7px 16px;border-radius:8px;margin:18px 0 10px;display:inline-block}
+.tbl{width:100%;border-collapse:collapse;box-shadow:var(--sh);border-radius:10px;overflow:hidden;background:var(--card);margin-bottom:14px}
+.tbl th{background:var(--p);color:#fff;text-align:left;padding:8px 11px;font-size:.67rem;text-transform:uppercase;letter-spacing:.03em}
+.tbl td{padding:8px 11px;border-bottom:1px solid var(--s2);font-size:.74rem;vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:nth-child(even) td{background:rgba(234,88,12,.04)}
+.tbl tr:hover td{background:var(--s2)}
+.nota{padding:9px 13px;border-radius:0 9px 9px 0;font-size:.73rem;border-left:4px solid;margin:8px 0;line-height:1.5}
+.n-ok{background:var(--grn2);border-color:var(--grn)}
+.n-err{background:var(--red2);border-color:var(--red)}
+.n-w{background:var(--warn2);border-color:var(--warn)}
+.n-vio{background:var(--vio2);border-color:var(--vio)}
+.n-sky{background:var(--sky2);border-color:var(--sky)}
+strong{color:var(--p)}
+.s3{color:#fef08a;font-weight:800}
+td.hl{background:var(--s2)!important;font-weight:700;color:var(--p2)}
+td.ok{background:var(--grn2)!important}
+td.er{background:var(--red2)!important}
+td.wa{background:var(--warn2)!important}
+td.vi{background:var(--vio2)!important}
+td.sk{background:var(--sky2)!important}
+</style>
+</head>
+<body>  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<div class="wrap">
+
+<header>
+  <div>
+    <h1>Tema 57 · HTML 3 · Cuadro comparativo y tablas operativas para examen</h1>
+    <div class="sub">Ética en la intervención social: principios y dilemas éticos · Oposiciones Navarra / TSS</div>
+  </div>
+  <button class="btn" onclick="const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark')">Claro / Oscuro</button>
+</header>
+
+<!-- T1 -->
+<h2>T1 · Moral, ética y deontología: distinción operativa <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Concepto</th><th>Definición</th><th>Carácter</th><th>Pregunta guía</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Moral</strong></td><td>Conjunto de valores, normas y costumbres que orientan el comportamiento en una comunidad.</td><td>Descriptivo · histórico · cultural</td><td>¿Cómo se comporta este grupo?</td><td>Es el objeto de estudio de la ética.</td></tr>
+<tr><td><strong>Ética</strong></td><td>Reflexión filosófica y crítica sobre la moral. Disciplina normativa y racional.</td><td>Normativo · racional · reflexivo</td><td>¿Cómo deberíamos comportarnos y por qué?</td><td class="hl">No se reduce al código. Exige reflexión activa. ★★★</td></tr>
+<tr><td><strong>Deontología profesional</strong></td><td>Normas y deberes que regulan el ejercicio de una profesión concreta.</td><td>Normativo · exigible · escrito</td><td>¿Qué debo hacer como profesional del TS?</td><td class="ok">En TS: Código Deontológico CGTS (2012/2022). ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T2 -->
+<h2>T2 · Modelos éticos de referencia para el TS <span class="s3">★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Modelo</th><th>Autor/es</th><th>Principio central</th><th>Aplicación al TS</th></tr></thead>
+<tbody>
+<tr><td><strong>Ética deontológica</strong></td><td>Kant</td><td>El deber como fundamento. Persona siempre como fin, nunca como medio.</td><td>Base de la dignidad humana y de los derechos en TS.</td></tr>
+<tr><td><strong>Consecuencialismo / utilitarismo</strong></td><td>Mill</td><td>Mayor bienestar para el mayor número.</td><td>Justifica decisiones de distribución de recursos escasos.</td></tr>
+<tr><td><strong>Ética de la virtud</strong></td><td>Aristóteles · MacIntyre</td><td>El carácter moral del profesional como base de la buena práctica.</td><td>El buen TS no solo aplica reglas; tiene virtudes estables.</td></tr>
+<tr><td><strong>Ética del cuidado</strong></td><td>Gilligan · Noddings</td><td>La relación de cuidado con el otro concreto como fundamento ético.</td><td class="hl">Especialmente relevante en TS. Persona concreta, no abstracta. ★★</td></tr>
+<tr><td><strong>Principialismo</strong></td><td>Beauchamp y Childress</td><td>Autonomía · beneficencia · no maleficencia · justicia (Tema 56).</td><td>Marco transversal para dilemas en contextos sanitarios y sociales.</td></tr>
+</tbody>
+</table>
+
+<!-- T3 -->
+<h2>T3 · Valores centrales del Trabajo Social <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Valor</th><th>Contenido</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td class="hl">1</td><td><strong>Dignidad</strong></td><td>Valor supremo. Toda persona es fin en sí misma con independencia de su situación o conducta.</td><td class="ok">Fundamento de todos los demás valores. ★★★</td></tr>
+<tr><td class="hl">2</td><td><strong>Derechos humanos</strong></td><td>Compromiso activo con la promoción y protección de los derechos fundamentales.</td><td>Marco universal de referencia.</td></tr>
+<tr><td class="hl">3</td><td><strong>Justicia social</strong></td><td>Lucha activa contra la exclusión, discriminación y estructuras injustas.</td><td class="er">No es solo un principio político: es ético. ★★★</td></tr>
+<tr><td class="hl">4</td><td><strong>Autonomía / autodeterminación</strong></td><td>Derecho de cada persona a dirigir su propia vida y decidir sobre ella.</td><td class="hl">Principio que más frecuentemente entra en dilema. ★★★</td></tr>
+<tr><td class="hl">5</td><td><strong>Igualdad / no discriminación</strong></td><td>Trato equitativo. Sin distinción de origen, género, edad, religión, situación económica, etc.</td><td>Incluye discriminación positiva.</td></tr>
+<tr><td class="hl">6</td><td><strong>Solidaridad</strong></td><td>Apoyo mutuo y compromiso con el bien común.</td><td>Dimensión comunitaria del TS.</td></tr>
+<tr><td class="hl">7</td><td><strong>Integridad profesional</strong></td><td>Honestidad, coherencia y transparencia en la práctica.</td><td>Conecta con el deber de denuncia de malas prácticas.</td></tr>
+</tbody>
+</table>
+
+<!-- T4 -->
+<h2>T4 · 9 principios éticos FITS (2018) <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Principio</th><th>Contenido operativo</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Respeto a DDHH y dignidad humana</strong></td><td>Toda intervención parte del reconocimiento de la dignidad y los derechos de la persona.</td></tr>
+<tr><td>2</td><td><strong>Autodeterminación</strong></td><td>Derecho de las personas a tomar sus propias decisiones, incluso cuando el profesional no las comparte.</td></tr>
+<tr><td>3</td><td><strong>Participación y empoderamiento</strong></td><td>Promover que las personas sean protagonistas de sus propios procesos de cambio.</td></tr>
+<tr><td>4</td><td><strong>Tratamiento holístico</strong></td><td>Ver y atender a la persona en su integralidad: no reducirla a un problema o a un expediente.</td></tr>
+<tr><td>5</td><td><strong>No discriminación</strong></td><td>Igual atención y respeto sin distinción de ningún tipo.</td></tr>
+<tr><td>6</td><td><strong>Justicia social</strong></td><td>Actuar en favor de los más vulnerables; denunciar injusticias estructurales.</td></tr>
+<tr><td>7</td><td><strong>Confidencialidad y privacidad</strong></td><td>Proteger la información personal de las personas usuarias.</td></tr>
+<tr><td>8</td><td><strong>Integridad profesional</strong></td><td>Actuar con coherencia, honestidad y responsabilidad.</td></tr>
+<tr><td>9</td><td><strong>Competencia profesional</strong></td><td>Actuar dentro del campo de la propia capacitación y formarse continuamente.</td></tr>
+</tbody>
+</table>
+
+<!-- T5 -->
+<h2>T5 · Definición Global del TS (FITS/IASSW, 2014) — 8 elementos clave <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Elemento</th><th>Significado para el TS</th><th>Trampa habitual</th></tr></thead>
+<tbody>
+<tr><td><strong>Cambio social</strong></td><td>El TS no solo atiende: transforma estructuras injustas.</td><td>Confundir con adaptación social.</td></tr>
+<tr><td><strong>Desarrollo social</strong></td><td>Contribuye al bienestar colectivo y al desarrollo de capacidades.</td><td>No es solo desarrollo individual.</td></tr>
+<tr><td><strong>Cohesión social</strong></td><td>Fortalece vínculos y sentido de comunidad.</td><td class="er">Se omite con frecuencia. ★★★</td></tr>
+<tr><td><strong>Empoderamiento</strong></td><td>Aumenta la capacidad de las personas para controlar su propia vida.</td><td>No es asistencialismo.</td></tr>
+<tr><td><strong>Liberación</strong></td><td>Superación de opresiones y barreras estructurales.</td><td class="er">Se sustituye erróneamente por "integración". ★★★</td></tr>
+<tr><td><strong>Justicia social</strong></td><td>Principio ético y político central de la profesión.</td><td>No es accesorio; es fundamental.</td></tr>
+<tr><td><strong>Derechos humanos</strong></td><td>Marco universal de referencia.</td><td>No solo en contextos de vulneración evidente.</td></tr>
+<tr><td><strong>Responsabilidad colectiva + diversidad</strong></td><td>Dimensión comunitaria y respeto a la diferencia.</td><td class="er">A veces se reduce solo a responsabilidad individual. ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T6 -->
+<h2>T6 · Qué es un dilema ético y qué no es <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Dimensión</th><th>SÍ es un dilema ético</th><th>NO es un dilema ético</th></tr></thead>
+<tbody>
+<tr><td><strong>Naturaleza</strong></td><td>Conflicto entre dos valores o principios igualmente legítimos.</td><td class="er">Conflicto entre bien y mal (eso es una transgresión ética, no un dilema). ★★★</td></tr>
+<tr><td><strong>Solución</strong></td><td>Requiere deliberación, argumentación y ponderación caso a caso.</td><td class="er">No tiene solución técnica ni jurídica automática. ★★★</td></tr>
+<tr><td><strong>Resultado</strong></td><td>Toda decisión implica algún coste ético.</td><td class="er">No existe la opción sin coste. ★★★</td></tr>
+<tr><td><strong>Banks (2008)</strong></td><td>Elegir entre dos males menores o dos bienes incompatibles.</td><td class="er">No es elegir entre el bien y el mal. ★★★</td></tr>
+<tr><td><strong>Documentación</strong></td><td>Debe registrarse el proceso y la justificación.</td><td>No puede decidirse de forma intuitiva y sin argumento.</td></tr>
+</tbody>
+</table>
+
+<!-- T7 -->
+<h2>T7 · 6 tipos de dilemas éticos en el TS <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Dilema</th><th>Situación</th><th>Principios en tensión</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>1. Autonomía vs. protección</strong></td><td>Persona en riesgo rechaza la intervención.</td><td>Autodeterminación ↔ Beneficencia / No maleficencia</td><td class="hl">Dilema más frecuente. ★★★</td></tr>
+<tr><td><strong>2. Confidencialidad vs. deber de informar</strong></td><td>Información con riesgo para terceros.</td><td>Confidencialidad ↔ Protección / Justicia</td><td class="hl">La confidencialidad puede ceder. ★★★</td></tr>
+<tr><td><strong>3. Interés individual vs. colectivo</strong></td><td>Lo mejor para uno perjudica a otros.</td><td>Autonomía individual ↔ Justicia distributiva</td><td>Recursos escasos.</td></tr>
+<tr><td><strong>4. Lealtad al usuario vs. institucional</strong></td><td>Prácticas institucionales contrarias al usuario.</td><td>Integridad ↔ Obligaciones laborales</td><td>Doble lealtad.</td></tr>
+<tr><td><strong>5. No juzgar vs. responsabilidad de denuncia</strong></td><td>Situación grave sin petición de intervención.</td><td>No discriminación ↔ Justicia social</td><td>¿Cuándo actuar sin petición?</td></tr>
+<tr><td><strong>6. Autonomía del menor vs. protección</strong></td><td>Menor ejerciendo autonomía en situación de riesgo.</td><td>Autodeterminación ↔ Interés superior del menor</td><td class="ok">El interés superior del menor prevalece. ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T8 -->
+<h2>T8 · 4 responsabilidades múltiples del TS <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Responsabilidad</th><th>Hacia quién</th><th>Contenido</th><th>Riesgo de conflicto</th></tr></thead>
+<tbody>
+<tr><td><strong>1. Persona usuaria</strong></td><td>Usuario/a</td><td>Autodeterminación · bienestar · confidencialidad · no discriminación.</td><td>Paternalismo · abandono · vulneración de derechos.</td></tr>
+<tr><td><strong>2. Institución</strong></td><td>Organización empleadora</td><td>Cumplir objetivos · normativa · procedimientos.</td><td class="hl">Conflicto lealtad usuario vs. institución. ★★★</td></tr>
+<tr><td><strong>3. Profesión</strong></td><td>Colectivo profesional</td><td>Código deontológico · buenas prácticas · supervisión.</td><td>Mala praxis institucional vs. deber deontológico.</td></tr>
+<tr><td><strong>4. Sociedad</strong></td><td>Ciudadanía y colectivo</td><td>Justicia social · DDHH · protección colectiva.</td><td>Interés individual vs. interés social.</td></tr>
+</tbody>
+</table>
+
+<!-- T9 -->
+<h2>T9 · Jerarquía de Reamer (1990) <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Prioridad</th><th>Valor</th><th>Contenido</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td class="er"><strong>1ª — Máxima ★★★</strong></td><td><strong>Vida · salud · seguridad</strong></td><td>Cuando hay riesgo vital, puede y debe actuarse aunque la persona no lo quiera.</td><td class="er">Vida prevalece sobre autodeterminación. ★★★</td></tr>
+<tr><td class="wa"><strong>2ª</strong></td><td><strong>Autodeterminación + información veraz</strong></td><td>Tiene prioridad sobre el bienestar si no hay riesgo vital.</td><td>Respetar la decisión aunque no guste al profesional.</td></tr>
+<tr><td class="ok"><strong>3ª</strong></td><td><strong>Bienestar y calidad de vida</strong></td><td>Se atiende cuando no entra en conflicto con los niveles superiores.</td><td>Objetivo general de la intervención.</td></tr>
+</tbody>
+</table>
+
+<!-- T10 -->
+<h2>T10 · Modelo de Banks vs. Modelo de Reamer <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Dimensión</th><th>Banks (2008)</th><th>Reamer (1990)</th></tr></thead>
+<tbody>
+<tr><td><strong>Enfoque</strong></td><td>Proceso deliberativo paso a paso</td><td>Jerarquía de valores en conflicto</td></tr>
+<tr><td><strong>Estructura</strong></td><td>7 pasos secuenciales</td><td>3 niveles de prioridad</td></tr>
+<tr><td><strong>Utilidad principal</strong></td><td>Orientar el proceso de deliberación y documentación</td><td>Decidir cuál de los valores en conflicto tiene más peso</td></tr>
+<tr><td><strong>Resultado</strong></td><td>Decisión argumentada y registrada</td><td>Aplicación de la prioridad que corresponda</td></tr>
+<tr><td><strong>Clave examen</strong></td><td class="hl">Banks: 7 pasos · elegir entre dos males menores ★★★</td><td class="hl">Reamer: vida > autodeterminación > bienestar ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T11 -->
+<h2>T11 · Modelo Banks: 7 pasos <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Paso</th><th>Pregunta operativa</th></tr></thead>
+<tbody>
+<tr><td class="hl">1</td><td><strong>Identificar el dilema</strong></td><td>¿Es realmente un dilema ético? ¿Qué está en juego?</td></tr>
+<tr><td class="hl">2</td><td><strong>Reconocer los valores en conflicto</strong></td><td>¿Qué principios se contradicen? Nombrarlos ambos.</td></tr>
+<tr><td class="hl">3</td><td><strong>Identificar a las personas afectadas</strong></td><td>¿Quién se ve implicado directa e indirectamente?</td></tr>
+<tr><td class="hl">4</td><td><strong>Explorar opciones y consecuencias</strong></td><td>¿Qué puede ocurrir con cada decisión posible?</td></tr>
+<tr><td class="hl">5</td><td><strong>Seleccionar la opción más justificable</strong></td><td>¿Cuál tiene la mejor argumentación ética?</td></tr>
+<tr><td class="hl">6</td><td><strong>Documentar la decisión y el proceso</strong></td><td>¿Queda registrado con justificación?</td></tr>
+<tr><td class="hl">7</td><td><strong>Revisión y aprendizaje posterior</strong></td><td>¿Qué se puede mejorar para la próxima vez?</td></tr>
+</tbody>
+</table>
+
+<!-- T12 -->
+<h2>T12 · Confidencialidad: cuándo se mantiene y cuándo cede <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Situación</th><th>¿La confidencialidad se mantiene?</th><th>Fundamento</th></tr></thead>
+<tbody>
+<tr><td>Información sin implicación de riesgo grave</td><td class="ok">SÍ</td><td>Respeto a la autonomía y la privacidad.</td></tr>
+<tr><td>Riesgo grave e inminente para la vida o integridad propia o de terceros</td><td class="er">PUEDE CEDER ★★★</td><td>Deber de protección y jerarquía Reamer (vida 1ª).</td></tr>
+<tr><td>Obligación legal de comunicar (maltrato de menores, etc.)</td><td class="er">DEBE CEDER ★★★</td><td>Mandato legal.</td></tr>
+<tr><td>Consentimiento explícito del usuario</td><td class="er">CEDE por decisión del usuario ★★★</td><td>Propio principio de autonomía.</td></tr>
+<tr><td>Curiosidad o petición institucional sin base legal ni riesgo</td><td class="ok">NO CEDE ★★★</td><td>No existe justificación ética ni legal.</td></tr>
+</tbody>
+</table>
+<div class="nota n-err"><strong>Regla de oro:</strong> cuando se quiebra la confidencialidad, la ruptura debe ser la mínima necesaria, debe estar justificada y debe quedar documentada. ★★★</div>
+
+<!-- T13 -->
+<h2>T13 · Confidencialidad vs. otros principios: mapa de conflictos <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Conflicto</th><th>Cuándo cede la confidencialidad</th><th>Cuándo prevalece</th></tr></thead>
+<tbody>
+<tr><td><strong>Confidencialidad vs. protección de vida</strong></td><td class="er">Cede: riesgo grave e inminente. ★★★</td><td>Prevalece: si el riesgo no es grave ni inminente.</td></tr>
+<tr><td><strong>Confidencialidad vs. interés del menor</strong></td><td class="er">Cede: interés superior del menor prevalece.</td><td>Solo si el menor no está en riesgo relevante.</td></tr>
+<tr><td><strong>Confidencialidad vs. institución</strong></td><td class="ok">Prevalece: sin base legal, la institución no tiene derecho a la información. ★★★</td><td>—</td></tr>
+<tr><td><strong>Confidencialidad vs. autonomía del propio usuario</strong></td><td class="er">Cede: el usuario puede decidir compartirla.</td><td>Si el usuario no autoriza, se mantiene.</td></tr>
+</tbody>
+</table>
+
+<!-- T14 -->
+<h2>T14 · Código Deontológico del TS (CGTS, 2012/2022) <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Aspecto</th><th>Contenido</th><th>Clave examen</th></tr></thead>
+<tbody>
+<tr><td><strong>Año de aprobación</strong></td><td>2012 · Actualización: 2022</td><td class="er">No es de 2008 ni de 2015. ★★★</td></tr>
+<tr><td><strong>Organismo</strong></td><td>Consejo General del Trabajo Social (CGTS)</td><td>No lo aprueba el Ministerio.</td></tr>
+<tr><td><strong>Valor central</strong></td><td>Dignidad de la persona</td><td class="ok">Base de todo. ★★★</td></tr>
+<tr><td><strong>Principios</strong></td><td>Dignidad · libertad · igualdad · solidaridad · integridad · justicia social</td><td>6 principios.</td></tr>
+<tr><td><strong>Esferas de relación</strong></td><td>Persona usuaria · institución · profesión · sociedad</td><td>Las mismas 4 responsabilidades. ★★★</td></tr>
+<tr><td><strong>Clave</strong></td><td>El código es una guía, no la ética entera. La ética exige reflexión activa.</td><td class="er">No es lo mismo código que ética. ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T15 -->
+<h2>T15 · FITS: Definición Global (2014) vs. Declaración de principios (2018) <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Dimensión</th><th>FITS/IASSW Definición Global (2014)</th><th>FITS Declaración de principios (2018)</th></tr></thead>
+<tbody>
+<tr><td><strong>Qué es</strong></td><td>Definición de la profesión</td><td>Declaración de principios éticos de la profesión</td></tr>
+<tr><td><strong>Contenido</strong></td><td>8 elementos: cambio social · desarrollo · cohesión · empoderamiento · liberación · justicia · DDHH · responsabilidad colectiva + diversidad</td><td>9 principios: dignidad · autonomía · participación · holístico · no discriminación · justicia · confidencialidad · integridad · competencia</td></tr>
+<tr><td><strong>Uso en examen</strong></td><td class="hl">Identificar los 8 elementos de la definición. ★★★</td><td class="hl">Identificar los 9 principios éticos. ★★★</td></tr>
+</tbody>
+</table>
+
+<!-- T16 -->
+<h2>T16 · Autores y aportaciones clave <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>Autor / fuente</th><th>Aportación principal</th><th>★</th></tr></thead>
+<tbody>
+<tr><td><strong>Banks, Sarah (2008)</strong></td><td>"Ética y valores en el Trabajo Social". Modelo deliberativo 7 pasos. Definición de dilema como dos males menores.</td><td class="hl">★★★</td></tr>
+<tr><td><strong>Reamer, F.G. (1990)</strong></td><td>"Ethical Dilemmas in Social Service". Jerarquía de principios: vida → autodeterminación → bienestar.</td><td class="hl">★★★</td></tr>
+<tr><td><strong>FITS / IASSW (2014)</strong></td><td>Definición global del Trabajo Social. 8 elementos clave.</td><td class="hl">★★★</td></tr>
+<tr><td><strong>FITS (2018)</strong></td><td>Declaración de principios éticos globales de la profesión. 9 principios.</td><td class="hl">★★★</td></tr>
+<tr><td><strong>CGTS (2012/2022)</strong></td><td>Código Deontológico del Trabajo Social en España.</td><td class="hl">★★★</td></tr>
+<tr><td><strong>Kant</strong></td><td>Ética deontológica. Persona como fin, nunca como medio. Imperativo categórico.</td><td>★★</td></tr>
+<tr><td><strong>Gilligan · Noddings</strong></td><td>Ética del cuidado. Relación con el otro concreto.</td><td>★★</td></tr>
+<tr><td><strong>LOPDGDD (LO 3/2018)</strong></td><td>Base legal de la confidencialidad en España.</td><td>★★</td></tr>
+</tbody>
+</table>
+
+<!-- T17 -->
+<h2>T17 · Las 12 trampas del examen <span class="s3">★★★</span></h2>
+<table class="tbl">
+<thead><tr><th>#</th><th>Afirmación incorrecta</th><th>Corrección exacta</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Un dilema ético tiene siempre una solución correcta.</td><td>Implica conflicto entre valores igualmente válidos. No hay respuesta automática. ★★★</td></tr>
+<tr><td>2</td><td>Banks define el dilema como elegir entre bien y mal.</td><td>Banks: elegir entre <strong>dos males menores</strong> o dos bienes incompatibles. ★★★</td></tr>
+<tr><td>3</td><td>La confidencialidad en TS es absoluta.</td><td>Puede ceder ante riesgo grave, obligación legal o consentimiento del usuario. ★★★</td></tr>
+<tr><td>4</td><td>La autodeterminación siempre prevalece sobre la protección.</td><td>Reamer: la <strong>vida tiene prioridad</strong> sobre la autodeterminación. ★★★</td></tr>
+<tr><td>5</td><td>La ética profesional del TS se reduce al Código Deontológico.</td><td>El código es una guía; la ética exige reflexión moral activa más amplia. ★★★</td></tr>
+<tr><td>6</td><td>El TS solo tiene responsabilidad ética con el usuario.</td><td>Cuatro responsabilidades: persona · institución · profesión · sociedad. ★★★</td></tr>
+<tr><td>7</td><td>En un dilema ético, la opción elegida no tiene coste.</td><td>Toda decisión en un dilema implica algún coste ético. ★★★</td></tr>
+<tr><td>8</td><td>La justicia social no es un principio ético del TS, es político.</td><td>Es principio central del Código Deontológico y de FITS (2014 y 2018). ★★★</td></tr>
+<tr><td>9</td><td>El Código Deontológico del TS español es de 2015.</td><td>Es de <strong>2012</strong>, actualizado en <strong>2022</strong>. CGTS. ★★★</td></tr>
+<tr><td>10</td><td>Los dilemas éticos se resuelven con la aplicación de la ley.</td><td>La ley es un recurso más; los dilemas requieren deliberación ética argumentada. ★★★</td></tr>
+<tr><td>11</td><td>La definición FITS (2014) dice "integración y adaptación social".</td><td>Dice <strong>empoderamiento y liberación</strong>. ★★★</td></tr>
+<tr><td>12</td><td>Reamer establece que la autodeterminación es la prioridad máxima.</td><td>La prioridad máxima de Reamer es la <strong>vida, salud y seguridad</strong>. ★★★</td></tr>
+</tbody>
+</table>
+
+</div>
+</body>
+</html>
