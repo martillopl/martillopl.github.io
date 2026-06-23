@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>2_esquema_resumen_t08.html</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f1f5f9;--surface:#fff;--border:#e2e8f0;
+      --text:#1f2937;--muted:#64748b;
+      --azul:#1d4ed8;--azul-l:#dbeafe;
+      --verde:#15803d;--verde-l:#dcfce7;
+      --naranja:#b45309;--naranja-l:#fef3c7;
+      --rojo:#b91c1c;--rojo-l:#fee2e2;
+      --violeta:#6d28d9;--violeta-l:#ede9fe;
+      --teal:#0f766e;--teal-l:#ccfbf1;
+      --indigo:#3730a3;--indigo-l:#e0e7ff;
+      --gris:#374151;
+      --radius:8px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Inter',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;padding:24px;}
+    h1{font-size:21px;color:#0f172a;border-bottom:3px solid var(--azul);padding-bottom:8px;margin-bottom:20px;}
+    h2{font-size:14px;color:#fff;margin:0;padding:8px 13px;border-radius:var(--radius) var(--radius) 0 0;font-weight:700;letter-spacing:.3px;}
+    .bloque{background:var(--surface);border-radius:var(--radius);box-shadow:0 2px 6px rgba(0,0,0,.09);margin-bottom:20px;overflow:hidden;}
+    .body{padding:14px 16px;}
+    .h-azul{background:var(--azul);}
+    .h-verde{background:var(--verde);}
+    .h-naranja{background:var(--naranja);}
+    .h-rojo{background:var(--rojo);}
+    .h-violeta{background:var(--violeta);}
+    .h-teal{background:var(--teal);}
+    .h-indigo{background:var(--indigo);}
+    .h-gris{background:var(--gris);}
+    ul{margin:4px 0 8px 18px;}li{margin-bottom:4px;font-size:14px;}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+    .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;}
+    .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+    .card{background:#f8fafc;border:1px solid var(--border);border-radius:var(--radius);padding:10px 12px;font-size:13px;}
+    .card-c{text-align:center;}
+    .card-title{font-weight:700;font-size:13px;margin-bottom:5px;}
+    .pill{display:inline-block;border-radius:20px;padding:2px 10px;font-size:12px;font-weight:700;margin:2px 3px 2px 0;}
+    .pill-a{background:var(--azul-l);color:var(--azul);}
+    .pill-v{background:var(--verde-l);color:var(--verde);}
+    .pill-n{background:var(--naranja-l);color:#92400e;}
+    .pill-r{background:var(--rojo-l);color:var(--rojo);}
+    .pill-p{background:var(--violeta-l);color:var(--violeta);}
+    .pill-t{background:var(--teal-l);color:var(--teal);}
+    .pill-i{background:var(--indigo-l);color:var(--indigo);}
+    .trampa{background:#fef2f2;border:1px solid #fca5a5;border-radius:var(--radius);padding:8px 12px;font-size:13px;margin-top:8px;}
+    .nota{background:#eff6ff;border:1px solid #bfdbfe;border-radius:var(--radius);padding:8px 12px;font-size:13px;margin-top:8px;}
+    .verde-box{background:#f0fdf4;border:1px solid #86efac;border-radius:var(--radius);padding:8px 12px;font-size:13px;margin-top:8px;}
+    .amarillo{background:#fefce8;border:1px solid #fde047;border-radius:var(--radius);padding:8px 12px;font-size:13px;margin-top:8px;}
+    .num{display:inline-flex;align-items:center;justify-content:center;background:var(--azul);color:#fff;border-radius:50%;width:22px;height:22px;font-size:12px;font-weight:700;flex-shrink:0;margin-right:6px;}
+    .ok{color:var(--verde);font-weight:700;}
+    .no{color:var(--rojo);font-weight:700;}
+    .exam{color:var(--rojo);font-weight:700;}
+    table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+    th,td{border:1px solid var(--border);padding:7px 9px;vertical-align:top;}
+    th{background:#f8fafc;font-weight:700;}
+    tr:nth-child(even){background:#f8fafc;}
+    .big{font-size:30px;font-weight:800;display:block;text-align:center;}
+    .divider{border:none;border-top:1px solid var(--border);margin:10px 0;}
+    strong{font-weight:700;}
+    @media(max-width:700px){.grid2,.grid3,.grid4{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 8 · Ley 39/2015 · Los actos administrativos<br>
+<span style="font-size:13px;font-weight:400;color:#475569;">Concepto · Clases · Elementos · Requisitos · Eficacia · Notificación · Publicación · Arts. 34–46 LPAC</span></h1>
+
+<!-- ══════════ BLOQUE 1: CONCEPTO ══════════ -->
+<div class="bloque">
+  <h2 class="h-azul">📋 Concepto de acto administrativo · Art. 34.1</h2>
+  <div class="body">
+    <div class="grid2">
+      <div>
+        <strong>Definición doctrinal</strong>
+        <div class="card" style="margin-top:6px;">
+          Declaración de <strong>voluntad, juicio, conocimiento o deseo</strong> dictada por un órgano de la Administración en el ejercicio de una <strong>potestad administrativa</strong>, con efectos jurídicos sobre derechos e intereses.
+        </div>
+        <ul style="margin-top:10px;">
+          <li><strong>Se dictan:</strong> de oficio o a instancia del interesado.</li>
+          <li><strong>Por:</strong> el órgano competente.</li>
+          <li><strong>Ajustándose:</strong> a los requisitos y al procedimiento establecidos.</li>
+        </ul>
+      </div>
+      <div>
+        <strong>Dos privilegios esenciales</strong>
+        <div class="grid2" style="gap:8px;margin-top:6px;">
+          <div class="card card-c" style="background:var(--azul-l);border-color:#93c5fd;">
+            <strong style="color:var(--azul);">Presunción de validez</strong><br>
+            <span style="font-size:12px;">Art. 39.1 · Se presume válido desde el dictado</span>
+          </div>
+          <div class="card card-c" style="background:var(--verde-l);border-color:#86efac;">
+            <strong style="color:var(--verde);">Ejecutividad</strong><br>
+            <span style="font-size:12px;">Art. 38 · Se puede ejecutar sin acudir al juez</span>
+          </div>
+        </div>
+        <div class="trampa" style="margin-top:10px;">⚠️ Validez ≠ Eficacia. El acto puede ser válido pero ineficaz (no notificado). O eficaz pero luego declarado inválido.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ BLOQUE 2: CLASES ══════════ -->
+<div class="bloque">
+  <h2 class="h-indigo">🗂️ Clases de actos administrativos</h2>
+  <div class="body">
+    <div class="grid3">
+      <div class="card">
+        <div class="card-title">Por posición en el procedimiento</div>
+        <span class="pill pill-a">Trámite</span> <span class="pill pill-v">Definitivos</span>
+        <p style="font-size:12px;margin-top:5px;">Solo los definitivos y los de <strong>trámite cualificados</strong> son directamente impugnables.</p>
+        <p style="font-size:12px;margin-top:4px;color:#6b7280;">Trámite cualificado: decide el fondo, produce indefensión o perjuicio irreparable.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Por sus efectos sobre el interesado</div>
+        <span class="pill pill-v">Favorables</span> <span class="pill pill-r">De gravamen</span>
+        <p style="font-size:12px;margin-top:5px;">Afecta al régimen de <strong>revocación</strong>: los favorables no pueden revocarse libremente.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Por sus destinatarios</div>
+        <span class="pill pill-i">Singulares</span> <span class="pill pill-n">Generales</span>
+        <p style="font-size:12px;margin-top:5px;"><strong>Singulares</strong> → notificación individual.<br>
+        <strong>Generales</strong> (pluralidad indeterminada) → publicación.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Por su contenido</div>
+        <span class="pill pill-t">Declarativos</span> <span class="pill pill-p">Constitutivos</span>
+        <p style="font-size:12px;margin-top:5px;">Declarativos: constatan un hecho preexistente.<br>Constitutivos: crean, modifican o extinguen relaciones jurídicas.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Por la vinculación de la AAPP</div>
+        <span class="pill pill-a">Reglados</span> <span class="pill pill-n">Discrecionales</span>
+        <p style="font-size:12px;margin-top:5px;">Reglados: todos los elementos los determina la ley.<br>Discrecionales: la AAPP tiene margen de apreciación; siempre controlables.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Por su ejecutividad directa</div>
+        <span class="pill pill-v">Ejecutivos</span> <span class="pill pill-r">No ejecutivos</span>
+        <p style="font-size:12px;margin-top:5px;">No ejecutivos: cuando la norma lo establece o necesitan aprobación superior (art. 38).</p>
+      </div>
+    </div>
+    <div class="trampa" style="margin-top:10px;">⚠️ <strong>Los actos de trámite NO son impugnables</strong> salvo que sean «cualificados». Identificar cuáles son cualificados es pregunta frecuente de examen.</div>
+  </div>
+</div>
+
+<!-- ══════════ BLOQUE 3: ELEMENTOS ══════════ -->
+<div class="bloque">
+  <h2 class="h-teal">🔩 Elementos del acto administrativo</h2>
+  <div class="body">
+    <div class="grid3">
+      <div class="card">
+        <div class="card-title">🧑‍💼 Subjetivos</div>
+        <ul>
+          <li><strong>Órgano competente</strong> (objetiva, territorial, jerárquica).</li>
+          <li>Incompetencia material o territorial → nulidad de pleno derecho (art. 47.1.b).</li>
+          <li>Incompetencia jerárquica → anulabilidad (art. 48).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title">📄 Objetivos (contenido)</div>
+        <ul>
+          <li>Contenido <strong>lícito, determinado o determinable y posible</strong>.</li>
+          <li>Adecuado a los fines del acto.</li>
+          <li>Puede llevar cláusulas accesorias (condición, término, modo) solo si el ordenamiento lo permite.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title">📋 Formales</div>
+        <ul>
+          <li>Forma: <strong>escrita, electrónica</strong> como regla.</li>
+          <li>Forma verbal: excepcional; debe dejar constancia escrita.</li>
+          <li>Motivación: cuando sea obligatoria (art. 35), con referencia a hechos y fundamentos de derecho.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ BLOQUE 4: REQUISITOS ══════════ -->
+<div class="bloque">
+  <h2 class="h-violeta">⚙️ Requisitos de los actos administrativos · Arts. 34–37</h2>
+  <div class="body">
+    <div class="grid2">
+      <div>
+        <strong>Art. 35 — Motivación: supuestos obligatorios</strong>
+        <div class="card" style="margin-top:6px;">
+          <table style="margin:0;">
+            <tr><th>Letra</th><th>Supuesto de motivación obligatoria</th></tr>
+            <tr><td><strong>a)</strong></td><td>Actos que limiten derechos subjetivos o intereses legítimos.</td></tr>
+            <tr><td><strong>b)</strong></td><td>Revisiones de oficio, recursos administrativos, arbitrajes e inadmisiones.</td></tr>
+            <tr><td><strong>c)</strong></td><td>Separación del criterio de actuaciones previas o del dictamen consultivo.</td></tr>
+            <tr><td><strong>d)</strong></td><td>Suspensión, reducción de plazos y otros actos de trámite cualificados.</td></tr>
+            <tr><td><strong>e)</strong></td><td>Procedimientos de oposición/concurrencia competitiva (selección personal, concesiones…).</td></tr>
+            <tr><td><strong>f)</strong></td><td>Actos discrecionales.</td></tr>
+            <tr><td><strong>g)</strong></td><td>Actos que deban serlo por disposición legal o reglamentaria.</td></tr>
+          </table>
+        </div>
+        <div class="amarillo" style="margin-top:8px;">⚡ La motivación puede hacerse <strong>por referencia</strong> a informes o propuestas incorporados al expediente.</div>
+        <div class="trampa" style="margin-top:6px;">⚠️ Falta de motivación obligatoria → <span style="font-weight:700;color:var(--naranja);">ANULABILIDAD</span> (art. 48), no nulidad de pleno derecho.</div>
+      </div>
+      <div>
+        <strong>Arts. 34, 36 y 37 — Resumen</strong>
+        <div class="card" style="margin-top:6px;">
+          <div class="card-title">Art. 34 — Producción y contenido</div>
+          <ul>
+            <li>Órgano competente · Procedimiento establecido.</li>
+            <li>Contenido: lícito, determinado, posible, adecuado.</li>
+            <li>Cláusulas accesorias: solo si autorizadas o compatibles.</li>
+          </ul>
+        </div>
+        <div class="card" style="margin-top:8px;">
+          <div class="card-title">Art. 36 — Forma</div>
+          <ul>
+            <li>Regla: <strong>escrita, electrónica</strong>.</li>
+            <li>Excepción: verbal cuando sea necesario + constancia escrita.</li>
+          </ul>
+        </div>
+        <div class="card" style="margin-top:8px;">
+          <div class="card-title">Art. 37 — Motivación por referencia</div>
+          <ul>
+            <li>Válida si los informes o propuestas constan en el expediente.</li>
+            <li>No es necesario transcribir el razonamiento completo.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ BLOQUE 5: EFICACIA ══════════ -->
+<div class="bloque">
+  <h2 class="h-verde">✅ Eficacia de los actos administrativos · Arts. 38–39</h2>
+  <div class="body">
+    <div class="grid3">
+      <div class="card">
+        <div class="card-title">Art. 38 — Ejecutividad</div>
+        <p style="font-size:13px;">Los actos son <span class="ok">ejecutivos</span> salvo que:<br>
+        (a) Una disposición establezca lo contrario.<br>
+        (b) Necesiten aprobación o autorización superior.</p>
+        <div class="nota" style="margin-top:6px;">La AAPP ejecuta sus propios actos sin acudir al juez = <strong>autotutela ejecutiva</strong>.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Art. 39.1 — Presunción de validez y efectos</div>
+        <p style="font-size:13px;">Los actos se presumen <strong>válidos</strong> y producen efectos <strong>desde la fecha en que se dicten</strong>, salvo que en ellos se disponga otra cosa.</p>
+        <div class="trampa" style="margin-top:6px;">⚠️ Notificación = requisito de <strong>eficacia</strong>, no de validez.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Art. 39.2 — Demora de la eficacia</div>
+        <p style="font-size:13px;">La eficacia queda <strong>demorada</strong> cuando:</p>
+        <ul>
+          <li>Así lo exija el <strong>contenido del acto</strong>.</li>
+          <li>Esté supeditada a <strong>notificación, publicación o aprobación superior</strong>.</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="divider">
+    <strong>Art. 39.3 — Eficacia retroactiva (EXCEPCIONAL)</strong>
+    <div class="grid2" style="gap:10px;margin-top:8px;">
+      <div class="card" style="background:var(--verde-l);border-color:#86efac;">
+        <div class="card-title" style="color:var(--verde);">✅ Caso 1 permitido</div>
+        <p style="font-size:13px;">Actos dictados en <strong>sustitución de actos anulados</strong>.</p>
+      </div>
+      <div class="card" style="background:var(--verde-l);border-color:#86efac;">
+        <div class="card-title" style="color:var(--verde);">✅ Caso 2 permitido</div>
+        <p style="font-size:13px;">Actos que produzcan <strong>efectos favorables al interesado</strong>, si:<br>
+        — Los hechos ya existían en esa fecha.<br>
+        — No se lesionan derechos de terceros.</p>
+      </div>
+    </div>
+    <div class="trampa" style="margin-top:8px;">⚠️ <strong>Nunca retroactividad</strong> en actos desfavorables. Ni en actos favorables si los hechos no existían. Solo estos 2 casos.</div>
+  </div>
+</div>
+
+<!-- ══════════ BLOQUE 6: NOTIFICACION ARTS 40-43 ══════════ -->
+<div class="bloque">
+  <h2 class="h-naranja">📬 Notificación · Arts. 40–43</h2>
+  <div class="body">
+    <div class="grid2">
+      <div>
+        <strong>Art. 40 — Obligación y contenido mínimo</strong>
+        <div class="card" style="margin-top:6px;">
+          <table style="margin:0;">
+            <tr><th colspan="2" style="text-align:center;">Plazo para notificar: <span style="color:var(--rojo);">10 días</span> desde el dictado</th></tr>
+            <tr><td>✅</td><td>Texto <strong>íntegro</strong> de la resolución</td></tr>
+            <tr><td>✅</td><td>Indicación de si <strong>pone fin o no a la vía administrativa</strong></td></tr>
+            <tr><td>✅</td><td>Expresión de los <strong>recursos procedentes</strong> (órgano + plazo)</td></tr>
+          </table>
+        </div>
+        <div class="trampa" style="margin-top:8px;">⚠️ Si faltan los recursos o la indicación de vía:<br>
+        — Reposición: <strong>3 meses</strong> (en vez de 1 mes).<br>
+        — Contencioso: <strong>6 meses</strong> (en vez de 2 meses).
+        </div>
+
+        <strong style="display:block;margin-top:12px;">Art. 42 — Notificación en papel</strong>
+        <ul style="margin-top:6px;">
+          <li>En domicilio o lugar señalado por el interesado.</li>
+          <li>Si no está: aviso → segunda entrega en <strong>3 días</strong>.</li>
+          <li><strong>Rechazo = notificación practicada</strong>.</li>
+        </ul>
+      </div>
+      <div>
+        <strong>Art. 41 — Condiciones generales</strong>
+        <div class="card card-c" style="background:var(--azul-l);border-color:#93c5fd;margin-top:6px;margin-bottom:8px;">
+          <strong style="color:var(--azul);">Preferentemente electrónica</strong><br>
+          <span style="font-size:12px;">Obligatoriamente si el interesado está obligado a relacionarse electrónicamente (art. 14: personas jurídicas, entidades sin personalidad, profesionales colegiados…)</span>
+        </div>
+        <strong>Art. 43 — Notificación electrónica</strong>
+        <div class="card" style="margin-top:6px;">
+          <div class="grid2" style="gap:8px;">
+            <div style="background:#f0fdf4;border:1px solid #86efac;border-radius:6px;padding:8px;text-align:center;font-size:12px;">
+              <strong>Comparecencia</strong><br>en sede electrónica
+            </div>
+            <div style="background:#eff6ff;border:1px solid #93c5fd;border-radius:6px;padding:8px;text-align:center;font-size:12px;">
+              <strong>DEH</strong><br>Dirección Electrónica Habilitada única
+            </div>
+          </div>
+        </div>
+        <div class="card card-c" style="margin-top:8px;background:var(--rojo-l);border-color:#fca5a5;">
+          <span class="big" style="color:var(--rojo);font-size:26px;">10</span>
+          <strong style="color:var(--rojo);">días naturales</strong> sin acceso<br>
+          <span style="font-size:12px;">= notificación considerada <strong>RECHAZADA</strong><br>Empieza el plazo para recurrir</span>
+        </div>
+        <div class="trampa" style="margin-top:8px;">⚠️ <strong>10 días NATURALES</strong> (no hábiles) sin acceder a la DEH o sede = rechazo.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ BLOQUE 7: NOTIFICACION INFRUCTUOSA + PUBLICACION ══════════ -->
+<div class="bloque">
+  <h2 class="h-rojo">📢 Notificación infructuosa (Art. 44) y Publicación (Arts. 45–46)</h2>
+  <div class="body">
+    <div class="grid3">
+      <div class="card">
+        <div class="card-title">Art. 44 — Notificación infructuosa</div>
+        <p style="font-size:13px;">Cuando no sea posible notificar por medios ordinarios (domicilio desconocido, paradero ignorado, intentos fallidos):</p>
+        <ul>
+          <li>Primero: boletín oficial CA / EL + sede electrónica del organismo.</li>
+          <li>Después: <strong>BOE</strong> (tablón edictos electrónico).</li>
+          <li>No se publica el texto íntegro, solo el aviso de que existe el acto.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title">Art. 45 — Publicación (cuándo suple/complementa)</div>
+        <ul>
+          <li>La norma del procedimiento así lo establezca.</li>
+          <li>Razones de <strong>interés público</strong>.</li>
+          <li>Pluralidad <strong>indeterminada</strong> de destinatarios.</li>
+          <li>Lugar de notificación <strong>desconocido</strong>.</li>
+          <li>Actos en procedimientos de <strong>selección de personal o concurrencia competitiva</strong>.</li>
+        </ul>
+        <div class="nota" style="margin-top:6px;">La publicación debe contener los mismos elementos que la notificación: texto íntegro, recursos, plazos.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Art. 46 — Indicación en vez de publicación íntegra</div>
+        <p style="font-size:13px;">Si publicar el contenido íntegro <strong>lesionara derechos o intereses legítimos</strong> (ej. datos personales sensibles):</p>
+        <ul>
+          <li>Solo se publica una <strong>somera indicación</strong> del contenido.</li>
+          <li>Se indica el lugar donde comparecer para conocer el texto íntegro.</li>
+        </ul>
+        <div class="verde-box" style="margin-top:6px;">✅ Garantía de privacidad: el interesado puede conocer el contenido íntegro, pero los datos no se exponen en el diario oficial.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ BLOQUE 8: TABLA RESUMEN FINAL ══════════ -->
+<div class="bloque">
+  <h2 class="h-gris">🧠 Tabla-resumen: artículo · figura · regla clave · trampa de examen</h2>
+  <div class="body">
+    <table>
+      <tr>
+        <th>Art.</th>
+        <th>Figura</th>
+        <th>Regla clave</th>
+        <th>Trampa típica de examen</th>
+      </tr>
+      <tr>
+        <td><strong>34</strong></td>
+        <td>Producción y contenido</td>
+        <td>Órgano competente; contenido lícito, determinado, posible y adecuado. Cláusulas accesorias solo si están autorizadas.</td>
+        <td>Creer que cualquier cláusula accesoria es válida; solo lo son si el ordenamiento las permite.</td>
+      </tr>
+      <tr>
+        <td><strong>35</strong></td>
+        <td>Motivación</td>
+        <td>Obligatoria en 7 supuestos tasados (a–g). Por referencia es válida. Su falta → anulabilidad.</td>
+        <td>Creer que la falta de motivación es nulidad de pleno derecho (art. 47). Es anulabilidad (art. 48).</td>
+      </tr>
+      <tr>
+        <td><strong>36</strong></td>
+        <td>Forma</td>
+        <td>Escrita electrónica como regla. Verbal solo cuando sea necesario, con constancia escrita.</td>
+        <td>Creer que la forma verbal tiene los mismos efectos sin necesidad de constancia escrita.</td>
+      </tr>
+      <tr>
+        <td><strong>38</strong></td>
+        <td>Ejecutividad</td>
+        <td>Los actos son ejecutivos salvo norma contraria o necesidad de aprobación superior.</td>
+        <td>Confundir ejecutividad con validez. Son conceptos independientes.</td>
+      </tr>
+      <tr>
+        <td><strong>39.1</strong></td>
+        <td>Presunción de validez y efectos</td>
+        <td>Válidos y eficaces desde el dictado, salvo disposición en contrario.</td>
+        <td>Creer que los efectos comienzan con la notificación (la notificación condiciona la eficacia, pero el acto ya es válido desde antes).</td>
+      </tr>
+      <tr>
+        <td><strong>39.2</strong></td>
+        <td>Demora de la eficacia</td>
+        <td>La eficacia se demora cuando lo exige el contenido del acto o depende de notificación, publicación o aprobación superior.</td>
+        <td>Creer que la eficacia siempre coincide con el dictado del acto.</td>
+      </tr>
+      <tr>
+        <td><strong>39.3</strong></td>
+        <td>Eficacia retroactiva</td>
+        <td>Excepcional. Solo en 2 casos: sustitución de acto anulado + efectos favorables si los hechos ya existían y sin lesión a terceros.</td>
+        <td>Aplicar retroactividad a actos desfavorables o a actos favorables cuando los hechos no existían.</td>
+      </tr>
+      <tr>
+        <td><strong>40</strong></td>
+        <td>Obligación y contenido de la notificación</td>
+        <td>Plazo: 10 días desde el dictado. Contenido: texto íntegro + si pone fin a la vía + recursos procedentes.</td>
+        <td>Si falta el contenido mínimo: el plazo de recurso no es el ordinario sino 3 meses (reposición) o 6 meses (contencioso).</td>
+      </tr>
+      <tr>
+        <td><strong>41</strong></td>
+        <td>Condiciones generales de notificación</td>
+        <td>Preferentemente electrónica. Obligatoriamente si el interesado está obligado a relacionarse electrónicamente.</td>
+        <td>Creer que siempre es obligatoria la forma electrónica para cualquier ciudadano.</td>
+      </tr>
+      <tr>
+        <td><strong>42</strong></td>
+        <td>Notificación en papel</td>
+        <td>Domicilio/lugar señalado. Segunda entrega en 3 días. Rechazo = practicada.</td>
+        <td>Creer que el rechazo anula o suspende los efectos de la notificación.</td>
+      </tr>
+      <tr>
+        <td><strong>43</strong></td>
+        <td>Notificación electrónica</td>
+        <td>Sede electrónica o DEH. 10 días naturales sin acceso = rechazada = practicada.</td>
+        <td>Creer que son 10 días hábiles. Son NATURALES.</td>
+      </tr>
+      <tr>
+        <td><strong>44</strong></td>
+        <td>Notificación infructuosa</td>
+        <td>Anuncio en BOE (previo en CA/EL y sede electrónica). No se publica texto íntegro, solo aviso.</td>
+        <td>Creer que se publica el texto íntegro del acto en el BOE.</td>
+      </tr>
+      <tr>
+        <td><strong>45</strong></td>
+        <td>Publicación</td>
+        <td>Suple o complementa la notificación cuando la norma lo establezca, interés público, pluralidad indeterminada o concurrencia competitiva.</td>
+        <td>Creer que la publicación siempre sustituye a la notificación; solo en los supuestos tasados.</td>
+      </tr>
+      <tr>
+        <td><strong>46</strong></td>
+        <td>Indicación de notificaciones y publicaciones</td>
+        <td>Si publicar el íntegro lesionaría derechos: solo indicación somera + lugar de comparecencia.</td>
+        <td>Confundir con la publicación ordinaria del art. 45.</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+=======================================================
+TEMA 5 · LEY 39/2015 (LPAC) · NORMAS GENERALES DE ACTUACIÓN
+TÍTULO II, CAPÍTULO I · ARTS. 13–19 y 28
+PUNTOS QUE SUELEN APARECER EN EXAMEN + ARTÍCULOS CLAVE
+=======================================================
+
+=== ESTRUCTURA DEL CAPÍTULO I (ARTS. 13–21) ===
+Art. 13  → Derechos de las personas en sus relaciones con las AAPP.
+Art. 14  → Derecho y obligación de relacionarse electrónicamente.
+Art. 15  → Lengua de los procedimientos.
+Art. 16  → Registros.
+Art. 17  → Archivo de documentos.
+Art. 18  → Colaboración de las personas.
+Art. 19  → Comparecencia de las personas.
+Art. 20  → Responsabilidad de la tramitación.
+Art. 21  → Obligación de resolver.
+(Arts. 22–36 = instrucción del procedimiento)
+Art. 28  → Documentos aportados por los interesados al procedimiento.
+
+=== DERECHOS DE LAS PERSONAS (Art. 13) ===
+Los más preguntados (distinguirlos del art. 53):
+  a) Comunicarse por punto de acceso general electrónico y usar lenguas cooficiales.
+  b) Usar medios electrónicos e información/orientación sobre requisitos.
+  c) Ser asistidos en el uso de medios electrónicos (art. 12).
+  d) Conocer el estado de tramitación e identificar a los responsables; obtener copias.
+  e) No aportar datos o documentos en poder de las AAPP (salvo oposición del interesado).
+  f) Protección de datos de carácter personal.
+  g) Acceso a la información pública conforme a la Ley de transparencia.
+  h) Ser tratados con respeto y deferencia.
+  i) Exigir responsabilidades a las AAPP y a su personal.
+  j) Obtener y utilizar medios de identificación y firma electrónica.
+  k) Cualesquiera otros reconocidos por la Constitución y las leyes.
+
+★ TRAMPA: Art. 13 = cualquier persona con capacidad de obrar en RELACIONES GENERALES.
+          Art. 53 = el interesado en el seno de un PROCEDIMIENTO CONCRETO.
+  Son listas distintas, con titulares distintos.
+
+=== DERECHO Y OBLIGACIÓN DE RELACIONARSE ELECTRÓNICAMENTE (Art. 14) ===
+PERSONAS FÍSICAS: opción libre (pueden elegir electrónico o presencial en cualquier momento).
+OBLIGADOS a relacionarse electrónicamente SIEMPRE (art. 14.2):
+  a) Personas jurídicas.
+  b) Entidades sin personalidad jurídica.
+  c) Profesionales con colegiación obligatoria para trámites de su actividad profesional
+     (en todo caso: notarios y registradores de la propiedad y mercantiles).
+  d) Quienes representen a un interesado obligado a relacionarse electrónicamente.
+  e) Empleados de las AAPP para trámites por razón de su condición de empleado público,
+     en la forma que determine reglamentariamente cada Administración.
+HABILITACIÓN REGLAMENTARIA (art. 14.3):
+  Las AAPP pueden extender la obligación a personas físicas para procedimientos concretos,
+  siempre que dispongan de acceso y disponibilidad de los medios tecnológicos necesarios.
+★ TRAMPA: Los empleados públicos no están obligados en todos sus trámites; solo en los que
+  realizan "por razón de su condición de empleado público". En sus actuaciones como
+  ciudadanos particulares, rigen las reglas generales del art. 14.1.
+
+=== LENGUA DE LOS PROCEDIMIENTOS (Art. 15) ===
+ADMINISTRACIÓN GENERAL DEL ESTADO (AGE):
+  - Lengua: CASTELLANO como regla general.
+  - Si el órgano tiene sede en territorio de CCAA con lengua cooficial:
+      · El interesado PUEDE usar la lengua cooficial.
+      · Si hay UN interesado → el procedimiento SE TRAMITA en la lengua elegida.
+      · Si hay VARIOS interesados y DISCREPAN → el procedimiento se tramita en CASTELLANO.
+        Pero los documentos/testimonios que requieran los interesados se expiden
+        en la lengua elegida por cada uno.
+CCAA Y ENTIDADES LOCALES:
+  - El uso de la lengua se ajusta a la LEGISLACIÓN AUTONÓMICA correspondiente.
+★ TRAMPA: No toda sede de la AGE puede tramitar en lengua cooficial; solo las que tienen
+  sede en el territorio de esa CCAA.
+★ TRAMPA: En caso de discrepancia entre interesados sobre la lengua → castellano,
+  PERO los documentos que cada interesado solicite se expiden en su lengua elegida.
+
+=== REGISTROS (Art. 16) ===
+REGISTRO ELECTRÓNICO GENERAL:
+  - Cada Administración dispone de uno. Asiento de todo documento presentado.
+  - Los documentos en papel deben ser digitalizados (el interesado conserva el original
+    si la normativa así lo prevé).
+¿DÓNDE PUEDE PRESENTARSE LA DOCUMENTACIÓN? (Art. 16.4, 5 vías):
+  a) Registro electrónico de la Administración u Organismo al que se dirigen,
+     o de cualquier otra entidad del art. 2.1.
+  b) Oficinas de Correos, en la forma que reglamentariamente se establezca.
+  c) Representaciones diplomáticas u oficinas consulares de España en el extranjero.
+  d) Oficinas de asistencia en materia de registros.
+  e) Cualquier otra que establezcan las disposiciones vigentes.
+★ Presentación en Correos: la fecha de presentación es la del sello de Correos (deposito).
+★ TRAMPA: No se puede presentar en un registro de una Administración diferente a la que va
+  dirigido en papel; sí electrónicamente (cualquier registro electrónico del art. 2.1).
+
+=== ARCHIVO DE DOCUMENTOS (Art. 17) ===
+  - Las AAPP mantienen un ARCHIVO ELECTRÓNICO ÚNICO de los documentos electrónicos
+    de procedimientos finalizados.
+  - Condiciones del archivo: autenticidad, integridad e inalterabilidad; disponibilidad
+    y acceso; conservación; recuperabilidad.
+  - Los soportes físicos deben contar con medidas de seguridad adecuadas.
+  - Los documentos en papel no digitalizados se conservan conforme a la legislación de
+    patrimonio histórico.
+
+=== COLABORACIÓN DE LAS PERSONAS (Art. 18) ===
+  - Los ciudadanos están OBLIGADOS a colaborar con la Administración en los términos
+    previstos por la LEY.
+  - Las AAPP pueden recabar de cualquier persona (física/jurídica, pública/privada) los
+    datos, informes, antecedentes y justificantes necesarios para el ejercicio de sus
+    competencias.
+  - La colaboración es gratuita salvo que la ley prevea otro régimen.
+  - El incumplimiento puede ser sancionable si la ley lo prevé.
+★ Distinción: la colaboración del art. 18 es externa (ciudadanos con la Administración);
+  no confundirla con la colaboración interadministrativa de la Ley 40/2015.
+
+=== COMPARECENCIA DE LAS PERSONAS (Art. 19) ===
+REGLA GENERAL: La comparecencia ante las oficinas públicas es VOLUNTARIA.
+  → Solo es OBLIGATORIA cuando así lo prevea expresamente una NORMA CON RANGO DE LEY.
+CUANDO LA ADMINISTRACIÓN SOLICITE COMPARECENCIA:
+  - La citación debe ser MOTIVADA.
+  - Debe indicar: lugar y hora, objeto de la comparecencia, efectos de la no
+    comparecencia y si puede realizarse por medios electrónicos o en sede electrónica.
+  - La no comparecencia sin causa justificada puede generar responsabilidad.
+★ TRAMPA: Un reglamento NO puede imponer la obligación de comparecer; solo una Ley.
+
+=== DOCUMENTOS APORTADOS POR LOS INTERESADOS (Art. 28) ===
+  Art. 28.1 — OBLIGACIÓN DEL INTERESADO: aportar los datos/documentos exigidos
+    por la normativa. Pueden además aportar voluntariamente cualquier otro.
+  Art. 28.2 — DERECHO A NO APORTAR LO QUE YA TIENE LA ADMINISTRACIÓN:
+    - Documentos en poder de la Administración actuante o elaborados por otra AAPP:
+      el interesado no tiene que aportarlos. La AAPP los consulta o recaba salvo
+      oposición del interesado.
+    - EXCEPCIÓN A LA OPOSICIÓN: no cabe oponerse cuando la aportación se exige
+      en el marco de potestades SANCIONADORAS o de INSPECCIÓN.
+    (Redacción vigente desde la LO 3/2018, de 5 de diciembre, LOPDGDD).
+  Art. 28.3 — PROHIBICIÓN DE EXIGIR ORIGINALES: las AAPP NO pueden exigir documentos
+    originales salvo que una norma reguladora lo establezca EXCEPCIONALMENTE.
+    Si la AAPP no puede recabar el documento, puede solicitar de nuevo al interesado.
+  Art. 28.4 — SI SE EXIGE ORIGINAL EN PAPEL: el interesado obtiene una COPIA AUTÉNTICA
+    (art. 27) antes de su presentación electrónica. La copia refleja esta circunstancia.
+  Art. 28.5 — COTEJO DE COPIAS: excepcionalmente, de forma MOTIVADA, la AAPP puede
+    solicitar el cotejo de las copias aportadas si la relevancia del documento lo exige
+    o existen dudas sobre la calidad de la copia.
+  Art. 28.6 — EFICACIA DE LAS COPIAS: eficacia EXCLUSIVAMENTE en el ámbito de la
+    actividad de las AAPP (no surten efectos fuera).
+  Art. 28.7 — RESPONSABILIDAD: los interesados se responsabilizan de la VERACIDAD de
+    los documentos presentados (responsabilidad administrativa y/o penal).
+
+★ TRAMPA: El derecho a no aportar documentos en poder de la AAPP (art. 28.2) NO es
+  absoluto: no aplica en procedimientos sancionadores o de inspección.
+★ TRAMPA: Las copias aportadas tienen eficacia "exclusivamente en el ámbito de la
+  actividad de las AAPP", no son documentos válidos fuera de ese ámbito.
+★ TRAMPA: La LO 3/2018 (LOPDGDD) modificó los apartados 2 y 3 del art. 28 LPAC.
+
+=== ARTÍCULOS MÁS PREGUNTADOS EN EXAMEN ===
+Art. 13  → Derechos (distinguir del art. 53).
+Art. 14  → Obligados electrónicos: los 5 sujetos del art. 14.2; las personas físicas pueden elegir.
+Art. 15  → Lengua AGE: castellano; cooficial en sede en CCAA; discrepancia → castellano.
+Art. 16  → Las 5 vías de presentación de documentos; fecha de Correos.
+Art. 17  → Archivo electrónico único; condiciones de conservación.
+Art. 18  → Colaboración: obligatoria en los términos de la ley; recabar de cualquier sujeto.
+Art. 19  → Comparecencia: voluntaria salvo Ley; citación motivada; puede ser electrónica.
+Art. 27  → Copias auténticas (imprescindible para entender el art. 28).
+Art. 28  → Documentos: obligación de aportar; derecho a no aportar lo que tiene la AAPP;
+           excepción sancionadora/inspectora; prohibición de originales; cotejo motivado;
+           responsabilidad por veracidad; LO 3/2018 modifica apartados 2 y 3.
+
+=======================================================

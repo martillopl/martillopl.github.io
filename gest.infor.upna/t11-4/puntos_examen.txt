@@ -1,0 +1,205 @@
+=======================================================
+TEMA 4 · LEY 39/2015 DEL PROCEDIMIENTO ADMINISTRATIVO COMÚN (LPAC)
+PUNTOS QUE SUELEN APARECER EN EXAMEN + ARTÍCULOS CLAVE
+=======================================================
+
+=== NORMA, ESTRUCTURA Y CONTEXTO ===
+- Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las AAPP (LPAC).
+- BOE n.º 236, de 2 de octubre de 2015.
+- Entrada en vigor: 2 de octubre de 2016 (un año desde su publicación).
+- Deroga la Ley 30/1992 de Régimen Jurídico y PAC.
+- Estructura: 133 artículos, 8 títulos (preliminar + 7), 6 DA, 5 DT, 1 DD, 7 DF.
+★ BINOMIO: La LPAC (relaciones ad extra) + Ley 40/2015 (relaciones ad intra) forman el dúo de reforma.
+
+=== TÍTULO PRELIMINAR (Arts. 1–2) ===
+OBJETO (Art. 1):
+  a) Requisitos de validez y eficacia de los actos administrativos.
+  b) Procedimiento administrativo común (incluyendo sancionador y responsabilidad patrimonial).
+  c) Principios de la iniciativa legislativa y la potestad reglamentaria.
+★ Tres objetos: no confundirlos entre sí.
+
+ÁMBITO DE APLICACIÓN (Art. 2):
+  Sector público:
+  a) Administración General del Estado.
+  b) Administraciones de las CCAA.
+  c) Entidades de la Administración Local.
+  d) Sector público institucional (organismos públicos, entidades de derecho público, universidades públicas).
+  → Partidos políticos, sindicatos, organizaciones empresariales y corporaciones de derecho público
+    se rigen por su normativa específica (la LPAC es supletoria para ellos).
+
+=== EL CIUDADANO COMO ADMINISTRADO ===
+★ La LPAC abandona el término "administrado" (connotación pasiva) y lo sustituye por:
+   ciudadano / persona / interesado.
+★ El término "administrado" apenas aparece dos veces en toda la LPAC (Exposición de Motivos y art. 101.2).
+- Los derechos de los ciudadanos ante la Administración están en el art. 13 (relaciones generales)
+  y en el art. 53 (derechos del interesado en el procedimiento).
+- Distinción clave: art. 13 = cualquier persona con capacidad de obrar;
+                   art. 53 = solo los interesados en un procedimiento concreto.
+
+=== DERECHOS DE LOS CIUDADANOS (Art. 13) ===
+  Los más preguntados:
+  a) Comunicarse en cualquier lengua oficial del territorio.
+  b) Usar medios electrónicos y obtener información/orientación.
+  c) Ser asistido en el uso de medios electrónicos (art. 12).
+  d) Conocer el estado de tramitación e identificar a las autoridades responsables.
+  e) No aportar datos o documentos en poder de las AAPP (salvo oposición del interesado).
+  f) Ser tratados con respeto y deferencia.
+  g) Exigir responsabilidades a las AAPP y su personal.
+  h) Obtener copias auténticas de los documentos que presenten.
+
+=== CAPACIDAD DE OBRAR (Art. 3) ===
+  Tienen capacidad de obrar ante las AAPP:
+  1. Personas físicas o jurídicas con capacidad con arreglo a las normas civiles (regla general).
+  2. Menores de edad → para el ejercicio de los derechos e intereses que el ordenamiento permita
+     sin asistencia de representante legal.
+     Excepción: menores incapacitados cuando la incapacitación afecte al derecho de que se trate.
+  3. Grupos de afectados, uniones y entidades sin personalidad jurídica y patrimonios
+     independientes o autónomos → CUANDO LA LEY ASÍ LO DECLARE EXPRESAMENTE.
+★ NOVEDAD respecto a Ley 30/1992: el punto 3 (grupos sin personalidad jurídica) es la principal
+  innovación del art. 3 LPAC.
+★ TRAMPA: No todos los grupos sin personalidad tienen capacidad de obrar siempre; solo cuando la
+  ley lo declare expresamente.
+
+=== CONCEPTO Y CLASES DE INTERESADOS (Art. 4) ===
+  Clase 1.ª (art. 4.1.a): Quienes PROMUEVEN el procedimiento como titulares de derechos
+    o intereses legítimos individuales o colectivos. → Han iniciado el procedimiento.
+  Clase 2.ª (art. 4.1.b): Quienes, SIN HABER INICIADO el procedimiento, tienen DERECHOS
+    que pueden resultar AFECTADOS por la decisión. → No hace falta que se personen.
+  Clase 3.ª (art. 4.1.c): Quienes tienen INTERESES LEGÍTIMOS que pueden verse afectados
+    y SE PERSONAN EN EL PROCEDIMIENTO antes de que recaiga resolución definitiva.
+    → Deben personarse; es su iniciativa.
+
+  PRECISIONES del art. 4:
+  - Art. 4.2: Asociaciones y organizaciones de intereses económicos y sociales →
+    titulares de intereses legítimos colectivos.
+  - Art. 4.3: Relación jurídica transmisible → el derechohabiente (heredero) sucede
+    al interesado en cualquier estado del procedimiento.
+
+★ REGLA MNEMOTÉCNICA de las 3 clases:
+   1.ª = PROMUEVE (derechos o intereses, inicio a instancia propia).
+   2.ª = SIN INICIAR (derechos afectados, no hace falta personarse).
+   3.ª = SE PERSONA (intereses afectados, antes de resolución definitiva).
+
+★ Diferencia clase 2.ª vs. clase 3.ª:
+   - 2.ª: tienen DERECHOS; no necesitan personarse (la Administración debe comunicarles vía art. 8).
+   - 3.ª: tienen INTERESES LEGÍTIMOS; deben personarse activamente antes de la resolución.
+
+=== REPRESENTACIÓN (Arts. 5–6) ===
+ART. 5.1: Regla general:
+  - Los interesados con capacidad de obrar PUEDEN actuar por representante.
+  - Las actuaciones se entienden con el representante (salvo manifestación expresa en contrario).
+ART. 5.2: ¿Quién puede representar?
+  - Persona física con capacidad de obrar.
+  - Persona jurídica, SOLO SI está previsto en sus Estatutos.
+ART. 5.3: ¿Cuándo se exige acreditar la representación?
+  - Actos de mero trámite: SE PRESUME (no hay que acreditarla).
+  - Actos relevantes: DEBE ACREDITARSE. Son: solicitudes, declaraciones responsables,
+    comunicaciones, recursos, desistimiento, renuncia a derechos.
+ART. 5.4: ¿Cómo se acredita?
+  - Cualquier medio válido en Derecho que deje constancia fidedigna.
+  - Acreditación expresa: apoderamiento apud acta (presencial o electrónico en sede) o
+    inscripción en registro electrónico de apoderamientos.
+ART. 5.6: Defecto de representación:
+  - No impide que el acto se tenga por realizado.
+  - Se subsana en PLAZO DE 10 DÍAS (prorrogable si las circunstancias lo requieren).
+ART. 5.7: Las AAPP pueden habilitar representantes electrónicos para transacciones específicas.
+
+REGISTRO ELECTRÓNICO DE APODERAMIENTOS (Art. 6):
+  - Obligatorio para AGE, CCAA y EE.LL.
+  - Deben inscribirse al menos los apoderamientos apud acta de carácter general.
+  - 3 tipos de poder inscribible:
+    a) Poder general: cualquier actuación y ante cualquier Administración.
+    b) Poder para una Administración concreta: cualquier procedimiento ante ella.
+    c) Poder para trámites concretos: especificados en el poder.
+  - Validez máxima: 5 AÑOS desde la inscripción.
+  - Revocación o prórroga: en cualquier momento antes del vencimiento.
+    Las prórrogas también tienen un máximo de 5 años.
+  - Interoperabilidad garantizada entre todos los registros.
+  - También interoperables con Registro Mercantil, de la Propiedad y protocolos notariales.
+★ TRAMPA: El poder apud acta se otorga por comparecencia electrónica en sede O por comparecencia
+  personal en oficinas de asistencia en materia de registros.
+
+=== PLURALIDAD Y NUEVOS INTERESADOS (Arts. 7–8) ===
+ART. 7 (Pluralidad):
+  - Las actuaciones se realizan con el interesado/representante expresamente señalado.
+  - En defecto de designación: con el que figure en PRIMER TÉRMINO.
+ART. 8 (Nuevos interesados):
+  - Solo se aplica a procedimientos SIN PUBLICIDAD.
+  - Si durante la instrucción se detectan personas con derechos/intereses cuya existencia
+    resulta del expediente y pueden verse afectadas → la Administración DEBE COMUNICARLES.
+★ TRAMPA: El art. 8 no aplica a procedimientos con publicidad (ahí se entiende que los
+  posibles interesados ya pueden enterarse por sí mismos).
+
+=== IDENTIFICACIÓN DE LOS INTERESADOS (Art. 9) ===
+SISTEMAS DE IDENTIFICACIÓN ELECTRÓNICA (3 tipos):
+  a) Certificados electrónicos cualificados de FIRMA ELECTRÓNICA (de la Lista de confianza).
+  b) Certificados electrónicos cualificados de SELLO ELECTRÓNICO (de la Lista de confianza).
+  c) Cualquier otro sistema válido que las AAPP consideren admisible:
+     - Requiere: registro previo que garantice la identidad.
+     - Requiere: comunicación a la Secretaría General de Administración Digital.
+     - Plazo: 2 meses desde la comunicación (el órgano de seguridad pública puede oponerse).
+★ La Administración debe garantizar que SIEMPRE sea posible usar al menos uno de los sistemas
+  a) o b) en cualquier procedimiento (aunque además admita el c).
+★ La aceptación de un sistema por la AGE acredita la identidad ante TODAS las AAPP (art. 9.5).
+★ Los recursos técnicos de los sistemas del tipo c) deben estar en territorio de la UE
+  (y en España si hay categorías especiales de datos del RGPD).
+
+=== FIRMA DE LOS INTERESADOS (Art. 10) ===
+PRINCIPIO: Cualquier medio que acredite autenticidad de la voluntad e integridad del documento.
+SISTEMAS DE FIRMA ELECTRÓNICA VÁLIDOS (3 tipos, igual que identificación):
+  a) Firma electrónica cualificada y avanzada basada en certificados cualificados.
+  b) Sello electrónico cualificado y avanzado basado en certificados cualificados.
+  c) Otros sistemas admitidos por las AAPP (con registro previo + comunicación + 2 meses).
+★ Cuando se usa un sistema de firma → la identidad se entiende ya acreditada (art. 10.6).
+★ La Administración debe garantizar que sistemas a) o b) sean posibles en TODOS los trámites.
+
+=== CUÁNDO SE EXIGE IDENTIFICACIÓN Y CUÁNDO FIRMA (Art. 11) ===
+  - IDENTIFICACIÓN: basta para CUALQUIER ACTUACIÓN en el procedimiento.
+  - FIRMA (obligatoria solo para):
+      1. Formular solicitudes.
+      2. Presentar declaraciones responsables o comunicaciones.
+      3. Interponer recursos.
+      4. Desistir de acciones.
+      5. Renunciar a derechos.
+★ REGLA: solo cuando el acto tiene relevancia jurídica propia (crea, modifica o extingue
+  una situación). El mero seguimiento del procedimiento no requiere firma, solo identificación.
+
+=== ASISTENCIA EN EL USO DE MEDIOS ELECTRÓNICOS (Art. 12) ===
+  - Las AAPP deben garantizar la posibilidad de relacionarse electrónicamente.
+  - Para quienes no estén obligados a relacionarse electrónicamente (personas físicas) y
+    lo soliciten → la Administración debe prestar asistencia.
+  - Si el interesado no tiene medios electrónicos → un FUNCIONARIO HABILITADO puede hacer
+    la identificación o firma en su nombre.
+  - Requisitos: el interesado debe identificarse presencialmente ante el funcionario y
+    prestar consentimiento expreso. Debe quedar constancia.
+  - Registro de funcionarios habilitados: cada AAPP lo mantiene actualizado; son
+    interoperables entre sí.
+
+=== OBLIGACIÓN DE RELACIONARSE ELECTRÓNICAMENTE (Art. 14) ===
+  OBLIGADOS siempre:
+  a) Personas jurídicas.
+  b) Entidades sin personalidad jurídica.
+  c) Profesionales con colegiación obligatoria (incluidos notarios y registradores).
+  d) Representantes de los obligados anteriores.
+  e) Empleados públicos para trámites relacionados con su condición de empleados.
+  PERSONAS FÍSICAS: opción libre (pero la norma reglamentaria puede obligarles en procedimientos
+  concretos si tienen acceso y disponibilidad de medios electrónicos).
+
+=== ARTÍCULOS MÁS PREGUNTADOS EN EXAMEN ===
+Art. 1   → Objeto triple de la LPAC.
+Art. 2   → Ámbito: las 4 categorías del sector público + los sujetos con aplicación supletoria.
+Art. 3   → Capacidad de obrar: 3 supuestos; novedad de las entidades sin personalidad jurídica.
+Art. 4   → Interesados: 3 clases; transmisión a derechohabientes; intereses colectivos.
+Art. 5   → Representación: cuándo se presume vs. cuándo se acredita; plazo de 10 días para subsanar.
+Art. 6   → Registro electrónico de apoderamientos: 3 tipos de poder; validez 5 años; interoperabilidad.
+Art. 7   → Pluralidad de interesados: interesado en primer término.
+Art. 8   → Nuevos interesados: solo en procedimientos sin publicidad.
+Art. 9   → Identificación: 3 sistemas (a, b, c); garantía de a) o b) en todo procedimiento.
+Art. 10  → Firma: 3 sistemas; firma acredita identidad; sistemas a) o b) garantizados en todos los trámites.
+Art. 11  → Identificación para todo; firma solo para 5 actos concretos.
+Art. 12  → Asistencia electrónica; funcionario habilitado + consentimiento expreso.
+Art. 13  → Derechos de los ciudadanos (relaciones generales con la Administración).
+Art. 14  → Obligados a relacionarse electrónicamente (personas jurídicas, entidades sin personalidad,
+           profesionales colegiados, empleados públicos).
+
+=======================================================

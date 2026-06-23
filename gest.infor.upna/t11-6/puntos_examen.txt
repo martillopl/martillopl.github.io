@@ -1,0 +1,156 @@
+=======================================================
+TEMA 6 · LEY 39/2015 (LPAC) · NORMAS GENERALES DE ACTUACIÓN
+REGISTROS · ARCHIVO · RESPONSABILIDAD TRAMITACIÓN · EMISIÓN DOCS · COPIAS AUTÉNTICAS
+ARTS. 16 · 17 · 20 · 26 · 27
+PUNTOS QUE SUELEN APARECER EN EXAMEN + ARTÍCULOS CLAVE
+=======================================================
+
+=== REGISTROS (Art. 16) ===
+REGISTRO ELECTRÓNICO GENERAL:
+  - Cada Administración dispone de UNO. Asiento de documentos presentados y recibidos.
+  - También puede anotar la SALIDA de documentos oficiales.
+  - Los organismos vinculados pueden tener sus propios registros, pero deben ser plenamente
+    interoperables e interconectados con el Registro Electrónico General de la Administración
+    de la que dependen.
+
+LAS 5 VÍAS DE PRESENTACIÓN DE DOCUMENTOS (art. 16.4):
+  a) Registro electrónico de la Administración destinataria o de cualquier sujeto del art. 2.1.
+  b) Oficinas de Correos (fecha del sello de Correos = fecha de presentación).
+  c) Representaciones diplomáticas u oficinas consulares de España en el extranjero.
+  d) Oficinas de asistencia en materia de registros (presencial).
+  e) Cualquier otra que establezcan las disposiciones vigentes.
+★ TRAMPA: La fecha en Correos es la del SELLO DE CORREOS, no la de recepción por la AAPP.
+★ TRAMPA: La presentación electrónica puede hacerse ante cualquier registro electrónico
+  del art. 2.1, no solo el de la Administración destinataria. En papel, solo ante las
+  vías del art. 16.4.
+
+DIGITALIZACIÓN (art. 16.5):
+  - Los documentos en papel presentados PRESENCIALMENTE deben digitalizarse por la oficina
+    de asistencia en que se presenten, para incorporarse al expediente electrónico.
+  - Los originales se DEVUELVEN al interesado (salvo que la norma exija custodia o el soporte
+    no sea susceptible de digitalización).
+
+=== ARCHIVO DE DOCUMENTOS (Art. 17) ===
+ARCHIVO ELECTRÓNICO ÚNICO:
+  - Cada AAPP mantiene UN archivo electrónico único de documentos de PROCEDIMIENTOS FINALIZADOS.
+  - UN solo archivo por Administración (no por órgano). Para la AGE: un único archivo.
+
+LAS 7 CONDICIONES DE CONSERVACIÓN (memorizar):
+  1. Autenticidad
+  2. Integridad
+  3. Inalterabilidad
+  4. Disponibilidad
+  5. Acceso
+  6. Conservación
+  7. Recuperabilidad
+
+  - Los soportes deben contar con MEDIDAS DE SEGURIDAD adecuadas.
+  - Los documentos en PAPEL no digitalizados → conservación conforme a la LEGISLACIÓN
+    DE PATRIMONIO HISTÓRICO.
+★ TRAMPA: El archivo es de PROCEDIMIENTOS FINALIZADOS, no de todos los documentos de la AAPP.
+★ TRAMPA: La legislación de patrimonio histórico rige los documentos en papel no digitalizados;
+  la LPAC regula el archivo electrónico único.
+
+=== RESPONSABILIDAD DE LA TRAMITACIÓN (Art. 20) ===
+  - El personal al servicio de las AAPP que tenga a su cargo el despacho de asuntos +
+    los titulares de los órganos administrativos competentes para instruir y resolver
+    son DIRECTAMENTE RESPONSABLES del cumplimiento de la obligación legal de resolver en plazo.
+  - Responsabilidad: disciplinaria. Sin perjuicio de los recursos del interesado (silencio).
+  - El procedimiento se impulsará DE OFICIO en todos sus trámites y a través de medios
+    electrónicos, respetando los principios de transparencia y publicidad.
+★ La responsabilidad de la tramitación alcanza tanto al PERSONAL DE DESPACHO como
+  a los TITULARES DE LOS ÓRGANOS competentes para instruir y resolver.
+
+=== EMISIÓN DE DOCUMENTOS POR LAS AAPP (Art. 26) ===
+CONCEPTO:
+  - Documentos públicos administrativos = los VÁLIDAMENTE EMITIDOS por los órganos de las AAPP.
+  - Forma: por ESCRITO, a través de MEDIOS ELECTRÓNICOS. Excepción: su naturaleza exija otra
+    forma más adecuada de expresión y constancia.
+
+5 REQUISITOS DE VALIDEZ DE LOS DOCUMENTOS ELECTRÓNICOS ADMINISTRATIVOS (art. 26.2):
+  a) Contener información en soporte electrónico en formato susceptible de identificación
+     y tratamiento diferenciado. (CONTENIDO)
+  b) Disponer de datos de identificación que permitan su individualización. (IDENTIFICACIÓN)
+  c) Incorporar una referencia TEMPORAL del momento en que han sido emitidos. (TIEMPO)
+  d) Incorporar los METADATOS MÍNIMOS exigidos. (METADATOS)
+  e) Incorporar las FIRMAS ELECTRÓNICAS que correspondan conforme a la normativa. (FIRMA)
+★ REGLA MNEMOTÉCNICA: C-I-T-M-F = Contenido, Identificación, Tiempo, Metadatos, Firma.
+
+DOCUMENTOS SIN FIRMA ELECTRÓNICA (art. 26.3):
+  No requieren firma los documentos electrónicos de las AAPP que:
+  - Se publiquen con carácter MERAMENTE INFORMATIVO, o
+  - No formen parte de un EXPEDIENTE ADMINISTRATIVO.
+  → En todo caso, deben IDENTIFICAR SU ORIGEN.
+★ TRAMPA: No todos los documentos administrativos electrónicos necesitan firma. Solo los
+  que forman parte de expediente o tienen efectos jurídicos propios.
+
+=== VALIDEZ Y EFICACIA DE LAS COPIAS REALIZADAS POR LAS AAPP (Art. 27) ===
+COMPETENCIA (art. 27.1):
+  - CADA AAPP determina los órganos con competencia para expedir copias auténticas.
+  - No hay un único órgano universal para todas las AAPP; cada una decide.
+
+¿QUIÉNES PUEDEN HACER COPIAS AUTÉNTICAS?:
+  - FUNCIONARIO HABILITADO, o
+  - ACTUACIÓN ADMINISTRATIVA AUTOMATIZADA.
+  → Debe mantenerse un REGISTRO DE FUNCIONARIOS HABILITADOS actualizado, interoperable e
+    interconectado con los de las restantes AAPP. Deben constar al menos los de las
+    oficinas de asistencia en materia de registros.
+
+EFECTOS SEGÚN TIPO DE DOCUMENTO:
+  a) Documentos públicos administrativos → misma validez y eficacia que el original.
+     Validez en las RESTANTES ADMINISTRACIONES.
+  b) Documentos privados → surten ÚNICAMENTE EFECTOS ADMINISTRATIVOS.
+★ TRAMPA CLÁSICA: Las copias auténticas de documentos PRIVADOS solo surten efectos
+  ADMINISTRATIVOS, no son equivalentes en plano civil o mercantil al documento original.
+
+CONCEPTO DE COPIA AUTÉNTICA (art. 27.2):
+  - Cualquier soporte (papel o electrónico).
+  - Realizada por órganos competentes de las AAPP.
+  - Garantizados: identidad del ÓRGANO que la realiza + identidad del CONTENIDO.
+  - Validez y eficacia: IGUAL QUE EL ORIGINAL.
+
+4 REGLAS TÉCNICAS (art. 27.3 + ENI + ENS):
+  a) Copia electrónica de documento electrónico → METADATOS que acrediten condición de copia
+     y que se visualicen al consultar el documento.
+  b) Copia electrónica de documento en papel (digitalización) → previa DIGITALIZACIÓN
+     + metadatos que acrediten condición de copia.
+  c) Copia en papel de documento electrónico → expresar condición de copia + CÓDIGO SEGURO
+     DE VERIFICACIÓN (CSV) u otro sistema de verificación que permita contrastar autenticidad
+     accediendo a los archivos del órgano emisor.
+  d) Copia en papel de documento original en papel → mediante copia auténtica en papel del
+     documento electrónico en poder de la AAPP O puesta de manifiesto electrónica con copia
+     auténtica del original.
+★ Los CSV y otros sistemas de verificación deben publicarse en la SEDE ELECTRÓNICA.
+★ La regla c) es la que se aplica cuando se imprime un documento PDF de la Administración:
+  el CSV al pie permite verificar su autenticidad online.
+
+PLAZO PARA EXPEDIR COPIAS (art. 27.4):
+  - El interesado puede solicitarlas EN CUALQUIER MOMENTO.
+  - Se dirige al ÓRGANO QUE EMITIÓ EL ORIGINAL.
+  - Plazo de expedición: 15 DÍAS desde recepción de la solicitud en el registro electrónico.
+  - Las AAPP están OBLIGADAS a expedir copias auténticas electrónicas de cualquier documento
+    en papel presentado por interesados que vaya a incorporarse a un expediente administrativo.
+
+MENCIONES EXPRESAS:
+  - Art. 27.5: Cuando la AAPP expide una copia auténtica electrónica, debe quedar
+    EXPRESAMENTE INDICADO en el documento de la copia.
+  - Art. 27.6: La expedición de copias de documentos notariales, registrales, judiciales
+    y diarios oficiales se rige por su LEGISLACIÓN ESPECÍFICA, no por el art. 27.
+★ TRAMPA MUY FRECUENTE: El art. 27 NO rige las copias de documentos notariales,
+  registrales o judiciales → legislación específica.
+
+=== ARTÍCULOS MÁS PREGUNTADOS EN EXAMEN ===
+Art. 16   → Registro Electrónico General; las 5 vías de presentación; fecha en Correos;
+            digitalización y devolución del original.
+Art. 17   → Archivo electrónico ÚNICO; para procedimientos FINALIZADOS; las 7 condiciones
+            de conservación; legislación de patrimonio para papel no digitalizado.
+Art. 20   → Responsabilidad directa del personal de despacho y los titulares de órganos;
+            impulso de oficio.
+Art. 26   → Documentos públicos administrativos = los válidamente emitidos; por escrito
+            y medios electrónicos; 5 requisitos C-I-T-M-F; sin firma los informativos.
+Art. 27   → Órganos competentes fijados por cada AAPP; funcionario habilitado o actuación
+            automatizada; copias privadas solo efectos administrativos; igual validez que
+            original; 4 reglas técnicas (a-d); plazo 15 días; documentos notariales y
+            judiciales → legislación específica.
+
+=======================================================

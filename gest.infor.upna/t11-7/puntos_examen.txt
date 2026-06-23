@@ -1,0 +1,172 @@
+=======================================================
+TEMA 7 · LEY 39/2015 (LPAC)
+CÓMPUTO DEL TIEMPO · TÉRMINOS Y PLAZOS · PRESCRIPCIÓN · CADUCIDAD
+OBLIGACIÓN DE RESOLVER · SUSPENSIÓN · AMPLIACIÓN · SILENCIO ADMINISTRATIVO
+ARTS. 21 · 22 · 23 · 24 · 25 · 29 · 30 · 31 · 32 · 33
+PUNTOS QUE SUELEN APARECER EN EXAMEN + ARTÍCULOS CLAVE
+=======================================================
+
+=== TÉRMINOS Y PLAZOS ===
+
+OBLIGATORIEDAD (Art. 29):
+  - Los términos y plazos obligan tanto a las AUTORIDADES y PERSONAL de las AAPP
+    como a los INTERESADOS. Imperativo para ambas partes.
+★ TRAMPA: No solo obligan a los ciudadanos; también a la Administración.
+
+CÓMPUTO DE PLAZOS (Art. 30):
+  - Plazos en HORAS: de hora en hora y de minuto en minuto. Máximo 24 horas; si más, se expresan en días.
+  - Plazos en DÍAS: se entienden HÁBILES (excluidos sábados, domingos y festivos) salvo que
+    la ley o el Derecho UE establezcan expresamente otro cómputo (ej: días naturales).
+  - El cómputo de plazos en días comienza el DÍA SIGUIENTE a la notificación, publicación o
+    desde el día siguiente al silencio administrativo (estimación o desestimación).
+  - Plazos en MESES o AÑOS: se computan de fecha a fecha (vence el mismo día del mes/año
+    de vencimiento). Si el mes de vencimiento no tiene ese día → último día del mes.
+  - Si el último día es INHÁBIL: el plazo se prorroga automáticamente hasta el siguiente día hábil.
+★ TRAMPA: Los días son hábiles por defecto. Solo son naturales si la ley lo dice expresamente.
+★ TRAMPA: El cómputo comienza el DÍA SIGUIENTE, no el mismo día de la notificación.
+
+CÓMPUTO EN REGISTROS (Art. 31):
+  - Registro electrónico: 24 horas al día, todos los días del año.
+  - Se rige por la fecha y hora oficial de la sede electrónica de acceso.
+  - Documentos presentados en día INHÁBIL → se registran a las 00:00:00 horas del PRIMER DÍA HÁBIL siguiente.
+  - Cada Administración debe publicar los días y horarios de las oficinas de asistencia.
+★ TRAMPA: La presentación electrónica es posible en festivos, pero el cómputo para la AAPP empieza
+  el día hábil siguiente (favorable al interesado).
+
+AMPLIACIÓN DE PLAZOS DEL INTERESADO (Art. 32):
+  - Solo puede solicitarse ANTES del vencimiento del plazo a ampliar.
+  - Requisitos: circunstancias que lo aconsejen + sin perjuicio de derechos de terceros.
+  - La ampliación no puede exceder de la MITAD del plazo original.
+  - También puede acordarse DE OFICIO por la Administración antes del vencimiento.
+
+TRAMITACIÓN DE URGENCIA (Art. 33):
+  - Acordada por el órgano competente, de oficio o a petición del interesado.
+  - Reduce a la MITAD los plazos establecidos.
+  - No se pueden reducir los plazos para presentación de solicitudes y recursos.
+
+=== OBLIGACIÓN DE RESOLVER (Art. 21) ===
+
+REGLA GENERAL:
+  - La Administración ESTÁ OBLIGADA a dictar resolución expresa y a notificarla en TODOS
+    los procedimientos, cualquiera que sea su forma de iniciación.
+
+EXCEPCIONES (procedimientos en que NO hay obligación de resolver expresamente):
+  a) Terminación por PACTO O CONVENIO.
+  b) Procedimientos relativos al ejercicio de derechos sometidos únicamente al deber de
+     DECLARACIÓN RESPONSABLE o COMUNICACIÓN a la Administración.
+
+PLAZO MÁXIMO PARA RESOLVER:
+  - El fijado por la norma reguladora del procedimiento.
+  - Si no hay norma: SUPLETORIAMENTE = 3 MESES.
+  - Puede ampliarse hasta 6 MESES mediante norma con rango de ley o norma UE.
+★ TRAMPA: El plazo supletorio es de 3 meses, no de 6. Los 6 meses son el límite de ampliación.
+
+CÓMPUTO DEL PLAZO (Art. 21.3):
+  a) Procedimientos de oficio → desde el ACUERDO DE INICIACIÓN.
+  b) Procedimientos a solicitud del interesado → desde la ENTRADA de la solicitud en el
+     REGISTRO ELECTRÓNICO del órgano competente para tramitar.
+★ TRAMPA: En procedimientos de oficio el plazo empieza desde el acuerdo de iniciación,
+  no desde ninguna solicitud del interesado.
+
+PUBLICIDAD:
+  - Las AAPP deben publicar en su PORTAL WEB los plazos máximos de todos sus procedimientos
+    y los efectos del silencio administrativo.
+
+=== SUSPENSIÓN DEL PLAZO MÁXIMO PARA RESOLVER (Art. 22) ===
+
+6 CAUSAS DE SUSPENSIÓN (art. 22.1 — enumerarlas en examen):
+  a) Requerimiento al interesado para SUBSANACIÓN o aportación de documentos:
+     suspende desde la notificación del requerimiento hasta su cumplimiento (o fin del plazo concedido).
+  b) Solicitud de pronunciamiento previo y preceptivo a un ÓRGANO DE LA UE:
+     suspende hasta que se notifica el pronunciamiento a la Administración instructora.
+  c) Solicitud de INFORMES PRECEPTIVOS a otros órganos:
+     suspende hasta su recepción, con un máximo de 3 MESES. Pasados 3 meses sin informe,
+     se reanuda el plazo.
+  d) Realización de PRUEBAS TÉCNICAS O ANÁLISIS contradictorios o dirimentes propuestos
+     por los interesados: hasta su incorporación al expediente.
+  e) Inicio de NEGOCIACIONES para pacto o convenio: mientras duren las negociaciones.
+  f) Necesidad de pronunciamiento PREVIO DE UN ÓRGANO JURISDICCIONAL indispensable para
+     resolver: por el tiempo que dure el procedimiento judicial.
+
+SUSPENSIÓN FACULTATIVA (art. 22.2):
+  - El órgano competente para resolver PUEDE suspender motivadamente cuando existan razones
+    fundadas y objetivas. Debe notificarse a los interesados.
+★ TRAMPA: Hay 6 causas de suspensión automática y una facultativa. En examen: completar la lista
+  o identificar cuál no es causa de suspensión.
+★ TRAMPA: Los informes preceptivos solo suspenden hasta 3 meses. Pasado ese tiempo, se reanuda
+  el plazo aunque el informe no haya llegado.
+
+=== AMPLIACIÓN DEL PLAZO MÁXIMO PARA RESOLVER Y NOTIFICAR (Art. 23) ===
+  - Puede acordarse cuando el volumen de solicitudes o la complejidad lo justifiquen.
+  - Debe acordarse ANTES de que venza el plazo máximo.
+  - Según STS 21/01/2025 (RC 3163/2022): también debe NOTIFICARSE para surtir efectos.
+  - La ampliación no puede exceder del plazo máximo establecido para el procedimiento.
+★ TRAMPA: Confundir art. 23 (ampliación del plazo máximo de resolución) con art. 32
+  (ampliación de plazos del interesado para realizar trámites).
+
+=== SILENCIO ADMINISTRATIVO (Art. 24) — INICIADOS A SOLICITUD DEL INTERESADO ===
+
+REGLA GENERAL = SILENCIO POSITIVO (estimatorio):
+  - Vencido el plazo sin resolución expresa → solicitud ESTIMADA.
+
+EXCEPCIONES = SILENCIO NEGATIVO (desestimatorio):
+  a) Cuando norma con rango de ley o Derecho UE lo establezca.
+  b) Cuando el procedimiento tenga por objeto el ACCESO A ACTIVIDADES o su ejercicio.
+  c) Los procedimientos de IMPUGNACIÓN DE ACTOS Y DISPOSICIONES (recursos).
+     Excepción dentro de la excepción: recurso de alzada contra desestimación por silencio
+     → el silencio en alzada también es POSITIVO (para garantizar acceso a la jurisdicción).
+
+EFECTOS DEL ACTO PRESUNTO:
+  - Produce efectos desde el VENCIMIENTO DEL PLAZO MÁXIMO.
+  - Puede acreditarse por CUALQUIER MEDIO DE PRUEBA, incluido el CERTIFICADO DE ACTO PRESUNTO.
+  - Vale ante la Administración y ante cualquier persona física o jurídica.
+
+RESOLUCIÓN EXPRESA POSTERIOR AL SILENCIO:
+  - Si silencio POSITIVO: la resolución solo puede ser CONFIRMATORIA del acto presunto.
+  - Si silencio NEGATIVO: la resolución puede tener CUALQUIER SENTIDO (sin vinculación al silencio).
+★ TRAMPA MUY FRECUENTE: Tras silencio positivo, la Administración NO puede resolver en sentido
+  desfavorable. Solo puede confirmar. Tras silencio negativo, sí puede resolver en cualquier sentido.
+
+=== FALTA DE RESOLUCIÓN EXPRESA EN PROCEDIMIENTOS DE OFICIO (Art. 25) ===
+
+NO HAY SILENCIO POSITIVO DE OFICIO:
+  El vencimiento del plazo sin resolución produce efectos distintos según el tipo de procedimiento:
+
+Art. 25.1.a) — Procedimientos susceptibles de producir ACTOS FAVORABLES al interesado:
+  → CADUCIDAD del procedimiento.
+  → El interesado puede reclamar el archivo de las actuaciones.
+  → La caducidad no extingue la acción de la Administración (si no ha prescrito puede reiniciar).
+
+Art. 25.1.b) — Procedimientos con potestades SANCIONADORAS o DE INTERVENCIÓN
+  (susceptibles de producir efectos desfavorables o de gravamen):
+  → CADUCIDAD.
+  → La resolución de caducidad ordena el ARCHIVO de las actuaciones (efectos del art. 95).
+  → No extingue la infracción si no ha prescrito.
+★ TRAMPA: En ningún caso hay silencio positivo en procedimientos de oficio.
+★ TRAMPA: La caducidad NO equivale a prescripción. Caducado el procedimiento, puede iniciarse
+  uno nuevo si la acción no ha prescrito.
+
+=== DISTINCIÓN CLAVE: PRESCRIPCIÓN VS. CADUCIDAD ===
+  - PRESCRIPCIÓN: extingue el derecho/acción por el tiempo. Puede interrumpirse.
+    Se regula en la normativa sectorial (no en el art. 25 LPAC directamente).
+  - CADUCIDAD: extingue el procedimiento concreto, no la acción subyacente.
+    Se regula en los arts. 25 y 95 LPAC.
+  - El art. 95.3 LPAC: la caducidad NO produce por sí sola la prescripción.
+
+=== ARTÍCULOS MÁS PREGUNTADOS EN EXAMEN ===
+Art. 29 → Obligatoriedad de plazos para ambas partes.
+Art. 30 → Días hábiles (regla) vs. naturales (excepción). Cómputo día siguiente.
+           Plazos en meses: de fecha a fecha. Final en inhábil → prorroga.
+Art. 31 → Registro 24h/365. Documentos en inhábil → 00:00:00 del primer hábil siguiente.
+Art. 32 → Ampliación de plazos del interesado: antes del vencimiento, máximo mitad.
+Art. 33 → Tramitación de urgencia: reduce a la mitad. No aplica a solicitudes y recursos.
+Art. 21 → Obligación de resolver siempre. Excepciones (pacto/declaración responsable).
+           Plazo supletorio 3 meses (hasta 6 por ley). Desde registro electrónico (solicitud)
+           o desde acuerdo de iniciación (oficio).
+Art. 22 → 6 causas de suspensión automática + facultativa. Informes preceptivos: máx. 3 meses.
+Art. 23 → Ampliación del plazo máximo: antes del vencimiento + notificación (STS 2025).
+Art. 24 → Silencio POSITIVO = regla. Silencio NEGATIVO = excepción (ley, acceso a actividad,
+           impugnación). Resolución tras silencio positivo: solo confirmatoria.
+Art. 25 → Oficio: caducidad, no silencio positivo. Sancionadores/gravamen: caducidad + archivo.
+
+=======================================================

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2_esquema_resumen_t09.html</title>
+  <style>
+    :root{
+      --bg:#f8fafc;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --line:#cbd5e1;
+      --blue:#2563eb;
+      --blue-soft:#dbeafe;
+      --green:#059669;
+      --green-soft:#d1fae5;
+      --amber:#d97706;
+      --amber-soft:#fef3c7;
+      --violet:#7c3aed;
+      --violet-soft:#ede9fe;
+      --rose:#e11d48;
+      --rose-soft:#ffe4e6;
+      --teal:#0f766e;
+      --teal-soft:#ccfbf1;
+      --slate:#334155;
+      --slate-soft:#e2e8f0;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.45 Arial,Helvetica,sans-serif}
+    .wrap{max-width:1200px;margin:0 auto;padding:24px}
+    .hero{background:linear-gradient(135deg,#0f172a,#1d4ed8);color:#fff;padding:28px;border-radius:18px;margin-bottom:22px;box-shadow:0 10px 30px rgba(15,23,42,.18)}
+    .hero h1{margin:0 0 8px;font-size:30px;line-height:1.15}
+    .hero p{margin:0;font-size:15px;max-width:900px;color:#e2e8f0}
+    .legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:18px 0 24px}
+    .legend div{background:#fff;border:1px solid var(--line);padding:10px 12px;border-radius:12px;font-size:14px;font-weight:700}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .block{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 6px 18px rgba(15,23,42,.05)}
+    .span-12{grid-column:span 12}.span-8{grid-column:span 8}.span-6{grid-column:span 6}.span-4{grid-column:span 4}
+    .tag{display:inline-block;padding:5px 10px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.02em;margin-bottom:12px}
+    h2{margin:0 0 10px;font-size:22px;line-height:1.2}
+    h3{margin:12px 0 8px;font-size:16px}
+    p{margin:8px 0;color:var(--muted)}
+    ul{margin:8px 0 0 18px;padding:0} li{margin:5px 0;color:var(--text)}
+    .cols-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .mini{border:1px dashed var(--line);border-radius:12px;padding:12px;background:#fff}
+    .pill{display:inline-block;background:#fff;border:1px solid var(--line);padding:6px 9px;border-radius:999px;font-size:13px;font-weight:700;margin:4px 6px 0 0}
+    .note{margin-top:12px;padding:10px 12px;border-radius:12px;font-size:14px;font-weight:700}
+    table{width:100%;border-collapse:collapse;margin-top:8px}
+    th,td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top;font-size:14px}
+    th{background:#f1f5f9}
+    .blue{border-top:6px solid var(--blue)} .blue .tag{background:var(--blue-soft);color:var(--blue)}
+    .green{border-top:6px solid var(--green)} .green .tag{background:var(--green-soft);color:var(--green)}
+    .amber{border-top:6px solid var(--amber)} .amber .tag{background:var(--amber-soft);color:var(--amber)}
+    .violet{border-top:6px solid var(--violet)} .violet .tag{background:var(--violet-soft);color:var(--violet)}
+    .rose{border-top:6px solid var(--rose)} .rose .tag{background:var(--rose-soft);color:var(--rose)}
+    .teal{border-top:6px solid var(--teal)} .teal .tag{background:var(--teal-soft);color:var(--teal)}
+    .slate{border-top:6px solid var(--slate)} .slate .tag{background:var(--slate-soft);color:var(--slate)}
+    .memory{font-size:20px;font-weight:800;color:#111827;background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 14px;margin-top:10px}
+    .exam{color:#991b1b;background:#fef2f2;border:1px solid #fecaca;padding:10px 12px;border-radius:12px;margin-top:12px;font-weight:700}
+    .footer{margin-top:22px;color:#64748b;font-size:13px;text-align:center}
+    @media (max-width:900px){.span-8,.span-6,.span-4{grid-column:span 12}.cols-2{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+      <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+    <section class="hero">
+      <h1>Tema 9 · Esquema-resumen visual</h1>
+      <p>Procedimiento Administrativo Común I: concepto y naturaleza, garantías del procedimiento, abstención y recusación. Diseño pensado para memorización rápida con bloques visuales, palabras-clave y datos de examen.</p>
+    </section>
+
+    <section class="legend">
+      <div>🔵 Concepto y naturaleza</div>
+      <div>🟢 Garantías del interesado</div>
+      <div>🟠 Art. 53 LPAC</div>
+      <div>🟣 Abstención</div>
+      <div>🌹 Recusación</div>
+      <div>🟢 Diferencias clave</div>
+      <div>⚫ Trampas frecuentes</div>
+      <div>📚 Tabla-resumen final</div>
+    </section>
+
+    <section class="grid">
+      <article class="block blue span-8">
+        <span class="tag">BLOQUE 1 · CONCEPTO</span>
+        <h2>Procedimiento administrativo común</h2>
+        <p><strong>Definición-base:</strong> conjunto ordenado de trámites y actuaciones formalmente realizadas, según el cauce legalmente previsto, para dictar un acto administrativo o expresar la voluntad de la Administración.</p>
+        <div class="cols-2">
+          <div class="mini">
+            <h3>Qué significa “conjunto ordenado”</h3>
+            <ul>
+              <li>No hay actuación arbitraria</li>
+              <li>Hay fases y secuencia legal</li>
+              <li>Sirve para adoptar decisiones válidas</li>
+            </ul>
+          </div>
+          <div class="mini">
+            <h3>Qué significa “común”</h3>
+            <ul>
+              <li>Aplicable a todas las AAPP</li>
+              <li>Base estatal</li>
+              <li>Respeta especialidades autonómicas</li>
+            </ul>
+          </div>
+        </div>
+        <div class="memory">Idea para memorizar: “Orden + cauce legal + acto final”</div>
+      </article>
+
+      <article class="block blue span-4">
+        <span class="tag">BLOQUE 2 · NATURALEZA</span>
+        <h2>Doble función</h2>
+        <div class="pill">Instrumento de eficacia</div>
+        <div class="pill">Garantía del ciudadano</div>
+        <div class="pill">Límite a la arbitrariedad</div>
+        <div class="pill">Manifestación de legalidad</div>
+        <p>El procedimiento no es un obstáculo formal: sirve a la vez para que la Administración actúe eficazmente y para proteger al interesado.</p>
+        <div class="note" style="background:var(--blue-soft);color:var(--blue)">CE: arts. 103, 105, 106 y 149.1.18ª</div>
+      </article>
+
+      <article class="block green span-6">
+        <span class="tag">BLOQUE 3 · GARANTÍAS</span>
+        <h2>Garantías del procedimiento</h2>
+        <ul>
+          <li>Legalidad</li>
+          <li>Objetividad e imparcialidad</li>
+          <li>Audiencia y contradicción</li>
+          <li>Defensa del interesado</li>
+          <li>Celeridad e impulso de oficio</li>
+          <li>Transparencia y acceso al expediente</li>
+        </ul>
+        <div class="memory">Regla corta: “La Administración decide, pero con cauce, audiencia y control”</div>
+      </article>
+
+      <article class="block amber span-6">
+        <span class="tag">BLOQUE 4 · ART. 53 LPAC</span>
+        <h2>Derechos del interesado</h2>
+        <div class="cols-2">
+          <div class="mini">
+            <ul>
+              <li>Conocer el estado de tramitación</li>
+              <li>Conocer el sentido del silencio</li>
+              <li>Identificar autoridades y personal</li>
+              <li>Obtener copia de documentos</li>
+            </ul>
+          </div>
+          <div class="mini">
+            <ul>
+              <li>No presentar originales salvo excepción</li>
+              <li>No aportar documentos ya en poder de la AAPP</li>
+              <li>Formular alegaciones y aportar documentos</li>
+              <li>Actuar asistido de asesor</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exam">Punto típico de test: art. 53.1.d → el interesado no debe aportar documentos ya en poder de la Administración</div>
+      </article>
+
+      <article class="block amber span-4">
+        <span class="tag">BLOQUE 5 · SANCIONADOR</span>
+        <h2>Plus de garantías</h2>
+        <p>En procedimientos sancionadores, el art. 53.2 añade derechos específicos.</p>
+        <ul>
+          <li>Conocer hechos imputados</li>
+          <li>Conocer infracción y posible sanción</li>
+          <li>Conocer instructor y órgano competente</li>
+          <li>No declarar contra sí mismo</li>
+          <li>Presunción de inocencia</li>
+        </ul>
+      </article>
+
+      <article class="block violet span-8">
+        <span class="tag">BLOQUE 6 · ABSTENCIÓN</span>
+        <h2>Abstención · Art. 23 LRJSP</h2>
+        <p><strong>Qué es:</strong> obligación de apartarse del procedimiento cuando concurre una causa legal de falta de imparcialidad.</p>
+        <table>
+          <tr><th>Letra</th><th>Causa</th></tr>
+          <tr><td>a</td><td>Interés personal, administrador de entidad interesada o litigio pendiente</td></tr>
+          <tr><td>b</td><td>Matrimonio o situación análoga, consanguinidad hasta 4.º grado, afinidad hasta 2.º grado</td></tr>
+          <tr><td>c</td><td>Amistad íntima o enemistad manifiesta</td></tr>
+          <tr><td>d</td><td>Haber intervenido como perito o testigo</td></tr>
+          <tr><td>e</td><td>Relación de servicio o servicios profesionales en los 2 últimos años</td></tr>
+        </table>
+        <div class="memory">Mnemotecnia: “Interés · Parentesco · Amistad/Enemistad · Perito/Testigo · Servicios 2 años”</div>
+      </article>
+
+      <article class="block violet span-4">
+        <span class="tag">BLOQUE 7 · EFECTOS</span>
+        <h2>Qué pasa si no se abstiene</h2>
+        <ul>
+          <li>Puede haber responsabilidad</li>
+          <li>No implica necesariamente invalidez del acto</li>
+          <li>El superior puede ordenar la abstención</li>
+        </ul>
+        <div class="exam">Trampa clásica: falta de abstención ≠ nulidad automática</div>
+      </article>
+
+      <article class="block rose span-8">
+        <span class="tag">BLOQUE 8 · RECUSACIÓN</span>
+        <h2>Recusación · Art. 24 LRJSP</h2>
+        <p><strong>Qué es:</strong> derecho del interesado a pedir que se aparte a la autoridad o empleado público cuando concurre una causa del art. 23.2.</p>
+        <div class="cols-2">
+          <div class="mini">
+            <h3>Pasos</h3>
+            <ol>
+              <li>Escrito del interesado</li>
+              <li>Se expone la causa</li>
+              <li>Se dirige al superior del recusado</li>
+            </ol>
+          </div>
+          <div class="mini">
+            <h3>Plazos</h3>
+            <ul>
+              <li>El recusado se manifiesta al día siguiente</li>
+              <li>Si niega la causa, el superior resuelve en 3 días</li>
+              <li>No cabe recurso directo</li>
+            </ul>
+          </div>
+        </div>
+        <div class="memory">Secuencia rápida: “Escrito → día siguiente → 3 días”</div>
+      </article>
+
+      <article class="block green span-4">
+        <span class="tag">BLOQUE 9 · DIFERENCIA CLAVE</span>
+        <h2>Abstención vs recusación</h2>
+        <table>
+          <tr><th>Abstención</th><th>Recusación</th></tr>
+          <tr><td>Iniciativa del funcionario</td><td>Iniciativa del interesado</td></tr>
+          <tr><td>Se comunica al superior</td><td>Se plantea por escrito</td></tr>
+          <tr><td>Es deber</td><td>Es derecho</td></tr>
+          <tr><td>Mismas causas</td><td>Mismas causas</td></tr>
+        </table>
+      </article>
+
+      <article class="block slate span-12">
+        <span class="tag">BLOQUE 10 · TABLA FINAL</span>
+        <h2>Mapa rápido del tema</h2>
+        <table>
+          <tr>
+            <th>Parte</th>
+            <th>Idea esencial</th>
+            <th>Artículo / referencia</th>
+            <th>Dato de examen</th>
+          </tr>
+          <tr>
+            <td>Concepto</td>
+            <td>Conjunto ordenado de trámites para dictar acto o expresar voluntad</td>
+            <td>Preámbulo LPAC</td>
+            <td>Definición doctrinal y legal de apoyo</td>
+          </tr>
+          <tr>
+            <td>Naturaleza</td>
+            <td>Eficacia administrativa + garantía del ciudadano</td>
+            <td>Arts. 1 LPAC y 103 CE</td>
+            <td>Doble función</td>
+          </tr>
+          <tr>
+            <td>Garantías</td>
+            <td>Legalidad, audiencia, contradicción, defensa, objetividad</td>
+            <td>Arts. 53 y 71 LPAC</td>
+            <td>Conectar con derechos del interesado</td>
+          </tr>
+          <tr>
+            <td>Derechos del interesado</td>
+            <td>Art. 53.1 letras a–i</td>
+            <td>Art. 53 LPAC</td>
+            <td>No aportar docs ya obrantes en la AAPP</td>
+          </tr>
+          <tr>
+            <td>Sancionador</td>
+            <td>Presunción de inocencia y no autoincriminación</td>
+            <td>Art. 53.2 LPAC</td>
+            <td>Garantía reforzada</td>
+          </tr>
+          <tr>
+            <td>Abstención</td>
+            <td>Deber de apartarse por causa legal</td>
+            <td>Art. 23 LRJSP</td>
+            <td>5 causas</td>
+          </tr>
+          <tr>
+            <td>Recusación</td>
+            <td>Derecho del interesado a pedir el apartamiento</td>
+            <td>Art. 24 LRJSP</td>
+            <td>Día siguiente y 3 días</td>
+          </tr>
+          <tr>
+            <td>Efectos</td>
+            <td>La no abstención no invalida automáticamente</td>
+            <td>Art. 23.4 LRJSP</td>
+            <td>Trampa muy frecuente</td>
+          </tr>
+        </table>
+      </article>
+    </section>
+
+    <div class="footer">Archivo 2 · Esquema-resumen visual · Tema 9 · LPAC 39/2015 + LRJSP 40/2015</div>
+  </div>
+</body>
+</html>

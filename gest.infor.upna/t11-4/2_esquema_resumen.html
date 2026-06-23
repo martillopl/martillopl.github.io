@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>2_esquema_resumen_t04.html</title>
+  <style>
+    *{box-sizing:border-box;}
+    body{font-family:Arial,Helvetica,sans-serif;line-height:1.5;color:#1f2937;margin:0;padding:24px;background:#f0f4f8;}
+    h1{font-size:24px;color:#0f172a;border-bottom:3px solid #1d4ed8;padding-bottom:8px;margin-bottom:6px;}
+    .subtitle{font-size:13px;color:#64748b;margin-bottom:22px;}
+    h2{font-size:17px;color:#0f172a;border-left:5px solid #2563eb;padding-left:10px;margin:26px 0 12px 0;}
+    /* BLOQUES KPI */
+    .kpi-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:22px;}
+    .kpi{background:#1d4ed8;color:#fff;border-radius:10px;padding:16px 20px;flex:1;min-width:140px;text-align:center;}
+    .kpi .num{font-size:28px;font-weight:900;display:block;}
+    .kpi .lbl{font-size:12px;margin-top:4px;opacity:.9;}
+    /* PIRÁMIDE / BLOQUE VERTICAL */
+    .piramide{display:flex;flex-direction:column;gap:8px;margin-bottom:22px;}
+    .nivel{border-radius:8px;padding:12px 18px;font-size:14px;}
+    .nivel .ntitle{font-weight:700;font-size:15px;margin-bottom:4px;}
+    .n1{background:#1d4ed8;color:#fff;}
+    .n2{background:#3b82f6;color:#fff;}
+    .n3{background:#93c5fd;color:#1e3a5f;}
+    /* TARJETAS EN CUADRÍCULA */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:22px;}
+    .card{background:#fff;border-radius:10px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,.08);border-top:4px solid #2563eb;}
+    .card.verde{border-top-color:#16a34a;}
+    .card.rojo{border-top-color:#dc2626;}
+    .card.ambar{border-top-color:#d97706;}
+    .card.lila{border-top-color:#7c3aed;}
+    .card h3{font-size:14px;margin:0 0 8px 0;color:#0f172a;}
+    .card p,.card ul{font-size:13px;margin:0;color:#374151;}
+    .card ul{padding-left:16px;}
+    .card li{margin-bottom:3px;}
+    /* FLUJO HORIZONTAL */
+    .flujo{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-bottom:22px;}
+    .paso{background:#2563eb;color:#fff;border-radius:8px;padding:10px 14px;font-size:13px;font-weight:700;text-align:center;flex:1;min-width:110px;}
+    .paso.gris{background:#e2e8f0;color:#1e293b;}
+    .paso.verde{background:#16a34a;}
+    .paso.rojo{background:#dc2626;}
+    .paso.ambar{background:#d97706;}
+    .flecha{font-size:20px;color:#64748b;flex-shrink:0;}
+    /* TABLA RÁPIDA */
+    table{width:100%;border-collapse:collapse;margin-bottom:22px;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.08);}
+    th,td{border:1px solid #e2e8f0;padding:9px 10px;font-size:13px;text-align:left;vertical-align:top;}
+    th{background:#dbeafe;font-weight:700;color:#0f172a;}
+    tr:nth-child(even){background:#f8fafc;}
+    /* TRAMPA */
+    .trampa{background:#fef2f2;border-left:5px solid #dc2626;border-radius:0 8px 8px 0;padding:12px 16px;margin-bottom:10px;font-size:13px;}
+    .trampa strong{color:#991b1b;}
+    .ok{color:#15803d;font-weight:700;}
+    .no{color:#dc2626;font-weight:700;}
+    /* MEMO */
+    .memo{background:#fef9c3;border-left:5px solid #eab308;border-radius:0 8px 8px 0;padding:12px 16px;margin-bottom:14px;font-size:13px;}
+    .tag{display:inline-block;background:#2563eb;color:#fff;border-radius:20px;padding:2px 10px;font-size:11px;font-weight:700;margin-right:4px;}
+    .tag.rojo{background:#dc2626;}
+    .tag.verde{background:#16a34a;}
+    .tag.ambar{background:#d97706;}
+    .tag.lila{background:#7c3aed;}
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 4 · Ley 39/2015 del Procedimiento Administrativo Común (LPAC)</h1>
+<p class="subtitle">Esquema-resumen visual · Título Preliminar · Interesados · Capacidad de obrar · Representación · Identificación y firma</p>
+
+<!-- KPIs -->
+<h2>📊 Cifras clave para el examen</h2>
+<div class="kpi-row">
+  <div class="kpi"><span class="num">133</span><span class="lbl">artículos de la LPAC</span></div>
+  <div class="kpi"><span class="num">8</span><span class="lbl">Títulos (Preliminar + 7)</span></div>
+  <div class="kpi" style="background:#1e40af;"><span class="num">3</span><span class="lbl">Clases de interesados (art. 4)</span></div>
+  <div class="kpi" style="background:#1e3a8a;"><span class="num">10</span><span class="lbl">días para subsanar defecto de representación</span></div>
+  <div class="kpi" style="background:#1e40af;"><span class="num">5</span><span class="lbl">años de validez máxima del poder apud acta</span></div>
+  <div class="kpi" style="background:#1e3a8a;"><span class="num">2</span><span class="lbl">meses de espera para otros sistemas de identificación/firma</span></div>
+  <div class="kpi" style="background:#1d4ed8;"><span class="num">5</span><span class="lbl">actos que exigen firma (art. 11)</span></div>
+  <div class="kpi" style="background:#1e3a8a;"><span class="num">3</span><span class="lbl">tipos de poder inscribible en el registro (art. 6)</span></div>
+</div>
+
+<!-- BINOMIO -->
+<h2>🔗 El binomio 39+40 · Arquitectura de la reforma</h2>
+<div class="flujo">
+  <div class="paso verde">LEY 39/2015<br><small>Relaciones<br>AD EXTRA<br>Adm.–Ciudadanos</small></div>
+  <div class="flecha">+</div>
+  <div class="paso" style="background:#7c3aed;">LEY 40/2015<br><small>Relaciones<br>AD INTRA<br>Organización</small></div>
+  <div class="flecha">=</div>
+  <div class="paso ambar">REFORMA INTEGRAL<br><small>del Derecho<br>Administrativo<br>español</small></div>
+</div>
+<div class="memo">⏰ La LPAC fue aprobada el <strong>1 de octubre de 2015</strong> (BOE 2 octubre) y entró en vigor el <strong>2 de octubre de 2016</strong>, un año después.</div>
+
+<!-- OBJETO Y ÁMBITO -->
+<h2>🎯 Objeto y ámbito (Arts. 1–2)</h2>
+<div class="grid">
+  <div class="card">
+    <h3>🎯 3 Objetos del art. 1</h3>
+    <ul>
+      <li><strong>Validez y eficacia</strong> de los actos administrativos</li>
+      <li><strong>Procedimiento administrativo común</strong> (incl. sancionador y responsabilidad patrimonial)</li>
+      <li><strong>Principios de iniciativa legislativa</strong> y potestad reglamentaria</li>
+    </ul>
+  </div>
+  <div class="card verde">
+    <h3>🏛 4 Administraciones del art. 2</h3>
+    <ul>
+      <li>Administración General del Estado</li>
+      <li>CCAA</li>
+      <li>Administración Local</li>
+      <li>Sector público institucional (organismos, universidades…)</li>
+    </ul>
+  </div>
+  <div class="card ambar">
+    <h3>⚠ Aplicación supletoria</h3>
+    <p>Partidos políticos, sindicatos, organizaciones empresariales y corporaciones de derecho público se rigen por su normativa específica. La LPAC les es supletoria.</p>
+  </div>
+</div>
+
+<!-- CIUDADANO COMO ADMINISTRADO -->
+<h2>👤 El ciudadano como administrado</h2>
+<div class="flujo">
+  <div class="paso gris">ADMINISTRADO<br><small>Ley 30/1992<br>Posición pasiva</small></div>
+  <div class="flecha">→</div>
+  <div class="paso verde">CIUDADANO<br><small>LPAC<br>Titular de derechos</small></div>
+  <div class="flecha">→</div>
+  <div class="paso" style="background:#1d4ed8;">INTERESADO<br><small>En procedimiento<br>concreto</small></div>
+</div>
+<div class="memo"><strong>Regla:</strong> Todo interesado es ciudadano, pero no todo ciudadano es interesado en cada procedimiento.<br>
+<strong>Art. 13</strong> = derechos de cualquier persona con capacidad de obrar (relaciones generales).<br>
+<strong>Art. 53</strong> = derechos del interesado en un procedimiento concreto.</div>
+
+<!-- CAPACIDAD DE OBRAR -->
+<h2>⚖ Capacidad de obrar (Art. 3)</h2>
+<div class="grid">
+  <div class="card">
+    <h3>1️⃣ Personas físicas y jurídicas</h3>
+    <p>Con capacidad de obrar con arreglo a las <strong>normas civiles</strong>. Regla general.</p>
+  </div>
+  <div class="card verde">
+    <h3>2️⃣ Menores de edad</h3>
+    <p>Para los derechos e intereses que el ordenamiento jurídico permita ejercer <strong>sin asistencia de representante legal</strong>.<br>
+    <em>Excepción:</em> menores incapacitados cuando la incapacitación afecte al derecho concreto.</p>
+  </div>
+  <div class="card rojo">
+    <h3>3️⃣ Grupos sin personalidad jurídica ⭐ NOVEDAD</h3>
+    <p>Grupos de afectados, uniones y entidades sin personalidad jurídica y patrimonios independientes o autónomos, <strong>cuando la Ley así lo declare expresamente</strong>.<br>
+    <em>Gran novedad respecto a Ley 30/1992.</em></p>
+  </div>
+</div>
+
+<!-- INTERESADOS -->
+<h2>🧑‍⚖️ Interesados: las 3 clases (Art. 4)</h2>
+<div class="piramide">
+  <div class="nivel n1">
+    <div class="ntitle">Clase 1.ª · Promotores (art. 4.1.a)</div>
+    Quienes <strong>PROMUEVEN</strong> el procedimiento como titulares de derechos o intereses legítimos individuales o colectivos. → Han tomado la iniciativa.
+  </div>
+  <div class="nivel n2">
+    <div class="ntitle">Clase 2.ª · Titulares de derechos afectados (art. 4.1.b)</div>
+    Quienes, <strong>SIN HABER INICIADO</strong> el procedimiento, tienen <strong>DERECHOS</strong> que pueden resultar afectados. → No hace falta que se personen; la Administración les comunica (art. 8).
+  </div>
+  <div class="nivel n3">
+    <div class="ntitle">Clase 3.ª · Se personan con intereses legítimos (art. 4.1.c)</div>
+    Quienes tienen <strong>INTERESES LEGÍTIMOS</strong> afectados y <strong>SE PERSONAN</strong> antes de que recaiga resolución definitiva. → Deben tomar la iniciativa de personarse.
+  </div>
+</div>
+<div class="grid">
+  <div class="card ambar">
+    <h3>📌 Art. 4.2 · Intereses colectivos</h3>
+    <p>Asociaciones y organizaciones representativas de intereses económicos y sociales son titulares de intereses legítimos <strong>colectivos</strong>.</p>
+  </div>
+  <div class="card verde">
+    <h3>📌 Art. 4.3 · Transmisión</h3>
+    <p>Si la condición de interesado deriva de una relación jurídica transmisible, el <strong>derechohabiente (heredero)</strong> le sucede en esa condición en cualquier estado del procedimiento.</p>
+  </div>
+</div>
+<div class="memo"><strong>Diferencia clave:</strong> 2.ª clase = tiene <u>derechos</u>, no necesita personarse. 3.ª clase = tiene <u>intereses legítimos</u>, debe personarse activamente antes de la resolución.</div>
+
+<!-- REPRESENTACIÓN -->
+<h2>🤝 Representación (Arts. 5–6)</h2>
+<div class="grid">
+  <div class="card">
+    <h3>✔ Cuándo se presume</h3>
+    <p>Actos de <strong>mero trámite</strong>: la representación se presume, no hay que acreditarla.</p>
+  </div>
+  <div class="card rojo">
+    <h3>📝 Cuándo hay que acreditarla</h3>
+    <ul>
+      <li>Formular solicitudes</li>
+      <li>Presentar declaraciones responsables o comunicaciones</li>
+      <li>Interponer recursos</li>
+      <li>Desistir de acciones</li>
+      <li>Renunciar a derechos</li>
+    </ul>
+  </div>
+  <div class="card verde">
+    <h3>⏱ Defecto de representación</h3>
+    <p>No impide que el acto se tenga por realizado. Plazo para subsanar: <strong>10 días</strong> (prorrogable si las circunstancias lo requieren).</p>
+  </div>
+  <div class="card ambar">
+    <h3>🏢 Personas jurídicas</h3>
+    <p>Solo pueden representar si lo prevén sus <strong>Estatutos</strong>.</p>
+  </div>
+</div>
+
+<!-- REGISTRO DE APODERAMIENTOS -->
+<h2>📋 Registro Electrónico de Apoderamientos (Art. 6)</h2>
+<div class="grid">
+  <div class="card n1" style="background:#1e3a8a;color:#fff;">
+    <h3 style="color:#fff;">Poder general</h3>
+    <p style="color:#e0f2fe;">Para cualquier actuación ante <strong>cualquier Administración</strong> y en cualquier procedimiento.</p>
+  </div>
+  <div class="card" style="border-top-color:#1d4ed8;">
+    <h3>Poder ante una Adm. concreta</h3>
+    <p>Para cualquier procedimiento ante <strong>una Administración específica</strong>.</p>
+  </div>
+  <div class="card verde">
+    <h3>Poder para trámites concretos</h3>
+    <p>Para los <strong>trámites específicos</strong> indicados en el poder.</p>
+  </div>
+</div>
+<div class="flujo">
+  <div class="paso gris">Otorgamiento<br><small>apud acta presencial<br>o electrónico</small></div>
+  <div class="flecha">→</div>
+  <div class="paso">Inscripción<br><small>en el registro<br>electrónico</small></div>
+  <div class="flecha">→</div>
+  <div class="paso verde">Validez<br><small>máximo<br><strong>5 años</strong></small></div>
+  <div class="flecha">→</div>
+  <div class="paso ambar">Renovación<br><small>o revocación<br>en cualquier momento</small></div>
+</div>
+<div class="memo">⚙ Los registros de apoderamientos son <strong>interoperables</strong> entre todas las Administraciones (también con Registro Mercantil, de la Propiedad y protocolos notariales).</div>
+
+<!-- IDENTIFICACIÓN Y FIRMA -->
+<h2>🔐 Identificación vs. firma: el esquema esencial (Arts. 9–11)</h2>
+<div class="grid">
+  <div class="card verde">
+    <h3>🆔 IDENTIFICACIÓN (Art. 9)<br>¿Cuándo? → Siempre</h3>
+    <p>Para <strong>cualquier actuación</strong> en el procedimiento. Basta con identificarse.</p>
+    <ul>
+      <li><span class="tag verde">a</span> Certificado cualificado de <strong>firma electrónica</strong></li>
+      <li><span class="tag verde">b</span> Certificado cualificado de <strong>sello electrónico</strong></li>
+      <li><span class="tag ambar">c</span> Otros sistemas (registro previo + comunicación + 2 meses)</li>
+    </ul>
+    <p style="margin-top:8px;font-size:12px;"><em>La Adm. debe garantizar siempre al menos un sistema a) o b).</em></p>
+  </div>
+  <div class="card rojo">
+    <h3>✍ FIRMA (Art. 10)<br>¿Cuándo? → Solo para 5 actos</h3>
+    <ul>
+      <li>Formular <strong>solicitudes</strong></li>
+      <li>Presentar <strong>declaraciones responsables o comunicaciones</strong></li>
+      <li>Interponer <strong>recursos</strong></li>
+      <li><strong>Desistir</strong> de acciones</li>
+      <li><strong>Renunciar</strong> a derechos</li>
+    </ul>
+    <p style="margin-top:8px;font-size:12px;"><em>Usar firma electrónica acredita ya la identidad (art. 10.6).</em></p>
+  </div>
+</div>
+<div class="memo"><strong>Regla mnemotécnica para los 5 actos que exigen firma:</strong><br>
+<span class="tag">S</span>olicitar &nbsp;<span class="tag">D</span>eclarar/Comunicar &nbsp;<span class="tag rojo">R</span>ecurrir &nbsp;<span class="tag ambar">D</span>esistir &nbsp;<span class="tag lila">R</span>enunciar
+→ <strong>SD-R-D-R</strong> · "Sólo Decidir Requiere Derecho Real"</div>
+
+<!-- ASISTENCIA Y OBLIGACIÓN ELECTRÓNICA -->
+<h2>💻 Asistencia y obligación de relacionarse electrónicamente (Arts. 12 y 14)</h2>
+<div class="grid">
+  <div class="card verde">
+    <h3>✔ Asistencia (Art. 12)</h3>
+    <p>Un <strong>funcionario habilitado</strong> puede realizar la identificación o firma del interesado que carece de medios. Requisitos:</p>
+    <ul>
+      <li>El interesado se identifica presencialmente</li>
+      <li>Presta <strong>consentimiento expreso</strong></li>
+      <li>Queda constancia en el expediente</li>
+    </ul>
+  </div>
+  <div class="card rojo">
+    <h3>⚡ Obligados a relacionarse electrónicamente (Art. 14)</h3>
+    <ul>
+      <li><strong>Personas jurídicas</strong></li>
+      <li><strong>Entidades sin personalidad jurídica</strong></li>
+      <li><strong>Profesionales con colegiación obligatoria</strong> (notarios, registradores…)</li>
+      <li><strong>Representantes</strong> de los obligados anteriores</li>
+      <li><strong>Empleados públicos</strong> para trámites de su condición</li>
+    </ul>
+    <p style="font-size:12px;margin-top:6px;"><em>Personas físicas: libre elección (salvo norma reglamentaria específica).</em></p>
+  </div>
+</div>
+
+<!-- TRAMPAS -->
+<h2>⚠ Trampas frecuentes en el examen</h2>
+<div class="trampa"><strong>✗ "La LPAC se aplica a partidos políticos y sindicatos directamente"</strong><br>
+→ <span class="ok">FALSO.</span> La LPAC es supletoria para ellos; se rigen por su normativa específica (art. 2.2).</div>
+<div class="trampa"><strong>✗ "Los grupos sin personalidad jurídica siempre tienen capacidad de obrar"</strong><br>
+→ <span class="ok">FALSO.</span> Solo cuando la Ley lo declare expresamente (art. 3.c).</div>
+<div class="trampa"><strong>✗ "Los interesados de clase 2.ª deben personarse activamente"</strong><br>
+→ <span class="ok">FALSO.</span> Son los de clase 3.ª. Los de clase 2.ª tienen derechos afectados y la Administración debe comunicarles por art. 8.</div>
+<div class="trampa"><strong>✗ "Siempre hay que acreditar la representación"</strong><br>
+→ <span class="ok">FALSO.</span> Solo para los 5 actos relevantes. Para actos de mero trámite se presume.</div>
+<div class="trampa"><strong>✗ "El defecto de representación invalida el acto inmediatamente"</strong><br>
+→ <span class="ok">FALSO.</span> Se da un plazo de 10 días para subsanarlo (art. 5.6).</div>
+<div class="trampa"><strong>✗ "Los poderes inscritos en el registro tienen validez indefinida"</strong><br>
+→ <span class="ok">FALSO.</span> Validez máxima de 5 años desde la inscripción.</div>
+<div class="trampa"><strong>✗ "La firma electrónica se exige para cualquier actuación"</strong><br>
+→ <span class="ok">FALSO.</span> La firma solo se exige para los 5 actos del art. 11. Para el resto basta con la identificación.</div>
+<div class="trampa"><strong>✗ "Las personas físicas siempre están obligadas a relacionarse electrónicamente"</strong><br>
+→ <span class="ok">FALSO.</span> Las personas físicas pueden elegir libremente (art. 14.1), salvo norma reglamentaria específica.</div>
+<div class="trampa"><strong>✗ "El art. 8 (nuevos interesados) se aplica a todos los procedimientos"</strong><br>
+→ <span class="ok">FALSO.</span> Solo aplica a procedimientos SIN PUBLICIDAD. En procedimientos con publicidad, los posibles interesados pueden conocerlo por sí mismos.</div>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+TEMA 13 · LEY 39/2015 · PUNTOS DE EXAMEN Y ARTÍCULOS CLAVE
+=============================================================
+Los recursos administrativos. Principios generales.
+Recurso de alzada. Recurso potestativo de reposición.
+Recurso extraordinario de revisión.
+=============================================================
+
+==============================
+A) ARTÍCULOS IMPRESCINDIBLES
+==============================
+
+ART. 112  → Objeto y clases: actos recurribles y los 3 tipos de recurso.
+ART. 113  → Mención al recurso extraordinario de revisión en principios generales.
+ART. 114  → Actos que ponen fin a la vía administrativa.
+ART. 115  → Requisitos de interposición del recurso.
+ART. 116  → Causas de inadmisión del recurso.
+ART. 117  → Suspensión de la ejecución del acto recurrido.
+ART. 118  → Audiencia de los interesados en el recurso.
+ART. 119  → Resolución del recurso; prohibición de reformatio in peius.
+ART. 120  → Pluralidad de recursos administrativos.
+ART. 121  → Objeto del recurso de alzada.
+ART. 122  → Plazos y resolución del recurso de alzada.
+ART. 123  → Objeto y naturaleza del recurso potestativo de reposición.
+ART. 124  → Plazos y resolución del recurso de reposición.
+ART. 125  → Causas (4) y plazos del recurso extraordinario de revisión.
+ART. 126  → Plazo de resolución y silencio del recurso extraordinario de revisión.
+
+======================================
+B) PUNTOS QUE CAEN EN EXAMEN TEST
+======================================
+
+1. CLASES DE RECURSOS (ART. 112)
+──────────────────────────────────
+• Hay 3 recursos administrativos: alzada, reposición (potestativo) y revisión (extraordinario).
+• Se recurren: resoluciones + actos de trámite cualificados (los 4 supuestos del art. 112.1).
+• No se recurren en vía admin.: disposiciones de carácter general (reglamentos).
+• Los recursos pueden fundarse en nulidad (art. 47) o anulabilidad (art. 48).
+
+2. FIN DE LA VÍA ADMINISTRATIVA (ART. 114)
+────────────────────────────────────────────
+• Ponen fin a la vía administrativa:
+  - Las resoluciones de los recursos de alzada.
+  - Los órganos que carezcan de superior jerárquico.
+  - Los órganos cuya resolución sea declarada fin de vía por ley o reglamento.
+  - Los acuerdos, pactos o convenios que finalicen el procedimiento.
+• Importante: la resolución de la alzada SIEMPRE pone fin a la vía admin.
+
+3. SUSPENSIÓN (ART. 117)
+─────────────────────────
+• Regla: la interposición del recurso NO suspende la ejecución.
+• Puede pedirse suspensión expresamente.
+• Si la AAPP no resuelve la solicitud en 1 MES → suspensión automática.
+• Silencio de 1 mes = positivo (suspensión concedida). Atención: es uno de los
+  pocos casos de silencio positivo en materia de recursos.
+
+4. CAUSAS DE INADMISIÓN (ART. 116)
+────────────────────────────────────
+• Falta de legitimación.
+• Acto no susceptible de recurso.
+• Extemporaneidad.
+• Recurso pendiente sobre el mismo acto.
+• Manifiestamente infundado.
+
+5. RESOLUCIÓN Y REFORMATIO IN PEIUS (ART. 119)
+────────────────────────────────────────────────
+• La resolución del recurso no puede agravar la situación del recurrente
+  (prohibición de reformatio in peius).
+• El órgano puede resolver cuestiones no alegadas si son de orden público.
+• La resolución ha de ser motivada.
+
+6. RECURSO DE ALZADA (ARTS. 121–122)
+──────────────────────────────────────
+• Objeto: actos que NO ponen fin a la vía administrativa.
+• Órgano competente: el superior jerárquico del que dictó el acto.
+• El recurso puede presentarse ante el órgano que dictó el acto o ante el superior.
+• Plazo interposición acto expreso: 1 MES.
+• Plazo interposición acto presunto: 3 MESES.
+• Plazo de resolución: 3 MESES.
+• Silencio: NEGATIVO (desestimación).
+• Efecto: la resolución de alzada pone fin a la vía admin.
+• Tras la alzada: solo cabe contencioso-admin. o recurso extraordinario de revisión.
+• Contra la resolución de alzada no cabe otro recurso ordinario en vía admin.
+
+7. RECURSO DE REPOSICIÓN (ARTS. 123–124)
+──────────────────────────────────────────
+• Objeto: actos que SÍ ponen fin a la vía administrativa.
+• Carácter: POTESTATIVO (no obligatorio antes del contencioso).
+• Órgano competente: el mismo que dictó el acto.
+• Plazo interposición acto expreso: 1 MES.
+• Plazo interposición acto presunto: 3 MESES (igual que alzada).
+• Plazo de resolución: 1 MES.
+• Silencio: NEGATIVO (desestimación).
+• Incompatibilidad: no puede interponerse si ya se ha interpuesto contencioso, ni viceversa.
+
+8. RECURSO EXTRAORDINARIO DE REVISIÓN (ARTS. 125–126)
+───────────────────────────────────────────────────────
+• Contra actos FIRMES en vía administrativa.
+• Solo por las 4 CAUSAS TASADAS del art. 125.1:
+    a) Error de hecho resultante del propio expediente → PLAZO: 4 AÑOS
+    b) Aparición de documentos nuevos de valor esencial → PLAZO: 3 MESES
+    c) Documentos o testimonios declarados falsos por sentencia firme → PLAZO: 3 MESES
+    d) Resolución dictada como consecuencia de conducta punible (sentencia firme) → PLAZO: 3 MESES
+• Plazo de resolución: 3 MESES.
+• Silencio: NEGATIVO.
+• No es un recurso ordinario; el interesado lo interpone (diferente a la revisión de oficio).
+• Puede interponerse aunque no se haya agotado otro recurso ordinario; es adicional.
+
+======================================
+C) TABLA COMPARATIVA RÁPIDA
+======================================
+
+                    ALZADA          REPOSICIÓN       REVISIÓN EXTRAORD.
+Objeto              No fin vía      Fin vía          Acto firme
+Carácter            Obligatorio     Potestativo      Extraordinario / tasado
+Órgano resuelve     Superior jerár. Mismo órgano     El órgano competente
+Plazo interp. expr. 1 mes           1 mes            4 años (causa a) / 3 meses
+Plazo resolución    3 meses         1 mes            3 meses
+Silencio            Negativo        Negativo         Negativo
+Efecto              Agota vía admin No agota (ya)    No modifica fin vía admin
+Tras la resolución  Contencioso     Contencioso      Contencioso
+
+======================================
+D) TRAMPAS FRECUENTES EN TEST
+======================================
+
+1. "La interposición del recurso suspende automáticamente la ejecución."
+   → FALSO. No hay suspensión automática. Solo se consigue pidiéndola expresamente,
+   o por silencio de 1 mes en la resolución de la solicitud de suspensión.
+
+2. "El recurso de reposición es obligatorio antes del contencioso-administrativo."
+   → FALSO. Es POTESTATIVO: el interesado puede ir directamente al contencioso.
+
+3. "El recurso de reposición lo resuelve el superior jerárquico."
+   → FALSO. Lo resuelve el mismo órgano que dictó el acto.
+
+4. "El plazo de resolución del recurso de alzada es 1 mes."
+   → FALSO. El plazo de resolución de la alzada es 3 MESES.
+   El de reposición sí es 1 mes.
+
+5. "Contra la resolución de alzada cabe nuevo recurso de alzada."
+   → FALSO. No cabe ningún recurso ordinario en vía admin. contra la resolución de alzada.
+
+6. "El recurso extraordinario de revisión tiene siempre un plazo de 3 meses para interponerlo."
+   → FALSO. La causa a) (error de hecho) tiene plazo de 4 AÑOS.
+   Las causas b), c) y d) tienen plazo de 3 meses.
+
+7. "Se puede interponer el recurso de reposición y el contencioso a la vez sobre el mismo acto."
+   → FALSO. Son incompatibles: no puede interponerse contencioso pendiente el de reposición
+   ni viceversa.
+
+8. "El recurso extraordinario de revisión solo puede usarlo la Administración."
+   → FALSO. Lo interpone el INTERESADO; la Administración usa la revisión de oficio (art. 106).
+
+9. "Contra las disposiciones generales cabe recurso de alzada."
+   → FALSO. Contra reglamentos no cabe recurso en vía administrativa (art. 112.3).
+
+10. "El silencio al solicitar la suspensión de la ejecución es negativo."
+    → FALSO. El silencio de 1 mes al resolver la solicitud de suspensión es POSITIVO
+    (suspensión automáticamente concedida, art. 117).
+
+======================================
+E) ESQUEMA NEMOTÉCNICO RÁPIDO
+======================================
+
+LOS 3 RECURSOS: A-R-R (Alzada · Reposición · Revisión extraordinaria)
+
+ALZADA: "Superior · 3 meses resolver · agota la vía"
+REPOSICIÓN: "Mismo órgano · 1 mes resolver · potestativo"
+REVISIÓN EXTRAORDINARIA: "4 causas · 4 años o 3 meses · acto firme"
+
+PLAZOS DE INTERPOSICIÓN:
+  Acto expreso → 1 mes (alzada y reposición)
+  Acto presunto → 3 meses (alzada y reposición)
+  Revisión extraordinaria → 4 años (causa a) / 3 meses (causas b, c, d)
+
+SILENCIO EN RESOLUCIÓN DE RECURSOS: SIEMPRE NEGATIVO.
+SILENCIO EN SOLICITUD DE SUSPENSIÓN: POSITIVO (1 mes).
+
+======================================
+F) ARTÍCULOS CLAVE PARA ORDENAR
+======================================
+
+Clases y objeto de los recursos → art. 112
+Fin de la vía administrativa → art. 114
+Requisitos de interposición → art. 115
+Causas de inadmisión → art. 116
+Suspensión de la ejecución → art. 117
+Resolución y reformatio in peius → art. 119
+Recurso de alzada (objeto) → art. 121
+Recurso de alzada (plazos) → art. 122
+Recurso de reposición (objeto) → art. 123
+Recurso de reposición (plazos) → art. 124
+Recurso extraordinario de revisión (causas y plazos) → art. 125
+Recurso extraordinario de revisión (resolución) → art. 126
