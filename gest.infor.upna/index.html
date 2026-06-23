@@ -15,8 +15,9 @@
   h1{font-size:22px;font-weight:500;line-height:1.3;margin-bottom:8px}
   .meta{font-size:13px;color:var(--t3)}
   .indice{background:var(--bg2);border:.5px solid var(--bl);border-radius:var(--r2);padding:16px 20px;margin-bottom:2.5rem}
-  .indice ol{padding-left:18px}
-  .indice li{font-size:13px;color:var(--t2);padding:3px 0}
+  .indice ol{padding-left:18px;counter-reset:item}
+  .indice li{font-size:13px;color:var(--t2);padding:3px 0;display:block}
+  .indice li:before{content: counters(item, ".") " ";counter-increment:item}
   .indice a{color:var(--t2);text-decoration:none}
   .indice a:hover{color:var(--t1)}
   p{font-size:15px;color:var(--t2);margin-bottom:1rem}
@@ -54,12 +55,14 @@
         </ol>
       </li>
       <li>
-        Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas (II): De las disposiciones sobre el procedimiento administrativo común. De la revisión de los actos en vía administrativa (Títulos IV y V).
-        <li><a href="t12-9/1_texto_explicativo.html">Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas. El Procedimiento Administrativo Común I: concepto y naturaleza. Garantías del procedimiento. Abstención y recusación.</a></li>
-        <li><a href="t12-10/1_texto_explicativo.html">Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas. El Procedimiento Administrativo Común II: iniciación del procedimiento. Ordenación. Instrucción. Finalización del procedimiento. Terminación. Terminación convencional. Resolución. Desistimiento y Renuncia. Caducidad.</a></li>
-        <li><a href="t12-11/1_texto_explicativo.html">Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas. El Procedimiento Administrativo Común III: la ejecución de los actos administrativos.</a></li>
-        <li><a href="t12-12/1_texto_explicativo.html">Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas. La teoría de la invalidez del acto administrativo. Nulidad y anulabilidad de los actos administrativos. La revisión de los actos en vía administrativa. La revisión de oficio.</a></li>
-        <li><a href="t12-13/1_texto_explicativo.html">Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas. Los recursos administrativos. Principios generales. Recurso de alzada. Recurso potestativo de reposición. Recurso extraordinario de revisión.</a></li>
+        <ol>
+          Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas (II): De las disposiciones sobre el procedimiento administrativo común. De la revisión de los actos en vía administrativa (Títulos IV y V).
+          <li><a href="t12-9/1_texto_explicativo.html">Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas. El Procedimiento Administrativo Común I: concepto y naturaleza. Garantías del procedimiento. Abstención y recusación.</a></li>
+          <li><a href="t12-10/1_texto_explicativo.html">Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas. El Procedimiento Administrativo Común II: iniciación del procedimiento. Ordenación. Instrucción. Finalización del procedimiento. Terminación. Terminación convencional. Resolución. Desistimiento y Renuncia. Caducidad.</a></li>
+          <li><a href="t12-11/1_texto_explicativo.html">Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas. El Procedimiento Administrativo Común III: la ejecución de los actos administrativos.</a></li>
+          <li><a href="t12-12/1_texto_explicativo.html">Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas. La teoría de la invalidez del acto administrativo. Nulidad y anulabilidad de los actos administrativos. La revisión de los actos en vía administrativa. La revisión de oficio.</a></li>
+          <li><a href="t12-13/1_texto_explicativo.html">Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas. Los recursos administrativos. Principios generales. Recurso de alzada. Recurso potestativo de reposición. Recurso extraordinario de revisión.</a></li>
+        </ol>
       </li>
       <li><a href="t13/1_texto_explicativo.html">Ley Orgánica 2/2023, de 22 de marzo, del Sistema Universitario: Organización de enseñanzas. Régimen Específico de las universidades públicas (Títulos III y IX).</a></li>
       <li><a href="t14/1_texto_explicativo.html">Decreto Foral 110/2003, de 12 de mayo, por el que se aprueban los Estatutos de la Universidad Pública de Navarra: Estructura de la Universidad. Gobierno de la Universidad. (Títulos I y II).</a></li>
