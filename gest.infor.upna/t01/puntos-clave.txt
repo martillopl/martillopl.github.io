@@ -1,0 +1,56 @@
+PUNTOS CLAVE — TEMA 1: TECNOLOGÍA BÁSICA
+Gestor/a Informático/a · UPNA · Oposición
+
+════════════════════════════════════════════════════════
+1. DISPOSITIVOS PERSONALES Y DISPOSITIVOS MÓVILES EN ENTORNOS CORPORATIVOS
+════════════════════════════════════════════════════════
+01. Los dispositivos personales pueden integrarse en el entorno corporativo mediante modelos de uso controlado, especialmente BYOD (Bring Your Own Device).
+02. El uso corporativo de dispositivos personales exige políticas claras de seguridad, acceso, actualización y control.
+03. Los dispositivos móviles aportan flexibilidad, pero también incrementan el riesgo de pérdida, fuga de datos y acceso no autorizado.
+04. En el ámbito corporativo, lo importante no es solo la titularidad del dispositivo, sino su capacidad de gestión y protección.
+
+════════════════════════════════════════════════════════
+2. CONECTIVIDAD DE LOS DISPOSITIVOS PERSONALES
+════════════════════════════════════════════════════════
+05. La conectividad permite acceder a recursos corporativos mediante redes cableadas, Wi‑Fi, redes móviles o VPN.
+06. No basta con “tener conexión”: la conectividad debe ser segura, autenticada y controlada.
+07. Son habituales mecanismos como cifrado, certificados digitales, autenticación reforzada y segmentación de red.
+08. El acceso desde redes externas exige especial atención a la protección de los datos y a la identidad del usuario.
+
+════════════════════════════════════════════════════════
+3. SISTEMAS DE DESPLIEGUE, GESTIÓN REMOTA Y CLONACIÓN DE EQUIPOS
+════════════════════════════════════════════════════════
+09. El despliegue consiste en poner en marcha equipos con una configuración estándar.
+10. La clonación es una técnica de despliegue que copia la configuración de un equipo maestro a otros equipos.
+11. La clonación permite homogeneidad y ahorro de tiempo, pero debe evitar problemas de duplicidad o licencias.
+12. La gestión remota permite administrar dispositivos sin presencia física.
+13. La gestión remota incluye inventario, instalación de software, actualización, bloqueo y borrado remoto.
+14. Las soluciones MDM/UEM centralizan la administración de equipos móviles y, en muchos casos, también de ordenadores.
+
+════════════════════════════════════════════════════════
+4. ESCRITORIOS Y ACCESO REMOTO
+════════════════════════════════════════════════════════
+15. El acceso remoto permite utilizar un equipo, sesión o aplicación situada en otra ubicación.
+16. El escritorio remoto da acceso a una sesión que se ejecuta en un equipo físico o servidor remoto.
+17. El escritorio virtual aloja el entorno de trabajo en infraestructura virtual centralizada.
+18. El acceso remoto es esencial para teletrabajo, soporte técnico y centralización de recursos.
+19. Conviene diferenciar claramente entre acceso a una sesión remota y consumo de un escritorio virtual.
+
+════════════════════════════════════════════════════════
+5. SISTEMAS OPERATIVOS Y SOFTWARE DE BASE
+════════════════════════════════════════════════════════
+20. El sistema operativo es el software base que gestiona recursos del hardware y permite ejecutar aplicaciones.
+21. Sus funciones principales incluyen gestión de memoria, procesador, almacenamiento, periféricos y seguridad.
+22. En el entorno corporativo destacan Microsoft Windows, Linux y macOS.
+23. Windows suele dominar el puesto de usuario por su amplia compatibilidad.
+24. Linux destaca especialmente en servidores, infraestructura y administración técnica.
+25. macOS se usa en determinados perfiles y entornos vinculados al ecosistema Apple.
+
+════════════════════════════════════════════════════════
+6. SOFTWARE DE CÓDIGO ABIERTO
+════════════════════════════════════════════════════════
+26. El software de código abierto permite acceder al código fuente, estudiarlo, modificarlo y redistribuirlo bajo licencia.
+27. El valor del software abierto no es solo económico, sino también técnico y organizativo.
+28. No debe confundirse automáticamente software libre con código abierto, aunque estén muy relacionados.
+29. El software libre enfatiza las libertades del usuario.
+30. El código abierto enfatiza el acceso al código 

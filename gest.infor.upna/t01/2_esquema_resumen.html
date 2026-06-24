@@ -1,0 +1,200 @@
+<!-- 2_esquema_resumen.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema 1 – Esquema resumen</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 2rem;
+      color: #1f2937;
+      background: #ffffff;
+      line-height: 1.45;
+    }
+    h1{
+      color: #123a5a;
+      border-bottom: 3px solid #123a5a;
+      padding-bottom: .35rem;
+      margin-bottom: 1.2rem;
+    }
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .card{
+      border: 1px solid #cfe0ef;
+      border-radius: 10px;
+      padding: 1rem 1rem .9rem;
+      background: #f8fbff;
+      box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    }
+    .card h2{
+      margin: 0 0 .7rem 0;
+      font-size: 1.03rem;
+      color: #174f7a;
+    }
+    ul{
+      margin: .4rem 0 0 1.1rem;
+      padding: 0;
+    }
+    li{
+      margin: .25rem 0;
+    }
+    .wide{
+      grid-column: 1 / -1;
+    }
+    .tag{
+      display:inline-block;
+      background:#dbeafe;
+      color:#1e3a8a;
+      border-radius:999px;
+      padding:.15rem .55rem;
+      font-size:.85rem;
+      margin-bottom:.55rem;
+    }
+    .mini{
+      font-size:.95rem;
+      color:#475569;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tema 1. Tecnología básica — Esquema resumen</h1>
+
+  <div class="grid">
+    <section class="card">
+      <div class="tag">1</div>
+      <h2>Dispositivos personales y móviles</h2>
+      <ul>
+        <li>Portátiles, tabletas, smartphones.</li>
+        <li>Uso en entornos corporativos.</li>
+        <li>Modelos: BYOD y gestión corporativa.</li>
+        <li>Problema central: movilidad vs control.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">2</div>
+      <h2>Conectividad</h2>
+      <ul>
+        <li>Cable, Wi-Fi, redes móviles, VPN.</li>
+        <li>Acceso a recursos internos y externos.</li>
+        <li>Seguridad: cifrado, autenticación, segmentación.</li>
+        <li>Conectar no es lo mismo que acceder de forma segura.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">3</div>
+      <h2>Despliegue, clonación y gestión remota</h2>
+      <ul>
+        <li>Despliegue: puesta en marcha estandarizada.</li>
+        <li>Clonación: copia de una imagen base.</li>
+        <li>Gestión remota: administrar sin presencia física.</li>
+        <li>MDM/UEM como soporte habitual.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">4</div>
+      <h2>Escritorios y acceso remoto</h2>
+      <ul>
+        <li>Trabajo desde otro lugar.</li>
+        <li>Teletrabajo y soporte técnico.</li>
+        <li>Escritorio remoto: control de sesión a distancia.</li>
+        <li>Escritorio virtual: entorno alojado centralmente.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">5</div>
+      <h2>Sistemas operativos</h2>
+      <ul>
+        <li>Software base del equipo.</li>
+        <li>Gestiona recursos: CPU, memoria, disco, periféricos.</li>
+        <li>Entornos: Microsoft Windows, Linux, macOS.</li>
+        <li>Base para aplicaciones y seguridad.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">6</div>
+      <h2>Microsoft, Linux y Macintosh</h2>
+      <ul>
+        <li>Windows: gran implantación en puestos de usuario.</li>
+        <li>Linux: servidores, infraestructura y administración técnica.</li>
+        <li>macOS: ecosistema Apple, uso en perfiles concretos.</li>
+        <li>Importa su papel organizativo y su compatibilidad.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">7</div>
+      <h2>Código abierto y software libre</h2>
+      <ul>
+        <li>Código fuente disponible.</li>
+        <li>Permite estudiar, modificar y redistribuir.</li>
+        <li>Software libre: libertad del usuario.</li>
+        <li>Open source: acceso al código y desarrollo colaborativo.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">8</div>
+      <h2>Ofimática y licencias</h2>
+      <ul>
+        <li>Documentos, hojas de cálculo, presentaciones, correo.</li>
+        <li>Soluciones propietarias y abiertas.</li>
+        <li>Licencias permisivas.</li>
+        <li>Licencias copyleft.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">9</div>
+      <h2>Virtualización</h2>
+      <ul>
+        <li>Desacopla servicio y hardware físico.</li>
+        <li>Más flexibilidad y mejor uso de recursos.</li>
+        <li>Virtualización de escritorios.</li>
+        <li>Virtualización de aplicaciones.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">10</div>
+      <h2>Cloud Computing</h2>
+      <ul>
+        <li>Recursos informáticos bajo demanda.</li>
+        <li>Escalabilidad y elasticidad.</li>
+        <li>Menor carga de gestión local.</li>
+        <li>Exige seguridad y gobernanza.</li>
+      </ul>
+    </section>
+
+    <section class="card wide">
+      <div class="tag">11</div>
+      <h2>Nubes públicas, privadas e híbridas</h2>
+      <ul>
+        <li><strong>Pública:</strong> infraestructura compartida de un proveedor.</li>
+        <li><strong>Privada:</strong> infraestructura dedicada a una sola organización.</li>
+        <li><strong>Híbrida:</strong> combinación de pública y privada.</li>
+        <li>Claves: control, coste, flexibilidad, complejidad.</li>
+      </ul>
+    </section>
+
+    <section class="card wide">
+      <div class="tag">12</div>
+      <h2>Relación entre los bloques</h2>
+      <p class="mini">
+        El puesto moderno se construye con una cadena lógica: dispositivo → conectividad → gestión → acceso remoto →
+        sistema operativo → software → virtualización → nube. La idea central es siempre la misma: facilidad para el
+        usuario y control para la organización.
+      </p>
+    </section>
+  </div>
+</body>
+</html>

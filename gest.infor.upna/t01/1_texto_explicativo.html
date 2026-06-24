@@ -1,0 +1,279 @@
+<!-- 1_texto_explicativo.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema 1 – Tecnología básica</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+      margin: 2.2rem;
+      color: #1f2937;
+      background: #ffffff;
+    }
+    h1,h2,h3{
+      color: #143a5a;
+      margin-top: 1.4rem;
+    }
+    h1{
+      border-bottom: 3px solid #143a5a;
+      padding-bottom: .4rem;
+    }
+    h2{
+      border-left: 6px solid #2b6cb0;
+      padding-left: .6rem;
+      margin-top: 2rem;
+    }
+    h3{
+      margin-top: 1.2rem;
+      color: #24557d;
+    }
+    .box{
+      background: #f7fbff;
+      border: 1px solid #d7e7f5;
+      border-radius: 8px;
+      padding: 1rem 1.1rem;
+      margin: 1rem 0;
+    }
+    .key{
+      background: #eef6ff;
+      border-left: 5px solid #2b6cb0;
+      padding: .8rem 1rem;
+      margin: 1rem 0;
+    }
+    ul{
+      margin-top: .4rem;
+    }
+    .small{
+      font-size: .95rem;
+      color: #4b5563;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tema 1. Tecnología básica</h1>
+
+  <div class="box">
+    <p>
+      Este tema reúne los fundamentos tecnológicos que permiten trabajar en un entorno corporativo moderno.
+      En él se estudian los dispositivos personales y móviles, la conectividad segura, los sistemas de despliegue
+      y gestión remota, los escritorios y accesos remotos, los principales sistemas operativos, el software de
+      código abierto, la virtualización y el cloud computing. Aunque cada bloque parece independiente, todos
+      forman parte de un mismo modelo de trabajo: el usuario accede a recursos de la organización desde un
+      dispositivo, y esos recursos pueden estar instalados localmente, gestionados a distancia, virtualizados o
+      alojados en la nube.
+    </p>
+    <p>
+      En la administración pública, y especialmente en un entorno universitario, la clave no es solo disponer de
+      tecnología, sino poder administrarla, protegerla y mantenerla homogénea. Por eso este tema combina aspectos
+      de uso, control, seguridad y arquitectura tecnológica.
+    </p>
+  </div>
+
+  <h2>1. Dispositivos personales y dispositivos móviles en entornos corporativos</h2>
+
+  <p>
+    Los dispositivos personales y móviles incluyen ordenadores portátiles, tabletas y teléfonos inteligentes.
+    Su presencia en la organización responde a una necesidad clara: trabajar con mayor flexibilidad y movilidad.
+    Sin embargo, cuando estos equipos se usan en entornos corporativos, dejan de ser simples dispositivos de uso
+    individual y pasan a integrarse en una política tecnológica de la organización.
+  </p>
+
+  <p>
+    En este contexto aparecen modelos como <strong>BYOD</strong> (Bring Your Own Device), en el que el empleado utiliza
+    su propio dispositivo para tareas de trabajo, y otros enfoques más controlados en los que la entidad proporciona
+    el equipo y conserva mayor capacidad de administración. El problema principal de estos modelos es equilibrar
+    comodidad y control. Cuanto mayor es la movilidad, mayor es también el riesgo de fuga de información, pérdida
+    de dispositivos o uso no autorizado de recursos.
+  </p>
+
+  <div class="key">
+    <p>
+      En examen conviene recordar que el uso corporativo de dispositivos personales exige políticas de seguridad,
+      control de acceso, actualización y, en su caso, borrado remoto.
+    </p>
+  </div>
+
+  <h2>2. Conectividad de los dispositivos personales</h2>
+
+  <p>
+    La conectividad permite que los dispositivos accedan a la infraestructura de la organización. Esa conexión
+    puede realizarse mediante cable, Wi-Fi, redes móviles o túneles seguros como VPN. Lo importante no es solo
+    “tener conexión”, sino hacerlo de manera autenticada, controlada y segura.
+  </p>
+
+  <p>
+    En entornos corporativos, la conectividad se complementa con mecanismos como la segmentación de red,
+    la autenticación reforzada, el uso de certificados y el cifrado de las comunicaciones. Esto es especialmente
+    importante cuando el acceso se realiza desde fuera de la sede, desde un dispositivo personal o desde una red
+    no plenamente confiable.
+  </p>
+
+  <h2>3. Sistemas de despliegue, gestión remota y clonación de equipos</h2>
+
+  <p>
+    El <strong>despliegue</strong> consiste en preparar y poner en funcionamiento equipos con una configuración
+    estandarizada. En vez de instalar manualmente el sistema operativo y las aplicaciones una y otra vez, se
+    utilizan imágenes base o plantillas que permiten reproducir una configuración común.
+  </p>
+
+  <p>
+    La <strong>clonación</strong> es una técnica concreta de despliegue. Permite copiar la configuración de un equipo
+    maestro a otros equipos, de manera que todos queden con una base homogénea. Esto resulta muy útil en aulas,
+    oficinas o servicios con muchos puestos similares. Su principal ventaja es la rapidez; su principal cuidado
+    está en evitar duplicidades, errores de configuración o problemas de licencias.
+  </p>
+
+  <p>
+    La <strong>gestión remota</strong> permite administrar dispositivos sin presencia física. Incluye tareas como
+    aplicar políticas de seguridad, instalar o desinstalar aplicaciones, actualizar el sistema, inventariar el
+    equipo, bloquearlo o incluso borrar su contenido a distancia. En la práctica, esto se apoya en soluciones de
+    administración centralizada como MDM o UEM, especialmente útiles cuando existe una gran diversidad de equipos.
+  </p>
+
+  <div class="box">
+    <p class="small">
+      Distinción útil: el despliegue y la clonación preparan equipos; la gestión remota los administra una vez en
+      servicio.
+    </p>
+  </div>
+
+  <h2>4. Escritorios y acceso remoto</h2>
+
+  <p>
+    El acceso remoto permite utilizar un equipo, una sesión de trabajo o una aplicación situada en otra ubicación.
+    Es una herramienta esencial para teletrabajo, soporte técnico y centralización de recursos. Su utilidad crece
+    cuando el usuario necesita trabajar desde distintos lugares sin perder continuidad.
+  </p>
+
+  <p>
+    Conviene distinguir entre <strong>escritorio remoto</strong> y <strong>escritorio virtual</strong>. En el escritorio
+    remoto se controla una sesión que está ejecutándose en otro equipo físico o servidor. En el escritorio virtual,
+    el entorno de trabajo se aloja en una infraestructura virtual centralizada. Ambos permiten acceso a distancia,
+    pero no son exactamente lo mismo.
+  </p>
+
+  <h2>5. Sistemas operativos y software de base</h2>
+
+  <p>
+    El sistema operativo es el software básico que hace posible el funcionamiento del ordenador. Gestiona recursos
+    como memoria, procesador, almacenamiento, periféricos y seguridad, y sirve de base para que se ejecuten las
+    aplicaciones. Sin sistema operativo, el hardware no puede prestar un servicio útil al usuario.
+  </p>
+
+  <p>
+    En el entorno corporativo destacan tres grandes familias: <strong>Microsoft Windows</strong>, <strong>Linux</strong>
+    y <strong>Macintosh/macOS</strong>. Windows suele predominar en los puestos de usuario por su compatibilidad con
+    aplicaciones de oficina y su integración en entornos de dominio. Linux tiene gran presencia en servidores,
+    infraestructura y tareas técnicas. Macintosh, por su parte, suele aparecer en determinados perfiles y puestos
+    donde se valora su ecosistema específico.
+  </p>
+
+  <div class="key">
+    <p>
+      Idea básica de examen: Windows, Linux y macOS no compiten solo por interfaz, sino por su papel dentro de la
+      organización y por su modelo de administración.
+    </p>
+  </div>
+
+  <h2>6. Software de código abierto</h2>
+
+  <p>
+    El software de código abierto es aquel cuyo código fuente está disponible para su estudio, modificación y
+    redistribución bajo determinadas condiciones. Su valor no reside únicamente en que sea gratuito, sino en que
+    permite transparencia técnica, adaptación y colaboración.
+  </p>
+
+  <p>
+    Es importante no confundir “código abierto” con “software libre” de forma simplista. Ambos conceptos están muy
+    relacionados, pero ponen el acento en aspectos distintos. El software libre destaca las libertades del usuario;
+    el código abierto resalta el acceso al código y el modelo de desarrollo. En la práctica, muchos programas se
+    sitúan en el cruce de ambas ideas.
+  </p>
+
+  <h3>Aplicaciones ofimáticas</h3>
+
+  <p>
+    Las aplicaciones ofimáticas permiten crear y editar documentos, hojas de cálculo, presentaciones y correo
+    electrónico. En el ámbito corporativo existen alternativas propietarias y abiertas. Las soluciones de código
+    abierto resultan atractivas por su flexibilidad, por la reducción de costes de licencia y por la independencia
+    tecnológica que pueden ofrecer.
+  </p>
+
+  <h3>Tipos de licencias</h3>
+
+  <p>
+    Las licencias determinan qué puede hacerse con el software. En el software abierto se suelen distinguir
+    licencias <strong>permisivas</strong> y licencias <strong>copyleft</strong>. Las permisivas permiten un uso muy
+    amplio con pocas obligaciones, normalmente centradas en mantener avisos de autoría. Las copyleft añaden la
+    exigencia de conservar la misma licencia en las obras derivadas y de poner a disposición el código fuente cuando
+    se distribuyen modificaciones.
+  </p>
+
+  <h2>7. Virtualización de escritorios y de aplicaciones</h2>
+
+  <p>
+    La virtualización consiste en desacoplar recursos lógicos del hardware físico. Gracias a ella, un escritorio o
+    una aplicación pueden ejecutarse sobre una infraestructura central en lugar de depender exclusivamente del
+    equipo local del usuario. Esto mejora la administración, la reutilización de recursos y la escalabilidad.
+  </p>
+
+  <p>
+    La <strong>virtualización de escritorios</strong> proporciona un entorno completo de trabajo alojado en servidores
+    o plataformas virtuales. La <strong>virtualización de aplicaciones</strong>, en cambio, entrega solo la aplicación
+    al usuario, sin necesidad de instalarla de forma tradicional en el equipo final. La primera ofrece una experiencia
+    más integral; la segunda es más ligera y focalizada.
+  </p>
+
+  <h2>8. Cloud Computing</h2>
+
+  <p>
+    El cloud computing es un modelo de consumo de recursos informáticos a través de la red. En lugar de comprar,
+    mantener y dimensionar toda la infraestructura local, la organización utiliza servicios bajo demanda. Esto
+    incluye cómputo, almacenamiento, plataformas y aplicaciones.
+  </p>
+
+  <p>
+    Las principales ventajas de la nube son la elasticidad, la escalabilidad y la reducción de carga operativa
+    sobre la infraestructura propia. A cambio, se requiere una buena gobernanza, una correcta gestión de la seguridad
+    y una atención especial al cumplimiento normativo, especialmente cuando se tratan datos sensibles o críticos.
+  </p>
+
+  <h3>Nubes privadas, públicas e híbridas</h3>
+
+  <p>
+    La <strong>nube pública</strong> ofrece servicios sobre infraestructura compartida de un proveedor externo.
+    La <strong>nube privada</strong> está destinada a una sola organización y aporta mayor control y personalización.
+    La <strong>nube híbrida</strong> combina ambas para distribuir cargas y aprovechar las ventajas de cada una.
+  </p>
+
+  <p>
+    La nube pública suele destacar por su flexibilidad; la privada, por su control; y la híbrida, por su capacidad
+    de combinar ambos enfoques. En examen es frecuente pedir la diferencia entre ellas, por lo que conviene tener
+    clara la idea central de cada modelo.
+  </p>
+
+  <h2>9. Relación entre todos los bloques</h2>
+
+  <p>
+    Todos estos conceptos forman parte de una misma realidad tecnológica. El usuario trabaja desde un dispositivo
+    personal o corporativo, se conecta de manera segura, accede a servicios remotos o virtualizados, utiliza un
+    sistema operativo y un software de base, y cada vez con mayor frecuencia consume recursos desde la nube.
+  </p>
+
+  <p>
+    Por eso este tema debe entenderse como un mapa del puesto de trabajo moderno: el objetivo no es solo que el
+    sistema funcione, sino que sea administrable, seguro, homogéneo y adaptable a las necesidades cambiantes de la
+    organización.
+  </p>
+
+  <div class="key">
+    <p>
+      En una frase: la tecnología básica corporativa busca que el usuario trabaje con facilidad y que la organización
+      conserve el control.
+    </p>
+  </div>
+</body>
+</html>
