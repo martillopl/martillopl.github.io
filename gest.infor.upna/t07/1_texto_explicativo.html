@@ -1,0 +1,212 @@
+<!-- 1_texto_explicativo.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema 7 – Administración de sistemas</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      line-height:1.58;
+      margin:2.2rem;
+      color:#1f2937;
+      background:#ffffff;
+    }
+    h1,h2,h3{
+      color:#143a5a;
+    }
+    h1{
+      border-bottom:3px solid #143a5a;
+      padding-bottom:.4rem;
+      margin-bottom:1.2rem;
+    }
+    h2{
+      margin-top:2rem;
+      border-left:6px solid #2b6cb0;
+      padding-left:.6rem;
+    }
+    h3{
+      margin-top:1.1rem;
+      color:#24557d;
+    }
+    .box{
+      background:#f7fbff;
+      border:1px solid #d7e7f5;
+      border-radius:8px;
+      padding:1rem 1.1rem;
+      margin:1rem 0;
+    }
+    .key{
+      background:#eef6ff;
+      border-left:5px solid #2b6cb0;
+      padding:.85rem 1rem;
+      margin:1rem 0;
+    }
+    ul{
+      margin-top:.4rem;
+    }
+    .small{
+      font-size:.95rem;
+      color:#4b5563;
+    }
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 7. Administración de sistemas</h1>
+
+  <div class="box">
+    <p>
+      Este tema aborda la administración de sistemas en entornos de servidor, desde los sistemas operativos UNIX y
+      Linux hasta la virtualización, los contenedores, el almacenamiento, las copias de seguridad y las estrategias
+      de alta disponibilidad. Es un tema central porque describe la base tecnológica que sostiene muchos servicios
+      corporativos y explica cómo garantizar que sigan funcionando de forma estable, escalable y recuperable.
+    </p>
+    <p>
+      La idea principal es que administrar sistemas no significa solo “mantenerlos encendidos”, sino planificar recursos,
+      aislar cargas, proteger datos, anticiparse a fallos y asegurar continuidad de servicio. Por eso aquí aparecen
+      conceptos técnicos y organizativos que suelen preguntarse mucho en oposición.
+    </p>
+  </div>
+
+  <h2>1. Sistemas operativos UNIX y Linux</h2>
+
+  <p>
+    UNIX y Linux son sistemas operativos multiusuario y multitarea que han sido fundamentales en el mundo servidor.
+    Su diseño favorece la estabilidad, la seguridad y el trabajo en red. En servidores x86, su administración incluye
+    gestión de usuarios, permisos, procesos, servicios, almacenamiento, redes y automatización.
+  </p>
+
+  <p>
+    Linux se ha consolidado como una opción muy extendida por su flexibilidad, su robustez y su ecosistema de
+    herramientas. La administración suele hacerse mediante consola, comandos, scripts y utilidades de configuración.
+    En examen, suele interesar entender que la administración en estos sistemas exige precisión, trazabilidad y
+    familiaridad con herramientas de línea de comandos.
+  </p>
+
+  <h2>2. Entornos de virtualización</h2>
+
+  <p>
+    La virtualización permite ejecutar varios sistemas operativos o entornos aislados sobre un mismo equipo físico.
+    Para ello se utiliza un hipervisor, que actúa como capa de control entre el hardware y las máquinas virtuales.
+    Cada máquina virtual dispone de recursos lógicos propios, aunque comparta físicamente la infraestructura.
+  </p>
+
+  <p>
+    La gran ventaja de la virtualización es el mejor aprovechamiento del hardware, junto con el aislamiento entre
+    sistemas y la facilidad para crear, mover o restaurar entornos. También simplifica la provisión de servidores,
+    las pruebas y la consolidación de cargas. Es una pieza básica en centros de datos modernos.
+  </p>
+
+  <div class="key">
+    <p>
+      Idea clave: virtualizar es repartir el hardware entre varios sistemas lógicos aislados.
+    </p>
+  </div>
+
+  <h2>3. Tecnologías de contenedores y orquestación</h2>
+
+  <p>
+    Los contenedores empaquetan una aplicación con sus dependencias y la ejecutan de forma aislada, compartiendo el
+    núcleo del sistema anfitrión. Esto los hace más ligeros y rápidos de iniciar que una máquina virtual. Son muy
+    útiles para desplegar aplicaciones de forma reproducible y consistente.
+  </p>
+
+  <p>
+    La orquestación coordina el despliegue, escalado, supervisión y recuperación de múltiples contenedores. Gracias
+    a ella, se automatiza gran parte de la operación y se facilita la alta disponibilidad de aplicaciones distribuidas.
+    En oposición, conviene distinguir muy bien entre virtualización y contenedorización: la primera abstrae hardware;
+    la segunda empaqueta aplicaciones sobre un núcleo compartido.
+  </p>
+
+  <h2>4. Sistemas de almacenamiento SAN y NAS</h2>
+
+  <p>
+    SAN y NAS son dos formas distintas de ofrecer almacenamiento en red. SAN proporciona almacenamiento a nivel de
+    bloque y está orientado a entornos donde se requiere alto rendimiento, baja latencia y gran integración con
+    servidores y bases de datos. NAS ofrece almacenamiento a nivel de fichero y se utiliza mucho para compartir
+    archivos entre varios usuarios o equipos.
+  </p>
+
+  <p>
+    La diferencia esencial está en el nivel de acceso. SAN se comporta como si el almacenamiento estuviera muy cerca
+    del servidor; NAS ofrece una compartición más directa de carpetas y ficheros a través de la red. En examen,
+    suele preguntarse cuál es más adecuada para bases de datos, virtualización o compartición documental.
+  </p>
+
+  <h2>5. Backup y replicación de datos</h2>
+
+  <p>
+    El backup es la copia de seguridad que permite restaurar información en caso de pérdida, error o corrupción. La
+    replicación, en cambio, mantiene una copia sincronizada de los datos en otro sistema o ubicación, con el objetivo
+    de reducir el impacto de una caída y acelerar la recuperación.
+  </p>
+
+  <p>
+    No son lo mismo. El backup protege frente a incidentes históricos o accidentales y permite volver a un punto
+    anterior; la replicación mejora continuidad y disponibilidad al disponer de datos casi en tiempo real en otro
+    lugar. Un buen diseño de sistemas suele combinar ambas estrategias.
+  </p>
+
+  <h2>6. Clusters de servidores para alta disponibilidad</h2>
+
+  <p>
+    Un cluster agrupa varios servidores que colaboran para ofrecer un servicio más robusto. Si uno falla, otro puede
+    asumir su papel, de forma que el usuario perciba una interrupción mínima o nula. Los clusters pueden emplearse
+    para alta disponibilidad, reparto de carga o procesamiento distribuido.
+  </p>
+
+  <p>
+    Su utilidad está en reducir el efecto de fallos individuales y aumentar la tolerancia a errores. En entornos
+    críticos, los clusters forman parte de una arquitectura pensada para que el servicio siga disponible incluso si
+    algún nodo deja de funcionar. En oposición, suele ser importante distinguir cluster de simple granja de servidores
+    o de virtualización aislada.
+  </p>
+
+  <h2>7. Alta disponibilidad, recuperación ante desastres y continuidad de negocio</h2>
+
+  <p>
+    La alta disponibilidad busca minimizar caídas del servicio mediante redundancia y conmutación rápida. La
+    recuperación ante desastres se centra en restaurar sistemas y datos tras un incidente grave, como un fallo masivo,
+    un incendio o una corrupción importante. La continuidad de negocio tiene una visión más amplia: pretende que los
+    procesos críticos de la organización sigan funcionando o se recuperen dentro de un plazo aceptable.
+  </p>
+
+  <p>
+    Estas estrategias requieren planificación, análisis de riesgos, copias, redundancia, procedimientos documentados y
+    pruebas periódicas. En la práctica, no basta con tener tecnología: hace falta definir qué servicios son críticos,
+    cuánto tiempo pueden estar caídos y qué objetivos de recuperación se aceptan. Por eso este bloque combina técnica
+    y organización.
+  </p>
+
+  <div class="box">
+    <p class="small">
+      Resumen rápido: alta disponibilidad evita la caída, recuperación ante desastres levanta el sistema tras la caída
+      y continuidad de negocio asegura que la actividad no se detenga.
+    </p>
+  </div>
+
+  <h2>8. Relación entre todos los bloques</h2>
+
+  <p>
+    Todos los apartados del tema forman una secuencia coherente. UNIX y Linux proporcionan la base de servidor; la
+    virtualización permite consolidar recursos; los contenedores agilizan el despliegue de aplicaciones; SAN y NAS
+    organizan el almacenamiento; backup y replicación protegen y duplican los datos; los clusters aumentan la
+    disponibilidad; y las estrategias de alta disponibilidad, recuperación ante desastres y continuidad de negocio
+    definen cómo responder ante incidencias graves.
+  </p>
+
+  <p>
+    En conjunto, el tema describe cómo construir y mantener infraestructuras de servidor fiables y resilientes.
+    Esa visión global es la que más ayuda a comprender el contenido y a responder con seguridad en oposición.
+  </p>
+</body>
+</html>

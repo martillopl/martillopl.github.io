@@ -1,0 +1,263 @@
+<!-- 3_cuadro_comparativo.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema 7 – Cuadro comparativo</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin:2rem;
+      color:#1f2937;
+      background:#ffffff;
+      line-height:1.45;
+    }
+    h1{
+      color:#123a5a;
+      border-bottom:3px solid #123a5a;
+      padding-bottom:.35rem;
+      margin-bottom:1.2rem;
+    }
+    h2{
+      color:#174f7a;
+      margin-top:1.8rem;
+      margin-bottom:.6rem;
+    }
+    .note{
+      background:#f0f7ff;
+      border-left:5px solid #2b6cb0;
+      padding:.8rem 1rem;
+      margin:1rem 0;
+      border-radius:6px;
+    }
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin:.8rem 0 1.4rem 0;
+      table-layout:fixed;
+    }
+    th, td{
+      border:1px solid #c9d7e6;
+      padding:.75rem .7rem;
+      vertical-align:top;
+      word-wrap:break-word;
+    }
+    th{
+      background:#dcecff;
+      color:#123a5a;
+      text-align:left;
+    }
+    tr:nth-child(even) td{
+      background:#fbfdff;
+    }
+    .small{
+      font-size:.95rem;
+      color:#475569;
+    }
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 7. Administración de sistemas — Cuadro comparativo</h1>
+
+  <div class="note">
+    Tabla pensada para distinguir conceptos que suelen confundirse en examen. Se resume qué hace cada tecnología,
+    en qué se basa y para qué se usa.
+  </div>
+
+  <h2>1. UNIX/Linux vs virtualización</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>UNIX/Linux</th>
+      <th>Virtualización</th>
+    </tr>
+    <tr>
+      <td>Naturaleza</td>
+      <td>Sistema operativo de servidor.</td>
+      <td>Tecnología para ejecutar varios sistemas sobre un mismo hardware.</td>
+    </tr>
+    <tr>
+      <td>Función</td>
+      <td>Gestionar recursos, procesos, usuarios y servicios.</td>
+      <td>Aislar y consolidar cargas.</td>
+    </tr>
+    <tr>
+      <td>Elemento clave</td>
+      <td>Consola, servicios y automatización.</td>
+      <td>Hipervisor.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Base del servidor.</td>
+      <td>Reparto del hardware entre sistemas lógicos.</td>
+    </tr>
+  </table>
+
+  <h2>2. Virtualización vs contenedores</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>Virtualización</th>
+      <th>Contenedores</th>
+    </tr>
+    <tr>
+      <td>Unidad aislada</td>
+      <td>Máquina virtual completa.</td>
+      <td>Aplicación con sus dependencias.</td>
+    </tr>
+    <tr>
+      <td>Recursos</td>
+      <td>Más pesados; cada VM incluye sistema operativo.</td>
+      <td>Más ligeros; comparten el núcleo del anfitrión.</td>
+    </tr>
+    <tr>
+      <td>Arranque</td>
+      <td>Más lento.</td>
+      <td>Más rápido.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Aísla sistemas.</td>
+      <td>Aísla aplicaciones.</td>
+    </tr>
+  </table>
+
+  <h2>3. SAN vs NAS</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>SAN</th>
+      <th>NAS</th>
+    </tr>
+    <tr>
+      <td>Nivel de acceso</td>
+      <td>Bloque.</td>
+      <td>Fichero.</td>
+    </tr>
+    <tr>
+      <td>Uso típico</td>
+      <td>Bases de datos, virtualización y entornos críticos.</td>
+      <td>Compartición de archivos y copias de seguridad.</td>
+    </tr>
+    <tr>
+      <td>Rendimiento</td>
+      <td>Alto y baja latencia.</td>
+      <td>Más dependiente del tráfico de red.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Almacenamiento cercano al servidor.</td>
+      <td>Almacenamiento compartido por red.</td>
+    </tr>
+  </table>
+
+  <h2>4. Backup vs replicación</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>Backup</th>
+      <th>Replicación</th>
+    </tr>
+    <tr>
+      <td>Función</td>
+      <td>Conservar una copia para restaurar.</td>
+      <td>Mantener una copia sincronizada en otro sistema.</td>
+    </tr>
+    <tr>
+      <td>Objetivo</td>
+      <td>Recuperar datos tras pérdida o error.</td>
+      <td>Reducir impacto de una caída y mejorar continuidad.</td>
+    </tr>
+    <tr>
+      <td>Relación temporal</td>
+      <td>Punto en el tiempo.</td>
+      <td>Casi en tiempo real o con retraso controlado.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Guarda una versión.</td>
+      <td>Duplica el estado.</td>
+    </tr>
+  </table>
+
+  <h2>5. Cluster vs servidor aislado</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>Servidor aislado</th>
+      <th>Cluster</th>
+    </tr>
+    <tr>
+      <td>Composición</td>
+      <td>Un único servidor presta el servicio.</td>
+      <td>Varios servidores cooperan como un sistema.</td>
+    </tr>
+    <tr>
+      <td>Disponibilidad</td>
+      <td>Más vulnerable al fallo único.</td>
+      <td>Más tolerante a fallos.</td>
+    </tr>
+    <tr>
+      <td>Uso</td>
+      <td>Entornos simples o no críticos.</td>
+      <td>Alta disponibilidad, balanceo o procesamiento distribuido.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Un nodo.</td>
+      <td>Varios nodos coordinados.</td>
+    </tr>
+  </table>
+
+  <h2>6. Alta disponibilidad vs recuperación ante desastres vs continuidad de negocio</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>Alta disponibilidad</th>
+      <th>Recuperación ante desastres</th>
+      <th>Continuidad de negocio</th>
+    </tr>
+    <tr>
+      <td>Objetivo</td>
+      <td>Evitar o minimizar caídas.</td>
+      <td>Restaurar sistemas tras un incidente grave.</td>
+      <td>Garantizar que la actividad siga o se recupere a tiempo.</td>
+    </tr>
+    <tr>
+      <td>Ámbito</td>
+      <td>Técnico e inmediato.</td>
+      <td>Técnico y de emergencia.</td>
+      <td>Técnico, organizativo y operativo.</td>
+    </tr>
+    <tr>
+      <td>Horizonte</td>
+      <td>Corto plazo.</td>
+      <td>Tras el desastre.</td>
+      <td>Más amplio y estratégico.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Que no se caiga.</td>
+      <td>Que vuelva a arrancar.</td>
+      <td>Que el negocio no se pare.</td>
+    </tr>
+  </table>
+
+  <div class="note">
+    <p class="small">
+      Resumen mental rápido: virtualización = máquinas completas; contenedores = aplicaciones empaquetadas; SAN =
+      bloques; NAS = ficheros; backup = copia recuperable; replicación = copia sincronizada; cluster = varios servidores;
+      HA = continuidad del servicio; DR = recuperación tras desastre; continuidad = supervivencia del negocio.
+    </p>
+  </div>
+</body>
+</html>

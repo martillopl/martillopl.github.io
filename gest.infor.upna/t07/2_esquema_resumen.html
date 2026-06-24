@@ -1,0 +1,158 @@
+<!-- 2_esquema_resumen.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema 7 – Esquema resumen</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin:2rem;
+      color:#1f2937;
+      background:#ffffff;
+      line-height:1.45;
+    }
+    h1{
+      color:#123a5a;
+      border-bottom:3px solid #123a5a;
+      padding-bottom:.35rem;
+      margin-bottom:1.2rem;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:1rem;
+    }
+    .card{
+      border:1px solid #cfe0ef;
+      border-radius:10px;
+      padding:1rem;
+      background:#f8fbff;
+      box-shadow:0 1px 4px rgba(0,0,0,.04);
+    }
+    .card h2{
+      margin:0 0 .7rem 0;
+      font-size:1.03rem;
+      color:#174f7a;
+    }
+    ul{
+      margin:.4rem 0 0 1.1rem;
+      padding:0;
+    }
+    li{
+      margin:.25rem 0;
+    }
+    .wide{
+      grid-column:1 / -1;
+    }
+    .tag{
+      display:inline-block;
+      background:#dbeafe;
+      color:#1e3a8a;
+      border-radius:999px;
+      padding:.15rem .55rem;
+      font-size:.85rem;
+      margin-bottom:.55rem;
+    }
+    .mini{
+      font-size:.95rem;
+      color:#475569;
+    }
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 7. Administración de sistemas — Esquema resumen</h1>
+
+  <div class="grid">
+    <section class="card">
+      <div class="tag">1</div>
+      <h2>UNIX y Linux</h2>
+      <ul>
+        <li>Sistemas multiusuario y multitarea.</li>
+        <li>Muy usados en servidores x86.</li>
+        <li>Administración por consola, scripts y automatización.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">2</div>
+      <h2>Virtualización</h2>
+      <ul>
+        <li>Varios sistemas sobre un mismo hardware.</li>
+        <li>Hipervisor como capa de control.</li>
+        <li>Aísla, consolida y facilita pruebas y migraciones.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">3</div>
+      <h2>Contenedores y orquestación</h2>
+      <ul>
+        <li>Empaquetan aplicación y dependencias.</li>
+        <li>Comparten el núcleo del anfitrión.</li>
+        <li>La orquestación coordina despliegue, escalado y recuperación.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">4</div>
+      <h2>SAN y NAS</h2>
+      <ul>
+        <li>SAN: acceso a nivel de bloque.</li>
+        <li>NAS: acceso a nivel de fichero.</li>
+        <li>SAN = rendimiento; NAS = compartición.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">5</div>
+      <h2>Backup y replicación</h2>
+      <ul>
+        <li>Backup: copia para restaurar.</li>
+        <li>Replicación: copia sincronizada.</li>
+        <li>Backup protege historial; replicación mejora continuidad.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">6</div>
+      <h2>Clusters</h2>
+      <ul>
+        <li>Varios servidores cooperan como un sistema.</li>
+        <li>Si uno cae, otro asume.</li>
+        <li>Mejoran disponibilidad y tolerancia a fallos.</li>
+      </ul>
+    </section>
+
+    <section class="card wide">
+      <div class="tag">7</div>
+      <h2>Alta disponibilidad, DR y continuidad</h2>
+      <ul>
+        <li>Alta disponibilidad: minimizar caídas del servicio.</li>
+        <li>Recuperación ante desastres: restaurar tras un fallo grave.</li>
+        <li>Continuidad de negocio: mantener o recuperar procesos críticos.</li>
+        <li>Requieren redundancia, procedimientos y pruebas periódicas.</li>
+      </ul>
+    </section>
+
+    <section class="card wide">
+      <div class="tag">8</div>
+      <h2>Relación entre bloques</h2>
+      <p class="mini">
+        UNIX/Linux aportan la base de servidor; la virtualización consolida recursos; los contenedores agilizan
+        despliegues; SAN y NAS organizan almacenamiento; backup y replicación protegen datos; los clusters aumentan
+        disponibilidad; HA, DR y continuidad de negocio definen la respuesta ante fallos graves.
+      </p>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+PUNTOS CLAVE — TEMA 7: ADMINISTRACIÓN DE SISTEMAS
+Gestor/a Informático/a · UPNA · Oposición
+
+════════════════════════════════════════════════════════
+1. UNIX Y LINUX
+════════════════════════════════════════════════════════
+01. UNIX y Linux son sistemas multiusuario y multitarea muy usados en servidores.
+02. Su administración en servidores x86 incluye usuarios, permisos, procesos, servicios, red y almacenamiento.
+03. Linux destaca por su estabilidad, flexibilidad y amplio ecosistema.
+04. La administración suele hacerse mediante consola, scripts y automatización.
+
+════════════════════════════════════════════════════════
+2. VIRTUALIZACIÓN
+════════════════════════════════════════════════════════
+05. La virtualización permite ejecutar varios sistemas sobre un mismo hardware físico.
+06. Un hipervisor gestiona las máquinas virtuales y reparte recursos.
+07. Sus ventajas son el aislamiento, la consolidación y la facilidad de migración.
+08. Es una base habitual en centros de datos y plataformas modernas.
+
+════════════════════════════════════════════════════════
+3. CONTENEDORES Y ORQUESTACIÓN
+════════════════════════════════════════════════════════
+09. Los contenedores empaquetan aplicaciones con sus dependencias.
+10. Comparten el núcleo del sistema anfitrión, por lo que son más ligeros que las máquinas virtuales.
+11. La orquestación coordina despliegue, escalado, balanceo y recuperación.
+12. Contenedores y orquestación facilitan despliegues reproducibles y ágiles.
+
+════════════════════════════════════════════════════════
+4. SAN Y NAS
+════════════════════════════════════════════════════════
+13. SAN ofrece almacenamiento a nivel de bloque.
+14. NAS ofrece almacenamiento a nivel de fichero.
+15. SAN se usa en entornos de alto rendimiento y sistemas críticos.
+16. NAS se usa mucho para compartición de archivos y copias de seguridad.
+
+════════════════════════════════════════════════════════
+5. BACKUP Y REPLICACIÓN
+════════════════════════════════════════════════════════
+17. El backup crea copias para poder restaurar datos.
+18. La replicación mantiene una copia sincronizada en otro sistema o ubicación.
+19. El backup protege frente a pérdida histórica o accidental.
+20. La replicación mejora continuidad y recuperación rápida.
+
+════════════════════════════════════════════════════════
+6. CLUSTERS DE SERVIDORES
+════════════════════════════════════════════════════════
+21. Un cluster agrupa varios servidores para actuar de forma coordinada.
+22. Si un nodo falla, otro puede asumir el servicio.
+23. Los clusters se usan para alta disponibilidad, balanceo o procesamiento distribuido.
+24. Aumentan tolerancia a fallos y resiliencia del sistema.
+
+════════════════════════════════════════════════════════
+7. ALTA DISPONIBILIDAD, DR Y CONTINUIDAD
+════════════════════════════════════════════════════════════════════════
+25. La alta disponibilidad busca minimizar caídas del servicio.
+26. La recuperación ante desastres se centra en restaurar sistemas tras un incidente grave.
+27. La continuidad de negocio asegura que los procesos críticos sigan funcionando o se recuperen.
+28. Estas estrategias requieren redundancia, copias, procedimientos y pruebas.
+
+════════════════════════════════════════════════════════
+8. DIFERENCIAS QUE SUELEN PREGUNTARSE
+════════════════════════════════════════════════════════
+29. UNIX/Linux no es lo mismo que virtualización.
+30. Virtualización no es lo mismo que contenedores.
+31. SAN no es lo mismo que NAS.
+32. Backup no es lo mismo que replicación.
+33. Cluster no es lo mismo que servidor aislado.
+34. Alta disponibilidad no es lo mismo que recuperación ante desastres.
+35. Recuperación ante desastres no es lo mismo que continuidad de negocio.
+
+════════════════════════════════════════════════════════
+9. IDEAS CLAVE DE EXAMEN
+════════════════════════════════════════════════════════
+36. UNIX y Linux son la base de muchos servidores.
+37. La virtualización reparte hardware entre sistemas lógicos.
+38. Los contenedores aíslan aplicaciones y comparten núcleo.
+39. SAN trabaja por bloques y NAS por ficheros.
+40. El backup guarda; la replicación duplica.
+41. Un cluster aumenta disponibilidad mediante cooperación de nodos.
+42. La alta disponibilidad evita caídas.
+43. La recuperación ante desastres permite volver a operar tras una caída grave.
+44. La continuidad de negocio protege la actividad global.
