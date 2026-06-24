@@ -1,0 +1,126 @@
+PUNTOS CLAVE — TEMA 3: FUNDAMENTOS DE PROGRAMACIÓN
+Gestor/a Informático/a · UPNA · Oposición
+
+════════════════════════════════════════════════════════
+1. TIPOS DE DATOS
+════════════════════════════════════════════════════════
+01. Los tipos de datos clasifican la información que maneja un programa.
+02. Determinan qué operaciones pueden realizarse con cada valor.
+03. Tipos habituales: enteros, reales, booleanos, caracteres, cadenas y estructuras.
+04. La elección del tipo de dato influye en la claridad, eficiencia y corrección del programa.
+
+════════════════════════════════════════════════════════
+2. PROGRAMACIÓN ESTRUCTURADA
+════════════════════════════════════════════════════════
+05. La programación estructurada busca programas claros, ordenados y fáciles de mantener.
+06. Se basa en tres estructuras fundamentales: secuencia, selección e iteración.
+07. Favorece la división del problema en bloques lógicos.
+08. Su objetivo es reducir la complejidad del código.
+
+════════════════════════════════════════════════════════
+3. PATRONES DE DISEÑO DE PROGRAMAS
+════════════════════════════════════════════════════════
+09. Los patrones de diseño son soluciones reutilizables a problemas de diseño frecuentes.
+10. No son código cerrado, sino modelos de organización del software.
+11. Se suelen agrupar en patrones creacionales, estructurales y de comportamiento.
+12. Facilitan la flexibilidad, la comprensión y el mantenimiento.
+
+════════════════════════════════════════════════════════
+4. PROGRAMACIÓN ORIENTADA A OBJETOS
+════════════════════════════════════════════════════════
+13. La programación orientada a objetos organiza el software en torno a objetos.
+14. Un objeto combina datos y comportamiento.
+15. Características principales: encapsulación, herencia, polimorfismo y abstracción.
+16. La encapsulación protege los datos internos.
+17. La herencia permite reutilización y especialización.
+18. El polimorfismo permite tratar objetos distintos de forma uniforme.
+19. La abstracción permite centrarse en lo esencial del problema.
+
+════════════════════════════════════════════════════════
+5. LENGUAJE JAVA
+════════════════════════════════════════════════════════════════════════
+20. Java es un lenguaje orientado a objetos, robusto y ampliamente utilizado.
+21. Se caracteriza por su portabilidad mediante bytecode y máquina virtual Java.
+22. Está muy extendido en entornos corporativos, servidores y aplicaciones de gestión.
+23. Tiene tipado estático y una amplia base de bibliotecas y herramientas.
+
+════════════════════════════════════════════════════════
+6. DESARROLLO DE APLICACIONES WEB
+════════════════════════════════════════════════════════
+24. Las aplicaciones web se ejecutan a través del navegador.
+25. La web moderna combina contenido, presentación e interactividad.
+26. El desarrollo web distingue entre lógica de cliente y lógica de servidor.
+27. HTML, CSS y JavaScript forman la base del desarrollo web moderno.
+
+════════════════════════════════════════════════════════
+7. JAVASCRIPT Y FRAMEWORKS
+════════════════════════════════════════════════════════════════════════
+28. JavaScript es el lenguaje principal de interacción dinámica en la web.
+29. Permite responder a eventos, modificar el contenido y conectar con servicios externos.
+30. Los frameworks proporcionan estructura, componentes reutilizables y aceleración del desarrollo.
+31. Un framework no es el lenguaje, sino una capa de apoyo sobre él.
+
+════════════════════════════════════════════════════════════════════════
+8. LENGUAJES DE ETIQUETADO Y HOJAS DE ESTILO
+════════════════════════════════════════════════════════════════════════
+32. HTML es el lenguaje de etiquetado básico de la web.
+33. HTML define estructura y contenido.
+34. CSS define presentación visual.
+35. La separación entre contenido y estilo mejora la mantenibilidad y la adaptación a distintos dispositivos.
+
+════════════════════════════════════════════════════════
+9. ENTORNOS DE DESARROLLO E IDE
+════════════════════════════════════════════════════════════════════════
+36. Un entorno de desarrollo agrupa las herramientas para crear software.
+37. Un IDE integra edición, compilación, ejecución y depuración.
+38. Los IDE suelen ofrecer autocompletado, navegación por el código y otras ayudas.
+39. El IDE aumenta la productividad frente a un editor simple.
+
+════════════════════════════════════════════════════════
+10. SISTEMAS DE CONTROL DE VERSIONES
+════════════════════════════════════════════════════════════════════════
+40. Los sistemas de control de versiones registran la evolución del código fuente.
+41. Permiten colaborar, recuperar versiones anteriores y resolver conflictos.
+42. Git es el sistema de control de versiones más extendido.
+43. Son esenciales en equipos de desarrollo.
+
+════════════════════════════════════════════════════════════════════════
+11. GESTORES DE DEPENDENCIAS
+════════════════════════════════════════════════════════════════════════
+44. Los gestores de dependencias automatizan la instalación y actualización de librerías.
+45. Permiten declarar qué paquetes necesita un proyecto.
+46. Mejoran la reproducibilidad y reducen errores de instalación manual.
+47. Son especialmente importantes en desarrollos modernos con múltiples bibliotecas.
+
+════════════════════════════════════════════════════════════════════════
+12. METODOLOGÍAS DE DESARROLLO Y TRABAJO EN EQUIPO
+════════════════════════════════════════════════════════════════════════
+48. Las metodologías organizan cómo se planifica, desarrolla, prueba y entrega el software.
+49. Pueden ser tradicionales o ágiles.
+50. Las metodologías ágiles favorecen la adaptación al cambio y la colaboración continua.
+51. El trabajo en equipo exige coordinación, reparto de tareas, revisión y trazabilidad.
+
+════════════════════════════════════════════════════════════════════════
+13. DIFERENCIAS QUE SUELEN PREGUNTARSE
+════════════════════════════════════════════════════════
+52. Tipo de dato no es lo mismo que variable.
+53. Programación estructurada no es lo mismo que orientación a objetos.
+54. Un patrón de diseño no es un framework.
+55. Java no es JavaScript.
+56. HTML no es CSS.
+57. Un IDE no es un simple editor de texto.
+58. Control de versiones no es lo mismo que gestor de dependencias.
+59. Git controla versiones; el gestor controla librerías.
+60. La metodología organiza el proceso; la herramienta solo lo apoya.
+
+════════════════════════════════════════════════════════════════════════
+14. IDEAS CLAVE DE EXAMEN
+════════════════════════════════════════════════════════════════════════
+61. La programación estructurada se basa en secuencia, selección e iteración.
+62. La orientación a objetos se apoya en encapsulación, herencia, polimorfismo y abstracción.
+63. Java destaca por su portabilidad mediante bytecode y máquina virtual.
+64. HTML estructura; CSS presenta; JavaScript interactúa.
+65. El IDE integra varias herramientas en un entorno único.
+66. Git es esencial para el trabajo colaborativo.
+67. Los gestores de dependencias automatizan la gestión de bibliotecas.
+68. Las metodologías ágiles priorizan adaptación, entrega incremental y colaboración.

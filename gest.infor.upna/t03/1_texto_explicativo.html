@@ -1,0 +1,298 @@
+<!-- 1_texto_explicativo.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema 3 – Fundamentos de programación</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      line-height:1.58;
+      margin:2.2rem;
+      color:#1f2937;
+      background:#ffffff;
+    }
+    h1,h2,h3{
+      color:#143a5a;
+    }
+    h1{
+      border-bottom:3px solid #143a5a;
+      padding-bottom:.4rem;
+      margin-bottom:1.2rem;
+    }
+    h2{
+      margin-top:2rem;
+      border-left:6px solid #2b6cb0;
+      padding-left:.6rem;
+    }
+    h3{
+      margin-top:1.1rem;
+      color:#24557d;
+    }
+    .box{
+      background:#f7fbff;
+      border:1px solid #d7e7f5;
+      border-radius:8px;
+      padding:1rem 1.1rem;
+      margin:1rem 0;
+    }
+    .key{
+      background:#eef6ff;
+      border-left:5px solid #2b6cb0;
+      padding:.85rem 1rem;
+      margin:1rem 0;
+    }
+    ul{
+      margin-top:.4rem;
+    }
+    .small{
+      font-size:.95rem;
+      color:#4b5563;
+    }
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 3. Fundamentos de programación</h1>
+
+  <div class="box">
+    <p>
+      Este tema reúne los fundamentos que permiten pasar de una idea a un programa informático funcional. Abarca
+      los tipos de datos, la programación estructurada, los patrones de diseño, la programación orientada a objetos,
+      el lenguaje Java, el desarrollo web, JavaScript y sus frameworks, los lenguajes de marcado, las hojas de
+      estilo, los entornos de desarrollo, el control de versiones, los gestores de dependencias y las metodologías
+      de trabajo en equipo.
+    </p>
+    <p>
+      Se trata de un tema muy amplio, pero con una lógica clara: primero se aprende a pensar el problema, luego a
+      estructurar la solución, después a implementarla con un lenguaje y unas herramientas concretas, y finalmente a
+      trabajar en equipo de forma ordenada y mantenible. En oposición, suele interesar mucho distinguir qué es cada
+      tecnología y para qué se usa.
+    </p>
+  </div>
+
+  <h2>1. Tipos de datos</h2>
+
+  <p>
+    Los tipos de datos son la forma en que un lenguaje de programación clasifica la información con la que trabaja.
+    Un programa no manipula “datos” de manera abstracta, sino valores concretos que pueden ser numéricos, lógicos,
+    textuales o estructurados. Esta clasificación es básica porque determina qué operaciones pueden hacerse con cada
+    dato y cómo se almacena internamente.
+  </p>
+
+  <p>
+    En los lenguajes de programación suelen aparecer tipos enteros, reales, booleanos, caracteres, cadenas y tipos
+    compuestos o estructurados. La correcta elección del tipo de dato influye en la eficiencia, la claridad del código
+    y la prevención de errores. En un examen es habitual que pregunten la relación entre tipo de dato, variable y
+    operación permitida.
+  </p>
+
+  <h2>2. Programación estructurada</h2>
+
+  <p>
+    La programación estructurada es un enfoque que busca escribir programas claros, ordenados y fáciles de mantener.
+    Se basa en dividir el problema en bloques lógicos y en utilizar estructuras de control bien definidas, como la
+    secuencia, la selección y la iteración. Su idea central es reducir la complejidad del programa mediante una
+    organización racional del código.
+  </p>
+
+  <p>
+    Este enfoque evita, en la medida de lo posible, construcciones desordenadas y favorece la legibilidad. Permite
+    que el programa se entienda mejor, se depure con más facilidad y se modifique de forma más segura. Aunque hoy
+    convive con otros paradigmas, sigue siendo una base imprescindible para entender la lógica de cualquier lenguaje.
+  </p>
+
+  <div class="key">
+    <p>
+      La programación estructurada no consiste solo en “escribir ordenadamente”, sino en resolver problemas mediante
+      secuencia, selección e iteración.
+    </p>
+  </div>
+
+  <h2>3. Patrones de diseño de programas</h2>
+
+  <p>
+    Los patrones de diseño son soluciones reutilizables a problemas frecuentes de diseño de software. No son código
+    cerrado, sino modelos de organización que ayudan a construir programas más flexibles, comprensibles y mantenibles.
+    Su valor está en que permiten resolver situaciones recurrentes sin empezar de cero cada vez.
+  </p>
+
+  <p>
+    En el desarrollo de software suelen distinguirse patrones creacionales, estructurales y de comportamiento. Los
+    primeros se ocupan de cómo se crean los objetos; los segundos, de cómo se relacionan y combinan; y los terceros,
+    de cómo interactúan y se comunican. En oposición, conviene entender que un patrón no es una librería ni una
+    herramienta, sino una forma de resolver un problema de diseño.
+  </p>
+
+  <h2>4. Lenguajes orientados a objeto</h2>
+
+  <p>
+    La programación orientada a objetos organiza el software en torno a objetos, que combinan datos y comportamientos.
+    Su idea principal es representar el sistema como un conjunto de entidades que interactúan entre sí. Esto facilita
+    la modularidad, la reutilización y el mantenimiento.
+  </p>
+
+  <p>
+    Entre sus características destacan la encapsulación, la herencia, el polimorfismo y la abstracción. La
+    encapsulación protege los datos internos; la herencia permite reutilizar y especializar comportamientos; el
+    polimorfismo permite tratar objetos distintos de forma uniforme; y la abstracción permite centrarse en lo
+    esencial del problema. Esta forma de programar es especialmente útil en sistemas medianos y grandes.
+  </p>
+
+  <h2>5. Lenguaje de programación Java</h2>
+
+  <p>
+    Java es un lenguaje orientado a objetos, muy extendido y diseñado para ofrecer portabilidad, robustez y seguridad.
+    Una de sus ideas más conocidas es que el código se compila a bytecode, que después se ejecuta sobre la máquina
+    virtual Java. Esto hace posible que el mismo programa pueda ejecutarse en distintos entornos con independencia del
+    sistema operativo concreto.
+  </p>
+
+  <p>
+    Java ha tenido una presencia muy fuerte tanto en aplicaciones de escritorio como en servidores y entornos web.
+    Se caracteriza por su tipado estático, su orientación a objetos y su ecosistema de herramientas y bibliotecas.
+    En oposición, suele interesar no solo saber qué es Java, sino por qué se considera un lenguaje robusto y
+    portable en contextos corporativos.
+  </p>
+
+  <div class="box">
+    <p class="small">
+      Idea básica de examen: Java destaca por el bytecode, la máquina virtual y su orientación a objetos.
+    </p>
+  </div>
+
+  <h2>6. Desarrollo de aplicaciones web</h2>
+
+  <p>
+    El desarrollo web consiste en crear aplicaciones que se ejecutan a través de un navegador y se comunican mediante
+    tecnologías propias de la web. Este ámbito incluye tanto la parte visible para el usuario como la lógica que
+    trabaja en servidor. La web moderna ya no es solo un conjunto de páginas estáticas, sino una plataforma de
+    aplicaciones completas.
+  </p>
+
+  <p>
+    En este entorno hay que distinguir entre la estructura del documento, su presentación visual y la lógica de
+    interacción. Esa separación ayuda a mantener proyectos más ordenados y facilita la colaboración entre perfiles
+    distintos. También explica por qué HTML, CSS y JavaScript forman una tríada tan importante en el desarrollo web.
+  </p>
+
+  <h2>7. JavaScript y frameworks</h2>
+
+  <p>
+    JavaScript es el lenguaje de programación más asociado al navegador y a la interacción dinámica en la web.
+    Permite responder a eventos, modificar el contenido de la página y conectar con servicios externos. Su evolución
+    lo ha convertido también en una tecnología muy usada fuera del navegador, especialmente en el lado del servidor
+    y en herramientas de desarrollo.
+  </p>
+
+  <p>
+    Los frameworks y bibliotecas de JavaScript facilitan la construcción de aplicaciones complejas al aportar
+    estructura, componentes reutilizables y patrones de trabajo ya resueltos. Su finalidad es acelerar el desarrollo
+    y mantener la coherencia del código. En examen es importante entender que un framework no es el lenguaje, sino
+    una capa de apoyo construida sobre él.
+  </p>
+
+  <h2>8. Lenguajes de etiquetado y hojas de estilo</h2>
+
+  <p>
+    Los lenguajes de etiquetado, como HTML, sirven para estructurar el contenido de una página web. Definen títulos,
+    párrafos, listas, enlaces, tablas y otros elementos del documento. No se centran en la lógica del programa, sino
+    en la organización semántica de la información.
+  </p>
+
+  <p>
+    Las hojas de estilo, como CSS, permiten definir la presentación visual del documento. Con ellas se controlan
+    colores, tamaños, márgenes, disposición y estilo general. Esta separación entre contenido y presentación mejora
+    la mantenibilidad y hace posible adaptar una misma estructura a distintos dispositivos o criterios de diseño.
+  </p>
+
+  <h2>9. Entornos de desarrollo e IDE</h2>
+
+  <p>
+    Un entorno de desarrollo es el conjunto de herramientas que utiliza el programador para crear, probar y depurar
+    software. Dentro de ese entorno, el IDE o entorno de desarrollo integrado agrupa en una sola interfaz funciones
+    como edición de código, compilación, ejecución, depuración y gestión de proyectos.
+  </p>
+
+  <p>
+    Su utilidad es enorme porque reduce el tiempo invertido en tareas mecánicas y favorece la productividad del equipo.
+    Los IDE modernos suelen incluir autocompletado, resaltado de sintaxis, navegación por el código y herramientas de
+    control de versiones o integración con sistemas externos. En oposición, conviene diferenciar el IDE de un simple
+    editor de texto.
+  </p>
+
+  <h2>10. Sistemas de control de versiones</h2>
+
+  <p>
+    Los sistemas de control de versiones permiten registrar cambios en el código fuente a lo largo del tiempo. Esto
+    resulta imprescindible cuando varias personas trabajan sobre el mismo proyecto, porque ayuda a saber quién cambió
+    qué, cuándo y por qué. También facilita recuperar versiones anteriores y resolver conflictos.
+  </p>
+
+  <p>
+    Git es el sistema más extendido en la actualidad, y se utiliza normalmente junto con plataformas de colaboración
+    que centralizan repositorios, revisiones y flujos de trabajo. Su importancia en el desarrollo profesional es muy
+    alta, porque permite trabajar de forma segura, trazable y coordinada.
+  </p>
+
+  <div class="key">
+    <p>
+      En una frase: el control de versiones no solo guarda copias del código, sino que organiza el trabajo colectivo
+      sobre ese código.
+    </p>
+  </div>
+
+  <h2>11. Gestores de dependencias de librerías</h2>
+
+  <p>
+    Los gestores de dependencias automatizan la instalación, actualización y mantenimiento de las bibliotecas que un
+    proyecto necesita. En lugar de incorporar manualmente cada componente, el proyecto declara qué dependencias usa y
+    el gestor se encarga de resolverlas y descargarlas.
+  </p>
+
+  <p>
+    Esta automatización reduce errores y mejora la reproducibilidad de los entornos de desarrollo. También facilita
+    que distintos miembros del equipo trabajen con versiones compatibles de las mismas librerías. En el contexto
+    moderno del desarrollo web y de Java, estos gestores son una pieza básica del proceso de construcción.
+  </p>
+
+  <h2>12. Metodologías de desarrollo y trabajo en equipo</h2>
+
+  <p>
+    Las metodologías de desarrollo organizan cómo se planifica, construye, prueba y entrega el software. Pueden ser
+    más tradicionales o más ágiles, pero en todos los casos persiguen el mismo objetivo: coordinar el trabajo para que
+    el resultado sea correcto, mantenible y entregado en plazo.
+  </p>
+
+  <p>
+    El trabajo en equipo exige repartir tareas, definir responsabilidades, documentar decisiones y coordinar cambios.
+    Por eso las metodologías modernas dan tanta importancia a la colaboración, la integración continua, la revisión
+    del código y la adaptación a cambios de requisitos. En oposición, no se trata de memorizar nombres de métodos,
+    sino de entender que el desarrollo software es una actividad colectiva y planificada.
+  </p>
+
+  <h2>13. Relación entre todos los bloques</h2>
+
+  <p>
+    Todos los elementos del tema están encadenados. Primero se entiende el problema y se representan sus datos.
+    Después se diseña una solución estructurada, se aplican patrones cuando conviene, se implementa con un lenguaje
+    orientado a objetos como Java o con tecnologías web, se apoya el trabajo con HTML, CSS y JavaScript, se desarrolla
+    en un IDE, se controla el código con un sistema de versiones, se gestionan las librerías con un gestor de
+    dependencias y, finalmente, se coordina todo mediante una metodología de trabajo en equipo.
+  </p>
+
+  <p>
+    Por tanto, este tema no es una simple lista de herramientas. Es una visión completa del proceso de desarrollo
+    de software, desde la idea inicial hasta la colaboración diaria en un equipo profesional. Esa perspectiva global
+    es la que más ayuda tanto para entender el contenido como para responder bien en examen.
+  </p>
+</body>
+</html>

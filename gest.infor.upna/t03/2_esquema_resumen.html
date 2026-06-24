@@ -1,0 +1,208 @@
+<!-- 2_esquema_resumen.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema 3 – Esquema resumen</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin:2rem;
+      color:#1f2937;
+      background:#ffffff;
+      line-height:1.45;
+    }
+    h1{
+      color:#123a5a;
+      border-bottom:3px solid #123a5a;
+      padding-bottom:.35rem;
+      margin-bottom:1.2rem;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:1rem;
+    }
+    .card{
+      border:1px solid #cfe0ef;
+      border-radius:10px;
+      padding:1rem;
+      background:#f8fbff;
+      box-shadow:0 1px 4px rgba(0,0,0,.04);
+    }
+    .card h2{
+      margin:0 0 .7rem 0;
+      font-size:1.03rem;
+      color:#174f7a;
+    }
+    ul{
+      margin:.4rem 0 0 1.1rem;
+      padding:0;
+    }
+    li{
+      margin:.25rem 0;
+    }
+    .wide{
+      grid-column:1 / -1;
+    }
+    .tag{
+      display:inline-block;
+      background:#dbeafe;
+      color:#1e3a8a;
+      border-radius:999px;
+      padding:.15rem .55rem;
+      font-size:.85rem;
+      margin-bottom:.55rem;
+    }
+    .mini{
+      font-size:.95rem;
+      color:#475569;
+    }
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 3. Fundamentos de programación — Esquema resumen</h1>
+
+  <div class="grid">
+    <section class="card">
+      <div class="tag">1</div>
+      <h2>Tipos de datos</h2>
+      <ul>
+        <li>Numéricos, lógicos, texto y estructurados.</li>
+        <li>Determinan operaciones y almacenamiento.</li>
+        <li>Base de variables y expresiones.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">2</div>
+      <h2>Programación estructurada</h2>
+      <ul>
+        <li>Secuencia, selección e iteración.</li>
+        <li>Busca claridad y mantenibilidad.</li>
+        <li>Divide el problema en bloques lógicos.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">3</div>
+      <h2>Patrones de diseño</h2>
+      <ul>
+        <li>Soluciones reutilizables a problemas frecuentes.</li>
+        <li>Creacionales, estructurales y de comportamiento.</li>
+        <li>Mejoran flexibilidad y mantenimiento.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">4</div>
+      <h2>Orientación a objetos</h2>
+      <ul>
+        <li>Objetos = datos + comportamiento.</li>
+        <li>Encapsulación.</li>
+        <li>Herencia.</li>
+        <li>Polimorfismo y abstracción.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">5</div>
+      <h2>Java</h2>
+      <ul>
+        <li>Lenguaje orientado a objetos.</li>
+        <li>Bytecode y máquina virtual Java.</li>
+        <li>Portabilidad y robustez.</li>
+        <li>Muy usado en entornos corporativos.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">6</div>
+      <h2>Desarrollo web</h2>
+      <ul>
+        <li>Aplicaciones que se ejecutan en navegador.</li>
+        <li>Contenido, presentación y lógica.</li>
+        <li>HTML, CSS y JavaScript como base.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">7</div>
+      <h2>JavaScript y frameworks</h2>
+      <ul>
+        <li>Lenguaje principal de interacción web.</li>
+        <li>Eventos, dinamismo y comunicación con servicios.</li>
+        <li>Frameworks = estructura y componentes reutilizables.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">8</div>
+      <h2>Etiquetado y estilos</h2>
+      <ul>
+        <li>HTML: estructura del contenido.</li>
+        <li>CSS: presentación visual.</li>
+        <li>Separación entre contenido y diseño.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">9</div>
+      <h2>Entornos de desarrollo e IDE</h2>
+      <ul>
+        <li>Edición, compilación, ejecución y depuración.</li>
+        <li>Autocompletado y navegación por código.</li>
+        <li>Más productividad y menos errores manuales.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">10</div>
+      <h2>Control de versiones</h2>
+      <ul>
+        <li>Registra cambios del código en el tiempo.</li>
+        <li>Permite colaboración y recuperación de versiones.</li>
+        <li>Git como sistema más extendido.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">11</div>
+      <h2>Gestores de dependencias</h2>
+      <ul>
+        <li>Instalan y actualizan librerías automáticamente.</li>
+        <li>Resuelven dependencias de proyecto.</li>
+        <li>Mejoran reproducibilidad y consistencia.</li>
+      </ul>
+    </section>
+
+    <section class="card wide">
+      <div class="tag">12</div>
+      <h2>Metodologías y trabajo en equipo</h2>
+      <ul>
+        <li>Organizan planificación, desarrollo, prueba y entrega.</li>
+        <li>Favorecen coordinación, revisión y adaptación a cambios.</li>
+        <li>Importancia de la colaboración y la trazabilidad.</li>
+      </ul>
+    </section>
+
+    <section class="card wide">
+      <div class="tag">13</div>
+      <h2>Relación entre bloques</h2>
+      <p class="mini">
+        El flujo del tema es: entender el problema, estructurarlo, diseñarlo, implementarlo, apoyarse en herramientas,
+        controlar cambios, gestionar librerías y coordinar el trabajo del equipo.
+      </p>
+    </section>
+  </div>
+</body>
+</html>
