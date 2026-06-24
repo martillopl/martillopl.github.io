@@ -1,0 +1,104 @@
+PUNTOS CLAVE — TEMA 2: BASES DE DATOS
+Gestor/a Informático/a · UPNA · Oposición
+
+════════════════════════════════════════════════════════
+1. MODELO ENTIDAD-RELACIÓN
+════════════════════════════════════════════════════════
+01. El modelo entidad-relación es un modelo conceptual.
+02. Sirve para representar la realidad mediante entidades, atributos y relaciones.
+03. Una entidad es un objeto o concepto sobre el que se almacena información.
+04. Un atributo es una característica de la entidad.
+05. Una relación expresa la vinculación entre entidades.
+06. El modelo entidad-relación es la fase previa al modelo relacional.
+
+════════════════════════════════════════════════════════
+2. BASES DE DATOS RELACIONALES
+════════════════════════════════════════════════════════
+07. El modelo relacional organiza la información en tablas.
+08. Cada fila representa un registro.
+09. Cada columna representa un atributo.
+10. La clave primaria identifica de forma única cada fila.
+11. La clave foránea relaciona una tabla con otra.
+12. Las bases de datos relacionales son el modelo más extendido en entornos corporativos.
+
+════════════════════════════════════════════════════════
+3. NORMALIZACIÓN
+════════════════════════════════════════════════════════
+13. La normalización reduce redundancias y evita anomalías.
+14. Su finalidad es mejorar el diseño y la coherencia de los datos.
+15. La 1FN exige valores atómicos.
+16. La 2FN evita dependencias parciales.
+17. La 3FN evita dependencias transitivas.
+18. Normalizar no es complicar la base, sino organizarla correctamente.
+
+════════════════════════════════════════════════════════
+4. INTEGRIDAD REFERENCIAL
+════════════════════════════════════════════════════════
+19. La integridad referencial garantiza que las relaciones entre tablas sean válidas.
+20. Se apoya en la clave foránea.
+21. Evita registros huérfanos.
+22. Impide referencias a registros inexistentes.
+23. Protege la coherencia entre tablas relacionadas.
+
+════════════════════════════════════════════════════════
+5. LENGUAJE SQL
+════════════════════════════════════════════════════════
+24. SQL es el lenguaje estándar de las bases de datos relacionales.
+25. Permite definir estructuras, consultar datos y modificar información.
+26. También permite gestionar permisos y transacciones.
+27. DDL: define estructuras.
+28. DML: manipula datos.
+29. Lenguaje de control: gestiona permisos y control transaccional.
+
+════════════════════════════════════════════════════════
+6. ADMINISTRACIÓN DE BASES DE DATOS: ORACLE Y MYSQL
+════════════════════════════════════════════════════════════════════════
+30. Oracle y MySQL son gestores de bases de datos relacionales.
+31. Ambos permiten trabajar con tablas, claves y SQL.
+32. Oracle se asocia a entornos corporativos complejos y de alta exigencia.
+33. MySQL tiene gran difusión por su facilidad de uso y amplia implantación.
+34. La diferencia no está en los principios básicos, sino en el contexto de uso y capacidades de administración.
+
+════════════════════════════════════════════════════════
+7. SISTEMAS DE APOYO A LA TOMA DE DECISIONES
+════════════════════════════════════════════════════════
+35. Los sistemas de apoyo a la toma de decisiones también se conocen como Business Intelligence.
+36. Su finalidad es analizar datos para ayudar a decidir.
+37. No sustituyen a la base transaccional, sino que la complementan.
+38. Suelen generar informes, indicadores y cuadros de mando.
+39. Permiten análisis histórico, comparativo y de tendencias.
+
+════════════════════════════════════════════════════════
+8. DIFERENCIAS QUE SUELEN PREGUNTARSE
+════════════════════════════════════════════════════════
+40. El modelo entidad-relación es conceptual; el relacional, lógico y estructural.
+41. Normalización no es lo mismo que integridad referencial.
+42. SQL no es una base de datos, sino el lenguaje para trabajar con ella.
+43. Oracle y MySQL son gestores, no modelos de datos.
+44. BI no registra operaciones: analiza la información ya registrada.
+45. La base transaccional guarda datos; BI los explota para decidir.
+
+════════════════════════════════════════════════════════
+9. IDEAS MUY PREGUNTABLES
+════════════════════════════════════════════════════════
+46. Las claves primarias identifican registros.
+47. Las claves foráneas enlazan tablas.
+48. La 1FN exige atomicidad.
+49. La 2FN elimina dependencias parciales.
+50. La 3FN elimina dependencias transitivas.
+51. La integridad referencial evita incoherencias entre tablas.
+52. SQL es imprescindible para definir y consultar bases relacionales.
+53. Oracle suele relacionarse con entornos empresariales complejos.
+54. MySQL es muy frecuente en entornos web y soluciones extendidas.
+55. BI convierte datos en información útil para la decisión.
+
+════════════════════════════════════════════════════════
+10. ARTÍCULOS Y CONCEPTOS CLAVE A RETENER
+════════════════════════════════════════════════════════
+56. Conceptos del modelo E-R: entidad, atributo y relación.
+57. Conceptos del modelo relacional: tabla, fila, columna, clave primaria y clave foránea.
+58. Conceptos de normalización: 1FN, 2FN, 3FN.
+59. Concepto de integridad referencial y su conexión con la clave foránea.
+60. Bloques funcionales de SQL: definición, manipulación y control.
+61. Función de los SGBD: creación, mantenimiento y consulta de datos.
+62. Finalidad del BI: análisis y apoyo a la decisión.

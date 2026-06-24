@@ -1,0 +1,257 @@
+<!-- 1_texto_explicativo.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema 2 – Bases de datos</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.58;
+      margin: 2.2rem;
+      color:#1f2937;
+      background:#ffffff;
+    }
+    h1,h2,h3{
+      color:#143a5a;
+    }
+    h1{
+      border-bottom:3px solid #143a5a;
+      padding-bottom:.4rem;
+      margin-bottom:1.2rem;
+    }
+    h2{
+      margin-top:2rem;
+      border-left:6px solid #2b6cb0;
+      padding-left:.6rem;
+    }
+    h3{
+      margin-top:1.1rem;
+      color:#24557d;
+    }
+    .box{
+      background:#f7fbff;
+      border:1px solid #d7e7f5;
+      border-radius:8px;
+      padding:1rem 1.1rem;
+      margin:1rem 0;
+    }
+    .key{
+      background:#eef6ff;
+      border-left:5px solid #2b6cb0;
+      padding:.85rem 1rem;
+      margin:1rem 0;
+    }
+    ul{
+      margin-top:.4rem;
+    }
+    .small{
+      font-size:.95rem;
+      color:#4b5563;
+    }
+  </style>
+</head>
+<body>
+    <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 2. Bases de datos</h1>
+
+  <div class="box">
+    <p>
+      Este tema aborda uno de los pilares de la informática de gestión: la organización, almacenamiento y explotación
+      de los datos. Una base de datos no es solo un contenedor de información, sino una estructura diseñada para
+      registrar datos de forma coherente, evitar redundancias innecesarias, mantener la integridad y facilitar la
+      consulta y el análisis. En el ámbito corporativo y, en especial, en una universidad o administración pública,
+      la calidad del dato es esencial porque de ella dependen la gestión diaria, la interoperabilidad y la toma de
+      decisiones.
+    </p>
+    <p>
+      El tema se desarrolla desde el diseño conceptual con el modelo entidad-relación, pasa por el modelo relacional
+      y la normalización, y llega a la explotación mediante SQL, la administración con sistemas como Oracle o MySQL y,
+      finalmente, el uso analítico de la información a través de Business Intelligence.
+    </p>
+  </div>
+
+  <h2>1. El modelo entidad-relación</h2>
+
+  <p>
+    El modelo entidad-relación es una herramienta de diseño conceptual. Sirve para representar la realidad mediante
+    entidades, atributos y relaciones. En esta fase no se piensa todavía en tablas ni en detalles técnicos de un
+    gestor concreto, sino en cómo se organiza la información que debe almacenar el sistema.
+  </p>
+
+  <p>
+    Una <strong>entidad</strong> es un objeto o concepto sobre el que se quiere guardar información, como una persona,
+    una asignatura o un departamento. Los <strong>atributos</strong> son las características que describen a la entidad,
+    por ejemplo nombre, código o fecha. Las <strong>relaciones</strong> expresan la vinculación entre entidades, como
+    la relación entre un alumno y una asignatura o entre un profesor y un departamento.
+  </p>
+
+  <p>
+    Lo importante del modelo entidad-relación es que permite pensar el sistema antes de implementarlo. Así se detectan
+    errores de diseño, se aclaran las dependencias entre datos y se prepara una estructura más sólida para la fase
+    relacional. En examen suelen preguntarse los conceptos básicos y la finalidad del modelo: representar de forma
+    clara la información y sus conexiones.
+  </p>
+
+  <h2>2. Bases de datos relacionales</h2>
+
+  <p>
+    El modelo relacional traduce esa visión conceptual a una estructura basada en <strong>tablas</strong>. Cada tabla
+    representa normalmente una entidad, cada fila representa una instancia concreta y cada columna corresponde a un
+    atributo. Este modelo se ha convertido en el más extendido porque es comprensible, robusto y permite trabajar con
+    grandes volúmenes de información de forma estructurada.
+  </p>
+
+  <p>
+    En una base de datos relacional son esenciales las <strong>claves</strong>. La clave primaria identifica de manera
+    única cada fila de una tabla. La clave foránea enlaza una tabla con otra y permite establecer relaciones entre
+    ellas. Gracias a esta organización se evita duplicar información innecesariamente y se mejora la consistencia de
+    los datos.
+  </p>
+
+  <div class="key">
+    <p>
+      Idea clave: en el modelo relacional, las entidades del modelo conceptual se materializan como tablas, y las
+      relaciones se gestionan mediante claves.
+    </p>
+  </div>
+
+  <h2>3. Normalización</h2>
+
+  <p>
+    La normalización es el proceso de organizar las tablas para reducir redundancias y evitar anomalías de inserción,
+    actualización y borrado. Su objetivo es mejorar la calidad del diseño y asegurar que cada dato se almacene en el
+    lugar adecuado.
+  </p>
+
+  <p>
+    La primera forma normal exige que los campos sean atómicos, es decir, que cada celda contenga un solo valor.
+    La segunda forma normal evita que atributos no clave dependan solo de una parte de la clave cuando esta es
+    compuesta. La tercera forma normal elimina dependencias transitivas, de modo que los atributos no clave dependan
+    solo de la clave primaria y no de otros atributos no clave.
+  </p>
+
+  <p>
+    Desde el punto de vista práctico, normalizar no significa “fragmentar por fragmentar”, sino diseñar tablas de
+    forma lógica. Una base de datos excesivamente desnormalizada puede repetir datos, ocupar más espacio y generar
+    incoherencias; una base de datos correctamente normalizada ayuda a mantener el orden y la integridad. En examen,
+    lo habitual es que pregunten la finalidad de la normalización y las ideas básicas de 1FN, 2FN y 3FN.
+  </p>
+
+  <h2>4. Integridad referencial</h2>
+
+  <p>
+    La integridad referencial garantiza que las relaciones entre tablas sean válidas. Se apoya en la clave foránea,
+    que solo puede referenciar valores existentes en la tabla relacionada. En otras palabras, no debe existir una
+    referencia a un registro que no exista.
+  </p>
+
+  <p>
+    Esta regla es fundamental para evitar inconsistencias. Por ejemplo, no tendría sentido registrar una matrícula
+    de estudiante asociada a una asignatura inexistente. Los gestores de bases de datos permiten definir acciones
+    como impedir borrados, restringir actualizaciones o propagar cambios, según la lógica que se quiera aplicar.
+  </p>
+
+  <div class="box">
+    <p class="small">
+      En oposición conviene distinguir integridad referencial de normalización: la normalización organiza la estructura;
+      la integridad referencial protege la validez de los vínculos entre tablas.
+    </p>
+  </div>
+
+  <h2>5. El lenguaje SQL</h2>
+
+  <p>
+    SQL es el lenguaje estándar para trabajar con bases de datos relacionales. Permite definir estructuras, insertar
+    datos, consultarlos, modificarlos y controlar permisos. Su importancia es enorme porque actúa como puente entre
+    el diseño de la base y su explotación real.
+  </p>
+
+  <p>
+    De forma general, SQL se divide en varios bloques funcionales. El lenguaje de definición de datos permite crear y
+    modificar tablas, índices o restricciones. El lenguaje de manipulación de datos sirve para consultar, insertar,
+    actualizar o borrar información. También existen instrucciones de control de permisos y transacciones.
+  </p>
+
+  <p>
+    En la práctica, SQL es uno de los elementos más examinables del tema porque conecta teoría y uso. No basta con
+    saber que existe: hay que entender que la estructura de la base se define con SQL y que la extracción de datos
+    también se realiza con SQL. En entornos corporativos, es la herramienta básica para la explotación de la
+    información.
+  </p>
+
+  <h2>6. Administración de bases de datos: Oracle y MySQL</h2>
+
+  <p>
+    Un sistema gestor de bases de datos es el software que permite crear, mantener y consultar bases de datos.
+    Oracle y MySQL son dos de los sistemas más conocidos dentro del modelo relacional. Aunque comparten principios,
+    se suelen asociar a contextos de uso distintos según la escala, la criticidad, la arquitectura o el modelo de
+    licenciamiento.
+  </p>
+
+  <p>
+    Oracle es una plataforma especialmente potente en entornos corporativos complejos y de gran exigencia, donde la
+    administración avanzada, la alta disponibilidad y la integración con otros componentes empresariales tienen gran
+    relevancia. MySQL, por su parte, ha tenido una gran difusión por su facilidad de uso, su extensión en múltiples
+    entornos y su presencia habitual en aplicaciones web y soluciones de menor o media complejidad.
+  </p>
+
+  <p>
+    Para examen no suele interesar solo saber qué son, sino entender que ambos son gestores de bases de datos
+    relacionales y que permiten aplicar los mismos principios fundamentales: tablas, claves, consultas, restricciones
+    y mantenimiento de la integridad. La diferencia importante está en el contexto de uso, el ecosistema y las
+    capacidades de administración que ofrecen.
+  </p>
+
+  <h2>7. Sistemas de apoyo a la toma de decisiones</h2>
+
+  <p>
+    Los sistemas de apoyo a la toma de decisiones, también conocidos como sistemas de Business Intelligence, se
+    utilizan para extraer valor de los datos almacenados en la organización. Su finalidad no es tanto registrar
+    operaciones como analizar información para ayudar a tomar decisiones fundamentadas.
+  </p>
+
+  <p>
+    Estas herramientas suelen recopilar datos de distintas fuentes, transformarlos y presentarlos de forma útil
+    mediante informes, cuadros de mando, indicadores y análisis históricos o comparativos. En este contexto, los
+    datos dejan de ser meramente operativos y pasan a convertirse en conocimiento útil para la dirección, la
+    planificación o el control.
+  </p>
+
+  <p>
+    BI no sustituye a la base de datos transaccional, sino que la complementa. La base de datos operativa almacena
+    la información del día a día; el sistema de apoyo a la decisión explota esa información para responder a
+    preguntas más complejas, detectar tendencias y facilitar la gestión estratégica.
+  </p>
+
+  <div class="key">
+    <p>
+      En una frase: la base de datos guarda y organiza; el Business Intelligence analiza y ayuda a decidir.
+    </p>
+  </div>
+
+  <h2>8. Relación entre todos los conceptos</h2>
+
+  <p>
+    El tema tiene una secuencia lógica muy clara. Primero se modela la información con el enfoque entidad-relación.
+    Después se transforma ese diseño en un esquema relacional basado en tablas. Más tarde se aplica normalización
+    para evitar redundancias y se protege la coherencia con la integridad referencial. Una vez estructurada la base,
+    SQL permite crear, consultar y administrar los datos. Finalmente, herramientas como Oracle o MySQL soportan esa
+    operativa y los sistemas BI convierten los datos en información útil para la toma de decisiones.
+  </p>
+
+  <p>
+    Por eso, estudiar este tema exige entender no solo definiciones aisladas, sino el recorrido completo desde el
+    diseño del dato hasta su explotación analítica. Esa visión global es la que más suele valorarse en un examen de
+    oposición, porque permite responder tanto preguntas conceptuales como cuestiones prácticas.
+  </p>
+</body>
+</html>

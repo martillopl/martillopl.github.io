@@ -1,0 +1,280 @@
+<!-- 3_cuadro_comparativo.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema 2 – Cuadro comparativo</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin:2rem;
+      color:#1f2937;
+      background:#ffffff;
+      line-height:1.45;
+    }
+    h1{
+      color:#123a5a;
+      border-bottom:3px solid #123a5a;
+      padding-bottom:.35rem;
+      margin-bottom:1.2rem;
+    }
+    h2{
+      color:#174f7a;
+      margin-top:1.8rem;
+      margin-bottom:.6rem;
+    }
+    .note{
+      background:#f0f7ff;
+      border-left:5px solid #2b6cb0;
+      padding:.8rem 1rem;
+      margin:1rem 0;
+      border-radius:6px;
+    }
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin:.8rem 0 1.4rem 0;
+      table-layout:fixed;
+    }
+    th, td{
+      border:1px solid #c9d7e6;
+      padding:.75rem .7rem;
+      vertical-align:top;
+      word-wrap:break-word;
+    }
+    th{
+      background:#dcecff;
+      color:#123a5a;
+      text-align:left;
+    }
+    tr:nth-child(even) td{
+      background:#fbfdff;
+    }
+    .small{
+      font-size:.95rem;
+      color:#475569;
+    }
+  </style>
+</head>
+<body>
+      <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 2. Bases de datos — Cuadro comparativo</h1>
+
+  <div class="note">
+    Cuadro pensado para repasar conceptos parecidos que suelen confundirse en examen. La idea es fijar diferencias
+    funcionales, no solo definiciones aisladas.
+  </div>
+
+  <h2>1. Modelo entidad-relación vs modelo relacional</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>Modelo entidad-relación</th>
+      <th>Modelo relacional</th>
+    </tr>
+    <tr>
+      <td>Naturaleza</td>
+      <td>Conceptual.</td>
+      <td>Lógico / estructural.</td>
+    </tr>
+    <tr>
+      <td>Qué representa</td>
+      <td>Entidades, atributos y relaciones.</td>
+      <td>Tablas, filas, columnas y claves.</td>
+    </tr>
+    <tr>
+      <td>Finalidad</td>
+      <td>Diseñar y entender la realidad del sistema.</td>
+      <td>Implementar la base de datos.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Esquema previo.</td>
+      <td>Traducción a tablas.</td>
+    </tr>
+  </table>
+
+  <h2>2. Normalización vs integridad referencial</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>Normalización</th>
+      <th>Integridad referencial</th>
+    </tr>
+    <tr>
+      <td>Objetivo</td>
+      <td>Reducir redundancia y anomalías.</td>
+      <td>Mantener coherencia entre tablas relacionadas.</td>
+    </tr>
+    <tr>
+      <td>Problema que evita</td>
+      <td>Duplicidades y dependencias inadecuadas.</td>
+      <td>Registros huérfanos o referencias inválidas.</td>
+    </tr>
+    <tr>
+      <td>Ámbito</td>
+      <td>Estructura interna de las tablas.</td>
+      <td>Relación entre tablas.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Organiza bien los datos.</td>
+      <td>Protege los enlaces entre datos.</td>
+    </tr>
+  </table>
+
+  <h2>3. SQL: DDL, DML y control</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>DDL</th>
+      <th>DML</th>
+      <th>Control</th>
+    </tr>
+    <tr>
+      <td>Función</td>
+      <td>Define estructuras.</td>
+      <td>Manipula datos.</td>
+      <td>Gestiona permisos y transacciones.</td>
+    </tr>
+    <tr>
+      <td>Ejemplos</td>
+      <td>Create, alter, drop.</td>
+      <td>Select, insert, update, delete.</td>
+      <td>Grant, revoke, commit, rollback.</td>
+    </tr>
+    <tr>
+      <td>Uso principal</td>
+      <td>Diseño de la base.</td>
+      <td>Operación diaria.</td>
+      <td>Seguridad y consistencia.</td>
+    </tr>
+  </table>
+
+  <h2>4. Oracle vs MySQL</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>Oracle</th>
+      <th>MySQL</th>
+    </tr>
+    <tr>
+      <td>Perfil de uso</td>
+      <td>Entornos corporativos complejos.</td>
+      <td>Muy extendido en aplicaciones web y soluciones más ligeras.</td>
+    </tr>
+    <tr>
+      <td>Enfoque</td>
+      <td>Potencia y administración avanzada.</td>
+      <td>Facilidad de uso y amplia difusión.</td>
+    </tr>
+    <tr>
+      <td>Escala</td>
+      <td>Frecuente en grandes organizaciones.</td>
+      <td>Muy versátil para múltiples escenarios.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Orientado a entornos empresariales exigentes.</td>
+      <td>Orientado a sencillez y despliegue frecuente.</td>
+    </tr>
+  </table>
+
+  <h2>5. Base transaccional vs Business Intelligence</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>Base de datos transaccional</th>
+      <th>Business Intelligence</th>
+    </tr>
+    <tr>
+      <td>Finalidad</td>
+      <td>Registrar operaciones del día a día.</td>
+      <td>Analizar datos para apoyar decisiones.</td>
+    </tr>
+    <tr>
+      <td>Tipo de preguntas</td>
+      <td>Operativas y concretas.</td>
+      <td>Analíticas, históricas y comparativas.</td>
+    </tr>
+    <tr>
+      <td>Salida habitual</td>
+      <td>Datos, consultas y procesos.</td>
+      <td>Informes, dashboards e indicadores.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Guardar y operar.</td>
+      <td>Interpretar y decidir.</td>
+    </tr>
+  </table>
+
+  <h2>6. Licencias permisivas vs copyleft</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>Licencias permisivas</th>
+      <th>Licencias copyleft</th>
+    </tr>
+    <tr>
+      <td>Restricciones</td>
+      <td>Mínimas.</td>
+      <td>Más exigentes.</td>
+    </tr>
+    <tr>
+      <td>Reutilización</td>
+      <td>Muy flexible, incluso en proyectos propietarios.</td>
+      <td>Obliga a conservar condiciones de apertura.</td>
+    </tr>
+    <tr>
+      <td>Obras derivadas</td>
+      <td>Pueden licenciarse con libertad mayor.</td>
+      <td>Normalmente deben seguir bajo la misma lógica de apertura.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Deja usar casi sin límites.</td>
+      <td>Impone reciprocidad.</td>
+    </tr>
+  </table>
+
+  <h2>7. 1FN, 2FN y 3FN</h2>
+  <table>
+    <tr>
+      <th>Forma normal</th>
+      <th>Qué exige</th>
+      <th>Qué evita</th>
+    </tr>
+    <tr>
+      <td>1FN</td>
+      <td>Valores atómicos.</td>
+      <td>Campos con varios valores o listas.</td>
+    </tr>
+    <tr>
+      <td>2FN</td>
+      <td>Dependencia completa de la clave.</td>
+      <td>Dependencias parciales.</td>
+    </tr>
+    <tr>
+      <td>3FN</td>
+      <td>Que no haya dependencias transitivas.</td>
+      <td>Atributos no clave dependientes de otros no clave.</td>
+    </tr>
+  </table>
+
+  <div class="note">
+    <p class="small">
+      Resumen mental rápido: ER = diseño conceptual; relacional = tablas; normalización = orden interno; integridad
+      referencial = enlaces correctos; SQL = lenguaje de trabajo; Oracle/MySQL = gestores; BI = análisis para decidir.
+    </p>
+  </div>
+</body>
+</html>
