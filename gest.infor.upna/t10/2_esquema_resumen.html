@@ -1,0 +1,148 @@
+<!-- 2_esquema_resumen.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema 10 – Esquema resumen</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin:2rem;
+      color:#1f2937;
+      background:#ffffff;
+      line-height:1.45;
+    }
+    h1{
+      color:#123a5a;
+      border-bottom:3px solid #123a5a;
+      padding-bottom:.35rem;
+      margin-bottom:1.2rem;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:1rem;
+    }
+    .card{
+      border:1px solid #cfe0ef;
+      border-radius:10px;
+      padding:1rem;
+      background:#f8fbff;
+      box-shadow:0 1px 4px rgba(0,0,0,.04);
+    }
+    .card h2{
+      margin:0 0 .7rem 0;
+      font-size:1.03rem;
+      color:#174f7a;
+    }
+    ul{
+      margin:.4rem 0 0 1.1rem;
+      padding:0;
+    }
+    li{
+      margin:.25rem 0;
+    }
+    .wide{
+      grid-column:1 / -1;
+    }
+    .tag{
+      display:inline-block;
+      background:#dbeafe;
+      color:#1e3a8a;
+      border-radius:999px;
+      padding:.15rem .55rem;
+      font-size:.85rem;
+      margin-bottom:.55rem;
+    }
+    .mini{
+      font-size:.95rem;
+      color:#475569;
+    }
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 10. Inteligencia Artificial — Esquema resumen</h1>
+
+  <div class="grid">
+    <section class="card">
+      <div class="tag">1</div>
+      <h2>Fundamentos de IA</h2>
+      <ul>
+        >Busca que sistemas realicen tareas inteligentes.</li>
+        >Se apoya en datos, algoritmos y cómputo.</li>
+        >No toda automatización es IA.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">2</div>
+      <h2>Aprendizaje automático</h2>
+      <ul>
+        >Rama de la IA que aprende de datos.</li>
+        >Supervisado: con etiquetas.</li>
+        >No supervisado: sin etiquetas.</li>
+        >Por refuerzo: con recompensa y error.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">3</div>
+      <h2>Modelos de lenguaje</h2>
+      <ul>
+        >Comprenden y generan texto.</li>
+        >Predicen secuencias según el contexto.</li>
+        >Sirven para redactar, resumir, traducir y asistir.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">4</div>
+      <h2>IA generativa</h2>
+      <ul>
+        >Crea nuevo contenido.</li>
+        >Puede generar texto, imágenes, audio, vídeo o código.</li>
+        >Requiere revisión humana por posibles errores o sesgos.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">5</div>
+      <h2>Ejecución local</h2>
+      <ul>
+        >Se ejecuta en infraestructura propia.</li>
+        >Aporta control y privacidad.</li>
+        >Exige más recursos y mantenimiento.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">6</div>
+      <h2>Ejecución en la nube</h2>
+      <ul>
+        >Se usa infraestructura remota del proveedor.</li>
+        >Aporta escalabilidad y rapidez de despliegue.</li>
+        >Introduce dependencia y consideraciones de coste y datos.</li>
+      </ul>
+    </section>
+
+    <section class="card wide">
+      <div class="tag">7</div>
+      <h2>Relación entre bloques</h2>
+      <p class="mini">
+        La IA es el marco general; el aprendizaje automático es una de sus bases; los modelos de lenguaje son una
+        aplicación específica; la IA generativa crea contenido; y la ejecución local o en la nube define cómo se
+        despliega y opera el sistema.
+      </p>
+    </section>
+  </div>
+</body>
+</html>

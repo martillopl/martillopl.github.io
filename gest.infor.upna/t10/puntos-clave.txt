@@ -1,0 +1,73 @@
+PUNTOS CLAVE — TEMA 10: INTELIGENCIA ARTIFICIAL
+Gestor/a Informático/a · UPNA · Oposición
+
+════════════════════════════════════════════════════════
+1. FUNDAMENTOS DE LA IA
+════════════════════════════════════════════════════════
+01. La inteligencia artificial busca que los sistemas realicen tareas que normalmente requieren inteligencia humana.
+02. Se apoya en datos, algoritmos y capacidad de cómputo.
+03. Permite razonar, predecir, clasificar y generar contenido.
+04. No toda automatización es inteligencia artificial.
+
+════════════════════════════════════════════════════════
+2. APRENDIZAJE AUTOMÁTICO
+════════════════════════════════════════════════════════
+05. El aprendizaje automático es una rama de la IA que aprende a partir de datos.
+06. En el aprendizaje supervisado se usan ejemplos etiquetados.
+07. En el no supervisado se buscan patrones sin etiquetas.
+08. En el aprendizaje por refuerzo se aprende mediante prueba, error y recompensa.
+
+════════════════════════════════════════════════════════
+3. MODELOS DE LENGUAJE
+════════════════════════════════════════════════════════
+09. Los modelos de lenguaje están entrenados para comprender y generar texto.
+10. Predicen la siguiente palabra o secuencia según el contexto.
+11. Sirven para resumir, traducir, redactar y responder preguntas.
+12. Su resultado debe interpretarse con criterio y verificación.
+
+════════════════════════════════════════════════════════
+4. IA GENERATIVA
+════════════════════════════════════════════════════════
+13. La IA generativa crea nuevo contenido a partir de patrones aprendidos.
+14. Puede generar texto, imágenes, audio, vídeo o código.
+15. Es útil para asistencia creativa, automatización y prototipado.
+16. Puede producir errores, sesgos o respuestas plausibles pero incorrectas.
+
+════════════════════════════════════════════════════════
+5. EJECUCIÓN LOCAL
+════════════════════════════════════════════════════════
+17. Ejecutar en local significa usar infraestructura propia.
+18. Aporta más control y más privacidad.
+19. Reduce la dependencia de proveedores externos.
+20. Exige más recursos, mantenimiento y capacidad técnica.
+
+════════════════════════════════════════════════════════
+6. EJECUCIÓN EN LA NUBE
+════════════════════════════════════════════════════════
+21. Ejecutar en la nube significa usar recursos remotos de un proveedor.
+22. Aporta escalabilidad y rapidez de despliegue.
+23. Facilita el acceso a recursos potentes sin invertir tanto en infraestructura propia.
+24. Introduce dependencia, coste y consideraciones sobre los datos.
+
+════════════════════════════════════════════════════════
+7. DIFERENCIAS QUE SUELEN PREGUNTARSE
+════════════════════════════════════════════════════════
+25. Inteligencia artificial no es lo mismo que aprendizaje automático.
+26. Aprendizaje automático no es lo mismo que IA generativa.
+27. Un modelo de lenguaje no es toda la IA generativa, sino una parte de ella.
+28. Local no es lo mismo que nube.
+
+════════════════════════════════════════════════════════
+8. IDEAS CLAVE DE EXAMEN
+════════════════════════════════════════════════════════
+29. La IA es el marco general.
+30. El aprendizaje automático aprende de datos.
+31. El aprendizaje supervisado usa etiquetas.
+32. El no supervisado busca estructuras.
+33. El refuerzo aprende por recompensa.
+34. Los modelos de lenguaje trabajan con texto y contexto.
+35. La IA generativa crea contenido nuevo.
+36. Ejecutar en local da control.
+37. Ejecutar en la nube da elasticidad.
+38. Siempre hace falta verificación humana.
+39. Más capacidad de generación no significa más verdad.
