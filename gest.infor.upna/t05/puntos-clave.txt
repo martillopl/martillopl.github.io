@@ -1,0 +1,96 @@
+PUNTOS CLAVE — TEMA 5: SOPORTE TÉCNICO Y TRABAJO COLABORATIVO
+Gestor/a Informático/a · UPNA · Oposición
+
+════════════════════════════════════════════════════════
+1. SOPORTE TÉCNICO INFORMÁTICO
+════════════════════════════════════════════════════════
+01. El soporte técnico informático ayuda a los usuarios a resolver problemas y a mantener operativos los sistemas.
+02. Abarca hardware, software, redes y servicios.
+03. Su finalidad es garantizar la continuidad del trabajo y reducir el impacto de las incidencias.
+04. El soporte debe ser trazable, organizado y orientado al usuario.
+
+════════════════════════════════════════════════════════
+2. TIPOS DE SOPORTE
+════════════════════════════════════════════════════════
+05. El soporte puede ser presencial, remoto, telefónico o mediante autoservicio.
+06. El soporte remoto es ágil para incidencias habituales.
+07. El soporte presencial es necesario en fallos físicos, cableado, periféricos o salas.
+08. La organización suele combinar varios tipos de soporte según el caso.
+
+════════════════════════════════════════════════════════
+3. NIVELES DE ATENCIÓN
+════════════════════════════════════════════════════════
+09. El primer nivel atiende consultas básicas y realiza filtrado inicial.
+10. El segundo nivel resuelve problemas más técnicos y especializados.
+11. El tercer nivel interviene en incidencias complejas o persistentes.
+12. La estructura por niveles mejora la eficiencia y el escalado de incidencias.
+
+════════════════════════════════════════════════════════
+4. GESTIÓN DE INCIDENCIAS Y SOLICITUDES
+════════════════════════════════════════════════════════
+13. Una incidencia es una interrupción o degradación del servicio.
+14. Una solicitud es una petición de información, ayuda, acceso o cambio.
+15. La gestión debe registrar, clasificar, asignar, seguir y cerrar cada caso.
+16. El sistema permite medir tiempos, priorizar trabajos y mantener histórico.
+
+════════════════════════════════════════════════════════
+5. HERRAMIENTAS COLABORATIVAS
+════════════════════════════════════════════════════════
+17. Las herramientas colaborativas facilitan el trabajo conjunto sobre documentos, tareas y contenidos.
+18. Incluyen documentos compartidos, calendarios, mensajería y edición simultánea.
+19. Ayudan a evitar duplicidades y mejorar la trazabilidad.
+20. Su eficacia depende también de las normas de uso y colaboración del equipo.
+
+════════════════════════════════════════════════════════
+6. COMUNICACIÓN Y VIDEOCONFERENCIA
+════════════════════════════════════════════════════════
+21. Las plataformas de comunicación permiten mensajes, voz, archivos y videoconferencia.
+22. Son esenciales para trabajo híbrido, formación y atención a distancia.
+23. La videoconferencia requiere buena red, audio, vídeo y configuración adecuada.
+24. No solo importa la plataforma: también el entorno técnico donde se usa.
+
+════════════════════════════════════════════════════════
+7. DIMENSIONAMIENTO
+════════════════════════════════════════════════════════
+25. El dimensionamiento calcula los recursos necesarios para que el servicio funcione correctamente.
+26. Incluye ancho de banda, número de usuarios, capacidad de equipos y crecimiento previsto.
+27. Un mal dimensionamiento puede causar saturación o gasto innecesario.
+28. Dimensionar es equilibrar necesidad, previsión y presupuesto.
+
+════════════════════════════════════════════════════════
+8. CALIDAD DE SERVICIO
+════════════════════════════════════════════════════════
+29. La calidad de servicio busca que la red trate adecuadamente distintos tipos de tráfico.
+30. Es especialmente importante en voz y videoconferencia.
+31. La latencia, el jitter y la estabilidad influyen directamente en la experiencia.
+32. Una red sin calidad de servicio puede generar cortes, eco y mala imagen.
+
+════════════════════════════════════════════════════════
+9. SALAS Y EQUIPOS AUDIOVISUALES
+════════════════════════════════════════════════════════
+33. Las salas deben contar con acondicionamiento físico adecuado.
+34. Incluye iluminación, acústica, distribución del espacio y conectividad.
+35. Los equipos audiovisuales incluyen cámaras, micrófonos, pantallas, altavoces y sistemas de proyección.
+36. Una sala mal preparada puede arruinar una reunión aunque el software funcione bien.
+
+════════════════════════════════════════════════════════
+10. DIFERENCIAS QUE SUELEN PREGUNTARSE
+════════════════════════════════════════════════════════
+37. Incidencia no es lo mismo que solicitud.
+38. Soporte presencial no es lo mismo que soporte remoto.
+39. Nivel 1 no es lo mismo que nivel 3.
+40. Herramienta colaborativa no es lo mismo que plataforma de videoconferencia.
+41. Dimensionamiento no es lo mismo que calidad de servicio.
+42. Sala acondicionada no es lo mismo que equipo audiovisual.
+
+════════════════════════════════════════════════════════
+11. IDEAS CLAVE DE EXAMEN
+════════════════════════════════════════════════════════
+43. El soporte técnico garantiza continuidad y ayuda al usuario.
+44. La gestión de incidencias aporta control, trazabilidad y mejora continua.
+45. Los niveles de atención ordenan la resolución y el escalado.
+46. Las herramientas colaborativas mejoran el trabajo en grupo.
+47. La videoconferencia exige red, equipos y sala adecuados.
+48. El dimensionamiento evita saturaciones y carencias.
+49. La calidad de servicio es clave en comunicaciones sensibles al retardo.
+50. El acondicionamiento físico complementa al tecnológico.
