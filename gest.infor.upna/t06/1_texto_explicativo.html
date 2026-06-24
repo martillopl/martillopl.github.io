@@ -1,0 +1,187 @@
+<!-- 1_texto_explicativo.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema 6 – Redes y comunicaciones</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      line-height:1.58;
+      margin:2.2rem;
+      color:#1f2937;
+      background:#ffffff;
+    }
+    h1,h2,h3{
+      color:#143a5a;
+    }
+    h1{
+      border-bottom:3px solid #143a5a;
+      padding-bottom:.4rem;
+      margin-bottom:1.2rem;
+    }
+    h2{
+      margin-top:2rem;
+      border-left:6px solid #2b6cb0;
+      padding-left:.6rem;
+    }
+    h3{
+      margin-top:1.1rem;
+      color:#24557d;
+    }
+    .box{
+      background:#f7fbff;
+      border:1px solid #d7e7f5;
+      border-radius:8px;
+      padding:1rem 1.1rem;
+      margin:1rem 0;
+    }
+    .key{
+      background:#eef6ff;
+      border-left:5px solid #2b6cb0;
+      padding:.85rem 1rem;
+      margin:1rem 0;
+    }
+    ul{
+      margin-top:.4rem;
+    }
+    .small{
+      font-size:.95rem;
+      color:#4b5563;
+    }
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 6. Redes y comunicaciones</h1>
+
+  <div class="box">
+    <p>
+      Este tema reúne los fundamentos técnicos de las redes de comunicación que soportan los servicios digitales de una organización. Incluye desde el cableado estructurado y las tecnologías de transporte hasta las redes locales, inalámbricas y de Internet, pasando por los protocolos básicos de configuración, resolución de nombres, sincronización horaria, correo electrónico y herramientas de monitorización. Es un tema esencial porque conecta la infraestructura física con los servicios que utilizan los usuarios cada día.
+    </p>
+    <p>
+      La idea general es comprender cómo circula la información en una red, cómo se organiza, cómo se enruta y cómo se supervisa para que el servicio sea estable, seguro y eficiente. En oposición, suelen preguntarse tanto los conceptos teóricos como las diferencias entre tecnologías y protocolos.
+    </p>
+  </div>
+
+  <h2>1. Sistemas de cableado estructurado</h2>
+
+  <p>
+    El cableado estructurado es la organización normalizada del cableado de telecomunicaciones dentro de un edificio o conjunto de edificios. Su objetivo es ofrecer una infraestructura ordenada, flexible y fácil de mantener, capaz de soportar distintos servicios de voz, datos y vídeo. No se trata de cables colocados de forma improvisada, sino de una arquitectura planificada.
+  </p>
+
+  <p>
+    Un sistema de cableado estructurado suele incluir subsistemas de entrada, distribución principal, distribución horizontal, armarios de comunicaciones, rosetas y elementos de interconexión. Su correcta implantación facilita el mantenimiento, la ampliación y la documentación de la red. En examen, es importante entender que el cableado estructurado es la base física sobre la que se apoyan muchas redes locales.
+  </p>
+
+  <h2>2. Redes de transporte TDM y WDM</h2>
+
+  <p>
+    Las redes de transporte son infraestructuras de alta capacidad que sirven para mover grandes volúmenes de tráfico entre nodos de la red. En este contexto aparecen tecnologías como TDM y WDM. TDM, o multiplexación por división en el tiempo, comparte el medio asignando intervalos temporales a distintas señales. WDM, o multiplexación por división en longitud de onda, combina varias señales ópticas en una misma fibra usando diferentes longitudes de onda.
+  </p>
+
+  <p>
+    Ambas técnicas buscan aprovechar mejor la capacidad del medio físico. TDM está más asociada a la separación temporal de canales, mientras que WDM aprovecha el dominio óptico para aumentar enormemente el ancho de banda disponible. En oposición, conviene distinguir claramente su principio de funcionamiento y su ámbito de aplicación.
+  </p>
+
+  <div class="key">
+    <p>
+      Idea clave: TDM separa por tiempo; WDM separa por longitud de onda.
+    </p>
+  </div>
+
+  <h2>3. Redes LAN y WLAN</h2>
+
+  <p>
+    Una red LAN es una red de área local que conecta dispositivos dentro de un espacio reducido, como una oficina, un edificio o un campus. Su función es permitir la comunicación rápida y eficiente entre equipos, servidores, impresoras y otros recursos compartidos. Una WLAN cumple la misma finalidad, pero utilizando tecnologías inalámbricas.
+  </p>
+
+  <p>
+    La LAN suele ofrecer mayor estabilidad y rendimiento, mientras que la WLAN proporciona movilidad y comodidad al usuario. En la práctica, ambas conviven en la mayoría de las organizaciones. En examen, suele ser importante distinguir entre la ventaja de la conexión por cable y la flexibilidad del acceso inalámbrico.
+  </p>
+
+  <h2>4. Estándares IEEE 802.1, 802.3 y 802.11</h2>
+
+  <p>
+    La familia IEEE 802 agrupa estándares relacionados con redes de área local y metropolitanas. El estándar 802.3 se asocia a Ethernet y define el acceso a redes LAN por cable. El 802.11 se refiere a las redes inalámbricas Wi-Fi. El 802.1 agrupa funciones de nivel de enlace y aspectos de arquitectura, entre ellos la gestión de redes locales conmutadas, VLAN y mecanismos de control asociados.
+  </p>
+
+  <p>
+    Estos estándares son fundamentales porque permiten interoperabilidad entre equipos y fabricantes distintos. Su conocimiento es básico en administración de redes, ya que explican cómo se conectan los dispositivos, cómo se conmutan las tramas y cómo se organiza el acceso al medio. En oposición, suelen aparecer preguntas sobre qué estándar corresponde a cada tipo de red.
+  </p>
+
+  <h2>5. Redes TCP/IP versión 4 y versión 6</h2>
+
+  <p>
+    TCP/IP es el conjunto de protocolos base de Internet y de la mayoría de redes actuales. IPv4 ha sido la versión predominante durante décadas, con direcciones de 32 bits, pero su espacio de direccionamiento es limitado. IPv6 se diseñó para superar esa limitación, con direcciones de 128 bits y mejoras en escalabilidad, autoconfiguración y tratamiento del tráfico.
+  </p>
+
+  <p>
+    Aunque IPv4 sigue estando muy extendido, IPv6 es cada vez más necesario por el crecimiento de dispositivos y servicios conectados. En examen suele ser importante no solo conocer la longitud de las direcciones, sino también la razón del cambio de versión y sus ventajas operativas. TCP e IP forman la base del transporte confiable y del encaminamiento de los paquetes en redes interconectadas.
+  </p>
+
+  <h2>6. Protocolos de enrutamiento</h2>
+
+  <p>
+    El enrutamiento consiste en decidir por qué camino viajarán los paquetes entre redes diferentes. Los protocolos de enrutamiento permiten a los routers intercambiar información para calcular rutas eficientes y adaptarse a cambios en la topología. Su función es mantener la conectividad entre redes.
+  </p>
+
+  <p>
+    Existen protocolos de enrutamiento dinámico que actualizan sus tablas automáticamente y protocolos más estáticos o manuales. La elección depende del tamaño de la red, de la complejidad y de la necesidad de adaptación. En oposición, interesa entender que el enrutamiento no es simplemente “conectar”, sino escoger el camino adecuado para que los datos lleguen a destino.
+  </p>
+
+  <h2>7. Servicios básicos de red: DHCP, DNS y NTP</h2>
+
+  <p>
+    DHCP asigna automáticamente parámetros de red a los equipos, como dirección IP, máscara, puerta de enlace y servidores asociados. DNS traduce nombres de dominio legibles por personas a direcciones IP que entienden las máquinas. NTP sincroniza la hora de los dispositivos de la red para que compartan una referencia temporal coherente.
+  </p>
+
+  <p>
+    Estos servicios son básicos porque simplifican la administración y mejoran la coherencia del entorno. Sin DHCP, la configuración de equipos sería más manual; sin DNS, la navegación por nombres sería incómoda; sin NTP, los registros y eventos podrían quedar descoordinados. En examen, suele ser frecuente confundir sus funciones, por lo que conviene tenerlas muy claras.
+  </p>
+
+  <div class="box">
+    <p class="small">
+      Resumen rápido: DHCP da dirección, DNS da nombre y NTP da hora.
+    </p>
+  </div>
+
+  <h2>8. Sistemas de correo electrónico</h2>
+
+  <p>
+    El correo electrónico es uno de los servicios de red más utilizados y se apoya en protocolos específicos. SMTP se emplea para el envío de mensajes entre servidores y desde clientes hacia el servidor de salida. POP e IMAP se usan para la recepción y consulta de mensajes.
+  </p>
+
+  <p>
+    POP suele orientarse a descargar el correo al cliente, mientras que IMAP permite sincronizar el buzón y conservar una visión más integrada del correo en distintos dispositivos. En oposición, conviene distinguir el papel de SMTP como protocolo de envío y el papel de POP/IMAP como protocolos de acceso al correo recibido.
+  </p>
+
+  <h2>9. Monitorización y gestión de redes</h2>
+
+  <p>
+    La monitorización de redes consiste en supervisar el funcionamiento de la infraestructura para detectar fallos, degradaciones y comportamientos anómalos. La gestión de redes incluye además tareas de configuración, control, inventario, análisis de rendimiento y resolución de incidencias. Ambas actividades son esenciales para garantizar disponibilidad y calidad del servicio.
+  </p>
+
+  <p>
+    Las herramientas de gestión permiten observar tráfico, disponibilidad de equipos, consumo de recursos y alertas de seguridad. Gracias a ellas, el administrador puede actuar de forma proactiva en lugar de limitarse a reaccionar cuando el servicio ya ha caído. En un entorno profesional, la monitorización es tan importante como el propio diseño de la red.
+  </p>
+
+  <h2>10. Relación entre todos los bloques</h2>
+
+  <p>
+    Todos los apartados del tema forman una cadena lógica. El cableado estructurado proporciona la base física; las redes LAN y WLAN dan conectividad local; los estándares IEEE regulan el funcionamiento; TCP/IP permite la comunicación entre redes; los protocolos de enrutamiento deciden el camino de los paquetes; DHCP, DNS y NTP aportan servicios imprescindibles; SMTP, POP e IMAP soportan el correo; y la monitorización mantiene la red operativa y controlada.
+  </p>
+
+  <p>
+    En conjunto, el tema muestra cómo se construye y administra una red moderna desde la infraestructura física hasta la supervisión continua del servicio. Esa visión global es la que mejor ayuda a entender el contenido y a responder con seguridad en oposición.
+  </p>
+</body>
+</html>

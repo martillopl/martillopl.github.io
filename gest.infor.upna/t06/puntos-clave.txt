@@ -1,0 +1,98 @@
+PUNTOS CLAVE — TEMA 6: REDES Y COMUNICACIONES
+Gestor/a Informático/a · UPNA · Oposición
+
+════════════════════════════════════════════════════════
+1. CABLEADO ESTRUCTURADO
+════════════════════════════════════════════════════════
+01. El cableado estructurado organiza de forma normalizada la infraestructura física de telecomunicaciones.
+02. Debe ser flexible, ordenado, escalable y fácil de mantener.
+03. Soporta voz, datos y vídeo dentro de edificios o campus.
+04. Es la base física sobre la que se apoyan muchas redes locales.
+
+════════════════════════════════════════════════════════
+2. REDES DE TRANSPORTE TDM Y WDM
+════════════════════════════════════════════════════════
+05. TDM multiplexa señales por división en el tiempo.
+06. WDM multiplexa señales por división en longitud de onda.
+07. TDM reparte el medio por intervalos temporales.
+08. WDM aprovecha la capacidad óptica de la fibra mediante distintas longitudes de onda.
+
+════════════════════════════════════════════════════════
+3. REDES LAN Y WLAN
+════════════════════════════════════════════════════════
+09. Una LAN conecta dispositivos en un ámbito reducido, como un edificio o una oficina.
+10. Una WLAN cumple la misma función, pero de forma inalámbrica.
+11. La LAN ofrece más estabilidad y rendimiento.
+12. La WLAN aporta movilidad y comodidad.
+
+════════════════════════════════════════════════════════
+4. ESTÁNDARES IEEE 802.1, 802.3 Y 802.11
+════════════════════════════════════════════════════════
+13. IEEE 802.3 se asocia a Ethernet y redes cableadas.
+14. IEEE 802.11 se asocia a Wi-Fi y redes inalámbricas.
+15. IEEE 802.1 agrupa funciones de arquitectura de red, VLAN y control en nivel de enlace.
+16. Los estándares IEEE garantizan interoperabilidad entre equipos y fabricantes.
+
+════════════════════════════════════════════════════════
+5. TCP/IP VERSIÓN 4 Y VERSIÓN 6
+════════════════════════════════════════════════════════
+17. TCP/IP es la base de Internet y de la mayoría de redes actuales.
+18. IPv4 utiliza direcciones de 32 bits.
+19. IPv6 utiliza direcciones de 128 bits.
+20. IPv6 se diseñó para ampliar el espacio de direccionamiento y mejorar la escalabilidad.
+
+════════════════════════════════════════════════════════
+6. PROTOCOLOS DE ENRUTAMIENTO
+════════════════════════════════════════════════════════
+21. El enrutamiento decide por qué camino viajan los paquetes entre redes.
+22. Los protocolos de enrutamiento permiten a los routers intercambiar información de ruta.
+23. Pueden ser dinámicos o estáticos.
+24. Su finalidad es mantener la conectividad entre redes y adaptar las rutas a cambios de topología.
+
+════════════════════════════════════════════════════════
+7. SERVICIOS BÁSICOS DE RED: DHCP, DNS Y NTP
+════════════════════════════════════════════════════════
+25. DHCP asigna automáticamente dirección IP, máscara, puerta de enlace y otros parámetros.
+26. DNS traduce nombres de dominio en direcciones IP.
+27. NTP sincroniza la hora de los equipos de la red.
+28. DHCP simplifica la configuración, DNS facilita el acceso por nombre y NTP mantiene coherencia temporal.
+
+════════════════════════════════════════════════════════
+8. CORREO ELECTRÓNICO: SMTP, POP E IMAP
+════════════════════════════════════════════════════════
+29. SMTP se usa para el envío de correo.
+30. POP se usa para la recepción mediante descarga.
+31. IMAP permite acceso al correo manteniendo sincronizado el buzón.
+32. SMTP es el protocolo de salida; POP e IMAP, los de acceso al correo recibido.
+
+════════════════════════════════════════════════════════
+9. MONITORIZACIÓN Y GESTIÓN DE REDES
+════════════════════════════════════════════════════════
+33. La monitorización supervisa el estado de la red para detectar fallos y degradaciones.
+34. La gestión de redes incluye configuración, control, inventario, rendimiento y resolución de incidencias.
+35. La monitorización aporta visibilidad; la gestión aporta actuación.
+36. Ambas son esenciales para la disponibilidad y la calidad del servicio.
+
+════════════════════════════════════════════════════════
+10. DIFERENCIAS QUE SUELEN PREGUNTARSE
+════════════════════════════════════════════════════════
+37. TDM no es lo mismo que WDM.
+38. LAN no es lo mismo que WLAN.
+39. IEEE 802.3 no es lo mismo que IEEE 802.11.
+40. IPv4 no es lo mismo que IPv6.
+41. DHCP no es lo mismo que DNS ni que NTP.
+42. SMTP no es lo mismo que POP ni que IMAP.
+43. Monitorización no es lo mismo que gestión.
+
+════════════════════════════════════════════════════════
+11. IDEAS CLAVE DE EXAMEN
+════════════════════════════════════════════════════════
+44. El cableado estructurado es la base física de la red.
+45. TDM separa por tiempo; WDM, por longitud de onda.
+46. LAN se asocia a cable; WLAN, a inalámbrico.
+47. 802.3 se vincula a Ethernet y 802.11 a Wi-Fi.
+48. IPv4 está limitado por su espacio de direcciones; IPv6 lo amplía.
+49. DHCP da red, DNS da nombre y NTP da hora.
+50. SMTP envía, POP descarga e IMAP sincroniza.
+51. La monitorización detecta; la gestión actúa.
+52. El enrutamiento decide el camino de los paquetes.

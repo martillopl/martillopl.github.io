@@ -1,0 +1,297 @@
+<!-- 3_cuadro_comparativo.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema 6 – Cuadro comparativo</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin:2rem;
+      color:#1f2937;
+      background:#ffffff;
+      line-height:1.45;
+    }
+    h1{
+      color:#123a5a;
+      border-bottom:3px solid #123a5a;
+      padding-bottom:.35rem;
+      margin-bottom:1.2rem;
+    }
+    h2{
+      color:#174f7a;
+      margin-top:1.8rem;
+      margin-bottom:.6rem;
+    }
+    .note{
+      background:#f0f7ff;
+      border-left:5px solid #2b6cb0;
+      padding:.8rem 1rem;
+      margin:1rem 0;
+      border-radius:6px;
+    }
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin:.8rem 0 1.4rem 0;
+      table-layout:fixed;
+    }
+    th, td{
+      border:1px solid #c9d7e6;
+      padding:.75rem .7rem;
+      vertical-align:top;
+      word-wrap:break-word;
+    }
+    th{
+      background:#dcecff;
+      color:#123a5a;
+      text-align:left;
+    }
+    tr:nth-child(even) td{
+      background:#fbfdff;
+    }
+    .small{
+      font-size:.95rem;
+      color:#475569;
+    }
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 6. Redes y comunicaciones — Cuadro comparativo</h1>
+
+  <div class="note">
+    Comparativa centrada en diferencias que suelen caer en examen. El objetivo es fijar de un vistazo la función,
+    el alcance y el uso típico de cada tecnología o servicio.
+  </div>
+
+  <h2>1. TDM vs WDM</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>TDM</th>
+      <th>WDM</th>
+    </tr>
+    <tr>
+      <td>Principio</td>
+      <td>Divide el medio por intervalos de tiempo.</td>
+      <td>Divide el medio por longitudes de onda.</td>
+    </tr>
+    <tr>
+      <td>Medio típico</td>
+      <td>Transporte digital temporal.</td>
+      <td>Fibra óptica.</td>
+    </tr>
+    <tr>
+      <td>Objetivo</td>
+      <td>Compartir el canal en el tiempo.</td>
+      <td>Aumentar capacidad óptica en la misma fibra.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Separa por tiempo.</td>
+      <td>Separa por color/luz.</td>
+    </tr>
+  </table>
+
+  <h2>2. LAN vs WLAN</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>LAN</th>
+      <th>WLAN</th>
+    </tr>
+    <tr>
+      <td>Conexión</td>
+      <td>Por cable.</td>
+      <td>Inalámbrica.</td>
+    </tr>
+    <tr>
+      <td>Ventaja</td>
+      <td>Más estabilidad y rendimiento.</td>
+      <td>Más movilidad y comodidad.</td>
+    </tr>
+    <tr>
+      <td>Uso habitual</td>
+      <td>Equipos fijos y servicios críticos.</td>
+      <td>Portátiles, móviles y zonas sin cableado.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Red local cableada.</td>
+      <td>Red local sin cables.</td>
+    </tr>
+  </table>
+
+  <h2>3. IEEE 802.3 vs IEEE 802.11</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>IEEE 802.3</th>
+      <th>IEEE 802.11</th>
+    </tr>
+    <tr>
+      <td>Asociación</td>
+      <td>Ethernet.</td>
+      <td>Wi-Fi.</td>
+    </tr>
+    <tr>
+      <td>Tipo de red</td>
+      <td>LAN por cable.</td>
+      <td>WLAN inalámbrica.</td>
+    </tr>
+    <tr>
+      <td>Medio</td>
+      <td>Par trenzado / fibra.</td>
+      <td>Radiofrecuencia.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Red cableada estándar.</td>
+      <td>Red inalámbrica estándar.</td>
+    </tr>
+  </table>
+
+  <h2>4. IPv4 vs IPv6</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>IPv4</th>
+      <th>IPv6</th>
+    </tr>
+    <tr>
+      <td>Tamaño de dirección</td>
+      <td>32 bits.</td>
+      <td>128 bits.</td>
+    </tr>
+    <tr>
+      <td>Espacio de direcciones</td>
+      <td>Limitado.</td>
+      <td>Muy amplio.</td>
+    </tr>
+    <tr>
+      <td>Motivo de evolución</td>
+      <td>Agotamiento de direcciones.</td>
+      <td>Escalabilidad y crecimiento de dispositivos.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Versión clásica.</td>
+      <td>Versión ampliada y más escalable.</td>
+    </tr>
+  </table>
+
+  <h2>5. DHCP vs DNS vs NTP</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>DHCP</th>
+      <th>DNS</th>
+      <th>NTP</th>
+    </tr>
+    <tr>
+      <td>Función</td>
+      <td>Asigna configuración de red.</td>
+      <td>Resuelve nombres a IP.</td>
+      <td>Sincroniza la hora.</td>
+    </tr>
+    <tr>
+      <td>Qué aporta</td>
+      <td>Dirección, máscara, gateway, etc.</td>
+      <td>Acceso a servicios por nombre.</td>
+      <td>Coherencia temporal.</td>
+    </tr>
+    <tr>
+      <td>Problema que evita</td>
+      <td>Configuración manual.</td>
+      <td>Memorizar direcciones IP.</td>
+      <td>Desfase de registros y eventos.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Da red.</td>
+      <td>Da nombre.</td>
+      <td>Da hora.</td>
+    </tr>
+  </table>
+
+  <h2>6. SMTP vs POP vs IMAP</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>SMTP</th>
+      <th>POP</th>
+      <th>IMAP</th>
+    </tr>
+    <tr>
+      <td>Función</td>
+      <td>Envío de correo.</td>
+      <td>Recepción por descarga.</td>
+      <td>Recepción con sincronización.</td>
+    </tr>
+    <tr>
+      <td>Relación con buzón</td>
+      <td>Entrega mensajes.</td>
+      <td>Tiende a bajar el correo al cliente.</td>
+      <td>Mantiene el buzón sincronizado.</td>
+    </tr>
+    <tr>
+      <td>Uso típico</td>
+      <td>Salida de mensajes.</td>
+      <td>Consulta simple.</td>
+      <td>Uso en varios dispositivos.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Envía.</td>
+      <td>Descarga.</td>
+      <td>Sincroniza.</td>
+    </tr>
+  </table>
+
+  <h2>7. Monitorización vs gestión de redes</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>Monitorización</th>
+      <th>Gestión de redes</th>
+    </tr>
+    <tr>
+      <td>Enfoque</td>
+      <td>Observar y detectar.</td>
+      <td>Operar, mantener y mejorar.</td>
+    </tr>
+    <tr>
+      <td>Salida típica</td>
+      <td>Alertas, métricas y visibilidad.</td>
+      <td>Decisiones, cambios y acciones.</td>
+    </tr>
+    <tr>
+      <td>Horizonte temporal</td>
+      <td>Estado actual y tendencias cortas.</td>
+      <td>Operación diaria y estabilidad a largo plazo.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Ver lo que pasa.</td>
+      <td>Actuar sobre lo que pasa.</td>
+    </tr>
+  </table>
+
+  <div class="note">
+    <p class="small">
+      Resumen mental rápido: TDM = tiempo, WDM = longitud de onda, LAN = cable, WLAN = inalámbrica, 802.3 =
+      Ethernet, 802.11 = Wi-Fi, IPv4 = 32 bits, IPv6 = 128 bits, DHCP = dirección, DNS = nombre, NTP = hora,
+      SMTP = envío, POP = descarga, IMAP = sincronización.
+    </p>
+  </div>
+</body>
+</html>

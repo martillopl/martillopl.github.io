@@ -1,0 +1,177 @@
+<!-- 2_esquema_resumen.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema 6 – Esquema resumen</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin:2rem;
+      color:#1f2937;
+      background:#ffffff;
+      line-height:1.45;
+    }
+    h1{
+      color:#123a5a;
+      border-bottom:3px solid #123a5a;
+      padding-bottom:.35rem;
+      margin-bottom:1.2rem;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:1rem;
+    }
+    .card{
+      border:1px solid #cfe0ef;
+      border-radius:10px;
+      padding:1rem;
+      background:#f8fbff;
+      box-shadow:0 1px 4px rgba(0,0,0,.04);
+    }
+    .card h2{
+      margin:0 0 .7rem 0;
+      font-size:1.03rem;
+      color:#174f7a;
+    }
+    ul{
+      margin:.4rem 0 0 1.1rem;
+      padding:0;
+    }
+    li{
+      margin:.25rem 0;
+    }
+    .wide{
+      grid-column:1 / -1;
+    }
+    .tag{
+      display:inline-block;
+      background:#dbeafe;
+      color:#1e3a8a;
+      border-radius:999px;
+      padding:.15rem .55rem;
+      font-size:.85rem;
+      margin-bottom:.55rem;
+    }
+    .mini{
+      font-size:.95rem;
+      color:#475569;
+    }
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 6. Redes y comunicaciones — Esquema resumen</h1>
+
+  <div class="grid">
+    <section class="card">
+      <div class="tag">1</div>
+      <h2>Cableado estructurado</h2>
+      <ul>
+        >Infraestructura física ordenada y normalizada.</li>
+        >Soporta voz, datos y vídeo.</li>
+        >Facilita mantenimiento y ampliación.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">2</div>
+      <h2>TDM y WDM</h2>
+      <ul>
+        >TDM: multiplexación por tiempo.</li>
+        >WDM: multiplexación por longitud de onda.</li>
+        >Ambas optimizan el uso del medio.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">3</div>
+      <h2>LAN y WLAN</h2>
+      <ul>
+        >LAN: red local por cable.</li>
+        >WLAN: red local inalámbrica.</li>
+        >LAN = más estabilidad, WLAN = más movilidad.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">4</div>
+      <h2>IEEE 802.1, 802.3 y 802.11</h2>
+      <ul>
+        >802.1: arquitectura, VLAN y funciones de enlace.</li>
+        >802.3: Ethernet por cable.</li>
+        >802.11: Wi-Fi / WLAN.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">5</div>
+      <h2>TCP/IP v4 y v6</h2>
+      <ul>
+        >IPv4: direcciones de 32 bits.</li>
+        >IPv6: direcciones de 128 bits.</li>
+        >IPv6 amplía espacio y escalabilidad.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">6</div>
+      <h2>Enrutamiento</h2>
+      <ul>
+        >Decide el camino de los paquetes.</li>
+        >Los routers intercambian información de ruta.</li>
+        >Puede ser dinámico o estático.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">7</div>
+      <h2>DHCP, DNS y NTP</h2>
+      <ul>
+        >DHCP: asigna IP y parámetros.</li>
+        >DNS: traduce nombres a IP.</li>
+        >NTP: sincroniza la hora.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">8</div>
+      <h2>Correo electrónico</h2>
+      <ul>
+        >SMTP: envío de mensajes.</li>
+        >POP: descarga de correo.</li>
+        >IMAP: consulta y sincronización del buzón.</li>
+      </ul>
+    </section>
+
+    <section class="card wide">
+      <div class="tag">9</div>
+      <h2>Monitorización y gestión de redes</h2>
+      <ul>
+        >Monitorizar: observar estado y detectar anomalías.</li>
+        >Gestionar: actuar sobre configuración, fallos y rendimiento.</li>
+        >Permite disponibilidad, control y mejora continua.</li>
+      </ul>
+    </section>
+
+    <section class="card wide">
+      <div class="tag">10</div>
+      <h2>Relación entre bloques</h2>
+      <p class="mini">
+        El cableado estructura la base física; LAN y WLAN dan conectividad local; IEEE regula tecnologías concretas;
+        TCP/IP permite la interconexión; el enrutamiento guía los paquetes; DHCP, DNS y NTP aportan servicios
+        esenciales; SMTP, POP e IMAP soportan el correo; y la monitorización mantiene la red bajo control.
+      </p>
+    </section>
+  </div>
+</body>
+</html>
