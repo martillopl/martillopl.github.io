@@ -1,0 +1,92 @@
+PUNTOS CLAVE — TEMA 8: SEGURIDAD DE SISTEMAS DE INFORMACIÓN
+Gestor/a Informático/a · UPNA · Oposición
+
+════════════════════════════════════════════════════════
+1. SEGURIDAD EN RED
+════════════════════════════════════════════════════════
+01. La seguridad en red protege sistemas, servicios y comunicaciones frente a accesos no autorizados y ataques.
+02. El cortafuegos filtra el tráfico según reglas de seguridad.
+03. Los sistemas de protección ante intrusiones detectan o bloquean comportamientos maliciosos.
+04. El cortafuegos de aplicación inspecciona el tráfico a nivel de aplicación.
+
+════════════════════════════════════════════════════════
+2. VPN
+════════════════════════════════════════════════════════
+05. La VPN crea un túnel seguro sobre una red no confiable.
+06. Se usa para acceso remoto y conexión entre sedes.
+07. Aporta confidencialidad, integridad y autenticación.
+08. No elimina Internet, sino que lo usa como soporte de un canal seguro.
+
+════════════════════════════════════════════════════════
+3. CRIPTOGRAFÍA
+════════════════════════════════════════════════════════
+09. La criptografía protege la información mediante algoritmos de cifrado.
+10. El cifrado simétrico usa la misma clave para cifrar y descifrar.
+11. El cifrado asimétrico usa un par de claves: pública y privada.
+12. La criptografía también sirve para firma digital, autenticación e integridad.
+
+════════════════════════════════════════════════════════
+4. PKI Y AUTORIDADES DE CERTIFICACIÓN
+════════════════════════════════════════════════════════
+13. Una PKI es una infraestructura de clave pública que gestiona claves y certificados.
+14. La autoridad de certificación emite certificados digitales.
+15. Los certificados vinculan una identidad con una clave pública.
+16. La PKI sostiene la confianza digital en comunicaciones y firma electrónica.
+
+════════════════════════════════════════════════════════
+5. PREVENCIÓN DE INCIDENTES
+════════════════════════════════════════════════════════
+17. La prevención reduce la probabilidad y el impacto de los incidentes.
+18. Incluye políticas, actualizaciones, control de accesos y copias de seguridad.
+19. También incluye segmentación de red, mínimos privilegios y concienciación.
+20. La seguridad depende de tecnología, procesos y personas.
+
+════════════════════════════════════════════════════════
+6. AUDITORÍAS DE SEGURIDAD
+════════════════════════════════════════════════════════
+21. La auditoría verifica el cumplimiento de controles, normas y procedimientos.
+22. Revisa configuraciones, accesos, registros y trazabilidad.
+23. Detecta debilidades y propone mejoras.
+24. La auditoría evalúa; no sustituye a la respuesta ante incidentes.
+
+════════════════════════════════════════════════════════
+7. GESTIÓN DE INCIDENTES Y FORENSE
+════════════════════════════════════════════════════════
+25. La gestión de incidentes organiza detección, contención, análisis, erradicación y recuperación.
+26. El análisis forense reconstruye lo ocurrido a partir de evidencias digitales.
+27. Es fundamental preservar la cadena de custodia.
+28. La gestión de incidentes actúa; el forense investiga.
+
+════════════════════════════════════════════════════════
+8. PROTECCIÓN DE DATOS Y RGPD
+════════════════════════════════════════════════════════
+29. La protección de datos personales exige licitud, transparencia y seguridad.
+30. El RGPD establece principios como minimización, finalidad, exactitud y responsabilidad proactiva.
+31. También impone medidas técnicas y organizativas adecuadas al riesgo.
+32. Seguridad informática y protección de datos están relacionadas, pero no son exactamente lo mismo.
+
+════════════════════════════════════════════════════════
+9. DIFERENCIAS QUE SUELEN PREGUNTARSE
+════════════════════════════════════════════════════════
+33. Cortafuegos no es lo mismo que IDS o IPS.
+34. VPN no es lo mismo que conexión directa.
+35. Cifrado simétrico no es lo mismo que asimétrico.
+36. PKI no es lo mismo que certificado digital.
+37. Prevención no es lo mismo que auditoría.
+38. Gestión de incidentes no es lo mismo que análisis forense.
+39. RGPD no es lo mismo que una medida técnica, sino un marco legal.
+
+════════════════════════════════════════════════════════
+10. IDEAS CLAVE DE EXAMEN
+════════════════════════════════════════════════════════
+40. El cortafuegos filtra.
+41. El IDS detecta.
+42. El IPS bloquea.
+43. La VPN cifra el canal.
+44. La criptografía protege información, identidad e integridad.
+45. La PKI da soporte a la confianza digital.
+46. Prevenir cuesta menos que responder tarde.
+47. La auditoría comprueba cumplimiento.
+48. El incidente se contiene y se recupera.
+49. El forense reconstruye hechos.
+50. El RGPD obliga a tratar datos personales con seguridad y responsabilidad.

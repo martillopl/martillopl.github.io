@@ -1,0 +1,167 @@
+<!-- 2_esquema_resumen.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema 8 – Esquema resumen</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin:2rem;
+      color:#1f2937;
+      background:#ffffff;
+      line-height:1.45;
+    }
+    h1{
+      color:#123a5a;
+      border-bottom:3px solid #123a5a;
+      padding-bottom:.35rem;
+      margin-bottom:1.2rem;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:1rem;
+    }
+    .card{
+      border:1px solid #cfe0ef;
+      border-radius:10px;
+      padding:1rem;
+      background:#f8fbff;
+      box-shadow:0 1px 4px rgba(0,0,0,.04);
+    }
+    .card h2{
+      margin:0 0 .7rem 0;
+      font-size:1.03rem;
+      color:#174f7a;
+    }
+    ul{
+      margin:.4rem 0 0 1.1rem;
+      padding:0;
+    }
+    li{
+      margin:.25rem 0;
+    }
+    .wide{
+      grid-column:1 / -1;
+    }
+    .tag{
+      display:inline-block;
+      background:#dbeafe;
+      color:#1e3a8a;
+      border-radius:999px;
+      padding:.15rem .55rem;
+      font-size:.85rem;
+      margin-bottom:.55rem;
+    }
+    .mini{
+      font-size:.95rem;
+      color:#475569;
+    }
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 8. Seguridad de sistemas de información — Esquema resumen</h1>
+
+  <div class="grid">
+    <section class="card">
+      <div class="tag">1</div>
+      <h2>Seguridad en red</h2>
+      <ul>
+        <li>Cortafuegos para filtrar tráfico.</li>
+        <li>Protección ante intrusiones.</li>
+        <li>Cortafuegos de aplicación para inspección más profunda.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">2</div>
+      <h2>VPN</h2>
+      <ul>
+        <li>Túnel seguro sobre red pública.</li>
+        <li>Acceso remoto y conexión entre sedes.</li>
+        <li>Confidencialidad, integridad y autenticación.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">3</div>
+      <h2>Criptografía</h2>
+      <ul>
+        <li>Cifrado simétrico y asimétrico.</li>
+        <li>Protege información, autenticidad e integridad.</li>
+        <li>Base de firma digital y comunicaciones seguras.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">4</div>
+      <h2>PKI y CA</h2>
+      <ul>
+        <li>Infraestructura de clave pública.</li>
+        <li>Certificados digitales y confianza.</li>
+        <li>Autoridad de certificación emite certificados.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">5</div>
+      <h2>Prevención</h2>
+      <ul>
+        <li>Políticas, actualizaciones y control de accesos.</li>
+        <li>Copias de seguridad y segmentación.</li>
+        <li>Concienciación y mínimos privilegios.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">6</div>
+      <h2>Auditorías</h2>
+      <ul>
+        <li>Verifican cumplimiento de controles y normas.</li>
+        <li>Detectan debilidades y áreas de mejora.</li>
+        <li>Revisan configuración, accesos y trazabilidad.</li>
+      </ul>
+    </section>
+
+    <section class="card wide">
+      <div class="tag">7</div>
+      <h2>Gestión de incidentes y forense</h2>
+      <ul>
+        <li>Gestión de incidentes: detección, contención, análisis, erradicación y recuperación.</li>
+        <li>Análisis forense: reconstrucción de hechos mediante evidencias digitales.</li>
+        <li>Importante preservar la cadena de custodia.</li>
+      </ul>
+    </section>
+
+    <section class="card wide">
+      <div class="tag">8</div>
+      <h2>RGPD y protección de datos</h2>
+      <ul>
+        <li>Tratamiento de datos personales con licitud, transparencia y seguridad.</li>
+        <li>Principios: minimización, finalidad, exactitud, conservación limitada y responsabilidad proactiva.</li>
+        <li>Exige medidas técnicas y organizativas acordes al riesgo.</li>
+      </ul>
+    </section>
+
+    <section class="card wide">
+      <div class="tag">9</div>
+      <h2>Relación entre bloques</h2>
+      <p class="mini">
+        La seguridad en red protege el perímetro; la VPN asegura accesos; la criptografía protege la información;
+        la PKI sostiene la confianza; la prevención reduce riesgos; la auditoría verifica; la gestión de incidentes
+        actúa; el forense reconstruye; y el RGPD fija obligaciones sobre datos personales.
+      </p>
+    </section>
+  </div>
+</body>
+</html>

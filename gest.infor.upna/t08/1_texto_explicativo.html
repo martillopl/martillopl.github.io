@@ -1,0 +1,230 @@
+<!-- 1_texto_explicativo.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema 8 – Seguridad de sistemas de información</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      line-height:1.58;
+      margin:2.2rem;
+      color:#1f2937;
+      background:#ffffff;
+    }
+    h1,h2,h3{
+      color:#143a5a;
+    }
+    h1{
+      border-bottom:3px solid #143a5a;
+      padding-bottom:.4rem;
+      margin-bottom:1.2rem;
+    }
+    h2{
+      margin-top:2rem;
+      border-left:6px solid #2b6cb0;
+      padding-left:.6rem;
+    }
+    h3{
+      margin-top:1.1rem;
+      color:#24557d;
+    }
+    .box{
+      background:#f7fbff;
+      border:1px solid #d7e7f5;
+      border-radius:8px;
+      padding:1rem 1.1rem;
+      margin:1rem 0;
+    }
+    .key{
+      background:#eef6ff;
+      border-left:5px solid #2b6cb0;
+      padding:.85rem 1rem;
+      margin:1rem 0;
+    }
+    ul{
+      margin-top:.4rem;
+    }
+    .small{
+      font-size:.95rem;
+      color:#4b5563;
+    }
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 8. Seguridad de sistemas de información</h1>
+
+  <div class="box">
+    <p>
+      Este tema se centra en cómo proteger los sistemas de información frente a amenazas, accesos indebidos,
+      fugas de datos e incidentes de seguridad. Reúne controles técnicos como cortafuegos, sistemas de detección o
+      prevención de intrusiones, VPN y criptografía, junto con elementos organizativos y legales como auditorías,
+      análisis forense, gestión de incidentes y protección de datos personales. Es un tema esencial porque la
+      seguridad no depende solo de una herramienta, sino de un conjunto coordinado de medidas.
+    </p>
+    <p>
+      La idea general es doble: por un lado, prevenir y reducir el riesgo; por otro, saber responder cuando el
+      incidente ya ha ocurrido. Por eso aparecen tanto mecanismos de defensa como procedimientos de investigación y
+      normas legales aplicables al tratamiento de la información.
+    </p>
+  </div>
+
+  <h2>1. Sistemas de seguridad en red</h2>
+
+  <p>
+    La seguridad en red engloba los mecanismos que protegen el tráfico, los dispositivos y los servicios frente a
+    accesos no autorizados o ataques. Uno de los elementos más conocidos es el cortafuegos, que filtra el tráfico de
+    entrada y salida según reglas definidas. Su función es actuar como barrera entre zonas de confianza distinta.
+  </p>
+
+  <p>
+    Junto al cortafuegos aparecen los sistemas de protección ante intrusiones, que detectan o bloquean comportamientos
+    anómalos y posibles ataques. También existen cortafuegos de aplicación, capaces de inspeccionar el tráfico a un
+    nivel más cercano a la lógica de las aplicaciones. En oposición, conviene distinguir entre filtrar, detectar y
+    bloquear, porque no todos estos mecanismos hacen exactamente lo mismo.
+  </p>
+
+  <div class="key">
+    <p>
+      Idea clave: el cortafuegos decide qué tráfico pasa; la protección ante intrusiones vigila comportamientos
+      sospechosos; el cortafuegos de aplicación inspecciona más en profundidad.
+    </p>
+  </div>
+
+  <h2>2. VPN</h2>
+
+  <p>
+    Una VPN crea un canal o túnel seguro sobre una red no confiable, normalmente Internet. Su objetivo es permitir
+    comunicaciones privadas y protegidas entre usuarios, sedes o recursos corporativos. Es una solución habitual en
+    acceso remoto y en interconexión de oficinas.
+  </p>
+
+  <p>
+    La VPN aporta principalmente confidencialidad, integridad y autenticación. De este modo, quien se conecta puede
+    hacerlo con un nivel de seguridad superior al que ofrecería una comunicación directa por una red pública. En
+    examen, suele ser importante entender que la VPN no elimina Internet, sino que lo usa como soporte para crear un
+    canal seguro.
+  </p>
+
+  <h2>3. Criptografía</h2>
+
+  <p>
+    La criptografía protege la información transformándola mediante algoritmos para que solo pueda ser interpretada
+    por quienes poseen la clave o el mecanismo adecuado. El cifrado simétrico utiliza la misma clave para cifrar y
+    descifrar, mientras que el cifrado asimétrico emplea un par de claves, pública y privada.
+  </p>
+
+  <p>
+    Además de cifrar, la criptografía permite firmar digitalmente, autenticar identidades y garantizar la integridad
+    de los datos. Por ello no se limita a ocultar información, sino que también contribuye a demostrar quién envía un
+    mensaje y si el contenido ha sido alterado. En oposición, suele ser muy útil diferenciar confidencialidad,
+    integridad y autenticidad.
+  </p>
+
+  <h2>4. PKI y autoridades de certificación</h2>
+
+  <p>
+    Una PKI es una infraestructura de clave pública que gestiona claves, certificados digitales y relaciones de
+    confianza. Su objetivo es hacer posible que una entidad pueda verificar la identidad de otra mediante certificados
+    emitidos y validados dentro de un marco de confianza.
+  </p>
+
+  <p>
+    La autoridad de certificación es la entidad que emite los certificados y vincula una identidad con una clave
+    pública. Los certificados son fundamentales para comunicaciones seguras como HTTPS, firma electrónica y otros
+    servicios de autenticación. En examen, conviene recordar que la PKI no es solo una tecnología, sino todo un
+    ecosistema de confianza digital.
+  </p>
+
+  <h2>5. Prevención de incidentes de seguridad</h2>
+
+  <p>
+    La prevención de incidentes incluye todas las medidas destinadas a reducir la probabilidad o el impacto de una
+    amenaza. Aquí se incluyen políticas de seguridad, actualizaciones, control de accesos, copias de seguridad,
+    segmentación de red, concienciación de usuarios y monitorización. No basta con instalar herramientas: hay que
+    diseñar una cultura de seguridad.
+  </p>
+
+  <p>
+    Las medidas preventivas suelen combinar componentes técnicos y organizativos. Por ejemplo, el principio de mínimo
+    privilegio limita el acceso de cada usuario a lo estrictamente necesario, mientras que la formación ayuda a evitar
+    errores humanos. En oposición, suele preguntarse mucho si la seguridad depende solo del software, y la respuesta
+    es no: también depende de procesos y personas.
+  </p>
+
+  <h2>6. Auditorías de seguridad</h2>
+
+  <p>
+    La auditoría de seguridad verifica si los sistemas y procedimientos cumplen con las normas, políticas y controles
+    establecidos. Puede revisar configuraciones, accesos, trazabilidad, registros, permisos y medidas de protección.
+    Su función es detectar debilidades y proponer mejoras.
+  </p>
+
+  <p>
+    Una auditoría no es lo mismo que una respuesta a un ataque ni que una investigación forense. Su papel es
+    evaluador y preventivo: comprobar si el entorno está bien protegido y si las medidas definidas se están aplicando
+    correctamente. En examen, esta distinción suele ser muy importante.
+  </p>
+
+  <h2>7. Gestión de incidentes y análisis forense</h2>
+
+  <p>
+    La gestión de incidentes organiza la detección, contención, análisis, erradicación y recuperación tras un evento
+    de seguridad. Su objetivo es limitar el daño, restaurar el servicio y evitar recurrencias. Se trata de un proceso
+    operativo, con pasos claros y con coordinación entre equipos técnicos y de gestión.
+  </p>
+
+  <p>
+    El análisis forense estudia evidencias digitales para reconstruir lo sucedido. Debe preservarse la cadena de
+    custodia para que la evidencia sea fiable y, si procede, válida desde el punto de vista jurídico. En oposición,
+    suele ser esencial no confundir la gestión del incidente con la investigación posterior: una cosa es actuar para
+    frenar el problema, y otra reconstruirlo con precisión.
+  </p>
+
+  <div class="box">
+    <p class="small">
+      Resumen rápido: la gestión de incidentes contiene y recupera; el análisis forense investiga y reconstruye.
+    </p>
+  </div>
+
+  <h2>8. Protección de datos de carácter personal y RGPD</h2>
+
+  <p>
+    La protección de datos personales exige tratar la información con licitud, transparencia y seguridad. El RGPD
+    establece principios como minimización de datos, limitación de la finalidad, exactitud, conservación limitada y
+    responsabilidad proactiva. También refuerza los derechos de las personas sobre sus datos.
+  </p>
+
+  <p>
+    En términos de seguridad, el RGPD obliga a aplicar medidas técnicas y organizativas adecuadas al riesgo. Esto
+    implica proteger la información personal no solo para cumplir la ley, sino para preservar la confianza y reducir
+    el impacto de posibles brechas. En examen, conviene recordar que protección de datos y seguridad informática están
+    muy relacionadas, pero no son exactamente lo mismo.
+  </p>
+
+  <h2>9. Relación entre todos los bloques</h2>
+
+  <p>
+    Todos los apartados del tema forman una secuencia lógica. La seguridad en red protege el perímetro y las
+    comunicaciones; la VPN asegura accesos remotos y conexiones entre sedes; la criptografía protege la información;
+    la PKI y las autoridades de certificación sostienen la confianza digital; la prevención reduce riesgos; la
+    auditoría verifica controles; la gestión de incidentes actúa cuando ocurre un problema; el análisis forense
+    reconstruye lo sucedido; y el RGPD fija obligaciones sobre el tratamiento de datos personales.
+  </p>
+
+  <p>
+    En conjunto, el tema muestra que la seguridad es un proceso continuo, no una acción puntual. Requiere tecnología,
+    procedimientos, investigación y cumplimiento normativo para proteger tanto los sistemas como la información que
+    contienen.
+  </p>
+</body>
+</html>
