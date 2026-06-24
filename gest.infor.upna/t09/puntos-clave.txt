@@ -1,0 +1,74 @@
+PUNTOS CLAVE — TEMA 9: ADMINISTRACIÓN ELECTRÓNICA
+Gestor/a Informático/a · UPNA · Oposición
+
+════════════════════════════════════════════════════════
+1. CERTIFICADOS Y FIRMA ELECTRÓNICA
+════════════════════════════════════════════════════════
+01. El certificado electrónico identifica de forma segura a una persona, órgano o entidad.
+02. La firma electrónica vincula identidad, voluntad y documento.
+03. La firma garantiza autenticidad e integridad, según su nivel.
+04. El certificado y la firma son esenciales para actuar con validez jurídica en digital.
+
+════════════════════════════════════════════════════════
+2. SELLADO DE TIEMPOS
+════════════════════════════════════════════════════════
+05. El sellado de tiempos acredita cuándo existía un documento o evento.
+06. Aporta prueba de fecha y hora certificadas.
+07. Es útil para evidencias, plazos y trazabilidad.
+08. No identifica al firmante: fija el momento.
+
+════════════════════════════════════════════════════════
+3. SEDE ELECTRÓNICA
+════════════════════════════════════════════════════════
+09. La sede electrónica es el punto de acceso oficial de la administración por medios electrónicos.
+10. Desde la sede se publican trámites, servicios, avisos y contenidos oficiales.
+11. Debe garantizar identificación, autenticación, integridad, accesibilidad y disponibilidad.
+12. Es la puerta digital oficial de la administración.
+
+════════════════════════════════════════════════════════
+4. REGISTRO ELECTRÓNICO
+════════════════════════════════════════════════════════
+13. El registro electrónico permite presentar escritos, solicitudes y comunicaciones por vía electrónica.
+14. Deja constancia de fecha, hora, remitente y contenido presentado.
+15. Acredita la entrada, no la resolución del asunto.
+16. Es clave para iniciar formalmente muchos procedimientos.
+
+════════════════════════════════════════════════════════
+5. PROCEDIMIENTOS ELECTRÓNICOS
+════════════════════════════════════════════════════════
+17. Un procedimiento electrónico organiza la tramitación completa por medios electrónicos.
+18. Incluye iniciación, instrucción, resolución, notificación y archivo.
+19. Mejora trazabilidad, control de plazos y acceso al expediente.
+20. Requiere interoperabilidad entre sistemas y órganos.
+
+════════════════════════════════════════════════════════
+6. COMUNICACIÓN Y NOTIFICACIÓN
+════════════════════════════════════════════════════════
+21. La comunicación electrónica transmite información entre administración y ciudadanía o entre órganos.
+22. La notificación electrónica informa formalmente de actos administrativos.
+23. La notificación puede iniciar plazos y producir efectos jurídicos.
+24. La notificación debe acreditar contenido, fecha, hora y acceso.
+
+════════════════════════════════════════════════════════
+7. DIFERENCIAS QUE SUELEN PREGUNTARSE
+════════════════════════════════════════════════════════
+25. Certificado no es lo mismo que firma.
+26. Firma no es lo mismo que sellado de tiempos.
+27. Sede electrónica no es lo mismo que portal web institucional.
+28. Registro electrónico no es lo mismo que resolución.
+29. Comunicación no es lo mismo que notificación.
+30. Procedimiento electrónico no es lo mismo que trámite aislado.
+
+════════════════════════════════════════════════════════
+8. IDEAS CLAVE DE EXAMEN
+════════════════════════════════════════════════════════
+31. El certificado identifica.
+32. La firma valida la actuación.
+33. El sello de tiempo sitúa en el momento.
+34. La sede electrónica es la puerta oficial.
+35. El registro electrónico acredita la entrada.
+36. El procedimiento electrónico organiza la tramitación completa.
+37. La comunicación informa.
+38. La notificación produce efectos jurídicos.
+39. La administración electrónica debe mantener seguridad jurídica, trazabilidad y prueba.
+40. Digitalizar no es solo escanear: es tramitar electrónicamente con validez.
