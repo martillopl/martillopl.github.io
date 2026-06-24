@@ -1,0 +1,132 @@
+PUNTOS CLAVE — TEMA 4: ARQUITECTURA DE APLICACIONES
+Gestor/a Informático/a · UPNA · Oposición
+
+════════════════════════════════════════════════════════
+1. ARQUITECTURA DE APLICACIONES Y PARADIGMAS DE IMPLEMENTACIÓN
+════════════════════════════════════════════════════════
+01. La arquitectura de aplicaciones describe la estructura del sistema y la relación entre sus componentes.
+02. La arquitectura afecta a escalabilidad, seguridad, mantenibilidad e integración.
+03. Paradigmas habituales: monolítico, por capas, orientado a servicios y microservicios.
+04. La separación de responsabilidades facilita evolución y mantenimiento.
+
+════════════════════════════════════════════════════════
+2. SERVIDORES DE APLICACIONES
+════════════════════════════════════════════════════════
+05. Un servidor de aplicaciones ejecuta la lógica de negocio y proporciona servicios comunes.
+06. Suele ofrecer gestión de sesiones, seguridad, transacciones e integración.
+07. No debe confundirse con un servidor web simple.
+08. Es una pieza central en aplicaciones corporativas complejas.
+
+════════════════════════════════════════════════════════
+3. ALTA DISPONIBILIDAD EN APLICACIONES
+════════════════════════════════════════════════════════
+09. La alta disponibilidad busca que la aplicación siga operativa ante fallos.
+10. Su objetivo es eliminar puntos únicos de fallo.
+11. Técnicas frecuentes: redundancia, clustering, réplica y balanceo de carga.
+12. Alta disponibilidad no es lo mismo que rendimiento, aunque pueden complementarse.
+
+════════════════════════════════════════════════════════
+4. DESPLIEGUE DE APLICACIONES
+════════════════════════════════════════════════════════
+13. El despliegue es el proceso de llevar una aplicación a un entorno operativo.
+14. Incluye instalación, configuración, publicación y puesta en marcha.
+15. Debe ser repetible, trazable y seguro.
+16. Suele apoyarse en automatización e integración continua / entrega continua.
+
+════════════════════════════════════════════════════════
+5. INTEGRACIÓN DE APLICACIONES Y ENTORNOS DISTRIBUIDOS
+════════════════════════════════════════════════════════
+17. La integración permite que sistemas distintos intercambien datos y servicios.
+18. Evita silos de información.
+19. Los entornos distribuidos reparten procesamiento y datos entre varios nodos.
+20. Suelen utilizar APIs, mensajería y servicios web.
+
+════════════════════════════════════════════════════════
+6. SERVICIOS WEB: SOAP Y REST
+════════════════════════════════════════════════════════
+21. Los servicios web permiten la comunicación entre aplicaciones a través de red.
+22. SOAP es más rígido y protocolario.
+23. REST es más ligero y flexible.
+24. SOAP suele asociarse a XML e integración empresarial.
+25. REST suele asociarse a APIs web modernas.
+
+════════════════════════════════════════════════════════
+7. IMPLANTACIÓN, GESTIÓN Y MANTENIMIENTO DE APLICACIONES
+════════════════════════════════════════════════════════
+26. Una aplicación no termina cuando se desarrolla: hay que implantarla, operarla y mantenerla.
+27. El mantenimiento incluye corrección de errores, actualizaciones y supervisión.
+28. La documentación y el control de cambios son esenciales.
+29. La continuidad del servicio depende de una buena gestión posterior al despliegue.
+
+════════════════════════════════════════════════════════
+8. APLICACIONES MULTIPLATAFORMA
+════════════════════════════════════════════════════════════════════════
+30. Las aplicaciones multiplataforma buscan funcionar en PC, tableta y teléfono.
+31. Su objetivo es reutilizar base funcional y adaptarla al dispositivo.
+32. Mejoran la portabilidad y la experiencia de usuario.
+33. Exigen tener en cuenta pantalla, interacción y contexto de uso.
+
+════════════════════════════════════════════════════════
+9. GESTIÓN DE CONTENIDOS WEB
+════════════════════════════════════════════════════════════════════════
+34. La gestión de contenidos web organiza la creación, publicación y actualización de información.
+35. Los sistemas de contenidos facilitan permisos, flujos editoriales y control de versiones.
+36. Permiten separar creación, revisión y publicación.
+37. Son fundamentales en portales y sitios institucionales.
+
+════════════════════════════════════════════════════════
+10. RESPONSIVE DESIGN
+════════════════════════════════════════════════════════════════════════
+38. El responsive design adapta una misma web a distintos tamaños de pantalla.
+39. No requiere necesariamente versiones separadas para cada dispositivo.
+40. Mejora la usabilidad en móvil, tableta y escritorio.
+41. Es clave en el acceso multidispositivo.
+
+════════════════════════════════════════════════════════
+11. PORTALES CORPORATIVOS
+════════════════════════════════════════════════════════════════════════
+42. Un portal corporativo centraliza acceso a servicios, información y aplicaciones.
+43. Puede servir a empleados, estudiantes, proveedores o ciudadanía.
+44. Aporta personalización y acceso integrado.
+45. Reduce dispersión de información y mejora la entrada única al entorno digital.
+
+════════════════════════════════════════════════════════
+12. PROGRAMACIÓN PARA MÓVILES
+════════════════════════════════════════════════════════════════════════
+46. La programación móvil tiene condicionantes específicos: pantalla pequeña, batería, tacto y conectividad variable.
+47. Exige ligereza y adaptación al contexto.
+48. Suele combinar lógica local y acceso a servicios remotos.
+49. La arquitectura móvil no se diseña igual que la de escritorio.
+
+════════════════════════════════════════════════════════════════════════
+13. SEO
+════════════════════════════════════════════════════════════════════════
+50. SEO significa posicionamiento en motores de búsqueda.
+51. Busca mejorar la visibilidad de una web o portal.
+52. Depende de estructura, semántica, accesibilidad y rendimiento.
+53. Es importante para que los contenidos sean localizables y útiles.
+
+════════════════════════════════════════════════════════════════════════
+14. DIFERENCIAS QUE SUELEN PREGUNTARSE
+════════════════════════════════════════════════════════
+54. Arquitectura no es lo mismo que implementación.
+55. Servidor de aplicaciones no es lo mismo que servidor web.
+56. Alta disponibilidad no es lo mismo que rendimiento.
+57. SOAP no es lo mismo que REST.
+58. Multiplataforma no es lo mismo que responsive design.
+59. Portal corporativo no es lo mismo que web informativa.
+60. Gestión de contenidos no es lo mismo que despliegue.
+61. SEO no es desarrollo funcional, pero sí afecta al éxito del portal.
+
+════════════════════════════════════════════════════════════════════════
+15. IDEAS CLAVE DE EXAMEN
+════════════════════════════════════════════════════════════════════════
+62. La arquitectura define la organización interna de la aplicación.
+63. Los servidores de aplicaciones aportan servicios comunes a la lógica de negocio.
+64. La alta disponibilidad busca continuidad ante fallos.
+65. El despliegue debe ser repetible y seguro.
+66. La integración evita silos y permite interoperabilidad.
+67. SOAP es más rígido; REST, más flexible.
+68. Responsive design adapta una misma web a varios dispositivos.
+69. Los portales corporativos centralizan acceso a servicios.
+70. SEO mejora la visibilidad y localización de contenidos.

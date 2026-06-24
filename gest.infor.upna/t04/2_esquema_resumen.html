@@ -1,0 +1,227 @@
+<!-- 2_esquema_resumen.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema 4 – Esquema resumen</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin:2rem;
+      color:#1f2937;
+      background:#ffffff;
+      line-height:1.45;
+    }
+    h1{
+      color:#123a5a;
+      border-bottom:3px solid #123a5a;
+      padding-bottom:.35rem;
+      margin-bottom:1.2rem;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:1rem;
+    }
+    .card{
+      border:1px solid #cfe0ef;
+      border-radius:10px;
+      padding:1rem;
+      background:#f8fbff;
+      box-shadow:0 1px 4px rgba(0,0,0,.04);
+    }
+    .card h2{
+      margin:0 0 .7rem 0;
+      font-size:1.03rem;
+      color:#174f7a;
+    }
+    ul{
+      margin:.4rem 0 0 1.1rem;
+      padding:0;
+    }
+    li{
+      margin:.25rem 0;
+    }
+    .wide{
+      grid-column:1 / -1;
+    }
+    .tag{
+      display:inline-block;
+      background:#dbeafe;
+      color:#1e3a8a;
+      border-radius:999px;
+      padding:.15rem .55rem;
+      font-size:.85rem;
+      margin-bottom:.55rem;
+    }
+    .mini{
+      font-size:.95rem;
+      color:#475569;
+    }
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 4. Arquitectura de aplicaciones — Esquema resumen</h1>
+
+  <div class="grid">
+    <section class="card">
+      <div class="tag">1</div>
+      <h2>Arquitectura de aplicaciones</h2>
+      <ul>
+        <li>Estructura interna del sistema.</li>
+        <li>Define componentes y comunicación.</li>
+        <li>Afecta a escalabilidad, seguridad y mantenimiento.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">2</div>
+      <h2>Paradigmas de implementación</h2>
+      <ul>
+        <li>Monolítica, por capas, orientada a servicios, microservicios.</li>
+        <li>Reparto de responsabilidades.</li>
+        <li>Impacto directo en evolución y mantenimiento.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">3</div>
+      <h2>Servidores de aplicaciones</h2>
+      <ul>
+        <li>Ejecutan lógica de negocio.</li>
+        <li>Aportan servicios comunes: sesiones, seguridad, transacciones.</li>
+        <li>Facilitan despliegue y gestión de aplicaciones complejas.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">4</div>
+      <h2>Alta disponibilidad</h2>
+      <ul>
+        <li>Busca continuidad del servicio.</li>
+        <li>Redundancia, clustering, balanceo y réplica.</li>
+        <li>Evita puntos únicos de fallo.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">5</div>
+      <h2>Despliegue</h2>
+      <ul>
+        <li>Paso de desarrollo a producción.</li>
+        <li>Instalación, configuración y publicación.</li>
+        <li>Importante que sea repetible y trazable.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">6</div>
+      <h2>Integración y distribuido</h2>
+      <ul>
+        <li>Interoperabilidad entre sistemas distintos.</li>
+        <li>APIs, mensajería y servicios web.</li>
+        <li>Coordinación entre nodos y servicios.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">7</div>
+      <h2>SOAP y REST</h2>
+      <ul>
+        <li>Sistemas de comunicación entre aplicaciones.</li>
+        <li>SOAP: más rígido y protocolario.</li>
+        <li>REST: más ligero y flexible, muy usado en APIs.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">8</div>
+      <h2>Implantación y mantenimiento</h2>
+      <ul>
+        <li>Una aplicación no termina al desarrollarse.</li>
+        <li>Hay que operar, supervisar, actualizar y corregir.</li>
+        <li>Parte esencial del ciclo de vida.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">9</div>
+      <h2>Multiplataforma</h2>
+      <ul>
+        <li>PC, tableta y teléfono.</li>
+        <li>Misma base funcional o adaptación mínima.</li>
+        <li>Prioriza portabilidad y experiencia de usuario.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">10</div>
+      <h2>Gestión de contenidos web</h2>
+      <ul>
+        <li>Creación, publicación y actualización de información.</li>
+        <li>Permisos, versiones y flujos editoriales.</li>
+        <li>Apoyo de sistemas de gestión de contenidos.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">11</div>
+      <h2>Responsive design</h2>
+      <ul>
+        <li>La web se adapta a distintos tamaños de pantalla.</li>
+        <li>No necesita versiones totalmente separadas.</li>
+        <li>Clave en móvil, tableta y escritorio.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">12</div>
+      <h2>Portales corporativos</h2>
+      <ul>
+        <li>Punto de acceso central a servicios e información.</li>
+        <li>Unifican contenido y aplicaciones.</li>
+        <li>Facilitan personalización y acceso integrado.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="tag">13</div>
+      <h2>Programación para móviles</h2>
+      <ul>
+        <li>Condicionada por pantalla, batería y conectividad.</li>
+        <li>Exige ligereza y adaptación al contexto.</li>
+        <li>Suele combinar lógica local y servicios remotos.</li>
+      </ul>
+    </section>
+
+    <section class="card wide">
+      <div class="tag">14</div>
+      <h2>SEO</h2>
+      <ul>
+        <li>Mejora la visibilidad en motores de búsqueda.</li>
+        <li>Depende de estructura, rendimiento, semántica y accesibilidad.</li>
+        <li>Es importante para portales y aplicaciones web públicas.</li>
+      </ul>
+    </section>
+
+    <section class="card wide">
+      <div class="tag">15</div>
+      <h2>Relación entre bloques</h2>
+      <p class="mini">
+        Arquitectura define; servidor ejecuta; alta disponibilidad protege; despliegue publica; integración conecta;
+        SOAP/REST comunican; mantenimiento conserva; responsive y multiplataforma adaptan; portal centraliza; SEO da
+        visibilidad.
+      </p>
+    </section>
+  </div>
+</body>
+</html>

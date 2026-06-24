@@ -1,0 +1,316 @@
+<!-- 3_cuadro_comparativo.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema 4 – Cuadro comparativo</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin:2rem;
+      color:#1f2937;
+      background:#ffffff;
+      line-height:1.45;
+    }
+    h1{
+      color:#123a5a;
+      border-bottom:3px solid #123a5a;
+      padding-bottom:.35rem;
+      margin-bottom:1.2rem;
+    }
+    h2{
+      color:#174f7a;
+      margin-top:1.8rem;
+      margin-bottom:.6rem;
+    }
+    .note{
+      background:#f0f7ff;
+      border-left:5px solid #2b6cb0;
+      padding:.8rem 1rem;
+      margin:1rem 0;
+      border-radius:6px;
+    }
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin:.8rem 0 1.4rem 0;
+      table-layout:fixed;
+    }
+    th, td{
+      border:1px solid #c9d7e6;
+      padding:.75rem .7rem;
+      vertical-align:top;
+      word-wrap:break-word;
+    }
+    th{
+      background:#dcecff;
+      color:#123a5a;
+      text-align:left;
+    }
+    tr:nth-child(even) td{
+      background:#fbfdff;
+    }
+    .small{
+      font-size:.95rem;
+      color:#475569;
+    }
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 4. Arquitectura de aplicaciones — Cuadro comparativo</h1>
+
+  <div class="note">
+    Comparativa centrada en diferencias que suelen confundirse en examen. La idea es distinguir funciones,
+    objetivos y alcance de cada concepto.
+  </div>
+
+  <h2>1. Monolítica vs microservicios</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>Arquitectura monolítica</th>
+      <th>Arquitectura de microservicios</th>
+    </tr>
+    <tr>
+      <td>Estructura</td>
+      <td>Una sola aplicación integrada.</td>
+      <td>Conjunto de servicios pequeños e independientes.</td>
+    </tr>
+    <tr>
+      <td>Despliegue</td>
+      <td>Unidad única.</td>
+      <td>Cada servicio puede desplegarse por separado.</td>
+    </tr>
+    <tr>
+      <td>Escalabilidad</td>
+      <td>Más difícil de escalar de forma selectiva.</td>
+      <td>Más flexible para escalar por partes.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Todo junto.</td>
+      <td>Separado y distribuido.</td>
+    </tr>
+  </table>
+
+  <h2>2. Servidor web vs servidor de aplicaciones</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>Servidor web</th>
+      <th>Servidor de aplicaciones</th>
+    </tr>
+    <tr>
+      <td>Función principal</td>
+      <td>Atender peticiones web y servir contenido.</td>
+      <td>Ejecutar lógica de negocio y servicios comunes.</td>
+    </tr>
+    <tr>
+      <td>Alcance</td>
+      <td>Más cercano a la capa de presentación.</td>
+      <td>Más cercano a la lógica de negocio.</td>
+    </tr>
+    <tr>
+      <td>Servicios habituales</td>
+      <td>HTTP, contenido estático, publicación web.</td>
+      <td>Sesiones, transacciones, seguridad, integración.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Entrega páginas y respuestas.</td>
+      <td>Ejecuta componentes de la aplicación.</td>
+    </tr>
+  </table>
+
+  <h2>3. Alta disponibilidad vs rendimiento</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>Alta disponibilidad</th>
+      <th>Rendimiento</th>
+    </tr>
+    <tr>
+      <td>Objetivo</td>
+      <td>Que el servicio siga disponible ante fallos.</td>
+      <td>Que el servicio responda rápido y con eficiencia.</td>
+    </tr>
+    <tr>
+      <td>Técnicas habituales</td>
+      <td>Redundancia, réplica, clustering, balanceo.</td>
+      <td>Optimización, caché, ajuste de recursos.</td>
+    </tr>
+    <tr>
+      <td>Enfoque</td>
+      <td>Resiliencia.</td>
+      <td>Velocidad y capacidad de respuesta.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Evitar caídas.</td>
+      <td>Evitar lentitud.</td>
+    </tr>
+  </table>
+
+  <h2>4. SOAP vs REST</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>SOAP</th>
+      <th>REST</th>
+    </tr>
+    <tr>
+      <td>Naturaleza</td>
+      <td>Protocolo más rígido.</td>
+      <td>Estilo arquitectónico más ligero.</td>
+    </tr>
+    <tr>
+      <td>Formato</td>
+      <td>Muy asociado a XML.</td>
+      <td>Puede usar varios formatos, frecuentemente JSON.</td>
+    </tr>
+    <tr>
+      <td>Uso típico</td>
+      <td>Integración empresarial formal.</td>
+      <td>APIs web modernas.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Más estructurado.</td>
+      <td>Más flexible y simple.</td>
+    </tr>
+  </table>
+
+  <h2>5. Aplicación web vs aplicación móvil</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>Aplicación web</th>
+      <th>Aplicación móvil</th>
+    </tr>
+    <tr>
+      <td>Dispositivo</td>
+      <td>Se usa principalmente en navegador.</td>
+      <td>Diseñada para teléfono o tableta.</td>
+    </tr>
+    <tr>
+      <td>Condicionantes</td>
+      <td>Pantalla y navegador.</td>
+      <td>Pantalla pequeña, batería, tacto y conectividad variable.</td>
+    </tr>
+    <tr>
+      <td>Arquitectura</td>
+      <td>Más orientada a web y portal.</td>
+      <td>Más adaptada al contexto de movilidad.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Acceso vía web.</td>
+      <td>Uso nativo o adaptado a movilidad.</td>
+    </tr>
+  </table>
+
+  <h2>6. Responsive design vs sitio móvil separado</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>Responsive design</th>
+      <th>Sitio móvil separado</th>
+    </tr>
+    <tr>
+      <td>Modelo</td>
+      <td>Una sola web que se adapta.</td>
+      <td>Versiones distintas para dispositivos distintos.</td>
+    </tr>
+    <tr>
+      <td>Mantenimiento</td>
+      <td>Más unificado.</td>
+      <td>Más duplicado y costoso.</td>
+    </tr>
+    <tr>
+      <td>SEO</td>
+      <td>Suele ser más sencillo de gestionar.</td>
+      <td>Puede requerir más trabajo de optimización.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Una interfaz adaptable.</td>
+      <td>Una interfaz específica por dispositivo.</td>
+    </tr>
+  </table>
+
+  <h2>7. Portal corporativo vs web informativa</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>Portal corporativo</th>
+      <th>Web informativa</th>
+    </tr>
+    <tr>
+      <td>Función</td>
+      <td>Punto central de acceso a servicios y aplicaciones.</td>
+      <td>Publicar y difundir información.</td>
+    </tr>
+    <tr>
+      <td>Interacción</td>
+      <td>Alta, con personalización y acceso integrado.</td>
+      <td>Más orientada al contenido que al servicio.</td>
+    </tr>
+    <tr>
+      <td>Usuarios</td>
+      <td>Empleados, estudiantes, proveedores o ciudadanía.</td>
+      <td>Visitantes o lectores de contenido.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Acceso a servicios.</td>
+      <td>Difusión de información.</td>
+    </tr>
+  </table>
+
+  <h2>8. Gestión de contenidos vs despliegue de contenido</h2>
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>Gestión de contenidos</th>
+      <th>Despliegue de contenido</th>
+    </tr>
+    <tr>
+      <td>Qué hace</td>
+      <td>Organiza la creación, publicación y mantenimiento editorial.</td>
+      <td>Lleva el contenido al entorno de publicación.</td>
+    </tr>
+    <tr>
+      <td>Enfoque</td>
+      <td>Editorial y organizativo.</td>
+      <td>Técnico y operativo.</td>
+    </tr>
+    <tr>
+      <td>Control</td>
+      <td>Permisos, flujos, versiones, estructura.</td>
+      <td>Actualización y disponibilidad en el sitio.</td>
+    </tr>
+    <tr>
+      <td>Idea clave</td>
+      <td>Gestionar qué se publica.</td>
+      <td>Publicarlo correctamente.</td>
+    </tr>
+  </table>
+
+  <div class="note">
+    <p class="small">
+      Resumen mental rápido: monolito = una pieza; microservicios = piezas independientes; SOAP = más rígido;
+      REST = más ligero; responsive = una web adaptable; portal = acceso central; alta disponibilidad = continuidad;
+      rendimiento = rapidez.
+    </p>
+  </div>
+</body>
+</html>

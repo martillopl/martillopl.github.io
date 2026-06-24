@@ -1,0 +1,312 @@
+<!-- 1_texto_explicativo.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema 4 – Arquitectura de aplicaciones</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      line-height:1.58;
+      margin:2.2rem;
+      color:#1f2937;
+      background:#ffffff;
+    }
+    h1,h2,h3{
+      color:#143a5a;
+    }
+    h1{
+      border-bottom:3px solid #143a5a;
+      padding-bottom:.4rem;
+      margin-bottom:1.2rem;
+    }
+    h2{
+      margin-top:2rem;
+      border-left:6px solid #2b6cb0;
+      padding-left:.6rem;
+    }
+    h3{
+      margin-top:1.1rem;
+      color:#24557d;
+    }
+    .box{
+      background:#f7fbff;
+      border:1px solid #d7e7f5;
+      border-radius:8px;
+      padding:1rem 1.1rem;
+      margin:1rem 0;
+    }
+    .key{
+      background:#eef6ff;
+      border-left:5px solid #2b6cb0;
+      padding:.85rem 1rem;
+      margin:1rem 0;
+    }
+    ul{
+      margin-top:.4rem;
+    }
+    .small{
+      font-size:.95rem;
+      color:#4b5563;
+    }
+  </style>
+</head>
+<body>
+  <div class="file-nav">
+    <a href="../index.html">Índice</a>
+  </div>
+  <nav>
+    <a href="1_texto_explicativo.html">📄 Texto explicativo</a>
+    <a href="2_esquema_resumen.html">🗂 Esquema-resumen</a>
+    <a href="3_cuadro_comparativo.html">📊 Cuadros comparativos</a>
+  </nav>
+<h1>Tema 4. Arquitectura de aplicaciones</h1>
+
+  <div class="box">
+    <p>
+      Este tema estudia cómo se organizan, despliegan, integran y mantienen las aplicaciones en un entorno
+      corporativo. Ya no basta con que una aplicación “funcione”: debe poder escalar, mantenerse disponible, integrarse
+      con otros sistemas, adaptarse a varios dispositivos y ofrecer una experiencia usable en web y móvil. Por eso
+      aquí aparecen conceptos como servidores de aplicaciones, alta disponibilidad, servicios web, responsive design,
+      portales corporativos, SEO y arquitecturas para móviles.
+    </p>
+    <p>
+      La idea de fondo es siempre la misma: convertir una aplicación en un servicio fiable y útil dentro de una
+      organización, con capacidad de evolucionar y de conectarse con otros sistemas.
+    </p>
+  </div>
+
+  <h2>1. Arquitectura de aplicaciones</h2>
+
+  <p>
+    La arquitectura de una aplicación describe su estructura interna y la forma en que se distribuyen sus funciones.
+    No se limita a la programación del código, sino que incluye la organización de componentes, la forma de
+    comunicarse entre ellos y la manera en que la aplicación se despliega y mantiene. Una buena arquitectura mejora
+    la escalabilidad, la seguridad, la mantenibilidad y la integración.
+  </p>
+
+  <p>
+    En el mundo corporativo suelen aparecer arquitecturas monolíticas, por capas, orientadas a servicios o basadas en
+    microservicios. Cada enfoque responde a una forma distinta de repartir responsabilidades. La elección depende del
+    tamaño del sistema, de la carga esperada, de la evolución prevista y del grado de integración con otros sistemas.
+  </p>
+
+  <h2>2. Paradigmas de implementación</h2>
+
+  <p>
+    Los paradigmas de implementación son las formas de organizar la ejecución de una aplicación. Algunos diseños
+    concentran la lógica en un único bloque, mientras que otros separan presentación, lógica y datos. También hay
+    arquitecturas que reparten el trabajo en múltiples servicios independientes.
+  </p>
+
+  <p>
+    Lo importante es entender que el paradigma elegido afecta directamente al mantenimiento y al crecimiento del
+    sistema. Una arquitectura bien separada facilita probar, modificar y sustituir partes de la aplicación sin
+    romper el conjunto. En examen, suelen interesar las ventajas de separar responsabilidades y la diferencia entre
+    soluciones centralizadas y distribuidas.
+  </p>
+
+  <h2>3. Servidores de aplicaciones</h2>
+
+  <p>
+    Un servidor de aplicaciones es una plataforma que ejecuta componentes de negocio y proporciona servicios comunes
+    a las aplicaciones: gestión de sesiones, seguridad, transacciones, conexión con bases de datos o equilibrio de
+    carga, entre otros. Su función es simplificar el despliegue y el mantenimiento de aplicaciones complejas.
+  </p>
+
+  <p>
+    Este tipo de servidor no solo recibe peticiones, como haría un servidor web básico, sino que también ayuda a
+    ejecutar la lógica de negocio. Por eso se convierte en una pieza central de muchos sistemas corporativos. Su
+    utilización permite estandarizar servicios y separar la infraestructura de la lógica funcional.
+  </p>
+
+  <div class="key">
+    <p>
+      Idea clave: el servidor de aplicaciones aporta servicios comunes para que la lógica del negocio no tenga que
+      resolver por sí sola tareas de infraestructura.
+    </p>
+  </div>
+
+  <h2>4. Alta disponibilidad en aplicaciones</h2>
+
+  <p>
+    La alta disponibilidad busca que la aplicación permanezca operativa incluso si falla parte de la infraestructura.
+    Para ello se eliminan puntos únicos de fallo y se introducen mecanismos de redundancia, balanceo, réplica y
+    recuperación. El objetivo no es solo evitar caídas, sino reducir el impacto de cualquier incidencia.
+  </p>
+
+  <p>
+    En este contexto aparecen conceptos como clustering, tolerancia a fallos, replicación de bases de datos, balanceo
+    de carga y copias de seguridad. Una arquitectura de alta disponibilidad es especialmente importante en servicios
+    críticos o de uso continuado. En oposición, conviene diferenciar disponibilidad de simple rendimiento: una
+    aplicación puede ser rápida, pero no necesariamente resiliente.
+  </p>
+
+  <h2>5. Despliegue de aplicaciones</h2>
+
+  <p>
+    El despliegue es el proceso de llevar una aplicación al entorno donde va a operar. Incluye instalación,
+    configuración, publicación, puesta en marcha y, en ocasiones, automatización mediante pipelines o mecanismos de
+    integración continua y entrega continua. Su correcta gestión resulta esencial para que el paso de desarrollo a
+    producción sea ordenado.
+  </p>
+
+  <p>
+    En el ámbito corporativo interesa que el despliegue sea repetible, trazable y seguro. Por eso se buscan procesos
+    automatizados que reduzcan errores manuales y permitan reproducir entornos de forma consistente. El despliegue
+    no es un acto único, sino un ciclo que puede repetirse en distintos entornos: desarrollo, pruebas y producción.
+  </p>
+
+  <h2>6. Integración de aplicaciones y entornos distribuidos</h2>
+
+  <p>
+    La integración de aplicaciones consiste en hacer que sistemas distintos intercambien datos y servicios de forma
+    coordinada. En una organización real es habitual que convivan aplicaciones desarrolladas en momentos distintos y
+    con tecnologías diferentes. Integrarlas es imprescindible para evitar silos de información.
+  </p>
+
+  <p>
+    Los entornos distribuidos reparten procesamiento y datos entre varios nodos o servicios. Esto aporta flexibilidad
+    y escalabilidad, aunque también añade complejidad de comunicación, sincronización y seguridad. Aquí aparecen
+    técnicas como APIs, mensajería, servicios web y arquitecturas orientadas a servicios. En examen, lo importante es
+    entender que la integración no es solo “conectar”, sino hacer interoperar sistemas distintos.
+  </p>
+
+  <h2>7. Servicios web: SOAP y REST</h2>
+
+  <p>
+    Los servicios web son mecanismos que permiten que aplicaciones distintas se comuniquen a través de la red.
+    SOAP y REST son dos de los enfoques más conocidos. SOAP es un protocolo más rígido, históricamente asociado a
+    XML y a escenarios empresariales que exigen formalidad y ciertas garantías. REST, en cambio, es un estilo
+    arquitectónico más ligero y flexible, muy extendido en APIs web modernas.
+  </p>
+
+  <p>
+    SOAP suele relacionarse con integración empresarial y con requisitos más estructurados. REST se asocia con
+    simplicidad, uso de recursos y comunicación habitual mediante HTTP. En oposición, conviene no confundirlos:
+    SOAP es más protocolario; REST es más arquitectónico.
+  </p>
+
+  <h2>8. Implantación, gestión y mantenimiento de aplicaciones</h2>
+
+  <p>
+    Una aplicación corporativa no termina cuando se desarrolla. Después hay que implantarla, administrarla, corregir
+    incidencias, actualizarla y garantizar su continuidad. Esto incluye supervisión, copias de seguridad, ajustes de
+    rendimiento y resolución de problemas.
+  </p>
+
+  <p>
+    La gestión y el mantenimiento informático son parte del ciclo de vida del software. Una aplicación útil pero
+    imposible de mantener acaba siendo un problema. Por eso se valora tanto la documentación, la trazabilidad de
+    cambios, el control de versiones y la posibilidad de actualización ordenada.
+  </p>
+
+  <h2>9. Aplicaciones multiplataforma</h2>
+
+  <p>
+    Las aplicaciones multiplataforma buscan funcionar en distintos dispositivos, como PC, tablet y teléfono, con una
+    misma base funcional o con adaptaciones mínimas. El objetivo es ofrecer continuidad de servicio al usuario sin
+    obligarlo a cambiar de tecnología según el dispositivo.
+  </p>
+
+  <p>
+    Este enfoque es especialmente útil en entornos donde la movilidad es importante. La aplicación puede adaptarse
+    al tamaño de pantalla, a la interacción táctil o al contexto de uso. En examen suele interesar la relación entre
+    portabilidad y experiencia de usuario.
+  </p>
+
+  <h2>10. Gestión de contenidos web</h2>
+
+  <p>
+    La gestión de contenidos web se centra en crear, organizar, publicar y actualizar información en un sitio web.
+    En organizaciones grandes no se trata solo de “subir páginas”, sino de administrar flujos de publicación, permisos,
+    versiones y estructura de contenidos. Los sistemas de gestión de contenidos facilitan este trabajo.
+  </p>
+
+  <p>
+    Un buen sistema de contenidos permite separar a quienes crean información de quienes la publican o supervisan.
+    Esto mejora el control, la coherencia visual y la actualización constante. En el contexto institucional, esta
+    capacidad es clave para mantener portales vivos y accesibles.
+  </p>
+
+  <h2>11. Aplicaciones multidispositivo y responsive design</h2>
+
+  <p>
+    El responsive design permite que una misma web se adapte al tamaño y características del dispositivo desde el
+    que se accede. No consiste en hacer versiones totalmente distintas, sino en diseñar una interfaz capaz de
+    reorganizarse según la pantalla, la orientación y el medio de interacción.
+  </p>
+
+  <p>
+    Esta adaptabilidad se ha vuelto imprescindible porque el acceso desde móvil y tableta es ya una parte normal del
+    uso web. En examen, conviene recordar que responsive design no significa solo “verse bien”, sino facilitar una
+    experiencia usable en contextos diferentes.
+  </p>
+
+  <h2>12. Portales corporativos</h2>
+
+  <p>
+    Un portal corporativo es un punto de entrada centralizado a la información, aplicaciones y servicios de la
+    organización. Su función es unificar el acceso, ofrecer personalización y facilitar el trabajo a distintos tipos
+    de usuarios. Puede servir tanto a empleados como a estudiantes, proveedores o ciudadanía, según el caso.
+  </p>
+
+  <p>
+    Su valor reside en la centralización y en la capacidad de ofrecer contenidos y servicios integrados. Un buen
+    portal reduce la dispersión de información y actúa como puerta de entrada a la organización digital.
+  </p>
+
+  <h2>13. Arquitectura y paradigmas de la programación para móviles</h2>
+
+  <p>
+    La programación móvil tiene condicionantes específicos: pantallas pequeñas, uso táctil, conectividad variable,
+    consumo de batería y diversidad de dispositivos. Por ello, la arquitectura y el paradigma de implementación deben
+    tener en cuenta ligereza, respuesta rápida y adaptación al contexto.
+  </p>
+
+  <p>
+    Las aplicaciones móviles suelen combinar lógica local con acceso a servicios remotos. La arquitectura debe
+    equilibrar experiencia de uso, sincronización de datos y eficiencia del dispositivo. En oposición, es importante
+    entender que no se diseña igual para móvil que para escritorio.
+  </p>
+
+  <h2>14. Posicionamiento en motores de búsqueda</h2>
+
+  <p>
+    El SEO busca mejorar la visibilidad de una web en los resultados de los motores de búsqueda. Aunque no pertenece
+    al desarrollo funcional puro, sí forma parte del éxito de una aplicación o portal web porque afecta a cómo se
+    encuentra y se indexa su contenido.
+  </p>
+
+  <p>
+    El posicionamiento depende, entre otros factores, de la estructura del contenido, la calidad de la información,
+    la accesibilidad técnica, el rendimiento y la claridad semántica. En un portal corporativo o institucional, el SEO
+    ayuda a que los contenidos sean localizables y útiles para el público objetivo.
+  </p>
+
+  <div class="key">
+    <p>
+      En una frase: una aplicación moderna no solo debe ejecutarse, sino integrarse, adaptarse a múltiples dispositivos,
+      mantenerse disponible y ser localizable y usable.
+    </p>
+  </div>
+
+  <h2>15. Relación entre todos los bloques</h2>
+
+  <p>
+    Todos los apartados del tema forman una secuencia coherente. La arquitectura define cómo se organiza la
+    aplicación; el servidor de aplicaciones la ejecuta; la alta disponibilidad asegura continuidad; el despliegue la
+    pone en producción; la integración la conecta con otros sistemas; SOAP y REST facilitan la comunicación; la
+    gestión y el mantenimiento prolongan su vida útil; el responsive design y las apps multiplataforma la adaptan a
+    distintos dispositivos; el portal corporativo centraliza el acceso; la programación móvil introduce requisitos
+    específicos; y el SEO contribuye a su visibilidad en la web.
+  </p>
+
+  <p>
+    En conjunto, este tema describe el ciclo de vida de una aplicación corporativa moderna, desde su concepción hasta
+    su explotación y visibilidad. Esa visión global es la que más suele ayudar a responder preguntas de oposición
+    con sentido técnico y no solo memorístico.
+  </p>
+</body>
+</html>
