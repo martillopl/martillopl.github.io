@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OPE Gestor Informatico UPNA</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg1:#fff;--bg2:#f5f4f0;--bg3:#eeece6;--t1:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bl:rgba(0,0,0,.10);--bm:rgba(0,0,0,.22);--r1:8px;--r2:12px}
+  @media(prefers-color-scheme:dark){:root{--bg1:#1e1e1c;--bg2:#282825;--bg3:#323230;--t1:#e8e6de;--t2:#9c9a92;--t3:#6e6d68;--bl:rgba(255,255,255,.10);--bm:rgba(255,255,255,.20)}}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg3);color:var(--t1);padding:2.5rem 1rem;line-height:1.8}
+  .page{max-width:740px;margin:0 auto}
+  .header{margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:.5px solid var(--bm)}
+  .tlabel{font-size:12px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+  h1{font-size:22px;font-weight:500;line-height:1.3;margin-bottom:8px}
+  .meta{font-size:13px;color:var(--t3)}
+  .indice{background:var(--bg2);border:.5px solid var(--bl);border-radius:var(--r2);padding:16px 20px;margin-bottom:2.5rem}
+  .indice ol{padding-left:18px;counter-reset:item}
+  .indice li{font-size:13px;color:var(--t2);padding:3px 0;display:block}
+  .indice li:before{content: counters(item, ".") " ";counter-increment:item}
+  .indice a{color:var(--t2);text-decoration:none}
+  .indice a:hover{color:var(--t1)}
+  p{font-size:15px;color:var(--t2);margin-bottom:1rem}
+  p:last-child{margin-bottom:0}
+  .footer{margin-top:3rem;padding-top:1.2rem;border-top:.5px solid var(--bl);font-size:11px;color:var(--t3);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="tlabel">OPE Gestor Informatico UPNA</div>
+    <h1>Temario</h1>
+    <div class="meta">Índice</div>
+  </div>
+  <div class="indice">
+    <ol>
+      <li><a href="t01/1_texto_explicativo.html">Tecnología básica: Dispositivos personales y dispositivos móviles en entornos corporativos. Conectividad de los dispositivos personales. Sistemas de despliegue, gestión remota y clonación de equipos. Escritorios y acceso remoto. Sistemas Operativos y software de base: entornos Microsoft, Linux y Macintosh. Software de código abierto: conceptos básicos, aplicaciones ofimáticas y tipos de licencias. Virtualización de escritorios y de aplicaciones. Cloud Computing. Nubes privadas, públicas e híbridas.</a></li>
+      <li><a href="t02/1_texto_explicativo.html">Bases de datos: El modelo entidad-relación. Bases de datos relacionales. Normalización. Integridad referencial. El lenguaje SQL. Administración de bases de datos: Oracle y MySQL. Sistemas de apoyo a la toma de decisiones (Business Intelligence).</a></li>
+      <li><a href="t03/1_texto_explicativo.html">Fundamentos de programación: Tipos de datos. Programación estructurada. Patrones de diseño de programas. Lenguajes orientados a objeto, características. Lenguaje de programación Java. Desarrollo de aplicaciones Web. Javascript y Frameworks. Lenguajes de etiquetado y publicación en la web. Hojas de estilo. Entornos de desarrollo, entornos IDE, herramientas. Sistemas de control de versiones de software. Gestores de dependencias de librerías. Metodologías de desarrollo y trabajo en equipo.</a></li>
+      <li><a href="t04/1_texto_explicativo.html">Arquitectura de aplicaciones: Paradigmas de implementación. Servidores de aplicaciones. Alta disponibilidad en aplicaciones. Despliegue de aplicaciones. Integración de aplicaciones y entornos distribuidos. Servicios Web: SOAP y REST. Implantación, gestión y mantenimiento informático de aplicaciones. Aplicaciones multiplataforma (PC, Tablet, teléfono). Gestión de contenidos web. Aplicaciones multidispositivo: responsive design. Portales Corporativos. Arquitectura y paradigmas de la programación para móviles. Posicionamiento en motores de búsqueda (SEO).</a></li>
+      <li><a href="t05/1_texto_explicativo.html">Soporte técnico y trabajo colaborativo: Soporte técnico informático: tipos de soporte, niveles de atención y sistemas de gestión de incidencias y solicitudes. Herramientas colaborativas y de trabajo en grupo. Plataformas de comunicación y videoconferencia. Dimensionamiento, calidad de servicio en las comunicaciones y acondicionamiento de salas y equipos audiovisuales.</a></li>
+      <li><a href="t06/1_texto_explicativo.html">Redes y comunicaciones: Sistemas de cableado estructurado. Redes de transporte TDM y WDM. Redes LAN y WLAN. Estándares IEEE 802.1, 802.3 y 802.11. Redes TCP/IP versión 4 y versión 6. Protocolos de enrutamiento. Servicios básicos de red: DHCP, DNS, NTP. Sistemas de correo electrónico: protocolos SMTP, POP e IMAP. Monitorización y gestión de redes.</a></li>
+      <li><a href="t07/1_texto_explicativo.html">Administración de sistemas: Sistemas operativos UNIX y Linux: administración en servidores x86. Entornos de virtualización. Tecnologías de contenedores y orquestación. Sistemas de almacenamiento SAN y NAS. Sistemas de backup y replicación de datos. Clusters de servidores para alta disponibilidad. Estrategias de alta disponibilidad, recuperación ante desastres y continuidad de negocio.</a></li>
+      <li><a href="t08/1_texto_explicativo.html">Seguridad de sistemas de información: Sistemas de seguridad en red: cortafuegos, protección ante intrusiones, cortafuegos de aplicación, VPNs. Criptografía, sistemas PKI y autoridades de certificación. Prevención de incidentes de seguridad. Auditorías de seguridad. Gestión de incidentes: análisis forense. Protección de datos de carácter personal, RGPD.</a></li>
+      <li><a href="t09/1_texto_explicativo.html">Administración electrónica: Certificados y firma electrónica. Sellado de tiempos. Sede electrónica. Registro electrónico. Procedimientos. Comunicación y notificación.</a></li>
+      <li><a href="t10/1_texto_explicativo.html">Inteligencia Artificial: Fundamentos de la Inteligencia Artificial y del aprendizaje automático. Modelos de lenguaje. Inteligencia artificial generativa. Ejecución en local o en la nube.</a></li>
+      <li>
+        Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas (I): De la actividad de las Administraciones Públicas. De los actos administrativos. (Títulos II y III).
+        <ol>
+          <li><a href="t11-4/1_texto_explicativo.html">Título Preliminar: disposiciones Generales. El ciudadano como administrado. Los interesados en el procedimiento administrativo. Concepto y clases. La capacidad de obrar. Representación. Identificación y firma de los interesados en el procedimiento administrativo.</a></li>
+          <li><a href="t11-5/1_texto_explicativo.html">Normas Generales de la actuación de las administraciones públicas: derechos de las personas en sus relaciones con las Administraciones públicas. Derecho y obligación de relacionarse electrónicamente con las administraciones públicas. Lengua de los procedimientos. Colaboración de las personas. Comparecencia de las personas. Documentos aportados por los interesados al procedimiento.</a></li>
+          <li><a href="t11-6/1_texto_explicativo.html">Normas Generales de la actuación de las administraciones públicas: registros. Archivo de documentos. Responsabilidad de la tramitación. Emisión de documentos por las Administraciones públicas. Validez y eficacia de las copias realizadas por las Administraciones públicas.</a></li>
+          <li><a href="t11-7/1_texto_explicativo.html">Normas Generales de la actuación de las administraciones públicas: cómputo del tiempo. Términos y plazos. La prescripción. La caducidad. Obligación de resolver. Suspensión del plazo máximo para resolver. Ampliación del plazo máximo para resolver y notificar. Silencio administrativo en los procedimientos iniciados a solicitud del interesado. Falta de resolución expresa en procedimientos iniciados de oficio.</a></li>
+          <li><a href="t11-8/1_texto_explicativo.html">Los actos administrativos. Concepto. Clases de actos administrativos. Elementos de los actos administrativos. Requisitos de los actos administrativos. La eficacia de los actos administrativos. Efectos. Notificación. Publicación.</a></li>
+        </ol>
+      </li>
+      <li>
+        Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas (II): De las disposiciones sobre el procedimiento administrativo común. De la revisión de los actos en vía administrativa (Títulos IV y V).
+        <ol>
+          <li><a href="t12-9/1_texto_explicativo.html">El Procedimiento Administrativo Común I: concepto y naturaleza. Garantías del procedimiento. Abstención y recusación.</a></li>
+          <li><a href="t12-10/1_texto_explicativo.html">El Procedimiento Administrativo Común II: iniciación del procedimiento. Ordenación. Instrucción. Finalización del procedimiento. Terminación. Terminación convencional. Resolución. Desistimiento y Renuncia. Caducidad.</a></li>
+          <li><a href="t12-11/1_texto_explicativo.html">El Procedimiento Administrativo Común III: la ejecución de los actos administrativos.</a></li>
+          <li><a href="t12-12/1_texto_explicativo.html">La teoría de la invalidez del acto administrativo. Nulidad y anulabilidad de los actos administrativos. La revisión de los actos en vía administrativa. La revisión de oficio.</a></li>
+          <li><a href="t12-13/1_texto_explicativo.html">Los recursos administrativos. Principios generales. Recurso de alzada. Recurso potestativo de reposición. Recurso extraordinario de revisión.</a></li>
+        </ol>
+      </li>
+      <li><a href="t13/1_texto_explicativo.html">Ley Orgánica 2/2023, de 22 de marzo, del Sistema Universitario: Organización de enseñanzas. Régimen Específico de las universidades públicas (Títulos III y IX).</a></li>
+      <li><a href="t14/1_texto_explicativo.html">Decreto Foral 110/2003, de 12 de mayo, por el que se aprueban los Estatutos de la Universidad Pública de Navarra: Estructura de la Universidad. Gobierno de la Universidad. (Títulos I y II).</a></li>
+    </ol>
+  </div>
+
+  <div class="footer">Temario OPE Gestor Informatico UPNA</div>
+</div>
+</body>
+</html>
