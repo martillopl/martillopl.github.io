@@ -1,0 +1,87 @@
+TEMA 20. NORMATIVA DE SEGURIDAD DE LA INFORMACIÓN DE LA UNIVERSIDAD PÚBLICA DE NAVARRA
+
+1. IDEA GENERAL
+- La normativa establece reglas para proteger la información institucional de la UPNA.
+- Fue publicada por Resolución 1816/2019, de 10 de septiembre, del Rector.
+- Su finalidad es garantizar una gestión segura de la información.
+- Se relaciona con el Esquema Nacional de Seguridad.
+
+2. OBJETO
+- Proteger la información y los sistemas que la tratan.
+- Evitar accesos indebidos, pérdidas y alteraciones.
+- Regular medidas organizativas y técnicas de seguridad.
+- Asegurar el buen funcionamiento institucional.
+
+3. FINALIDAD
+- Confidencialidad.
+- Integridad.
+- Disponibilidad.
+- Control y protección de la información.
+
+4. RELACIÓN CON EL ENS
+- El Esquema Nacional de Seguridad fija el marco general del sector público.
+- La normativa de la UPNA se adapta a ese marco.
+- Permite una protección homogénea y actualizada.
+- Conecta la regulación interna con los principios comunes de seguridad.
+
+5. PRINCIPIOS DE ACTUACIÓN
+- Prevención.
+- Responsabilidad.
+- Proporcionalidad.
+- Mejora continua.
+
+6. RESPONSABILIDADES
+- La seguridad no depende solo de un servicio técnico.
+- Toda la organización participa.
+- La dirección, las unidades y el personal tienen obligaciones.
+- Deben comunicarse incidentes y anomalías.
+
+7. CULTURA DE SEGURIDAD
+- La seguridad exige formación y vigilancia.
+- Hay que actuar antes de que aparezcan los problemas.
+- La reacción ante incidentes también forma parte del sistema.
+- La mejora constante es esencial.
+
+8. IDEA DE FONDO
+- La información es un activo esencial de la universidad.
+- Protegerla es una tarea organizativa y colectiva.
+- La seguridad es una condición para el funcionamiento normal de la institución.
+- Sin seguridad no hay confianza ni continuidad del servicio.
+
+9. CLAVES PARA EXAMEN
+- Normativa de seguridad de la información.
+- Resolución 1816/2019.
+- Protección de sistemas y datos.
+- Confidencialidad, integridad y disponibilidad.
+- Relación con el ENS.
+- Responsabilidad compartida.
+- Cultura de seguridad.
+
+10. FRASES MEMORIZABLES
+- “La seguridad de la información protege los datos y los sistemas de la universidad.”
+- “El ENS fija el marco común y la UPNA lo concreta internamente.”
+- “La seguridad no es solo técnica: es organizativa y colectiva.”
+- “La tríada básica es confidencialidad, integridad y disponibilidad.”
+- “La prevención y la mejora continua son esenciales en la seguridad de la información.”
+
+11. ESQUEMA FINAL
+- Norma.
+  - Resolución 1816/2019.
+  - Seguridad de la información en la UPNA.
+
+- Finalidad.
+  - Proteger datos y sistemas.
+  - Garantizar confidencialidad, integridad y disponibilidad.
+
+- Marco.
+  - Esquema Nacional de Seguridad.
+
+- Desarrollo.
+  - Prevención.
+  - Responsabilidad.
+  - Mejora continua.
+
+- Resultado.
+  - Información protegida.
+  - Servicios fiables.
+  - Cultura de seguridad.
