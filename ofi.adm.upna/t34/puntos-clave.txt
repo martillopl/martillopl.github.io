@@ -1,0 +1,134 @@
+TEMA 34. HOJAS DE CÁLCULO: CONCEPTOS FUNDAMENTALES. MICROSOFT EXCEL 2024. LIBROS DE TRABAJO, HOJAS Y CELDAS. INTRODUCCIÓN Y EDICIÓN DE DATOS. FÓRMULAS Y FUNCIONES. REFERENCIAS RELATIVAS Y ABSOLUTAS. FORMATO DE CELDAS Y HOJAS. TABLAS. ORDENACIÓN Y FILTRADO DE DATOS. REPRESENTACIÓN GRÁFICA DE LA INFORMACIÓN. DISEÑO DE PÁGINA. IMPRESIÓN
+
+1. IDEA GENERAL
+- Las hojas de cálculo son programas diseñados para organizar, calcular, analizar y representar datos.
+- Microsoft Excel 2024 es una de las aplicaciones más usadas para trabajar con información numérica y tabular.
+- Su utilidad es enorme en administración, contabilidad, análisis de datos y gestión documental.
+
+2. CONCEPTOS FUNDAMENTALES
+- Hoja de cálculo: matriz de filas y columnas para trabajar con datos.
+- Celda: intersección de fila y columna donde se introducen datos.
+- Rango: conjunto de celdas.
+- Libro de trabajo: archivo de Excel que contiene una o varias hojas.
+- Hoja: espacio de trabajo individual dentro del libro.
+
+3. LIBROS, HOJAS Y CELDAS
+- El libro de trabajo puede contener varias hojas.
+- Las hojas pueden insertarse, eliminarse, renombrarse o moverse.
+- Las celdas se identifican por coordenadas de columna y fila.
+- Una correcta organización de libros y hojas facilita el análisis de la información.
+
+4. INTRODUCCIÓN Y EDICIÓN DE DATOS
+- Los datos pueden ser numéricos, textuales, fechas, horas o fórmulas.
+- Introducir datos consiste en escribirlos en una celda.
+- Editar datos implica corregir, sustituir o modificar su contenido.
+- La selección de celdas y rangos es básica para operar con precisión.
+
+5. FÓRMULAS Y FUNCIONES
+- Las fórmulas permiten realizar cálculos.
+- Todas las fórmulas comienzan con el signo igual.
+- Las funciones son fórmulas predefinidas que simplifican los cálculos.
+- Excel incluye funciones matemáticas, estadísticas, lógicas, de texto y de fecha, entre otras.
+
+6. REFERENCIAS RELATIVAS Y ABSOLUTAS
+- La referencia relativa cambia al copiar la fórmula.
+- La referencia absoluta permanece fija al copiar la fórmula.
+- La referencia mixta combina una parte fija y otra variable.
+- El símbolo $ sirve para fijar fila, columna o ambas.
+
+7. FORMATO DE CELDAS Y HOJAS
+- El formato modifica la apariencia de los datos.
+- Puede afectar a fuente, tamaño, color, alineación, bordes, relleno y formato numérico.
+- También puede aplicarse a la hoja completa mediante opciones de visualización o impresión.
+- El formato ayuda a interpretar mejor la información.
+
+8. TABLAS
+- Las tablas estructuran los datos en un formato ordenado.
+- Permiten aplicar filtros, estilos y referencias estructuradas.
+- Facilitan el análisis y la expansión automática de formatos y fórmulas.
+- Son útiles para bases de datos sencillas y registros organizados.
+
+9. ORDENACIÓN Y FILTRADO
+- La ordenación organiza los datos según uno o varios criterios.
+- El filtrado muestra solo los registros que cumplen determinadas condiciones.
+- Ambas funciones mejoran el análisis de grandes conjuntos de datos.
+- Son herramientas esenciales para la gestión de información.
+
+10. REPRESENTACIÓN GRÁFICA
+- Los gráficos transforman los datos en una representación visual.
+- Permiten comparar valores, detectar tendencias y resumir información.
+- Excel ofrece gráficos de barras, columnas, líneas, sectores y otros tipos.
+- Un gráfico bien diseñado facilita la comprensión inmediata.
+
+11. DISEÑO DE PÁGINA
+- Permite ajustar márgenes, orientación, tamaño de papel y área de impresión.
+- Incluye opciones para encabezados, pies de página y escala de impresión.
+- El diseño de página prepara la hoja para su salida en papel o PDF.
+- Es clave para presentar correctamente los datos impresos.
+
+12. IMPRESIÓN
+- La impresión convierte la hoja de cálculo en documento físico o exportable.
+- Debe revisarse la vista previa antes de imprimir.
+- Excel permite configurar copias, páginas, orientación y distribución.
+- Una buena configuración evita errores y desperdicio de papel.
+
+13. CLAVES PARA EXAMEN
+- La hoja de cálculo organiza datos en filas y columnas.
+- Un libro contiene varias hojas.
+- Las fórmulas y funciones permiten calcular y analizar información.
+- Las referencias relativas cambian al copiar; las absolutas no.
+- El formato mejora la presentación.
+- Las tablas, filtros y gráficos facilitan el análisis.
+- El diseño de página e impresión cierran el proceso de trabajo.
+
+14. FRASES MEMORIZABLES
+- “Excel organiza datos, calcula resultados y representa información.”
+- “El libro de trabajo contiene una o varias hojas.”
+- “Las fórmulas comienzan con el signo igual.”
+- “Las referencias absolutas fijan fila o columna.”
+- “Las tablas y gráficos convierten datos en información útil.”
+- “El diseño de página prepara la hoja para imprimir.”
+
+15. ESQUEMA FINAL
+- Conceptos básicos.
+  - Hoja de cálculo.
+  - Celda.
+  - Rango.
+  - Libro de trabajo.
+  - Hoja.
+
+- Tratamiento de datos.
+  - Introducción.
+  - Edición.
+  - Fórmulas.
+  - Funciones.
+  - Referencias.
+
+- Presentación y análisis.
+  - Formato.
+  - Tablas.
+  - Ordenación.
+  - Filtrado.
+  - Gráficos.
+
+- Salida final.
+  - Diseño de página.
+  - Impresión.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TRAMPAS FRECUENTES EN EXAMEN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ “Una hoja de cálculo solo sirve para hacer cuentas” → FALSO: también analiza, ordena y representa datos.
+
+❌ “Libro y hoja son lo mismo” → FALSO: el libro contiene varias hojas.
+
+❌ “Las fórmulas no necesitan signo igual” → FALSO: toda fórmula empieza con =.
+
+❌ “Las referencias relativas no cambian al copiar” → FALSO: sí se ajustan automáticamente.
+
+❌ “El formato altera el contenido de la celda” → FALSO: modifica la apariencia, no el dato.
+
+❌ “Los gráficos sustituyen al dato” → FALSO: lo representan visualmente.
+
+❌ “Imprimir es el primer paso” → FALSO: es la fase final del proceso.
