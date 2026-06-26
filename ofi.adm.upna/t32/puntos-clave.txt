@@ -1,0 +1,124 @@
+TEMA 32. SISTEMAS OPERATIVOS EN ENTORNOS PERSONALES: WINDOWS 11. EL ESCRITORIO Y SUS ELEMENTOS. EL MENÚ INICIO Y LA BARRA DE TAREAS. EL EXPLORADOR DE ARCHIVOS. CONFIGURACIÓN Y PANEL DE CONTROL. ADMINISTRACIÓN BÁSICA DEL SISTEMA: ADMINISTRADOR DE TAREAS, DISPOSITIVOS E IMPRESORAS. TRABAJO EN RED. CUENTAS DE USUARIO. AYUDA Y SOPORTE
+
+1. IDEA GENERAL
+- Windows 11 es un sistema operativo orientado al entorno personal.
+- Organiza el trabajo del usuario mediante una interfaz gráfica moderna.
+- Sus herramientas principales son escritorio, menú Inicio, barra de tareas, Explorador de archivos, Configuración, Panel de control y utilidades de administración.
+
+2. EL ESCRITORIO
+- Es el área principal de trabajo del sistema.
+- Muestra iconos, accesos directos, archivos y ventanas abiertas.
+- Permite acceder rápidamente a programas y documentos.
+- Puede personalizarse con fondos, temas y otros ajustes visuales.
+
+3. MENÚ INICIO
+- Permite acceder a aplicaciones, configuración y búsqueda.
+- En Windows 11 se sitúa en el centro de la barra de tareas.
+- Es la puerta de entrada habitual a las herramientas del sistema.
+- Facilita el acceso rápido a programas y funciones frecuentes.
+
+4. BARRA DE TAREAS
+- Reúne iconos de aplicaciones ancladas y ventanas abiertas.
+- Muestra notificaciones y acceso a funciones rápidas.
+- Permite cambiar entre programas y revisar el estado del sistema.
+- Es un elemento esencial del uso diario.
+
+5. EXPLORADOR DE ARCHIVOS
+- Es la herramienta para gestionar archivos y carpetas.
+- Permite crear, copiar, mover, renombrar y eliminar documentos.
+- Facilita la navegación por unidades, carpetas y redes.
+- Incluye panel de navegación, barra de direcciones y búsqueda.
+
+6. CONFIGURACIÓN Y PANEL DE CONTROL
+- Configuración es el entorno moderno de administración del sistema.
+- Permite ajustar red, personalización, cuentas, privacidad y otros parámetros.
+- El Panel de control conserva opciones clásicas y herramientas tradicionales.
+- Ambos entornos pueden complementarse.
+
+7. ADMINISTRADOR DE TAREAS
+- Muestra los procesos activos y el rendimiento del equipo.
+- Permite cerrar aplicaciones bloqueadas.
+- Ayuda a controlar el consumo de recursos.
+- Es una utilidad básica de administración.
+
+8. DISPOSITIVOS E IMPRESORAS
+- Permite gestionar periféricos conectados al equipo.
+- Incluye impresoras, teclados, ratones, escáneres y otros dispositivos.
+- Sirve para comprobar estados y resolver incidencias.
+- Es útil en la administración cotidiana del sistema.
+
+9. TRABAJO EN RED
+- Windows 11 permite acceder a recursos compartidos.
+- Facilita el uso de impresoras en red y carpetas compartidas.
+- Es importante para equipos conectados en una red local.
+- Requiere una configuración correcta para funcionar con seguridad.
+
+10. CUENTAS DE USUARIO
+- Identifican a las personas que usan el equipo.
+- Determinan permisos y opciones de acceso.
+- Pueden ser locales o vinculadas a servicios en línea.
+- Permiten personalización y control de seguridad.
+
+11. AYUDA Y SOPORTE
+- Windows 11 incorpora herramientas de ayuda y resolución de problemas.
+- Permite consultar información integrada y soporte en línea.
+- Ayuda a localizar funciones y solucionar incidencias.
+- Complementa el uso de las demás herramientas del sistema.
+
+12. CLAVES PARA EXAMEN
+- El escritorio es el área principal de trabajo.
+- El menú Inicio y la barra de tareas facilitan el acceso a aplicaciones y funciones.
+- El Explorador de archivos organiza documentos y carpetas.
+- Configuración y Panel de control permiten administrar el sistema.
+- El Administrador de tareas controla procesos y rendimiento.
+- Dispositivos e impresoras gestionan periféricos.
+- El trabajo en red permite recursos compartidos.
+- Las cuentas de usuario determinan identidad y permisos.
+- La ayuda y soporte resuelven dudas e incidencias.
+
+13. FRASES MEMORIZABLES
+- “El escritorio es el área principal de trabajo de Windows 11.”
+- “El menú Inicio y la barra de tareas son la puerta de acceso al sistema.”
+- “El Explorador de archivos organiza la información del usuario.”
+- “Configuración es el centro moderno de administración.”
+- “El Administrador de tareas controla procesos y rendimiento.”
+- “Las cuentas de usuario definen identidad y permisos.”
+- “La ayuda y el soporte completan el uso del sistema.”
+
+14. ESQUEMA FINAL
+- Interfaz.
+  - Escritorio.
+  - Menú Inicio.
+  - Barra de tareas.
+
+- Gestión de archivos.
+  - Explorador de archivos.
+
+- Administración del sistema.
+  - Configuración.
+  - Panel de control.
+  - Administrador de tareas.
+  - Dispositivos e impresoras.
+
+- Entorno de uso.
+  - Trabajo en red.
+  - Cuentas de usuario.
+  - Ayuda y soporte.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TRAMPAS FRECUENTES EN EXAMEN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ “El escritorio es solo decorativo” → FALSO: es el área principal de trabajo.
+
+❌ “Inicio y barra de tareas cumplen la misma función” → FALSO: son complementarios, pero no idénticos.
+
+❌ “El Explorador solo sirve para abrir carpetas” → FALSO: también permite gestionar archivos.
+
+❌ “Configuración ha sustituido por completo al Panel de control” → FALSO: ambos conviven.
+
+❌ “El Administrador de tareas solo sirve para cerrar programas” → FALSO: también muestra rendimiento y procesos.
+
+❌ “Las cuentas de usuario no afectan al sistema” → FALSO: determinan acceso, permisos y personalización.
+
+❌ “La ayuda solo sirve para usuarios avanzados” → FALSO: está pensada para resolver dudas básicas y técnicas.
