@@ -1,0 +1,144 @@
+TEMA 33. PROCESADORES DE TEXTO: CONCEPTOS FUNDAMENTALES. MICROSOFT WORD 2024. ENTORNO DE TRABAJO. CREACIÓN, EDICIÓN Y FORMATO DE DOCUMENTOS. DISEÑO DE PÁGINA Y COMPOSICIÓN. ESTILOS Y PLANTILLAS. LISTAS Y ESQUEMAS. INSERCIÓN Y FORMATO DE TABLAS. ENCABEZADOS Y PIES DE PÁGINA. NUMERACIÓN DE PÁGINAS. COMBINACIÓN DE CORRESPONDENCIA. REVISIÓN DE DOCUMENTOS. GESTIÓN DE ARCHIVOS E IMPRESIÓN
+
+1. IDEA GENERAL
+- Los procesadores de texto son aplicaciones destinadas a crear, editar, dar formato y gestionar documentos escritos.
+- Microsoft Word 2024 es una de las herramientas más utilizadas en entornos personales, académicos y profesionales.
+- Permite redactar, revisar, maquetar, imprimir y compartir documentos con gran flexibilidad.
+
+2. CONCEPTOS FUNDAMENTALES
+- Documento: archivo de texto con contenido estructurado.
+- Formato: conjunto de características visuales del texto y la página.
+- Edición: modificación del contenido del documento.
+- Maquetación: organización visual y estructural de los elementos de la página.
+- Plantillas y estilos: herramientas para mantener coherencia y rapidez en el diseño.
+
+3. ENTORNO DE TRABAJO DE WORD 2024
+- La ventana de Word muestra barra de título, cinta de opciones, área de documento, reglas, barra de estado y controles de vista.
+- La cinta organiza las herramientas por pestañas y grupos.
+- La barra de acceso rápido permite ejecutar comandos frecuentes.
+- La vista de documento puede adaptarse según la tarea de trabajo.
+
+4. CREACIÓN, EDICIÓN Y FORMATO
+- Crear documentos nuevos desde cero o a partir de plantillas.
+- Editar texto mediante inserción, eliminación, copia, corte y pegado.
+- Aplicar formato de fuente, párrafo y carácter.
+- El formato incluye tipo de letra, tamaño, color, alineación, sangrías, interlineado y espaciado.
+
+5. DISEÑO DE PÁGINA Y COMPOSICIÓN
+- Permite ajustar márgenes, orientación, tamaño de papel, columnas y saltos.
+- Controla la distribución del contenido en la página.
+- Incluye opciones de encabezado, pie de página, fondo y bordes.
+- La composición busca una presentación ordenada y profesional.
+
+6. ESTILOS Y PLANTILLAS
+- Los estilos aplican un conjunto predefinido de formatos a títulos, párrafos y elementos del documento.
+- Facilitan la uniformidad visual y la automatización del formato.
+- Las plantillas sirven como modelos reutilizables para crear documentos similares.
+- Son muy útiles para documentos administrativos, académicos o de uso repetitivo.
+
+7. LISTAS Y ESQUEMAS
+- Word permite crear listas con viñetas, numeración y listas multinivel.
+- Las listas facilitan la organización de ideas y procedimientos.
+- Los esquemas ayudan a estructurar contenidos jerárquicos.
+- Son fundamentales en temarios, manuales y documentos técnicos.
+
+8. TABLAS
+- Las tablas organizan información en filas y columnas.
+- Pueden insertarse y luego modificar su diseño, tamaño y alineación.
+- Word permite combinar celdas, dividirlas, aplicar bordes y sombreado.
+- Son útiles para datos comparativos, inventarios y formularios.
+
+9. ENCABEZADOS, PIES Y NUMERACIÓN
+- El encabezado aparece en la parte superior de cada página.
+- El pie de página aparece en la parte inferior.
+- Ambos pueden contener texto, fechas, logotipos o numeración.
+- La numeración de páginas facilita la localización y organización del documento.
+
+10. COMBINACIÓN DE CORRESPONDENCIA
+- Permite generar múltiples documentos personalizados a partir de una plantilla y una lista de datos.
+- Se usa habitualmente para cartas, etiquetas, sobres y comunicaciones masivas.
+- Combina un documento principal con fuentes de datos externas.
+- Ahorra tiempo y reduce errores en envíos repetitivos.
+
+11. REVISIÓN DE DOCUMENTOS
+- Incluye corrección ortográfica y gramatical.
+- Permite comentarios, control de cambios y comparación de documentos.
+- Facilita el trabajo colaborativo y la supervisión de modificaciones.
+- Es esencial antes de imprimir o compartir un documento.
+
+12. GESTIÓN DE ARCHIVOS E IMPRESIÓN
+- Word permite guardar, abrir, recuperar, exportar y compartir documentos.
+- Los formatos más habituales son DOCX y PDF.
+- La impresión permite configurar páginas, orientación, copias y propiedades de la impresora.
+- Una buena gestión de archivos asegura compatibilidad, seguridad y conservación de la información.
+
+13. CLAVES PARA EXAMEN
+- Un procesador de texto sirve para crear y editar documentos escritos.
+- Word 2024 organiza el trabajo mediante cinta de opciones y área de documento.
+- El formato afecta al texto y a la página.
+- Los estilos y plantillas aportan rapidez y uniformidad.
+- Las tablas, listas, encabezados y pies mejoran la estructura del documento.
+- La combinación de correspondencia automatiza documentos masivos personalizados.
+- La revisión y la impresión completan el ciclo de elaboración documental.
+
+14. FRASES MEMORIZABLES
+- “Un procesador de texto permite crear, editar y presentar documentos.”
+- “Word 2024 organiza las herramientas mediante la cinta de opciones.”
+- “Los estilos garantizan uniformidad y rapidez.”
+- “Las tablas ordenan información en filas y columnas.”
+- “La combinación de correspondencia personaliza documentos masivos.”
+- “La revisión asegura calidad antes de imprimir o compartir.”
+
+15. ESQUEMA FINAL
+- Conceptos básicos.
+  - Documento.
+  - Formato.
+  - Edición.
+  - Maquetación.
+
+- Entorno de trabajo.
+  - Cinta de opciones.
+  - Barra de acceso rápido.
+  - Área de documento.
+
+- Tratamiento del documento.
+  - Creación.
+  - Edición.
+  - Formato.
+  - Diseño de página.
+
+- Estructura.
+  - Estilos.
+  - Plantillas.
+  - Listas.
+  - Esquemas.
+  - Tablas.
+
+- Elementos de página.
+  - Encabezados.
+  - Pies de página.
+  - Numeración.
+
+- Funciones avanzadas.
+  - Combinación de correspondencia.
+  - Revisión.
+  - Gestión de archivos.
+  - Impresión.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TRAMPAS FRECUENTES EN EXAMEN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ “Formato y edición son lo mismo” → FALSO: editar es modificar contenido; formatear es cambiar apariencia.
+
+❌ “Las plantillas sustituyen por completo al trabajo manual” → FALSO: solo sirven como modelo de base.
+
+❌ “Las listas multinivel son solo decorativas” → FALSO: estructuran jerárquicamente la información.
+
+❌ “Los encabezados y pies solo sirven para adornar” → FALSO: también aportan información fija y numeración.
+
+❌ “La combinación de correspondencia sirve solo para cartas” → FALSO: también para etiquetas, sobres y otros documentos masivos.
+
+❌ “La revisión solo corrige ortografía” → FALSO: incluye comentarios, control de cambios y comparación.
+
+❌ “Guardar e imprimir son funciones secundarias” → FALSO: forman parte esencial del ciclo documental.
