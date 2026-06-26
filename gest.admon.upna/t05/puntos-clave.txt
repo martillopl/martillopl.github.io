@@ -1,0 +1,102 @@
+TEMA 2. PUNTOS CLAVE Y ARTÍCULOS CLAVE
+
+LEY 39/2015, DE 1 DE OCTUBRE, DEL PROCEDIMIENTO ADMINISTRATIVO COMÚN DE LAS ADMINISTRACIONES PÚBLICAS
+
+1. BLOQUES DEL TEMA
+- Título III: De los actos administrativos.
+- Título V: De la revisión de los actos en vía administrativa.
+
+2. ARTÍCULOS CLAVE DEL TÍTULO III
+- Art. 34: Producción y contenido de los actos administrativos.
+- Art. 35: Motivación.
+- Art. 36: Forma.
+- Art. 37: Inderogabilidad singular.
+- Art. 38: Ejecutividad.
+- Art. 39: Eficacia.
+- Art. 40: Notificación.
+- Art. 41: Condiciones generales para la práctica de las notificaciones.
+- Art. 42: Práctica de las notificaciones en papel.
+- Art. 43: Práctica de las notificaciones a través de medios electrónicos.
+- Art. 44: Notificación infructuosa.
+- Art. 45: Publicación.
+- Art. 46: Indicaciones sobre publicación.
+- Art. 47: Nulidad de pleno derecho.
+- Art. 48: Anulabilidad.
+- Art. 49: Límites a la nulidad y anulabilidad.
+- Art. 50: Convalidación.
+- Art. 51: Conservación de actos y trámites.
+- Art. 52: Conversión de actos viciados.
+
+3. ARTÍCULOS CLAVE DEL TÍTULO V
+- Art. 106: Revisión de disposiciones y actos nulos.
+- Art. 107: Declaración de lesividad de actos anulables.
+- Art. 108: Suspensión.
+- Art. 109: Revocación de actos y rectificación de errores.
+- Art. 110: Límites a la revisión.
+- Art. 111: Competencia para la revisión de oficio.
+- Art. 112: Objeto y clases de recursos administrativos.
+- Art. 113: Suspensión de la ejecución del acto recurrido.
+- Art. 114: Fin de la vía administrativa.
+- Art. 115: Interposición del recurso.
+- Art. 116: Causas de inadmisión.
+- Art. 117: Suspensión de la ejecución.
+- Art. 118: Audiencia de los interesados.
+- Art. 119: Resolución.
+- Art. 120: Plazos.
+- Art. 121: Recurso de alzada.
+- Art. 122: Recurso potestativo de reposición.
+- Art. 123: Recurso extraordinario de revisión.
+- Art. 124: Plazos del recurso de reposición.
+- Art. 125: Plazos del recurso extraordinario de revisión.
+- Art. 126: Terminación.
+
+4. PREGUNTAS QUE SUELEN CAER
+- Concepto de acto administrativo.
+- Requisitos del acto administrativo.
+- Diferencia entre eficacia y validez.
+- Diferencia entre notificación y publicación.
+- Cuándo un acto es eficaz y cuándo no.
+- Diferencia entre nulidad de pleno derecho y anulabilidad.
+- Qué actos ponen fin a la vía administrativa.
+- Diferencia entre revisión de oficio y recurso administrativo.
+- Revisión de oficio de actos nulos.
+- Declaración de lesividad.
+- Revocación y rectificación de errores.
+- Recurso de alzada: contra qué actos procede.
+- Recurso potestativo de reposición: carácter y plazo.
+- Recurso extraordinario de revisión: supuestos y carácter excepcional.
+- Suspensión del acto recurrido.
+
+5. IDEAS FUERZA PARA EXAMEN
+- El Título III regula los actos administrativos: requisitos, eficacia e invalidez.
+- El Título V regula la revisión de los actos en vía administrativa.
+- La notificación es clave para la eficacia frente a los interesados.
+- La publicación se usa en supuestos legalmente previstos.
+- La nulidad es más grave que la anulabilidad.
+- La revisión de oficio la inicia la propia Administración.
+- Los recursos administrativos los interpone el interesado.
+- El recurso de alzada procede contra actos que no ponen fin a la vía administrativa.
+- El recurso de reposición es potestativo.
+- El recurso extraordinario de revisión es excepcional y tasado.
+
+6. VERSIÓN DE OPOSICIÓN CON FRASES MEMORIZABLES
+- Si te preguntan por el acto administrativo, piensa en el Título III.
+- El acto administrativo es una declaración con efectos jurídicos individuales.
+- Requisitos del acto: competencia, contenido, finalidad, motivación y forma.
+- La eficacia no es lo mismo que la validez.
+- Un acto puede ser válido y, sin embargo, no ser todavía eficaz.
+- La notificación individualiza el conocimiento del acto.
+- La publicación se reserva para los casos previstos por la ley.
+- Si te preguntan por invalidez, piensa en nulidad y anulabilidad.
+- La nulidad es el vicio más grave; la anulabilidad, el menos intenso.
+- No todo defecto del acto lleva a nulidad.
+- Si te preguntan por revisión, piensa en el Título V.
+- La revisión de oficio la hace la propia Administración.
+- El recurso administrativo lo presenta el interesado.
+- La alzada va contra actos que no agotan la vía administrativa.
+- La reposición va contra actos que sí la agotan, y es potestativa.
+- El recurso extraordinario de revisión es la vía excepcional.
+- Revocación no es lo mismo que rectificación de errores.
+- La rectificación corrige errores materiales, de hecho o aritméticos.
+- Idea-faro: acto, eficacia, invalidez y revisión.
+- Frase resumen: “Primero ves si el acto vale; luego ves si produce efectos; y si falla, compruebas cómo se revisa”.
