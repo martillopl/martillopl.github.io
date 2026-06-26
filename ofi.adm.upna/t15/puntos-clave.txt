@@ -1,0 +1,85 @@
+TEMA 15. POLÍTICA DE PROTECCIÓN DE DATOS DE LA UNIVERSIDAD PÚBLICA DE NAVARRA
+
+1. IDEA GENERAL
+- La política de protección de datos de la UPNA concreta internamente cómo debe tratarse la información personal.
+- Su finalidad es garantizar el cumplimiento normativo dentro de la universidad.
+- Se aplica a la actividad docente, investigadora, administrativa y de gestión.
+- Refuerza la legalidad, la seguridad y la confidencialidad.
+
+2. FINALIDAD
+- Ordenar el tratamiento de datos personales en la UPNA.
+- Evitar usos indebidos o desproporcionados de la información.
+- Asegurar que la universidad actúe con responsabilidad.
+- Adaptar el marco general de protección de datos al ámbito universitario.
+
+3. PRINCIPIOS
+- Licitud.
+- Transparencia.
+- Minimización de datos.
+- Limitación de la finalidad.
+- Exactitud.
+- Seguridad.
+- Confidencialidad.
+- Responsabilidad proactiva.
+
+4. PAPEL DE LA UPNA
+- La UPNA actúa como responsable del tratamiento.
+- Debe decidir sobre los fines y medios del tratamiento.
+- Debe impartir instrucciones internas claras.
+- Debe garantizar el cumplimiento por parte de su personal y unidades.
+
+5. DERECHOS DE LAS PERSONAS
+- Derecho de acceso.
+- Derecho de rectificación.
+- Derecho de supresión.
+- Derecho de oposición.
+- Derecho a la limitación del tratamiento.
+- La política debe facilitar su ejercicio.
+
+6. SEGURIDAD Y CONFIDENCIALIDAD
+- Deben adoptarse medidas técnicas y organizativas adecuadas.
+- La seguridad debe adaptarse al nivel de riesgo.
+- Existe deber de secreto y de custodia de la información.
+- La confidencialidad es una exigencia esencial.
+
+7. MODIFICACIÓN DE 2022
+- La política fue aprobada en junio de 2022.
+- Fue modificada en noviembre de 2022.
+- La modificación actualiza y refuerza el texto inicial.
+- Muestra que la protección de datos exige revisión continua.
+
+8. IDEAS PARA EXAMEN
+- Política interna de protección de datos.
+- Responsable del tratamiento.
+- Principios de licitud, seguridad y transparencia.
+- Derechos de las personas.
+- Medidas técnicas y organizativas.
+- Confidencialidad y deber de secreto.
+
+9. FRASES MEMORIZABLES
+- “La política de la UPNA adapta internamente la protección de datos al funcionamiento universitario.”
+- “La UPNA actúa como responsable del tratamiento y debe garantizar el cumplimiento.”
+- “Proteger datos no es solo cumplir, sino poder demostrar que se cumple.”
+- “La confidencialidad y el deber de secreto son esenciales.”
+- “La modificación de 2022 actualiza y refuerza la política inicial.”
+
+10. ESQUEMA FINAL
+- Objeto.
+  - Regular internamente el tratamiento de datos.
+  - Garantizar cumplimiento.
+
+- Principios.
+  - Licitud.
+  - Transparencia.
+  - Seguridad.
+  - Confidencialidad.
+
+- Garantías.
+  - Derechos de las personas.
+  - Medidas técnicas y organizativas.
+  - Deber de secreto.
+
+- Resultado.
+  - Cumplimiento normativo.
+  - Protección de datos.
+  - Confianza institucional.
