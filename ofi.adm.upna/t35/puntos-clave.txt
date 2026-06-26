@@ -1,0 +1,111 @@
+TEMA 35. BASES DE DATOS: CONCEPTOS FUNDAMENTALES. MICROSOFT ACCESS 2024. CONCEPTOS BÁSICOS DE BASES DE DATOS. TABLAS Y RELACIONES. CONSULTAS. FORMULARIOS. INFORMES. GESTIÓN BÁSICA E IMPRESIÓN
+
+1. IDEA GENERAL
+- Una base de datos es un conjunto organizado de datos relacionados.
+- Microsoft Access 2024 permite crear y gestionar bases de datos relacionales.
+- Su finalidad es almacenar, recuperar, tratar y presentar información de forma estructurada.
+
+2. CONCEPTOS BÁSICOS
+- Base de datos: conjunto ordenado de datos relacionados.
+- Campo: columna que define una característica de los datos.
+- Registro: fila con un conjunto concreto de valores.
+- Tabla: estructura donde se almacenan los datos.
+- Objeto: elemento de Access que sirve para trabajar con la base de datos.
+
+3. TABLAS
+- Son el núcleo de la base de datos.
+- Almacenan la información principal.
+- Se organizan en campos y registros.
+- Un buen diseño evita duplicidades y errores.
+
+4. RELACIONES
+- Vinculan unas tablas con otras.
+- Permiten trabajar con datos relacionados sin repetir información.
+- Mantienen la coherencia de la base de datos.
+- Son esenciales en las bases de datos relacionales.
+
+5. CONSULTAS
+- Sirven para buscar, filtrar, ordenar y recuperar datos.
+- Pueden trabajar sobre una o varias tablas.
+- Permiten aplicar criterios de selección.
+- También pueden realizar cálculos y obtener resultados concretos.
+
+6. FORMULARIOS
+- Se usan para ver, introducir y modificar datos.
+- Ofrecen una interfaz más cómoda que la hoja de datos.
+- Reducen errores de captura.
+- Facilitan el trabajo diario con la base de datos.
+
+7. INFORMES
+- Presentan los datos de forma ordenada y clara.
+- Están orientados a la lectura y a la impresión.
+- Se generan normalmente a partir de tablas o consultas.
+- Son útiles para listados, resúmenes y documentos formales.
+
+8. GESTIÓN BÁSICA
+- Crear, abrir, guardar y modificar objetos.
+- Importar o vincular objetos de otras bases de datos.
+- Documentar el diseño y las relaciones.
+- Mantener una estructura coherente y funcional.
+
+9. IMPRESIÓN
+- Access permite imprimir tablas, consultas, formularios e informes.
+- Los informes son los objetos más adecuados para la salida impresa.
+- Debe revisarse el formato antes de imprimir.
+- También puede imprimirse la documentación del diseño de la base de datos.
+
+10. IDEAS PARA EXAMEN
+- Las tablas almacenan datos.
+- Las relaciones conectan tablas.
+- Las consultas extraen y procesan información.
+- Los formularios facilitan la entrada de datos.
+- Los informes presentan la información.
+- La gestión básica y la impresión completan el uso de Access.
+
+11. FRASES MEMORIZABLES
+- “La tabla es el núcleo de la base de datos.”
+- “Las relaciones conectan la información.”
+- “Las consultas buscan y seleccionan datos.”
+- “Los formularios facilitan la introducción de información.”
+- “Los informes están pensados para la salida final.”
+- “Access organiza, consulta y presenta datos con estructura.”
+
+12. ESQUEMA FINAL
+- Base de datos.
+  - Campos.
+  - Registros.
+  - Tablas.
+
+- Tratamiento.
+  - Relaciones.
+  - Consultas.
+
+- Interacción.
+  - Formularios.
+
+- Presentación.
+  - Informes.
+  - Impresión.
+
+- Gestión.
+  - Crear.
+  - Abrir.
+  - Guardar.
+  - Importar.
+  - Documentar.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TRAMPAS FRECUENTES EN EXAMEN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ “La consulta almacena datos” → FALSO: los almacena la tabla.
+
+❌ “El formulario sirve para ordenar datos” → FALSO: su función principal es introducir y modificar información.
+
+❌ “El informe solo sirve para calcular” → FALSO: está orientado a presentar resultados.
+
+❌ “Las relaciones duplican información” → FALSO: ayudan a evitar duplicidades.
+
+❌ “La impresión es lo mismo que la consulta” → FALSO: la impresión es la salida final.
+
+❌ “Una base de datos es solo una tabla” → FALSO: incluye varios objetos relacionados.
